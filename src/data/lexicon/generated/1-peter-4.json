@@ -170,6 +170,10 @@
         "lemma": "logos"
       },
       {
+        "surface": "is",
+        "lemma": "echo"
+      },
+      {
         "surface": "ready",
         "lemma": "hetoimos"
       },
@@ -226,6 +230,10 @@
         "lemma": "telos"
       },
       {
+        "surface": "of all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "is near",
         "lemma": "engizo"
       },
@@ -244,8 +252,16 @@
     ],
     "8": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "love",
         "lemma": "agape"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "echo"
       },
       {
         "surface": "deeply",
@@ -312,11 +328,19 @@
         "lemma": "charisma"
       },
       {
+        "surface": "he has received",
+        "lemma": "lambano"
+      },
+      {
         "surface": "to serve",
         "lemma": "diakoneo"
       }
     ],
     "11": [
+      {
+        "surface": "speaks",
+        "lemma": "laleo"
+      },
       {
         "surface": "vvv",
         "lemma": "theos"
@@ -342,6 +366,10 @@
         "lemma": "choregeo"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -358,6 +386,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
       },
@@ -372,10 +404,6 @@
       {
         "surface": "ever",
         "lemma": "aion"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ],
     "12": [
@@ -394,6 +422,10 @@
       {
         "surface": "trial",
         "lemma": "peirasmos"
+      },
+      {
+        "surface": "that has come",
+        "lemma": "ginomai"
       },
       {
         "surface": "something strange",
@@ -536,6 +568,10 @@
       {
         "surface": "it begins",
         "lemma": "proton"
+      },
+      {
+        "surface": "what will",
+        "lemma": "tis"
       },
       {
         "surface": "outcome be",

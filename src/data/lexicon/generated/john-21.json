@@ -52,6 +52,10 @@
         "lemma": "thomas"
       },
       {
+        "surface": "called",
+        "lemma": "lego"
+      },
+      {
         "surface": "Didymus",
         "lemma": "didumos"
       },
@@ -84,6 +88,10 @@
         "lemma": "mathetes"
       },
       {
+        "surface": "were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "together",
         "lemma": "homou"
       }
@@ -98,12 +106,28 @@
         "lemma": "petros"
       },
       {
+        "surface": "told",
+        "lemma": "lego"
+      },
+      {
         "surface": "I am going",
         "lemma": "hupago"
       },
       {
         "surface": "fishing",
         "lemma": "halieuo"
+      },
+      {
+        "surface": "will go",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "they said",
+        "lemma": "lego"
+      },
+      {
+        "surface": "So they went out",
+        "lemma": "exerchomai"
       },
       {
         "surface": "got",
@@ -116,6 +140,10 @@
       {
         "surface": "caught",
         "lemma": "piazo"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
       },
       {
         "surface": "night",
@@ -132,12 +160,24 @@
         "lemma": "iesous"
       },
       {
+        "surface": "stood",
+        "lemma": "histemi"
+      },
+      {
         "surface": "shore",
         "lemma": "aigialos"
       },
       {
         "surface": "disciples",
         "lemma": "mathetes"
+      },
+      {
+        "surface": "recognize",
+        "lemma": "eido"
+      },
+      {
+        "surface": "it was",
+        "lemma": "eimi"
       },
       {
         "surface": "Jesus",
@@ -150,15 +190,31 @@
         "lemma": "iesous"
       },
       {
+        "surface": "called out",
+        "lemma": "lego"
+      },
+      {
         "surface": "Children",
         "lemma": "paidion"
       },
       {
+        "surface": "do you have",
+        "lemma": "echo"
+      },
+      {
         "surface": "fish",
         "lemma": "prosphagion"
+      },
+      {
+        "surface": "they answered",
+        "lemma": "apokrino"
       }
     ],
     "6": [
+      {
+        "surface": "He told",
+        "lemma": "eipon"
+      },
       {
         "surface": "Cast",
         "lemma": "ballo"
@@ -178,6 +234,10 @@
       {
         "surface": "boat",
         "lemma": "ploion"
+      },
+      {
+        "surface": "you will find some",
+        "lemma": "heurisko"
       },
       {
         "surface": "they cast it there",
@@ -214,8 +274,16 @@
         "lemma": "agapao"
       },
       {
+        "surface": "said",
+        "lemma": "lego"
+      },
+      {
         "surface": "to Peter",
         "lemma": "petros"
+      },
+      {
+        "surface": "It is",
+        "lemma": "eimi"
       },
       {
         "surface": "Lord",
@@ -230,6 +298,14 @@
         "lemma": "petros"
       },
       {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "it was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
@@ -240,6 +316,10 @@
       {
         "surface": "outer garment",
         "lemma": "ependutes"
+      },
+      {
+        "surface": "he had removed it",
+        "lemma": "eimi"
       },
       {
         "surface": "jumped",
@@ -260,6 +340,10 @@
         "lemma": "mathetes"
       },
       {
+        "surface": "came ashore",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "boat",
         "lemma": "ploiarion"
       },
@@ -274,6 +358,10 @@
       {
         "surface": "fish",
         "lemma": "ichthus"
+      },
+      {
+        "surface": "they were",
+        "lemma": "eimi"
       },
       {
         "surface": "far",
@@ -324,6 +412,10 @@
         "lemma": "iesous"
       },
       {
+        "surface": "told",
+        "lemma": "lego"
+      },
+      {
         "surface": "Bring",
         "lemma": "phero"
       },
@@ -370,12 +462,20 @@
         "lemma": "mestos"
       },
       {
+        "surface": "of large",
+        "lemma": "megas"
+      },
+      {
         "surface": "fish",
         "lemma": "ichthus"
       },
       {
         "surface": "153",
         "lemma": "hekaton"
+      },
+      {
+        "surface": "with",
+        "lemma": "eimi"
       },
       {
         "surface": "so many",
@@ -400,6 +500,14 @@
         "lemma": "iesous"
       },
       {
+        "surface": "said",
+        "lemma": "lego"
+      },
+      {
+        "surface": "None",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "disciples",
         "lemma": "mathetes"
       },
@@ -412,6 +520,22 @@
         "lemma": "exetazo"
       },
       {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "They knew",
+        "lemma": "eido"
+      },
+      {
+        "surface": "it was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       }
@@ -422,8 +546,20 @@
         "lemma": "iesous"
       },
       {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "took",
+        "lemma": "lambano"
+      },
+      {
         "surface": "bread",
         "lemma": "artos"
+      },
+      {
+        "surface": "gave it",
+        "lemma": "didomi"
       },
       {
         "surface": "He did the same with",
@@ -474,6 +610,10 @@
         "lemma": "iesous"
       },
       {
+        "surface": "asked",
+        "lemma": "lego"
+      },
+      {
         "surface": "Simon",
         "lemma": "simon"
       },
@@ -502,8 +642,20 @@
         "lemma": "kurios"
       },
       {
+        "surface": "he answered",
+        "lemma": "lego"
+      },
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
         "surface": "I love",
         "lemma": "phileo"
+      },
+      {
+        "surface": "Jesus replied",
+        "lemma": "lego"
       },
       {
         "surface": "Feed",
@@ -515,6 +667,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "Jesus asked",
+        "lemma": "lego"
+      },
       {
         "surface": "vvv",
         "lemma": "palin"
@@ -540,8 +696,20 @@
         "lemma": "kurios"
       },
       {
+        "surface": "he answered",
+        "lemma": "lego"
+      },
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
         "surface": "I love",
         "lemma": "phileo"
+      },
+      {
+        "surface": "Jesus told",
+        "lemma": "lego"
       },
       {
         "surface": "Shepherd",
@@ -553,6 +721,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "Jesus asked",
+        "lemma": "lego"
+      },
       {
         "surface": "third time",
         "lemma": "tritos"
@@ -578,6 +750,10 @@
         "lemma": "lupeo"
       },
       {
+        "surface": "Jesus had asked",
+        "lemma": "eipon"
+      },
+      {
         "surface": "a third time",
         "lemma": "tritos"
       },
@@ -590,12 +766,32 @@
         "lemma": "kurios"
       },
       {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "I love",
         "lemma": "phileo"
       },
       {
         "surface": "Jesus",
         "lemma": "iesous"
+      },
+      {
+        "surface": "said",
+        "lemma": "lego"
       },
       {
         "surface": "Feed",
@@ -608,12 +804,12 @@
     ],
     "18": [
       {
-        "surface": "Truly",
-        "lemma": "amen"
+        "surface": "I tell",
+        "lemma": "lego"
       },
       {
-        "surface": "truly",
-        "lemma": "amen"
+        "surface": "you were",
+        "lemma": "eimi"
       },
       {
         "surface": "young",
@@ -626,6 +822,10 @@
       {
         "surface": "walked",
         "lemma": "peripateo"
+      },
+      {
+        "surface": "you wanted",
+        "lemma": "thelo"
       },
       {
         "surface": "you are old",
@@ -650,9 +850,17 @@
       {
         "surface": "lead you",
         "lemma": "phero"
+      },
+      {
+        "surface": "you do not want to go",
+        "lemma": "thelo"
       }
     ],
     "19": [
+      {
+        "surface": "Jesus said",
+        "lemma": "eipon"
+      },
       {
         "surface": "to indicate",
         "lemma": "semaino"
@@ -672,6 +880,14 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "He had said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "He told",
+        "lemma": "lego"
       },
       {
         "surface": "Follow",
@@ -720,8 +936,20 @@
         "lemma": "deipnon"
       },
       {
+        "surface": "to ask",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "is going to",
+        "lemma": "eimi"
       },
       {
         "surface": "betray",
@@ -730,12 +958,24 @@
     ],
     "21": [
       {
+        "surface": "Peter saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "he",
         "lemma": "petros"
       },
       {
+        "surface": "asked",
+        "lemma": "lego"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "what about",
+        "lemma": "tis"
       }
     ],
     "22": [
@@ -744,8 +984,24 @@
         "lemma": "iesous"
       },
       {
+        "surface": "answered",
+        "lemma": "lego"
+      },
+      {
+        "surface": "I want",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to remain",
         "lemma": "meno"
+      },
+      {
+        "surface": "I return",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "what is that",
+        "lemma": "tis"
       },
       {
         "surface": "follow",
@@ -756,6 +1012,10 @@
       {
         "surface": "rumor",
         "lemma": "logos"
+      },
+      {
+        "surface": "spread",
+        "lemma": "exerchomai"
       },
       {
         "surface": "brothers",
@@ -774,15 +1034,35 @@
         "lemma": "iesous"
       },
       {
+        "surface": "did not say",
+        "lemma": "eipon"
+      },
+      {
         "surface": "he would not die",
         "lemma": "apothnesko"
       },
       {
+        "surface": "I want",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to remain",
         "lemma": "meno"
+      },
+      {
+        "surface": "I return",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "what is that",
+        "lemma": "tis"
       }
     ],
     "24": [
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
       {
         "surface": "disciple",
         "lemma": "mathetes"
@@ -792,8 +1072,20 @@
         "lemma": "martureo"
       },
       {
+        "surface": "has written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
         "surface": "testimony",
         "lemma": "marturia"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "true",
@@ -802,12 +1094,28 @@
     ],
     "25": [
       {
+        "surface": "There are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "more things",
         "lemma": "allos"
       },
       {
         "surface": "Jesus",
         "lemma": "iesous"
+      },
+      {
+        "surface": "did",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "were written down",
+        "lemma": "grapho"
       },
       {
         "surface": "I suppose that",
@@ -824,6 +1132,10 @@
       {
         "surface": "books",
         "lemma": "biblion"
+      },
+      {
+        "surface": "that would be written",
+        "lemma": "grapho"
       }
     ]
   },

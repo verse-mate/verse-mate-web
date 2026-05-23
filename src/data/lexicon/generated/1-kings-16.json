@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Jehu",
         "lemma": "yehu"
       },
@@ -28,6 +32,10 @@
       {
         "surface": "Baasha",
         "lemma": "basah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -38,6 +46,10 @@
       {
         "surface": "of the dust",
         "lemma": "aphar"
+      },
+      {
+        "surface": "and made",
+        "lemma": "natan"
       },
       {
         "surface": "you ruler",
@@ -86,10 +98,6 @@
     ],
     "3": [
       {
-        "surface": "So now",
-        "lemma": "hen"
-      },
-      {
         "surface": "I will consume",
         "lemma": "baar"
       },
@@ -100,6 +108,10 @@
       {
         "surface": "and his house",
         "lemma": "bet"
+      },
+      {
+        "surface": "and I will make",
+        "lemma": "natan"
       },
       {
         "surface": "your house",
@@ -182,6 +194,10 @@
         "lemma": "gevurah"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "written",
         "lemma": "katav"
       },
@@ -210,6 +226,10 @@
       {
         "surface": "rested",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
       },
       {
         "surface": "and was buried",
@@ -246,6 +266,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "through",
         "lemma": "yad"
       },
@@ -274,8 +298,16 @@
         "lemma": "bet"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "he had done",
+        "lemma": "asah"
       },
       {
         "surface": "in the sight",
@@ -296,6 +328,10 @@
       {
         "surface": "of his hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "and becoming",
+        "lemma": "hayah"
       },
       {
         "surface": "like the house",
@@ -436,6 +472,10 @@
         "lemma": "zimri"
       },
       {
+        "surface": "went in",
+        "lemma": "bo"
+      },
+      {
         "surface": "struck Elah down",
         "lemma": "nakhah"
       },
@@ -454,8 +494,16 @@
     ],
     "11": [
       {
+        "surface": "As soon as",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Zimri began to reign",
         "lemma": "malakh"
+      },
+      {
+        "surface": "and was seated",
+        "lemma": "yashav"
       },
       {
         "surface": "the throne",
@@ -466,12 +514,20 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "the entire",
+        "lemma": "kol"
+      },
+      {
         "surface": "household",
         "lemma": "bet"
       },
       {
         "surface": "of Baasha",
         "lemma": "basah"
+      },
+      {
+        "surface": "He did not",
+        "lemma": "lo"
       },
       {
         "surface": "leave",
@@ -498,6 +554,10 @@
       {
         "surface": "destroyed",
         "lemma": "shamad"
+      },
+      {
+        "surface": "the entire",
+        "lemma": "kol"
       },
       {
         "surface": "household",
@@ -537,6 +597,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the sins",
         "lemma": "chattaah"
@@ -602,6 +666,14 @@
       {
         "surface": "of Elah",
         "lemma": "elah"
+      },
+      {
+        "surface": "along with all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "written",
@@ -692,6 +764,10 @@
         "lemma": "chanah"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "that Zimri",
         "lemma": "zimri"
       },
@@ -714,6 +790,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -746,6 +826,10 @@
         "lemma": "omri"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "yisrael"
       },
@@ -772,12 +856,20 @@
         "lemma": "zimri"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
       },
       {
         "surface": "was captured",
         "lemma": "lakhad"
+      },
+      {
+        "surface": "he entered",
+        "lemma": "bo"
       },
       {
         "surface": "the citadel",
@@ -810,6 +902,10 @@
         "lemma": "chata"
       },
       {
+        "surface": "doing",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -836,6 +932,10 @@
       {
         "surface": "and the sin",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "he had committed",
+        "lemma": "asah"
       },
       {
         "surface": "and had caused Israel",
@@ -866,6 +966,10 @@
       {
         "surface": "he committed",
         "lemma": "qashar"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "written",
@@ -908,6 +1012,10 @@
       {
         "surface": "of the people",
         "lemma": "am"
+      },
+      {
+        "surface": "supported",
+        "lemma": "hayah"
       },
       {
         "surface": "Tibni",
@@ -1072,6 +1180,10 @@
         "lemma": "har"
       },
       {
+        "surface": "calling",
+        "lemma": "qara"
+      },
+      {
         "surface": "it",
         "lemma": "ir"
       },
@@ -1102,6 +1214,10 @@
         "lemma": "omri"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -1118,6 +1234,10 @@
         "lemma": "raa"
       },
       {
+        "surface": "than all",
+        "lemma": "kol"
+      },
+      {
         "surface": "before him",
         "lemma": "paneh"
       }
@@ -1126,6 +1246,10 @@
       {
         "surface": "For he walked",
         "lemma": "halakh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the ways",
@@ -1194,6 +1318,14 @@
         "lemma": "gevurah"
       },
       {
+        "surface": "he exercised",
+        "lemma": "asah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "written",
         "lemma": "katav"
       },
@@ -1222,6 +1354,10 @@
       {
         "surface": "rested",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
       },
       {
         "surface": "and was buried",
@@ -1320,6 +1456,10 @@
         "lemma": "omri"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -1332,11 +1472,19 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "more than all",
+        "lemma": "kol"
+      },
+      {
         "surface": "were before him",
         "lemma": "paneh"
       }
     ],
     "31": [
+      {
+        "surface": "And as if it were",
+        "lemma": "hayah"
+      },
       {
         "surface": "not enough",
         "lemma": "qalal"
@@ -1434,12 +1582,20 @@
         "lemma": "achav"
       },
       {
+        "surface": "set up",
+        "lemma": "asah"
+      },
+      {
         "surface": "an Asherah pole",
         "lemma": "asherah"
       },
       {
         "surface": "Thus Ahab",
         "lemma": "achav"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "more",
@@ -1460,6 +1616,10 @@
       {
         "surface": "of Israel, {to anger",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "than all",
+        "lemma": "kol"
       },
       {
         "surface": "the kings",
@@ -1558,8 +1718,8 @@
     ]
   },
   "themeLemmas": [
-    "asa",
     "yisrael",
-    "malakh"
+    "malakh",
+    "omri"
   ]
 }

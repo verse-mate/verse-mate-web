@@ -22,6 +22,10 @@
         "lemma": "levenah"
       },
       {
+        "surface": "place",
+        "lemma": "natan"
+      },
+      {
         "surface": "before you",
         "lemma": "paneh"
       },
@@ -39,6 +43,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "Then lay",
+        "lemma": "natan"
+      },
       {
         "surface": "siege",
         "lemma": "matsor"
@@ -58,6 +66,10 @@
       {
         "surface": "a ramp",
         "lemma": "solelah"
+      },
+      {
+        "surface": "set up",
+        "lemma": "natan"
       },
       {
         "surface": "camps",
@@ -90,6 +102,10 @@
         "lemma": "machavat"
       },
       {
+        "surface": "and set it up",
+        "lemma": "natan"
+      },
+      {
         "surface": "as an iron",
         "lemma": "barzel"
       },
@@ -112,6 +128,10 @@
       {
         "surface": "your face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "so that it is",
+        "lemma": "hayah"
       },
       {
         "surface": "under siege",
@@ -185,6 +205,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "have assigned",
+        "lemma": "natan"
+      },
       {
         "surface": "390",
         "lemma": "shalosh"
@@ -260,6 +284,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "I have assigned",
+        "lemma": "natan"
+      },
+      {
         "surface": "40",
         "lemma": "arbaim"
       },
@@ -308,12 +336,16 @@
     ],
     "8": [
       {
-        "surface": "Now behold",
-        "lemma": "hinneh"
+        "surface": "I will tie you up",
+        "lemma": "natan"
       },
       {
         "surface": "with ropes",
         "lemma": "avot"
+      },
+      {
+        "surface": "so you cannot",
+        "lemma": "lo"
       },
       {
         "surface": "turn",
@@ -370,12 +402,20 @@
         "lemma": "kussemet"
       },
       {
+        "surface": "put",
+        "lemma": "natan"
+      },
+      {
         "surface": "in a single",
         "lemma": "echad"
       },
       {
         "surface": "container",
         "lemma": "keli"
+      },
+      {
+        "surface": "and make",
+        "lemma": "asah"
       },
       {
         "surface": "into bread",
@@ -434,6 +474,10 @@
       {
         "surface": "and you are to eat it",
         "lemma": "akhal"
+      },
+      {
+        "surface": "at set times",
+        "lemma": "et"
       }
     ],
     "11": [
@@ -460,6 +504,10 @@
       {
         "surface": "and you are to drink it",
         "lemma": "shatah"
+      },
+      {
+        "surface": "at set times",
+        "lemma": "et"
       }
     ],
     "12": [
@@ -498,6 +546,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "This is how",
         "lemma": "kakhah"
       },
@@ -528,10 +580,6 @@
     ],
     "14": [
       {
-        "surface": "Ah",
-        "lemma": "ahah"
-      },
-      {
         "surface": "Lord",
         "lemma": "adonai"
       },
@@ -540,8 +588,16 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "I said",
+        "lemma": "amar"
+      },
+      {
         "surface": "I",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "have never",
+        "lemma": "lo"
       },
       {
         "surface": "defiled myself",
@@ -556,6 +612,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eaten",
         "lemma": "akhal"
       },
@@ -568,6 +628,10 @@
         "lemma": "terephah"
       },
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "unclean",
         "lemma": "piggul"
       },
@@ -576,11 +640,27 @@
         "lemma": "basar"
       },
       {
+        "surface": "has ever entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "my mouth",
         "lemma": "peh"
       }
     ],
     "15": [
+      {
+        "surface": "Look",
+        "lemma": "raah"
+      },
+      {
+        "surface": "He replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will let",
+        "lemma": "natan"
+      },
       {
         "surface": "use cow",
         "lemma": "baqar"
@@ -602,11 +682,19 @@
         "lemma": "gelel"
       },
       {
+        "surface": "and you may bake",
+        "lemma": "asah"
+      },
+      {
         "surface": "your bread",
         "lemma": "lechem"
       }
     ],
     "16": [
+      {
+        "surface": "Then He told",
+        "lemma": "amar"
+      },
       {
         "surface": "Son",
         "lemma": "ben"
@@ -700,8 +788,8 @@
     ]
   },
   "themeLemmas": [
+    "natan",
     "akhal",
-    "lechem",
-    "avan"
+    "lechem"
   ]
 }

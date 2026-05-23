@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Be",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "imitators",
         "lemma": "mimetes"
       },
@@ -82,6 +86,10 @@
         "lemma": "porneia"
       },
       {
+        "surface": "of any kind",
+        "lemma": "pas"
+      },
+      {
         "surface": "of impurity",
         "lemma": "akatharsia"
       },
@@ -118,6 +126,18 @@
     ],
     "5": [
       {
+        "surface": "vvv",
+        "lemma": "eido"
+      },
+      {
+        "surface": "you can be sure",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "No",
+        "lemma": "pas"
+      },
+      {
         "surface": "immoral",
         "lemma": "pornos"
       },
@@ -130,8 +150,16 @@
         "lemma": "pleonektes"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "an idolater",
         "lemma": "eidololatres"
+      },
+      {
+        "surface": "has",
+        "lemma": "echo"
       },
       {
         "surface": "inheritance",
@@ -176,6 +204,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "is coming",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "sons",
         "lemma": "huios"
       },
@@ -186,11 +218,19 @@
     ],
     "7": [
       {
+        "surface": "be",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "partakers",
         "lemma": "summetochos"
       }
     ],
     "8": [
+      {
+        "surface": "you were",
+        "lemma": "eimi"
+      },
       {
         "surface": "darkness",
         "lemma": "skotos"
@@ -230,6 +270,10 @@
         "lemma": "phos"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "goodness",
         "lemma": "agathosune"
       },
@@ -246,6 +290,14 @@
       {
         "surface": "Test and prove",
         "lemma": "dokimazo"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eimi"
       },
       {
         "surface": "pleases",
@@ -284,8 +336,20 @@
     ],
     "12": [
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "shameful",
         "lemma": "aischros"
+      },
+      {
+        "surface": "to mention",
+        "lemma": "lego"
+      },
+      {
+        "surface": "the disobedient do",
+        "lemma": "ginomai"
       },
       {
         "surface": "in secret",
@@ -293,6 +357,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "everything",
+        "lemma": "pas"
+      },
       {
         "surface": "exposed",
         "lemma": "elegcho"
@@ -306,8 +374,16 @@
         "lemma": "phaneroo"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "is illuminated",
         "lemma": "phaneroo"
+      },
+      {
+        "surface": "becomes",
+        "lemma": "eimi"
       },
       {
         "surface": "a light itself",
@@ -315,6 +391,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "it is said",
+        "lemma": "lego"
+      },
       {
         "surface": "Wake up",
         "lemma": "egeiro"
@@ -376,11 +456,19 @@
         "lemma": "hemera"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "evil",
         "lemma": "poneros"
       }
     ],
     "17": [
+      {
+        "surface": "be",
+        "lemma": "ginomai"
+      },
       {
         "surface": "foolish",
         "lemma": "aphron"
@@ -388,6 +476,10 @@
       {
         "surface": "understand",
         "lemma": "suniemi"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
       },
       {
         "surface": "Lord’s",
@@ -408,6 +500,10 @@
         "lemma": "oinos"
       },
       {
+        "surface": "leads to",
+        "lemma": "eimi"
+      },
+      {
         "surface": "reckless indiscretion",
         "lemma": "asotia"
       },
@@ -421,6 +517,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "Speak",
+        "lemma": "laleo"
+      },
       {
         "surface": "psalms",
         "lemma": "psalmos"
@@ -470,6 +570,10 @@
       {
         "surface": "the Father",
         "lemma": "pater"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       },
       {
         "surface": "the name",
@@ -530,6 +634,10 @@
         "lemma": "aner"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the head",
         "lemma": "kephale"
       },
@@ -582,6 +690,10 @@
       {
         "surface": "husbands",
         "lemma": "aner"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       }
     ],
     "25": [
@@ -650,6 +762,10 @@
         "lemma": "ekklesia"
       },
       {
+        "surface": "without",
+        "lemma": "echo"
+      },
+      {
         "surface": "stain",
         "lemma": "spilos"
       },
@@ -706,6 +822,10 @@
     ],
     "29": [
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "hated",
         "lemma": "miseo"
       },
@@ -731,6 +851,10 @@
       }
     ],
     "30": [
+      {
+        "surface": "we are",
+        "lemma": "eimi"
+      },
       {
         "surface": "members",
         "lemma": "melos"
@@ -770,6 +894,14 @@
         "lemma": "duo"
       },
       {
+        "surface": "will become",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "flesh",
         "lemma": "sarx"
       }
@@ -778,6 +910,18 @@
       {
         "surface": "mystery",
         "lemma": "musterion"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "profound",
+        "lemma": "megas"
+      },
+      {
+        "surface": "am speaking",
+        "lemma": "lego"
       },
       {
         "surface": "Christ",

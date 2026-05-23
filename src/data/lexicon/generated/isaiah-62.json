@@ -10,6 +10,10 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "keep silent",
         "lemma": "chashah"
       },
@@ -18,12 +22,20 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "keep still",
         "lemma": "shaqat"
       },
       {
         "surface": "her righteousness",
         "lemma": "tsedeq"
+      },
+      {
+        "surface": "shines",
+        "lemma": "yatsa"
       },
       {
         "surface": "like a bright light",
@@ -48,8 +60,16 @@
         "lemma": "goy"
       },
       {
+        "surface": "will see",
+        "lemma": "raah"
+      },
+      {
         "surface": "your righteousness",
         "lemma": "tsedeq"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "kings",
@@ -58,6 +78,10 @@
       {
         "surface": "your glory",
         "lemma": "kavod"
+      },
+      {
+        "surface": "You will be called",
+        "lemma": "qara"
       },
       {
         "surface": "a new",
@@ -81,6 +105,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "You will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "a crown",
         "lemma": "atarah"
@@ -116,8 +144,16 @@
     ],
     "4": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
+      },
+      {
+        "surface": "will you be called",
+        "lemma": "amar"
       },
       {
         "surface": "Forsaken",
@@ -128,8 +164,16 @@
         "lemma": "erets"
       },
       {
+        "surface": "named",
+        "lemma": "amar"
+      },
+      {
         "surface": "Desolate",
         "lemma": "shemamah"
+      },
+      {
+        "surface": "will be called",
+        "lemma": "qara"
       },
       {
         "surface": "vvv",
@@ -232,6 +276,14 @@
         "lemma": "chashah"
       },
       {
+        "surface": "day",
+        "lemma": "kol"
+      },
+      {
+        "surface": "or night",
+        "lemma": "kol"
+      },
+      {
         "surface": "You who call",
         "lemma": "zakhar"
       },
@@ -240,11 +292,23 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "shall take no",
+        "lemma": "al"
+      },
+      {
         "surface": "rest",
         "lemma": "demi"
       }
     ],
     "7": [
+      {
+        "surface": "nor",
+        "lemma": "al"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
+      },
       {
         "surface": "any rest",
         "lemma": "demi"
@@ -292,8 +356,16 @@
         "lemma": "zeroa"
       },
       {
+        "surface": "Never",
+        "lemma": "im"
+      },
+      {
         "surface": "again",
         "lemma": "od"
+      },
+      {
+        "surface": "will I give",
+        "lemma": "natan"
       },
       {
         "surface": "your grain",
@@ -306,6 +378,10 @@
       {
         "surface": "for food",
         "lemma": "maakhal"
+      },
+      {
+        "surface": "nor will",
+        "lemma": "im"
       },
       {
         "surface": "foreigners",
@@ -418,12 +494,12 @@
     ],
     "11": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has proclaimed",
+        "lemma": "shama"
       },
       {
         "surface": "the ends",
@@ -434,6 +510,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "Say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Daughter",
         "lemma": "bat"
       },
@@ -442,16 +522,12 @@
         "lemma": "tsiyyon"
       },
       {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "your Savior",
         "lemma": "yesah"
       },
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "comes",
+        "lemma": "bo"
       },
       {
         "surface": "His reward",
@@ -467,6 +543,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "And they will be called",
+        "lemma": "qara"
+      },
       {
         "surface": "the Holy",
         "lemma": "qodesh"
@@ -484,6 +564,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will be called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Sought Out",
         "lemma": "darash"
       },
@@ -492,14 +576,18 @@
         "lemma": "ir"
       },
       {
+        "surface": "Not",
+        "lemma": "lo"
+      },
+      {
         "surface": "Forsaken",
         "lemma": "azav"
       }
     ]
   },
   "themeLemmas": [
-    "yerushalaim",
-    "hinneh",
-    "tsiyyon"
+    "qara",
+    "lo",
+    "yerushalaim"
   ]
 }

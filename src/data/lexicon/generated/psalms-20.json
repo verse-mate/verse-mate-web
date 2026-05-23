@@ -78,6 +78,10 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your gifts",
         "lemma": "minchah"
       },
@@ -96,12 +100,20 @@
     ],
     "4": [
       {
+        "surface": "May He give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the desires of your heart",
         "lemma": "levav"
       },
       {
         "surface": "and make",
         "lemma": "male"
+      },
+      {
+        "surface": "all your",
+        "lemma": "kol"
       },
       {
         "surface": "plans {succeed",
@@ -136,6 +148,10 @@
       {
         "surface": "grant",
         "lemma": "male"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "your petitions",
@@ -252,12 +268,16 @@
       {
         "surface": "on the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "we call",
+        "lemma": "qara"
       }
     ]
   },
   "themeLemmas": [
     "un",
     "shem",
-    "zakhar"
+    "kol"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at the end",
         "lemma": "qets"
       },
@@ -56,8 +60,16 @@
         "lemma": "churam"
       },
       {
+        "surface": "had given",
+        "lemma": "natan"
+      },
+      {
         "surface": "him",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "and settled",
+        "lemma": "yashav"
       },
       {
         "surface": "Israelites",
@@ -102,6 +114,10 @@
       {
         "surface": "in the wilderness",
         "lemma": "midbar"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the store",
@@ -168,6 +184,10 @@
         "lemma": "baalat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the store",
         "lemma": "miskenah"
       },
@@ -176,8 +196,16 @@
         "lemma": "ir"
       },
       {
+        "surface": "belonged to",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the cities",
@@ -190,6 +218,10 @@
       {
         "surface": "horses",
         "lemma": "parash"
+      },
+      {
+        "surface": "whatever",
+        "lemma": "kol"
       },
       {
         "surface": "he",
@@ -212,6 +244,10 @@
         "lemma": "levanon"
       },
       {
+        "surface": "and throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -221,6 +257,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "As for all",
+        "lemma": "kol"
+      },
       {
         "surface": "the people",
         "lemma": "am"
@@ -250,6 +290,10 @@
         "lemma": "yevusi"
       },
       {
+        "surface": "were not",
+        "lemma": "lo"
+      },
+      {
         "surface": "Israelites",
         "lemma": "yisrael"
       }
@@ -270,6 +314,10 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lo"
       },
       {
         "surface": "destroyed",
@@ -296,6 +344,14 @@
       {
         "surface": "Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "consign",
+        "lemma": "natan"
       },
       {
         "surface": "vvv",
@@ -402,8 +458,20 @@
         "lemma": "banah"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "My wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "live",
+        "lemma": "yashav"
       },
       {
         "surface": "in the house",
@@ -428,6 +496,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has entered",
+        "lemma": "bo"
       },
       {
         "surface": "are holy",
@@ -544,6 +616,10 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "of his father",
+        "lemma": "av"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -630,6 +706,10 @@
     ],
     "15": [
       {
+        "surface": "They did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn aside",
         "lemma": "sur"
       },
@@ -650,6 +730,10 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "in any",
+        "lemma": "kol"
+      },
+      {
         "surface": "matter",
         "lemma": "davar"
       },
@@ -659,6 +743,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "Thus all",
+        "lemma": "kol"
+      },
       {
         "surface": "the work",
         "lemma": "melakhah"
@@ -764,6 +852,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "They went",
+        "lemma": "bo"
+      },
+      {
         "surface": "Solomon’s",
         "lemma": "shelomoh"
       },
@@ -796,6 +888,10 @@
         "lemma": "zahav"
       },
       {
+        "surface": "which they delivered",
+        "lemma": "bo"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
@@ -807,7 +903,7 @@
   },
   "themeLemmas": [
     "shelomoh",
-    "banah",
-    "bet"
+    "kol",
+    "banah"
   ]
 }

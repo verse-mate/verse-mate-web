@@ -124,12 +124,19 @@ POS_MAP: dict[str, str] = {
     'A:Conj': 'Conjunction', 'A:Pron': 'Pronoun', 'A:Part': 'Particle',
 }
 
-# POS classes we DON'T mark tappable. Articles, prepositions, conjunctions,
-# pronouns, particles, interjections, numerals — function words that don't
-# reward a lexical popup. We keep nouns, verbs, adjectives, adverbs, and
-# proper nouns (names like Paul, Christ, Jerusalem).
-# Same logic applies to Hebrew (H:) and Aramaic (A:) entries.
+# POS-based filtering is the only filter we apply. Articles, prepositions,
+# conjunctions, pronouns, particles, interjections, numerals — function
+# words that don't reward a lexical popup. We keep nouns, verbs, adjectives,
+# adverbs, and proper nouns (names like Paul, Christ, Jerusalem).
+#
+# Lemma-specific blocking (SKIP_LEMMA_SLUGS, below) is intentionally empty
+# so every CONTENT-class word stays tappable — including high-frequency
+# verbs like γινώσκω ("knowing"), ἡγέομαι ("consider"), ὁράω, ἀκούω. The
+# previous per-lemma blocklist (preserved as _HISTORICAL_LEMMA_STOPWORDS
+# for reference) was too aggressive and stripped real content words from
+# James 1 ("knowing", "humble", "consider", "reproach").
 SKIP_POS_PREFIXES: tuple[str, ...] = (
+    # Greek (G: prefix)
     'G:Conj', 'G:CONJ',
     'G:Prep', 'G:PREP',
     'G:Art', 'G:ART', 'G:T',
@@ -137,17 +144,28 @@ SKIP_POS_PREFIXES: tuple[str, ...] = (
     'G:Part', 'G:PART', 'G:PRT',
     'G:INJ',
     'G:Num',
-    # Hebrew / Aramaic equivalents — TBESH uses H: prefix, Aramaic A:
-    'H:Conj', 'H:Prep', 'H:Art', 'H:Pron', 'H:Part', 'H:PRT', 'H:INJ', 'H:Num',
+    'G:COND',  # conditional particle (εἰ, "if") — function word
+    # Hebrew (H: prefix) and Aramaic (A: prefix)
+    'H:Conj', 'H:Prep', 'H:Art', 'H:Pron', 'H:Part', 'H:PRT',
+    'H:INJ', 'H:Intj',  # both casings appear in TBESH
+    'H:Num',
     'H:T', 'H:P', 'H:X', 'H:R', 'H:Q', 'H:D', 'H:F',
-    'A:Conj', 'A:Prep', 'A:Art', 'A:Pron', 'A:Part', 'A:PRT', 'A:INJ', 'A:Num',
+    'H:DemP',  # demonstrative pronoun (זֶה, "this") — function word
+    'A:Conj', 'A:Prep', 'A:Art', 'A:Pron', 'A:Part', 'A:PRT',
+    'A:INJ', 'A:Intj',
+    'A:Num',
+    'A:DemP',
 )
 
 # Content-word lemmas so common they aren't worth a per-occurrence tap.
 # Mostly the auxiliary / generic verbs of being, having, doing, saying that
 # carry no theological freight on their own. Add sparingly — over-filtering
 # strips real lemmas from the reading experience.
-SKIP_LEMMA_SLUGS: frozenset[str] = frozenset({
+#
+# DISABLED 2026-05-23 to match Strong's full coverage. The historical
+# entries are preserved in the literal below (commented) so they can be
+# re-enabled by moving any back inside the frozenset.
+_HISTORICAL_LEMMA_STOPWORDS = frozenset({
     # ─── Greek / NT ───
     # Auxiliary / generic verbs of being-having-doing-saying-perceiving
     'eimi',     # εἰμί — to be (~2,460× NT)
@@ -209,6 +227,10 @@ SKIP_LEMMA_SLUGS: frozenset[str] = frozenset({
     'yashav',   # יָשַׁב — to sit/dwell (~1,088× OT)
     'kol',      # כֹּל — all/every (~5,400× OT)
 })
+
+# Active skip list — currently empty (full Strong's coverage mode).
+# Add slugs back from _HISTORICAL_LEMMA_STOPWORDS to re-enable filtering.
+SKIP_LEMMA_SLUGS: frozenset[str] = frozenset()
 
 
 def is_content_pos(pos_code: str) -> bool:

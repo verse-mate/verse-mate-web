@@ -22,8 +22,16 @@
         "lemma": "mavet"
       },
       {
+        "surface": "I saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "seated",
+        "lemma": "yashav"
       },
       {
         "surface": "a throne",
@@ -110,6 +118,10 @@
     ],
     "3": [
       {
+        "surface": "were calling out",
+        "lemma": "qara"
+      },
+      {
         "surface": "Holy",
         "lemma": "qadosh"
       },
@@ -130,6 +142,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -146,6 +162,10 @@
       {
         "surface": "At the sound",
         "lemma": "qol"
+      },
+      {
+        "surface": "of their voices",
+        "lemma": "qara"
       },
       {
         "surface": "the doorposts",
@@ -174,8 +194,8 @@
     ],
     "5": [
       {
-        "surface": "Woe",
-        "lemma": "oy"
+        "surface": "Then I said",
+        "lemma": "amar"
       },
       {
         "surface": "I am ruined",
@@ -192,6 +212,10 @@
       {
         "surface": "lips",
         "lemma": "saphah"
+      },
+      {
+        "surface": "dwelling",
+        "lemma": "yashav"
       },
       {
         "surface": "among",
@@ -212,6 +236,10 @@
       {
         "surface": "my eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "have seen",
+        "lemma": "raah"
       },
       {
         "surface": "the King",
@@ -270,8 +298,8 @@
         "lemma": "peh"
       },
       {
-        "surface": "Now that",
-        "lemma": "hinneh"
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "has touched",
@@ -300,12 +328,20 @@
     ],
     "8": [
       {
+        "surface": "Then I heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the voice",
         "lemma": "qol"
       },
       {
         "surface": "of the Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Whom",
@@ -324,8 +360,8 @@
         "lemma": "halakh"
       },
       {
-        "surface": "Here am I",
-        "lemma": "hen"
+        "surface": "And I said",
+        "lemma": "amar"
       },
       {
         "surface": "Send me",
@@ -334,16 +370,40 @@
     ],
     "9": [
       {
+        "surface": "And He replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "Go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
       },
       {
         "surface": "people",
         "lemma": "am"
       },
       {
+        "surface": "Be ever hearing",
+        "lemma": "shama"
+      },
+      {
+        "surface": "but never",
+        "lemma": "al"
+      },
+      {
         "surface": "understanding",
         "lemma": "bin"
+      },
+      {
+        "surface": "be ever seeing",
+        "lemma": "raah"
+      },
+      {
+        "surface": "but never",
+        "lemma": "al"
       },
       {
         "surface": "perceiving",
@@ -380,8 +440,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "they might see",
+        "lemma": "raah"
+      },
+      {
         "surface": "with their eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "with their ears",
@@ -396,14 +464,26 @@
         "lemma": "levav"
       },
       {
+        "surface": "and turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and be healed",
         "lemma": "rapah"
       }
     ],
     "11": [
       {
+        "surface": "Then I asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "O Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "And He replied",
+        "lemma": "amar"
       },
       {
         "surface": "the cities",
@@ -416,6 +496,10 @@
       {
         "surface": "and without",
         "lemma": "ayin"
+      },
+      {
+        "surface": "inhabitant",
+        "lemma": "yashav"
       },
       {
         "surface": "until the houses",
@@ -474,8 +558,16 @@
         "lemma": "asiri"
       },
       {
+        "surface": "it will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "burned",
         "lemma": "baar"
+      },
+      {
+        "surface": "again",
+        "lemma": "shuv"
       },
       {
         "surface": "As the terebinth",
@@ -508,8 +600,8 @@
     ]
   },
   "themeLemmas": [
-    "shenayim",
-    "saphah",
-    "qadosh"
+    "amar",
+    "raah",
+    "yashav"
   ]
 }

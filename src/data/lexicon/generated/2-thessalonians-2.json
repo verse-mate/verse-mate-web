@@ -94,6 +94,10 @@
         "lemma": "proton"
       },
       {
+        "surface": "occurs",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "man",
         "lemma": "anthropos"
       },
@@ -124,6 +128,14 @@
         "lemma": "huperairo"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
+        "surface": "so-called",
+        "lemma": "lego"
+      },
+      {
         "surface": "god",
         "lemma": "theos"
       },
@@ -148,6 +160,10 @@
         "lemma": "apodeiknumi"
       },
       {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       }
@@ -158,11 +174,23 @@
         "lemma": "mnemoneuo"
       },
       {
+        "surface": "I told",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "while I was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "still",
         "lemma": "eti"
       }
     ],
     "6": [
+      {
+        "surface": "you know",
+        "lemma": "eido"
+      },
       {
         "surface": "vvv",
         "lemma": "nun"
@@ -208,6 +236,10 @@
       {
         "surface": "restrains it",
         "lemma": "katecho"
+      },
+      {
+        "surface": "he is taken",
+        "lemma": "ginomai"
       },
       {
         "surface": "the way",
@@ -266,12 +298,20 @@
         "lemma": "parousia"
       },
       {
+        "surface": "will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the working",
         "lemma": "energeia"
       },
       {
         "surface": "of Satan",
         "lemma": "satanas"
+      },
+      {
+        "surface": "every kind of",
+        "lemma": "pas"
       },
       {
         "surface": "power",
@@ -291,6 +331,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "every",
+        "lemma": "pas"
+      },
       {
         "surface": "wicked",
         "lemma": "adikia"
@@ -350,6 +394,10 @@
       {
         "surface": "judgment may come upon",
         "lemma": "krino"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "have disbelieved",
@@ -482,16 +530,8 @@
         "lemma": "didasko"
       },
       {
-        "surface": "whether",
-        "lemma": "eite"
-      },
-      {
         "surface": "speech",
         "lemma": "logos"
-      },
-      {
-        "surface": "or",
-        "lemma": "eite"
       },
       {
         "surface": "letter",
@@ -528,6 +568,10 @@
         "lemma": "agapao"
       },
       {
+        "surface": "given us",
+        "lemma": "didomi"
+      },
+      {
         "surface": "eternal",
         "lemma": "aionios"
       },
@@ -556,6 +600,10 @@
       {
         "surface": "strengthen you",
         "lemma": "sterizo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "good",

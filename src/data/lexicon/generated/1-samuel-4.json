@@ -14,12 +14,28 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
       {
         "surface": "Now the Israelites",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to meet",
+        "lemma": "qara"
       },
       {
         "surface": "the Philistines",
@@ -62,6 +78,10 @@
       {
         "surface": "arrayed themselves",
         "lemma": "arakh"
+      },
+      {
+        "surface": "against",
+        "lemma": "qara"
       },
       {
         "surface": "Israel",
@@ -118,6 +138,10 @@
         "lemma": "am"
       },
       {
+        "surface": "returned",
+        "lemma": "bo"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
       },
@@ -128,6 +152,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "Why",
@@ -172,6 +200,10 @@
       {
         "surface": "from Shiloh",
         "lemma": "shiloh"
+      },
+      {
+        "surface": "so that it may go",
+        "lemma": "bo"
       },
       {
         "surface": "with us",
@@ -228,6 +260,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "who sits enthroned",
+        "lemma": "yashav"
+      },
+      {
         "surface": "between the cherubim",
         "lemma": "keruv"
       },
@@ -270,6 +306,10 @@
     ],
     "5": [
       {
+        "surface": "When",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the ark",
         "lemma": "aron"
       },
@@ -282,8 +322,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the Israelites",
@@ -312,6 +360,10 @@
     ],
     "6": [
       {
+        "surface": "On hearing",
+        "lemma": "shama"
+      },
+      {
         "surface": "the noise",
         "lemma": "qol"
       },
@@ -322,6 +374,10 @@
       {
         "surface": "the Philistines",
         "lemma": "pelishti"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "What is",
@@ -356,6 +412,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "had entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
       }
@@ -374,12 +434,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "have entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "their camp",
         "lemma": "machaneh"
       },
       {
-        "surface": "Woe",
-        "lemma": "oy"
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "has happened",
+        "lemma": "hayah"
       },
       {
         "surface": "before",
@@ -387,10 +459,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
       {
         "surface": "Who",
         "lemma": "mi"
@@ -424,6 +492,10 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "with all kinds",
+        "lemma": "kol"
+      },
+      {
         "surface": "of plagues",
         "lemma": "makkah"
       },
@@ -436,6 +508,10 @@
       {
         "surface": "Take courage",
         "lemma": "chazaq"
+      },
+      {
+        "surface": "and be",
+        "lemma": "hayah"
       },
       {
         "surface": "men",
@@ -456,6 +532,10 @@
       {
         "surface": "they served",
         "lemma": "avad"
+      },
+      {
+        "surface": "Now be",
+        "lemma": "hayah"
       },
       {
         "surface": "men",
@@ -498,6 +578,10 @@
       {
         "surface": "The slaughter",
         "lemma": "makkah"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "very",
@@ -584,12 +668,20 @@
         "lemma": "maarakhah"
       },
       {
+        "surface": "all the way",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Shiloh",
         "lemma": "shiloh"
       },
       {
         "surface": "with his clothes",
         "lemma": "mad"
+      },
+      {
+        "surface": "torn",
+        "lemma": "qara"
       },
       {
         "surface": "and dirt",
@@ -602,12 +694,16 @@
     ],
     "13": [
       {
-        "surface": "there",
-        "lemma": "hinneh"
+        "surface": "When he arrived",
+        "lemma": "bo"
       },
       {
         "surface": "was Eli",
         "lemma": "eli"
+      },
+      {
+        "surface": "sitting",
+        "lemma": "yashav"
       },
       {
         "surface": "his chair",
@@ -630,6 +726,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
         "surface": "trembled",
         "lemma": "chared"
       },
@@ -646,12 +746,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
       },
       {
         "surface": "to give a report",
         "lemma": "nagad"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "city",
@@ -668,8 +776,16 @@
         "lemma": "eli"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the outcry",
         "lemma": "qol"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "amar"
       },
       {
         "surface": "Why",
@@ -716,9 +832,21 @@
       {
         "surface": "was fixed",
         "lemma": "qamay"
+      },
+      {
+        "surface": "because he could not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       }
     ],
     "16": [
+      {
+        "surface": "have just come",
+        "lemma": "bo"
+      },
       {
         "surface": "the battle",
         "lemma": "maarakhah"
@@ -726,6 +854,10 @@
       {
         "surface": "the man",
         "lemma": "ish"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Eli",
@@ -744,8 +876,16 @@
         "lemma": "mah"
       },
       {
+        "surface": "happened",
+        "lemma": "hayah"
+      },
+      {
         "surface": "my son",
         "lemma": "ben"
+      },
+      {
+        "surface": "Eli asked",
+        "lemma": "amar"
       }
     ],
     "17": [
@@ -772,6 +912,10 @@
       {
         "surface": "the Philistines",
         "lemma": "pelishti"
+      },
+      {
+        "surface": "there has been",
+        "lemma": "hayah"
       },
       {
         "surface": "a great",
@@ -819,6 +963,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "As soon as",
+        "lemma": "hayah"
+      },
       {
         "surface": "the ark",
         "lemma": "aron"
@@ -910,6 +1058,10 @@
         "lemma": "yalad"
       },
       {
+        "surface": "When she heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the news",
         "lemma": "shemuah"
       },
@@ -956,6 +1108,10 @@
     ],
     "20": [
       {
+        "surface": "As",
+        "lemma": "et"
+      },
+      {
         "surface": "she was dying",
         "lemma": "mut"
       },
@@ -966,6 +1122,10 @@
       {
         "surface": "said",
         "lemma": "davar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -980,6 +1140,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "But she did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "respond",
         "lemma": "un"
       },
@@ -989,6 +1153,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "And she named",
+        "lemma": "qara"
+      },
       {
         "surface": "the boy",
         "lemma": "naar"
@@ -1000,6 +1168,10 @@
       {
         "surface": "Ichabod",
         "lemma": "ikhavod"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "The glory",
@@ -1048,6 +1220,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "she said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the ark",
         "lemma": "aron"
       },
@@ -1062,8 +1238,8 @@
     ]
   },
   "themeLemmas": [
-    "eli",
     "yisrael",
-    "aron"
+    "aron",
+    "pelishti"
   ]
 }

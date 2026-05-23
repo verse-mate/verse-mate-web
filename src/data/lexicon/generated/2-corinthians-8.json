@@ -22,6 +22,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "has given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "churches",
         "lemma": "ekklesia"
       },
@@ -31,6 +35,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "the terrible",
+        "lemma": "polus"
+      },
       {
         "surface": "ordeal",
         "lemma": "dokime"
@@ -88,6 +96,10 @@
     ],
     "4": [
       {
+        "surface": "vvv",
+        "lemma": "polus"
+      },
+      {
         "surface": "they earnestly",
         "lemma": "paraklesis"
       },
@@ -116,6 +128,10 @@
       {
         "surface": "we expected",
         "lemma": "elpizo"
+      },
+      {
+        "surface": "they gave",
+        "lemma": "didomi"
       },
       {
         "surface": "first",
@@ -162,6 +178,10 @@
         "lemma": "perisseuo"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "in faith",
         "lemma": "pistis"
       },
@@ -172,6 +192,10 @@
       {
         "surface": "in knowledge",
         "lemma": "gnosis"
+      },
+      {
+        "surface": "complete",
+        "lemma": "pas"
       },
       {
         "surface": "earnestness",
@@ -191,6 +215,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "I am not giving",
+        "lemma": "lego"
+      },
       {
         "surface": "a command",
         "lemma": "epitage"
@@ -222,6 +250,10 @@
     ],
     "9": [
       {
+        "surface": "you know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
       },
@@ -236,6 +268,10 @@
       {
         "surface": "Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "though He was",
+        "lemma": "eimi"
       },
       {
         "surface": "rich",
@@ -256,6 +292,10 @@
     ],
     "10": [
       {
+        "surface": "is my opinion",
+        "lemma": "didomi"
+      },
+      {
         "surface": "what is helpful",
         "lemma": "sumphero"
       },
@@ -270,6 +310,14 @@
       {
         "surface": "only",
         "lemma": "monon"
+      },
+      {
+        "surface": "to give",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "to have such a desire",
+        "lemma": "thelo"
       }
     ],
     "11": [
@@ -282,12 +330,24 @@
         "lemma": "epiteleo"
       },
       {
+        "surface": "the work",
+        "lemma": "poieo"
+      },
+      {
         "surface": "you may complete it",
         "lemma": "epiteleo"
       },
       {
         "surface": "eager",
         "lemma": "prothumia"
+      },
+      {
+        "surface": "desire",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "means",
+        "lemma": "echo"
       }
     ],
     "12": [
@@ -302,6 +362,14 @@
       {
         "surface": "the gift is acceptable",
         "lemma": "euprosdektos"
+      },
+      {
+        "surface": "one has",
+        "lemma": "echo"
+      },
+      {
+        "surface": "what he does not have",
+        "lemma": "echo"
       }
     ],
     "13": [
@@ -344,8 +412,16 @@
         "lemma": "perisseuma"
       },
       {
+        "surface": "will",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "need",
         "lemma": "husterema"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "ginomai"
       },
       {
         "surface": "equality",
@@ -353,6 +429,14 @@
       }
     ],
     "15": [
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "much",
+        "lemma": "polus"
+      },
       {
         "surface": "had no excess",
         "lemma": "pleonazo"
@@ -374,6 +458,10 @@
       {
         "surface": "to God",
         "lemma": "theos"
+      },
+      {
+        "surface": "put",
+        "lemma": "didomi"
       },
       {
         "surface": "heart",
@@ -406,6 +494,10 @@
         "lemma": "spoudaios"
       },
       {
+        "surface": "coming",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "of his own volition",
         "lemma": "authairetos"
       }
@@ -422,6 +514,10 @@
       {
         "surface": "is praised",
         "lemma": "epainos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "churches",
@@ -528,8 +624,20 @@
         "lemma": "pollakis"
       },
       {
+        "surface": "many ways",
+        "lemma": "polus"
+      },
+      {
         "surface": "now",
         "lemma": "nuni"
+      },
+      {
+        "surface": "even",
+        "lemma": "polus"
+      },
+      {
+        "surface": "more",
+        "lemma": "polus"
       },
       {
         "surface": "so",
@@ -541,10 +649,6 @@
       }
     ],
     "23": [
-      {
-        "surface": "As for",
-        "lemma": "eite"
-      },
       {
         "surface": "Titus",
         "lemma": "titos"
@@ -560,10 +664,6 @@
       {
         "surface": "fellow worker",
         "lemma": "sunergos"
-      },
-      {
-        "surface": "As for",
-        "lemma": "eite"
       },
       {
         "surface": "brothers",

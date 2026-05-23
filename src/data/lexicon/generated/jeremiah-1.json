@@ -48,6 +48,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the thirteenth",
         "lemma": "shalosh"
       },
@@ -81,6 +85,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "and",
+        "lemma": "hayah"
+      },
       {
         "surface": "through the days",
         "lemma": "yom"
@@ -158,6 +166,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "5": [
@@ -182,8 +198,16 @@
         "lemma": "terem"
       },
       {
+        "surface": "you were born",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "I set you apart",
         "lemma": "qadash"
+      },
+      {
+        "surface": "and appointed you",
+        "lemma": "natan"
       },
       {
         "surface": "as a prophet",
@@ -196,10 +220,6 @@
     ],
     "6": [
       {
-        "surface": "Ah",
-        "lemma": "ahah"
-      },
-      {
         "surface": "Lord",
         "lemma": "adonai"
       },
@@ -208,8 +228,12 @@
         "lemma": "yehovih"
       },
       {
-        "surface": "I surely",
-        "lemma": "hinneh"
+        "surface": "I said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -230,8 +254,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
         "surface": "only a child",
         "lemma": "naar"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
       },
       {
         "surface": "I send you",
@@ -240,6 +280,10 @@
       {
         "surface": "you must go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "I command you",
@@ -251,6 +295,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "be afraid",
         "lemma": "yare"
@@ -294,8 +342,12 @@
         "lemma": "peh"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I have put",
+        "lemma": "natan"
       },
       {
         "surface": "My words",
@@ -307,6 +359,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "See",
+        "lemma": "raah"
+      },
       {
         "surface": "I have appointed",
         "lemma": "paqad"
@@ -358,6 +414,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "asking",
+        "lemma": "amar"
+      },
+      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
       },
@@ -366,18 +430,38 @@
         "lemma": "mah"
       },
       {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "a branch",
         "lemma": "maqqel"
       },
       {
         "surface": "of an almond tree",
         "lemma": "shaqed"
+      },
+      {
+        "surface": "I replied",
+        "lemma": "amar"
       }
     ],
     "12": [
       {
+        "surface": "You have observed",
+        "lemma": "raah"
+      },
+      {
         "surface": "correctly",
         "lemma": "yatav"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -390,6 +474,10 @@
       {
         "surface": "My word",
         "lemma": "davar"
+      },
+      {
+        "surface": "to accomplish it",
+        "lemma": "asah"
       }
     ],
     "13": [
@@ -406,8 +494,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "asking",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "a boiling",
@@ -416,6 +520,10 @@
       {
         "surface": "pot",
         "lemma": "sir"
+      },
+      {
+        "surface": "I replied",
+        "lemma": "amar"
       },
       {
         "surface": "and it is tilting toward us",
@@ -436,6 +544,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Disaster",
         "lemma": "ra"
       },
@@ -448,11 +560,27 @@
         "lemma": "patach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
       }
     ],
     "15": [
+      {
+        "surface": "I am about to summon",
+        "lemma": "qara"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the clans",
         "lemma": "mishpachah"
@@ -474,6 +602,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "Their kings will come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and set up",
+        "lemma": "natan"
+      },
+      {
         "surface": "their thrones",
         "lemma": "kisse"
       },
@@ -490,12 +626,20 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her surrounding",
         "lemma": "saviv"
       },
       {
         "surface": "walls",
         "lemma": "chomah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the other cities",
@@ -514,6 +658,10 @@
       {
         "surface": "My judgments",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their wickedness",
@@ -562,8 +710,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "command you",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be intimidated",
@@ -584,12 +740,12 @@
     ],
     "18": [
       {
-        "surface": "Now behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "this day",
         "lemma": "yom"
+      },
+      {
+        "surface": "have made you",
+        "lemma": "natan"
       },
       {
         "surface": "like a fortified",
@@ -614,6 +770,10 @@
       {
         "surface": "walls",
         "lemma": "chomah"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "land",
@@ -650,6 +810,10 @@
         "lemma": "lacham"
       },
       {
+        "surface": "but will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "overcome",
         "lemma": "yakhol"
       },
@@ -668,8 +832,8 @@
     ]
   },
   "themeLemmas": [
-    "yehudah",
-    "paneh",
-    "yoshiyyah"
+    "amar",
+    "kol",
+    "raah"
   ]
 }

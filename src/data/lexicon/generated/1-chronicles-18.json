@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Some time later",
+        "lemma": "hayah"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -54,6 +58,10 @@
       {
         "surface": "and they",
         "lemma": "moav"
+      },
+      {
+        "surface": "became",
+        "lemma": "hayah"
       },
       {
         "surface": "subject",
@@ -168,6 +176,10 @@
         "lemma": "aqar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the horses",
         "lemma": "rekhev"
       },
@@ -192,6 +204,10 @@
       {
         "surface": "of Damascus",
         "lemma": "dammeseq"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "to help",
@@ -252,6 +268,10 @@
         "lemma": "aram"
       },
       {
+        "surface": "became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "subject",
         "lemma": "eved"
       },
@@ -280,6 +300,10 @@
         "lemma": "yasah"
       },
       {
+        "surface": "wherever",
+        "lemma": "kol"
+      },
+      {
         "surface": "he went",
         "lemma": "halakh"
       }
@@ -302,12 +326,20 @@
         "lemma": "shelet"
       },
       {
+        "surface": "belonged",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the officers",
         "lemma": "eved"
       },
       {
         "surface": "of Hadadezer",
         "lemma": "hadadezer"
+      },
+      {
+        "surface": "and brought them",
+        "lemma": "bo"
       },
       {
         "surface": "to Jerusalem",
@@ -356,6 +388,10 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
         "surface": "the bronze",
         "lemma": "nechoshet"
       },
@@ -390,12 +426,20 @@
         "lemma": "chamat"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
       {
         "surface": "had defeated",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "the entire",
+        "lemma": "kol"
       },
       {
         "surface": "army",
@@ -460,12 +504,20 @@
         "lemma": "hadadezer"
       },
       {
+        "surface": "had been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at war",
         "lemma": "milchamah"
       },
       {
         "surface": "with Tou",
         "lemma": "tou"
+      },
+      {
+        "surface": "Hadoram brought all kinds",
+        "lemma": "kol"
       },
       {
         "surface": "of articles",
@@ -512,6 +564,10 @@
       {
         "surface": "he had carried off",
         "lemma": "nasa"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "these nations",
@@ -590,8 +646,16 @@
         "lemma": "edom"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Edomites",
         "lemma": "edom"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "subject",
@@ -614,6 +678,10 @@
         "lemma": "yasah"
       },
       {
+        "surface": "wherever",
+        "lemma": "kol"
+      },
+      {
         "surface": "he went",
         "lemma": "halakh"
       }
@@ -628,8 +696,20 @@
         "lemma": "malakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "and",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "administered",
+        "lemma": "asah"
       },
       {
         "surface": "justice",
@@ -638,6 +718,10 @@
       {
         "surface": "and righteousness",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "his people",
@@ -761,7 +845,7 @@
   },
   "themeLemmas": [
     "david",
-    "nakhah",
-    "hadadezer"
+    "kol",
+    "nakhah"
   ]
 }

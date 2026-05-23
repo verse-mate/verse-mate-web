@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "You are to",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "imitate",
         "lemma": "mimetes"
       },
@@ -24,6 +28,10 @@
         "lemma": "mimnesko"
       },
       {
+        "surface": "in everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "for maintaining",
         "lemma": "katecho"
       },
@@ -38,12 +46,28 @@
     ],
     "3": [
       {
+        "surface": "I want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to understand",
+        "lemma": "eido"
+      },
+      {
         "surface": "head",
         "lemma": "kephale"
       },
       {
+        "surface": "of every",
+        "lemma": "pas"
+      },
+      {
         "surface": "man",
         "lemma": "aner"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "Christ",
@@ -76,6 +100,10 @@
     ],
     "4": [
       {
+        "surface": "Every",
+        "lemma": "pas"
+      },
+      {
         "surface": "man",
         "lemma": "aner"
       },
@@ -86,6 +114,10 @@
       {
         "surface": "prophesies",
         "lemma": "propheteuo"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "his head",
@@ -101,6 +133,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "every",
+        "lemma": "pas"
+      },
       {
         "surface": "woman",
         "lemma": "gune"
@@ -128,6 +164,14 @@
       {
         "surface": "head",
         "lemma": "kephale"
+      },
+      {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "heis"
       },
       {
         "surface": "her head were shaved",
@@ -206,6 +250,10 @@
         "lemma": "gune"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the glory",
         "lemma": "doxa"
       },
@@ -218,6 +266,10 @@
       {
         "surface": "man",
         "lemma": "aner"
+      },
+      {
+        "surface": "did not come",
+        "lemma": "eimi"
       },
       {
         "surface": "woman",
@@ -262,6 +314,10 @@
       {
         "surface": "ought",
         "lemma": "opheilo"
+      },
+      {
+        "surface": "to have",
+        "lemma": "echo"
       },
       {
         "surface": "a sign of authority",
@@ -320,6 +376,10 @@
         "lemma": "gune"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       }
@@ -328,6 +388,10 @@
       {
         "surface": "Judge",
         "lemma": "krino"
+      },
+      {
+        "surface": "Is it",
+        "lemma": "eimi"
       },
       {
         "surface": "proper",
@@ -368,6 +432,10 @@
         "lemma": "komao"
       },
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a disgrace",
         "lemma": "atimia"
       }
@@ -382,12 +450,20 @@
         "lemma": "komao"
       },
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
       },
       {
         "surface": "long hair",
         "lemma": "kome"
+      },
+      {
+        "surface": "is given",
+        "lemma": "didomi"
       },
       {
         "surface": "a covering",
@@ -398,6 +474,10 @@
       {
         "surface": "is inclined to dispute this",
         "lemma": "dokeo"
+      },
+      {
+        "surface": "have",
+        "lemma": "echo"
       },
       {
         "surface": "practice",
@@ -440,6 +520,10 @@
         "lemma": "proton"
       },
       {
+        "surface": "I hear that",
+        "lemma": "akouo"
+      },
+      {
         "surface": "come together",
         "lemma": "sunerchomai"
       },
@@ -470,8 +554,16 @@
         "lemma": "dei"
       },
       {
+        "surface": "be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "differences",
         "lemma": "hairesis"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ginomai"
       },
       {
         "surface": "show",
@@ -486,6 +578,10 @@
       {
         "surface": "come together",
         "lemma": "sunerchomai"
+      },
+      {
+        "surface": "it is",
+        "lemma": "eimi"
       },
       {
         "surface": "the Lord’s",
@@ -528,6 +624,10 @@
     ],
     "22": [
       {
+        "surface": "you have",
+        "lemma": "echo"
+      },
+      {
         "surface": "homes",
         "lemma": "oikia"
       },
@@ -554,6 +654,18 @@
       {
         "surface": "humiliate",
         "lemma": "kataischuno"
+      },
+      {
+        "surface": "have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "can I say",
+        "lemma": "eipon"
       },
       {
         "surface": "Shall I praise",
@@ -594,6 +706,10 @@
         "lemma": "paradidomi"
       },
       {
+        "surface": "took",
+        "lemma": "lambano"
+      },
+      {
         "surface": "bread",
         "lemma": "artos"
       }
@@ -608,8 +724,20 @@
         "lemma": "klao"
       },
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "body",
         "lemma": "soma"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
       },
       {
         "surface": "remembrance",
@@ -634,8 +762,16 @@
         "lemma": "poterion"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "cup",
         "lemma": "poterion"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "new",
@@ -652,6 +788,10 @@
       {
         "surface": "blood",
         "lemma": "haima"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
       },
       {
         "surface": "you drink it",
@@ -694,6 +834,10 @@
       {
         "surface": "death",
         "lemma": "thanatos"
+      },
+      {
+        "surface": "He comes",
+        "lemma": "erchomai"
       }
     ],
     "27": [
@@ -720,6 +864,10 @@
       {
         "surface": "in an unworthy manner",
         "lemma": "anaxios"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "guilty of sinning",
@@ -796,6 +944,10 @@
     ],
     "30": [
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "are weak",
         "lemma": "asthenes"
       },
@@ -816,10 +968,6 @@
       {
         "surface": "we judged",
         "lemma": "diakrino"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "an"
       },
       {
         "surface": "we would not come under judgment",
@@ -892,8 +1040,8 @@
         "lemma": "krima"
       },
       {
-        "surface": "vvv",
-        "lemma": "an"
+        "surface": "I come",
+        "lemma": "erchomai"
       },
       {
         "surface": "I will give instructions",

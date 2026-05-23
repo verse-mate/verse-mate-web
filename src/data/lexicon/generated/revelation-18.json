@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "another",
         "lemma": "allos"
       },
@@ -20,6 +24,14 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "authority",
@@ -64,6 +76,14 @@
         "lemma": "babulon"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
+        "surface": "She has become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a lair",
         "lemma": "katoiketerion"
       },
@@ -76,6 +96,10 @@
         "lemma": "phulake"
       },
       {
+        "surface": "for every",
+        "lemma": "pas"
+      },
+      {
         "surface": "unclean",
         "lemma": "akathartos"
       },
@@ -84,12 +108,20 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "unclean",
         "lemma": "akathartos"
       },
       {
         "surface": "bird",
         "lemma": "orneon"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "detestable",
@@ -101,6 +133,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "All",
+        "lemma": "pas"
+      },
       {
         "surface": "nations",
         "lemma": "ethnos"
@@ -156,6 +192,10 @@
     ],
     "4": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "another",
         "lemma": "allos"
       },
@@ -168,6 +208,14 @@
         "lemma": "ouranos"
       },
       {
+        "surface": "say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Come",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "people",
         "lemma": "laos"
       },
@@ -178,6 +226,10 @@
       {
         "surface": "sins",
         "lemma": "hamartia"
+      },
+      {
+        "surface": "contract",
+        "lemma": "lambano"
       },
       {
         "surface": "plagues",
@@ -258,6 +310,10 @@
         "lemma": "streniao"
       },
       {
+        "surface": "give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "the same measure",
         "lemma": "tosoutos"
       },
@@ -274,6 +330,10 @@
         "lemma": "kardia"
       },
       {
+        "surface": "she says",
+        "lemma": "lego"
+      },
+      {
         "surface": "I sit",
         "lemma": "kathemai"
       },
@@ -282,8 +342,16 @@
         "lemma": "basilissa"
       },
       {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a widow",
         "lemma": "chera"
+      },
+      {
+        "surface": "see",
+        "lemma": "horao"
       },
       {
         "surface": "grief",
@@ -298,6 +366,10 @@
       {
         "surface": "will come",
         "lemma": "heko"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "day",
@@ -388,8 +460,20 @@
         "lemma": "basanismos"
       },
       {
+        "surface": "they will stand",
+        "lemma": "histemi"
+      },
+      {
         "surface": "a distance",
         "lemma": "makrothen"
+      },
+      {
+        "surface": "and cry out",
+        "lemma": "lego"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "city",
@@ -408,12 +492,20 @@
         "lemma": "babulon"
       },
       {
+        "surface": "a single",
+        "lemma": "heis"
+      },
+      {
         "surface": "hour",
         "lemma": "hora"
       },
       {
         "surface": "judgment",
         "lemma": "krisis"
+      },
+      {
+        "surface": "has come",
+        "lemma": "erchomai"
       }
     ],
     "11": [
@@ -432,6 +524,10 @@
       {
         "surface": "mourn",
         "lemma": "pentheo"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
       },
       {
         "surface": "to buy",
@@ -484,12 +580,20 @@
         "lemma": "kokkinos"
       },
       {
+        "surface": "of all kinds",
+        "lemma": "pas"
+      },
+      {
         "surface": "of citron",
         "lemma": "thuinos"
       },
       {
         "surface": "wood",
         "lemma": "xulon"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "article",
@@ -604,6 +708,10 @@
         "lemma": "aperchomai"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "luxury",
         "lemma": "liparos"
       },
@@ -614,6 +722,10 @@
       {
         "surface": "have vanished",
         "lemma": "apolluo"
+      },
+      {
+        "surface": "never to be seen",
+        "lemma": "heurisko"
       }
     ],
     "15": [
@@ -624,6 +736,10 @@
       {
         "surface": "and gained their wealth",
         "lemma": "plouteo"
+      },
+      {
+        "surface": "will stand",
+        "lemma": "histemi"
       },
       {
         "surface": "a distance",
@@ -647,6 +763,14 @@
       }
     ],
     "16": [
+      {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
+      },
       {
         "surface": "city",
         "lemma": "polis"
@@ -690,6 +814,10 @@
     ],
     "17": [
       {
+        "surface": "a single",
+        "lemma": "heis"
+      },
+      {
         "surface": "hour",
         "lemma": "hora"
       },
@@ -704,6 +832,10 @@
       {
         "surface": "has been destroyed",
         "lemma": "eremoo"
+      },
+      {
+        "surface": "Every",
+        "lemma": "pas"
       },
       {
         "surface": "shipmaster",
@@ -724,6 +856,10 @@
       {
         "surface": "sea",
         "lemma": "thalassa"
+      },
+      {
+        "surface": "will stand",
+        "lemma": "histemi"
       },
       {
         "surface": "a distance",
@@ -748,12 +884,24 @@
         "lemma": "purosis"
       },
       {
+        "surface": "What city was ever",
+        "lemma": "tis"
+      },
+      {
         "surface": "like",
         "lemma": "homoios"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "city",
         "lemma": "polis"
+      },
+      {
+        "surface": "they will exclaim",
+        "lemma": "lego"
       }
     ],
     "19": [
@@ -782,8 +930,20 @@
         "lemma": "krazo"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "city",
         "lemma": "polis"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "had",
+        "lemma": "echo"
       },
       {
         "surface": "ships",
@@ -800,6 +960,10 @@
       {
         "surface": "wealth",
         "lemma": "timiotes"
+      },
+      {
+        "surface": "in a single",
+        "lemma": "heis"
       },
       {
         "surface": "hour",
@@ -846,6 +1010,10 @@
     ],
     "21": [
       {
+        "surface": "a",
+        "lemma": "heis"
+      },
+      {
         "surface": "mighty",
         "lemma": "ischuros"
       },
@@ -862,6 +1030,10 @@
         "lemma": "lithos"
       },
       {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "millstone",
         "lemma": "mulos"
       },
@@ -874,12 +1046,20 @@
         "lemma": "thalassa"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "With such",
         "lemma": "houto"
       },
       {
         "surface": "violence",
         "lemma": "hormema"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "city",
@@ -892,6 +1072,10 @@
       {
         "surface": "will be cast down",
         "lemma": "ballo"
+      },
+      {
+        "surface": "never to be seen",
+        "lemma": "heurisko"
       },
       {
         "surface": "again",
@@ -920,16 +1104,32 @@
         "lemma": "salpistes"
       },
       {
+        "surface": "will never ring out",
+        "lemma": "akouo"
+      },
+      {
         "surface": "again",
         "lemma": "eti"
+      },
+      {
+        "surface": "any",
+        "lemma": "pas"
       },
       {
         "surface": "craftsmen",
         "lemma": "technites"
       },
       {
+        "surface": "of any",
+        "lemma": "pas"
+      },
+      {
         "surface": "trade",
         "lemma": "techne"
+      },
+      {
+        "surface": "be found",
+        "lemma": "heurisko"
       },
       {
         "surface": "again",
@@ -942,6 +1142,10 @@
       {
         "surface": "of a millstone",
         "lemma": "mulos"
+      },
+      {
+        "surface": "be heard",
+        "lemma": "akouo"
       },
       {
         "surface": "again",
@@ -978,6 +1182,10 @@
         "lemma": "numphios"
       },
       {
+        "surface": "will never call out",
+        "lemma": "akouo"
+      },
+      {
         "surface": "again",
         "lemma": "eti"
       },
@@ -986,12 +1194,20 @@
         "lemma": "emporos"
       },
       {
+        "surface": "were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "great ones",
         "lemma": "megistan"
       },
       {
         "surface": "earth",
         "lemma": "ge"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "nations",
@@ -1008,6 +1224,10 @@
     ],
     "24": [
       {
+        "surface": "there was found",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "the blood",
         "lemma": "haima"
       },
@@ -1018,6 +1238,10 @@
       {
         "surface": "saints",
         "lemma": "hagios"
+      },
+      {
+        "surface": "of all",
+        "lemma": "pas"
       },
       {
         "surface": "had been slain",

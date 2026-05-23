@@ -10,16 +10,32 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Noah",
         "lemma": "noach"
+      },
+      {
+        "surface": "Go",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",
         "lemma": "tevah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your family",
         "lemma": "bet"
+      },
+      {
+        "surface": "I have found",
+        "lemma": "raah"
       },
       {
         "surface": "righteous",
@@ -40,6 +56,10 @@
         "lemma": "sheva"
       },
       {
+        "surface": "every kind of",
+        "lemma": "kol"
+      },
+      {
         "surface": "clean",
         "lemma": "tahor"
       },
@@ -58,6 +78,10 @@
       {
         "surface": "a pair",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "unclean",
@@ -108,6 +132,10 @@
       {
         "surface": "the face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -164,14 +192,30 @@
         "lemma": "adamah"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "living thing",
         "lemma": "yequm"
+      },
+      {
+        "surface": "I have made",
+        "lemma": "asah"
       }
     ],
     "5": [
       {
         "surface": "And Noah",
         "lemma": "noach"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the LORD",
@@ -204,6 +248,10 @@
         "lemma": "mabbul"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
@@ -228,6 +276,10 @@
       {
         "surface": "wives",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "entered",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",
@@ -268,6 +320,10 @@
         "lemma": "oph"
       },
       {
+        "surface": "and everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "crawls",
         "lemma": "ramas"
       },
@@ -277,6 +333,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
       {
         "surface": "Noah",
         "lemma": "noach"
@@ -316,6 +376,10 @@
     ],
     "10": [
       {
+        "surface": "And after",
+        "lemma": "hayah"
+      },
+      {
         "surface": "seven",
         "lemma": "sheva"
       },
@@ -326,6 +390,10 @@
       {
         "surface": "the floodwaters",
         "lemma": "mayim"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
       },
       {
         "surface": "the earth",
@@ -374,6 +442,10 @@
         "lemma": "chodesh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fountains",
         "lemma": "mayan"
       },
@@ -408,6 +480,10 @@
         "lemma": "geshem"
       },
       {
+        "surface": "fell",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -440,6 +516,10 @@
       {
         "surface": "Noah",
         "lemma": "noach"
+      },
+      {
+        "surface": "entered",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",
@@ -484,6 +564,14 @@
     ],
     "14": [
       {
+        "surface": "and",
+        "lemma": "kol"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "kind of",
         "lemma": "min"
       },
@@ -504,11 +592,19 @@
         "lemma": "oph"
       },
       {
+        "surface": "and",
+        "lemma": "kol"
+      },
+      {
         "surface": "winged creature",
         "lemma": "tsippor"
       }
     ],
     "15": [
+      {
+        "surface": "They came",
+        "lemma": "bo"
+      },
       {
         "surface": "Noah",
         "lemma": "noach"
@@ -526,6 +622,10 @@
         "lemma": "shenayim"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "creature",
         "lemma": "basar"
       },
@@ -540,12 +640,20 @@
     ],
     "16": [
       {
+        "surface": "And they entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the male",
         "lemma": "zakhar"
       },
       {
         "surface": "and female",
         "lemma": "neqevah"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "living thing",
@@ -580,6 +688,10 @@
       {
         "surface": "the flood",
         "lemma": "mabbul"
+      },
+      {
+        "surface": "kept coming",
+        "lemma": "hayah"
       },
       {
         "surface": "the earth",
@@ -662,6 +774,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "so that all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the high",
         "lemma": "gavoah"
       },
@@ -672,6 +788,10 @@
       {
         "surface": "under",
         "lemma": "tachat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the heavens",
@@ -714,6 +834,10 @@
     ],
     "21": [
       {
+        "surface": "And every",
+        "lemma": "kol"
+      },
+      {
         "surface": "living thing",
         "lemma": "basar"
       },
@@ -742,6 +866,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "creature that swarms",
         "lemma": "sherets"
       },
@@ -750,14 +878,26 @@
         "lemma": "erets"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "mankind",
         "lemma": "adam"
       }
     ],
     "22": [
       {
+        "surface": "Of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "on dry land",
         "lemma": "charavah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "the breath",
@@ -781,6 +921,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "And every",
+        "lemma": "kol"
+      },
       {
         "surface": "living thing",
         "lemma": "yequm"
@@ -866,8 +1010,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "noach",
-    "tevah",
-    "mayim"
+    "tevah"
   ]
 }

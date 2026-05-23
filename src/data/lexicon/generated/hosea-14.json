@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O Israel",
         "lemma": "yisrael"
       },
@@ -36,12 +40,24 @@
         "lemma": "davar"
       },
       {
+        "surface": "and return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "Say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Take away",
         "lemma": "nasa"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "our iniquity",
@@ -74,8 +90,16 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "save us",
         "lemma": "yasah"
+      },
+      {
+        "surface": "nor will we",
+        "lemma": "lo"
       },
       {
         "surface": "ride",
@@ -84,6 +108,14 @@
       {
         "surface": "horses",
         "lemma": "sus"
+      },
+      {
+        "surface": "We will never again",
+        "lemma": "lo"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Our gods",
@@ -126,9 +158,17 @@
       {
         "surface": "My anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "has turned away",
+        "lemma": "shuv"
       }
     ],
     "5": [
+      {
+        "surface": "I will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "like the dew",
         "lemma": "tal"
@@ -172,6 +212,10 @@
         "lemma": "hod"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like the olive tree",
         "lemma": "zayit"
       },
@@ -185,6 +229,14 @@
       }
     ],
     "7": [
+      {
+        "surface": "They will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and dwell",
+        "lemma": "yashav"
+      },
       {
         "surface": "in his shade",
         "lemma": "tsel"
@@ -312,8 +364,8 @@
     ]
   },
   "themeLemmas": [
-    "levanon",
-    "yisrael",
-    "parach"
+    "shuv",
+    "lo",
+    "levanon"
   ]
 }

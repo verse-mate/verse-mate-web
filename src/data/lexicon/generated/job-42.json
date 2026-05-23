@@ -28,6 +28,14 @@
         "lemma": "yakhol"
       },
       {
+        "surface": "all things",
+        "lemma": "kol"
+      },
+      {
+        "surface": "and that no",
+        "lemma": "lo"
+      },
+      {
         "surface": "plan",
         "lemma": "mezimmah"
       },
@@ -66,6 +74,10 @@
         "lemma": "nagad"
       },
       {
+        "surface": "I did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "understand",
         "lemma": "bin"
       },
@@ -80,8 +92,8 @@
     ],
     "4": [
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "You said, ‘Listen",
+        "lemma": "shama"
       },
       {
         "surface": "will speak",
@@ -102,12 +114,20 @@
         "lemma": "shema"
       },
       {
+        "surface": "had heard of You",
+        "lemma": "shama"
+      },
+      {
         "surface": "but now",
         "lemma": "attah"
       },
       {
         "surface": "my eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "have seen You",
+        "lemma": "raah"
       }
     ],
     "6": [
@@ -154,6 +174,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Eliphaz",
         "lemma": "eliphaz"
       },
@@ -176,6 +200,10 @@
       {
         "surface": "friends",
         "lemma": "rea"
+      },
+      {
+        "surface": "you have not",
+        "lemma": "lo"
       },
       {
         "surface": "spoken",
@@ -268,8 +296,16 @@
         "lemma": "bilti"
       },
       {
+        "surface": "deal",
+        "lemma": "asah"
+      },
+      {
         "surface": "according to your folly",
         "lemma": "nevalah"
+      },
+      {
+        "surface": "you have not",
+        "lemma": "lo"
       },
       {
         "surface": "spoken",
@@ -318,6 +354,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "and did",
+        "lemma": "asah"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -360,6 +400,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "restored",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his prosperity",
         "lemma": "shevut"
       },
@@ -370,12 +414,24 @@
       {
         "surface": "his",
         "lemma": "iyyov"
+      },
+      {
+        "surface": "former possessions",
+        "lemma": "kol"
       }
     ],
     "11": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "his brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "sisters",
@@ -388,6 +444,10 @@
       {
         "surface": "acquaintances",
         "lemma": "yada"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "and dined",
@@ -406,6 +466,10 @@
         "lemma": "nacham"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the adversity",
         "lemma": "ra"
       },
@@ -414,8 +478,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "had brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "And each",
         "lemma": "ish"
+      },
+      {
+        "surface": "one gave",
+        "lemma": "natan"
       },
       {
         "surface": "a",
@@ -460,6 +532,10 @@
         "lemma": "reshit"
       },
       {
+        "surface": "He owned",
+        "lemma": "hayah"
+      },
+      {
         "surface": "14,000",
         "lemma": "arba"
       },
@@ -498,6 +574,10 @@
     ],
     "13": [
       {
+        "surface": "And he also had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "seven",
         "lemma": "shivanah"
       },
@@ -515,6 +595,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "He named",
+        "lemma": "qara"
+      },
       {
         "surface": "his first",
         "lemma": "echad"
@@ -546,6 +630,10 @@
     ],
     "15": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "women",
         "lemma": "ishshah"
       },
@@ -566,8 +654,20 @@
         "lemma": "matsa"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "and their father",
+        "lemma": "av"
+      },
+      {
+        "surface": "granted",
+        "lemma": "natan"
       },
       {
         "surface": "an inheritance",
@@ -602,6 +702,10 @@
       {
         "surface": "years",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "raah"
       },
       {
         "surface": "his children",
@@ -649,7 +753,7 @@
   },
   "themeLemmas": [
     "iyyov",
-    "yada",
-    "echad"
+    "kol",
+    "lo"
   ]
 }

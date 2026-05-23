@@ -18,6 +18,10 @@
         "lemma": "or"
       },
       {
+        "surface": "has come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and the glory",
         "lemma": "kavod"
       },
@@ -31,10 +35,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "darkness",
         "lemma": "choshekh"
@@ -66,6 +66,10 @@
       {
         "surface": "and His glory",
         "lemma": "kavod"
+      },
+      {
+        "surface": "will appear",
+        "lemma": "raah"
       }
     ],
     "3": [
@@ -104,16 +108,32 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and look",
+        "lemma": "raah"
+      },
+      {
         "surface": "around",
         "lemma": "saviv"
+      },
+      {
+        "surface": "They all",
+        "lemma": "kol"
       },
       {
         "surface": "gather",
         "lemma": "qavats"
       },
       {
+        "surface": "and come",
+        "lemma": "bo"
+      },
+      {
         "surface": "your sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "from afar",
@@ -133,6 +153,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "you will look",
+        "lemma": "raah"
+      },
       {
         "surface": "and be radiant",
         "lemma": "nahar"
@@ -168,6 +192,10 @@
       {
         "surface": "of the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       }
     ],
     "6": [
@@ -196,8 +224,16 @@
         "lemma": "ephah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "from Sheba",
         "lemma": "sheva"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "bearing",
@@ -225,6 +261,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the flocks",
         "lemma": "tson"
@@ -284,6 +324,10 @@
         "lemma": "uph"
       },
       {
+        "surface": "like clouds",
+        "lemma": "av"
+      },
+      {
         "surface": "like doves",
         "lemma": "yonah"
       },
@@ -312,6 +356,10 @@
       {
         "surface": "in the lead",
         "lemma": "rishon"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "bo"
       },
       {
         "surface": "your children",
@@ -406,6 +454,10 @@
         "lemma": "patach"
       },
       {
+        "surface": "they will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "be shut",
         "lemma": "sagar"
       },
@@ -426,6 +478,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "may be brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "with their kings",
         "lemma": "melekh"
       },
@@ -442,6 +498,10 @@
       {
         "surface": "or kingdom",
         "lemma": "mamlakhah"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "serve you",
@@ -468,6 +528,10 @@
       {
         "surface": "of Lebanon",
         "lemma": "levanon"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "its cypress",
@@ -528,6 +592,10 @@
         "lemma": "shachach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who reviled you",
         "lemma": "naats"
       },
@@ -538,6 +606,10 @@
       {
         "surface": "your feet",
         "lemma": "kaph"
+      },
+      {
+        "surface": "and call",
+        "lemma": "qara"
       },
       {
         "surface": "the City",
@@ -564,6 +636,10 @@
       {
         "surface": "Whereas",
         "lemma": "tachat"
+      },
+      {
+        "surface": "you have been",
+        "lemma": "hayah"
       },
       {
         "surface": "forsaken",
@@ -666,8 +742,16 @@
         "lemma": "nechoshet"
       },
       {
+        "surface": "I will bring you",
+        "lemma": "bo"
+      },
+      {
         "surface": "gold",
         "lemma": "zahav"
+      },
+      {
+        "surface": "I will bring",
+        "lemma": "bo"
       },
       {
         "surface": "silver",
@@ -728,12 +812,20 @@
     ],
     "18": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
       {
         "surface": "will} violence",
         "lemma": "chamas"
+      },
+      {
+        "surface": "be heard",
+        "lemma": "shama"
       },
       {
         "surface": "in your land",
@@ -750,6 +842,10 @@
       {
         "surface": "within your borders",
         "lemma": "gevul"
+      },
+      {
+        "surface": "But you will name",
+        "lemma": "qara"
       },
       {
         "surface": "your walls",
@@ -770,6 +866,10 @@
     ],
     "19": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -778,12 +878,20 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "your light",
         "lemma": "or"
       },
       {
         "surface": "by day",
         "lemma": "yomam"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "the brightness",
@@ -800,6 +908,10 @@
       {
         "surface": "for the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "everlasting",
@@ -824,12 +936,24 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "will no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
       {
+        "surface": "set",
+        "lemma": "bo"
+      },
+      {
         "surface": "and your moon",
         "lemma": "yareach"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "wane",
@@ -838,6 +962,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "everlasting",
@@ -861,6 +989,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
       {
         "surface": "your people",
         "lemma": "am"
@@ -904,6 +1036,10 @@
         "lemma": "qatan"
       },
       {
+        "surface": "will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a thousand",
         "lemma": "eleph"
       },
@@ -924,14 +1060,18 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "in its time",
+        "lemma": "et"
+      },
+      {
         "surface": "I will accomplish it quickly",
         "lemma": "chush"
       }
     ]
   },
   "themeLemmas": [
+    "bo",
     "or",
-    "tachat",
-    "paar"
+    "lo"
   ]
 }

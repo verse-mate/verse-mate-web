@@ -14,6 +14,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -40,12 +44,24 @@
         "lemma": "halakh"
       },
       {
+        "surface": "I asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "To measure",
         "lemma": "madad"
       },
       {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and to determine",
+        "lemma": "raah"
       },
       {
         "surface": "its width",
@@ -58,10 +74,6 @@
     ],
     "3": [
       {
-        "surface": "Then",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the angel",
         "lemma": "maleakh"
       },
@@ -70,15 +82,31 @@
         "lemma": "davar"
       },
       {
+        "surface": "went forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and another",
         "lemma": "acher"
       },
       {
         "surface": "angel",
         "lemma": "maleakh"
+      },
+      {
+        "surface": "came forward",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to meet him",
+        "lemma": "qara"
       }
     ],
     "4": [
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
       {
         "surface": "Run",
         "lemma": "ruts"
@@ -94,6 +122,10 @@
       {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "will be a city",
+        "lemma": "yashav"
       },
       {
         "surface": "without walls",
@@ -118,6 +150,10 @@
     ],
     "5": [
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a wall",
         "lemma": "chomah"
       },
@@ -138,6 +174,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and I will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the glory",
         "lemma": "kavod"
       },
@@ -147,14 +187,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "Get up",
-        "lemma": "hoy"
-      },
-      {
-        "surface": "Get up",
-        "lemma": "hoy"
-      },
       {
         "surface": "Flee",
         "lemma": "nus"
@@ -202,16 +234,16 @@
     ],
     "7": [
       {
-        "surface": "Get up",
-        "lemma": "hoy"
-      },
-      {
         "surface": "O Zion",
         "lemma": "tsiyyon"
       },
       {
         "surface": "Escape",
         "lemma": "malat"
+      },
+      {
+        "surface": "you who dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "with the Daughter",
@@ -234,6 +266,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "After His Glory",
@@ -270,16 +306,16 @@
     ],
     "9": [
       {
-        "surface": "I will surely",
-        "lemma": "hen"
-      },
-      {
         "surface": "wave",
         "lemma": "nuph"
       },
       {
         "surface": "My hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "so that they will become",
+        "lemma": "hayah"
       },
       {
         "surface": "plunder",
@@ -324,6 +360,10 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "I am coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "to dwell",
         "lemma": "shakhan"
       },
@@ -360,6 +400,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and they will become",
+        "lemma": "hayah"
       },
       {
         "surface": "people",
@@ -442,6 +486,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "people",
         "lemma": "basar"
       },
@@ -462,6 +510,6 @@
   "themeLemmas": [
     "tavekh",
     "neum",
-    "yerushalaim"
+    "hayah"
   ]
 }

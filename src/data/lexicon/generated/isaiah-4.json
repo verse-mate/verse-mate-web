@@ -30,6 +30,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "We will eat",
         "lemma": "akhal"
       },
@@ -44,6 +48,10 @@
       {
         "surface": "our own clothes",
         "lemma": "simlah"
+      },
+      {
+        "surface": "let us be called",
+        "lemma": "qara"
       },
       {
         "surface": "by your name",
@@ -70,6 +78,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "beautiful",
@@ -122,8 +134,16 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "will be called",
+        "lemma": "amar"
+      },
+      {
         "surface": "holy",
         "lemma": "qadosh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "in Jerusalem",
@@ -139,6 +159,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "when",
+        "lemma": "im"
+      },
       {
         "surface": "the Lord",
         "lemma": "adonai"
@@ -202,6 +226,10 @@
         "lemma": "bara"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of Mount",
         "lemma": "har"
       },
@@ -240,6 +268,10 @@
       {
         "surface": "by night",
         "lemma": "laylah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the glory",
@@ -288,6 +320,6 @@
   "themeLemmas": [
     "yerushalaim",
     "tsiyyon",
-    "yomam"
+    "kol"
   ]
 }

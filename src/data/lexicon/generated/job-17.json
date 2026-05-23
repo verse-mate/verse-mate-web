@@ -28,6 +28,10 @@
     ],
     "2": [
       {
+        "surface": "Surely",
+        "lemma": "im"
+      },
+      {
         "surface": "mockers",
         "lemma": "hatol"
       },
@@ -48,10 +52,6 @@
       {
         "surface": "Give me",
         "lemma": "sum"
-      },
-      {
-        "surface": "I pray",
-        "lemma": "na"
       },
       {
         "surface": "the pledge",
@@ -78,6 +78,10 @@
       {
         "surface": "to understanding",
         "lemma": "sekhel"
+      },
+      {
+        "surface": "You will not",
+        "lemma": "lo"
       },
       {
         "surface": "exalt them",
@@ -124,6 +128,10 @@
         "lemma": "am"
       },
       {
+        "surface": "a man",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in whose face",
         "lemma": "paneh"
       },
@@ -144,6 +152,10 @@
       {
         "surface": "with grief",
         "lemma": "kaas"
+      },
+      {
+        "surface": "and my whole",
+        "lemma": "kol"
       },
       {
         "surface": "body",
@@ -203,6 +215,22 @@
       }
     ],
     "10": [
+      {
+        "surface": "come back",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and try again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "all of you",
+        "lemma": "kol"
+      },
+      {
+        "surface": "For I will not",
+        "lemma": "lo"
+      },
       {
         "surface": "find",
         "lemma": "matsa"
@@ -270,6 +298,10 @@
     ],
     "13": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I look",
         "lemma": "qavah"
       },
@@ -296,8 +328,16 @@
     ],
     "14": [
       {
+        "surface": "and say",
+        "lemma": "qara"
+      },
+      {
         "surface": "to corruption",
         "lemma": "shachat"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
       },
       {
         "surface": "and to the worm",

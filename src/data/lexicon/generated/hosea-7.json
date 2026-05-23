@@ -46,6 +46,10 @@
         "lemma": "gannav"
       },
       {
+        "surface": "break in",
+        "lemma": "bo"
+      },
+      {
         "surface": "bandits",
         "lemma": "gedud"
       },
@@ -64,12 +68,20 @@
         "lemma": "bal"
       },
       {
+        "surface": "consider",
+        "lemma": "amar"
+      },
+      {
         "surface": "in their hearts",
         "lemma": "levav"
       },
       {
         "surface": "that I remember",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their evil",
@@ -86,6 +98,10 @@
       {
         "surface": "are all around them",
         "lemma": "savav"
+      },
+      {
+        "surface": "they are",
+        "lemma": "hayah"
       },
       {
         "surface": "before",
@@ -119,6 +135,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "They are all",
+        "lemma": "kol"
+      },
       {
         "surface": "adulterers",
         "lemma": "naaph"
@@ -204,6 +224,10 @@
         "lemma": "orev"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
       },
@@ -234,6 +258,10 @@
     ],
     "7": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "of them are hot",
         "lemma": "chamam"
       },
@@ -250,6 +278,10 @@
         "lemma": "shaphat"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "their kings",
         "lemma": "melekh"
       },
@@ -260,6 +292,10 @@
       {
         "surface": "not one",
         "lemma": "ayin"
+      },
+      {
+        "surface": "calls",
+        "lemma": "qara"
       }
     ],
     "8": [
@@ -278,6 +314,10 @@
       {
         "surface": "Ephraim",
         "lemma": "ephrayim"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
       },
       {
         "surface": "vvv",
@@ -306,6 +346,10 @@
         "lemma": "koach"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "notice",
         "lemma": "yada"
       },
@@ -316,6 +360,10 @@
       {
         "surface": "with gray",
         "lemma": "sevah"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -340,12 +388,28 @@
         "lemma": "paneh"
       },
       {
+        "surface": "yet they do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "their God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "despite all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
       },
       {
         "surface": "seek Him",
@@ -358,6 +422,10 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a silly",
         "lemma": "patah"
       },
@@ -368,6 +436,10 @@
       {
         "surface": "dove",
         "lemma": "yonah"
+      },
+      {
+        "surface": "calling out",
+        "lemma": "qara"
       },
       {
         "surface": "to Egypt",
@@ -422,10 +494,6 @@
     ],
     "13": [
       {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
-      {
         "surface": "they have strayed",
         "lemma": "nadad"
       },
@@ -451,6 +519,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "They do not",
+        "lemma": "lo"
+      },
       {
         "surface": "cry out",
         "lemma": "zaaq"
@@ -508,6 +580,22 @@
     ],
     "16": [
       {
+        "surface": "They turn",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to the Most High",
+        "lemma": "al"
+      },
+      {
+        "surface": "they are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a faulty",
         "lemma": "remiyyah"
       },
@@ -550,8 +638,8 @@
     ]
   },
   "themeLemmas": [
-    "ra",
-    "ephrayim",
-    "tannur"
+    "lo",
+    "kol",
+    "ra"
   ]
 }

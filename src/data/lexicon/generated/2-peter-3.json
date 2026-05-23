@@ -82,6 +82,10 @@
         "lemma": "proton"
       },
       {
+        "surface": "you must understand",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "last",
         "lemma": "eschatos"
       },
@@ -92,6 +96,10 @@
       {
         "surface": "scoffers",
         "lemma": "empaiktes"
+      },
+      {
+        "surface": "will come",
+        "lemma": "erchomai"
       },
       {
         "surface": "scoffing",
@@ -116,6 +124,10 @@
         "lemma": "pou"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "promise",
         "lemma": "epangelia"
       },
@@ -124,12 +136,20 @@
         "lemma": "parousia"
       },
       {
+        "surface": "they will ask",
+        "lemma": "lego"
+      },
+      {
         "surface": "fathers",
         "lemma": "pater"
       },
       {
         "surface": "fell asleep",
         "lemma": "koimao"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       },
       {
         "surface": "continues",
@@ -150,6 +170,10 @@
     ],
     "5": [
       {
+        "surface": "deliberately",
+        "lemma": "thelo"
+      },
+      {
         "surface": "overlook",
         "lemma": "lanthano"
       },
@@ -168,6 +192,10 @@
       {
         "surface": "the heavens",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "existed",
+        "lemma": "eimi"
       },
       {
         "surface": "the earth",
@@ -222,6 +250,10 @@
         "lemma": "ge"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "reserved",
         "lemma": "thesaurizo"
       },
@@ -260,12 +292,20 @@
         "lemma": "agapetos"
       },
       {
+        "surface": "this one",
+        "lemma": "heis"
+      },
+      {
         "surface": "escape your notice",
         "lemma": "lanthano"
       },
       {
         "surface": "the Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "a",
+        "lemma": "heis"
       },
       {
         "surface": "day",
@@ -286,6 +326,10 @@
       {
         "surface": "years",
         "lemma": "etos"
+      },
+      {
+        "surface": "a",
+        "lemma": "heis"
       },
       {
         "surface": "day",
@@ -324,6 +368,10 @@
       {
         "surface": "to perish",
         "lemma": "apolluo"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       },
       {
         "surface": "to come",
@@ -382,9 +430,17 @@
       {
         "surface": "works",
         "lemma": "ergon"
+      },
+      {
+        "surface": "will be laid bare",
+        "lemma": "heurisko"
       }
     ],
     "11": [
+      {
+        "surface": "Since everything",
+        "lemma": "pas"
+      },
       {
         "surface": "will be destroyed",
         "lemma": "luo"
@@ -512,6 +568,10 @@
         "lemma": "spoudazo"
       },
       {
+        "surface": "to be found",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "peace",
         "lemma": "eirene"
       },
@@ -554,14 +614,34 @@
         "lemma": "paulos"
       },
       {
+        "surface": "wrote",
+        "lemma": "grapho"
+      },
+      {
         "surface": "wisdom",
         "lemma": "sophia"
+      },
+      {
+        "surface": "God gave him",
+        "lemma": "didomi"
       }
     ],
     "16": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "letters",
         "lemma": "epistole"
+      },
+      {
+        "surface": "speaking",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "hard to understand",
@@ -674,10 +754,6 @@
       {
         "surface": "of eternity",
         "lemma": "aion"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ]
   },

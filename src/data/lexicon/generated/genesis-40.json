@@ -74,6 +74,10 @@
     ],
     "3": [
       {
+        "surface": "and imprisoned them",
+        "lemma": "natan"
+      },
+      {
         "surface": "in the house",
         "lemma": "bet"
       },
@@ -118,6 +122,10 @@
       {
         "surface": "and he became their personal attendant",
         "lemma": "sharat"
+      },
+      {
+        "surface": "After they had been",
+        "lemma": "hayah"
       },
       {
         "surface": "in custody",
@@ -188,8 +196,16 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "in the morning",
         "lemma": "boqer"
+      },
+      {
+        "surface": "he saw",
+        "lemma": "raah"
       },
       {
         "surface": "that they were distraught",
@@ -244,6 +260,10 @@
         "lemma": "chalom"
       },
       {
+        "surface": "they replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "but there is no one",
         "lemma": "ayin"
       },
@@ -254,6 +274,14 @@
       {
         "surface": "Then Joseph",
         "lemma": "yoseph"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Don’t",
+        "lemma": "lo"
       },
       {
         "surface": "interpretations",
@@ -292,10 +320,6 @@
       {
         "surface": "In my dream",
         "lemma": "chalom"
-      },
-      {
-        "surface": "there",
-        "lemma": "hinneh"
       },
       {
         "surface": "was a vine",
@@ -378,6 +402,10 @@
         "lemma": "kos"
       },
       {
+        "surface": "and placed",
+        "lemma": "natan"
+      },
+      {
         "surface": "the cup",
         "lemma": "kos"
       },
@@ -394,6 +422,10 @@
       {
         "surface": "Joseph",
         "lemma": "yoseph"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "the interpretation",
@@ -442,8 +474,16 @@
         "lemma": "rosh"
       },
       {
+        "surface": "and restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "position",
         "lemma": "ken"
+      },
+      {
+        "surface": "You will put",
+        "lemma": "natan"
       },
       {
         "surface": "Pharaoh’s",
@@ -466,6 +506,10 @@
         "lemma": "rishon"
       },
       {
+        "surface": "you were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "his cupbearer",
         "lemma": "mashqeh"
       }
@@ -476,12 +520,12 @@
         "lemma": "yatav"
       },
       {
-        "surface": "please",
-        "lemma": "na"
-      },
-      {
         "surface": "remember",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "and show",
+        "lemma": "asah"
       },
       {
         "surface": "kindness",
@@ -494,6 +538,10 @@
       {
         "surface": "Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "that he might bring me out",
+        "lemma": "yatsa"
       },
       {
         "surface": "prison",
@@ -518,6 +566,14 @@
         "lemma": "poh"
       },
       {
+        "surface": "I have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "they should have put",
         "lemma": "sum"
       },
@@ -536,6 +592,10 @@
         "lemma": "aphah"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the interpretation",
         "lemma": "patar"
       },
@@ -544,16 +604,16 @@
         "lemma": "tov"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Joseph",
         "lemma": "yoseph"
       },
       {
         "surface": "had a dream",
         "lemma": "chalom"
-      },
-      {
-        "surface": "There were",
-        "lemma": "hinneh"
       },
       {
         "surface": "three",
@@ -580,6 +640,10 @@
       {
         "surface": "basket",
         "lemma": "sal"
+      },
+      {
+        "surface": "were all sorts of",
+        "lemma": "kol"
       },
       {
         "surface": "baked",
@@ -704,8 +768,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "he held",
+        "lemma": "asah"
+      },
+      {
         "surface": "a feast",
         "lemma": "mishteh"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "his officials",
@@ -746,6 +818,10 @@
     ],
     "21": [
       {
+        "surface": "Pharaoh restored",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the chief",
         "lemma": "sar"
       },
@@ -756,6 +832,10 @@
       {
         "surface": "his position",
         "lemma": "mashqeh"
+      },
+      {
+        "surface": "so that he once again placed",
+        "lemma": "natan"
       },
       {
         "surface": "the cup",
@@ -802,6 +882,10 @@
         "lemma": "mashqeh"
       },
       {
+        "surface": "however, did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "remember",
         "lemma": "zakhar"
       },
@@ -816,8 +900,8 @@
     ]
   },
   "themeLemmas": [
-    "kos",
     "paroh",
-    "sar"
+    "sar",
+    "yoseph"
   ]
 }

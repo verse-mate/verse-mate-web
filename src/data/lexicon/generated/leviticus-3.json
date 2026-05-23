@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "one’s offering",
         "lemma": "qorban"
       },
@@ -26,8 +30,16 @@
         "lemma": "baqar"
       },
       {
+        "surface": "whether",
+        "lemma": "im"
+      },
+      {
         "surface": "male",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "female",
@@ -146,6 +158,10 @@
         "lemma": "qerev"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fat",
         "lemma": "chelev"
       },
@@ -236,6 +252,10 @@
     ],
     "6": [
       {
+        "surface": "If, however",
+        "lemma": "im"
+      },
+      {
         "surface": "vvv",
         "lemma": "qorban"
       },
@@ -269,6 +289,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "is presenting",
         "lemma": "qarav"
@@ -410,6 +434,10 @@
         "lemma": "qerev"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fat",
         "lemma": "chelev"
       },
@@ -479,6 +507,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "one’s offering",
         "lemma": "qorban"
@@ -584,6 +616,10 @@
         "lemma": "qerev"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fat",
         "lemma": "chelev"
       },
@@ -656,6 +692,10 @@
         "lemma": "reach"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fat",
         "lemma": "chelev"
       },
@@ -678,16 +718,32 @@
         "lemma": "dor"
       },
       {
+        "surface": "wherever",
+        "lemma": "kol"
+      },
+      {
         "surface": "you live",
         "lemma": "moshav"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "eat",
         "lemma": "akhal"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "fat",
         "lemma": "chelev"
+      },
+      {
+        "surface": "or any",
+        "lemma": "kol"
       },
       {
         "surface": "blood",

@@ -32,8 +32,16 @@
     ],
     "2": [
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "In my distress",
         "lemma": "batstsarah"
+      },
+      {
+        "surface": "I called",
+        "lemma": "qara"
       },
       {
         "surface": "the LORD",
@@ -54,6 +62,10 @@
       {
         "surface": "I called for help",
         "lemma": "shava"
+      },
+      {
+        "surface": "and You heard",
+        "lemma": "shama"
       },
       {
         "surface": "my voice",
@@ -86,6 +98,10 @@
         "lemma": "savav"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your breakers",
         "lemma": "mishbar"
       },
@@ -99,6 +115,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
       {
         "surface": "I have been banished",
         "lemma": "garash"
@@ -238,6 +258,10 @@
         "lemma": "tephillah"
       },
       {
+        "surface": "went up",
+        "lemma": "bo"
+      },
+      {
         "surface": "Your holy",
         "lemma": "qodesh"
       },
@@ -304,6 +328,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "commanded",
+        "lemma": "amar"
+      },
+      {
         "surface": "the fish",
         "lemma": "dag"
       },
@@ -322,8 +350,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "yonah",
-    "savav",
-    "qol"
+    "savav"
   ]
 }

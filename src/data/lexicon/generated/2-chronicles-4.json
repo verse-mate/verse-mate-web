@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "He made",
+        "lemma": "asah"
+      },
+      {
         "surface": "a bronze",
         "lemma": "nechoshet"
       },
@@ -51,6 +55,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "He also made",
+        "lemma": "asah"
+      },
       {
         "surface": "the Sea",
         "lemma": "yam"
@@ -224,6 +232,10 @@
         "lemma": "yam"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their hindquarters",
         "lemma": "achor"
       },
@@ -284,6 +296,10 @@
     ],
     "6": [
       {
+        "surface": "He also made",
+        "lemma": "asah"
+      },
+      {
         "surface": "ten",
         "lemma": "eser"
       },
@@ -294,6 +310,10 @@
       {
         "surface": "for washing",
         "lemma": "rachats"
+      },
+      {
+        "surface": "and placed",
+        "lemma": "natan"
       },
       {
         "surface": "five",
@@ -338,6 +358,10 @@
     ],
     "7": [
       {
+        "surface": "He made",
+        "lemma": "asah"
+      },
+      {
         "surface": "ten",
         "lemma": "eser"
       },
@@ -352,6 +376,10 @@
       {
         "surface": "according to their specifications",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "and placed them",
+        "lemma": "natan"
       },
       {
         "surface": "in the temple",
@@ -375,6 +403,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Additionally, he made",
+        "lemma": "asah"
+      },
       {
         "surface": "ten",
         "lemma": "eser"
@@ -408,6 +440,10 @@
         "lemma": "semol"
       },
       {
+        "surface": "He also made",
+        "lemma": "asah"
+      },
+      {
         "surface": "a hundred",
         "lemma": "meah"
       },
@@ -421,6 +457,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "He made",
+        "lemma": "asah"
+      },
       {
         "surface": "the courtyard",
         "lemma": "chatser"
@@ -456,6 +496,10 @@
     ],
     "10": [
       {
+        "surface": "He put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Sea",
         "lemma": "yam"
       },
@@ -476,6 +520,10 @@
       {
         "surface": "Additionally, Huram",
         "lemma": "churam"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
       },
       {
         "surface": "the pots",
@@ -500,6 +548,10 @@
       {
         "surface": "the work",
         "lemma": "melakhah"
+      },
+      {
+        "surface": "he had undertaken",
+        "lemma": "asah"
       },
       {
         "surface": "for King",
@@ -692,12 +744,20 @@
         "lemma": "mazleg"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the other articles",
         "lemma": "keli"
       },
       {
         "surface": "All these objects that Huram-abi",
         "lemma": "churam"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
       },
       {
         "surface": "for King",
@@ -764,6 +824,14 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "articles",
         "lemma": "keli"
       },
@@ -780,6 +848,10 @@
         "lemma": "nechoshet"
       },
       {
+        "surface": "could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be determined",
         "lemma": "chaqar"
       }
@@ -788,6 +860,14 @@
       {
         "surface": "Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "also made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the furnishings",
@@ -942,8 +1022,8 @@
     ]
   },
   "themeLemmas": [
+    "asah",
     "shenayim",
-    "zahav",
-    "yam"
+    "zahav"
   ]
 }

@@ -42,6 +42,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "They returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -59,6 +63,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "accompanied",
+        "lemma": "bo"
+      },
       {
         "surface": "Zerubbabel",
         "lemma": "zerubbavel"
@@ -814,6 +822,10 @@
       {
         "surface": "139",
         "lemma": "meah"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "43": [
@@ -1246,6 +1258,10 @@
       {
         "surface": "numbered 392",
         "lemma": "shalosh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "59": [
@@ -1280,6 +1296,10 @@
       {
         "surface": "and Immer",
         "lemma": "immer"
+      },
+      {
+        "surface": "but they could not",
+        "lemma": "lo"
       },
       {
         "surface": "prove",
@@ -1378,6 +1398,10 @@
         "lemma": "giladi"
       },
       {
+        "surface": "and was called",
+        "lemma": "qara"
+      },
+      {
         "surface": "their name",
         "lemma": "shem"
       }
@@ -1390,6 +1414,10 @@
       {
         "surface": "their family records",
         "lemma": "katav"
+      },
+      {
+        "surface": "but they could not",
+        "lemma": "lo"
       },
       {
         "surface": "find them",
@@ -1408,6 +1436,14 @@
       {
         "surface": "The governor",
         "lemma": "tirshata"
+      },
+      {
+        "surface": "ordered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "to eat",
@@ -1431,6 +1467,10 @@
       }
     ],
     "64": [
+      {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
       {
         "surface": "assembly",
         "lemma": "qahal"
@@ -1512,6 +1552,10 @@
     ],
     "68": [
       {
+        "surface": "When they arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "at the house",
         "lemma": "bet"
       },
@@ -1526,6 +1570,10 @@
       {
         "surface": "some of the heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of the families",
+        "lemma": "av"
       },
       {
         "surface": "gave freewill offerings",
@@ -1552,6 +1600,10 @@
       {
         "surface": "According to their ability",
         "lemma": "koach"
+      },
+      {
+        "surface": "they gave",
+        "lemma": "natan"
       },
       {
         "surface": "to the treasury",
@@ -1624,8 +1676,16 @@
         "lemma": "am"
       },
       {
+        "surface": "settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in their own towns",
         "lemma": "ir"
+      },
+      {
+        "surface": "and the rest",
+        "lemma": "kol"
       },
       {
         "surface": "of the Israelites",

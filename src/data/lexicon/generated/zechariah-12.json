@@ -64,10 +64,6 @@
     ],
     "2": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "will make",
         "lemma": "sum"
       },
@@ -84,6 +80,10 @@
         "lemma": "raal"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the surrounding",
         "lemma": "saviv"
       },
@@ -94,6 +94,10 @@
       {
         "surface": "Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "besieged",
@@ -108,6 +112,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "when all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -138,8 +146,16 @@
         "lemma": "even"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the peoples",
         "lemma": "am"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who would heave it away",
@@ -166,6 +182,10 @@
       {
         "surface": "I will strike",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "horse",
@@ -208,6 +228,10 @@
         "lemma": "ivvaron"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the horses",
         "lemma": "sus"
       },
@@ -226,8 +250,16 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "in their hearts",
         "lemma": "lev"
+      },
+      {
+        "surface": "The people",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -292,6 +324,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the peoples",
         "lemma": "am"
       },
@@ -306,6 +342,10 @@
       {
         "surface": "the left",
         "lemma": "semol"
+      },
+      {
+        "surface": "while the people",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -362,8 +402,16 @@
         "lemma": "tipharah"
       },
       {
+        "surface": "of the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "may not",
+        "lemma": "lo"
       },
       {
         "surface": "be greater",
@@ -388,12 +436,20 @@
         "lemma": "ganan"
       },
       {
+        "surface": "the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
       },
       {
         "surface": "the weakest",
         "lemma": "kashal"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like David",
@@ -426,6 +482,10 @@
     ],
     "9": [
       {
+        "surface": "So",
+        "lemma": "hayah"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -438,8 +498,16 @@
         "lemma": "shamad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "that come",
+        "lemma": "bo"
       },
       {
         "surface": "Jerusalem",
@@ -458,6 +526,10 @@
       {
         "surface": "of David",
         "lemma": "david"
+      },
+      {
+        "surface": "the people",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -592,6 +664,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "of Nathan",
+        "lemma": "natan"
+      },
+      {
         "surface": "and their wives",
         "lemma": "ishshah"
       }
@@ -628,6 +704,10 @@
     ],
     "14": [
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the remaining",
         "lemma": "shaar"
       },
@@ -643,7 +723,7 @@
   },
   "themeLemmas": [
     "yerushalaim",
-    "mishpachah",
-    "bet"
+    "kol",
+    "mishpachah"
   ]
 }

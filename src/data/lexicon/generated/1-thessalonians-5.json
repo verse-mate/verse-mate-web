@@ -20,6 +20,10 @@
       {
         "surface": "need",
         "lemma": "chreia"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
       }
     ],
     "2": [
@@ -28,12 +32,20 @@
         "lemma": "akribos"
       },
       {
+        "surface": "aware",
+        "lemma": "eido"
+      },
+      {
         "surface": "the Day",
         "lemma": "hemera"
       },
       {
         "surface": "of the Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "will come",
+        "lemma": "erchomai"
       },
       {
         "surface": "vvv",
@@ -49,6 +61,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "people are saying",
+        "lemma": "lego"
+      },
       {
         "surface": "Peace",
         "lemma": "eirene"
@@ -74,6 +90,10 @@
         "lemma": "odin"
       },
       {
+        "surface": "a pregnant woman",
+        "lemma": "echo"
+      },
+      {
         "surface": "they will not escape",
         "lemma": "ekpheugo"
       }
@@ -82,6 +102,10 @@
       {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "the darkness",
@@ -102,6 +126,14 @@
     ],
     "5": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "sons",
         "lemma": "huios"
       },
@@ -116,6 +148,10 @@
       {
         "surface": "of the day",
         "lemma": "hemera"
+      },
+      {
+        "surface": "we do not belong",
+        "lemma": "eimi"
       },
       {
         "surface": "to the night",
@@ -171,6 +207,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "belong to",
+        "lemma": "eimi"
+      },
       {
         "surface": "the day",
         "lemma": "hemera"
@@ -248,16 +288,8 @@
         "lemma": "apothnesko"
       },
       {
-        "surface": "whether",
-        "lemma": "eite"
-      },
-      {
         "surface": "we are awake",
         "lemma": "gregoreo"
-      },
-      {
-        "surface": "or",
-        "lemma": "eite"
       },
       {
         "surface": "asleep",
@@ -280,6 +312,18 @@
       {
         "surface": "build",
         "lemma": "oikodomeo"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
+        "surface": "another {up",
+        "lemma": "heis"
+      },
+      {
+        "surface": "you are already doing",
+        "lemma": "poieo"
       }
     ],
     "12": [
@@ -290,6 +334,10 @@
       {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "to acknowledge",
+        "lemma": "eido"
       },
       {
         "surface": "work diligently",
@@ -362,9 +410,17 @@
       {
         "surface": "and be patient",
         "lemma": "makrothumeo"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       }
     ],
     "15": [
+      {
+        "surface": "Make sure that",
+        "lemma": "horao"
+      },
       {
         "surface": "repays",
         "lemma": "apodidomi"
@@ -392,6 +448,10 @@
       {
         "surface": "one another",
         "lemma": "allelon"
+      },
+      {
+        "surface": "all people",
+        "lemma": "pas"
       }
     ],
     "16": [
@@ -418,6 +478,10 @@
       {
         "surface": "Give thanks",
         "lemma": "eucharisteo"
+      },
+      {
+        "surface": "every circumstance",
+        "lemma": "pas"
       },
       {
         "surface": "God’s",
@@ -462,6 +526,10 @@
         "lemma": "dokimazo"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "Hold fast",
         "lemma": "katecho"
       },
@@ -474,6 +542,10 @@
       {
         "surface": "Abstain",
         "lemma": "apecho"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "form",
@@ -550,6 +622,10 @@
       {
         "surface": "is faithful",
         "lemma": "pistos"
+      },
+      {
+        "surface": "will do it",
+        "lemma": "poieo"
       }
     ],
     "25": [
@@ -566,6 +642,10 @@
       {
         "surface": "Greet",
         "lemma": "aspazomai"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "brothers",
@@ -596,6 +676,10 @@
       {
         "surface": "read",
         "lemma": "anaginosko"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
       },
       {
         "surface": "brothers",

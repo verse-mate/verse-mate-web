@@ -14,6 +14,10 @@
         "lemma": "sheva"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "about the fame",
         "lemma": "shema"
       },
@@ -30,6 +34,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "she came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to test him",
         "lemma": "nasah"
       },
@@ -39,6 +47,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "She arrived",
+        "lemma": "bo"
+      },
       {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
@@ -88,12 +100,24 @@
         "lemma": "even"
       },
       {
+        "surface": "And she came",
+        "lemma": "bo"
+      },
+      {
         "surface": "Solomon",
         "lemma": "shelomoh"
       },
       {
         "surface": "and spoke",
         "lemma": "davar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "her mind",
@@ -110,8 +134,20 @@
         "lemma": "nagad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her questions",
         "lemma": "davar"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "too difficult",
@@ -134,6 +170,14 @@
       {
         "surface": "of Sheba",
         "lemma": "sheva"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the wisdom",
@@ -204,9 +248,17 @@
       {
         "surface": "it took her breath",
         "lemma": "ruach"
+      },
+      {
+        "surface": "away",
+        "lemma": "lo"
       }
     ],
     "6": [
+      {
+        "surface": "She said",
+        "lemma": "amar"
+      },
       {
         "surface": "the king",
         "lemma": "melekh"
@@ -214,6 +266,10 @@
       {
         "surface": "The report",
         "lemma": "davar"
+      },
+      {
+        "surface": "I heard",
+        "lemma": "shama"
       },
       {
         "surface": "in my own country",
@@ -228,11 +284,19 @@
         "lemma": "chokhmah"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "true",
         "lemma": "emet"
       }
     ],
     "7": [
+      {
+        "surface": "But I did not",
+        "lemma": "lo"
+      },
       {
         "surface": "believe",
         "lemma": "aman"
@@ -242,12 +306,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "I came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "with my own eyes",
         "lemma": "ayin"
       },
       {
-        "surface": "Indeed",
-        "lemma": "hinneh"
+        "surface": "not even",
+        "lemma": "lo"
       },
       {
         "surface": "half",
@@ -272,6 +344,10 @@
       {
         "surface": "the report",
         "lemma": "shemuah"
+      },
+      {
+        "surface": "I heard",
+        "lemma": "shama"
       }
     ],
     "8": [
@@ -304,6 +380,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "and hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "your wisdom",
         "lemma": "chokhmah"
       }
@@ -312,6 +392,10 @@
       {
         "surface": "Blessed",
         "lemma": "barakh"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "the LORD",
@@ -324,6 +408,10 @@
       {
         "surface": "has delighted",
         "lemma": "chaphets"
+      },
+      {
+        "surface": "to set",
+        "lemma": "natan"
       },
       {
         "surface": "the throne",
@@ -358,6 +446,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "to carry out",
+        "lemma": "asah"
+      },
+      {
         "surface": "justice",
         "lemma": "mishpat"
       },
@@ -367,6 +459,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Then she gave",
+        "lemma": "natan"
+      },
       {
         "surface": "the king",
         "lemma": "melekh"
@@ -400,6 +496,10 @@
         "lemma": "even"
       },
       {
+        "surface": "Never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "od"
       },
@@ -412,12 +512,20 @@
         "lemma": "rov"
       },
       {
+        "surface": "brought in",
+        "lemma": "bo"
+      },
+      {
         "surface": "the queen",
         "lemma": "malkah"
       },
       {
         "surface": "of Sheba",
         "lemma": "sheva"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "to King",
@@ -450,6 +558,10 @@
         "lemma": "ophir"
       },
       {
+        "surface": "brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "from Ophir",
         "lemma": "ophir"
       },
@@ -478,6 +590,10 @@
       {
         "surface": "The king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
       },
       {
         "surface": "the almug",
@@ -520,6 +636,10 @@
         "lemma": "shir"
       },
       {
+        "surface": "Never",
+        "lemma": "lo"
+      },
+      {
         "surface": "before had such",
         "lemma": "ken"
       },
@@ -530,6 +650,18 @@
       {
         "surface": "wood",
         "lemma": "ets"
+      },
+      {
+        "surface": "been brought in",
+        "lemma": "bo"
+      },
+      {
+        "surface": "nor has such",
+        "lemma": "lo"
+      },
+      {
+        "surface": "been seen again",
+        "lemma": "raah"
       },
       {
         "surface": "day",
@@ -546,12 +678,20 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "the queen",
         "lemma": "malkah"
       },
       {
         "surface": "of Sheba",
         "lemma": "sheva"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "she desired",
@@ -564,6 +704,10 @@
       {
         "surface": "besides",
         "lemma": "bad"
+      },
+      {
+        "surface": "he had given",
+        "lemma": "natan"
       },
       {
         "surface": "out of his",
@@ -604,12 +748,20 @@
         "lemma": "zahav"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Solomon",
         "lemma": "shelomoh"
       },
       {
         "surface": "each year",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "666",
@@ -638,6 +790,10 @@
         "lemma": "rakhal"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Arabian",
         "lemma": "arav"
       },
@@ -662,6 +818,10 @@
       {
         "surface": "Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
       },
       {
         "surface": "two hundred",
@@ -754,6 +914,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "put them",
+        "lemma": "natan"
+      },
+      {
         "surface": "in the House",
         "lemma": "bet"
       },
@@ -770,6 +934,10 @@
       {
         "surface": "Additionally, the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
       },
       {
         "surface": "a great",
@@ -872,8 +1040,20 @@
         "lemma": "maalah"
       },
       {
+        "surface": "Nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "like this",
         "lemma": "ken"
+      },
+      {
+        "surface": "had ever been made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "for any",
+        "lemma": "kol"
       },
       {
         "surface": "kingdom",
@@ -881,6 +1061,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "King",
         "lemma": "melekh"
@@ -900,6 +1084,10 @@
       {
         "surface": "were gold",
         "lemma": "zahav"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the utensils",
@@ -936,6 +1124,10 @@
       {
         "surface": "because it was accounted",
         "lemma": "chashav"
+      },
+      {
+        "surface": "as nothing",
+        "lemma": "lo"
       },
       {
         "surface": "in the days",
@@ -988,6 +1180,10 @@
         "lemma": "tarshish"
       },
       {
+        "surface": "would arrive",
+        "lemma": "bo"
+      },
+      {
         "surface": "bearing",
         "lemma": "nasa"
       },
@@ -1026,6 +1222,10 @@
         "lemma": "gadal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -1044,6 +1244,10 @@
     ],
     "24": [
       {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "world",
         "lemma": "erets"
       },
@@ -1060,12 +1264,20 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "to hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the wisdom",
         "lemma": "chokhmah"
       },
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "had put",
+        "lemma": "natan"
       },
       {
         "surface": "in his heart",
@@ -1084,6 +1296,10 @@
       {
         "surface": "each visitor",
         "lemma": "ish"
+      },
+      {
+        "surface": "would bring",
+        "lemma": "bo"
       },
       {
         "surface": "his tribute",
@@ -1174,6 +1390,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "made",
+        "lemma": "natan"
+      },
+      {
         "surface": "silver",
         "lemma": "keseph"
       },
@@ -1184,6 +1404,10 @@
       {
         "surface": "as stones",
         "lemma": "even"
+      },
+      {
+        "surface": "and",
+        "lemma": "natan"
       },
       {
         "surface": "cedar",
@@ -1282,6 +1506,14 @@
         "lemma": "yad"
       },
       {
+        "surface": "exported them",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -1302,6 +1534,6 @@
   "themeLemmas": [
     "shelomoh",
     "zahav",
-    "meah"
+    "kol"
   ]
 }

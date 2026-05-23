@@ -18,8 +18,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the words",
@@ -32,6 +40,10 @@
       {
         "surface": "their God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "everything that",
+        "lemma": "kol"
       },
       {
         "surface": "the LORD",
@@ -68,12 +80,20 @@
         "lemma": "qareach"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the arrogant",
         "lemma": "zed"
       },
       {
         "surface": "men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Jeremiah",
@@ -96,8 +116,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "sent you",
         "lemma": "shalach"
+      },
+      {
+        "surface": "to say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "go",
+        "lemma": "bo"
       },
       {
         "surface": "to Egypt",
@@ -124,6 +160,10 @@
       {
         "surface": "is inciting",
         "lemma": "sut"
+      },
+      {
+        "surface": "deliver",
+        "lemma": "natan"
       },
       {
         "surface": "into the hands",
@@ -160,6 +200,10 @@
         "lemma": "qareach"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the commanders",
         "lemma": "sar"
       },
@@ -168,12 +212,24 @@
         "lemma": "chayil"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
+        "surface": "disobeyed",
+        "lemma": "shama"
+      },
+      {
         "surface": "the command",
         "lemma": "qol"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "to stay",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -198,6 +254,10 @@
         "lemma": "qareach"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the commanders",
         "lemma": "sar"
       },
@@ -210,6 +270,10 @@
         "lemma": "laqach"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "remnant",
         "lemma": "sheerit"
       },
@@ -218,12 +282,20 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "had returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to the land",
         "lemma": "erets"
       },
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -254,6 +326,10 @@
       {
         "surface": "daughters",
         "lemma": "bat"
+      },
+      {
+        "surface": "and everyone",
+        "lemma": "kol"
       },
       {
         "surface": "Nebuzaradan",
@@ -314,6 +390,10 @@
     ],
     "7": [
       {
+        "surface": "So they entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -322,12 +402,24 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "they did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obey",
+        "lemma": "shama"
+      },
+      {
         "surface": "the voice",
         "lemma": "qol"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and they went",
+        "lemma": "bo"
       },
       {
         "surface": "Tahpanhes",
@@ -342,6 +434,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
       },
       {
         "surface": "Jeremiah",
@@ -408,6 +504,10 @@
     ],
     "10": [
       {
+        "surface": "Then tell them",
+        "lemma": "amar"
+      },
+      {
         "surface": "this is what",
         "lemma": "koh"
       },
@@ -426,6 +526,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "I will send for",
@@ -477,6 +581,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "He will come",
+        "lemma": "bo"
+      },
       {
         "surface": "and strike down",
         "lemma": "nakhah"
@@ -568,6 +676,10 @@
         "lemma": "beged"
       },
       {
+        "surface": "and he will depart",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from there",
         "lemma": "sham"
       },
@@ -620,8 +732,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "mitsrayim",
-    "yirmeyah",
-    "yochanan"
+    "yirmeyah"
   ]
 }

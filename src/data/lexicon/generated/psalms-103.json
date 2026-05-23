@@ -22,6 +22,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "that is within me",
         "lemma": "qerev"
       },
@@ -48,8 +52,16 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "forget",
         "lemma": "shakhach"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "His kind deeds",
@@ -62,12 +74,20 @@
         "lemma": "salach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your iniquities",
         "lemma": "avan"
       },
       {
         "surface": "and heals",
         "lemma": "rapah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "your diseases",
@@ -132,12 +152,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "executes",
+        "lemma": "asah"
+      },
+      {
         "surface": "righteousness",
         "lemma": "tsedaqah"
       },
       {
         "surface": "and justice",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "the oppressed",
@@ -202,12 +230,20 @@
     ],
     "9": [
       {
+        "surface": "He will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "always",
         "lemma": "netsach"
       },
       {
         "surface": "accuse us",
         "lemma": "riv"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "harbor His anger",
@@ -219,6 +255,18 @@
       }
     ],
     "10": [
+      {
+        "surface": "He has not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "dealt",
+        "lemma": "asah"
+      },
+      {
+        "surface": "with us",
+        "lemma": "lo"
+      },
       {
         "surface": "our sins",
         "lemma": "chet"
@@ -281,6 +329,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "As a father",
+        "lemma": "av"
+      },
       {
         "surface": "has compassion",
         "lemma": "racham"
@@ -368,6 +420,10 @@
         "lemma": "nakhar"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more",
         "lemma": "od"
       }
@@ -420,6 +476,10 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "to obey",
+        "lemma": "asah"
+      },
+      {
         "surface": "His precepts",
         "lemma": "piqqud"
       }
@@ -448,6 +508,10 @@
       {
         "surface": "rules",
         "lemma": "mashal"
+      },
+      {
+        "surface": "over all",
+        "lemma": "kol"
       }
     ],
     "20": [
@@ -472,8 +536,16 @@
         "lemma": "koach"
       },
       {
+        "surface": "who carry out",
+        "lemma": "asah"
+      },
+      {
         "surface": "His word",
         "lemma": "davar"
+      },
+      {
+        "surface": "who hearken",
+        "lemma": "shama"
       },
       {
         "surface": "to the voice",
@@ -494,12 +566,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His hosts",
         "lemma": "tsava"
       },
       {
         "surface": "you servants",
         "lemma": "sharat"
+      },
+      {
+        "surface": "who do",
+        "lemma": "asah"
       },
       {
         "surface": "His will",
@@ -516,8 +596,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His works",
         "lemma": "maaseh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "places",
@@ -542,8 +630,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "barakh",
-    "chesed",
-    "yare"
+    "lo"
   ]
 }

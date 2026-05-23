@@ -40,8 +40,16 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "is no",
+        "lemma": "lo"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "knowledge",
@@ -130,6 +138,10 @@
         "lemma": "ed"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "go unpunished",
         "lemma": "naqah"
       },
@@ -140,6 +152,10 @@
       {
         "surface": "lies",
         "lemma": "kazav"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "escape",
@@ -164,6 +180,10 @@
         "lemma": "nadiv"
       },
       {
+        "surface": "and everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "is a friend",
         "lemma": "rea"
       },
@@ -177,6 +197,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the brothers",
         "lemma": "ach"
@@ -204,6 +228,10 @@
       {
         "surface": "with pleading",
         "lemma": "emer"
+      },
+      {
+        "surface": "are nowhere to be found",
+        "lemma": "lo"
       }
     ],
     "8": [
@@ -250,6 +278,10 @@
         "lemma": "ed"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "go unpunished",
         "lemma": "naqah"
       },
@@ -270,6 +302,10 @@
       {
         "surface": "Luxury",
         "lemma": "taanug"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "is unseemly",
@@ -358,6 +394,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "is his father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "ruin",
         "lemma": "havvah"
       },
@@ -390,6 +430,10 @@
       {
         "surface": "are inherited",
         "lemma": "nachalah"
+      },
+      {
+        "surface": "from fathers",
+        "lemma": "av"
       },
       {
         "surface": "but a prudent",
@@ -500,6 +544,10 @@
         "lemma": "tiqvah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be party",
         "lemma": "nasa"
       },
@@ -522,6 +570,10 @@
         "lemma": "onesh"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "you rescue him",
         "lemma": "natsal"
       },
@@ -535,6 +587,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
       {
         "surface": "to counsel",
         "lemma": "etsah"
@@ -664,6 +720,14 @@
         "lemma": "tsallachat"
       },
       {
+        "surface": "he will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "bring it back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his mouth",
         "lemma": "peh"
       }
@@ -708,6 +772,10 @@
         "lemma": "shadad"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "or evicts",
         "lemma": "barach"
       },
@@ -732,6 +800,10 @@
       {
         "surface": "If you cease",
         "lemma": "chadal"
+      },
+      {
+        "surface": "to hear",
+        "lemma": "shama"
       },
       {
         "surface": "instruction",
@@ -816,8 +888,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "tov",
-    "nephesh",
-    "kesil"
+    "nephesh"
   ]
 }

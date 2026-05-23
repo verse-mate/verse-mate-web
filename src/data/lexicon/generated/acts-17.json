@@ -18,8 +18,16 @@
         "lemma": "apollonia"
       },
       {
+        "surface": "they came",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "Thessalonica",
         "lemma": "thessalonike"
+      },
+      {
+        "surface": "there was",
+        "lemma": "eimi"
       },
       {
         "surface": "a Jewish",
@@ -38,6 +46,10 @@
       {
         "surface": "Paul",
         "lemma": "paulos"
+      },
+      {
+        "surface": "went into",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "three",
@@ -94,6 +106,10 @@
         "lemma": "katangello"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
       }
@@ -114,6 +130,10 @@
       {
         "surface": "Silas",
         "lemma": "silas"
+      },
+      {
+        "surface": "a large",
+        "lemma": "polus"
       },
       {
         "surface": "number",
@@ -196,6 +216,10 @@
     ],
     "6": [
       {
+        "surface": "they could not find",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "they dragged",
         "lemma": "suro"
       },
@@ -242,6 +266,10 @@
         "lemma": "hupodechomai"
       },
       {
+        "surface": "are} all",
+        "lemma": "pas"
+      },
+      {
         "surface": "defying",
         "lemma": "prasso"
       },
@@ -252,6 +280,14 @@
       {
         "surface": "decrees",
         "lemma": "dogma"
+      },
+      {
+        "surface": "saying that",
+        "lemma": "lego"
+      },
+      {
+        "surface": "there is",
+        "lemma": "eimi"
       },
       {
         "surface": "another",
@@ -268,6 +304,10 @@
     ],
     "8": [
       {
+        "surface": "On hearing",
+        "lemma": "akouo"
+      },
+      {
         "surface": "crowd",
         "lemma": "ochlos"
       },
@@ -281,6 +321,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "they collected",
+        "lemma": "lambano"
+      },
       {
         "surface": "bond",
         "lemma": "hikanos"
@@ -346,6 +390,10 @@
     ],
     "11": [
       {
+        "surface": "were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "more noble-minded",
         "lemma": "eugenes"
       },
@@ -360,6 +408,10 @@
       {
         "surface": "message",
         "lemma": "logos"
+      },
+      {
+        "surface": "great",
+        "lemma": "pas"
       },
       {
         "surface": "eagerness",
@@ -378,11 +430,19 @@
         "lemma": "hemera"
       },
       {
+        "surface": "were",
+        "lemma": "echo"
+      },
+      {
         "surface": "true",
         "lemma": "houto"
       }
     ],
     "12": [
+      {
+        "surface": "many",
+        "lemma": "polus"
+      },
       {
         "surface": "believed",
         "lemma": "pisteuo"
@@ -418,6 +478,10 @@
         "lemma": "thessalonike"
       },
       {
+        "surface": "learned",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "Paul",
         "lemma": "paulos"
       },
@@ -436,6 +500,10 @@
       {
         "surface": "Berea",
         "lemma": "beroia"
+      },
+      {
+        "surface": "they went",
+        "lemma": "erchomai"
       },
       {
         "surface": "there themselves",
@@ -522,6 +590,10 @@
         "lemma": "exeimi"
       },
       {
+        "surface": "with",
+        "lemma": "lambano"
+      },
+      {
         "surface": "instructions",
         "lemma": "entole"
       },
@@ -532,6 +604,10 @@
       {
         "surface": "Timothy",
         "lemma": "timotheos"
+      },
+      {
+        "surface": "join",
+        "lemma": "erchomai"
       },
       {
         "surface": "soon as possible",
@@ -568,6 +644,10 @@
         "lemma": "polis"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "full of idols",
         "lemma": "kateidolos"
       }
@@ -598,6 +678,10 @@
         "lemma": "paratugchano"
       },
       {
+        "surface": "each",
+        "lemma": "pas"
+      },
+      {
         "surface": "day",
         "lemma": "hemera"
       }
@@ -620,12 +704,32 @@
         "lemma": "sumballo"
       },
       {
+        "surface": "asked",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
         "surface": "babbler",
         "lemma": "spermologos"
       },
       {
+        "surface": "trying",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to say",
+        "lemma": "lego"
+      },
+      {
         "surface": "He seems",
         "lemma": "dokeo"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
       },
       {
         "surface": "advocating",
@@ -666,12 +770,32 @@
         "lemma": "areiospagos"
       },
       {
+        "surface": "where they asked him",
+        "lemma": "lego"
+      },
+      {
+        "surface": "May we",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "new",
         "lemma": "kainos"
       },
       {
         "surface": "teaching is",
         "lemma": "didache"
+      },
+      {
+        "surface": "are presenting",
+        "lemma": "laleo"
       }
     ],
     "20": [
@@ -690,9 +814,25 @@
       {
         "surface": "we want",
         "lemma": "boulomai"
+      },
+      {
+        "surface": "to know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "mean",
+        "lemma": "thelo"
       }
     ],
     "21": [
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
       {
         "surface": "the Athenians",
         "lemma": "athenaios"
@@ -710,8 +850,20 @@
         "lemma": "eukaireo"
       },
       {
+        "surface": "nothing",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "more",
         "lemma": "heteros"
+      },
+      {
+        "surface": "hearing",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "articulating",
+        "lemma": "lego"
       },
       {
         "surface": "new ideas",
@@ -722,6 +874,10 @@
       {
         "surface": "Paul",
         "lemma": "paulos"
+      },
+      {
+        "surface": "stood up",
+        "lemma": "histemi"
       },
       {
         "surface": "the meeting",
@@ -748,6 +904,10 @@
         "lemma": "theoreo"
       },
       {
+        "surface": "every way",
+        "lemma": "pas"
+      },
+      {
         "surface": "very religious",
         "lemma": "deisidaimon"
       }
@@ -764,6 +924,10 @@
       {
         "surface": "objects of worship",
         "lemma": "sebasma"
+      },
+      {
+        "surface": "I even found",
+        "lemma": "heurisko"
       },
       {
         "surface": "an altar",
@@ -800,8 +964,16 @@
         "lemma": "theos"
       },
       {
+        "surface": "made",
+        "lemma": "poieo"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       },
       {
         "surface": "is",
@@ -850,15 +1022,39 @@
         "lemma": "prosdeo"
       },
       {
+        "surface": "gives",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "life",
         "lemma": "zoe"
       },
       {
         "surface": "breath",
         "lemma": "pnoe"
+      },
+      {
+        "surface": "everything else",
+        "lemma": "pas"
       }
     ],
     "26": [
+      {
+        "surface": "one man",
+        "lemma": "heis"
+      },
+      {
+        "surface": "He made",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
+      },
       {
         "surface": "nation",
         "lemma": "ethnos"
@@ -870,6 +1066,10 @@
       {
         "surface": "that they should inhabit",
         "lemma": "katoikeo"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "pas"
       },
       {
         "surface": "earth",
@@ -910,6 +1110,10 @@
         "lemma": "pselaphao"
       },
       {
+        "surface": "find Him",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "He is",
         "lemma": "huparcho"
       },
@@ -920,6 +1124,10 @@
       {
         "surface": "each",
         "lemma": "hekastos"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       }
     ],
     "28": [
@@ -932,12 +1140,20 @@
         "lemma": "kineo"
       },
       {
+        "surface": "have our being",
+        "lemma": "eimi"
+      },
+      {
         "surface": "poets",
         "lemma": "poietes"
       },
       {
         "surface": "have said",
         "lemma": "ero"
+      },
+      {
+        "surface": "We are",
+        "lemma": "eimi"
       },
       {
         "surface": "offspring",
@@ -968,6 +1184,10 @@
       {
         "surface": "Divine Being",
         "lemma": "theios"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "like",
@@ -1028,6 +1248,10 @@
         "lemma": "parangello"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "people",
         "lemma": "anthropos"
       },
@@ -1041,6 +1265,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "He has set",
+        "lemma": "histemi"
+      },
       {
         "surface": "a day",
         "lemma": "hemera"
@@ -1078,6 +1306,10 @@
         "lemma": "pistis"
       },
       {
+        "surface": "to everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "by raising",
         "lemma": "anistemi"
       },
@@ -1087,6 +1319,10 @@
       }
     ],
     "32": [
+      {
+        "surface": "they heard about",
+        "lemma": "akouo"
+      },
       {
         "surface": "the resurrection",
         "lemma": "anastasis"
@@ -1098,6 +1334,14 @@
       {
         "surface": "began to mock him",
         "lemma": "chleuazo"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "We want to hear",
+        "lemma": "akouo"
       },
       {
         "surface": "again",
@@ -1112,6 +1356,10 @@
       {
         "surface": "Paul",
         "lemma": "paulos"
+      },
+      {
+        "surface": "left",
+        "lemma": "exerchomai"
       },
       {
         "surface": "the Areopagus",

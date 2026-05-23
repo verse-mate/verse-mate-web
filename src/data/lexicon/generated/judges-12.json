@@ -26,6 +26,10 @@
         "lemma": "tsaphon"
       },
       {
+        "surface": "They said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Jephthah",
         "lemma": "yiphtach"
       },
@@ -44,6 +48,14 @@
       {
         "surface": "the Ammonites",
         "lemma": "ben"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
+        "surface": "calling us",
+        "lemma": "qara"
       },
       {
         "surface": "to go",
@@ -68,8 +80,16 @@
         "lemma": "yiphtach"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "My people",
         "lemma": "am"
+      },
+      {
+        "surface": "had",
+        "lemma": "hayah"
       },
       {
         "surface": "a serious",
@@ -88,6 +108,10 @@
         "lemma": "zaaq"
       },
       {
+        "surface": "you did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "save",
         "lemma": "yasah"
       },
@@ -97,6 +121,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "When I saw",
+        "lemma": "raah"
+      },
       {
         "surface": "you would not",
         "lemma": "ayin"
@@ -124,6 +152,10 @@
       {
         "surface": "and the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "delivered them",
+        "lemma": "natan"
       },
       {
         "surface": "into my hand",
@@ -156,6 +188,10 @@
         "lemma": "qavats"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the men",
         "lemma": "enosh"
       },
@@ -186,6 +222,10 @@
       {
         "surface": "the Ephraimites",
         "lemma": "ephrayim"
+      },
+      {
+        "surface": "had said",
+        "lemma": "amar"
       },
       {
         "surface": "Gileadites",
@@ -234,12 +274,20 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "and",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a fugitive",
         "lemma": "palit"
       },
       {
         "surface": "from Ephraim",
         "lemma": "ephrayim"
+      },
+      {
+        "surface": "would say",
+        "lemma": "amar"
       },
       {
         "surface": "Let me cross over",
@@ -250,18 +298,38 @@
         "lemma": "gilad"
       },
       {
+        "surface": "would ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "an Ephraimite",
         "lemma": "ephrati"
+      },
+      {
+        "surface": "If he answered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       }
     ],
     "6": [
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "they told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Shibboleth",
         "lemma": "shibbol"
+      },
+      {
+        "surface": "If he said",
+        "lemma": "amar"
       },
       {
         "surface": "Sibboleth",
@@ -270,6 +338,10 @@
       {
         "surface": "because he could",
         "lemma": "kun"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "pronounce",
@@ -294,6 +366,10 @@
       {
         "surface": "of the Jordan",
         "lemma": "yarden"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
       },
       {
         "surface": "42,000",
@@ -378,6 +454,10 @@
     ],
     "9": [
       {
+        "surface": "He had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "thirty",
         "lemma": "sheloshim"
       },
@@ -404,6 +484,10 @@
       {
         "surface": "and for his sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "he brought back",
+        "lemma": "bo"
       },
       {
         "surface": "thirty",
@@ -548,6 +632,10 @@
     ],
     "14": [
       {
+        "surface": "He had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "forty",
         "lemma": "arbaim"
       },
@@ -641,7 +729,7 @@
   },
   "themeLemmas": [
     "ephrayim",
-    "yisrael",
-    "shaphat"
+    "amar",
+    "yisrael"
   ]
 }

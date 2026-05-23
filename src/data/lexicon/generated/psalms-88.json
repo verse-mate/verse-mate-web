@@ -80,6 +80,10 @@
         "lemma": "tephillah"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "before You",
         "lemma": "paneh"
       },
@@ -136,6 +140,10 @@
         "lemma": "bor"
       },
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a man",
         "lemma": "gaver"
       },
@@ -168,6 +176,10 @@
       {
         "surface": "in the grave",
         "lemma": "qever"
+      },
+      {
+        "surface": "You",
+        "lemma": "lo"
       },
       {
         "surface": "remember",
@@ -218,6 +230,10 @@
         "lemma": "samakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your waves",
         "lemma": "mishbar"
       },
@@ -250,6 +266,14 @@
       {
         "surface": "I am confined",
         "lemma": "kala"
+      },
+      {
+        "surface": "and cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "escape",
+        "lemma": "yatsa"
       }
     ],
     "9": [
@@ -266,6 +290,14 @@
         "lemma": "oni"
       },
       {
+        "surface": "I call to You",
+        "lemma": "qara"
+      },
+      {
+        "surface": "daily",
+        "lemma": "kol"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -279,6 +311,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Do You work",
+        "lemma": "asah"
+      },
       {
         "surface": "wonders",
         "lemma": "pele"
@@ -446,6 +482,10 @@
     ],
     "17": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       },
@@ -491,7 +531,7 @@
   },
   "themeLemmas": [
     "yada",
-    "tephillah",
-    "shit"
+    "kol",
+    "tephillah"
   ]
 }

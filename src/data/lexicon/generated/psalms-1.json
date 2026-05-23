@@ -14,6 +14,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "walk",
         "lemma": "halakh"
       },
@@ -26,6 +30,10 @@
         "lemma": "rasah"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "set foot",
         "lemma": "amad"
       },
@@ -36,6 +44,14 @@
       {
         "surface": "of sinners",
         "lemma": "chatta"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
+        "surface": "sit",
+        "lemma": "yashav"
       },
       {
         "surface": "in the seat",
@@ -78,6 +94,10 @@
     ],
     "3": [
       {
+        "surface": "He is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a tree",
         "lemma": "ets"
       },
@@ -94,23 +114,47 @@
         "lemma": "mayim"
       },
       {
+        "surface": "yielding",
+        "lemma": "natan"
+      },
+      {
         "surface": "its fruit",
         "lemma": "peri"
+      },
+      {
+        "surface": "in season",
+        "lemma": "et"
       },
       {
         "surface": "whose leaf",
         "lemma": "aleh"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "wither",
         "lemma": "naval"
       },
       {
+        "surface": "and",
+        "lemma": "kol"
+      },
+      {
         "surface": "who prospers",
         "lemma": "tsalach"
+      },
+      {
+        "surface": "in all he does",
+        "lemma": "asah"
       }
     ],
     "4": [
+      {
+        "surface": "Not",
+        "lemma": "lo"
+      },
       {
         "surface": "so",
         "lemma": "ken"
@@ -118,6 +162,10 @@
       {
         "surface": "the wicked",
         "lemma": "rasah"
+      },
+      {
+        "surface": "they are",
+        "lemma": "im"
       },
       {
         "surface": "like chaff",
@@ -136,6 +184,10 @@
       {
         "surface": "the wicked",
         "lemma": "rasah"
+      },
+      {
+        "surface": "will} not",
+        "lemma": "lo"
       },
       {
         "surface": "stand",
@@ -190,8 +242,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "rasah",
-    "tsaddiq",
-    "torah"
+    "tsaddiq"
   ]
 }

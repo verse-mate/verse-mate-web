@@ -98,6 +98,10 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "fitting",
         "lemma": "axios"
       },
@@ -111,7 +115,15 @@
       },
       {
         "surface": "vvv",
+        "lemma": "heis"
+      },
+      {
+        "surface": "vvv",
         "lemma": "hekastos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
       },
       {
         "surface": "love",
@@ -146,6 +158,10 @@
       {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "persecution",
@@ -195,10 +211,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "After all",
-        "lemma": "eiper"
-      },
       {
         "surface": "it is only right",
         "lemma": "dikaios"
@@ -264,8 +276,16 @@
         "lemma": "pur"
       },
       {
+        "surface": "inflicting",
+        "lemma": "didomi"
+      },
+      {
         "surface": "vengeance",
         "lemma": "ekdikesis"
+      },
+      {
+        "surface": "do not know",
+        "lemma": "eido"
       },
       {
         "surface": "God",
@@ -328,6 +348,10 @@
         "lemma": "hemera"
       },
       {
+        "surface": "He comes",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "to be glorified",
         "lemma": "endoxazomai"
       },
@@ -338,6 +362,10 @@
       {
         "surface": "regarded with wonder",
         "lemma": "thaumazo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "have believed",
@@ -376,6 +404,10 @@
       {
         "surface": "He will powerfully fulfill",
         "lemma": "pleroo"
+      },
+      {
+        "surface": "your every",
+        "lemma": "pas"
       },
       {
         "surface": "good",

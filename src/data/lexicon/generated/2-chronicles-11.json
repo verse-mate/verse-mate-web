@@ -10,6 +10,10 @@
         "lemma": "rechavam"
       },
       {
+        "surface": "arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -50,6 +54,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "and restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the kingdom",
         "lemma": "mamlakhah"
       },
@@ -68,6 +76,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Shemaiah",
         "lemma": "shemayah"
       },
@@ -81,6 +93,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "Tell",
+        "lemma": "amar"
+      },
       {
         "surface": "Rehoboam",
         "lemma": "rechavam"
@@ -100,6 +116,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the Israelites",
@@ -124,6 +144,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to go up",
         "lemma": "alah"
       },
@@ -140,8 +168,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "of you must return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "home",
         "lemma": "bet"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "So they listened",
+        "lemma": "shama"
       },
       {
         "surface": "to the words",
@@ -150,6 +190,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and turned back",
+        "lemma": "shuv"
       },
       {
         "surface": "from going",
@@ -164,6 +208,10 @@
       {
         "surface": "Rehoboam",
         "lemma": "rechavam"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in Jerusalem",
@@ -294,6 +342,10 @@
         "lemma": "metsurah"
       },
       {
+        "surface": "and put",
+        "lemma": "natan"
+      },
+      {
         "surface": "officers",
         "lemma": "nagid"
       },
@@ -324,6 +376,10 @@
         "lemma": "romach"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "vvv",
         "lemma": "ir"
       },
@@ -346,6 +402,10 @@
       {
         "surface": "and Benjamin",
         "lemma": "binyamin"
+      },
+      {
+        "surface": "belonged",
+        "lemma": "hayah"
       }
     ],
     "13": [
@@ -358,8 +418,16 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their districts",
         "lemma": "gevul"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -440,9 +508,17 @@
       {
         "surface": "and calf idols",
         "lemma": "egel"
+      },
+      {
+        "surface": "he had made",
+        "lemma": "asah"
       }
     ],
     "16": [
+      {
+        "surface": "Those from every",
+        "lemma": "kol"
+      },
       {
         "surface": "tribe",
         "lemma": "shevet"
@@ -450,6 +526,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "who had set",
+        "lemma": "natan"
       },
       {
         "surface": "their hearts",
@@ -476,6 +556,10 @@
         "lemma": "achar"
       },
       {
+        "surface": "followed the Levites",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -490,6 +574,10 @@
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of their fathers",
+        "lemma": "av"
       }
     ],
     "17": [
@@ -690,6 +778,10 @@
         "lemma": "avishalom"
       },
       {
+        "surface": "more than all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his wives",
         "lemma": "ishshah"
       },
@@ -790,6 +882,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "the districts",
         "lemma": "erets"
       },
@@ -802,12 +898,20 @@
         "lemma": "binyamin"
       },
       {
+        "surface": "and to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fortified",
         "lemma": "metsurah"
       },
       {
         "surface": "cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "He gave",
+        "lemma": "natan"
       },
       {
         "surface": "abundant",
@@ -834,6 +938,6 @@
   "themeLemmas": [
     "yehudah",
     "rechavam",
-    "yisrael"
+    "kol"
   ]
 }

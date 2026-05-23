@@ -10,6 +10,10 @@
         "lemma": "bilam"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "it pleased",
         "lemma": "tov"
       },
@@ -24,6 +28,10 @@
       {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "he did not",
+        "lemma": "lo"
       },
       {
         "surface": "seek",
@@ -60,6 +68,10 @@
         "lemma": "nasa"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -78,6 +90,10 @@
       {
         "surface": "of God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
       }
     ],
     "3": [
@@ -88,6 +104,10 @@
       {
         "surface": "an oracle",
         "lemma": "mashal"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "This is the prophecy",
@@ -126,6 +146,10 @@
       {
         "surface": "the prophecy",
         "lemma": "neum"
+      },
+      {
+        "surface": "of one who hears",
+        "lemma": "shama"
       },
       {
         "surface": "the words",
@@ -276,6 +300,10 @@
         "lemma": "el"
       },
       {
+        "surface": "brought him",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "out of Egypt",
         "lemma": "mitsrayim"
       },
@@ -384,8 +412,16 @@
         "lemma": "saphaq"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
+      },
+      {
+        "surface": "I summoned you",
+        "lemma": "qara"
       },
       {
         "surface": "to curse",
@@ -394,10 +430,6 @@
       {
         "surface": "my enemies",
         "lemma": "oyev"
-      },
-      {
-        "surface": "but behold",
-        "lemma": "hinneh"
       },
       {
         "surface": "you have persisted in blessing them",
@@ -426,12 +458,12 @@
         "lemma": "maqom"
       },
       {
-        "surface": "I would reward you richly",
-        "lemma": "kavad"
+        "surface": "I said",
+        "lemma": "amar"
       },
       {
-        "surface": "but instead",
-        "lemma": "hinneh"
+        "surface": "I would reward you richly",
+        "lemma": "kavad"
       },
       {
         "surface": "the LORD",
@@ -452,8 +484,16 @@
         "lemma": "bilam"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "Balak",
         "lemma": "balaq"
+      },
+      {
+        "surface": "Did I not",
+        "lemma": "lo"
       },
       {
         "surface": "tell",
@@ -470,8 +510,16 @@
     ],
     "13": [
       {
+        "surface": "that even if",
+        "lemma": "im"
+      },
+      {
         "surface": "Balak",
         "lemma": "balaq"
+      },
+      {
+        "surface": "were to give",
+        "lemma": "natan"
       },
       {
         "surface": "his house",
@@ -492,6 +540,14 @@
       {
         "surface": "I could",
         "lemma": "yakhol"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       },
       {
         "surface": "anything of my own accord",
@@ -556,6 +612,10 @@
         "lemma": "am"
       },
       {
+        "surface": "will do",
+        "lemma": "asah"
+      },
+      {
         "surface": "to your people",
         "lemma": "am"
       },
@@ -576,6 +636,10 @@
       {
         "surface": "an oracle",
         "lemma": "mashal"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "This is the prophecy",
@@ -614,6 +678,10 @@
       {
         "surface": "the prophecy",
         "lemma": "neum"
+      },
+      {
+        "surface": "of one who hears",
+        "lemma": "shama"
       },
       {
         "surface": "the words",
@@ -658,12 +726,24 @@
     ],
     "17": [
       {
+        "surface": "I see him",
+        "lemma": "raah"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "now",
         "lemma": "attah"
       },
       {
         "surface": "I behold him",
         "lemma": "shur"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "near",
@@ -710,6 +790,10 @@
         "lemma": "qur"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -724,12 +808,20 @@
         "lemma": "edom"
       },
       {
+        "surface": "will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a possession",
         "lemma": "yereshah"
       },
       {
         "surface": "as",
         "lemma": "yereshah"
+      },
+      {
+        "surface": "will",
+        "lemma": "hayah"
       },
       {
         "surface": "Seir",
@@ -742,6 +834,10 @@
       {
         "surface": "but Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "will perform",
+        "lemma": "asah"
       },
       {
         "surface": "with valor",
@@ -772,6 +868,10 @@
     ],
     "20": [
       {
+        "surface": "Then Balaam saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "Amalek",
         "lemma": "amaleq"
       },
@@ -782,6 +882,10 @@
       {
         "surface": "an oracle",
         "lemma": "mashal"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Amalek",
@@ -806,6 +910,10 @@
     ],
     "21": [
       {
+        "surface": "Next he saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the Kenites",
         "lemma": "qeni"
       },
@@ -816,6 +924,10 @@
       {
         "surface": "an oracle",
         "lemma": "mashal"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Your dwelling place",
@@ -844,6 +956,10 @@
         "lemma": "qayin"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "destroyed",
         "lemma": "baar"
       },
@@ -866,8 +982,8 @@
         "lemma": "mashal"
       },
       {
-        "surface": "Ah",
-        "lemma": "oy"
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "who",
@@ -930,6 +1046,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "and returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to his homeland",
         "lemma": "maqom"
       },
@@ -949,7 +1069,7 @@
   },
   "themeLemmas": [
     "bilam",
-    "nasa",
-    "neum"
+    "amar",
+    "nasa"
   ]
 }

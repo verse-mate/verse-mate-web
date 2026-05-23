@@ -480,6 +480,10 @@
         "lemma": "natin"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who had separated themselves",
         "lemma": "badal"
       },
@@ -502,6 +506,10 @@
       {
         "surface": "along with their wives",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "their sons",
@@ -534,6 +542,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "and commit",
+        "lemma": "bo"
+      },
+      {
         "surface": "themselves with a sworn",
         "lemma": "shevuah"
       },
@@ -554,6 +566,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "given",
+        "lemma": "natan"
+      },
+      {
         "surface": "through",
         "lemma": "yad"
       },
@@ -570,8 +586,16 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "and to obey",
+        "lemma": "asah"
+      },
+      {
         "surface": "carefully",
         "lemma": "shamar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the commandments",
@@ -596,6 +620,14 @@
     ],
     "30": [
       {
+        "surface": "We will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
+      },
+      {
         "surface": "our daughters {in marriage",
         "lemma": "bat"
       },
@@ -606,6 +638,10 @@
       {
         "surface": "of the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "and we will not",
+        "lemma": "lo"
       },
       {
         "surface": "take",
@@ -630,8 +666,16 @@
         "lemma": "erets"
       },
       {
+        "surface": "bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "merchandise",
         "lemma": "maqqachah"
+      },
+      {
+        "surface": "or any",
+        "lemma": "kol"
       },
       {
         "surface": "kind of grain",
@@ -648,6 +692,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "we will not",
+        "lemma": "lo"
       },
       {
         "surface": "buy",
@@ -678,6 +726,10 @@
         "lemma": "natash"
       },
       {
+        "surface": "and will cancel every",
+        "lemma": "kol"
+      },
+      {
         "surface": "debt",
         "lemma": "mashsah"
       }
@@ -690,6 +742,10 @@
       {
         "surface": "the obligation",
         "lemma": "mitsvah"
+      },
+      {
+        "surface": "to contribute",
+        "lemma": "natan"
       },
       {
         "surface": "a third",
@@ -762,6 +818,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "and for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the duties",
         "lemma": "melakhah"
       },
@@ -812,8 +872,16 @@
         "lemma": "zaman"
       },
       {
+        "surface": "times",
+        "lemma": "et"
+      },
+      {
         "surface": "each year",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "They are to bring it",
+        "lemma": "bo"
       },
       {
         "surface": "to the house",
@@ -850,12 +918,20 @@
     ],
     "35": [
       {
+        "surface": "We will also bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "the firstfruits",
         "lemma": "bikkur"
       },
       {
         "surface": "of our land",
         "lemma": "adamah"
+      },
+      {
+        "surface": "and of every",
+        "lemma": "kol"
       },
       {
         "surface": "fruit",
@@ -883,6 +959,10 @@
       }
     ],
     "36": [
+      {
+        "surface": "we will bring",
+        "lemma": "bo"
+      },
       {
         "surface": "the firstborn",
         "lemma": "bekhor"
@@ -942,6 +1022,10 @@
     ],
     "37": [
       {
+        "surface": "we will bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "to the priests",
         "lemma": "kohen"
       },
@@ -974,6 +1058,10 @@
         "lemma": "peri"
       },
       {
+        "surface": "of all our",
+        "lemma": "kol"
+      },
+      {
         "surface": "trees",
         "lemma": "ets"
       },
@@ -1002,6 +1090,10 @@
         "lemma": "asar"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the towns",
         "lemma": "ir"
       },
@@ -1022,6 +1114,10 @@
       {
         "surface": "line",
         "lemma": "ben"
+      },
+      {
+        "surface": "is to accompany",
+        "lemma": "hayah"
       },
       {
         "surface": "the Levites",
@@ -1078,6 +1174,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "are to bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "the contributions",
         "lemma": "terumah"
       },
@@ -1126,6 +1226,10 @@
         "lemma": "shir"
       },
       {
+        "surface": "Thus we will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "neglect",
         "lemma": "azav"
       },
@@ -1141,7 +1245,7 @@
   },
   "themeLemmas": [
     "bet",
-    "leviyyi",
-    "kohen"
+    "kol",
+    "leviyyi"
   ]
 }

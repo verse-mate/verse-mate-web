@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "are consistent with",
         "lemma": "prepo"
       },
@@ -22,6 +26,10 @@
       {
         "surface": "Older men",
         "lemma": "presbutes"
+      },
+      {
+        "surface": "are to be",
+        "lemma": "eimi"
       },
       {
         "surface": "temperate",
@@ -78,6 +86,10 @@
         "lemma": "douloo"
       },
       {
+        "surface": "to much",
+        "lemma": "polus"
+      },
+      {
         "surface": "wine",
         "lemma": "oinos"
       },
@@ -94,6 +106,10 @@
       {
         "surface": "young women",
         "lemma": "neos"
+      },
+      {
+        "surface": "to",
+        "lemma": "eimi"
       },
       {
         "surface": "love their husbands",
@@ -166,6 +182,10 @@
     ],
     "7": [
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "show",
         "lemma": "parecho"
       },
@@ -216,12 +236,20 @@
         "lemma": "entrepo"
       },
       {
+        "surface": "having",
+        "lemma": "echo"
+      },
+      {
         "surface": "nothing",
         "lemma": "medeis"
       },
       {
         "surface": "bad",
         "lemma": "phaulos"
+      },
+      {
+        "surface": "to say",
+        "lemma": "lego"
       }
     ],
     "9": [
@@ -242,6 +270,14 @@
         "lemma": "despotes"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "well-pleasing",
         "lemma": "euarestos"
       },
@@ -260,12 +296,20 @@
         "lemma": "endeiknumi"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "good",
         "lemma": "agathos"
       },
       {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "every respect",
+        "lemma": "pas"
       },
       {
         "surface": "they will adorn",
@@ -300,6 +344,10 @@
       {
         "surface": "bringing salvation",
         "lemma": "soterion"
+      },
+      {
+        "surface": "to everyone",
+        "lemma": "pas"
       }
     ],
     "12": [
@@ -370,6 +418,10 @@
         "lemma": "epiphaneia"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -388,8 +440,16 @@
     ],
     "14": [
       {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "redeem",
         "lemma": "lutroo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "lawlessness",
@@ -422,12 +482,20 @@
     ],
     "15": [
       {
+        "surface": "Speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "you encourage",
         "lemma": "parakaleo"
       },
       {
         "surface": "rebuke",
         "lemma": "elegcho"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "authority",

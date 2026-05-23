@@ -52,8 +52,20 @@
         "lemma": "tsippor"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
       },
       {
         "surface": "to the Amorites",
@@ -100,6 +112,10 @@
         "lemma": "moav"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the elders",
         "lemma": "zaqen"
       },
@@ -114,6 +130,10 @@
       {
         "surface": "will devour",
         "lemma": "lachakh"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "around us",
@@ -154,6 +174,10 @@
       {
         "surface": "of Moab",
         "lemma": "moav"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
       }
     ],
     "5": [
@@ -194,16 +218,20 @@
         "lemma": "ben"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "a people",
         "lemma": "am"
       },
       {
+        "surface": "has come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "said Balak",
+        "lemma": "qara"
       },
       {
         "surface": "They cover",
@@ -218,15 +246,15 @@
         "lemma": "erets"
       },
       {
+        "surface": "and have settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "next to me",
         "lemma": "mul"
       }
     ],
     "6": [
-      {
-        "surface": "So please",
-        "lemma": "na"
-      },
       {
         "surface": "come",
         "lemma": "halakh"
@@ -314,6 +342,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "They came",
+        "lemma": "bo"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
       },
@@ -344,6 +376,14 @@
         "lemma": "poh"
       },
       {
+        "surface": "Balaam replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and I will give",
+        "lemma": "shuv"
+      },
+      {
         "surface": "you the answer",
         "lemma": "davar"
       },
@@ -364,6 +404,10 @@
         "lemma": "moav"
       },
       {
+        "surface": "stayed",
+        "lemma": "yashav"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
       }
@@ -374,8 +418,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "amar"
       },
       {
         "surface": "Who",
@@ -390,6 +442,10 @@
       {
         "surface": "And Balaam",
         "lemma": "bilam"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "God",
@@ -422,12 +478,12 @@
     ],
     "11": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "a people",
         "lemma": "am"
+      },
+      {
+        "surface": "has come out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of Egypt",
@@ -480,12 +536,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
       },
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "You are not",
+        "lemma": "lo"
       },
       {
         "surface": "to curse",
@@ -514,6 +582,10 @@
         "lemma": "boqer"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Balak’s",
         "lemma": "balaq"
       },
@@ -538,6 +610,10 @@
         "lemma": "maen"
       },
       {
+        "surface": "to let me",
+        "lemma": "natan"
+      },
+      {
         "surface": "go",
         "lemma": "halakh"
       }
@@ -556,8 +632,16 @@
         "lemma": "qamay"
       },
       {
+        "surface": "returned",
+        "lemma": "bo"
+      },
+      {
         "surface": "Balak",
         "lemma": "balaq"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "Balaam",
@@ -600,8 +684,16 @@
     ],
     "16": [
       {
+        "surface": "They came",
+        "lemma": "bo"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "This is what",
@@ -620,8 +712,12 @@
         "lemma": "tsippor"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "let nothing",
+        "lemma": "al"
       },
       {
         "surface": "hinder",
@@ -642,8 +738,16 @@
         "lemma": "meod"
       },
       {
-        "surface": "So please",
-        "lemma": "na"
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "whatever",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you say",
+        "lemma": "amar"
       },
       {
         "surface": "come",
@@ -676,8 +780,16 @@
         "lemma": "balaq"
       },
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "Balak",
         "lemma": "balaq"
+      },
+      {
+        "surface": "were to give",
+        "lemma": "natan"
       },
       {
         "surface": "his house",
@@ -698,6 +810,14 @@
       {
         "surface": "I could",
         "lemma": "yakhol"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       },
       {
         "surface": "anything small",
@@ -730,8 +850,8 @@
         "lemma": "attah"
       },
       {
-        "surface": "please",
-        "lemma": "na"
+        "surface": "stay",
+        "lemma": "yashav"
       },
       {
         "surface": "overnight",
@@ -768,12 +888,32 @@
         "lemma": "elohim"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Since",
+        "lemma": "im"
+      },
+      {
         "surface": "these men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "have come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to summon",
+        "lemma": "qara"
       },
       {
         "surface": "get up",
@@ -786,6 +926,10 @@
       {
         "surface": "but you must only",
         "lemma": "akh"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       },
       {
         "surface": "I tell you",
@@ -884,6 +1028,10 @@
       {
         "surface": "When the donkey",
         "lemma": "aton"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "the angel",
@@ -986,6 +1134,10 @@
         "lemma": "aton"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the angel",
         "lemma": "maleakh"
       },
@@ -1082,6 +1234,10 @@
         "lemma": "aton"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the angel",
         "lemma": "maleakh"
       },
@@ -1140,12 +1296,20 @@
         "lemma": "peh"
       },
       {
+        "surface": "and she said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Balaam",
         "lemma": "bilam"
       },
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "have I done",
+        "lemma": "asah"
       },
       {
         "surface": "you have beaten me",
@@ -1166,16 +1330,16 @@
         "lemma": "bilam"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "the donkey",
         "lemma": "aton"
       },
       {
         "surface": "You have made a fool",
         "lemma": "alal"
-      },
-      {
-        "surface": "If",
-        "lemma": "lu"
       },
       {
         "surface": "I had",
@@ -1204,8 +1368,16 @@
         "lemma": "aton"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Balaam",
         "lemma": "bilam"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "the donkey",
@@ -1220,12 +1392,24 @@
         "lemma": "od"
       },
       {
+        "surface": "Have I ever treated",
+        "lemma": "asah"
+      },
+      {
         "surface": "this way",
         "lemma": "koh"
       },
       {
         "surface": "before",
         "lemma": "sakhan"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
       }
     ],
     "31": [
@@ -1244,6 +1428,10 @@
       {
         "surface": "eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "and he saw",
+        "lemma": "raah"
       },
       {
         "surface": "the angel",
@@ -1292,6 +1480,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "asked him",
+        "lemma": "amar"
+      },
+      {
         "surface": "have you beaten",
         "lemma": "nakhah"
       },
@@ -1308,8 +1500,8 @@
         "lemma": "regel"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
+        "surface": "have come out",
+        "lemma": "yatsa"
       },
       {
         "surface": "to oppose you",
@@ -1332,6 +1524,10 @@
       {
         "surface": "The donkey",
         "lemma": "aton"
+      },
+      {
+        "surface": "saw me",
+        "lemma": "raah"
       },
       {
         "surface": "and turned away",
@@ -1380,12 +1576,20 @@
         "lemma": "bilam"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the angel",
         "lemma": "maleakh"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "I did not",
+        "lemma": "lo"
       },
       {
         "surface": "realize",
@@ -1400,8 +1604,16 @@
         "lemma": "derekh"
       },
       {
+        "surface": "to confront me",
+        "lemma": "qara"
+      },
+      {
         "surface": "And now",
         "lemma": "attah"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
       },
       {
         "surface": "this is displeasing",
@@ -1410,6 +1622,10 @@
       {
         "surface": "in your sight",
         "lemma": "ayin"
+      },
+      {
+        "surface": "I will go back",
+        "lemma": "shuv"
       }
     ],
     "35": [
@@ -1420,6 +1636,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Balaam",
@@ -1468,8 +1688,24 @@
         "lemma": "balaq"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
+      },
+      {
+        "surface": "was coming",
+        "lemma": "bo"
+      },
+      {
+        "surface": "he went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to meet him",
+        "lemma": "qara"
       },
       {
         "surface": "the Moabite",
@@ -1502,8 +1738,16 @@
         "lemma": "balaq"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
+      },
+      {
+        "surface": "Did I not",
+        "lemma": "lo"
       },
       {
         "surface": "send you an urgent summons",
@@ -1514,12 +1758,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "did you not come",
         "lemma": "halakh"
       },
       {
         "surface": "Am I really",
         "lemma": "umnam"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "able",
@@ -1532,12 +1784,16 @@
     ],
     "38": [
       {
-        "surface": "See",
-        "lemma": "hinneh"
+        "surface": "I have come",
+        "lemma": "bo"
       },
       {
         "surface": "Balaam",
         "lemma": "bilam"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "but can",
@@ -1586,6 +1842,10 @@
         "lemma": "balaq"
       },
       {
+        "surface": "and they came",
+        "lemma": "bo"
+      },
+      {
         "surface": "vvv",
         "lemma": "qiryatchutsot"
       },
@@ -1626,6 +1886,10 @@
     ],
     "41": [
       {
+        "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
         "surface": "The next morning",
         "lemma": "boqer"
       },
@@ -1658,6 +1922,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "he could see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the outskirts of the camp",
         "lemma": "qatseh"
       },
@@ -1669,7 +1937,7 @@
   },
   "themeLemmas": [
     "bilam",
-    "halakh",
-    "balaq"
+    "amar",
+    "halakh"
   ]
 }

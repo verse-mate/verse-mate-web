@@ -10,12 +10,20 @@
         "lemma": "teknion"
       },
       {
+        "surface": "I am writing",
+        "lemma": "grapho"
+      },
+      {
         "surface": "you will not sin",
         "lemma": "hamartano"
       },
       {
         "surface": "does sin",
         "lemma": "hamartano"
+      },
+      {
+        "surface": "we have",
+        "lemma": "echo"
       },
       {
         "surface": "an advocate",
@@ -39,6 +47,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
       {
         "surface": "the atoning sacrifice",
         "lemma": "hilasmos"
@@ -66,6 +78,14 @@
     ],
     "3": [
       {
+        "surface": "we can be sure",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "we have come to know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "we keep",
         "lemma": "tereo"
       },
@@ -76,6 +96,14 @@
     ],
     "4": [
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
+        "surface": "I know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "does not keep",
         "lemma": "tereo"
       },
@@ -84,12 +112,20 @@
         "lemma": "entole"
       },
       {
+        "surface": "he is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a liar",
         "lemma": "pseustes"
       },
       {
         "surface": "truth",
         "lemma": "aletheia"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       }
     ],
     "5": [
@@ -112,9 +148,21 @@
       {
         "surface": "has been truly perfected",
         "lemma": "teleioo"
+      },
+      {
+        "surface": "we know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "we are",
+        "lemma": "eimi"
       }
     ],
     "6": [
+      {
+        "surface": "claims",
+        "lemma": "lego"
+      },
       {
         "surface": "to abide",
         "lemma": "meno"
@@ -138,6 +186,10 @@
         "lemma": "agapetos"
       },
       {
+        "surface": "I am not writing",
+        "lemma": "grapho"
+      },
+      {
         "surface": "a new",
         "lemma": "kainos"
       },
@@ -154,6 +206,10 @@
         "lemma": "entole"
       },
       {
+        "surface": "you have had",
+        "lemma": "echo"
+      },
+      {
         "surface": "the beginning",
         "lemma": "arche"
       },
@@ -162,8 +218,16 @@
         "lemma": "entole"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "message",
         "lemma": "logos"
+      },
+      {
+        "surface": "you have heard",
+        "lemma": "akouo"
       }
     ],
     "8": [
@@ -172,12 +236,20 @@
         "lemma": "palin"
       },
       {
+        "surface": "I am also writing",
+        "lemma": "grapho"
+      },
+      {
         "surface": "a new",
         "lemma": "kainos"
       },
       {
         "surface": "commandment",
         "lemma": "entole"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "true",
@@ -210,6 +282,14 @@
     ],
     "9": [
       {
+        "surface": "claims",
+        "lemma": "lego"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "light",
         "lemma": "phos"
       },
@@ -220,6 +300,10 @@
       {
         "surface": "brother",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "he is",
+        "lemma": "eimi"
       },
       {
         "surface": "darkness",
@@ -244,6 +328,10 @@
         "lemma": "phos"
       },
       {
+        "surface": "there is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "cause of stumbling",
         "lemma": "skandalon"
       }
@@ -258,6 +346,10 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "darkness",
         "lemma": "skotia"
       },
@@ -268,6 +360,10 @@
       {
         "surface": "darkness",
         "lemma": "skotia"
+      },
+      {
+        "surface": "He does not know",
+        "lemma": "eido"
       },
       {
         "surface": "where",
@@ -292,6 +388,10 @@
     ],
     "12": [
       {
+        "surface": "I am writing",
+        "lemma": "grapho"
+      },
+      {
         "surface": "little children",
         "lemma": "teknion"
       },
@@ -310,12 +410,24 @@
     ],
     "13": [
       {
+        "surface": "I am writing",
+        "lemma": "grapho"
+      },
+      {
         "surface": "fathers",
         "lemma": "pater"
       },
       {
+        "surface": "you know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "the beginning",
         "lemma": "arche"
+      },
+      {
+        "surface": "I am writing",
+        "lemma": "grapho"
       },
       {
         "surface": "young men",
@@ -330,8 +442,16 @@
         "lemma": "poneros"
       },
       {
+        "surface": "I have written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "children",
         "lemma": "paidion"
+      },
+      {
+        "surface": "you know",
+        "lemma": "ginosko"
       },
       {
         "surface": "Father",
@@ -340,16 +460,32 @@
     ],
     "14": [
       {
+        "surface": "I have written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "fathers",
         "lemma": "pater"
+      },
+      {
+        "surface": "you know",
+        "lemma": "ginosko"
       },
       {
         "surface": "the beginning",
         "lemma": "arche"
       },
       {
+        "surface": "I have written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "young men",
         "lemma": "neaniskos"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "strong",
@@ -404,9 +540,17 @@
       {
         "surface": "Father",
         "lemma": "pater"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       }
     ],
     "16": [
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
       {
         "surface": "world",
         "lemma": "kosmos"
@@ -436,6 +580,10 @@
         "lemma": "bios"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Father",
         "lemma": "pater"
       },
@@ -456,6 +604,10 @@
       {
         "surface": "desires",
         "lemma": "epithumia"
+      },
+      {
+        "surface": "does",
+        "lemma": "poieo"
       },
       {
         "surface": "will",
@@ -480,6 +632,10 @@
         "lemma": "paidion"
       },
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the last",
         "lemma": "eschatos"
       },
@@ -488,16 +644,40 @@
         "lemma": "hora"
       },
       {
+        "surface": "you have heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "the antichrist",
         "lemma": "antichristos"
+      },
+      {
+        "surface": "is coming",
+        "lemma": "erchomai"
       },
       {
         "surface": "now",
         "lemma": "nun"
       },
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "antichrists",
         "lemma": "antichristos"
+      },
+      {
+        "surface": "have appeared",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "we know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "it is",
+        "lemma": "eimi"
       },
       {
         "surface": "the last",
@@ -510,8 +690,16 @@
     ],
     "19": [
       {
-        "surface": "vvv",
-        "lemma": "an"
+        "surface": "They went out",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "they did not belong",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "they had belonged",
+        "lemma": "eimi"
       },
       {
         "surface": "they would have remained",
@@ -520,9 +708,21 @@
       {
         "surface": "made it clear",
         "lemma": "phaneroo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
+      {
+        "surface": "belonged to",
+        "lemma": "eimi"
       }
     ],
     "20": [
+      {
+        "surface": "have",
+        "lemma": "echo"
+      },
       {
         "surface": "an anointing",
         "lemma": "chrisma"
@@ -530,16 +730,36 @@
       {
         "surface": "Holy One",
         "lemma": "hagios"
+      },
+      {
+        "surface": "all of you know the truth",
+        "lemma": "eido"
       }
     ],
     "21": [
+      {
+        "surface": "I have not written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "you lack knowledge",
+        "lemma": "eido"
+      },
       {
         "surface": "truth",
         "lemma": "aletheia"
       },
       {
+        "surface": "you have",
+        "lemma": "eido"
+      },
+      {
         "surface": "lie",
         "lemma": "pseudos"
+      },
+      {
+        "surface": "comes",
+        "lemma": "eimi"
       },
       {
         "surface": "truth",
@@ -547,6 +767,14 @@
       }
     ],
     "22": [
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
       {
         "surface": "liar",
         "lemma": "pseustes"
@@ -560,8 +788,16 @@
         "lemma": "iesous"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "antichrist",
@@ -582,12 +818,20 @@
     ],
     "23": [
       {
+        "surface": "Whoever",
+        "lemma": "pas"
+      },
+      {
         "surface": "denies",
         "lemma": "arneomai"
       },
       {
         "surface": "Son",
         "lemma": "huios"
+      },
+      {
+        "surface": "does not have",
+        "lemma": "echo"
       },
       {
         "surface": "Father",
@@ -602,11 +846,19 @@
         "lemma": "huios"
       },
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "Father",
         "lemma": "pater"
       }
     ],
     "24": [
+      {
+        "surface": "you have heard",
+        "lemma": "akouo"
+      },
       {
         "surface": "the beginning",
         "lemma": "arche"
@@ -634,6 +886,10 @@
     ],
     "25": [
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "promise",
         "lemma": "epangelia"
       },
@@ -652,6 +908,10 @@
     ],
     "26": [
       {
+        "surface": "I have written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "trying to deceive",
         "lemma": "planao"
       }
@@ -662,8 +922,16 @@
         "lemma": "chrisma"
       },
       {
+        "surface": "you received",
+        "lemma": "lambano"
+      },
+      {
         "surface": "remains",
         "lemma": "meno"
+      },
+      {
+        "surface": "you do",
+        "lemma": "echo"
       },
       {
         "surface": "need",
@@ -688,6 +956,10 @@
       {
         "surface": "teaches",
         "lemma": "didasko"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
       },
       {
         "surface": "remain",
@@ -716,6 +988,10 @@
         "lemma": "phaneroo"
       },
       {
+        "surface": "we may be",
+        "lemma": "echo"
+      },
+      {
         "surface": "confident",
         "lemma": "parresia"
       },
@@ -730,8 +1006,28 @@
     ],
     "29": [
       {
+        "surface": "you know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "He is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "righteous",
         "lemma": "dikaios"
+      },
+      {
+        "surface": "you also know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
+        "surface": "practices",
+        "lemma": "poieo"
       },
       {
         "surface": "righteousness",

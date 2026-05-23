@@ -10,12 +10,20 @@
         "lemma": "ozen"
       },
       {
+        "surface": "call out",
+        "lemma": "qara"
+      },
+      {
         "surface": "in a loud",
         "lemma": "gadol"
       },
       {
         "surface": "voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Draw near",
@@ -48,16 +56,16 @@
     ],
     "2": [
       {
-        "surface": "And I saw",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "six",
         "lemma": "shesh"
       },
       {
         "surface": "men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "coming",
+        "lemma": "bo"
       },
       {
         "surface": "from the direction",
@@ -124,6 +132,10 @@
         "lemma": "moten"
       },
       {
+        "surface": "And they came in",
+        "lemma": "bo"
+      },
+      {
         "surface": "and stood",
         "lemma": "amad"
       },
@@ -162,12 +174,20 @@
         "lemma": "keruv"
       },
       {
+        "surface": "it had been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the threshold",
         "lemma": "miphtan"
       },
       {
         "surface": "of the temple",
         "lemma": "bet"
+      },
+      {
+        "surface": "And He called",
+        "lemma": "qara"
       },
       {
         "surface": "the man",
@@ -212,6 +232,10 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -240,8 +264,16 @@
         "lemma": "anaq"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the abominations",
         "lemma": "toevah"
+      },
+      {
+        "surface": "committed",
+        "lemma": "asah"
       },
       {
         "surface": "there",
@@ -252,6 +284,10 @@
       {
         "surface": "And as I listened",
         "lemma": "ozen"
+      },
+      {
+        "surface": "He said",
+        "lemma": "amar"
       },
       {
         "surface": "Follow him",
@@ -304,8 +340,16 @@
         "lemma": "taph"
       },
       {
+        "surface": "but do not",
+        "lemma": "al"
+      },
+      {
         "surface": "go near",
         "lemma": "nagash"
+      },
+      {
+        "surface": "anyone",
+        "lemma": "kol"
       },
       {
         "surface": "has the mark",
@@ -338,6 +382,10 @@
     ],
     "7": [
       {
+        "surface": "Then He told",
+        "lemma": "amar"
+      },
+      {
         "surface": "Defile",
         "lemma": "tame"
       },
@@ -356,6 +404,14 @@
       {
         "surface": "with the slain",
         "lemma": "chalal"
+      },
+      {
+        "surface": "Go forth",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "So they went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "and began killing",
@@ -384,10 +440,6 @@
         "lemma": "zaaq"
       },
       {
-        "surface": "Oh",
-        "lemma": "ahah"
-      },
-      {
         "surface": "Lord",
         "lemma": "adonai"
       },
@@ -412,6 +464,10 @@
         "lemma": "shachat"
       },
       {
+        "surface": "the entire",
+        "lemma": "kol"
+      },
+      {
         "surface": "remnant",
         "lemma": "sheerit"
       },
@@ -421,6 +477,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "He replied",
+        "lemma": "amar"
+      },
       {
         "surface": "The iniquity",
         "lemma": "avan"
@@ -470,6 +530,10 @@
         "lemma": "mutteh"
       },
       {
+        "surface": "they say",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
       },
@@ -488,9 +552,17 @@
       {
         "surface": "does not",
         "lemma": "ayin"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       }
     ],
     "10": [
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
       {
         "surface": "look on them",
         "lemma": "ayin"
@@ -498,6 +570,10 @@
       {
         "surface": "with pity",
         "lemma": "chus"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "will I spare them",
@@ -508,15 +584,15 @@
         "lemma": "derekh"
       },
       {
+        "surface": "down",
+        "lemma": "natan"
+      },
+      {
         "surface": "upon their own heads",
         "lemma": "rosh"
       }
     ],
     "11": [
-      {
-        "surface": "Then",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the man",
         "lemma": "ish"
@@ -538,14 +614,22 @@
         "lemma": "moten"
       },
       {
+        "surface": "reported back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "You commanded",
         "lemma": "tsavah"
       }
     ]
   },
   "themeLemmas": [
+    "amar",
     "tavekh",
-    "bet",
-    "yisrael"
+    "bet"
   ]
 }

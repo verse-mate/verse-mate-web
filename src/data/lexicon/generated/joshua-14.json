@@ -50,6 +50,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of the families",
+        "lemma": "av"
+      },
+      {
         "surface": "of the tribes",
         "lemma": "matteh"
       },
@@ -106,6 +110,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "had given",
+        "lemma": "natan"
+      },
+      {
         "surface": "the inheritance",
         "lemma": "nachalah"
       },
@@ -130,6 +138,14 @@
         "lemma": "matteh"
       },
       {
+        "surface": "But he granted",
+        "lemma": "natan"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "inheritance",
         "lemma": "nachalah"
       },
@@ -152,6 +168,10 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
       },
@@ -168,6 +188,10 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "And no",
+        "lemma": "lo"
+      },
+      {
         "surface": "portion",
         "lemma": "cheleq"
       },
@@ -176,12 +200,24 @@
         "lemma": "erets"
       },
       {
+        "surface": "was given",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the Levites",
         "lemma": "leviyyi"
       },
       {
+        "surface": "except for",
+        "lemma": "im"
+      },
+      {
         "surface": "cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "in which to live",
+        "lemma": "yashav"
       },
       {
         "surface": "along with pasturelands",
@@ -204,6 +240,10 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "the LORD",
@@ -262,6 +302,10 @@
       {
         "surface": "the Kenizzite",
         "lemma": "qenizzi"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "know",
@@ -342,6 +386,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "and I brought back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "report",
         "lemma": "davar"
       }
@@ -398,12 +446,24 @@
         "lemma": "shava"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Surely",
+        "lemma": "im"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "you have set foot",
         "lemma": "darakh"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "an inheritance",
@@ -434,10 +494,6 @@
       {
         "surface": "Now",
         "lemma": "attah"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hinneh"
       },
       {
         "surface": "the LORD promised",
@@ -492,10 +548,6 @@
         "lemma": "attah"
       },
       {
-        "surface": "here",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "eighty-five",
         "lemma": "chamesh"
       },
@@ -544,12 +596,24 @@
       {
         "surface": "for war",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "for going out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and for coming in",
+        "lemma": "bo"
       }
     ],
     "12": [
       {
         "surface": "Now therefore",
         "lemma": "attah"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
       },
       {
         "surface": "hill country",
@@ -566,6 +630,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       },
       {
         "surface": "then",
@@ -634,6 +702,10 @@
         "lemma": "yephunneh"
       },
       {
+        "surface": "and gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "Hebron",
         "lemma": "chevron"
       },
@@ -646,6 +718,10 @@
       {
         "surface": "Hebron",
         "lemma": "chevron"
+      },
+      {
+        "surface": "belongs to",
+        "lemma": "hayah"
       },
       {
         "surface": "Caleb",
@@ -742,6 +818,6 @@
   "themeLemmas": [
     "mosheh",
     "nachalah",
-    "matteh"
+    "natan"
   ]
 }

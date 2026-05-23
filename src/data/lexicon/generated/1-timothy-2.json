@@ -10,6 +10,10 @@
         "lemma": "proton"
       },
       {
+        "surface": "of all",
+        "lemma": "pas"
+      },
+      {
         "surface": "I urge that",
         "lemma": "parakaleo"
       },
@@ -28,12 +32,24 @@
       {
         "surface": "and thanksgiving",
         "lemma": "eucharistia"
+      },
+      {
+        "surface": "be offered",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       }
     ],
     "2": [
       {
         "surface": "kings",
         "lemma": "basileus"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "authority",
@@ -54,6 +70,10 @@
       {
         "surface": "lives",
         "lemma": "bios"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "godliness",
@@ -84,8 +104,20 @@
     ],
     "4": [
       {
+        "surface": "wants",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "to be saved",
         "lemma": "sozo"
+      },
+      {
+        "surface": "to come",
+        "lemma": "erchomai"
       },
       {
         "surface": "the knowledge",
@@ -98,8 +130,16 @@
     ],
     "5": [
       {
+        "surface": "there is one",
+        "lemma": "heis"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "mediator",
@@ -128,8 +168,16 @@
     ],
     "6": [
       {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "as a ransom",
         "lemma": "antilutron"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "testimony that was given",
@@ -174,6 +222,10 @@
         "lemma": "ethnos"
       },
       {
+        "surface": "I am telling",
+        "lemma": "lego"
+      },
+      {
         "surface": "the truth",
         "lemma": "aletheia"
       },
@@ -190,6 +242,10 @@
       {
         "surface": "men",
         "lemma": "aner"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
       },
       {
         "surface": "everywhere",
@@ -310,6 +366,10 @@
         "lemma": "hesuchia"
       },
       {
+        "surface": "full",
+        "lemma": "pas"
+      },
+      {
         "surface": "submissiveness",
         "lemma": "hupotage"
       }
@@ -334,6 +394,10 @@
       {
         "surface": "a man",
         "lemma": "aner"
+      },
+      {
+        "surface": "she is to remain",
+        "lemma": "eimi"
       },
       {
         "surface": "quiet",
@@ -380,6 +444,10 @@
         "lemma": "exapatao"
       },
       {
+        "surface": "and fell",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "transgression",
         "lemma": "parabasis"
       }
@@ -418,6 +486,6 @@
   "themeLemmas": [
     "sophrosune",
     "hesuchia",
-    "adam"
+    "aletheia"
   ]
 }

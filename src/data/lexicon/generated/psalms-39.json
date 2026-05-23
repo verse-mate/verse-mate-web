@@ -22,6 +22,10 @@
         "lemma": "david"
       },
       {
+        "surface": "I said",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will watch",
         "lemma": "shamar"
       },
@@ -158,8 +162,8 @@
     ],
     "5": [
       {
-        "surface": "You, indeed",
-        "lemma": "hinneh"
+        "surface": "have made",
+        "lemma": "natan"
       },
       {
         "surface": "my days",
@@ -184,6 +188,10 @@
       {
         "surface": "Truly",
         "lemma": "akh"
+      },
+      {
+        "surface": "each",
+        "lemma": "kol"
       },
       {
         "surface": "man",
@@ -236,6 +244,10 @@
         "lemma": "tsavar"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "knowing",
         "lemma": "yada"
       },
@@ -276,8 +288,16 @@
         "lemma": "natsal"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my transgressions",
         "lemma": "pesah"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "make me",
@@ -298,12 +318,20 @@
         "lemma": "alam"
       },
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "open",
         "lemma": "patach"
       },
       {
         "surface": "my mouth",
         "lemma": "peh"
+      },
+      {
+        "surface": "have done",
+        "lemma": "asah"
       }
     ],
     "10": [
@@ -362,6 +390,10 @@
         "lemma": "akh"
       },
       {
+        "surface": "each",
+        "lemma": "kol"
+      },
+      {
         "surface": "man",
         "lemma": "adam"
       },
@@ -375,6 +407,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
       {
         "surface": "my prayer",
         "lemma": "tephillah"
@@ -392,6 +428,10 @@
         "lemma": "shavah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be deaf",
         "lemma": "charash"
       },
@@ -406,6 +446,14 @@
       {
         "surface": "a stranger",
         "lemma": "toshav"
+      },
+      {
+        "surface": "like all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "my fathers",
+        "lemma": "av"
       }
     ],
     "13": [
@@ -432,8 +480,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "akh",
-    "yada",
-    "hevel"
+    "yada"
   ]
 }

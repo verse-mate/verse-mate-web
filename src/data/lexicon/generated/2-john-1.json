@@ -34,6 +34,14 @@
         "lemma": "monos"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "truth",
         "lemma": "aletheia"
       }
@@ -46,6 +54,10 @@
       {
         "surface": "abides",
         "lemma": "meno"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "forever",
@@ -90,6 +102,10 @@
         "lemma": "pater"
       },
       {
+        "surface": "will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "truth",
         "lemma": "aletheia"
       },
@@ -102,6 +118,10 @@
       {
         "surface": "I was overjoyed",
         "lemma": "chairo"
+      },
+      {
+        "surface": "find",
+        "lemma": "heurisko"
       },
       {
         "surface": "children",
@@ -122,6 +142,10 @@
       {
         "surface": "has commanded",
         "lemma": "entole"
+      },
+      {
+        "surface": "us",
+        "lemma": "lambano"
       }
     ],
     "5": [
@@ -146,6 +170,10 @@
         "lemma": "entole"
       },
       {
+        "surface": "we have had",
+        "lemma": "echo"
+      },
+      {
         "surface": "the beginning",
         "lemma": "arche"
       },
@@ -160,6 +188,10 @@
     ],
     "6": [
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "love",
         "lemma": "agape"
       },
@@ -172,8 +204,16 @@
         "lemma": "entole"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "commandment",
         "lemma": "entole"
+      },
+      {
+        "surface": "you have heard",
+        "lemma": "akouo"
       },
       {
         "surface": "the beginning",
@@ -186,8 +226,16 @@
     ],
     "7": [
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "deceivers",
         "lemma": "planos"
+      },
+      {
+        "surface": "have gone out",
+        "lemma": "exerchomai"
       },
       {
         "surface": "world",
@@ -196,6 +244,10 @@
       {
         "surface": "to confess",
         "lemma": "homologeo"
+      },
+      {
+        "surface": "the coming of",
+        "lemma": "erchomai"
       },
       {
         "surface": "Jesus",
@@ -208,6 +260,10 @@
       {
         "surface": "the flesh",
         "lemma": "sarx"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "deceiver",
@@ -238,6 +294,10 @@
     ],
     "9": [
       {
+        "surface": "Anyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "runs ahead",
         "lemma": "proago"
       },
@@ -254,6 +314,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "does not have",
+        "lemma": "echo"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -266,6 +330,10 @@
         "lemma": "didache"
       },
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "Father",
         "lemma": "pater"
       },
@@ -276,6 +344,10 @@
     ],
     "10": [
       {
+        "surface": "comes",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "does not bring",
         "lemma": "phero"
       },
@@ -284,11 +356,23 @@
         "lemma": "didache"
       },
       {
+        "surface": "receive",
+        "lemma": "lambano"
+      },
+      {
         "surface": "your home",
         "lemma": "oikia"
+      },
+      {
+        "surface": "greet",
+        "lemma": "lego"
       }
     ],
     "11": [
+      {
+        "surface": "greets",
+        "lemma": "lego"
+      },
       {
         "surface": "shares",
         "lemma": "koinoneo"
@@ -303,6 +387,18 @@
       }
     ],
     "12": [
+      {
+        "surface": "I have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "many things",
+        "lemma": "polus"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
+      },
       {
         "surface": "but I would prefer",
         "lemma": "boulomai"
@@ -320,6 +416,14 @@
         "lemma": "elpizo"
       },
       {
+        "surface": "to come",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "face",
         "lemma": "stoma"
       },
@@ -330,6 +434,10 @@
       {
         "surface": "joy",
         "lemma": "chara"
+      },
+      {
+        "surface": "may be",
+        "lemma": "eimi"
       },
       {
         "surface": "complete",

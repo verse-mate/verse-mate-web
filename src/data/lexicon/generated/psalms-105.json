@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "call",
+        "lemma": "qara"
+      },
+      {
         "surface": "upon His name",
         "lemma": "shem"
       },
@@ -42,6 +46,10 @@
       {
         "surface": "tell",
         "lemma": "siach"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "His wonders",
@@ -114,6 +122,10 @@
         "lemma": "pala"
       },
       {
+        "surface": "He has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "His marvels",
         "lemma": "mophet"
       },
@@ -164,6 +176,10 @@
       {
         "surface": "His judgments carry",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -246,6 +262,10 @@
     ],
     "11": [
       {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -263,6 +283,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "When they were",
+        "lemma": "hayah"
+      },
       {
         "surface": "few",
         "lemma": "mat"
@@ -308,6 +332,10 @@
         "lemma": "nuach"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "man",
         "lemma": "adam"
       },
@@ -325,6 +353,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "touch",
         "lemma": "naga"
@@ -344,6 +376,10 @@
     ],
     "16": [
       {
+        "surface": "He called down",
+        "lemma": "qara"
+      },
+      {
         "surface": "famine",
         "lemma": "raav"
       },
@@ -354,6 +390,10 @@
       {
         "surface": "and cut off",
         "lemma": "shavar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their supplies",
@@ -404,6 +444,10 @@
         "lemma": "kevel"
       },
       {
+        "surface": "and placed",
+        "lemma": "bo"
+      },
+      {
         "surface": "his neck",
         "lemma": "nephesh"
       },
@@ -416,6 +460,10 @@
       {
         "surface": "his prediction",
         "lemma": "davar"
+      },
+      {
+        "surface": "came true",
+        "lemma": "bo"
       },
       {
         "surface": "and the word",
@@ -474,6 +522,10 @@
         "lemma": "mashal"
       },
       {
+        "surface": "over all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his substance",
         "lemma": "qinyan"
       }
@@ -504,6 +556,10 @@
       {
         "surface": "Then Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "entered",
+        "lemma": "bo"
       },
       {
         "surface": "Egypt",
@@ -636,6 +692,10 @@
         "lemma": "chashakh"
       },
       {
+        "surface": "yet they",
+        "lemma": "lo"
+      },
+      {
         "surface": "defied",
         "lemma": "marah"
       },
@@ -690,12 +750,24 @@
     ],
     "31": [
       {
+        "surface": "He spoke",
+        "lemma": "amar"
+      },
+      {
         "surface": "and insects",
         "lemma": "arov"
       },
       {
+        "surface": "swarmed",
+        "lemma": "bo"
+      },
+      {
         "surface": "gnats",
         "lemma": "ken"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "their country",
@@ -703,6 +775,10 @@
       }
     ],
     "32": [
+      {
+        "surface": "He gave them",
+        "lemma": "natan"
+      },
       {
         "surface": "hail",
         "lemma": "barad"
@@ -748,8 +824,16 @@
     ],
     "34": [
       {
+        "surface": "He spoke",
+        "lemma": "amar"
+      },
+      {
         "surface": "and the locusts",
         "lemma": "arbeh"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "young locusts",
@@ -768,6 +852,10 @@
       {
         "surface": "They devoured",
         "lemma": "akhal"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "plant",
@@ -796,6 +884,10 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -808,11 +900,19 @@
         "lemma": "reshit"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their vigor",
         "lemma": "on"
       }
     ],
     "37": [
+      {
+        "surface": "He brought Israel out",
+        "lemma": "yatsa"
+      },
       {
         "surface": "with silver",
         "lemma": "keseph"
@@ -842,6 +942,10 @@
       {
         "surface": "was glad",
         "lemma": "samach"
+      },
+      {
+        "surface": "when they departed",
+        "lemma": "yatsa"
       },
       {
         "surface": "the dread",
@@ -882,6 +986,10 @@
       {
         "surface": "They asked",
         "lemma": "shaal"
+      },
+      {
+        "surface": "and He brought",
+        "lemma": "bo"
       },
       {
         "surface": "quail",
@@ -972,6 +1080,10 @@
     ],
     "44": [
       {
+        "surface": "He gave them",
+        "lemma": "natan"
+      },
+      {
         "surface": "the lands",
         "lemma": "erets"
       },
@@ -1012,8 +1124,8 @@
     ]
   },
   "themeLemmas": [
-    "shalach",
-    "zakhar",
-    "yaaqov"
+    "kol",
+    "bo",
+    "shalach"
   ]
 }

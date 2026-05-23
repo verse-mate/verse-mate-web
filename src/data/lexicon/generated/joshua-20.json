@@ -28,6 +28,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "to designate",
+        "lemma": "natan"
+      },
+      {
         "surface": "the cities",
         "lemma": "ir"
       },
@@ -76,6 +80,10 @@
       {
         "surface": "there",
         "lemma": "sham"
+      },
+      {
+        "surface": "These will be",
+        "lemma": "hayah"
       },
       {
         "surface": "refuge",
@@ -140,8 +148,16 @@
         "lemma": "ir"
       },
       {
+        "surface": "and give",
+        "lemma": "natan"
+      },
+      {
         "surface": "a place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
       }
     ],
     "5": [
@@ -156,6 +172,10 @@
       {
         "surface": "pursues him",
         "lemma": "radaph"
+      },
+      {
+        "surface": "they must not",
+        "lemma": "lo"
       },
       {
         "surface": "surrender",
@@ -182,6 +202,10 @@
         "lemma": "beli"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "vvv",
         "lemma": "temol"
       },
@@ -195,6 +219,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "He is to stay",
+        "lemma": "yashav"
+      },
       {
         "surface": "city",
         "lemma": "ir"
@@ -228,12 +256,20 @@
         "lemma": "kohen"
       },
       {
+        "surface": "serving",
+        "lemma": "hayah"
+      },
+      {
         "surface": "time",
         "lemma": "yom"
       },
       {
         "surface": "the manslayer",
         "lemma": "ratsach"
+      },
+      {
+        "surface": "may return",
+        "lemma": "shuv"
       },
       {
         "surface": "to his own home",
@@ -320,6 +356,10 @@
         "lemma": "yericho"
       },
       {
+        "surface": "they designated",
+        "lemma": "natan"
+      },
+      {
         "surface": "Bezer",
         "lemma": "betser"
       },
@@ -374,12 +414,20 @@
     ],
     "9": [
       {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the cities",
         "lemma": "ir"
       },
       {
         "surface": "appointed",
         "lemma": "muadah"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "the Israelites",
@@ -392,6 +440,10 @@
       {
         "surface": "among them",
         "lemma": "tavekh"
+      },
+      {
+        "surface": "so that anyone",
+        "lemma": "kol"
       },
       {
         "surface": "who kills",
@@ -412,6 +464,10 @@
       {
         "surface": "there",
         "lemma": "sham"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
       },
       {
         "surface": "die",
@@ -446,6 +502,6 @@
   "themeLemmas": [
     "nus",
     "ratsach",
-    "nakhah"
+    "natan"
   ]
 }

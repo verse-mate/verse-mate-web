@@ -122,6 +122,10 @@
         "lemma": "esh"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "glow",
         "lemma": "nagah"
       }
@@ -264,6 +268,10 @@
         "lemma": "on"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "depleted",
         "lemma": "raev"
       },
@@ -402,6 +410,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "name",
         "lemma": "shem"
       },
@@ -433,6 +445,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "He has no",
+        "lemma": "lo"
+      },
       {
         "surface": "offspring",
         "lemma": "nin"
@@ -498,6 +514,10 @@
         "lemma": "maqom"
       },
       {
+        "surface": "of one who does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -509,7 +529,7 @@
   },
   "themeLemmas": [
     "or",
-    "ohel",
-    "tsaad"
+    "lo",
+    "ohel"
   ]
 }

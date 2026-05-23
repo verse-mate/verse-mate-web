@@ -20,6 +20,10 @@
     ],
     "2": [
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the law",
         "lemma": "torah"
       },
@@ -36,6 +40,10 @@
         "lemma": "tohorah"
       },
       {
+        "surface": "when he is brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       }
@@ -46,6 +54,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to go",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "outside",
         "lemma": "chuts"
       },
@@ -54,8 +66,8 @@
         "lemma": "machaneh"
       },
       {
-        "surface": "and if",
-        "lemma": "hinneh"
+        "surface": "to examine him",
+        "lemma": "raah"
       },
       {
         "surface": "the skin disease",
@@ -276,6 +288,10 @@
         "lemma": "galach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his hair",
         "lemma": "sear"
       },
@@ -296,8 +312,16 @@
         "lemma": "achar"
       },
       {
+        "surface": "he may enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
+      },
+      {
+        "surface": "but he must remain",
+        "lemma": "yashav"
       },
       {
         "surface": "outside",
@@ -330,6 +354,10 @@
         "lemma": "galach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his hair",
         "lemma": "sear"
       },
@@ -344,6 +372,10 @@
       {
         "surface": "his eyebrows",
         "lemma": "gav"
+      },
+      {
+        "surface": "and the rest",
+        "lemma": "kol"
       },
       {
         "surface": "of his hair",
@@ -608,6 +640,10 @@
         "lemma": "asham"
       },
       {
+        "surface": "and put it",
+        "lemma": "natan"
+      },
+      {
         "surface": "the right",
         "lemma": "yemani"
       },
@@ -738,6 +774,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to put",
+        "lemma": "natan"
+      },
+      {
         "surface": "of the oil",
         "lemma": "shemen"
       },
@@ -812,6 +852,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the head",
         "lemma": "rosh"
       },
@@ -836,6 +880,10 @@
       {
         "surface": "Then the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "is to sacrifice",
+        "lemma": "asah"
       },
       {
         "surface": "the sin offering",
@@ -893,6 +941,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "If, however",
+        "lemma": "im"
+      },
       {
         "surface": "is poor",
         "lemma": "dal"
@@ -988,6 +1040,10 @@
         "lemma": "echad"
       },
       {
+        "surface": "to be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sin offering",
         "lemma": "chattaah"
       },
@@ -1008,6 +1064,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "he is to bring",
+        "lemma": "bo"
       },
       {
         "surface": "for his cleansing",
@@ -1108,6 +1168,10 @@
       {
         "surface": "of the guilt offering",
         "lemma": "asham"
+      },
+      {
+        "surface": "and put",
+        "lemma": "natan"
       },
       {
         "surface": "the right",
@@ -1220,6 +1284,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "shall also put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the oil",
         "lemma": "shemen"
       },
@@ -1294,6 +1362,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the head",
         "lemma": "rosh"
       },
@@ -1315,6 +1387,10 @@
       }
     ],
     "30": [
+      {
+        "surface": "Then he must sacrifice",
+        "lemma": "asah"
+      },
       {
         "surface": "the turtledoves",
         "lemma": "tor"
@@ -1384,6 +1460,10 @@
         "lemma": "tsaraat"
       },
       {
+        "surface": "and cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "afford",
         "lemma": "nasag"
       },
@@ -1412,6 +1492,10 @@
     ],
     "34": [
       {
+        "surface": "you enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -1420,8 +1504,16 @@
         "lemma": "kenaan"
       },
       {
+        "surface": "am giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "as your possession",
         "lemma": "achuzzah"
+      },
+      {
+        "surface": "and I put",
+        "lemma": "natan"
       },
       {
         "surface": "a contamination",
@@ -1446,6 +1538,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "shall come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and tell",
         "lemma": "nagad"
       },
@@ -1456,6 +1552,10 @@
       {
         "surface": "Something like mildew",
         "lemma": "nega"
+      },
+      {
+        "surface": "has appeared",
+        "lemma": "raah"
       },
       {
         "surface": "house",
@@ -1488,8 +1588,20 @@
         "lemma": "kohen"
       },
       {
+        "surface": "enters it",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to examine",
+        "lemma": "raah"
+      },
+      {
         "surface": "the mildew",
         "lemma": "nega"
+      },
+      {
+        "surface": "so that nothing",
+        "lemma": "lo"
       },
       {
         "surface": "in the house",
@@ -1512,18 +1624,26 @@
         "lemma": "kohen"
       },
       {
+        "surface": "shall go in",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to inspect",
+        "lemma": "raah"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
       }
     ],
     "37": [
       {
-        "surface": "the house",
-        "lemma": "nega"
+        "surface": "He is to examine",
+        "lemma": "raah"
       },
       {
-        "surface": "and if",
-        "lemma": "hinneh"
+        "surface": "the house",
+        "lemma": "nega"
       },
       {
         "surface": "the mildew",
@@ -1564,6 +1684,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "shall go outside",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the doorway",
         "lemma": "petach"
       },
@@ -1602,8 +1726,12 @@
         "lemma": "kohen"
       },
       {
-        "surface": "If",
-        "lemma": "hinneh"
+        "surface": "is to return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and inspect the house",
+        "lemma": "raah"
       },
       {
         "surface": "the mildew",
@@ -1720,6 +1848,10 @@
         "lemma": "laqach"
       },
       {
+        "surface": "to replace",
+        "lemma": "bo"
+      },
+      {
         "surface": "the contaminated ones",
         "lemma": "even"
       },
@@ -1742,8 +1874,16 @@
     ],
     "43": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "the mildew",
         "lemma": "nega"
+      },
+      {
+        "surface": "reappears",
+        "lemma": "shuv"
       },
       {
         "surface": "in the house",
@@ -1784,8 +1924,12 @@
         "lemma": "kohen"
       },
       {
-        "surface": "If",
-        "lemma": "hinneh"
+        "surface": "must come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and inspect it",
+        "lemma": "raah"
       },
       {
         "surface": "the mildew",
@@ -1834,12 +1978,20 @@
         "lemma": "ets"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its",
         "lemma": "bet"
       },
       {
         "surface": "plaster",
         "lemma": "aphar"
+      },
+      {
+        "surface": "and taken",
+        "lemma": "yatsa"
       },
       {
         "surface": "outside",
@@ -1860,8 +2012,16 @@
     ],
     "46": [
       {
+        "surface": "Anyone who enters",
+        "lemma": "bo"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
+      },
+      {
+        "surface": "during any",
+        "lemma": "kol"
       },
       {
         "surface": "of the days",
@@ -1908,16 +2068,28 @@
     ],
     "48": [
       {
+        "surface": "If, however",
+        "lemma": "im"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       },
       {
-        "surface": "and",
-        "lemma": "hinneh"
+        "surface": "comes",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and inspects it",
+        "lemma": "raah"
       },
       {
         "surface": "the mildew",
         "lemma": "nega"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
       },
       {
         "surface": "spread",
@@ -2190,6 +2362,10 @@
       {
         "surface": "is the law",
         "lemma": "torah"
+      },
+      {
+        "surface": "for any",
+        "lemma": "kol"
       },
       {
         "surface": "infectious skin disease",

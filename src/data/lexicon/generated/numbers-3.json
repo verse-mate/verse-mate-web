@@ -152,6 +152,14 @@
         "lemma": "sinay"
       },
       {
+        "surface": "And since they had",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
       },
@@ -170,6 +178,10 @@
       {
         "surface": "the lifetime",
         "lemma": "paneh"
+      },
+      {
+        "surface": "of their father",
+        "lemma": "av"
       },
       {
         "surface": "Aaron",
@@ -234,6 +246,10 @@
         "lemma": "mishmeret"
       },
       {
+        "surface": "and for the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -266,6 +282,10 @@
       {
         "surface": "They shall take care of",
         "lemma": "shamar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the furnishings",
@@ -302,6 +322,10 @@
     ],
     "9": [
       {
+        "surface": "Assign",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Levites",
         "lemma": "leviyyi"
       },
@@ -312,6 +336,10 @@
       {
         "surface": "and his sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "have been given exclusively",
+        "lemma": "natan"
       },
       {
         "surface": "the Israelites",
@@ -364,13 +392,13 @@
       {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "12": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "have taken",
         "lemma": "laqach"
@@ -396,6 +424,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "firstborn",
         "lemma": "peter"
       },
@@ -410,9 +442,17 @@
       {
         "surface": "The Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "belong",
+        "lemma": "hayah"
       }
     ],
     "13": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the firstborn",
         "lemma": "bekhor"
@@ -424,6 +464,10 @@
       {
         "surface": "I struck down",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "firstborn",
@@ -442,6 +486,10 @@
         "lemma": "qadash"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -456,6 +504,10 @@
       {
         "surface": "beast",
         "lemma": "behemah"
+      },
+      {
+        "surface": "They are",
+        "lemma": "hayah"
       },
       {
         "surface": "am the LORD",
@@ -482,6 +534,10 @@
       {
         "surface": "of Sinai",
         "lemma": "sinay"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "15": [
@@ -494,12 +550,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "by their families",
+        "lemma": "av"
+      },
+      {
         "surface": "and clans",
         "lemma": "mishpachah"
       },
       {
         "surface": "You are to count",
         "lemma": "paqad"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "male",
@@ -541,6 +605,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "were",
+        "lemma": "hayah"
+      },
       {
         "surface": "the sons",
         "lemma": "ben"
@@ -650,6 +718,10 @@
       {
         "surface": "of the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "according to their families",
+        "lemma": "av"
       }
     ],
     "21": [
@@ -686,6 +758,10 @@
       {
         "surface": "The number",
         "lemma": "paqad"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the males",
@@ -844,6 +920,10 @@
         "lemma": "metar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the service for these items",
         "lemma": "avodah"
       }
@@ -886,6 +966,10 @@
       {
         "surface": "The number",
         "lemma": "mispar"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the males",
@@ -1010,6 +1094,10 @@
         "lemma": "masakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the service for these items",
         "lemma": "avodah"
       }
@@ -1090,6 +1178,10 @@
       {
         "surface": "The number",
         "lemma": "paqad"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the males",
@@ -1192,8 +1284,16 @@
         "lemma": "eden"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its equipment",
         "lemma": "keli"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the service for these items",
@@ -1306,6 +1406,10 @@
     ],
     "39": [
       {
+        "surface": "The total",
+        "lemma": "kol"
+      },
+      {
         "surface": "number",
         "lemma": "paqad"
       },
@@ -1338,6 +1442,10 @@
         "lemma": "peh"
       },
       {
+        "surface": "including all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the males",
         "lemma": "zakhar"
       },
@@ -1364,12 +1472,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Moses",
         "lemma": "mosheh"
       },
       {
         "surface": "Number",
         "lemma": "paqad"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "firstborn",
@@ -1426,6 +1542,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -1448,6 +1568,10 @@
       {
         "surface": "in place of",
         "lemma": "tachat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the firstborn",
@@ -1476,6 +1600,10 @@
         "lemma": "paqad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -1497,6 +1625,10 @@
       }
     ],
     "43": [
+      {
+        "surface": "The total",
+        "lemma": "kol"
+      },
       {
         "surface": "number",
         "lemma": "paqad"
@@ -1530,6 +1662,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "22273",
         "lemma": "shenayim"
       }
@@ -1546,6 +1682,10 @@
       {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "45": [
@@ -1560,6 +1700,10 @@
       {
         "surface": "in place",
         "lemma": "tachat"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the firstborn",
@@ -1592,6 +1736,10 @@
       {
         "surface": "The Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "belong",
+        "lemma": "hayah"
       },
       {
         "surface": "am the LORD",
@@ -1659,6 +1807,10 @@
       }
     ],
     "48": [
+      {
+        "surface": "Give",
+        "lemma": "natan"
+      },
       {
         "surface": "the money",
         "lemma": "keseph"
@@ -1750,6 +1902,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "the redemption",
         "lemma": "paduy"
       },
@@ -1788,8 +1944,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "mishpachah",
-    "mosheh",
-    "leviyyi"
+    "mosheh"
   ]
 }

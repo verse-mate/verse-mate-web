@@ -42,8 +42,16 @@
         "lemma": "shem"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "have set",
+        "lemma": "natan"
       },
       {
         "surface": "Your glory",
@@ -93,6 +101,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "I behold",
+        "lemma": "raah"
+      },
       {
         "surface": "Your heavens",
         "lemma": "shamayim"
@@ -184,6 +196,10 @@
         "lemma": "shit"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -193,6 +209,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "sheep",
         "lemma": "tsoneh"
@@ -262,14 +282,18 @@
         "lemma": "shem"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
     ]
   },
   "themeLemmas": [
+    "kol",
     "mah",
-    "yam",
-    "shem"
+    "yam"
   ]
 }

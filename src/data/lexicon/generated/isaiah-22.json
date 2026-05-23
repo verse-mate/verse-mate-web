@@ -22,6 +22,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "you have all",
+        "lemma": "kol"
+      },
+      {
         "surface": "gone up",
         "lemma": "alah"
       },
@@ -56,12 +60,20 @@
         "lemma": "chalal"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "die",
         "lemma": "chalal"
       },
       {
         "surface": "by the sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "nor were they",
+        "lemma": "lo"
       },
       {
         "surface": "killed",
@@ -73,6 +85,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "your rulers",
         "lemma": "qatsin"
@@ -92,6 +108,10 @@
       {
         "surface": "without a bow",
         "lemma": "qeshet"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "your fugitives",
@@ -116,6 +136,10 @@
     ],
     "4": [
       {
+        "surface": "I said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Turn away",
         "lemma": "shaah"
       },
@@ -126,6 +150,10 @@
       {
         "surface": "bitterly",
         "lemma": "marar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "try",
@@ -302,6 +330,10 @@
     ],
     "9": [
       {
+        "surface": "You saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "there were many",
         "lemma": "ravav"
       },
@@ -362,6 +394,10 @@
     ],
     "11": [
       {
+        "surface": "You built",
+        "lemma": "asah"
+      },
+      {
         "surface": "a reservoir",
         "lemma": "miqvah"
       },
@@ -386,8 +422,20 @@
         "lemma": "berekhah"
       },
       {
+        "surface": "but you did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "look",
         "lemma": "navat"
+      },
+      {
+        "surface": "the One who made it",
+        "lemma": "asah"
+      },
+      {
+        "surface": "or consider",
+        "lemma": "raah"
       },
       {
         "surface": "Him who planned",
@@ -416,6 +464,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "for weeping",
         "lemma": "bekhi"
       },
@@ -437,10 +489,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "But look",
-        "lemma": "hinneh"
-      },
       {
         "surface": "there is joy",
         "lemma": "sasvon"
@@ -524,8 +572,16 @@
         "lemma": "avan"
       },
       {
+        "surface": "of yours will never",
+        "lemma": "im"
+      },
+      {
         "surface": "be atoned for",
         "lemma": "kipher"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the Lord",
@@ -558,8 +614,16 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "say",
+        "lemma": "bo"
       },
       {
         "surface": "Shebna",
@@ -629,10 +693,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "Look",
-        "lemma": "hinneh"
-      },
       {
         "surface": "O mighty man",
         "lemma": "gaver"
@@ -728,6 +788,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "I will summon",
+        "lemma": "qara"
+      },
+      {
         "surface": "My servant",
         "lemma": "eved"
       },
@@ -762,12 +826,28 @@
         "lemma": "chazaq"
       },
       {
+        "surface": "I will put",
+        "lemma": "natan"
+      },
+      {
         "surface": "your authority",
         "lemma": "memshalah"
       },
       {
         "surface": "in his hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "and he will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a father",
+        "lemma": "av"
+      },
+      {
+        "surface": "to the dwellers",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -783,6 +863,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "I will place",
+        "lemma": "natan"
+      },
       {
         "surface": "his shoulder",
         "lemma": "shekhem"
@@ -842,6 +926,10 @@
         "lemma": "maqom"
       },
       {
+        "surface": "and he will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a throne",
         "lemma": "kisse"
       },
@@ -852,6 +940,10 @@
       {
         "surface": "for the house",
         "lemma": "bet"
+      },
+      {
+        "surface": "of his father",
+        "lemma": "av"
       }
     ],
     "24": [
@@ -860,8 +952,16 @@
         "lemma": "talah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the glory",
         "lemma": "kavod"
+      },
+      {
+        "surface": "of his father’s",
+        "lemma": "av"
       },
       {
         "surface": "house",
@@ -876,6 +976,10 @@
         "lemma": "tsephiah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the lesser",
         "lemma": "qatan"
       },
@@ -886,6 +990,10 @@
       {
         "surface": "from bowls",
         "lemma": "aggan"
+      },
+      {
+        "surface": "every kind",
+        "lemma": "kol"
       },
       {
         "surface": "of jar",
@@ -958,6 +1066,6 @@
   "themeLemmas": [
     "bet",
     "tsava",
-    "yehovih"
+    "kol"
   ]
 }

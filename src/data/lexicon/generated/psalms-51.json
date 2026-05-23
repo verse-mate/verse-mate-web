@@ -18,8 +18,20 @@
         "lemma": "david"
       },
       {
+        "surface": "When Nathan",
+        "lemma": "natan"
+      },
+      {
         "surface": "the prophet",
         "lemma": "navi"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "his adultery",
+        "lemma": "bo"
       },
       {
         "surface": "vvv",
@@ -108,6 +120,10 @@
         "lemma": "chata"
       },
       {
+        "surface": "and done",
+        "lemma": "asah"
+      },
+      {
         "surface": "what is evil",
         "lemma": "ra"
       },
@@ -134,10 +150,6 @@
     ],
     "5": [
       {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
-      {
         "surface": "I was brought forth",
         "lemma": "chul"
       },
@@ -159,10 +171,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
       {
         "surface": "You desire",
         "lemma": "chaphets"
@@ -216,6 +224,10 @@
     ],
     "8": [
       {
+        "surface": "Let me hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "joy",
         "lemma": "sasvon"
       },
@@ -252,6 +264,10 @@
       {
         "surface": "and blot out",
         "lemma": "machah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "my iniquities",
@@ -306,6 +322,10 @@
         "lemma": "laqach"
       },
       {
+        "surface": "not",
+        "lemma": "al"
+      },
+      {
         "surface": "Your Holy",
         "lemma": "qodesh"
       },
@@ -315,6 +335,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Restore",
+        "lemma": "shuv"
+      },
       {
         "surface": "the joy",
         "lemma": "sasvon"
@@ -352,6 +376,10 @@
       {
         "surface": "and sinners",
         "lemma": "chatta"
+      },
+      {
+        "surface": "will return",
+        "lemma": "shuv"
       }
     ],
     "14": [
@@ -416,12 +444,24 @@
     ],
     "16": [
       {
+        "surface": "You do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "delight",
         "lemma": "chaphets"
       },
       {
         "surface": "in sacrifice",
         "lemma": "zevach"
+      },
+      {
+        "surface": "or I would bring it",
+        "lemma": "natan"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "You take no pleasure",
@@ -464,6 +504,10 @@
       {
         "surface": "O God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "You will not",
+        "lemma": "lo"
       },
       {
         "surface": "despise",
@@ -534,6 +578,6 @@
   "themeLemmas": [
     "ruach",
     "zevach",
-    "chaphets"
+    "lo"
   ]
 }

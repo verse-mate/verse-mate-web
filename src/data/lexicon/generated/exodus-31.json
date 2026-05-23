@@ -20,6 +20,14 @@
     ],
     "2": [
       {
+        "surface": "See",
+        "lemma": "raah"
+      },
+      {
+        "surface": "I have called",
+        "lemma": "qara"
+      },
+      {
         "surface": "by name",
         "lemma": "shem"
       },
@@ -78,6 +86,10 @@
         "lemma": "daat"
       },
       {
+        "surface": "in all kinds",
+        "lemma": "kol"
+      },
+      {
         "surface": "of craftsmanship",
         "lemma": "melakhah"
       }
@@ -90,6 +102,10 @@
       {
         "surface": "artistic",
         "lemma": "machashavah"
+      },
+      {
+        "surface": "works",
+        "lemma": "asah"
       },
       {
         "surface": "in gold",
@@ -126,11 +142,23 @@
         "lemma": "ets"
       },
       {
+        "surface": "so that he may be a master",
+        "lemma": "asah"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "craft",
         "lemma": "melakhah"
       }
     ],
     "6": [
+      {
+        "surface": "have selected",
+        "lemma": "natan"
+      },
       {
         "surface": "Oholiab",
         "lemma": "oholiav"
@@ -152,12 +180,28 @@
         "lemma": "dan"
       },
       {
+        "surface": "I have also given",
+        "lemma": "natan"
+      },
+      {
         "surface": "skill",
         "lemma": "chokhmah"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the craftsmen",
         "lemma": "chakham"
+      },
+      {
+        "surface": "that they may fashion",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "I have commanded you",
@@ -186,6 +230,10 @@
         "lemma": "kapporet"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the other furnishings",
         "lemma": "keli"
       },
@@ -212,6 +260,10 @@
         "lemma": "menorah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its utensils",
         "lemma": "keli"
       },
@@ -232,6 +284,10 @@
       {
         "surface": "of burnt offering",
         "lemma": "olah"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "its utensils",
@@ -306,6 +362,14 @@
         "lemma": "qodesh"
       },
       {
+        "surface": "They are to make them",
+        "lemma": "asah"
+      },
+      {
+        "surface": "according to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "I have commanded you",
         "lemma": "tsavah"
       }
@@ -314,6 +378,10 @@
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Moses",
@@ -392,6 +460,14 @@
         "lemma": "mut"
       },
       {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
+      {
+        "surface": "does",
+        "lemma": "asah"
+      },
+      {
         "surface": "any work",
         "lemma": "melakhah"
       },
@@ -422,6 +498,10 @@
         "lemma": "melakhah"
       },
       {
+        "surface": "may be done",
+        "lemma": "asah"
+      },
+      {
         "surface": "but the seventh",
         "lemma": "shevii"
       },
@@ -444,6 +524,14 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
+      {
+        "surface": "does",
+        "lemma": "asah"
       },
       {
         "surface": "any work",
@@ -474,6 +562,10 @@
       {
         "surface": "the Sabbath",
         "lemma": "shabbat"
+      },
+      {
+        "surface": "celebrating",
+        "lemma": "asah"
       },
       {
         "surface": "it",
@@ -522,6 +614,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
         "surface": "the heavens",
         "lemma": "shamayim"
       },
@@ -564,6 +660,10 @@
         "lemma": "sinay"
       },
       {
+        "surface": "He gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "him",
         "lemma": "mosheh"
       },
@@ -602,8 +702,8 @@
     ]
   },
   "themeLemmas": [
-    "shabbat",
-    "melakhah",
-    "qodesh"
+    "kol",
+    "asah",
+    "shabbat"
   ]
 }

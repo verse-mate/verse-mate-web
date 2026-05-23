@@ -22,6 +22,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "rebuke me",
         "lemma": "yakhach"
       },
@@ -156,6 +160,10 @@
         "lemma": "shachach"
       },
       {
+        "surface": "all day long",
+        "lemma": "kol"
+      },
+      {
         "surface": "I go about",
         "lemma": "halakh"
       },
@@ -218,6 +226,10 @@
         "lemma": "adonai"
       },
       {
+        "surface": "my every",
+        "lemma": "kol"
+      },
+      {
         "surface": "desire",
         "lemma": "taavah"
       },
@@ -228,6 +240,10 @@
       {
         "surface": "my groaning",
         "lemma": "anachah"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "hidden",
@@ -332,6 +348,10 @@
         "lemma": "mirmah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       }
@@ -342,8 +362,20 @@
         "lemma": "cheresh"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "and like a mute man",
         "lemma": "illem"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
       },
       {
         "surface": "open",
@@ -356,8 +388,20 @@
     ],
     "14": [
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "whose mouth",
@@ -391,6 +435,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "I said",
+        "lemma": "amar"
+      },
       {
         "surface": "gloat",
         "lemma": "samach"
@@ -506,12 +554,20 @@
     ],
     "21": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "forsake me",
         "lemma": "azav"
       },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "be not",
+        "lemma": "al"
       },
       {
         "surface": "far",
@@ -542,8 +598,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "paneh",
-    "tov",
-    "tachat"
+    "kol"
   ]
 }

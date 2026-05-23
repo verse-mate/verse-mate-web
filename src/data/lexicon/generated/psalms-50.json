@@ -30,6 +30,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "and summons",
+        "lemma": "qara"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -70,6 +74,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "approaches",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and will not",
+        "lemma": "al"
+      },
+      {
         "surface": "be silent",
         "lemma": "charash"
       },
@@ -96,8 +108,16 @@
     ],
     "4": [
       {
+        "surface": "He summons",
+        "lemma": "qara"
+      },
+      {
         "surface": "the heavens",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
       },
       {
         "surface": "and the earth",
@@ -162,6 +182,10 @@
     ],
     "7": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "O My people",
         "lemma": "am"
       },
@@ -188,6 +212,10 @@
     ],
     "8": [
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rebuke",
         "lemma": "yakhach"
       },
@@ -210,6 +238,10 @@
     ],
     "9": [
       {
+        "surface": "I have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "need",
         "lemma": "laqach"
       },
@@ -231,6 +263,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
       {
         "surface": "beast",
         "lemma": "chay"
@@ -258,6 +294,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "bird",
         "lemma": "oph"
       },
@@ -276,8 +316,20 @@
     ],
     "12": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I were hungry",
         "lemma": "raev"
+      },
+      {
+        "surface": "I would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "tell",
+        "lemma": "amar"
       },
       {
         "surface": "the world",
@@ -342,6 +394,10 @@
     ],
     "15": [
       {
+        "surface": "Call upon Me",
+        "lemma": "qara"
+      },
+      {
         "surface": "in the day",
         "lemma": "yom"
       },
@@ -366,6 +422,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "What right",
@@ -416,6 +476,14 @@
     ],
     "18": [
       {
+        "surface": "When",
+        "lemma": "im"
+      },
+      {
+        "surface": "you see",
+        "lemma": "raah"
+      },
+      {
         "surface": "a thief",
         "lemma": "gannav"
       },
@@ -460,12 +528,20 @@
     ],
     "20": [
       {
+        "surface": "You sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "and malign",
         "lemma": "davar"
       },
       {
         "surface": "your brother",
         "lemma": "ach"
+      },
+      {
+        "surface": "you",
+        "lemma": "natan"
       },
       {
         "surface": "slander",
@@ -482,12 +558,20 @@
     ],
     "21": [
       {
+        "surface": "You have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "and I kept silent",
         "lemma": "charash"
       },
       {
         "surface": "you thought",
         "lemma": "damah"
+      },
+      {
+        "surface": "I was",
+        "lemma": "hayah"
       },
       {
         "surface": "But now I rebuke you",
@@ -503,10 +587,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "Now",
-        "lemma": "na"
-      },
       {
         "surface": "consider",
         "lemma": "bin"
@@ -554,6 +634,10 @@
         "lemma": "derekh"
       },
       {
+        "surface": "I will show",
+        "lemma": "raah"
+      },
+      {
         "surface": "the salvation",
         "lemma": "yesah"
       },
@@ -564,8 +648,8 @@
     ]
   },
   "themeLemmas": [
-    "zevach",
-    "zavach",
-    "yakhach"
+    "qara",
+    "lo",
+    "zevach"
   ]
 }

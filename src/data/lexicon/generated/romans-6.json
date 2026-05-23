@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
         "surface": "shall we say",
         "lemma": "ero"
       },
@@ -27,6 +31,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "Certainly not",
+        "lemma": "ginomai"
+      },
       {
         "surface": "died",
         "lemma": "apothnesko"
@@ -122,6 +130,10 @@
     ],
     "5": [
       {
+        "surface": "we have been",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "united with Him",
         "lemma": "sumphutos"
       },
@@ -134,11 +146,19 @@
         "lemma": "thanatos"
       },
       {
+        "surface": "we will certainly also be united with Him",
+        "lemma": "eimi"
+      },
+      {
         "surface": "in His resurrection",
         "lemma": "anastasis"
       }
     ],
     "6": [
+      {
+        "surface": "We know",
+        "lemma": "ginosko"
+      },
       {
         "surface": "old",
         "lemma": "palaios"
@@ -209,6 +229,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "For we know",
+        "lemma": "eido"
+      },
       {
         "surface": "Christ",
         "lemma": "christos"
@@ -384,6 +408,10 @@
         "lemma": "kurieuo"
       },
       {
+        "surface": "you are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "law",
         "lemma": "nomos"
       },
@@ -394,8 +422,16 @@
     ],
     "15": [
       {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
         "surface": "Shall we sin",
         "lemma": "hamartano"
+      },
+      {
+        "surface": "we are",
+        "lemma": "eimi"
       },
       {
         "surface": "law",
@@ -404,9 +440,17 @@
       {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "Certainly not",
+        "lemma": "ginomai"
       }
     ],
     "16": [
+      {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
       {
         "surface": "you offer",
         "lemma": "paristemi"
@@ -420,16 +464,16 @@
         "lemma": "doulos"
       },
       {
+        "surface": "you are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "slaves",
         "lemma": "doulos"
       },
       {
         "surface": "you obey",
         "lemma": "hupakouo"
-      },
-      {
-        "surface": "whether you are slaves",
-        "lemma": "etoi"
       },
       {
         "surface": "to sin",
@@ -456,6 +500,10 @@
       {
         "surface": "to God",
         "lemma": "theos"
+      },
+      {
+        "surface": "though you once were",
+        "lemma": "eimi"
       },
       {
         "surface": "slaves",
@@ -501,6 +549,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "I am speaking",
+        "lemma": "lego"
+      },
       {
         "surface": "in human terms",
         "lemma": "anthropinos"
@@ -568,12 +620,20 @@
     ],
     "20": [
       {
+        "surface": "you were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "slaves",
         "lemma": "doulos"
       },
       {
         "surface": "to sin",
         "lemma": "hamartia"
+      },
+      {
+        "surface": "you were",
+        "lemma": "eimi"
       },
       {
         "surface": "free of obligation",
@@ -586,8 +646,16 @@
     ],
     "21": [
       {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
         "surface": "fruit",
         "lemma": "karpos"
+      },
+      {
+        "surface": "did you reap",
+        "lemma": "echo"
       },
       {
         "surface": "at that time",
@@ -634,6 +702,10 @@
       {
         "surface": "fruit",
         "lemma": "karpos"
+      },
+      {
+        "surface": "you reap",
+        "lemma": "echo"
       },
       {
         "surface": "holiness",

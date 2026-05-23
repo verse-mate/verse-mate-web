@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Some time later",
+        "lemma": "hayah"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -100,6 +104,10 @@
         "lemma": "moav"
       },
       {
+        "surface": "became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "subject",
         "lemma": "eved"
       },
@@ -148,6 +156,10 @@
       {
         "surface": "who had marched out",
         "lemma": "halakh"
+      },
+      {
+        "surface": "to restore",
+        "lemma": "shuv"
       },
       {
         "surface": "his dominion",
@@ -204,6 +216,10 @@
         "lemma": "aqar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the horses",
         "lemma": "rekhev"
       },
@@ -228,6 +244,10 @@
       {
         "surface": "of Damascus",
         "lemma": "dammeseq"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "to help",
@@ -296,6 +316,10 @@
         "lemma": "aram"
       },
       {
+        "surface": "became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "subject",
         "lemma": "eved"
       },
@@ -324,6 +348,10 @@
         "lemma": "yasah"
       },
       {
+        "surface": "wherever",
+        "lemma": "kol"
+      },
+      {
         "surface": "he went",
         "lemma": "halakh"
       }
@@ -346,12 +374,20 @@
         "lemma": "shelet"
       },
       {
+        "surface": "belonged",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the officers",
         "lemma": "eved"
       },
       {
         "surface": "of Hadadezer",
         "lemma": "hadadezer"
+      },
+      {
+        "surface": "and brought them",
+        "lemma": "bo"
       },
       {
         "surface": "to Jerusalem",
@@ -414,12 +450,20 @@
         "lemma": "chamat"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
       {
         "surface": "had defeated",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "the entire",
+        "lemma": "kol"
       },
       {
         "surface": "army",
@@ -480,12 +524,20 @@
         "lemma": "hadadezer"
       },
       {
+        "surface": "had been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at war",
         "lemma": "milchamah"
       },
       {
         "surface": "with Toi",
         "lemma": "tou"
+      },
+      {
+        "surface": "Joram brought",
+        "lemma": "hayah"
       },
       {
         "surface": "with him",
@@ -544,6 +596,10 @@
       {
         "surface": "he had dedicated",
         "lemma": "qadash"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -606,8 +662,16 @@
         "lemma": "david"
       },
       {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
         "surface": "a name for himself",
         "lemma": "shem"
+      },
+      {
+        "surface": "when he returned",
+        "lemma": "shuv"
       },
       {
         "surface": "from striking down",
@@ -640,12 +704,24 @@
         "lemma": "netsiv"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "Edom",
         "lemma": "edom"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Edomites",
         "lemma": "edom"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "subject",
@@ -668,6 +744,10 @@
         "lemma": "yasah"
       },
       {
+        "surface": "wherever",
+        "lemma": "kol"
+      },
+      {
         "surface": "he went",
         "lemma": "halakh"
       }
@@ -682,12 +762,24 @@
         "lemma": "malakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
       {
         "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "vvv",
         "lemma": "david"
+      },
+      {
+        "surface": "and administered",
+        "lemma": "asah"
       },
       {
         "surface": "justice",
@@ -696,6 +788,10 @@
       {
         "surface": "and righteousness",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "his people",
@@ -804,6 +900,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "priestly leaders",
         "lemma": "kohen"
       }
@@ -811,7 +911,7 @@
   },
   "themeLemmas": [
     "david",
-    "aram",
-    "nakhah"
+    "kol",
+    "hayah"
   ]
 }

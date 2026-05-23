@@ -26,6 +26,10 @@
         "lemma": "shir"
       },
       {
+        "surface": "He has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "wonders",
         "lemma": "pala"
       },
@@ -98,12 +102,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the ends",
         "lemma": "ephes"
       },
       {
         "surface": "of the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "have seen",
+        "lemma": "raah"
       },
       {
         "surface": "the salvation",
@@ -122,6 +134,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -212,6 +228,10 @@
       {
         "surface": "the world",
         "lemma": "tevel"
+      },
+      {
+        "surface": "and all who dwell",
+        "lemma": "yashav"
       }
     ],
     "8": [
@@ -248,6 +268,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "He comes",
+        "lemma": "bo"
       },
       {
         "surface": "to judge",

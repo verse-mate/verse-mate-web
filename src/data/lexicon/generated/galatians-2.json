@@ -102,6 +102,10 @@
         "lemma": "peritemno"
       },
       {
+        "surface": "even though he was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a Greek",
         "lemma": "hellen"
       }
@@ -168,6 +172,14 @@
         "lemma": "dokeo"
       },
       {
+        "surface": "they were",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "makes no difference",
         "lemma": "diaphero"
       },
@@ -176,18 +188,30 @@
         "lemma": "theos"
       },
       {
+        "surface": "does not show favoritism",
+        "lemma": "lambano"
+      },
+      {
         "surface": "leaders",
         "lemma": "dokeo"
       },
       {
         "surface": "added",
         "lemma": "prosanatithemi"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
       }
     ],
     "7": [
       {
         "surface": "On the contrary",
         "lemma": "tounantion"
+      },
+      {
+        "surface": "they saw",
+        "lemma": "horao"
       },
       {
         "surface": "I had been entrusted to preach",
@@ -238,8 +262,16 @@
     ],
     "9": [
       {
+        "surface": "recognizing",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "had been given",
+        "lemma": "didomi"
       },
       {
         "surface": "James",
@@ -258,8 +290,16 @@
         "lemma": "dokeo"
       },
       {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "pillars",
         "lemma": "stulos"
+      },
+      {
+        "surface": "gave",
+        "lemma": "didomi"
       },
       {
         "surface": "Barnabas",
@@ -298,12 +338,20 @@
       {
         "surface": "I was eager",
         "lemma": "spoudazo"
+      },
+      {
+        "surface": "to do",
+        "lemma": "poieo"
       }
     ],
     "11": [
       {
         "surface": "Cephas",
         "lemma": "kephas"
+      },
+      {
+        "surface": "came",
+        "lemma": "erchomai"
       },
       {
         "surface": "Antioch",
@@ -318,11 +366,19 @@
         "lemma": "prosopon"
       },
       {
+        "surface": "he stood",
+        "lemma": "eimi"
+      },
+      {
         "surface": "condemned",
         "lemma": "kataginosko"
       }
     ],
     "12": [
+      {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
       {
         "surface": "James",
         "lemma": "iakobos"
@@ -334,6 +390,10 @@
       {
         "surface": "Gentiles",
         "lemma": "ethnos"
+      },
+      {
+        "surface": "they arrived",
+        "lemma": "erchomai"
       },
       {
         "surface": "he began to draw back",
@@ -380,6 +440,10 @@
     ],
     "14": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "they were not walking in line",
         "lemma": "orthopodeo"
       },
@@ -392,8 +456,16 @@
         "lemma": "euangelion"
       },
       {
+        "surface": "I said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "to Cephas",
         "lemma": "kephas"
+      },
+      {
+        "surface": "them all",
+        "lemma": "pas"
       },
       {
         "surface": "who are",
@@ -447,6 +519,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
       {
         "surface": "a man",
         "lemma": "anthropos"
@@ -534,6 +610,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "are found to be",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "sinners",
         "lemma": "hamartolos"
       },
@@ -548,6 +628,10 @@
       {
         "surface": "of sin",
         "lemma": "hamartia"
+      },
+      {
+        "surface": "Certainly not",
+        "lemma": "ginomai"
       }
     ],
     "18": [

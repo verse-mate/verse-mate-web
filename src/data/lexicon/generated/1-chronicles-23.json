@@ -44,6 +44,10 @@
         "lemma": "asaph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the leaders",
         "lemma": "sar"
       },
@@ -88,6 +92,10 @@
       {
         "surface": "of men",
         "lemma": "gaver"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "38,000",
@@ -152,6 +160,10 @@
       {
         "surface": "with the instruments",
         "lemma": "keli"
+      },
+      {
+        "surface": "I have made",
+        "lemma": "asah"
       },
       {
         "surface": "for giving praise",
@@ -266,6 +278,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of the families",
+        "lemma": "av"
+      },
+      {
         "surface": "of Ladan",
         "lemma": "ladan"
       }
@@ -314,6 +330,10 @@
         "lemma": "yachat"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the first",
         "lemma": "rosh"
       },
@@ -334,12 +354,24 @@
         "lemma": "beriah"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "have many",
         "lemma": "ravah"
       },
       {
         "surface": "sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "so they were counted as",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "one family",
+        "lemma": "av"
       },
       {
         "surface": "and received a single",
@@ -460,6 +492,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "were named",
+        "lemma": "qara"
+      },
+      {
         "surface": "the tribe",
         "lemma": "shevet"
       },
@@ -518,12 +554,24 @@
         "lemma": "rechavyah"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the first",
         "lemma": "rosh"
       },
       {
         "surface": "Eliezer",
         "lemma": "eliezer"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "have",
+        "lemma": "hayah"
       },
       {
         "surface": "any other",
@@ -680,6 +728,14 @@
         "lemma": "mut"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
+        "surface": "having any",
+        "lemma": "hayah"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
       },
@@ -740,8 +796,16 @@
         "lemma": "levi"
       },
       {
+        "surface": "by their families",
+        "lemma": "av"
+      },
+      {
         "surface": "the heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of families",
+        "lemma": "av"
       },
       {
         "surface": "registered",
@@ -768,6 +832,10 @@
         "lemma": "maal"
       },
       {
+        "surface": "who worked",
+        "lemma": "asah"
+      },
+      {
         "surface": "in the service",
         "lemma": "avodah"
       },
@@ -784,6 +852,10 @@
       {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "had said",
+        "lemma": "amar"
       },
       {
         "surface": "The LORD",
@@ -830,6 +902,10 @@
       {
         "surface": "the tabernacle",
         "lemma": "mishkan"
+      },
+      {
+        "surface": "or any",
+        "lemma": "kol"
       },
       {
         "surface": "of the articles",
@@ -916,6 +992,10 @@
         "lemma": "tohorah"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the holy things",
         "lemma": "qodesh"
       },
@@ -970,6 +1050,10 @@
         "lemma": "ravakh"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "measurements of quantity",
         "lemma": "mesurah"
       },
@@ -1009,6 +1093,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "Whenever",
+        "lemma": "kol"
+      },
       {
         "surface": "burnt offerings",
         "lemma": "olah"
@@ -1106,8 +1194,8 @@
     ]
   },
   "themeLemmas": [
-    "eliezer",
-    "bet",
-    "avodah"
+    "hayah",
+    "kol",
+    "bet"
   ]
 }

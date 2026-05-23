@@ -54,6 +54,14 @@
     ],
     "3": [
       {
+        "surface": "seeing",
+        "lemma": "horao"
+      },
+      {
+        "surface": "this",
+        "lemma": "eimi"
+      },
+      {
         "surface": "pleased",
         "lemma": "arestos"
       },
@@ -72,6 +80,10 @@
       {
         "surface": "Peter",
         "lemma": "petros"
+      },
+      {
+        "surface": "during",
+        "lemma": "eimi"
       },
       {
         "surface": "Feast of Unleavened Bread",
@@ -146,6 +158,10 @@
         "lemma": "ekklesia"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "fervently",
         "lemma": "ektenos"
       },
@@ -178,6 +194,10 @@
       {
         "surface": "Peter",
         "lemma": "petros"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
       },
       {
         "surface": "sleeping",
@@ -262,6 +282,10 @@
         "lemma": "egeiro"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "Get up",
         "lemma": "anistemi"
       },
@@ -296,12 +320,24 @@
         "lemma": "sandalion"
       },
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "angel",
         "lemma": "angelos"
       },
       {
+        "surface": "Peter did",
+        "lemma": "poieo"
+      },
+      {
         "surface": "so",
         "lemma": "houto"
+      },
+      {
+        "surface": "the angel told",
+        "lemma": "lego"
       },
       {
         "surface": "Wrap",
@@ -322,8 +358,24 @@
         "lemma": "akoloutheo"
       },
       {
+        "surface": "out",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "he was unaware",
+        "lemma": "eido"
+      },
+      {
         "surface": "angel",
         "lemma": "angelos"
+      },
+      {
+        "surface": "was doing",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
       },
       {
         "surface": "real",
@@ -360,6 +412,10 @@
         "lemma": "phulake"
       },
       {
+        "surface": "and came",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "iron",
         "lemma": "sidereos"
       },
@@ -384,8 +440,16 @@
         "lemma": "automatos"
       },
       {
+        "surface": "they had gone outside",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "and walked the length of",
         "lemma": "proerchomai"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "block",
@@ -410,8 +474,20 @@
         "lemma": "petros"
       },
       {
+        "surface": "came",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "and said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Now",
         "lemma": "nun"
+      },
+      {
+        "surface": "I know",
+        "lemma": "eido"
       },
       {
         "surface": "for sure",
@@ -442,6 +518,10 @@
         "lemma": "cheir"
       },
       {
+        "surface": "from everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "Jewish",
         "lemma": "ioudaios"
       },
@@ -458,6 +538,10 @@
       {
         "surface": "he had realized this",
         "lemma": "suneido"
+      },
+      {
+        "surface": "he went",
+        "lemma": "erchomai"
       },
       {
         "surface": "house",
@@ -490,6 +574,10 @@
       {
         "surface": "many people",
         "lemma": "hikanos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eimi"
       },
       {
         "surface": "had gathered together",
@@ -572,6 +660,10 @@
         "lemma": "petros"
       },
       {
+        "surface": "is standing",
+        "lemma": "histemi"
+      },
+      {
         "surface": "gate",
         "lemma": "pulon"
       }
@@ -582,12 +674,28 @@
         "lemma": "mainomai"
       },
       {
+        "surface": "they told",
+        "lemma": "eipon"
+      },
+      {
         "surface": "she kept insisting",
         "lemma": "diischurizomai"
       },
       {
+        "surface": "it was",
+        "lemma": "echo"
+      },
+      {
         "surface": "so",
         "lemma": "houto"
+      },
+      {
+        "surface": "they said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "It must be",
+        "lemma": "eimi"
       },
       {
         "surface": "angel",
@@ -610,6 +718,10 @@
       {
         "surface": "when they opened the door",
         "lemma": "anoigo"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "horao"
       },
       {
         "surface": "they were astounded",
@@ -658,6 +770,14 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "he said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "he left for",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "another",
         "lemma": "heteros"
       },
@@ -672,6 +792,10 @@
         "lemma": "hemera"
       },
       {
+        "surface": "there was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "small",
         "lemma": "oligos"
       },
@@ -682,6 +806,14 @@
       {
         "surface": "soldiers",
         "lemma": "stratiotes"
+      },
+      {
+        "surface": "as to what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "had become of",
+        "lemma": "ginomai"
       },
       {
         "surface": "Peter",
@@ -696,6 +828,10 @@
       {
         "surface": "had searched",
         "lemma": "epizeteo"
+      },
+      {
+        "surface": "unsuccessfully",
+        "lemma": "heurisko"
       },
       {
         "surface": "he examined",
@@ -731,6 +867,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "Herod was",
+        "lemma": "eimi"
+      },
       {
         "surface": "in a furious dispute",
         "lemma": "thumomacheo"
@@ -850,6 +990,10 @@
         "lemma": "parachrema"
       },
       {
+        "surface": "Herod did not give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
       },
@@ -868,6 +1012,10 @@
       {
         "surface": "struck",
         "lemma": "patasso"
+      },
+      {
+        "surface": "he was",
+        "lemma": "ginomai"
       },
       {
         "surface": "eaten by worms",

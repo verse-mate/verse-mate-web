@@ -14,12 +14,24 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Why",
         "lemma": "mah"
       },
       {
+        "surface": "have you done",
+        "lemma": "asah"
+      },
+      {
         "surface": "Why did you fail",
         "lemma": "bilti"
+      },
+      {
+        "surface": "to call",
+        "lemma": "qara"
       },
       {
         "surface": "you went",
@@ -40,12 +52,24 @@
     ],
     "2": [
       {
+        "surface": "But Gideon answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "Now",
         "lemma": "attah"
       },
       {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "have I accomplished",
+        "lemma": "asah"
+      },
+      {
+        "surface": "Are not",
+        "lemma": "lo"
       },
       {
         "surface": "the gleanings",
@@ -74,6 +98,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "has delivered",
+        "lemma": "natan"
+      },
+      {
         "surface": "Oreb",
         "lemma": "orev"
       },
@@ -100,6 +128,10 @@
       {
         "surface": "was I able",
         "lemma": "yakhol"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
       },
       {
         "surface": "When he had said",
@@ -132,6 +164,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to the Jordan",
         "lemma": "yarden"
       },
@@ -150,6 +186,10 @@
     ],
     "5": [
       {
+        "surface": "So Gideon said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the men",
         "lemma": "enosh"
       },
@@ -158,8 +198,8 @@
         "lemma": "sukkot"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "give",
+        "lemma": "natan"
       },
       {
         "surface": "my troops",
@@ -208,6 +248,10 @@
         "lemma": "sukkot"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Are the hands",
         "lemma": "kaph"
       },
@@ -228,6 +272,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "we should give",
+        "lemma": "natan"
+      },
+      {
         "surface": "bread",
         "lemma": "lechem"
       },
@@ -246,8 +294,16 @@
         "lemma": "gidon"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "when the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has delivered",
+        "lemma": "natan"
       },
       {
         "surface": "Zebah",
@@ -322,12 +378,20 @@
     ],
     "9": [
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
         "surface": "the men",
         "lemma": "enosh"
       },
       {
         "surface": "of Penuel",
         "lemma": "penuel"
+      },
+      {
+        "surface": "When I return",
+        "lemma": "shuv"
       },
       {
         "surface": "in triumph",
@@ -368,8 +432,16 @@
         "lemma": "eleph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "that were left",
         "lemma": "yatar"
+      },
+      {
+        "surface": "of",
+        "lemma": "kol"
       },
       {
         "surface": "the armies",
@@ -446,6 +518,10 @@
         "lemma": "machaneh"
       },
       {
+        "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
         "surface": "by surprise",
         "lemma": "betach"
       }
@@ -488,6 +564,10 @@
         "lemma": "charad"
       },
       {
+        "surface": "their entire",
+        "lemma": "kol"
+      },
+      {
         "surface": "army",
         "lemma": "machaneh"
       }
@@ -504,6 +584,10 @@
       {
         "surface": "of Joash",
         "lemma": "yoash"
+      },
+      {
+        "surface": "returned",
+        "lemma": "shuv"
       },
       {
         "surface": "the battle",
@@ -558,6 +642,10 @@
     ],
     "15": [
       {
+        "surface": "And Gideon went",
+        "lemma": "bo"
+      },
+      {
         "surface": "the men",
         "lemma": "enosh"
       },
@@ -566,8 +654,8 @@
         "lemma": "sukkot"
       },
       {
-        "surface": "Here",
-        "lemma": "hinneh"
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "are Zebah",
@@ -580,6 +668,10 @@
       {
         "surface": "you taunted",
         "lemma": "charaph"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Are the hands",
@@ -600,6 +692,10 @@
       {
         "surface": "in your possession",
         "lemma": "yad"
+      },
+      {
+        "surface": "we should give",
+        "lemma": "natan"
       },
       {
         "surface": "bread",
@@ -680,6 +776,10 @@
     ],
     "18": [
       {
+        "surface": "Next, Gideon asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Zebah",
         "lemma": "zevach"
       },
@@ -704,6 +804,10 @@
         "lemma": "tavor"
       },
       {
+        "surface": "they answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "each one",
         "lemma": "echad"
       },
@@ -726,6 +830,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "Gideon replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -742,12 +850,12 @@
         "lemma": "chay"
       },
       {
-        "surface": "if",
-        "lemma": "lu"
-      },
-      {
         "surface": "you had let them live",
         "lemma": "chayah"
+      },
+      {
+        "surface": "I would not",
+        "lemma": "lo"
       },
       {
         "surface": "kill",
@@ -755,6 +863,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "So he said",
+        "lemma": "amar"
+      },
       {
         "surface": "to Jether",
         "lemma": "yeter"
@@ -774,6 +886,10 @@
       {
         "surface": "But the young man",
         "lemma": "naar"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "draw",
@@ -804,6 +920,10 @@
       {
         "surface": "and Zalmunna",
         "lemma": "tsalmunna"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Get up",
@@ -864,6 +984,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Gideon",
         "lemma": "gidon"
       },
@@ -898,8 +1022,20 @@
         "lemma": "gidon"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rule",
         "lemma": "mashal"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "will",
@@ -924,12 +1060,20 @@
         "lemma": "gidon"
       },
       {
+        "surface": "added",
+        "lemma": "amar"
+      },
+      {
         "surface": "Let me make a request",
         "lemma": "shaal"
       },
       {
         "surface": "that each of you",
         "lemma": "ish"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
       },
       {
         "surface": "an earring",
@@ -953,6 +1097,14 @@
       }
     ],
     "25": [
+      {
+        "surface": "We will give them gladly",
+        "lemma": "natan"
+      },
+      {
+        "surface": "they replied",
+        "lemma": "amar"
+      },
       {
         "surface": "So they spread out",
         "lemma": "paras"
@@ -998,6 +1150,10 @@
       {
         "surface": "he had requested",
         "lemma": "shaal"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "1 ,700",
@@ -1054,6 +1210,10 @@
         "lemma": "gidon"
       },
       {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
         "surface": "an ephod",
         "lemma": "ephod"
       },
@@ -1070,6 +1230,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "But soon all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -1084,6 +1248,10 @@
       {
         "surface": "there",
         "lemma": "sham"
+      },
+      {
+        "surface": "and it became",
+        "lemma": "hayah"
       },
       {
         "surface": "a snare",
@@ -1114,6 +1282,10 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "and did not",
+        "lemma": "lo"
       },
       {
         "surface": "raise",
@@ -1172,6 +1344,10 @@
       {
         "surface": "home",
         "lemma": "bet"
+      },
+      {
+        "surface": "and settled down",
+        "lemma": "yashav"
       }
     ],
     "30": [
@@ -1180,12 +1356,24 @@
         "lemma": "gidon"
       },
       {
+        "surface": "had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "seventy",
         "lemma": "shivim"
       },
       {
         "surface": "sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "of his own",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "he had",
+        "lemma": "hayah"
       },
       {
         "surface": "many",
@@ -1260,6 +1448,10 @@
         "lemma": "qever"
       },
       {
+        "surface": "of his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Joash",
         "lemma": "yoash"
       },
@@ -1278,6 +1470,10 @@
     ],
     "33": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Gideon",
         "lemma": "gidon"
       },
@@ -1288,6 +1484,10 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "turned",
+        "lemma": "shuv"
       },
       {
         "surface": "and prostituted themselves",
@@ -1324,6 +1524,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to remember",
         "lemma": "zakhar"
       },
@@ -1344,6 +1548,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their enemies",
         "lemma": "oyev"
       },
@@ -1353,6 +1561,14 @@
       }
     ],
     "35": [
+      {
+        "surface": "They did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "show",
+        "lemma": "asah"
+      },
       {
         "surface": "kindness",
         "lemma": "chesed"
@@ -1370,8 +1586,16 @@
         "lemma": "gidon"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the good things",
         "lemma": "tov"
+      },
+      {
+        "surface": "he had done",
+        "lemma": "asah"
       },
       {
         "surface": "Israel",
@@ -1380,8 +1604,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "gidon",
-    "zevach",
-    "tsalmunna"
+    "zevach"
   ]
 }

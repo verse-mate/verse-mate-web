@@ -28,6 +28,10 @@
         "lemma": "pachad"
       },
       {
+        "surface": "He establishes",
+        "lemma": "asah"
+      },
+      {
         "surface": "harmony",
         "lemma": "shalom"
       },
@@ -52,6 +56,10 @@
       {
         "surface": "does His light",
         "lemma": "or"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "rise",
@@ -94,12 +102,12 @@
     ],
     "5": [
       {
-        "surface": "If",
-        "lemma": "hen"
-      },
-      {
         "surface": "the moon",
         "lemma": "yareach"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "shine",
@@ -108,6 +116,10 @@
       {
         "surface": "and the stars",
         "lemma": "kokhav"
+      },
+      {
+        "surface": "are not",
+        "lemma": "lo"
       },
       {
         "surface": "pure",
@@ -142,6 +154,7 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "mah",
     "enosh"
   ]

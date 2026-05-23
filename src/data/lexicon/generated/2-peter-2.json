@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "there were",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "false prophets",
         "lemma": "pseudoprophetes"
       },
       {
         "surface": "people",
         "lemma": "laos"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "eimi"
       },
       {
         "surface": "false teachers",
@@ -55,6 +63,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "Many",
+        "lemma": "polus"
+      },
       {
         "surface": "will follow in",
         "lemma": "exakoloutheo"
@@ -330,6 +342,10 @@
         "lemma": "kurios"
       },
       {
+        "surface": "knows how",
+        "lemma": "eido"
+      },
+      {
         "surface": "to rescue",
         "lemma": "rhuomai"
       },
@@ -420,6 +436,14 @@
       {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "though",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "greater",
+        "lemma": "megas"
       },
       {
         "surface": "in strength",
@@ -540,6 +564,10 @@
         "lemma": "ophthalmos"
       },
       {
+        "surface": "are",
+        "lemma": "echo"
+      },
+      {
         "surface": "full",
         "lemma": "mestos"
       },
@@ -566,6 +594,10 @@
       {
         "surface": "children",
         "lemma": "teknon"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "hearts",
@@ -628,6 +660,10 @@
     ],
     "16": [
       {
+        "surface": "he was",
+        "lemma": "echo"
+      },
+      {
         "surface": "rebuked",
         "lemma": "elegxis"
       },
@@ -673,6 +709,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
       {
         "surface": "springs",
         "lemma": "pege"
@@ -832,6 +872,10 @@
         "lemma": "eschatos"
       },
       {
+        "surface": "is",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "worse than",
         "lemma": "cheiron"
       },
@@ -841,6 +885,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "It would have been",
+        "lemma": "eimi"
+      },
       {
         "surface": "better",
         "lemma": "kreitton"

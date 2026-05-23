@@ -6,8 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "I want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to know",
+        "lemma": "eido"
+      },
+      {
         "surface": "vvv",
         "lemma": "agon"
+      },
+      {
+        "surface": "I am struggling",
+        "lemma": "echo"
       },
       {
         "surface": "Laodicea",
@@ -16,6 +28,10 @@
       {
         "surface": "for all who",
         "lemma": "hosos"
+      },
+      {
+        "surface": "have not met",
+        "lemma": "horao"
       },
       {
         "surface": "face to face",
@@ -38,6 +54,10 @@
       {
         "surface": "love",
         "lemma": "agape"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
       },
       {
         "surface": "the full riches",
@@ -70,8 +90,16 @@
     ],
     "3": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "hidden",
         "lemma": "apokruphos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "treasures",
@@ -87,6 +115,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "I say",
+        "lemma": "lego"
+      },
       {
         "surface": "no one",
         "lemma": "medeis"
@@ -108,6 +140,10 @@
       {
         "surface": "body",
         "lemma": "sarx"
+      },
+      {
+        "surface": "I am present",
+        "lemma": "eimi"
       },
       {
         "surface": "in spirit",
@@ -234,6 +270,10 @@
     ],
     "9": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "fullness",
         "lemma": "pleroma"
       },
@@ -252,12 +292,24 @@
     ],
     "10": [
       {
+        "surface": "you have been",
+        "lemma": "eimi"
+      },
+      {
         "surface": "made complete",
         "lemma": "pleroo"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "head",
         "lemma": "kephale"
+      },
+      {
+        "surface": "over every",
+        "lemma": "pas"
       },
       {
         "surface": "ruler",
@@ -334,6 +386,10 @@
     ],
     "13": [
       {
+        "surface": "were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "dead",
         "lemma": "nekros"
       },
@@ -358,6 +414,10 @@
         "lemma": "charizo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "trespasses",
         "lemma": "paraptoma"
       }
@@ -374,6 +434,10 @@
       {
         "surface": "decrees",
         "lemma": "dogma"
+      },
+      {
+        "surface": "stood",
+        "lemma": "eimi"
       },
       {
         "surface": "against",
@@ -446,6 +510,10 @@
     ],
     "17": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a shadow",
         "lemma": "skia"
       },
@@ -468,6 +536,10 @@
         "lemma": "medeis"
       },
       {
+        "surface": "who delights",
+        "lemma": "thelo"
+      },
+      {
         "surface": "false humility",
         "lemma": "tapeinophrosune"
       },
@@ -486,6 +558,10 @@
       {
         "surface": "with speculation about",
         "lemma": "embateuo"
+      },
+      {
+        "surface": "he has seen",
+        "lemma": "horao"
       },
       {
         "surface": "Such a person is puffed up",
@@ -512,6 +588,10 @@
       {
         "surface": "head",
         "lemma": "kephale"
+      },
+      {
+        "surface": "whole",
+        "lemma": "pas"
       },
       {
         "surface": "body",
@@ -564,6 +644,10 @@
         "lemma": "kosmos"
       },
       {
+        "surface": "why",
+        "lemma": "tis"
+      },
+      {
         "surface": "you still belonged",
         "lemma": "zao"
       },
@@ -592,6 +676,14 @@
     ],
     "22": [
       {
+        "surface": "will",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "perish",
         "lemma": "phthora"
       },
@@ -613,6 +705,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "have",
+        "lemma": "echo"
+      },
       {
         "surface": "an appearance",
         "lemma": "logos"
@@ -636,6 +732,10 @@
       {
         "surface": "of the body",
         "lemma": "soma"
+      },
+      {
+        "surface": "but they are",
+        "lemma": "eimi"
       },
       {
         "surface": "value",

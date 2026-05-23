@@ -14,8 +14,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "brings",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "are entering",
+        "lemma": "bo"
       },
       {
         "surface": "to possess",
@@ -92,6 +100,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "has delivered them over",
+        "lemma": "natan"
+      },
+      {
         "surface": "to you",
         "lemma": "paneh"
       },
@@ -108,8 +120,16 @@
         "lemma": "karat"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "treaty",
         "lemma": "berit"
+      },
+      {
+        "surface": "and show them no",
+        "lemma": "lo"
       },
       {
         "surface": "mercy",
@@ -118,8 +138,20 @@
     ],
     "3": [
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "intermarry",
         "lemma": "choten"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
       },
       {
         "surface": "your daughters",
@@ -128,6 +160,10 @@
       {
         "surface": "to their sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "take",
@@ -192,6 +228,10 @@
       {
         "surface": "this is what",
         "lemma": "koh"
+      },
+      {
+        "surface": "you are to do to them",
+        "lemma": "asah"
       },
       {
         "surface": "tear down",
@@ -260,12 +300,20 @@
         "lemma": "bachar"
       },
       {
+        "surface": "to be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a people",
         "lemma": "am"
       },
       {
         "surface": "prized possession",
         "lemma": "segullah"
+      },
+      {
+        "surface": "out of all",
+        "lemma": "kol"
       },
       {
         "surface": "peoples",
@@ -286,6 +334,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "set His affection",
         "lemma": "chashaq"
       },
@@ -298,12 +350,20 @@
         "lemma": "ravav"
       },
       {
+        "surface": "than the other",
+        "lemma": "kol"
+      },
+      {
         "surface": "peoples",
         "lemma": "am"
       },
       {
         "surface": "were the fewest",
         "lemma": "meat"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "peoples",
@@ -332,8 +392,16 @@
         "lemma": "shava"
       },
       {
+        "surface": "to your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "He",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "brought you out",
+        "lemma": "yatsa"
       },
       {
         "surface": "with a mighty",
@@ -448,6 +516,10 @@
         "lemma": "avad"
       },
       {
+        "surface": "He will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "hesitate",
         "lemma": "achar"
       },
@@ -486,6 +558,10 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "to follow",
+        "lemma": "asah"
+      },
+      {
         "surface": "this day",
         "lemma": "yom"
       }
@@ -494,6 +570,10 @@
       {
         "surface": "If",
         "lemma": "eqev"
+      },
+      {
+        "surface": "you listen to",
+        "lemma": "shama"
       },
       {
         "surface": "ordinances",
@@ -526,6 +606,10 @@
       {
         "surface": "He swore",
         "lemma": "shava"
+      },
+      {
+        "surface": "to your fathers",
+        "lemma": "av"
       }
     ],
     "13": [
@@ -596,16 +680,40 @@
       {
         "surface": "He swore",
         "lemma": "shava"
+      },
+      {
+        "surface": "to your fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "to give",
+        "lemma": "natan"
       }
     ],
     "14": [
+      {
+        "surface": "You will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "blessed",
         "lemma": "barakh"
       },
       {
+        "surface": "above all",
+        "lemma": "kol"
+      },
+      {
         "surface": "peoples",
         "lemma": "am"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "barren man",
@@ -630,12 +738,24 @@
         "lemma": "sur"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "sickness",
         "lemma": "choli"
       },
       {
+        "surface": "He will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "lay",
         "lemma": "sum"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "of the terrible",
@@ -654,6 +774,14 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "but He will inflict them",
+        "lemma": "natan"
+      },
+      {
+        "surface": "on all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who hate you",
         "lemma": "sane"
       }
@@ -662,6 +790,10 @@
       {
         "surface": "You must destroy",
         "lemma": "akhal"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the peoples",
@@ -676,12 +808,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "will deliver",
+        "lemma": "natan"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "look",
         "lemma": "ayin"
       },
       {
         "surface": "with pity",
         "lemma": "chus"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
       },
       {
         "surface": "worship",
@@ -697,6 +841,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "You may say",
+        "lemma": "amar"
+      },
       {
         "surface": "in your heart",
         "lemma": "levav"
@@ -724,6 +872,10 @@
     ],
     "18": [
       {
+        "surface": "But do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
@@ -740,8 +892,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "to Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "Egypt",
@@ -760,6 +920,10 @@
       {
         "surface": "you",
         "lemma": "ayin"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "the signs",
@@ -794,6 +958,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "brought you out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
       },
@@ -802,8 +970,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "will do",
+        "lemma": "asah"
+      },
+      {
         "surface": "the same",
         "lemma": "ken"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the peoples",
@@ -849,6 +1025,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
       {
         "surface": "be terrified",
         "lemma": "arats"
@@ -912,6 +1092,10 @@
         "lemma": "meat"
       },
       {
+        "surface": "You will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be enabled",
         "lemma": "yakhol"
       },
@@ -946,6 +1130,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "will give them over",
+        "lemma": "natan"
+      },
+      {
         "surface": "to you",
         "lemma": "paneh"
       },
@@ -972,6 +1160,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "over to",
+        "lemma": "natan"
+      },
+      {
         "surface": "you",
         "lemma": "yad"
       },
@@ -990,6 +1182,10 @@
       {
         "surface": "heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "one",
@@ -1020,6 +1216,10 @@
       {
         "surface": "of their gods",
         "lemma": "elohim"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "covet",
@@ -1056,12 +1256,24 @@
     ],
     "26": [
       {
+        "surface": "And you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "any detestable thing",
         "lemma": "toevah"
       },
       {
         "surface": "your house",
         "lemma": "bet"
+      },
+      {
+        "surface": "or you",
+        "lemma": "hayah"
       },
       {
         "surface": "will be set apart for destruction",
@@ -1082,8 +1294,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "paneh",
-    "shamar",
-    "avad"
+    "kol"
   ]
 }

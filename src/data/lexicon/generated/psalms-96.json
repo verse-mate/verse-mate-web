@@ -30,6 +30,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
@@ -86,6 +90,10 @@
         "lemma": "pala"
       },
       {
+        "surface": "among all",
+        "lemma": "kol"
+      },
+      {
         "surface": "peoples",
         "lemma": "am"
       }
@@ -112,11 +120,19 @@
         "lemma": "yare"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "gods",
         "lemma": "elohim"
       }
     ],
     "5": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the gods",
         "lemma": "elohim"
@@ -132,6 +148,10 @@
       {
         "surface": "but it is the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "who made",
+        "lemma": "asah"
       },
       {
         "surface": "the heavens",
@@ -224,6 +244,10 @@
         "lemma": "minchah"
       },
       {
+        "surface": "and enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "His courts",
         "lemma": "chatser"
       }
@@ -254,11 +278,19 @@
         "lemma": "paneh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
     ],
     "10": [
+      {
+        "surface": "Declare",
+        "lemma": "amar"
+      },
       {
         "surface": "among the nations",
         "lemma": "goy"
@@ -340,6 +372,14 @@
         "lemma": "alaz"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the trees",
         "lemma": "ets"
       },
@@ -360,6 +400,14 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "He is coming",
+        "lemma": "bo"
+      },
+      {
+        "surface": "He is coming",
+        "lemma": "bo"
       },
       {
         "surface": "to judge",
@@ -392,8 +440,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "shir",
-    "yahav",
-    "paneh"
+    "yahav"
   ]
 }

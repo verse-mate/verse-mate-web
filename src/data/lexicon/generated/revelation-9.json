@@ -18,6 +18,10 @@
         "lemma": "salpizo"
       },
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a star",
         "lemma": "aster"
       },
@@ -32,6 +36,10 @@
       {
         "surface": "earth",
         "lemma": "ge"
+      },
+      {
+        "surface": "it was given",
+        "lemma": "didomi"
       },
       {
         "surface": "key",
@@ -76,6 +84,10 @@
         "lemma": "kapnos"
       },
       {
+        "surface": "of a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "furnace",
         "lemma": "kaminos"
       },
@@ -110,12 +122,24 @@
         "lemma": "akris"
       },
       {
+        "surface": "descended on",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "earth",
         "lemma": "ge"
       },
       {
+        "surface": "were given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "power",
         "lemma": "exousia"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "echo"
       },
       {
         "surface": "that of",
@@ -148,12 +172,20 @@
         "lemma": "ge"
       },
       {
+        "surface": "any",
+        "lemma": "pas"
+      },
+      {
         "surface": "plant",
         "lemma": "chloros"
       },
       {
         "surface": "tree",
         "lemma": "dendron"
+      },
+      {
+        "surface": "did not have",
+        "lemma": "echo"
       },
       {
         "surface": "seal",
@@ -169,6 +201,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "were not given power",
+        "lemma": "didomi"
+      },
       {
         "surface": "kill",
         "lemma": "apokteino"
@@ -214,6 +250,10 @@
       {
         "surface": "death",
         "lemma": "thanatos"
+      },
+      {
+        "surface": "will not find",
+        "lemma": "heurisko"
       },
       {
         "surface": "they will long",
@@ -288,6 +328,10 @@
     ],
     "8": [
       {
+        "surface": "They had",
+        "lemma": "echo"
+      },
+      {
         "surface": "hair",
         "lemma": "thrix"
       },
@@ -309,6 +353,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "They also had",
+        "lemma": "echo"
+      },
       {
         "surface": "breastplates",
         "lemma": "thorax"
@@ -334,6 +382,10 @@
         "lemma": "phone"
       },
       {
+        "surface": "of many",
+        "lemma": "polus"
+      },
+      {
         "surface": "horses",
         "lemma": "hippos"
       },
@@ -351,6 +403,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "They had",
+        "lemma": "echo"
+      },
       {
         "surface": "tails",
         "lemma": "oura"
@@ -394,6 +450,10 @@
     ],
     "11": [
       {
+        "surface": "They were ruled by",
+        "lemma": "echo"
+      },
+      {
         "surface": "a king",
         "lemma": "basileus"
       },
@@ -422,6 +482,10 @@
         "lemma": "hellenikos"
       },
       {
+        "surface": "vvv",
+        "lemma": "echo"
+      },
+      {
         "surface": "it is",
         "lemma": "onoma"
       },
@@ -431,6 +495,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "first",
+        "lemma": "heis"
+      },
       {
         "surface": "has passed",
         "lemma": "aperchomai"
@@ -442,6 +510,10 @@
       {
         "surface": "are still",
         "lemma": "eti"
+      },
+      {
+        "surface": "to follow",
+        "lemma": "erchomai"
       }
     ],
     "13": [
@@ -456,6 +528,14 @@
       {
         "surface": "sounded his trumpet",
         "lemma": "salpizo"
+      },
+      {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "a",
+        "lemma": "heis"
       },
       {
         "surface": "voice",
@@ -484,12 +564,20 @@
     ],
     "14": [
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "sixth",
         "lemma": "hektos"
       },
       {
         "surface": "angel",
         "lemma": "angelos"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "trumpet",
@@ -510,6 +598,10 @@
       {
         "surface": "are bound",
         "lemma": "deo"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "river",
@@ -584,6 +676,10 @@
         "lemma": "dis"
       },
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "number",
         "lemma": "arithmos"
       }
@@ -598,8 +694,16 @@
         "lemma": "horasis"
       },
       {
+        "surface": "looked like",
+        "lemma": "horao"
+      },
+      {
         "surface": "this",
         "lemma": "houto"
+      },
+      {
+        "surface": "The riders had",
+        "lemma": "echo"
       },
       {
         "surface": "breastplates the colors of",
@@ -706,6 +810,10 @@
         "lemma": "hippos"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "mouths",
         "lemma": "stoma"
       },
@@ -724,6 +832,10 @@
       {
         "surface": "snakes",
         "lemma": "ophis"
+      },
+      {
+        "surface": "having",
+        "lemma": "echo"
       },
       {
         "surface": "heads",
@@ -796,8 +908,16 @@
         "lemma": "xulinos"
       },
       {
+        "surface": "cannot",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "see",
         "lemma": "blepo"
+      },
+      {
+        "surface": "hear",
+        "lemma": "akouo"
       },
       {
         "surface": "walk",

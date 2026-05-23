@@ -22,6 +22,10 @@
         "lemma": "galilaia"
       },
       {
+        "surface": "went",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "region",
         "lemma": "horion"
       },
@@ -35,6 +39,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "Large",
+        "lemma": "polus"
+      },
       {
         "surface": "crowds",
         "lemma": "ochlos"
@@ -66,6 +74,10 @@
         "lemma": "peirazo"
       },
       {
+        "surface": "by asking",
+        "lemma": "lego"
+      },
+      {
         "surface": "Is it lawful",
         "lemma": "exesti"
       },
@@ -82,11 +94,19 @@
         "lemma": "gune"
       },
       {
+        "surface": "any",
+        "lemma": "pas"
+      },
+      {
         "surface": "reason",
         "lemma": "aitia"
       }
     ],
     "4": [
+      {
+        "surface": "Jesus answered",
+        "lemma": "apokrino"
+      },
       {
         "surface": "Have you not read",
         "lemma": "anaginosko"
@@ -100,6 +120,10 @@
         "lemma": "ktizo"
       },
       {
+        "surface": "made",
+        "lemma": "poieo"
+      },
+      {
         "surface": "male",
         "lemma": "arren"
       },
@@ -109,6 +133,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
       {
         "surface": "a man",
         "lemma": "anthropos"
@@ -138,14 +166,30 @@
         "lemma": "duo"
       },
       {
+        "surface": "will become",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "flesh",
         "lemma": "sarx"
       }
     ],
     "6": [
       {
+        "surface": "they are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "two",
         "lemma": "duo"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "flesh",
@@ -170,12 +214,24 @@
     ],
     "7": [
       {
+        "surface": "Why",
+        "lemma": "tis"
+      },
+      {
+        "surface": "they asked",
+        "lemma": "lego"
+      },
+      {
         "surface": "did} Moses",
         "lemma": "mouses"
       },
       {
         "surface": "order a man",
         "lemma": "entello"
+      },
+      {
+        "surface": "to give his wife",
+        "lemma": "didomi"
       },
       {
         "surface": "a certificate",
@@ -191,6 +247,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Jesus replied",
+        "lemma": "lego"
+      },
       {
         "surface": "Moses",
         "lemma": "mouses"
@@ -212,6 +272,10 @@
         "lemma": "sklerokardia"
       },
       {
+        "surface": "it was",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "this way",
         "lemma": "houto"
       },
@@ -221,6 +285,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "I tell",
+        "lemma": "lego"
+      },
       {
         "surface": "divorces",
         "lemma": "apoluo"
@@ -252,8 +320,16 @@
         "lemma": "mathetes"
       },
       {
+        "surface": "said",
+        "lemma": "lego"
+      },
+      {
         "surface": "this",
         "lemma": "houto"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "case",
@@ -278,15 +354,31 @@
     ],
     "11": [
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "can accept",
         "lemma": "choreo"
       },
       {
         "surface": "word",
         "lemma": "logos"
+      },
+      {
+        "surface": "He replied",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "it has been given",
+        "lemma": "didomi"
       }
     ],
     "12": [
+      {
+        "surface": "there are",
+        "lemma": "eimi"
+      },
       {
         "surface": "eunuchs",
         "lemma": "eunouchos"
@@ -334,6 +426,10 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "who can",
+        "lemma": "dunamai"
       },
       {
         "surface": "accept this",
@@ -384,12 +480,20 @@
         "lemma": "iesous"
       },
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Let",
         "lemma": "aphiemi"
       },
       {
         "surface": "little children",
         "lemma": "paidion"
+      },
+      {
+        "surface": "come",
+        "lemma": "erchomai"
       },
       {
         "surface": "do not hinder",
@@ -402,6 +506,10 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "belongs",
+        "lemma": "eimi"
       }
     ],
     "15": [
@@ -424,16 +532,36 @@
     ],
     "16": [
       {
+        "surface": "a man",
+        "lemma": "heis"
+      },
+      {
         "surface": "came up",
         "lemma": "proserchomai"
+      },
+      {
+        "surface": "and inquired",
+        "lemma": "eipon"
       },
       {
         "surface": "Teacher",
         "lemma": "didaskalos"
       },
       {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "good thing",
         "lemma": "agathos"
+      },
+      {
+        "surface": "must I do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "obtain",
+        "lemma": "echo"
       },
       {
         "surface": "eternal",
@@ -446,6 +574,10 @@
     ],
     "17": [
       {
+        "surface": "Why",
+        "lemma": "tis"
+      },
+      {
         "surface": "do you ask",
         "lemma": "erotao"
       },
@@ -454,8 +586,28 @@
         "lemma": "agathos"
       },
       {
+        "surface": "Jesus replied",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "There is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "only One",
+        "lemma": "heis"
+      },
+      {
         "surface": "good",
         "lemma": "agathos"
+      },
+      {
+        "surface": "you want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to enter",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "life",
@@ -476,8 +628,16 @@
         "lemma": "poios"
       },
       {
+        "surface": "the man asked",
+        "lemma": "lego"
+      },
+      {
         "surface": "Jesus",
         "lemma": "iesous"
+      },
+      {
+        "surface": "answered",
+        "lemma": "eipon"
       },
       {
         "surface": "Do not murder",
@@ -520,12 +680,24 @@
     ],
     "20": [
       {
+        "surface": "All these",
+        "lemma": "pas"
+      },
+      {
         "surface": "I have kept",
         "lemma": "phulasso"
       },
       {
+        "surface": "said",
+        "lemma": "lego"
+      },
+      {
         "surface": "young man",
         "lemma": "neaniskos"
+      },
+      {
+        "surface": "What",
+        "lemma": "tis"
       },
       {
         "surface": "vvv",
@@ -546,6 +718,14 @@
         "lemma": "phemi"
       },
       {
+        "surface": "you want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "perfect",
         "lemma": "teleios"
       },
@@ -562,8 +742,16 @@
         "lemma": "huparcho"
       },
       {
+        "surface": "give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "poor",
         "lemma": "ptochos"
+      },
+      {
+        "surface": "you will have",
+        "lemma": "echo"
       },
       {
         "surface": "treasure",
@@ -584,12 +772,28 @@
         "lemma": "neaniskos"
       },
       {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "he went away",
         "lemma": "aperchomai"
       },
       {
         "surface": "in sorrow",
         "lemma": "lupeo"
+      },
+      {
+        "surface": "he",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "had",
+        "lemma": "echo"
+      },
+      {
+        "surface": "great",
+        "lemma": "polus"
       },
       {
         "surface": "wealth",
@@ -602,12 +806,16 @@
         "lemma": "iesous"
       },
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "disciples",
         "lemma": "mathetes"
       },
       {
-        "surface": "Truly",
-        "lemma": "amen"
+        "surface": "I tell",
+        "lemma": "lego"
       },
       {
         "surface": "it is hard for",
@@ -616,6 +824,10 @@
       {
         "surface": "a rich man",
         "lemma": "plousios"
+      },
+      {
+        "surface": "to enter",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "kingdom",
@@ -632,12 +844,24 @@
         "lemma": "palin"
       },
       {
+        "surface": "I tell",
+        "lemma": "lego"
+      },
+      {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "easier for",
         "lemma": "eukopoteros"
       },
       {
         "surface": "a camel",
         "lemma": "kamelos"
+      },
+      {
+        "surface": "to pass",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "the eye",
@@ -650,6 +874,10 @@
       {
         "surface": "a rich man",
         "lemma": "plousios"
+      },
+      {
+        "surface": "to enter",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "kingdom",
@@ -666,12 +894,28 @@
         "lemma": "mathetes"
       },
       {
+        "surface": "heard this",
+        "lemma": "akouo"
+      },
+      {
         "surface": "they were} greatly",
         "lemma": "sphodra"
       },
       {
         "surface": "astonished",
         "lemma": "ekplesso"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
       },
       {
         "surface": "be saved",
@@ -688,8 +932,16 @@
         "lemma": "emblepo"
       },
       {
+        "surface": "and said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "man",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "impossible",
@@ -698,6 +950,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "all things are",
+        "lemma": "pas"
       },
       {
         "surface": "possible",
@@ -710,12 +966,28 @@
         "lemma": "petros"
       },
       {
+        "surface": "replied",
+        "lemma": "apokrino"
+      },
+      {
         "surface": "have left",
         "lemma": "aphiemi"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "to follow",
         "lemma": "akoloutheo"
+      },
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "will there be",
+        "lemma": "eimi"
       }
     ],
     "28": [
@@ -724,8 +996,12 @@
         "lemma": "iesous"
       },
       {
-        "surface": "Truly",
-        "lemma": "amen"
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "I tell",
+        "lemma": "lego"
       },
       {
         "surface": "renewal of all things",
@@ -786,6 +1062,10 @@
     ],
     "29": [
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "has left",
         "lemma": "aphiemi"
       },
@@ -826,6 +1106,10 @@
         "lemma": "onoma"
       },
       {
+        "surface": "will receive",
+        "lemma": "lambano"
+      },
+      {
         "surface": "a hundredfold",
         "lemma": "hekatontaplasion"
       },
@@ -844,8 +1128,16 @@
     ],
     "30": [
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "who are first",
         "lemma": "protos"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "last",

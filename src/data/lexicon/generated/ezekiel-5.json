@@ -184,6 +184,14 @@
         "lemma": "esh"
       },
       {
+        "surface": "will spread",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
@@ -204,6 +212,10 @@
       {
         "surface": "GOD",
         "lemma": "yehovih"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "Jerusalem",
@@ -268,6 +280,10 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "and have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "walked",
         "lemma": "halakh"
       },
@@ -294,6 +310,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "You have been more insubordinate",
         "lemma": "hamon"
       },
@@ -306,6 +326,10 @@
         "lemma": "saviv"
       },
       {
+        "surface": "you have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "walked",
         "lemma": "halakh"
       },
@@ -314,8 +338,24 @@
         "lemma": "chuqqah"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
+        "surface": "kept",
+        "lemma": "asah"
+      },
+      {
         "surface": "My ordinances",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
+        "surface": "have you even conformed",
+        "lemma": "asah"
       },
       {
         "surface": "to the ordinances",
@@ -348,8 +388,12 @@
         "lemma": "yehovih"
       },
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and I will execute",
+        "lemma": "asah"
       },
       {
         "surface": "judgments",
@@ -370,8 +414,32 @@
     ],
     "9": [
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your abominations",
         "lemma": "toevah"
+      },
+      {
+        "surface": "I will do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "I have never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "done before",
+        "lemma": "asah"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       },
       {
         "surface": "again",
@@ -382,6 +450,10 @@
       {
         "surface": "As a result",
         "lemma": "ken"
+      },
+      {
+        "surface": "fathers",
+        "lemma": "av"
       },
       {
         "surface": "among you",
@@ -404,6 +476,14 @@
         "lemma": "akhal"
       },
       {
+        "surface": "their fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "I will execute",
+        "lemma": "asah"
+      },
+      {
         "surface": "judgments",
         "lemma": "shephet"
       },
@@ -412,8 +492,16 @@
         "lemma": "zarah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your remnant",
         "lemma": "sheerit"
+      },
+      {
+        "surface": "to every",
+        "lemma": "kol"
       },
       {
         "surface": "wind",
@@ -448,6 +536,10 @@
       {
         "surface": "My sanctuary",
         "lemma": "miqdash"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "your detestable idols",
@@ -524,6 +616,10 @@
         "lemma": "zarah"
       },
       {
+        "surface": "to every",
+        "lemma": "kol"
+      },
+      {
         "surface": "wind",
         "lemma": "ruach"
       },
@@ -588,6 +684,10 @@
     ],
     "14": [
       {
+        "surface": "I will make",
+        "lemma": "natan"
+      },
+      {
         "surface": "you a ruin",
         "lemma": "chorbah"
       },
@@ -608,11 +708,19 @@
         "lemma": "ayin"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who pass by",
         "lemma": "avar"
       }
     ],
     "15": [
+      {
+        "surface": "So you will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "a reproach",
         "lemma": "cherpah"
@@ -636,6 +744,10 @@
       {
         "surface": "around you",
         "lemma": "saviv"
+      },
+      {
+        "surface": "when I execute",
+        "lemma": "asah"
       },
       {
         "surface": "judgments",
@@ -750,6 +862,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "and I will bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "a sword",
         "lemma": "cherev"
       },
@@ -765,7 +881,7 @@
   },
   "themeLemmas": [
     "saviv",
-    "shelishi",
-    "laqach"
+    "asah",
+    "kol"
   ]
 }

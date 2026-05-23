@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "true",
         "lemma": "alethinos"
       },
@@ -18,6 +22,10 @@
         "lemma": "pater"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "keeper of the vineyard",
         "lemma": "georgos"
       }
@@ -26,6 +34,10 @@
       {
         "surface": "He cuts off",
         "lemma": "airo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "branch",
@@ -38,6 +50,10 @@
       {
         "surface": "fruit",
         "lemma": "karpos"
+      },
+      {
+        "surface": "every branch",
+        "lemma": "pas"
       },
       {
         "surface": "does bear",
@@ -58,6 +74,10 @@
     ],
     "3": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "already",
         "lemma": "ede"
       },
@@ -68,6 +88,10 @@
       {
         "surface": "word",
         "lemma": "logos"
+      },
+      {
+        "surface": "I have spoken",
+        "lemma": "laleo"
       }
     ],
     "4": [
@@ -78,6 +102,10 @@
       {
         "surface": "branch",
         "lemma": "klema"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
       },
       {
         "surface": "bear",
@@ -102,6 +130,10 @@
     ],
     "5": [
       {
+        "surface": "am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "vine",
         "lemma": "ampelos"
       },
@@ -118,8 +150,24 @@
         "lemma": "phero"
       },
       {
+        "surface": "much",
+        "lemma": "polus"
+      },
+      {
         "surface": "fruit",
         "lemma": "karpos"
+      },
+      {
+        "surface": "you can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
       }
     ],
     "6": [
@@ -172,6 +220,14 @@
       {
         "surface": "ask",
         "lemma": "aiteo"
+      },
+      {
+        "surface": "you wish",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "it will be done",
+        "lemma": "ginomai"
       }
     ],
     "8": [
@@ -188,8 +244,16 @@
         "lemma": "phero"
       },
       {
+        "surface": "much",
+        "lemma": "polus"
+      },
+      {
         "surface": "fruit",
         "lemma": "karpos"
+      },
+      {
+        "surface": "proving yourselves to be",
+        "lemma": "ginomai"
       },
       {
         "surface": "My",
@@ -266,12 +330,20 @@
     ],
     "11": [
       {
+        "surface": "I have told",
+        "lemma": "laleo"
+      },
+      {
         "surface": "My",
         "lemma": "emos"
       },
       {
         "surface": "joy",
         "lemma": "chara"
+      },
+      {
+        "surface": "may be",
+        "lemma": "eimi"
       },
       {
         "surface": "joy",
@@ -283,6 +355,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
       {
         "surface": "My",
         "lemma": "emos"
@@ -306,8 +382,20 @@
     ],
     "13": [
       {
+        "surface": "Greater",
+        "lemma": "megas"
+      },
+      {
         "surface": "love",
         "lemma": "agape"
+      },
+      {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
       },
       {
         "surface": "lay down",
@@ -324,8 +412,16 @@
     ],
     "14": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "friends",
         "lemma": "philos"
+      },
+      {
+        "surface": "you do",
+        "lemma": "poieo"
       },
       {
         "surface": "command",
@@ -333,6 +429,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "do I call",
+        "lemma": "lego"
+      },
       {
         "surface": "servants",
         "lemma": "doulos"
@@ -342,8 +442,20 @@
         "lemma": "doulos"
       },
       {
+        "surface": "understand",
+        "lemma": "eido"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "master",
         "lemma": "kurios"
+      },
+      {
+        "surface": "is doing",
+        "lemma": "poieo"
       },
       {
         "surface": "I have called",
@@ -352,6 +464,14 @@
       {
         "surface": "friends",
         "lemma": "philos"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "I have learned",
+        "lemma": "akouo"
       },
       {
         "surface": "Father",
@@ -406,6 +526,10 @@
       {
         "surface": "name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "He will give",
+        "lemma": "didomi"
       }
     ],
     "17": [
@@ -432,6 +556,10 @@
         "lemma": "miseo"
       },
       {
+        "surface": "understand",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "it hated",
         "lemma": "miseo"
       },
@@ -442,16 +570,16 @@
     ],
     "19": [
       {
+        "surface": "you were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
       },
       {
         "surface": "it",
         "lemma": "kosmos"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "an"
       },
       {
         "surface": "would love you",
@@ -468,6 +596,10 @@
       {
         "surface": "hates",
         "lemma": "miseo"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "world",
@@ -492,8 +624,20 @@
         "lemma": "logos"
       },
       {
+        "surface": "spoke",
+        "lemma": "eipon"
+      },
+      {
         "surface": "servant",
         "lemma": "doulos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "greater than",
+        "lemma": "megas"
       },
       {
         "surface": "master",
@@ -526,8 +670,16 @@
     ],
     "21": [
       {
+        "surface": "they will treat",
+        "lemma": "poieo"
+      },
+      {
         "surface": "name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "they do not know",
+        "lemma": "eido"
       },
       {
         "surface": "sent",
@@ -536,8 +688,24 @@
     ],
     "22": [
       {
+        "surface": "I had not come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "spoken",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "they would not be guilty of sin",
+        "lemma": "echo"
+      },
+      {
         "surface": "Now",
         "lemma": "nun"
+      },
+      {
+        "surface": "they have",
+        "lemma": "echo"
       },
       {
         "surface": "excuse",
@@ -564,16 +732,36 @@
     ],
     "24": [
       {
+        "surface": "I had not done",
+        "lemma": "poieo"
+      },
+      {
         "surface": "works",
         "lemma": "ergon"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
       },
       {
         "surface": "else",
         "lemma": "allos"
       },
       {
+        "surface": "did",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "they would not be guilty of sin",
+        "lemma": "echo"
+      },
+      {
         "surface": "now",
         "lemma": "nun"
+      },
+      {
+        "surface": "they have seen",
+        "lemma": "horao"
       },
       {
         "surface": "hated",
@@ -594,6 +782,10 @@
         "lemma": "logos"
       },
       {
+        "surface": "is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "Law",
         "lemma": "nomos"
       },
@@ -610,6 +802,10 @@
       {
         "surface": "Advocate",
         "lemma": "parakletos"
+      },
+      {
+        "surface": "comes",
+        "lemma": "erchomai"
       },
       {
         "surface": "will send",
@@ -644,6 +840,10 @@
       {
         "surface": "must testify",
         "lemma": "martureo"
+      },
+      {
+        "surface": "you have been",
+        "lemma": "eimi"
       },
       {
         "surface": "the beginning",

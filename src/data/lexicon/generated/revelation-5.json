@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a scroll",
         "lemma": "biblion"
       },
@@ -20,6 +24,10 @@
       {
         "surface": "throne",
         "lemma": "thronos"
+      },
+      {
+        "surface": "It had writing",
+        "lemma": "grapho"
       },
       {
         "surface": "on both sides",
@@ -40,6 +48,10 @@
     ],
     "2": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a mighty",
         "lemma": "ischuros"
       },
@@ -52,8 +64,16 @@
         "lemma": "kerusso"
       },
       {
+        "surface": "a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
+      },
+      {
+        "surface": "Who is",
+        "lemma": "tis"
       },
       {
         "surface": "worthy",
@@ -78,6 +98,10 @@
     ],
     "3": [
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "heaven",
         "lemma": "ouranos"
       },
@@ -88,6 +112,10 @@
       {
         "surface": "earth",
         "lemma": "ge"
+      },
+      {
+        "surface": "was able",
+        "lemma": "dunamai"
       },
       {
         "surface": "to open",
@@ -108,6 +136,18 @@
         "lemma": "klaio"
       },
       {
+        "surface": "bitterly",
+        "lemma": "polus"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "was found",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "worthy",
         "lemma": "axios"
       },
@@ -126,8 +166,16 @@
     ],
     "5": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "elders",
         "lemma": "presbuteros"
+      },
+      {
+        "surface": "said",
+        "lemma": "lego"
       },
       {
         "surface": "weep",
@@ -176,12 +224,20 @@
     ],
     "6": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a Lamb",
         "lemma": "arnion"
       },
       {
         "surface": "to have been slain",
         "lemma": "sphazo"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "the center",
@@ -204,6 +260,10 @@
         "lemma": "presbuteros"
       },
       {
+        "surface": "The Lamb had",
+        "lemma": "echo"
+      },
+      {
         "surface": "seven",
         "lemma": "hepta"
       },
@@ -218,6 +278,10 @@
       {
         "surface": "eyes",
         "lemma": "ophthalmos"
+      },
+      {
+        "surface": "represent",
+        "lemma": "eimi"
       },
       {
         "surface": "seven",
@@ -236,11 +300,23 @@
         "lemma": "apostello"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "earth",
         "lemma": "ge"
       }
     ],
     "7": [
+      {
+        "surface": "He came",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "took the scroll",
+        "lemma": "lambano"
+      },
       {
         "surface": "right hand",
         "lemma": "dexios"
@@ -255,6 +331,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "He had taken",
+        "lemma": "lambano"
+      },
       {
         "surface": "scroll",
         "lemma": "biblion"
@@ -288,6 +368,10 @@
         "lemma": "hekastos"
       },
       {
+        "surface": "had",
+        "lemma": "echo"
+      },
+      {
         "surface": "a harp",
         "lemma": "kithara"
       },
@@ -306,6 +390,10 @@
       {
         "surface": "of incense",
         "lemma": "thumiama"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "prayers",
@@ -332,6 +420,14 @@
       {
         "surface": "Worthy",
         "lemma": "axios"
+      },
+      {
+        "surface": "are You",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "to take",
+        "lemma": "lambano"
       },
       {
         "surface": "scroll",
@@ -362,6 +458,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "tribe",
         "lemma": "phule"
       },
@@ -379,6 +479,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "You have made",
+        "lemma": "poieo"
+      },
       {
         "surface": "a kingdom",
         "lemma": "basileia"
@@ -402,8 +506,20 @@
     ],
     "11": [
       {
+        "surface": "I looked",
+        "lemma": "horao"
+      },
+      {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "the voices",
         "lemma": "phone"
+      },
+      {
+        "surface": "of many",
+        "lemma": "polus"
       },
       {
         "surface": "angels",
@@ -430,6 +546,10 @@
         "lemma": "arithmos"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "myriads",
         "lemma": "murias"
       },
@@ -452,8 +572,16 @@
         "lemma": "phone"
       },
       {
+        "surface": "they were saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "Worthy",
         "lemma": "axios"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "Lamb",
@@ -462,6 +590,10 @@
       {
         "surface": "was slain",
         "lemma": "sphazo"
+      },
+      {
+        "surface": "to receive",
+        "lemma": "lambano"
       },
       {
         "surface": "power",
@@ -494,6 +626,14 @@
     ],
     "13": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "creature",
         "lemma": "ktisma"
       },
@@ -512,6 +652,14 @@
       {
         "surface": "sea",
         "lemma": "thalassa"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "sits",
@@ -560,8 +708,8 @@
         "lemma": "zoon"
       },
       {
-        "surface": "Amen",
-        "lemma": "amen"
+        "surface": "said",
+        "lemma": "eipon"
       },
       {
         "surface": "elders",

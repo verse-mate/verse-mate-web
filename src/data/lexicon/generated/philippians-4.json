@@ -146,6 +146,14 @@
         "lemma": "epieikes"
       },
       {
+        "surface": "be apparent",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       }
@@ -158,6 +166,10 @@
       {
         "surface": "nothing",
         "lemma": "medeis"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       },
       {
         "surface": "prayer",
@@ -198,6 +210,10 @@
         "lemma": "huperecho"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "understanding",
         "lemma": "nous"
       },
@@ -234,6 +250,10 @@
       {
         "surface": "whatever",
         "lemma": "hosos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "true",
@@ -302,6 +322,14 @@
         "lemma": "paralambano"
       },
       {
+        "surface": "heard from me",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "seen",
+        "lemma": "horao"
+      },
+      {
         "surface": "put it into practice",
         "lemma": "prasso"
       },
@@ -312,6 +340,10 @@
       {
         "surface": "of peace",
         "lemma": "eirene"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       }
     ],
     "10": [
@@ -350,6 +382,10 @@
     ],
     "11": [
       {
+        "surface": "I am not saying this",
+        "lemma": "lego"
+      },
+      {
         "surface": "need",
         "lemma": "husteresis"
       },
@@ -358,18 +394,38 @@
         "lemma": "manthano"
       },
       {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "content",
         "lemma": "autarkes"
       }
     ],
     "12": [
       {
+        "surface": "I know",
+        "lemma": "eido"
+      },
+      {
         "surface": "how to live humbly",
         "lemma": "tapeinoo"
       },
       {
+        "surface": "I know",
+        "lemma": "eido"
+      },
+      {
         "surface": "how to abound",
         "lemma": "perisseuo"
+      },
+      {
+        "surface": "any",
+        "lemma": "pas"
+      },
+      {
+        "surface": "every situation",
+        "lemma": "pas"
       },
       {
         "surface": "I have learned the secret",
@@ -398,11 +454,19 @@
         "lemma": "ischuo"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "gives me strength",
         "lemma": "endunamoo"
       }
     ],
     "14": [
+      {
+        "surface": "you have done",
+        "lemma": "poieo"
+      },
       {
         "surface": "well",
         "lemma": "kalos"
@@ -422,6 +486,10 @@
         "lemma": "philippesios"
       },
       {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
         "surface": "the early days",
         "lemma": "arche"
       },
@@ -430,8 +498,16 @@
         "lemma": "euangelion"
       },
       {
+        "surface": "I left",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "Macedonia",
         "lemma": "makedonia"
+      },
+      {
+        "surface": "no",
+        "lemma": "oudeis"
       },
       {
         "surface": "church",
@@ -508,6 +584,10 @@
         "lemma": "apecho"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "I need",
         "lemma": "pleroo"
       },
@@ -554,6 +634,10 @@
         "lemma": "pleroo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "needs",
         "lemma": "chreia"
       },
@@ -594,16 +678,16 @@
       {
         "surface": "ever",
         "lemma": "aion"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ],
     "21": [
       {
         "surface": "Greet",
         "lemma": "aspazomai"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "the saints",
@@ -627,6 +711,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "All",
+        "lemma": "pas"
+      },
       {
         "surface": "saints",
         "lemma": "hagios"

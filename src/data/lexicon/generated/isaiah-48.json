@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O house",
         "lemma": "bet"
       },
@@ -14,12 +18,20 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "you who are called",
+        "lemma": "qara"
+      },
+      {
         "surface": "by the name",
         "lemma": "shem"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "who have descended",
+        "lemma": "yatsa"
       },
       {
         "surface": "from the line",
@@ -54,8 +66,16 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "in truth",
         "lemma": "emet"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "righteousness",
@@ -63,6 +83,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "call yourselves",
+        "lemma": "qara"
+      },
       {
         "surface": "after the holy",
         "lemma": "qodesh"
@@ -106,12 +130,28 @@
         "lemma": "rishon"
       },
       {
+        "surface": "they came",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "out of My mouth",
         "lemma": "peh"
       },
       {
+        "surface": "and I proclaimed them",
+        "lemma": "shama"
+      },
+      {
         "surface": "Suddenly",
         "lemma": "pitom"
+      },
+      {
+        "surface": "I acted",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and they came to pass",
+        "lemma": "bo"
       }
     ],
     "4": [
@@ -146,12 +186,28 @@
         "lemma": "nagad"
       },
       {
+        "surface": "I announced it",
+        "lemma": "shama"
+      },
+      {
         "surface": "before",
         "lemma": "terem"
       },
       {
+        "surface": "it came to pass",
+        "lemma": "bo"
+      },
+      {
+        "surface": "claim",
+        "lemma": "amar"
+      },
+      {
         "surface": "My idol",
         "lemma": "otsev"
+      },
+      {
+        "surface": "has done this",
+        "lemma": "asah"
       },
       {
         "surface": "my carved image",
@@ -168,8 +224,20 @@
     ],
     "6": [
       {
+        "surface": "You have heard these things",
+        "lemma": "shama"
+      },
+      {
         "surface": "look at them",
         "lemma": "chazah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "acknowledge them",
@@ -180,12 +248,20 @@
         "lemma": "attah"
       },
       {
+        "surface": "I will tell you of",
+        "lemma": "shama"
+      },
+      {
         "surface": "new things",
         "lemma": "chadash"
       },
       {
         "surface": "hidden things",
         "lemma": "natsar"
+      },
+      {
+        "surface": "unknown to you",
+        "lemma": "lo"
       }
     ],
     "7": [
@@ -198,6 +274,18 @@
         "lemma": "attah"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "you have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "heard of them",
+        "lemma": "shama"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
@@ -206,8 +294,8 @@
         "lemma": "yom"
       },
       {
-        "surface": "I already",
-        "lemma": "hinneh"
+        "surface": "claim",
+        "lemma": "amar"
       },
       {
         "surface": "knew them",
@@ -216,12 +304,28 @@
     ],
     "8": [
       {
+        "surface": "You have never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "you have never",
+        "lemma": "lo"
+      },
+      {
         "surface": "understood",
         "lemma": "yada"
       },
       {
         "surface": "your ears",
         "lemma": "ozen"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
       },
       {
         "surface": "been open",
@@ -234,6 +338,10 @@
       {
         "surface": "how deceitful you are",
         "lemma": "bagad"
+      },
+      {
+        "surface": "you have been called",
+        "lemma": "qara"
       },
       {
         "surface": "a rebel",
@@ -276,12 +384,12 @@
     ],
     "10": [
       {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "I have refined you",
         "lemma": "tsaraph"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "as silver",
@@ -302,12 +410,24 @@
     ],
     "11": [
       {
+        "surface": "I will act",
+        "lemma": "asah"
+      },
+      {
         "surface": "how",
         "lemma": "ekh"
       },
       {
         "surface": "can I let Myself be defamed",
         "lemma": "chalal"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "yield",
+        "lemma": "natan"
       },
       {
         "surface": "My glory",
@@ -320,12 +440,20 @@
     ],
     "12": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O Jacob",
         "lemma": "yaaqov"
       },
       {
         "surface": "and Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "whom I have called",
+        "lemma": "qara"
       },
       {
         "surface": "am the first",
@@ -362,6 +490,10 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "summon them",
+        "lemma": "qara"
+      },
+      {
         "surface": "they stand up",
         "lemma": "amad"
       },
@@ -374,6 +506,14 @@
       {
         "surface": "Come together",
         "lemma": "qavats"
+      },
+      {
+        "surface": "all of you",
+        "lemma": "kol"
+      },
+      {
+        "surface": "and listen",
+        "lemma": "shama"
       },
       {
         "surface": "Which",
@@ -390,6 +530,10 @@
       {
         "surface": "chosen ally",
         "lemma": "ahav"
+      },
+      {
+        "surface": "will carry out",
+        "lemma": "asah"
       },
       {
         "surface": "His desire",
@@ -414,6 +558,14 @@
         "lemma": "davar"
       },
       {
+        "surface": "I have called him",
+        "lemma": "qara"
+      },
+      {
+        "surface": "I have brought him",
+        "lemma": "bo"
+      },
+      {
         "surface": "and he will succeed",
         "lemma": "tsalach"
       },
@@ -428,8 +580,16 @@
         "lemma": "qarav"
       },
       {
+        "surface": "and listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "From the beginning",
         "lemma": "rosh"
+      },
+      {
+        "surface": "I have not",
+        "lemma": "lo"
       },
       {
         "surface": "spoken",
@@ -438,6 +598,14 @@
       {
         "surface": "in secret",
         "lemma": "seter"
+      },
+      {
+        "surface": "from the time",
+        "lemma": "et"
+      },
+      {
+        "surface": "it happened",
+        "lemma": "hayah"
       },
       {
         "surface": "was there",
@@ -468,6 +636,10 @@
       {
         "surface": "Thus",
         "lemma": "koh"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -516,10 +688,6 @@
     ],
     "18": [
       {
-        "surface": "If only",
-        "lemma": "lu"
-      },
-      {
         "surface": "you had paid attention",
         "lemma": "qashav"
       },
@@ -530,6 +698,10 @@
       {
         "surface": "your peace",
         "lemma": "shalom"
+      },
+      {
+        "surface": "would have been",
+        "lemma": "hayah"
       },
       {
         "surface": "like a river",
@@ -554,6 +726,10 @@
         "lemma": "zera"
       },
       {
+        "surface": "would have been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "as countless as the sand",
         "lemma": "chol"
       },
@@ -570,6 +746,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "would never",
+        "lemma": "lo"
+      },
+      {
         "surface": "be cut off",
         "lemma": "karat"
       },
@@ -583,6 +763,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "Leave",
+        "lemma": "yatsa"
+      },
       {
         "surface": "Babylon",
         "lemma": "bavel"
@@ -608,12 +792,24 @@
         "lemma": "rinnah"
       },
       {
+        "surface": "proclaim",
+        "lemma": "shama"
+      },
+      {
+        "surface": "let it go out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the ends",
         "lemma": "qatseh"
       },
       {
         "surface": "of the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "The LORD",
@@ -633,6 +829,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "They did not",
+        "lemma": "lo"
+      },
       {
         "surface": "thirst",
         "lemma": "tsame"
@@ -684,6 +884,10 @@
         "lemma": "shalom"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -694,8 +898,8 @@
     ]
   },
   "themeLemmas": [
-    "yisrael",
-    "shem",
-    "nagad"
+    "lo",
+    "shama",
+    "qara"
   ]
 }

@@ -18,6 +18,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "who went",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
       },
@@ -78,6 +82,10 @@
       {
         "surface": "Gad",
         "lemma": "gad"
+      },
+      {
+        "surface": "and Asher",
+        "lemma": "asher"
       }
     ],
     "5": [
@@ -90,12 +98,24 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "numbered",
+        "lemma": "hayah"
+      },
+      {
         "surface": "seventy",
         "lemma": "shivim"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "including Joseph",
         "lemma": "yoseph"
+      },
+      {
+        "surface": "who was",
+        "lemma": "hayah"
       },
       {
         "surface": "already in Egypt",
@@ -108,8 +128,16 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "generation",
@@ -164,6 +192,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -182,8 +214,8 @@
     ],
     "9": [
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
         "surface": "his people",
@@ -216,8 +248,16 @@
         "lemma": "ravah"
       },
       {
+        "surface": "and if",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a war",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "breaks out",
+        "lemma": "qara"
       },
       {
         "surface": "may join",
@@ -344,12 +384,20 @@
         "lemma": "chomer"
       },
       {
+        "surface": "and with all kinds",
+        "lemma": "kol"
+      },
+      {
         "surface": "of work",
         "lemma": "avodah"
       },
       {
         "surface": "in the fields",
         "lemma": "saday"
+      },
+      {
+        "surface": "Every",
+        "lemma": "kol"
       },
       {
         "surface": "service",
@@ -372,6 +420,10 @@
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "to the Hebrew",
@@ -412,8 +464,16 @@
         "lemma": "yalad"
       },
       {
+        "surface": "observe them",
+        "lemma": "raah"
+      },
+      {
         "surface": "the birthstools",
         "lemma": "oven"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
       },
       {
         "surface": "is a son",
@@ -422,6 +482,10 @@
       {
         "surface": "kill",
         "lemma": "mut"
+      },
+      {
+        "surface": "but if",
+        "lemma": "im"
       },
       {
         "surface": "a daughter",
@@ -444,6 +508,14 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "and did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       },
       {
         "surface": "the king",
@@ -476,12 +548,24 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "the midwives",
         "lemma": "yalad"
       },
       {
+        "surface": "and asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Why",
         "lemma": "maddua"
+      },
+      {
+        "surface": "have you done",
+        "lemma": "asah"
       },
       {
         "surface": "Why have you let the boys",
@@ -498,12 +582,20 @@
         "lemma": "yalad"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "Pharaoh",
         "lemma": "paroh"
       },
       {
         "surface": "The Hebrew women",
         "lemma": "ivri"
+      },
+      {
+        "surface": "are not",
+        "lemma": "lo"
       },
       {
         "surface": "like the Egyptian",
@@ -528,6 +620,10 @@
       {
         "surface": "a midwife",
         "lemma": "yalad"
+      },
+      {
+        "surface": "arrives",
+        "lemma": "bo"
       }
     ],
     "20": [
@@ -574,6 +670,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "He gave",
+        "lemma": "asah"
+      },
+      {
         "surface": "families of their own",
         "lemma": "bet"
       }
@@ -588,8 +688,16 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his people",
         "lemma": "am"
+      },
+      {
+        "surface": "Every",
+        "lemma": "kol"
       },
       {
         "surface": "son",
@@ -608,6 +716,10 @@
         "lemma": "yeor"
       },
       {
+        "surface": "but every",
+        "lemma": "kol"
+      },
+      {
         "surface": "daughter",
         "lemma": "bat"
       },
@@ -619,7 +731,7 @@
   },
   "themeLemmas": [
     "yalad",
-    "mitsrayim",
-    "ravah"
+    "kol",
+    "mitsrayim"
   ]
 }

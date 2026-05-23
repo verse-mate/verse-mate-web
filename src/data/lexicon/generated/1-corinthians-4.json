@@ -52,11 +52,19 @@
         "lemma": "oikonomos"
       },
       {
+        "surface": "they be found",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "faithful",
         "lemma": "pistos"
       }
     ],
     "3": [
+      {
+        "surface": "care very little",
+        "lemma": "eimi"
+      },
       {
         "surface": "I am judged",
         "lemma": "anakrino"
@@ -84,6 +92,10 @@
         "lemma": "dikaioo"
       },
       {
+        "surface": "It is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the Lord",
         "lemma": "kurios"
       },
@@ -104,6 +116,10 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "comes",
+        "lemma": "erchomai"
       },
       {
         "surface": "will bring to light",
@@ -138,6 +154,10 @@
         "lemma": "hekastos"
       },
       {
+        "surface": "will receive",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "praise",
         "lemma": "epainos"
       },
@@ -164,8 +184,20 @@
         "lemma": "manthano"
       },
       {
+        "surface": "is written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "heis"
+      },
+      {
         "surface": "you will not take pride",
         "lemma": "phusioo"
+      },
+      {
+        "surface": "one man",
+        "lemma": "heis"
       },
       {
         "surface": "another",
@@ -174,18 +206,50 @@
     ],
     "7": [
       {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
         "surface": "makes you so superior",
         "lemma": "diakrino"
       },
       {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "do you have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "you did not receive",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "you did receive it",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "why",
+        "lemma": "tis"
+      },
+      {
         "surface": "do you boast",
         "lemma": "kauchaomai"
+      },
+      {
+        "surface": "you did not",
+        "lemma": "lambano"
       }
     ],
     "8": [
       {
         "surface": "Already",
         "lemma": "ede"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eimi"
       },
       {
         "surface": "you have all you want",
@@ -236,6 +300,10 @@
       {
         "surface": "prisoners  appointed for death",
         "lemma": "epithanatios"
+      },
+      {
+        "surface": "We have become",
+        "lemma": "ginomai"
       },
       {
         "surface": "a spectacle",
@@ -362,6 +430,10 @@
         "lemma": "arti"
       },
       {
+        "surface": "we have become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "the scum",
         "lemma": "perikatharma"
       },
@@ -372,9 +444,17 @@
       {
         "surface": "the refuse",
         "lemma": "peripsema"
+      },
+      {
+        "surface": "of the world",
+        "lemma": "pas"
       }
     ],
     "14": [
+      {
+        "surface": "I am not writing",
+        "lemma": "grapho"
+      },
       {
         "surface": "to shame",
         "lemma": "entrepo"
@@ -394,6 +474,10 @@
     ],
     "15": [
       {
+        "surface": "you have",
+        "lemma": "echo"
+      },
+      {
         "surface": "ten thousand",
         "lemma": "murioi"
       },
@@ -404,6 +488,10 @@
       {
         "surface": "Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "have many",
+        "lemma": "polus"
       },
       {
         "surface": "fathers",
@@ -430,6 +518,10 @@
       {
         "surface": "I urge",
         "lemma": "parakaleo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ginomai"
       },
       {
         "surface": "to imitate",
@@ -486,6 +578,10 @@
         "lemma": "pantachou"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "church",
         "lemma": "ekklesia"
       }
@@ -494,9 +590,17 @@
       {
         "surface": "have become arrogant",
         "lemma": "phusioo"
+      },
+      {
+        "surface": "were not coming",
+        "lemma": "erchomai"
       }
     ],
     "19": [
+      {
+        "surface": "I will come",
+        "lemma": "erchomai"
+      },
       {
         "surface": "shortly",
         "lemma": "tacheos"
@@ -504,6 +608,14 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "is willing",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "I will find out",
+        "lemma": "ginosko"
       },
       {
         "surface": "arrogant people",
@@ -537,6 +649,18 @@
       }
     ],
     "21": [
+      {
+        "surface": "Which",
+        "lemma": "tis"
+      },
+      {
+        "surface": "do you prefer",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "Shall I come",
+        "lemma": "erchomai"
+      },
       {
         "surface": "a rod",
         "lemma": "rhabdos"

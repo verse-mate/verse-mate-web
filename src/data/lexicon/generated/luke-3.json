@@ -112,6 +112,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "came",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "John",
         "lemma": "ioannes"
       },
@@ -129,6 +133,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "He went",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
       {
         "surface": "region around",
         "lemma": "perichoros"
@@ -159,6 +171,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
       {
         "surface": "the book",
         "lemma": "biblos"
@@ -200,6 +216,10 @@
         "lemma": "kurios"
       },
       {
+        "surface": "make",
+        "lemma": "poieo"
+      },
+      {
         "surface": "straight",
         "lemma": "euthus"
       },
@@ -210,12 +230,20 @@
     ],
     "5": [
       {
+        "surface": "Every",
+        "lemma": "pas"
+      },
+      {
         "surface": "valley",
         "lemma": "pharagx"
       },
       {
         "surface": "shall be filled in",
         "lemma": "pleroo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "mountain",
@@ -232,6 +260,10 @@
       {
         "surface": "crooked ways",
         "lemma": "skolios"
+      },
+      {
+        "surface": "shall be made",
+        "lemma": "eimi"
       },
       {
         "surface": "straight",
@@ -252,8 +284,16 @@
     ],
     "6": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "humanity",
         "lemma": "sarx"
+      },
+      {
+        "surface": "will see",
+        "lemma": "horao"
       },
       {
         "surface": "God’s",
@@ -265,6 +305,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "John said",
+        "lemma": "eipon"
+      },
       {
         "surface": "crowds",
         "lemma": "ochlos"
@@ -286,6 +330,10 @@
         "lemma": "echidna"
       },
       {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
         "surface": "warned",
         "lemma": "hupodeiknumi"
       },
@@ -304,6 +352,10 @@
     ],
     "8": [
       {
+        "surface": "Produce",
+        "lemma": "poieo"
+      },
+      {
         "surface": "fruit",
         "lemma": "karpos"
       },
@@ -320,6 +372,14 @@
         "lemma": "archomai"
       },
       {
+        "surface": "to say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "We have",
+        "lemma": "echo"
+      },
+      {
         "surface": "Abraham",
         "lemma": "abraam"
       },
@@ -328,12 +388,20 @@
         "lemma": "pater"
       },
       {
+        "surface": "I tell",
+        "lemma": "lego"
+      },
+      {
         "surface": "stones",
         "lemma": "lithos"
       },
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
       },
       {
         "surface": "raise up",
@@ -370,8 +438,16 @@
         "lemma": "dendron"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "tree",
         "lemma": "dendron"
+      },
+      {
+        "surface": "that does not produce",
+        "lemma": "poieo"
       },
       {
         "surface": "good",
@@ -402,9 +478,25 @@
       {
         "surface": "asked",
         "lemma": "eperotao"
+      },
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "should we do",
+        "lemma": "poieo"
       }
     ],
     "11": [
+      {
+        "surface": "John replied",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "has",
+        "lemma": "echo"
+      },
       {
         "surface": "two",
         "lemma": "duo"
@@ -418,8 +510,20 @@
         "lemma": "metadidomi"
       },
       {
+        "surface": "who has",
+        "lemma": "echo"
+      },
+      {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "food",
         "lemma": "broma"
+      },
+      {
+        "surface": "should do",
+        "lemma": "poieo"
       },
       {
         "surface": "the same",
@@ -432,12 +536,28 @@
         "lemma": "telones"
       },
       {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "to be baptized",
         "lemma": "baptizo"
       },
       {
         "surface": "Teacher",
         "lemma": "didaskalos"
+      },
+      {
+        "surface": "they asked",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "should we do",
+        "lemma": "poieo"
       }
     ],
     "13": [
@@ -456,6 +576,10 @@
       {
         "surface": "are authorized",
         "lemma": "diatasso"
+      },
+      {
+        "surface": "he answered",
+        "lemma": "eipon"
       }
     ],
     "14": [
@@ -468,12 +592,24 @@
         "lemma": "eperotao"
       },
       {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "should we do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "Do not take money by force",
         "lemma": "diaseio"
       },
       {
         "surface": "false accusation",
         "lemma": "sukophanteo"
+      },
+      {
+        "surface": "he said",
+        "lemma": "eipon"
       },
       {
         "surface": "Be content with",
@@ -494,6 +630,10 @@
         "lemma": "prosdokao"
       },
       {
+        "surface": "were} all",
+        "lemma": "pas"
+      },
+      {
         "surface": "wondering",
         "lemma": "dialogizomai"
       },
@@ -506,6 +646,10 @@
         "lemma": "ioannes"
       },
       {
+        "surface": "could be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
       }
@@ -514,6 +658,14 @@
       {
         "surface": "John",
         "lemma": "ioannes"
+      },
+      {
+        "surface": "answered",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "all of them",
+        "lemma": "pas"
       },
       {
         "surface": "baptize",
@@ -528,12 +680,20 @@
         "lemma": "ischuros"
       },
       {
+        "surface": "will come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "straps",
         "lemma": "himas"
       },
       {
         "surface": "sandals",
         "lemma": "hupodema"
+      },
+      {
+        "surface": "I am",
+        "lemma": "eimi"
       },
       {
         "surface": "worthy",
@@ -608,6 +768,10 @@
     ],
     "18": [
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "other",
         "lemma": "heteros"
       },
@@ -650,18 +814,30 @@
         "lemma": "herodias"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "the evils",
         "lemma": "poneros"
       },
       {
         "surface": "he",
         "lemma": "herodes"
+      },
+      {
+        "surface": "had done",
+        "lemma": "poieo"
       }
     ],
     "20": [
       {
         "surface": "Herod added",
         "lemma": "prostithemi"
+      },
+      {
+        "surface": "them all",
+        "lemma": "pas"
       },
       {
         "surface": "He locked",
@@ -740,8 +916,16 @@
         "lemma": "phone"
       },
       {
+        "surface": "came",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "beloved",
@@ -762,6 +946,10 @@
         "lemma": "iesous"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "thirty",
         "lemma": "triakonta"
       },
@@ -772,6 +960,10 @@
       {
         "surface": "when He began His ministry",
         "lemma": "archomai"
+      },
+      {
+        "surface": "He was",
+        "lemma": "eimi"
       },
       {
         "surface": "regarded",
@@ -1123,7 +1315,7 @@
   },
   "themeLemmas": [
     "tetrarcheo",
-    "sala",
-    "melchi"
+    "melchi",
+    "matthat"
   ]
 }

@@ -82,6 +82,14 @@
         "lemma": "dokeo"
       },
       {
+        "surface": "he is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "when he is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "nothing",
         "lemma": "medeis"
       },
@@ -106,6 +114,10 @@
       {
         "surface": "Then",
         "lemma": "tote"
+      },
+      {
+        "surface": "he will have",
+        "lemma": "echo"
       },
       {
         "surface": "reason to boast",
@@ -150,6 +162,10 @@
       {
         "surface": "must share",
         "lemma": "koinoneo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "good things",
@@ -260,6 +276,10 @@
     ],
     "10": [
       {
+        "surface": "we have",
+        "lemma": "echo"
+      },
+      {
         "surface": "opportunity",
         "lemma": "kairos"
       },
@@ -270,6 +290,10 @@
       {
         "surface": "good",
         "lemma": "agathos"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       },
       {
         "surface": "especially",
@@ -286,12 +310,20 @@
     ],
     "11": [
       {
+        "surface": "See",
+        "lemma": "horao"
+      },
+      {
         "surface": "what large",
         "lemma": "pelikos"
       },
       {
         "surface": "letters",
         "lemma": "gramma"
+      },
+      {
+        "surface": "I am using to write",
+        "lemma": "grapho"
       },
       {
         "surface": "my own",
@@ -306,6 +338,10 @@
       {
         "surface": "Those who",
         "lemma": "hosos"
+      },
+      {
+        "surface": "want",
+        "lemma": "thelo"
       },
       {
         "surface": "to make a good impression",
@@ -354,6 +390,10 @@
         "lemma": "nomos"
       },
       {
+        "surface": "they want",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to be circumcised",
         "lemma": "peritemno"
       },
@@ -371,6 +411,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "may",
+        "lemma": "ginomai"
+      },
       {
         "surface": "boast",
         "lemma": "kauchaomai"
@@ -412,6 +456,10 @@
       {
         "surface": "uncircumcision",
         "lemma": "akrobustia"
+      },
+      {
+        "surface": "means",
+        "lemma": "eimi"
       },
       {
         "surface": "a new",
@@ -510,10 +558,6 @@
       {
         "surface": "brothers",
         "lemma": "adelphos"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ]
   },

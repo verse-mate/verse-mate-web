@@ -600,11 +600,19 @@
         "lemma": "iesous"
       },
       {
+        "surface": "is called",
+        "lemma": "lego"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
       }
     ],
     "17": [
+      {
+        "surface": "In all",
+        "lemma": "pas"
+      },
       {
         "surface": "there were fourteen",
         "lemma": "dekatessares"
@@ -668,6 +676,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "came about",
+        "lemma": "eimi"
+      },
+      {
         "surface": "mother",
         "lemma": "meter"
       },
@@ -688,6 +700,14 @@
         "lemma": "sunerchomai"
       },
       {
+        "surface": "she was found",
+        "lemma": "heurisko"
+      },
+      {
+        "surface": "to be with child",
+        "lemma": "echo"
+      },
+      {
         "surface": "the Holy",
         "lemma": "hagios"
       },
@@ -706,8 +726,16 @@
         "lemma": "aner"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a righteous man",
         "lemma": "dikaios"
+      },
+      {
+        "surface": "was unwilling",
+        "lemma": "thelo"
       },
       {
         "surface": "to disgrace her publicly",
@@ -748,6 +776,10 @@
         "lemma": "onar"
       },
       {
+        "surface": "and said",
+        "lemma": "lego"
+      },
+      {
         "surface": "Joseph",
         "lemma": "ioseph"
       },
@@ -778,6 +810,10 @@
       {
         "surface": "conceived",
         "lemma": "gennao"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "the Holy",
@@ -828,6 +864,10 @@
         "lemma": "holos"
       },
       {
+        "surface": "took place",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "fulfill",
         "lemma": "pleroo"
       },
@@ -850,6 +890,10 @@
         "lemma": "parthenos"
       },
       {
+        "surface": "will be with child",
+        "lemma": "echo"
+      },
+      {
         "surface": "will give birth to",
         "lemma": "tikto"
       },
@@ -866,6 +910,10 @@
         "lemma": "emmanouel"
       },
       {
+        "surface": "means",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       }
@@ -878,6 +926,10 @@
       {
         "surface": "woke up",
         "lemma": "egeiro"
+      },
+      {
+        "surface": "he did",
+        "lemma": "poieo"
       },
       {
         "surface": "angel",
@@ -902,6 +954,10 @@
     ],
     "25": [
       {
+        "surface": "he had no union",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "she gave birth to",
         "lemma": "tikto"
       },
@@ -922,6 +978,6 @@
   "themeLemmas": [
     "metoikesia",
     "gennao",
-    "salmon"
+    "sadok"
   ]
 }

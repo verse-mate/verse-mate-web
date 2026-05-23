@@ -86,6 +86,10 @@
         "lemma": "dedan"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the Asshurites",
         "lemma": "ashuri"
       },
@@ -128,6 +132,10 @@
         "lemma": "eldaah"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "were descendants",
         "lemma": "ben"
       },
@@ -140,6 +148,14 @@
       {
         "surface": "Abraham",
         "lemma": "avraham"
+      },
+      {
+        "surface": "left",
+        "lemma": "natan"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "to Isaac",
@@ -158,6 +174,10 @@
       {
         "surface": "Abraham",
         "lemma": "avraham"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "gifts",
@@ -364,6 +384,10 @@
       {
         "surface": "who",
         "lemma": "yitschaq"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "vvv",
@@ -592,6 +616,10 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "as you go",
+        "lemma": "bo"
+      },
+      {
         "surface": "toward Asshur",
         "lemma": "ashshur"
       },
@@ -602,6 +630,10 @@
       {
         "surface": "toward",
         "lemma": "paneh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their brothers",
@@ -642,6 +674,10 @@
       {
         "surface": "and Isaac",
         "lemma": "yitschaq"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "forty",
@@ -752,6 +788,10 @@
         "lemma": "ratsats"
       },
       {
+        "surface": "and she said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Why",
         "lemma": "mah"
       },
@@ -772,6 +812,10 @@
       {
         "surface": "and He",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "to her",
+        "lemma": "amar"
       },
       {
         "surface": "Two",
@@ -840,10 +884,6 @@
         "lemma": "yalad"
       },
       {
-        "surface": "there were indeed",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "twins",
         "lemma": "taom"
       },
@@ -858,6 +898,10 @@
         "lemma": "rishon"
       },
       {
+        "surface": "one came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "red",
         "lemma": "admoni"
       },
@@ -868,6 +912,10 @@
       {
         "surface": "like a fur coat",
         "lemma": "adderet"
+      },
+      {
+        "surface": "so they named him",
+        "lemma": "qara"
       },
       {
         "surface": "Esau",
@@ -888,6 +936,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "grasping",
         "lemma": "achaz"
       },
@@ -898,6 +950,10 @@
       {
         "surface": "heel",
         "lemma": "aqev"
+      },
+      {
+        "surface": "so he was named",
+        "lemma": "qara"
       },
       {
         "surface": "Jacob",
@@ -934,6 +990,10 @@
         "lemma": "esav"
       },
       {
+        "surface": "became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a skillful",
         "lemma": "yada"
       },
@@ -960,6 +1020,10 @@
       {
         "surface": "man",
         "lemma": "ish"
+      },
+      {
+        "surface": "who stayed",
+        "lemma": "yashav"
       },
       {
         "surface": "at home",
@@ -1018,6 +1082,10 @@
         "lemma": "esav"
       },
       {
+        "surface": "came in",
+        "lemma": "bo"
+      },
+      {
         "surface": "the field",
         "lemma": "saday"
       },
@@ -1030,6 +1098,10 @@
       {
         "surface": "He",
         "lemma": "esav"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Jacob",
@@ -1052,6 +1124,10 @@
         "lemma": "ayeph"
       },
       {
+        "surface": "he was also called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Edom",
         "lemma": "edom"
       }
@@ -1072,12 +1148,16 @@
       {
         "surface": "Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       }
     ],
     "32": [
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Esau",
@@ -1106,6 +1186,10 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "So Esau swore",
         "lemma": "shava"
       },
@@ -1126,6 +1210,10 @@
       {
         "surface": "Then Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "some bread",

@@ -50,6 +50,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "recite",
+        "lemma": "amar"
+      },
+      {
         "surface": "my verses",
         "lemma": "maaseh"
       },
@@ -60,6 +64,10 @@
       {
         "surface": "my tongue",
         "lemma": "lashon"
+      },
+      {
+        "surface": "is the pen",
+        "lemma": "et"
       },
       {
         "surface": "of a skillful",
@@ -280,6 +288,10 @@
     ],
     "8": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "your garments are fragrant",
         "lemma": "beged"
       },
@@ -348,8 +360,16 @@
     ],
     "10": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "Consider",
+        "lemma": "raah"
       },
       {
         "surface": "and incline",
@@ -366,6 +386,10 @@
       {
         "surface": "your people",
         "lemma": "am"
+      },
+      {
+        "surface": "and your father’s",
+        "lemma": "av"
       },
       {
         "surface": "house",
@@ -426,6 +450,10 @@
     ],
     "13": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "glorious",
         "lemma": "kavod"
       },
@@ -466,6 +494,10 @@
       {
         "surface": "companions",
         "lemma": "reah"
+      },
+      {
+        "surface": "are brought",
+        "lemma": "bo"
       }
     ],
     "15": [
@@ -480,6 +512,10 @@
       {
         "surface": "and gladness",
         "lemma": "gil"
+      },
+      {
+        "surface": "they enter",
+        "lemma": "bo"
       },
       {
         "surface": "the palace",
@@ -500,12 +536,20 @@
         "lemma": "tachat"
       },
       {
+        "surface": "your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "you will make them",
         "lemma": "shit"
       },
       {
         "surface": "princes",
         "lemma": "sar"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -520,6 +564,10 @@
       {
         "surface": "your name",
         "lemma": "shem"
+      },
+      {
+        "surface": "through all",
+        "lemma": "kol"
       },
       {
         "surface": "generations",
@@ -544,8 +592,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "yaval",
-    "yamin",
-    "tsedeq"
+    "yamin"
   ]
 }

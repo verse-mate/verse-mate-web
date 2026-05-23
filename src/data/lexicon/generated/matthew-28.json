@@ -18,6 +18,10 @@
         "lemma": "epiphosko"
       },
       {
+        "surface": "the first day",
+        "lemma": "heis"
+      },
+      {
         "surface": "of the week",
         "lemma": "sabbaton"
       },
@@ -38,6 +42,10 @@
         "lemma": "maria"
       },
       {
+        "surface": "went",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "to see",
         "lemma": "theoreo"
       },
@@ -47,6 +55,14 @@
       }
     ],
     "2": [
+      {
+        "surface": "there was",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
+      },
       {
         "surface": "earthquake",
         "lemma": "seismos"
@@ -86,6 +102,10 @@
         "lemma": "idea"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "lightning",
         "lemma": "astrape"
       },
@@ -116,6 +136,10 @@
         "lemma": "phobos"
       },
       {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "dead men",
         "lemma": "nekros"
       }
@@ -126,12 +150,24 @@
         "lemma": "angelos"
       },
       {
+        "surface": "vvv",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "women",
         "lemma": "gune"
       },
       {
         "surface": "be afraid",
         "lemma": "phobeo"
+      },
+      {
+        "surface": "I know",
+        "lemma": "eido"
       },
       {
         "surface": "are looking for",
@@ -148,12 +184,24 @@
     ],
     "6": [
       {
+        "surface": "He is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "here",
         "lemma": "hode"
       },
       {
         "surface": "He has risen",
         "lemma": "egeiro"
+      },
+      {
+        "surface": "He said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "see",
+        "lemma": "horao"
       },
       {
         "surface": "place",
@@ -172,6 +220,10 @@
       {
         "surface": "quickly",
         "lemma": "tachu"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "eipon"
       },
       {
         "surface": "disciples",
@@ -196,6 +248,14 @@
       {
         "surface": "There",
         "lemma": "ekei"
+      },
+      {
+        "surface": "you will see",
+        "lemma": "horao"
+      },
+      {
+        "surface": "I have told",
+        "lemma": "eipon"
       }
     ],
     "8": [
@@ -210,6 +270,10 @@
       {
         "surface": "fear",
         "lemma": "phobos"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "joy",
@@ -238,6 +302,10 @@
         "lemma": "hupantao"
       },
       {
+        "surface": "and said",
+        "lemma": "lego"
+      },
+      {
         "surface": "Greetings",
         "lemma": "chairo"
       },
@@ -262,6 +330,10 @@
       {
         "surface": "be afraid",
         "lemma": "phobeo"
+      },
+      {
+        "surface": "said",
+        "lemma": "lego"
       },
       {
         "surface": "Jesus",
@@ -290,6 +362,10 @@
       {
         "surface": "There",
         "lemma": "kakei"
+      },
+      {
+        "surface": "they will see",
+        "lemma": "horao"
       }
     ],
     "11": [
@@ -300,6 +376,10 @@
       {
         "surface": "guards",
         "lemma": "koustodia"
+      },
+      {
+        "surface": "went",
+        "lemma": "erchomai"
       },
       {
         "surface": "city",
@@ -316,6 +396,10 @@
       {
         "surface": "all",
         "lemma": "hapas"
+      },
+      {
+        "surface": "had happened",
+        "lemma": "ginomai"
       }
     ],
     "12": [
@@ -326,6 +410,14 @@
       {
         "surface": "elders",
         "lemma": "presbuteros"
+      },
+      {
+        "surface": "formed a plan",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "they gave",
+        "lemma": "didomi"
       },
       {
         "surface": "soldiers",
@@ -342,8 +434,20 @@
     ],
     "13": [
       {
+        "surface": "and instructed them",
+        "lemma": "lego"
+      },
+      {
+        "surface": "You are to say",
+        "lemma": "eipon"
+      },
+      {
         "surface": "disciples",
         "lemma": "mathetes"
+      },
+      {
+        "surface": "came",
+        "lemma": "erchomai"
       },
       {
         "surface": "by night",
@@ -360,6 +464,10 @@
     ],
     "14": [
       {
+        "surface": "reaches",
+        "lemma": "akouo"
+      },
+      {
         "surface": "governor",
         "lemma": "hegemon"
       },
@@ -368,14 +476,26 @@
         "lemma": "peitho"
       },
       {
+        "surface": "keep",
+        "lemma": "poieo"
+      },
+      {
         "surface": "out of trouble",
         "lemma": "amerimnos"
       }
     ],
     "15": [
       {
+        "surface": "took",
+        "lemma": "lambano"
+      },
+      {
         "surface": "money",
         "lemma": "argurion"
+      },
+      {
+        "surface": "and did",
+        "lemma": "poieo"
       },
       {
         "surface": "they were instructed",
@@ -434,6 +554,10 @@
     ],
     "17": [
       {
+        "surface": "they saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "they worshiped Him",
         "lemma": "proskuneo"
       },
@@ -452,6 +576,14 @@
         "lemma": "proserchomai"
       },
       {
+        "surface": "and said",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "All",
+        "lemma": "pas"
+      },
+      {
         "surface": "authority",
         "lemma": "exousia"
       },
@@ -462,6 +594,10 @@
       {
         "surface": "earth",
         "lemma": "ge"
+      },
+      {
+        "surface": "has been given",
+        "lemma": "didomi"
       }
     ],
     "19": [
@@ -472,6 +608,10 @@
       {
         "surface": "make disciples",
         "lemma": "matheteuo"
+      },
+      {
+        "surface": "of all",
+        "lemma": "pas"
       },
       {
         "surface": "nations",
@@ -512,12 +652,24 @@
         "lemma": "tereo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "that",
         "lemma": "hosos"
       },
       {
         "surface": "I have commanded",
         "lemma": "entello"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "always",
+        "lemma": "pas"
       },
       {
         "surface": "end",

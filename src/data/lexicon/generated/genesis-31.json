@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now Jacob heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "that Laban’s",
         "lemma": "lavan"
       },
@@ -26,14 +30,38 @@
         "lemma": "laqach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "our father",
+        "lemma": "av"
+      },
+      {
+        "surface": "and built",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "wealth",
         "lemma": "kavod"
+      },
+      {
+        "surface": "our father’s expense",
+        "lemma": "av"
       }
     ],
     "2": [
       {
         "surface": "And Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "from the countenance",
@@ -58,16 +86,32 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "Go back",
+        "lemma": "shuv"
       },
       {
         "surface": "the land",
         "lemma": "erets"
       },
       {
+        "surface": "of your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "and to your kindred",
         "lemma": "moledet"
+      },
+      {
+        "surface": "and I will be",
+        "lemma": "hayah"
       }
     ],
     "4": [
@@ -78,6 +122,10 @@
       {
         "surface": "sent word",
         "lemma": "shalach"
+      },
+      {
+        "surface": "and called",
+        "lemma": "qara"
       },
       {
         "surface": "Rachel",
@@ -98,6 +146,18 @@
     ],
     "5": [
       {
+        "surface": "and he told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "can see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "from your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "countenance",
         "lemma": "paneh"
       },
@@ -108,6 +168,14 @@
       {
         "surface": "but the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of my father",
+        "lemma": "av"
+      },
+      {
+        "surface": "has been",
+        "lemma": "hayah"
       }
     ],
     "6": [
@@ -120,11 +188,23 @@
         "lemma": "avad"
       },
       {
+        "surface": "your father",
+        "lemma": "av"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my strength",
         "lemma": "koach"
       }
     ],
     "7": [
+      {
+        "surface": "And although he",
+        "lemma": "av"
+      },
       {
         "surface": "has cheated",
         "lemma": "hatal"
@@ -150,18 +230,42 @@
         "lemma": "elohim"
       },
       {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "allowed him",
+        "lemma": "natan"
+      },
+      {
         "surface": "to harm me",
         "lemma": "raa"
       }
     ],
     "8": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "The speckled",
         "lemma": "naqod"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "your wages",
         "lemma": "sakhar"
+      },
+      {
+        "surface": "then the whole",
+        "lemma": "kol"
       },
       {
         "surface": "flock",
@@ -176,12 +280,28 @@
         "lemma": "naqod"
       },
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "The streaked",
         "lemma": "aqod"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "your wages",
         "lemma": "sakhar"
+      },
+      {
+        "surface": "then the whole",
+        "lemma": "kol"
       },
       {
         "surface": "flock",
@@ -206,11 +326,23 @@
         "lemma": "natsal"
       },
       {
+        "surface": "your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "livestock",
         "lemma": "miqneh"
+      },
+      {
+        "surface": "and given",
+        "lemma": "natan"
       }
     ],
     "10": [
+      {
+        "surface": "When",
+        "lemma": "et"
+      },
       {
         "surface": "the flocks",
         "lemma": "tson"
@@ -266,18 +398,34 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Jacob",
         "lemma": "yaaqov"
       },
       {
-        "surface": "Here I am",
-        "lemma": "hinneh"
+        "surface": "And I replied",
+        "lemma": "amar"
       }
     ],
     "12": [
       {
         "surface": "Look up",
         "lemma": "nasa"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that all",
+        "lemma": "kol"
       },
       {
         "surface": "the males",
@@ -304,8 +452,20 @@
         "lemma": "naqod"
       },
       {
+        "surface": "I have seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Laban",
         "lemma": "lavan"
+      },
+      {
+        "surface": "has done",
+        "lemma": "asah"
       }
     ],
     "13": [
@@ -346,8 +506,16 @@
         "lemma": "qamay"
       },
       {
+        "surface": "leave",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "land {at once",
         "lemma": "erets"
+      },
+      {
+        "surface": "and return",
+        "lemma": "shuv"
       },
       {
         "surface": "your native",
@@ -384,11 +552,19 @@
         "lemma": "od"
       },
       {
+        "surface": "in our father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       }
     ],
     "15": [
+      {
+        "surface": "Are we not",
+        "lemma": "lo"
+      },
       {
         "surface": "regarded",
         "lemma": "chashav"
@@ -412,6 +588,10 @@
     ],
     "16": [
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the wealth",
         "lemma": "osher"
       },
@@ -424,6 +604,10 @@
         "lemma": "natsal"
       },
       {
+        "surface": "from our father",
+        "lemma": "av"
+      },
+      {
         "surface": "and to our children",
         "lemma": "ben"
       },
@@ -432,8 +616,20 @@
         "lemma": "attah"
       },
       {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "whatever",
+        "lemma": "kol"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "has told",
+        "lemma": "amar"
       }
     ],
     "17": [
@@ -468,8 +664,16 @@
         "lemma": "nahag"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his livestock {before him",
         "lemma": "miqneh"
+      },
+      {
+        "surface": "along with all",
+        "lemma": "kol"
       },
       {
         "surface": "the possessions",
@@ -482,6 +686,14 @@
       {
         "surface": "in Paddan-aram",
         "lemma": "aram"
+      },
+      {
+        "surface": "to go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
       },
       {
         "surface": "Isaac",
@@ -522,6 +734,10 @@
         "lemma": "ganav"
       },
       {
+        "surface": "her father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "household idols",
         "lemma": "teraphim"
       }
@@ -560,6 +776,10 @@
       {
         "surface": "fled",
         "lemma": "barach"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "crossed",
@@ -656,6 +876,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "Laban",
         "lemma": "lavan"
       },
@@ -666,6 +890,10 @@
       {
         "surface": "in a dream",
         "lemma": "chalom"
+      },
+      {
+        "surface": "and warned",
+        "lemma": "amar"
       },
       {
         "surface": "Be careful",
@@ -744,12 +972,20 @@
         "lemma": "lavan"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Jacob",
         "lemma": "yaaqov"
       },
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "have you done",
+        "lemma": "asah"
       },
       {
         "surface": "You have deceived",
@@ -786,6 +1022,10 @@
         "lemma": "ganav"
       },
       {
+        "surface": "without even",
+        "lemma": "lo"
+      },
+      {
         "surface": "telling",
         "lemma": "nagad"
       },
@@ -812,6 +1052,10 @@
     ],
     "28": [
       {
+        "surface": "But you did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "even let me",
         "lemma": "natash"
       },
@@ -832,11 +1076,19 @@
         "lemma": "attah"
       },
       {
+        "surface": "you have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "a foolish thing",
         "lemma": "sakhal"
       }
     ],
     "29": [
+      {
+        "surface": "I have power to do",
+        "lemma": "asah"
+      },
       {
         "surface": "great harm",
         "lemma": "ra"
@@ -848,6 +1100,14 @@
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of your father",
+        "lemma": "av"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Be careful",
@@ -884,6 +1144,10 @@
         "lemma": "kasaph"
       },
       {
+        "surface": "for your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
@@ -914,6 +1178,10 @@
         "lemma": "un"
       },
       {
+        "surface": "I thought",
+        "lemma": "amar"
+      },
+      {
         "surface": "you",
         "lemma": "lavan"
       },
@@ -934,6 +1202,10 @@
       {
         "surface": "your gods",
         "lemma": "elohim"
+      },
+      {
+        "surface": "he shall not",
+        "lemma": "lo"
       },
       {
         "surface": "live",
@@ -964,6 +1236,10 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -980,6 +1256,10 @@
       {
         "surface": "So Laban",
         "lemma": "lavan"
+      },
+      {
+        "surface": "went",
+        "lemma": "bo"
       },
       {
         "surface": "into Jacob’s",
@@ -1014,12 +1294,24 @@
         "lemma": "matsa"
       },
       {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "Then he left",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Leah’s",
         "lemma": "leah"
       },
       {
         "surface": "tent",
         "lemma": "ohel"
+      },
+      {
+        "surface": "and entered",
+        "lemma": "bo"
       },
       {
         "surface": "Rachel’s",
@@ -1056,6 +1348,10 @@
         "lemma": "gamal"
       },
       {
+        "surface": "and was sitting",
+        "lemma": "yashav"
+      },
+      {
         "surface": "And Laban",
         "lemma": "lavan"
       },
@@ -1064,22 +1360,46 @@
         "lemma": "mashash"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "in the tent",
         "lemma": "ohel"
       },
       {
         "surface": "but found",
         "lemma": "matsa"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
       }
     ],
     "35": [
+      {
+        "surface": "Rachel said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "her father",
+        "lemma": "av"
+      },
       {
         "surface": "Sir",
         "lemma": "adon"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be angry",
         "lemma": "charah"
+      },
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
       },
       {
         "surface": "stand up",
@@ -1096,6 +1416,10 @@
       {
         "surface": "So Laban searched",
         "lemma": "chaphas"
+      },
+      {
+        "surface": "but could not",
+        "lemma": "lo"
       },
       {
         "surface": "find",
@@ -1136,6 +1460,10 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "For what",
         "lemma": "mah"
       },
@@ -1158,12 +1486,20 @@
         "lemma": "mashash"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my goods",
         "lemma": "keli"
       },
       {
         "surface": "Have you found",
         "lemma": "matsa"
+      },
+      {
+        "surface": "anything",
+        "lemma": "kol"
       },
       {
         "surface": "that belongs to you",
@@ -1220,8 +1556,16 @@
         "lemma": "ez"
       },
       {
+        "surface": "have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "miscarried",
         "lemma": "shakhol"
+      },
+      {
+        "surface": "nor have I",
+        "lemma": "lo"
       },
       {
         "surface": "eaten",
@@ -1237,6 +1581,14 @@
       }
     ],
     "39": [
+      {
+        "surface": "I did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "bring",
+        "lemma": "bo"
+      },
       {
         "surface": "anything torn by wild beasts",
         "lemma": "terephah"
@@ -1267,6 +1619,10 @@
       }
     ],
     "40": [
+      {
+        "surface": "As it was",
+        "lemma": "hayah"
+      },
       {
         "surface": "the heat",
         "lemma": "chorev"
@@ -1368,6 +1724,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of my father",
+        "lemma": "av"
+      },
+      {
         "surface": "the God",
         "lemma": "elohim"
       },
@@ -1388,6 +1748,10 @@
         "lemma": "lule"
       },
       {
+        "surface": "been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "by now",
         "lemma": "attah"
       },
@@ -1402,6 +1766,10 @@
       {
         "surface": "But God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "has seen",
+        "lemma": "raah"
       },
       {
         "surface": "my affliction",
@@ -1462,8 +1830,20 @@
         "lemma": "tson"
       },
       {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "Yet what",
         "lemma": "mah"
+      },
+      {
+        "surface": "can I do",
+        "lemma": "asah"
       },
       {
         "surface": "today",
@@ -1498,6 +1878,10 @@
       {
         "surface": "a covenant",
         "lemma": "berit"
+      },
+      {
+        "surface": "and let it serve as",
+        "lemma": "hayah"
       },
       {
         "surface": "a witness",
@@ -1536,6 +1920,10 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to his relatives",
         "lemma": "ach"
       },
@@ -1554,6 +1942,10 @@
       {
         "surface": "stones",
         "lemma": "even"
+      },
+      {
+        "surface": "and made",
+        "lemma": "asah"
       },
       {
         "surface": "a mound",
@@ -1578,6 +1970,10 @@
         "lemma": "lavan"
       },
       {
+        "surface": "called it",
+        "lemma": "qara"
+      },
+      {
         "surface": "vvv",
         "lemma": "yegar"
       },
@@ -1590,6 +1986,10 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "called it",
+        "lemma": "qara"
+      },
+      {
         "surface": "Galeed",
         "lemma": "galed"
       }
@@ -1598,6 +1998,10 @@
       {
         "surface": "Then Laban",
         "lemma": "lavan"
+      },
+      {
+        "surface": "declared",
+        "lemma": "amar"
       },
       {
         "surface": "mound",
@@ -1620,6 +2024,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "the place was called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Galeed",
         "lemma": "galed"
       }
@@ -1628,6 +2036,10 @@
       {
         "surface": "It was also called Mizpah",
         "lemma": "mitspah"
+      },
+      {
+        "surface": "Laban said",
+        "lemma": "amar"
       },
       {
         "surface": "May the LORD",
@@ -1656,12 +2068,20 @@
     ],
     "50": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you mistreat",
         "lemma": "anah"
       },
       {
         "surface": "my daughters",
         "lemma": "bat"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "take",
@@ -1678,6 +2098,10 @@
       {
         "surface": "one",
         "lemma": "ish"
+      },
+      {
+        "surface": "remember",
+        "lemma": "raah"
       },
       {
         "surface": "that God",
@@ -1698,12 +2122,12 @@
         "lemma": "lavan"
       },
       {
-        "surface": "to Jacob",
-        "lemma": "yaaqov"
+        "surface": "also said",
+        "lemma": "amar"
       },
       {
-        "surface": "Here is",
-        "lemma": "hinneh"
+        "surface": "to Jacob",
+        "lemma": "yaaqov"
       },
       {
         "surface": "mound",
@@ -1740,12 +2164,24 @@
         "lemma": "edah"
       },
       {
+        "surface": "that",
+        "lemma": "im"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "go past",
         "lemma": "avar"
       },
       {
         "surface": "mound",
         "lemma": "gal"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "go past",
@@ -1786,6 +2222,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of their father",
+        "lemma": "av"
+      },
+      {
         "surface": "judge",
         "lemma": "shaphat"
       },
@@ -1804,6 +2244,10 @@
       {
         "surface": "by the Fear",
         "lemma": "pachad"
+      },
+      {
+        "surface": "of his father",
+        "lemma": "av"
       },
       {
         "surface": "Isaac",
@@ -1826,6 +2270,10 @@
       {
         "surface": "on the mountain",
         "lemma": "har"
+      },
+      {
+        "surface": "and invited",
+        "lemma": "qara"
       },
       {
         "surface": "his relatives",
@@ -1890,6 +2338,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "home",
         "lemma": "maqom"
       }
@@ -1898,6 +2350,6 @@
   "themeLemmas": [
     "yaaqov",
     "lavan",
-    "tson"
+    "amar"
   ]
 }

@@ -38,6 +38,10 @@
         "lemma": "levav"
       },
       {
+        "surface": "am not",
+        "lemma": "lo"
+      },
+      {
         "surface": "inferior",
         "lemma": "naphal"
       },
@@ -52,12 +56,20 @@
     ],
     "4": [
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a laughingstock",
         "lemma": "sechoq"
       },
       {
         "surface": "to my friends",
         "lemma": "rea"
+      },
+      {
+        "surface": "though I called",
+        "lemma": "qara"
       },
       {
         "surface": "on God",
@@ -132,6 +144,10 @@
         "lemma": "battuchot"
       },
       {
+        "surface": "those who carry",
+        "lemma": "bo"
+      },
+      {
         "surface": "their god",
         "lemma": "eloah"
       },
@@ -198,6 +214,14 @@
         "lemma": "mi"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -208,12 +232,20 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has done",
+        "lemma": "asah"
       }
     ],
     "10": [
       {
         "surface": "The life",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "living thing",
@@ -228,11 +260,19 @@
         "lemma": "ruach"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "mankind",
         "lemma": "basar"
       }
     ],
     "11": [
+      {
+        "surface": "Does not",
+        "lemma": "lo"
+      },
       {
         "surface": "the ear",
         "lemma": "ozen"
@@ -300,12 +340,12 @@
     ],
     "14": [
       {
-        "surface": "What",
-        "lemma": "hen"
-      },
-      {
         "surface": "He tears down",
         "lemma": "haras"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "lo"
       },
       {
         "surface": "be rebuilt",
@@ -320,15 +360,15 @@
         "lemma": "sagar"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "be released",
         "lemma": "patach"
       }
     ],
     "15": [
-      {
-        "surface": "If",
-        "lemma": "hen"
-      },
       {
         "surface": "He holds back",
         "lemma": "atsar"
@@ -504,6 +544,10 @@
         "lemma": "choshekh"
       },
       {
+        "surface": "and brings",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "deep shadows",
         "lemma": "tsalmavet"
       },
@@ -560,6 +604,10 @@
         "lemma": "taah"
       },
       {
+        "surface": "in a trackless",
+        "lemma": "lo"
+      },
+      {
         "surface": "wasteland",
         "lemma": "tohu"
       }
@@ -572,6 +620,10 @@
       {
         "surface": "in the darkness",
         "lemma": "choshekh"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "light",
@@ -588,8 +640,8 @@
     ]
   },
   "themeLemmas": [
-    "chokhmah",
-    "yara",
-    "un"
+    "lo",
+    "kol",
+    "chokhmah"
   ]
 }

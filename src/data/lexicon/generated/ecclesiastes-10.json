@@ -98,11 +98,23 @@
         "lemma": "chaser"
       },
       {
+        "surface": "and he shows",
+        "lemma": "amar"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "is a fool",
         "lemma": "sakhal"
       }
     ],
     "4": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "the ruler’s",
         "lemma": "mashal"
@@ -114,6 +126,10 @@
       {
         "surface": "flares",
         "lemma": "alah"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "abandon",
@@ -150,6 +166,10 @@
         "lemma": "ra"
       },
       {
+        "surface": "I have seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -160,6 +180,10 @@
       {
         "surface": "an error",
         "lemma": "shegagah"
+      },
+      {
+        "surface": "that proceeds",
+        "lemma": "yatsa"
       },
       {
         "surface": "from",
@@ -176,6 +200,10 @@
         "lemma": "sekhel"
       },
       {
+        "surface": "is appointed",
+        "lemma": "natan"
+      },
+      {
         "surface": "to great",
         "lemma": "rav"
       },
@@ -188,11 +216,19 @@
         "lemma": "ashir"
       },
       {
+        "surface": "sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in lowly positions",
         "lemma": "shephel"
       }
     ],
     "7": [
+      {
+        "surface": "I have seen",
+        "lemma": "raah"
+      },
       {
         "surface": "slaves",
         "lemma": "eved"
@@ -276,6 +312,10 @@
     ],
     "10": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "the axe",
         "lemma": "barzel"
       },
@@ -286,6 +326,10 @@
       {
         "surface": "the blade",
         "lemma": "paneh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "unsharpened",
@@ -314,12 +358,20 @@
     ],
     "11": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "the snake",
         "lemma": "nachash"
       },
       {
         "surface": "bites",
         "lemma": "nashakh"
+      },
+      {
+        "surface": "before",
+        "lemma": "lo"
       },
       {
         "surface": "it is charmed",
@@ -412,6 +464,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "adam"
       },
@@ -424,12 +480,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "is coming",
+        "lemma": "hayah"
+      },
+      {
         "surface": "and who",
         "lemma": "mi"
       },
       {
         "surface": "can tell",
         "lemma": "nagad"
+      },
+      {
+        "surface": "will come",
+        "lemma": "hayah"
       },
       {
         "surface": "after him",
@@ -450,6 +514,10 @@
         "lemma": "yaga"
       },
       {
+        "surface": "he does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -463,10 +531,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "Woe",
-        "lemma": "i"
-      },
       {
         "surface": "O land",
         "lemma": "erets"
@@ -522,8 +586,16 @@
         "lemma": "akhal"
       },
       {
+        "surface": "at the proper time",
+        "lemma": "et"
+      },
+      {
         "surface": "for strength",
         "lemma": "gevurah"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
       },
       {
         "surface": "for drunkenness",
@@ -566,6 +638,10 @@
         "lemma": "lechem"
       },
       {
+        "surface": "is prepared",
+        "lemma": "asah"
+      },
+      {
         "surface": "for laughter",
         "lemma": "sechoq"
       },
@@ -588,9 +664,17 @@
       {
         "surface": "is the answer",
         "lemma": "un"
+      },
+      {
+        "surface": "for everything",
+        "lemma": "kol"
       }
     ],
     "20": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "curse",
         "lemma": "qalal"
@@ -602,6 +686,10 @@
       {
         "surface": "in your thoughts",
         "lemma": "madda"
+      },
+      {
+        "surface": "or",
+        "lemma": "al"
       },
       {
         "surface": "curse",
@@ -646,8 +734,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "halakh",
-    "sar",
-    "sakhal"
+    "sar"
   ]
 }

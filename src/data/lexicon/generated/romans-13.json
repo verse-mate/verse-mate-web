@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "must submit himself",
         "lemma": "hupotasso"
       },
@@ -14,12 +18,20 @@
         "lemma": "exousia"
       },
       {
+        "surface": "there is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "authority",
         "lemma": "exousia"
       },
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "exist",
+        "lemma": "eimi"
       },
       {
         "surface": "have been appointed",
@@ -56,6 +68,10 @@
         "lemma": "anthistemi"
       },
       {
+        "surface": "will bring",
+        "lemma": "lambano"
+      },
+      {
         "surface": "judgment",
         "lemma": "krima"
       }
@@ -64,6 +80,10 @@
       {
         "surface": "rulers",
         "lemma": "archon"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "a terror",
@@ -82,6 +102,10 @@
         "lemma": "kakos"
       },
       {
+        "surface": "Do you want",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to be unafraid",
         "lemma": "phobeo"
       },
@@ -90,8 +114,16 @@
         "lemma": "exousia"
       },
       {
+        "surface": "Then do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "right",
         "lemma": "agathos"
+      },
+      {
+        "surface": "you will have",
+        "lemma": "echo"
       },
       {
         "surface": "approval",
@@ -99,6 +131,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "he is",
+        "lemma": "eimi"
+      },
       {
         "surface": "God’s",
         "lemma": "theos"
@@ -110,6 +146,10 @@
       {
         "surface": "good",
         "lemma": "agathos"
+      },
+      {
+        "surface": "you do",
+        "lemma": "poieo"
       },
       {
         "surface": "wrong",
@@ -130,6 +170,10 @@
       {
         "surface": "in vain",
         "lemma": "eike"
+      },
+      {
+        "surface": "He is",
+        "lemma": "eimi"
       },
       {
         "surface": "God’s",
@@ -188,6 +232,10 @@
         "lemma": "phoros"
       },
       {
+        "surface": "the authorities are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God’s",
         "lemma": "theos"
       },
@@ -204,6 +252,10 @@
       {
         "surface": "Pay",
         "lemma": "apodidomi"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       },
       {
         "surface": "you owe him",
@@ -350,6 +402,10 @@
     ],
     "11": [
       {
+        "surface": "understanding",
+        "lemma": "eido"
+      },
+      {
         "surface": "occasion",
         "lemma": "kairos"
       },
@@ -482,6 +538,10 @@
       {
         "surface": "Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "make",
+        "lemma": "poieo"
       },
       {
         "surface": "provision",

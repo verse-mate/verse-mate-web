@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I ask",
+        "lemma": "lego"
+      },
+      {
         "surface": "did} God",
         "lemma": "theos"
       },
@@ -16,6 +20,14 @@
       {
         "surface": "people",
         "lemma": "laos"
+      },
+      {
+        "surface": "Certainly not",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
       },
       {
         "surface": "an Israelite",
@@ -56,8 +68,20 @@
         "lemma": "proginosko"
       },
       {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "Scripture",
         "lemma": "graphe"
+      },
+      {
+        "surface": "says",
+        "lemma": "lego"
       },
       {
         "surface": "Elijah",
@@ -116,6 +140,10 @@
     ],
     "4": [
       {
+        "surface": "what was",
+        "lemma": "tis"
+      },
+      {
         "surface": "divine reply",
         "lemma": "chrematismos"
       },
@@ -158,6 +186,10 @@
         "lemma": "kairos"
       },
       {
+        "surface": "there is",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a remnant",
         "lemma": "leimma"
       },
@@ -184,11 +216,19 @@
         "lemma": "charis"
       },
       {
+        "surface": "be",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
       }
     ],
     "7": [
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
       {
         "surface": "Israel",
         "lemma": "israel"
@@ -220,8 +260,16 @@
     ],
     "8": [
       {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "gave",
+        "lemma": "didomi"
       },
       {
         "surface": "a spirit",
@@ -244,6 +292,10 @@
         "lemma": "ous"
       },
       {
+        "surface": "could not hear",
+        "lemma": "akouo"
+      },
+      {
         "surface": "this very day",
         "lemma": "semeron"
       }
@@ -254,8 +306,16 @@
         "lemma": "daueid"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
         "surface": "table",
         "lemma": "trapeza"
+      },
+      {
+        "surface": "become",
+        "lemma": "ginomai"
       },
       {
         "surface": "a snare",
@@ -294,9 +354,17 @@
       {
         "surface": "be bent",
         "lemma": "sugkampto"
+      },
+      {
+        "surface": "forever",
+        "lemma": "pas"
       }
     ],
     "11": [
+      {
+        "surface": "I ask",
+        "lemma": "lego"
+      },
       {
         "surface": "did they stumble",
         "lemma": "ptaio"
@@ -304,6 +372,10 @@
       {
         "surface": "to fall beyond recovery",
         "lemma": "pipto"
+      },
+      {
+        "surface": "Certainly not",
+        "lemma": "ginomai"
       },
       {
         "surface": "trespass",
@@ -358,8 +430,16 @@
     ],
     "13": [
       {
+        "surface": "I am speaking",
+        "lemma": "lego"
+      },
+      {
         "surface": "Gentiles",
         "lemma": "ethnos"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
       },
       {
         "surface": "the apostle",
@@ -404,6 +484,10 @@
       {
         "surface": "of the world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
       },
       {
         "surface": "acceptance be",
@@ -460,6 +544,10 @@
       {
         "surface": "have been grafted in",
         "lemma": "egkentrizo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ginomai"
       },
       {
         "surface": "to share",
@@ -534,6 +622,10 @@
       {
         "surface": "unbelief",
         "lemma": "apistia"
+      },
+      {
+        "surface": "stand",
+        "lemma": "histemi"
       },
       {
         "surface": "by faith",
@@ -626,6 +718,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "able",
         "lemma": "dunatos"
       },
@@ -686,6 +782,10 @@
     ],
     "25": [
       {
+        "surface": "I do not want",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to be ignorant",
         "lemma": "agnoeo"
       },
@@ -696,6 +796,10 @@
       {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "you will not be",
+        "lemma": "eimi"
       },
       {
         "surface": "conceited",
@@ -710,6 +814,10 @@
         "lemma": "meros"
       },
       {
+        "surface": "has come",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "to Israel",
         "lemma": "israel"
       },
@@ -720,6 +828,10 @@
       {
         "surface": "Gentiles",
         "lemma": "ethnos"
+      },
+      {
+        "surface": "has come in",
+        "lemma": "eiserchomai"
       }
     ],
     "26": [
@@ -728,12 +840,20 @@
         "lemma": "houto"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "Israel",
         "lemma": "israel"
       },
       {
         "surface": "will be saved",
         "lemma": "sozo"
+      },
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
       },
       {
         "surface": "Deliverer",
@@ -876,12 +996,20 @@
         "lemma": "sugkleio"
       },
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "disobedience",
         "lemma": "apeitheia"
       },
       {
         "surface": "He may have mercy on",
         "lemma": "eleeo"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       }
     ],
     "33": [
@@ -924,6 +1052,14 @@
     ],
     "34": [
       {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "has known",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "the mind",
         "lemma": "nous"
       },
@@ -932,11 +1068,23 @@
         "lemma": "kurios"
       },
       {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "has been",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "counselor",
         "lemma": "sumboulos"
       }
     ],
     "35": [
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
       {
         "surface": "has first given",
         "lemma": "prodidomi"
@@ -948,16 +1096,16 @@
     ],
     "36": [
       {
+        "surface": "are all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
       },
       {
         "surface": "forever",
         "lemma": "aion"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ]
   },

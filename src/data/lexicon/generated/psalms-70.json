@@ -74,12 +74,12 @@
     ],
     "3": [
       {
-        "surface": "Aha",
-        "lemma": "heach"
+        "surface": "May those who say",
+        "lemma": "amar"
       },
       {
-        "surface": "aha",
-        "lemma": "heach"
+        "surface": "retreat",
+        "lemma": "shuv"
       },
       {
         "surface": "their shame",
@@ -87,6 +87,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "May all",
+        "lemma": "kol"
+      },
       {
         "surface": "who seek You",
         "lemma": "baqash"
@@ -110,6 +114,10 @@
       {
         "surface": "always",
         "lemma": "tamid"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Let God",
@@ -150,14 +158,18 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "delay",
         "lemma": "achar"
       }
     ]
   },
   "themeLemmas": [
-    "heach",
     "chush",
-    "baqash"
+    "baqash",
+    "amar"
   ]
 }

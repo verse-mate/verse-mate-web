@@ -6,16 +6,16 @@
   "verses": {
     "1": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "a day",
         "lemma": "yom"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is coming",
+        "lemma": "bo"
       },
       {
         "surface": "when your plunder",
@@ -34,6 +34,10 @@
       {
         "surface": "For I will gather",
         "lemma": "asaph"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -80,6 +84,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "will go",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "into exile",
         "lemma": "golah"
       },
@@ -90,6 +98,10 @@
       {
         "surface": "of the people",
         "lemma": "am"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "be removed",
@@ -104,6 +116,10 @@
       {
         "surface": "Then the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "to fight",
@@ -278,6 +294,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the holy ones",
         "lemma": "qadosh"
       }
@@ -286,6 +310,14 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "light",
@@ -301,6 +333,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "It will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "a unique day",
         "lemma": "yom"
@@ -318,6 +354,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -330,11 +370,23 @@
         "lemma": "erev"
       },
       {
+        "surface": "comes",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "light",
         "lemma": "or"
       }
     ],
     "8": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -346,6 +398,10 @@
       {
         "surface": "water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "will flow out",
+        "lemma": "yatsa"
       },
       {
         "surface": "from Jerusalem",
@@ -394,8 +450,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -419,6 +483,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the land",
         "lemma": "erets"
@@ -450,6 +518,10 @@
       {
         "surface": "but Jerusalem will be raised up",
         "lemma": "raam"
+      },
+      {
+        "surface": "and will remain",
+        "lemma": "yashav"
       },
       {
         "surface": "in her place",
@@ -502,8 +574,20 @@
     ],
     "11": [
       {
+        "surface": "People will live",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "and never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "od"
+      },
+      {
+        "surface": "will there be",
+        "lemma": "hayah"
       },
       {
         "surface": "an utter destruction",
@@ -514,11 +598,19 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "will dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "securely",
         "lemma": "betach"
       }
     ],
     "12": [
+      {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "the plague",
         "lemma": "maggephah"
@@ -530,6 +622,10 @@
       {
         "surface": "strikes",
         "lemma": "nagaph"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the peoples",
@@ -602,6 +698,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will come",
+        "lemma": "hayah"
+      },
+      {
         "surface": "so that each",
         "lemma": "ish"
       },
@@ -648,6 +748,10 @@
         "lemma": "chayil"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the surrounding",
         "lemma": "saviv"
       },
@@ -686,6 +790,10 @@
         "lemma": "maggephah"
       },
       {
+        "surface": "will strike",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the horses",
         "lemma": "sus"
       },
@@ -702,6 +810,10 @@
         "lemma": "chamor"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the animals",
         "lemma": "behemah"
       },
@@ -712,12 +824,24 @@
     ],
     "16": [
       {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the survivors",
         "lemma": "yatar"
       },
       {
+        "surface": "from",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "that came",
+        "lemma": "bo"
       },
       {
         "surface": "Jerusalem",
@@ -766,12 +890,20 @@
     ],
     "17": [
       {
+        "surface": "And should",
+        "lemma": "hayah"
+      },
+      {
         "surface": "of the families",
         "lemma": "mishpachah"
       },
       {
         "surface": "of the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "go up",
@@ -800,9 +932,21 @@
       {
         "surface": "then the rain",
         "lemma": "geshem"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "fall",
+        "lemma": "hayah"
       }
     ],
     "18": [
+      {
+        "surface": "And if",
+        "lemma": "im"
+      },
       {
         "surface": "the people",
         "lemma": "mishpachah"
@@ -812,8 +956,28 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "go up",
         "lemma": "alah"
+      },
+      {
+        "surface": "and",
+        "lemma": "lo"
+      },
+      {
+        "surface": "enter in",
+        "lemma": "bo"
+      },
+      {
+        "surface": "then the rain will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "this will be",
+        "lemma": "hayah"
       },
       {
         "surface": "the plague",
@@ -830,6 +994,10 @@
       {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "go up",
@@ -850,6 +1018,10 @@
     ],
     "19": [
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the punishment",
         "lemma": "chattaah"
       },
@@ -858,8 +1030,16 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "and of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "go up",
@@ -892,6 +1072,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will be inscribed",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the bells",
         "lemma": "metsillah"
       },
@@ -912,6 +1096,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like the sprinkling bowls",
         "lemma": "mizraq"
       },
@@ -926,6 +1114,10 @@
     ],
     "21": [
       {
+        "surface": "Indeed, every",
+        "lemma": "kol"
+      },
+      {
         "surface": "pot",
         "lemma": "sir"
       },
@@ -936,6 +1128,10 @@
       {
         "surface": "and Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "holy",
@@ -950,8 +1146,16 @@
         "lemma": "tsava"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who sacrifice",
         "lemma": "zavach"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "and take",
@@ -966,8 +1170,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "there will no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "a Canaanite",
@@ -988,8 +1200,8 @@
     ]
   },
   "themeLemmas": [
-    "yerushalaim",
-    "chetsi",
-    "alah"
+    "hayah",
+    "lo",
+    "kol"
   ]
 }

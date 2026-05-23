@@ -10,6 +10,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "let us return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -90,6 +94,10 @@
         "lemma": "motsa"
       },
       {
+        "surface": "He will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "like the rain",
         "lemma": "geshem"
       },
@@ -112,12 +120,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "shall I do",
+        "lemma": "asah"
+      },
+      {
         "surface": "O Ephraim",
         "lemma": "ephrayim"
       },
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "shall I do",
+        "lemma": "asah"
       },
       {
         "surface": "O Judah",
@@ -174,6 +190,10 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "go forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "like lightning",
         "lemma": "or"
       }
@@ -186,6 +206,10 @@
       {
         "surface": "mercy",
         "lemma": "chesed"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "sacrifice",
@@ -278,6 +302,10 @@
         "lemma": "shekhem"
       },
       {
+        "surface": "they have committed",
+        "lemma": "asah"
+      },
+      {
         "surface": "atrocities",
         "lemma": "zimmah"
       }
@@ -290,6 +318,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "I have seen",
+        "lemma": "raah"
       },
       {
         "surface": "a horrible thing",
@@ -330,6 +362,10 @@
         "lemma": "shit"
       },
       {
+        "surface": "when I restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "My people",
         "lemma": "am"
       },
@@ -340,8 +376,8 @@
     ]
   },
   "themeLemmas": [
+    "asah",
     "yisrael",
-    "yehudah",
-    "yada"
+    "yehudah"
   ]
 }

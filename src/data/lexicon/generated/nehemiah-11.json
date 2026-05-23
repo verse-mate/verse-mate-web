@@ -14,6 +14,10 @@
         "lemma": "am"
       },
       {
+        "surface": "settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -34,12 +38,20 @@
         "lemma": "goral"
       },
       {
+        "surface": "to bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       },
       {
         "surface": "of ten",
         "lemma": "eser"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
       },
       {
         "surface": "in the holy",
@@ -76,12 +88,20 @@
         "lemma": "barakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the men",
         "lemma": "enosh"
       },
       {
         "surface": "who volunteered",
         "lemma": "nadav"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
       },
       {
         "surface": "in Jerusalem",
@@ -98,6 +118,10 @@
         "lemma": "medinah"
       },
       {
+        "surface": "settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -112,6 +136,10 @@
       {
         "surface": "each",
         "lemma": "ish"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "on his own property",
@@ -162,6 +190,10 @@
       {
         "surface": "and Benjamin",
         "lemma": "binyamin"
+      },
+      {
+        "surface": "settled",
+        "lemma": "yashav"
       },
       {
         "surface": "in Jerusalem",
@@ -304,8 +336,16 @@
         "lemma": "perets"
       },
       {
+        "surface": "who settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "totaled",
+        "lemma": "kol"
       },
       {
         "surface": "468",
@@ -532,6 +572,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "who did",
+        "lemma": "asah"
+      },
+      {
         "surface": "the work",
         "lemma": "melakhah"
       },
@@ -604,6 +648,10 @@
       {
         "surface": "the leaders",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of families",
+        "lemma": "av"
       },
       {
         "surface": "242 men",
@@ -852,6 +900,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "totaled",
+        "lemma": "kol"
+      },
+      {
         "surface": "284",
         "lemma": "meah"
       }
@@ -904,6 +956,10 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "were in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the villages",
         "lemma": "ir"
       },
@@ -924,6 +980,10 @@
       {
         "surface": "The temple servants",
         "lemma": "natin"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "on the hill of Ophel",
@@ -1084,6 +1144,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "in every",
+        "lemma": "kol"
+      },
+      {
         "surface": "matter",
         "lemma": "davar"
       },
@@ -1108,6 +1172,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "vvv",
@@ -1366,8 +1434,8 @@
     ]
   },
   "themeLemmas": [
+    "yashav",
     "yehudah",
-    "yerushalaim",
-    "leviyyi"
+    "yerushalaim"
   ]
 }

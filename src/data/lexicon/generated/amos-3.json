@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "word",
         "lemma": "davar"
       },
@@ -24,6 +28,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "family",
@@ -48,6 +56,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the families",
         "lemma": "mishpachah"
       },
@@ -58,6 +70,10 @@
       {
         "surface": "I will punish",
         "lemma": "paqad"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "your iniquities",
@@ -112,8 +128,16 @@
         "lemma": "kephir"
       },
       {
+        "surface": "growl",
+        "lemma": "natan"
+      },
+      {
         "surface": "in his den",
         "lemma": "meonah"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
       },
       {
         "surface": "he has caught",
@@ -162,11 +186,19 @@
         "lemma": "lakhad"
       },
       {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "to catch",
         "lemma": "lakhad"
       }
     ],
     "6": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "a ram’s horn",
         "lemma": "shophar"
@@ -184,20 +216,40 @@
         "lemma": "am"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "tremble",
         "lemma": "charad"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
       },
       {
         "surface": "calamity",
         "lemma": "ra"
       },
       {
+        "surface": "comes",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to a city",
         "lemma": "ir"
       },
       {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "caused it",
+        "lemma": "asah"
       }
     ],
     "7": [
@@ -208,6 +260,14 @@
       {
         "surface": "GOD",
         "lemma": "yehovih"
+      },
+      {
+        "surface": "does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
       },
       {
         "surface": "revealing",
@@ -240,6 +300,10 @@
         "lemma": "mi"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
       },
@@ -260,11 +324,19 @@
         "lemma": "mi"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "prophesy",
         "lemma": "nava"
       }
     ],
     "9": [
+      {
+        "surface": "Proclaim",
+        "lemma": "shama"
+      },
       {
         "surface": "the citadels",
         "lemma": "armon"
@@ -294,6 +366,10 @@
         "lemma": "shomeron"
       },
       {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the great",
         "lemma": "rav"
       },
@@ -318,6 +394,14 @@
       {
         "surface": "For they know",
         "lemma": "yada"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "how to do",
+        "lemma": "asah"
       },
       {
         "surface": "right",
@@ -366,6 +450,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "An enemy",
         "lemma": "tsar"
       },
@@ -402,6 +490,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the shepherd",
@@ -444,6 +536,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "dwelling",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Samaria",
         "lemma": "shomeron"
       },
@@ -469,6 +565,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
       {
         "surface": "and testify",
         "lemma": "ud"
@@ -612,8 +712,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "bet",
-    "yehovih",
-    "armon"
+    "yehovih"
   ]
 }

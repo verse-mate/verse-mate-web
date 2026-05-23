@@ -54,6 +54,10 @@
         "lemma": "matsa"
       },
       {
+        "surface": "so that I could go",
+        "lemma": "bo"
+      },
+      {
         "surface": "His seat",
         "lemma": "tekhunah"
       }
@@ -104,6 +108,10 @@
       {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "He would say",
+        "lemma": "amar"
       }
     ],
     "6": [
@@ -118,6 +126,10 @@
       {
         "surface": "power",
         "lemma": "koach"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "would certainly",
@@ -156,10 +168,6 @@
     ],
     "8": [
       {
-        "surface": "If",
-        "lemma": "hen"
-      },
-      {
         "surface": "I go",
         "lemma": "halakh"
       },
@@ -176,14 +184,26 @@
         "lemma": "achor"
       },
       {
+        "surface": "I cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "find",
         "lemma": "bin"
       }
     ],
     "9": [
       {
+        "surface": "When He is at work",
+        "lemma": "asah"
+      },
+      {
         "surface": "in the north",
         "lemma": "semol"
+      },
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
       },
       {
         "surface": "behold Him",
@@ -196,6 +216,14 @@
       {
         "surface": "to the south",
         "lemma": "yamin"
+      },
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see Him",
+        "lemma": "raah"
       }
     ],
     "10": [
@@ -210,6 +238,10 @@
       {
         "surface": "when He has tested me",
         "lemma": "bachan"
+      },
+      {
+        "surface": "I will come forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "as gold",
@@ -238,11 +270,19 @@
         "lemma": "derekh"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "turning aside",
         "lemma": "natah"
       }
     ],
     "12": [
+      {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
       {
         "surface": "departed",
         "lemma": "mush"
@@ -276,6 +316,14 @@
       {
         "surface": "and who",
         "lemma": "mi"
+      },
+      {
+        "surface": "can oppose Him",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "He does",
+        "lemma": "asah"
       },
       {
         "surface": "what He",
@@ -342,6 +390,10 @@
     ],
     "17": [
       {
+        "surface": "I am not",
+        "lemma": "lo"
+      },
+      {
         "surface": "silenced",
         "lemma": "tsamat"
       },
@@ -368,8 +420,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "paneh",
-    "yada",
-    "bin"
+    "yada"
   ]
 }

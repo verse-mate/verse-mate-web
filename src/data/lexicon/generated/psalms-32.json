@@ -52,6 +52,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "count",
         "lemma": "chashav"
       },
@@ -84,6 +88,10 @@
       {
         "surface": "from my groaning",
         "lemma": "sheagah"
+      },
+      {
+        "surface": "all day long",
+        "lemma": "kol"
       }
     ],
     "4": [
@@ -134,12 +142,20 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "and did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "hide",
         "lemma": "kasah"
       },
       {
         "surface": "my iniquity",
         "lemma": "avan"
+      },
+      {
+        "surface": "I said",
+        "lemma": "amar"
       },
       {
         "surface": "I will confess",
@@ -172,12 +188,20 @@
     ],
     "6": [
       {
+        "surface": "let all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the godly",
         "lemma": "chasid"
       },
       {
         "surface": "pray",
         "lemma": "palal"
+      },
+      {
+        "surface": "while",
+        "lemma": "et"
       },
       {
         "surface": "You may be found",
@@ -194,6 +218,10 @@
       {
         "surface": "rise",
         "lemma": "mayim"
+      },
+      {
+        "surface": "they will not",
+        "lemma": "lo"
       },
       {
         "surface": "come near",
@@ -257,6 +285,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
       {
         "surface": "like the horse",
         "lemma": "sus"
@@ -346,6 +382,10 @@
         "lemma": "run"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you upright",
         "lemma": "yashar"
       },
@@ -357,7 +397,7 @@
   },
   "themeLemmas": [
     "selah",
-    "avan",
-    "savav"
+    "lo",
+    "kol"
   ]
 }

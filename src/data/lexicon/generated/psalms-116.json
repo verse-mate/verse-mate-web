@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "He has heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "my voice",
         "lemma": "qol"
       },
@@ -30,6 +34,10 @@
       {
         "surface": "His ear",
         "lemma": "ozen"
+      },
+      {
+        "surface": "I will call on Him",
+        "lemma": "qara"
       },
       {
         "surface": "as long as I live",
@@ -75,6 +83,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Then I called",
+        "lemma": "qara"
+      },
       {
         "surface": "on the name",
         "lemma": "shem"
@@ -141,6 +153,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Return to your rest",
+        "lemma": "shuv"
+      },
       {
         "surface": "O my soul",
         "lemma": "nephesh"
@@ -230,6 +246,14 @@
         "lemma": "chaphaz"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "men",
         "lemma": "adam"
       },
@@ -244,8 +268,16 @@
         "lemma": "mah"
       },
       {
+        "surface": "can I repay",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "His goodness",
@@ -264,6 +296,10 @@
       {
         "surface": "of salvation",
         "lemma": "yeshuah"
+      },
+      {
+        "surface": "and call",
+        "lemma": "qara"
       },
       {
         "surface": "on the name",
@@ -290,6 +326,10 @@
       {
         "surface": "in the presence of",
         "lemma": "neged"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "His people",
@@ -319,10 +359,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "Truly",
-        "lemma": "anna"
-      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -366,6 +402,10 @@
         "lemma": "todah"
       },
       {
+        "surface": "and call",
+        "lemma": "qara"
+      },
+      {
         "surface": "on the name",
         "lemma": "shem"
       },
@@ -390,6 +430,10 @@
       {
         "surface": "in the presence",
         "lemma": "neged"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "His people",
@@ -424,8 +468,8 @@
     ]
   },
   "themeLemmas": [
-    "shem",
-    "nephesh",
-    "mavet"
+    "qara",
+    "kol",
+    "shem"
   ]
 }

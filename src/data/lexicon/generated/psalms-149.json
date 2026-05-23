@@ -48,6 +48,10 @@
         "lemma": "samach"
       },
       {
+        "surface": "in their Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "let the children",
         "lemma": "ben"
       },
@@ -166,6 +170,10 @@
     ],
     "7": [
       {
+        "surface": "to inflict",
+        "lemma": "asah"
+      },
+      {
         "surface": "vengeance",
         "lemma": "neqamah"
       },
@@ -214,6 +222,10 @@
     ],
     "9": [
       {
+        "surface": "to execute",
+        "lemma": "asah"
+      },
+      {
         "surface": "the judgment",
         "lemma": "mishpat"
       },
@@ -224,6 +236,10 @@
       {
         "surface": "honor",
         "lemma": "hadar"
+      },
+      {
+        "surface": "is for all",
+        "lemma": "kol"
       },
       {
         "surface": "His saints",
@@ -238,6 +254,6 @@
   "themeLemmas": [
     "halal",
     "chasid",
-    "shir"
+    "asah"
   ]
 }

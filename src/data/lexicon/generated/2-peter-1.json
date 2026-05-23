@@ -106,6 +106,10 @@
         "lemma": "doreo"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "life",
         "lemma": "zoe"
       },
@@ -144,8 +148,16 @@
         "lemma": "timios"
       },
       {
+        "surface": "magnificent",
+        "lemma": "megas"
+      },
+      {
         "surface": "promises",
         "lemma": "epangelma"
+      },
+      {
+        "surface": "you may become",
+        "lemma": "ginomai"
       },
       {
         "surface": "partakers",
@@ -180,6 +192,10 @@
       {
         "surface": "make",
         "lemma": "pareisphero"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "effort",
@@ -294,12 +310,20 @@
         "lemma": "pareimi"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "nearsighted",
         "lemma": "muopazo"
       },
       {
         "surface": "to the point of blindness",
         "lemma": "tuphlos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lambano"
       },
       {
         "surface": "having forgotten",
@@ -328,6 +352,10 @@
         "lemma": "spoudazo"
       },
       {
+        "surface": "to make",
+        "lemma": "poieo"
+      },
+      {
         "surface": "calling",
         "lemma": "klesis"
       },
@@ -338,6 +366,10 @@
       {
         "surface": "sure",
         "lemma": "bebaios"
+      },
+      {
+        "surface": "if you practice",
+        "lemma": "poieo"
       },
       {
         "surface": "stumble",
@@ -396,6 +428,10 @@
         "lemma": "hupomimnesko"
       },
       {
+        "surface": "you know them",
+        "lemma": "eido"
+      },
+      {
         "surface": "are established",
         "lemma": "sterizo"
       },
@@ -430,14 +466,26 @@
         "lemma": "hosos"
       },
       {
+        "surface": "I live",
+        "lemma": "eimi"
+      },
+      {
         "surface": "tent  of my body",
         "lemma": "skenoma"
       }
     ],
     "14": [
       {
+        "surface": "because I know",
+        "lemma": "eido"
+      },
+      {
         "surface": "this tent",
         "lemma": "skenoma"
+      },
+      {
+        "surface": "will",
+        "lemma": "eimi"
       },
       {
         "surface": "soon",
@@ -476,6 +524,14 @@
       {
         "surface": "departure",
         "lemma": "exodos"
+      },
+      {
+        "surface": "will",
+        "lemma": "echo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "poieo"
       },
       {
         "surface": "be able to recall",
@@ -524,6 +580,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "we were",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "eyewitnesses",
         "lemma": "epoptes"
       },
@@ -533,6 +593,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "He received",
+        "lemma": "lambano"
+      },
       {
         "surface": "honor",
         "lemma": "time"
@@ -566,6 +630,10 @@
         "lemma": "doxa"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "beloved",
         "lemma": "agapetos"
       },
@@ -580,12 +648,20 @@
     ],
     "18": [
       {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
       },
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "when we were",
+        "lemma": "eimi"
       },
       {
         "surface": "holy",
@@ -598,6 +674,10 @@
     ],
     "19": [
       {
+        "surface": "We also have",
+        "lemma": "echo"
+      },
+      {
         "surface": "word",
         "lemma": "logos"
       },
@@ -608,6 +688,10 @@
       {
         "surface": "as confirmed beyond doubt",
         "lemma": "bebaios"
+      },
+      {
+        "surface": "And you will do",
+        "lemma": "poieo"
       },
       {
         "surface": "well",
@@ -660,12 +744,20 @@
         "lemma": "proton"
       },
       {
+        "surface": "you must understand",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "prophecy",
         "lemma": "propheteia"
       },
       {
         "surface": "of Scripture",
         "lemma": "graphe"
+      },
+      {
+        "surface": "comes",
+        "lemma": "ginomai"
       },
       {
         "surface": "from one’s own",
@@ -696,6 +788,10 @@
       {
         "surface": "men",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "laleo"
       },
       {
         "surface": "God",

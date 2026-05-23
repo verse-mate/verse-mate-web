@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those who enact",
         "lemma": "chaqaq"
       },
@@ -64,6 +60,10 @@
         "lemma": "am"
       },
       {
+        "surface": "to make",
+        "lemma": "hayah"
+      },
+      {
         "surface": "widows",
         "lemma": "almanah"
       },
@@ -86,6 +86,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "will you do",
+        "lemma": "asah"
+      },
+      {
         "surface": "on the day",
         "lemma": "yom"
       },
@@ -96,6 +100,10 @@
       {
         "surface": "when devastation",
         "lemma": "sho"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
       },
       {
         "surface": "from afar",
@@ -156,8 +164,20 @@
         "lemma": "harag"
       },
       {
+        "surface": "Despite all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "turned away",
+        "lemma": "shuv"
       },
       {
         "surface": "His hand",
@@ -173,10 +193,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
       {
         "surface": "to Assyria",
         "lemma": "ashshur"
@@ -258,12 +274,20 @@
     ],
     "7": [
       {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "vvv",
         "lemma": "ken"
       },
       {
         "surface": "his intention",
         "lemma": "damah"
+      },
+      {
+        "surface": "this is not",
+        "lemma": "lo"
       },
       {
         "surface": "his plan",
@@ -282,11 +306,19 @@
         "lemma": "karat"
       },
       {
+        "surface": "many",
+        "lemma": "lo"
+      },
+      {
         "surface": "nations",
         "lemma": "goy"
       }
     ],
     "8": [
+      {
+        "surface": "Are not",
+        "lemma": "lo"
+      },
       {
         "surface": "all",
         "lemma": "yachad"
@@ -298,9 +330,17 @@
       {
         "surface": "kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "he says",
+        "lemma": "amar"
       }
     ],
     "9": [
+      {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
       {
         "surface": "Calno",
         "lemma": "kalneh"
@@ -310,12 +350,20 @@
         "lemma": "karkemish"
       },
       {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "Hamath",
         "lemma": "chamat"
       },
       {
         "surface": "like Arpad",
         "lemma": "arpad"
+      },
+      {
+        "surface": "Is not",
+        "lemma": "lo"
       },
       {
         "surface": "Samaria",
@@ -358,6 +406,10 @@
     ],
     "11": [
       {
+        "surface": "I have done to",
+        "lemma": "asah"
+      },
+      {
         "surface": "Samaria",
         "lemma": "shomeron"
       },
@@ -366,8 +418,16 @@
         "lemma": "elil"
       },
       {
+        "surface": "will I not",
+        "lemma": "lo"
+      },
+      {
         "surface": "also",
         "lemma": "ken"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       },
       {
         "surface": "to Jerusalem",
@@ -386,6 +446,10 @@
       {
         "surface": "has completed",
         "lemma": "batsa"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "His work",
@@ -438,12 +502,20 @@
     ],
     "13": [
       {
+        "surface": "he says",
+        "lemma": "amar"
+      },
+      {
         "surface": "By the strength",
         "lemma": "koach"
       },
       {
         "surface": "of my hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "I have done this",
+        "lemma": "asah"
       },
       {
         "surface": "and by my wisdom",
@@ -480,6 +552,10 @@
       {
         "surface": "I subdued",
         "lemma": "yarad"
+      },
+      {
+        "surface": "their rulers",
+        "lemma": "yashav"
       }
     ],
     "14": [
@@ -520,8 +596,16 @@
         "lemma": "asaph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "wing",
@@ -558,6 +642,10 @@
         "lemma": "chatsav"
       },
       {
+        "surface": "Does",
+        "lemma": "im"
+      },
+      {
         "surface": "a saw",
         "lemma": "massvor"
       },
@@ -588,6 +676,10 @@
       {
         "surface": "lifting him",
         "lemma": "rum"
+      },
+      {
+        "surface": "who is not",
+        "lemma": "lo"
       },
       {
         "surface": "wood",
@@ -656,6 +748,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "a fire",
@@ -738,6 +834,10 @@
         "lemma": "yaar"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "so few",
         "lemma": "mispar"
       },
@@ -774,6 +874,10 @@
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "will no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -814,6 +918,10 @@
         "lemma": "shear"
       },
       {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "a remnant",
         "lemma": "shear"
       },
@@ -840,6 +948,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like the sand",
         "lemma": "chol"
       },
@@ -850,6 +962,10 @@
       {
         "surface": "only a remnant",
         "lemma": "shear"
+      },
+      {
+        "surface": "will return",
+        "lemma": "shuv"
       },
       {
         "surface": "Destruction",
@@ -882,6 +998,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "will carry out",
+        "lemma": "asah"
+      },
+      {
         "surface": "the destruction",
         "lemma": "kalah"
       },
@@ -892,6 +1012,10 @@
       {
         "surface": "upon",
         "lemma": "qerev"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "land",
@@ -920,12 +1044,24 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "O My people",
         "lemma": "am"
       },
       {
+        "surface": "who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "fear",
@@ -1080,6 +1216,10 @@
     ],
     "28": [
       {
+        "surface": "Assyria has entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "Aiath",
         "lemma": "ay"
       },
@@ -1182,6 +1322,10 @@
         "lemma": "nadad"
       },
       {
+        "surface": "the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Gebim",
         "lemma": "gevim"
       },
@@ -1237,10 +1381,6 @@
       }
     ],
     "33": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the Lord",
         "lemma": "adon"
@@ -1318,8 +1458,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "tsava",
-    "shear",
-    "yisrael"
+    "shear"
   ]
 }

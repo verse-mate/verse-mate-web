@@ -60,6 +60,10 @@
         "lemma": "levanon"
       },
       {
+        "surface": "will be given",
+        "lemma": "natan"
+      },
+      {
         "surface": "the splendor",
         "lemma": "hadar"
       },
@@ -70,6 +74,10 @@
       {
         "surface": "and Sharon",
         "lemma": "sharon"
+      },
+      {
+        "surface": "will see",
+        "lemma": "raah"
       },
       {
         "surface": "the glory",
@@ -116,6 +124,10 @@
     ],
     "4": [
       {
+        "surface": "Say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to those with anxious",
         "lemma": "mahar"
       },
@@ -128,16 +140,20 @@
         "lemma": "chazaq"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "with vengeance",
@@ -150,6 +166,10 @@
       {
         "surface": "retribution",
         "lemma": "gemul"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "to save you",
@@ -234,6 +254,10 @@
         "lemma": "sharav"
       },
       {
+        "surface": "will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a pool",
         "lemma": "agam"
       },
@@ -280,8 +304,16 @@
         "lemma": "sham"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a highway",
         "lemma": "maslul"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
       },
       {
         "surface": "the Way",
@@ -294,6 +326,10 @@
       {
         "surface": "The unclean",
         "lemma": "tame"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "travel it",
@@ -312,14 +348,26 @@
         "lemma": "evil"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "stray onto it",
         "lemma": "taah"
       }
     ],
     "9": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "lion",
         "lemma": "ari"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "there",
@@ -340,6 +388,10 @@
       {
         "surface": "will go up on it",
         "lemma": "alah"
+      },
+      {
+        "surface": "Such will not",
+        "lemma": "lo"
       },
       {
         "surface": "be found",
@@ -366,6 +418,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and enter",
+        "lemma": "bo"
       },
       {
         "surface": "Zion",
@@ -410,8 +470,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "sham",
-    "simchah",
-    "run"
+    "hayah"
   ]
 }

@@ -30,6 +30,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "are up",
+        "lemma": "bo"
+      },
+      {
         "surface": "my neck",
         "lemma": "nephesh"
       }
@@ -56,6 +60,10 @@
         "lemma": "moomad"
       },
       {
+        "surface": "I have drifted",
+        "lemma": "bo"
+      },
+      {
         "surface": "into deep",
         "lemma": "maamaq"
       },
@@ -76,6 +84,10 @@
       {
         "surface": "I am weary",
         "lemma": "yaga"
+      },
+      {
+        "surface": "from my crying",
+        "lemma": "qara"
       },
       {
         "surface": "my throat",
@@ -140,8 +152,16 @@
         "lemma": "sheqer"
       },
       {
+        "surface": "Though I did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "steal",
         "lemma": "gazal"
+      },
+      {
+        "surface": "I must repay",
+        "lemma": "shuv"
       }
     ],
     "5": [
@@ -162,6 +182,10 @@
         "lemma": "ashmah"
       },
       {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "hidden",
         "lemma": "kachad"
       }
@@ -170,6 +194,10 @@
       {
         "surface": "May those who hope in You",
         "lemma": "qavah"
+      },
+      {
+        "surface": "not",
+        "lemma": "al"
       },
       {
         "surface": "be ashamed",
@@ -190,6 +218,10 @@
       {
         "surface": "may those who seek You",
         "lemma": "baqash"
+      },
+      {
+        "surface": "not",
+        "lemma": "al"
       },
       {
         "surface": "be dishonored",
@@ -227,6 +259,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "I have become",
+        "lemma": "hayah"
+      },
       {
         "surface": "a stranger",
         "lemma": "zur"
@@ -288,11 +324,19 @@
         "lemma": "tsom"
       },
       {
+        "surface": "but it brought me",
+        "lemma": "hayah"
+      },
+      {
         "surface": "reproach",
         "lemma": "cherpah"
       }
     ],
     "11": [
+      {
+        "surface": "I made",
+        "lemma": "natan"
+      },
       {
         "surface": "sackcloth",
         "lemma": "saq"
@@ -302,11 +346,19 @@
         "lemma": "levush"
       },
       {
+        "surface": "and I was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "sport",
         "lemma": "mashal"
       }
     ],
     "12": [
+      {
+        "surface": "Those who sit",
+        "lemma": "yashav"
+      },
       {
         "surface": "at the gate",
         "lemma": "shaar"
@@ -332,6 +384,10 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is for a time",
+        "lemma": "et"
       },
       {
         "surface": "of favor",
@@ -372,6 +428,10 @@
         "lemma": "tit"
       },
       {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let me sink",
         "lemma": "tava"
       },
@@ -394,6 +454,10 @@
     ],
     "15": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let the floods",
         "lemma": "shibbol"
       },
@@ -408,6 +472,10 @@
       {
         "surface": "swallow me up",
         "lemma": "bala"
+      },
+      {
+        "surface": "let not",
+        "lemma": "al"
       },
       {
         "surface": "the Pit",
@@ -456,6 +524,10 @@
       {
         "surface": "Hide",
         "lemma": "satar"
+      },
+      {
+        "surface": "not",
+        "lemma": "al"
       },
       {
         "surface": "Your face",
@@ -518,6 +590,10 @@
         "lemma": "kelimmah"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "my adversaries",
         "lemma": "tsarar"
       },
@@ -562,9 +638,17 @@
       {
         "surface": "but I found",
         "lemma": "matsa"
+      },
+      {
+        "surface": "no one",
+        "lemma": "lo"
       }
     ],
     "21": [
+      {
+        "surface": "They poisoned",
+        "lemma": "natan"
+      },
       {
         "surface": "my food",
         "lemma": "barut"
@@ -587,6 +671,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "May their table",
+        "lemma": "hayah"
+      },
       {
         "surface": "become",
         "lemma": "shulchan"
@@ -612,6 +700,10 @@
       {
         "surface": "be darkened",
         "lemma": "chashakh"
+      },
+      {
+        "surface": "so they cannot see",
+        "lemma": "raah"
       },
       {
         "surface": "and their backs",
@@ -646,12 +738,24 @@
     ],
     "25": [
       {
+        "surface": "May",
+        "lemma": "hayah"
+      },
+      {
         "surface": "their place",
         "lemma": "tirah"
       },
       {
         "surface": "be deserted",
         "lemma": "shamem"
+      },
+      {
+        "surface": "let there be no one",
+        "lemma": "al"
+      },
+      {
+        "surface": "to dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in their tents",
@@ -682,12 +786,24 @@
     ],
     "27": [
       {
+        "surface": "Add",
+        "lemma": "natan"
+      },
+      {
         "surface": "iniquity",
         "lemma": "avan"
       },
       {
         "surface": "their iniquity",
         "lemma": "avan"
+      },
+      {
+        "surface": "let them not",
+        "lemma": "al"
+      },
+      {
+        "surface": "share",
+        "lemma": "bo"
       },
       {
         "surface": "in Your righteousness",
@@ -706,6 +822,10 @@
       {
         "surface": "of Life",
         "lemma": "chay"
+      },
+      {
+        "surface": "and not",
+        "lemma": "al"
       },
       {
         "surface": "listed",
@@ -796,6 +916,10 @@
         "lemma": "anav"
       },
       {
+        "surface": "will see",
+        "lemma": "raah"
+      },
+      {
         "surface": "and rejoice",
         "lemma": "samach"
       },
@@ -822,8 +946,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "listens",
+        "lemma": "shama"
+      },
+      {
         "surface": "the needy",
         "lemma": "evyon"
+      },
+      {
+        "surface": "and does not",
+        "lemma": "lo"
       },
       {
         "surface": "despise",
@@ -850,6 +982,10 @@
       {
         "surface": "the seas",
         "lemma": "yam"
+      },
+      {
+        "surface": "and everything",
+        "lemma": "kol"
       },
       {
         "surface": "that moves",
@@ -880,6 +1016,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "that they may dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "there",
@@ -918,8 +1058,8 @@
     ]
   },
   "themeLemmas": [
-    "cherpah",
-    "un",
-    "nephesh"
+    "al",
+    "hayah",
+    "cherpah"
   ]
 }

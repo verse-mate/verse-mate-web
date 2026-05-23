@@ -22,6 +22,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Be fruitful",
         "lemma": "parah"
       },
@@ -48,12 +52,24 @@
         "lemma": "chat"
       },
       {
+        "surface": "will fall",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "living creature",
         "lemma": "chay"
       },
       {
         "surface": "on the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "bird",
@@ -64,12 +80,20 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "crawls",
         "lemma": "ramas"
       },
       {
         "surface": "on the ground",
         "lemma": "adamah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the fish",
@@ -80,11 +104,19 @@
         "lemma": "yam"
       },
       {
+        "surface": "They are delivered",
+        "lemma": "natan"
+      },
+      {
         "surface": "into your hand",
         "lemma": "yad"
       }
     ],
     "3": [
+      {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
       {
         "surface": "that lives",
         "lemma": "chay"
@@ -92,6 +124,10 @@
       {
         "surface": "and moves",
         "lemma": "remes"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "food",
@@ -104,12 +140,24 @@
       {
         "surface": "plants",
         "lemma": "esev"
+      },
+      {
+        "surface": "I now give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all things",
+        "lemma": "kol"
       }
     ],
     "4": [
       {
         "surface": "But",
         "lemma": "akh"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
       },
       {
         "surface": "eat",
@@ -136,6 +184,10 @@
       {
         "surface": "I will require",
         "lemma": "darash"
+      },
+      {
+        "surface": "the life of any",
+        "lemma": "kol"
       },
       {
         "surface": "man",
@@ -204,6 +256,10 @@
         "lemma": "tselem"
       },
       {
+        "surface": "God has made",
+        "lemma": "asah"
+      },
+      {
         "surface": "mankind",
         "lemma": "adam"
       }
@@ -236,6 +292,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Noah",
         "lemma": "noach"
       },
@@ -245,10 +305,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
       {
         "surface": "establish",
         "lemma": "qamay"
@@ -268,6 +324,10 @@
     ],
     "10": [
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "living",
         "lemma": "chay"
       },
@@ -284,6 +344,10 @@
         "lemma": "behemah"
       },
       {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
         "surface": "beast",
         "lemma": "chay"
       },
@@ -292,8 +356,16 @@
         "lemma": "erets"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "living thing",
         "lemma": "chay"
+      },
+      {
+        "surface": "that came out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of the ark",
@@ -310,8 +382,16 @@
         "lemma": "berit"
       },
       {
+        "surface": "Never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "od"
+      },
+      {
+        "surface": "will all",
+        "lemma": "kol"
       },
       {
         "surface": "life",
@@ -330,8 +410,16 @@
         "lemma": "mabbul"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "od"
+      },
+      {
+        "surface": "will there be",
+        "lemma": "hayah"
       },
       {
         "surface": "a flood",
@@ -352,12 +440,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "is the sign",
         "lemma": "ot"
       },
       {
         "surface": "of the covenant",
         "lemma": "berit"
+      },
+      {
+        "surface": "am making",
+        "lemma": "natan"
       },
       {
         "surface": "between Me",
@@ -370,6 +466,10 @@
       {
         "surface": "and",
         "lemma": "bayin"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "living",
@@ -390,12 +490,20 @@
     ],
     "13": [
       {
+        "surface": "I have set",
+        "lemma": "natan"
+      },
+      {
         "surface": "My rainbow",
         "lemma": "qeshet"
       },
       {
         "surface": "in the clouds",
         "lemma": "anan"
+      },
+      {
+        "surface": "and it will be",
+        "lemma": "hayah"
       },
       {
         "surface": "a sign",
@@ -436,6 +544,10 @@
         "lemma": "qeshet"
       },
       {
+        "surface": "appears",
+        "lemma": "raah"
+      },
+      {
         "surface": "in the clouds",
         "lemma": "anan"
       }
@@ -462,6 +574,10 @@
         "lemma": "bayin"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "living",
         "lemma": "chay"
       },
@@ -470,8 +586,16 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "kind",
         "lemma": "basar"
+      },
+      {
+        "surface": "Never",
+        "lemma": "lo"
       },
       {
         "surface": "again",
@@ -482,12 +606,20 @@
         "lemma": "mayim"
       },
       {
+        "surface": "become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a flood",
         "lemma": "mabbul"
       },
       {
         "surface": "to destroy",
         "lemma": "shachat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "life",
@@ -500,8 +632,16 @@
         "lemma": "qeshet"
       },
       {
+        "surface": "appears",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the clouds",
         "lemma": "anan"
+      },
+      {
+        "surface": "I will see it",
+        "lemma": "raah"
       },
       {
         "surface": "and remember",
@@ -528,12 +668,20 @@
         "lemma": "bayin"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "living",
         "lemma": "chay"
       },
       {
         "surface": "creature",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "kind",
@@ -548,6 +696,10 @@
       {
         "surface": "So God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Noah",
@@ -574,6 +726,10 @@
         "lemma": "bayin"
       },
       {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
         "surface": "creature",
         "lemma": "basar"
       },
@@ -592,8 +748,16 @@
         "lemma": "noach"
       },
       {
+        "surface": "who came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the ark",
         "lemma": "tevah"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "Shem",
@@ -612,6 +776,10 @@
         "lemma": "cham"
       },
       {
+        "surface": "was the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Canaan",
         "lemma": "kenaan"
       }
@@ -628,6 +796,10 @@
       {
         "surface": "of Noah",
         "lemma": "noach"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "earth",
@@ -696,8 +868,20 @@
         "lemma": "cham"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Canaan",
         "lemma": "kenaan"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "his father’s",
+        "lemma": "av"
       },
       {
         "surface": "nakedness",
@@ -758,6 +942,10 @@
         "lemma": "kasah"
       },
       {
+        "surface": "their father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "nakedness",
         "lemma": "ervah"
       },
@@ -768,6 +956,18 @@
       {
         "surface": "were turned away",
         "lemma": "achorannit"
+      },
+      {
+        "surface": "so that they did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "their father’s",
+        "lemma": "av"
       },
       {
         "surface": "nakedness",
@@ -798,9 +998,17 @@
       {
         "surface": "son",
         "lemma": "ben"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
       }
     ],
     "25": [
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
       {
         "surface": "Cursed be",
         "lemma": "arar"
@@ -818,11 +1026,19 @@
         "lemma": "eved"
       },
       {
+        "surface": "shall he be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to his brothers",
         "lemma": "ach"
       }
     ],
     "26": [
+      {
+        "surface": "He also declared",
+        "lemma": "amar"
+      },
       {
         "surface": "Blessed",
         "lemma": "barakh"
@@ -842,6 +1058,10 @@
       {
         "surface": "May Canaan",
         "lemma": "kenaan"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "the servant",
@@ -876,6 +1096,10 @@
       {
         "surface": "and may Canaan",
         "lemma": "kenaan"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "his servant",
@@ -918,6 +1142,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "a total of",
+        "lemma": "hayah"
+      },
+      {
         "surface": "950",
         "lemma": "tesah"
       },
@@ -932,8 +1160,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "bayin",
-    "noach",
-    "chay"
+    "hayah"
   ]
 }

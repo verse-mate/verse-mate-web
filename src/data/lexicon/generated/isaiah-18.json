@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to the land",
         "lemma": "erets"
       },
@@ -118,6 +114,14 @@
     ],
     "3": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the world",
         "lemma": "tevel"
       },
@@ -142,12 +146,20 @@
         "lemma": "har"
       },
       {
+        "surface": "you will see it",
+        "lemma": "raah"
+      },
+      {
         "surface": "when a ram’s horn",
         "lemma": "shophar"
       },
       {
         "surface": "sounds",
         "lemma": "taqa"
+      },
+      {
+        "surface": "you will hear it",
+        "lemma": "shama"
       }
     ],
     "4": [
@@ -158,6 +170,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has told",
+        "lemma": "amar"
       },
       {
         "surface": "I will quietly",
@@ -182,6 +198,10 @@
       {
         "surface": "the sunshine",
         "lemma": "or"
+      },
+      {
+        "surface": "like a cloud",
+        "lemma": "av"
       },
       {
         "surface": "of dew",
@@ -216,6 +236,10 @@
       {
         "surface": "and the flower",
         "lemma": "nitstsah"
+      },
+      {
+        "surface": "becomes",
+        "lemma": "hayah"
       },
       {
         "surface": "a ripening",
@@ -284,6 +308,10 @@
         "lemma": "quts"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the wild animals",
         "lemma": "behemah"
       },
@@ -293,6 +321,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
       {
         "surface": "gifts",
         "lemma": "shay"

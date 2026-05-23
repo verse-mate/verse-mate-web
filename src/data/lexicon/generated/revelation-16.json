@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
       },
       {
         "surface": "temple",
         "lemma": "naos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "seven",
@@ -84,6 +96,14 @@
         "lemma": "helkos"
       },
       {
+        "surface": "broke out",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "had",
+        "lemma": "echo"
+      },
+      {
         "surface": "mark",
         "lemma": "charagma"
       },
@@ -118,12 +138,20 @@
         "lemma": "thalassa"
       },
       {
+        "surface": "it turned to",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "blood",
         "lemma": "haima"
       },
       {
         "surface": "of the dead",
         "lemma": "nekros"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "living",
@@ -168,11 +196,19 @@
         "lemma": "hudor"
       },
       {
+        "surface": "they turned to",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "blood",
         "lemma": "haima"
       }
     ],
     "5": [
+      {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
       {
         "surface": "angel",
         "lemma": "angelos"
@@ -182,12 +218,28 @@
         "lemma": "hudor"
       },
       {
+        "surface": "say",
+        "lemma": "lego"
+      },
+      {
         "surface": "Righteous",
         "lemma": "dikaios"
       },
       {
+        "surface": "are You",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Holy One",
         "lemma": "hosios"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
       },
       {
         "surface": "You have brought these judgments",
@@ -212,6 +264,10 @@
         "lemma": "prophetes"
       },
       {
+        "surface": "You have given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "blood",
         "lemma": "haima"
       },
@@ -220,14 +276,26 @@
         "lemma": "pino"
       },
       {
+        "surface": "as they",
+        "lemma": "eimi"
+      },
+      {
         "surface": "deserve",
         "lemma": "axios"
       }
     ],
     "7": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "altar",
         "lemma": "thusiasterion"
+      },
+      {
+        "surface": "reply",
+        "lemma": "lego"
       },
       {
         "surface": "Lord",
@@ -272,6 +340,10 @@
         "lemma": "helios"
       },
       {
+        "surface": "it was given power",
+        "lemma": "didomi"
+      },
+      {
         "surface": "to scorch",
         "lemma": "kaumatizo"
       },
@@ -294,6 +366,10 @@
         "lemma": "kaumatizo"
       },
       {
+        "surface": "by intense",
+        "lemma": "megas"
+      },
+      {
         "surface": "heat",
         "lemma": "kauma"
       },
@@ -310,6 +386,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "had",
+        "lemma": "echo"
+      },
+      {
         "surface": "authority",
         "lemma": "exousia"
       },
@@ -320,6 +400,10 @@
       {
         "surface": "they did not repent",
         "lemma": "metanoeo"
+      },
+      {
+        "surface": "and give",
+        "lemma": "didomi"
       },
       {
         "surface": "glory",
@@ -350,6 +434,10 @@
       {
         "surface": "kingdom",
         "lemma": "basileia"
+      },
+      {
+        "surface": "was",
+        "lemma": "ginomai"
       },
       {
         "surface": "plunged into darkness",
@@ -412,6 +500,10 @@
         "lemma": "phiale"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "river",
         "lemma": "potamos"
       },
@@ -445,6 +537,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
       {
         "surface": "three",
         "lemma": "treis"
@@ -480,12 +576,20 @@
     ],
     "14": [
       {
+        "surface": "These are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "demonic",
         "lemma": "daimonion"
       },
       {
         "surface": "spirits",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "that perform",
+        "lemma": "poieo"
       },
       {
         "surface": "signs",
@@ -516,6 +620,10 @@
         "lemma": "polemos"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "day",
         "lemma": "hemera"
       },
@@ -529,6 +637,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "I am coming",
+        "lemma": "erchomai"
+      },
       {
         "surface": "a thief",
         "lemma": "kleptes"
@@ -602,8 +714,16 @@
         "lemma": "aer"
       },
       {
+        "surface": "a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
+      },
+      {
+        "surface": "came",
+        "lemma": "exerchomai"
       },
       {
         "surface": "throne",
@@ -612,9 +732,21 @@
       {
         "surface": "temple",
         "lemma": "naos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
+        "surface": "It is done",
+        "lemma": "ginomai"
       }
     ],
     "18": [
+      {
+        "surface": "there were",
+        "lemma": "ginomai"
+      },
       {
         "surface": "flashes of lightning",
         "lemma": "astrape"
@@ -628,6 +760,10 @@
         "lemma": "bronte"
       },
       {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "earthquake",
         "lemma": "seismos"
       },
@@ -636,8 +772,16 @@
         "lemma": "hoios"
       },
       {
+        "surface": "had not occurred",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "men",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "were",
+        "lemma": "ginomai"
       },
       {
         "surface": "earth",
@@ -648,14 +792,26 @@
         "lemma": "houto"
       },
       {
+        "surface": "was the great",
+        "lemma": "megas"
+      },
+      {
         "surface": "quake",
         "lemma": "seismos"
       }
     ],
     "19": [
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "city",
         "lemma": "polis"
+      },
+      {
+        "surface": "was split",
+        "lemma": "ginomai"
       },
       {
         "surface": "three",
@@ -690,6 +846,14 @@
         "lemma": "babulon"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
+        "surface": "and gave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "cup",
         "lemma": "poterion"
       },
@@ -708,6 +872,10 @@
     ],
     "20": [
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "island",
         "lemma": "nesos"
       },
@@ -718,9 +886,17 @@
       {
         "surface": "mountain",
         "lemma": "oros"
+      },
+      {
+        "surface": "could be found",
+        "lemma": "heurisko"
       }
     ],
     "21": [
+      {
+        "surface": "great",
+        "lemma": "megas"
+      },
       {
         "surface": "hailstones",
         "lemma": "chalaza"
@@ -766,8 +942,16 @@
         "lemma": "plege"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "vvv",
         "lemma": "sphodra"
+      },
+      {
+        "surface": "so horrendous",
+        "lemma": "megas"
       }
     ]
   },

@@ -24,6 +24,10 @@
     ],
     "2": [
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
       },
@@ -78,6 +82,10 @@
         "lemma": "gur"
       },
       {
+        "surface": "and he became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a young lion",
         "lemma": "kephir"
       },
@@ -108,6 +116,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "he was trapped",
         "lemma": "taphas"
       },
@@ -120,6 +132,10 @@
         "lemma": "chach"
       },
       {
+        "surface": "they led him away",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -129,6 +145,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "When she saw",
+        "lemma": "raah"
+      },
       {
         "surface": "she had waited in vain",
         "lemma": "yachal"
@@ -174,6 +194,10 @@
       {
         "surface": "the lions",
         "lemma": "ari"
+      },
+      {
+        "surface": "and became",
+        "lemma": "hayah"
       },
       {
         "surface": "a young lion",
@@ -244,6 +268,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "set out",
+        "lemma": "natan"
+      },
+      {
         "surface": "from the provinces",
         "lemma": "medinah"
       },
@@ -274,6 +302,14 @@
         "lemma": "chach"
       },
       {
+        "surface": "they caged him",
+        "lemma": "natan"
+      },
+      {
+        "surface": "and brought him",
+        "lemma": "bo"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -282,12 +318,24 @@
         "lemma": "bavel"
       },
       {
+        "surface": "They brought him",
+        "lemma": "bo"
+      },
+      {
         "surface": "into captivity",
         "lemma": "matsod"
       },
       {
         "surface": "his roar",
         "lemma": "qol"
+      },
+      {
+        "surface": "was heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -324,6 +372,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "it was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "fruitful",
         "lemma": "parah"
       },
@@ -341,6 +393,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "It had",
+        "lemma": "hayah"
+      },
       {
         "surface": "strong",
         "lemma": "oz"
@@ -368,6 +424,10 @@
       {
         "surface": "the thick branches",
         "lemma": "avot"
+      },
+      {
+        "surface": "conspicuous",
+        "lemma": "raah"
       },
       {
         "surface": "for its height",
@@ -472,6 +532,10 @@
         "lemma": "esh"
       },
       {
+        "surface": "has gone out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from its main branch",
         "lemma": "matteh"
       },
@@ -484,12 +548,20 @@
         "lemma": "peri"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "strong",
         "lemma": "oz"
       },
       {
         "surface": "branch",
         "lemma": "matteh"
+      },
+      {
+        "surface": "remains",
+        "lemma": "hayah"
       },
       {
         "surface": "fit for a ruler’s",
@@ -504,14 +576,18 @@
         "lemma": "qinah"
       },
       {
+        "surface": "and shall be used",
+        "lemma": "hayah"
+      },
+      {
         "surface": "as a lament",
         "lemma": "qinah"
       }
     ]
   },
   "themeLemmas": [
+    "hayah",
     "matteh",
-    "kephir",
-    "akhal"
+    "kephir"
   ]
 }

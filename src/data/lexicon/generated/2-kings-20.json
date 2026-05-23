@@ -38,12 +38,24 @@
         "lemma": "amots"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "This is what",
         "lemma": "koh"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "Put your house",
@@ -56,6 +68,10 @@
       {
         "surface": "are about to die",
         "lemma": "mut"
+      },
+      {
+        "surface": "you will not",
+        "lemma": "lo"
       },
       {
         "surface": "recover",
@@ -82,13 +98,13 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "3": [
-      {
-        "surface": "Please",
-        "lemma": "anna"
-      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -118,6 +134,10 @@
         "lemma": "shalem"
       },
       {
+        "surface": "I have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "what is good",
         "lemma": "tov"
       },
@@ -140,8 +160,16 @@
     ],
     "4": [
       {
+        "surface": "Before",
+        "lemma": "lo"
+      },
+      {
         "surface": "Isaiah",
         "lemma": "yeshayah"
+      },
+      {
+        "surface": "had left",
+        "lemma": "yatsa"
       },
       {
         "surface": "the middle",
@@ -158,9 +186,25 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "5": [
+      {
+        "surface": "Go back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
+      },
       {
         "surface": "Hezekiah",
         "lemma": "chizqiyyah"
@@ -186,20 +230,32 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of your father",
+        "lemma": "av"
+      },
+      {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I have heard",
+        "lemma": "shama"
       },
       {
         "surface": "your prayer",
         "lemma": "tephillah"
       },
       {
-        "surface": "your tears",
-        "lemma": "dimah"
+        "surface": "I have seen",
+        "lemma": "raah"
       },
       {
-        "surface": "vvv",
-        "lemma": "hen"
+        "surface": "your tears",
+        "lemma": "dimah"
       },
       {
         "surface": "I will surely heal",
@@ -286,6 +342,10 @@
         "lemma": "yeshayah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Prepare",
         "lemma": "laqach"
       },
@@ -318,6 +378,10 @@
       {
         "surface": "Now Hezekiah",
         "lemma": "chizqiyyah"
+      },
+      {
+        "surface": "had asked",
+        "lemma": "amar"
       },
       {
         "surface": "Isaiah",
@@ -366,6 +430,10 @@
         "lemma": "yeshayah"
       },
       {
+        "surface": "had replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "will be a sign",
         "lemma": "ot"
       },
@@ -376,6 +444,10 @@
       {
         "surface": "He",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will do",
+        "lemma": "asah"
       },
       {
         "surface": "He has promised",
@@ -396,6 +468,14 @@
       {
         "surface": "steps",
         "lemma": "maalah"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
+        "surface": "back",
+        "lemma": "shuv"
       },
       {
         "surface": "ten",
@@ -428,12 +508,24 @@
         "lemma": "maalah"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "Hezekiah",
         "lemma": "chizqiyyah"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "for it",
         "lemma": "tsel"
+      },
+      {
+        "surface": "to go",
+        "lemma": "shuv"
       },
       {
         "surface": "back",
@@ -458,8 +550,16 @@
         "lemma": "navi"
       },
       {
+        "surface": "called out",
+        "lemma": "qara"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and He brought",
+        "lemma": "shuv"
       },
       {
         "surface": "the shadow",
@@ -491,6 +591,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
       {
         "surface": "Merodach-baladan",
         "lemma": "berodakhbaladan"
@@ -532,6 +636,10 @@
         "lemma": "chizqiyyah"
       },
       {
+        "surface": "he had heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "Hezekiah’s",
         "lemma": "chizqiyyah"
       },
@@ -544,6 +652,18 @@
       {
         "surface": "And Hezekiah",
         "lemma": "chizqiyyah"
+      },
+      {
+        "surface": "received",
+        "lemma": "shama"
+      },
+      {
+        "surface": "and showed them",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all that was",
+        "lemma": "kol"
       },
       {
         "surface": "in his treasure",
@@ -578,6 +698,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "was found",
         "lemma": "matsa"
       },
@@ -586,8 +710,20 @@
         "lemma": "otsar"
       },
       {
+        "surface": "There was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "in his palace",
         "lemma": "bet"
+      },
+      {
+        "surface": "or in all",
+        "lemma": "kol"
       },
       {
         "surface": "his dominion",
@@ -596,6 +732,14 @@
       {
         "surface": "Hezekiah",
         "lemma": "chizqiyyah"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "show them",
+        "lemma": "raah"
       }
     ],
     "14": [
@@ -608,12 +752,20 @@
         "lemma": "yeshayah"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
       {
         "surface": "Hezekiah",
         "lemma": "chizqiyyah"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "amar"
       },
       {
         "surface": "Where",
@@ -624,8 +776,20 @@
         "lemma": "enosh"
       },
       {
+        "surface": "come from",
+        "lemma": "bo"
+      },
+      {
         "surface": "and what",
         "lemma": "mah"
+      },
+      {
+        "surface": "did they say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "They came",
+        "lemma": "bo"
       },
       {
         "surface": "from a distant",
@@ -640,6 +804,10 @@
         "lemma": "chizqiyyah"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "from Babylon",
         "lemma": "bavel"
       }
@@ -650,20 +818,52 @@
         "lemma": "mah"
       },
       {
+        "surface": "have they seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "in your palace",
         "lemma": "bet"
+      },
+      {
+        "surface": "Isaiah asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "They have seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "in my palace",
         "lemma": "bet"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "Hezekiah",
         "lemma": "chizqiyyah"
       },
       {
+        "surface": "There is nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "among my treasures",
         "lemma": "otsar"
+      },
+      {
+        "surface": "I did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "show them",
+        "lemma": "raah"
       }
     ],
     "16": [
@@ -672,8 +872,16 @@
         "lemma": "yeshayah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Hezekiah",
         "lemma": "chizqiyyah"
+      },
+      {
+        "surface": "Hear",
+        "lemma": "shama"
       },
       {
         "surface": "the word",
@@ -690,12 +898,20 @@
         "lemma": "yom"
       },
       {
-        "surface": "will surely",
-        "lemma": "hinneh"
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "when everything",
+        "lemma": "kol"
       },
       {
         "surface": "in your palace",
         "lemma": "bet"
+      },
+      {
+        "surface": "your fathers",
+        "lemma": "av"
       },
       {
         "surface": "have stored up",
@@ -714,8 +930,16 @@
         "lemma": "bavel"
       },
       {
+        "surface": "Nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "will be left",
         "lemma": "yatar"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -728,8 +952,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "flesh and blood",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "will be taken away",
         "lemma": "laqach"
+      },
+      {
+        "surface": "to be",
+        "lemma": "hayah"
       },
       {
         "surface": "eunuchs",
@@ -754,6 +986,10 @@
         "lemma": "chizqiyyah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Isaiah",
         "lemma": "yeshayah"
       },
@@ -772,6 +1008,22 @@
       {
         "surface": "is good",
         "lemma": "tov"
+      },
+      {
+        "surface": "For he thought",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Will there not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "at least",
+        "lemma": "im"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "peace",
@@ -800,8 +1052,16 @@
         "lemma": "chizqiyyah"
       },
       {
+        "surface": "along with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his might",
         "lemma": "gevurah"
+      },
+      {
+        "surface": "he constructed",
+        "lemma": "asah"
       },
       {
         "surface": "the pool",
@@ -810,6 +1070,10 @@
       {
         "surface": "and the tunnel",
         "lemma": "tealah"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "bo"
       },
       {
         "surface": "water",
@@ -850,6 +1114,10 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "and his son",
         "lemma": "ben"
       },
@@ -868,8 +1136,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "chizqiyyah",
-    "yeshayah",
-    "bet"
+    "yeshayah"
   ]
 }

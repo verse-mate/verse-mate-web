@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "tongues",
         "lemma": "glossa"
       },
@@ -18,8 +22,16 @@
         "lemma": "angelos"
       },
       {
+        "surface": "have",
+        "lemma": "echo"
+      },
+      {
         "surface": "love",
         "lemma": "agape"
+      },
+      {
+        "surface": "I am",
+        "lemma": "ginomai"
       },
       {
         "surface": "only a ringing",
@@ -40,16 +52,40 @@
     ],
     "2": [
       {
+        "surface": "I have",
+        "lemma": "echo"
+      },
+      {
         "surface": "the gift of prophecy",
         "lemma": "propheteia"
+      },
+      {
+        "surface": "can fathom",
+        "lemma": "eido"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "mysteries",
         "lemma": "musterion"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "knowledge",
         "lemma": "gnosis"
+      },
+      {
+        "surface": "I have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "absolute",
+        "lemma": "pas"
       },
       {
         "surface": "faith",
@@ -64,14 +100,30 @@
         "lemma": "oros"
       },
       {
+        "surface": "have",
+        "lemma": "echo"
+      },
+      {
         "surface": "love",
         "lemma": "agape"
+      },
+      {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
       }
     ],
     "3": [
       {
         "surface": "I give",
         "lemma": "psomizo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "possess {to the poor",
@@ -90,12 +142,20 @@
         "lemma": "soma"
       },
       {
+        "surface": "have",
+        "lemma": "echo"
+      },
+      {
         "surface": "love",
         "lemma": "agape"
       },
       {
         "surface": "I gain",
         "lemma": "opheleo"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
       }
     ],
     "4": [
@@ -178,16 +238,32 @@
         "lemma": "stego"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "believes",
         "lemma": "pisteuo"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
       },
       {
         "surface": "hopes",
         "lemma": "elpizo"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "endures",
         "lemma": "hupomeno"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
       }
     ],
     "8": [
@@ -204,10 +280,6 @@
         "lemma": "pipto"
       },
       {
-        "surface": "where",
-        "lemma": "eite"
-      },
-      {
         "surface": "there are prophecies",
         "lemma": "propheteia"
       },
@@ -216,20 +288,12 @@
         "lemma": "katargeo"
       },
       {
-        "surface": "where",
-        "lemma": "eite"
-      },
-      {
         "surface": "there are tongues",
         "lemma": "glossa"
       },
       {
         "surface": "they will be restrained",
         "lemma": "pauo"
-      },
-      {
-        "surface": "where",
-        "lemma": "eite"
       },
       {
         "surface": "there is knowledge",
@@ -241,6 +305,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "we know",
+        "lemma": "ginosko"
+      },
       {
         "surface": "part",
         "lemma": "meros"
@@ -260,6 +328,10 @@
         "lemma": "teleios"
       },
       {
+        "surface": "comes",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "partial",
         "lemma": "meros"
       },
@@ -270,8 +342,16 @@
     ],
     "11": [
       {
+        "surface": "I was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a child",
         "lemma": "nepios"
+      },
+      {
+        "surface": "I talked",
+        "lemma": "laleo"
       },
       {
         "surface": "a child",
@@ -292,6 +372,10 @@
       {
         "surface": "a child",
         "lemma": "nepios"
+      },
+      {
+        "surface": "I became",
+        "lemma": "ginomai"
       },
       {
         "surface": "a man",
@@ -340,6 +424,10 @@
         "lemma": "arti"
       },
       {
+        "surface": "I know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "part",
         "lemma": "meros"
       },
@@ -380,6 +468,10 @@
       {
         "surface": "and love",
         "lemma": "agape"
+      },
+      {
+        "surface": "the greatest",
+        "lemma": "megas"
       },
       {
         "surface": "love",

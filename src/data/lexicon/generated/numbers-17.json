@@ -48,6 +48,14 @@
         "lemma": "nasi"
       },
       {
+        "surface": "of each",
+        "lemma": "kol"
+      },
+      {
+        "surface": "tribe",
+        "lemma": "av"
+      },
+      {
         "surface": "Write",
         "lemma": "katav"
       },
@@ -96,6 +104,10 @@
       {
         "surface": "for the head",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of each tribe",
+        "lemma": "av"
       }
     ],
     "4": [
@@ -172,8 +184,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "and each",
+        "lemma": "kol"
+      },
+      {
         "surface": "of their leaders",
         "lemma": "nasi"
+      },
+      {
+        "surface": "gave him",
+        "lemma": "natan"
       },
       {
         "surface": "a",
@@ -194,6 +214,10 @@
       {
         "surface": "of the leaders",
         "lemma": "nasi"
+      },
+      {
+        "surface": "of their tribes",
+        "lemma": "av"
       },
       {
         "surface": "twelve",
@@ -260,16 +284,16 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the Tent",
         "lemma": "ohel"
       },
       {
         "surface": "of the Testimony",
         "lemma": "edut"
-      },
-      {
-        "surface": "and saw",
-        "lemma": "hinneh"
       },
       {
         "surface": "that Aaron’s",
@@ -290,6 +314,10 @@
       {
         "surface": "had sprouted",
         "lemma": "parach"
+      },
+      {
+        "surface": "put forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "buds",
@@ -314,6 +342,14 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "brought out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the staffs",
         "lemma": "matteh"
       },
@@ -326,8 +362,16 @@
         "lemma": "paneh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "They saw them",
+        "lemma": "raah"
       },
       {
         "surface": "and each man",
@@ -348,8 +392,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "Put",
+        "lemma": "shuv"
       },
       {
         "surface": "Aaron’s",
@@ -388,6 +440,10 @@
         "lemma": "telunah"
       },
       {
+        "surface": "lest",
+        "lemma": "lo"
+      },
+      {
         "surface": "they die",
         "lemma": "mut"
       }
@@ -396,6 +452,10 @@
       {
         "surface": "So Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "the LORD",
@@ -412,12 +472,12 @@
         "lemma": "ben"
       },
       {
-        "surface": "Moses",
-        "lemma": "mosheh"
+        "surface": "declared",
+        "lemma": "amar"
       },
       {
-        "surface": "Look",
-        "lemma": "hen"
+        "surface": "Moses",
+        "lemma": "mosheh"
       },
       {
         "surface": "we are perishing",
@@ -428,11 +488,19 @@
         "lemma": "avad"
       },
       {
+        "surface": "we are all",
+        "lemma": "kol"
+      },
+      {
         "surface": "lost",
         "lemma": "avad"
       }
     ],
     "13": [
+      {
+        "surface": "Anyone",
+        "lemma": "kol"
+      },
       {
         "surface": "who comes near",
         "lemma": "qarev"
@@ -462,6 +530,6 @@
   "themeLemmas": [
     "matteh",
     "mosheh",
-    "paneh"
+    "kol"
   ]
 }

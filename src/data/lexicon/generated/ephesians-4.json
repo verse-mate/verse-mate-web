@@ -36,6 +36,10 @@
     ],
     "2": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "humility",
         "lemma": "tapeinophrosune"
       },
@@ -88,8 +92,16 @@
     ],
     "4": [
       {
+        "surface": "There is one",
+        "lemma": "heis"
+      },
+      {
         "surface": "body",
         "lemma": "soma"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "Spirit",
@@ -98,6 +110,10 @@
       {
         "surface": "you were called",
         "lemma": "kaleo"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "hope",
@@ -110,12 +126,24 @@
     ],
     "5": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "baptism",
@@ -124,12 +152,32 @@
     ],
     "6": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
       {
         "surface": "Father",
         "lemma": "pater"
+      },
+      {
+        "surface": "of all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ],
     "7": [
@@ -138,8 +186,16 @@
         "lemma": "hekastos"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "has been given",
+        "lemma": "didomi"
       },
       {
         "surface": "measure",
@@ -155,6 +211,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "it says",
+        "lemma": "lego"
+      },
       {
         "surface": "When He ascended",
         "lemma": "anabaino"
@@ -172,6 +232,10 @@
         "lemma": "aichmalosia"
       },
       {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "gifts",
         "lemma": "doma"
       },
@@ -181,6 +245,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "does",
+        "lemma": "eimi"
+      },
       {
         "surface": "He ascended” mean",
         "lemma": "anabaino"
@@ -208,8 +280,16 @@
         "lemma": "katabaino"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "who ascended",
         "lemma": "anabaino"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "heavens",
@@ -218,9 +298,17 @@
       {
         "surface": "to fill",
         "lemma": "pleroo"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
       }
     ],
     "11": [
+      {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
       {
         "surface": "to be apostles",
         "lemma": "apostolos"
@@ -273,6 +361,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
       {
         "surface": "we all reach",
         "lemma": "katantao"
@@ -328,6 +420,10 @@
         "lemma": "meketi"
       },
       {
+        "surface": "be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "infants",
         "lemma": "nepios"
       },
@@ -338,6 +434,10 @@
       {
         "surface": "carried around",
         "lemma": "periphero"
+      },
+      {
+        "surface": "by every",
+        "lemma": "pas"
       },
       {
         "surface": "wind",
@@ -378,6 +478,10 @@
         "lemma": "agape"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "grow up",
         "lemma": "auxano"
       },
@@ -386,11 +490,19 @@
         "lemma": "christos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "head",
         "lemma": "kephale"
       }
     ],
     "16": [
+      {
+        "surface": "whole",
+        "lemma": "pas"
+      },
       {
         "surface": "body",
         "lemma": "soma"
@@ -402,6 +514,10 @@
       {
         "surface": "held together",
         "lemma": "sumbibazo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "supporting",
@@ -436,11 +552,19 @@
         "lemma": "hekastos"
       },
       {
+        "surface": "individual",
+        "lemma": "heis"
+      },
+      {
         "surface": "part",
         "lemma": "meros"
       }
     ],
     "17": [
+      {
+        "surface": "I tell you",
+        "lemma": "lego"
+      },
       {
         "surface": "insist on it",
         "lemma": "marturomai"
@@ -484,6 +608,10 @@
         "lemma": "dianoia"
       },
       {
+        "surface": "and",
+        "lemma": "eimi"
+      },
+      {
         "surface": "alienated from",
         "lemma": "apallotrioo"
       },
@@ -498,6 +626,10 @@
       {
         "surface": "ignorance",
         "lemma": "agnoia"
+      },
+      {
+        "surface": "that is",
+        "lemma": "eimi"
       },
       {
         "surface": "hardness",
@@ -526,6 +658,10 @@
         "lemma": "ergasia"
       },
       {
+        "surface": "of every kind",
+        "lemma": "pas"
+      },
+      {
         "surface": "of impurity",
         "lemma": "akatharsia"
       },
@@ -550,12 +686,20 @@
     ],
     "21": [
       {
+        "surface": "you heard of",
+        "lemma": "akouo"
+      },
+      {
         "surface": "were taught",
         "lemma": "didasko"
       },
       {
         "surface": "the truth",
         "lemma": "aletheia"
+      },
+      {
+        "surface": "that is",
+        "lemma": "eimi"
       },
       {
         "surface": "Jesus",
@@ -658,12 +802,20 @@
         "lemma": "pseudos"
       },
       {
+        "surface": "and speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "truthfully",
         "lemma": "aletheia"
       },
       {
         "surface": "neighbor",
         "lemma": "plesion"
+      },
+      {
+        "surface": "we are all",
+        "lemma": "eimi"
       },
       {
         "surface": "members",
@@ -697,6 +849,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "give",
+        "lemma": "didomi"
+      },
       {
         "surface": "devil",
         "lemma": "diabolos"
@@ -740,8 +896,16 @@
         "lemma": "cheir"
       },
       {
+        "surface": "he may have something",
+        "lemma": "echo"
+      },
+      {
         "surface": "to share with",
         "lemma": "metadidomi"
+      },
+      {
+        "surface": "in",
+        "lemma": "echo"
       },
       {
         "surface": "need",
@@ -778,8 +942,16 @@
         "lemma": "chreia"
       },
       {
+        "surface": "bringing",
+        "lemma": "didomi"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "who listen",
+        "lemma": "akouo"
       }
     ],
     "30": [
@@ -818,6 +990,10 @@
         "lemma": "airo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "bitterness",
         "lemma": "pikria"
       },
@@ -838,11 +1014,19 @@
         "lemma": "blasphemia"
       },
       {
+        "surface": "every form",
+        "lemma": "pas"
+      },
+      {
         "surface": "of malice",
         "lemma": "kakia"
       }
     ],
     "32": [
+      {
+        "surface": "Be",
+        "lemma": "ginomai"
+      },
       {
         "surface": "kind",
         "lemma": "chrestos"

@@ -26,6 +26,10 @@
         "lemma": "kavod"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "befit",
         "lemma": "naeh"
       },
@@ -58,6 +62,14 @@
       {
         "surface": "curse",
         "lemma": "qelalah"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come to rest",
+        "lemma": "bo"
       }
     ],
     "3": [
@@ -92,6 +104,10 @@
     ],
     "4": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "answer",
         "lemma": "un"
       },
@@ -120,6 +136,10 @@
       {
         "surface": "according to his folly",
         "lemma": "ivvelet"
+      },
+      {
+        "surface": "he become",
+        "lemma": "hayah"
       },
       {
         "surface": "wise",
@@ -208,6 +228,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "the giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "of honor",
         "lemma": "kavod"
       },
@@ -256,6 +280,10 @@
         "lemma": "chalal"
       },
       {
+        "surface": "at random",
+        "lemma": "kol"
+      },
+      {
         "surface": "is he who hires",
         "lemma": "sakhar"
       },
@@ -278,6 +306,10 @@
         "lemma": "kelev"
       },
       {
+        "surface": "returns",
+        "lemma": "shuv"
+      },
+      {
         "surface": "its vomit",
         "lemma": "qe"
       },
@@ -295,6 +327,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Do you see",
+        "lemma": "raah"
+      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -320,6 +356,10 @@
       {
         "surface": "The slacker",
         "lemma": "atsel"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "A lion",
@@ -386,6 +426,10 @@
         "lemma": "laah"
       },
       {
+        "surface": "to bring it back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his mouth",
         "lemma": "peh"
       }
@@ -406,6 +450,10 @@
       {
         "surface": "than seven men",
         "lemma": "sheva"
+      },
+      {
+        "surface": "who answer",
+        "lemma": "shuv"
       },
       {
         "surface": "discreetly",
@@ -436,6 +484,10 @@
       {
         "surface": "a quarrel",
         "lemma": "riv"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       }
     ],
     "18": [
@@ -476,6 +528,14 @@
       {
         "surface": "his neighbor",
         "lemma": "rea"
+      },
+      {
+        "surface": "and says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "was only",
+        "lemma": "lo"
       },
       {
         "surface": "joking",
@@ -638,6 +698,10 @@
         "lemma": "chanan"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "believe",
         "lemma": "aman"
       },
@@ -700,6 +764,10 @@
       {
         "surface": "a stone",
         "lemma": "even"
+      },
+      {
+        "surface": "will have it roll back",
+        "lemma": "shuv"
       }
     ],
     "28": [
@@ -728,6 +796,10 @@
         "lemma": "peh"
       },
       {
+        "surface": "causes",
+        "lemma": "asah"
+      },
+      {
         "surface": "ruin",
         "lemma": "midcheh"
       }
@@ -735,7 +807,7 @@
   },
   "themeLemmas": [
     "kesil",
-    "peh",
-    "atsel"
+    "shuv",
+    "peh"
   ]
 }

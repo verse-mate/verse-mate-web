@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
         "surface": "men",
         "lemma": "adam"
       },
@@ -44,6 +48,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the daughters",
         "lemma": "bat"
       },
@@ -64,6 +72,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "vvv",
+        "lemma": "kol"
+      },
+      {
         "surface": "they chose",
         "lemma": "bachar"
       }
@@ -74,8 +86,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "My Spirit",
         "lemma": "ruach"
+      },
+      {
+        "surface": "will} not",
+        "lemma": "lo"
       },
       {
         "surface": "contend",
@@ -98,6 +118,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "shall} be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "120",
         "lemma": "meah"
       },
@@ -110,6 +134,10 @@
       {
         "surface": "The Nephilim",
         "lemma": "nephil"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "on the earth",
@@ -130,6 +158,10 @@
       {
         "surface": "of God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "had relations with",
+        "lemma": "bo"
       },
       {
         "surface": "the daughters",
@@ -166,6 +198,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the wickedness",
         "lemma": "ra"
       },
@@ -180,6 +216,10 @@
       {
         "surface": "upon the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "and that every",
+        "lemma": "kol"
       },
       {
         "surface": "inclination",
@@ -198,6 +238,10 @@
         "lemma": "ra"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the time",
         "lemma": "yom"
       }
@@ -210,6 +254,10 @@
       {
         "surface": "regretted",
         "lemma": "nacham"
+      },
+      {
+        "surface": "He had made",
+        "lemma": "asah"
       },
       {
         "surface": "man",
@@ -232,6 +280,10 @@
       {
         "surface": "So the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "I will blot out",
@@ -276,6 +328,10 @@
       {
         "surface": "I am grieved",
         "lemma": "nacham"
+      },
+      {
+        "surface": "I have made them",
+        "lemma": "asah"
       }
     ],
     "8": [
@@ -312,6 +368,10 @@
       {
         "surface": "Noah",
         "lemma": "noach"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "a righteous man",
@@ -404,16 +464,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "looked",
+        "lemma": "raah"
+      },
+      {
         "surface": "upon the earth",
         "lemma": "erets"
       },
       {
-        "surface": "and saw that",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "it was corrupt",
         "lemma": "shachat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "living creatures",
@@ -438,6 +502,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Noah",
         "lemma": "noach"
       },
@@ -446,8 +514,16 @@
         "lemma": "qets"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "living creatures",
         "lemma": "basar"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
       },
       {
         "surface": "before Me",
@@ -470,10 +546,6 @@
         "lemma": "chamas"
       },
       {
-        "surface": "Now behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "I will destroy both them",
         "lemma": "shachat"
       },
@@ -483,6 +555,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "Make",
+        "lemma": "asah"
+      },
       {
         "surface": "an ark",
         "lemma": "tevah"
@@ -494,6 +570,10 @@
       {
         "surface": "wood",
         "lemma": "ets"
+      },
+      {
+        "surface": "make",
+        "lemma": "asah"
       },
       {
         "surface": "rooms",
@@ -521,6 +601,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "you are to build",
+        "lemma": "asah"
+      },
       {
         "surface": "The ark",
         "lemma": "tevah"
@@ -564,6 +648,10 @@
     ],
     "16": [
       {
+        "surface": "You are to make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a roof",
         "lemma": "tsohar"
       },
@@ -600,6 +688,10 @@
         "lemma": "tevah"
       },
       {
+        "surface": "and build",
+        "lemma": "asah"
+      },
+      {
         "surface": "lower",
         "lemma": "tachti"
       },
@@ -614,8 +706,8 @@
     ],
     "17": [
       {
-        "surface": "behold",
-        "lemma": "hinneh"
+        "surface": "I will bring",
+        "lemma": "bo"
       },
       {
         "surface": "floodwaters",
@@ -628,6 +720,10 @@
       {
         "surface": "to destroy",
         "lemma": "shachat"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "creature",
@@ -650,6 +746,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "on the earth",
         "lemma": "erets"
       },
@@ -666,6 +766,10 @@
       {
         "surface": "My covenant",
         "lemma": "berit"
+      },
+      {
+        "surface": "and you {will} enter",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",
@@ -690,8 +794,20 @@
     ],
     "19": [
       {
+        "surface": "And",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you are to bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "living",
@@ -724,6 +840,10 @@
         "lemma": "shenayim"
       },
       {
+        "surface": "of every kind",
+        "lemma": "kol"
+      },
+      {
         "surface": "bird",
         "lemma": "oph"
       },
@@ -732,8 +852,16 @@
         "lemma": "behemah"
       },
       {
+        "surface": "and",
+        "lemma": "kol"
+      },
+      {
         "surface": "crawling creature",
         "lemma": "remes"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "to be kept alive",
@@ -744,6 +872,10 @@
       {
         "surface": "to take",
         "lemma": "laqach"
+      },
+      {
+        "surface": "every kind",
+        "lemma": "kol"
       },
       {
         "surface": "of food",
@@ -768,6 +900,14 @@
         "lemma": "noach"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "precisely as",
         "lemma": "ken"
       },
@@ -782,8 +922,8 @@
     ]
   },
   "themeLemmas": [
-    "tevah",
-    "noach",
-    "adam"
+    "kol",
+    "asah",
+    "tevah"
   ]
 }

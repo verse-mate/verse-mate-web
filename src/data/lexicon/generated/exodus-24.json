@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Then the LORD said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -68,12 +72,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "must} not",
+        "lemma": "lo"
+      },
+      {
         "surface": "come near",
         "lemma": "nagash"
       },
       {
         "surface": "And the people",
         "lemma": "am"
+      },
+      {
+        "surface": "may not",
+        "lemma": "lo"
       },
       {
         "surface": "go up",
@@ -86,6 +98,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "and told",
         "lemma": "saphar"
       },
@@ -94,8 +110,16 @@
         "lemma": "am"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the words",
         "lemma": "davar"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "ordinances",
@@ -110,6 +134,10 @@
         "lemma": "am"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "responded",
         "lemma": "un"
       },
@@ -122,6 +150,10 @@
         "lemma": "qol"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the words",
         "lemma": "davar"
       },
@@ -132,6 +164,10 @@
       {
         "surface": "has spoken",
         "lemma": "davar"
+      },
+      {
+        "surface": "we will do",
+        "lemma": "asah"
       }
     ],
     "4": [
@@ -142,6 +178,10 @@
       {
         "surface": "wrote down",
         "lemma": "katav"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the words",
@@ -290,8 +330,20 @@
         "lemma": "berit"
       },
       {
+        "surface": "and read it",
+        "lemma": "qara"
+      },
+      {
         "surface": "to the people",
         "lemma": "am"
+      },
+      {
+        "surface": "who replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "the LORD",
@@ -300,6 +352,14 @@
       {
         "surface": "has spoken",
         "lemma": "davar"
+      },
+      {
+        "surface": "we will do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and we will be obedient",
+        "lemma": "shama"
       }
     ],
     "8": [
@@ -324,8 +384,8 @@
         "lemma": "am"
       },
       {
-        "surface": "This",
-        "lemma": "hinneh"
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "is the blood",
@@ -342,6 +402,10 @@
       {
         "surface": "has made",
         "lemma": "karat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "words",
@@ -383,6 +447,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "and they saw",
+        "lemma": "raah"
+      },
       {
         "surface": "the God",
         "lemma": "elohim"
@@ -426,6 +494,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "lay",
         "lemma": "shalach"
       },
@@ -460,6 +532,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -472,8 +548,16 @@
         "lemma": "har"
       },
       {
+        "surface": "and stay",
+        "lemma": "hayah"
+      },
+      {
         "surface": "here",
         "lemma": "sham"
+      },
+      {
+        "surface": "so that I may give",
+        "lemma": "natan"
       },
       {
         "surface": "the tablets",
@@ -532,8 +616,20 @@
     ],
     "14": [
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the elders",
         "lemma": "zaqen"
+      },
+      {
+        "surface": "Wait",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "we return",
+        "lemma": "shuv"
       },
       {
         "surface": "Aaron",
@@ -542,10 +638,6 @@
       {
         "surface": "and Hur",
         "lemma": "chur"
-      },
-      {
-        "surface": "are here",
-        "lemma": "hinneh"
       },
       {
         "surface": "Whoever",
@@ -628,6 +720,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "the LORD called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -684,6 +780,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the cloud",
         "lemma": "anan"
       },
@@ -698,6 +798,10 @@
       {
         "surface": "and he",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "remained",
+        "lemma": "hayah"
       },
       {
         "surface": "on the mountain",

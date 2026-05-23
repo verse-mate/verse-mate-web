@@ -76,11 +76,19 @@
         "lemma": "yakhach"
       },
       {
+        "surface": "and enters",
+        "lemma": "bo"
+      },
+      {
         "surface": "into judgment",
         "lemma": "mishpat"
       }
     ],
     "5": [
+      {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
       {
         "surface": "your wickedness",
         "lemma": "ra"
@@ -130,6 +138,10 @@
         "lemma": "shaqah"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "water",
         "lemma": "mayim"
       },
@@ -170,6 +182,10 @@
       {
         "surface": "of honor",
         "lemma": "paneh"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       }
     ],
     "9": [
@@ -226,6 +242,14 @@
         "lemma": "choshekh"
       },
       {
+        "surface": "you cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "and a flood",
         "lemma": "shiphah"
       },
@@ -240,6 +264,10 @@
     ],
     "12": [
       {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "God",
         "lemma": "eloah"
       },
@@ -250,6 +278,10 @@
       {
         "surface": "as the heavens",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "Look at",
+        "lemma": "raah"
       },
       {
         "surface": "the highest",
@@ -265,6 +297,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Yet you say",
+        "lemma": "amar"
+      },
       {
         "surface": "What",
         "lemma": "mah"
@@ -292,8 +328,20 @@
     ],
     "14": [
       {
+        "surface": "Thick clouds",
+        "lemma": "av"
+      },
+      {
         "surface": "veil",
         "lemma": "seter"
+      },
+      {
+        "surface": "so He does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see us",
+        "lemma": "raah"
       },
       {
         "surface": "as He traverses",
@@ -340,6 +388,14 @@
         "lemma": "qamat"
       },
       {
+        "surface": "before",
+        "lemma": "lo"
+      },
+      {
+        "surface": "their time",
+        "lemma": "et"
+      },
+      {
         "surface": "and their foundations",
         "lemma": "yesod"
       },
@@ -353,6 +409,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "They said",
+        "lemma": "amar"
+      },
       {
         "surface": "to God",
         "lemma": "el"
@@ -406,6 +466,10 @@
         "lemma": "tsaddiq"
       },
       {
+        "surface": "see it",
+        "lemma": "raah"
+      },
+      {
         "surface": "and are glad",
         "lemma": "samach"
       },
@@ -419,6 +483,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "Surely",
+        "lemma": "im"
+      },
       {
         "surface": "our foes",
         "lemma": "qim"
@@ -446,16 +514,16 @@
         "lemma": "sakhan"
       },
       {
-        "surface": "now",
-        "lemma": "na"
-      },
-      {
         "surface": "and be at peace",
         "lemma": "salem"
       },
       {
         "surface": "good",
         "lemma": "tov"
+      },
+      {
+        "surface": "will come to you",
+        "lemma": "bo"
       }
     ],
     "22": [
@@ -485,6 +553,14 @@
       }
     ],
     "23": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you return",
+        "lemma": "shuv"
+      },
       {
         "surface": "the Almighty",
         "lemma": "shadday"
@@ -538,6 +614,10 @@
         "lemma": "shadday"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "your gold",
         "lemma": "betser"
       },
@@ -578,6 +658,10 @@
         "lemma": "atar"
       },
       {
+        "surface": "and He will hear you",
+        "lemma": "shama"
+      },
+      {
         "surface": "and you will fulfill",
         "lemma": "salem"
       },
@@ -612,6 +696,10 @@
       {
         "surface": "men are brought low",
         "lemma": "shaphel"
+      },
+      {
+        "surface": "and you say",
+        "lemma": "amar"
       },
       {
         "surface": "Lift them up",
@@ -654,8 +742,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "shadday",
-    "sakhan",
-    "zeroa"
+    "raah"
   ]
 }

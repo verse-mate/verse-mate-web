@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "In",
+        "lemma": "et"
+      },
+      {
         "surface": "the spring",
         "lemma": "teshuvah"
       },
       {
+        "surface": "at the time when",
+        "lemma": "et"
+      },
+      {
         "surface": "kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "march out to war",
+        "lemma": "yatsa"
       },
       {
         "surface": "Joab",
@@ -38,6 +50,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "He came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Rabbah",
         "lemma": "rabbah"
       },
@@ -48,6 +64,10 @@
       {
         "surface": "but David",
         "lemma": "david"
+      },
+      {
+        "surface": "remained",
+        "lemma": "yashav"
       },
       {
         "surface": "in Jerusalem",
@@ -116,12 +136,20 @@
         "lemma": "even"
       },
       {
+        "surface": "and it was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "David’s",
         "lemma": "david"
       },
       {
         "surface": "head",
         "lemma": "rosh"
+      },
+      {
+        "surface": "And David took",
+        "lemma": "yatsa"
       },
       {
         "surface": "a great amount",
@@ -137,6 +165,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "David brought out",
+        "lemma": "yatsa"
+      },
       {
         "surface": "the people",
         "lemma": "am"
@@ -166,8 +198,16 @@
         "lemma": "david"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "the same",
         "lemma": "ken"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the Ammonite",
@@ -182,8 +222,16 @@
         "lemma": "david"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his troops",
         "lemma": "am"
+      },
+      {
+        "surface": "returned",
+        "lemma": "shuv"
       },
       {
         "surface": "to Jerusalem",
@@ -191,6 +239,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Some time later",
+        "lemma": "hayah"
+      },
       {
         "surface": "war",
         "lemma": "milchamah"
@@ -240,6 +292,10 @@
       {
         "surface": "Once again",
         "lemma": "od"
+      },
+      {
+        "surface": "there was",
+        "lemma": "hayah"
       },
       {
         "surface": "a battle",
@@ -300,6 +356,10 @@
     ],
     "6": [
       {
+        "surface": "And there was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "also",
         "lemma": "od"
       },
@@ -310,6 +370,10 @@
       {
         "surface": "at Gath",
         "lemma": "gat"
+      },
+      {
+        "surface": "where there was",
+        "lemma": "hayah"
       },
       {
         "surface": "a man",
@@ -411,7 +475,7 @@
   },
   "themeLemmas": [
     "david",
-    "nakhah",
-    "rapah"
+    "hayah",
+    "nakhah"
   ]
 }

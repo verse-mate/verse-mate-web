@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "there is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a dispute",
         "lemma": "riv"
       },
@@ -47,6 +51,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "the guilty man",
         "lemma": "rasah"
@@ -90,6 +98,10 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more",
         "lemma": "yasaph"
       },
@@ -120,6 +132,10 @@
     ],
     "4": [
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "muzzle",
         "lemma": "chasam"
       },
@@ -136,6 +152,10 @@
       {
         "surface": "brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "together",
@@ -162,6 +182,14 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "marry",
+        "lemma": "hayah"
+      },
+      {
         "surface": "vvv",
         "lemma": "zur"
       },
@@ -180,6 +208,10 @@
       {
         "surface": "wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "bo"
       },
       {
         "surface": "and fulfill the duty of a brother-in-law for her",
@@ -216,6 +248,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be blotted out",
         "lemma": "machah"
       },
@@ -226,8 +262,16 @@
     ],
     "7": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "the man",
         "lemma": "ish"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "want",
@@ -258,6 +302,10 @@
         "lemma": "shaar"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "My husband’s brother",
         "lemma": "yavam"
       },
@@ -282,6 +330,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "He is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "willing",
         "lemma": "avah"
       },
@@ -300,12 +352,24 @@
         "lemma": "ir"
       },
       {
+        "surface": "shall summon",
+        "lemma": "qara"
+      },
+      {
         "surface": "and speak",
         "lemma": "davar"
       },
       {
         "surface": "If he persists",
         "lemma": "amad"
+      },
+      {
+        "surface": "and says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
       },
       {
         "surface": "want",
@@ -350,12 +414,24 @@
         "lemma": "paneh"
       },
       {
+        "surface": "and declare",
+        "lemma": "amar"
+      },
+      {
         "surface": "This is what",
         "lemma": "kakhah"
       },
       {
+        "surface": "is done",
+        "lemma": "asah"
+      },
+      {
         "surface": "to the man",
         "lemma": "ish"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "maintain",
@@ -378,6 +454,10 @@
       {
         "surface": "in Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "will be called",
+        "lemma": "qara"
       },
       {
         "surface": "The House",
@@ -452,11 +532,23 @@
         "lemma": "kaph"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "You must show her no pity",
         "lemma": "chus"
       }
     ],
     "13": [
+      {
+        "surface": "You shall not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "have",
+        "lemma": "hayah"
+      },
       {
         "surface": "two differing weights",
         "lemma": "even"
@@ -476,6 +568,14 @@
     ],
     "14": [
       {
+        "surface": "You shall not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "have",
+        "lemma": "hayah"
+      },
+      {
         "surface": "two differing measures",
         "lemma": "ephah"
       },
@@ -493,6 +593,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "You must maintain",
+        "lemma": "hayah"
+      },
       {
         "surface": "accurate",
         "lemma": "shalem"
@@ -528,9 +632,21 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is giving",
+        "lemma": "natan"
       }
     ],
     "16": [
+      {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who behaves",
+        "lemma": "asah"
+      },
       {
         "surface": "dishonestly",
         "lemma": "evel"
@@ -558,8 +674,16 @@
         "lemma": "amaleq"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "along your way",
         "lemma": "derekh"
+      },
+      {
+        "surface": "from",
+        "lemma": "yatsa"
       },
       {
         "surface": "Egypt",
@@ -588,8 +712,16 @@
         "lemma": "zanav"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your stragglers",
         "lemma": "chashal"
+      },
+      {
+        "surface": "they had no",
+        "lemma": "lo"
       },
       {
         "surface": "fear",
@@ -614,6 +746,10 @@
         "lemma": "nuach"
       },
       {
+        "surface": "from",
+        "lemma": "kol"
+      },
+      {
         "surface": "the enemies",
         "lemma": "oyev"
       },
@@ -628,6 +764,10 @@
       {
         "surface": "He",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is giving",
+        "lemma": "natan"
       },
       {
         "surface": "to possess",
@@ -658,14 +798,18 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forget",
         "lemma": "shakhach"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "nakhah",
-    "ach",
-    "yavam"
+    "hayah"
   ]
 }

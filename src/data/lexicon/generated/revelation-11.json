@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "a measuring rod",
         "lemma": "kalamos"
       },
@@ -16,6 +20,10 @@
       {
         "surface": "a staff",
         "lemma": "rhabdos"
+      },
+      {
+        "surface": "and was told",
+        "lemma": "lego"
       },
       {
         "surface": "Go",
@@ -60,6 +68,10 @@
         "lemma": "metreo"
       },
       {
+        "surface": "it has been given over",
+        "lemma": "didomi"
+      },
+      {
         "surface": "nations",
         "lemma": "ethnos"
       },
@@ -85,6 +97,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "I will empower",
+        "lemma": "didomi"
+      },
       {
         "surface": "two",
         "lemma": "duo"
@@ -116,6 +132,10 @@
     ],
     "4": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "two",
         "lemma": "duo"
       },
@@ -132,6 +152,10 @@
         "lemma": "luchnia"
       },
       {
+        "surface": "that stand",
+        "lemma": "histemi"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
@@ -141,6 +165,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "wants",
+        "lemma": "thelo"
+      },
       {
         "surface": "to harm",
         "lemma": "adikeo"
@@ -170,6 +198,10 @@
         "lemma": "houto"
       },
       {
+        "surface": "wants",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to harm",
         "lemma": "adikeo"
       },
@@ -183,6 +215,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "have",
+        "lemma": "echo"
+      },
       {
         "surface": "power",
         "lemma": "exousia"
@@ -236,8 +272,16 @@
         "lemma": "ge"
       },
       {
+        "surface": "every kind of",
+        "lemma": "pas"
+      },
+      {
         "surface": "plague",
         "lemma": "plege"
+      },
+      {
+        "surface": "they wish",
+        "lemma": "thelo"
       }
     ],
     "7": [
@@ -262,6 +306,10 @@
         "lemma": "abussos"
       },
       {
+        "surface": "will wage",
+        "lemma": "poieo"
+      },
+      {
         "surface": "war",
         "lemma": "polemos"
       },
@@ -282,6 +330,10 @@
       {
         "surface": "street",
         "lemma": "plateia"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "city",
@@ -442,8 +494,20 @@
         "lemma": "theos"
       },
       {
+        "surface": "entered",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "they stood",
+        "lemma": "histemi"
+      },
+      {
         "surface": "feet",
         "lemma": "pous"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "fear",
@@ -460,12 +524,24 @@
     ],
     "12": [
       {
+        "surface": "the witnesses heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
       },
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "Come up",
@@ -500,6 +576,14 @@
       {
         "surface": "hour",
         "lemma": "hora"
+      },
+      {
+        "surface": "there was",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
       },
       {
         "surface": "earthquake",
@@ -546,8 +630,16 @@
         "lemma": "loipos"
       },
       {
+        "surface": "were",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "terrified",
         "lemma": "emphobos"
+      },
+      {
+        "surface": "gave",
+        "lemma": "didomi"
       },
       {
         "surface": "glory",
@@ -576,6 +668,10 @@
         "lemma": "tritos"
       },
       {
+        "surface": "is coming",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "shortly",
         "lemma": "tachu"
       }
@@ -594,8 +690,16 @@
         "lemma": "salpizo"
       },
       {
+        "surface": "loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voices",
         "lemma": "phone"
+      },
+      {
+        "surface": "called out",
+        "lemma": "lego"
       },
       {
         "surface": "heaven",
@@ -608,6 +712,10 @@
       {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "has become",
+        "lemma": "ginomai"
       },
       {
         "surface": "Lord",
@@ -670,6 +778,10 @@
     ],
     "17": [
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "We give thanks",
         "lemma": "eucharisteo"
       },
@@ -684,6 +796,22 @@
       {
         "surface": "Almighty",
         "lemma": "pantokrator"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "You have taken",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "power",
@@ -708,6 +836,10 @@
         "lemma": "orge"
       },
       {
+        "surface": "has come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "time has come",
         "lemma": "kairos"
       },
@@ -718,6 +850,10 @@
       {
         "surface": "dead",
         "lemma": "nekros"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "didomi"
       },
       {
         "surface": "to reward",
@@ -746,6 +882,10 @@
       {
         "surface": "small",
         "lemma": "mikros"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "to destroy",
@@ -786,8 +926,16 @@
         "lemma": "diatheke"
       },
       {
+        "surface": "appeared",
+        "lemma": "horao"
+      },
+      {
         "surface": "temple",
         "lemma": "naos"
+      },
+      {
+        "surface": "there were",
+        "lemma": "ginomai"
       },
       {
         "surface": "flashes of lightning",
@@ -804,6 +952,10 @@
       {
         "surface": "an earthquake",
         "lemma": "seismos"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
       },
       {
         "surface": "hailstorm",

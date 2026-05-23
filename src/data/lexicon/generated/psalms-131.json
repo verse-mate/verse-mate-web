@@ -22,6 +22,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "proud",
         "lemma": "gavah"
       },
@@ -34,8 +38,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "haughty",
         "lemma": "rum"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
       },
       {
         "surface": "aspire",
@@ -51,6 +63,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "Surely",
+        "lemma": "im"
+      },
       {
         "surface": "I have stilled",
         "lemma": "shavah"
@@ -100,6 +116,7 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "nephesh",
     "gamal"
   ]

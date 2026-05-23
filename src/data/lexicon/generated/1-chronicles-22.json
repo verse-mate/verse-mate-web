@@ -10,6 +10,10 @@
         "lemma": "david"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
       },
@@ -38,6 +42,10 @@
       {
         "surface": "So David",
         "lemma": "david"
+      },
+      {
+        "surface": "gave orders",
+        "lemma": "amar"
       },
       {
         "surface": "to gather",
@@ -160,6 +168,10 @@
         "lemma": "tsori"
       },
       {
+        "surface": "had brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "a large quantity of",
         "lemma": "rov"
       },
@@ -180,6 +192,10 @@
       {
         "surface": "And David",
         "lemma": "david"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "My son",
@@ -226,12 +242,12 @@
         "lemma": "tipharah"
       },
       {
-        "surface": "lands",
-        "lemma": "erets"
+        "surface": "throughout all",
+        "lemma": "kol"
       },
       {
-        "surface": "Therefore",
-        "lemma": "na"
+        "surface": "lands",
+        "lemma": "erets"
       },
       {
         "surface": "I must make preparations",
@@ -259,6 +275,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "Then David called for",
+        "lemma": "qara"
+      },
       {
         "surface": "his son",
         "lemma": "ben"
@@ -298,12 +318,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
       {
         "surface": "to Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "it was",
+        "lemma": "hayah"
       },
       {
         "surface": "my heart",
@@ -340,6 +368,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "You have shed",
         "lemma": "shaphakh"
       },
@@ -352,12 +384,20 @@
         "lemma": "dam"
       },
       {
+        "surface": "and waged",
+        "lemma": "asah"
+      },
+      {
         "surface": "great",
         "lemma": "gadol"
       },
       {
         "surface": "wars",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "You are not",
+        "lemma": "lo"
       },
       {
         "surface": "to build",
@@ -394,16 +434,16 @@
     ],
     "9": [
       {
-        "surface": "But",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "a son",
         "lemma": "ben"
       },
       {
         "surface": "will be born",
         "lemma": "yalad"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "a man",
@@ -418,6 +458,10 @@
         "lemma": "nuach"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his enemies",
         "lemma": "oyev"
       },
@@ -430,8 +474,16 @@
         "lemma": "shem"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "and I will grant",
+        "lemma": "natan"
       },
       {
         "surface": "Israel",
@@ -464,8 +516,16 @@
         "lemma": "shem"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "son",
         "lemma": "ben"
+      },
+      {
+        "surface": "Father",
+        "lemma": "av"
       },
       {
         "surface": "And I will establish",
@@ -496,6 +556,10 @@
       {
         "surface": "may the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "and may you succeed",
@@ -530,6 +594,10 @@
       {
         "surface": "may the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
       },
       {
         "surface": "insight",
@@ -570,8 +638,16 @@
         "lemma": "tsalach"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "you carefully",
         "lemma": "shamar"
+      },
+      {
+        "surface": "follow",
+        "lemma": "asah"
       },
       {
         "surface": "the statutes",
@@ -606,6 +682,10 @@
         "lemma": "amats"
       },
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
@@ -615,10 +695,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "Now behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "I have taken great pains",
         "lemma": "oni"
@@ -694,6 +770,10 @@
         "lemma": "rov"
       },
       {
+        "surface": "workers",
+        "lemma": "asah"
+      },
+      {
         "surface": "stonecutters",
         "lemma": "chatsav"
       },
@@ -708,6 +788,10 @@
       {
         "surface": "and men skilled",
         "lemma": "chakham"
+      },
+      {
+        "surface": "in every kind",
+        "lemma": "kol"
       },
       {
         "surface": "of work",
@@ -744,8 +828,16 @@
         "lemma": "qamay"
       },
       {
+        "surface": "the work",
+        "lemma": "asah"
+      },
+      {
         "surface": "and may the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       }
     ],
     "17": [
@@ -756,6 +848,10 @@
       {
         "surface": "ordered",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the leaders",
@@ -780,6 +876,10 @@
     ],
     "18": [
       {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -794,6 +894,14 @@
       {
         "surface": "on every side",
         "lemma": "saviv"
+      },
+      {
+        "surface": "He has given",
+        "lemma": "natan"
+      },
+      {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "of the land",
@@ -828,6 +936,10 @@
       {
         "surface": "Now",
         "lemma": "attah"
+      },
+      {
+        "surface": "set",
+        "lemma": "natan"
       },
       {
         "surface": "your heart",
@@ -868,6 +980,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "so that you may bring",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",

@@ -78,12 +78,24 @@
     ],
     "3": [
       {
+        "surface": "who has no",
+        "lemma": "lo"
+      },
+      {
         "surface": "slander",
         "lemma": "ragal"
       },
       {
         "surface": "his tongue",
         "lemma": "lashon"
+      },
+      {
+        "surface": "who does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "harm",
@@ -124,6 +136,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "who does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "revise",
         "lemma": "mur"
       },
@@ -138,8 +154,16 @@
     ],
     "5": [
       {
+        "surface": "who lends",
+        "lemma": "natan"
+      },
+      {
         "surface": "his money",
         "lemma": "keseph"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "interest",
@@ -158,12 +182,22 @@
         "lemma": "naqi"
       },
       {
+        "surface": "He who does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "be shaken",
         "lemma": "mot"
       }
     ]
   },
   "themeLemmas": [
-    "mi"
+    "lo",
+    "mi",
+    "asah"
   ]
 }

@@ -14,6 +14,10 @@
         "lemma": "bavel"
       },
       {
+        "surface": "we sat",
+        "lemma": "yashav"
+      },
+      {
         "surface": "wept",
         "lemma": "bakhah"
       },
@@ -106,6 +110,10 @@
     ],
     "5": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I forget you",
         "lemma": "shakhach"
       },
@@ -136,8 +144,24 @@
         "lemma": "chekh"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "remember you",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
       },
       {
         "surface": "exalt",
@@ -184,6 +208,10 @@
       {
         "surface": "Destroy it",
         "lemma": "arah"
+      },
+      {
+        "surface": "they said",
+        "lemma": "amar"
       },
       {
         "surface": "tear it down",

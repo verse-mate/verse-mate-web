@@ -36,6 +36,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "when I sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "and when I rise",
         "lemma": "qamay"
       },
@@ -70,6 +74,10 @@
         "lemma": "sakhan"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my ways",
         "lemma": "derekh"
       }
@@ -86,6 +94,10 @@
       {
         "surface": "You know",
         "lemma": "yada"
+      },
+      {
+        "surface": "all about it",
+        "lemma": "kol"
       },
       {
         "surface": "O LORD",
@@ -160,6 +172,10 @@
     ],
     "8": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I ascend",
         "lemma": "nasaq"
       },
@@ -172,12 +188,12 @@
         "lemma": "sham"
       },
       {
-        "surface": "in Sheol",
-        "lemma": "sheol"
+        "surface": "if I make my bed",
+        "lemma": "yatsa"
       },
       {
-        "surface": "You are there",
-        "lemma": "hen"
+        "surface": "in Sheol",
+        "lemma": "sheol"
       }
     ],
     "9": [
@@ -230,6 +246,10 @@
     ],
     "11": [
       {
+        "surface": "If I say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Surely",
         "lemma": "akh"
       },
@@ -258,6 +278,10 @@
       {
         "surface": "the darkness",
         "lemma": "choshekh"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "dark",
@@ -346,8 +370,16 @@
         "lemma": "otsem"
       },
       {
+        "surface": "was not",
+        "lemma": "lo"
+      },
+      {
         "surface": "hidden",
         "lemma": "kachad"
+      },
+      {
+        "surface": "I was made",
+        "lemma": "asah"
       },
       {
         "surface": "in secret",
@@ -372,8 +404,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "my unformed body",
         "lemma": "golem"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "my days",
@@ -450,6 +490,10 @@
     ],
     "19": [
       {
+        "surface": "O",
+        "lemma": "im"
+      },
+      {
         "surface": "God",
         "lemma": "eloah"
       },
@@ -476,6 +520,10 @@
     ],
     "20": [
       {
+        "surface": "speak of You",
+        "lemma": "amar"
+      },
+      {
         "surface": "deceitfully",
         "lemma": "mezimmah"
       },
@@ -493,6 +541,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "Do I not",
+        "lemma": "lo"
+      },
       {
         "surface": "hate",
         "lemma": "sane"
@@ -526,6 +578,10 @@
       {
         "surface": "hatred",
         "lemma": "sinah"
+      },
+      {
+        "surface": "I count them",
+        "lemma": "hayah"
       },
       {
         "surface": "as my enemies",
@@ -564,6 +620,14 @@
     ],
     "24": [
       {
+        "surface": "See",
+        "lemma": "raah"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "there is any offensive",
         "lemma": "otsev"
       },
@@ -588,6 +652,6 @@
   "themeLemmas": [
     "yada",
     "sane",
-    "sham"
+    "lo"
   ]
 }

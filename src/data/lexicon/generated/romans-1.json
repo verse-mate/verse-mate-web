@@ -66,6 +66,10 @@
         "lemma": "huios"
       },
       {
+        "surface": "was a descendant",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "of David",
         "lemma": "daueid"
       },
@@ -126,12 +130,20 @@
         "lemma": "onoma"
       },
       {
+        "surface": "we received",
+        "lemma": "lambano"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
       },
       {
         "surface": "apostleship",
         "lemma": "apostole"
+      },
+      {
+        "surface": "all those",
+        "lemma": "pas"
       },
       {
         "surface": "Gentiles",
@@ -148,6 +160,10 @@
     ],
     "6": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "called",
         "lemma": "kletos"
       },
@@ -161,6 +177,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "To all",
+        "lemma": "pas"
+      },
       {
         "surface": "Rome",
         "lemma": "rhome"
@@ -232,6 +252,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
       },
@@ -270,12 +294,20 @@
         "lemma": "huios"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "witness",
         "lemma": "martus"
       },
       {
         "surface": "constantly",
         "lemma": "adialeiptos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "poieo"
       },
       {
         "surface": "I remember",
@@ -310,12 +342,20 @@
       {
         "surface": "I may succeed",
         "lemma": "euodoo"
+      },
+      {
+        "surface": "in coming",
+        "lemma": "erchomai"
       }
     ],
     "11": [
       {
         "surface": "I long",
         "lemma": "epipotheo"
+      },
+      {
+        "surface": "to see",
+        "lemma": "horao"
       },
       {
         "surface": "I may impart",
@@ -336,6 +376,10 @@
     ],
     "12": [
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "may be mutually encouraged",
         "lemma": "sumparakaleo"
       },
@@ -349,6 +393,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "I do not want",
+        "lemma": "thelo"
+      },
       {
         "surface": "to be unaware",
         "lemma": "agnoeo"
@@ -366,8 +414,16 @@
         "lemma": "protithemi"
       },
       {
+        "surface": "to come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "have been prevented from visiting",
         "lemma": "koluo"
+      },
+      {
+        "surface": "I might have",
+        "lemma": "echo"
       },
       {
         "surface": "harvest",
@@ -383,6 +439,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
       {
         "surface": "obligated",
         "lemma": "opheiletes"
@@ -432,6 +492,10 @@
         "lemma": "euangelion"
       },
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the power",
         "lemma": "dunamis"
       },
@@ -442,6 +506,10 @@
       {
         "surface": "salvation",
         "lemma": "soteria"
+      },
+      {
+        "surface": "to everyone",
+        "lemma": "pas"
       },
       {
         "surface": "believes",
@@ -482,6 +550,10 @@
         "lemma": "pistis"
       },
       {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "righteous",
         "lemma": "dikaios"
       },
@@ -510,6 +582,10 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "the godlessness",
@@ -544,6 +620,10 @@
       {
         "surface": "about God",
         "lemma": "theos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "plain",
@@ -596,11 +676,19 @@
         "lemma": "poiema"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "without excuse",
         "lemma": "anapologetos"
       }
     ],
     "21": [
+      {
+        "surface": "although they knew",
+        "lemma": "ginosko"
+      },
       {
         "surface": "God",
         "lemma": "theos"
@@ -642,6 +730,10 @@
       {
         "surface": "Although they claimed",
         "lemma": "phasko"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
       },
       {
         "surface": "wise",
@@ -762,16 +854,16 @@
         "lemma": "ktizo"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "forever",
         "lemma": "aion"
       },
       {
         "surface": "worthy of praise",
         "lemma": "eulogetos"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ],
     "26": [
@@ -888,6 +980,10 @@
         "lemma": "dokimazo"
       },
       {
+        "surface": "to acknowledge",
+        "lemma": "echo"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -908,6 +1004,10 @@
         "lemma": "nous"
       },
       {
+        "surface": "to do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "ought not to be done",
         "lemma": "katheko"
       }
@@ -916,6 +1016,10 @@
       {
         "surface": "They have become filled with",
         "lemma": "pleroo"
+      },
+      {
+        "surface": "every kind of",
+        "lemma": "pas"
       },
       {
         "surface": "wickedness",
@@ -1036,6 +1140,10 @@
         "lemma": "prasso"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "worthy",
         "lemma": "axios"
       },
@@ -1046,6 +1154,10 @@
       {
         "surface": "only",
         "lemma": "monon"
+      },
+      {
+        "surface": "continue to do",
+        "lemma": "poieo"
       },
       {
         "surface": "approve of",

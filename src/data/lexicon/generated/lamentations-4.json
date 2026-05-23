@@ -42,6 +42,10 @@
         "lemma": "shaphakh"
       },
       {
+        "surface": "on every",
+        "lemma": "kol"
+      },
+      {
         "surface": "street",
         "lemma": "chuts"
       },
@@ -252,6 +256,10 @@
         "lemma": "rega"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "a hand",
         "lemma": "yad"
       },
@@ -316,6 +324,10 @@
         "lemma": "shechor"
       },
       {
+        "surface": "they are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "recognized",
         "lemma": "nakhar"
       },
@@ -336,6 +348,10 @@
         "lemma": "etsem"
       },
       {
+        "surface": "it has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "as dry",
         "lemma": "yavesh"
       },
@@ -352,6 +368,10 @@
       {
         "surface": "by the sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "are",
+        "lemma": "hayah"
       },
       {
         "surface": "better off",
@@ -402,6 +422,10 @@
       {
         "surface": "their own children",
         "lemma": "yeled"
+      },
+      {
+        "surface": "who became",
+        "lemma": "hayah"
       },
       {
         "surface": "their food",
@@ -476,8 +500,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "believe",
         "lemma": "aman"
+      },
+      {
+        "surface": "nor any",
+        "lemma": "kol"
+      },
+      {
+        "surface": "people",
+        "lemma": "yashav"
       },
       {
         "surface": "of the world",
@@ -490,6 +526,10 @@
       {
         "surface": "or a foe",
         "lemma": "oyev"
+      },
+      {
+        "surface": "could enter",
+        "lemma": "bo"
       },
       {
         "surface": "the gates",
@@ -556,6 +596,10 @@
         "lemma": "dam"
       },
       {
+        "surface": "so that no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one dared",
         "lemma": "yakhol"
       },
@@ -578,12 +622,20 @@
         "lemma": "tame"
       },
       {
+        "surface": "men shouted",
+        "lemma": "qara"
+      },
+      {
         "surface": "Away",
         "lemma": "sur"
       },
       {
         "surface": "away",
         "lemma": "sur"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "touch us",
@@ -602,8 +654,16 @@
         "lemma": "goy"
       },
       {
+        "surface": "it was said",
+        "lemma": "amar"
+      },
+      {
         "surface": "They can stay",
         "lemma": "gur"
+      },
+      {
+        "surface": "here no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -628,12 +688,20 @@
         "lemma": "navat"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more",
         "lemma": "yasaph"
       },
       {
         "surface": "The priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "vvv",
@@ -646,6 +714,10 @@
       {
         "surface": "the elders",
         "lemma": "zaqen"
+      },
+      {
+        "surface": "find no",
+        "lemma": "lo"
       },
       {
         "surface": "favor",
@@ -684,6 +756,10 @@
       {
         "surface": "a nation",
         "lemma": "goy"
+      },
+      {
+        "surface": "that could not",
+        "lemma": "lo"
       },
       {
         "surface": "save us",
@@ -726,12 +802,20 @@
       {
         "surface": "for our end",
         "lemma": "qets"
+      },
+      {
+        "surface": "had come",
+        "lemma": "bo"
       }
     ],
     "19": [
       {
         "surface": "Those who chased us",
         "lemma": "radaph"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "swifter",
@@ -788,6 +872,10 @@
         "lemma": "shechit"
       },
       {
+        "surface": "We had said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Under his shadow",
         "lemma": "tsel"
       },
@@ -816,6 +904,10 @@
       {
         "surface": "of Edom",
         "lemma": "edom"
+      },
+      {
+        "surface": "you who dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -860,6 +952,10 @@
         "lemma": "tamam"
       },
       {
+        "surface": "He will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "prolong",
         "lemma": "yasaph"
       },
@@ -894,8 +990,8 @@
     ]
   },
   "themeLemmas": [
-    "chuts",
-    "avan",
-    "yasaph"
+    "lo",
+    "hayah",
+    "chuts"
   ]
 }

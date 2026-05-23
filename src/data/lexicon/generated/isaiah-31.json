@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those who go down",
         "lemma": "yarad"
       },
@@ -50,6 +46,10 @@
         "lemma": "parash"
       },
       {
+        "surface": "They do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "look",
         "lemma": "shaah"
       },
@@ -60,6 +60,10 @@
       {
         "surface": "One of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
       },
       {
         "surface": "seek",
@@ -76,8 +80,16 @@
         "lemma": "chakham"
       },
       {
+        "surface": "and brings",
+        "lemma": "bo"
+      },
+      {
         "surface": "disaster",
         "lemma": "ra"
+      },
+      {
+        "surface": "He does not",
+        "lemma": "lo"
       },
       {
         "surface": "call back",
@@ -118,6 +130,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "God",
         "lemma": "el"
       },
@@ -128,6 +144,10 @@
       {
         "surface": "are flesh",
         "lemma": "basar"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "spirit",
@@ -162,6 +182,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "both",
+        "lemma": "kol"
+      },
+      {
         "surface": "will perish",
         "lemma": "kalah"
       },
@@ -178,6 +202,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has said",
+        "lemma": "amar"
       },
       {
         "surface": "a lion",
@@ -202,6 +230,14 @@
       {
         "surface": "of shepherds",
         "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "is called out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "it is not",
+        "lemma": "lo"
       },
       {
         "surface": "terrified",
@@ -300,6 +336,10 @@
     ],
     "6": [
       {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "against whom you have so blatantly",
         "lemma": "amaq"
       },
@@ -348,6 +388,10 @@
       {
         "surface": "have sinfully",
         "lemma": "chet"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
       }
     ],
     "8": [
@@ -358,6 +402,10 @@
       {
         "surface": "will fall",
         "lemma": "naphal"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "by the sword",
@@ -374,6 +422,10 @@
       {
         "surface": "will devour them",
         "lemma": "akhal"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "one made by mortals",
@@ -394,6 +446,10 @@
       {
         "surface": "and their young men",
         "lemma": "bachur"
+      },
+      {
+        "surface": "will be put",
+        "lemma": "hayah"
       },
       {
         "surface": "to forced labor",
@@ -452,8 +508,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "tsava",
-    "cherev",
-    "yisrael"
+    "cherev"
   ]
 }

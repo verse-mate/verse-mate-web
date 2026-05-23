@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those who devise",
         "lemma": "chashav"
       },
@@ -36,6 +32,10 @@
       {
         "surface": "light",
         "lemma": "or"
+      },
+      {
+        "surface": "they accomplish it",
+        "lemma": "asah"
       },
       {
         "surface": "the power",
@@ -106,6 +106,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "I am planning",
         "lemma": "chashav"
       },
@@ -122,6 +126,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "you cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "free",
         "lemma": "mush"
       },
@@ -130,12 +138,20 @@
         "lemma": "tsavvar"
       },
       {
+        "surface": "Then you will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "walk",
         "lemma": "halakh"
       },
       {
         "surface": "so proudly",
         "lemma": "romah"
+      },
+      {
+        "surface": "will be a time",
+        "lemma": "et"
       },
       {
         "surface": "of calamity",
@@ -158,6 +174,10 @@
       {
         "surface": "and taunt you",
         "lemma": "nahah"
+      },
+      {
+        "surface": "with this bitter",
+        "lemma": "hayah"
       },
       {
         "surface": "lamentation",
@@ -206,6 +226,14 @@
         "lemma": "ken"
       },
       {
+        "surface": "you will have",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no one",
+        "lemma": "lo"
+      },
+      {
         "surface": "in the assembly",
         "lemma": "qahal"
       },
@@ -228,12 +256,20 @@
     ],
     "6": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "preach",
         "lemma": "nataph"
       },
       {
         "surface": "they preach",
         "lemma": "nataph"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
       },
       {
         "surface": "preach",
@@ -244,11 +280,19 @@
         "lemma": "kelimmah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "overtake us",
         "lemma": "nasag"
       }
     ],
     "7": [
+      {
+        "surface": "Should it be said",
+        "lemma": "amar"
+      },
       {
         "surface": "O house",
         "lemma": "bet"
@@ -272,6 +316,10 @@
       {
         "surface": "the things He does",
         "lemma": "maalal"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
       },
       {
         "surface": "My words",
@@ -328,6 +376,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "like men returning",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from battle",
         "lemma": "milchamah"
       }
@@ -380,6 +432,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "your place of rest",
         "lemma": "menuchah"
       },
@@ -401,10 +457,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "If",
-        "lemma": "lu"
-      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -438,6 +490,10 @@
         "lemma": "shekhar"
       },
       {
+        "surface": "he would be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "just the preacher",
         "lemma": "nataph"
       },
@@ -450,6 +506,10 @@
       {
         "surface": "I will surely gather",
         "lemma": "asaph"
+      },
+      {
+        "surface": "all of you",
+        "lemma": "kol"
       },
       {
         "surface": "O Jacob",
@@ -530,6 +590,10 @@
         "lemma": "shaar"
       },
       {
+        "surface": "and go out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Their King",
         "lemma": "melekh"
       },
@@ -552,8 +616,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "nataph",
-    "halakh",
-    "bet"
+    "halakh"
   ]
 }

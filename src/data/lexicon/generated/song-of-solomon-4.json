@@ -6,20 +6,12 @@
   "verses": {
     "1": [
       {
-        "surface": "How",
-        "lemma": "hen"
-      },
-      {
         "surface": "beautiful you are",
         "lemma": "yapheh"
       },
       {
         "surface": "my darling",
         "lemma": "rayah"
-      },
-      {
-        "surface": "how",
-        "lemma": "hen"
       },
       {
         "surface": "very beautiful",
@@ -86,6 +78,10 @@
       {
         "surface": "the washing",
         "lemma": "rachtsah"
+      },
+      {
+        "surface": "each",
+        "lemma": "kol"
       },
       {
         "surface": "has its twin",
@@ -176,6 +172,10 @@
         "lemma": "magen"
       },
       {
+        "surface": "all of them",
+        "lemma": "kol"
+      },
+      {
         "surface": "shields",
         "lemma": "shelet"
       },
@@ -254,6 +254,10 @@
     ],
     "7": [
       {
+        "surface": "You are altogether",
+        "lemma": "kol"
+      },
+      {
         "surface": "beautiful",
         "lemma": "yapheh"
       },
@@ -271,6 +275,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Come",
+        "lemma": "bo"
+      },
       {
         "surface": "from Lebanon",
         "lemma": "levanon"
@@ -406,6 +414,10 @@
       {
         "surface": "of your perfume",
         "lemma": "shemen"
+      },
+      {
+        "surface": "than all",
+        "lemma": "kol"
       },
       {
         "surface": "spices",
@@ -544,6 +556,10 @@
         "lemma": "qinnamon"
       },
       {
+        "surface": "every kind",
+        "lemma": "kol"
+      },
+      {
         "surface": "of frankincense",
         "lemma": "levonah"
       },
@@ -558,6 +574,10 @@
       {
         "surface": "and aloes",
         "lemma": "ahalim"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the finest",
@@ -608,6 +628,10 @@
         "lemma": "tsaphon"
       },
       {
+        "surface": "and come",
+        "lemma": "bo"
+      },
+      {
         "surface": "O south wind",
         "lemma": "teman"
       },
@@ -632,6 +656,10 @@
         "lemma": "dod"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "into his garden",
         "lemma": "gan"
       },
@@ -650,8 +678,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "kallah",
-    "levanon",
-    "gan"
+    "levanon"
   ]
 }

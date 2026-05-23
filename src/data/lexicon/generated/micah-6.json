@@ -6,12 +6,16 @@
   "verses": {
     "1": [
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "Hear",
+        "lemma": "shama"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "Arise",
@@ -30,11 +34,19 @@
         "lemma": "givah"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "your voice",
         "lemma": "qol"
       }
     ],
     "2": [
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
       {
         "surface": "O mountains",
         "lemma": "har"
@@ -88,6 +100,10 @@
       {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "have I done",
+        "lemma": "asah"
       },
       {
         "surface": "Testify",
@@ -290,6 +306,10 @@
         "lemma": "shemen"
       },
       {
+        "surface": "Shall I present",
+        "lemma": "natan"
+      },
+      {
         "surface": "my firstborn",
         "lemma": "bekhor"
       },
@@ -344,6 +364,14 @@
         "lemma": "darash"
       },
       {
+        "surface": "but",
+        "lemma": "im"
+      },
+      {
+        "surface": "to act",
+        "lemma": "asah"
+      },
+      {
         "surface": "justly",
         "lemma": "mishpat"
       },
@@ -378,6 +406,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "calls out",
+        "lemma": "qara"
+      },
+      {
         "surface": "to the city",
         "lemma": "ir"
       },
@@ -386,8 +418,16 @@
         "lemma": "tushiyyah"
       },
       {
+        "surface": "to fear",
+        "lemma": "raah"
+      },
+      {
         "surface": "Your name",
         "lemma": "shem"
+      },
+      {
+        "surface": "Heed",
+        "lemma": "shama"
       },
       {
         "surface": "the rod",
@@ -476,6 +516,10 @@
         "lemma": "chamas"
       },
       {
+        "surface": "and its residents",
+        "lemma": "yashav"
+      },
+      {
         "surface": "speak",
         "lemma": "davar"
       },
@@ -520,6 +564,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be satisfied",
         "lemma": "sava"
       },
@@ -536,12 +584,20 @@
         "lemma": "nasag"
       },
       {
+        "surface": "you will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "preserve",
         "lemma": "palat"
       },
       {
         "surface": "you save",
         "lemma": "palat"
+      },
+      {
+        "surface": "I will give",
+        "lemma": "natan"
       },
       {
         "surface": "to the sword",
@@ -552,6 +608,10 @@
       {
         "surface": "will sow",
         "lemma": "zara"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "reap",
@@ -566,6 +626,10 @@
         "lemma": "zayit"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "anoint yourselves",
         "lemma": "sukh"
       },
@@ -576,6 +640,10 @@
       {
         "surface": "you will tread grapes",
         "lemma": "tirosh"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "drink",
@@ -600,6 +668,10 @@
         "lemma": "omri"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the practices",
         "lemma": "maaseh"
       },
@@ -620,8 +692,16 @@
         "lemma": "moetsah"
       },
       {
+        "surface": "I will make",
+        "lemma": "natan"
+      },
+      {
         "surface": "a desolation",
         "lemma": "shammah"
+      },
+      {
+        "surface": "and your inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "an object of contempt",
@@ -643,7 +723,7 @@
   },
   "themeLemmas": [
     "mah",
-    "riv",
-    "bet"
+    "lo",
+    "shama"
   ]
 }

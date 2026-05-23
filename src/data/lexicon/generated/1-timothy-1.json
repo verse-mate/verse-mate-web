@@ -178,6 +178,10 @@
         "lemma": "parangelia"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the love",
         "lemma": "agape"
       },
@@ -222,6 +226,14 @@
     ],
     "7": [
       {
+        "surface": "They want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "teachers of the law",
         "lemma": "nomodidaskalos"
       },
@@ -230,11 +242,23 @@
         "lemma": "noeo"
       },
       {
+        "surface": "they are saying",
+        "lemma": "lego"
+      },
+      {
+        "surface": "which",
+        "lemma": "tis"
+      },
+      {
         "surface": "they so confidently assert",
         "lemma": "diabebaioo"
       }
     ],
     "8": [
+      {
+        "surface": "we know",
+        "lemma": "eido"
+      },
       {
         "surface": "law",
         "lemma": "nomos"
@@ -253,6 +277,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "We realize",
+        "lemma": "eido"
+      },
       {
         "surface": "law",
         "lemma": "nomos"
@@ -364,6 +392,10 @@
     ],
     "12": [
       {
+        "surface": "I",
+        "lemma": "echo"
+      },
+      {
         "surface": "thank",
         "lemma": "charis"
       },
@@ -402,6 +434,10 @@
     ],
     "13": [
       {
+        "surface": "I was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "formerly",
         "lemma": "proteron"
       },
@@ -416,6 +452,10 @@
       {
         "surface": "a violent man",
         "lemma": "hubristes"
+      },
+      {
+        "surface": "I had acted",
+        "lemma": "poieo"
       },
       {
         "surface": "ignorance",
@@ -474,6 +514,10 @@
         "lemma": "axios"
       },
       {
+        "surface": "of full",
+        "lemma": "pas"
+      },
+      {
         "surface": "acceptance",
         "lemma": "apodoche"
       },
@@ -486,6 +530,10 @@
         "lemma": "iesous"
       },
       {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
       },
@@ -496,6 +544,10 @@
       {
         "surface": "sinners",
         "lemma": "hamartolos"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
       },
       {
         "surface": "the worst",
@@ -592,10 +644,6 @@
       {
         "surface": "ever",
         "lemma": "aion"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ],
     "18": [
@@ -638,6 +686,10 @@
     ],
     "19": [
       {
+        "surface": "holding on",
+        "lemma": "echo"
+      },
+      {
         "surface": "to faith",
         "lemma": "pistis"
       },
@@ -663,6 +715,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
       {
         "surface": "Hymenaeus",
         "lemma": "humenaios"

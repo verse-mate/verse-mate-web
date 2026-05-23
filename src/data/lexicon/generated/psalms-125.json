@@ -30,8 +30,16 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "It cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "be moved",
         "lemma": "mot"
+      },
+      {
+        "surface": "it abides",
+        "lemma": "yashav"
       },
       {
         "surface": "forever",
@@ -78,6 +86,10 @@
         "lemma": "resah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rest",
         "lemma": "nuach"
       },
@@ -92,6 +104,10 @@
       {
         "surface": "the righteous",
         "lemma": "tsaddiq"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "put forth",
@@ -160,8 +176,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "tsaddiq",
-    "saviv",
-    "har"
+    "saviv"
   ]
 }

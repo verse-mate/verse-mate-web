@@ -84,6 +84,10 @@
         "lemma": "dokimazo"
       },
       {
+        "surface": "what is",
+        "lemma": "tis"
+      },
+      {
         "surface": "good",
         "lemma": "agathos"
       },
@@ -108,6 +112,18 @@
       {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "I say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "to every one",
+        "lemma": "pas"
       },
       {
         "surface": "Do not think of yourself",
@@ -148,16 +164,36 @@
     ],
     "4": [
       {
+        "surface": "each of us has",
+        "lemma": "echo"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "body",
         "lemma": "soma"
       },
       {
-        "surface": "members",
-        "lemma": "melos"
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "members",
         "lemma": "melos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "members",
+        "lemma": "melos"
+      },
+      {
+        "surface": "have",
+        "lemma": "echo"
       },
       {
         "surface": "function",
@@ -174,6 +210,18 @@
         "lemma": "christos"
       },
       {
+        "surface": "we who are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
+        "surface": "are one",
+        "lemma": "heis"
+      },
+      {
         "surface": "body",
         "lemma": "soma"
       },
@@ -182,11 +230,19 @@
         "lemma": "melos"
       },
       {
+        "surface": "belongs to one",
+        "lemma": "heis"
+      },
+      {
         "surface": "another",
         "lemma": "allelon"
       }
     ],
     "6": [
+      {
+        "surface": "We have",
+        "lemma": "echo"
+      },
       {
         "surface": "different",
         "lemma": "diaphoros"
@@ -200,8 +256,8 @@
         "lemma": "charis"
       },
       {
-        "surface": "If one’s gift is",
-        "lemma": "eite"
+        "surface": "given",
+        "lemma": "didomi"
       },
       {
         "surface": "prophecy",
@@ -218,20 +274,12 @@
     ],
     "7": [
       {
-        "surface": "if it is",
-        "lemma": "eite"
-      },
-      {
         "surface": "serving",
         "lemma": "diakonia"
       },
       {
         "surface": "let him serve",
         "lemma": "diakonia"
-      },
-      {
-        "surface": "if it is",
-        "lemma": "eite"
       },
       {
         "surface": "teaching",
@@ -243,10 +291,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "if it is",
-        "lemma": "eite"
-      },
       {
         "surface": "encouraging",
         "lemma": "parakaleo"
@@ -460,6 +504,10 @@
         "lemma": "tapeinos"
       },
       {
+        "surface": "be",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "conceited",
         "lemma": "phronimos"
       }
@@ -484,6 +532,10 @@
       {
         "surface": "what is right",
         "lemma": "kalos"
+      },
+      {
+        "surface": "everybody",
+        "lemma": "pas"
       }
     ],
     "18": [
@@ -494,6 +546,10 @@
       {
         "surface": "live at peace",
         "lemma": "eireneuo"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       }
     ],
     "19": [
@@ -506,6 +562,10 @@
         "lemma": "agapetos"
       },
       {
+        "surface": "leave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "room",
         "lemma": "topos"
       },
@@ -514,12 +574,20 @@
         "lemma": "orge"
       },
       {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "Vengeance is",
         "lemma": "ekdikesis"
       },
       {
         "surface": "will repay",
         "lemma": "antapodidomi"
+      },
+      {
+        "surface": "says",
+        "lemma": "lego"
       },
       {
         "surface": "the Lord",
@@ -546,6 +614,10 @@
       {
         "surface": "give him a drink",
         "lemma": "potizo"
+      },
+      {
+        "surface": "in so doing",
+        "lemma": "poieo"
       },
       {
         "surface": "you will heap",

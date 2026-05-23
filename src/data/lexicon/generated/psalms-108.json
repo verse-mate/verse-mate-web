@@ -130,6 +130,10 @@
         "lemma": "kavod"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
@@ -282,12 +286,24 @@
     ],
     "11": [
       {
+        "surface": "Have You not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rejected us",
         "lemma": "zanach"
       },
       {
         "surface": "O God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "Will You no longer",
+        "lemma": "lo"
+      },
+      {
+        "surface": "march out",
+        "lemma": "yatsa"
       },
       {
         "surface": "O God",
@@ -328,6 +344,10 @@
       {
         "surface": "With God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "we will perform",
+        "lemma": "asah"
       },
       {
         "surface": "with valor",

@@ -10,6 +10,10 @@
         "lemma": "iesous"
       },
       {
+        "surface": "had spoken",
+        "lemma": "laleo"
+      },
+      {
         "surface": "He lifted up",
         "lemma": "epairo"
       },
@@ -22,12 +26,20 @@
         "lemma": "ouranos"
       },
       {
+        "surface": "and said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Father",
         "lemma": "pater"
       },
       {
         "surface": "hour",
         "lemma": "hora"
+      },
+      {
+        "surface": "has come",
+        "lemma": "erchomai"
       },
       {
         "surface": "Glorify",
@@ -48,30 +60,58 @@
     ],
     "2": [
       {
+        "surface": "You granted",
+        "lemma": "didomi"
+      },
+      {
         "surface": "authority",
         "lemma": "exousia"
+      },
+      {
+        "surface": "over all",
+        "lemma": "pas"
       },
       {
         "surface": "people",
         "lemma": "sarx"
       },
       {
+        "surface": "He may give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "eternal",
         "lemma": "aionios"
       },
       {
         "surface": "life",
         "lemma": "zoe"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "You have given",
+        "lemma": "didomi"
       }
     ],
     "3": [
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "eternal",
         "lemma": "aionios"
       },
       {
         "surface": "life",
         "lemma": "zoe"
+      },
+      {
+        "surface": "they may know",
+        "lemma": "ginosko"
       },
       {
         "surface": "only",
@@ -114,6 +154,14 @@
       {
         "surface": "work",
         "lemma": "ergon"
+      },
+      {
+        "surface": "You gave",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
       }
     ],
     "5": [
@@ -134,8 +182,16 @@
         "lemma": "doxa"
       },
       {
+        "surface": "I had",
+        "lemma": "echo"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "existed",
+        "lemma": "eimi"
       }
     ],
     "6": [
@@ -148,12 +204,24 @@
         "lemma": "onoma"
       },
       {
+        "surface": "You have given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
       },
       {
+        "surface": "They were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Yours",
         "lemma": "sos"
+      },
+      {
+        "surface": "You gave",
+        "lemma": "didomi"
       },
       {
         "surface": "they have kept",
@@ -168,16 +236,52 @@
       {
         "surface": "Now",
         "lemma": "nun"
+      },
+      {
+        "surface": "they know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "You have given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "comes",
+        "lemma": "eimi"
       }
     ],
     "8": [
+      {
+        "surface": "I have given",
+        "lemma": "didomi"
+      },
       {
         "surface": "words",
         "lemma": "rhema"
       },
       {
+        "surface": "You gave",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "have received them",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "They knew",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "with certainty",
         "lemma": "alethos"
+      },
+      {
+        "surface": "I came",
+        "lemma": "exerchomai"
       },
       {
         "surface": "they believed",
@@ -200,12 +304,28 @@
       {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "You have given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "they are",
+        "lemma": "eimi"
       }
     ],
     "10": [
       {
+        "surface": "All",
+        "lemma": "pas"
+      },
+      {
         "surface": "I have",
         "lemma": "emos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "Yours",
@@ -226,12 +346,24 @@
     ],
     "11": [
       {
-        "surface": "world",
-        "lemma": "kosmos"
+        "surface": "I will no longer be",
+        "lemma": "eimi"
       },
       {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "am coming",
+        "lemma": "erchomai"
       },
       {
         "surface": "Holy",
@@ -248,9 +380,25 @@
       {
         "surface": "name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "You gave",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "they may be",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       }
     ],
     "12": [
+      {
+        "surface": "I was",
+        "lemma": "eimi"
+      },
       {
         "surface": "protected",
         "lemma": "tereo"
@@ -262,6 +410,14 @@
       {
         "surface": "name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "You gave",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "Not one",
+        "lemma": "oudeis"
       },
       {
         "surface": "has been lost",
@@ -290,8 +446,20 @@
         "lemma": "nun"
       },
       {
+        "surface": "I am coming",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "I am saying",
+        "lemma": "laleo"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "they may have",
+        "lemma": "echo"
       },
       {
         "surface": "My",
@@ -308,6 +476,10 @@
     ],
     "14": [
       {
+        "surface": "have given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "word",
         "lemma": "logos"
       },
@@ -320,8 +492,16 @@
         "lemma": "miseo"
       },
       {
+        "surface": "they are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
       },
       {
         "surface": "world",
@@ -352,8 +532,16 @@
     ],
     "16": [
       {
+        "surface": "They are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
       },
       {
         "surface": "world",
@@ -376,6 +564,10 @@
       {
         "surface": "word",
         "lemma": "logos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "truth",
@@ -406,6 +598,10 @@
         "lemma": "hagiazo"
       },
       {
+        "surface": "may be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "sanctified",
         "lemma": "hagiazo"
       },
@@ -434,8 +630,24 @@
     ],
     "21": [
       {
+        "surface": "all of them",
+        "lemma": "pas"
+      },
+      {
+        "surface": "may be",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Father",
         "lemma": "pater"
+      },
+      {
+        "surface": "be",
+        "lemma": "eimi"
       },
       {
         "surface": "world",
@@ -452,18 +664,50 @@
     ],
     "22": [
       {
+        "surface": "have given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
+      },
+      {
+        "surface": "You gave",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "they may be",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
+        "surface": "are one",
+        "lemma": "heis"
       }
     ],
     "23": [
+      {
+        "surface": "they may be",
+        "lemma": "eimi"
+      },
       {
         "surface": "perfectly",
         "lemma": "teleioo"
       },
       {
+        "surface": "united",
+        "lemma": "heis"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "may know",
+        "lemma": "ginosko"
       },
       {
         "surface": "sent",
@@ -484,6 +728,22 @@
         "lemma": "pater"
       },
       {
+        "surface": "I want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "You have given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "they may see",
         "lemma": "theoreo"
       },
@@ -494,6 +754,10 @@
       {
         "surface": "glory",
         "lemma": "doxa"
+      },
+      {
+        "surface": "You gave",
+        "lemma": "didomi"
       },
       {
         "surface": "You loved",
@@ -522,6 +786,18 @@
         "lemma": "kosmos"
       },
       {
+        "surface": "known",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "sent",
         "lemma": "apostello"
       }
@@ -542,6 +818,10 @@
       {
         "surface": "love",
         "lemma": "agape"
+      },
+      {
+        "surface": "may be",
+        "lemma": "eimi"
       }
     ]
   },

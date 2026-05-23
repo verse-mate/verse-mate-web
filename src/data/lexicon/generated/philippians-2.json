@@ -52,6 +52,10 @@
         "lemma": "phroneo"
       },
       {
+        "surface": "having",
+        "lemma": "echo"
+      },
+      {
         "surface": "love",
         "lemma": "agape"
       },
@@ -62,6 +66,10 @@
       {
         "surface": "vvv",
         "lemma": "phroneo"
+      },
+      {
+        "surface": "purpose",
+        "lemma": "heis"
       }
     ],
     "3": [
@@ -140,6 +148,10 @@
         "lemma": "hegeomai"
       },
       {
+        "surface": "vvv",
+        "lemma": "eimi"
+      },
+      {
         "surface": "equality",
         "lemma": "isos"
       },
@@ -158,6 +170,10 @@
         "lemma": "kenoo"
       },
       {
+        "surface": "taking",
+        "lemma": "lambano"
+      },
+      {
         "surface": "the form",
         "lemma": "morphe"
       },
@@ -166,11 +182,19 @@
         "lemma": "doulos"
       },
       {
+        "surface": "being made",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "human likeness",
         "lemma": "homoioma"
       }
     ],
     "8": [
+      {
+        "surface": "being found",
+        "lemma": "heurisko"
+      },
       {
         "surface": "in appearance",
         "lemma": "schema"
@@ -182,6 +206,10 @@
       {
         "surface": "He humbled",
         "lemma": "tapeinoo"
+      },
+      {
+        "surface": "and became",
+        "lemma": "ginomai"
       },
       {
         "surface": "obedient",
@@ -218,6 +246,10 @@
         "lemma": "onoma"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "names",
         "lemma": "onoma"
       }
@@ -230,6 +262,10 @@
       {
         "surface": "of Jesus",
         "lemma": "iesous"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "knee",
@@ -253,6 +289,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "every",
+        "lemma": "pas"
+      },
       {
         "surface": "tongue",
         "lemma": "glossa"
@@ -312,6 +352,10 @@
         "lemma": "nun"
       },
       {
+        "surface": "even",
+        "lemma": "polus"
+      },
+      {
         "surface": "more",
         "lemma": "mallon"
       },
@@ -338,12 +382,20 @@
     ],
     "13": [
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
       {
         "surface": "works",
         "lemma": "energeo"
+      },
+      {
+        "surface": "to will",
+        "lemma": "thelo"
       },
       {
         "surface": "to act",
@@ -356,6 +408,14 @@
     ],
     "14": [
       {
+        "surface": "Do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "complaining",
         "lemma": "gongusmos"
       },
@@ -365,6 +425,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "you may be",
+        "lemma": "ginomai"
+      },
       {
         "surface": "blameless",
         "lemma": "amemptos"
@@ -476,6 +540,10 @@
       {
         "surface": "rejoice with",
         "lemma": "sugchairo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ],
     "18": [
@@ -516,9 +584,21 @@
       {
         "surface": "may be cheered",
         "lemma": "eupsucheo"
+      },
+      {
+        "surface": "when I learn",
+        "lemma": "ginosko"
       }
     ],
     "20": [
+      {
+        "surface": "I have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "nobody else",
+        "lemma": "oudeis"
+      },
       {
         "surface": "like him",
         "lemma": "isopsuchos"
@@ -534,6 +614,10 @@
     ],
     "21": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "look after",
         "lemma": "zeteo"
       },
@@ -547,6 +631,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "you know",
+        "lemma": "ginosko"
+      },
       {
         "surface": "proven worth",
         "lemma": "dokime"
@@ -594,6 +682,10 @@
       {
         "surface": "the Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "will come",
+        "lemma": "erchomai"
       },
       {
         "surface": "soon",
@@ -644,12 +736,24 @@
     ],
     "26": [
       {
+        "surface": "he has been",
+        "lemma": "eimi"
+      },
+      {
         "surface": "longing for",
         "lemma": "epipotheo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "is distressed",
         "lemma": "ademoneo"
+      },
+      {
+        "surface": "you heard",
+        "lemma": "akouo"
       },
       {
         "surface": "he was ill",
@@ -682,6 +786,10 @@
         "lemma": "monos"
       },
       {
+        "surface": "spare me",
+        "lemma": "echo"
+      },
+      {
         "surface": "sorrow",
         "lemma": "lupe"
       },
@@ -700,12 +808,20 @@
         "lemma": "pempo"
       },
       {
+        "surface": "when you see",
+        "lemma": "horao"
+      },
+      {
         "surface": "again",
         "lemma": "palin"
       },
       {
         "surface": "you may rejoice",
         "lemma": "chairo"
+      },
+      {
+        "surface": "may be",
+        "lemma": "eimi"
       },
       {
         "surface": "less anxious",
@@ -722,8 +838,16 @@
         "lemma": "kurios"
       },
       {
+        "surface": "great",
+        "lemma": "pas"
+      },
+      {
         "surface": "joy",
         "lemma": "chara"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "echo"
       },
       {
         "surface": "honor",

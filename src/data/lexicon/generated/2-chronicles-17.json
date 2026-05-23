@@ -32,8 +32,16 @@
     ],
     "2": [
       {
+        "surface": "He stationed",
+        "lemma": "natan"
+      },
+      {
         "surface": "troops",
         "lemma": "chayil"
+      },
+      {
+        "surface": "in every",
+        "lemma": "kol"
       },
       {
         "surface": "fortified",
@@ -46,6 +54,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "and put",
+        "lemma": "natan"
       },
       {
         "surface": "garrisons",
@@ -68,6 +80,10 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Asa",
         "lemma": "asa"
       },
@@ -80,6 +96,10 @@
       {
         "surface": "Now the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "Jehoshaphat",
@@ -98,8 +118,16 @@
         "lemma": "derekh"
       },
       {
+        "surface": "of his father",
+        "lemma": "av"
+      },
+      {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "He did not",
+        "lemma": "lo"
       },
       {
         "surface": "seek",
@@ -120,12 +148,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of his father",
+        "lemma": "av"
+      },
+      {
         "surface": "and walked",
         "lemma": "halakh"
       },
       {
         "surface": "by His commandments",
         "lemma": "mitsvah"
+      },
+      {
+        "surface": "rather than",
+        "lemma": "lo"
       },
       {
         "surface": "the practices",
@@ -154,8 +190,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "brought",
+        "lemma": "natan"
       },
       {
         "surface": "him",
@@ -164,6 +208,10 @@
       {
         "surface": "tribute",
         "lemma": "minchah"
+      },
+      {
+        "surface": "so that",
+        "lemma": "hayah"
       },
       {
         "surface": "an abundance",
@@ -358,6 +406,10 @@
         "lemma": "savav"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "the towns",
         "lemma": "ir"
       },
@@ -384,6 +436,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "fell",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kingdoms",
         "lemma": "mamlakhah"
       },
@@ -400,6 +460,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "so that they did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "make war",
         "lemma": "lacham"
       },
@@ -412,6 +476,10 @@
       {
         "surface": "Philistines",
         "lemma": "pelishti"
+      },
+      {
+        "surface": "also brought",
+        "lemma": "bo"
       },
       {
         "surface": "gifts",
@@ -432,6 +500,10 @@
       {
         "surface": "the Arabs",
         "lemma": "aravi"
+      },
+      {
+        "surface": "brought",
+        "lemma": "bo"
       },
       {
         "surface": "7700",
@@ -506,6 +578,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "He also had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "warriors",
         "lemma": "milchamah"
       },
@@ -530,6 +606,10 @@
       {
         "surface": "according to the houses",
         "lemma": "bet"
+      },
+      {
+        "surface": "of their fathers",
+        "lemma": "av"
       },
       {
         "surface": "From Judah",
@@ -694,12 +774,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "stationed",
+        "lemma": "natan"
+      },
+      {
         "surface": "in the fortified",
         "lemma": "mivtsar"
       },
       {
         "surface": "cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "Judah",
@@ -710,6 +798,6 @@
   "themeLemmas": [
     "yehudah",
     "yehoshaphat",
-    "chayil"
+    "kol"
   ]
 }

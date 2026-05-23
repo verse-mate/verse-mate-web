@@ -30,6 +30,10 @@
         "lemma": "kaph"
       },
       {
+        "surface": "all you peoples",
+        "lemma": "kol"
+      },
+      {
         "surface": "shout",
         "lemma": "rua"
       },
@@ -66,6 +70,10 @@
       {
         "surface": "King",
         "lemma": "melekh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -186,6 +194,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -210,6 +222,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is seated",
+        "lemma": "yashav"
       },
       {
         "surface": "His holy",
@@ -269,7 +285,7 @@
   },
   "themeLemmas": [
     "zamar",
-    "tachat",
-    "qol"
+    "kol",
+    "tachat"
   ]
 }

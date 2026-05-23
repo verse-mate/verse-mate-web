@@ -28,11 +28,19 @@
         "lemma": "saiph"
       },
       {
+        "surface": "compel me to answer",
+        "lemma": "shuv"
+      },
+      {
         "surface": "of the turmoil",
         "lemma": "chush"
       }
     ],
     "3": [
+      {
+        "surface": "I have heard",
+        "lemma": "shama"
+      },
       {
         "surface": "a rebuke",
         "lemma": "musar"
@@ -100,6 +108,10 @@
     ],
     "6": [
       {
+        "surface": "Though",
+        "lemma": "im"
+      },
+      {
         "surface": "his arrogance",
         "lemma": "si"
       },
@@ -118,6 +130,10 @@
       {
         "surface": "touches",
         "lemma": "naga"
+      },
+      {
+        "surface": "the clouds",
+        "lemma": "av"
       }
     ],
     "7": [
@@ -134,6 +150,14 @@
         "lemma": "gelel"
       },
       {
+        "surface": "those who had seen him",
+        "lemma": "raah"
+      },
+      {
+        "surface": "will ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "Where is he",
         "lemma": "ay"
       }
@@ -146,6 +170,10 @@
       {
         "surface": "like a dream",
         "lemma": "chalom"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "to be found",
@@ -174,12 +202,20 @@
         "lemma": "shazaph"
       },
       {
+        "surface": "will see him no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more",
         "lemma": "yasaph"
       },
       {
         "surface": "and his place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "will no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -206,6 +242,10 @@
       {
         "surface": "for his own hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "must return",
+        "lemma": "shuv"
       },
       {
         "surface": "his wealth",
@@ -235,6 +275,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
       {
         "surface": "evil",
         "lemma": "ra"
@@ -362,6 +406,14 @@
     ],
     "17": [
       {
+        "surface": "He will not",
+        "lemma": "al"
+      },
+      {
+        "surface": "enjoy",
+        "lemma": "raah"
+      },
+      {
         "surface": "the streams",
         "lemma": "pelaggah"
       },
@@ -384,12 +436,24 @@
     ],
     "18": [
       {
+        "surface": "He must return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the fruit of his labor",
         "lemma": "yaga"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "consuming it",
         "lemma": "bala"
+      },
+      {
+        "surface": "he cannot",
+        "lemma": "lo"
       },
       {
         "surface": "enjoy",
@@ -426,6 +490,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "he did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "build",
         "lemma": "banah"
       }
@@ -436,8 +504,16 @@
         "lemma": "beten"
       },
       {
+        "surface": "is never",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfied",
         "lemma": "yada"
+      },
+      {
+        "surface": "he cannot",
+        "lemma": "lo"
       },
       {
         "surface": "escape",
@@ -466,6 +542,10 @@
         "lemma": "tuv"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "endure",
         "lemma": "chul"
       }
@@ -484,15 +564,27 @@
         "lemma": "yatsar"
       },
       {
+        "surface": "the full",
+        "lemma": "kol"
+      },
+      {
         "surface": "force",
         "lemma": "yad"
       },
       {
         "surface": "of misery",
         "lemma": "amel"
+      },
+      {
+        "surface": "will come upon him",
+        "lemma": "bo"
       }
     ],
     "23": [
+      {
+        "surface": "When he",
+        "lemma": "hayah"
+      },
       {
         "surface": "has filled",
         "lemma": "male"
@@ -550,6 +642,10 @@
         "lemma": "shalaph"
       },
       {
+        "surface": "out of",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "his back",
         "lemma": "gevah"
       },
@@ -572,6 +668,10 @@
     ],
     "26": [
       {
+        "surface": "Total",
+        "lemma": "kol"
+      },
+      {
         "surface": "darkness",
         "lemma": "choshekh"
       },
@@ -586,6 +686,10 @@
       {
         "surface": "A fire",
         "lemma": "esh"
+      },
+      {
+        "surface": "unfanned",
+        "lemma": "lo"
       },
       {
         "surface": "will consume him",
@@ -680,8 +784,8 @@
     ]
   },
   "themeLemmas": [
-    "male",
-    "beten",
-    "yada"
+    "lo",
+    "shuv",
+    "male"
   ]
 }

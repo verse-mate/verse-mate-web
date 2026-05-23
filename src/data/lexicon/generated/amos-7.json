@@ -18,6 +18,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "showed me",
+        "lemma": "raah"
+      },
+      {
         "surface": "He was preparing",
         "lemma": "yatsar"
       },
@@ -48,6 +52,14 @@
     ],
     "2": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "when",
+        "lemma": "im"
+      },
+      {
         "surface": "the locusts had",
         "lemma": "kalah"
       },
@@ -64,16 +76,16 @@
         "lemma": "erets"
       },
       {
+        "surface": "I said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Lord",
         "lemma": "adonai"
       },
       {
         "surface": "GOD",
         "lemma": "yehovih"
-      },
-      {
-        "surface": "please",
-        "lemma": "na"
       },
       {
         "surface": "forgive",
@@ -106,8 +118,20 @@
         "lemma": "nacham"
       },
       {
+        "surface": "It will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "happen",
+        "lemma": "hayah"
+      },
+      {
         "surface": "He",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       }
     ],
     "4": [
@@ -124,12 +148,20 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "showed me",
+        "lemma": "raah"
+      },
+      {
         "surface": "The Lord",
         "lemma": "adonai"
       },
       {
         "surface": "GOD",
         "lemma": "yehovih"
+      },
+      {
+        "surface": "was calling",
+        "lemma": "qara"
       },
       {
         "surface": "for judgment",
@@ -162,16 +194,16 @@
     ],
     "5": [
       {
+        "surface": "Then I said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Lord",
         "lemma": "adonai"
       },
       {
         "surface": "GOD",
         "lemma": "yehovih"
-      },
-      {
-        "surface": "please",
-        "lemma": "na"
       },
       {
         "surface": "stop",
@@ -204,6 +236,18 @@
         "lemma": "nacham"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "happen",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the Lord",
         "lemma": "adonai"
       },
@@ -218,8 +262,8 @@
         "lemma": "koh"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
+        "surface": "He showed me",
+        "lemma": "raah"
       },
       {
         "surface": "the Lord",
@@ -256,6 +300,14 @@
         "lemma": "mah"
       },
       {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -264,8 +316,12 @@
         "lemma": "anakh"
       },
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "I replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the Lord",
@@ -290,6 +346,10 @@
       {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "I will no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -376,6 +436,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Amos",
         "lemma": "amos"
       },
@@ -400,8 +464,16 @@
         "lemma": "erets"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "bear",
         "lemma": "kul"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "his words",
@@ -416,6 +488,10 @@
       {
         "surface": "Amos",
         "lemma": "amos"
+      },
+      {
+        "surface": "has said",
+        "lemma": "amar"
       },
       {
         "surface": "Jeroboam",
@@ -446,6 +522,10 @@
       {
         "surface": "And Amaziah",
         "lemma": "amatsyah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Amos",
@@ -490,6 +570,10 @@
     ],
     "13": [
       {
+        "surface": "But never",
+        "lemma": "lo"
+      },
+      {
         "surface": "prophesy",
         "lemma": "nava"
       },
@@ -523,6 +607,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "was not",
+        "lemma": "lo"
+      },
       {
         "surface": "a prophet",
         "lemma": "navi"
@@ -574,6 +662,10 @@
         "lemma": "tson"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Go",
         "lemma": "halakh"
       },
@@ -596,6 +688,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the word",
         "lemma": "davar"
       },
@@ -604,12 +700,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "prophesy",
         "lemma": "nava"
       },
       {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "preach",
@@ -636,6 +744,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "Your wife",
@@ -704,8 +816,8 @@
     ]
   },
   "themeLemmas": [
-    "amos",
+    "amar",
     "yisrael",
-    "yehovih"
+    "lo"
   ]
 }

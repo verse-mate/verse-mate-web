@@ -40,6 +40,10 @@
         "lemma": "barakh"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the name",
         "lemma": "shem"
       },
@@ -84,6 +88,10 @@
         "lemma": "rum"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
@@ -110,6 +118,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "the One enthroned",
+        "lemma": "yashav"
+      },
+      {
         "surface": "on high",
         "lemma": "gavah"
       }
@@ -118,6 +130,10 @@
       {
         "surface": "He humbles Himself",
         "lemma": "shaphel"
+      },
+      {
+        "surface": "to behold",
+        "lemma": "raah"
       },
       {
         "surface": "the heavens",
@@ -156,6 +172,10 @@
     ],
     "8": [
       {
+        "surface": "to seat them",
+        "lemma": "yashav"
+      },
+      {
         "surface": "nobles",
         "lemma": "nadiv"
       },
@@ -169,6 +189,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "He settles",
+        "lemma": "yashav"
+      },
       {
         "surface": "the barren woman",
         "lemma": "aqar"
@@ -197,7 +221,7 @@
   },
   "themeLemmas": [
     "halal",
-    "shem",
-    "rum"
+    "yashav",
+    "shem"
   ]
 }

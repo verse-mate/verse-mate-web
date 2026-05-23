@@ -32,12 +32,24 @@
         "lemma": "shava"
       },
       {
+        "surface": "but You do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "or cry out",
         "lemma": "zaaq"
       },
       {
         "surface": "Violence",
         "lemma": "chamas"
+      },
+      {
+        "surface": "but You do not",
+        "lemma": "lo"
       },
       {
         "surface": "save",
@@ -48,6 +60,10 @@
       {
         "surface": "Why",
         "lemma": "mah"
+      },
+      {
+        "surface": "do You make me see",
+        "lemma": "raah"
       },
       {
         "surface": "iniquity",
@@ -78,6 +94,10 @@
         "lemma": "riv"
       },
       {
+        "surface": "is ongoing",
+        "lemma": "hayah"
+      },
+      {
         "surface": "and conflict",
         "lemma": "madon"
       },
@@ -100,6 +120,14 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "goes forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the wicked",
         "lemma": "rasah"
       },
@@ -116,11 +144,19 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "is",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "perverted",
         "lemma": "aqal"
       }
     ],
     "5": [
+      {
+        "surface": "Look",
+        "lemma": "raah"
+      },
       {
         "surface": "at the nations",
         "lemma": "goy"
@@ -146,6 +182,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "that you would never",
+        "lemma": "lo"
+      },
+      {
         "surface": "believe",
         "lemma": "aman"
       },
@@ -155,10 +195,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "behold",
-        "lemma": "hen"
-      },
       {
         "surface": "I am raising up",
         "lemma": "qamay"
@@ -198,6 +234,10 @@
       {
         "surface": "dwellings",
         "lemma": "mishkan"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       }
     ],
     "7": [
@@ -208,6 +248,10 @@
       {
         "surface": "and feared",
         "lemma": "yare"
+      },
+      {
+        "surface": "they derive",
+        "lemma": "yatsa"
       },
       {
         "surface": "justice",
@@ -256,6 +300,10 @@
         "lemma": "parash"
       },
       {
+        "surface": "comes",
+        "lemma": "bo"
+      },
+      {
         "surface": "from afar",
         "lemma": "rachoq"
       },
@@ -277,6 +325,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "of them come",
+        "lemma": "bo"
+      },
       {
         "surface": "bent",
         "lemma": "megammah"
@@ -328,6 +384,10 @@
         "lemma": "sachaq"
       },
       {
+        "surface": "at every",
+        "lemma": "kol"
+      },
+      {
         "surface": "fortress",
         "lemma": "mivtsar"
       },
@@ -372,6 +432,10 @@
     ],
     "12": [
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "from everlasting",
         "lemma": "qedem"
       },
@@ -386,6 +450,10 @@
       {
         "surface": "my Holy One",
         "lemma": "qadosh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "We will not die",
@@ -426,8 +494,16 @@
         "lemma": "tehor"
       },
       {
+        "surface": "to look upon",
+        "lemma": "raah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "and You cannot",
+        "lemma": "lo"
       },
       {
         "surface": "tolerate",
@@ -468,6 +544,10 @@
     ],
     "14": [
       {
+        "surface": "You have made",
+        "lemma": "asah"
+      },
+      {
         "surface": "men",
         "lemma": "adam"
       },
@@ -484,11 +564,19 @@
         "lemma": "remes"
       },
       {
+        "surface": "that have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "ruler",
         "lemma": "mashal"
       }
     ],
     "15": [
+      {
+        "surface": "The foe pulls all of them",
+        "lemma": "kol"
+      },
       {
         "surface": "up",
         "lemma": "alah"
@@ -578,14 +666,18 @@
         "lemma": "goy"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "mercy",
         "lemma": "chamal"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "navat",
-    "cherem",
-    "chamas"
+    "yatsa"
   ]
 }

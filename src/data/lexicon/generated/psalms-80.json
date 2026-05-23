@@ -50,6 +50,10 @@
         "lemma": "tson"
       },
       {
+        "surface": "You who sit enthroned",
+        "lemma": "yashav"
+      },
+      {
         "surface": "between the cherubim",
         "lemma": "keruv"
       },
@@ -93,6 +97,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "Restore us",
+        "lemma": "shuv"
+      },
       {
         "surface": "O God",
         "lemma": "elohim"
@@ -185,6 +193,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Restore us",
+        "lemma": "shuv"
+      },
       {
         "surface": "O God",
         "lemma": "elohim"
@@ -320,6 +332,10 @@
         "lemma": "gader"
       },
       {
+        "surface": "so that all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who pass by",
         "lemma": "avar"
       },
@@ -356,6 +372,10 @@
     ],
     "14": [
       {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O God",
         "lemma": "elohim"
       },
@@ -364,16 +384,16 @@
         "lemma": "tsava"
       },
       {
-        "surface": "we pray",
-        "lemma": "na"
-      },
-      {
         "surface": "Look down",
         "lemma": "navat"
       },
       {
         "surface": "from heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
       },
       {
         "surface": "Attend to",
@@ -434,6 +454,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the man",
         "lemma": "ish"
       },
@@ -456,6 +480,10 @@
     ],
     "18": [
       {
+        "surface": "Then we will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn away",
         "lemma": "sug"
       },
@@ -464,11 +492,19 @@
         "lemma": "chayah"
       },
       {
+        "surface": "and we will call",
+        "lemma": "qara"
+      },
+      {
         "surface": "on Your name",
         "lemma": "shem"
       }
     ],
     "19": [
+      {
+        "surface": "Restore us",
+        "lemma": "shuv"
+      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -498,6 +534,6 @@
   "themeLemmas": [
     "paneh",
     "tsava",
-    "yasah"
+    "shuv"
   ]
 }

@@ -32,8 +32,16 @@
     ],
     "2": [
       {
+        "surface": "speaks",
+        "lemma": "laleo"
+      },
+      {
         "surface": "in a tongue",
         "lemma": "glossa"
+      },
+      {
+        "surface": "does not speak",
+        "lemma": "laleo"
       },
       {
         "surface": "to men",
@@ -42,6 +50,18 @@
       {
         "surface": "to God",
         "lemma": "theos"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "understands him",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "he utters",
+        "lemma": "laleo"
       },
       {
         "surface": "mysteries",
@@ -56,6 +76,10 @@
       {
         "surface": "prophesies",
         "lemma": "propheteuo"
+      },
+      {
+        "surface": "speaks",
+        "lemma": "laleo"
       },
       {
         "surface": "to men",
@@ -75,6 +99,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "speaks",
+        "lemma": "laleo"
+      },
       {
         "surface": "in a tongue",
         "lemma": "glossa"
@@ -98,6 +126,18 @@
     ],
     "5": [
       {
+        "surface": "I wish that",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "could speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "in tongues",
         "lemma": "glossa"
       },
@@ -114,6 +154,14 @@
         "lemma": "propheteuo"
       },
       {
+        "surface": "is greater",
+        "lemma": "megas"
+      },
+      {
+        "surface": "speaks",
+        "lemma": "laleo"
+      },
+      {
         "surface": "in tongues",
         "lemma": "glossa"
       },
@@ -124,6 +172,10 @@
       {
         "surface": "church",
         "lemma": "ekklesia"
+      },
+      {
+        "surface": "may be",
+        "lemma": "lambano"
       },
       {
         "surface": "edified",
@@ -140,12 +192,28 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "I come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "speaking",
+        "lemma": "laleo"
+      },
+      {
         "surface": "in tongues",
         "lemma": "glossa"
       },
       {
+        "surface": "how",
+        "lemma": "tis"
+      },
+      {
         "surface": "will I benefit",
         "lemma": "opheleo"
+      },
+      {
+        "surface": "I bring",
+        "lemma": "laleo"
       },
       {
         "surface": "some revelation",
@@ -170,20 +238,24 @@
         "lemma": "apsuchos"
       },
       {
-        "surface": "such as",
-        "lemma": "eite"
+        "surface": "instruments",
+        "lemma": "didomi"
       },
       {
         "surface": "the flute",
         "lemma": "aulos"
       },
       {
-        "surface": "or",
-        "lemma": "eite"
-      },
-      {
         "surface": "harp",
         "lemma": "kithara"
+      },
+      {
+        "surface": "will anyone recognize",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "they are playing",
+        "lemma": "didomi"
       },
       {
         "surface": "notes",
@@ -200,12 +272,20 @@
         "lemma": "salpigx"
       },
       {
+        "surface": "sounds",
+        "lemma": "didomi"
+      },
+      {
         "surface": "a muffled",
         "lemma": "adelos"
       },
       {
         "surface": "call",
         "lemma": "phone"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
       },
       {
         "surface": "will prepare",
@@ -222,6 +302,10 @@
         "lemma": "houto"
       },
       {
+        "surface": "you speak",
+        "lemma": "didomi"
+      },
+      {
         "surface": "intelligible",
         "lemma": "eusemos"
       },
@@ -234,6 +318,22 @@
         "lemma": "glossa"
       },
       {
+        "surface": "will anyone know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "you are saying",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "You will  just  be",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "speaking",
+        "lemma": "laleo"
+      },
+      {
         "surface": "the air",
         "lemma": "aer"
       }
@@ -242,6 +342,10 @@
       {
         "surface": "Assuredly",
         "lemma": "tugchano"
+      },
+      {
+        "surface": "there are",
+        "lemma": "eimi"
       },
       {
         "surface": "many",
@@ -260,11 +364,19 @@
         "lemma": "kosmos"
       },
       {
+        "surface": "none of them is",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "without meaning",
         "lemma": "aphonos"
       }
     ],
     "11": [
+      {
+        "surface": "I do not know",
+        "lemma": "eido"
+      },
       {
         "surface": "meaning",
         "lemma": "dunamis"
@@ -274,8 +386,20 @@
         "lemma": "phone"
       },
       {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a foreigner",
         "lemma": "barbaros"
+      },
+      {
+        "surface": "speaker",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "he is",
+        "lemma": "laleo"
       },
       {
         "surface": "a foreigner",
@@ -286,6 +410,10 @@
       {
         "surface": "It is the same",
         "lemma": "houto"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "eager to have",
@@ -313,6 +441,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "speaks",
+        "lemma": "laleo"
+      },
       {
         "surface": "in a tongue",
         "lemma": "glossa"
@@ -348,11 +480,23 @@
         "lemma": "nous"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "unfruitful",
         "lemma": "akarpos"
       }
     ],
     "15": [
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "shall I do",
+        "lemma": "eimi"
+      },
       {
         "surface": "I will pray",
         "lemma": "proseuchomai"
@@ -412,16 +556,24 @@
         "lemma": "ero"
       },
       {
-        "surface": "Amen",
-        "lemma": "amen"
-      },
-      {
         "surface": "your",
         "lemma": "sos"
       },
       {
         "surface": "thanksgiving",
         "lemma": "eucharistia"
+      },
+      {
+        "surface": "he does not know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "you are saying",
+        "lemma": "lego"
       }
     ],
     "17": [
@@ -452,18 +604,34 @@
         "lemma": "theos"
       },
       {
+        "surface": "that I speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "in tongues",
         "lemma": "glossa"
       },
       {
         "surface": "more",
         "lemma": "mallon"
+      },
+      {
+        "surface": "than all",
+        "lemma": "pas"
       }
     ],
     "19": [
       {
         "surface": "the church",
         "lemma": "ekklesia"
+      },
+      {
+        "surface": "I would rather",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "speak",
+        "lemma": "laleo"
       },
       {
         "surface": "five",
@@ -508,6 +676,10 @@
         "lemma": "phren"
       },
       {
+        "surface": "vvv",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "like children",
         "lemma": "paidion"
       },
@@ -524,11 +696,19 @@
         "lemma": "phren"
       },
       {
+        "surface": "be",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "mature",
         "lemma": "teleios"
       }
     ],
     "21": [
+      {
+        "surface": "It is written",
+        "lemma": "grapho"
+      },
       {
         "surface": "Law",
         "lemma": "nomos"
@@ -546,6 +726,10 @@
         "lemma": "cheilos"
       },
       {
+        "surface": "I will speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "people",
         "lemma": "laos"
       },
@@ -558,6 +742,10 @@
         "lemma": "eisakouo"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
         "surface": "the Lord",
         "lemma": "kurios"
       }
@@ -566,6 +754,10 @@
       {
         "surface": "Tongues",
         "lemma": "glossa"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "a sign",
@@ -606,6 +798,14 @@
         "lemma": "sunerchomai"
       },
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
+        "surface": "speaks",
+        "lemma": "laleo"
+      },
+      {
         "surface": "in tongues",
         "lemma": "glossa"
       },
@@ -616,6 +816,10 @@
       {
         "surface": "some unbelievers",
         "lemma": "apistos"
+      },
+      {
+        "surface": "come in",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "will they not say",
@@ -636,6 +840,14 @@
         "lemma": "idiotes"
       },
       {
+        "surface": "comes in",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "is prophesying",
         "lemma": "propheteuo"
       },
@@ -646,6 +858,10 @@
       {
         "surface": "and called to account",
         "lemma": "anakrino"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ],
     "25": [
@@ -656,6 +872,10 @@
       {
         "surface": "heart",
         "lemma": "kardia"
+      },
+      {
+        "surface": "will be",
+        "lemma": "ginomai"
       },
       {
         "surface": "made known",
@@ -686,11 +906,23 @@
         "lemma": "theos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "truly",
         "lemma": "ontos"
       }
     ],
     "26": [
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "shall we say",
+        "lemma": "eimi"
+      },
       {
         "surface": "brothers",
         "lemma": "adelphos"
@@ -704,8 +936,16 @@
         "lemma": "hekastos"
       },
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "a psalm",
         "lemma": "psalmos"
+      },
+      {
+        "surface": "or",
+        "lemma": "echo"
       },
       {
         "surface": "a teaching",
@@ -720,8 +960,20 @@
         "lemma": "glossa"
       },
       {
+        "surface": "or",
+        "lemma": "echo"
+      },
+      {
         "surface": "an interpretation",
         "lemma": "hermeneia"
+      },
+      {
+        "surface": "All of these",
+        "lemma": "pas"
+      },
+      {
+        "surface": "must be done",
+        "lemma": "ginomai"
       },
       {
         "surface": "build up  the church",
@@ -730,8 +982,8 @@
     ],
     "27": [
       {
-        "surface": "If",
-        "lemma": "eite"
+        "surface": "speaks",
+        "lemma": "laleo"
       },
       {
         "surface": "in a tongue",
@@ -754,11 +1006,19 @@
         "lemma": "meros"
       },
       {
+        "surface": "someone",
+        "lemma": "heis"
+      },
+      {
         "surface": "must interpret",
         "lemma": "diermeneuo"
       }
     ],
     "28": [
+      {
+        "surface": "there is",
+        "lemma": "eimi"
+      },
       {
         "surface": "interpreter",
         "lemma": "diermeneutes"
@@ -770,6 +1030,10 @@
       {
         "surface": "the church",
         "lemma": "ekklesia"
+      },
+      {
+        "surface": "speak only",
+        "lemma": "laleo"
       },
       {
         "surface": "God",
@@ -788,6 +1052,10 @@
       {
         "surface": "prophets",
         "lemma": "prophetes"
+      },
+      {
+        "surface": "should speak",
+        "lemma": "laleo"
       },
       {
         "surface": "others",
@@ -822,8 +1090,24 @@
     ],
     "31": [
       {
+        "surface": "you can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "prophesy",
         "lemma": "propheteuo"
+      },
+      {
+        "surface": "turn",
+        "lemma": "heis"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       },
       {
         "surface": "may be instructed",
@@ -854,6 +1138,10 @@
     ],
     "33": [
       {
+        "surface": "God is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a God",
         "lemma": "theos"
       },
@@ -864,6 +1152,10 @@
       {
         "surface": "of peace",
         "lemma": "eirene"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "churches",
@@ -892,15 +1184,27 @@
         "lemma": "epitrepo"
       },
       {
+        "surface": "to speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "must be in submission",
         "lemma": "hupotasso"
       },
       {
         "surface": "law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "says",
+        "lemma": "lego"
       }
     ],
     "35": [
+      {
+        "surface": "they wish",
+        "lemma": "thelo"
+      },
       {
         "surface": "to inquire about",
         "lemma": "manthano"
@@ -922,12 +1226,20 @@
         "lemma": "oikos"
       },
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "dishonorable",
         "lemma": "aischros"
       },
       {
         "surface": "for a woman",
         "lemma": "gune"
+      },
+      {
+        "surface": "to speak",
+        "lemma": "laleo"
       },
       {
         "surface": "the church",
@@ -944,6 +1256,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "originate",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "the only ones",
         "lemma": "monos"
       },
@@ -958,6 +1274,10 @@
         "lemma": "dokeo"
       },
       {
+        "surface": "himself",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a prophet",
         "lemma": "prophetes"
       },
@@ -968,6 +1288,14 @@
       {
         "surface": "let him acknowledge",
         "lemma": "epiginosko"
+      },
+      {
+        "surface": "I am writing",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "the Lord’s",
@@ -1006,11 +1334,23 @@
         "lemma": "koluo"
       },
       {
+        "surface": "speaking",
+        "lemma": "laleo"
+      },
+      {
         "surface": "in tongues",
         "lemma": "glossa"
       }
     ],
     "40": [
+      {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "must be done",
+        "lemma": "ginomai"
+      },
       {
         "surface": "in a proper",
         "lemma": "euschemonos"

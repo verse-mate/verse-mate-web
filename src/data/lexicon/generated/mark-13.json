@@ -14,8 +14,16 @@
         "lemma": "hieros"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "disciples",
         "lemma": "mathetes"
+      },
+      {
+        "surface": "said",
+        "lemma": "lego"
       },
       {
         "surface": "Teacher",
@@ -40,12 +48,20 @@
         "lemma": "blepo"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "buildings",
         "lemma": "oikodome"
       },
       {
         "surface": "Jesus",
         "lemma": "iesous"
+      },
+      {
+        "surface": "replied",
+        "lemma": "eipon"
       },
       {
         "surface": "stone",
@@ -112,8 +128,24 @@
     ],
     "4": [
       {
+        "surface": "Tell",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "happen",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "what will be",
+        "lemma": "tis"
+      },
+      {
         "surface": "sign",
         "lemma": "semeion"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
       },
       {
         "surface": "are about",
@@ -134,6 +166,10 @@
         "lemma": "archomai"
       },
       {
+        "surface": "by telling",
+        "lemma": "lego"
+      },
+      {
         "surface": "See to it",
         "lemma": "blepo"
       },
@@ -144,15 +180,39 @@
     ],
     "6": [
       {
+        "surface": "Many",
+        "lemma": "polus"
+      },
+      {
+        "surface": "will come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "name",
         "lemma": "onoma"
       },
       {
+        "surface": "claiming",
+        "lemma": "lego"
+      },
+      {
+        "surface": "am He",
+        "lemma": "eimi"
+      },
+      {
         "surface": "will deceive",
         "lemma": "planao"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       }
     ],
     "7": [
+      {
+        "surface": "you hear of",
+        "lemma": "akouo"
+      },
       {
         "surface": "wars",
         "lemma": "polemos"
@@ -172,6 +232,10 @@
       {
         "surface": "These things  must",
         "lemma": "dei"
+      },
+      {
+        "surface": "happen",
+        "lemma": "ginomai"
       },
       {
         "surface": "end",
@@ -204,12 +268,20 @@
         "lemma": "basileia"
       },
       {
+        "surface": "There will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "earthquakes",
         "lemma": "seismos"
       },
       {
         "surface": "places",
         "lemma": "topos"
+      },
+      {
+        "surface": "as well as",
+        "lemma": "eimi"
       },
       {
         "surface": "famines",
@@ -246,6 +318,10 @@
         "lemma": "sunagoge"
       },
       {
+        "surface": "you will stand",
+        "lemma": "histemi"
+      },
+      {
         "surface": "governors",
         "lemma": "hegemon"
       },
@@ -276,6 +352,10 @@
         "lemma": "kerusso"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "nations",
         "lemma": "ethnos"
       }
@@ -294,8 +374,32 @@
         "lemma": "promerimnao"
       },
       {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "to say",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "speak",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "are given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "time",
         "lemma": "hora"
+      },
+      {
+        "surface": "it will not be",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "speaking",
+        "lemma": "laleo"
       },
       {
         "surface": "Holy",
@@ -350,8 +454,16 @@
     ],
     "13": [
       {
+        "surface": "You will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "hated",
         "lemma": "miseo"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       },
       {
         "surface": "name",
@@ -372,12 +484,20 @@
     ],
     "14": [
       {
+        "surface": "you see",
+        "lemma": "horao"
+      },
+      {
         "surface": "abomination",
         "lemma": "bdelugma"
       },
       {
         "surface": "desolation",
         "lemma": "eremosis"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "it should not be",
@@ -446,6 +566,10 @@
         "lemma": "hemera"
       },
       {
+        "surface": "pregnant",
+        "lemma": "echo"
+      },
+      {
         "surface": "nursing mothers",
         "lemma": "thelazo"
       }
@@ -456,11 +580,19 @@
         "lemma": "proseuchomai"
       },
       {
+        "surface": "this will not occur",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "in the winter",
         "lemma": "cheimon"
       }
     ],
     "19": [
+      {
+        "surface": "will be",
+        "lemma": "eimi"
+      },
       {
         "surface": "days",
         "lemma": "hemera"
@@ -480,6 +612,10 @@
       {
         "surface": "now",
         "lemma": "nun"
+      },
+      {
+        "surface": "to be seen again",
+        "lemma": "ginomai"
       }
     ],
     "20": [
@@ -494,10 +630,6 @@
       {
         "surface": "days",
         "lemma": "hemera"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "an"
       },
       {
         "surface": "would be saved",
@@ -520,6 +652,10 @@
       {
         "surface": "At that time",
         "lemma": "tote"
+      },
+      {
+        "surface": "says",
+        "lemma": "eipon"
       },
       {
         "surface": "here is",
@@ -552,6 +688,10 @@
         "lemma": "egeiro"
       },
       {
+        "surface": "perform",
+        "lemma": "didomi"
+      },
+      {
         "surface": "signs",
         "lemma": "semeion"
       },
@@ -580,6 +720,10 @@
       {
         "surface": "I have told",
         "lemma": "prolego"
+      },
+      {
+        "surface": "everything {in advance",
+        "lemma": "pas"
       }
     ],
     "24": [
@@ -604,6 +748,10 @@
         "lemma": "selene"
       },
       {
+        "surface": "will not give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "light",
         "lemma": "phengos"
       }
@@ -612,6 +760,10 @@
       {
         "surface": "stars",
         "lemma": "aster"
+      },
+      {
+        "surface": "will",
+        "lemma": "eimi"
       },
       {
         "surface": "fall",
@@ -640,6 +792,10 @@
         "lemma": "tote"
       },
       {
+        "surface": "they will see",
+        "lemma": "horao"
+      },
+      {
         "surface": "Son",
         "lemma": "huios"
       },
@@ -648,8 +804,16 @@
         "lemma": "anthropos"
       },
       {
+        "surface": "coming",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "the clouds",
         "lemma": "nephele"
+      },
+      {
+        "surface": "great",
+        "lemma": "polus"
       },
       {
         "surface": "power",
@@ -720,6 +884,10 @@
         "lemma": "klados"
       },
       {
+        "surface": "become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "tender",
         "lemma": "hapalos"
       },
@@ -732,8 +900,16 @@
         "lemma": "phullon"
       },
       {
+        "surface": "you know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "summer",
         "lemma": "theros"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       }
     ],
     "29": [
@@ -742,14 +918,30 @@
         "lemma": "houto"
       },
       {
+        "surface": "you see",
+        "lemma": "horao"
+      },
+      {
+        "surface": "happening",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "He is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the door",
         "lemma": "thura"
       }
     ],
     "30": [
       {
-        "surface": "Truly",
-        "lemma": "amen"
+        "surface": "I tell",
+        "lemma": "lego"
       },
       {
         "surface": "generation",
@@ -758,6 +950,14 @@
       {
         "surface": "will not pass away",
         "lemma": "parerchomai"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "have happened",
+        "lemma": "ginomai"
       }
     ],
     "31": [
@@ -783,6 +983,14 @@
       }
     ],
     "32": [
+      {
+        "surface": "No one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "knows",
+        "lemma": "eido"
+      },
       {
         "surface": "day",
         "lemma": "hemera"
@@ -818,8 +1026,16 @@
         "lemma": "agrupneo"
       },
       {
+        "surface": "you do not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "appointed time",
         "lemma": "kairos"
+      },
+      {
+        "surface": "will come",
+        "lemma": "eimi"
       }
     ],
     "34": [
@@ -838,6 +1054,10 @@
       {
         "surface": "house",
         "lemma": "oikia"
+      },
+      {
+        "surface": "put",
+        "lemma": "didomi"
       },
       {
         "surface": "each",
@@ -874,12 +1094,20 @@
         "lemma": "gregoreo"
       },
       {
+        "surface": "you do not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "master",
         "lemma": "kurios"
       },
       {
         "surface": "house",
         "lemma": "oikia"
+      },
+      {
+        "surface": "will return",
+        "lemma": "erchomai"
       },
       {
         "surface": "in the evening",
@@ -900,8 +1128,16 @@
     ],
     "36": [
       {
+        "surface": "he may arrive",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "without notice",
         "lemma": "exaiphnes"
+      },
+      {
+        "surface": "and find",
+        "lemma": "heurisko"
       },
       {
         "surface": "sleeping",
@@ -909,6 +1145,18 @@
       }
     ],
     "37": [
+      {
+        "surface": "I say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "I say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "to everyone",
+        "lemma": "pas"
+      },
       {
         "surface": "Keep watch",
         "lemma": "gregoreo"

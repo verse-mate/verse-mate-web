@@ -148,6 +148,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "she does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know that",
         "lemma": "yada"
       },
@@ -168,6 +172,14 @@
       {
         "surface": "my sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "turn aside",
@@ -192,6 +204,10 @@
         "lemma": "rachaq"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "go near",
         "lemma": "qarav"
       },
@@ -205,6 +221,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "you concede",
+        "lemma": "natan"
+      },
       {
         "surface": "your vigor",
         "lemma": "hod"
@@ -272,6 +292,10 @@
     ],
     "12": [
       {
+        "surface": "and you will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "How",
         "lemma": "ekh"
       },
@@ -298,12 +322,24 @@
     ],
     "13": [
       {
+        "surface": "I did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to the voice",
         "lemma": "qol"
       },
       {
         "surface": "of my teachers",
         "lemma": "moreh"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "incline",
@@ -320,8 +356,16 @@
     ],
     "14": [
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "on the brink",
         "lemma": "meat"
+      },
+      {
+        "surface": "of utter",
+        "lemma": "kol"
       },
       {
         "surface": "ruin",
@@ -390,6 +434,10 @@
     ],
     "17": [
       {
+        "surface": "Let them be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "alone",
         "lemma": "bad"
       },
@@ -406,6 +454,10 @@
       {
         "surface": "May your fountain",
         "lemma": "maqor"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "blessed",
@@ -448,6 +500,10 @@
       {
         "surface": "satisfy you",
         "lemma": "ravah"
+      },
+      {
+        "surface": "always",
+        "lemma": "kol"
       },
       {
         "surface": "may you be captivated",
@@ -518,6 +574,10 @@
         "lemma": "palas"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his paths",
         "lemma": "magal"
       }
@@ -578,6 +638,6 @@
   "themeLemmas": [
     "zur",
     "shagah",
-    "tavekh"
+    "lo"
   ]
 }

@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "another",
         "lemma": "allos"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "marvelous",
@@ -28,6 +36,10 @@
       {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "seven",
@@ -56,6 +68,10 @@
     ],
     "2": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a sea",
         "lemma": "thalassa"
       },
@@ -80,6 +96,10 @@
         "lemma": "hualinos"
       },
       {
+        "surface": "stood",
+        "lemma": "histemi"
+      },
+      {
         "surface": "had conquered",
         "lemma": "nikao"
       },
@@ -98,6 +118,10 @@
       {
         "surface": "name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "They were holding",
+        "lemma": "echo"
       },
       {
         "surface": "harps",
@@ -132,6 +156,10 @@
       {
         "surface": "Lamb",
         "lemma": "arnion"
+      },
+      {
+        "surface": "Great",
+        "lemma": "megas"
       },
       {
         "surface": "wonderful are",
@@ -176,6 +204,10 @@
     ],
     "4": [
       {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
         "surface": "will not fear You",
         "lemma": "phobeo"
       },
@@ -200,6 +232,10 @@
         "lemma": "hosios"
       },
       {
+        "surface": "All",
+        "lemma": "pas"
+      },
+      {
         "surface": "nations",
         "lemma": "ethnos"
       },
@@ -221,6 +257,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "I looked",
+        "lemma": "horao"
+      },
       {
         "surface": "temple",
         "lemma": "naos"
@@ -248,12 +288,20 @@
         "lemma": "naos"
       },
       {
+        "surface": "came",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "seven",
         "lemma": "hepta"
       },
       {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "seven",
@@ -298,12 +346,20 @@
     ],
     "7": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "four",
         "lemma": "tessares"
       },
       {
         "surface": "living creatures",
         "lemma": "zoon"
+      },
+      {
+        "surface": "gave",
+        "lemma": "didomi"
       },
       {
         "surface": "seven",
@@ -374,6 +430,18 @@
       {
         "surface": "power",
         "lemma": "dunamis"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "could",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "enter",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "temple",

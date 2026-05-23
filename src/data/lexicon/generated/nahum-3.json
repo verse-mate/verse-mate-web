@@ -6,16 +6,16 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to the city",
         "lemma": "ir"
       },
       {
         "surface": "of blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "full",
+        "lemma": "kol"
       },
       {
         "surface": "of lies",
@@ -28,6 +28,10 @@
       {
         "surface": "plunder",
         "lemma": "pereq"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "without",
@@ -186,10 +190,6 @@
     ],
     "5": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -212,6 +212,10 @@
       {
         "surface": "your face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "I will show",
+        "lemma": "raah"
       },
       {
         "surface": "your nakedness",
@@ -254,8 +258,24 @@
     ],
     "7": [
       {
+        "surface": "Then",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who see you",
+        "lemma": "raah"
+      },
+      {
         "surface": "will recoil",
         "lemma": "nadad"
+      },
+      {
+        "surface": "and say",
+        "lemma": "amar"
       },
       {
         "surface": "Nineveh",
@@ -294,6 +314,10 @@
       {
         "surface": "than Thebes",
         "lemma": "no"
+      },
+      {
+        "surface": "stationed",
+        "lemma": "yashav"
       },
       {
         "surface": "by the Nile",
@@ -350,6 +374,10 @@
         "lemma": "luvi"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "her allies",
         "lemma": "ezrah"
       }
@@ -380,6 +408,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "street",
         "lemma": "chuts"
       },
@@ -394,6 +426,10 @@
       {
         "surface": "her dignitaries",
         "lemma": "kavad"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "her nobles",
@@ -414,6 +450,10 @@
         "lemma": "shakhar"
       },
       {
+        "surface": "you will go",
+        "lemma": "hayah"
+      },
+      {
         "surface": "into hiding",
         "lemma": "alam"
       },
@@ -432,6 +472,10 @@
     ],
     "12": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "your fortresses",
         "lemma": "mivtsar"
       },
@@ -442,6 +486,10 @@
       {
         "surface": "the first ripe figs",
         "lemma": "bikkur"
+      },
+      {
+        "surface": "when",
+        "lemma": "im"
       },
       {
         "surface": "shaken",
@@ -461,10 +509,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "Look at",
-        "lemma": "hinneh"
-      },
       {
         "surface": "your troops",
         "lemma": "am"
@@ -522,6 +566,10 @@
       {
         "surface": "your fortresses",
         "lemma": "mivtsar"
+      },
+      {
+        "surface": "Work",
+        "lemma": "bo"
       },
       {
         "surface": "the clay",
@@ -666,6 +714,10 @@
         "lemma": "nadad"
       },
       {
+        "surface": "and no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one knows",
         "lemma": "yada"
       },
@@ -742,6 +794,14 @@
         "lemma": "chalah"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the news of you",
         "lemma": "shema"
       },
@@ -752,6 +812,10 @@
       {
         "surface": "who",
         "lemma": "mi"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
       },
       {
         "surface": "experienced",
@@ -768,8 +832,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "akhal",
-    "yeleq",
-    "kavad"
+    "yeleq"
   ]
 }

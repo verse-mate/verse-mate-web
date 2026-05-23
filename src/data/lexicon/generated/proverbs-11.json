@@ -40,8 +40,16 @@
         "lemma": "zadon"
       },
       {
+        "surface": "comes",
+        "lemma": "bo"
+      },
+      {
         "surface": "disgrace",
         "lemma": "qalon"
+      },
+      {
+        "surface": "follows",
+        "lemma": "bo"
       },
       {
         "surface": "humility",
@@ -82,6 +90,10 @@
       {
         "surface": "Riches",
         "lemma": "hon"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "are worthless",
@@ -218,6 +230,10 @@
       {
         "surface": "the wicked man",
         "lemma": "rasah"
+      },
+      {
+        "surface": "goes in",
+        "lemma": "bo"
       }
     ],
     "9": [
@@ -496,6 +512,10 @@
         "lemma": "rasah"
       },
       {
+        "surface": "earns",
+        "lemma": "asah"
+      },
+      {
         "surface": "an empty",
         "lemma": "sheqer"
       },
@@ -584,6 +604,10 @@
       {
         "surface": "that the wicked",
         "lemma": "ra"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "go unpunished",
@@ -770,6 +794,10 @@
         "lemma": "ra"
       },
       {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to him who seeks it",
         "lemma": "darash"
       }
@@ -865,10 +893,6 @@
       }
     ],
     "31": [
-      {
-        "surface": "If",
-        "lemma": "hen"
-      },
       {
         "surface": "the righteous",
         "lemma": "tsaddiq"

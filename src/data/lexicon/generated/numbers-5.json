@@ -36,12 +36,24 @@
         "lemma": "machaneh"
       },
       {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "with a skin disease",
         "lemma": "tsara"
       },
       {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "who has a bodily discharge",
         "lemma": "zuv"
+      },
+      {
+        "surface": "and anyone",
+        "lemma": "kol"
       },
       {
         "surface": "who is defiled",
@@ -78,6 +90,10 @@
         "lemma": "machaneh"
       },
       {
+        "surface": "so they will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defile",
         "lemma": "tame"
       },
@@ -100,6 +116,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "this",
         "lemma": "ken"
       },
@@ -118,6 +138,10 @@
       {
         "surface": "They",
         "lemma": "ben"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "the LORD",
@@ -176,6 +200,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "by committing",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "sin",
         "lemma": "chattaah"
       },
@@ -202,6 +234,14 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "he has committed",
+        "lemma": "asah"
+      },
+      {
+        "surface": "He must make full restitution",
+        "lemma": "shuv"
+      },
+      {
         "surface": "add",
         "lemma": "yasaph"
       },
@@ -210,11 +250,19 @@
         "lemma": "chamishi"
       },
       {
+        "surface": "and give all this",
+        "lemma": "natan"
+      },
+      {
         "surface": "he has wronged",
         "lemma": "asham"
       }
     ],
     "8": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "the man",
         "lemma": "ish"
@@ -228,12 +276,20 @@
         "lemma": "gaal"
       },
       {
+        "surface": "to whom restitution can be made for",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the wrong",
         "lemma": "asham"
       },
       {
         "surface": "vvv",
         "lemma": "asham"
+      },
+      {
+        "surface": "the restitution",
+        "lemma": "shuv"
       },
       {
         "surface": "belongs to the LORD",
@@ -262,6 +318,10 @@
     ],
     "9": [
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "sacred",
         "lemma": "qodesh"
       },
@@ -280,6 +340,10 @@
       {
         "surface": "to the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "shall belong",
+        "lemma": "hayah"
       }
     ],
     "10": [
@@ -296,8 +360,16 @@
         "lemma": "ish"
       },
       {
+        "surface": "gives",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "will belong to",
+        "lemma": "hayah"
       }
     ],
     "11": [
@@ -322,6 +394,10 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "and tell them that",
+        "lemma": "amar"
       },
       {
         "surface": "any man’s",
@@ -378,6 +454,10 @@
         "lemma": "ed"
       },
       {
+        "surface": "was not",
+        "lemma": "lo"
+      },
+      {
         "surface": "caught in the act",
         "lemma": "taphas"
       }
@@ -428,6 +508,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defiled herself",
         "lemma": "tame"
       }
@@ -438,12 +522,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "is to bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "his wife",
         "lemma": "ishshah"
       },
       {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "He must also bring",
+        "lemma": "bo"
       },
       {
         "surface": "an offering",
@@ -466,12 +558,20 @@
         "lemma": "qemach"
       },
       {
+        "surface": "He is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to pour",
         "lemma": "yatsaq"
       },
       {
         "surface": "oil",
         "lemma": "shemen"
+      },
+      {
+        "surface": "it or put",
+        "lemma": "natan"
       },
       {
         "surface": "frankincense",
@@ -550,6 +650,10 @@
         "lemma": "keli"
       },
       {
+        "surface": "and put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the dust",
         "lemma": "aphar"
       },
@@ -600,6 +704,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "and place",
+        "lemma": "natan"
+      },
+      {
         "surface": "her hands",
         "lemma": "kaph"
       },
@@ -622,6 +730,10 @@
       {
         "surface": "The priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
       },
       {
         "surface": "to hold",
@@ -650,8 +762,20 @@
         "lemma": "shava"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "her",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "no other",
+        "lemma": "lo"
       },
       {
         "surface": "man",
@@ -660,6 +784,14 @@
       {
         "surface": "has slept with you",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "and",
+        "lemma": "im"
+      },
+      {
+        "surface": "you have not",
+        "lemma": "lo"
       },
       {
         "surface": "gone astray",
@@ -712,6 +844,10 @@
         "lemma": "tame"
       },
       {
+        "surface": "and lain",
+        "lemma": "natan"
+      },
+      {
         "surface": "carnally",
         "lemma": "shekhovet"
       },
@@ -754,6 +890,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "make",
+        "lemma": "natan"
+      },
+      {
         "surface": "an attested",
         "lemma": "alah"
       },
@@ -768,6 +908,10 @@
       {
         "surface": "your people",
         "lemma": "am"
+      },
+      {
+        "surface": "by making",
+        "lemma": "natan"
       },
       {
         "surface": "your thigh",
@@ -796,6 +940,10 @@
         "lemma": "arar"
       },
       {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "your stomach",
         "lemma": "meeh"
       },
@@ -818,6 +966,10 @@
       {
         "surface": "Then the woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "is to say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -882,6 +1034,10 @@
       {
         "surface": "and it",
         "lemma": "mayim"
+      },
+      {
+        "surface": "will enter",
+        "lemma": "bo"
       },
       {
         "surface": "and may cause her bitter",
@@ -994,6 +1150,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "she has defiled herself",
         "lemma": "tame"
       },
@@ -1012,6 +1172,10 @@
       {
         "surface": "that brings a curse",
         "lemma": "arar"
+      },
+      {
+        "surface": "will enter",
+        "lemma": "bo"
       },
       {
         "surface": "and cause bitter suffering",
@@ -1034,6 +1198,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "and she will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "accursed",
         "lemma": "alah"
       },
@@ -1048,8 +1216,16 @@
     ],
     "28": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "the woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
       },
       {
         "surface": "defiled herself",
@@ -1146,6 +1322,14 @@
       {
         "surface": "and the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "is to apply",
+        "lemma": "asah"
+      },
+      {
+        "surface": "entire",
+        "lemma": "kol"
       },
       {
         "surface": "law",

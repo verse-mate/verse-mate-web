@@ -10,6 +10,10 @@
         "lemma": "david"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Is there",
         "lemma": "yesh"
       },
@@ -24,6 +28,10 @@
       {
         "surface": "of Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "I can show",
+        "lemma": "asah"
       },
       {
         "surface": "kindness",
@@ -56,6 +64,10 @@
         "lemma": "tsiva"
       },
       {
+        "surface": "They summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -64,18 +76,30 @@
         "lemma": "melekh"
       },
       {
+        "surface": "inquired",
+        "lemma": "amar"
+      },
+      {
         "surface": "Ziba",
         "lemma": "tsiva"
       },
       {
         "surface": "I am your servant",
         "lemma": "eved"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
       }
     ],
     "3": [
       {
         "surface": "So the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "Is there anyone",
@@ -94,6 +118,10 @@
         "lemma": "shaul"
       },
       {
+        "surface": "I can show",
+        "lemma": "asah"
+      },
+      {
         "surface": "the kindness",
         "lemma": "chesed"
       },
@@ -104,6 +132,10 @@
       {
         "surface": "Ziba",
         "lemma": "tsiva"
+      },
+      {
+        "surface": "answered",
+        "lemma": "amar"
       },
       {
         "surface": "There is still",
@@ -132,6 +164,10 @@
         "lemma": "ephoh"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -140,8 +176,8 @@
         "lemma": "tsiva"
       },
       {
-        "surface": "Indeed",
-        "lemma": "hinneh"
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "vvv",
@@ -228,6 +264,10 @@
         "lemma": "shaul"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -244,34 +284,70 @@
         "lemma": "david"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Mephibosheth",
         "lemma": "mephivoshet"
       },
       {
         "surface": "I am your servant",
         "lemma": "eved"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
       }
     ],
     "7": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "David",
         "lemma": "david"
       },
       {
+        "surface": "surely I will show",
+        "lemma": "asah"
+      },
+      {
         "surface": "kindness",
         "lemma": "chesed"
+      },
+      {
+        "surface": "of your father",
+        "lemma": "av"
       },
       {
         "surface": "Jonathan",
         "lemma": "yehonatan"
       },
       {
+        "surface": "I will restore",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "saday"
+      },
+      {
+        "surface": "of your grandfather",
+        "lemma": "av"
       },
       {
         "surface": "Saul",
@@ -294,6 +370,10 @@
       {
         "surface": "Mephibosheth bowed down",
         "lemma": "shachah"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -322,6 +402,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "Saul’s",
         "lemma": "shaul"
       },
@@ -334,6 +418,14 @@
         "lemma": "tsiva"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I have given",
+        "lemma": "natan"
+      },
+      {
         "surface": "to your master’s",
         "lemma": "adon"
       },
@@ -342,8 +434,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "belonged to",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "and to all",
+        "lemma": "kol"
       },
       {
         "surface": "his house",
@@ -368,12 +472,20 @@
         "lemma": "adamah"
       },
       {
+        "surface": "and bring in the harvest",
+        "lemma": "bo"
+      },
+      {
         "surface": "so that your master’s",
         "lemma": "adon"
       },
       {
         "surface": "grandson",
         "lemma": "ben"
+      },
+      {
+        "surface": "may have",
+        "lemma": "hayah"
       },
       {
         "surface": "food",
@@ -434,12 +546,24 @@
         "lemma": "tsiva"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
       {
         "surface": "Your servant",
         "lemma": "eved"
+      },
+      {
+        "surface": "will do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "my lord",
@@ -500,6 +624,10 @@
         "lemma": "mikah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who dwelt",
         "lemma": "moshav"
       },
@@ -524,6 +652,10 @@
       {
         "surface": "So Mephibosheth",
         "lemma": "mephivoshet"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in Jerusalem",
@@ -560,8 +692,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "tsiva",
-    "shaul",
-    "mephivoshet"
+    "shaul"
   ]
 }

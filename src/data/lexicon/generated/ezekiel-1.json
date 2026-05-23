@@ -50,6 +50,10 @@
         "lemma": "patach"
       },
       {
+        "surface": "and I saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "visions",
         "lemma": "marah"
       },
@@ -98,6 +102,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came directly",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Ezekiel",
         "lemma": "yechezqel"
       },
@@ -140,16 +148,24 @@
       {
         "surface": "hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       }
     ],
     "4": [
       {
-        "surface": "and saw",
-        "lemma": "hinneh"
+        "surface": "I looked",
+        "lemma": "raah"
       },
       {
         "surface": "a whirlwind",
         "lemma": "ruach"
+      },
+      {
+        "surface": "coming",
+        "lemma": "bo"
       },
       {
         "surface": "the north",
@@ -342,6 +358,10 @@
         "lemma": "achot"
       },
       {
+        "surface": "They did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn",
         "lemma": "savav"
       },
@@ -492,6 +512,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "turning",
         "lemma": "savav"
       },
@@ -558,6 +582,10 @@
         "lemma": "baraq"
       },
       {
+        "surface": "flashed",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "it",
         "lemma": "esh"
       }
@@ -582,12 +610,12 @@
     ],
     "15": [
       {
-        "surface": "at the living creatures",
-        "lemma": "chay"
+        "surface": "When I looked",
+        "lemma": "raah"
       },
       {
-        "surface": "I saw",
-        "lemma": "hinneh"
+        "surface": "at the living creatures",
+        "lemma": "chay"
       },
       {
         "surface": "a",
@@ -688,6 +716,10 @@
       {
         "surface": "directions",
         "lemma": "reva"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "pivoting",
@@ -944,6 +976,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "I heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the sound",
         "lemma": "qol"
       },
@@ -997,6 +1033,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "And there came",
+        "lemma": "hayah"
+      },
       {
         "surface": "a voice",
         "lemma": "qol"
@@ -1082,6 +1122,10 @@
         "lemma": "maal"
       },
       {
+        "surface": "I saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "a gleam",
         "lemma": "ayin"
       },
@@ -1116,6 +1160,10 @@
       {
         "surface": "down",
         "lemma": "mattah"
+      },
+      {
+        "surface": "I saw",
+        "lemma": "raah"
       },
       {
         "surface": "what looked",
@@ -1184,8 +1232,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "And when I saw it",
+        "lemma": "raah"
+      },
+      {
         "surface": "I fell",
         "lemma": "naphal"
+      },
+      {
+        "surface": "and heard",
+        "lemma": "shama"
       },
       {
         "surface": "a voice",

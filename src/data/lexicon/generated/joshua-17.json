@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now this was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the allotment",
         "lemma": "goral"
       },
@@ -38,8 +42,16 @@
         "lemma": "menashsheh"
       },
       {
+        "surface": "and father",
+        "lemma": "av"
+      },
+      {
         "surface": "of the Gileadites",
         "lemma": "gilad"
+      },
+      {
+        "surface": "who had received",
+        "lemma": "hayah"
       },
       {
         "surface": "Gilead",
@@ -48,6 +60,10 @@
       {
         "surface": "and Bashan",
         "lemma": "bashan"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "a man",
@@ -59,6 +75,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "So this allotment was",
+        "lemma": "hayah"
+      },
       {
         "surface": "for the rest",
         "lemma": "yatar"
@@ -162,8 +182,20 @@
         "lemma": "menashsheh"
       },
       {
+        "surface": "had",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "only",
+        "lemma": "im"
       },
       {
         "surface": "daughters",
@@ -228,6 +260,10 @@
         "lemma": "nasi"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
       },
@@ -238,6 +274,10 @@
       {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "to give",
+        "lemma": "natan"
       },
       {
         "surface": "an inheritance",
@@ -252,12 +292,20 @@
         "lemma": "ach"
       },
       {
+        "surface": "So Joshua gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "an inheritance",
         "lemma": "nachalah"
       },
       {
         "surface": "among",
         "lemma": "tavekh"
+      },
+      {
+        "surface": "their father’s",
+        "lemma": "av"
       },
       {
         "surface": "brothers",
@@ -348,6 +396,10 @@
         "lemma": "gilad"
       },
       {
+        "surface": "belonged to",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the rest",
         "lemma": "yatar"
       },
@@ -370,6 +422,14 @@
         "lemma": "menashsheh"
       },
       {
+        "surface": "went",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "from Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "to Michmethath",
         "lemma": "mikhmetat"
       },
@@ -380,6 +440,10 @@
       {
         "surface": "then",
         "lemma": "halakh"
+      },
+      {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "vvv",
@@ -398,6 +462,10 @@
       {
         "surface": "of Tappuah",
         "lemma": "taphuch"
+      },
+      {
+        "surface": "belonged to",
+        "lemma": "hayah"
       },
       {
         "surface": "Manasseh",
@@ -482,6 +550,10 @@
         "lemma": "nachal"
       },
       {
+        "surface": "and ended",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at the Sea",
         "lemma": "yam"
       }
@@ -500,6 +572,10 @@
         "lemma": "menashsheh"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to the north",
         "lemma": "tsaphon"
       },
@@ -514,6 +590,10 @@
       {
         "surface": "and adjoining",
         "lemma": "paga"
+      },
+      {
+        "surface": "Asher",
+        "lemma": "asher"
       },
       {
         "surface": "on the north",
@@ -534,8 +614,16 @@
         "lemma": "yissaskhar"
       },
       {
+        "surface": "and Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "Manasseh",
         "lemma": "menashsheh"
+      },
+      {
+        "surface": "was assigned",
+        "lemma": "hayah"
       },
       {
         "surface": "Beth-shean",
@@ -568,6 +656,10 @@
       {
         "surface": "Taanach",
         "lemma": "taanakh"
+      },
+      {
+        "surface": "and",
+        "lemma": "yashav"
       },
       {
         "surface": "Megiddo",
@@ -608,11 +700,19 @@
         "lemma": "yaal"
       },
       {
+        "surface": "to stay",
+        "lemma": "yashav"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
       }
     ],
     "13": [
+      {
+        "surface": "However",
+        "lemma": "hayah"
+      },
       {
         "surface": "the Israelites",
         "lemma": "ben"
@@ -622,12 +722,20 @@
         "lemma": "chazaq"
       },
       {
+        "surface": "they put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Canaanites",
         "lemma": "kenaani"
       },
       {
         "surface": "to forced labor",
         "lemma": "mas"
+      },
+      {
+        "surface": "but they failed",
+        "lemma": "lo"
       },
       {
         "surface": "to drive them out",
@@ -658,6 +766,10 @@
       {
         "surface": "Why",
         "lemma": "maddua"
+      },
+      {
+        "surface": "have you given",
+        "lemma": "natan"
       },
       {
         "surface": "only",
@@ -700,6 +812,14 @@
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
       },
       {
         "surface": "have so many",
@@ -756,6 +876,10 @@
         "lemma": "har"
       },
       {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "enough",
         "lemma": "matsa"
       },
@@ -764,8 +888,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Canaanites",
         "lemma": "kenaani"
+      },
+      {
+        "surface": "who live",
+        "lemma": "yashav"
       },
       {
         "surface": "in the valley",
@@ -802,6 +938,10 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
       },
@@ -834,6 +974,14 @@
         "lemma": "koach"
       },
       {
+        "surface": "You shall not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "have",
+        "lemma": "hayah"
+      },
+      {
         "surface": "just one",
         "lemma": "echad"
       },
@@ -848,6 +996,10 @@
         "lemma": "har"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "is a forest",
         "lemma": "yaar"
       },
@@ -858,6 +1010,10 @@
       {
         "surface": "and its farthest limits",
         "lemma": "totsaah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "the Canaanites have iron",
@@ -879,7 +1035,7 @@
   },
   "themeLemmas": [
     "menashsheh",
-    "gilad",
-    "gevul"
+    "hayah",
+    "gilad"
   ]
 }

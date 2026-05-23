@@ -188,6 +188,10 @@
         "lemma": "rachtsah"
       },
       {
+        "surface": "each",
+        "lemma": "kol"
+      },
+      {
         "surface": "has its twin",
         "lemma": "taam"
       },
@@ -286,6 +290,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "see her",
+        "lemma": "raah"
+      },
+      {
         "surface": "and call her blessed",
         "lemma": "ashar"
       },
@@ -354,12 +362,20 @@
         "lemma": "ginnah"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the blossoms",
         "lemma": "ev"
       },
       {
         "surface": "of the valley",
         "lemma": "nachal"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "if the vines",
@@ -379,6 +395,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Before",
+        "lemma": "lo"
+      },
       {
         "surface": "I realized it",
         "lemma": "yada"
@@ -406,8 +426,24 @@
     ],
     "13": [
       {
+        "surface": "Come back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "come back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O Shulammite",
         "lemma": "shulammit"
+      },
+      {
+        "surface": "Come back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "come back",
+        "lemma": "shuv"
       },
       {
         "surface": "that we may gaze",
@@ -437,7 +473,7 @@
   },
   "themeLemmas": [
     "dod",
-    "yapheh",
-    "yarad"
+    "shuv",
+    "yapheh"
   ]
 }

@@ -22,12 +22,16 @@
         "lemma": "avraham"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Abraham",
         "lemma": "avraham"
       },
       {
-        "surface": "Here I am",
-        "lemma": "hinneh"
+        "surface": "he answered",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -38,6 +42,10 @@
       {
         "surface": "your son",
         "lemma": "ben"
+      },
+      {
+        "surface": "God said",
+        "lemma": "amar"
       },
       {
         "surface": "your only",
@@ -82,6 +90,10 @@
       {
         "surface": "of the mountains",
         "lemma": "har"
+      },
+      {
+        "surface": "I will show",
+        "lemma": "amar"
       }
     ],
     "3": [
@@ -148,6 +160,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "had designated",
+        "lemma": "amar"
       }
     ],
     "4": [
@@ -168,6 +184,10 @@
         "lemma": "nasa"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the place",
         "lemma": "maqom"
       },
@@ -177,6 +197,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Stay",
+        "lemma": "yashav"
+      },
       {
         "surface": "here",
         "lemma": "poh"
@@ -188,6 +212,10 @@
       {
         "surface": "Abraham",
         "lemma": "avraham"
+      },
+      {
+        "surface": "told",
+        "lemma": "amar"
       },
       {
         "surface": "his servants",
@@ -208,6 +236,10 @@
       {
         "surface": "to worship",
         "lemma": "shachah"
+      },
+      {
+        "surface": "and then we will return",
+        "lemma": "shuv"
       }
     ],
     "6": [
@@ -270,16 +302,28 @@
         "lemma": "yitschaq"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Abraham",
         "lemma": "avraham"
       },
       {
-        "surface": "Here I am",
-        "lemma": "hinneh"
+        "surface": "My father",
+        "lemma": "av"
       },
       {
         "surface": "my son",
         "lemma": "ben"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
       },
       {
         "surface": "The fire",
@@ -290,8 +334,8 @@
         "lemma": "ets"
       },
       {
-        "surface": "are here",
-        "lemma": "hinneh"
+        "surface": "said Isaac",
+        "lemma": "amar"
       },
       {
         "surface": "but where",
@@ -312,8 +356,16 @@
         "lemma": "avraham"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "will provide",
+        "lemma": "raah"
       },
       {
         "surface": "the lamb",
@@ -342,12 +394,20 @@
     ],
     "9": [
       {
+        "surface": "When they arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "the place",
         "lemma": "maqom"
       },
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "had designated",
+        "lemma": "amar"
       },
       {
         "surface": "Abraham",
@@ -442,6 +502,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "called out",
+        "lemma": "qara"
+      },
+      {
         "surface": "heaven",
         "lemma": "shamayim"
       },
@@ -454,11 +518,15 @@
         "lemma": "avraham"
       },
       {
-        "surface": "Here I am",
-        "lemma": "hinneh"
+        "surface": "he replied",
+        "lemma": "amar"
       }
     ],
     "12": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "lay",
         "lemma": "shalach"
@@ -472,8 +540,16 @@
         "lemma": "naar"
       },
       {
+        "surface": "or do",
+        "lemma": "asah"
+      },
+      {
         "surface": "anything",
         "lemma": "meumah"
+      },
+      {
+        "surface": "said the angel",
+        "lemma": "amar"
       },
       {
         "surface": "now",
@@ -490,6 +566,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "since you have not",
+        "lemma": "lo"
       },
       {
         "surface": "withheld",
@@ -512,6 +592,10 @@
       {
         "surface": "looked up",
         "lemma": "nasa"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "raah"
       },
       {
         "surface": "behind him",
@@ -572,6 +656,10 @@
         "lemma": "avraham"
       },
       {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "place",
         "lemma": "maqom"
       },
@@ -580,8 +668,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "Will Provide",
+        "lemma": "raah"
+      },
+      {
         "surface": "to this day",
         "lemma": "yom"
+      },
+      {
+        "surface": "it is said",
+        "lemma": "amar"
       },
       {
         "surface": "On the mountain",
@@ -590,6 +686,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "it will be provided",
+        "lemma": "raah"
       }
     ],
     "15": [
@@ -600,6 +700,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
       },
       {
         "surface": "Abraham",
@@ -616,6 +720,10 @@
     ],
     "16": [
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "I have sworn",
         "lemma": "shava"
       },
@@ -626,6 +734,14 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "you have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and have not",
+        "lemma": "lo"
       },
       {
         "surface": "withheld",
@@ -692,6 +808,10 @@
         "lemma": "zera"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "nations",
         "lemma": "goy"
       },
@@ -708,6 +828,10 @@
         "lemma": "eqev"
       },
       {
+        "surface": "you have obeyed",
+        "lemma": "shama"
+      },
+      {
         "surface": "My voice",
         "lemma": "qol"
       }
@@ -716,6 +840,10 @@
       {
         "surface": "Abraham",
         "lemma": "avraham"
+      },
+      {
+        "surface": "went back",
+        "lemma": "shuv"
       },
       {
         "surface": "his servants",
@@ -746,6 +874,10 @@
         "lemma": "avraham"
       },
       {
+        "surface": "settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in",
         "lemma": "beersheva"
       },
@@ -755,6 +887,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "Some time later",
+        "lemma": "hayah"
+      },
       {
         "surface": "Abraham",
         "lemma": "avraham"
@@ -804,6 +940,10 @@
       {
         "surface": "Kemuel",
         "lemma": "qemuel"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "of Aram",
@@ -907,7 +1047,7 @@
   },
   "themeLemmas": [
     "avraham",
-    "olah",
-    "laqach"
+    "amar",
+    "olah"
   ]
 }

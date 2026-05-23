@@ -26,8 +26,16 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "about Edom",
         "lemma": "edom"
+      },
+      {
+        "surface": "We have heard",
+        "lemma": "shama"
       },
       {
         "surface": "a message",
@@ -64,8 +72,8 @@
     ],
     "2": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
+        "surface": "I will make you",
+        "lemma": "natan"
       },
       {
         "surface": "small",
@@ -118,6 +126,10 @@
         "lemma": "marom"
       },
       {
+        "surface": "who say",
+        "lemma": "amar"
+      },
+      {
         "surface": "in your heart",
         "lemma": "lev"
       },
@@ -135,6 +147,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
       {
         "surface": "you soar",
         "lemma": "gavah"
@@ -178,8 +194,20 @@
     ],
     "5": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "thieves",
         "lemma": "gannav"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
       },
       {
         "surface": "robbers",
@@ -198,6 +226,10 @@
         "lemma": "damah"
       },
       {
+        "surface": "would they not",
+        "lemma": "lo"
+      },
+      {
         "surface": "steal",
         "lemma": "ganav"
       },
@@ -206,8 +238,20 @@
         "lemma": "day"
       },
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "grape gatherers",
         "lemma": "batsar"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "would they not",
+        "lemma": "lo"
       },
       {
         "surface": "leave",
@@ -241,6 +285,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the men",
         "lemma": "enosh"
@@ -310,6 +358,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will I not",
+        "lemma": "lo"
       },
       {
         "surface": "destroy",
@@ -434,6 +486,10 @@
         "lemma": "nokhri"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "his gate",
         "lemma": "shaar"
       },
@@ -456,6 +512,14 @@
     ],
     "12": [
       {
+        "surface": "But you should not",
+        "lemma": "al"
+      },
+      {
+        "surface": "gloat",
+        "lemma": "raah"
+      },
+      {
         "surface": "in that day",
         "lemma": "yom"
       },
@@ -470,6 +534,10 @@
       {
         "surface": "of misfortune",
         "lemma": "nekher"
+      },
+      {
+        "surface": "nor",
+        "lemma": "al"
       },
       {
         "surface": "rejoice",
@@ -492,6 +560,10 @@
         "lemma": "avad"
       },
       {
+        "surface": "nor",
+        "lemma": "al"
+      },
+      {
         "surface": "boast proudly",
         "lemma": "gadal"
       },
@@ -505,6 +577,14 @@
       }
     ],
     "13": [
+      {
+        "surface": "You should not",
+        "lemma": "al"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
+      },
       {
         "surface": "the gate",
         "lemma": "shaar"
@@ -522,6 +602,14 @@
         "lemma": "ed"
       },
       {
+        "surface": "nor",
+        "lemma": "al"
+      },
+      {
+        "surface": "gloat",
+        "lemma": "raah"
+      },
+      {
         "surface": "their affliction",
         "lemma": "ra"
       },
@@ -532,6 +620,10 @@
       {
         "surface": "of their disaster",
         "lemma": "ed"
+      },
+      {
+        "surface": "nor",
+        "lemma": "al"
       },
       {
         "surface": "loot",
@@ -552,6 +644,10 @@
     ],
     "14": [
       {
+        "surface": "Nor should you",
+        "lemma": "al"
+      },
+      {
         "surface": "stand",
         "lemma": "amad"
       },
@@ -566,6 +662,10 @@
       {
         "surface": "their fugitives",
         "lemma": "palit"
+      },
+      {
+        "surface": "nor",
+        "lemma": "al"
       },
       {
         "surface": "deliver up",
@@ -598,12 +698,28 @@
         "lemma": "qarov"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
       {
+        "surface": "you have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "it will be done",
+        "lemma": "asah"
+      },
+      {
         "surface": "your recompense",
         "lemma": "gemul"
+      },
+      {
+        "surface": "will return",
+        "lemma": "shuv"
       },
       {
         "surface": "upon your own head",
@@ -624,6 +740,10 @@
         "lemma": "har"
       },
       {
+        "surface": "so all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
@@ -642,6 +762,18 @@
       {
         "surface": "and gulp it down",
         "lemma": "lua"
+      },
+      {
+        "surface": "they will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "as if they had never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "existed",
+        "lemma": "hayah"
       }
     ],
     "17": [
@@ -654,8 +786,16 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "there will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "deliverance",
         "lemma": "peletah"
+      },
+      {
+        "surface": "and it will be",
+        "lemma": "hayah"
       },
       {
         "surface": "holy",
@@ -686,6 +826,10 @@
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "a blazing fire",
@@ -724,8 +868,16 @@
         "lemma": "akhal"
       },
       {
+        "surface": "Therefore no",
+        "lemma": "lo"
+      },
+      {
         "surface": "survivor",
         "lemma": "sarid"
+      },
+      {
+        "surface": "will remain",
+        "lemma": "hayah"
       },
       {
         "surface": "from the house",
@@ -878,14 +1030,18 @@
         "lemma": "melukhah"
       },
       {
+        "surface": "will belong to",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
     ]
   },
   "themeLemmas": [
-    "har",
-    "esav",
-    "bet"
+    "al",
+    "hayah",
+    "har"
   ]
 }

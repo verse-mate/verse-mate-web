@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Where",
         "lemma": "ay"
       },
@@ -44,10 +48,6 @@
       {
         "surface": "did I sell you",
         "lemma": "makhar"
-      },
-      {
-        "surface": "Look",
-        "lemma": "hen"
       },
       {
         "surface": "you were sold",
@@ -84,12 +84,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "when I arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "Why did no one",
         "lemma": "ayin"
       },
       {
         "surface": "answer",
         "lemma": "un"
+      },
+      {
+        "surface": "when I called",
+        "lemma": "qara"
       },
       {
         "surface": "Is My hand",
@@ -104,6 +112,10 @@
         "lemma": "pedut"
       },
       {
+        "surface": "Or",
+        "lemma": "im"
+      },
+      {
         "surface": "do I lack",
         "lemma": "ayin"
       },
@@ -114,10 +126,6 @@
       {
         "surface": "to deliver you",
         "lemma": "natsal"
-      },
-      {
-        "surface": "Behold",
-        "lemma": "hen"
       },
       {
         "surface": "My rebuke",
@@ -204,6 +212,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "has given",
+        "lemma": "natan"
+      },
+      {
         "surface": "the tongue",
         "lemma": "lashon"
       },
@@ -248,6 +260,10 @@
         "lemma": "ozen"
       },
       {
+        "surface": "to listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "as a disciple",
         "lemma": "limmud"
       }
@@ -270,8 +286,16 @@
         "lemma": "ozen"
       },
       {
+        "surface": "have not been",
+        "lemma": "lo"
+      },
+      {
         "surface": "rebellious",
         "lemma": "marah"
+      },
+      {
+        "surface": "nor have I",
+        "lemma": "lo"
       },
       {
         "surface": "turned",
@@ -283,6 +307,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "I offered",
+        "lemma": "natan"
+      },
       {
         "surface": "My back",
         "lemma": "gev"
@@ -298,6 +326,10 @@
       {
         "surface": "to those who tore out My beard",
         "lemma": "marat"
+      },
+      {
+        "surface": "I did not",
+        "lemma": "lo"
       },
       {
         "surface": "hide",
@@ -330,6 +362,10 @@
         "lemma": "azar"
       },
       {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been disgraced",
         "lemma": "kalam"
       },
@@ -348,6 +384,10 @@
       {
         "surface": "and I know",
         "lemma": "yada"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
       },
       {
         "surface": "be put to shame",
@@ -394,10 +434,6 @@
     ],
     "9": [
       {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
-      {
         "surface": "the Lord",
         "lemma": "adonai"
       },
@@ -418,8 +454,8 @@
         "lemma": "rasah"
       },
       {
-        "surface": "See",
-        "lemma": "hen"
+        "surface": "they will all",
+        "lemma": "kol"
       },
       {
         "surface": "wear out",
@@ -450,6 +486,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and obeys",
+        "lemma": "shama"
       },
       {
         "surface": "the voice",
@@ -498,8 +538,8 @@
     ],
     "11": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "you who kindle",
@@ -538,6 +578,10 @@
         "lemma": "baar"
       },
       {
+        "surface": "will receive",
+        "lemma": "hayah"
+      },
+      {
         "surface": "from My hand",
         "lemma": "yad"
       },
@@ -553,7 +597,7 @@
   },
   "themeLemmas": [
     "mi",
-    "hen",
+    "lo",
     "yehovih"
   ]
 }

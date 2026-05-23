@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -36,6 +32,10 @@
       {
         "surface": "and scatter",
         "lemma": "puts"
+      },
+      {
+        "surface": "its inhabitants",
+        "lemma": "yashav"
       }
     ],
     "2": [
@@ -170,6 +170,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "its people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "they have transgressed",
         "lemma": "avar"
       },
@@ -212,12 +216,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "and its inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "must bear the guilt",
         "lemma": "asham"
       },
       {
         "surface": "the earth’s",
         "lemma": "erets"
+      },
+      {
+        "surface": "dwellers",
+        "lemma": "yashav"
       },
       {
         "surface": "have been burned",
@@ -248,6 +260,10 @@
       {
         "surface": "withers",
         "lemma": "amal"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "the merrymakers",
@@ -298,6 +314,10 @@
     ],
     "9": [
       {
+        "surface": "They no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer sing",
         "lemma": "shir"
       },
@@ -336,12 +356,20 @@
         "lemma": "shavar"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
       {
         "surface": "is closed",
         "lemma": "sagar"
+      },
+      {
+        "surface": "to entry",
+        "lemma": "bo"
       }
     ],
     "11": [
@@ -356,6 +384,10 @@
       {
         "surface": "wine",
         "lemma": "yayin"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "joy",
@@ -406,6 +438,10 @@
     ],
     "13": [
       {
+        "surface": "will it be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "on",
         "lemma": "qerev"
       },
@@ -432,6 +468,10 @@
       {
         "surface": "like a gleaning",
         "lemma": "olelah"
+      },
+      {
+        "surface": "after",
+        "lemma": "im"
       },
       {
         "surface": "a grape harvest",
@@ -516,6 +556,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "we hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "singing",
         "lemma": "zamir"
       },
@@ -528,16 +572,16 @@
         "lemma": "tsaddiq"
       },
       {
-        "surface": "I am wasting away",
-        "lemma": "razi"
+        "surface": "But I said",
+        "lemma": "amar"
       },
       {
         "surface": "I am wasting away",
         "lemma": "razi"
       },
       {
-        "surface": "Woe",
-        "lemma": "oy"
+        "surface": "I am wasting away",
+        "lemma": "razi"
       },
       {
         "surface": "The treacherous",
@@ -572,6 +616,10 @@
       {
         "surface": "and snare",
         "lemma": "pach"
+      },
+      {
+        "surface": "O dweller",
+        "lemma": "yashav"
       },
       {
         "surface": "of the earth",
@@ -702,6 +750,10 @@
       {
         "surface": "and it falls",
         "lemma": "naphal"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "to rise",
@@ -840,8 +892,8 @@
     ]
   },
   "themeLemmas": [
+    "yashav",
     "marom",
-    "bagad",
-    "shaar"
+    "bagad"
   ]
 }

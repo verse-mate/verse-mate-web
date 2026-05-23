@@ -50,6 +50,10 @@
     ],
     "3": [
       {
+        "surface": "Put not",
+        "lemma": "al"
+      },
+      {
         "surface": "your trust",
         "lemma": "batach"
       },
@@ -78,6 +82,14 @@
       {
         "surface": "When his spirit",
         "lemma": "ruach"
+      },
+      {
+        "surface": "departs",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "he returns",
+        "lemma": "shuv"
       },
       {
         "surface": "to the ground",
@@ -128,6 +140,10 @@
     ],
     "6": [
       {
+        "surface": "the Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "of heaven",
         "lemma": "shamayim"
       },
@@ -138,6 +154,10 @@
       {
         "surface": "the sea",
         "lemma": "yam"
+      },
+      {
+        "surface": "and everything",
+        "lemma": "kol"
       },
       {
         "surface": "He remains",
@@ -154,12 +174,20 @@
     ],
     "7": [
       {
+        "surface": "He executes",
+        "lemma": "asah"
+      },
+      {
         "surface": "justice",
         "lemma": "mishpat"
       },
       {
         "surface": "for the oppressed",
         "lemma": "ashaq"
+      },
+      {
+        "surface": "and gives",
+        "lemma": "natan"
       },
       {
         "surface": "food",
@@ -287,6 +315,7 @@
   },
   "themeLemmas": [
     "halal",
-    "shamar"
+    "shamar",
+    "asah"
   ]
 }

@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the Lord",
         "lemma": "adon"
       },
@@ -40,6 +36,10 @@
       {
         "surface": "and support",
         "lemma": "mishenah"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "supply",
@@ -115,6 +115,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "I will make",
+        "lemma": "natan"
+      },
       {
         "surface": "mere lads",
         "lemma": "naar"
@@ -192,12 +196,20 @@
         "lemma": "ach"
       },
       {
+        "surface": "within his father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
       {
         "surface": "You have a cloak",
         "lemma": "simlah"
+      },
+      {
+        "surface": "you be",
+        "lemma": "hayah"
       },
       {
         "surface": "leader",
@@ -226,6 +238,14 @@
         "lemma": "nasa"
       },
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a healer",
         "lemma": "chavash"
       },
@@ -244,6 +264,10 @@
       {
         "surface": "in my house",
         "lemma": "bet"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
       },
       {
         "surface": "make me",
@@ -326,12 +350,12 @@
         "lemma": "chattaah"
       },
       {
-        "surface": "conceal it",
-        "lemma": "kachad"
+        "surface": "they do not",
+        "lemma": "lo"
       },
       {
-        "surface": "Woe",
-        "lemma": "oy"
+        "surface": "conceal it",
+        "lemma": "kachad"
       },
       {
         "surface": "to them",
@@ -347,6 +371,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Tell",
+        "lemma": "amar"
+      },
       {
         "surface": "the righteous",
         "lemma": "tsaddiq"
@@ -370,10 +398,6 @@
     ],
     "11": [
       {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
-      {
         "surface": "to the wicked",
         "lemma": "rasah"
       },
@@ -388,6 +412,10 @@
       {
         "surface": "with what their hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "have done",
+        "lemma": "asah"
       }
     ],
     "12": [
@@ -462,6 +490,10 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "brings",
+        "lemma": "bo"
       },
       {
         "surface": "this charge",
@@ -546,6 +578,10 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "also says",
+        "lemma": "amar"
       },
       {
         "surface": "the daughters",
@@ -764,6 +800,10 @@
         "lemma": "besem"
       },
       {
+        "surface": "there will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a stench",
         "lemma": "maq"
       },
@@ -814,6 +854,10 @@
       {
         "surface": "beauty",
         "lemma": "yophi"
+      },
+      {
+        "surface": "shame",
+        "lemma": "ki"
       }
     ],
     "25": [
@@ -854,6 +898,10 @@
       {
         "surface": "destitute",
         "lemma": "naqah"
+      },
+      {
+        "surface": "she will sit",
+        "lemma": "yashav"
       },
       {
         "surface": "on the ground",

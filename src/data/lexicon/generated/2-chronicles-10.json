@@ -18,8 +18,16 @@
         "lemma": "shekhem"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "had gone",
+        "lemma": "bo"
       },
       {
         "surface": "there",
@@ -44,8 +52,16 @@
         "lemma": "nevat"
       },
       {
+        "surface": "heard about this",
+        "lemma": "shama"
+      },
+      {
         "surface": "he",
         "lemma": "yarovam"
+      },
+      {
+        "surface": "returned",
+        "lemma": "shuv"
       },
       {
         "surface": "from Egypt",
@@ -70,12 +86,24 @@
         "lemma": "shalach"
       },
       {
+        "surface": "Jeroboam",
+        "lemma": "qara"
+      },
+      {
         "surface": "and he",
         "lemma": "yarovam"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "Rehoboam",
@@ -87,6 +115,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Your father",
+        "lemma": "av"
+      },
       {
         "surface": "put a heavy",
         "lemma": "qashah"
@@ -108,6 +140,10 @@
         "lemma": "qasheh"
       },
       {
+        "surface": "of your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "service",
         "lemma": "avodah"
       },
@@ -120,11 +156,23 @@
         "lemma": "ol"
       },
       {
+        "surface": "he put",
+        "lemma": "natan"
+      },
+      {
         "surface": "and we will serve you",
         "lemma": "avad"
       }
     ],
     "5": [
+      {
+        "surface": "Rehoboam answered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Come back",
+        "lemma": "shuv"
+      },
       {
         "surface": "in",
         "lemma": "od"
@@ -164,12 +212,24 @@
         "lemma": "zaqen"
       },
       {
+        "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
         "surface": "had served",
         "lemma": "amad"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "during",
+        "lemma": "hayah"
       },
       {
         "surface": "his lifetime",
@@ -184,14 +244,30 @@
         "lemma": "yaats"
       },
       {
+        "surface": "to respond",
+        "lemma": "shuv"
+      },
+      {
         "surface": "people",
         "lemma": "am"
+      },
+      {
+        "surface": "he asked",
+        "lemma": "amar"
       }
     ],
     "7": [
       {
         "surface": "They replied",
         "lemma": "davar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you will be",
+        "lemma": "hayah"
       },
       {
         "surface": "kind",
@@ -218,8 +294,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "they will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "servants",
         "lemma": "eved"
+      },
+      {
+        "surface": "forever",
+        "lemma": "kol"
       }
     ],
     "8": [
@@ -258,6 +342,10 @@
     ],
     "9": [
       {
+        "surface": "He asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
       },
@@ -270,6 +358,10 @@
         "lemma": "yaats"
       },
       {
+        "surface": "that we send back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "people",
         "lemma": "am"
       },
@@ -278,12 +370,24 @@
         "lemma": "davar"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Lighten",
         "lemma": "qalal"
       },
       {
         "surface": "the yoke",
         "lemma": "ol"
+      },
+      {
+        "surface": "your father",
+        "lemma": "av"
+      },
+      {
+        "surface": "put",
+        "lemma": "natan"
       }
     ],
     "10": [
@@ -304,12 +408,20 @@
         "lemma": "koh"
       },
       {
+        "surface": "you should answer",
+        "lemma": "amar"
+      },
+      {
         "surface": "these people",
         "lemma": "am"
       },
       {
         "surface": "said",
         "lemma": "davar"
+      },
+      {
+        "surface": "Your father",
+        "lemma": "av"
       },
       {
         "surface": "made our yoke",
@@ -328,12 +440,20 @@
         "lemma": "koh"
       },
       {
+        "surface": "you should tell",
+        "lemma": "amar"
+      },
+      {
         "surface": "My little finger",
         "lemma": "qoten"
       },
       {
         "surface": "is thicker",
         "lemma": "avah"
+      },
+      {
+        "surface": "than my father’s",
+        "lemma": "av"
       },
       {
         "surface": "waist",
@@ -344,6 +464,10 @@
       {
         "surface": "Whereas",
         "lemma": "attah"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
       },
       {
         "surface": "burdened",
@@ -364,6 +488,10 @@
       {
         "surface": "your yoke",
         "lemma": "ol"
+      },
+      {
+        "surface": "Whereas my father",
+        "lemma": "av"
       },
       {
         "surface": "scourged",
@@ -392,8 +520,16 @@
         "lemma": "yarovam"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "returned",
+        "lemma": "bo"
       },
       {
         "surface": "Rehoboam",
@@ -402,6 +538,14 @@
       {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "had said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Come back",
+        "lemma": "shuv"
       },
       {
         "surface": "on the third",
@@ -460,6 +604,10 @@
         "lemma": "etsah"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Whereas my father made your yoke",
         "lemma": "ol"
       },
@@ -470,6 +618,10 @@
       {
         "surface": "will add",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "Whereas my father",
+        "lemma": "av"
       },
       {
         "surface": "scourged",
@@ -490,12 +642,24 @@
         "lemma": "melekh"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
         "surface": "this turn of events",
         "lemma": "nesibbah"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "God",
@@ -544,6 +708,10 @@
     ],
     "16": [
       {
+        "surface": "When all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel saw",
         "lemma": "yisrael"
       },
@@ -552,8 +720,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "had refused",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to them",
         "lemma": "am"
+      },
+      {
+        "surface": "they answered",
+        "lemma": "shuv"
       },
       {
         "surface": "the king",
@@ -570,6 +750,10 @@
       {
         "surface": "in David",
         "lemma": "david"
+      },
+      {
+        "surface": "and what",
+        "lemma": "lo"
       },
       {
         "surface": "inheritance",
@@ -592,6 +776,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "Look",
+        "lemma": "raah"
+      },
+      {
         "surface": "now",
         "lemma": "bet"
       },
@@ -602,6 +790,10 @@
       {
         "surface": "O David",
         "lemma": "david"
+      },
+      {
+        "surface": "So all",
+        "lemma": "kol"
       },
       {
         "surface": "the Israelites",
@@ -628,6 +820,10 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "living",
+        "lemma": "yashav"
       },
       {
         "surface": "in the cities",
@@ -725,7 +921,7 @@
   },
   "themeLemmas": [
     "rechavam",
-    "ol",
-    "yisrael"
+    "amar",
+    "ol"
   ]
 }

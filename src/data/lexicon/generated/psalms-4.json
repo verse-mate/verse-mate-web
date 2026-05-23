@@ -26,6 +26,10 @@
         "lemma": "un"
       },
       {
+        "surface": "when I call",
+        "lemma": "qara"
+      },
+      {
         "surface": "O God",
         "lemma": "elohim"
       },
@@ -44,6 +48,10 @@
       {
         "surface": "show me grace",
         "lemma": "chanan"
+      },
+      {
+        "surface": "and hear",
+        "lemma": "shama"
       },
       {
         "surface": "my prayer",
@@ -104,6 +112,14 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "hears",
+        "lemma": "shama"
+      },
+      {
+        "surface": "when I call",
+        "lemma": "qara"
       }
     ],
     "4": [
@@ -112,12 +128,20 @@
         "lemma": "ragaz"
       },
       {
+        "surface": "yet do not",
+        "lemma": "al"
+      },
+      {
         "surface": "sin",
         "lemma": "chata"
       },
       {
         "surface": "your bed",
         "lemma": "mishkav"
+      },
+      {
+        "surface": "search",
+        "lemma": "amar"
       },
       {
         "surface": "your heart",
@@ -160,8 +184,16 @@
         "lemma": "rav"
       },
       {
+        "surface": "ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "Who",
         "lemma": "mi"
+      },
+      {
+        "surface": "can show us",
+        "lemma": "raah"
       },
       {
         "surface": "the good",
@@ -186,12 +218,20 @@
     ],
     "7": [
       {
+        "surface": "You have filled",
+        "lemma": "natan"
+      },
+      {
         "surface": "my heart",
         "lemma": "lev"
       },
       {
         "surface": "with more joy",
         "lemma": "simchah"
+      },
+      {
+        "surface": "than when",
+        "lemma": "et"
       },
       {
         "surface": "grain",
@@ -232,6 +272,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "make me dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in safety",
         "lemma": "betach"
       }
@@ -239,6 +283,7 @@
   },
   "themeLemmas": [
     "tsedeq",
+    "shama",
     "selah"
   ]
 }

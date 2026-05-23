@@ -26,6 +26,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "and all his possessions",
+        "lemma": "kol"
+      },
+      {
         "surface": "and Lot was",
         "lemma": "lot"
       }
@@ -108,12 +112,20 @@
       {
         "surface": "had formerly",
         "lemma": "techillah"
+      },
+      {
+        "surface": "been pitched",
+        "lemma": "hayah"
       }
     ],
     "4": [
       {
         "surface": "the site",
         "lemma": "maqom"
+      },
+      {
+        "surface": "he had built",
+        "lemma": "asah"
       },
       {
         "surface": "the altar",
@@ -126,6 +138,10 @@
       {
         "surface": "Abram",
         "lemma": "avram"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
       },
       {
         "surface": "on the name",
@@ -150,6 +166,10 @@
         "lemma": "avram"
       },
       {
+        "surface": "had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "flocks",
         "lemma": "tson"
       },
@@ -168,12 +188,24 @@
         "lemma": "erets"
       },
       {
+        "surface": "was unable",
+        "lemma": "lo"
+      },
+      {
         "surface": "to support",
         "lemma": "nasa"
       },
       {
+        "surface": "while they stayed",
+        "lemma": "yashav"
+      },
+      {
         "surface": "together",
         "lemma": "yachad"
+      },
+      {
+        "surface": "they had",
+        "lemma": "hayah"
       },
       {
         "surface": "so many",
@@ -186,9 +218,17 @@
       {
         "surface": "that they were unable",
         "lemma": "yakhol"
+      },
+      {
+        "surface": "to coexist",
+        "lemma": "yashav"
       }
     ],
     "7": [
+      {
+        "surface": "And there was",
+        "lemma": "hayah"
+      },
       {
         "surface": "discord",
         "lemma": "riv"
@@ -222,6 +262,10 @@
         "lemma": "perizzi"
       },
       {
+        "surface": "were also living",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
       }
@@ -232,12 +276,20 @@
         "lemma": "avram"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Lot",
         "lemma": "lot"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "let there be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "al"
       },
       {
         "surface": "contention",
@@ -266,6 +318,14 @@
     ],
     "9": [
       {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
       },
@@ -274,12 +334,12 @@
         "lemma": "paneh"
       },
       {
-        "surface": "Now",
-        "lemma": "na"
-      },
-      {
         "surface": "separate yourself",
         "lemma": "parad"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
       },
       {
         "surface": "you go to the left",
@@ -288,6 +348,10 @@
       {
         "surface": "I will go to the right",
         "lemma": "yaman"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
       },
       {
         "surface": "you go to the right",
@@ -308,12 +372,24 @@
         "lemma": "nasa"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "plain",
         "lemma": "kikkar"
       },
       {
         "surface": "of the Jordan",
         "lemma": "yarden"
+      },
+      {
+        "surface": "all the way",
+        "lemma": "bo"
       },
       {
         "surface": "to Zoar",
@@ -370,6 +446,10 @@
         "lemma": "bachar"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "plain",
         "lemma": "kikkar"
       },
@@ -400,6 +480,10 @@
         "lemma": "avram"
       },
       {
+        "surface": "lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
       },
@@ -410,6 +494,10 @@
       {
         "surface": "but Lot",
         "lemma": "lot"
+      },
+      {
+        "surface": "settled",
+        "lemma": "yashav"
       },
       {
         "surface": "in the cities",
@@ -472,12 +560,12 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "Abram",
-        "lemma": "avram"
+        "surface": "said",
+        "lemma": "amar"
       },
       {
-        "surface": "Now",
-        "lemma": "na"
+        "surface": "Abram",
+        "lemma": "avram"
       },
       {
         "surface": "lift up",
@@ -494,6 +582,10 @@
       {
         "surface": "are",
         "lemma": "sham"
+      },
+      {
+        "surface": "and look",
+        "lemma": "raah"
       },
       {
         "surface": "to the north",
@@ -514,8 +606,20 @@
     ],
     "15": [
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "I will give",
+        "lemma": "natan"
       },
       {
         "surface": "and your offspring",
@@ -538,6 +642,10 @@
       {
         "surface": "of the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
       },
       {
         "surface": "one",
@@ -588,6 +696,10 @@
       {
         "surface": "and breadth",
         "lemma": "rochav"
+      },
+      {
+        "surface": "I will give it",
+        "lemma": "natan"
       }
     ],
     "18": [
@@ -598,6 +710,14 @@
       {
         "surface": "moved his tent",
         "lemma": "ahal"
+      },
+      {
+        "surface": "and went",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
       },
       {
         "surface": "near the Oaks",
@@ -630,8 +750,8 @@
     ]
   },
   "themeLemmas": [
-    "lot",
     "avram",
-    "bayin"
+    "yashav",
+    "kol"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Then the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -76,6 +80,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "Give",
+        "lemma": "natan"
+      },
+      {
         "surface": "water",
         "lemma": "mayim"
       },
@@ -94,6 +102,10 @@
       {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "Why",
@@ -180,6 +192,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "should I do",
+        "lemma": "asah"
+      },
+      {
         "surface": "people",
         "lemma": "am"
       },
@@ -196,6 +212,10 @@
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Moses",
@@ -252,10 +272,6 @@
     ],
     "6": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "I will stand",
         "lemma": "amad"
       },
@@ -288,6 +304,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "will come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "for the people",
         "lemma": "am"
       },
@@ -298,6 +318,10 @@
       {
         "surface": "So Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "this",
@@ -317,6 +341,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "He named",
+        "lemma": "qara"
+      },
       {
         "surface": "the place",
         "lemma": "maqom"
@@ -346,6 +374,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Is",
         "lemma": "yesh"
       },
@@ -358,6 +390,10 @@
         "lemma": "qerev"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "not",
         "lemma": "ayin"
       }
@@ -366,6 +402,10 @@
       {
         "surface": "After this, the Amalekites",
         "lemma": "amaleq"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "and attacked",
@@ -386,6 +426,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
       },
@@ -396,6 +440,10 @@
       {
         "surface": "some of our men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "and go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "to fight",
@@ -436,8 +484,16 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "had instructed",
+        "lemma": "amar"
       },
       {
         "surface": "and fought",
@@ -540,6 +596,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "and he sat",
+        "lemma": "yashav"
+      },
+      {
         "surface": "Then Aaron",
         "lemma": "aharon"
       },
@@ -568,12 +628,20 @@
         "lemma": "yad"
       },
       {
+        "surface": "remained",
+        "lemma": "hayah"
+      },
+      {
         "surface": "steady",
         "lemma": "emunah"
       },
       {
         "surface": "the sun",
         "lemma": "shemesh"
+      },
+      {
+        "surface": "went down",
+        "lemma": "bo"
       }
     ],
     "13": [
@@ -602,6 +670,10 @@
       {
         "surface": "Then the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Moses",
@@ -662,6 +734,10 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "and named",
+        "lemma": "qara"
+      },
+      {
         "surface": "it",
         "lemma": "shem"
       },
@@ -675,6 +751,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
       {
         "surface": "a hand",
         "lemma": "yad"
@@ -711,7 +791,7 @@
   },
   "themeLemmas": [
     "mosheh",
-    "amaleq",
-    "yisrael"
+    "amar",
+    "amaleq"
   ]
 }

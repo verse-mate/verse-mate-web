@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "Not",
+        "lemma": "lo"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to Your name",
         "lemma": "shem"
+      },
+      {
+        "surface": "be",
+        "lemma": "natan"
       },
       {
         "surface": "the glory",
@@ -36,6 +48,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Where",
         "lemma": "ayyeh"
       },
@@ -52,6 +68,14 @@
       {
         "surface": "is in heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "He does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "as",
+        "lemma": "kol"
       },
       {
         "surface": "He pleases",
@@ -90,12 +114,24 @@
         "lemma": "peh"
       },
       {
+        "surface": "but cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "speak",
         "lemma": "davar"
       },
       {
         "surface": "they have eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "but cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       }
     ],
     "6": [
@@ -104,8 +140,20 @@
         "lemma": "ozen"
       },
       {
+        "surface": "but cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "they have noses",
         "lemma": "aph"
+      },
+      {
+        "surface": "but cannot",
+        "lemma": "lo"
       },
       {
         "surface": "smell",
@@ -118,6 +166,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "but cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "feel",
         "lemma": "mush"
       },
@@ -126,8 +178,16 @@
         "lemma": "regel"
       },
       {
+        "surface": "but cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "walk",
         "lemma": "halakh"
+      },
+      {
+        "surface": "they cannot",
+        "lemma": "lo"
       },
       {
         "surface": "even clear",
@@ -139,6 +199,18 @@
       }
     ],
     "8": [
+      {
+        "surface": "Those who make them",
+        "lemma": "asah"
+      },
+      {
+        "surface": "become",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "as do all",
+        "lemma": "kol"
+      },
       {
         "surface": "trust",
         "lemma": "batach"
@@ -302,6 +374,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "the Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "of heaven",
         "lemma": "shamayim"
       },
@@ -324,6 +400,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "He has given",
+        "lemma": "natan"
+      },
+      {
         "surface": "vvv",
         "lemma": "ben"
       },
@@ -333,6 +413,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "It is not",
+        "lemma": "lo"
+      },
       {
         "surface": "the dead",
         "lemma": "mut"
@@ -344,6 +428,14 @@
       {
         "surface": "the LORD",
         "lemma": "yah"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "who descend",
@@ -374,8 +466,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "barakh",
-    "batach",
-    "magen"
+    "batach"
   ]
 }

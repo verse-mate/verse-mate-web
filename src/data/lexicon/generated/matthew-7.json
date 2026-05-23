@@ -42,6 +42,10 @@
     ],
     "3": [
       {
+        "surface": "Why",
+        "lemma": "tis"
+      },
+      {
         "surface": "do you look at",
         "lemma": "blepo"
       },
@@ -156,6 +160,10 @@
     ],
     "6": [
       {
+        "surface": "give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "dogs",
         "lemma": "kuon"
       },
@@ -198,8 +206,16 @@
         "lemma": "aiteo"
       },
       {
+        "surface": "it will be given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "seek",
         "lemma": "zeteo"
+      },
+      {
+        "surface": "you will find",
+        "lemma": "heurisko"
       },
       {
         "surface": "knock",
@@ -212,12 +228,24 @@
     ],
     "8": [
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "who asks",
         "lemma": "aiteo"
       },
       {
+        "surface": "receives",
+        "lemma": "lambano"
+      },
+      {
         "surface": "seeks",
         "lemma": "zeteo"
+      },
+      {
+        "surface": "finds",
+        "lemma": "heurisko"
       },
       {
         "surface": "knocks",
@@ -229,6 +257,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "Which",
+        "lemma": "tis"
+      },
       {
         "surface": "son",
         "lemma": "huios"
@@ -270,8 +302,20 @@
     ],
     "11": [
       {
+        "surface": "who are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "evil",
         "lemma": "poneros"
+      },
+      {
+        "surface": "know how",
+        "lemma": "eido"
+      },
+      {
+        "surface": "to give",
+        "lemma": "didomi"
       },
       {
         "surface": "good",
@@ -298,6 +342,10 @@
         "lemma": "ouranos"
       },
       {
+        "surface": "give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "good things",
         "lemma": "agathos"
       },
@@ -308,8 +356,28 @@
     ],
     "12": [
       {
+        "surface": "In everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "as",
         "lemma": "houto"
+      },
+      {
+        "surface": "you would have",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "them do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "is the essence of",
+        "lemma": "eimi"
       },
       {
         "surface": "Law",
@@ -321,6 +389,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Enter",
+        "lemma": "eiserchomai"
+      },
       {
         "surface": "narrow",
         "lemma": "stenos"
@@ -352,6 +424,14 @@
       {
         "surface": "destruction",
         "lemma": "apoleia"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
+        "surface": "enter",
+        "lemma": "eiserchomai"
       }
     ],
     "14": [
@@ -382,6 +462,10 @@
       {
         "surface": "only a few",
         "lemma": "oligos"
+      },
+      {
+        "surface": "find",
+        "lemma": "heurisko"
       }
     ],
     "15": [
@@ -394,6 +478,10 @@
         "lemma": "pseudoprophetes"
       },
       {
+        "surface": "come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "sheep’s",
         "lemma": "probaton"
       },
@@ -404,6 +492,10 @@
       {
         "surface": "inwardly",
         "lemma": "esothen"
+      },
+      {
+        "surface": "they are",
+        "lemma": "eimi"
       },
       {
         "surface": "ravenous",
@@ -446,12 +538,20 @@
         "lemma": "houto"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "good",
         "lemma": "agathos"
       },
       {
         "surface": "tree",
         "lemma": "dendron"
+      },
+      {
+        "surface": "bears",
+        "lemma": "poieo"
       },
       {
         "surface": "good",
@@ -468,6 +568,10 @@
       {
         "surface": "tree",
         "lemma": "dendron"
+      },
+      {
+        "surface": "bears",
+        "lemma": "poieo"
       },
       {
         "surface": "bad",
@@ -488,6 +592,14 @@
         "lemma": "dendron"
       },
       {
+        "surface": "cannot",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "bear",
+        "lemma": "poieo"
+      },
+      {
         "surface": "bad",
         "lemma": "poneros"
       },
@@ -504,6 +616,10 @@
         "lemma": "dendron"
       },
       {
+        "surface": "bear",
+        "lemma": "poieo"
+      },
+      {
         "surface": "good",
         "lemma": "kalos"
       },
@@ -514,8 +630,16 @@
     ],
     "19": [
       {
+        "surface": "Every",
+        "lemma": "pas"
+      },
+      {
         "surface": "tree",
         "lemma": "dendron"
+      },
+      {
+        "surface": "that does not bear",
+        "lemma": "poieo"
       },
       {
         "surface": "good",
@@ -550,12 +674,24 @@
     ],
     "21": [
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
       {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "will enter",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "kingdom",
@@ -564,6 +700,10 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "does",
+        "lemma": "poieo"
       },
       {
         "surface": "will",
@@ -579,6 +719,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "Many",
+        "lemma": "polus"
+      },
       {
         "surface": "will say",
         "lemma": "ero"
@@ -624,6 +768,14 @@
         "lemma": "daimonion"
       },
       {
+        "surface": "perform",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "miracles",
         "lemma": "dunamis"
       }
@@ -636,6 +788,10 @@
       {
         "surface": "I will tell them plainly",
         "lemma": "homologeo"
+      },
+      {
+        "surface": "I never knew",
+        "lemma": "ginosko"
       },
       {
         "surface": "depart",
@@ -652,8 +808,20 @@
     ],
     "24": [
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
+        "surface": "hears",
+        "lemma": "akouo"
+      },
+      {
         "surface": "words",
         "lemma": "logos"
+      },
+      {
+        "surface": "acts on",
+        "lemma": "poieo"
       },
       {
         "surface": "is like",
@@ -694,6 +862,10 @@
         "lemma": "potamos"
       },
       {
+        "surface": "raged",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "winds",
         "lemma": "anemos"
       },
@@ -724,8 +896,20 @@
     ],
     "26": [
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
+        "surface": "hears",
+        "lemma": "akouo"
+      },
+      {
         "surface": "words",
         "lemma": "logos"
+      },
+      {
+        "surface": "does not act on",
+        "lemma": "poieo"
       },
       {
         "surface": "is like",
@@ -766,6 +950,10 @@
         "lemma": "potamos"
       },
       {
+        "surface": "raged",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "winds",
         "lemma": "anemos"
       },
@@ -786,11 +974,23 @@
         "lemma": "pipto"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "collapse",
         "lemma": "ptosis"
       }
     ],
     "28": [
+      {
+        "surface": "vvv",
+        "lemma": "ginomai"
+      },
       {
         "surface": "Jesus",
         "lemma": "iesous"
@@ -818,8 +1018,16 @@
     ],
     "29": [
       {
+        "surface": "He",
+        "lemma": "eimi"
+      },
+      {
         "surface": "taught",
         "lemma": "didasko"
+      },
+      {
+        "surface": "who had",
+        "lemma": "echo"
       },
       {
         "surface": "authority",

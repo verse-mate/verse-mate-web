@@ -14,6 +14,10 @@
         "lemma": "iesous"
       },
       {
+        "surface": "spoke",
+        "lemma": "laleo"
+      },
+      {
         "surface": "crowds",
         "lemma": "ochlos"
       },
@@ -46,12 +50,36 @@
     ],
     "3": [
       {
+        "surface": "practice",
+        "lemma": "poieo"
+      },
+      {
         "surface": "observe",
         "lemma": "tereo"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "they tell",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "do",
         "lemma": "ergon"
+      },
+      {
+        "surface": "they do not practice",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "they preach",
+        "lemma": "lego"
       }
     ],
     "4": [
@@ -84,6 +112,10 @@
         "lemma": "omos"
       },
       {
+        "surface": "are not willing",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to lift a finger",
         "lemma": "daktulos"
       },
@@ -94,8 +126,16 @@
     ],
     "5": [
       {
+        "surface": "All",
+        "lemma": "pas"
+      },
+      {
         "surface": "deeds",
         "lemma": "ergon"
+      },
+      {
+        "surface": "are done",
+        "lemma": "poieo"
       },
       {
         "surface": "men",
@@ -176,8 +216,24 @@
         "lemma": "rhabbi"
       },
       {
+        "surface": "have",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Teacher",
         "lemma": "didaskalos"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "brothers",
@@ -198,6 +254,14 @@
         "lemma": "pater"
       },
       {
+        "surface": "have",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Father",
         "lemma": "pater"
       },
@@ -216,6 +280,14 @@
         "lemma": "kathegetes"
       },
       {
+        "surface": "have",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Instructor",
         "lemma": "kathegetes"
       },
@@ -225,6 +297,14 @@
       }
     ],
     "11": [
+      {
+        "surface": "greatest",
+        "lemma": "megas"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "eimi"
+      },
       {
         "surface": "servant",
         "lemma": "diakonos"
@@ -274,8 +354,20 @@
         "lemma": "ouranos"
       },
       {
+        "surface": "do not enter",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "will you let",
         "lemma": "aphiemi"
+      },
+      {
+        "surface": "in",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "wish to enter",
+        "lemma": "eiserchomai"
       }
     ],
     "15": [
@@ -304,8 +396,24 @@
         "lemma": "thalassa"
       },
       {
+        "surface": "to win",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "a single",
+        "lemma": "heis"
+      },
+      {
         "surface": "convert",
         "lemma": "proselutos"
+      },
+      {
+        "surface": "he becomes one",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "you make",
+        "lemma": "poieo"
       },
       {
         "surface": "twice as much",
@@ -330,12 +438,24 @@
         "lemma": "hodegos"
       },
       {
+        "surface": "say",
+        "lemma": "lego"
+      },
+      {
         "surface": "swears",
         "lemma": "omnumi"
       },
       {
         "surface": "temple",
         "lemma": "naos"
+      },
+      {
+        "surface": "it means",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
       },
       {
         "surface": "swears",
@@ -364,6 +484,18 @@
         "lemma": "moros"
       },
       {
+        "surface": "Which",
+        "lemma": "tis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "greater",
+        "lemma": "megas"
+      },
+      {
         "surface": "gold",
         "lemma": "chrusos"
       },
@@ -386,6 +518,14 @@
         "lemma": "thusiasterion"
       },
       {
+        "surface": "it means",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "swears",
         "lemma": "omnumi"
       },
@@ -402,6 +542,14 @@
       {
         "surface": "You blind men",
         "lemma": "tuphlos"
+      },
+      {
+        "surface": "Which",
+        "lemma": "tis"
+      },
+      {
+        "surface": "is greater",
+        "lemma": "megas"
       },
       {
         "surface": "gift",
@@ -428,6 +576,10 @@
       {
         "surface": "swears",
         "lemma": "omnumi"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       }
     ],
     "21": [
@@ -532,6 +684,10 @@
         "lemma": "dei"
       },
       {
+        "surface": "practiced",
+        "lemma": "poieo"
+      },
+      {
         "surface": "neglecting",
         "lemma": "aphiemi"
       }
@@ -630,6 +786,10 @@
         "lemma": "paropsis"
       },
       {
+        "surface": "may become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "clean",
         "lemma": "katharos"
       }
@@ -684,6 +844,10 @@
         "lemma": "osteon"
       },
       {
+        "surface": "every kind of",
+        "lemma": "pas"
+      },
+      {
         "surface": "impurity",
         "lemma": "akatharsia"
       }
@@ -704,6 +868,10 @@
       {
         "surface": "on the inside",
         "lemma": "esothen"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "full",
@@ -758,6 +926,14 @@
     ],
     "30": [
       {
+        "surface": "you say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "we had lived",
+        "lemma": "eimi"
+      },
+      {
         "surface": "days",
         "lemma": "hemera"
       },
@@ -766,8 +942,8 @@
         "lemma": "pater"
       },
       {
-        "surface": "vvv",
-        "lemma": "an"
+        "surface": "we would not have been",
+        "lemma": "eimi"
       },
       {
         "surface": "partners",
@@ -786,6 +962,10 @@
       {
         "surface": "you testify",
         "lemma": "martureo"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "the sons",
@@ -888,6 +1068,14 @@
     ],
     "35": [
       {
+        "surface": "will come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "the righteous",
         "lemma": "dikaios"
       },
@@ -946,8 +1134,12 @@
     ],
     "36": [
       {
-        "surface": "Truly",
-        "lemma": "amen"
+        "surface": "I tell",
+        "lemma": "lego"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "will come",
@@ -988,6 +1180,10 @@
         "lemma": "posakis"
       },
       {
+        "surface": "I have longed",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to gather",
         "lemma": "episunago"
       },
@@ -1014,6 +1210,10 @@
       {
         "surface": "wings",
         "lemma": "pterux"
+      },
+      {
+        "surface": "you were unwilling",
+        "lemma": "thelo"
       }
     ],
     "38": [
@@ -1032,8 +1232,24 @@
     ],
     "39": [
       {
+        "surface": "I tell",
+        "lemma": "lego"
+      },
+      {
+        "surface": "you will not see",
+        "lemma": "horao"
+      },
+      {
+        "surface": "you say",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Blessed is",
         "lemma": "eulogeo"
+      },
+      {
+        "surface": "comes",
+        "lemma": "erchomai"
       },
       {
         "surface": "the name",

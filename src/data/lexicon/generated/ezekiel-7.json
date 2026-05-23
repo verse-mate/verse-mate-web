@@ -12,6 +12,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -36,6 +44,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the land",
         "lemma": "adamah"
       },
@@ -50,6 +62,10 @@
       {
         "surface": "The end",
         "lemma": "qets"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
       },
       {
         "surface": "the four",
@@ -90,14 +106,30 @@
         "lemma": "derekh"
       },
       {
+        "surface": "and repay",
+        "lemma": "natan"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your abominations",
         "lemma": "toevah"
       }
     ],
     "4": [
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "with pity",
         "lemma": "chus"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "will I spare you",
@@ -138,6 +170,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Disaster",
         "lemma": "ra"
       },
@@ -150,8 +186,8 @@
         "lemma": "ra"
       },
       {
-        "surface": "behold",
-        "lemma": "hinneh"
+        "surface": "it is coming",
+        "lemma": "bo"
       }
     ],
     "6": [
@@ -160,16 +196,24 @@
         "lemma": "qets"
       },
       {
+        "surface": "has come",
+        "lemma": "bo"
+      },
+      {
         "surface": "The end",
         "lemma": "qets"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
       },
       {
         "surface": "It has roused itself",
         "lemma": "quts"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
+        "surface": "it has come",
+        "lemma": "bo"
       }
     ],
     "7": [
@@ -178,8 +222,24 @@
         "lemma": "tsephirah"
       },
       {
+        "surface": "has come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "O inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "The time",
+        "lemma": "et"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
       },
       {
         "surface": "the day",
@@ -196,6 +256,10 @@
       {
         "surface": "on the mountains",
         "lemma": "har"
+      },
+      {
+        "surface": "instead of shouts of joy",
+        "lemma": "lo"
       }
     ],
     "8": [
@@ -228,18 +292,38 @@
         "lemma": "derekh"
       },
       {
+        "surface": "and repay you",
+        "lemma": "natan"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your abominations",
         "lemma": "toevah"
       }
     ],
     "9": [
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "look on you with pity",
         "lemma": "chus"
       },
       {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
         "surface": "will I spare you",
         "lemma": "chamal"
+      },
+      {
+        "surface": "but I will punish you",
+        "lemma": "natan"
       },
       {
         "surface": "for your ways",
@@ -268,20 +352,20 @@
     ],
     "10": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the day",
         "lemma": "yom"
       },
       {
-        "surface": "is here",
-        "lemma": "hinneh"
+        "surface": "It has come",
+        "lemma": "bo"
       },
       {
         "surface": "Doom",
         "lemma": "tsephirah"
+      },
+      {
+        "surface": "has gone out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the rod",
@@ -318,12 +402,28 @@
         "lemma": "resah"
       },
       {
+        "surface": "None",
+        "lemma": "lo"
+      },
+      {
+        "surface": "none",
+        "lemma": "lo"
+      },
+      {
         "surface": "of their multitude",
         "lemma": "hamon"
       },
       {
+        "surface": "none",
+        "lemma": "lo"
+      },
+      {
         "surface": "of their wealth",
         "lemma": "hem"
+      },
+      {
+        "surface": "and nothing",
+        "lemma": "lo"
       },
       {
         "surface": "of value",
@@ -331,6 +431,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "The time",
+        "lemma": "et"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
+      },
       {
         "surface": "the day",
         "lemma": "yom"
@@ -344,12 +452,20 @@
         "lemma": "qanah"
       },
       {
+        "surface": "not",
+        "lemma": "al"
+      },
+      {
         "surface": "rejoice",
         "lemma": "samach"
       },
       {
         "surface": "and the seller",
         "lemma": "makhar"
+      },
+      {
+        "surface": "not",
+        "lemma": "al"
       },
       {
         "surface": "mourn",
@@ -360,6 +476,10 @@
         "lemma": "charon"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "multitude",
         "lemma": "hamon"
       }
@@ -368,6 +488,14 @@
       {
         "surface": "The seller",
         "lemma": "makhar"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "recover",
+        "lemma": "shuv"
       },
       {
         "surface": "what he sold",
@@ -386,8 +514,20 @@
         "lemma": "chazon"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "multitude",
         "lemma": "hamon"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be revoked",
+        "lemma": "shuv"
       },
       {
         "surface": "and because of their iniquity",
@@ -420,6 +560,10 @@
         "lemma": "kun"
       },
       {
+        "surface": "everything ready",
+        "lemma": "kol"
+      },
+      {
         "surface": "but no",
         "lemma": "ayin"
       },
@@ -434,6 +578,10 @@
       {
         "surface": "My wrath",
         "lemma": "charon"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "multitude",
@@ -526,12 +674,20 @@
     ],
     "17": [
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "hand",
         "lemma": "yad"
       },
       {
         "surface": "will go limp",
         "lemma": "raphah"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
       },
       {
         "surface": "knee",
@@ -568,8 +724,16 @@
         "lemma": "bushah"
       },
       {
+        "surface": "will cover all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their faces",
         "lemma": "paneh"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "their heads",
@@ -598,6 +762,10 @@
         "lemma": "zahav"
       },
       {
+        "surface": "will seem",
+        "lemma": "hayah"
+      },
+      {
         "surface": "unclean",
         "lemma": "niddah"
       },
@@ -608,6 +776,10 @@
       {
         "surface": "and gold",
         "lemma": "zahav"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "lo"
       },
       {
         "surface": "save them",
@@ -626,6 +798,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "They cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfy",
         "lemma": "sava"
       },
@@ -640,6 +816,10 @@
       {
         "surface": "their stomachs with wealth",
         "lemma": "meeh"
+      },
+      {
+        "surface": "it became",
+        "lemma": "hayah"
       },
       {
         "surface": "the stumbling block",
@@ -668,6 +848,10 @@
         "lemma": "gaon"
       },
       {
+        "surface": "to fashion",
+        "lemma": "asah"
+      },
+      {
         "surface": "their vile",
         "lemma": "toevah"
       },
@@ -680,11 +864,19 @@
         "lemma": "shiqquts"
       },
       {
+        "surface": "I will make these",
+        "lemma": "natan"
+      },
+      {
         "surface": "into something unclean",
         "lemma": "niddah"
       }
     ],
     "21": [
+      {
+        "surface": "And I will hand these things over",
+        "lemma": "natan"
+      },
       {
         "surface": "as plunder",
         "lemma": "baz"
@@ -732,11 +924,19 @@
         "lemma": "perits"
       },
       {
+        "surface": "will enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "and they will defile it",
         "lemma": "chalal"
       }
     ],
     "23": [
+      {
+        "surface": "Forge",
+        "lemma": "asah"
+      },
       {
         "surface": "the chain",
         "lemma": "rattoq"
@@ -771,6 +971,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "So I will bring",
+        "lemma": "bo"
+      },
       {
         "surface": "the most wicked",
         "lemma": "ra"
@@ -814,6 +1018,10 @@
         "lemma": "qephadah"
       },
       {
+        "surface": "is coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "They will seek",
         "lemma": "baqash"
       },
@@ -834,6 +1042,14 @@
       {
         "surface": "disaster",
         "lemma": "hovah"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and",
+        "lemma": "hayah"
       },
       {
         "surface": "rumor",
@@ -914,6 +1130,10 @@
         "lemma": "bahal"
       },
       {
+        "surface": "I will deal",
+        "lemma": "asah"
+      },
+      {
         "surface": "according to their conduct",
         "lemma": "derekh"
       },
@@ -936,8 +1156,8 @@
     ]
   },
   "themeLemmas": [
-    "toevah",
-    "qets",
-    "hinneh"
+    "lo",
+    "bo",
+    "kol"
   ]
 }

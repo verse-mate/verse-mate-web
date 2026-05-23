@@ -14,8 +14,16 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "vvv",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Judea",
         "lemma": "ioudaia"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
       },
       {
         "surface": "Gentiles",
@@ -58,6 +66,18 @@
     ],
     "3": [
       {
+        "surface": "and said",
+        "lemma": "lego"
+      },
+      {
+        "surface": "You visited",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "echo"
+      },
+      {
         "surface": "uncircumcised",
         "lemma": "akrobustia"
       },
@@ -90,6 +110,10 @@
     ],
     "5": [
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the city",
         "lemma": "polis"
       },
@@ -106,8 +130,16 @@
         "lemma": "ekstasis"
       },
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a vision",
         "lemma": "horama"
+      },
+      {
+        "surface": "a large",
+        "lemma": "megas"
       },
       {
         "surface": "sheet",
@@ -132,6 +164,10 @@
       {
         "surface": "corners",
         "lemma": "arche"
+      },
+      {
+        "surface": "it came right down to",
+        "lemma": "erchomai"
       }
     ],
     "6": [
@@ -170,8 +206,16 @@
     ],
     "7": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "a voice",
         "lemma": "phone"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "Get up",
@@ -196,6 +240,10 @@
         "lemma": "kurios"
       },
       {
+        "surface": "I said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "nothing",
         "lemma": "oudepote"
       },
@@ -208,6 +256,10 @@
         "lemma": "akathartos"
       },
       {
+        "surface": "has {ever} entered",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "mouth",
         "lemma": "stoma"
       }
@@ -216,6 +268,10 @@
       {
         "surface": "the voice",
         "lemma": "phone"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "apokrino"
       },
       {
         "surface": "heaven",
@@ -239,6 +295,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "happened",
+        "lemma": "ginomai"
+      },
       {
         "surface": "three times",
         "lemma": "tris"
@@ -280,12 +340,20 @@
       {
         "surface": "house",
         "lemma": "oikia"
+      },
+      {
+        "surface": "I was staying",
+        "lemma": "eimi"
       }
     ],
     "12": [
       {
         "surface": "Spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "told",
+        "lemma": "eipon"
       },
       {
         "surface": "to accompany",
@@ -308,6 +376,14 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "went",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "we entered",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "man’s",
         "lemma": "aner"
       },
@@ -322,12 +398,24 @@
         "lemma": "apangello"
       },
       {
+        "surface": "he had seen",
+        "lemma": "horao"
+      },
+      {
         "surface": "an angel",
         "lemma": "angelos"
       },
       {
+        "surface": "standing",
+        "lemma": "histemi"
+      },
+      {
         "surface": "house",
         "lemma": "oikos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "eipon"
       },
       {
         "surface": "Send",
@@ -356,8 +444,16 @@
     ],
     "14": [
       {
+        "surface": "will convey",
+        "lemma": "laleo"
+      },
+      {
         "surface": "a message",
         "lemma": "rhema"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "household",
@@ -372,6 +468,10 @@
       {
         "surface": "began",
         "lemma": "archomai"
+      },
+      {
+        "surface": "to speak",
+        "lemma": "laleo"
       },
       {
         "surface": "Holy",
@@ -404,6 +504,10 @@
         "lemma": "kurios"
       },
       {
+        "surface": "He said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "John",
         "lemma": "ioannes"
       },
@@ -434,6 +538,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "same",
         "lemma": "isos"
       },
@@ -458,6 +566,14 @@
         "lemma": "christos"
       },
       {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "to",
         "lemma": "dunatos"
       },
@@ -472,6 +588,10 @@
     ],
     "18": [
       {
+        "surface": "they heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "they had no further objections",
         "lemma": "hesuchazo"
       },
@@ -484,8 +604,16 @@
         "lemma": "theos"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "has granted",
+        "lemma": "didomi"
       },
       {
         "surface": "Gentiles",
@@ -510,6 +638,10 @@
         "lemma": "thlipsis"
       },
       {
+        "surface": "that began",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "Stephen",
         "lemma": "stephanos"
       },
@@ -528,6 +660,10 @@
       {
         "surface": "Antioch",
         "lemma": "antiocheia"
+      },
+      {
+        "surface": "speaking",
+        "lemma": "laleo"
       },
       {
         "surface": "message",
@@ -556,8 +692,16 @@
         "lemma": "kurenaios"
       },
       {
+        "surface": "went",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "Antioch",
         "lemma": "antiocheia"
+      },
+      {
+        "surface": "and began speaking",
+        "lemma": "laleo"
       },
       {
         "surface": "Greeks",
@@ -586,6 +730,14 @@
         "lemma": "kurios"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "a great",
+        "lemma": "polus"
+      },
+      {
         "surface": "number of people",
         "lemma": "arithmos"
       },
@@ -606,6 +758,10 @@
       {
         "surface": "news",
         "lemma": "logos"
+      },
+      {
+        "surface": "reached",
+        "lemma": "akouo"
       },
       {
         "surface": "ears",
@@ -642,6 +798,10 @@
         "lemma": "paraginomai"
       },
       {
+        "surface": "saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
       },
@@ -656,6 +816,10 @@
       {
         "surface": "encouraged",
         "lemma": "parakaleo"
+      },
+      {
+        "surface": "them all",
+        "lemma": "pas"
       },
       {
         "surface": "to abide",
@@ -675,6 +839,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "Barnabas was",
+        "lemma": "eimi"
+      },
       {
         "surface": "a good",
         "lemma": "agathos"
@@ -718,6 +886,10 @@
     ],
     "25": [
       {
+        "surface": "Barnabas went",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "Tarsus",
         "lemma": "tarsos"
       },
@@ -731,6 +903,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "he found him",
+        "lemma": "heurisko"
+      },
       {
         "surface": "he brought him",
         "lemma": "ago"
@@ -808,6 +984,10 @@
     ],
     "28": [
       {
+        "surface": "One",
+        "lemma": "heis"
+      },
+      {
         "surface": "named",
         "lemma": "onoma"
       },
@@ -828,6 +1008,10 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "famine",
         "lemma": "limos"
       },
@@ -836,12 +1020,20 @@
         "lemma": "mello"
       },
       {
+        "surface": "sweep",
+        "lemma": "eimi"
+      },
+      {
         "surface": "whole",
         "lemma": "holos"
       },
       {
         "surface": "world",
         "lemma": "oikoumene"
+      },
+      {
+        "surface": "happened",
+        "lemma": "ginomai"
       },
       {
         "surface": "Claudius",
@@ -887,6 +1079,10 @@
       }
     ],
     "30": [
+      {
+        "surface": "they did",
+        "lemma": "poieo"
+      },
       {
         "surface": "sending their gifts",
         "lemma": "apostello"

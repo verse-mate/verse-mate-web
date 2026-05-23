@@ -58,6 +58,10 @@
         "lemma": "neshamah"
       },
       {
+        "surface": "is still",
+        "lemma": "kol"
+      },
+      {
         "surface": "and the breath",
         "lemma": "ruach"
       },
@@ -76,6 +80,10 @@
         "lemma": "saphah"
       },
       {
+        "surface": "will not",
+        "lemma": "im"
+      },
+      {
         "surface": "speak",
         "lemma": "davar"
       },
@@ -88,6 +96,10 @@
         "lemma": "lashon"
       },
       {
+        "surface": "will not",
+        "lemma": "im"
+      },
+      {
         "surface": "utter",
         "lemma": "hagah"
       },
@@ -98,12 +110,12 @@
     ],
     "5": [
       {
-        "surface": "I will never",
-        "lemma": "chalilah"
-      },
-      {
         "surface": "say that you are right",
         "lemma": "tsadaq"
+      },
+      {
+        "surface": "I will maintain",
+        "lemma": "lo"
       },
       {
         "surface": "my integrity",
@@ -124,6 +136,10 @@
         "lemma": "tsedaqah"
       },
       {
+        "surface": "and never",
+        "lemma": "lo"
+      },
+      {
         "surface": "let go",
         "lemma": "raphah"
       },
@@ -136,6 +152,10 @@
         "lemma": "levav"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "accuse me",
         "lemma": "charaph"
       }
@@ -144,6 +164,10 @@
       {
         "surface": "May my enemy",
         "lemma": "oyev"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "like the wicked",
@@ -194,12 +218,20 @@
         "lemma": "el"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "his cry",
         "lemma": "tsaaqah"
       },
       {
         "surface": "distress",
         "lemma": "batstsarah"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
       }
     ],
     "10": [
@@ -212,8 +244,20 @@
         "lemma": "shadday"
       },
       {
+        "surface": "Will he call upon",
+        "lemma": "qara"
+      },
+      {
         "surface": "God",
         "lemma": "eloah"
+      },
+      {
+        "surface": "at all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "times",
+        "lemma": "et"
       }
     ],
     "11": [
@@ -230,6 +274,10 @@
         "lemma": "el"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "conceal",
         "lemma": "kachad"
       },
@@ -240,8 +288,8 @@
     ],
     "12": [
       {
-        "surface": "Surely",
-        "lemma": "hen"
+        "surface": "all of you",
+        "lemma": "kol"
       },
       {
         "surface": "have seen it",
@@ -292,6 +340,10 @@
     ],
     "14": [
       {
+        "surface": "Though",
+        "lemma": "im"
+      },
+      {
         "surface": "his sons",
         "lemma": "ben"
       },
@@ -306,6 +358,10 @@
       {
         "surface": "and his offspring",
         "lemma": "tseetsa"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
       },
       {
         "surface": "have enough",
@@ -334,11 +390,19 @@
         "lemma": "almanah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "weep for them",
         "lemma": "bakhah"
       }
     ],
     "16": [
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
       {
         "surface": "he heaps up",
         "lemma": "tsavar"
@@ -408,6 +472,10 @@
         "lemma": "sukkah"
       },
       {
+        "surface": "set up",
+        "lemma": "asah"
+      },
+      {
         "surface": "by a watchman",
         "lemma": "natsar"
       }
@@ -420,6 +488,10 @@
       {
         "surface": "wealthy",
         "lemma": "ashir"
+      },
+      {
+        "surface": "but will do so no more",
+        "lemma": "lo"
       },
       {
         "surface": "when he opens",
@@ -488,6 +560,10 @@
         "lemma": "shalakh"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "mercy",
         "lemma": "chamal"
       },
@@ -520,8 +596,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "shadday",
-    "eloah",
-    "rasah"
+    "im"
   ]
 }

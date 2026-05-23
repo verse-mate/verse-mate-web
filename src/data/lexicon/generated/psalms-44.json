@@ -22,12 +22,20 @@
         "lemma": "qorach"
       },
       {
+        "surface": "We have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "with our ears",
         "lemma": "ozen"
       },
       {
         "surface": "O God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "our fathers",
+        "lemma": "av"
       },
       {
         "surface": "have told",
@@ -86,6 +94,10 @@
     ],
     "3": [
       {
+        "surface": "it was not",
+        "lemma": "lo"
+      },
+      {
         "surface": "by their sword",
         "lemma": "cherev"
       },
@@ -100,6 +112,10 @@
       {
         "surface": "their arm",
         "lemma": "zeroa"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "bring them victory",
@@ -172,6 +188,10 @@
     ],
     "6": [
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "trust",
         "lemma": "batach"
       },
@@ -216,6 +236,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "all day long",
+        "lemma": "kol"
+      },
+      {
         "surface": "and Your name",
         "lemma": "shem"
       },
@@ -242,11 +266,23 @@
         "lemma": "kalam"
       },
       {
+        "surface": "You no longer",
+        "lemma": "lo"
+      },
+      {
+        "surface": "go forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "with our armies",
         "lemma": "tsava"
       }
     ],
     "10": [
+      {
+        "surface": "You have made us retreat",
+        "lemma": "shuv"
+      },
       {
         "surface": "the foe",
         "lemma": "tsar"
@@ -261,6 +297,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "You have given us up",
+        "lemma": "natan"
+      },
       {
         "surface": "as sheep",
         "lemma": "tson"
@@ -286,6 +326,14 @@
       {
         "surface": "Your people",
         "lemma": "am"
+      },
+      {
+        "surface": "for nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "profit",
@@ -354,6 +402,10 @@
     ],
     "15": [
       {
+        "surface": "All day long",
+        "lemma": "kol"
+      },
+      {
         "surface": "my disgrace",
         "lemma": "kelimmah"
       },
@@ -402,6 +454,18 @@
     ],
     "17": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "has come upon us",
+        "lemma": "bo"
+      },
+      {
+        "surface": "though we have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forgotten You",
         "lemma": "shakhach"
       },
@@ -418,6 +482,10 @@
       {
         "surface": "Our hearts",
         "lemma": "lev"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
       },
       {
         "surface": "turned back",
@@ -460,6 +528,10 @@
     ],
     "20": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "we had forgotten",
         "lemma": "shakhach"
       },
@@ -490,6 +562,10 @@
     ],
     "21": [
       {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -510,6 +586,10 @@
       {
         "surface": "we face death",
         "lemma": "harag"
+      },
+      {
+        "surface": "all day long",
+        "lemma": "kol"
       },
       {
         "surface": "we are considered",
@@ -544,6 +624,10 @@
       {
         "surface": "Arise",
         "lemma": "quts"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "reject us forever",
@@ -622,8 +706,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "paneh",
-    "yasah",
-    "tsar"
+    "kol"
   ]
 }

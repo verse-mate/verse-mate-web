@@ -18,6 +18,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "He who created you",
         "lemma": "bara"
       },
@@ -34,12 +38,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
       },
       {
         "surface": "I have redeemed you",
         "lemma": "gaal"
+      },
+      {
+        "surface": "I have called",
+        "lemma": "qara"
       },
       {
         "surface": "you by your name",
@@ -60,6 +72,10 @@
         "lemma": "nahar"
       },
       {
+        "surface": "they will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "overwhelm you",
         "lemma": "shataph"
       },
@@ -72,12 +88,20 @@
         "lemma": "esh"
       },
       {
+        "surface": "you will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be scorched",
         "lemma": "kavah"
       },
       {
         "surface": "the flames",
         "lemma": "lehavah"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "set you ablaze",
@@ -104,6 +128,10 @@
       {
         "surface": "your Savior",
         "lemma": "yasah"
+      },
+      {
+        "surface": "I give",
+        "lemma": "natan"
       },
       {
         "surface": "Egypt",
@@ -144,6 +172,10 @@
         "lemma": "ahav"
       },
       {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "men",
         "lemma": "adam"
       },
@@ -166,8 +198,16 @@
     ],
     "5": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
+      },
+      {
+        "surface": "I will bring",
+        "lemma": "bo"
       },
       {
         "surface": "your offspring",
@@ -188,16 +228,32 @@
     ],
     "6": [
       {
+        "surface": "I will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the north",
         "lemma": "tsaphon"
+      },
+      {
+        "surface": "Give them up",
+        "lemma": "natan"
       },
       {
         "surface": "and to the south",
         "lemma": "teman"
       },
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "hold them back",
         "lemma": "kala"
+      },
+      {
+        "surface": "Bring",
+        "lemma": "bo"
       },
       {
         "surface": "My sons",
@@ -222,6 +278,14 @@
     ],
     "7": [
       {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "by My name",
         "lemma": "shem"
       },
@@ -236,9 +300,17 @@
       {
         "surface": "whom I have indeed formed",
         "lemma": "yatsar"
+      },
+      {
+        "surface": "and made",
+        "lemma": "asah"
       }
     ],
     "8": [
+      {
+        "surface": "Bring out",
+        "lemma": "yatsa"
+      },
       {
         "surface": "a people",
         "lemma": "am"
@@ -265,6 +337,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the nations",
         "lemma": "goy"
@@ -294,8 +370,16 @@
         "lemma": "nagad"
       },
       {
+        "surface": "and proclaim to us",
+        "lemma": "shama"
+      },
+      {
         "surface": "the former things",
         "lemma": "rishon"
+      },
+      {
+        "surface": "Let them present",
+        "lemma": "natan"
       },
       {
         "surface": "their witnesses",
@@ -304,6 +388,14 @@
       {
         "surface": "to vindicate them",
         "lemma": "tsadaq"
+      },
+      {
+        "surface": "so that others may hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "and say",
+        "lemma": "amar"
       },
       {
         "surface": "It is true",
@@ -348,6 +440,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "god",
         "lemma": "el"
       },
@@ -358,6 +454,14 @@
       {
         "surface": "and after Me",
         "lemma": "achar"
+      },
+      {
+        "surface": "none",
+        "lemma": "lo"
+      },
+      {
+        "surface": "will come",
+        "lemma": "hayah"
       }
     ],
     "11": [
@@ -386,6 +490,10 @@
       {
         "surface": "and saved",
         "lemma": "yasah"
+      },
+      {
+        "surface": "and proclaimed",
+        "lemma": "shama"
       },
       {
         "surface": "I, and not",
@@ -436,12 +544,20 @@
       {
         "surface": "who",
         "lemma": "mi"
+      },
+      {
+        "surface": "can reverse it",
+        "lemma": "shuv"
       }
     ],
     "14": [
       {
         "surface": "Thus",
         "lemma": "koh"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -470,6 +586,10 @@
       {
         "surface": "and bring them",
         "lemma": "yarad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "as fugitives",
@@ -516,8 +636,16 @@
         "lemma": "koh"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "who makes",
+        "lemma": "natan"
       },
       {
         "surface": "a way",
@@ -541,6 +669,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "who brings out",
+        "lemma": "yatsa"
+      },
       {
         "surface": "the chariots",
         "lemma": "rekhev"
@@ -588,12 +720,20 @@
     ],
     "18": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "call to mind",
         "lemma": "zakhar"
       },
       {
         "surface": "the former things",
         "lemma": "rishon"
+      },
+      {
+        "surface": "pay no",
+        "lemma": "al"
       },
       {
         "surface": "attention",
@@ -606,8 +746,8 @@
     ],
     "19": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "I am about to do",
+        "lemma": "asah"
       },
       {
         "surface": "something new",
@@ -620,6 +760,10 @@
       {
         "surface": "it is coming",
         "lemma": "tsamach"
+      },
+      {
+        "surface": "Do you not",
+        "lemma": "lo"
       },
       {
         "surface": "see it",
@@ -672,6 +816,10 @@
         "lemma": "yaanah"
       },
       {
+        "surface": "I provide",
+        "lemma": "natan"
+      },
+      {
         "surface": "water",
         "lemma": "mayim"
       },
@@ -720,6 +868,14 @@
     ],
     "22": [
       {
+        "surface": "But you have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "O Jacob",
         "lemma": "yaaqov"
       },
@@ -733,6 +889,14 @@
       }
     ],
     "23": [
+      {
+        "surface": "You have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "brought",
+        "lemma": "bo"
+      },
       {
         "surface": "sheep",
         "lemma": "seh"
@@ -750,12 +914,20 @@
         "lemma": "zevach"
       },
       {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "burdened you",
         "lemma": "avad"
       },
       {
         "surface": "with offerings",
         "lemma": "minchah"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "wearied",
@@ -778,6 +950,10 @@
       {
         "surface": "with your silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "satisfied Me",
@@ -828,6 +1004,10 @@
       {
         "surface": "your sins",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "no more",
+        "lemma": "lo"
       }
     ],
     "26": [
@@ -858,6 +1038,10 @@
         "lemma": "rishon"
       },
       {
+        "surface": "father",
+        "lemma": "av"
+      },
+      {
         "surface": "sinned",
         "lemma": "chata"
       },
@@ -884,6 +1068,10 @@
         "lemma": "qodesh"
       },
       {
+        "surface": "and I will devote",
+        "lemma": "natan"
+      },
+      {
         "surface": "Jacob",
         "lemma": "yaaqov"
       },
@@ -902,8 +1090,8 @@
     ]
   },
   "themeLemmas": [
-    "yisrael",
-    "yatsar",
-    "zakhar"
+    "lo",
+    "natan",
+    "yisrael"
   ]
 }

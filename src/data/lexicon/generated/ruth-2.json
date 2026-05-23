@@ -56,12 +56,12 @@
         "lemma": "moavi"
       },
       {
-        "surface": "to Naomi",
-        "lemma": "noomi"
+        "surface": "said",
+        "lemma": "amar"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "to Naomi",
+        "lemma": "noomi"
       },
       {
         "surface": "let me go",
@@ -102,12 +102,20 @@
       {
         "surface": "my daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "Naomi replied",
+        "lemma": "amar"
       }
     ],
     "3": [
       {
         "surface": "So Ruth departed",
         "lemma": "halakh"
+      },
+      {
+        "surface": "and went out",
+        "lemma": "bo"
       },
       {
         "surface": "into the field",
@@ -156,12 +164,12 @@
     ],
     "4": [
       {
-        "surface": "Just then",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "Boaz",
         "lemma": "boaz"
+      },
+      {
+        "surface": "arrived",
+        "lemma": "bo"
       },
       {
         "surface": "from",
@@ -170,6 +178,10 @@
       {
         "surface": "Bethlehem",
         "lemma": "betlechem"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "to the harvesters",
@@ -186,12 +198,20 @@
       {
         "surface": "bless you",
         "lemma": "barakh"
+      },
+      {
+        "surface": "they replied",
+        "lemma": "amar"
       }
     ],
     "5": [
       {
         "surface": "And Boaz",
         "lemma": "boaz"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "the foreman",
@@ -224,6 +244,10 @@
         "lemma": "moavi"
       },
       {
+        "surface": "who returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "Naomi",
         "lemma": "noomi"
       },
@@ -238,8 +262,8 @@
     ],
     "7": [
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "She has said",
+        "lemma": "amar"
       },
       {
         "surface": "let me glean",
@@ -262,6 +286,10 @@
         "lemma": "qatser"
       },
       {
+        "surface": "So she came out",
+        "lemma": "bo"
+      },
+      {
         "surface": "and has continued",
         "lemma": "amad"
       },
@@ -272,6 +300,10 @@
       {
         "surface": "now",
         "lemma": "attah"
+      },
+      {
+        "surface": "that she rested",
+        "lemma": "yashav"
       },
       {
         "surface": "a short time",
@@ -288,12 +320,24 @@
         "lemma": "boaz"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Ruth",
         "lemma": "rut"
       },
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "my daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "go",
@@ -310,6 +354,10 @@
       {
         "surface": "field",
         "lemma": "saday"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "go away",
@@ -348,6 +396,10 @@
       {
         "surface": "after these girls",
         "lemma": "achar"
+      },
+      {
+        "surface": "Indeed",
+        "lemma": "lo"
       },
       {
         "surface": "I have ordered",
@@ -408,6 +460,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Why",
         "lemma": "maddua"
       },
@@ -446,6 +502,14 @@
         "lemma": "nagad"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "your mother-in-law",
         "lemma": "chamot"
       },
@@ -464,6 +528,10 @@
       {
         "surface": "how you left",
         "lemma": "azav"
+      },
+      {
+        "surface": "your father",
+        "lemma": "av"
       },
       {
         "surface": "and mother",
@@ -486,6 +554,10 @@
         "lemma": "am"
       },
       {
+        "surface": "you did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -506,6 +578,10 @@
       {
         "surface": "your work",
         "lemma": "poal"
+      },
+      {
+        "surface": "and may you receive",
+        "lemma": "hayah"
       },
       {
         "surface": "a rich",
@@ -536,6 +612,10 @@
         "lemma": "kanaph"
       },
       {
+        "surface": "you have taken",
+        "lemma": "bo"
+      },
+      {
         "surface": "refuge",
         "lemma": "chasah"
       }
@@ -544,6 +624,10 @@
       {
         "surface": "My lord",
         "lemma": "adon"
+      },
+      {
+        "surface": "she said",
+        "lemma": "amar"
       },
       {
         "surface": "may I continue to find",
@@ -574,6 +658,14 @@
         "lemma": "shiphchah"
       },
       {
+        "surface": "am",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "like one",
         "lemma": "echad"
       },
@@ -584,8 +676,16 @@
     ],
     "14": [
       {
+        "surface": "At mealtime",
+        "lemma": "et"
+      },
+      {
         "surface": "Boaz",
         "lemma": "boaz"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Come over",
@@ -614,6 +714,10 @@
       {
         "surface": "into the vinegar sauce",
         "lemma": "chomets"
+      },
+      {
+        "surface": "So she sat down",
+        "lemma": "yashav"
       },
       {
         "surface": "beside",
@@ -678,6 +782,10 @@
         "lemma": "omer"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "insult her",
         "lemma": "kalam"
       }
@@ -698,6 +806,10 @@
       {
         "surface": "for her to gather",
         "lemma": "laqat"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
       },
       {
         "surface": "rebuke",
@@ -726,6 +838,10 @@
         "lemma": "laqat"
       },
       {
+        "surface": "it was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "about an ephah",
         "lemma": "ephah"
       },
@@ -740,6 +856,10 @@
         "lemma": "nasa"
       },
       {
+        "surface": "and went into",
+        "lemma": "bo"
+      },
+      {
         "surface": "the town",
         "lemma": "ir"
       },
@@ -748,8 +868,16 @@
         "lemma": "chamot"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "she had gleaned",
         "lemma": "laqat"
+      },
+      {
+        "surface": "And she brought out",
+        "lemma": "yatsa"
       },
       {
         "surface": "she had saved",
@@ -758,12 +886,20 @@
       {
         "surface": "from her meal",
         "lemma": "sova"
+      },
+      {
+        "surface": "and gave it",
+        "lemma": "natan"
       }
     ],
     "19": [
       {
         "surface": "Then her mother-in-law",
         "lemma": "chamot"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "Where",
@@ -782,8 +918,16 @@
         "lemma": "an"
       },
       {
+        "surface": "did you work",
+        "lemma": "asah"
+      },
+      {
         "surface": "Blessed",
         "lemma": "barakh"
+      },
+      {
+        "surface": "be the man",
+        "lemma": "hayah"
       },
       {
         "surface": "who noticed you",
@@ -798,6 +942,10 @@
         "lemma": "chamot"
       },
       {
+        "surface": "she had worked",
+        "lemma": "asah"
+      },
+      {
         "surface": "The name",
         "lemma": "shem"
       },
@@ -806,18 +954,30 @@
         "lemma": "ish"
       },
       {
+        "surface": "I worked",
+        "lemma": "asah"
+      },
+      {
         "surface": "today",
         "lemma": "yom"
       },
       {
         "surface": "is Boaz",
         "lemma": "boaz"
+      },
+      {
+        "surface": "she said",
+        "lemma": "amar"
       }
     ],
     "20": [
       {
         "surface": "Then Naomi",
         "lemma": "noomi"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "to her daughter-in-law",
@@ -830,6 +990,10 @@
       {
         "surface": "by the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
       },
       {
         "surface": "withdrawn",
@@ -850,6 +1014,10 @@
       {
         "surface": "Naomi",
         "lemma": "noomi"
+      },
+      {
+        "surface": "continued",
+        "lemma": "amar"
       },
       {
         "surface": "The man",
@@ -874,6 +1042,14 @@
         "lemma": "moavi"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "told me",
+        "lemma": "amar"
+      },
+      {
         "surface": "Stay",
         "lemma": "davaq"
       },
@@ -886,6 +1062,10 @@
         "lemma": "kalah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "harvest",
         "lemma": "qatsir"
       }
@@ -894,6 +1074,10 @@
       {
         "surface": "And Naomi",
         "lemma": "noomi"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "her daughter-in-law",
@@ -912,8 +1096,16 @@
         "lemma": "tov"
       },
       {
+        "surface": "for you to work",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "his young women",
         "lemma": "naarah"
+      },
+      {
+        "surface": "so that nothing",
+        "lemma": "lo"
       },
       {
         "surface": "will happen",
@@ -962,14 +1154,18 @@
         "lemma": "kalah"
       },
       {
+        "surface": "And she lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "her mother-in-law",
         "lemma": "chamot"
       }
     ]
   },
   "themeLemmas": [
+    "amar",
     "laqat",
-    "boaz",
-    "saday"
+    "boaz"
   ]
 }

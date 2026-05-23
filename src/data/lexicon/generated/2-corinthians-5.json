@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
         "surface": "earthly",
         "lemma": "epigeios"
       },
@@ -20,6 +24,10 @@
       {
         "surface": "is dismantled",
         "lemma": "kataluo"
+      },
+      {
+        "surface": "we have",
+        "lemma": "echo"
       },
       {
         "surface": "a building",
@@ -74,11 +82,19 @@
         "lemma": "enduo"
       },
       {
+        "surface": "we will not be found",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "naked",
         "lemma": "gumnos"
       }
     ],
     "4": [
+      {
+        "surface": "while we are",
+        "lemma": "eimi"
+      },
       {
         "surface": "tent",
         "lemma": "skenos"
@@ -90,6 +106,10 @@
       {
         "surface": "under our burdens",
         "lemma": "bareo"
+      },
+      {
+        "surface": "we do not wish",
+        "lemma": "thelo"
       },
       {
         "surface": "to be unclothed",
@@ -122,6 +142,10 @@
         "lemma": "katergazomai"
       },
       {
+        "surface": "and has given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "Spirit",
         "lemma": "pneuma"
       },
@@ -138,6 +162,10 @@
       {
         "surface": "we are always confident",
         "lemma": "tharreo"
+      },
+      {
+        "surface": "we know",
+        "lemma": "eido"
       },
       {
         "surface": "while we are at home",
@@ -202,20 +230,16 @@
         "lemma": "philotimeomai"
       },
       {
+        "surface": "to",
+        "lemma": "eimi"
+      },
+      {
         "surface": "please",
         "lemma": "euarestos"
       },
       {
-        "surface": "whether",
-        "lemma": "eite"
-      },
-      {
         "surface": "we are at home in this body",
         "lemma": "endemeo"
-      },
-      {
-        "surface": "or",
-        "lemma": "eite"
       },
       {
         "surface": "away from it",
@@ -226,6 +250,10 @@
       {
         "surface": "must",
         "lemma": "dei"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "appear",
@@ -256,16 +284,8 @@
         "lemma": "soma"
       },
       {
-        "surface": "whether",
-        "lemma": "eite"
-      },
-      {
         "surface": "good",
         "lemma": "agathos"
-      },
-      {
-        "surface": "or",
-        "lemma": "eite"
       },
       {
         "surface": "bad",
@@ -273,6 +293,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "since we know",
+        "lemma": "eido"
+      },
       {
         "surface": "to fear",
         "lemma": "phobos"
@@ -320,12 +344,20 @@
         "lemma": "palin"
       },
       {
+        "surface": "we are giving",
+        "lemma": "didomi"
+      },
+      {
         "surface": "an occasion",
         "lemma": "aphorme"
       },
       {
         "surface": "to be proud",
         "lemma": "kauchema"
+      },
+      {
+        "surface": "you can answer",
+        "lemma": "echo"
       },
       {
         "surface": "take pride",
@@ -342,20 +374,12 @@
     ],
     "13": [
       {
-        "surface": "If",
-        "lemma": "eite"
-      },
-      {
         "surface": "we are out of our mind",
         "lemma": "existemi"
       },
       {
         "surface": "it is for God",
         "lemma": "theos"
-      },
-      {
-        "surface": "if",
-        "lemma": "eite"
       },
       {
         "surface": "we are of sound mind",
@@ -380,8 +404,20 @@
         "lemma": "krino"
       },
       {
+        "surface": "One",
+        "lemma": "heis"
+      },
+      {
         "surface": "died",
         "lemma": "apothnesko"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "died",
@@ -392,6 +428,10 @@
       {
         "surface": "He died",
         "lemma": "apothnesko"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "live",
@@ -420,12 +460,28 @@
         "lemma": "nun"
       },
       {
+        "surface": "regard",
+        "lemma": "eido"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "the flesh",
         "lemma": "sarx"
       },
       {
+        "surface": "we once regarded",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "we do so",
+        "lemma": "ginosko"
       }
     ],
     "17": [
@@ -452,9 +508,17 @@
       {
         "surface": "the new",
         "lemma": "kainos"
+      },
+      {
+        "surface": "has come",
+        "lemma": "ginomai"
       }
     ],
     "18": [
+      {
+        "surface": "All this is",
+        "lemma": "pas"
+      },
       {
         "surface": "God",
         "lemma": "theos"
@@ -466,6 +530,10 @@
       {
         "surface": "Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "gave",
+        "lemma": "didomi"
       },
       {
         "surface": "ministry",
@@ -480,6 +548,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
       },
       {
         "surface": "reconciling",
@@ -550,12 +622,24 @@
     ],
     "21": [
       {
+        "surface": "God made",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "knew",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "sin",
         "lemma": "hamartia"
       },
       {
         "surface": "to be sin",
         "lemma": "hamartia"
+      },
+      {
+        "surface": "might become",
+        "lemma": "ginomai"
       },
       {
         "surface": "the righteousness",

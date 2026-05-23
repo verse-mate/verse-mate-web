@@ -58,8 +58,16 @@
         "lemma": "tame"
       },
       {
+        "surface": "will no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
       }
     ],
     "2": [
@@ -118,12 +126,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "You were sold",
         "lemma": "makhar"
       },
       {
         "surface": "for nothing",
         "lemma": "chinnam"
+      },
+      {
+        "surface": "and without",
+        "lemma": "lo"
       },
       {
         "surface": "money",
@@ -146,6 +162,10 @@
       {
         "surface": "GOD",
         "lemma": "yehovih"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "At first",
@@ -240,6 +260,10 @@
       {
         "surface": "continually",
         "lemma": "tamid"
+      },
+      {
+        "surface": "all day long",
+        "lemma": "kol"
       }
     ],
     "6": [
@@ -270,10 +294,6 @@
       {
         "surface": "who speaks",
         "lemma": "davar"
-      },
-      {
-        "surface": "Here I am",
-        "lemma": "hen"
       }
     ],
     "7": [
@@ -298,6 +318,10 @@
         "lemma": "basar"
       },
       {
+        "surface": "who proclaim",
+        "lemma": "shama"
+      },
+      {
         "surface": "peace",
         "lemma": "shalom"
       },
@@ -310,8 +334,16 @@
         "lemma": "tov"
       },
       {
+        "surface": "who proclaim",
+        "lemma": "shama"
+      },
+      {
         "surface": "salvation",
         "lemma": "yeshuah"
+      },
+      {
+        "surface": "who say",
+        "lemma": "amar"
       },
       {
         "surface": "to Zion",
@@ -356,8 +388,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "will see",
+        "lemma": "raah"
+      },
+      {
         "surface": "when the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "returns",
+        "lemma": "shuv"
       },
       {
         "surface": "to Zion",
@@ -428,8 +468,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the ends",
@@ -438,6 +486,10 @@
       {
         "surface": "of the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "will see",
+        "lemma": "raah"
       },
       {
         "surface": "the salvation",
@@ -458,6 +510,10 @@
         "lemma": "sur"
       },
       {
+        "surface": "go out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from there",
         "lemma": "sham"
       },
@@ -466,8 +522,16 @@
         "lemma": "naga"
       },
       {
+        "surface": "no",
+        "lemma": "al"
+      },
+      {
         "surface": "unclean thing",
         "lemma": "tame"
+      },
+      {
+        "surface": "come out",
+        "lemma": "yatsa"
       },
       {
         "surface": "from it",
@@ -492,8 +556,20 @@
     ],
     "12": [
       {
+        "surface": "you will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "leave",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in a hurry",
         "lemma": "chippazon"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "flee in haste",
@@ -525,10 +601,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "My Servant",
         "lemma": "eved"
@@ -614,18 +686,34 @@
         "lemma": "peh"
       },
       {
+        "surface": "they will see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "they have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been told",
         "lemma": "saphar"
       },
       {
         "surface": "and they will understand",
         "lemma": "bin"
+      },
+      {
+        "surface": "they have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "yerushalaim",
-    "tsiyyon",
-    "nasa"
+    "tsiyyon"
   ]
 }

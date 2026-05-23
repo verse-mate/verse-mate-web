@@ -60,12 +60,24 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Does He not",
+        "lemma": "lo"
+      },
+      {
         "surface": "speak",
         "lemma": "davar"
       },
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "heard this",
+        "lemma": "shama"
       }
     ],
     "3": [
@@ -84,6 +96,10 @@
       {
         "surface": "man",
         "lemma": "ish"
+      },
+      {
+        "surface": "more so than any",
+        "lemma": "kol"
       },
       {
         "surface": "man",
@@ -108,6 +124,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -124,6 +144,10 @@
         "lemma": "shalosh"
       },
       {
+        "surface": "come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the Tent",
         "lemma": "ohel"
       },
@@ -134,6 +158,10 @@
       {
         "surface": "So the three",
         "lemma": "shalosh"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       }
     ],
     "5": [
@@ -166,6 +194,10 @@
         "lemma": "ohel"
       },
       {
+        "surface": "and summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
       },
@@ -176,16 +208,32 @@
       {
         "surface": "When both",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "of them had stepped forward",
+        "lemma": "yatsa"
       }
     ],
     "6": [
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "He said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Hear",
+        "lemma": "shama"
       },
       {
         "surface": "My words",
         "lemma": "davar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "there is",
+        "lemma": "hayah"
       },
       {
         "surface": "a prophet among you",
@@ -214,6 +262,10 @@
     ],
     "7": [
       {
+        "surface": "But this is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "so",
         "lemma": "ken"
       },
@@ -228,6 +280,10 @@
       {
         "surface": "is faithful",
         "lemma": "aman"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "My house",
@@ -252,6 +308,10 @@
         "lemma": "mareh"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "in riddles",
         "lemma": "chidah"
       },
@@ -270,6 +330,10 @@
       {
         "surface": "Why then",
         "lemma": "maddua"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "were you unafraid",
@@ -320,10 +384,6 @@
         "lemma": "ohel"
       },
       {
-        "surface": "suddenly",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "Miriam",
         "lemma": "miryam"
       },
@@ -348,15 +408,15 @@
         "lemma": "miryam"
       },
       {
-        "surface": "saw that",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "she was leprous",
         "lemma": "tsara"
       }
     ],
     "11": [
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
       {
         "surface": "Moses",
         "lemma": "mosheh"
@@ -366,8 +426,8 @@
         "lemma": "adon"
       },
       {
-        "surface": "please",
-        "lemma": "na"
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "hold",
@@ -388,8 +448,12 @@
     ],
     "12": [
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "let her be",
+        "lemma": "hayah"
       },
       {
         "surface": "like a stillborn infant",
@@ -406,6 +470,10 @@
       {
         "surface": "consumed",
         "lemma": "akhal"
+      },
+      {
+        "surface": "when he comes out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of his mother’s",
@@ -434,10 +502,6 @@
         "lemma": "el"
       },
       {
-        "surface": "please",
-        "lemma": "na"
-      },
-      {
         "surface": "heal",
         "lemma": "rapah"
       }
@@ -448,8 +512,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "If her father",
+        "lemma": "av"
       },
       {
         "surface": "had but spit",
@@ -458,6 +530,10 @@
       {
         "surface": "in her face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "would she not",
+        "lemma": "lo"
       },
       {
         "surface": "have been in disgrace",
@@ -530,6 +606,10 @@
         "lemma": "am"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "move on",
         "lemma": "nasa"
       },
@@ -576,6 +656,6 @@
   "themeLemmas": [
     "mosheh",
     "miryam",
-    "na"
+    "lo"
   ]
 }

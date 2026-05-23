@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -54,8 +58,16 @@
         "lemma": "etsem"
       },
       {
+        "surface": "of the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "will be removed",
+        "lemma": "yatsa"
       },
       {
         "surface": "from their graves",
@@ -74,6 +86,10 @@
       {
         "surface": "and moon",
         "lemma": "yareach"
+      },
+      {
+        "surface": "and to all",
+        "lemma": "kol"
       },
       {
         "surface": "the host",
@@ -104,12 +120,24 @@
         "lemma": "shachah"
       },
       {
+        "surface": "Their bones will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be gathered up",
         "lemma": "asaph"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "buried",
         "lemma": "qavar"
+      },
+      {
+        "surface": "but will become",
+        "lemma": "hayah"
       },
       {
         "surface": "like dung",
@@ -121,6 +149,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "And wherever",
+        "lemma": "kol"
+      },
       {
         "surface": "I have banished them",
         "lemma": "nadach"
@@ -164,6 +196,10 @@
     ],
     "4": [
       {
+        "surface": "So you are to tell",
+        "lemma": "amar"
+      },
+      {
         "surface": "this is what",
         "lemma": "koh"
       },
@@ -172,12 +208,32 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Do men fall",
         "lemma": "naphal"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "get up again",
         "lemma": "qamay"
+      },
+      {
+        "surface": "Does one turn away",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
       }
     ],
     "5": [
@@ -188,6 +244,10 @@
       {
         "surface": "people",
         "lemma": "am"
+      },
+      {
+        "surface": "turned away",
+        "lemma": "shuv"
       },
       {
         "surface": "Why does Jerusalem",
@@ -208,12 +268,24 @@
       {
         "surface": "they refuse",
         "lemma": "maen"
+      },
+      {
+        "surface": "to return",
+        "lemma": "shuv"
       }
     ],
     "6": [
       {
         "surface": "I have listened",
         "lemma": "qashav"
+      },
+      {
+        "surface": "and heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
       },
       {
         "surface": "speak",
@@ -240,8 +312,24 @@
         "lemma": "ra"
       },
       {
+        "surface": "asking",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "have I done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "Everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "has pursued",
+        "lemma": "shuv"
       },
       {
         "surface": "his own course",
@@ -294,8 +382,20 @@
         "lemma": "shamar"
       },
       {
+        "surface": "their time",
+        "lemma": "et"
+      },
+      {
+        "surface": "of migration",
+        "lemma": "bo"
+      },
+      {
         "surface": "but My people",
         "lemma": "am"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -314,6 +414,10 @@
       {
         "surface": "How",
         "lemma": "ekh"
+      },
+      {
+        "surface": "can you say",
+        "lemma": "amar"
       },
       {
         "surface": "are wise",
@@ -336,8 +440,16 @@
         "lemma": "sheqer"
       },
       {
+        "surface": "pen",
+        "lemma": "et"
+      },
+      {
         "surface": "of the scribes",
         "lemma": "saphar"
+      },
+      {
+        "surface": "has produced",
+        "lemma": "asah"
       },
       {
         "surface": "a deception",
@@ -360,10 +472,6 @@
       {
         "surface": "and trapped",
         "lemma": "lakhad"
-      },
-      {
-        "surface": "Since",
-        "lemma": "hinneh"
       },
       {
         "surface": "they have rejected",
@@ -392,6 +500,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "their wives",
         "lemma": "ishshah"
       },
@@ -416,6 +528,10 @@
         "lemma": "gadol"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "are greedy",
         "lemma": "batsa"
       },
@@ -430,6 +546,14 @@
       {
         "surface": "priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "practice",
+        "lemma": "asah"
       },
       {
         "surface": "deceit",
@@ -458,6 +582,10 @@
         "lemma": "qalal"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Peace",
         "lemma": "shalom"
       },
@@ -480,12 +608,24 @@
         "lemma": "bush"
       },
       {
+        "surface": "they have committed",
+        "lemma": "asah"
+      },
+      {
+        "surface": "they have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "shame",
         "lemma": "bush"
       },
       {
         "surface": "at all",
         "lemma": "bush"
+      },
+      {
+        "surface": "they do not even",
+        "lemma": "lo"
       },
       {
         "surface": "know how",
@@ -508,12 +648,20 @@
         "lemma": "naphal"
       },
       {
+        "surface": "when",
+        "lemma": "et"
+      },
+      {
         "surface": "I punish them",
         "lemma": "pequddah"
       },
       {
         "surface": "they will collapse",
         "lemma": "kashal"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -566,14 +714,26 @@
         "lemma": "naval"
       },
       {
+        "surface": "Whatever I have given",
+        "lemma": "natan"
+      },
+      {
         "surface": "will be lost to them",
         "lemma": "avar"
       }
     ],
     "14": [
       {
+        "surface": "just sitting here",
+        "lemma": "yashav"
+      },
+      {
         "surface": "Gather together",
         "lemma": "asaph"
+      },
+      {
+        "surface": "let us flee",
+        "lemma": "bo"
       },
       {
         "surface": "the fortified",
@@ -642,12 +802,12 @@
         "lemma": "tov"
       },
       {
-        "surface": "of healing",
-        "lemma": "marpe"
+        "surface": "for a time",
+        "lemma": "et"
       },
       {
-        "surface": "but there",
-        "lemma": "hinneh"
+        "surface": "of healing",
+        "lemma": "marpe"
       },
       {
         "surface": "was only terror",
@@ -662,6 +822,10 @@
       {
         "surface": "of enemy horses",
         "lemma": "sus"
+      },
+      {
+        "surface": "is heard",
+        "lemma": "shama"
       },
       {
         "surface": "from Dan",
@@ -680,12 +844,20 @@
         "lemma": "abbir"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
       },
       {
         "surface": "quakes",
         "lemma": "raash"
+      },
+      {
+        "surface": "They come",
+        "lemma": "bo"
       },
       {
         "surface": "to devour",
@@ -702,13 +874,13 @@
       {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "and all who dwell",
+        "lemma": "yashav"
       }
     ],
     "17": [
-      {
-        "surface": "behold",
-        "lemma": "hen"
-      },
       {
         "surface": "I will send",
         "lemma": "shalach"
@@ -794,6 +966,10 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "Is her",
+        "lemma": "im"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
@@ -838,6 +1014,10 @@
       {
         "surface": "has ended",
         "lemma": "kalah"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
       },
       {
         "surface": "been saved",
@@ -916,14 +1096,18 @@
         "lemma": "am"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been restored",
         "lemma": "alah"
       }
     ]
   },
   "themeLemmas": [
-    "etsem",
-    "shalom",
-    "neum"
+    "lo",
+    "kol",
+    "amar"
   ]
 }

@@ -18,6 +18,10 @@
         "lemma": "esher"
       },
       {
+        "surface": "are all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who fear",
         "lemma": "yare"
       },
@@ -104,10 +108,6 @@
         "lemma": "ken"
       },
       {
-        "surface": "indeed",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "shall blessing come",
         "lemma": "barakh"
       },
@@ -138,12 +138,20 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "that you may see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the prosperity",
         "lemma": "tuv"
       },
       {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the days",
@@ -155,6 +163,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "that you may see",
+        "lemma": "raah"
+      },
       {
         "surface": "your children’s",
         "lemma": "ben"
@@ -175,7 +187,7 @@
   },
   "themeLemmas": [
     "yare",
-    "esher",
-    "barakh"
+    "raah",
+    "kol"
   ]
 }

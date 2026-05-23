@@ -46,6 +46,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "showed him",
+        "lemma": "raah"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
       },
@@ -59,6 +67,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "of Naphtali",
         "lemma": "naphtali"
@@ -74,6 +86,10 @@
       {
         "surface": "and Manasseh",
         "lemma": "menashsheh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -128,6 +144,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "is the land",
         "lemma": "erets"
       },
@@ -148,12 +168,28 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "when I said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "it to your descendants",
         "lemma": "zera"
       },
       {
+        "surface": "I have let you see",
+        "lemma": "raah"
+      },
+      {
         "surface": "it with your own eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "but you will not",
+        "lemma": "lo"
       },
       {
         "surface": "cross into it",
@@ -228,6 +264,10 @@
         "lemma": "betpeor"
       },
       {
+        "surface": "and no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
       },
@@ -270,12 +310,20 @@
         "lemma": "ayin"
       },
       {
+        "surface": "were not",
+        "lemma": "lo"
+      },
+      {
         "surface": "weak",
         "lemma": "kahah"
       },
       {
         "surface": "and his vitality",
         "lemma": "leach"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lo"
       },
       {
         "surface": "diminished",
@@ -374,6 +422,14 @@
         "lemma": "ben"
       },
       {
+        "surface": "obeyed",
+        "lemma": "shama"
+      },
+      {
+        "surface": "and did",
+        "lemma": "asah"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -390,6 +446,10 @@
       {
         "surface": "Since that time",
         "lemma": "od"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "prophet",
@@ -426,6 +486,10 @@
     ],
     "11": [
       {
+        "surface": "no prophet who did all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the signs",
         "lemma": "ot"
       },
@@ -442,6 +506,10 @@
         "lemma": "shalach"
       },
       {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
       },
@@ -454,8 +522,16 @@
         "lemma": "paroh"
       },
       {
+        "surface": "and to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his officials",
         "lemma": "eved"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his land",
@@ -464,12 +540,24 @@
     ],
     "12": [
       {
+        "surface": "and no prophet who performed",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the mighty",
         "lemma": "chazaq"
       },
       {
         "surface": "acts of power",
         "lemma": "yad"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "awesome deeds",
@@ -484,6 +572,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       }
@@ -491,7 +583,7 @@
   },
   "themeLemmas": [
     "mosheh",
-    "moav",
-    "yisrael"
+    "kol",
+    "lo"
   ]
 }

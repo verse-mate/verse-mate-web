@@ -14,18 +14,26 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "I do not want",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to be uninformed",
         "lemma": "agnoeo"
       }
     ],
     "2": [
       {
-        "surface": "pagans",
-        "lemma": "ethnos"
+        "surface": "You know",
+        "lemma": "eido"
       },
       {
-        "surface": "vvv",
-        "lemma": "an"
+        "surface": "you were",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "pagans",
+        "lemma": "ethnos"
       },
       {
         "surface": "you were influenced",
@@ -50,6 +58,14 @@
         "lemma": "gnorizo"
       },
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "who is speaking",
+        "lemma": "laleo"
+      },
+      {
         "surface": "the Spirit",
         "lemma": "pneuma"
       },
@@ -58,12 +74,28 @@
         "lemma": "theos"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
         "surface": "Jesus",
         "lemma": "iesous"
       },
       {
         "surface": "be cursed",
         "lemma": "anathema"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "say",
+        "lemma": "eipon"
       },
       {
         "surface": "Jesus",
@@ -84,6 +116,10 @@
     ],
     "4": [
       {
+        "surface": "There are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "different",
         "lemma": "diairesis"
       },
@@ -97,6 +133,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "There are",
+        "lemma": "eimi"
+      },
       {
         "surface": "different",
         "lemma": "diairesis"
@@ -112,6 +152,10 @@
     ],
     "6": [
       {
+        "surface": "There are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "different ways",
         "lemma": "diairesis"
       },
@@ -126,6 +170,14 @@
       {
         "surface": "works",
         "lemma": "energeo"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
+        "surface": "all people",
+        "lemma": "pas"
       }
     ],
     "7": [
@@ -142,11 +194,19 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "is given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "common good",
         "lemma": "sumphero"
       }
     ],
     "8": [
+      {
+        "surface": "there is given",
+        "lemma": "didomi"
+      },
       {
         "surface": "Spirit",
         "lemma": "pneuma"
@@ -200,6 +260,10 @@
       {
         "surface": "of healing",
         "lemma": "iama"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "Spirit",
@@ -266,8 +330,16 @@
     ],
     "11": [
       {
+        "surface": "All",
+        "lemma": "pas"
+      },
+      {
         "surface": "are the work",
         "lemma": "energeo"
+      },
+      {
+        "surface": "of one",
+        "lemma": "heis"
       },
       {
         "surface": "Spirit",
@@ -296,12 +368,48 @@
         "lemma": "soma"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "a unit",
+        "lemma": "heis"
+      },
+      {
+        "surface": "it is composed",
+        "lemma": "echo"
+      },
+      {
+        "surface": "of many",
+        "lemma": "polus"
+      },
+      {
         "surface": "parts",
         "lemma": "melos"
       },
       {
         "surface": "parts",
         "lemma": "melos"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
+        "surface": "they all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "form",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "body",
@@ -318,28 +426,32 @@
     ],
     "13": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
       },
       {
         "surface": "were all baptized",
         "lemma": "baptizo"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "body",
         "lemma": "soma"
       },
       {
-        "surface": "whether",
-        "lemma": "eite"
-      },
-      {
         "surface": "Jews",
         "lemma": "ioudaios"
-      },
-      {
-        "surface": "or",
-        "lemma": "eite"
       },
       {
         "surface": "Greeks",
@@ -350,16 +462,20 @@
         "lemma": "doulos"
       },
       {
-        "surface": "or",
-        "lemma": "eite"
-      },
-      {
         "surface": "free",
         "lemma": "eleutheros"
       },
       {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
+      {
         "surface": "we were all given",
         "lemma": "potizo"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "Spirit {to drink",
@@ -372,8 +488,20 @@
         "lemma": "soma"
       },
       {
+        "surface": "does not consist",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "of one",
+        "lemma": "heis"
+      },
+      {
         "surface": "part",
         "lemma": "melos"
+      },
+      {
+        "surface": "of many",
+        "lemma": "polus"
       }
     ],
     "15": [
@@ -382,12 +510,28 @@
         "lemma": "pous"
       },
       {
+        "surface": "should say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a hand",
         "lemma": "cheir"
       },
       {
+        "surface": "I do",
+        "lemma": "eimi"
+      },
+      {
         "surface": "body",
         "lemma": "soma"
+      },
+      {
+        "surface": "would",
+        "lemma": "eimi"
       },
       {
         "surface": "body",
@@ -400,12 +544,28 @@
         "lemma": "ous"
       },
       {
+        "surface": "should say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "an eye",
         "lemma": "ophthalmos"
       },
       {
+        "surface": "I do",
+        "lemma": "eimi"
+      },
+      {
         "surface": "body",
         "lemma": "soma"
+      },
+      {
+        "surface": "would",
+        "lemma": "eimi"
       },
       {
         "surface": "body",
@@ -474,9 +634,29 @@
       {
         "surface": "every",
         "lemma": "hekastos"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
+        "surface": "His design",
+        "lemma": "thelo"
       }
     ],
     "19": [
+      {
+        "surface": "they were",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
       {
         "surface": "part",
         "lemma": "melos"
@@ -496,8 +676,16 @@
         "lemma": "nun"
       },
       {
+        "surface": "there are many",
+        "lemma": "polus"
+      },
+      {
         "surface": "parts",
         "lemma": "melos"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "body",
@@ -510,8 +698,20 @@
         "lemma": "ophthalmos"
       },
       {
+        "surface": "cannot",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "say",
+        "lemma": "eipon"
+      },
+      {
         "surface": "hand",
         "lemma": "cheir"
+      },
+      {
+        "surface": "I do",
+        "lemma": "echo"
       },
       {
         "surface": "need",
@@ -524,6 +724,10 @@
       {
         "surface": "feet",
         "lemma": "pous"
+      },
+      {
+        "surface": "I do",
+        "lemma": "echo"
       },
       {
         "surface": "need",
@@ -550,6 +754,10 @@
       {
         "surface": "weaker",
         "lemma": "asthenes"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "indispensable",
@@ -586,6 +794,10 @@
         "lemma": "aschemon"
       },
       {
+        "surface": "are treated with",
+        "lemma": "echo"
+      },
+      {
         "surface": "special",
         "lemma": "perissos"
       },
@@ -598,6 +810,10 @@
       {
         "surface": "presentable parts",
         "lemma": "euschemon"
+      },
+      {
+        "surface": "have",
+        "lemma": "echo"
       },
       {
         "surface": "need",
@@ -616,6 +832,10 @@
         "lemma": "soma"
       },
       {
+        "surface": "and has given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "greater",
         "lemma": "perissos"
       },
@@ -629,6 +849,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "there should be",
+        "lemma": "eimi"
+      },
       {
         "surface": "division",
         "lemma": "schisma"
@@ -652,8 +876,8 @@
     ],
     "26": [
       {
-        "surface": "If",
-        "lemma": "eite"
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "part",
@@ -664,6 +888,10 @@
         "lemma": "pascho"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "part",
         "lemma": "melos"
       },
@@ -672,8 +900,8 @@
         "lemma": "sumpascho"
       },
       {
-        "surface": "if",
-        "lemma": "eite"
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "part",
@@ -682,6 +910,10 @@
       {
         "surface": "is honored",
         "lemma": "doxazo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "part",
@@ -693,6 +925,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
       {
         "surface": "the body",
         "lemma": "soma"
@@ -782,16 +1018,32 @@
     ],
     "29": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "apostles",
         "lemma": "apostolos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "prophets",
         "lemma": "prophetes"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "teachers",
         "lemma": "didaskalos"
+      },
+      {
+        "surface": "all work",
+        "lemma": "pas"
       },
       {
         "surface": "miracles",
@@ -799,6 +1051,14 @@
       }
     ],
     "30": [
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "have",
+        "lemma": "echo"
+      },
       {
         "surface": "gifts",
         "lemma": "charisma"
@@ -808,8 +1068,20 @@
         "lemma": "iama"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "in tongues",
         "lemma": "glossa"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "interpret",
@@ -820,6 +1092,10 @@
       {
         "surface": "eagerly desire",
         "lemma": "zeloo"
+      },
+      {
+        "surface": "greater",
+        "lemma": "megas"
       },
       {
         "surface": "gifts",

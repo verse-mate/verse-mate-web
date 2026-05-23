@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "another",
         "lemma": "allos"
       },
@@ -64,6 +68,10 @@
     ],
     "2": [
       {
+        "surface": "He held",
+        "lemma": "echo"
+      },
+      {
         "surface": "hand",
         "lemma": "cheir"
       },
@@ -106,6 +114,10 @@
         "lemma": "krazo"
       },
       {
+        "surface": "vvv",
+        "lemma": "megas"
+      },
+      {
         "surface": "in a loud voice",
         "lemma": "phone"
       },
@@ -130,6 +142,10 @@
         "lemma": "bronte"
       },
       {
+        "surface": "sounded",
+        "lemma": "laleo"
+      },
+      {
         "surface": "voices",
         "lemma": "phone"
       }
@@ -144,8 +160,20 @@
         "lemma": "bronte"
       },
       {
+        "surface": "had spoken",
+        "lemma": "laleo"
+      },
+      {
         "surface": "I was about",
         "lemma": "mello"
+      },
+      {
+        "surface": "to put it in writing",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "I heard",
+        "lemma": "akouo"
       },
       {
         "surface": "a voice",
@@ -154,6 +182,10 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "Seal up",
@@ -166,12 +198,28 @@
       {
         "surface": "thunders",
         "lemma": "bronte"
+      },
+      {
+        "surface": "have said",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "write",
+        "lemma": "grapho"
       }
     ],
     "5": [
       {
         "surface": "angel",
         "lemma": "angelos"
+      },
+      {
+        "surface": "I had seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "sea",
@@ -230,6 +278,10 @@
       {
         "surface": "sea",
         "lemma": "thalassa"
+      },
+      {
+        "surface": "There will be",
+        "lemma": "eimi"
       },
       {
         "surface": "delay",
@@ -292,16 +344,32 @@
         "lemma": "phone"
       },
       {
+        "surface": "I had heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "laleo"
       },
       {
         "surface": "again",
         "lemma": "palin"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "Go",
         "lemma": "hupago"
+      },
+      {
+        "surface": "take",
+        "lemma": "lambano"
       },
       {
         "surface": "small scroll",
@@ -318,6 +386,10 @@
       {
         "surface": "angel",
         "lemma": "angelos"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "sea",
@@ -338,12 +410,28 @@
         "lemma": "angelos"
       },
       {
+        "surface": "and said",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "small scroll",
         "lemma": "biblaridion"
       },
       {
+        "surface": "Take it",
+        "lemma": "lambano"
+      },
+      {
         "surface": "eat",
         "lemma": "katesthio"
+      },
+      {
+        "surface": "he said",
+        "lemma": "lego"
       },
       {
         "surface": "It will make",
@@ -358,6 +446,10 @@
         "lemma": "stoma"
       },
       {
+        "surface": "it will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "as sweet",
         "lemma": "glukus"
       },
@@ -367,6 +459,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "I took",
+        "lemma": "lambano"
+      },
       {
         "surface": "small scroll",
         "lemma": "biblaridion"
@@ -382,6 +478,10 @@
       {
         "surface": "ate",
         "lemma": "katesthio"
+      },
+      {
+        "surface": "it was",
+        "lemma": "eimi"
       },
       {
         "surface": "as sweet",
@@ -410,6 +510,10 @@
     ],
     "11": [
       {
+        "surface": "they told",
+        "lemma": "lego"
+      },
+      {
         "surface": "must",
         "lemma": "dei"
       },
@@ -420,6 +524,10 @@
       {
         "surface": "again",
         "lemma": "palin"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "peoples",

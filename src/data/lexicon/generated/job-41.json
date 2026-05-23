@@ -62,6 +62,10 @@
         "lemma": "tachanun"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "speak",
         "lemma": "davar"
       },
@@ -176,15 +180,15 @@
         "lemma": "milchamah"
       },
       {
+        "surface": "and never",
+        "lemma": "al"
+      },
+      {
         "surface": "repeat it",
         "lemma": "yasaph"
       }
     ],
     "9": [
-      {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
       {
         "surface": "hope of overcoming him",
         "lemma": "tochelet"
@@ -203,6 +207,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "No one",
+        "lemma": "lo"
+      },
       {
         "surface": "is so fierce",
         "lemma": "akhzar"
@@ -238,6 +246,10 @@
         "lemma": "salem"
       },
       {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -247,6 +259,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
+      },
       {
         "surface": "keep silent",
         "lemma": "charash"
@@ -288,6 +304,10 @@
       {
         "surface": "Who",
         "lemma": "mi"
+      },
+      {
+        "surface": "can approach him",
+        "lemma": "bo"
       },
       {
         "surface": "with a bridle",
@@ -356,8 +376,16 @@
         "lemma": "echad"
       },
       {
+        "surface": "that no",
+        "lemma": "lo"
+      },
+      {
         "surface": "air",
         "lemma": "ruach"
+      },
+      {
+        "surface": "can pass",
+        "lemma": "bo"
       },
       {
         "surface": "between them",
@@ -380,6 +408,10 @@
       {
         "surface": "they clasp",
         "lemma": "lakhad"
+      },
+      {
+        "surface": "and cannot",
+        "lemma": "lo"
       },
       {
         "surface": "be separated",
@@ -444,6 +476,10 @@
         "lemma": "ashan"
       },
       {
+        "surface": "billows",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from his nostrils",
         "lemma": "nechir"
       },
@@ -476,6 +512,10 @@
       {
         "surface": "and flames",
         "lemma": "lahav"
+      },
+      {
+        "surface": "pour",
+        "lemma": "yatsa"
       },
       {
         "surface": "from his mouth",
@@ -636,6 +676,10 @@
     ],
     "28": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "arrow",
         "lemma": "qeshet"
       },
@@ -774,6 +818,10 @@
         "lemma": "moshel"
       },
       {
+        "surface": "a creature",
+        "lemma": "asah"
+      },
+      {
         "surface": "devoid of",
         "lemma": "beli"
       },
@@ -784,12 +832,24 @@
     ],
     "34": [
       {
+        "surface": "He looks down",
+        "lemma": "raah"
+      },
+      {
+        "surface": "on all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the haughty",
         "lemma": "gavoah"
       },
       {
         "surface": "is king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the proud",
@@ -799,7 +859,7 @@
   },
   "themeLemmas": [
     "mi",
-    "yatsaq",
-    "sum"
+    "lo",
+    "yatsaq"
   ]
 }

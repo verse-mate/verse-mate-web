@@ -118,6 +118,10 @@
     ],
     "5": [
       {
+        "surface": "They do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -134,6 +138,10 @@
         "lemma": "chashekhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the foundations",
         "lemma": "mosad"
       },
@@ -148,8 +156,16 @@
     ],
     "6": [
       {
+        "surface": "have said",
+        "lemma": "amar"
+      },
+      {
         "surface": "are gods",
         "lemma": "elohim"
+      },
+      {
+        "surface": "you are all",
+        "lemma": "kol"
       },
       {
         "surface": "sons",
@@ -204,6 +220,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
@@ -215,7 +235,7 @@
   },
   "themeLemmas": [
     "shaphat",
-    "rasah",
-    "dal"
+    "kol",
+    "rasah"
   ]
 }

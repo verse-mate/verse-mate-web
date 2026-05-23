@@ -154,6 +154,10 @@
         "lemma": "atah"
       },
       {
+        "surface": "and asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Who",
         "lemma": "man"
       },
@@ -166,10 +170,6 @@
         "lemma": "benah"
       },
       {
-        "surface": "this",
-        "lemma": "denah"
-      },
-      {
         "surface": "temple",
         "lemma": "bayit"
       },
@@ -178,22 +178,18 @@
         "lemma": "kelal"
       },
       {
-        "surface": "this",
-        "lemma": "denah"
-      },
-      {
         "surface": "structure",
         "lemma": "ushsharna"
       }
     ],
     "4": [
       {
-        "surface": "What",
-        "lemma": "man"
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
-        "surface": "are",
-        "lemma": "innun"
+        "surface": "What",
+        "lemma": "man"
       },
       {
         "surface": "the names",
@@ -206,10 +202,6 @@
       {
         "surface": "are constructing",
         "lemma": "benah"
-      },
-      {
-        "surface": "this",
-        "lemma": "denah"
       },
       {
         "surface": "building",
@@ -260,10 +252,6 @@
       {
         "surface": "written instructions",
         "lemma": "nishtevan"
-      },
-      {
-        "surface": "this matter",
-        "lemma": "denah"
       },
       {
         "surface": "were returned",
@@ -350,6 +338,10 @@
         "lemma": "daryavesh"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "peace",
         "lemma": "shelam"
       }
@@ -416,10 +408,6 @@
         "lemma": "ketal"
       },
       {
-        "surface": "This",
-        "lemma": "dekh"
-      },
-      {
         "surface": "work",
         "lemma": "avidah"
       },
@@ -446,12 +434,12 @@
         "lemma": "sheel"
       },
       {
-        "surface": "the",
-        "lemma": "illekh"
-      },
-      {
         "surface": "elders",
         "lemma": "siv"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "amar"
       },
       {
         "surface": "Who",
@@ -466,20 +454,12 @@
         "lemma": "benah"
       },
       {
-        "surface": "this",
-        "lemma": "denah"
-      },
-      {
         "surface": "temple",
         "lemma": "bayit"
       },
       {
         "surface": "and restore",
         "lemma": "kelal"
-      },
-      {
-        "surface": "this",
-        "lemma": "denah"
       },
       {
         "surface": "structure",
@@ -528,10 +508,6 @@
       {
         "surface": "We",
         "lemma": "anachna"
-      },
-      {
-        "surface": "are",
-        "lemma": "himmo"
       },
       {
         "surface": "servants",
@@ -600,6 +576,10 @@
     ],
     "12": [
       {
+        "surface": "our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "angered",
         "lemma": "regaz"
       },
@@ -614,10 +594,6 @@
       {
         "surface": "He delivered",
         "lemma": "yehav"
-      },
-      {
-        "surface": "them",
-        "lemma": "himmo"
       },
       {
         "surface": "into the hand",
@@ -642,10 +618,6 @@
       {
         "surface": "who destroyed",
         "lemma": "setar"
-      },
-      {
-        "surface": "this",
-        "lemma": "denah"
       },
       {
         "surface": "temple",
@@ -696,10 +668,6 @@
       {
         "surface": "to rebuild",
         "lemma": "benah"
-      },
-      {
-        "surface": "this",
-        "lemma": "denah"
       },
       {
         "surface": "house",
@@ -798,12 +766,12 @@
     ],
     "15": [
       {
-        "surface": "Take",
-        "lemma": "nesa"
+        "surface": "and instructed",
+        "lemma": "amar"
       },
       {
-        "surface": "these",
-        "lemma": "elleh"
+        "surface": "Take",
+        "lemma": "nesa"
       },
       {
         "surface": "articles",
@@ -812,10 +780,6 @@
       {
         "surface": "put",
         "lemma": "nechat"
-      },
-      {
-        "surface": "them",
-        "lemma": "himmo"
       },
       {
         "surface": "in the temple",
@@ -843,10 +807,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "this",
-        "lemma": "dekh"
-      },
       {
         "surface": "Sheshbazzar",
         "lemma": "sheshebatstsar"
@@ -946,10 +906,6 @@
         "lemma": "benah"
       },
       {
-        "surface": "the",
-        "lemma": "dekh"
-      },
-      {
         "surface": "house",
         "lemma": "bayit"
       },
@@ -972,16 +928,12 @@
       {
         "surface": "his decision",
         "lemma": "reut"
-      },
-      {
-        "surface": "this matter",
-        "lemma": "denah"
       }
     ]
   },
   "themeLemmas": [
     "elah",
     "benah",
-    "denah"
+    "yerushalem"
   ]
 }

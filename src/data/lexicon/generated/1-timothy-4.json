@@ -14,6 +14,10 @@
         "lemma": "rhetos"
       },
       {
+        "surface": "states",
+        "lemma": "lego"
+      },
+      {
         "surface": "later",
         "lemma": "husteros"
       },
@@ -120,6 +124,10 @@
     ],
     "4": [
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "creation",
         "lemma": "ktisma"
       },
@@ -130,6 +138,14 @@
       {
         "surface": "is good",
         "lemma": "kalos"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "that is received",
+        "lemma": "lambano"
       },
       {
         "surface": "thanksgiving",
@@ -166,6 +182,10 @@
       {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "you will be",
+        "lemma": "eimi"
       },
       {
         "surface": "a good",
@@ -244,6 +264,10 @@
         "lemma": "gumnasia"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "limited",
         "lemma": "oligos"
       },
@@ -256,8 +280,20 @@
         "lemma": "eusebeia"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "valuable",
         "lemma": "ophelimos"
+      },
+      {
+        "surface": "every way",
+        "lemma": "pas"
+      },
+      {
+        "surface": "holding",
+        "lemma": "echo"
       },
       {
         "surface": "promise",
@@ -290,6 +326,10 @@
         "lemma": "axios"
       },
       {
+        "surface": "of full",
+        "lemma": "pas"
+      },
+      {
         "surface": "acceptance",
         "lemma": "apodoche"
       }
@@ -316,8 +356,16 @@
         "lemma": "theos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the Savior",
         "lemma": "soter"
+      },
+      {
+        "surface": "of everyone",
+        "lemma": "pas"
       },
       {
         "surface": "and especially",
@@ -352,6 +400,10 @@
         "lemma": "neotes"
       },
       {
+        "surface": "set",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "an example",
         "lemma": "tupos"
       },
@@ -382,6 +434,10 @@
     ],
     "13": [
       {
+        "surface": "I come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "devote yourself",
         "lemma": "prosecho"
       },
@@ -408,6 +464,10 @@
         "lemma": "charisma"
       },
       {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "the prophecy spoken",
         "lemma": "propheteia"
       },
@@ -430,12 +490,24 @@
         "lemma": "meletao"
       },
       {
+        "surface": "and absorbed",
+        "lemma": "eimi"
+      },
+      {
         "surface": "progress",
         "lemma": "prokope"
       },
       {
+        "surface": "will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "evident",
         "lemma": "phaneros"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
       }
     ],
     "16": [
@@ -452,8 +524,16 @@
         "lemma": "epimeno"
       },
       {
+        "surface": "by so doing",
+        "lemma": "poieo"
+      },
+      {
         "surface": "you will save",
         "lemma": "sozo"
+      },
+      {
+        "surface": "hear",
+        "lemma": "akouo"
       }
     ]
   },

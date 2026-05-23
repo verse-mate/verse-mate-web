@@ -14,6 +14,10 @@
         "lemma": "galates"
       },
       {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
         "surface": "has bewitched",
         "lemma": "baskaino"
       },
@@ -40,12 +44,20 @@
     ],
     "2": [
       {
+        "surface": "I would like",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to learn",
         "lemma": "manthano"
       },
       {
         "surface": "just",
         "lemma": "monon"
+      },
+      {
+        "surface": "Did you receive",
+        "lemma": "lambano"
       },
       {
         "surface": "Spirit",
@@ -69,6 +81,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "Are you",
+        "lemma": "eimi"
+      },
       {
         "surface": "so",
         "lemma": "houto"
@@ -174,8 +190,16 @@
     ],
     "7": [
       {
+        "surface": "Understand",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "sons",
@@ -220,6 +244,10 @@
         "lemma": "abraam"
       },
       {
+        "surface": "All",
+        "lemma": "pas"
+      },
+      {
         "surface": "nations",
         "lemma": "ethnos"
       },
@@ -252,6 +280,10 @@
         "lemma": "hosos"
       },
       {
+        "surface": "rely on",
+        "lemma": "eimi"
+      },
+      {
         "surface": "works",
         "lemma": "ergon"
       },
@@ -260,16 +292,40 @@
         "lemma": "nomos"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a curse",
         "lemma": "katara"
+      },
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
       },
       {
         "surface": "Cursed is",
         "lemma": "epikataratos"
       },
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "does not continue",
         "lemma": "emmeno"
+      },
+      {
+        "surface": "to do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "written",
+        "lemma": "grapho"
       },
       {
         "surface": "Book",
@@ -284,6 +340,10 @@
       {
         "surface": "it is clear",
         "lemma": "delos"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
       },
       {
         "surface": "is justified",
@@ -316,8 +376,16 @@
         "lemma": "nomos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "on faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "does",
+        "lemma": "poieo"
       },
       {
         "surface": "will live",
@@ -342,12 +410,24 @@
         "lemma": "nomos"
       },
       {
+        "surface": "by becoming",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a curse",
         "lemma": "katara"
       },
       {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "Cursed is",
         "lemma": "epikataratos"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       },
       {
         "surface": "is hung",
@@ -368,6 +448,10 @@
         "lemma": "abraam"
       },
       {
+        "surface": "would come",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "Gentiles",
         "lemma": "ethnos"
       },
@@ -384,6 +468,10 @@
         "lemma": "pistis"
       },
       {
+        "surface": "we might receive",
+        "lemma": "lambano"
+      },
+      {
         "surface": "promise",
         "lemma": "epangelia"
       },
@@ -398,12 +486,20 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "let me put this",
+        "lemma": "lego"
+      },
+      {
         "surface": "a human covenant",
         "lemma": "diatheke"
       },
       {
         "surface": "once it is ratified",
         "lemma": "kuroo"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "oudeis"
       },
       {
         "surface": "be canceled",
@@ -432,12 +528,28 @@
         "lemma": "sperma"
       },
       {
+        "surface": "The Scripture  does not say",
+        "lemma": "lego"
+      },
+      {
         "surface": "to seeds",
         "lemma": "sperma"
       },
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "seed",
         "lemma": "sperma"
+      },
+      {
+        "surface": "One",
+        "lemma": "heis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "Christ",
@@ -446,8 +558,16 @@
     ],
     "17": [
       {
+        "surface": "What I mean",
+        "lemma": "lego"
+      },
+      {
         "surface": "The law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "that came",
+        "lemma": "ginomai"
       },
       {
         "surface": "430",
@@ -514,6 +634,10 @@
     ],
     "19": [
       {
+        "surface": "Why",
+        "lemma": "tis"
+      },
+      {
         "surface": "law  given",
         "lemma": "nomos"
       },
@@ -524,6 +648,10 @@
       {
         "surface": "transgressions",
         "lemma": "parabasis"
+      },
+      {
+        "surface": "the arrival",
+        "lemma": "erchomai"
       },
       {
         "surface": "seed",
@@ -556,8 +684,24 @@
         "lemma": "mesites"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "for only  one  party",
+        "lemma": "heis"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       }
     ],
     "21": [
@@ -574,16 +718,24 @@
         "lemma": "theos"
       },
       {
+        "surface": "Certainly not",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a law",
         "lemma": "nomos"
       },
       {
-        "surface": "impart life",
-        "lemma": "zoopoieo"
+        "surface": "had been given",
+        "lemma": "didomi"
       },
       {
-        "surface": "then",
-        "lemma": "an"
+        "surface": "could",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "impart life",
+        "lemma": "zoopoieo"
       },
       {
         "surface": "righteousness",
@@ -594,6 +746,10 @@
         "lemma": "ontos"
       },
       {
+        "surface": "have come",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the law",
         "lemma": "nomos"
       }
@@ -602,6 +758,10 @@
       {
         "surface": "Scripture  pronounces",
         "lemma": "graphe"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "confined",
@@ -628,6 +788,10 @@
         "lemma": "epangelia"
       },
       {
+        "surface": "might be given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "believe",
         "lemma": "pisteuo"
       }
@@ -636,6 +800,10 @@
       {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "came",
+        "lemma": "erchomai"
       },
       {
         "surface": "we were held in custody",
@@ -668,6 +836,10 @@
         "lemma": "nomos"
       },
       {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "guardian",
         "lemma": "paidagogos"
       },
@@ -690,11 +862,27 @@
         "lemma": "pistis"
       },
       {
+        "surface": "has come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "we are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a guardian",
         "lemma": "paidagogos"
       }
     ],
     "26": [
+      {
+        "surface": "You are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
       {
         "surface": "sons",
         "lemma": "huios"
@@ -768,6 +956,18 @@
         "lemma": "thelus"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
       },
@@ -780,6 +980,10 @@
       {
         "surface": "to Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "Abraham’s",

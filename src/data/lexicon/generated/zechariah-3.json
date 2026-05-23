@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Then the angel showed me",
+        "lemma": "raah"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
       },
@@ -56,6 +60,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Satan",
         "lemma": "satan"
       },
@@ -88,6 +96,10 @@
         "lemma": "gaar"
       },
       {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a firebrand",
         "lemma": "ud"
       },
@@ -104,6 +116,10 @@
       {
         "surface": "Now Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "dressed",
@@ -136,6 +152,10 @@
         "lemma": "un"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "those standing",
         "lemma": "amad"
       },
@@ -156,6 +176,14 @@
         "lemma": "beged"
       },
       {
+        "surface": "Then he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "See",
+        "lemma": "raah"
+      },
+      {
         "surface": "I have removed",
         "lemma": "avar"
       },
@@ -173,6 +201,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Then I said",
+        "lemma": "amar"
+      },
       {
         "surface": "Let them put",
         "lemma": "sum"
@@ -254,6 +286,14 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you walk",
         "lemma": "halakh"
       },
@@ -286,6 +326,10 @@
         "lemma": "chatser"
       },
       {
+        "surface": "and I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "a place",
         "lemma": "mahalakh"
       },
@@ -300,8 +344,8 @@
     ],
     "8": [
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "Hear",
+        "lemma": "shama"
       },
       {
         "surface": "O high",
@@ -320,6 +364,10 @@
         "lemma": "rea"
       },
       {
+        "surface": "seated",
+        "lemma": "yashav"
+      },
+      {
         "surface": "before you",
         "lemma": "paneh"
       },
@@ -328,8 +376,8 @@
         "lemma": "mophet"
       },
       {
-        "surface": "behold",
-        "lemma": "hen"
+        "surface": "I am going to bring",
+        "lemma": "bo"
       },
       {
         "surface": "My servant",
@@ -342,12 +390,12 @@
     ],
     "9": [
       {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the stone",
         "lemma": "even"
+      },
+      {
+        "surface": "I have set",
+        "lemma": "natan"
       },
       {
         "surface": "before",
@@ -372,10 +420,6 @@
       {
         "surface": "eyes",
         "lemma": "ayin"
-      },
-      {
-        "surface": "Behold",
-        "lemma": "hen"
       },
       {
         "surface": "I will engrave on it",
@@ -434,6 +478,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "you will each invite",
+        "lemma": "qara"
       },
       {
         "surface": "your neighbor",

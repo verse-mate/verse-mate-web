@@ -6,8 +6,8 @@
   "verses": {
     "1": [
       {
-        "surface": "Come",
-        "lemma": "hoy"
+        "surface": "all you",
+        "lemma": "kol"
       },
       {
         "surface": "who are thirsty",
@@ -58,8 +58,16 @@
         "lemma": "chalav"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "money",
         "lemma": "keseph"
+      },
+      {
+        "surface": "and without",
+        "lemma": "lo"
       },
       {
         "surface": "cost",
@@ -80,6 +88,10 @@
         "lemma": "keseph"
       },
       {
+        "surface": "on that which is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "bread",
         "lemma": "lechem"
       },
@@ -88,8 +100,16 @@
         "lemma": "yegia"
       },
       {
+        "surface": "on that which does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfy",
         "lemma": "sovah"
+      },
+      {
+        "surface": "Listen carefully",
+        "lemma": "shama"
       },
       {
         "surface": "and eat",
@@ -126,6 +146,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "so that your soul",
         "lemma": "nephesh"
       },
@@ -160,8 +184,8 @@
     ],
     "4": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "I have made him",
+        "lemma": "natan"
       },
       {
         "surface": "a witness",
@@ -186,12 +210,16 @@
     ],
     "5": [
       {
-        "surface": "Surely",
-        "lemma": "hen"
+        "surface": "you will summon",
+        "lemma": "qara"
       },
       {
         "surface": "a nation",
         "lemma": "goy"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -200,6 +228,10 @@
       {
         "surface": "and nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "who do not",
+        "lemma": "lo"
       },
       {
         "surface": "know you",
@@ -244,6 +276,14 @@
         "lemma": "matsa"
       },
       {
+        "surface": "call on Him",
+        "lemma": "qara"
+      },
+      {
+        "surface": "while He is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "near",
         "lemma": "qarov"
       }
@@ -274,6 +314,10 @@
         "lemma": "machashavah"
       },
       {
+        "surface": "let him return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -300,8 +344,16 @@
         "lemma": "machashavah"
       },
       {
+        "surface": "are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "your thoughts",
         "lemma": "machashavah"
+      },
+      {
+        "surface": "neither are",
+        "lemma": "lo"
       },
       {
         "surface": "your ways",
@@ -376,6 +428,14 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "and do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "watering",
         "lemma": "ravah"
       },
@@ -390,6 +450,10 @@
       {
         "surface": "and sprout",
         "lemma": "tsamach"
+      },
+      {
+        "surface": "and providing",
+        "lemma": "natan"
       },
       {
         "surface": "seed",
@@ -418,12 +482,28 @@
         "lemma": "davar"
       },
       {
+        "surface": "proceeds",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from My mouth",
         "lemma": "peh"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "empty",
         "lemma": "reqam"
+      },
+      {
+        "surface": "it will accomplish",
+        "lemma": "asah"
       },
       {
         "surface": "I please",
@@ -439,6 +519,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "go out",
+        "lemma": "yatsa"
+      },
       {
         "surface": "with joy",
         "lemma": "simchah"
@@ -470,6 +554,10 @@
       {
         "surface": "before you",
         "lemma": "paneh"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the trees",
@@ -522,6 +610,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "this will make",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a name",
         "lemma": "shem"
       },
@@ -538,14 +630,18 @@
         "lemma": "ot"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
         "surface": "to be destroyed",
         "lemma": "karat"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "machashavah",
-    "halakh",
-    "keseph"
+    "halakh"
   ]
 }

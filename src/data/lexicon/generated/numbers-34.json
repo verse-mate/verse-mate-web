@@ -28,6 +28,14 @@
         "lemma": "ben"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -62,6 +70,10 @@
         "lemma": "peah"
       },
       {
+        "surface": "will extend",
+        "lemma": "hayah"
+      },
+      {
         "surface": "from the Wilderness",
         "lemma": "midbar"
       },
@@ -88,6 +100,10 @@
       {
         "surface": "border",
         "lemma": "gevul"
+      },
+      {
+        "surface": "will run",
+        "lemma": "hayah"
       },
       {
         "surface": "from the end",
@@ -128,6 +144,10 @@
         "lemma": "tsin"
       },
       {
+        "surface": "and go",
+        "lemma": "hayah"
+      },
+      {
         "surface": "south",
         "lemma": "negev"
       },
@@ -138,6 +158,10 @@
       {
         "surface": "of Kadesh-barnea",
         "lemma": "qadeshbarnea"
+      },
+      {
+        "surface": "Then it will go on",
+        "lemma": "yatsa"
       },
       {
         "surface": "vvv",
@@ -178,6 +202,10 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "and end",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at the Sea",
         "lemma": "yam"
       }
@@ -192,6 +220,10 @@
         "lemma": "gevul"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the coastline",
         "lemma": "gevul"
       },
@@ -202,6 +234,10 @@
       {
         "surface": "Sea",
         "lemma": "yam"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "boundary",
@@ -220,6 +256,10 @@
       {
         "surface": "border",
         "lemma": "gevul"
+      },
+      {
+        "surface": "will run",
+        "lemma": "hayah"
       },
       {
         "surface": "the Great",
@@ -252,6 +292,10 @@
         "lemma": "hor"
       },
       {
+        "surface": "vvv",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Lebo-hamath",
         "lemma": "chamat"
       },
@@ -260,14 +304,26 @@
         "lemma": "gevul"
       },
       {
+        "surface": "extend",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to Zedad",
         "lemma": "tsedad"
       }
     ],
     "9": [
       {
+        "surface": "continue",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "to Ziphron",
         "lemma": "ziphron"
+      },
+      {
+        "surface": "and end",
+        "lemma": "hayah"
       },
       {
         "surface": "vvv",
@@ -276,6 +332,10 @@
       {
         "surface": "at Hazar-enan",
         "lemma": "chatsarenan"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "boundary",
@@ -368,12 +428,20 @@
         "lemma": "yarden"
       },
       {
+        "surface": "and end",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at the Salt",
         "lemma": "melach"
       },
       {
         "surface": "Sea",
         "lemma": "yam"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "land",
@@ -420,6 +488,10 @@
       {
         "surface": "has commanded that",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "it be given",
+        "lemma": "natan"
       },
       {
         "surface": "to the nine",
@@ -820,6 +892,10 @@
       {
         "surface": "from the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of Asher",
+        "lemma": "asher"
       }
     ],
     "28": [
@@ -877,7 +953,7 @@
   },
   "themeLemmas": [
     "matteh",
-    "gevul",
-    "yam"
+    "hayah",
+    "gevul"
   ]
 }

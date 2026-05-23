@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "Some time later",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Absalom",
         "lemma": "avishalom"
+      },
+      {
+        "surface": "provided for",
+        "lemma": "asah"
       },
       {
         "surface": "a chariot",
@@ -56,8 +64,24 @@
         "lemma": "shaar"
       },
       {
+        "surface": "Whenever",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a grievance",
         "lemma": "riv"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "bo"
       },
       {
         "surface": "the king",
@@ -72,12 +96,24 @@
         "lemma": "avishalom"
       },
       {
+        "surface": "would call out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "and ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "ay"
       },
       {
         "surface": "city",
         "lemma": "ir"
+      },
+      {
+        "surface": "And if he replied",
+        "lemma": "amar"
       },
       {
         "surface": "Your servant is",
@@ -102,6 +138,14 @@
         "lemma": "avishalom"
       },
       {
+        "surface": "would say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Look",
+        "lemma": "raah"
+      },
+      {
         "surface": "your claims",
         "lemma": "davar"
       },
@@ -120,12 +164,20 @@
       {
         "surface": "has no deputy",
         "lemma": "ayin"
+      },
+      {
+        "surface": "to hear",
+        "lemma": "shama"
       }
     ],
     "4": [
       {
         "surface": "And he",
         "lemma": "avishalom"
+      },
+      {
+        "surface": "would add",
+        "lemma": "amar"
       },
       {
         "surface": "If only",
@@ -144,6 +196,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "then everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "a grievance",
         "lemma": "riv"
       },
@@ -152,11 +208,19 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "could come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and I would give him justice",
         "lemma": "tsadaq"
       }
     ],
     "5": [
+      {
+        "surface": "Also, when",
+        "lemma": "hayah"
+      },
       {
         "surface": "anyone",
         "lemma": "ish"
@@ -192,8 +256,20 @@
         "lemma": "avishalom"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "the king",
@@ -238,16 +314,20 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "had passed",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Absalom",
         "lemma": "avishalom"
       },
       {
-        "surface": "the king",
-        "lemma": "melekh"
+        "surface": "said",
+        "lemma": "amar"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "the king",
+        "lemma": "melekh"
       },
       {
         "surface": "let me go",
@@ -288,6 +368,10 @@
         "lemma": "neder"
       },
       {
+        "surface": "while dwelling",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Geshur",
         "lemma": "geshur"
       },
@@ -296,8 +380,24 @@
         "lemma": "aram"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "indeed",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "brings me back",
+        "lemma": "shuv"
       },
       {
         "surface": "to Jerusalem",
@@ -320,6 +420,10 @@
       {
         "surface": "in peace",
         "lemma": "shalom"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the king",
@@ -352,6 +456,10 @@
         "lemma": "ragal"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "the tribes",
         "lemma": "shevet"
       },
@@ -360,12 +468,24 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "with this message",
+        "lemma": "amar"
+      },
+      {
+        "surface": "When you hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the sound",
         "lemma": "qol"
       },
       {
         "surface": "of the horn",
         "lemma": "shophar"
+      },
+      {
+        "surface": "you are to say",
+        "lemma": "amar"
       },
       {
         "surface": "Absalom",
@@ -402,6 +522,10 @@
         "lemma": "avishalom"
       },
       {
+        "surface": "They had been invited as guests",
+        "lemma": "qara"
+      },
+      {
         "surface": "and they went along",
         "lemma": "halakh"
       },
@@ -412,6 +536,14 @@
       {
         "surface": "for they knew",
         "lemma": "yada"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "about",
+        "lemma": "kol"
       },
       {
         "surface": "the matter",
@@ -464,6 +596,10 @@
         "lemma": "qesher"
       },
       {
+        "surface": "gained",
+        "lemma": "hayah"
+      },
+      {
         "surface": "strength",
         "lemma": "ammits"
       },
@@ -490,8 +626,16 @@
         "lemma": "nagad"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "and reported",
+        "lemma": "amar"
       },
       {
         "surface": "The hearts",
@@ -504,6 +648,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "are",
+        "lemma": "hayah"
       },
       {
         "surface": "with",
@@ -520,6 +668,14 @@
         "lemma": "david"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the servants",
         "lemma": "eved"
       },
@@ -534,6 +690,14 @@
       {
         "surface": "and let us flee",
         "lemma": "barach"
+      },
+      {
+        "surface": "will",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "escape",
@@ -598,6 +762,14 @@
         "lemma": "eved"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Whatever",
+        "lemma": "kol"
+      },
+      {
         "surface": "our lord",
         "lemma": "adon"
       },
@@ -618,6 +790,14 @@
       {
         "surface": "Then the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "set out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and his entire",
+        "lemma": "kol"
       },
       {
         "surface": "household",
@@ -658,6 +838,14 @@
         "lemma": "melekh"
       },
       {
+        "surface": "set out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -680,6 +868,10 @@
     ],
     "18": [
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his servants",
         "lemma": "eved"
       },
@@ -692,12 +884,24 @@
         "lemma": "yad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Cherethites",
         "lemma": "kereti"
       },
       {
+        "surface": "and",
+        "lemma": "kol"
+      },
+      {
         "surface": "Pelethites",
         "lemma": "peleti"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "six",
@@ -710,6 +914,10 @@
       {
         "surface": "Gittites",
         "lemma": "gitti"
+      },
+      {
+        "surface": "had followed",
+        "lemma": "bo"
       },
       {
         "surface": "him",
@@ -726,6 +934,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Ittai",
         "lemma": "ittay"
       },
@@ -740,6 +952,14 @@
       {
         "surface": "go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "Go back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and stay",
+        "lemma": "yashav"
       },
       {
         "surface": "the new king",
@@ -759,6 +979,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "In fact, you arrived",
+        "lemma": "bo"
+      },
       {
         "surface": "only yesterday",
         "lemma": "temol"
@@ -782,6 +1006,14 @@
       {
         "surface": "am going",
         "lemma": "halakh"
+      },
+      {
+        "surface": "Go back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and take",
+        "lemma": "shuv"
       },
       {
         "surface": "your brothers",
@@ -842,8 +1074,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "may be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "whether",
+        "lemma": "im"
+      },
+      {
         "surface": "it means life",
         "lemma": "chay"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "death",
@@ -856,12 +1100,20 @@
       {
         "surface": "your servant",
         "lemma": "eved"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       }
     ],
     "22": [
       {
         "surface": "March on then",
         "lemma": "avar"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "David",
@@ -884,8 +1136,16 @@
         "lemma": "avar"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the little ones",
@@ -893,6 +1153,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "Everyone",
+        "lemma": "kol"
+      },
       {
         "surface": "in the countryside",
         "lemma": "erets"
@@ -904,6 +1168,10 @@
       {
         "surface": "loudly",
         "lemma": "qol"
+      },
+      {
+        "surface": "as all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -930,6 +1198,10 @@
         "lemma": "nachal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -952,8 +1224,8 @@
         "lemma": "tsadoq"
       },
       {
-        "surface": "there",
-        "lemma": "hinneh"
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the Levites",
@@ -996,6 +1268,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -1014,8 +1290,16 @@
         "lemma": "melekh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Zadok",
         "lemma": "tsadoq"
+      },
+      {
+        "surface": "Return",
+        "lemma": "shuv"
       },
       {
         "surface": "the ark",
@@ -1028,6 +1312,10 @@
       {
         "surface": "to the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
       },
       {
         "surface": "I find",
@@ -1046,18 +1334,38 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "He will bring me back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and let me see",
+        "lemma": "raah"
+      },
+      {
         "surface": "His dwelling place {again",
         "lemma": "naveh"
       }
     ],
     "26": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "He should say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "delight",
         "lemma": "chaphets"
       },
       {
-        "surface": "then here I am",
-        "lemma": "hen"
+        "surface": "let Him do",
+        "lemma": "asah"
       },
       {
         "surface": "seems good",
@@ -1074,12 +1382,24 @@
         "lemma": "melekh"
       },
       {
+        "surface": "also said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Zadok",
         "lemma": "tsadoq"
       },
       {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "Are you not a seer",
+        "lemma": "raah"
+      },
+      {
+        "surface": "Return",
+        "lemma": "shuv"
       },
       {
         "surface": "to the city",
@@ -1112,6 +1432,10 @@
     ],
     "28": [
       {
+        "surface": "See",
+        "lemma": "raah"
+      },
+      {
         "surface": "wait",
         "lemma": "mahah"
       },
@@ -1128,6 +1452,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "comes",
+        "lemma": "bo"
+      },
+      {
         "surface": "to inform",
         "lemma": "nagad"
       }
@@ -1142,6 +1470,10 @@
         "lemma": "evyatar"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the ark",
         "lemma": "aron"
       },
@@ -1152,6 +1484,10 @@
       {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "and stayed",
+        "lemma": "yashav"
       },
       {
         "surface": "there",
@@ -1194,6 +1530,10 @@
       {
         "surface": "barefoot",
         "lemma": "yacheph"
+      },
+      {
+        "surface": "And all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -1246,12 +1586,12 @@
         "lemma": "david"
       },
       {
-        "surface": "O LORD",
-        "lemma": "yehovah"
+        "surface": "pleaded",
+        "lemma": "amar"
       },
       {
-        "surface": "please",
-        "lemma": "na"
+        "surface": "O LORD",
+        "lemma": "yehovah"
       },
       {
         "surface": "turn the counsel",
@@ -1268,8 +1608,16 @@
     ],
     "32": [
       {
+        "surface": "When",
+        "lemma": "hayah"
+      },
+      {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "the summit",
@@ -1292,12 +1640,16 @@
         "lemma": "arki"
       },
       {
-        "surface": "was there",
-        "lemma": "hinneh"
+        "surface": "to meet him",
+        "lemma": "qara"
       },
       {
         "surface": "with his robe",
         "lemma": "ketonet"
+      },
+      {
+        "surface": "torn",
+        "lemma": "qara"
       },
       {
         "surface": "and dust",
@@ -1314,8 +1666,20 @@
         "lemma": "david"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you go on",
         "lemma": "avar"
+      },
+      {
+        "surface": "you will be",
+        "lemma": "hayah"
       },
       {
         "surface": "a burden",
@@ -1336,12 +1700,28 @@
         "lemma": "achitophel"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to the city",
         "lemma": "ir"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Absalom",
         "lemma": "avishalom"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "your servant",
@@ -1350,6 +1730,10 @@
       {
         "surface": "my king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "was your father’s",
+        "lemma": "av"
       },
       {
         "surface": "servant",
@@ -1365,6 +1749,10 @@
       }
     ],
     "35": [
+      {
+        "surface": "Will not",
+        "lemma": "lo"
+      },
       {
         "surface": "Zadok",
         "lemma": "tsadoq"
@@ -1390,6 +1778,14 @@
         "lemma": "tsadoq"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "from the king’s",
         "lemma": "melekh"
       },
@@ -1399,10 +1795,6 @@
       }
     ],
     "36": [
-      {
-        "surface": "Indeed",
-        "lemma": "hinneh"
-      },
       {
         "surface": "their two",
         "lemma": "shenayim"
@@ -1438,6 +1830,14 @@
       {
         "surface": "them",
         "lemma": "yad"
+      },
+      {
+        "surface": "with everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you hear",
+        "lemma": "shama"
       }
     ],
     "37": [
@@ -1454,6 +1854,10 @@
         "lemma": "chushay"
       },
       {
+        "surface": "arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -1462,14 +1866,18 @@
         "lemma": "avishalom"
       },
       {
+        "surface": "was entering",
+        "lemma": "bo"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
       }
     ]
   },
   "themeLemmas": [
-    "avishalom",
-    "halakh",
-    "david"
+    "kol",
+    "amar",
+    "avishalom"
   ]
 }

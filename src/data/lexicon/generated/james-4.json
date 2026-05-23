@@ -36,12 +36,20 @@
         "lemma": "epithumeo"
       },
       {
+        "surface": "have",
+        "lemma": "echo"
+      },
+      {
         "surface": "you kill",
         "lemma": "phoneuo"
       },
       {
         "surface": "covet",
         "lemma": "zeloo"
+      },
+      {
+        "surface": "are unable",
+        "lemma": "dunamai"
       },
       {
         "surface": "to obtain it",
@@ -56,6 +64,10 @@
         "lemma": "polemeo"
       },
       {
+        "surface": "You do not have",
+        "lemma": "echo"
+      },
+      {
         "surface": "ask",
         "lemma": "aiteo"
       }
@@ -64,6 +76,10 @@
       {
         "surface": "And when you do ask",
         "lemma": "aiteo"
+      },
+      {
+        "surface": "receive",
+        "lemma": "lambano"
       },
       {
         "surface": "you ask",
@@ -88,12 +104,20 @@
         "lemma": "moichalis"
       },
       {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "friendship",
         "lemma": "philia"
       },
       {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "hostility",
@@ -106,6 +130,10 @@
       {
         "surface": "chooses",
         "lemma": "boulomai"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
       },
       {
         "surface": "a friend",
@@ -138,6 +166,10 @@
         "lemma": "graphe"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
         "surface": "without reason that",
         "lemma": "kenos"
       },
@@ -160,8 +192,20 @@
     ],
     "6": [
       {
+        "surface": "He gives us",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "more",
+        "lemma": "megas"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "it says",
+        "lemma": "lego"
       },
       {
         "surface": "God",
@@ -174,6 +218,10 @@
       {
         "surface": "the proud",
         "lemma": "huperephanos"
+      },
+      {
+        "surface": "gives",
+        "lemma": "didomi"
       },
       {
         "surface": "grace",
@@ -346,6 +394,10 @@
         "lemma": "nomos"
       },
       {
+        "surface": "you are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a practitioner",
         "lemma": "poietes"
       },
@@ -360,6 +412,14 @@
     ],
     "12": [
       {
+        "surface": "There is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "only one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Lawgiver",
         "lemma": "nomothetes"
       },
@@ -368,12 +428,24 @@
         "lemma": "krites"
       },
       {
+        "surface": "is able",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "to save",
         "lemma": "sozo"
       },
       {
         "surface": "destroy",
         "lemma": "apolluo"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "to judge",
@@ -394,6 +466,10 @@
         "lemma": "nun"
       },
       {
+        "surface": "say",
+        "lemma": "lego"
+      },
+      {
         "surface": "Today",
         "lemma": "semeron"
       },
@@ -408,6 +484,10 @@
       {
         "surface": "city",
         "lemma": "polis"
+      },
+      {
+        "surface": "spend",
+        "lemma": "poieo"
       },
       {
         "surface": "a year",
@@ -444,6 +524,10 @@
         "lemma": "zoe"
       },
       {
+        "surface": "You are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a mist",
         "lemma": "atmis"
       },
@@ -466,12 +550,24 @@
     ],
     "15": [
       {
+        "surface": "to say",
+        "lemma": "lego"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
       {
+        "surface": "is willing",
+        "lemma": "thelo"
+      },
+      {
         "surface": "we will live",
         "lemma": "zao"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
       }
     ],
     "16": [
@@ -488,8 +584,16 @@
         "lemma": "alazoneia"
       },
       {
+        "surface": "All",
+        "lemma": "pas"
+      },
+      {
         "surface": "boasting",
         "lemma": "kauchesis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "evil",
@@ -498,8 +602,24 @@
     ],
     "17": [
       {
+        "surface": "who knows",
+        "lemma": "eido"
+      },
+      {
         "surface": "the right thing",
         "lemma": "kalos"
+      },
+      {
+        "surface": "to do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "to do it",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "guilty of sin",

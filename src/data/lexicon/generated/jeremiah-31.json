@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -14,8 +18,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "I will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the families",
@@ -24,6 +36,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "people",
@@ -38,6 +54,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "The people",
@@ -80,6 +100,10 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "appeared",
+        "lemma": "raah"
       },
       {
         "surface": "in the past, saying",
@@ -140,6 +164,10 @@
         "lemma": "toph"
       },
       {
+        "surface": "and go out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in joyful",
         "lemma": "sachaq"
       },
@@ -196,6 +224,10 @@
         "lemma": "natsar"
       },
       {
+        "surface": "will call out",
+        "lemma": "qara"
+      },
+      {
         "surface": "on the hills",
         "lemma": "har"
       },
@@ -234,6 +266,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Sing",
         "lemma": "run"
       },
@@ -258,8 +294,16 @@
         "lemma": "goy"
       },
       {
+        "surface": "Make",
+        "lemma": "shama"
+      },
+      {
         "surface": "your praises heard",
         "lemma": "halal"
+      },
+      {
+        "surface": "and say",
+        "lemma": "amar"
       },
       {
         "surface": "O LORD",
@@ -284,8 +328,8 @@
     ],
     "8": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "I will bring",
+        "lemma": "bo"
       },
       {
         "surface": "from the land",
@@ -324,6 +368,10 @@
         "lemma": "yalad"
       },
       {
+        "surface": "They will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "as a great",
         "lemma": "gadol"
       },
@@ -333,6 +381,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "They will come",
+        "lemma": "bo"
+      },
       {
         "surface": "with weeping",
         "lemma": "bekhi"
@@ -366,12 +418,24 @@
         "lemma": "derekh"
       },
       {
+        "surface": "where they will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "stumble",
         "lemma": "kashal"
       },
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Israel’s",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "Father",
+        "lemma": "av"
       },
       {
         "surface": "and Ephraim",
@@ -383,6 +447,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
       {
         "surface": "O nations",
         "lemma": "goy"
@@ -460,6 +528,10 @@
     ],
     "12": [
       {
+        "surface": "They will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and shout for joy",
         "lemma": "run"
       },
@@ -512,12 +584,20 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a well-watered",
         "lemma": "raveh"
       },
       {
         "surface": "garden",
         "lemma": "gan"
+      },
+      {
+        "surface": "and never",
+        "lemma": "lo"
       },
       {
         "surface": "again",
@@ -626,8 +706,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "A voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "is heard",
+        "lemma": "shama"
       },
       {
         "surface": "in Ramah",
@@ -680,6 +768,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Keep",
         "lemma": "mana"
       },
@@ -720,6 +812,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "Then your children will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from the land",
         "lemma": "erets"
       },
@@ -754,11 +850,19 @@
         "lemma": "ben"
       },
       {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to their own land",
         "lemma": "gevul"
       }
     ],
     "18": [
+      {
+        "surface": "I have surely heard",
+        "lemma": "shama"
+      },
       {
         "surface": "Ephraim’s",
         "lemma": "ephrayim"
@@ -772,8 +876,20 @@
         "lemma": "yasar"
       },
       {
+        "surface": "like an untrained",
+        "lemma": "lo"
+      },
+      {
         "surface": "calf",
         "lemma": "egel"
+      },
+      {
+        "surface": "Restore me",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "that I may return",
+        "lemma": "shuv"
       },
       {
         "surface": "the LORD",
@@ -788,6 +904,10 @@
       {
         "surface": "After",
         "lemma": "achar"
+      },
+      {
+        "surface": "I returned",
+        "lemma": "shuv"
       },
       {
         "surface": "I repented",
@@ -922,12 +1042,20 @@
         "lemma": "halakh"
       },
       {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O Virgin",
         "lemma": "betulah"
       },
       {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
       },
       {
         "surface": "cities of yours",
@@ -998,12 +1126,24 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "When I restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from captivity",
         "lemma": "shevut"
       },
       {
         "surface": "they will once again",
         "lemma": "od"
+      },
+      {
+        "surface": "speak",
+        "lemma": "amar"
       },
       {
         "surface": "word",
@@ -1052,8 +1192,16 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "will dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "together",
@@ -1090,6 +1238,10 @@
         "lemma": "male"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who are weak",
         "lemma": "daav"
       }
@@ -1098,6 +1250,10 @@
       {
         "surface": "I awoke",
         "lemma": "quts"
+      },
+      {
+        "surface": "and looked around",
+        "lemma": "raah"
       },
       {
         "surface": "My sleep",
@@ -1112,6 +1268,10 @@
       {
         "surface": "The days",
         "lemma": "yom"
+      },
+      {
+        "surface": "are coming",
+        "lemma": "bo"
       },
       {
         "surface": "declares",
@@ -1214,8 +1374,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "it will no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
+      },
+      {
+        "surface": "be said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "The fathers",
+        "lemma": "av"
       },
       {
         "surface": "have eaten",
@@ -1252,6 +1424,10 @@
         "lemma": "avan"
       },
       {
+        "surface": "If anyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "eats",
         "lemma": "akhal"
       },
@@ -1270,12 +1446,12 @@
     ],
     "31": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the days",
         "lemma": "yom"
+      },
+      {
+        "surface": "are coming",
+        "lemma": "bo"
       },
       {
         "surface": "declares",
@@ -1316,12 +1492,20 @@
     ],
     "32": [
       {
+        "surface": "It will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be like the covenant",
         "lemma": "berit"
       },
       {
         "surface": "I made",
         "lemma": "karat"
+      },
+      {
+        "surface": "their fathers",
+        "lemma": "av"
       },
       {
         "surface": "when",
@@ -1334,6 +1518,10 @@
       {
         "surface": "by the hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "to lead them",
+        "lemma": "yatsa"
       },
       {
         "surface": "out of the land",
@@ -1398,6 +1586,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "I will put",
+        "lemma": "natan"
+      },
+      {
         "surface": "My law",
         "lemma": "torah"
       },
@@ -1414,8 +1606,16 @@
         "lemma": "lev"
       },
       {
+        "surface": "And I will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "people",
@@ -1423,6 +1623,10 @@
       }
     ],
     "34": [
+      {
+        "surface": "No",
+        "lemma": "lo"
+      },
       {
         "surface": "longer",
         "lemma": "od"
@@ -1448,12 +1652,20 @@
         "lemma": "ach"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Know",
         "lemma": "yada"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "they will all",
+        "lemma": "kol"
       },
       {
         "surface": "know",
@@ -1492,6 +1704,10 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more",
         "lemma": "od"
       }
@@ -1502,8 +1718,16 @@
         "lemma": "koh"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "who gives",
+        "lemma": "natan"
       },
       {
         "surface": "the sun",
@@ -1568,6 +1792,10 @@
     ],
     "36": [
       {
+        "surface": "Only if",
+        "lemma": "im"
+      },
+      {
         "surface": "fixed order",
         "lemma": "choq"
       },
@@ -1596,8 +1824,16 @@
         "lemma": "zera"
       },
       {
+        "surface": "ever",
+        "lemma": "kol"
+      },
+      {
         "surface": "cease",
         "lemma": "shavat"
+      },
+      {
+        "surface": "to be",
+        "lemma": "hayah"
       },
       {
         "surface": "a nation",
@@ -1616,6 +1852,14 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Only if",
+        "lemma": "im"
       },
       {
         "surface": "the heavens",
@@ -1650,12 +1894,24 @@
         "lemma": "maas"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of Israel’s",
         "lemma": "yisrael"
       },
       {
         "surface": "descendants",
         "lemma": "zera"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "they have done",
+        "lemma": "asah"
       },
       {
         "surface": "declares",
@@ -1670,10 +1926,6 @@
       {
         "surface": "The days",
         "lemma": "yom"
-      },
-      {
-        "surface": "are coming",
-        "lemma": "hinneh"
       },
       {
         "surface": "declares",
@@ -1726,6 +1978,10 @@
         "lemma": "od"
       },
       {
+        "surface": "stretch out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "straight",
         "lemma": "neged"
       },
@@ -1748,6 +2004,10 @@
     ],
     "40": [
       {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "valley",
         "lemma": "emeq"
       },
@@ -1758,6 +2018,10 @@
       {
         "surface": "and ashes",
         "lemma": "deshen"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the fields",
@@ -1796,6 +2060,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "It will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "od"
       },
@@ -1812,6 +2080,6 @@
   "themeLemmas": [
     "neum",
     "yisrael",
-    "od"
+    "amar"
   ]
 }

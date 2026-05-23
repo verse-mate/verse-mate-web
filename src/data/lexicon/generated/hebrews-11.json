@@ -10,6 +10,10 @@
         "lemma": "pistis"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the assurance",
         "lemma": "hupostasis"
       },
@@ -66,6 +70,10 @@
         "lemma": "blepo"
       },
       {
+        "surface": "was not made",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "was visible",
         "lemma": "phaino"
       }
@@ -104,6 +112,10 @@
         "lemma": "martureo"
       },
       {
+        "surface": "as",
+        "lemma": "eimi"
+      },
+      {
         "surface": "righteous",
         "lemma": "dikaios"
       },
@@ -124,6 +136,10 @@
         "lemma": "eti"
       },
       {
+        "surface": "he still speaks",
+        "lemma": "laleo"
+      },
+      {
         "surface": "even though he is dead",
         "lemma": "apothnesko"
       }
@@ -142,8 +158,16 @@
         "lemma": "metatithemi"
       },
       {
+        "surface": "he did not see",
+        "lemma": "horao"
+      },
+      {
         "surface": "death",
         "lemma": "thanatos"
+      },
+      {
+        "surface": "He could not be found",
+        "lemma": "heurisko"
       },
       {
         "surface": "God",
@@ -198,6 +222,14 @@
       {
         "surface": "believe",
         "lemma": "pisteuo"
+      },
+      {
+        "surface": "He exists",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ginomai"
       },
       {
         "surface": "He rewards",
@@ -258,6 +290,10 @@
         "lemma": "kosmos"
       },
       {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "heir",
         "lemma": "kleronomos"
       },
@@ -284,12 +320,20 @@
         "lemma": "kaleo"
       },
       {
+        "surface": "to go",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "a place",
         "lemma": "topos"
       },
       {
         "surface": "he would later",
         "lemma": "mello"
+      },
+      {
+        "surface": "receive",
+        "lemma": "lambano"
       },
       {
         "surface": "his inheritance",
@@ -300,12 +344,20 @@
         "lemma": "hupakouo"
       },
       {
+        "surface": "went",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "knowing",
         "lemma": "epistamai"
       },
       {
         "surface": "where",
         "lemma": "pou"
+      },
+      {
+        "surface": "he was going",
+        "lemma": "erchomai"
       }
     ],
     "9": [
@@ -364,6 +416,10 @@
         "lemma": "polis"
       },
       {
+        "surface": "with",
+        "lemma": "echo"
+      },
+      {
         "surface": "foundations",
         "lemma": "themelios"
       },
@@ -402,6 +458,10 @@
         "lemma": "helikia"
       },
       {
+        "surface": "was enabled",
+        "lemma": "lambano"
+      },
+      {
         "surface": "conceive",
         "lemma": "katabole"
       },
@@ -423,6 +483,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "one man",
+        "lemma": "heis"
+      },
       {
         "surface": "as good as dead",
         "lemma": "nekroo"
@@ -458,6 +522,10 @@
     ],
     "13": [
       {
+        "surface": "All",
+        "lemma": "pas"
+      },
+      {
         "surface": "died",
         "lemma": "apothnesko"
       },
@@ -466,8 +534,16 @@
         "lemma": "pistis"
       },
       {
+        "surface": "having received",
+        "lemma": "lambano"
+      },
+      {
         "surface": "they were promised",
         "lemma": "epangelia"
+      },
+      {
+        "surface": "they saw them",
+        "lemma": "horao"
       },
       {
         "surface": "welcomed",
@@ -480,6 +556,10 @@
       {
         "surface": "they acknowledged",
         "lemma": "homologeo"
+      },
+      {
+        "surface": "they were",
+        "lemma": "eimi"
       },
       {
         "surface": "strangers",
@@ -495,6 +575,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "say",
+        "lemma": "lego"
+      },
       {
         "surface": "show",
         "lemma": "emphanizo"
@@ -518,8 +602,8 @@
         "lemma": "ekbasis"
       },
       {
-        "surface": "vvv",
-        "lemma": "an"
+        "surface": "they would have had",
+        "lemma": "echo"
       },
       {
         "surface": "opportunity",
@@ -607,6 +691,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "God had said",
+        "lemma": "laleo"
+      },
       {
         "surface": "Isaac",
         "lemma": "isaak"
@@ -778,6 +866,10 @@
         "lemma": "gennao"
       },
       {
+        "surface": "they saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a beautiful",
         "lemma": "asteios"
       },
@@ -808,8 +900,20 @@
         "lemma": "mouses"
       },
       {
+        "surface": "when he was",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "grown",
+        "lemma": "megas"
+      },
+      {
         "surface": "refused",
         "lemma": "arneomai"
+      },
+      {
+        "surface": "to be called",
+        "lemma": "lego"
       },
       {
         "surface": "the son",
@@ -846,6 +950,10 @@
         "lemma": "mallon"
       },
       {
+        "surface": "to experience",
+        "lemma": "echo"
+      },
+      {
         "surface": "the fleeting",
         "lemma": "proskairos"
       },
@@ -859,6 +967,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "vvv",
+        "lemma": "megas"
+      },
       {
         "surface": "vvv",
         "lemma": "ploutos"
@@ -922,6 +1034,10 @@
         "lemma": "kartereo"
       },
       {
+        "surface": "he saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "invisible",
         "lemma": "aoratos"
       }
@@ -930,6 +1046,10 @@
       {
         "surface": "By faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "he kept",
+        "lemma": "poieo"
       },
       {
         "surface": "Passover",
@@ -988,6 +1108,10 @@
       {
         "surface": "tried",
         "lemma": "peira"
+      },
+      {
+        "surface": "to follow",
+        "lemma": "lambano"
       },
       {
         "surface": "they were drowned",
@@ -1060,8 +1184,16 @@
     ],
     "32": [
       {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "more",
         "lemma": "eti"
+      },
+      {
+        "surface": "shall I say",
+        "lemma": "lego"
       },
       {
         "surface": "Time",
@@ -1180,6 +1312,10 @@
         "lemma": "astheneia"
       },
       {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "mighty",
         "lemma": "ischuros"
       },
@@ -1204,6 +1340,10 @@
       {
         "surface": "Women",
         "lemma": "gune"
+      },
+      {
+        "surface": "received back",
+        "lemma": "lambano"
       },
       {
         "surface": "dead",
@@ -1246,6 +1386,10 @@
       {
         "surface": "others",
         "lemma": "heteros"
+      },
+      {
+        "surface": "endured",
+        "lemma": "lambano"
       },
       {
         "surface": "mocking",
@@ -1316,6 +1460,10 @@
         "lemma": "kosmos"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "worthy",
         "lemma": "axios"
       },
@@ -1345,6 +1493,10 @@
       }
     ],
     "39": [
+      {
+        "surface": "were} all",
+        "lemma": "pas"
+      },
       {
         "surface": "commended",
         "lemma": "martureo"

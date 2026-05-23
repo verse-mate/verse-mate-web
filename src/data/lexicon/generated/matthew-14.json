@@ -18,6 +18,10 @@
         "lemma": "tetrarches"
       },
       {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "reports",
         "lemma": "akoe"
       },
@@ -28,8 +32,16 @@
     ],
     "2": [
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "servants",
         "lemma": "pais"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "John",
@@ -104,11 +116,23 @@
         "lemma": "ioannes"
       },
       {
+        "surface": "had been telling",
+        "lemma": "eipon"
+      },
+      {
         "surface": "It is not lawful",
         "lemma": "exesti"
+      },
+      {
+        "surface": "to have",
+        "lemma": "echo"
       }
     ],
     "5": [
+      {
+        "surface": "Herod wanted",
+        "lemma": "thelo"
+      },
       {
         "surface": "to kill",
         "lemma": "apokteino"
@@ -120,6 +144,10 @@
       {
         "surface": "people",
         "lemma": "ochlos"
+      },
+      {
+        "surface": "they regarded",
+        "lemma": "echo"
       },
       {
         "surface": "a prophet",
@@ -166,6 +194,10 @@
         "lemma": "horkos"
       },
       {
+        "surface": "to give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "she asked",
         "lemma": "aiteo"
       }
@@ -182,6 +214,10 @@
       {
         "surface": "she said",
         "lemma": "phemi"
+      },
+      {
+        "surface": "Give",
+        "lemma": "didomi"
       },
       {
         "surface": "here",
@@ -224,6 +260,10 @@
       {
         "surface": "he ordered that",
         "lemma": "keleuo"
+      },
+      {
+        "surface": "her wish be granted",
+        "lemma": "didomi"
       }
     ],
     "10": [
@@ -256,6 +296,10 @@
       {
         "surface": "a platter",
         "lemma": "pinax"
+      },
+      {
+        "surface": "presented",
+        "lemma": "didomi"
       },
       {
         "surface": "girl",
@@ -292,6 +336,10 @@
         "lemma": "thapto"
       },
       {
+        "surface": "they went",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "and informed",
         "lemma": "apangello"
       },
@@ -304,6 +352,10 @@
       {
         "surface": "Jesus",
         "lemma": "iesous"
+      },
+      {
+        "surface": "heard  about John",
+        "lemma": "akouo"
       },
       {
         "surface": "He withdrew",
@@ -330,6 +382,10 @@
         "lemma": "ochlos"
       },
       {
+        "surface": "found out about it",
+        "lemma": "akouo"
+      },
+      {
         "surface": "and followed",
         "lemma": "akoloutheo"
       },
@@ -343,6 +399,18 @@
       }
     ],
     "14": [
+      {
+        "surface": "He stepped ashore",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "a large",
+        "lemma": "polus"
+      },
       {
         "surface": "crowd",
         "lemma": "ochlos"
@@ -366,12 +434,24 @@
         "lemma": "opsia"
       },
       {
+        "surface": "came",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "disciples",
         "lemma": "mathetes"
       },
       {
         "surface": "came",
         "lemma": "proserchomai"
+      },
+      {
+        "surface": "and said",
+        "lemma": "lego"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "a desolate",
@@ -416,6 +496,10 @@
     ],
     "16": [
       {
+        "surface": "They do",
+        "lemma": "echo"
+      },
+      {
         "surface": "need",
         "lemma": "chreia"
       },
@@ -428,11 +512,23 @@
         "lemma": "iesous"
       },
       {
+        "surface": "replied",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "something to eat",
         "lemma": "phagein"
       }
     ],
     "17": [
+      {
+        "surface": "We have",
+        "lemma": "echo"
+      },
       {
         "surface": "here",
         "lemma": "hode"
@@ -452,6 +548,10 @@
       {
         "surface": "fish",
         "lemma": "ichthus"
+      },
+      {
+        "surface": "they answered",
+        "lemma": "lego"
       }
     ],
     "18": [
@@ -462,6 +562,10 @@
       {
         "surface": "here",
         "lemma": "hode"
+      },
+      {
+        "surface": "Jesus said",
+        "lemma": "eipon"
       }
     ],
     "19": [
@@ -480,6 +584,10 @@
       {
         "surface": "grass",
         "lemma": "chortos"
+      },
+      {
+        "surface": "Taking",
+        "lemma": "lambano"
       },
       {
         "surface": "five",
@@ -518,6 +626,10 @@
         "lemma": "artos"
       },
       {
+        "surface": "and gave them",
+        "lemma": "didomi"
+      },
+      {
         "surface": "disciples",
         "lemma": "mathetes"
       },
@@ -531,6 +643,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
       {
         "surface": "They all ate",
         "lemma": "phagein"
@@ -568,6 +684,10 @@
       {
         "surface": "men",
         "lemma": "aner"
+      },
+      {
+        "surface": "were",
+        "lemma": "eimi"
       },
       {
         "surface": "fed",
@@ -642,6 +762,14 @@
         "lemma": "opsia"
       },
       {
+        "surface": "came",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "He was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "there",
         "lemma": "ekei"
       },
@@ -664,6 +792,10 @@
         "lemma": "ede"
       },
       {
+        "surface": "far",
+        "lemma": "polus"
+      },
+      {
         "surface": "land",
         "lemma": "ge"
       },
@@ -678,6 +810,10 @@
       {
         "surface": "wind",
         "lemma": "anemos"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
       },
       {
         "surface": "against it",
@@ -698,6 +834,10 @@
         "lemma": "nux"
       },
       {
+        "surface": "Jesus went out",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "walking",
         "lemma": "peripateo"
       },
@@ -712,6 +852,10 @@
         "lemma": "mathetes"
       },
       {
+        "surface": "saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "walking",
         "lemma": "peripateo"
       },
@@ -724,8 +868,16 @@
         "lemma": "tarasso"
       },
       {
+        "surface": "It’s",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a ghost",
         "lemma": "phantasma"
+      },
+      {
+        "surface": "they said",
+        "lemma": "lego"
       },
       {
         "surface": "cried out",
@@ -742,12 +894,20 @@
         "lemma": "iesous"
       },
       {
+        "surface": "spoke up",
+        "lemma": "laleo"
+      },
+      {
         "surface": "at once",
         "lemma": "eutheos"
       },
       {
         "surface": "Take courage",
         "lemma": "tharseo"
+      },
+      {
+        "surface": "It is",
+        "lemma": "eimi"
       },
       {
         "surface": "be afraid",
@@ -760,12 +920,24 @@
         "lemma": "kurios"
       },
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Peter",
         "lemma": "petros"
       },
       {
+        "surface": "replied",
+        "lemma": "apokrino"
+      },
+      {
         "surface": "command",
         "lemma": "keleuo"
+      },
+      {
+        "surface": "to come",
+        "lemma": "erchomai"
       },
       {
         "surface": "water",
@@ -773,6 +945,14 @@
       }
     ],
     "29": [
+      {
+        "surface": "Come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "said Jesus",
+        "lemma": "eipon"
+      },
       {
         "surface": "Peter",
         "lemma": "petros"
@@ -792,6 +972,10 @@
       {
         "surface": "water",
         "lemma": "hudor"
+      },
+      {
+        "surface": "came",
+        "lemma": "erchomai"
       },
       {
         "surface": "Jesus",
@@ -862,6 +1046,10 @@
         "lemma": "oligopistos"
       },
       {
+        "surface": "He said",
+        "lemma": "lego"
+      },
+      {
         "surface": "did you doubt",
         "lemma": "distazo"
       }
@@ -894,8 +1082,16 @@
         "lemma": "proskuneo"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "Truly",
         "lemma": "alethos"
+      },
+      {
+        "surface": "You are",
+        "lemma": "eimi"
       },
       {
         "surface": "the Son",
@@ -910,6 +1106,10 @@
       {
         "surface": "they had crossed over",
         "lemma": "diaperao"
+      },
+      {
+        "surface": "they landed",
+        "lemma": "erchomai"
       },
       {
         "surface": "Gennesaret",
@@ -944,6 +1144,10 @@
       {
         "surface": "People brought",
         "lemma": "prosphero"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "sick",

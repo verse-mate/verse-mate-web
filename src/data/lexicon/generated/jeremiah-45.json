@@ -100,14 +100,18 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Baruch",
         "lemma": "barukh"
       }
     ],
     "3": [
       {
-        "surface": "Woe is",
-        "lemma": "oy"
+        "surface": "You have said",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -138,6 +142,10 @@
         "lemma": "matsa"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "rest",
         "lemma": "menuchah"
       }
@@ -148,12 +156,24 @@
         "lemma": "koh"
       },
       {
+        "surface": "Jeremiah was to say",
+        "lemma": "amar"
+      },
+      {
         "surface": "This is what",
         "lemma": "koh"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -186,12 +206,24 @@
         "lemma": "gadol"
       },
       {
+        "surface": "Stop",
+        "lemma": "al"
+      },
+      {
         "surface": "seeking",
         "lemma": "baqash"
       },
       {
+        "surface": "I will bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "disaster",
         "lemma": "ra"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "living creature",
@@ -206,8 +238,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "but wherever",
+        "lemma": "kol"
+      },
+      {
         "surface": "you go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "I will grant",
+        "lemma": "natan"
       },
       {
         "surface": "your life",
@@ -220,8 +260,8 @@
     ]
   },
   "themeLemmas": [
-    "koh",
-    "yirmeyah",
-    "barukh"
+    "amar",
+    "kol",
+    "koh"
   ]
 }

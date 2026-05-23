@@ -62,6 +62,10 @@
     ],
     "3": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O kings",
         "lemma": "melekh"
       },
@@ -104,6 +108,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "when You went out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from Seir",
         "lemma": "seir"
       },
@@ -134,6 +142,10 @@
       {
         "surface": "poured out rain",
         "lemma": "nataph"
+      },
+      {
+        "surface": "the clouds",
+        "lemma": "av"
       },
       {
         "surface": "poured down",
@@ -288,12 +300,20 @@
         "lemma": "shaar"
       },
       {
+        "surface": "Not",
+        "lemma": "im"
+      },
+      {
         "surface": "a shield",
         "lemma": "magen"
       },
       {
         "surface": "or spear",
         "lemma": "romach"
+      },
+      {
+        "surface": "was found",
+        "lemma": "raah"
       },
       {
         "surface": "among forty",
@@ -350,6 +370,10 @@
       {
         "surface": "donkeys",
         "lemma": "aton"
+      },
+      {
+        "surface": "who sit",
+        "lemma": "yashav"
       },
       {
         "surface": "saddle blankets",
@@ -624,12 +648,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "did you sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "among",
         "lemma": "bayin"
       },
       {
         "surface": "the sheepfolds",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "to hear",
+        "lemma": "shama"
       },
       {
         "surface": "the whistling",
@@ -690,6 +722,14 @@
         "lemma": "oniyyah"
       },
       {
+        "surface": "Asher",
+        "lemma": "asher"
+      },
+      {
+        "surface": "stayed",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at the coast",
         "lemma": "choph"
       },
@@ -738,6 +778,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "and fought",
         "lemma": "lacham"
       },
@@ -768,6 +812,10 @@
       {
         "surface": "but they took",
         "lemma": "laqach"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "plunder",
@@ -878,6 +926,10 @@
         "lemma": "meroz"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the angel",
         "lemma": "maleakh"
       },
@@ -888,6 +940,18 @@
       {
         "surface": "Bitterly curse",
         "lemma": "arar"
+      },
+      {
+        "surface": "her inhabitants",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "they did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       },
       {
         "surface": "to help",
@@ -956,6 +1020,10 @@
       {
         "surface": "water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "and she gave him",
+        "lemma": "natan"
       },
       {
         "surface": "milk",
@@ -1132,6 +1200,10 @@
         "lemma": "bush"
       },
       {
+        "surface": "in coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "What",
         "lemma": "maddua"
       },
@@ -1162,11 +1234,19 @@
         "lemma": "un"
       },
       {
+        "surface": "keeps",
+        "lemma": "shuv"
+      },
+      {
         "surface": "telling",
         "lemma": "emer"
       }
     ],
     "30": [
+      {
+        "surface": "Are they not",
+        "lemma": "lo"
+      },
       {
         "surface": "finding",
         "lemma": "matsa"
@@ -1234,6 +1314,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "may all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your enemies",
         "lemma": "oyev"
       },
@@ -1248,6 +1332,10 @@
       {
         "surface": "But may those who love You",
         "lemma": "ahav"
+      },
+      {
+        "surface": "shine like",
+        "lemma": "yatsa"
       },
       {
         "surface": "the sun",
@@ -1277,7 +1365,7 @@
   },
   "themeLemmas": [
     "yisrael",
-    "yarad",
-    "ur"
+    "yashav",
+    "yarad"
   ]
 }

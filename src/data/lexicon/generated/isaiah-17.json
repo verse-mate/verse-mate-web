@@ -14,10 +14,6 @@
         "lemma": "dammeseq"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "Damascus",
         "lemma": "dammeseq"
       },
@@ -28,6 +24,10 @@
       {
         "surface": "a city",
         "lemma": "ir"
+      },
+      {
+        "surface": "it has become",
+        "lemma": "hayah"
       },
       {
         "surface": "a heap",
@@ -50,6 +50,10 @@
       {
         "surface": "are forsaken",
         "lemma": "azav"
+      },
+      {
+        "surface": "they will be left",
+        "lemma": "hayah"
       },
       {
         "surface": "to the flocks",
@@ -98,6 +102,10 @@
         "lemma": "aram"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like the splendor",
         "lemma": "kavod"
       },
@@ -123,6 +131,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "In",
+        "lemma": "hayah"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -153,6 +165,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "as",
+        "lemma": "hayah"
+      },
       {
         "surface": "the reaper",
         "lemma": "qatsir"
@@ -274,6 +290,10 @@
         "lemma": "shaah"
       },
       {
+        "surface": "their Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "and turn their eyes",
         "lemma": "ayin"
       },
@@ -287,6 +307,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "They will not",
+        "lemma": "lo"
+      },
       {
         "surface": "look",
         "lemma": "shaah"
@@ -312,6 +336,10 @@
         "lemma": "chamman"
       },
       {
+        "surface": "they have made",
+        "lemma": "asah"
+      },
+      {
         "surface": "with their fingers",
         "lemma": "etsba"
       }
@@ -328,6 +356,10 @@
       {
         "surface": "cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "will be like",
+        "lemma": "hayah"
       },
       {
         "surface": "forsaken",
@@ -350,6 +382,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "and to utter",
+        "lemma": "hayah"
+      },
+      {
         "surface": "desolation",
         "lemma": "shemamah"
       }
@@ -366,6 +402,10 @@
       {
         "surface": "of your salvation",
         "lemma": "yesah"
+      },
+      {
+        "surface": "and failed",
+        "lemma": "lo"
       },
       {
         "surface": "to remember",
@@ -455,10 +495,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "Alas",
-        "lemma": "hoy"
-      },
       {
         "surface": "the tumult",
         "lemma": "hamon"
@@ -580,10 +616,6 @@
         "lemma": "erev"
       },
       {
-        "surface": "there is",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "sudden terror",
         "lemma": "ballahah"
       },
@@ -618,8 +650,8 @@
     ]
   },
   "themeLemmas": [
+    "hayah",
     "shaah",
-    "yisrael",
-    "shaon"
+    "yisrael"
   ]
 }

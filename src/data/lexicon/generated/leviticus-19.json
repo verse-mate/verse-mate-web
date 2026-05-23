@@ -24,12 +24,24 @@
         "lemma": "davar"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Be",
+        "lemma": "hayah"
       },
       {
         "surface": "holy",
@@ -62,6 +74,10 @@
         "lemma": "em"
       },
       {
+        "surface": "and father",
+        "lemma": "av"
+      },
+      {
         "surface": "and you must keep",
         "lemma": "shamar"
       },
@@ -80,12 +96,20 @@
     ],
     "4": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "turn",
         "lemma": "panah"
       },
       {
         "surface": "idols",
         "lemma": "elil"
+      },
+      {
+        "surface": "or make",
+        "lemma": "asah"
       },
       {
         "surface": "molten",
@@ -166,6 +190,10 @@
     ],
     "7": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "any of it is eaten",
         "lemma": "akhal"
       },
@@ -180,6 +208,10 @@
       {
         "surface": "is tainted",
         "lemma": "piggul"
+      },
+      {
+        "surface": "and will not",
+        "lemma": "lo"
       },
       {
         "surface": "be accepted",
@@ -238,6 +270,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "you are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to reap",
         "lemma": "kalah"
       },
@@ -263,6 +299,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "strip your vineyard",
         "lemma": "kerem"
@@ -306,8 +346,16 @@
     ],
     "11": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "steal",
         "lemma": "ganav"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "lie",
@@ -327,6 +375,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "swear",
         "lemma": "shava"
@@ -358,6 +410,10 @@
     ],
     "13": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defraud",
         "lemma": "ashaq"
       },
@@ -366,8 +422,16 @@
         "lemma": "rea"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "rob him",
         "lemma": "gazal"
+      },
+      {
+        "surface": "must not",
+        "lemma": "lo"
       },
       {
         "surface": "withhold",
@@ -388,12 +452,20 @@
     ],
     "14": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "curse",
         "lemma": "qalal"
       },
       {
         "surface": "the deaf",
         "lemma": "cheresh"
+      },
+      {
+        "surface": "or place",
+        "lemma": "natan"
       },
       {
         "surface": "a stumbling block",
@@ -422,8 +494,20 @@
     ],
     "15": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "pervert",
+        "lemma": "asah"
+      },
+      {
         "surface": "justice",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
       },
       {
         "surface": "show partiality",
@@ -432,6 +516,10 @@
       {
         "surface": "to the poor",
         "lemma": "dal"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "favoritism",
@@ -456,6 +544,10 @@
     ],
     "16": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "go",
         "lemma": "halakh"
       },
@@ -466,6 +558,10 @@
       {
         "surface": "among your people",
         "lemma": "am"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "endanger",
@@ -485,6 +581,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "harbor hatred",
         "lemma": "sane"
@@ -506,6 +606,10 @@
         "lemma": "amit"
       },
       {
+        "surface": "so that you will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "incur",
         "lemma": "nasa"
       },
@@ -515,6 +619,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
       {
         "surface": "seek revenge",
         "lemma": "naqam"
@@ -552,6 +660,10 @@
       {
         "surface": "My statutes",
         "lemma": "chuqqah"
+      },
+      {
+        "surface": "You shall not",
+        "lemma": "lo"
       },
       {
         "surface": "crossbreed",
@@ -620,20 +732,40 @@
         "lemma": "ish"
       },
       {
+        "surface": "but who has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been redeemed",
         "lemma": "padah"
+      },
+      {
+        "surface": "given",
+        "lemma": "natan"
       },
       {
         "surface": "freedom",
         "lemma": "chuphshah"
       },
       {
+        "surface": "there must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "due punishment",
         "lemma": "biqqoret"
       },
       {
+        "surface": "But they are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to be put to death",
         "lemma": "mut"
+      },
+      {
+        "surface": "she had not",
+        "lemma": "lo"
       },
       {
         "surface": "been freed",
@@ -641,6 +773,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "The man, however, must bring",
+        "lemma": "bo"
+      },
       {
         "surface": "a ram",
         "lemma": "ayil"
@@ -714,12 +850,20 @@
     ],
     "23": [
       {
+        "surface": "you enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "and plant",
         "lemma": "nata"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "kind of tree",
@@ -750,8 +894,16 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "it will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "forbidden",
         "lemma": "arel"
+      },
+      {
+        "surface": "and must not",
+        "lemma": "lo"
       },
       {
         "surface": "be eaten",
@@ -768,8 +920,16 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its fruit",
         "lemma": "peri"
+      },
+      {
+        "surface": "must be",
+        "lemma": "hayah"
       },
       {
         "surface": "consecrated",
@@ -820,6 +980,10 @@
     ],
     "26": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
       },
@@ -828,8 +992,16 @@
         "lemma": "dam"
       },
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "practice divination",
         "lemma": "nachash"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "sorcery",
@@ -837,6 +1009,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "cut off the hair",
         "lemma": "naqaph"
@@ -864,6 +1040,10 @@
     ],
     "28": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "make any cuts",
         "lemma": "seret"
       },
@@ -874,6 +1054,10 @@
       {
         "surface": "for the dead",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "or put",
+        "lemma": "natan"
       },
       {
         "surface": "tattoo",
@@ -890,6 +1074,10 @@
     ],
     "29": [
       {
+        "surface": "You must not",
+        "lemma": "al"
+      },
+      {
         "surface": "defile",
         "lemma": "chalal"
       },
@@ -900,6 +1088,10 @@
       {
         "surface": "by making her a prostitute",
         "lemma": "zanah"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "the land",
@@ -941,6 +1133,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "You must not",
+        "lemma": "al"
+      },
       {
         "surface": "turn",
         "lemma": "panah"
@@ -1018,11 +1214,19 @@
         "lemma": "erets"
       },
       {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "oppress",
         "lemma": "yanah"
       }
     ],
     "34": [
+      {
+        "surface": "You must treat",
+        "lemma": "hayah"
+      },
       {
         "surface": "the foreigner",
         "lemma": "ger"
@@ -1038,6 +1242,10 @@
       {
         "surface": "and love",
         "lemma": "ahav"
+      },
+      {
+        "surface": "you were",
+        "lemma": "hayah"
       },
       {
         "surface": "foreigners",
@@ -1062,6 +1270,14 @@
     ],
     "35": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "use",
+        "lemma": "asah"
+      },
+      {
         "surface": "dishonest",
         "lemma": "evel"
       },
@@ -1083,6 +1299,10 @@
       }
     ],
     "36": [
+      {
+        "surface": "You shall maintain",
+        "lemma": "hayah"
+      },
       {
         "surface": "honest",
         "lemma": "tsedeq"
@@ -1124,6 +1344,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "brought",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "out of the land",
         "lemma": "erets"
       },
@@ -1138,12 +1362,24 @@
         "lemma": "shamar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "My statutes",
         "lemma": "chuqqah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "My ordinances",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "and follow",
+        "lemma": "asah"
       },
       {
         "surface": "am the LORD",
@@ -1152,8 +1388,8 @@
     ]
   },
   "themeLemmas": [
-    "akhal",
-    "tsedeq",
-    "yare"
+    "lo",
+    "hayah",
+    "akhal"
   ]
 }

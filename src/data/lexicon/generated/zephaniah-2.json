@@ -14,6 +14,10 @@
         "lemma": "qashash"
       },
       {
+        "surface": "O shameful",
+        "lemma": "lo"
+      },
+      {
         "surface": "nation",
         "lemma": "goy"
       }
@@ -60,6 +64,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "comes",
+        "lemma": "bo"
+      },
+      {
         "surface": "before",
         "lemma": "terem"
       },
@@ -74,6 +82,10 @@
       {
         "surface": "anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
       }
     ],
     "3": [
@@ -84,6 +96,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "you humble",
@@ -144,6 +160,10 @@
         "lemma": "azzah"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "abandoned",
         "lemma": "azav"
       },
@@ -178,8 +198,8 @@
     ],
     "5": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
+        "surface": "to the dwellers",
+        "lemma": "yashav"
       },
       {
         "surface": "of",
@@ -224,12 +244,20 @@
       {
         "surface": "and no one will be",
         "lemma": "ayin"
+      },
+      {
+        "surface": "left",
+        "lemma": "yashav"
       }
     ],
     "6": [
       {
         "surface": "So the seacoast",
         "lemma": "chevel"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "a land of pastures",
@@ -256,6 +284,10 @@
       {
         "surface": "The coast will belong",
         "lemma": "chevel"
+      },
+      {
+        "surface": "to",
+        "lemma": "hayah"
       },
       {
         "surface": "the remnant",
@@ -302,11 +334,19 @@
         "lemma": "paqad"
       },
       {
+        "surface": "and restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "their captives",
         "lemma": "shevut"
       }
     ],
     "8": [
+      {
+        "surface": "I have heard",
+        "lemma": "shama"
+      },
       {
         "surface": "the reproach",
         "lemma": "cherpah"
@@ -372,6 +412,10 @@
       {
         "surface": "Moab",
         "lemma": "moav"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like Sodom",
@@ -478,6 +522,10 @@
         "lemma": "razah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the gods",
         "lemma": "elohim"
       },
@@ -488,6 +536,10 @@
       {
         "surface": "Then the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "shore",
@@ -580,6 +632,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "of every kind",
+        "lemma": "kol"
+      },
+      {
         "surface": "the desert owl",
         "lemma": "qaat"
       },
@@ -634,8 +690,16 @@
         "lemma": "ir"
       },
       {
+        "surface": "that dwells",
+        "lemma": "yashav"
+      },
+      {
         "surface": "securely",
         "lemma": "betach"
+      },
+      {
+        "surface": "that thinks",
+        "lemma": "amar"
       },
       {
         "surface": "to herself",
@@ -658,12 +722,20 @@
         "lemma": "shammah"
       },
       {
+        "surface": "she has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a resting place",
         "lemma": "marbets"
       },
       {
         "surface": "for beasts",
         "lemma": "chay"
+      },
+      {
+        "surface": "Everyone",
+        "lemma": "kol"
       },
       {
         "surface": "who passes",
@@ -684,8 +756,8 @@
     ]
   },
   "themeLemmas": [
-    "terem",
-    "shemamah",
-    "chevel"
+    "kol",
+    "hayah",
+    "yashav"
   ]
 }

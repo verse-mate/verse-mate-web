@@ -60,8 +60,20 @@
     ],
     "2": [
       {
+        "surface": "you know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "the",
+        "lemma": "tis"
+      },
+      {
         "surface": "instructions",
         "lemma": "parangelia"
+      },
+      {
+        "surface": "we gave",
+        "lemma": "didomi"
       },
       {
         "surface": "Lord",
@@ -73,6 +85,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
       {
         "surface": "God’s",
         "lemma": "theos"
@@ -98,6 +114,10 @@
       {
         "surface": "each",
         "lemma": "hekastos"
+      },
+      {
+        "surface": "must know how",
+        "lemma": "eido"
       },
       {
         "surface": "to control",
@@ -130,6 +150,10 @@
         "lemma": "ethnos"
       },
       {
+        "surface": "do not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       }
@@ -158,6 +182,10 @@
       {
         "surface": "will avenge",
         "lemma": "ekdikos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "we have already told",
@@ -204,6 +232,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "gives",
+        "lemma": "didomi"
+      },
+      {
         "surface": "Holy",
         "lemma": "hagios"
       },
@@ -218,8 +250,20 @@
         "lemma": "philadelphia"
       },
       {
+        "surface": "you do",
+        "lemma": "echo"
+      },
+      {
         "surface": "need anyone",
         "lemma": "chreia"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "have been",
+        "lemma": "eimi"
       },
       {
         "surface": "taught by God",
@@ -235,6 +279,14 @@
       }
     ],
     "10": [
+      {
+        "surface": "showing",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
       {
         "surface": "brothers",
         "lemma": "adelphos"
@@ -304,6 +356,10 @@
         "lemma": "euschemonos"
       },
       {
+        "surface": "being",
+        "lemma": "echo"
+      },
+      {
         "surface": "dependent",
         "lemma": "chreia"
       },
@@ -316,6 +372,10 @@
       {
         "surface": "Brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "we do not want",
+        "lemma": "thelo"
       },
       {
         "surface": "to be uninformed",
@@ -332,6 +392,10 @@
       {
         "surface": "rest",
         "lemma": "loipos"
+      },
+      {
+        "surface": "are",
+        "lemma": "echo"
       },
       {
         "surface": "hope",
@@ -384,6 +448,10 @@
       {
         "surface": "of the Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "we declare",
+        "lemma": "lego"
       },
       {
         "surface": "alive",
@@ -496,6 +564,10 @@
       {
         "surface": "so",
         "lemma": "houto"
+      },
+      {
+        "surface": "we will",
+        "lemma": "eimi"
       },
       {
         "surface": "always {be",

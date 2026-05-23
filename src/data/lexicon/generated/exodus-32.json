@@ -10,6 +10,10 @@
         "lemma": "am"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -38,8 +42,16 @@
         "lemma": "aharon"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Come",
         "lemma": "qamay"
+      },
+      {
+        "surface": "make",
+        "lemma": "asah"
       },
       {
         "surface": "gods",
@@ -70,18 +82,30 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "we do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
       {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "has happened",
+        "lemma": "hayah"
       }
     ],
     "2": [
       {
         "surface": "So Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "told",
+        "lemma": "amar"
       },
       {
         "surface": "Take off",
@@ -110,9 +134,17 @@
       {
         "surface": "and daughters",
         "lemma": "bat"
+      },
+      {
+        "surface": "and bring them",
+        "lemma": "bo"
       }
     ],
     "3": [
+      {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
       {
         "surface": "the people",
         "lemma": "am"
@@ -128,6 +160,10 @@
       {
         "surface": "earrings",
         "lemma": "nezem"
+      },
+      {
+        "surface": "and brought them",
+        "lemma": "bo"
       },
       {
         "surface": "Aaron",
@@ -152,12 +188,20 @@
         "lemma": "cheret"
       },
       {
+        "surface": "he fashioned",
+        "lemma": "asah"
+      },
+      {
         "surface": "into a molten",
         "lemma": "massekhah"
       },
       {
         "surface": "calf",
         "lemma": "egel"
+      },
+      {
+        "surface": "And they said",
+        "lemma": "amar"
       },
       {
         "surface": "O Israel",
@@ -186,6 +230,10 @@
         "lemma": "aharon"
       },
       {
+        "surface": "saw this",
+        "lemma": "raah"
+      },
+      {
         "surface": "he built",
         "lemma": "banah"
       },
@@ -196,6 +244,10 @@
       {
         "surface": "before the calf",
         "lemma": "paneh"
+      },
+      {
+        "surface": "and proclaimed",
+        "lemma": "qara"
       },
       {
         "surface": "Tomorrow",
@@ -238,6 +290,10 @@
       {
         "surface": "And the people",
         "lemma": "am"
+      },
+      {
+        "surface": "sat down",
+        "lemma": "yashav"
       },
       {
         "surface": "to eat",
@@ -312,6 +368,10 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "They have made",
+        "lemma": "asah"
+      },
+      {
         "surface": "a molten",
         "lemma": "massekhah"
       },
@@ -326,6 +386,10 @@
       {
         "surface": "They have sacrificed",
         "lemma": "zavach"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "O Israel",
@@ -354,16 +418,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "also said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
       {
-        "surface": "people",
-        "lemma": "am"
+        "surface": "I have seen",
+        "lemma": "raah"
       },
       {
-        "surface": "are indeed",
-        "lemma": "hinneh"
+        "surface": "people",
+        "lemma": "am"
       },
       {
         "surface": "a stiff-necked",
@@ -396,6 +464,10 @@
         "lemma": "kalah"
       },
       {
+        "surface": "Then I will make",
+        "lemma": "asah"
+      },
+      {
         "surface": "into a great",
         "lemma": "gadol"
       },
@@ -422,6 +494,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -440,6 +516,10 @@
       {
         "surface": "against Your people",
         "lemma": "am"
+      },
+      {
+        "surface": "You brought",
+        "lemma": "yatsa"
       },
       {
         "surface": "out of the land",
@@ -472,6 +552,14 @@
         "lemma": "mah"
       },
       {
+        "surface": "should the Egyptians declare",
+        "lemma": "amar"
+      },
+      {
+        "surface": "He brought them out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "with evil intent",
         "lemma": "ra"
       },
@@ -494,6 +582,10 @@
       {
         "surface": "of the earth",
         "lemma": "adamah"
+      },
+      {
+        "surface": "Turn",
+        "lemma": "shuv"
       },
       {
         "surface": "from Your fierce",
@@ -562,12 +654,24 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "and I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "your descendants",
         "lemma": "zera"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
+      },
+      {
+        "surface": "I have promised",
+        "lemma": "amar"
       },
       {
         "surface": "and it shall be their inheritance",
@@ -594,6 +698,10 @@
       {
         "surface": "He had threatened",
         "lemma": "davar"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "asah"
       },
       {
         "surface": "on His people",
@@ -686,6 +794,10 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the sound",
         "lemma": "qol"
       },
@@ -696,6 +808,10 @@
       {
         "surface": "shouting",
         "lemma": "rea"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
         "surface": "Moses",
@@ -715,6 +831,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "But Moses replied",
+        "lemma": "amar"
+      },
       {
         "surface": "It is neither",
         "lemma": "ayin"
@@ -740,6 +860,10 @@
         "lemma": "chalushah"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the sound",
         "lemma": "qol"
       },
@@ -756,6 +880,10 @@
       {
         "surface": "the camp",
         "lemma": "machaneh"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "raah"
       },
       {
         "surface": "the calf",
@@ -812,6 +940,10 @@
         "lemma": "egel"
       },
       {
+        "surface": "they had made",
+        "lemma": "asah"
+      },
+      {
         "surface": "burned it",
         "lemma": "saraph"
       },
@@ -862,12 +994,24 @@
         "lemma": "am"
       },
       {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "you have led them",
+        "lemma": "bo"
       },
       {
         "surface": "so great",
@@ -880,6 +1024,10 @@
     ],
     "22": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be enraged",
         "lemma": "charah"
       },
@@ -890,6 +1038,10 @@
       {
         "surface": "Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "yourself know",
@@ -905,6 +1057,14 @@
       }
     ],
     "23": [
+      {
+        "surface": "They told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Make",
+        "lemma": "asah"
+      },
       {
         "surface": "gods",
         "lemma": "elohim"
@@ -934,15 +1094,27 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "we do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
       {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "has happened",
+        "lemma": "hayah"
       }
     ],
     "24": [
+      {
+        "surface": "So I said",
+        "lemma": "amar"
+      },
       {
         "surface": "Whoever",
         "lemma": "mi"
@@ -956,12 +1128,20 @@
         "lemma": "paraq"
       },
       {
+        "surface": "and they gave it",
+        "lemma": "natan"
+      },
+      {
         "surface": "And when I threw it",
         "lemma": "shalakh"
       },
       {
         "surface": "into the fire",
         "lemma": "esh"
+      },
+      {
+        "surface": "out came",
+        "lemma": "yatsa"
       },
       {
         "surface": "calf",
@@ -972,6 +1152,10 @@
       {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "that the people",
@@ -1016,12 +1200,20 @@
         "lemma": "machaneh"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Whoever",
         "lemma": "mi"
       },
       {
         "surface": "is for the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "And all",
+        "lemma": "kol"
       },
       {
         "surface": "the Levites",
@@ -1033,6 +1225,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "He told",
+        "lemma": "amar"
+      },
       {
         "surface": "This is what",
         "lemma": "koh"
@@ -1048,6 +1244,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "Each of you men",
@@ -1104,6 +1304,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "as Moses",
         "lemma": "mosheh"
       },
@@ -1138,6 +1342,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Today",
         "lemma": "yom"
       },
@@ -1166,6 +1374,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "so the LORD has bestowed",
+        "lemma": "natan"
+      },
+      {
         "surface": "a blessing",
         "lemma": "berakhah"
       },
@@ -1182,6 +1394,10 @@
       {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the people",
@@ -1234,12 +1450,16 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
-        "surface": "Oh",
-        "lemma": "anna"
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "what a great",
@@ -1258,6 +1478,10 @@
         "lemma": "chata"
       },
       {
+        "surface": "They have made",
+        "lemma": "asah"
+      },
+      {
         "surface": "gods",
         "lemma": "elohim"
       },
@@ -1272,6 +1496,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "You would only forgive",
         "lemma": "nasa"
       },
@@ -1280,12 +1508,12 @@
         "lemma": "chattaah"
       },
       {
-        "surface": "not",
-        "lemma": "ayin"
+        "surface": "But if",
+        "lemma": "im"
       },
       {
-        "surface": "please",
-        "lemma": "na"
+        "surface": "not",
+        "lemma": "ayin"
       },
       {
         "surface": "blot me",
@@ -1304,6 +1532,10 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "Moses",
@@ -1348,10 +1580,6 @@
         "lemma": "davar"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "My angel",
         "lemma": "maleakh"
       },
@@ -1394,18 +1622,26 @@
         "lemma": "am"
       },
       {
+        "surface": "they had done",
+        "lemma": "asah"
+      },
+      {
         "surface": "with the calf",
         "lemma": "egel"
       },
       {
         "surface": "Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "had made",
+        "lemma": "asah"
       }
     ]
   },
   "themeLemmas": [
+    "amar",
     "mosheh",
-    "aharon",
-    "alah"
+    "asah"
   ]
 }

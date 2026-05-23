@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Zephaniah",
         "lemma": "tsephanyah"
       },
@@ -78,6 +82,10 @@
       {
         "surface": "I will completely sweep away",
         "lemma": "asaph"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "the face",
@@ -176,6 +184,14 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -260,12 +276,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "neither",
+        "lemma": "lo"
+      },
+      {
         "surface": "seeking",
         "lemma": "baqash"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "inquiring of Him",
@@ -316,6 +340,10 @@
       {
         "surface": "He has consecrated",
         "lemma": "qadash"
+      },
+      {
+        "surface": "His guests",
+        "lemma": "qara"
       }
     ],
     "8": [
@@ -348,6 +376,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who are dressed",
         "lemma": "lavash"
       },
@@ -368,6 +400,10 @@
       {
         "surface": "I will punish",
         "lemma": "paqad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who leap",
@@ -416,6 +452,10 @@
         "lemma": "qol"
       },
       {
+        "surface": "will go up",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the Fish",
         "lemma": "dag"
       },
@@ -450,8 +490,16 @@
         "lemma": "yalal"
       },
       {
+        "surface": "O dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the Hollow",
         "lemma": "makhtesh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "your merchants",
@@ -460,6 +508,10 @@
       {
         "surface": "will be silenced",
         "lemma": "damah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who weigh out",
@@ -475,6 +527,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
       {
         "surface": "I will search",
         "lemma": "chaphas"
@@ -504,12 +564,20 @@
         "lemma": "shemer"
       },
       {
+        "surface": "who say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to themselves",
         "lemma": "levav"
       },
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will do nothing",
+        "lemma": "lo"
       },
       {
         "surface": "either good",
@@ -524,6 +592,10 @@
       {
         "surface": "Their wealth",
         "lemma": "chayil"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "plundered",
@@ -546,12 +618,24 @@
         "lemma": "bet"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "inhabit them",
+        "lemma": "yashav"
+      },
+      {
         "surface": "and plant",
         "lemma": "nata"
       },
       {
         "surface": "vineyards",
         "lemma": "kerem"
+      },
+      {
+        "surface": "but never",
+        "lemma": "lo"
       },
       {
         "surface": "drink",
@@ -788,6 +872,10 @@
         "lemma": "evrah"
       },
       {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "earth",
         "lemma": "erets"
       },
@@ -808,6 +896,10 @@
         "lemma": "akh"
       },
       {
+        "surface": "He will make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a sudden",
         "lemma": "bahal"
       },
@@ -816,14 +908,22 @@
         "lemma": "kalah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "on the earth",
         "lemma": "erets"
       }
     ]
   },
   "themeLemmas": [
-    "qarov",
-    "paqad",
-    "paneh"
+    "kol",
+    "lo",
+    "yashav"
   ]
 }

@@ -90,10 +90,6 @@
     ],
     "3": [
       {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "how they lie in wait",
         "lemma": "arav"
       },
@@ -110,8 +106,16 @@
         "lemma": "gur"
       },
       {
+        "surface": "for no",
+        "lemma": "lo"
+      },
+      {
         "surface": "transgression",
         "lemma": "pesah"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "sin of my own",
@@ -142,6 +146,14 @@
       {
         "surface": "Arise",
         "lemma": "ur"
+      },
+      {
+        "surface": "to help me",
+        "lemma": "qara"
+      },
+      {
+        "surface": "and take notice",
+        "lemma": "raah"
       }
     ],
     "5": [
@@ -174,12 +186,24 @@
         "lemma": "paqad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
       {
+        "surface": "show no",
+        "lemma": "al"
+      },
+      {
         "surface": "mercy",
         "lemma": "chanan"
+      },
+      {
+        "surface": "to the",
+        "lemma": "kol"
       },
       {
         "surface": "wicked",
@@ -195,6 +219,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "They return",
+        "lemma": "shuv"
+      },
       {
         "surface": "in the evening",
         "lemma": "erev"
@@ -218,10 +246,6 @@
     ],
     "7": [
       {
-        "surface": "See what",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "they spew",
         "lemma": "nava"
       },
@@ -240,6 +264,10 @@
       {
         "surface": "who",
         "lemma": "mi"
+      },
+      {
+        "surface": "can hear us",
+        "lemma": "shama"
       }
     ],
     "8": [
@@ -254,6 +282,10 @@
       {
         "surface": "You scoff",
         "lemma": "laag"
+      },
+      {
+        "surface": "at all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -296,11 +328,19 @@
         "lemma": "elohim"
       },
       {
+        "surface": "will let me stare down",
+        "lemma": "raah"
+      },
+      {
         "surface": "my foes",
         "lemma": "sharar"
       }
     ],
     "11": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "kill them",
         "lemma": "harag"
@@ -420,6 +460,10 @@
     ],
     "14": [
       {
+        "surface": "They return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "in the evening",
         "lemma": "erev"
       },
@@ -454,6 +498,14 @@
         "lemma": "lun"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "they are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfied",
         "lemma": "sava"
       }
@@ -478,6 +530,10 @@
       {
         "surface": "in the morning",
         "lemma": "boqer"
+      },
+      {
+        "surface": "You are",
+        "lemma": "hayah"
       },
       {
         "surface": "my fortress",
@@ -526,6 +582,6 @@
   "themeLemmas": [
     "oz",
     "misgav",
-    "chesed"
+    "lo"
   ]
 }

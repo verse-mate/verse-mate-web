@@ -34,6 +34,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "ignore",
         "lemma": "alam"
       },
@@ -138,6 +142,10 @@
         "lemma": "raad"
       },
       {
+        "surface": "grip",
+        "lemma": "bo"
+      },
+      {
         "surface": "and horror",
         "lemma": "pallatsut"
       },
@@ -148,8 +156,16 @@
     ],
     "6": [
       {
+        "surface": "I said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Oh",
         "lemma": "mi"
+      },
+      {
+        "surface": "that",
+        "lemma": "natan"
       },
       {
         "surface": "wings",
@@ -169,10 +185,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "How",
-        "lemma": "hinneh"
-      },
       {
         "surface": "far away",
         "lemma": "rachaq"
@@ -228,6 +240,10 @@
       {
         "surface": "their speech",
         "lemma": "lashon"
+      },
+      {
+        "surface": "I see",
+        "lemma": "raah"
       },
       {
         "surface": "violence",
@@ -290,6 +306,10 @@
         "lemma": "mirmah"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
         "surface": "leave",
         "lemma": "mush"
       },
@@ -299,6 +319,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "it is not",
+        "lemma": "lo"
+      },
       {
         "surface": "an enemy",
         "lemma": "oyev"
@@ -310,6 +334,10 @@
       {
         "surface": "that I could endure",
         "lemma": "nasa"
+      },
+      {
+        "surface": "It is not",
+        "lemma": "lo"
       },
       {
         "surface": "a foe",
@@ -404,6 +432,10 @@
     ],
     "16": [
       {
+        "surface": "call",
+        "lemma": "qara"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -438,6 +470,10 @@
         "lemma": "siach"
       },
       {
+        "surface": "and He hears",
+        "lemma": "shama"
+      },
+      {
         "surface": "my voice",
         "lemma": "qol"
       }
@@ -462,6 +498,10 @@
       {
         "surface": "many",
         "lemma": "rav"
+      },
+      {
+        "surface": "oppose",
+        "lemma": "hayah"
       }
     ],
     "19": [
@@ -470,8 +510,16 @@
         "lemma": "el"
       },
       {
+        "surface": "will hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "and humiliate them",
         "lemma": "anah"
+      },
+      {
+        "surface": "the One enthroned",
+        "lemma": "yashav"
       },
       {
         "surface": "for the ages",
@@ -488,6 +536,10 @@
       {
         "surface": "change",
         "lemma": "chaliphah"
+      },
+      {
+        "surface": "and they have no",
+        "lemma": "lo"
       },
       {
         "surface": "fear",
@@ -572,6 +624,14 @@
         "lemma": "kul"
       },
       {
+        "surface": "He will never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "let",
+        "lemma": "natan"
+      },
+      {
         "surface": "the righteous",
         "lemma": "tsaddiq"
       },
@@ -610,6 +670,10 @@
         "lemma": "mirmah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "live out half",
         "lemma": "chatsah"
       },
@@ -624,8 +688,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "qerev",
-    "yarad",
-    "siach"
+    "yarad"
   ]
 }

@@ -216,6 +216,10 @@
         "lemma": "mimshal"
       },
       {
+        "surface": "over their families",
+        "lemma": "av"
+      },
+      {
         "surface": "were strong",
         "lemma": "gibbor"
       },
@@ -271,6 +275,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "descendants",
         "lemma": "ben"
@@ -368,8 +376,20 @@
         "lemma": "rosh"
       },
       {
+        "surface": "he was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
       },
       {
         "surface": "had appointed him",
@@ -420,6 +440,10 @@
       {
         "surface": "numbered 13",
         "lemma": "shalosh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "12": [
@@ -478,6 +502,10 @@
         "lemma": "shaar"
       },
       {
+        "surface": "according to their families",
+        "lemma": "av"
+      },
+      {
         "surface": "young",
         "lemma": "qatan"
       },
@@ -534,6 +562,10 @@
       {
         "surface": "for the North Gate",
         "lemma": "tsaphon"
+      },
+      {
+        "surface": "fell to him",
+        "lemma": "yatsa"
       }
     ],
     "15": [
@@ -746,6 +778,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of the families",
+        "lemma": "av"
+      },
+      {
         "surface": "of Ladan",
         "lemma": "ladan"
       },
@@ -900,6 +936,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the treasuries",
         "lemma": "otsar"
       },
@@ -918,6 +958,10 @@
       {
         "surface": "by the heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of families",
+        "lemma": "av"
       },
       {
         "surface": "who were the commanders",
@@ -968,6 +1012,10 @@
     ],
     "28": [
       {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "that had been dedicated",
         "lemma": "qadash"
       },
@@ -1014,6 +1062,10 @@
       {
         "surface": "of Zeruiah",
         "lemma": "tseruyah"
+      },
+      {
+        "surface": "along with everything else",
+        "lemma": "kol"
       },
       {
         "surface": "that was dedicated",
@@ -1108,6 +1160,10 @@
         "lemma": "yarden"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the work",
         "lemma": "melakhah"
       },
@@ -1144,6 +1200,10 @@
       {
         "surface": "according to the genealogies",
         "lemma": "toledah"
+      },
+      {
+        "surface": "of his ancestors",
+        "lemma": "av"
       },
       {
         "surface": "In the fortieth",
@@ -1208,6 +1268,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of families",
+        "lemma": "av"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
@@ -1236,6 +1300,10 @@
         "lemma": "menashshi"
       },
       {
+        "surface": "for every",
+        "lemma": "kol"
+      },
+      {
         "surface": "matter pertaining to",
         "lemma": "davar"
       },
@@ -1256,6 +1324,6 @@
   "themeLemmas": [
     "ach",
     "ovededom",
-    "chayil"
+    "kol"
   ]
 }

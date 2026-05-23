@@ -14,8 +14,16 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "and was buried",
         "lemma": "qavar"
+      },
+      {
+        "surface": "them",
+        "lemma": "av"
       },
       {
         "surface": "in the City",
@@ -80,6 +88,10 @@
         "lemma": "shephatyah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
       },
@@ -97,6 +109,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "Their father",
+        "lemma": "av"
+      },
+      {
+        "surface": "had given them",
+        "lemma": "natan"
+      },
       {
         "surface": "many",
         "lemma": "rav"
@@ -130,6 +150,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "he gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "the kingdom",
         "lemma": "mamlakhah"
       },
@@ -152,6 +176,10 @@
         "lemma": "qamay"
       },
       {
+        "surface": "his father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "kingdom",
         "lemma": "mamlakhah"
       },
@@ -166,6 +194,10 @@
       {
         "surface": "to the sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "his brothers",
@@ -240,6 +272,10 @@
         "lemma": "achav"
       },
       {
+        "surface": "had done",
+        "lemma": "asah"
+      },
+      {
         "surface": "married",
         "lemma": "ishshah"
       },
@@ -250,6 +286,10 @@
       {
         "surface": "of Ahab",
         "lemma": "achav"
+      },
+      {
+        "surface": "and did",
+        "lemma": "asah"
       },
       {
         "surface": "evil",
@@ -268,6 +308,10 @@
       {
         "surface": "Yet the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was unwilling",
+        "lemma": "lo"
       },
       {
         "surface": "to destroy",
@@ -294,12 +338,24 @@
         "lemma": "david"
       },
       {
+        "surface": "He had promised",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to maintain",
+        "lemma": "natan"
+      },
+      {
         "surface": "a lamp",
         "lemma": "ner"
       },
       {
         "surface": "and his descendants",
         "lemma": "ben"
+      },
+      {
+        "surface": "forever",
+        "lemma": "kol"
       }
     ],
     "8": [
@@ -348,6 +404,10 @@
       {
         "surface": "with his officers",
         "lemma": "sar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his chariots",
@@ -424,6 +484,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "Jehoram had forsaken",
         "lemma": "azav"
       },
@@ -434,9 +498,17 @@
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of his fathers",
+        "lemma": "av"
       }
     ],
     "11": [
+      {
+        "surface": "built",
+        "lemma": "asah"
+      },
       {
         "surface": "high places",
         "lemma": "bamah"
@@ -448,6 +520,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "he had caused the people",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -472,12 +548,20 @@
         "lemma": "mikhtav"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "from Elijah",
         "lemma": "eliyyah"
       },
       {
         "surface": "the prophet",
         "lemma": "navi"
+      },
+      {
+        "surface": "which stated",
+        "lemma": "amar"
       },
       {
         "surface": "This is what",
@@ -492,8 +576,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of your father",
+        "lemma": "av"
+      },
+      {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You have not",
+        "lemma": "lo"
       },
       {
         "surface": "walked",
@@ -502,6 +598,10 @@
       {
         "surface": "in the ways",
         "lemma": "derekh"
+      },
+      {
+        "surface": "of your father",
+        "lemma": "av"
       },
       {
         "surface": "Jehoshaphat",
@@ -546,6 +646,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "and the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -574,6 +678,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "family",
         "lemma": "bet"
       },
@@ -583,10 +691,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "So behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -606,6 +710,10 @@
       {
         "surface": "your wives",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "your possessions",
@@ -652,6 +760,10 @@
       {
         "surface": "your bowels",
         "lemma": "meeh"
+      },
+      {
+        "surface": "to come out",
+        "lemma": "yatsa"
       }
     ],
     "16": [
@@ -706,6 +818,10 @@
         "lemma": "shavah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the possessions",
         "lemma": "rekhush"
       },
@@ -730,6 +846,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a son",
         "lemma": "ben"
       },
@@ -750,6 +870,10 @@
       {
         "surface": "After",
         "lemma": "achar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the LORD",
@@ -774,6 +898,10 @@
     ],
     "19": [
       {
+        "surface": "This continued",
+        "lemma": "hayah"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -790,12 +918,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "had passed",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Finally",
         "lemma": "qets"
       },
       {
         "surface": "his intestines",
         "lemma": "meeh"
+      },
+      {
+        "surface": "came out",
+        "lemma": "yatsa"
       },
       {
         "surface": "his disease",
@@ -818,15 +954,31 @@
         "lemma": "am"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a fire",
         "lemma": "serephah"
       },
       {
         "surface": "as they had done",
         "lemma": "serephah"
+      },
+      {
+        "surface": "for his fathers",
+        "lemma": "av"
       }
     ],
     "20": [
+      {
+        "surface": "Jehoram was",
+        "lemma": "hayah"
+      },
       {
         "surface": "thirty-two",
         "lemma": "sheloshim"
@@ -860,6 +1012,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one’s regret",
         "lemma": "chemdah"
       },
@@ -876,6 +1032,10 @@
         "lemma": "david"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "in the tombs",
         "lemma": "qever"
       },
@@ -887,7 +1047,7 @@
   },
   "themeLemmas": [
     "yehudah",
-    "yehoram",
-    "malakh"
+    "kol",
+    "yehoram"
   ]
 }

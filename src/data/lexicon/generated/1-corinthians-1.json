@@ -76,6 +76,14 @@
         "lemma": "hagios"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
+      {
         "surface": "everywhere",
         "lemma": "topos"
       },
@@ -148,6 +156,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "has given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
       },
@@ -162,8 +174,20 @@
         "lemma": "ploutizo"
       },
       {
+        "surface": "every way",
+        "lemma": "pas"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "speech",
         "lemma": "logos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "knowledge",
@@ -308,8 +332,24 @@
         "lemma": "christos"
       },
       {
+        "surface": "all of",
+        "lemma": "pas"
+      },
+      {
+        "surface": "you agree together",
+        "lemma": "lego"
+      },
+      {
+        "surface": "there may be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "divisions",
         "lemma": "schisma"
+      },
+      {
+        "surface": "you may be",
+        "lemma": "eimi"
       },
       {
         "surface": "united",
@@ -338,14 +378,30 @@
         "lemma": "deloo"
       },
       {
+        "surface": "there are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "quarrels",
         "lemma": "eris"
       }
     ],
     "12": [
       {
+        "surface": "What I mean",
+        "lemma": "lego"
+      },
+      {
         "surface": "Individuals",
         "lemma": "hekastos"
+      },
+      {
+        "surface": "are saying",
+        "lemma": "lego"
+      },
+      {
+        "surface": "follow",
+        "lemma": "eimi"
       },
       {
         "surface": "Paul",
@@ -418,6 +474,10 @@
     ],
     "15": [
       {
+        "surface": "can say",
+        "lemma": "eipon"
+      },
+      {
         "surface": "you were baptized",
         "lemma": "baptizo"
       },
@@ -446,6 +506,10 @@
       {
         "surface": "beyond that",
         "lemma": "loipon"
+      },
+      {
+        "surface": "I do not remember",
+        "lemma": "eido"
       },
       {
         "surface": "I baptized",
@@ -504,6 +568,10 @@
         "lemma": "stauros"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "foolishness",
         "lemma": "moria"
       },
@@ -516,6 +584,10 @@
         "lemma": "sozo"
       },
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the power",
         "lemma": "dunamis"
       },
@@ -525,6 +597,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
       {
         "surface": "I will destroy",
         "lemma": "apolluo"
@@ -612,6 +688,10 @@
       {
         "surface": "wisdom",
         "lemma": "sophia"
+      },
+      {
+        "surface": "know",
+        "lemma": "ginosko"
       },
       {
         "surface": "Him",
@@ -742,6 +822,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "wiser",
         "lemma": "sophos"
       },
@@ -780,12 +864,24 @@
         "lemma": "klesis"
       },
       {
+        "surface": "many of you",
+        "lemma": "polus"
+      },
+      {
         "surface": "were wise",
         "lemma": "sophos"
       },
       {
+        "surface": "many were",
+        "lemma": "polus"
+      },
+      {
         "surface": "powerful",
         "lemma": "dunatos"
+      },
+      {
+        "surface": "many were",
+        "lemma": "polus"
       },
       {
         "surface": "of noble birth",
@@ -864,11 +960,23 @@
         "lemma": "kosmos"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "nullify",
         "lemma": "katargeo"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       }
     ],
     "29": [
+      {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
       {
         "surface": "one",
         "lemma": "sarx"
@@ -880,12 +988,20 @@
     ],
     "30": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
       },
       {
         "surface": "Jesus",
         "lemma": "iesous"
+      },
+      {
+        "surface": "has become",
+        "lemma": "ginomai"
       },
       {
         "surface": "wisdom",
@@ -909,6 +1025,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
       {
         "surface": "boasts",
         "lemma": "kauchaomai"

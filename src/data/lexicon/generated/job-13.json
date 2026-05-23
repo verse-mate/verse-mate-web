@@ -6,16 +6,24 @@
   "verses": {
     "1": [
       {
-        "surface": "Indeed",
-        "lemma": "hen"
-      },
-      {
         "surface": "my eyes",
         "lemma": "ayin"
       },
       {
+        "surface": "have seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all this",
+        "lemma": "kol"
+      },
+      {
         "surface": "my ears",
         "lemma": "ozen"
+      },
+      {
+        "surface": "have heard",
+        "lemma": "shama"
       },
       {
         "surface": "and understood",
@@ -30,6 +38,10 @@
       {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "am not",
+        "lemma": "lo"
       },
       {
         "surface": "inferior",
@@ -68,6 +80,10 @@
         "lemma": "sheqer"
       },
       {
+        "surface": "you are all",
+        "lemma": "kol"
+      },
+      {
         "surface": "worthless",
         "lemma": "elil"
       },
@@ -86,14 +102,18 @@
         "lemma": "charash"
       },
       {
+        "surface": "for that would be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "wisdom",
         "lemma": "chokhmah"
       }
     ],
     "6": [
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "Hear",
+        "lemma": "shama"
       },
       {
         "surface": "my argument",
@@ -140,6 +160,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "argue",
         "lemma": "riv"
       },
@@ -176,6 +200,10 @@
         "lemma": "yakhach"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "you secretly",
         "lemma": "seter"
       },
@@ -188,6 +216,10 @@
       {
         "surface": "Would His majesty",
         "lemma": "seet"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "terrify you",
@@ -270,10 +302,6 @@
     ],
     "15": [
       {
-        "surface": "Though",
-        "lemma": "hen"
-      },
-      {
         "surface": "He slay me",
         "lemma": "qatal"
       },
@@ -304,8 +332,16 @@
         "lemma": "yeshuah"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "godless man",
         "lemma": "chaneph"
+      },
+      {
+        "surface": "can appear",
+        "lemma": "bo"
       },
       {
         "surface": "before Him",
@@ -313,6 +349,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "Listen carefully",
+        "lemma": "shama"
+      },
       {
         "surface": "to my words",
         "lemma": "millah"
@@ -327,14 +367,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "now",
-        "lemma": "na"
-      },
       {
         "surface": "I have prepared",
         "lemma": "arakh"
@@ -380,8 +412,16 @@
         "lemma": "akh"
       },
       {
+        "surface": "grant",
+        "lemma": "asah"
+      },
+      {
         "surface": "these two",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "I need not",
+        "lemma": "lo"
       },
       {
         "surface": "hide",
@@ -402,6 +442,10 @@
         "lemma": "kaph"
       },
       {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let Your terror",
         "lemma": "emah"
       },
@@ -412,12 +456,20 @@
     ],
     "22": [
       {
+        "surface": "Then call me",
+        "lemma": "qara"
+      },
+      {
         "surface": "will answer",
         "lemma": "un"
       },
       {
         "surface": "let me speak",
         "lemma": "davar"
+      },
+      {
+        "surface": "and You can reply",
+        "lemma": "shuv"
       }
     ],
     "23": [
@@ -534,6 +586,10 @@
         "lemma": "shamar"
       },
       {
+        "surface": "over all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my paths",
         "lemma": "orach"
       },
@@ -571,7 +627,7 @@
   },
   "themeLemmas": [
     "paneh",
-    "yakhach",
-    "yada"
+    "lo",
+    "yakhach"
   ]
 }

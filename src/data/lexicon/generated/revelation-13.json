@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a beast",
         "lemma": "therion"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "ten",
@@ -64,6 +72,14 @@
         "lemma": "therion"
       },
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "like",
         "lemma": "homoios"
       },
@@ -92,6 +108,10 @@
         "lemma": "drakon"
       },
       {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "power",
         "lemma": "dunamis"
       },
@@ -100,11 +120,19 @@
         "lemma": "thronos"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "authority",
         "lemma": "exousia"
       }
     ],
     "3": [
+      {
+        "surface": "One",
+        "lemma": "heis"
+      },
       {
         "surface": "heads",
         "lemma": "kephale"
@@ -156,6 +184,10 @@
         "lemma": "drakon"
       },
       {
+        "surface": "had given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "authority",
         "lemma": "exousia"
       },
@@ -172,6 +204,14 @@
         "lemma": "therion"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
         "surface": "is like",
         "lemma": "homoios"
       },
@@ -180,14 +220,34 @@
         "lemma": "therion"
       },
       {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "wage war",
         "lemma": "polemeo"
       }
     ],
     "5": [
       {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "a mouth",
         "lemma": "stoma"
+      },
+      {
+        "surface": "to speak",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "arrogant",
+        "lemma": "megas"
       },
       {
         "surface": "blasphemous words",
@@ -196,6 +256,10 @@
       {
         "surface": "authority",
         "lemma": "exousia"
+      },
+      {
+        "surface": "to act",
+        "lemma": "poieo"
       },
       {
         "surface": "for 42",
@@ -246,6 +310,14 @@
     ],
     "7": [
       {
+        "surface": "was permitted",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "poieo"
+      },
+      {
         "surface": "to wage war",
         "lemma": "polemos"
       },
@@ -258,8 +330,16 @@
         "lemma": "nikao"
       },
       {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "authority",
         "lemma": "exousia"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "tribe",
@@ -280,6 +360,10 @@
     ],
     "8": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "dwell",
         "lemma": "katoikeo"
       },
@@ -294,6 +378,10 @@
       {
         "surface": "names",
         "lemma": "onoma"
+      },
+      {
+        "surface": "have not been written",
+        "lemma": "grapho"
       },
       {
         "surface": "the foundation",
@@ -322,8 +410,16 @@
     ],
     "9": [
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "an ear",
         "lemma": "ous"
+      },
+      {
+        "surface": "let him hear",
+        "lemma": "akouo"
       }
     ],
     "10": [
@@ -364,6 +460,10 @@
         "lemma": "hode"
       },
       {
+        "surface": "is a call for",
+        "lemma": "eimi"
+      },
+      {
         "surface": "perseverance",
         "lemma": "hupomone"
       },
@@ -377,6 +477,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
       {
         "surface": "another",
         "lemma": "allos"
@@ -392,6 +496,10 @@
       {
         "surface": "earth",
         "lemma": "ge"
+      },
+      {
+        "surface": "This beast had",
+        "lemma": "echo"
       },
       {
         "surface": "two",
@@ -410,11 +518,23 @@
         "lemma": "arnion"
       },
       {
+        "surface": "spoke",
+        "lemma": "laleo"
+      },
+      {
         "surface": "a dragon",
         "lemma": "drakon"
       }
     ],
     "12": [
+      {
+        "surface": "this beast exercised",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
       {
         "surface": "authority",
         "lemma": "exousia"
@@ -426,6 +546,10 @@
       {
         "surface": "beast",
         "lemma": "therion"
+      },
+      {
+        "surface": "caused",
+        "lemma": "poieo"
       },
       {
         "surface": "earth",
@@ -462,8 +586,20 @@
     ],
     "13": [
       {
+        "surface": "the second beast performed",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "signs",
         "lemma": "semeion"
+      },
+      {
+        "surface": "causing",
+        "lemma": "poieo"
       },
       {
         "surface": "fire",
@@ -492,6 +628,14 @@
         "lemma": "semeion"
       },
       {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "to perform",
+        "lemma": "poieo"
+      },
+      {
         "surface": "beast",
         "lemma": "therion"
       },
@@ -508,6 +652,10 @@
         "lemma": "ge"
       },
       {
+        "surface": "telling",
+        "lemma": "lego"
+      },
+      {
         "surface": "vvv",
         "lemma": "katoikeo"
       },
@@ -516,12 +664,20 @@
         "lemma": "ge"
       },
       {
+        "surface": "to make",
+        "lemma": "poieo"
+      },
+      {
         "surface": "an image",
         "lemma": "eikon"
       },
       {
         "surface": "beast",
         "lemma": "therion"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "echo"
       },
       {
         "surface": "had been wounded",
@@ -538,6 +694,14 @@
     ],
     "15": [
       {
+        "surface": "The second beast was permitted",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "to give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "breath",
         "lemma": "pneuma"
       },
@@ -552,6 +716,14 @@
       {
         "surface": "image",
         "lemma": "eikon"
+      },
+      {
+        "surface": "could speak",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "cause",
+        "lemma": "poieo"
       },
       {
         "surface": "all who",
@@ -576,8 +748,20 @@
     ],
     "16": [
       {
+        "surface": "the second beast required",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "small",
         "lemma": "mikros"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "rich",
@@ -594,6 +778,10 @@
       {
         "surface": "slave",
         "lemma": "doulos"
+      },
+      {
+        "surface": "receive",
+        "lemma": "didomi"
       },
       {
         "surface": "a mark",
@@ -614,12 +802,20 @@
     ],
     "17": [
       {
+        "surface": "could",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "buy",
         "lemma": "agorazo"
       },
       {
         "surface": "sell",
         "lemma": "poleo"
+      },
+      {
+        "surface": "had",
+        "lemma": "echo"
       },
       {
         "surface": "mark",
@@ -648,8 +844,16 @@
         "lemma": "hode"
       },
       {
+        "surface": "is a call for",
+        "lemma": "eimi"
+      },
+      {
         "surface": "wisdom",
         "lemma": "sophia"
+      },
+      {
+        "surface": "has",
+        "lemma": "echo"
       },
       {
         "surface": "insight",
@@ -666,6 +870,10 @@
       {
         "surface": "beast",
         "lemma": "therion"
+      },
+      {
+        "surface": "it is",
+        "lemma": "eimi"
       },
       {
         "surface": "the number",

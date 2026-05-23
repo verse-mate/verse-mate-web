@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "dead",
         "lemma": "nekros"
       },
@@ -66,6 +70,10 @@
     ],
     "3": [
       {
+        "surface": "All",
+        "lemma": "pas"
+      },
+      {
         "surface": "lived",
         "lemma": "anastrepho"
       },
@@ -78,6 +86,10 @@
         "lemma": "sarx"
       },
       {
+        "surface": "and indulging",
+        "lemma": "poieo"
+      },
+      {
         "surface": "desires",
         "lemma": "thelema"
       },
@@ -88,6 +100,10 @@
       {
         "surface": "rest",
         "lemma": "loipos"
+      },
+      {
+        "surface": "we were",
+        "lemma": "eimi"
       },
       {
         "surface": "by nature",
@@ -104,12 +120,20 @@
     ],
     "4": [
       {
+        "surface": "great",
+        "lemma": "polus"
+      },
+      {
         "surface": "love",
         "lemma": "agape"
       },
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "who is",
+        "lemma": "eimi"
       },
       {
         "surface": "rich",
@@ -130,6 +154,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "dead",
         "lemma": "nekros"
       },
@@ -140,6 +168,10 @@
       {
         "surface": "It is by grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "you have been",
+        "lemma": "eimi"
       },
       {
         "surface": "saved",
@@ -212,6 +244,10 @@
         "lemma": "charis"
       },
       {
+        "surface": "you have been",
+        "lemma": "eimi"
+      },
+      {
         "surface": "saved",
         "lemma": "sozo"
       },
@@ -239,6 +275,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "we are",
+        "lemma": "eimi"
+      },
       {
         "surface": "workmanship",
         "lemma": "poiema"
@@ -290,8 +330,16 @@
         "lemma": "sarx"
       },
       {
+        "surface": "and called",
+        "lemma": "lego"
+      },
+      {
         "surface": "uncircumcised",
         "lemma": "akrobustia"
+      },
+      {
+        "surface": "so-called",
+        "lemma": "lego"
       },
       {
         "surface": "circumcision",
@@ -310,6 +358,10 @@
       {
         "surface": "time",
         "lemma": "kairos"
+      },
+      {
+        "surface": "you were",
+        "lemma": "eimi"
       },
       {
         "surface": "Christ",
@@ -366,8 +418,16 @@
         "lemma": "iesous"
       },
       {
+        "surface": "were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "far away",
         "lemma": "makran"
+      },
+      {
+        "surface": "have been brought",
+        "lemma": "ginomai"
       },
       {
         "surface": "blood",
@@ -380,12 +440,24 @@
     ],
     "14": [
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "peace",
         "lemma": "eirene"
       },
       {
+        "surface": "has made",
+        "lemma": "poieo"
+      },
+      {
         "surface": "the two",
         "lemma": "amphoteros"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "has torn down",
@@ -430,6 +502,10 @@
         "lemma": "ktizo"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "new",
         "lemma": "kainos"
       },
@@ -440,6 +516,10 @@
       {
         "surface": "two",
         "lemma": "duo"
+      },
+      {
+        "surface": "thus making",
+        "lemma": "poieo"
       },
       {
         "surface": "peace",
@@ -460,6 +540,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "body",
         "lemma": "soma"
       },
@@ -477,6 +561,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "He came",
+        "lemma": "erchomai"
+      },
       {
         "surface": "and preached",
         "lemma": "euangelizomai"
@@ -500,6 +588,10 @@
         "lemma": "amphoteros"
       },
       {
+        "surface": "we both have",
+        "lemma": "echo"
+      },
+      {
         "surface": "access",
         "lemma": "prosagoge"
       },
@@ -508,11 +600,19 @@
         "lemma": "pater"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Spirit",
         "lemma": "pneuma"
       }
     ],
     "19": [
+      {
+        "surface": "you are",
+        "lemma": "eimi"
+      },
       {
         "surface": "strangers",
         "lemma": "xenos"
@@ -560,11 +660,19 @@
         "lemma": "iesous"
       },
       {
+        "surface": "as",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the cornerstone",
         "lemma": "akrogoniaios"
       }
     ],
     "21": [
+      {
+        "surface": "the whole",
+        "lemma": "pas"
+      },
       {
         "surface": "building",
         "lemma": "oikodome"

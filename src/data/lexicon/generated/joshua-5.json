@@ -6,6 +6,14 @@
   "verses": {
     "1": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "when all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Amorite",
         "lemma": "emori"
       },
@@ -26,6 +34,10 @@
         "lemma": "yarden"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Canaanite",
         "lemma": "kenaani"
       },
@@ -36,6 +48,10 @@
       {
         "surface": "the coast",
         "lemma": "yam"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       },
       {
         "surface": "the LORD",
@@ -78,6 +94,10 @@
         "lemma": "ruach"
       },
       {
+        "surface": "failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "for fear of",
         "lemma": "paneh"
       },
@@ -88,12 +108,24 @@
     ],
     "2": [
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "Make",
+        "lemma": "asah"
       },
       {
         "surface": "flint",
@@ -114,12 +146,20 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "once again",
+        "lemma": "shuv"
       }
     ],
     "3": [
       {
         "surface": "So Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
       },
       {
         "surface": "flint",
@@ -160,12 +200,24 @@
         "lemma": "mul"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "those",
         "lemma": "am"
       },
       {
+        "surface": "who came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the men",
@@ -188,14 +240,34 @@
         "lemma": "midbar"
       },
       {
+        "surface": "after they had left",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Egypt",
         "lemma": "mitsrayim"
       }
     ],
     "5": [
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who had come out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "circumcised",
         "lemma": "mul"
+      },
+      {
+        "surface": "none",
+        "lemma": "kol"
       },
       {
         "surface": "of those",
@@ -212,6 +284,10 @@
       {
         "surface": "on the journey",
         "lemma": "derekh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "yatsa"
       },
       {
         "surface": "from Egypt",
@@ -244,6 +320,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nation’s",
         "lemma": "goy"
       },
@@ -256,12 +336,24 @@
         "lemma": "milchamah"
       },
       {
+        "surface": "who had come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
       },
       {
         "surface": "had died",
         "lemma": "tamam"
+      },
+      {
+        "surface": "they did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obey",
+        "lemma": "shama"
       },
       {
         "surface": "the LORD",
@@ -280,6 +372,10 @@
         "lemma": "bilti"
       },
       {
+        "surface": "to let them see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -290,6 +386,14 @@
       {
         "surface": "had sworn",
         "lemma": "shava"
+      },
+      {
+        "surface": "to their fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "to give",
+        "lemma": "natan"
       },
       {
         "surface": "a land",
@@ -330,8 +434,16 @@
         "lemma": "mul"
       },
       {
+        "surface": "Until this time they were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "still uncircumcised",
         "lemma": "arel"
+      },
+      {
+        "surface": "they had not",
+        "lemma": "lo"
       },
       {
         "surface": "been circumcised",
@@ -344,12 +456,24 @@
     ],
     "8": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nation",
         "lemma": "goy"
       },
       {
         "surface": "had been circumcised",
         "lemma": "mul"
+      },
+      {
+        "surface": "they stayed",
+        "lemma": "yashav"
       },
       {
         "surface": "there",
@@ -368,6 +492,10 @@
       {
         "surface": "Then the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Joshua",
@@ -392,6 +520,10 @@
       {
         "surface": "place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "has been called",
+        "lemma": "qara"
       },
       {
         "surface": "Gilgal",
@@ -438,6 +570,10 @@
       {
         "surface": "of Jericho",
         "lemma": "yericho"
+      },
+      {
+        "surface": "they kept",
+        "lemma": "asah"
       },
       {
         "surface": "the Passover",
@@ -508,6 +644,14 @@
         "lemma": "shavat"
       },
       {
+        "surface": "There was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more",
         "lemma": "od"
       },
@@ -546,12 +690,20 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "near Jericho",
         "lemma": "yericho"
       },
       {
         "surface": "he looked up",
         "lemma": "nasa"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "raah"
       },
       {
         "surface": "a man",
@@ -586,14 +738,34 @@
         "lemma": "halakh"
       },
       {
+        "surface": "and asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "for our enemies",
         "lemma": "tsar"
       }
     ],
     "14": [
       {
+        "surface": "Neither",
+        "lemma": "lo"
+      },
+      {
+        "surface": "He replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "have now",
         "lemma": "attah"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       },
       {
         "surface": "as Commander",
@@ -618,6 +790,10 @@
       {
         "surface": "in reverence",
         "lemma": "shachah"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -650,6 +826,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "Take off",
         "lemma": "nashal"
       },
@@ -674,6 +854,10 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "so",
         "lemma": "ken"
       }
@@ -682,6 +866,6 @@
   "themeLemmas": [
     "yehoshua",
     "mul",
-    "mitsrayim"
+    "kol"
   ]
 }

@@ -14,6 +14,10 @@
         "lemma": "maqor"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "opened",
         "lemma": "patach"
       },
@@ -24,6 +28,10 @@
       {
         "surface": "of David",
         "lemma": "david"
+      },
+      {
+        "surface": "and the people",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -39,6 +47,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -72,6 +84,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "and they will no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -102,6 +118,10 @@
     ],
     "3": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
         "surface": "anyone",
         "lemma": "ish"
       },
@@ -114,12 +134,24 @@
         "lemma": "nava"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "and mother",
         "lemma": "em"
       },
       {
         "surface": "who bore him",
         "lemma": "yalad"
+      },
+      {
+        "surface": "will say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You shall not",
+        "lemma": "lo"
       },
       {
         "surface": "remain alive",
@@ -146,6 +178,10 @@
         "lemma": "nava"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "and mother",
         "lemma": "em"
       },
@@ -159,6 +195,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -184,6 +224,10 @@
         "lemma": "chizzavon"
       },
       {
+        "surface": "and he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "put on",
         "lemma": "lavash"
       },
@@ -201,6 +245,14 @@
       }
     ],
     "5": [
+      {
+        "surface": "He will say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "am not",
+        "lemma": "lo"
+      },
       {
         "surface": "a prophet",
         "lemma": "navi"
@@ -228,6 +280,10 @@
     ],
     "6": [
       {
+        "surface": "If someone asks",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
       },
@@ -238,6 +294,10 @@
       {
         "surface": "on your chest",
         "lemma": "bayin"
+      },
+      {
+        "surface": "he will answer",
+        "lemma": "amar"
       },
       {
         "surface": "the wounds I received",
@@ -302,6 +362,10 @@
         "lemma": "puts"
       },
       {
+        "surface": "and I will turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "My hand",
         "lemma": "yad"
       },
@@ -311,6 +375,14 @@
       }
     ],
     "8": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
+      },
       {
         "surface": "the land",
         "lemma": "erets"
@@ -350,6 +422,10 @@
         "lemma": "shelishi"
       },
       {
+        "surface": "I will bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "through the fire",
         "lemma": "esh"
       },
@@ -370,6 +446,10 @@
         "lemma": "zahav"
       },
       {
+        "surface": "They will call",
+        "lemma": "qara"
+      },
+      {
         "surface": "on My name",
         "lemma": "shem"
       },
@@ -378,8 +458,16 @@
         "lemma": "un"
       },
       {
+        "surface": "I will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "They are My people",
         "lemma": "am"
+      },
+      {
+        "surface": "will say",
+        "lemma": "amar"
       },
       {
         "surface": "The LORD is",
@@ -392,8 +480,8 @@
     ]
   },
   "themeLemmas": [
-    "shem",
-    "neum",
-    "navi"
+    "amar",
+    "hayah",
+    "lo"
   ]
 }

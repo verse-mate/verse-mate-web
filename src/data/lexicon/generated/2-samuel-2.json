@@ -46,8 +46,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "Then David",
         "lemma": "david"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "Where",
@@ -60,6 +68,10 @@
       {
         "surface": "To Hebron",
         "lemma": "chevron"
+      },
+      {
+        "surface": "replied the LORD",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -130,6 +142,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "and they settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the towns",
         "lemma": "ir"
       },
@@ -146,6 +162,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "came to Hebron",
+        "lemma": "bo"
       },
       {
         "surface": "and there",
@@ -218,12 +238,20 @@
         "lemma": "yavesh"
       },
       {
+        "surface": "to tell",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "bless",
         "lemma": "barakh"
+      },
+      {
+        "surface": "you showed",
+        "lemma": "asah"
       },
       {
         "surface": "kindness",
@@ -252,6 +280,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "show",
+        "lemma": "asah"
+      },
+      {
         "surface": "loving devotion",
         "lemma": "chesed"
       },
@@ -260,8 +292,16 @@
         "lemma": "emet"
       },
       {
+        "surface": "show",
+        "lemma": "asah"
+      },
+      {
         "surface": "favor",
         "lemma": "tov"
+      },
+      {
+        "surface": "you have done",
+        "lemma": "asah"
       }
     ],
     "7": [
@@ -386,6 +426,10 @@
         "lemma": "binyamin"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       }
@@ -448,6 +492,10 @@
         "lemma": "akh"
       },
       {
+        "surface": "followed",
+        "lemma": "hayah"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       }
@@ -464,6 +512,10 @@
       {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "king",
@@ -532,6 +584,10 @@
         "lemma": "shaul"
       },
       {
+        "surface": "marched out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from Mahanaim",
         "lemma": "machanayim"
       },
@@ -562,6 +618,10 @@
         "lemma": "david"
       },
       {
+        "surface": "marched out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and met them",
         "lemma": "pagash"
       },
@@ -574,6 +634,10 @@
         "lemma": "givon"
       },
       {
+        "surface": "took up positions",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the pool",
         "lemma": "berekhah"
       }
@@ -582,6 +646,10 @@
       {
         "surface": "Then Abner",
         "lemma": "avner"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Joab",
@@ -610,6 +678,10 @@
       {
         "surface": "Joab",
         "lemma": "yoav"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       }
     ],
     "15": [
@@ -700,6 +772,10 @@
         "lemma": "givon"
       },
       {
+        "surface": "is called",
+        "lemma": "qara"
+      },
+      {
         "surface": "vvv",
         "lemma": "chelqathatstsurim"
       },
@@ -716,6 +792,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "vvv",
@@ -766,6 +846,10 @@
       {
         "surface": "of Zeruiah",
         "lemma": "tseruyah"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "there",
@@ -822,6 +906,10 @@
         "lemma": "avner"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turning",
         "lemma": "natah"
       },
@@ -852,14 +940,26 @@
         "lemma": "achar"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Asahel",
         "lemma": "asahel"
+      },
+      {
+        "surface": "Asahel replied",
+        "lemma": "amar"
       }
     ],
     "21": [
       {
         "surface": "So Abner",
         "lemma": "avner"
+      },
+      {
+        "surface": "told",
+        "lemma": "amar"
       },
       {
         "surface": "Turn",
@@ -902,6 +1002,10 @@
         "lemma": "avah"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "stop",
         "lemma": "sur"
       },
@@ -918,6 +1022,10 @@
       {
         "surface": "Abner",
         "lemma": "avner"
+      },
+      {
+        "surface": "warned",
+        "lemma": "amar"
       },
       {
         "surface": "Asahel",
@@ -998,6 +1106,10 @@
         "lemma": "chanit"
       },
       {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "his back",
         "lemma": "achar"
       },
@@ -1014,8 +1126,16 @@
         "lemma": "sham"
       },
       {
+        "surface": "And every man",
+        "lemma": "kol"
+      },
+      {
         "surface": "paused",
         "lemma": "amad"
+      },
+      {
+        "surface": "when he came",
+        "lemma": "bo"
       },
       {
         "surface": "the place",
@@ -1056,6 +1176,10 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "had gone",
+        "lemma": "bo"
+      },
+      {
         "surface": "far as the hill",
         "lemma": "givah"
       },
@@ -1094,6 +1218,10 @@
         "lemma": "avner"
       },
       {
+        "surface": "formed",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a single",
         "lemma": "echad"
       },
@@ -1124,6 +1252,10 @@
         "lemma": "avner"
       },
       {
+        "surface": "called out",
+        "lemma": "qara"
+      },
+      {
         "surface": "Joab",
         "lemma": "yoav"
       },
@@ -1134,6 +1266,10 @@
       {
         "surface": "devour forever",
         "lemma": "akhal"
+      },
+      {
+        "surface": "Do you not",
+        "lemma": "lo"
       },
       {
         "surface": "realize",
@@ -1148,8 +1284,16 @@
         "lemma": "mar"
       },
       {
+        "surface": "before you tell",
+        "lemma": "amar"
+      },
+      {
         "surface": "the troops",
         "lemma": "am"
+      },
+      {
+        "surface": "to stop",
+        "lemma": "shuv"
       },
       {
         "surface": "pursuing",
@@ -1172,6 +1316,10 @@
       {
         "surface": "Joab",
         "lemma": "yoav"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "spoken up",
@@ -1212,12 +1360,20 @@
         "lemma": "shophar"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the troops",
         "lemma": "am"
       },
       {
         "surface": "stopped",
         "lemma": "amad"
+      },
+      {
+        "surface": "they no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -1241,6 +1397,10 @@
       }
     ],
     "29": [
+      {
+        "surface": "And all",
+        "lemma": "kol"
+      },
       {
         "surface": "night",
         "lemma": "laylah"
@@ -1274,8 +1434,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "morning",
         "lemma": "bitron"
+      },
+      {
+        "surface": "and arrived",
+        "lemma": "bo"
       },
       {
         "surface": "at Mahanaim",
@@ -1288,6 +1456,10 @@
         "lemma": "yoav"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from pursuing",
         "lemma": "achar"
       },
@@ -1298,6 +1470,10 @@
       {
         "surface": "he gathered",
         "lemma": "qavats"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the troops",
@@ -1364,6 +1540,10 @@
         "lemma": "qavar"
       },
       {
+        "surface": "in his father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "tomb",
         "lemma": "qever"
       },
@@ -1388,6 +1568,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
       },
@@ -1404,6 +1588,6 @@
   "themeLemmas": [
     "avner",
     "david",
-    "yoav"
+    "amar"
   ]
 }

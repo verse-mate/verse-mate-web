@@ -136,6 +136,10 @@
         "lemma": "shamir"
       },
       {
+        "surface": "confronted Me",
+        "lemma": "natan"
+      },
+      {
         "surface": "I would march",
         "lemma": "milchamah"
       },
@@ -162,8 +166,16 @@
         "lemma": "maoz"
       },
       {
+        "surface": "let them make",
+        "lemma": "asah"
+      },
+      {
         "surface": "peace",
         "lemma": "shalom"
+      },
+      {
+        "surface": "yes, let them make",
+        "lemma": "asah"
       },
       {
         "surface": "peace",
@@ -171,6 +183,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "In the days to come",
+        "lemma": "bo"
+      },
       {
         "surface": "Jacob",
         "lemma": "yaaqov"
@@ -278,6 +294,10 @@
         "lemma": "kipher"
       },
       {
+        "surface": "and the full",
+        "lemma": "kol"
+      },
+      {
         "surface": "fruit",
         "lemma": "peri"
       },
@@ -294,6 +314,10 @@
         "lemma": "sum"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the altar",
         "lemma": "mizbeach"
       },
@@ -308,6 +332,10 @@
       {
         "surface": "bits of chalk",
         "lemma": "gir"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "Asherah poles",
@@ -398,6 +426,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and use them for kindling",
         "lemma": "or"
       },
@@ -406,8 +438,20 @@
         "lemma": "am"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "understanding",
         "lemma": "binah"
+      },
+      {
+        "surface": "their Maker",
+        "lemma": "asah"
+      },
+      {
+        "surface": "has no",
+        "lemma": "lo"
       },
       {
         "surface": "compassion on them",
@@ -416,6 +460,10 @@
       {
         "surface": "and their Creator",
         "lemma": "yatsar"
+      },
+      {
+        "surface": "shows them no",
+        "lemma": "lo"
       },
       {
         "surface": "favor",
@@ -470,6 +518,10 @@
     ],
     "13": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -496,6 +548,10 @@
       {
         "surface": "in Assyria",
         "lemma": "ashshur"
+      },
+      {
+        "surface": "will come forth",
+        "lemma": "bo"
       },
       {
         "surface": "with those who were exiles",
@@ -532,8 +588,8 @@
     ]
   },
   "themeLemmas": [
-    "yaaqov",
-    "sham",
-    "shalom"
+    "lo",
+    "bo",
+    "asah"
   ]
 }

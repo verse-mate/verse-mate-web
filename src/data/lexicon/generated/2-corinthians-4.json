@@ -10,6 +10,10 @@
         "lemma": "eleeo"
       },
       {
+        "surface": "has given us",
+        "lemma": "echo"
+      },
+      {
         "surface": "ministry",
         "lemma": "diakonia"
       },
@@ -64,6 +68,10 @@
         "lemma": "sunistemi"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "man’s",
         "lemma": "anthropos"
       },
@@ -82,8 +90,16 @@
         "lemma": "euangelion"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "veiled",
         "lemma": "kalupto"
+      },
+      {
+        "surface": "it is",
+        "lemma": "eimi"
       },
       {
         "surface": "veiled",
@@ -136,6 +152,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the image",
         "lemma": "eikon"
       },
@@ -174,6 +194,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
       },
       {
         "surface": "Let} light",
@@ -226,6 +250,10 @@
     ],
     "7": [
       {
+        "surface": "we have",
+        "lemma": "echo"
+      },
+      {
         "surface": "treasure",
         "lemma": "thesauros"
       },
@@ -246,6 +274,10 @@
         "lemma": "dunamis"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "from God",
         "lemma": "theos"
       }
@@ -254,6 +286,10 @@
       {
         "surface": "We are hard pressed",
         "lemma": "thlibo"
+      },
+      {
+        "surface": "all sides",
+        "lemma": "pas"
       },
       {
         "surface": "crushed",
@@ -382,8 +418,20 @@
     ],
     "13": [
       {
+        "surface": "what is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "I believed",
         "lemma": "pisteuo"
+      },
+      {
+        "surface": "I have spoken",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "who have",
+        "lemma": "echo"
       },
       {
         "surface": "spirit",
@@ -396,9 +444,17 @@
       {
         "surface": "believe",
         "lemma": "pisteuo"
+      },
+      {
+        "surface": "speak",
+        "lemma": "laleo"
       }
     ],
     "14": [
+      {
+        "surface": "knowing",
+        "lemma": "eido"
+      },
       {
         "surface": "raised",
         "lemma": "egeiro"
@@ -425,6 +481,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "All this is",
+        "lemma": "pas"
+      },
       {
         "surface": "grace",
         "lemma": "charis"

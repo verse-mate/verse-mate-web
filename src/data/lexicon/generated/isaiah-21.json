@@ -30,6 +30,10 @@
         "lemma": "negev"
       },
       {
+        "surface": "an invader comes",
+        "lemma": "bo"
+      },
+      {
         "surface": "from the desert",
         "lemma": "midbar"
       },
@@ -92,6 +96,10 @@
         "lemma": "shavat"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her groaning",
         "lemma": "anachah"
       }
@@ -130,8 +138,16 @@
         "lemma": "avah"
       },
       {
+        "surface": "to hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "I am dismayed",
         "lemma": "bahal"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       }
     ],
     "4": [
@@ -220,6 +236,10 @@
         "lemma": "adonai"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Go",
         "lemma": "halakh"
       },
@@ -234,9 +254,17 @@
       {
         "surface": "and have him report",
         "lemma": "nagad"
+      },
+      {
+        "surface": "he sees",
+        "lemma": "raah"
       }
     ],
     "7": [
+      {
+        "surface": "When he sees",
+        "lemma": "raah"
+      },
       {
         "surface": "chariots",
         "lemma": "rekhev"
@@ -284,6 +312,10 @@
         "lemma": "ari"
       },
       {
+        "surface": "shouted",
+        "lemma": "qara"
+      },
+      {
         "surface": "Day",
         "lemma": "tamid"
       },
@@ -304,6 +336,10 @@
         "lemma": "mitspeh"
       },
       {
+        "surface": "night after",
+        "lemma": "kol"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
       },
@@ -318,8 +354,8 @@
     ],
     "9": [
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "come",
+        "lemma": "bo"
       },
       {
         "surface": "the riders",
@@ -338,6 +374,10 @@
         "lemma": "un"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Fallen",
         "lemma": "naphal"
       },
@@ -348,6 +388,10 @@
       {
         "surface": "Babylon",
         "lemma": "bavel"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "the images",
@@ -384,6 +428,10 @@
         "lemma": "nagad"
       },
       {
+        "surface": "I have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -408,6 +456,10 @@
       {
         "surface": "against Dumah",
         "lemma": "dumah"
+      },
+      {
+        "surface": "One calls",
+        "lemma": "qara"
       },
       {
         "surface": "from Seir",
@@ -444,6 +496,10 @@
         "lemma": "shamar"
       },
       {
+        "surface": "replies",
+        "lemma": "amar"
+      },
+      {
         "surface": "Morning",
         "lemma": "boqer"
       },
@@ -456,6 +512,10 @@
         "lemma": "laylah"
       },
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you would inquire",
         "lemma": "baah"
       },
@@ -466,6 +526,10 @@
       {
         "surface": "Come back",
         "lemma": "atah"
+      },
+      {
+        "surface": "yet again",
+        "lemma": "shuv"
       }
     ],
     "13": [
@@ -510,6 +574,10 @@
       {
         "surface": "for the thirsty",
         "lemma": "tsame"
+      },
+      {
+        "surface": "O dwellers",
+        "lemma": "yashav"
       },
       {
         "surface": "vvv",
@@ -588,6 +656,10 @@
         "lemma": "adonai"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Within one year",
         "lemma": "shaneh"
       },
@@ -598,6 +670,10 @@
       {
         "surface": "would count it",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the glory",
@@ -654,6 +730,6 @@
   "themeLemmas": [
     "rekhev",
     "laylah",
-    "shamar"
+    "kol"
   ]
 }

@@ -52,6 +52,10 @@
         "lemma": "badal"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the foreigners",
         "lemma": "ben"
       },
@@ -70,6 +74,10 @@
       {
         "surface": "and the iniquities",
         "lemma": "avan"
+      },
+      {
+        "surface": "of their fathers",
+        "lemma": "av"
       }
     ],
     "3": [
@@ -80,6 +88,10 @@
       {
         "surface": "their places",
         "lemma": "omed"
+      },
+      {
+        "surface": "they read",
+        "lemma": "qara"
       },
       {
         "surface": "from the Book",
@@ -230,6 +242,10 @@
         "lemma": "petachyah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Stand up",
         "lemma": "qamay"
       },
@@ -270,6 +286,10 @@
         "lemma": "rum"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "blessing",
         "lemma": "berakhah"
       },
@@ -288,12 +308,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "You created",
+        "lemma": "asah"
+      },
+      {
         "surface": "the heavens",
         "lemma": "shamayim"
       },
       {
         "surface": "the highest heavens",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "their host",
@@ -304,12 +332,24 @@
         "lemma": "erets"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the seas",
         "lemma": "yam"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "give life",
         "lemma": "chayah"
+      },
+      {
+        "surface": "to all things",
+        "lemma": "kol"
       },
       {
         "surface": "and the host",
@@ -340,6 +380,10 @@
       {
         "surface": "Abram",
         "lemma": "avram"
+      },
+      {
+        "surface": "who brought him",
+        "lemma": "yatsa"
       },
       {
         "surface": "out of Ur",
@@ -388,6 +432,10 @@
         "lemma": "berit"
       },
       {
+        "surface": "to give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -416,6 +464,10 @@
         "lemma": "girgashi"
       },
       {
+        "surface": "to give it",
+        "lemma": "natan"
+      },
+      {
         "surface": "to his descendants",
         "lemma": "zera"
       },
@@ -434,12 +486,24 @@
     ],
     "9": [
       {
+        "surface": "You saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the affliction",
         "lemma": "oni"
       },
       {
+        "surface": "of our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "in Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "You heard",
+        "lemma": "shama"
       },
       {
         "surface": "their cry",
@@ -456,6 +520,10 @@
     ],
     "10": [
       {
+        "surface": "You performed",
+        "lemma": "natan"
+      },
+      {
         "surface": "signs",
         "lemma": "ot"
       },
@@ -468,8 +536,16 @@
         "lemma": "paroh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his officials",
         "lemma": "eved"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -486,6 +562,10 @@
       {
         "surface": "they had acted with arrogance",
         "lemma": "zud"
+      },
+      {
+        "surface": "You made",
+        "lemma": "asah"
       },
       {
         "surface": "a name",
@@ -610,6 +690,10 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "You gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "just",
         "lemma": "yashar"
       },
@@ -686,6 +770,10 @@
         "lemma": "raav"
       },
       {
+        "surface": "You gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "bread",
         "lemma": "lechem"
       },
@@ -698,12 +786,24 @@
         "lemma": "tsama"
       },
       {
+        "surface": "You brought",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "water",
         "lemma": "mayim"
       },
       {
         "surface": "from the rock",
         "lemma": "sela"
+      },
+      {
+        "surface": "You told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to go in",
+        "lemma": "bo"
       },
       {
         "surface": "and possess",
@@ -716,9 +816,17 @@
       {
         "surface": "You had sworn",
         "lemma": "nasa"
+      },
+      {
+        "surface": "to give",
+        "lemma": "natan"
       }
     ],
     "16": [
+      {
+        "surface": "and our fathers",
+        "lemma": "av"
+      },
       {
         "surface": "became arrogant",
         "lemma": "zud"
@@ -726,6 +834,14 @@
       {
         "surface": "and stiff-necked",
         "lemma": "qashah"
+      },
+      {
+        "surface": "and did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obey",
+        "lemma": "shama"
       },
       {
         "surface": "Your commandments",
@@ -738,12 +854,24 @@
         "lemma": "maen"
       },
       {
+        "surface": "to listen",
+        "lemma": "shama"
+      },
+      {
+        "surface": "and failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to remember",
         "lemma": "zakhar"
       },
       {
         "surface": "the wonders",
         "lemma": "pala"
+      },
+      {
+        "surface": "You performed",
+        "lemma": "asah"
       },
       {
         "surface": "They stiffened",
@@ -754,8 +882,16 @@
         "lemma": "oreph"
       },
       {
+        "surface": "and appointed",
+        "lemma": "natan"
+      },
+      {
         "surface": "a leader",
         "lemma": "rosh"
+      },
+      {
+        "surface": "to return them",
+        "lemma": "shuv"
       },
       {
         "surface": "to their bondage",
@@ -798,11 +934,19 @@
         "lemma": "chesed"
       },
       {
+        "surface": "and You did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forsake them",
         "lemma": "azav"
       }
     ],
     "18": [
+      {
+        "surface": "they cast",
+        "lemma": "asah"
+      },
       {
         "surface": "an image",
         "lemma": "massekhah"
@@ -810,6 +954,10 @@
       {
         "surface": "of a calf",
         "lemma": "egel"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "is your God",
@@ -822,6 +970,10 @@
       {
         "surface": "out of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and when they committed",
+        "lemma": "asah"
       },
       {
         "surface": "terrible",
@@ -842,6 +994,10 @@
         "lemma": "racham"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forsake them",
         "lemma": "azav"
       },
@@ -860,6 +1016,10 @@
       {
         "surface": "of cloud",
         "lemma": "anan"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "turned away",
@@ -900,6 +1060,10 @@
     ],
     "20": [
       {
+        "surface": "You gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "Your good",
         "lemma": "tov"
       },
@@ -912,6 +1076,10 @@
         "lemma": "sakhal"
       },
       {
+        "surface": "You did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "withhold",
         "lemma": "mana"
       },
@@ -922,6 +1090,10 @@
       {
         "surface": "from their mouths",
         "lemma": "peh"
+      },
+      {
+        "surface": "and You gave",
+        "lemma": "natan"
       },
       {
         "surface": "water",
@@ -954,8 +1126,16 @@
         "lemma": "chaser"
       },
       {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "Their clothes",
         "lemma": "salmah"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "wear out",
@@ -966,11 +1146,19 @@
         "lemma": "regel"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "swell",
         "lemma": "batseq"
       }
     ],
     "22": [
+      {
+        "surface": "You gave",
+        "lemma": "natan"
+      },
       {
         "surface": "kingdoms",
         "lemma": "mamlakhah"
@@ -1042,8 +1230,24 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "and brought them",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "You had told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "their fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "to enter",
+        "lemma": "bo"
       },
       {
         "surface": "and possess",
@@ -1054,6 +1258,10 @@
       {
         "surface": "So their descendants",
         "lemma": "ben"
+      },
+      {
+        "surface": "went in",
+        "lemma": "bo"
       },
       {
         "surface": "and possessed",
@@ -1076,8 +1284,16 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "dwelling",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "You delivered",
+        "lemma": "natan"
       },
       {
         "surface": "into their hands",
@@ -1094,6 +1310,10 @@
       {
         "surface": "of the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
       },
       {
         "surface": "as they wished",
@@ -1128,6 +1348,10 @@
       {
         "surface": "full",
         "lemma": "male"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "goods",
@@ -1224,6 +1448,14 @@
         "lemma": "ud"
       },
       {
+        "surface": "to return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "They committed",
+        "lemma": "asah"
+      },
+      {
         "surface": "terrible",
         "lemma": "gadol"
       },
@@ -1233,6 +1465,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "So You delivered them",
+        "lemma": "natan"
+      },
       {
         "surface": "into the hands",
         "lemma": "yad"
@@ -1244,6 +1480,10 @@
       {
         "surface": "who oppressed",
         "lemma": "yatsar"
+      },
+      {
+        "surface": "and in their time",
+        "lemma": "et"
       },
       {
         "surface": "of distress",
@@ -1258,12 +1498,20 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "heard them",
+        "lemma": "shama"
+      },
+      {
         "surface": "and in Your great",
         "lemma": "rav"
       },
       {
         "surface": "compassion",
         "lemma": "racham"
+      },
+      {
+        "surface": "You gave",
+        "lemma": "natan"
       },
       {
         "surface": "deliverers",
@@ -1286,6 +1534,14 @@
       {
         "surface": "But as soon as they had rest",
         "lemma": "nuach"
+      },
+      {
+        "surface": "they again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "evil",
@@ -1316,6 +1572,14 @@
         "lemma": "zaaq"
       },
       {
+        "surface": "to You again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "from heaven",
         "lemma": "shamayim"
       },
@@ -1328,6 +1592,10 @@
         "lemma": "rav"
       },
       {
+        "surface": "times",
+        "lemma": "et"
+      },
+      {
         "surface": "in Your compassion",
         "lemma": "racham"
       }
@@ -1338,12 +1606,24 @@
         "lemma": "ud"
       },
       {
+        "surface": "to turn back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "Your law",
         "lemma": "torah"
       },
       {
         "surface": "were arrogant",
         "lemma": "zud"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
+        "surface": "and disobeyed",
+        "lemma": "shama"
       },
       {
         "surface": "Your commandments",
@@ -1366,6 +1646,14 @@
         "lemma": "chayah"
       },
       {
+        "surface": "if he practices",
+        "lemma": "asah"
+      },
+      {
+        "surface": "They turned",
+        "lemma": "natan"
+      },
+      {
         "surface": "a stubborn",
         "lemma": "sarar"
       },
@@ -1380,6 +1668,14 @@
       {
         "surface": "their necks",
         "lemma": "oreph"
+      },
+      {
+        "surface": "and would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obey",
+        "lemma": "shama"
       }
     ],
     "30": [
@@ -1412,8 +1708,16 @@
         "lemma": "navi"
       },
       {
+        "surface": "Yet they would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "listen",
         "lemma": "azan"
+      },
+      {
+        "surface": "so You gave them",
+        "lemma": "natan"
       },
       {
         "surface": "into the hands",
@@ -1432,6 +1736,18 @@
       {
         "surface": "compassion",
         "lemma": "racham"
+      },
+      {
+        "surface": "You did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "put an end to them",
+        "lemma": "asah"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "did You forsake them",
@@ -1488,8 +1804,16 @@
         "lemma": "berit"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "view lightly",
         "lemma": "maat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the hardship",
@@ -1516,6 +1840,14 @@
         "lemma": "navi"
       },
       {
+        "surface": "our ancestors",
+        "lemma": "av"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your people",
         "lemma": "am"
       },
@@ -1538,6 +1870,18 @@
         "lemma": "tsaddiq"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that has befallen",
+        "lemma": "bo"
+      },
+      {
+        "surface": "You have acted",
+        "lemma": "asah"
+      },
+      {
         "surface": "faithfully",
         "lemma": "emet"
       },
@@ -1558,6 +1902,18 @@
       {
         "surface": "and priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "and fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obey",
+        "lemma": "asah"
       },
       {
         "surface": "Your law",
@@ -1594,6 +1950,10 @@
         "lemma": "tuv"
       },
       {
+        "surface": "You had given",
+        "lemma": "natan"
+      },
+      {
         "surface": "and in the spacious",
         "lemma": "rachav"
       },
@@ -1606,12 +1966,24 @@
         "lemma": "erets"
       },
       {
+        "surface": "You had set",
+        "lemma": "natan"
+      },
+      {
         "surface": "before them",
         "lemma": "paneh"
       },
       {
+        "surface": "they would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "serve You",
         "lemma": "avad"
+      },
+      {
+        "surface": "or turn",
+        "lemma": "shuv"
       },
       {
         "surface": "from their wicked",
@@ -1623,10 +1995,6 @@
       }
     ],
     "36": [
-      {
-        "surface": "So here",
-        "lemma": "hinneh"
-      },
       {
         "surface": "today",
         "lemma": "yom"
@@ -1640,6 +2008,14 @@
         "lemma": "erets"
       },
       {
+        "surface": "You gave",
+        "lemma": "natan"
+      },
+      {
+        "surface": "our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "to enjoy",
         "lemma": "akhal"
       },
@@ -1650,10 +2026,6 @@
       {
         "surface": "and goodness",
         "lemma": "tuv"
-      },
-      {
-        "surface": "here",
-        "lemma": "hinneh"
       },
       {
         "surface": "as slaves",
@@ -1672,6 +2044,10 @@
       {
         "surface": "goes to the kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "You have set",
+        "lemma": "natan"
       },
       {
         "surface": "because of our sins",
@@ -1704,6 +2080,10 @@
     ],
     "38": [
       {
+        "surface": "In view of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "make",
         "lemma": "karat"
       },
@@ -1734,8 +2114,8 @@
     ]
   },
   "themeLemmas": [
-    "rav",
-    "torah",
-    "gadol"
+    "natan",
+    "lo",
+    "kol"
   ]
 }

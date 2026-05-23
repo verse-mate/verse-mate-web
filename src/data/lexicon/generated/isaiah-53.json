@@ -60,12 +60,24 @@
         "lemma": "erets"
       },
       {
+        "surface": "He had no",
+        "lemma": "lo"
+      },
+      {
         "surface": "stately form",
         "lemma": "toar"
       },
       {
         "surface": "or majesty",
         "lemma": "hadar"
+      },
+      {
+        "surface": "to attract us",
+        "lemma": "raah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "beauty",
@@ -120,6 +132,10 @@
       {
         "surface": "and we esteemed Him",
         "lemma": "chashav"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       }
     ],
     "4": [
@@ -200,6 +216,10 @@
     ],
     "6": [
       {
+        "surface": "We all",
+        "lemma": "kol"
+      },
+      {
         "surface": "like sheep",
         "lemma": "tson"
       },
@@ -230,6 +250,10 @@
       {
         "surface": "the iniquity",
         "lemma": "avan"
+      },
+      {
+        "surface": "of us all",
+        "lemma": "kol"
       }
     ],
     "7": [
@@ -240,6 +264,10 @@
       {
         "surface": "and afflicted",
         "lemma": "anah"
+      },
+      {
+        "surface": "yet He did not",
+        "lemma": "lo"
       },
       {
         "surface": "open",
@@ -276,6 +304,10 @@
       {
         "surface": "is silent",
         "lemma": "alam"
+      },
+      {
+        "surface": "so He did not",
+        "lemma": "lo"
       },
       {
         "surface": "open",
@@ -338,6 +370,10 @@
     ],
     "9": [
       {
+        "surface": "He was assigned",
+        "lemma": "natan"
+      },
+      {
         "surface": "a grave",
         "lemma": "qever"
       },
@@ -354,8 +390,20 @@
         "lemma": "mavet"
       },
       {
+        "surface": "He had done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "violence",
         "lemma": "chamas"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "was any deceit",
@@ -384,6 +432,10 @@
         "lemma": "chalah"
       },
       {
+        "surface": "and when",
+        "lemma": "im"
+      },
+      {
         "surface": "His soul",
         "lemma": "nephesh"
       },
@@ -394,6 +446,10 @@
       {
         "surface": "a guilt offering",
         "lemma": "asham"
+      },
+      {
+        "surface": "He will see",
+        "lemma": "raah"
       },
       {
         "surface": "His offspring",
@@ -432,6 +488,10 @@
       {
         "surface": "of His soul",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "He will see the light of life",
+        "lemma": "raah"
       },
       {
         "surface": "and be satisfied",
@@ -538,8 +598,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "rav",
-    "peh",
-    "paneh"
+    "raah"
   ]
 }

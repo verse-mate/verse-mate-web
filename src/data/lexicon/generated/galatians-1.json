@@ -48,6 +48,10 @@
     ],
     "2": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "brothers",
         "lemma": "adelphos"
       },
@@ -91,6 +95,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
       {
         "surface": "sins",
         "lemma": "hamartia"
@@ -136,10 +144,6 @@
       {
         "surface": "ever",
         "lemma": "aion"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ],
     "6": [
@@ -182,12 +186,24 @@
     ],
     "7": [
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a gospel",
         "lemma": "allos"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "troubling",
         "lemma": "tarasso"
+      },
+      {
+        "surface": "trying",
+        "lemma": "thelo"
       },
       {
         "surface": "to distort",
@@ -220,6 +236,10 @@
         "lemma": "euangelizomai"
       },
       {
+        "surface": "let him be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "under a curse",
         "lemma": "anathema"
       }
@@ -234,6 +254,10 @@
         "lemma": "arti"
       },
       {
+        "surface": "I say",
+        "lemma": "lego"
+      },
+      {
         "surface": "again",
         "lemma": "palin"
       },
@@ -244,6 +268,10 @@
       {
         "surface": "you received",
         "lemma": "paralambano"
+      },
+      {
+        "surface": "let him be",
+        "lemma": "eimi"
       },
       {
         "surface": "under a curse",
@@ -288,8 +316,8 @@
         "lemma": "anthropos"
       },
       {
-        "surface": "vvv",
-        "lemma": "an"
+        "surface": "I would not be",
+        "lemma": "eimi"
       },
       {
         "surface": "a servant",
@@ -316,6 +344,10 @@
       {
         "surface": "I preached",
         "lemma": "euangelizomai"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
       },
       {
         "surface": "man",
@@ -349,6 +381,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "you have heard of",
+        "lemma": "akouo"
+      },
       {
         "surface": "my",
         "lemma": "emos"
@@ -386,6 +422,10 @@
       {
         "surface": "Judaism",
         "lemma": "ioudaismos"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "of my contemporaries",
@@ -550,6 +590,10 @@
     ],
     "19": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "other",
         "lemma": "heteros"
       },
@@ -576,6 +620,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "I am writing",
+        "lemma": "grapho"
+      },
+      {
         "surface": "is no lie",
         "lemma": "pseudomai"
       }
@@ -584,6 +632,10 @@
       {
         "surface": "Later",
         "lemma": "epeita"
+      },
+      {
+        "surface": "I went",
+        "lemma": "erchomai"
       },
       {
         "surface": "regions",
@@ -599,6 +651,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "I was",
+        "lemma": "eimi"
+      },
       {
         "surface": "personally",
         "lemma": "prosopon"
@@ -622,8 +678,16 @@
     ],
     "23": [
       {
+        "surface": "They",
+        "lemma": "eimi"
+      },
+      {
         "surface": "only",
         "lemma": "monon"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
       },
       {
         "surface": "persecuted",

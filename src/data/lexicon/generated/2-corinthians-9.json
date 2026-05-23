@@ -14,11 +14,23 @@
         "lemma": "hagios"
       },
       {
+        "surface": "there is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "no need",
         "lemma": "perissos"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
       }
     ],
     "2": [
+      {
+        "surface": "I know",
+        "lemma": "eido"
+      },
       {
         "surface": "eagerness to help",
         "lemma": "prothumia"
@@ -78,8 +90,16 @@
         "lemma": "kenoo"
       },
       {
+        "surface": "you will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "prepared",
         "lemma": "paraskeuazo"
+      },
+      {
+        "surface": "I said",
+        "lemma": "eipon"
       }
     ],
     "4": [
@@ -88,8 +108,20 @@
         "lemma": "makedon"
       },
       {
+        "surface": "come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "find",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "unprepared",
         "lemma": "aparaskeuastos"
+      },
+      {
+        "surface": "say",
+        "lemma": "lego"
       },
       {
         "surface": "would be ashamed of",
@@ -136,6 +168,10 @@
       {
         "surface": "This way",
         "lemma": "houto"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "prepared",
@@ -232,6 +268,10 @@
         "lemma": "dunateo"
       },
       {
+        "surface": "to make} all",
+        "lemma": "pas"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
       },
@@ -240,8 +280,20 @@
         "lemma": "perisseuo"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "at all times",
         "lemma": "pantote"
+      },
+      {
+        "surface": "having",
+        "lemma": "echo"
+      },
+      {
+        "surface": "all that",
+        "lemma": "pas"
       },
       {
         "surface": "you need",
@@ -250,6 +302,10 @@
       {
         "surface": "you will abound",
         "lemma": "perisseuo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "good",
@@ -262,8 +318,16 @@
     ],
     "9": [
       {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "He has scattered abroad",
         "lemma": "skorpizo"
+      },
+      {
+        "surface": "His gifts",
+        "lemma": "didomi"
       },
       {
         "surface": "poor",
@@ -330,8 +394,16 @@
         "lemma": "ploutizo"
       },
       {
+        "surface": "every way",
+        "lemma": "pas"
+      },
+      {
         "surface": "be generous",
         "lemma": "haplotes"
+      },
+      {
+        "surface": "on every occasion",
+        "lemma": "pas"
       },
       {
         "surface": "your generosity will produce",
@@ -356,6 +428,10 @@
         "lemma": "leitourgia"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "only",
         "lemma": "monon"
       },
@@ -374,6 +450,10 @@
       {
         "surface": "is also overflowing",
         "lemma": "perisseuo"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "expressions of thanksgiving",
@@ -424,6 +504,10 @@
       {
         "surface": "contribution",
         "lemma": "koinonia"
+      },
+      {
+        "surface": "all the others",
+        "lemma": "pas"
       }
     ],
     "14": [

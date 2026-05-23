@@ -12,6 +12,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -38,6 +46,10 @@
     ],
     "3": [
       {
+        "surface": "and tell her that",
+        "lemma": "amar"
+      },
+      {
         "surface": "this is what",
         "lemma": "koh"
       },
@@ -48,6 +60,10 @@
       {
         "surface": "GOD",
         "lemma": "yehovih"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "to Jerusalem",
@@ -68,6 +84,10 @@
       {
         "surface": "of the Canaanites",
         "lemma": "kenaani"
+      },
+      {
+        "surface": "Your father",
+        "lemma": "av"
       },
       {
         "surface": "was an Amorite",
@@ -96,8 +116,16 @@
         "lemma": "shor"
       },
       {
+        "surface": "was not",
+        "lemma": "lo"
+      },
+      {
         "surface": "cut",
         "lemma": "karat"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "were you washed",
@@ -112,6 +140,10 @@
         "lemma": "mishi"
       },
       {
+        "surface": "You were not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rubbed with salt",
         "lemma": "malach"
       },
@@ -122,8 +154,16 @@
     ],
     "5": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "one cared enough",
         "lemma": "chus"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
       },
       {
         "surface": "even one",
@@ -168,6 +208,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "you wallowing",
         "lemma": "bus"
       },
@@ -180,6 +224,10 @@
         "lemma": "dam"
       },
       {
+        "surface": "I said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Live",
         "lemma": "chayah"
       },
@@ -188,11 +236,19 @@
         "lemma": "dam"
       },
       {
+        "surface": "I said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Live",
         "lemma": "chayah"
       }
     ],
     "7": [
+      {
+        "surface": "I made",
+        "lemma": "natan"
+      },
       {
         "surface": "you thrive",
         "lemma": "revavah"
@@ -212,6 +268,10 @@
       {
         "surface": "and matured",
         "lemma": "gadal"
+      },
+      {
+        "surface": "and became",
+        "lemma": "bo"
       },
       {
         "surface": "very beautiful",
@@ -248,8 +308,12 @@
         "lemma": "avar"
       },
       {
-        "surface": "and you were indeed",
-        "lemma": "hinneh"
+        "surface": "and saw you",
+        "lemma": "raah"
+      },
+      {
+        "surface": "old enough",
+        "lemma": "et"
       },
       {
         "surface": "for love",
@@ -276,8 +340,16 @@
         "lemma": "shava"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "into a covenant",
         "lemma": "berit"
+      },
+      {
+        "surface": "and you became",
+        "lemma": "hayah"
       },
       {
         "surface": "declares",
@@ -362,6 +434,10 @@
         "lemma": "adi"
       },
       {
+        "surface": "and I put",
+        "lemma": "natan"
+      },
+      {
         "surface": "bracelets",
         "lemma": "tsamid"
       },
@@ -379,6 +455,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "I put",
+        "lemma": "natan"
+      },
       {
         "surface": "a ring",
         "lemma": "nezem"
@@ -476,6 +556,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "spread",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "among the nations",
         "lemma": "goy"
       },
@@ -534,8 +618,16 @@
         "lemma": "taznut"
       },
       {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "who passed by",
         "lemma": "avar"
+      },
+      {
+        "surface": "and your beauty was theirs for the asking",
+        "lemma": "hayah"
       }
     ],
     "16": [
@@ -548,6 +640,10 @@
         "lemma": "beged"
       },
       {
+        "surface": "and made",
+        "lemma": "asah"
+      },
+      {
         "surface": "colorful",
         "lemma": "tala"
       },
@@ -558,6 +654,22 @@
       {
         "surface": "you prostituted yourself",
         "lemma": "zanah"
+      },
+      {
+        "surface": "Such things should not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "have happened",
+        "lemma": "bo"
+      },
+      {
+        "surface": "never should",
+        "lemma": "lo"
+      },
+      {
+        "surface": "they have occurred",
+        "lemma": "hayah"
       }
     ],
     "17": [
@@ -580,6 +692,14 @@
       {
         "surface": "and silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "I had given",
+        "lemma": "natan"
+      },
+      {
+        "surface": "and you made",
+        "lemma": "asah"
       },
       {
         "surface": "male",
@@ -612,6 +732,10 @@
         "lemma": "kasah"
       },
       {
+        "surface": "and you set",
+        "lemma": "natan"
+      },
+      {
         "surface": "My oil",
         "lemma": "shemen"
       },
@@ -625,6 +749,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "And you set",
+        "lemma": "natan"
+      },
       {
         "surface": "before them",
         "lemma": "paneh"
@@ -642,6 +770,10 @@
         "lemma": "lechem"
       },
       {
+        "surface": "I had given you",
+        "lemma": "natan"
+      },
+      {
         "surface": "the fine flour",
         "lemma": "solet"
       },
@@ -656,6 +788,10 @@
       {
         "surface": "that I had fed you",
         "lemma": "akhal"
+      },
+      {
+        "surface": "That is what happened",
+        "lemma": "hayah"
       },
       {
         "surface": "declares",
@@ -714,11 +850,19 @@
         "lemma": "ben"
       },
       {
+        "surface": "and delivered them up",
+        "lemma": "natan"
+      },
+      {
         "surface": "through the fire",
         "lemma": "avar"
       }
     ],
     "22": [
+      {
+        "surface": "in all",
+        "lemma": "kol"
+      },
       {
         "surface": "your abominations",
         "lemma": "toevah"
@@ -726,6 +870,10 @@
       {
         "surface": "and acts of prostitution",
         "lemma": "taznut"
+      },
+      {
+        "surface": "you did not",
+        "lemma": "lo"
       },
       {
         "surface": "remember",
@@ -738,6 +886,10 @@
       {
         "surface": "of your youth",
         "lemma": "naur"
+      },
+      {
+        "surface": "when you were",
+        "lemma": "hayah"
       },
       {
         "surface": "naked",
@@ -758,14 +910,6 @@
     ],
     "23": [
       {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
-      {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
-      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -778,8 +922,16 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in addition to",
         "lemma": "achar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "your other wickedness",
@@ -796,8 +948,16 @@
         "lemma": "gav"
       },
       {
+        "surface": "and made",
+        "lemma": "asah"
+      },
+      {
         "surface": "a lofty shrine",
         "lemma": "ramah"
+      },
+      {
+        "surface": "in every",
+        "lemma": "kol"
       },
       {
         "surface": "public square",
@@ -808,6 +968,10 @@
       {
         "surface": "the head",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "street",
@@ -846,6 +1010,10 @@
         "lemma": "regel"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who passed by",
         "lemma": "avar"
       }
@@ -882,10 +1050,6 @@
     ],
     "27": [
       {
-        "surface": "Therefore",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "I stretched out",
         "lemma": "natah"
       },
@@ -900,6 +1064,10 @@
       {
         "surface": "your portion",
         "lemma": "choq"
+      },
+      {
+        "surface": "I gave you over",
+        "lemma": "natan"
       },
       {
         "surface": "to the desire",
@@ -952,6 +1120,10 @@
         "lemma": "zanah"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfied",
         "lemma": "sovah"
       }
@@ -976,6 +1148,10 @@
       {
         "surface": "of merchants",
         "lemma": "kenaan"
+      },
+      {
+        "surface": "you were not",
+        "lemma": "lo"
       },
       {
         "surface": "satisfied",
@@ -1008,6 +1184,14 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "while you do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the acts",
         "lemma": "maaseh"
       },
@@ -1034,16 +1218,36 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "street",
         "lemma": "derekh"
+      },
+      {
+        "surface": "and made",
+        "lemma": "asah"
       },
       {
         "surface": "your lofty shrines",
         "lemma": "ramah"
       },
       {
+        "surface": "in every",
+        "lemma": "kol"
+      },
+      {
         "surface": "public square",
         "lemma": "rechov"
+      },
+      {
+        "surface": "you were",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not even like",
+        "lemma": "lo"
       },
       {
         "surface": "a prostitute",
@@ -1082,16 +1286,32 @@
     ],
     "33": [
       {
+        "surface": "Men give",
+        "lemma": "natan"
+      },
+      {
         "surface": "gifts",
         "lemma": "nedeh"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "their prostitutes",
         "lemma": "zanah"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "gifts",
         "lemma": "nadan"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "your lovers",
@@ -1100,6 +1320,10 @@
       {
         "surface": "You bribed",
         "lemma": "shachad"
+      },
+      {
+        "surface": "to come",
+        "lemma": "bo"
       },
       {
         "surface": "from everywhere",
@@ -1116,12 +1340,20 @@
         "lemma": "taznut"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the opposite",
         "lemma": "hephekh"
       },
       {
         "surface": "of other women",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "No one",
+        "lemma": "lo"
       },
       {
         "surface": "solicited",
@@ -1132,12 +1364,28 @@
         "lemma": "zanah"
       },
       {
+        "surface": "and you paid",
+        "lemma": "natan"
+      },
+      {
         "surface": "a fee",
         "lemma": "etnan"
       },
       {
+        "surface": "instead of",
+        "lemma": "lo"
+      },
+      {
+        "surface": "receiving",
+        "lemma": "natan"
+      },
+      {
         "surface": "one",
         "lemma": "etnan"
+      },
+      {
+        "surface": "are",
+        "lemma": "hayah"
       },
       {
         "surface": "the very opposite",
@@ -1152,6 +1400,10 @@
       {
         "surface": "O prostitute",
         "lemma": "zanah"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "the word",
@@ -1174,6 +1426,10 @@
       {
         "surface": "GOD",
         "lemma": "yehovih"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "you poured out",
@@ -1200,6 +1456,10 @@
         "lemma": "ahav"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your detestable",
         "lemma": "toevah"
       },
@@ -1214,6 +1474,10 @@
       {
         "surface": "of your children",
         "lemma": "ben"
+      },
+      {
+        "surface": "you gave",
+        "lemma": "natan"
       }
     ],
     "37": [
@@ -1222,12 +1486,12 @@
         "lemma": "ken"
       },
       {
-        "surface": "I will surely",
-        "lemma": "hen"
-      },
-      {
         "surface": "gather",
         "lemma": "qavats"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the lovers",
@@ -1238,8 +1502,16 @@
         "lemma": "arev"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you loved",
         "lemma": "ahav"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "you hated",
@@ -1260,6 +1532,14 @@
       {
         "surface": "you",
         "lemma": "ervah"
+      },
+      {
+        "surface": "and they will see you",
+        "lemma": "raah"
+      },
+      {
+        "surface": "completely",
+        "lemma": "kol"
       },
       {
         "surface": "naked",
@@ -1288,6 +1568,10 @@
         "lemma": "dam"
       },
       {
+        "surface": "so I will bring upon you",
+        "lemma": "natan"
+      },
+      {
         "surface": "the wrath",
         "lemma": "chemah"
       },
@@ -1301,6 +1585,10 @@
       }
     ],
     "39": [
+      {
+        "surface": "Then I will deliver",
+        "lemma": "natan"
+      },
       {
         "surface": "into the hands of your lovers",
         "lemma": "yad"
@@ -1386,6 +1674,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "and execute",
+        "lemma": "asah"
+      },
+      {
         "surface": "judgment",
         "lemma": "shephet"
       },
@@ -1408,6 +1700,14 @@
       {
         "surface": "to your prostitution",
         "lemma": "zanah"
+      },
+      {
+        "surface": "and you will never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "pay",
+        "lemma": "natan"
       },
       {
         "surface": "your lovers",
@@ -1436,6 +1736,10 @@
         "lemma": "shaqat"
       },
       {
+        "surface": "and no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -1445,6 +1749,10 @@
       }
     ],
     "43": [
+      {
+        "surface": "you did not",
+        "lemma": "lo"
+      },
       {
         "surface": "remember",
         "lemma": "zakhar"
@@ -1462,8 +1770,16 @@
         "lemma": "ragaz"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "bring your deeds",
         "lemma": "derekh"
+      },
+      {
+        "surface": "down",
+        "lemma": "natan"
       },
       {
         "surface": "upon your own head",
@@ -1482,8 +1798,20 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "Have you not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "committed",
+        "lemma": "asah"
+      },
+      {
         "surface": "this lewdness",
         "lemma": "zimmah"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "your other abominations",
@@ -1492,8 +1820,8 @@
     ],
     "44": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who speak in proverbs",
@@ -1562,6 +1890,10 @@
         "lemma": "chitti"
       },
       {
+        "surface": "and your father",
+        "lemma": "av"
+      },
+      {
         "surface": "an Amorite",
         "lemma": "emori"
       }
@@ -1578,6 +1910,10 @@
       {
         "surface": "was Samaria",
         "lemma": "shomeron"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "with her daughters",
@@ -1600,6 +1936,10 @@
         "lemma": "sedom"
       },
       {
+        "surface": "who lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "with her daughters",
         "lemma": "bat"
       },
@@ -1610,12 +1950,20 @@
     ],
     "47": [
       {
+        "surface": "And you not only",
+        "lemma": "lo"
+      },
+      {
         "surface": "walked",
         "lemma": "halakh"
       },
       {
         "surface": "ways",
         "lemma": "derekh"
+      },
+      {
+        "surface": "and practiced",
+        "lemma": "asah"
       },
       {
         "surface": "their abominations",
@@ -1660,14 +2008,26 @@
         "lemma": "bat"
       },
       {
+        "surface": "never",
+        "lemma": "im"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "and your daughters",
         "lemma": "bat"
+      },
+      {
+        "surface": "have done",
+        "lemma": "asah"
       }
     ],
     "49": [
       {
-        "surface": "Now",
-        "lemma": "hinneh"
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "the iniquity",
@@ -1686,6 +2046,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "arrogant",
         "lemma": "gaon"
       },
@@ -1696,6 +2060,10 @@
       {
         "surface": "and complacent",
         "lemma": "shaqat"
+      },
+      {
+        "surface": "they did not",
+        "lemma": "lo"
       },
       {
         "surface": "help",
@@ -1716,6 +2084,10 @@
         "lemma": "gavah"
       },
       {
+        "surface": "and committed",
+        "lemma": "asah"
+      },
+      {
         "surface": "abominations",
         "lemma": "toevah"
       },
@@ -1726,12 +2098,20 @@
       {
         "surface": "Therefore I removed",
         "lemma": "sur"
+      },
+      {
+        "surface": "you have seen",
+        "lemma": "raah"
       }
     ],
     "51": [
       {
         "surface": "Furthermore, Samaria",
         "lemma": "shomeron"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "commit",
@@ -1754,8 +2134,16 @@
         "lemma": "toevah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the abominations",
         "lemma": "toevah"
+      },
+      {
+        "surface": "you have committed",
+        "lemma": "asah"
       },
       {
         "surface": "have made your sisters",
@@ -1818,6 +2206,10 @@
     ],
     "53": [
       {
+        "surface": "But I will restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "Sodom",
         "lemma": "sedom"
       },
@@ -1864,6 +2256,14 @@
         "lemma": "kalam"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you did",
+        "lemma": "asah"
+      },
+      {
         "surface": "to comfort them",
         "lemma": "nacham"
       }
@@ -1890,6 +2290,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to their former state",
         "lemma": "qadmah"
       },
@@ -1898,11 +2302,23 @@
         "lemma": "bat"
       },
       {
+        "surface": "will also return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to your former state",
         "lemma": "qadmah"
       }
     ],
     "56": [
+      {
+        "surface": "Did you not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "treat",
+        "lemma": "hayah"
+      },
       {
         "surface": "your sister",
         "lemma": "achot"
@@ -1938,6 +2354,10 @@
         "lemma": "galah"
       },
       {
+        "surface": "you are now",
+        "lemma": "et"
+      },
+      {
         "surface": "scorned",
         "lemma": "cherpah"
       },
@@ -1948,6 +2368,10 @@
       {
         "surface": "of Edom",
         "lemma": "aram"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "those around her",
@@ -2004,6 +2428,18 @@
       {
         "surface": "GOD",
         "lemma": "yehovih"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will deal",
+        "lemma": "asah"
+      },
+      {
+        "surface": "your deeds",
+        "lemma": "asah"
       },
       {
         "surface": "you have despised",
@@ -2078,8 +2514,16 @@
         "lemma": "achot"
       },
       {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "as daughters",
         "lemma": "bat"
+      },
+      {
+        "surface": "but not because of",
+        "lemma": "lo"
       },
       {
         "surface": "My covenant with you",
@@ -2110,12 +2554,24 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "you will remember",
         "lemma": "zakhar"
       },
       {
         "surface": "and be ashamed",
         "lemma": "bush"
+      },
+      {
+        "surface": "and never",
+        "lemma": "lo"
       },
       {
         "surface": "again",
@@ -2152,8 +2608,8 @@
     ]
   },
   "themeLemmas": [
-    "zanah",
-    "achot",
-    "yehovih"
+    "kol",
+    "lo",
+    "natan"
   ]
 }

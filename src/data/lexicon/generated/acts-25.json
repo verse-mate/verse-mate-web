@@ -82,6 +82,10 @@
         "lemma": "hierousalem"
       },
       {
+        "surface": "because  they were preparing",
+        "lemma": "poieo"
+      },
+      {
         "surface": "an ambush",
         "lemma": "enedra"
       },
@@ -98,6 +102,10 @@
       {
         "surface": "Festus",
         "lemma": "phestos"
+      },
+      {
+        "surface": "replied",
+        "lemma": "apokrino"
       },
       {
         "surface": "Paul",
@@ -128,6 +136,10 @@
       {
         "surface": "man",
         "lemma": "aner"
+      },
+      {
+        "surface": "has done",
+        "lemma": "eimi"
       },
       {
         "surface": "wrong",
@@ -226,6 +238,10 @@
         "lemma": "kataphero"
       },
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "serious",
         "lemma": "barus"
       },
@@ -278,12 +294,24 @@
         "lemma": "phestos"
       },
       {
+        "surface": "wishing",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to do the Jews a favor",
         "lemma": "katatithemi"
       },
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "to Paul",
         "lemma": "paulos"
+      },
+      {
+        "surface": "Are you willing",
+        "lemma": "thelo"
       },
       {
         "surface": "to go up",
@@ -302,6 +330,18 @@
       {
         "surface": "Paul",
         "lemma": "paulos"
+      },
+      {
+        "surface": "replied",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "judgment seat",
@@ -366,8 +406,24 @@
         "lemma": "apothnesko"
       },
       {
+        "surface": "there is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "no",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "accusations",
         "lemma": "kategoreo"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "has the right",
+        "lemma": "dunamai"
       },
       {
         "surface": "to hand me over",
@@ -398,6 +454,10 @@
       {
         "surface": "council",
         "lemma": "sumboulion"
+      },
+      {
+        "surface": "and replied",
+        "lemma": "apokrino"
       },
       {
         "surface": "You have appealed",
@@ -484,6 +544,10 @@
         "lemma": "basileus"
       },
       {
+        "surface": "There is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "man",
         "lemma": "aner"
       },
@@ -501,6 +565,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "was",
+        "lemma": "ginomai"
+      },
       {
         "surface": "Jerusalem",
         "lemma": "hierosoluma"
@@ -532,6 +600,14 @@
     ],
     "16": [
       {
+        "surface": "I told",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the Roman custom",
         "lemma": "ethos"
       },
@@ -542,6 +618,10 @@
       {
         "surface": "man {over",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "has had",
+        "lemma": "lambano"
       },
       {
         "surface": "an opportunity",
@@ -572,6 +652,10 @@
       {
         "surface": "here {with me",
         "lemma": "enthade"
+      },
+      {
+        "surface": "I did",
+        "lemma": "poieo"
       },
       {
         "surface": "not",
@@ -612,8 +696,16 @@
         "lemma": "kategoros"
       },
       {
+        "surface": "rose to speak",
+        "lemma": "histemi"
+      },
+      {
         "surface": "vvv",
         "lemma": "phero"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "oudeis"
       },
       {
         "surface": "they did not charge him",
@@ -629,6 +721,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "They only had",
+        "lemma": "echo"
+      },
       {
         "surface": "contentions",
         "lemma": "zetema"
@@ -670,6 +766,10 @@
       {
         "surface": "how to investigate",
         "lemma": "zetesis"
+      },
+      {
+        "surface": "I asked",
+        "lemma": "eipon"
       },
       {
         "surface": "he was willing",
@@ -744,12 +844,20 @@
         "lemma": "boulomai"
       },
       {
+        "surface": "to hear",
+        "lemma": "akouo"
+      },
+      {
         "surface": "man",
         "lemma": "anthropos"
       },
       {
         "surface": "Tomorrow",
         "lemma": "aurion"
+      },
+      {
+        "surface": "you will hear",
+        "lemma": "akouo"
       },
       {
         "surface": "Festus declared",
@@ -770,8 +878,20 @@
         "lemma": "bernike"
       },
       {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "great",
+        "lemma": "polus"
+      },
+      {
         "surface": "pomp",
         "lemma": "phantasia"
+      },
+      {
+        "surface": "entered",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "auditorium",
@@ -826,6 +946,10 @@
       {
         "surface": "Agrippa",
         "lemma": "agrippas"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "who",
@@ -920,8 +1044,16 @@
     ],
     "26": [
       {
+        "surface": "I have",
+        "lemma": "echo"
+      },
+      {
         "surface": "definite",
         "lemma": "asphales"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
       },
       {
         "surface": "our sovereign",
@@ -946,6 +1078,18 @@
       {
         "surface": "after this inquiry",
         "lemma": "anakrisis"
+      },
+      {
+        "surface": "I may have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "something",
+        "lemma": "tis"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
       }
     ],
     "27": [

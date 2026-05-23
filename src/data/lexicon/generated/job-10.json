@@ -40,8 +40,16 @@
     ],
     "2": [
       {
+        "surface": "I will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "God",
         "lemma": "eloah"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "condemn me",
@@ -100,8 +108,16 @@
         "lemma": "basar"
       },
       {
+        "surface": "Do You see",
+        "lemma": "raah"
+      },
+      {
         "surface": "as man",
         "lemma": "enosh"
+      },
+      {
+        "surface": "sees",
+        "lemma": "raah"
       }
     ],
     "5": [
@@ -116,6 +132,10 @@
       {
         "surface": "of a mortal",
         "lemma": "enosh"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "Your years",
@@ -154,6 +174,10 @@
         "lemma": "daat"
       },
       {
+        "surface": "I am not",
+        "lemma": "lo"
+      },
+      {
         "surface": "guilty",
         "lemma": "rasah"
       },
@@ -184,6 +208,10 @@
         "lemma": "yachad"
       },
       {
+        "surface": "formed me",
+        "lemma": "asah"
+      },
+      {
         "surface": "Would You now turn",
         "lemma": "saviv"
       },
@@ -194,16 +222,20 @@
     ],
     "9": [
       {
-        "surface": "Please",
-        "lemma": "na"
-      },
-      {
         "surface": "remember",
         "lemma": "zakhar"
       },
       {
+        "surface": "You molded me",
+        "lemma": "asah"
+      },
+      {
         "surface": "like clay",
         "lemma": "chomer"
+      },
+      {
+        "surface": "Would You now return me",
+        "lemma": "shuv"
       },
       {
         "surface": "dust",
@@ -211,6 +243,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Did You not",
+        "lemma": "lo"
+      },
       {
         "surface": "pour me out",
         "lemma": "natakh"
@@ -256,6 +292,10 @@
     ],
     "12": [
       {
+        "surface": "You have granted",
+        "lemma": "asah"
+      },
+      {
         "surface": "life",
         "lemma": "chay"
       },
@@ -292,12 +332,20 @@
     ],
     "14": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I sinned",
         "lemma": "chata"
       },
       {
         "surface": "You would take note",
         "lemma": "shamar"
+      },
+      {
+        "surface": "and would not",
+        "lemma": "lo"
       },
       {
         "surface": "acquit me",
@@ -310,16 +358,20 @@
     ],
     "15": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I am guilty",
         "lemma": "rasah"
       },
       {
-        "surface": "woe",
-        "lemma": "allay"
-      },
-      {
         "surface": "And even if I am righteous",
         "lemma": "tsadaq"
+      },
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
       },
       {
         "surface": "lift",
@@ -358,6 +410,10 @@
       {
         "surface": "like a lion",
         "lemma": "shachal"
+      },
+      {
+        "surface": "and again",
+        "lemma": "shuv"
       },
       {
         "surface": "display Your power",
@@ -400,6 +456,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "did You bring me",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from the womb",
         "lemma": "rechem"
       },
@@ -408,11 +468,31 @@
         "lemma": "gava"
       },
       {
+        "surface": "and no",
+        "lemma": "lo"
+      },
+      {
         "surface": "eye",
         "lemma": "ayin"
+      },
+      {
+        "surface": "had seen me",
+        "lemma": "raah"
       }
     ],
     "19": [
+      {
+        "surface": "I had never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to be",
+        "lemma": "hayah"
+      },
       {
         "surface": "but had been carried",
         "lemma": "yaval"
@@ -430,6 +510,10 @@
       {
         "surface": "Are my days",
         "lemma": "yom"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "few",
@@ -452,6 +536,14 @@
       {
         "surface": "I go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to return",
+        "lemma": "shuv"
       },
       {
         "surface": "a land",
@@ -480,6 +572,10 @@
         "lemma": "tsalmavet"
       },
       {
+        "surface": "and disorder",
+        "lemma": "lo"
+      },
+      {
         "surface": "where even the light",
         "lemma": "yapah"
       },
@@ -490,8 +586,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "rasah",
-    "yapah",
-    "yada"
+    "shuv"
   ]
 }

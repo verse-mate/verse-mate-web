@@ -10,6 +10,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "forget",
         "lemma": "shakhach"
       },
@@ -57,6 +61,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "Never",
+        "lemma": "al"
+      },
       {
         "surface": "let loving devotion",
         "lemma": "chesed"
@@ -126,6 +134,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your heart",
         "lemma": "lev"
       },
@@ -134,11 +146,19 @@
         "lemma": "shaan"
       },
       {
+        "surface": "not",
+        "lemma": "al"
+      },
+      {
         "surface": "your own understanding",
         "lemma": "binah"
       }
     ],
     "6": [
+      {
+        "surface": "in all",
+        "lemma": "kol"
+      },
       {
         "surface": "your ways",
         "lemma": "derekh"
@@ -157,6 +177,14 @@
       }
     ],
     "7": [
+      {
+        "surface": "Be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "al"
+      },
       {
         "surface": "wise",
         "lemma": "chakham"
@@ -183,6 +211,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "This will bring",
+        "lemma": "hayah"
+      },
       {
         "surface": "healing",
         "lemma": "riphut"
@@ -216,6 +248,10 @@
       {
         "surface": "and with the firstfruits",
         "lemma": "reshit"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "your crops",
@@ -254,6 +290,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "reject",
         "lemma": "maas"
       },
@@ -264,6 +304,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "loathe",
@@ -286,6 +330,10 @@
       {
         "surface": "He loves",
         "lemma": "ahav"
+      },
+      {
+        "surface": "as does a father",
+        "lemma": "av"
       },
       {
         "surface": "the son",
@@ -358,6 +406,10 @@
         "lemma": "panin"
       },
       {
+        "surface": "nothing",
+        "lemma": "kol"
+      },
+      {
         "surface": "you desire",
         "lemma": "chephets"
       },
@@ -400,6 +452,10 @@
       {
         "surface": "are pleasant",
         "lemma": "noam"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "her paths",
@@ -494,6 +550,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "lose",
         "lemma": "luz"
       },
@@ -515,6 +575,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "They will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "life",
         "lemma": "chay"
@@ -550,14 +614,26 @@
         "lemma": "regel"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "stumble",
         "lemma": "nagaph"
       }
     ],
     "24": [
       {
+        "surface": "When",
+        "lemma": "im"
+      },
+      {
         "surface": "you lie down",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "you will not",
+        "lemma": "lo"
       },
       {
         "surface": "be afraid",
@@ -578,6 +654,10 @@
     ],
     "25": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
       },
@@ -594,6 +674,10 @@
         "lemma": "sho"
       },
       {
+        "surface": "overtakes",
+        "lemma": "bo"
+      },
+      {
         "surface": "the wicked",
         "lemma": "rasah"
       }
@@ -602,6 +686,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "your confidence",
@@ -622,6 +710,10 @@
     ],
     "27": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "withhold",
         "lemma": "mana"
       },
@@ -634,15 +726,31 @@
         "lemma": "baal"
       },
       {
+        "surface": "when it is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "within your",
         "lemma": "yad"
       },
       {
         "surface": "power",
         "lemma": "el"
+      },
+      {
+        "surface": "to act",
+        "lemma": "asah"
       }
     ],
     "28": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "tell",
+        "lemma": "amar"
+      },
       {
         "surface": "your neighbor",
         "lemma": "rea"
@@ -652,8 +760,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "tomorrow",
         "lemma": "machar"
+      },
+      {
+        "surface": "and I will provide",
+        "lemma": "natan"
       },
       {
         "surface": "when you already have the means",
@@ -661,6 +777,10 @@
       }
     ],
     "29": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "devise",
         "lemma": "ra"
@@ -676,9 +796,17 @@
       {
         "surface": "trustfully",
         "lemma": "betach"
+      },
+      {
+        "surface": "dwells",
+        "lemma": "yashav"
       }
     ],
     "30": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "accuse",
         "lemma": "riv"
@@ -692,8 +820,16 @@
         "lemma": "chinnam"
       },
       {
+        "surface": "when",
+        "lemma": "im"
+      },
+      {
         "surface": "he has done",
         "lemma": "gamal"
+      },
+      {
+        "surface": "you no",
+        "lemma": "lo"
       },
       {
         "surface": "harm",
@@ -701,6 +837,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "envy",
         "lemma": "qana"
@@ -716,6 +856,10 @@
       {
         "surface": "or choose",
         "lemma": "bachar"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "of his ways",
@@ -784,6 +928,10 @@
         "lemma": "luts"
       },
       {
+        "surface": "but gives",
+        "lemma": "natan"
+      },
+      {
         "surface": "grace",
         "lemma": "chen"
       },
@@ -820,8 +968,8 @@
     ]
   },
   "themeLemmas": [
-    "ra",
-    "chen",
-    "chay"
+    "al",
+    "kol",
+    "hayah"
   ]
 }

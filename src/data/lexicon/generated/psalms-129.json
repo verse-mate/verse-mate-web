@@ -30,8 +30,8 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "declare",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -46,6 +46,10 @@
       {
         "surface": "from my youth",
         "lemma": "naur"
+      },
+      {
+        "surface": "they have not",
+        "lemma": "lo"
       },
       {
         "surface": "prevailed",
@@ -98,6 +102,10 @@
     ],
     "5": [
       {
+        "surface": "May all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who hate",
         "lemma": "sane"
       },
@@ -119,6 +127,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "May they be",
+        "lemma": "hayah"
+      },
       {
         "surface": "like grass",
         "lemma": "chatsir"
@@ -142,6 +154,10 @@
     ],
     "7": [
       {
+        "surface": "unable",
+        "lemma": "lo"
+      },
+      {
         "surface": "to fill",
         "lemma": "male"
       },
@@ -164,8 +180,16 @@
     ],
     "8": [
       {
+        "surface": "May none",
+        "lemma": "lo"
+      },
+      {
         "surface": "who pass by",
         "lemma": "avar"
+      },
+      {
+        "surface": "say to them",
+        "lemma": "amar"
       },
       {
         "surface": "The blessing",
@@ -190,8 +214,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "tsarar",
-    "rav",
-    "naur"
+    "rav"
   ]
 }

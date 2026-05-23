@@ -76,12 +76,20 @@
     ],
     "4": [
       {
+        "surface": "Say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to wisdom",
         "lemma": "chokhmah"
       },
       {
         "surface": "are my sister",
         "lemma": "achot"
+      },
+      {
+        "surface": "and call",
+        "lemma": "qara"
       },
       {
         "surface": "understanding",
@@ -137,6 +145,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "I saw",
+        "lemma": "raah"
+      },
       {
         "surface": "among the simple",
         "lemma": "peti"
@@ -212,12 +224,12 @@
     ],
     "10": [
       {
-        "surface": "Then",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "a woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "came out to meet him",
+        "lemma": "qara"
       },
       {
         "surface": "with the attire",
@@ -248,6 +260,10 @@
       {
         "surface": "her feet",
         "lemma": "regel"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "remain",
@@ -284,6 +300,10 @@
         "lemma": "etsel"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "corner",
         "lemma": "pinnah"
       }
@@ -300,6 +320,10 @@
       {
         "surface": "she brazenly",
         "lemma": "azaz"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       }
     ],
     "14": [
@@ -325,6 +349,14 @@
       }
     ],
     "15": [
+      {
+        "surface": "I came out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to meet you",
+        "lemma": "qara"
+      },
       {
         "surface": "I sought you",
         "lemma": "shachar"
@@ -452,6 +484,10 @@
         "lemma": "keseph"
       },
       {
+        "surface": "and will not return",
+        "lemma": "bo"
+      },
+      {
         "surface": "till",
         "lemma": "yom"
       },
@@ -500,6 +536,10 @@
         "lemma": "shor"
       },
       {
+        "surface": "going",
+        "lemma": "bo"
+      },
+      {
         "surface": "the slaughter",
         "lemma": "tevach"
       },
@@ -542,6 +582,10 @@
         "lemma": "pach"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "knowing",
         "lemma": "yada"
       },
@@ -560,6 +604,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "and attend",
         "lemma": "qashav"
       },
@@ -574,6 +622,10 @@
     ],
     "25": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let your heart",
         "lemma": "lev"
       },
@@ -584,6 +636,10 @@
       {
         "surface": "her ways",
         "lemma": "derekh"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "stray",
@@ -614,6 +670,10 @@
       {
         "surface": "are many",
         "lemma": "atsum"
+      },
+      {
+        "surface": "in number",
+        "lemma": "kol"
       }
     ],
     "27": [
@@ -646,6 +706,6 @@
   "themeLemmas": [
     "bet",
     "shamar",
-    "halakh"
+    "qara"
   ]
 }

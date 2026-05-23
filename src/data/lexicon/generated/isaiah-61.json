@@ -46,6 +46,10 @@
         "lemma": "shavar"
       },
       {
+        "surface": "to proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "liberty",
         "lemma": "deror"
       },
@@ -67,6 +71,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "to proclaim",
+        "lemma": "qara"
+      },
       {
         "surface": "the year",
         "lemma": "shaneh"
@@ -96,6 +104,10 @@
         "lemma": "nacham"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who mourn",
         "lemma": "avel"
       }
@@ -112,6 +124,10 @@
       {
         "surface": "in Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "to give",
+        "lemma": "natan"
       },
       {
         "surface": "a crown of beauty",
@@ -160,6 +176,10 @@
       {
         "surface": "of despair",
         "lemma": "keheh"
+      },
+      {
+        "surface": "So they will be called",
+        "lemma": "qara"
       },
       {
         "surface": "oaks",
@@ -264,12 +284,20 @@
     ],
     "6": [
       {
+        "surface": "will be called",
+        "lemma": "qara"
+      },
+      {
         "surface": "the priests",
         "lemma": "kohen"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "they will speak",
+        "lemma": "amar"
       },
       {
         "surface": "as ministers",
@@ -348,6 +376,10 @@
       {
         "surface": "joy",
         "lemma": "simchah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       }
     ],
     "8": [
@@ -378,6 +410,10 @@
       {
         "surface": "in My faithfulness",
         "lemma": "emet"
+      },
+      {
+        "surface": "I will give them",
+        "lemma": "natan"
       },
       {
         "surface": "their recompense",
@@ -420,6 +456,14 @@
       {
         "surface": "the peoples",
         "lemma": "am"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who see them",
+        "lemma": "raah"
       },
       {
         "surface": "will acknowledge",
@@ -514,6 +558,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "brings forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "its growth",
         "lemma": "tsemach"
       },
@@ -558,6 +606,10 @@
         "lemma": "neged"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       }
@@ -565,7 +617,7 @@
   },
   "themeLemmas": [
     "tachat",
-    "olam",
-    "zera"
+    "qara",
+    "olam"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "an angel",
         "lemma": "angelos"
       },
@@ -26,8 +30,16 @@
         "lemma": "abussos"
       },
       {
+        "surface": "holding",
+        "lemma": "echo"
+      },
+      {
         "surface": "hand",
         "lemma": "cheir"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
       },
       {
         "surface": "chain",
@@ -50,6 +62,10 @@
       {
         "surface": "serpent",
         "lemma": "ophis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "the devil",
@@ -128,12 +144,20 @@
     ],
     "4": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "the thrones",
         "lemma": "thronos"
       },
       {
         "surface": "those seated",
         "lemma": "kathizo"
+      },
+      {
+        "surface": "had been given",
+        "lemma": "didomi"
       },
       {
         "surface": "authority to judge",
@@ -174,6 +198,10 @@
       {
         "surface": "image",
         "lemma": "eikon"
+      },
+      {
+        "surface": "had not received",
+        "lemma": "lambano"
       },
       {
         "surface": "mark",
@@ -252,6 +280,10 @@
         "lemma": "hagios"
       },
       {
+        "surface": "share",
+        "lemma": "echo"
+      },
+      {
         "surface": "first",
         "lemma": "protos"
       },
@@ -268,8 +300,16 @@
         "lemma": "thanatos"
       },
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "power",
         "lemma": "exousia"
+      },
+      {
+        "surface": "they will be",
+        "lemma": "eimi"
       },
       {
         "surface": "priests",
@@ -323,6 +363,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "will go out",
+        "lemma": "exerchomai"
+      },
       {
         "surface": "to deceive",
         "lemma": "planao"
@@ -474,6 +518,14 @@
     ],
     "11": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "white",
         "lemma": "leukos"
       },
@@ -504,16 +556,32 @@
       {
         "surface": "place",
         "lemma": "topos"
+      },
+      {
+        "surface": "was found",
+        "lemma": "heurisko"
       }
     ],
     "12": [
+      {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
       {
         "surface": "dead",
         "lemma": "nekros"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "small",
         "lemma": "mikros"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "throne",
@@ -556,6 +624,10 @@
         "lemma": "ergon"
       },
       {
+        "surface": "recorded",
+        "lemma": "grapho"
+      },
+      {
         "surface": "books",
         "lemma": "biblion"
       }
@@ -564,6 +636,10 @@
       {
         "surface": "sea",
         "lemma": "thalassa"
+      },
+      {
+        "surface": "gave up",
+        "lemma": "didomi"
       },
       {
         "surface": "dead",
@@ -576,6 +652,10 @@
       {
         "surface": "Hades",
         "lemma": "hades"
+      },
+      {
+        "surface": "gave up",
+        "lemma": "didomi"
       },
       {
         "surface": "dead",
@@ -616,6 +696,10 @@
         "lemma": "pur"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "second",
         "lemma": "deuteros"
       },
@@ -633,6 +717,14 @@
       }
     ],
     "15": [
+      {
+        "surface": "was found",
+        "lemma": "heurisko"
+      },
+      {
+        "surface": "whose name was not written",
+        "lemma": "grapho"
+      },
       {
         "surface": "Book",
         "lemma": "biblos"

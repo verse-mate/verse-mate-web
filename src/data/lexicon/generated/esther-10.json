@@ -32,6 +32,10 @@
     ],
     "2": [
       {
+        "surface": "And all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of Mordecai’s",
         "lemma": "mordekhay"
       },
@@ -62,6 +66,10 @@
       {
         "surface": "had raised him",
         "lemma": "gadal"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "written",
@@ -150,6 +158,10 @@
         "lemma": "shalom"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his countrymen",
         "lemma": "zera"
       }
@@ -158,6 +170,6 @@
   "themeLemmas": [
     "yehudi",
     "mordekhay",
-    "achashverosh"
+    "kol"
   ]
 }

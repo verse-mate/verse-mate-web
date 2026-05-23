@@ -10,6 +10,18 @@
         "lemma": "eidolothutos"
       },
       {
+        "surface": "We know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
+      {
+        "surface": "we all have",
+        "lemma": "echo"
+      },
+      {
         "surface": "knowledge",
         "lemma": "gnosis"
       },
@@ -36,12 +48,24 @@
         "lemma": "dokeo"
       },
       {
+        "surface": "he knows",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "vvv",
         "lemma": "oupo"
       },
       {
+        "surface": "does not yet know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "he ought",
         "lemma": "dei"
+      },
+      {
+        "surface": "to know",
+        "lemma": "ginosko"
       }
     ],
     "3": [
@@ -52,6 +76,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "is known",
+        "lemma": "ginosko"
       }
     ],
     "4": [
@@ -64,42 +92,62 @@
         "lemma": "eidolothutos"
       },
       {
+        "surface": "We know",
+        "lemma": "eido"
+      },
+      {
         "surface": "an idol",
         "lemma": "eidolon"
+      },
+      {
+        "surface": "is nothing at all",
+        "lemma": "oudeis"
       },
       {
         "surface": "the world",
         "lemma": "kosmos"
       },
       {
+        "surface": "there is no",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       }
     ],
     "5": [
       {
-        "surface": "if",
-        "lemma": "eiper"
+        "surface": "there are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "so-called",
+        "lemma": "lego"
       },
       {
         "surface": "gods",
         "lemma": "theos"
       },
       {
-        "surface": "whether",
-        "lemma": "eite"
-      },
-      {
         "surface": "heaven",
         "lemma": "ouranos"
       },
       {
-        "surface": "or",
-        "lemma": "eite"
-      },
-      {
         "surface": "earth",
         "lemma": "ge"
+      },
+      {
+        "surface": "there are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "many  so-called",
+        "lemma": "polus"
       },
       {
         "surface": "gods",
@@ -112,12 +160,24 @@
     ],
     "6": [
       {
+        "surface": "there is but  one",
+        "lemma": "heis"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
       {
         "surface": "Father",
         "lemma": "pater"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "Lord",
@@ -130,9 +190,17 @@
       {
         "surface": "Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ],
     "7": [
+      {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
       {
         "surface": "knowledge",
         "lemma": "gnosis"
@@ -156,6 +224,10 @@
       {
         "surface": "conscience",
         "lemma": "suneidesis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "weak",
@@ -206,6 +278,10 @@
         "lemma": "exousia"
       },
       {
+        "surface": "does not become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a stumbling block",
         "lemma": "proskomma"
       },
@@ -224,6 +300,14 @@
         "lemma": "suneidesis"
       },
       {
+        "surface": "sees",
+        "lemma": "horao"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "echo"
+      },
+      {
         "surface": "are well informed",
         "lemma": "gnosis"
       },
@@ -234,6 +318,10 @@
       {
         "surface": "an idol’s temple",
         "lemma": "eidoleion"
+      },
+      {
+        "surface": "be",
+        "lemma": "eimi"
       },
       {
         "surface": "encouraged",

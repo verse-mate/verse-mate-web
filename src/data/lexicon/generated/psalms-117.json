@@ -14,12 +14,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "all you",
+        "lemma": "kol"
+      },
+      {
         "surface": "nations",
         "lemma": "goy"
       },
       {
         "surface": "Extol Him",
         "lemma": "shavach"
+      },
+      {
+        "surface": "all you",
+        "lemma": "kol"
       },
       {
         "surface": "peoples",
@@ -54,6 +62,7 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "halal"
   ]
 }
