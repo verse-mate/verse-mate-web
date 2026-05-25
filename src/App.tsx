@@ -8,6 +8,7 @@ import { AppProvider } from "@/contexts/AppContext";
 import { PostHogProvider } from "@/providers/PostHogProvider";
 import { AudioPlayerProvider } from "@/audio";
 import AppLayout from "@/components/AppLayout";
+import FeatureOnboarding from "@/components/onboarding/FeatureOnboarding";
 import BibleRoute from "@/components/routes/BibleRoute";
 import AuthCallback from "@/components/routes/AuthCallback";
 import Logout from "@/components/routes/Logout";
@@ -43,6 +44,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <PreAuthLocationTracker />
+          <FeatureOnboarding />
           <PostHogProvider>
           <AudioPlayerProvider>
           <Routes>
