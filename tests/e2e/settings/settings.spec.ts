@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { SettingsPage } from '../pages/settings.page';
+import { guestStorageState } from '../fixtures/env';
 
 /**
  * Settings — render + version + language + font size + theme.
@@ -33,8 +34,10 @@ import { SettingsPage } from '../pages/settings.page';
 
 test.describe('Settings', () => {
   // Belt-and-suspenders: make isolation explicit at the suite level even
-  // though the global config already clears storageState per test.
-  test.use({ storageState: { cookies: [], origins: [] } });
+  // though the global config already sets this per test. Uses the shared
+  // guest state so the first-run onboarding overlay stays dismissed (an
+  // empty storageState would let it cover the page and block interactions).
+  test.use({ storageState: guestStorageState() });
 
   test('shows Bible version, language, font slider, and theme selector', async ({ page }) => {
     const settings = new SettingsPage(page);
