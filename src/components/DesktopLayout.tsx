@@ -36,7 +36,6 @@ import { BOOKS_WITH_VISUALS } from '@/data/visuals/booksWithVisuals';
 import { nameToSlug } from '@/lib/bookSlugs';
 import { RightPanelProvider } from '@/contexts/RightPanelContext';
 import { useTopicView } from '@/contexts/TopicViewContext';
-import { AudioInlineEntry } from '@/audio';
 import {
   ExplanationTab as TopicExplanationTab,
   INSIGHT_TABS as TOPIC_INSIGHT_TABS,
@@ -992,17 +991,6 @@ function CommentaryPanel({
         </div>
         {summary ? (
           <>
-            {bookId && summary.explanationId ? (
-              <div style={{ marginBottom: 12 }}>
-                <AudioInlineEntry
-                  explanationId={summary.explanationId}
-                  explanationType="summary"
-                  bookId={bookId}
-                  chapterNumber={chapter}
-                  sourceHref={`/read/${book}/${chapter}/commentary`}
-                />
-              </div>
-            ) : null}
             <CommentaryBody text={summary.detail} />
           </>
         ) : (
@@ -1069,20 +1057,6 @@ function CommentaryPanel({
             {allExpanded ? 'Collapse All' : 'Expand All'}
           </button>
         </div>
-        {(() => {
-          const bylineId = byLineItems[0]?.explanationId ?? null;
-          return bookId && bylineId ? (
-            <div style={{ marginBottom: 12 }}>
-              <AudioInlineEntry
-                explanationId={bylineId}
-                explanationType="byline"
-                bookId={bookId}
-                chapterNumber={chapter}
-                sourceHref={`/read/${book}/${chapter}/commentary`}
-              />
-            </div>
-          ) : null;
-        })()}
         <div className="byline-list">
           {byLineItems.map(c => {
             const isOpen = allExpanded || expanded === c.verse;
