@@ -26,7 +26,12 @@ test.skip(
   'Mobile chrome only — desktop has its own commentary surface',
 );
 
-test.describe('Commentary — audio inline-entry (guest)', () => {
+// The inline "Listen" audio chips were removed from the commentary
+// Summary / By Line views for now (the AudioInlineEntry usages were
+// dropped while the audio module itself stays in place). These specs are
+// skipped until the chips are restored — re-enable by switching back to
+// `test.describe`.
+test.describe.skip('Commentary — audio inline-entry (guest)', () => {
   test('audio-inline-entry mounts on the summary tab and reaches a known state', async ({ page }) => {
     const commentary = new CommentaryPage(page);
     await commentary.goto('Genesis', 1);
