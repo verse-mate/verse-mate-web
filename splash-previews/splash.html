@@ -47,7 +47,7 @@
   .skip { font-size:14px; color:var(--fg-3); font-weight:500; }
 
   .preview {
-    flex:0 0 auto; height:430px; margin-top:14px; border-radius:22px; overflow:hidden;
+    flex:0 0 auto; height:466px; margin-top:0; border-radius:22px; overflow:hidden;
     border:1px solid var(--preview-border); box-shadow:var(--shadow); position:relative;
     background:var(--bg);
   }
@@ -306,10 +306,6 @@ const FEATURES = [
 function frame(theme, f) {
   const dots = [0,1,2].map(i=>`<i class="${i===f.dot?'on':''}"></i>`).join('');
   return `<div class="frame theme-${theme}" data-shot="${f.dot+1}-${theme}">
-    <div class="topbar">
-      <div class="brand"><span class="dot"></span>VerseMate</div>
-      <div class="skip">Skip</div>
-    </div>
     <div class="preview">${f.render()}</div>
     <div class="copy">
       <div class="eyebrow">${f.eyebrow}</div>
