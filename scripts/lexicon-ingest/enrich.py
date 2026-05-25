@@ -45,8 +45,11 @@ import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-GENERATED_DIR = HERE.parent.parent / 'src' / 'data' / 'lexicon' / 'generated'
-HAND_LEMMAS_TS = HERE.parent.parent / 'src' / 'data' / 'lexicon' / 'lemmas.ts'
+# Lexicon lives in the sibling @versemate/lexicon repo since PR #187.
+# Resolves to ../../../verse-mate-lexicon/src/generated/ from this script.
+LEXICON_REPO = HERE.parent.parent.parent / 'verse-mate-lexicon'
+GENERATED_DIR = LEXICON_REPO / 'src' / 'generated'
+HAND_LEMMAS_TS = LEXICON_REPO / 'src' / 'lemmas.ts'
 LEMMAS_JSON = GENERATED_DIR / '_lemmas.json'
 
 DEFAULT_MODEL = 'claude-haiku-4-5-20251001'  # fast + cheap + plenty for Layer 1

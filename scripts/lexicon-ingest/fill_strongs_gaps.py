@@ -32,7 +32,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from build import parse_tbe, slugify_translit  # noqa: E402
 
-LEMMAS_JSON = HERE.parent.parent / 'src' / 'data' / 'lexicon' / 'generated' / '_lemmas.json'
+LEMMAS_JSON = HERE.parent.parent.parent / 'verse-mate-lexicon' / 'src' / 'generated' / '_lemmas.json'
 TBESG_PATH = HERE / 'data' / 'tbesg.txt'
 TBESH_PATH = HERE / 'data' / 'tbesh.txt'
 

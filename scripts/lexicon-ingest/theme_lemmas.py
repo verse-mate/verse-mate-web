@@ -24,7 +24,8 @@ from collections import Counter
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-OUT_DIR = HERE.parent.parent / 'src' / 'data' / 'lexicon' / 'generated'
+# Lexicon lives in the sibling @versemate/lexicon repo since PR #187.
+OUT_DIR = HERE.parent.parent.parent / 'verse-mate-lexicon' / 'src' / 'generated'
 
 TOP_N = 3
 MIN_LOCAL_COUNT = 2
