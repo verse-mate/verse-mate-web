@@ -27,7 +27,11 @@ test.skip(
   'Mobile chrome only — desktop has its own commentary surface',
 );
 
-test.describe('Audio — listen smoke', () => {
+// The inline "Listen" audio chips were removed from the commentary views
+// for now, so the chip → dock → full-sheet flow has no entry point.
+// Skipped until the chips are restored — re-enable by switching back to
+// `test.describe`.
+test.describe.skip('Audio — listen smoke', () => {
   test('chip → dock → full sheet → Esc closes', async ({ page }) => {
     await page.goto('/read/leviticus/1/commentary');
 
