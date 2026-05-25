@@ -298,7 +298,7 @@
     font-family: 'Roboto Serif', Georgia, serif;
     font-weight: 300;
     font-size: 20px;
-    line-height: 34px;
+    line-height: 1.9;
   }
   /* Below the desktop breakpoint, suppress every form of iOS native text
      selection across the scripture body. PR #94 set these on each verse
