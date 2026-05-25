@@ -92,7 +92,7 @@ button { font-family: inherit; }
   font-family: 'Roboto Serif', 'Source Serif Pro', Georgia, serif;
   font-weight: 300;
   font-size: 20px;
-  line-height: 34px;
+  line-height: 1.9;
   color: var(--fg-primary);
 }
 .font-title { font-family: 'Roboto', system-ui, sans-serif; font-weight: 500; }
