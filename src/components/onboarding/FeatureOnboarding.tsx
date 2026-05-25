@@ -5,10 +5,11 @@ import { vmTokens } from '@/styles/themeStyles';
 
 /**
  * FeatureOnboarding — first-run onboarding shown the first time a visitor opens
- * the web app. Walks through nine screens: five welcome/intro screens carried
- * over from the mobile app (re-built as desktop mocks), the three reading
- * features (Greek & Hebrew, the inductive study method, and Visuals), and a
- * closing verse-insight screen — then never shows again.
+ * the web app. Walks through seven screens: an opening verse-insight screen and
+ * two intro screens carried over from the mobile app (rebuilt as desktop mocks),
+ * the three reading features (Greek & Hebrew, the inductive study method, and
+ * Visuals), and a closing "multiple languages, worldwide" screen — then never
+ * shows again.
  *
  * Each screen is a hand-built, theme-reactive preview + a short explainer; no
  * baked-in slide images. Theme-reactive: every colour comes from `vmTokens`
@@ -600,59 +601,7 @@ function floatCard(centered: boolean): React.CSSProperties {
   };
 }
 
-// Screen 1 — Welcome: a reader view with the Bible / Insight toggle.
-function WelcomePreview({ centered = false }: { centered?: boolean }) {
-  const verse = (n: number, color: string, text: string) => (
-    <div style={{ display: 'flex', gap: 9, padding: '6px 0' }}>
-      <span style={{ flex: '0 0 auto', width: 3, borderRadius: 2, background: color }} />
-      <div style={{ fontSize: 13, lineHeight: '19px', color: vmTokens.textPrimary }}>
-        <sup style={{ color: vmTokens.gold, fontWeight: 700, marginRight: 3 }}>{n}</sup>
-        {text}
-      </div>
-    </div>
-  );
-  return (
-    <div style={{ position: 'absolute', inset: 0, background: vmTokens.pageBg }}>
-      <ScriptureWash />
-      <div style={floatCard(centered)}>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: '12px 14px',
-            borderBottom: `1px solid ${vmTokens.divider}`,
-          }}
-        >
-          <span style={{ fontSize: 14, fontWeight: 600, color: vmTokens.textPrimary }}>Genesis 1 ⌄</span>
-          <Seg items={['Bible', 'Insight']} active="Bible" inline small />
-        </div>
-        <div style={{ padding: '14px 16px' }}>
-          <div
-            style={{
-              fontFamily: '"Roboto Serif", Georgia, serif',
-              fontSize: 22,
-              fontWeight: 700,
-              color: vmTokens.textPrimary,
-            }}
-          >
-            Genesis 1
-          </div>
-          <div style={{ fontSize: 13, fontWeight: 600, color: vmTokens.textSecondary, marginTop: 2 }}>
-            The Creation <span style={{ color: vmTokens.textTertiary, fontWeight: 400 }}>· 1–31</span>
-          </div>
-          <div style={{ marginTop: 8 }}>
-            {verse(1, 'rgba(178,59,59,0.9)', 'In the beginning God created the heavens and the earth.')}
-            {verse(2, 'rgba(74,110,140,0.9)', 'The earth was formless and void, and darkness was over the surface of the deep.')}
-            {verse(3, vmTokens.gold, 'Then God said, “Let there be light”; and there was light.')}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// Screen 2 — Understand at every level: Insight → By Line analysis.
+// Understand at every level: Insight → By Line analysis.
 function UnderstandPreview({ centered = false }: { centered?: boolean }) {
   return (
     <div
@@ -704,7 +653,7 @@ function UnderstandPreview({ centered = false }: { centered?: boolean }) {
   );
 }
 
-// Screen 3 — Explore the bigger story: the Topics search.
+// Explore the bigger story: the Topics search.
 function ExplorePreview({ centered = false }: { centered?: boolean }) {
   const row = (title: string, desc: string, first?: boolean) => (
     <div
@@ -771,81 +720,7 @@ function ExplorePreview({ centered = false }: { centered?: boolean }) {
   );
 }
 
-// Screen 4 — Make it personal / share: highlight + note card.
-function PersonalPreview({ centered = false }: { centered?: boolean }) {
-  const action = (label: string, danger?: boolean) => (
-    <div
-      style={{
-        flex: 1,
-        textAlign: 'center',
-        fontSize: 12,
-        fontWeight: 600,
-        color: danger ? vmTokens.statusError : vmTokens.textPrimary,
-        background: vmTokens.pageBg,
-        border: `1px solid ${vmTokens.divider}`,
-        borderRadius: 9,
-        padding: '9px 6px',
-      }}
-    >
-      {label}
-    </div>
-  );
-  return (
-    <div style={{ position: 'absolute', inset: 0, background: vmTokens.pageBg }}>
-      <ScriptureWash />
-      <div style={floatCard(centered)}>
-        <div
-          style={{
-            padding: '13px 16px',
-            borderBottom: `1px solid ${vmTokens.divider}`,
-            textAlign: 'center',
-            fontSize: 14,
-            fontWeight: 600,
-            color: vmTokens.textPrimary,
-          }}
-        >
-          Genesis 1
-        </div>
-        <div style={{ padding: '14px 16px' }}>
-          <div
-            style={{
-              fontSize: 11,
-              fontWeight: 700,
-              letterSpacing: '0.09em',
-              textTransform: 'uppercase',
-              color: vmTokens.gold,
-              marginBottom: 7,
-            }}
-          >
-            My note
-          </div>
-          <div
-            style={{
-              fontFamily: '"Roboto Serif", Georgia, serif',
-              fontSize: 14,
-              lineHeight: '21px',
-              color: vmTokens.textPrimary,
-            }}
-          >
-            God creates the world and humanity; sin enters, bringing separation and loss.
-          </div>
-        </div>
-        <div style={{ padding: '0 16px 14px', display: 'flex', flexDirection: 'column', gap: 8 }}>
-          <div style={{ display: 'flex', gap: 8 }}>
-            {action('Copy')}
-            {action('Share')}
-          </div>
-          <div style={{ display: 'flex', gap: 8 }}>
-            {action('Save Note')}
-            {action('Delete', true)}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// Screen 5 — Multiple languages, worldwide: dotted globe + language chips.
+// Multiple languages, worldwide: dotted globe + language chips.
 function LanguagesPreview({ centered = false }: { centered?: boolean }) {
   const chips = ['English', 'Español', 'Português', 'Français', 'Deutsch', '中文', '한국어', 'العربية', 'हिन्दी'];
   const pins: [number, number][] = [[30, 70], [170, 78], [40, 140], [165, 120], [100, 40], [120, 150], [70, 110]];
@@ -900,7 +775,7 @@ function LanguagesPreview({ centered = false }: { centered?: boolean }) {
   );
 }
 
-// Final screen — Explore any verse: the Verse Insight card.
+// Explore any book / any verse: the Verse Insight card.
 function VerseInsightPreview({ centered = false }: { centered?: boolean }) {
   const btn = (label: string) => (
     <div
@@ -990,11 +865,11 @@ interface Feature {
 
 const FEATURES: Feature[] = [
   {
-    id: 'welcome',
-    eyebrow: 'Welcome',
-    title: 'Welcome to VerseMate',
-    desc: 'The Bible was meant to be understood — not just read. Open any chapter and move between the text and guided insight whenever you want to go deeper.',
-    Preview: WelcomePreview,
+    id: 'verse',
+    eyebrow: 'Verse Insight',
+    title: 'Explore any book. Any verse.',
+    desc: 'Tap any verse to open Verse Insight — a focused take on what it means, the key original-language words, and how it connects to the rest of Scripture.',
+    Preview: VerseInsightPreview,
   },
   {
     id: 'levels',
@@ -1009,20 +884,6 @@ const FEATURES: Feature[] = [
     title: 'Explore the bigger story',
     desc: 'Look beyond a single chapter — browse the events, prophecies, parables, and themes that trace one connected story across the whole Bible.',
     Preview: ExplorePreview,
-  },
-  {
-    id: 'personal',
-    eyebrow: 'Notes & Sharing',
-    title: 'Make it personal. Share it forward.',
-    desc: 'Highlight verses, keep your own notes, and share Scripture and the insights that move you with the people you love.',
-    Preview: PersonalPreview,
-  },
-  {
-    id: 'languages',
-    eyebrow: 'For Everyone',
-    title: 'Multiple languages. Always free. Worldwide.',
-    desc: 'VerseMate speaks your language and is free for everyone, everywhere — no subscription, no paywall, wherever you are.',
-    Preview: LanguagesPreview,
   },
   {
     id: 'lexicon',
@@ -1046,11 +907,11 @@ const FEATURES: Feature[] = [
     Preview: VisualsPreview,
   },
   {
-    id: 'verse',
-    eyebrow: 'Verse Insight',
-    title: 'Explore any book. Any verse.',
-    desc: 'Tap any verse to open Verse Insight — a focused take on what it means, the key original-language words, and how it connects to the rest of Scripture.',
-    Preview: VerseInsightPreview,
+    id: 'languages',
+    eyebrow: 'For Everyone',
+    title: 'Multiple languages. Always free. Worldwide.',
+    desc: 'VerseMate speaks your language and is free for everyone, everywhere — no subscription, no paywall, wherever you are.',
+    Preview: LanguagesPreview,
   },
 ];
 

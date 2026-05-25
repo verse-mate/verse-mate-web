@@ -5,18 +5,17 @@ import FeatureOnboarding from './FeatureOnboarding';
 
 const STORAGE_KEY = 'versemate-onboarding-seen';
 
-// The nine screen titles in their intended order: five welcome/intro screens,
-// then the three existing reading-feature screens, then the closing verse screen.
+// The seven screen titles in their intended order: an opening verse screen and
+// two intro screens, then the three existing reading-feature screens, and the
+// closing languages screen (which shows the finish action).
 const SCREEN_TITLES = [
-  'Welcome to VerseMate',
+  'Explore any book. Any verse.',
   'Understand Scripture at every level',
   'Explore the bigger story',
-  'Make it personal. Share it forward.',
-  'Multiple languages. Always free. Worldwide.',
   'Greek & Hebrew, one tap away',
   'The inductive method, step by step',
   'See the whole book at a glance',
-  'Explore any book. Any verse.',
+  'Multiple languages. Always free. Worldwide.',
 ];
 
 function renderOnboarding() {
@@ -37,7 +36,7 @@ describe('FeatureOnboarding', () => {
     expect(screen.getByText(SCREEN_TITLES[0])).toBeInTheDocument();
   });
 
-  it('advances through all nine screens in order, then finishes on the last', () => {
+  it('advances through all seven screens in order, then finishes on the last', () => {
     renderOnboarding();
 
     for (let i = 0; i < SCREEN_TITLES.length; i++) {
