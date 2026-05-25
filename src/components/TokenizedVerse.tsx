@@ -16,12 +16,27 @@ function isWordCharOrApostrophe(ch: string | undefined): boolean {
   return ch === "'" || ch === '’';
 }
 
+// AlignedToken.surface can be either a single string (legacy / generated
+// alignments) or a string[] (cross-translation aliases attached by the
+// lexicon loader). Normalize both to an array of surfaces for matching.
+function surfacesOf(token: AlignedToken): readonly string[] {
+  const s = token.surface;
+  return typeof s === 'string' ? [s] : s;
+}
+
 function tokenize(text: string, alignments: AlignedToken[]): Chunk[] {
-  // Greedy longest-match: sort by surface length descending so multi-word
-  // surfaces ("double-minded") win over substrings ("minded").
-  const sorted = [...alignments].sort(
-    (a, b) => b.surface.length - a.surface.length,
-  );
+  // Expand each token into one match candidate per surface variant. We sort
+  // ALL candidates by surface length (descending) so multi-word matches like
+  // "double-minded" beat single-word substrings like "minded", regardless
+  // of which translation-alias the longer form came from.
+  type Candidate = { surface: string; token: AlignedToken };
+  const candidates: Candidate[] = [];
+  for (const t of alignments) {
+    for (const s of surfacesOf(t)) {
+      if (s.length > 0) candidates.push({ surface: s, token: t });
+    }
+  }
+  candidates.sort((a, b) => b.surface.length - a.surface.length);
 
   const chunks: Chunk[] = [];
   let buffer = '';
@@ -30,9 +45,8 @@ function tokenize(text: string, alignments: AlignedToken[]): Chunk[] {
   while (i < text.length) {
     let matched: { len: number; token: AlignedToken } | null = null;
 
-    for (const t of sorted) {
-      const surf = t.surface;
-      if (surf.length === 0) continue;
+    for (const c of candidates) {
+      const surf = c.surface;
       const slice = text.slice(i, i + surf.length);
       if (slice.toLowerCase() !== surf.toLowerCase()) continue;
 
@@ -45,7 +59,7 @@ function tokenize(text: string, alignments: AlignedToken[]): Chunk[] {
       if (isWordCharOrApostrophe(before)) continue;
       if (isWordCharOrApostrophe(after)) continue;
 
-      matched = { len: surf.length, token: t };
+      matched = { len: surf.length, token: c.token };
       break;
     }
 
@@ -91,14 +105,9 @@ export default function TokenizedVerse({
   return (
     <>
       {chunks.map((c, idx) => {
-        if (c.kind === 'text') {
-          return <React.Fragment key={idx}>{c.text}</React.Fragment>;
-        }
+        if (c.kind === 'text') return <React.Fragment key={idx}>{c.text}</React.Fragment>;
         const entry = alignment.lexicon[c.token!.lemma];
-        if (!entry) {
-          // Lexicon entry missing — render as plain text rather than crash.
-          return <React.Fragment key={idx}>{c.text}</React.Fragment>;
-        }
+        if (!entry) return <React.Fragment key={idx}>{c.text}</React.Fragment>;
         const isTheme = alignment.themeLemmas?.includes(c.token!.lemma) ?? false;
         return (
           <LexiconPopover
