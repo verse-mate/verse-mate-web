@@ -33,7 +33,7 @@ function shouldShow(): boolean {
 
 // ─────────────────────────── feature previews ───────────────────────────
 
-function LexiconPreview() {
+function LexiconPreview({ centered = false }: { centered?: boolean }) {
   const label: React.CSSProperties = {
     fontSize: 10,
     fontWeight: 600,
@@ -68,8 +68,8 @@ function LexiconPreview() {
         style={{
           position: 'absolute',
           left: '50%',
-          top: 28,
-          transform: 'translateX(-50%)',
+          top: centered ? '50%' : 28,
+          transform: centered ? 'translate(-50%, -50%)' : 'translateX(-50%)',
           width: 300,
           background: vmTokens.surfaceRaisedBg,
           border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
@@ -181,7 +181,7 @@ function Pills({ active }: { active: string }) {
   );
 }
 
-function StudyPreview() {
+function StudyPreview({ centered = false }: { centered?: boolean }) {
   const Step = ({ n, title, cap, first }: { n: number; title: string; cap: string; first?: boolean }) => (
     <div
       style={{
@@ -229,7 +229,16 @@ function StudyPreview() {
     </div>
   );
   return (
-    <div style={{ position: 'absolute', inset: 0, background: vmTokens.pageBg }}>
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        background: vmTokens.pageBg,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: centered ? 'center' : 'flex-start',
+      }}
+    >
       <Pills active="Study" />
       <div style={{ padding: '18px 16px' }}>
         <div
@@ -355,9 +364,18 @@ function SketchBoard({ sub, cc }: { sub: string; cc?: boolean }) {
   );
 }
 
-function VisualsPreview() {
+function VisualsPreview({ centered = false }: { centered?: boolean }) {
   return (
-    <div style={{ position: 'absolute', inset: 0, background: vmTokens.pageBg }}>
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        background: vmTokens.pageBg,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: centered ? 'center' : 'flex-start',
+      }}
+    >
       <Pills active="Visuals" />
       <div style={{ padding: '16px 16px 0' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -499,7 +517,7 @@ interface Feature {
   eyebrow: string;
   title: string;
   desc: string;
-  Preview: () => JSX.Element;
+  Preview: (props: { centered?: boolean }) => JSX.Element;
 }
 
 const FEATURES: Feature[] = [
@@ -741,7 +759,7 @@ export default function FeatureOnboarding() {
               background: vmTokens.pageBg,
             }}
           >
-            <Preview />
+            <Preview centered />
           </div>
           <div
             style={{
