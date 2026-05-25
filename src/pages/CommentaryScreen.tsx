@@ -11,7 +11,6 @@ import StudyPanel from '@/components/StudyPanel';
 // open the Visuals tab don't pay for it on initial mobile page load.
 const VisualsPanel = lazy(() => import('@/components/VisualsPanel'));
 import { BOOKS_WITH_VISUALS } from '@/data/visuals/booksWithVisuals';
-import { AudioInlineEntry } from '@/audio';
 import { useApp } from '@/contexts/AppContext';
 
 type Tab = 'summary' | 'byline' | 'study' | 'visuals';
@@ -322,17 +321,6 @@ export default function CommentaryScreen() {
               }
               return (
                 <>
-                  {bookId && summary.explanationId ? (
-                    <div className="mb-3">
-                      <AudioInlineEntry
-                        explanationId={summary.explanationId}
-                        explanationType="summary"
-                        bookId={bookId}
-                        chapterNumber={chapterNum}
-                        sourceHref={`/read/${decodedBook}/${chapterNum}/commentary`}
-                      />
-                    </div>
-                  ) : null}
                   <CommentaryBody text={summary.detail} />
                 </>
               );
@@ -397,20 +385,6 @@ export default function CommentaryScreen() {
                     {allExpanded ? 'Collapse All' : 'Expand All'}
                   </button>
                 </div>
-                {(() => {
-                  const bylineId = byLineItems[0]?.explanationId ?? null;
-                  return bookId && bylineId ? (
-                    <div className="mb-3">
-                      <AudioInlineEntry
-                        explanationId={bylineId}
-                        explanationType="byline"
-                        bookId={bookId}
-                        chapterNumber={chapterNum}
-                        sourceHref={`/read/${decodedBook}/${chapterNum}/commentary`}
-                      />
-                    </div>
-                  ) : null;
-                })()}
                 <div>
                   {byLineItems.map(c => {
                     const isOpen = allExpanded || expanded === c.verse;
