@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { BASE_URL, E2E_PORT, guestStorageState } from './fixtures/env';
 
 /**
  * Standalone Playwright config for the E2E parity suite.
@@ -24,8 +25,7 @@ import { defineConfig, devices } from '@playwright/test';
  *   CI                    Playwright treats as production (retries on)
  */
 
-const PORT = Number(process.env.E2E_PORT || 5173);
-const BASE_URL = process.env.E2E_BASE_URL || `http://localhost:${PORT}`;
+const PORT = E2E_PORT;
 const SPAWN_DEV_SERVER = !process.env.E2E_BASE_URL;
 
 export default defineConfig({
@@ -49,8 +49,11 @@ export default defineConfig({
     video: 'retain-on-failure',
     actionTimeout: 10_000,
     navigationTimeout: 20_000,
-    // The app uses cookie-based auth; clear by default per test
-    storageState: { cookies: [], origins: [] },
+    // The app uses cookie-based auth; start every test signed-out. localStorage
+    // is seeded with the onboarding "seen" flag so the first-run feature tour
+    // overlay never covers the app (it would otherwise intercept clicks and
+    // hang the suite). See guestStorageState in fixtures/env.ts.
+    storageState: guestStorageState(BASE_URL),
   },
 
   projects: [
