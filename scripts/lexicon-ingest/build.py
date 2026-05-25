@@ -9,12 +9,13 @@ Sources:
     → (Greek lemma, translit, POS, English gloss, Abbott-Smith definition).
     CC BY 4.0.
 
-Output:
-  * src/data/lexicon/generated/_lemmas.json — one global lexicon, keyed by
-    a stable translit slug. Contains every Greek lemma referenced by any
-    NT alignment row.
-  * src/data/lexicon/generated/<book-slug>-<chapter>.json — one file per
-    chapter, holding the verse→token alignment in ChapterAlignment shape.
+Output (since PR #187 the lexicon lives in a sibling repo):
+  * ../../../verse-mate-lexicon/src/generated/_lemmas.json — one global
+    lexicon, keyed by a stable translit slug. Contains every Greek lemma
+    referenced by any NT alignment row.
+  * ../../../verse-mate-lexicon/src/generated/<book-slug>-<chapter>.json
+    — one file per chapter, holding the verse→token alignment in
+    ChapterAlignment shape.
 
 Usage:
   ./build.py --book Philippians       # build one book
