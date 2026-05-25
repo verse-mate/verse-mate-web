@@ -241,8 +241,9 @@ export default function CommentaryScreen() {
         </div>
       </div>
 
-      {/* Body — BLACK background, white text */}
-      <div className="flex-1 overflow-y-auto px-4 pb-8" style={{ backgroundColor: vmTokens.pageBg, color: vmTokens.headerFg }}>
+      {/* Body — theme-aware reading surface (cream in light, black in dark)
+          with primary text so content stays legible in both themes. */}
+      <div className="flex-1 overflow-y-auto px-4 pb-8" style={{ backgroundColor: vmTokens.pageBg, color: vmTokens.textPrimary }}>
         {/* Study tab uses its own static data; route it before the empty
             commentaries early-return. */}
         {tab === 'study' ? (
@@ -420,7 +421,7 @@ export default function CommentaryScreen() {
                           data-testid={`byline-verse-toggle-${c.verse}`}
                           style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '16px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer' }}
                         >
-                          <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, color: vmTokens.headerFg }}>
+                          <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, color: vmTokens.textPrimary }}>
                             {decodedBook} {chapterNum}:{c.verse}
                           </span>
                           {isOpen ? (
