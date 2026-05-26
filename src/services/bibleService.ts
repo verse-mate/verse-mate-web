@@ -373,7 +373,13 @@ async function fetchExplanation(
     const data = await api.get<ExplanationResponse>(
       `/bible/book/explanation/${bookId}/${chapter}`,
       { explanationType },
-      { auth: false }
+      // Send the access token: the AI-explanation language is keyed off the
+      // user's `preferred_language`, which the backend reads from the JWT
+      // claims (that's why a language change re-issues the token). With
+      // `auth: false` the token never went out, so commentary always came
+      // back in the default language regardless of the chosen preference.
+      // Guests simply send no token and get the default.
+      { auth: true }
     );
     const text = data?.explanation?.explanation;
     const rawId = data?.explanation?.explanation_id;
