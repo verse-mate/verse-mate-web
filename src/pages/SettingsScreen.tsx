@@ -399,6 +399,13 @@ export default function SettingsScreen() {
         // Small delay to ensure backend DB consistency before issuing new token.
         await new Promise((resolve) => setTimeout(resolve, 500));
         await refreshTokens();
+        // The AI-explanation language is carried by the refreshed token, but
+        // commentary/insights are fetched per book:chapter and cached in
+        // module state with no language key — so nothing re-fetches on a
+        // preference change. Reload so all content reloads under the new
+        // token + a fresh cache. (Preference persisted above, so the picker
+        // restores the selection after reload.)
+        window.location.reload();
       } catch (err) {
         console.error('Failed to save language preference:', err);
       }
