@@ -18,6 +18,7 @@ import {
   ExplanationType,
 } from './types';
 import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, getRefreshToken, ApiError, API_BASE_URL } from './api';
+import { bibleVersions, BibleVersionInfo, TestamentCoverage } from '@/constants/bible-versions';
 
 // ─── Raw API response shapes ─────────────────────────────────────────────
 // Narrow definitions of just the fields we read from each backend payload.
@@ -191,24 +192,28 @@ export async function resolveBookName(bookId: number): Promise<string | null> {
 
 // ─── Chapter ──────────────────────────────────────────────────────────────
 /**
- * Fetch a chapter.
+ * Fetch a chapter for the given Bible version.
  *
- * NOTE: the API currently 404s whenever a versionKey is provided (any value),
- * so we omit it. When multi-version support lands we'll re-add it here.
+ * The version is sent as `bible_version` (the backend also accepts the
+ * `versionKey` alias and defaults to NASB1995 when omitted). For NT-only
+ * versions (e.g. UKRKL) an OT book comes back with `verses: []`, which the
+ * caller renders as an empty chapter rather than an error.
  */
 export async function fetchChapter(
   book: string,
   chapter: number,
-  _version: BibleVersion
+  version: BibleVersion
 ): Promise<Chapter> {
   const bookId = await resolveBookId(book);
   if (!bookId) {
     return { book, bookId: 0, chapter, verses: [] };
   }
   try {
-    const data = await api.get<{ book?: ChapterRaw }>(`/bible/book/${bookId}/${chapter}`, undefined, {
-      auth: false,
-    });
+    const data = await api.get<{ book?: ChapterRaw }>(
+      `/bible/book/${bookId}/${chapter}`,
+      version ? { bible_version: version } : undefined,
+      { auth: false }
+    );
     const bookObj = data?.book;
     const ch = bookObj?.chapters?.[0];
     const verses = (ch?.verses || []).map((v: VerseRaw) => ({
@@ -224,6 +229,55 @@ export async function fetchChapter(
     };
   } catch {
     return { book, bookId, chapter, verses: [] };
+  }
+}
+
+// ─── Bible versions (discovery) ────────────────────────────────────────────
+interface BibleVersionRaw {
+  version_key: string;
+  version_name?: string;
+  language_code?: string;
+  license?: string;
+  license_url?: string | null;
+  attribution?: string | null;
+  testament_coverage?: string;
+}
+
+const _staticVersionByKey = new Map(bibleVersions.map(v => [v.key, v]));
+
+/**
+ * Fetch the available Bible versions from `GET /bible/versions`.
+ *
+ * Falls back to the static `bibleVersions` catalog when the endpoint is
+ * unavailable (e.g. an environment whose backend hasn't run the ingest yet).
+ * License/attribution strings missing from the API are backfilled from the
+ * static catalog so the Credits screen always has the required CC BY / BY-SA
+ * attribution line.
+ */
+export async function fetchBibleVersions(): Promise<BibleVersionInfo[]> {
+  try {
+    const data = await api.get<{ versions?: BibleVersionRaw[] }>('/bible/versions', undefined, {
+      auth: false,
+    });
+    const list = data?.versions || [];
+    if (list.length === 0) return bibleVersions;
+    return list.map((v): BibleVersionInfo => {
+      const fallback = _staticVersionByKey.get(v.version_key);
+      const name = v.version_name || fallback?.value || v.version_key;
+      const value = v.version_name ? `${v.version_name} (${v.version_key})` : name;
+      const coverage = (v.testament_coverage as TestamentCoverage) || fallback?.testamentCoverage;
+      return {
+        key: v.version_key,
+        value,
+        languageCode: v.language_code || fallback?.languageCode || 'en',
+        license: v.license || fallback?.license,
+        licenseUrl: v.license_url ?? fallback?.licenseUrl ?? null,
+        attribution: v.attribution || fallback?.attribution || null,
+        testamentCoverage: coverage,
+      };
+    });
+  } catch {
+    return bibleVersions;
   }
 }
 
@@ -1163,11 +1217,9 @@ const DEFAULT_SETTINGS: AppSettings = {
   fontSize: 20,
   lineSpacing: 1.7,
   theme: 'dark',
-  // NASB1995 is the only Bible version the backend has verse text for —
-  // ESV/NIV/KJV/NLT are still in the type union for legacy storage but
-  // hitting any of them returns no verses, which surfaces as unsubstituted
-  // `{verse:Genesis 1:1}` placeholders in topic byline insights and empty
-  // chapter bodies. Defaulting to NASB1995 keeps fresh visits sane.
+  // NASB1995 is the licensed English default. The backend now serves all the
+  // open translations too (see GET /bible/versions); users switch via the
+  // Settings picker. Fresh visits start on the English default.
   defaultVersion: 'NASB1995',
   notifications: true,
   showVerseNumbers: true,
