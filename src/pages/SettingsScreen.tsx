@@ -82,8 +82,21 @@ interface Language {
 const LANGUAGES_CACHE_KEY = 'versemate:languages_cache';
 const PREFERRED_LANGUAGE_KEY = '@versemate:preferred_language';
 
-const formatLanguageDisplay = (lang: Language) =>
-  lang.name === lang.nativeName ? lang.name : `${lang.nativeName} (${lang.name})`;
+// Display a language by its English name, collapsed to the base language so
+// regional variants read as the plain language ("es-MX" → "Spanish",
+// "en-US" → "English"). Falls back to the uppercased code if Intl can't
+// resolve it.
+function englishLanguageName(code: string): string {
+  const base = (code || '').split('-')[0];
+  if (!base) return code;
+  try {
+    return new Intl.DisplayNames(['en'], { type: 'language' }).of(base) || base.toUpperCase();
+  } catch {
+    return base.toUpperCase();
+  }
+}
+
+const formatLanguageDisplay = (lang: Language) => englishLanguageName(lang.code);
 
 // ─── Component ──────────────────────────────────────────────────────────
 // Style primitives (pageContainerStyle, sectionStyle, selectButtonStyle,
@@ -136,6 +149,28 @@ export default function SettingsScreen() {
   );
   const [showLanguagePicker, setShowLanguagePicker] = useState(false);
   const [availableLanguages, setAvailableLanguages] = useState<Language[]>([]);
+
+  // Collapse regional variants to one entry per base language (so the list
+  // reads "English / Spanish / …" rather than "American English", "English",
+  // "Mexican Spanish"). Keep the currently-selected code if it's in a group,
+  // otherwise the bare base code, otherwise the first seen — so the active
+  // preference stays highlighted and persisted.
+  const displayLanguages = useMemo(() => {
+    const byBase = new Map<string, Language>();
+    for (const lang of availableLanguages) {
+      const base = lang.code.split('-')[0];
+      const existing = byBase.get(base);
+      if (!existing) {
+        byBase.set(base, lang);
+        continue;
+      }
+      if (existing.code === selectedLanguage) continue;
+      if (lang.code === selectedLanguage || lang.code === base) byBase.set(base, lang);
+    }
+    return Array.from(byBase.values()).sort((a, b) =>
+      englishLanguageName(a.code).localeCompare(englishLanguageName(b.code))
+    );
+  }, [availableLanguages, selectedLanguage]);
 
   // Profile form state
   const [firstName, setFirstName] = useState(userFirstName || '');
@@ -621,10 +656,7 @@ export default function SettingsScreen() {
             data-testid="settings-language-button"
           >
             <span style={selectButtonTextStyle}>
-              {(() => {
-                const sel = availableLanguages.find((l) => l.code === selectedLanguage);
-                return sel ? formatLanguageDisplay(sel) : 'Select Language';
-              })()}
+              {selectedLanguage ? englishLanguageName(selectedLanguage) : 'Select Language'}
             </span>
             {showLanguagePicker ? (
               <ChevronUp size={20} color={vmTokens.textSecondary} />
@@ -636,9 +668,9 @@ export default function SettingsScreen() {
           {showLanguagePicker && (
             <div style={pickerContainerStyle}>
               <div style={pickerScrollStyle}>
-                {availableLanguages.map((language, idx) => {
+                {displayLanguages.map((language, idx) => {
                   const isSelected = language.code === selectedLanguage;
-                  const isLast = idx === availableLanguages.length - 1;
+                  const isLast = idx === displayLanguages.length - 1;
                   return (
                     <button
                       type="button"
