@@ -7,35 +7,41 @@ function entry(partial: Partial<LexEntry>): LexEntry {
     lemma: 'x',
     translit: 'x',
     strongs: 'H0',
-    pos: 'Noun',
+    pos: 'Noun (masc.)',
     basicGloss: 'gloss',
     ...partial,
   } as LexEntry;
 }
 
 describe('shouldUnderlineLexeme', () => {
-  it('underlines distinctive (low-frequency) OT words', () => {
-    expect(shouldUnderlineLexeme(entry({ otFrequency: 80 }))).toBe(true); // darkness
-    expect(shouldUnderlineLexeme(entry({ otFrequency: 3 }))).toBe(true); // void
+  it('underlines content words (nouns, verbs, adjectives, proper nouns)', () => {
+    expect(shouldUnderlineLexeme(entry({ pos: 'Noun (masc.)', basicGloss: 'God' }))).toBe(true);
+    expect(shouldUnderlineLexeme(entry({ pos: 'Verb', basicGloss: 'to create' }))).toBe(true);
+    expect(shouldUnderlineLexeme(entry({ pos: 'Adjective', basicGloss: 'good' }))).toBe(true);
+    expect(shouldUnderlineLexeme(entry({ pos: 'Proper noun (person)', basicGloss: 'David' }))).toBe(true);
   });
 
-  it('does not underline common high-frequency OT glue words', () => {
-    expect(shouldUnderlineLexeme(entry({ otFrequency: 2883 }))).toBe(false); // hayah → was/were
-    expect(shouldUnderlineLexeme(entry({ otFrequency: 2565 }))).toBe(false); // elohim → God
-    expect(shouldUnderlineLexeme(entry({ otFrequency: 5232 }))).toBe(false); // kol → all
+  it('does not underline the copula "to be" (was/were/is) even though its POS is Verb', () => {
+    expect(shouldUnderlineLexeme(entry({ pos: 'Verb', basicGloss: 'to be' }))).toBe(false);
+    expect(shouldUnderlineLexeme(entry({ pos: 'Verb', basicGloss: 'To Be ' }))).toBe(false);
   });
 
-  it('uses NT frequency when OT frequency is absent', () => {
-    expect(shouldUnderlineLexeme(entry({ ntFrequency: 319 }))).toBe(true); // logos
-    expect(shouldUnderlineLexeme(entry({ ntFrequency: 2322 }))).toBe(false); // eimi → is
+  it('does not underline function/grammatical words', () => {
+    expect(shouldUnderlineLexeme(entry({ pos: 'Adverb', basicGloss: 'so' }))).toBe(false);
+    expect(shouldUnderlineLexeme(entry({ pos: 'Preposition', basicGloss: 'in' }))).toBe(false);
+    expect(shouldUnderlineLexeme(entry({ pos: 'Conjunction', basicGloss: 'and' }))).toBe(false);
+    expect(shouldUnderlineLexeme(entry({ pos: 'Particle', basicGloss: 'the' }))).toBe(false);
+    expect(shouldUnderlineLexeme(entry({ pos: 'Pronoun (demonstrative)', basicGloss: 'this' }))).toBe(false);
   });
 
-  it('treats the threshold as exclusive', () => {
-    expect(shouldUnderlineLexeme(entry({ otFrequency: 599 }))).toBe(true);
-    expect(shouldUnderlineLexeme(entry({ otFrequency: 600 }))).toBe(false);
+  it('treats terse function POS codes (G:CONJ, H:Neg, G:PRT-N) as function words', () => {
+    expect(shouldUnderlineLexeme(entry({ pos: 'G:CONJ' }))).toBe(false);
+    expect(shouldUnderlineLexeme(entry({ pos: 'H:Neg', basicGloss: 'not' }))).toBe(false);
+    expect(shouldUnderlineLexeme(entry({ pos: 'G:PRT-N' }))).toBe(false);
   });
 
-  it('underlines words with unknown frequency (treated as distinctive)', () => {
-    expect(shouldUnderlineLexeme(entry({}))).toBe(true);
+  it('underlines words with unrecognized POS (treated as content)', () => {
+    expect(shouldUnderlineLexeme(entry({ pos: '?' }))).toBe(true);
+    expect(shouldUnderlineLexeme(entry({ pos: 'H:N-M/F' }))).toBe(true);
   });
 });
