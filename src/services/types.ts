@@ -7,9 +7,33 @@
 // src/constants/bible-versions.ts and the backend's ingest manifest.
 export type BibleVersion = string;
 
+/**
+ * One token on a Strong's-tagged verse. Joining each token's `text` field
+ * reproduces the verse's `text` byte-for-byte — the lossless-join invariant
+ * the backend enforces when seeding `verses.tokens`. Tokens with a `strongs`
+ * value are tappable content words; tokens without are passthrough
+ * (whitespace, punctuation, translator-supplied function words).
+ */
+export interface VerseToken {
+  text: string;
+  /** Strong's number in canonical G####/H#### form (4-digit padded). */
+  strongs?: string;
+  /** Secondary Strong's for compound surface words (e.g. "Jesucristo"). */
+  strongs_alt?: string[];
+  /** Optional LLM-alignment confidence 0..1 (omitted for published sources). */
+  confidence?: number;
+}
+
 export interface Verse {
   number: number; // mirrors API verseNumber
   text: string;
+  /**
+   * Strong's-tagged token array. Present only when the chapter was fetched
+   * with `tagged=1` AND the row had tokens seeded in the backend. Consumers
+   * that ignore this field keep reading `text` exactly as before — no
+   * regression.
+   */
+  tokens?: VerseToken[];
 }
 
 export interface ChapterSubtitle {
