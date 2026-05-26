@@ -461,6 +461,38 @@
   }
 }
 
+/* Mobile / zoomed-desktop: cap the sheet width so it doesn't stretch
+   edge-to-edge on wide or zoomed-in viewports. The full-bleed sheet made
+   the Copy/Share/Save/Close buttons span the whole width (reading as
+   oversized) and left almost no room for the summary. Centered + capped
+   keeps it sheet-sized; the ≥768px rule below overrides for the split view. */
+.verse-insight-sheet {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Short viewports (zoomed-in desktop, landscape phones): the fixed header +
+   action/close chrome crowded the summary down to a sliver. Reclaim space by
+   using more of the screen height, dropping the redundant quoted-verse text
+   (the verse ref still shows in the header), and compacting the buttons. */
+@media (max-height: 600px) {
+  .verse-insight-sheet {
+    min-height: 92%;
+    max-height: 100%;
+  }
+  .verse-insight-sheet .vis-quote {
+    display: none;
+  }
+  .verse-insight-sheet .vis-actions button,
+  .verse-insight-sheet .vis-close button {
+    height: 38px;
+  }
+  .verse-insight-sheet .vis-close {
+    padding-bottom: 8px;
+  }
+}
+
 /* ─── Tablet+ : VerseInsightSheet emerges over the Bible reading panel ───
    The sheet is absolutely positioned and its offset parent is `.split-body`
    (which spans BOTH the reading + commentary panels). Anchoring it to the
