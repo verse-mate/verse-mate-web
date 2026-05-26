@@ -18,11 +18,11 @@ interface LexiconPopoverProps {
   token: AlignedToken;
   children: React.ReactNode;
   /**
-   * True when this lemma is in the chapter's themeLemmas list. Theme words
-   * carry the chapter's central argument and get a more prominent
-   * underline so the spine of the chapter reads at a glance.
+   * When false, the word stays tappable (opens the lexical card) but renders
+   * WITHOUT the dotted underline. Used to de-emphasize common / low-importance
+   * words so the underlines focus attention on the distinctive ones.
    */
-  isTheme?: boolean;
+  underline?: boolean;
   onActivate?: () => void;
 }
 
@@ -80,7 +80,7 @@ export default function LexiconPopover({
   entry,
   token,
   children,
-  isTheme,
+  underline = true,
   onActivate,
 }: LexiconPopoverProps) {
   const contextual = token.contextual;
@@ -148,7 +148,7 @@ export default function LexiconPopover({
           onTouchEnd={(e) => e.stopPropagation()}
           onMouseDown={(e) => e.stopPropagation()}
           onMouseUp={(e) => e.stopPropagation()}
-          className={isTheme ? 'lex-word lex-word-theme' : 'lex-word'}
+          className={underline ? 'lex-word' : undefined}
           data-lex-word={entry.translit}
           aria-label={`${surface} — ${entry.translit}, ${entry.basicGloss}`}
           style={{
