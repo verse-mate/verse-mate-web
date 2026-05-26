@@ -87,6 +87,20 @@ export default function LexiconPopover({
 
   // Controlled so we can dismiss the card when the Bible scrolls behind it.
   const [open, setOpen] = useState(false);
+
+  // Don't let a drag-to-select gesture pop the lexical card. On desktop the
+  // verse text is real, selectable text and releasing a highlight drag often
+  // lands on a word — that click would otherwise open this card and steal
+  // focus, collapsing the selection before the highlight toolbar can act.
+  // When a non-empty selection exists, refuse to open (a plain click leaves
+  // the selection collapsed, so normal taps still open the card).
+  const handleOpenChange = useCallback((next: boolean) => {
+    if (next) {
+      const sel = typeof window !== 'undefined' ? window.getSelection() : null;
+      if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
+    }
+    setOpen(next);
+  }, []);
   // Free-drag offset applied on top of Radix's anchored position, so the user
   // can move the card out of the way (e.g. when zoomed in and it's tall).
   const [drag, setDrag] = useState({ x: 0, y: 0 });
@@ -119,6 +133,13 @@ export default function LexiconPopover({
     (e: React.PointerEvent) => {
       e.stopPropagation();
       e.currentTarget.setPointerCapture?.(e.pointerId);
+      // While dragging the card, lock page text selection. A mouse drag that
+      // travels over the scripture behind the card otherwise spawns a text
+      // selection, which surfaces the highlight toolbar *behind* the card
+      // (most visible when the page is zoomed and the card is large).
+      document.body.style.userSelect = 'none';
+      document.body.style.setProperty('-webkit-user-select', 'none');
+      window.getSelection()?.removeAllRanges();
       dragRef.current = { startX: e.clientX, startY: e.clientY, baseX: drag.x, baseY: drag.y };
     },
     [drag.x, drag.y],
@@ -128,14 +149,34 @@ export default function LexiconPopover({
     if (!d) return;
     setDrag({ x: d.baseX + (e.clientX - d.startX), y: d.baseY + (e.clientY - d.startY) });
   }, []);
-  const onHandlePointerUp = useCallback((e: React.PointerEvent) => {
-    if (!dragRef.current) return;
-    dragRef.current = null;
-    e.currentTarget.releasePointerCapture?.(e.pointerId);
+  const releaseSelectionLock = useCallback(() => {
+    document.body.style.userSelect = '';
+    document.body.style.removeProperty('-webkit-user-select');
+    window.getSelection()?.removeAllRanges();
+  }, []);
+  const onHandlePointerUp = useCallback(
+    (e: React.PointerEvent) => {
+      if (!dragRef.current) return;
+      dragRef.current = null;
+      e.currentTarget.releasePointerCapture?.(e.pointerId);
+      releaseSelectionLock();
+    },
+    [releaseSelectionLock],
+  );
+
+  // Safety net: if the card unmounts mid-drag (e.g. dismissed by a scroll),
+  // don't leave the page stuck in the no-select state.
+  useEffect(() => {
+    return () => {
+      if (dragRef.current) {
+        document.body.style.userSelect = '';
+        document.body.style.removeProperty('-webkit-user-select');
+      }
+    };
   }, []);
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
+    <Popover open={open} onOpenChange={handleOpenChange}>
       <PopoverTrigger asChild>
         <span
           role="button"
