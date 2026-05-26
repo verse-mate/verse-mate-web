@@ -87,6 +87,20 @@ export default function LexiconPopover({
 
   // Controlled so we can dismiss the card when the Bible scrolls behind it.
   const [open, setOpen] = useState(false);
+
+  // Don't let a drag-to-select gesture pop the lexical card. On desktop the
+  // verse text is real, selectable text and releasing a highlight drag often
+  // lands on a word — that click would otherwise open this card and steal
+  // focus, collapsing the selection before the highlight toolbar can act.
+  // When a non-empty selection exists, refuse to open (a plain click leaves
+  // the selection collapsed, so normal taps still open the card).
+  const handleOpenChange = useCallback((next: boolean) => {
+    if (next) {
+      const sel = typeof window !== 'undefined' ? window.getSelection() : null;
+      if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
+    }
+    setOpen(next);
+  }, []);
   // Free-drag offset applied on top of Radix's anchored position, so the user
   // can move the card out of the way (e.g. when zoomed in and it's tall).
   const [drag, setDrag] = useState({ x: 0, y: 0 });
@@ -135,7 +149,7 @@ export default function LexiconPopover({
   }, []);
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
+    <Popover open={open} onOpenChange={handleOpenChange}>
       <PopoverTrigger asChild>
         <span
           role="button"
