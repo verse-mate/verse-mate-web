@@ -1,9 +1,31 @@
+import { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import ScreenHeader from '@/components/ScreenHeader';
+import type { BibleVersionInfo } from '@/constants/bible-versions';
+import { fetchBibleVersions } from '@/services/bibleService';
 import { vmTokens } from '@/styles/themeStyles';
+
+// CC BY / CC BY-SA versions carry an attribution obligation: their credit
+// line must be shown wherever the text is displayed.
+function requiresAttribution(v: BibleVersionInfo): boolean {
+  return !!v.attribution && /^cc by/i.test(v.license || '');
+}
 
 export default function AboutScreen() {
   const navigate = useNavigate();
+  const [attributedVersions, setAttributedVersions] = useState<BibleVersionInfo[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const versions = await fetchBibleVersions();
+      if (!cancelled) setAttributedVersions(versions.filter(requiresAttribution));
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title="About" onBack={() => navigate('/menu')} />
@@ -48,6 +70,47 @@ export default function AboutScreen() {
           you're discovering Scripture for the first time or leading a study group, VerseMate
           helps illuminate God's Word for real understanding and lasting transformation.
         </p>
+
+        {/* Bible translation credits — required by the CC BY / CC BY-SA
+            licenses of the open translations we display. The list is driven by
+            GET /bible/versions (attribution backfilled from the static catalog
+            when the API hasn't populated it yet). Public-domain versions carry
+            no obligation and are intentionally omitted. */}
+        {attributedVersions.length > 0 && (
+          <div data-testid="about-translation-credits" style={{ marginTop: 24 }}>
+            <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 18, lineHeight: '26px', color: vmTokens.textPrimary }}>
+              Bible Translations
+            </h2>
+            <p style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, lineHeight: '20px', color: vmTokens.textTertiary, marginTop: 8 }}>
+              Some translations are used under Creative Commons licenses, which
+              require attribution:
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '10px 0 0' }}>
+              {attributedVersions.map((v) => (
+                <li
+                  key={v.key}
+                  data-testid={`translation-credit-${v.key.toLowerCase()}`}
+                  style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, lineHeight: '20px', color: vmTokens.textTertiary, marginTop: 8 }}
+                >
+                  {v.attribution}
+                  {v.licenseUrl && (
+                    <>
+                      {' '}
+                      <a
+                        href={v.licenseUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: vmTokens.gold, textDecoration: 'none' }}
+                      >
+                        License
+                      </a>
+                    </>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Legal + Contact links — issue #49.
             Privacy Policy and Terms of Service are required by App Store /

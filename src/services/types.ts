@@ -1,7 +1,11 @@
 // VerseMate domain types — aligned to the real API (api.versemate.org)
 // plus backward-compat fields so existing UI code keeps working unchanged.
 
-export type BibleVersion = 'ESV' | 'NIV' | 'KJV' | 'NLT' | 'NASB1995';
+// A Bible version key (e.g. "NASB1995", "LSG", "SCH51"). Versions are now
+// served dynamically by the backend (GET /bible/versions), so this is a free
+// string rather than a fixed union. Canonical keys live in
+// src/constants/bible-versions.ts and the backend's ingest manifest.
+export type BibleVersion = string;
 
 export interface Verse {
   number: number; // mirrors API verseNumber

@@ -153,7 +153,8 @@ OpenAPI spec: `https://api.versemate.org/openapi/json`
 
 ```bash
 GET /bible/books                              # All 66 books
-GET /bible/book/{bookId}/{chapterNumber}      # Chapter text + subtitles (no versionKey!)
+GET /bible/versions                           # Available translations (version_key, language_code, license, attribution, testament_coverage)
+GET /bible/book/{bookId}/{chapterNumber}?bible_version=LSG   # Chapter text + subtitles; bible_version defaults to NASB1995
 GET /bible/book/explanation/{bookId}/{ch}?explanationType=summary|byline|detailed
 GET /bible/auto-highlights/{bookId}/{ch}
 GET /bible/book/bookmarks/{userId}
@@ -365,13 +366,18 @@ VITE_GOOGLE_CLIENT_ID=94126503648-2fb9dakdfi8pmi8ep78bk5nsrv94db6o.apps.googleus
    git add . && git commit -m "chore: force rebuild" && git push
    ```
 
-### API returns 404 for chapter text
+### Selecting a Bible version for chapter text
 
-The API doesn't support `versionKey` — omit it:
+The chapter endpoint takes a `bible_version` query param (the `versionKey`
+alias also works) and defaults to `NASB1995` when omitted. Use a valid key
+from `GET /bible/versions`:
 ```
-BAD:  GET /bible/book/1/1?versionKey=ESV  → 404
-GOOD: GET /bible/book/1/1                  → 200
+GOOD: GET /bible/book/1/1?bible_version=LSG    → 200 (French, book name "Genèse")
+GOOD: GET /bible/book/1/1                       → 200 (NASB1995 default)
+BAD:  GET /bible/book/1/1?bible_version=ZZZ     → 404 (unknown version)
 ```
+NT-only versions (e.g. `UKRKL`) return `verses: []` for OT books — render that
+as an empty chapter, not an error.
 
 ### Google SSO doesn't work in Lovable preview
 
