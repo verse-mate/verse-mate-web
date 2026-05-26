@@ -31,9 +31,22 @@ interface BibleBookRaw {
   chapters?: unknown[];
 }
 
+interface VerseTokenRaw {
+  text: string;
+  strongs?: string;
+  strongs_alt?: string[];
+  confidence?: number;
+}
+
 interface VerseRaw {
   verseNumber: number;
   text: string;
+  /**
+   * Strong's-tagged tokens. Returned only when the chapter was fetched with
+   * `tagged=1` AND the row has tokens seeded. Joining each `text` reproduces
+   * the verse's `text` field byte-for-byte (lossless-join invariant).
+   */
+  tokens?: VerseTokenRaw[];
 }
 
 interface ChapterRaw {
@@ -209,9 +222,17 @@ export async function fetchChapter(
     return { book, bookId: 0, chapter, verses: [] };
   }
   try {
+    // Request Strong's-tagged tokens for every fetch. The backend serves
+    // tokens only for rows that have been seeded; rows without are returned
+    // in the legacy `{verseNumber, text}` shape, so this flag is harmless
+    // for translations we haven't tagged yet (e.g. NASB1995, KJV — those
+    // use the lexicon-overlay path which doesn't need wire tokens).
+    const query: Record<string, string> = { tagged: '1' };
+    if (version) query.bible_version = version;
+
     const data = await api.get<{ book?: ChapterRaw }>(
       `/bible/book/${bookId}/${chapter}`,
-      version ? { bible_version: version } : undefined,
+      query,
       { auth: false }
     );
     const bookObj = data?.book;
@@ -219,6 +240,7 @@ export async function fetchChapter(
     const verses = (ch?.verses || []).map((v: VerseRaw) => ({
       number: v.verseNumber,
       text: v.text,
+      ...(v.tokens ? { tokens: v.tokens } : {}),
     }));
     return {
       book: bookObj?.name || book,
