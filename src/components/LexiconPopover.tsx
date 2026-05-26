@@ -133,6 +133,13 @@ export default function LexiconPopover({
     (e: React.PointerEvent) => {
       e.stopPropagation();
       e.currentTarget.setPointerCapture?.(e.pointerId);
+      // While dragging the card, lock page text selection. A mouse drag that
+      // travels over the scripture behind the card otherwise spawns a text
+      // selection, which surfaces the highlight toolbar *behind* the card
+      // (most visible when the page is zoomed and the card is large).
+      document.body.style.userSelect = 'none';
+      document.body.style.setProperty('-webkit-user-select', 'none');
+      window.getSelection()?.removeAllRanges();
       dragRef.current = { startX: e.clientX, startY: e.clientY, baseX: drag.x, baseY: drag.y };
     },
     [drag.x, drag.y],
@@ -142,10 +149,30 @@ export default function LexiconPopover({
     if (!d) return;
     setDrag({ x: d.baseX + (e.clientX - d.startX), y: d.baseY + (e.clientY - d.startY) });
   }, []);
-  const onHandlePointerUp = useCallback((e: React.PointerEvent) => {
-    if (!dragRef.current) return;
-    dragRef.current = null;
-    e.currentTarget.releasePointerCapture?.(e.pointerId);
+  const releaseSelectionLock = useCallback(() => {
+    document.body.style.userSelect = '';
+    document.body.style.removeProperty('-webkit-user-select');
+    window.getSelection()?.removeAllRanges();
+  }, []);
+  const onHandlePointerUp = useCallback(
+    (e: React.PointerEvent) => {
+      if (!dragRef.current) return;
+      dragRef.current = null;
+      e.currentTarget.releasePointerCapture?.(e.pointerId);
+      releaseSelectionLock();
+    },
+    [releaseSelectionLock],
+  );
+
+  // Safety net: if the card unmounts mid-drag (e.g. dismissed by a scroll),
+  // don't leave the page stuck in the no-select state.
+  useEffect(() => {
+    return () => {
+      if (dragRef.current) {
+        document.body.style.userSelect = '';
+        document.body.style.removeProperty('-webkit-user-select');
+      }
+    };
   }, []);
 
   return (
