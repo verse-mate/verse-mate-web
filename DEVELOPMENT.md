@@ -376,8 +376,8 @@ GOOD: GET /bible/book/1/1?bible_version=LSG    → 200 (French, book name "Genè
 GOOD: GET /bible/book/1/1                       → 200 (NASB1995 default)
 BAD:  GET /bible/book/1/1?bible_version=ZZZ     → 404 (unknown version)
 ```
-NT-only versions (e.g. `UKRKL`) return `verses: []` for OT books — render that
-as an empty chapter, not an error.
+An NT-only version returns `verses: []` for OT books — render that as an empty
+chapter, not an error. (All currently ingested versions cover the full canon.)
 
 ### Google SSO doesn't work in Lovable preview
 
