@@ -39,6 +39,32 @@ The TypeScript renderer prefers hand-curated entries (`lemmas.ts`) over generate
 
 Not built yet. Plan: a separate script reads the generated alignments, picks the ~200 theologically loaded lemmas, batches Claude API calls with the lexicon entry + verse context as grounding, and writes a `_contextual.json` overlay file. Each `(lemma, pericope)` pair gets one contextual blurb, reviewed before merge.
 
+## KJV alias coverage (`kjv_aliases.py`)
+
+The reader matches lemmas to displayed text by English *surface* string
+(`TokenizedVerse.tsx`, whole-word match), so showing a Greek/Hebrew definition
+on a translation requires that translation's word to be a known surface for the
+lemma. For English that's `_aliases.json`. Its KJV coverage was patchy — missing
+the archaic inflections (`-eth`/`-est`, "hath", "doeth", "saith") and a few KJV
+synonyms ("ghost", "raiment", "firmament") — and because the match is strict
+whole-word, "love" never matches inside "loveth".
+
+`kjv_aliases.py` fills those gaps deterministically (no network/API key). It
+derives archaic verb forms from a curated whitelist of common verbs (gated on
+`pos == "Verb"`, so it never inflects a noun synonym) plus a small irregular /
+synonym table, and merges them into `_aliases.json` additively.
+
+```bash
+./kjv_aliases.py --report     # preview: lemmas touched, surfaces added, probe check
+./kjv_aliases.py              # write _aliases.json in the sibling lexicon repo
+```
+
+Reads/writes the sibling `../../../verse-mate-lexicon/src/generated`, falling
+back to the installed `@versemate/lexicon` package for inputs. After running,
+commit the regenerated `_aliases.json` in **verse-mate-lexicon** and bump the
+pin in this repo's `package.json`. Note: KJV text only renders once the backend
+serves it (see `docs/multi-version-bible.md`); the aliases just make it light up.
+
 ## License posture
 
 BSB is public domain (no restrictions). TBESG is CC BY 4.0 — attribution required in the app's About / credits screen. Don't redistribute the raw TBESG file with the app; the generated JSON is a derivative work that just needs the credit line.
