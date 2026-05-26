@@ -25,12 +25,12 @@ CC BY / CC BY-SA texts are included — never NC, ND, or permission-only.
 | `SYN`    | ru | `russyn`      | Синодальный перевод (Synodal) | Public Domain | 66 |
 | `RVR09`  | es | `spaRV1909`   | Reina-Valera 1909 | Public Domain | 66 |
 | `VDC`    | ro | `ron1924`     | Biblia Cornilescu 1924 | Public Domain | 66 |
-| `UKRKL`  | uk | `ukr1871`     | Переклад Куліша | Public Domain | **NT only (27)** |
+| `UKRKL`  | uk | `ukr1871`     | Переклад Куліша | Public Domain | 66 |
 
 Notes:
 - **NASB1995** (the current English text) is served from the licensed backend, not eBible.
 - **NIV** and **ESV** are not on eBible (both copyrighted, not redistributable), so they're omitted.
-- **Ukrainian** has no complete open Bible — `ukr1871` is the public-domain NT only.
+- **Ukrainian** uses Kulish's translation (`ukr1871`), public domain — the ingested data covers the full Protestant canon (OT + NT).
 
 ## Usage
 

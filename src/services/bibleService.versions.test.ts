@@ -60,19 +60,20 @@ describe('fetchBibleVersions', () => {
         versions: [
           // CC version with attribution not yet populated by the API.
           { version_key: 'SCH51', version_name: 'Schlachter-Bibel 1951', language_code: 'de', license: 'CC BY 4.0', license_url: null, attribution: null, testament_coverage: 'full' },
-          { version_key: 'UKRKL', version_name: 'Переклад Куліша', language_code: 'uk', license: 'Public Domain', license_url: null, attribution: null, testament_coverage: 'nt' },
+          // Synthetic NT-only entry to exercise the coverage passthrough.
+          { version_key: 'XYZNT', version_name: 'Example NT', language_code: 'xx', license: 'Public Domain', license_url: null, attribution: null, testament_coverage: 'nt' },
         ],
       })
     );
 
     const versions = await fetchBibleVersions();
     const sch = versions.find((v) => v.key === 'SCH51');
-    const ukr = versions.find((v) => v.key === 'UKRKL');
+    const ntOnly = versions.find((v) => v.key === 'XYZNT');
 
     expect(sch?.value).toBe('Schlachter-Bibel 1951 (SCH51)');
     // Attribution backfilled from the static catalog when the API returns null.
     expect(sch?.attribution).toMatch(/CC BY 4\.0/);
-    expect(ukr?.testamentCoverage).toBe('nt');
+    expect(ntOnly?.testamentCoverage).toBe('nt');
   });
 
   it('falls back to the static catalog when the endpoint is empty', async () => {

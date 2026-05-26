@@ -195,9 +195,9 @@ export async function resolveBookName(bookId: number): Promise<string | null> {
  * Fetch a chapter for the given Bible version.
  *
  * The version is sent as `bible_version` (the backend also accepts the
- * `versionKey` alias and defaults to NASB1995 when omitted). For NT-only
- * versions (e.g. UKRKL) an OT book comes back with `verses: []`, which the
- * caller renders as an empty chapter rather than an error.
+ * `versionKey` alias and defaults to NASB1995 when omitted). For an NT-only
+ * version an OT book comes back with `verses: []`, which the caller renders
+ * as an empty chapter rather than an error.
  */
 export async function fetchChapter(
   book: string,

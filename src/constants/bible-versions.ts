@@ -131,39 +131,40 @@ export const bibleVersions: BibleVersionInfo[] = [
     attribution: null,
     testamentCoverage: 'full',
   },
-  // Ukrainian: no complete open Bible exists yet — public-domain NT only.
+  // Ukrainian: Kulish's translation — the ingested data covers the full
+  // Protestant canon (OT + NT), despite the historical "1871 NT" naming.
   {
     key: 'UKRKL',
-    value: 'Переклад Куліша — Новий Завіт (UKRKL)',
+    value: 'Переклад Куліша (UKRKL)',
     languageCode: 'uk',
     license: 'Public Domain',
     licenseUrl: null,
     attribution: null,
-    testamentCoverage: 'nt',
+    testamentCoverage: 'full',
   },
 ];
 
-// Native-language labels for the picker's group headers. Falls back to
-// Intl.DisplayNames (then the raw code) for anything not listed here so a
-// version in a new language still gets a sensible heading.
+// English-language labels for the picker's group headers. Falls back to
+// Intl.DisplayNames (in English, then the raw code) for anything not listed
+// here so a version in a new language still gets a sensible heading.
 const LANGUAGE_LABELS: Record<string, string> = {
   en: 'English',
-  de: 'Deutsch',
-  fr: 'Français',
+  de: 'German',
+  fr: 'French',
   tl: 'Tagalog',
-  hi: 'हिन्दी',
-  pt: 'Português',
-  it: 'Italiano',
-  ru: 'Русский',
-  es: 'Español',
-  ro: 'Română',
-  uk: 'Українська',
+  hi: 'Hindi',
+  pt: 'Portuguese',
+  it: 'Italian',
+  ru: 'Russian',
+  es: 'Spanish',
+  ro: 'Romanian',
+  uk: 'Ukrainian',
 };
 
 export function languageLabel(code: string): string {
   if (LANGUAGE_LABELS[code]) return LANGUAGE_LABELS[code];
   try {
-    const dn = new Intl.DisplayNames([code], { type: 'language' });
+    const dn = new Intl.DisplayNames(['en'], { type: 'language' });
     return dn.of(code) || code.toUpperCase();
   } catch {
     return code.toUpperCase();
