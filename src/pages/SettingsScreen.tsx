@@ -36,12 +36,13 @@ import {
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { bibleVersions } from '@/constants/bible-versions';
+import { bibleVersions, languageLabel, type BibleVersionInfo } from '@/constants/bible-versions';
 import { useApp } from '@/contexts/AppContext';
 import { useDeleteAccount } from '@/hooks/useDeleteAccount';
 import { ApiError } from '@/services/api';
 import {
   fetchBibleLanguages,
+  fetchBibleVersions,
   refreshTokens,
   updateAuthProfile,
   updateUserPreferredLanguage,
@@ -100,13 +101,34 @@ export default function SettingsScreen() {
   const userAvatarUrl = state.userAvatarUrl;
   const userPreferredLanguage = state.userPreferredLanguage;
 
-  // Bible version state
+  // Bible version state. The list is driven by GET /bible/versions (grouped
+  // by language below) and falls back to the static catalog while that
+  // request is in flight or if it fails.
   const bibleVersion = state.settings.defaultVersion;
+  const [availableVersions, setAvailableVersions] = useState<BibleVersionInfo[]>(bibleVersions);
   const selectedVersionData = useMemo(
-    () => bibleVersions.find((v) => v.key === bibleVersion),
-    [bibleVersion]
+    () => availableVersions.find((v) => v.key === bibleVersion),
+    [availableVersions, bibleVersion]
   );
   const [showVersionPicker, setShowVersionPicker] = useState(false);
+
+  // Group versions by language for the picker, English first then the rest
+  // alphabetically by their native label.
+  const versionGroups = useMemo(() => {
+    const byLang = new Map<string, BibleVersionInfo[]>();
+    for (const v of availableVersions) {
+      const list = byLang.get(v.languageCode) || [];
+      list.push(v);
+      byLang.set(v.languageCode, list);
+    }
+    return Array.from(byLang.entries())
+      .map(([code, versions]) => ({ code, label: languageLabel(code), versions }))
+      .sort((a, b) => {
+        if (a.code === 'en') return -1;
+        if (b.code === 'en') return 1;
+        return a.label.localeCompare(b.label);
+      });
+  }, [availableVersions]);
 
   // Language state
   const [selectedLanguage, setSelectedLanguage] = useState<string>(
@@ -151,6 +173,19 @@ export default function SettingsScreen() {
       setSelectedLanguage(userPreferredLanguage);
     }
   }, [userPreferredLanguage]);
+
+  // Fetch the available Bible versions from the discovery endpoint. Keeps the
+  // static catalog as the initial value so the picker is never empty.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const versions = await fetchBibleVersions();
+      if (!cancelled && versions.length > 0) setAvailableVersions(versions);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // Fetch available languages, with localStorage cache fallback.
   useEffect(() => {
@@ -503,35 +538,74 @@ export default function SettingsScreen() {
 
           {showVersionPicker && (
             <div style={pickerContainerStyle}>
-              {bibleVersions.map((version, idx) => {
-                const isSelected = version.key === bibleVersion;
-                const isLast = idx === bibleVersions.length - 1;
-                return (
-                  <button
-                    type="button"
-                    key={version.key}
-                    onClick={() => handleBibleVersionChange(version.key as BibleVersion)}
-                    data-testid={`version-option-${version.key.toLowerCase()}`}
-                    style={{
-                      ...pickerItemBaseStyle,
-                      borderBottom: isLast ? 'none' : `1px solid ${vmTokens.surfaceRaisedBorder}`,
-                      background: isSelected ? vmTokens.rowSelectedBg : 'transparent',
-                    }}
-                  >
-                    <span
+              <div style={pickerScrollStyle}>
+                {versionGroups.map((group) => (
+                  <div key={group.code}>
+                    <div
+                      data-testid={`version-group-${group.code}`}
                       style={{
-                        flex: 1,
-                        fontSize: 16,
-                        color: isSelected ? vmTokens.gold : vmTokens.textPrimary,
-                        fontWeight: isSelected ? 500 : 400,
+                        padding: '8px 16px 4px',
+                        fontSize: 12,
+                        fontWeight: 600,
+                        letterSpacing: '0.04em',
+                        textTransform: 'uppercase',
+                        color: vmTokens.textSecondary,
+                        background: vmTokens.surfaceRaisedBg,
                       }}
                     >
-                      {version.value}
-                    </span>
-                    {isSelected && <Check size={20} color={vmTokens.gold} />}
-                  </button>
-                );
-              })}
+                      {group.label}
+                    </div>
+                    {group.versions.map((version) => {
+                      const isSelected = version.key === bibleVersion;
+                      const isNtOnly = version.testamentCoverage === 'nt';
+                      return (
+                        <button
+                          type="button"
+                          key={version.key}
+                          onClick={() => handleBibleVersionChange(version.key as BibleVersion)}
+                          data-testid={`version-option-${version.key.toLowerCase()}`}
+                          style={{
+                            ...pickerItemBaseStyle,
+                            borderBottom: `1px solid ${vmTokens.surfaceRaisedBorder}`,
+                            background: isSelected ? vmTokens.rowSelectedBg : 'transparent',
+                          }}
+                        >
+                          <span
+                            style={{
+                              flex: 1,
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: 8,
+                              fontSize: 16,
+                              color: isSelected ? vmTokens.gold : vmTokens.textPrimary,
+                              fontWeight: isSelected ? 500 : 400,
+                            }}
+                          >
+                            {version.value}
+                            {isNtOnly && (
+                              <span
+                                data-testid={`version-nt-badge-${version.key.toLowerCase()}`}
+                                style={{
+                                  fontSize: 10,
+                                  fontWeight: 600,
+                                  letterSpacing: '0.04em',
+                                  padding: '2px 6px',
+                                  borderRadius: 6,
+                                  color: vmTokens.textSecondary,
+                                  border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
+                                }}
+                              >
+                                NT only
+                              </span>
+                            )}
+                          </span>
+                          {isSelected && <Check size={20} color={vmTokens.gold} />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </section>
