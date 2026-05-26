@@ -1,7 +1,9 @@
 import React from 'react';
 import LexiconPopover from './LexiconPopover';
-import type { AlignedToken, ChapterAlignment } from '@versemate/lexicon';
+import type { AlignedToken, ChapterAlignment, LexEntry } from '@versemate/lexicon';
+import { loadStrongsIndex } from '@versemate/lexicon';
 import { shouldUnderlineLexeme } from '@/lib/lexiconImportance';
+import type { VerseToken } from '@/services/types';
 
 interface Chunk {
   kind: 'text' | 'word';
@@ -89,19 +91,103 @@ interface TokenizedVerseProps {
   text: string;
   verseNumber: number;
   alignment: ChapterAlignment;
+  /**
+   * Backend-emitted Strong's tokens for this verse, present when the
+   * chapter was fetched with `?tagged=1` AND the row had tokens seeded.
+   * When supplied AND non-empty, takes precedence over the legacy
+   * English-surface scan: each token's `strongs` is looked up directly
+   * in `STRONGS_INDEX`, no surface matching needed.
+   */
+  wireTokens?: VerseToken[];
+}
+
+/**
+ * Render branch for backend-tagged verses (Spanish RVR09, German SCH51,
+ * French LSG, Russian SYN — plus the LLM-aligned non-Latin translations
+ * once they land). Walks `wireTokens` in order; each token with a
+ * `strongs` value becomes a `LexiconPopover` looked up by Strong's ID,
+ * each passthrough renders as plain text. Joining each token's `text`
+ * field reproduces the verse exactly (the lossless-join invariant the
+ * backend enforces at seed time), so the visible text is identical to
+ * what the legacy renderer would have produced.
+ */
+function TaggedVerse({ tokens }: { tokens: VerseToken[] }) {
+  // `loadStrongsIndex` is cached, so concurrent verses share one fetch.
+  // Suspense-style ergonomics aren't available here without a refactor,
+  // so we render plain text on the first tick, then hydrate to popovers
+  // once the index resolves. Hot reloads + repeat chapter visits skip the
+  // round-trip entirely thanks to the in-module promise cache.
+  const [index, setIndex] = React.useState<Readonly<Record<string, LexEntry>> | null>(
+    null,
+  );
+  React.useEffect(() => {
+    let cancelled = false;
+    loadStrongsIndex().then((idx) => {
+      if (!cancelled) setIndex(idx);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return (
+    <>
+      {tokens.map((tok, idx) => {
+        if (!tok.strongs || !index) {
+          return <React.Fragment key={idx}>{tok.text}</React.Fragment>;
+        }
+        const entry = index[tok.strongs];
+        if (!entry) return <React.Fragment key={idx}>{tok.text}</React.Fragment>;
+        // Synthesize a minimal AlignedToken so LexiconPopover (currently
+        // shaped around the lexicon-overlay path) keeps working. The
+        // `surface` field is the displayed text; `lemma` is the slug-style
+        // key. This shape may be simplified once the lexicon overlay path
+        // is retired for non-English translations.
+        const aligned: AlignedToken = {
+          surface: tok.text,
+          lemma: entry.translit,
+        };
+        return (
+          <LexiconPopover
+            key={idx}
+            surface={tok.text}
+            entry={entry}
+            token={aligned}
+            underline={shouldUnderlineLexeme(entry)}
+          >
+            {tok.text}
+          </LexiconPopover>
+        );
+      })}
+    </>
+  );
 }
 
 export default function TokenizedVerse({
   text,
   verseNumber,
   alignment,
+  wireTokens,
 }: TokenizedVerseProps) {
+  // Hooks must run in the same order every render — hoist the useMemo
+  // above the early-return branches.
   const tokens = alignment.verses[verseNumber] ?? [];
+  const chunks = React.useMemo(
+    () => (tokens.length === 0 ? [] : tokenize(text, tokens)),
+    [text, tokens],
+  );
+
+  // When the backend supplied Strong's-tagged tokens, prefer those — they
+  // come from hand-edited or LLM-aligned sources and don't need surface
+  // scanning. Fall through to the legacy lexicon-overlay path otherwise
+  // (English versions whose alignment ships via `loadAlignmentFor`, or
+  // non-English versions whose backend rows haven't been seeded yet).
+  if (wireTokens && wireTokens.length > 0) {
+    return <TaggedVerse tokens={wireTokens} />;
+  }
   if (tokens.length === 0) {
     return <>{text}</>;
   }
-
-  const chunks = React.useMemo(() => tokenize(text, tokens), [text, tokens]);
 
   return (
     <>
