@@ -250,9 +250,14 @@ const _staticVersionByKey = new Map(bibleVersions.map(v => [v.key, v]));
  *
  * Falls back to the static `bibleVersions` catalog when the endpoint is
  * unavailable (e.g. an environment whose backend hasn't run the ingest yet).
- * License/attribution strings missing from the API are backfilled from the
- * static catalog so the Credits screen always has the required CC BY / BY-SA
- * attribution line.
+ *
+ * For versions in our curated catalog, the catalog is the source of truth for
+ * the display label and testament coverage — the discovery endpoint's
+ * `version_name`/`testament_coverage` can be stale (e.g. UKRKL ships as
+ * "(НЗ)" / "nt" but actually carries the full canon). The API still discovers
+ * which versions exist and supplies license/attribution (backfilled from the
+ * catalog when the API returns null, so the Credits screen always has the
+ * required CC BY / BY-SA line).
  */
 export async function fetchBibleVersions(): Promise<BibleVersionInfo[]> {
   try {
@@ -263,17 +268,15 @@ export async function fetchBibleVersions(): Promise<BibleVersionInfo[]> {
     if (list.length === 0) return bibleVersions;
     return list.map((v): BibleVersionInfo => {
       const fallback = _staticVersionByKey.get(v.version_key);
-      const name = v.version_name || fallback?.value || v.version_key;
-      const value = v.version_name ? `${v.version_name} (${v.version_key})` : name;
-      const coverage = (v.testament_coverage as TestamentCoverage) || fallback?.testamentCoverage;
+      const apiValue = v.version_name ? `${v.version_name} (${v.version_key})` : undefined;
       return {
         key: v.version_key,
-        value,
+        value: fallback?.value || apiValue || v.version_key,
         languageCode: v.language_code || fallback?.languageCode || 'en',
         license: v.license || fallback?.license,
         licenseUrl: v.license_url ?? fallback?.licenseUrl ?? null,
         attribution: v.attribution || fallback?.attribution || null,
-        testamentCoverage: coverage,
+        testamentCoverage: fallback?.testamentCoverage || (v.testament_coverage as TestamentCoverage),
       };
     });
   } catch {
