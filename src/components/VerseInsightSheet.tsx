@@ -241,13 +241,6 @@ export default function VerseInsightSheet({
               <ChevronRight size={18} className="text-foreground" />
             </button>
           </div>
-
-          {/* Quoted verse — pushed down for breathing room under the stepper */}
-          {verseText && (
-            <p className="px-6 mt-4 text-center text-[14px] italic text-muted-foreground leading-snug">
-              "{verseText}"
-            </p>
-          )}
         </div>
 
         {/* Analysis panel — outer px-4 aligns with action-button row below.
@@ -261,7 +254,7 @@ export default function VerseInsightSheet({
           // margin-bottom (mb-6 = 24px) AND the scroll container adds pb-12
           // (48px), so the visible gap between the card's bottom edge and
           // the action-button row is unmistakable at any scroll position.
-          className="flex-1 overflow-y-auto px-4 mt-6 pb-12"
+          className="flex-1 overflow-y-auto px-4 mt-4 pb-12"
           style={{
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
@@ -269,6 +262,13 @@ export default function VerseInsightSheet({
             touchAction: 'pan-y',
           }}
         >
+          {/* Quoted verse — scrolls with the content so it never permanently
+              eats header space on short / zoomed-in viewports. */}
+          {verseText && (
+            <p className="vis-quote px-2 mb-4 text-center text-[14px] italic text-muted-foreground leading-snug">
+              "{verseText}"
+            </p>
+          )}
           <div
             className="rounded-xl bg-secondary border border-border p-5 mb-6"
             // Inherit the user's reading font size so commentary matches the
@@ -308,7 +308,7 @@ export default function VerseInsightSheet({
             top padding gives a clear visual separation from the scrolling
             content above so the last line of commentary never reads as
             "behind" the buttons. */}
-        <div className="shrink-0 px-4 pb-2 pt-3 border-t border-border">
+        <div className="vis-actions shrink-0 px-4 pb-2 pt-3 border-t border-border">
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={handleCopy}
@@ -336,7 +336,7 @@ export default function VerseInsightSheet({
         </div>
 
         {/* Close button */}
-        <div className="shrink-0 px-4 pb-4 safe-bottom">
+        <div className="vis-close shrink-0 px-4 pb-4 safe-bottom">
           <button
             onClick={onClose}
             className="w-full h-12 rounded-xl bg-gold text-foreground font-medium text-[15px]"

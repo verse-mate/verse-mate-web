@@ -355,13 +355,23 @@ button { font-family: inherit; }
 /* ─── Reading body ─── */
 .reading-body {
   flex: 1;
-  overflow-y: auto;
+  min-height: 0;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-reading);
 }
-.reading-body::-webkit-scrollbar { width: 8px; }
-.reading-body::-webkit-scrollbar-thumb { background: var(--bg-sidebar-border); border-radius: 4px; }
-.reading-body::-webkit-scrollbar-track { background: transparent; }
+/* The verse column scrolls in here; .reading-body stays put so the absolutely
+   positioned chapter-nav arrows remain pinned (don't scroll away when zoomed). */
+.reading-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+.reading-scroll::-webkit-scrollbar { width: 8px; }
+.reading-scroll::-webkit-scrollbar-thumb { background: var(--bg-sidebar-border); border-radius: 4px; }
+.reading-scroll::-webkit-scrollbar-track { background: transparent; }
 
 .reading-inner {
   /* Narrower than the prototype's 780 to leave a meaningful gutter on
