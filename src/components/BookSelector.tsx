@@ -95,9 +95,9 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
   // Chapter picker view
   if (selectedBookObj) {
     return (
-      <div data-testid="bible-navigation-modal-chapters" className="absolute inset-0 z-50 bg-background flex flex-col animate-fade-in text-foreground">
+      <div data-testid="bible-navigation-modal-chapters" className="absolute inset-0 z-50 bg-background flex flex-col items-center animate-fade-in text-foreground">
         <header
-          className="shrink-0 safe-top"
+          className="shrink-0 safe-top w-full max-w-[680px]"
           style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)' }}
         >
           <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
@@ -113,7 +113,7 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
           </div>
         </header>
 
-        <div className="sub-screen-body flex-1 px-4 pt-2 pb-6">
+        <div className="sub-screen-body flex-1 px-4 pt-2 pb-6 w-full max-w-[680px]">
           <p className="text-[13px] text-muted-foreground mb-3">Select a chapter</p>
           <div className="grid grid-cols-5 sm:grid-cols-6 gap-2">
             {Array.from({ length: selectedBookObj.chapters }, (_, i) => i + 1).map(ch => (
@@ -133,10 +133,13 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
   }
 
   return (
-    <div data-testid="bible-navigation-modal" className="absolute inset-0 z-50 bg-background flex flex-col animate-fade-in text-foreground">
-      {/* Header: Search title */}
+    <div data-testid="bible-navigation-modal" className="absolute inset-0 z-50 bg-background flex flex-col items-center animate-fade-in text-foreground">
+      {/* Header: Search title.
+          Content is capped to a centered column (max-w-[680px]) so the
+          full-screen overlay doesn't stretch the tabs / search bar edge-to-edge
+          on wide or zoomed-in viewports — see the `items-center` on the parent. */}
       <header
-        className="shrink-0 safe-top"
+        className="shrink-0 safe-top w-full max-w-[680px]"
         style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)' }}
       >
         <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
@@ -153,7 +156,7 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
       </header>
 
       {/* Segmented tabs */}
-      <div className="px-4 pt-2">
+      <div className="px-4 pt-2 w-full max-w-[680px]">
         <div className="flex items-center rounded-full bg-secondary p-1">
           {(['OT', 'NT', 'Topics'] as Tab[]).map(t => {
             const label = t === 'OT' ? 'Old Testament' : t === 'NT' ? 'New Testament' : 'Topics';
@@ -181,7 +184,7 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
 
       {/* Topic category pills (only on Topics tab) — Events / Prophecies / Parables / Themes */}
       {tab === 'Topics' && (
-        <div className="px-4 pt-2">
+        <div className="px-4 pt-2 w-full max-w-[680px]">
           <div className="flex items-center gap-1 rounded-full bg-secondary p-1">
             {TOPIC_CATEGORIES.map(c => {
               const active = topicCategory === c.key;
@@ -213,7 +216,7 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
       )}
 
       {/* Search input */}
-      <div className="px-4 pt-3">
+      <div className="px-4 pt-3 w-full max-w-[680px]">
         <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-secondary border border-border">
           <Search size={18} className="text-muted-foreground" strokeWidth={2} />
           <input
@@ -228,7 +231,7 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
       </div>
 
       {/* List */}
-      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6">
+      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6 w-full max-w-[680px]">
         {tab === 'Topics' ? (
           filteredTopics.length > 0 ? (
             <div>

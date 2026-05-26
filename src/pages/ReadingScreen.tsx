@@ -338,12 +338,16 @@ export default function ReadingScreen() {
           .chapter-meta holds the h1 + icon buttons. .font-scripture is the
           verse body. All layout / colors come from prototype.css. */}
       <div
-        ref={scrollRef}
         onTouchStart={handleBodyTouchStart}
         onTouchEnd={handleBodyTouchEnd}
         data-testid="chapter-pager-view"
         className="reading-body"
       >
+        {/* Inner scroller — the verse column scrolls here while the chapter
+            nav arrows (siblings below, outside this div) stay pinned to the
+            non-scrolling .reading-body so they don't scroll off-screen when
+            zoomed in. */}
+        <div className="reading-scroll" ref={scrollRef}>
         <div className="reading-inner">
         <div className="chapter-meta">
           <h1 className="chapter-title" data-testid="chapter-header">
@@ -483,12 +487,13 @@ export default function ReadingScreen() {
           })()}
         </div>
         </div>{/* end .reading-inner */}
+        </div>{/* end .reading-scroll */}
 
-        {/* Chapter nav buttons — INSIDE .reading-body so their absolute
-            positioning resolves to .reading-body (the prototype's relative
-            ancestor), not .split-body. Without this they bubble all the
-            way up to .split-body and end up positioned across BOTH panes
-            instead of within the reading column. */}
+        {/* Chapter nav buttons — INSIDE .reading-body (now the non-scrolling
+            relative ancestor) but OUTSIDE .reading-scroll, so their absolute
+            positioning resolves to .reading-body and they stay vertically
+            pinned as the verse column scrolls. Anchoring here (not .split-body)
+            keeps them in the reading column rather than across both panes. */}
         {state.chapter > 1 && (
           <button
             onClick={() => goToChapter(-1)}
