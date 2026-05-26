@@ -1,6 +1,7 @@
 import React from 'react';
 import LexiconPopover from './LexiconPopover';
 import type { AlignedToken, ChapterAlignment } from '@versemate/lexicon';
+import { shouldUnderlineLexeme } from '@/lib/lexiconImportance';
 
 interface Chunk {
   kind: 'text' | 'word';
@@ -108,14 +109,13 @@ export default function TokenizedVerse({
         if (c.kind === 'text') return <React.Fragment key={idx}>{c.text}</React.Fragment>;
         const entry = alignment.lexicon[c.token!.lemma];
         if (!entry) return <React.Fragment key={idx}>{c.text}</React.Fragment>;
-        const isTheme = alignment.themeLemmas?.includes(c.token!.lemma) ?? false;
         return (
           <LexiconPopover
             key={idx}
             surface={c.text}
             entry={entry}
             token={c.token!}
-            isTheme={isTheme}
+            underline={shouldUnderlineLexeme(entry)}
           >
             {c.text}
           </LexiconPopover>
