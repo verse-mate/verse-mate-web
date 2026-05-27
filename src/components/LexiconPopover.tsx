@@ -2,6 +2,8 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import type { LexEntry, AlignedToken } from '@versemate/lexicon';
 import { vmTokens } from '@/styles/themeStyles';
+import { usePreferredLanguage } from '@/hooks/usePreferredLanguage';
+import { fetchLemmaCard, apiCardToLexEntry } from '@/services/lemmaApi';
 
 // Hebrew + Aramaic block (U+0590-U+05FF) — if a lemma contains any character
 // in this range, render it RTL. Greek lemmas have no Hebrew chars so the
@@ -87,6 +89,56 @@ export default function LexiconPopover({
 
   // Controlled so we can dismiss the card when the Bible scrolls behind it.
   const [open, setOpen] = useState(false);
+
+  // Language-aware lemma card. English users render the bundled `entry`
+  // verbatim and never hit the network; non-English users fetch the
+  // translated card and merge it over the bundled English baseline (which
+  // shows instantly, then upgrades when the translation lands).
+  const lang = usePreferredLanguage();
+  const [renderEntry, setRenderEntry] = useState<LexEntry>(entry);
+  const [isTranslated, setIsTranslated] = useState(false);
+
+  useEffect(() => {
+    // English (or a token with no Strong's): render the bundled entry, never
+    // touch the network.
+    if (lang === 'en' || !entry.strongs) {
+      setRenderEntry(entry);
+      setIsTranslated(false);
+      return;
+    }
+    // Non-English: only fetch once the card is actually opened. A popover is
+    // mounted for every underlined word in the chapter, so fetching on mount
+    // would fire one request per word; gating on `open` limits it to the word
+    // the user taps (cached thereafter, so re-opening is instant).
+    if (!open) return;
+
+    // Show the bundled entry immediately so the card is never blank, then
+    // overlay the translation once it resolves.
+    setRenderEntry(entry);
+    setIsTranslated(false);
+    let cancelled = false;
+    fetchLemmaCard(entry.strongs, lang).then((card) => {
+      if (cancelled || !card) return;
+      const merged: LexEntry = { ...entry, ...apiCardToLexEntry(card) };
+      // The API drops the Greek script on related words — restore it from the
+      // bundled entry by position. When the API ships no related at all, keep
+      // the bundled related untouched.
+      if (card.related && card.related.length > 0) {
+        merged.related = card.related.map((r, i) => ({
+          lemma: entry.related?.[i]?.lemma ?? '',
+          translit: r.translit,
+          note: r.note,
+        }));
+      } else {
+        merged.related = entry.related;
+      }
+      setRenderEntry(merged);
+      setIsTranslated(card.is_translated);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [open, entry, lang]);
 
   // Don't let a drag-to-select gesture pop the lexical card. On desktop the
   // verse text is real, selectable text and releasing a highlight drag often
@@ -191,7 +243,7 @@ export default function LexiconPopover({
           onMouseUp={(e) => e.stopPropagation()}
           className={underline ? 'lex-word' : undefined}
           data-lex-word={entry.translit}
-          aria-label={`${surface} — ${entry.translit}, ${entry.basicGloss}`}
+          aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
           style={{
             cursor: 'pointer',
             color: 'inherit',
@@ -257,7 +309,7 @@ export default function LexiconPopover({
         >
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
             <span
-              dir={isHebrew(entry.lemma) ? 'rtl' : 'ltr'}
+              dir={isHebrew(renderEntry.lemma) ? 'rtl' : 'ltr'}
               style={{
                 fontFamily: 'Georgia, "Times New Roman", serif',
                 fontSize: 22,
@@ -269,23 +321,44 @@ export default function LexiconPopover({
                 unicodeBidi: 'isolate',
               }}
             >
-              {entry.lemma}
+              {renderEntry.lemma}
             </span>
             <span style={{ fontSize: 14, color: vmTokens.gold, fontWeight: 500 }}>
-              {entry.translit}
+              {renderEntry.translit}
             </span>
+            {/* Transparency that the card's prose is an AI translation, not the
+                original-language reference data. Only shown when the endpoint
+                actually returned a translated card (is_translated). */}
+            {isTranslated && (
+              <span
+                style={{
+                  marginLeft: 'auto',
+                  alignSelf: 'center',
+                  fontSize: 9,
+                  fontWeight: 600,
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  color: vmTokens.gold,
+                  border: `1px solid ${vmTokens.gold}`,
+                  borderRadius: 4,
+                  padding: '1px 5px',
+                }}
+              >
+                Translated
+              </span>
+            )}
           </div>
           <div style={{ marginTop: 4, fontSize: 12, color: vmTokens.textTertiary }}>
-            {entry.pos} • {entry.strongs}
-            {entry.pronunciation ? ` • ${entry.pronunciation}` : ''}
+            {renderEntry.pos} • {renderEntry.strongs}
+            {renderEntry.pronunciation ? ` • ${renderEntry.pronunciation}` : ''}
             {/* Frequency: show NT-only, OT-only, or both depending on which
                 fields are populated. Hebrew lemmas keyed to TBESH always
                 get otFrequency; Greek to TBESG always get ntFrequency. */}
-            {typeof entry.otFrequency === 'number' && entry.otFrequency > 0
-              ? ` • ${entry.otFrequency}× in OT`
+            {typeof renderEntry.otFrequency === 'number' && renderEntry.otFrequency > 0
+              ? ` • ${renderEntry.otFrequency}× in OT`
               : ''}
-            {typeof entry.ntFrequency === 'number' && entry.ntFrequency > 0
-              ? ` • ${entry.ntFrequency}× in NT`
+            {typeof renderEntry.ntFrequency === 'number' && renderEntry.ntFrequency > 0
+              ? ` • ${renderEntry.ntFrequency}× in NT`
               : ''}
           </div>
         </div>
@@ -299,11 +372,11 @@ export default function LexiconPopover({
 
         {/* ── BASIC SENSE ── */}
         <Section label="Basic sense">
-          <p style={SECTION_BODY_STYLE}>{entry.basicGloss}</p>
+          <p style={SECTION_BODY_STYLE}>{renderEntry.basicGloss}</p>
         </Section>
 
         {/* ── SEMANTIC RANGE ── */}
-        {entry.semanticRange && entry.semanticRange.length > 0 && (
+        {renderEntry.semanticRange && renderEntry.semanticRange.length > 0 && (
           <Section label="Semantic range">
             <ul
               style={{
@@ -314,7 +387,7 @@ export default function LexiconPopover({
                 color: vmTokens.textPrimary,
               }}
             >
-              {entry.semanticRange.map((s, i) => (
+              {renderEntry.semanticRange.map((s, i) => (
                 <li key={i} style={{ marginBottom: 3 }}>
                   {s}
                 </li>
@@ -324,10 +397,10 @@ export default function LexiconPopover({
         )}
 
         {/* ── RELATED WORDS ── */}
-        {entry.related && entry.related.length > 0 && (
+        {renderEntry.related && renderEntry.related.length > 0 && (
           <Section label="Related">
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {entry.related.map((r, i) => (
+              {renderEntry.related.map((r, i) => (
                 <div key={i} style={{ fontSize: 13, lineHeight: '18px' }}>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
                     <span
@@ -355,7 +428,7 @@ export default function LexiconPopover({
         )}
 
         {/* ── LEXICAL NOTE ── */}
-        {entry.notes && (
+        {renderEntry.notes && (
           <Section label="Lexical note">
             <p
               style={{
@@ -365,13 +438,13 @@ export default function LexiconPopover({
                 color: vmTokens.textPrimary,
               }}
             >
-              {entry.notes}
+              {renderEntry.notes}
             </p>
           </Section>
         )}
 
         {/* ── LOADED CAVEAT (no bottom border — last section) ── */}
-        {entry.loaded && (
+        {renderEntry.loaded && (
           <div style={{ padding: '10px 16px 14px' }}>
             <div
               style={{
