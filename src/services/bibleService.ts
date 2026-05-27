@@ -19,6 +19,7 @@ import {
 } from './types';
 import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, getRefreshToken, ApiError, API_BASE_URL } from './api';
 import { bibleVersions, BibleVersionInfo, TestamentCoverage } from '@/constants/bible-versions';
+import { getPreferredLanguageCode } from '@/hooks/usePreferredLanguage';
 
 // ─── Raw API response shapes ─────────────────────────────────────────────
 // Narrow definitions of just the fields we read from each backend payload.
@@ -326,14 +327,18 @@ interface ExplanationCache {
 const _explanationCache = new Map<string, Promise<ExplanationCache>>();
 
 async function loadExplanations(bookId: number, chapter: number): Promise<ExplanationCache> {
-  const key = `${bookId}:${chapter}`;
+  // Key by language so switching language refetches instead of serving the
+  // previously-cached language. The backend localizes from the `lang` param
+  // (falling back to the JWT claim, then the default).
+  const lang = getPreferredLanguageCode();
+  const key = `${bookId}:${chapter}:${lang}`;
   const existing = _explanationCache.get(key);
   if (existing) return existing;
   const promise = (async (): Promise<ExplanationCache> => {
     const [summary, byline, detailed] = await Promise.all([
-      fetchExplanation(bookId, chapter, 'summary'),
-      fetchExplanation(bookId, chapter, 'byline'),
-      fetchExplanation(bookId, chapter, 'detailed'),
+      fetchExplanation(bookId, chapter, 'summary', lang),
+      fetchExplanation(bookId, chapter, 'byline', lang),
+      fetchExplanation(bookId, chapter, 'detailed', lang),
     ]);
     return {
       summary,
@@ -389,18 +394,17 @@ export async function fetchCommentary(book: string, chapter: number): Promise<Co
 async function fetchExplanation(
   bookId: number,
   chapter: number,
-  explanationType: ExplanationType
+  explanationType: ExplanationType,
+  lang: string
 ): Promise<ExplanationEntry> {
   try {
     const data = await api.get<ExplanationResponse>(
       `/bible/book/explanation/${bookId}/${chapter}`,
-      { explanationType },
-      // Send the access token: the AI-explanation language is keyed off the
-      // user's `preferred_language`, which the backend reads from the JWT
-      // claims (that's why a language change re-issues the token). With
-      // `auth: false` the token never went out, so commentary always came
-      // back in the default language regardless of the chosen preference.
-      // Guests simply send no token and get the default.
+      // `lang` localizes commentary for everyone, including guests with no
+      // token. The backend honors it over the JWT `preferred_language` claim,
+      // so a guest's picker choice takes effect without signing in. The token
+      // is still sent (auth: true) so the claim remains the fallback.
+      { explanationType, lang },
       { auth: true }
     );
     const text = data?.explanation?.explanation;
