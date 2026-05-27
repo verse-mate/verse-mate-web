@@ -22,18 +22,25 @@ function explanationResponse(text: string): Response {
   return jsonResponse({ explanation: { explanation: text, explanation_id: 7 } });
 }
 
+let requestedUrls: string[] = [];
+
 /** Route /bible/books and the byline explanation; everything else is empty. */
 function mockBylineMarkdown(byline: string) {
+  requestedUrls = [];
   global.fetch = vi.fn(async (input: RequestInfo | URL) => {
     const url = typeof input === 'string' ? input : input.toString();
+    requestedUrls.push(url);
     if (url.includes('/bible/books')) return jsonResponse(BOOKS);
     if (url.includes('explanationType=byline')) return explanationResponse(byline);
     return explanationResponse('');
   }) as typeof global.fetch;
 }
 
+const bylineRequests = () => requestedUrls.filter((u) => u.includes('explanationType=byline'));
+
 afterEach(() => {
   global.fetch = ORIGINAL_FETCH;
+  localStorage.clear();
   vi.restoreAllMocks();
 });
 
@@ -71,5 +78,36 @@ describe('fetchCommentary — By Line parsing across languages', () => {
 
     const byline = (await fetchCommentary('Genesis', 3)).filter((c) => c.type === 'byline');
     expect(byline.map((c) => c.verse)).toEqual([4, 5]);
+  });
+});
+
+describe('fetchCommentary — language param', () => {
+  it('sends the stored preferred language so guests get localized commentary', async () => {
+    localStorage.setItem('@versemate:preferred_language', 'es-MX');
+    mockBylineMarkdown('## Génesis 1:1\n> En el principio…');
+
+    await fetchCommentary('Genesis', 4);
+    // Region suffix is collapsed to the base ISO code the backend keys on.
+    expect(bylineRequests()[0]).toContain('lang=es');
+  });
+
+  it('defaults to en when no language is stored', async () => {
+    mockBylineMarkdown('## Genesis 1:1\n> In the beginning…');
+
+    await fetchCommentary('Genesis', 5);
+    expect(bylineRequests()[0]).toContain('lang=en');
+  });
+
+  it('keys the cache by language so switching language refetches', async () => {
+    mockBylineMarkdown('## Genesis 1:1\n> In the beginning…');
+
+    await fetchCommentary('Genesis', 6); // en (default)
+    localStorage.setItem('@versemate:preferred_language', 'fr');
+    await fetchCommentary('Genesis', 6); // fr — must not serve the en cache
+
+    const reqs = bylineRequests();
+    expect(reqs).toHaveLength(2);
+    expect(reqs[0]).toContain('lang=en');
+    expect(reqs[1]).toContain('lang=fr');
   });
 });

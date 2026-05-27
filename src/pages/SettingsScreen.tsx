@@ -395,17 +395,14 @@ export default function SettingsScreen() {
 
     if (isAuthenticated) {
       try {
+        // Persist as the server-side default. Localization now travels via the
+        // `lang` query param and the explanation cache is keyed by language, so
+        // returning to the reader refetches under the new language — no
+        // full-page reload. The token refresh keeps the `preferred_language`
+        // claim current as the backend's fallback.
         await updateUserPreferredLanguage(languageCode);
-        // Small delay to ensure backend DB consistency before issuing new token.
         await new Promise((resolve) => setTimeout(resolve, 500));
         await refreshTokens();
-        // The AI-explanation language is carried by the refreshed token, but
-        // commentary/insights are fetched per book:chapter and cached in
-        // module state with no language key — so nothing re-fetches on a
-        // preference change. Reload so all content reloads under the new
-        // token + a fresh cache. (Preference persisted above, so the picker
-        // restores the selection after reload.)
-        window.location.reload();
       } catch (err) {
         console.error('Failed to save language preference:', err);
       }
