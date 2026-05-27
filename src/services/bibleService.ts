@@ -430,8 +430,9 @@ async function fetchExplanation(
 function splitBylineByVerse(text: string): Map<number, string> {
   const map = new Map<number, string>();
   if (!text) return map;
-  // Match "## Book Name 1:2" headings
-  const re = /^##\s+[\w\s]+?\s+\d+:(\d+)/gm;
+  // Book name is `.+?` (any non-newline run), not ASCII `[\w\s]`, so localized
+  // names with diacritics or non-Latin scripts (e.g. "Génesis", "創世記") parse.
+  const re = /^##\s+.+?\s+\d+:(\d+)/gm;
   const matches: { idx: number; verse: number }[] = [];
   let m: RegExpExecArray | null;
   while ((m = re.exec(text))) {
