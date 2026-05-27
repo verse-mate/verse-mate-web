@@ -20,6 +20,15 @@ function readPreferredLanguage(): string {
   }
 }
 
+/**
+ * Non-hook read of the preferred language (base ISO, e.g. "es"), for callers
+ * outside React such as the API service layer. Same source of truth as
+ * usePreferredLanguage; defaults to "en".
+ */
+export function getPreferredLanguageCode(): string {
+  return readPreferredLanguage();
+}
+
 function subscribe(onStoreChange: () => void): () => void {
   if (typeof window === 'undefined') return () => {};
   // Cross-tab changes fire `storage`. A same-tab change happens on the Settings
