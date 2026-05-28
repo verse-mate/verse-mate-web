@@ -276,7 +276,11 @@ export default function ReadingScreen() {
     // issue from that.
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.headerBg }}>
       {/* ─── DARK HEADER with TEXT pill tabs — hidden on desktop (DesktopLayout renders shared header) ─── */}
-      <header className="reading-screen-header shrink-0 safe-top" style={{ backgroundColor: vmTokens.headerBg, paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
+      {/* `.safe-top` adds only the real notch inset (env(safe-area-inset-top),
+          0 on desktop / non-notched), so the bar is just its 56px row instead
+          of carrying a fixed status-bar floor that reads as dead space when a
+          zoomed-in desktop browser drops into this mobile layout. */}
+      <header className="reading-screen-header shrink-0 safe-top" style={{ backgroundColor: vmTokens.headerBg }}>
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
           {/* Left: Book + chapter dropdown */}
           <button
