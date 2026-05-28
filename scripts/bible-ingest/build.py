@@ -55,7 +55,7 @@ VERSIONS: list[dict] = [
     {'key': 'RVR09',  'ebible_id': 'spaRV1909', 'language': 'es', 'title': 'Reina Valera 1909',            'license': 'Public Domain', 'license_url': '', 'attribution': 'Santa Biblia Reina-Valera 1909. Public domain.'},
     {'key': 'LSG',    'ebible_id': 'fraLSG',    'language': 'fr', 'title': 'Louis Segond 1910',            'license': 'Public Domain', 'license_url': '', 'attribution': 'La Sainte Bible, Louis Segond 1910. Public domain.'},
     {'key': 'RIV',    'ebible_id': 'ita1927',   'language': 'it', 'title': 'Riveduta 1927',                'license': 'Public Domain', 'license_url': '', 'attribution': 'La Sacra Bibbia, Riveduta (Luzzi) 1927. Public domain.'},
-    {'key': 'VDC',    'ebible_id': 'ron1924',   'language': 'ro', 'title': 'Biblia Cornilescu 1924',       'license': 'Public Domain', 'license_url': '', 'attribution': 'Biblia Dumitru Cornilescu 1924. Public domain.'},
+    {'key': 'VDC',    'ebible_id': 'ron1924',   'language': 'ro', 'title': 'Biblia Cornilescu 1924',       'license': 'Public Domain', 'license_url': '', 'attribution': 'Biblia Dumitru Cornilescu 1924. Public domain.', 'transliterate': 'mol-cyrl-to-ron-latn'},
     {'key': 'UKRKL',  'ebible_id': 'ukr1871',   'language': 'uk', 'title': 'Переклад Куліша',              'license': 'Public Domain', 'license_url': '', 'attribution': 'Святе Письмо, переклад П. Куліша. Public domain.', 'expect': 'full'},
     {'key': 'SCH51',  'ebible_id': 'deu1951',   'language': 'de', 'title': 'Schlachter-Bibel 1951',        'license': 'CC BY 4.0',     'license_url': 'https://creativecommons.org/licenses/by/4.0/',    'attribution': 'Schlachter-Bibel 1951 © Genfer Bibelgesellschaft. CC BY 4.0.'},
     {'key': 'BLIV',   'ebible_id': 'porbr2018', 'language': 'pt', 'title': 'Bíblia Livre',                 'license': 'CC BY 3.0',     'license_url': 'https://creativecommons.org/licenses/by/3.0/br/', 'attribution': 'Bíblia Livre © 2018 Diego Santos, Mario Sérgio, Marco Teles. CC BY 3.0 BR.'},
@@ -94,6 +94,349 @@ META_MARKERS = {
     '\\ms', '\\ms1', '\\mr', '\\mr1', '\\sr', '\\sp', '\\sd', '\\r', '\\d', '\\cl',
     '\\cp', '\\pb', '\\periph', '\\qa', '\\lit',
 }
+
+
+# ─────────────────────────────────────────────────────────────────────────
+# Moldovan Cyrillic → Latin Romanian transliteration.
+#
+# eBible.org's `ron1924` (Biblia Cornilescu 1924) is published in Cyrillic
+# script (the 1957 Moldovan SSR orthography). A Latin-script edition of the
+# same translation is not on eBible.org, so to serve the Cornilescu text in
+# the script Romanian readers actually expect we transliterate at ingest
+# time. This is a deterministic letter-mapping with two positional rules
+# (ы→î/â at edges, я/ю→ea/ia after consonant) plus a small override list
+# for words where Cyrillic я is ambiguous between Latin "ea" and "ia".
+# ─────────────────────────────────────────────────────────────────────────
+
+_CYR_SINGLE = {
+    'А': 'A', 'а': 'a', 'Б': 'B', 'б': 'b', 'В': 'V', 'в': 'v', 'Г': 'G', 'г': 'g',
+    'Д': 'D', 'д': 'd', 'Е': 'E', 'е': 'e', 'Ж': 'J', 'ж': 'j', 'З': 'Z', 'з': 'z',
+    'И': 'I', 'и': 'i', 'Й': 'I', 'й': 'i', 'К': 'C', 'к': 'c', 'Л': 'L', 'л': 'l',
+    'М': 'M', 'м': 'm', 'Н': 'N', 'н': 'n', 'О': 'O', 'о': 'o', 'П': 'P', 'п': 'p',
+    'Р': 'R', 'р': 'r', 'С': 'S', 'с': 's', 'Т': 'T', 'т': 't', 'У': 'U', 'у': 'u',
+    'Ф': 'F', 'ф': 'f', 'Х': 'H', 'х': 'h', 'Ц': 'Ț', 'ц': 'ț', 'Ч': 'C', 'ч': 'c',
+    'Ш': 'Ș', 'ш': 'ș', 'Щ': 'Șt', 'щ': 'șt', 'Ы': 'Î', 'ы': 'î', 'Ь': 'I', 'ь': 'i',
+    'Ъ': 'Ă', 'ъ': 'ă', 'Э': 'Ă', 'э': 'ă', 'Ю': 'Iu', 'ю': 'iu', 'Я': 'Ia', 'я': 'ia',
+    # Moldovan /dʒ/ — the soft g sound (Леӂя = Legea).
+    'Ӂ': 'G', 'ӂ': 'g',
+}
+
+_CYR_BACK_VOWELS = set('аоуэыАОУЭЫ')
+_CYR_CONSONANTS = set('бвгджзйклмнпрстфхцчшщӂБВГДЖЗЙКЛМНПРСТФХЦЧШЩӁ')
+_CYR_VOWELS = set('аеёиоуыэюяАЕЁИОУЫЭЮЯ')
+_CYR_SOFT_INSERT = {'ч': 'c', 'Ч': 'C', 'ӂ': 'g', 'Ӂ': 'G'}
+
+# Override list — words where Cyrillic 'я' after a consonant maps to Latin
+# 'ia' (not the default 'ea' the rule produces). Cornilescu 1924 spells
+# these with 'ia' per Latin orthographic tradition; the Cyrillic source
+# can't distinguish them since both /ia/ and /ea/ collapse onto 'я'.
+_TRANSLIT_WORD_FIXES = {
+    # 'a pieri' / 'a pierde' (perish/lose) family.
+    'peară': 'piară', 'pearde': 'pierde', 'peardă': 'piardă',
+    'pearzi': 'pierzi', 'pearzător': 'pierzător', 'pearzătoare': 'pierzătoare',
+    'pearzare': 'pierzare', 'peardut': 'pierdut', 'peardută': 'pierdută',
+    'peardem': 'pierdem', 'pearză': 'piardă', 'pear': 'pier', 'peari': 'pieri',
+    'pearit': 'pierit',
+    # 'viața' (life) and inflections.
+    'veața': 'viața', 'veață': 'viață', 'veaței': 'vieții',
+    'veețile': 'viețile', 'veețuiește': 'viețuiește', 'veețuiesc': 'viețuiesc',
+    # 'piatră' (stone).
+    'peatră': 'piatră', 'peatre': 'pietre', 'peatra': 'piatra', 'peatrei': 'pietrei',
+    # 'piață' (market).
+    'peață': 'piață', 'peațe': 'piețe', 'peața': 'piața',
+    # 'piept' (chest), 'piele' (skin).
+    'peept': 'piept', 'peeptul': 'pieptul', 'peeptului': 'pieptului',
+    'peele': 'piele', 'peelea': 'pielea',
+    # Capitalized variants for sentence-initial occurrences.
+    'Peară': 'Piară', 'Pearde': 'Pierde', 'Peardă': 'Piardă',
+    'Veața': 'Viața', 'Peatră': 'Piatră', 'Peață': 'Piață',
+}
+
+# Word-boundary fixes — Cyrillic source occasionally collapses two Latin
+# words (e.g. "Кэча" = "Căci a"). Applied as multi-word substitutions
+# after transliteration.
+_TRANSLIT_PHRASE_FIXES = {
+    # Doxology fragment: "Căci a Ta este împărăția" — typeset in Cyrillic
+    # as a single chunk "Кэча Та", which transliterates to "Căcea Ta".
+    'Căcea Ta': 'Căci a Ta',
+}
+
+
+def _translit_word(word: str) -> str:
+    out: list[str] = []
+    chars = list(word)
+    n = len(chars)
+    for i, ch in enumerate(chars):
+        if ch == '':
+            continue
+        prev_cyr = chars[i - 1] if i > 0 else ''
+        next_cyr = chars[i + 1] if i + 1 < n else ''
+
+        # ы → î at word edges, â mid-word (1993 Romanian orthography).
+        if ch in ('ы', 'Ы'):
+            edge = (i == 0 or i == n - 1
+                    or (prev_cyr not in _CYR_CONSONANTS and prev_cyr not in _CYR_VOWELS)
+                    or (next_cyr not in _CYR_CONSONANTS and next_cyr not in _CYR_VOWELS))
+            out.append(('Î' if edge else 'Â') if ch == 'Ы' else ('î' if edge else 'â'))
+            continue
+
+        # я → ea after consonant, ia after vowel/word-start. Same for ю→eu/iu.
+        if ch in ('я', 'Я', 'ю', 'Ю'):
+            after_cons = prev_cyr in _CYR_CONSONANTS
+            mapping = {
+                'я': ('ea', 'ia'), 'Я': ('Ea', 'Ia'),
+                'ю': ('eu', 'iu'), 'Ю': ('Eu', 'Iu'),
+            }
+            out.append(mapping[ch][0] if after_cons else mapping[ch][1])
+            continue
+
+        # Word-final ч → "ci" (Romanian terminal -i pattern: кэч→căci).
+        # ч + ь collapses to a single "ci" (both would otherwise emit "i").
+        if ch in ('ч', 'Ч') and (
+            next_cyr == ''
+            or next_cyr in ('ь', 'Ь')
+            or (next_cyr not in _CYR_VOWELS and next_cyr not in _CYR_CONSONANTS)
+        ):
+            out.append('Ci' if ch == 'Ч' else 'ci')
+            if next_cyr in ('ь', 'Ь'):
+                chars[i + 1] = ''  # consume so we don't double the "i"
+            continue
+
+        # ч/ӂ before back vowel а/о/у → cea/cio/ciu, gea/gio/giu.
+        if ch in _CYR_SOFT_INSERT and next_cyr in _CYR_BACK_VOWELS:
+            base = _CYR_SOFT_INSERT[ch]
+            if next_cyr in ('а', 'А'):
+                out.append(base + 'e')
+            elif next_cyr in ('о', 'О', 'у', 'У'):
+                out.append(base + 'i')
+            else:
+                out.append(base)
+            continue
+
+        out.append(_CYR_SINGLE.get(ch, ch))
+    return ''.join(out)
+
+
+def transliterate_mol_cyr_to_ron_latn(text: str) -> str:
+    """Convert Moldovan-Cyrillic Romanian to Latin-script Romanian.
+
+    Deterministic letter-mapping + positional rules; final pass applies a
+    small word-level override list for known Cornilescu spellings where
+    Cyrillic's collapsed 'я' (ea≅ia) doesn't pick the right Latin form.
+    """
+
+    def fix_one(tok: str) -> str:
+        # Strip leading/trailing punctuation around the alphabetic core so
+        # the override lookup matches the bare word ("peară" not "peară,").
+        m = re.match(r'^(\W*)(.*?)(\W*)$', tok, flags=re.S)
+        if not m:
+            return _translit_word(tok)
+        lead, core, trail = m.group(1), m.group(2), m.group(3)
+        core_latin = _translit_word(core)
+        core_latin = _TRANSLIT_WORD_FIXES.get(core_latin, core_latin)
+        return f'{lead}{core_latin}{trail}'
+
+    out = re.sub(r'\S+', lambda m: fix_one(m.group(0)), text)
+    for k, v in _TRANSLIT_PHRASE_FIXES.items():
+        out = out.replace(k, v)
+    return out
+
+
+TRANSLITERATORS = {
+    'mol-cyrl-to-ron-latn': transliterate_mol_cyr_to_ron_latn,
+}
+
+# ─────────────────────────────────────────────────────────────────────────
+# Merged-word splitter. Some eBible source packages collapse two
+# whitespace-separated words into a single token (e.g. "Fiindcăatât" =
+# "Fiindcă atât", or "izbăvește-nede" = "izbăvește-ne de"). These are
+# typesetting bugs in the upstream USFM, not transliteration bugs — but
+# they show up most jarringly in transliterated VDC where every Cyrillic
+# page that had a merge inherits the merged Latin form.
+#
+# Strategy: use the system's hunspell Romanian dictionary (hunspell-ro).
+# For each unique token in the corpus, query hunspell. If hunspell's
+# TOP-RANKED suggestion is a space-separated two-word split that re-
+# concatenates to the original token (case-insensitive), apply that split.
+# Anchoring on hunspell's *top* suggestion avoids accidentally accepting
+# lower-ranked space-splits when the real correction is something else —
+# e.g. "Împărățiia" (archaic 1924 spelling) has "Împărății" as the top
+# suggestion (modernization to short form), and the space-split
+# "Împărăți ia" comes third; the top-only check rejects this and
+# preserves the 1924 orthography.
+#
+# Hunspell processes hyphenated tokens by splitting on the hyphen first,
+# so it can't detect merges like "izbăvește-nede" → "izbăvește-ne de".
+# Those are picked up by `_MANUAL_MERGE_FIXES` below — short hand-curated
+# list, expanded as new ones are spotted in testing.
+# ─────────────────────────────────────────────────────────────────────────
+
+# Manual fixes for cases hunspell can't detect on its own:
+#   - Hyphenated merges (hunspell splits on '-' before validating).
+#   - Splits where one half requires a character substitution (e.g. mid-
+#     word â that should have been a word-edge î).
+_MANUAL_MERGE_FIXES = {
+    'izbăvește-nede': 'izbăvește-ne de',
+    'facă-sevoia': 'facă-se voia',
+    'precumân': 'precum în',
+    'Precumân': 'Precum în',
+}
+
+# Tokens that LOOK like a merge to the auto-detector but are actually
+# legitimate biblical proper nouns (Romanian-form of Hebrew/Greek place
+# names where both halves of the apparent split are common words too).
+# Maintained by hand — add new ones as they're spotted in QA.
+_NEVER_SPLIT = {
+    'Anatotul',  # Anathoth (Jeremiah's hometown). Splitter would pick
+                 # "Ana totul" because both halves are common Romanian
+                 # ("Ana" = barely, "totul" = everything).
+}
+
+
+def _hunspell_check_batch(words: list[str]) -> dict[str, list[str]]:
+    """Run hunspell-ro on a batch of words. Returns {word: [suggestions]}.
+
+    Hunspell -a output format:
+      '*'                          → correct
+      '& word N M: sug1, sug2, …'  → misspelled with suggestions
+      '# word M'                   → misspelled, no suggestions
+      ''                           → blank between input words
+    """
+    import subprocess
+    if not words:
+        return {}
+    payload = '\n'.join(words) + '\n'
+    proc = subprocess.run(
+        ['hunspell', '-d', 'ro_RO', '-a'],
+        input=payload, capture_output=True, text=True, check=False,
+    )
+    if proc.returncode != 0:
+        raise SystemExit(f'hunspell failed: {proc.stderr[:200]}')
+    out: dict[str, list[str]] = {}
+    lines = iter(proc.stdout.splitlines())
+    next(lines, None)  # skip banner
+    idx = 0
+    for line in lines:
+        if not line or line == '*':
+            continue
+        if line.startswith('+') or line.startswith('-'):
+            continue
+        if line.startswith('&'):
+            # "& word N M: s1, s2, ..."
+            _, rest = line.split(' ', 1)
+            word_part, suggestions = rest.split(':', 1)
+            word = word_part.split(' ', 1)[0]
+            sugs = [s.strip() for s in suggestions.split(',')]
+            out[word] = sugs
+        elif line.startswith('#'):
+            _, rest = line.split(' ', 1)
+            word = rest.split(' ', 1)[0]
+            out[word] = []
+        idx += 1
+    return out
+
+
+def split_merged_words_in_chapters(chapters: list[dict]) -> list[tuple[str, str]]:
+    """Detect and fix merged-word tokens across a version's chapters.
+
+    Mutates verse `text` in place. Returns the list of (merged, split)
+    pairs that were applied, for the build-time log so a reviewer can
+    sanity-check the splits before deployment.
+    """
+    # Build the corpus frequency table — we'll use it to gate hunspell's
+    # suggestions. A real merge bug splits into two COMMON words; a
+    # proper-noun split (e.g. "Abigailei" → "Abigail ei") combines a rare
+    # name with a frequent suffix, which we want to reject.
+    word_re = re.compile(r"\S+")
+    bare_word_re = re.compile(r"[A-Za-zĂăÂâÎîȘșȚț']+")
+    freq: dict[str, int] = {}
+    for ch in chapters:
+        for v in ch['verses']:
+            for w in bare_word_re.findall(v['text']):
+                lc = w.lower()
+                freq[lc] = freq.get(lc, 0) + 1
+
+    # Threshold: 20+ occurrences = "common enough that a missing space
+    # next to it is a real bug". Function words (de, în, și), copulas
+    # (este, sunt), demonstratives (aceasta, aceste), and the kernel
+    # Cornilescu vocabulary (Dumnezeu, Tatăl, Domnul) all clear 20× by
+    # mid-Genesis. Biblical proper nouns largely stay under 20.
+    COMMON_THRESHOLD = 20
+
+    candidates: set[str] = set()
+    for ch in chapters:
+        for v in ch['verses']:
+            for w in word_re.findall(v['text']):
+                m = re.match(r'^(\W*)(.*?)(\W*)$', w, flags=re.S)
+                core = m.group(2) if m else w
+                if not core or len(core) < 6 or '-' in core:
+                    continue
+                if any(c.isdigit() for c in core):
+                    continue
+                # Skip if the bare token is already a common word — no
+                # reason to try splitting "Dumnezeu" even if hunspell
+                # somehow flagged it.
+                if freq.get(core.lower(), 0) >= COMMON_THRESHOLD:
+                    continue
+                if core in _NEVER_SPLIT:
+                    continue
+                candidates.add(core)
+
+    fixes: dict[str, str] = {}
+    if candidates:
+        hunspell_results = _hunspell_check_batch(sorted(candidates))
+        for token, sugs in hunspell_results.items():
+            if not sugs:
+                continue
+            top = sugs[0]
+            if ' ' not in top or '-' in top:
+                continue
+            parts = top.split(' ')
+            if len(parts) != 2:
+                continue
+            if ''.join(parts).lower() != token.lower():
+                continue
+            # Gate: BOTH halves must be common in this corpus. This
+            # filters proper-noun + suffix splits while keeping legitimate
+            # merges of two everyday words.
+            left_lc, right_lc = parts[0].lower(), parts[1].lower()
+            if freq.get(left_lc, 0) < COMMON_THRESHOLD:
+                continue
+            if freq.get(right_lc, 0) < COMMON_THRESHOLD:
+                continue
+            fixes[token] = top
+
+    # Layer manual fixes on top (these handle hyphenated and edge cases).
+    for k, v in _MANUAL_MERGE_FIXES.items():
+        fixes[k] = v
+
+    if not fixes:
+        return []
+
+    def repl(tok: str) -> str:
+        m = re.match(r'^(\W*)(.*?)(\W*)$', tok, flags=re.S)
+        if not m:
+            return tok
+        lead, core, trail = m.group(1), m.group(2), m.group(3)
+        if not core or core not in fixes:
+            return tok
+        return f'{lead}{fixes[core]}{trail}'
+
+    applied: dict[str, str] = {}
+    for ch in chapters:
+        for v in ch['verses']:
+            new_text = word_re.sub(lambda m: repl(m.group(0)), v['text'])
+            if new_text != v['text']:
+                # Record what was applied for the build log
+                for w in word_re.findall(v['text']):
+                    core = re.match(r'^(\W*)(.*?)(\W*)$', w, flags=re.S).group(2)
+                    if core in fixes:
+                        applied[core] = fixes[core]
+            v['text'] = new_text
+        for sub in ch.get('subtitles') or []:
+            sub['subtitle'] = word_re.sub(lambda m: repl(m.group(0)), sub['subtitle'])
+
+    return sorted(applied.items(), key=lambda p: p[0].lower())
 
 
 def license_allows_redistribution(lic: str) -> bool:
@@ -279,6 +622,41 @@ def ingest(version: dict, from_zip: str | None = None) -> dict:
         if '\\v' not in usfm:
             continue
         chapters.extend(usfm_to_chapters(usfm))
+
+    # Apply per-version transliteration (e.g. VDC's Cyrillic-script source
+    # is converted to Latin Romanian here). See TRANSLITERATORS above.
+    translit_name = version.get('transliterate')
+    if translit_name:
+        if translit_name not in TRANSLITERATORS:
+            raise SystemExit(f'{key}: unknown transliterate "{translit_name}"')
+        fn = TRANSLITERATORS[translit_name]
+        for ch in chapters:
+            for v in ch['verses']:
+                v['text'] = fn(v['text'])
+            for sub in ch.get('subtitles') or []:
+                sub['subtitle'] = fn(sub['subtitle'])
+            if 'book' in ch and isinstance(ch['book'], str):
+                ch['book'] = fn(ch['book'])
+
+        # Fix merged-word typesetting bugs in the source. Self-validating:
+        # only splits a rare token if both halves are common words in the
+        # same corpus. Prints the splits for build-time review.
+        splits = split_merged_words_in_chapters(chapters)
+        if splits:
+            print(f'  {key}: merged-word splitter applied {len(splits)} fixes')
+            # Dump the full list to a sibling file so a reviewer can audit
+            # every split before deploy. Build-log only shows the first 15.
+            log_path = OUT_DIR / key / 'merged-word-splits.log'
+            log_path.parent.mkdir(parents=True, exist_ok=True)
+            log_path.write_text(
+                '\n'.join(f'{orig} → {fix}' for orig, fix in splits) + '\n',
+                encoding='utf-8',
+            )
+            print(f'  {key}: full split list at {log_path}')
+            for orig, fix in splits[:15]:
+                print(f'    {orig!r} → {fix!r}')
+            if len(splits) > 15:
+                print(f'    … and {len(splits) - 15} more')
 
     vdir = OUT_DIR / key
     book_ids: set[int] = set()
