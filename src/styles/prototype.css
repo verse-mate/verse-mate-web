@@ -566,7 +566,8 @@ button { font-family: inherit; }
   line-height: 1.5;
 }
 .commentary-body::-webkit-scrollbar { width: 8px; }
-.commentary-body::-webkit-scrollbar-thumb { background: #D8D2C0; border-radius: 4px; }
+.commentary-body::-webkit-scrollbar-thumb { background: var(--bg-sidebar-border); border-radius: 4px; }
+.commentary-body::-webkit-scrollbar-track { background: transparent; }
 .commentary-h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -1337,7 +1338,8 @@ button { font-family: inherit; }
   background: var(--bg-menu);
 }
 .sub-screen-body::-webkit-scrollbar { width: 8px; }
-.sub-screen-body::-webkit-scrollbar-thumb { background: #D8D2C0; border-radius: 4px; }
+.sub-screen-body::-webkit-scrollbar-thumb { background: var(--bg-sidebar-border); border-radius: 4px; }
+.sub-screen-body::-webkit-scrollbar-track { background: transparent; }
 
 .list-stack { display: flex; flex-direction: column; gap: 10px; }
 .row-card {

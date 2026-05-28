@@ -300,15 +300,17 @@
     font-size: 20px;
     line-height: 1.9;
   }
-  /* Below the desktop breakpoint, suppress every form of iOS native text
-     selection across the scripture body. PR #94 set these on each verse
-     span, but iOS still triggered selection on the second long-press of an
-     already-highlighted verse (the rendered highlight markup pushed the
-     touch target into a state where -webkit-user-select on the span alone
-     wasn't honoured). Anchoring the rule on the parent container with
-     !important closes that hole. Desktop ≥1024px still gets text selection
-     via SelectionToolbar. */
-  @media (max-width: 1023px) {
+  /* On touch devices below the desktop breakpoint, suppress every form of
+     iOS native text selection across the scripture body. PR #94 set these on
+     each verse span, but iOS still triggered selection on the second
+     long-press of an already-highlighted verse (the rendered highlight markup
+     pushed the touch target into a state where -webkit-user-select on the span
+     alone wasn't honoured). Anchoring the rule on the parent container with
+     !important closes that hole. Gated on `(pointer: coarse)` so a mouse user
+     who zooms in (dropping the CSS-pixel width below 1024) keeps real text
+     selection + the SelectionToolbar instead of having drag-to-highlight
+     blocked — mirrors the pointer-based `isDesktop` logic in ReadingScreen. */
+  @media (max-width: 1023px) and (pointer: coarse) {
     .font-scripture,
     .font-scripture * {
       -webkit-user-select: none !important;
@@ -455,6 +457,19 @@
   margin-right: auto;
 }
 
+/* Action + close buttons scale with the viewport height so they shrink on
+   short / zoomed-in viewports (where the fixed chrome otherwise crowds the
+   summary out) and stay a comfortable tap size on tall ones — no breakpoint
+   guessing. `vh` tracks the CSS-pixel viewport, which shrinks under browser
+   zoom, so the buttons naturally get smaller exactly when the user complains
+   they're too large. */
+.verse-insight-sheet .vis-actions button {
+  height: clamp(32px, 5.5vh, 40px);
+}
+.verse-insight-sheet .vis-close button {
+  height: clamp(34px, 6vh, 48px);
+}
+
 /* Verse-actions sheet (long-press / verse-tap menu). Mirrors the insight
    sheet's centering + cap so it stays sheet-sized instead of full-bleed on
    wide or zoomed-in viewports, and caps its height with internal scroll so
@@ -481,10 +496,8 @@
   .verse-insight-sheet .vis-quote {
     display: none;
   }
-  .verse-insight-sheet .vis-actions button,
-  .verse-insight-sheet .vis-close button {
-    height: 36px;
-  }
+  /* Button heights are handled by the responsive clamp() above; here we only
+     tighten the surrounding padding to claw back a little more vertical room. */
   .verse-insight-sheet .vis-actions {
     padding-top: 6px;
     padding-bottom: 4px;
