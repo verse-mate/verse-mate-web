@@ -55,7 +55,7 @@ VERSIONS: list[dict] = [
     {'key': 'RVR09',  'ebible_id': 'spaRV1909', 'language': 'es', 'title': 'Reina Valera 1909',            'license': 'Public Domain', 'license_url': '', 'attribution': 'Santa Biblia Reina-Valera 1909. Public domain.'},
     {'key': 'LSG',    'ebible_id': 'fraLSG',    'language': 'fr', 'title': 'Louis Segond 1910',            'license': 'Public Domain', 'license_url': '', 'attribution': 'La Sainte Bible, Louis Segond 1910. Public domain.'},
     {'key': 'RIV',    'ebible_id': 'ita1927',   'language': 'it', 'title': 'Riveduta 1927',                'license': 'Public Domain', 'license_url': '', 'attribution': 'La Sacra Bibbia, Riveduta (Luzzi) 1927. Public domain.'},
-    {'key': 'VDC',    'ebible_id': 'ron1924',   'language': 'ro', 'title': 'Biblia Cornilescu 1924',       'license': 'Public Domain', 'license_url': '', 'attribution': 'Biblia Dumitru Cornilescu 1924. Public domain.'},
+    {'key': 'VDC',    'ebible_id': 'ron1924',   'language': 'ro', 'title': 'Biblia Cornilescu 1924',       'license': 'Public Domain', 'license_url': '', 'attribution': 'Biblia Dumitru Cornilescu 1924. Public domain.', 'transliterate': 'mol-cyrl-to-ron-latn'},
     {'key': 'UKRKL',  'ebible_id': 'ukr1871',   'language': 'uk', 'title': 'Переклад Куліша',              'license': 'Public Domain', 'license_url': '', 'attribution': 'Святе Письмо, переклад П. Куліша. Public domain.', 'expect': 'full'},
     {'key': 'SCH51',  'ebible_id': 'deu1951',   'language': 'de', 'title': 'Schlachter-Bibel 1951',        'license': 'CC BY 4.0',     'license_url': 'https://creativecommons.org/licenses/by/4.0/',    'attribution': 'Schlachter-Bibel 1951 © Genfer Bibelgesellschaft. CC BY 4.0.'},
     {'key': 'BLIV',   'ebible_id': 'porbr2018', 'language': 'pt', 'title': 'Bíblia Livre',                 'license': 'CC BY 3.0',     'license_url': 'https://creativecommons.org/licenses/by/3.0/br/', 'attribution': 'Bíblia Livre © 2018 Diego Santos, Mario Sérgio, Marco Teles. CC BY 3.0 BR.'},
@@ -93,6 +93,157 @@ META_MARKERS = {
     '\\toca1', '\\toca2', '\\toca3', '\\mt', '\\mt1', '\\mt2', '\\mt3', '\\mte',
     '\\ms', '\\ms1', '\\mr', '\\mr1', '\\sr', '\\sp', '\\sd', '\\r', '\\d', '\\cl',
     '\\cp', '\\pb', '\\periph', '\\qa', '\\lit',
+}
+
+
+# ─────────────────────────────────────────────────────────────────────────
+# Moldovan Cyrillic → Latin Romanian transliteration.
+#
+# eBible.org's `ron1924` (Biblia Cornilescu 1924) is published in Cyrillic
+# script (the 1957 Moldovan SSR orthography). A Latin-script edition of the
+# same translation is not on eBible.org, so to serve the Cornilescu text in
+# the script Romanian readers actually expect we transliterate at ingest
+# time. This is a deterministic letter-mapping with two positional rules
+# (ы→î/â at edges, я/ю→ea/ia after consonant) plus a small override list
+# for words where Cyrillic я is ambiguous between Latin "ea" and "ia".
+# ─────────────────────────────────────────────────────────────────────────
+
+_CYR_SINGLE = {
+    'А': 'A', 'а': 'a', 'Б': 'B', 'б': 'b', 'В': 'V', 'в': 'v', 'Г': 'G', 'г': 'g',
+    'Д': 'D', 'д': 'd', 'Е': 'E', 'е': 'e', 'Ж': 'J', 'ж': 'j', 'З': 'Z', 'з': 'z',
+    'И': 'I', 'и': 'i', 'Й': 'I', 'й': 'i', 'К': 'C', 'к': 'c', 'Л': 'L', 'л': 'l',
+    'М': 'M', 'м': 'm', 'Н': 'N', 'н': 'n', 'О': 'O', 'о': 'o', 'П': 'P', 'п': 'p',
+    'Р': 'R', 'р': 'r', 'С': 'S', 'с': 's', 'Т': 'T', 'т': 't', 'У': 'U', 'у': 'u',
+    'Ф': 'F', 'ф': 'f', 'Х': 'H', 'х': 'h', 'Ц': 'Ț', 'ц': 'ț', 'Ч': 'C', 'ч': 'c',
+    'Ш': 'Ș', 'ш': 'ș', 'Щ': 'Șt', 'щ': 'șt', 'Ы': 'Î', 'ы': 'î', 'Ь': 'I', 'ь': 'i',
+    'Ъ': 'Ă', 'ъ': 'ă', 'Э': 'Ă', 'э': 'ă', 'Ю': 'Iu', 'ю': 'iu', 'Я': 'Ia', 'я': 'ia',
+    # Moldovan /dʒ/ — the soft g sound (Леӂя = Legea).
+    'Ӂ': 'G', 'ӂ': 'g',
+}
+
+_CYR_BACK_VOWELS = set('аоуэыАОУЭЫ')
+_CYR_CONSONANTS = set('бвгджзйклмнпрстфхцчшщӂБВГДЖЗЙКЛМНПРСТФХЦЧШЩӁ')
+_CYR_VOWELS = set('аеёиоуыэюяАЕЁИОУЫЭЮЯ')
+_CYR_SOFT_INSERT = {'ч': 'c', 'Ч': 'C', 'ӂ': 'g', 'Ӂ': 'G'}
+
+# Override list — words where Cyrillic 'я' after a consonant maps to Latin
+# 'ia' (not the default 'ea' the rule produces). Cornilescu 1924 spells
+# these with 'ia' per Latin orthographic tradition; the Cyrillic source
+# can't distinguish them since both /ia/ and /ea/ collapse onto 'я'.
+_TRANSLIT_WORD_FIXES = {
+    # 'a pieri' / 'a pierde' (perish/lose) family.
+    'peară': 'piară', 'pearde': 'pierde', 'peardă': 'piardă',
+    'pearzi': 'pierzi', 'pearzător': 'pierzător', 'pearzătoare': 'pierzătoare',
+    'pearzare': 'pierzare', 'peardut': 'pierdut', 'peardută': 'pierdută',
+    'peardem': 'pierdem', 'pearză': 'piardă', 'pear': 'pier', 'peari': 'pieri',
+    'pearit': 'pierit',
+    # 'viața' (life) and inflections.
+    'veața': 'viața', 'veață': 'viață', 'veaței': 'vieții',
+    'veețile': 'viețile', 'veețuiește': 'viețuiește', 'veețuiesc': 'viețuiesc',
+    # 'piatră' (stone).
+    'peatră': 'piatră', 'peatre': 'pietre', 'peatra': 'piatra', 'peatrei': 'pietrei',
+    # 'piață' (market).
+    'peață': 'piață', 'peațe': 'piețe', 'peața': 'piața',
+    # 'piept' (chest), 'piele' (skin).
+    'peept': 'piept', 'peeptul': 'pieptul', 'peeptului': 'pieptului',
+    'peele': 'piele', 'peelea': 'pielea',
+    # Capitalized variants for sentence-initial occurrences.
+    'Peară': 'Piară', 'Pearde': 'Pierde', 'Peardă': 'Piardă',
+    'Veața': 'Viața', 'Peatră': 'Piatră', 'Peață': 'Piață',
+}
+
+# Word-boundary fixes — Cyrillic source occasionally collapses two Latin
+# words (e.g. "Кэча" = "Căci a"). Applied as multi-word substitutions
+# after transliteration.
+_TRANSLIT_PHRASE_FIXES = {
+    # Doxology fragment: "Căci a Ta este împărăția" — typeset in Cyrillic
+    # as a single chunk "Кэча Та", which transliterates to "Căcea Ta".
+    'Căcea Ta': 'Căci a Ta',
+}
+
+
+def _translit_word(word: str) -> str:
+    out: list[str] = []
+    chars = list(word)
+    n = len(chars)
+    for i, ch in enumerate(chars):
+        if ch == '':
+            continue
+        prev_cyr = chars[i - 1] if i > 0 else ''
+        next_cyr = chars[i + 1] if i + 1 < n else ''
+
+        # ы → î at word edges, â mid-word (1993 Romanian orthography).
+        if ch in ('ы', 'Ы'):
+            edge = (i == 0 or i == n - 1
+                    or (prev_cyr not in _CYR_CONSONANTS and prev_cyr not in _CYR_VOWELS)
+                    or (next_cyr not in _CYR_CONSONANTS and next_cyr not in _CYR_VOWELS))
+            out.append(('Î' if edge else 'Â') if ch == 'Ы' else ('î' if edge else 'â'))
+            continue
+
+        # я → ea after consonant, ia after vowel/word-start. Same for ю→eu/iu.
+        if ch in ('я', 'Я', 'ю', 'Ю'):
+            after_cons = prev_cyr in _CYR_CONSONANTS
+            mapping = {
+                'я': ('ea', 'ia'), 'Я': ('Ea', 'Ia'),
+                'ю': ('eu', 'iu'), 'Ю': ('Eu', 'Iu'),
+            }
+            out.append(mapping[ch][0] if after_cons else mapping[ch][1])
+            continue
+
+        # Word-final ч → "ci" (Romanian terminal -i pattern: кэч→căci).
+        # ч + ь collapses to a single "ci" (both would otherwise emit "i").
+        if ch in ('ч', 'Ч') and (
+            next_cyr == ''
+            or next_cyr in ('ь', 'Ь')
+            or (next_cyr not in _CYR_VOWELS and next_cyr not in _CYR_CONSONANTS)
+        ):
+            out.append('Ci' if ch == 'Ч' else 'ci')
+            if next_cyr in ('ь', 'Ь'):
+                chars[i + 1] = ''  # consume so we don't double the "i"
+            continue
+
+        # ч/ӂ before back vowel а/о/у → cea/cio/ciu, gea/gio/giu.
+        if ch in _CYR_SOFT_INSERT and next_cyr in _CYR_BACK_VOWELS:
+            base = _CYR_SOFT_INSERT[ch]
+            if next_cyr in ('а', 'А'):
+                out.append(base + 'e')
+            elif next_cyr in ('о', 'О', 'у', 'У'):
+                out.append(base + 'i')
+            else:
+                out.append(base)
+            continue
+
+        out.append(_CYR_SINGLE.get(ch, ch))
+    return ''.join(out)
+
+
+def transliterate_mol_cyr_to_ron_latn(text: str) -> str:
+    """Convert Moldovan-Cyrillic Romanian to Latin-script Romanian.
+
+    Deterministic letter-mapping + positional rules; final pass applies a
+    small word-level override list for known Cornilescu spellings where
+    Cyrillic's collapsed 'я' (ea≅ia) doesn't pick the right Latin form.
+    """
+
+    def fix_one(tok: str) -> str:
+        # Strip leading/trailing punctuation around the alphabetic core so
+        # the override lookup matches the bare word ("peară" not "peară,").
+        m = re.match(r'^(\W*)(.*?)(\W*)$', tok, flags=re.S)
+        if not m:
+            return _translit_word(tok)
+        lead, core, trail = m.group(1), m.group(2), m.group(3)
+        core_latin = _translit_word(core)
+        core_latin = _TRANSLIT_WORD_FIXES.get(core_latin, core_latin)
+        return f'{lead}{core_latin}{trail}'
+
+    out = re.sub(r'\S+', lambda m: fix_one(m.group(0)), text)
+    for k, v in _TRANSLIT_PHRASE_FIXES.items():
+        out = out.replace(k, v)
+    return out
+
+
+TRANSLITERATORS = {
+    'mol-cyrl-to-ron-latn': transliterate_mol_cyr_to_ron_latn,
 }
 
 
@@ -279,6 +430,21 @@ def ingest(version: dict, from_zip: str | None = None) -> dict:
         if '\\v' not in usfm:
             continue
         chapters.extend(usfm_to_chapters(usfm))
+
+    # Apply per-version transliteration (e.g. VDC's Cyrillic-script source
+    # is converted to Latin Romanian here). See TRANSLITERATORS above.
+    translit_name = version.get('transliterate')
+    if translit_name:
+        if translit_name not in TRANSLITERATORS:
+            raise SystemExit(f'{key}: unknown transliterate "{translit_name}"')
+        fn = TRANSLITERATORS[translit_name]
+        for ch in chapters:
+            for v in ch['verses']:
+                v['text'] = fn(v['text'])
+            for sub in ch.get('subtitles') or []:
+                sub['subtitle'] = fn(sub['subtitle'])
+            if 'book' in ch and isinstance(ch['book'], str):
+                ch['book'] = fn(ch['book'])
 
     vdir = OUT_DIR / key
     book_ids: set[int] = set()
