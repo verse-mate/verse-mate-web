@@ -160,10 +160,26 @@ export default function LexiconPopover({
     null,
   );
   const contentRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLSpanElement>(null);
 
-  // Re-center on the word each time the card opens (clear any prior drag).
+  // Open on whichever side of the word has more vertical room so the card gets
+  // the most available height (Radix caps max-height to the chosen side). This
+  // is what keeps tall cards from being cut down to a scrolling sliver when the
+  // page is zoomed in and the CSS-pixel viewport is short.
+  const [side, setSide] = useState<'top' | 'bottom'>('bottom');
+
+  // Re-center on the word each time the card opens (clear any prior drag) and
+  // pick the roomier side.
   useEffect(() => {
-    if (open) setDrag({ x: 0, y: 0 });
+    if (!open) return;
+    setDrag({ x: 0, y: 0 });
+    const el = triggerRef.current;
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      const spaceAbove = rect.top;
+      const spaceBelow = window.innerHeight - rect.bottom;
+      setSide(spaceBelow >= spaceAbove ? 'bottom' : 'top');
+    }
   }, [open]);
 
   // Dismiss on background scroll. Radix's avoid-collision/reposition logic
@@ -231,6 +247,7 @@ export default function LexiconPopover({
     <Popover open={open} onOpenChange={handleOpenChange}>
       <PopoverTrigger asChild>
         <span
+          ref={triggerRef}
           role="button"
           tabIndex={0}
           onClick={(e) => {
@@ -256,13 +273,13 @@ export default function LexiconPopover({
       <PopoverContent
         ref={contentRef}
         align="center"
-        side="bottom"
+        side={side}
         sideOffset={6}
         // Tight collision padding gives the card as much vertical room as
         // possible so there's less internal scrolling — especially when the
         // page is zoomed in (the CSS-pixel viewport shrinks with zoom). Drag
         // handle lets the user move it if it still runs tall.
-        collisionPadding={{ top: 16, right: 12, bottom: 12, left: 12 }}
+        collisionPadding={{ top: 8, right: 8, bottom: 8, left: 8 }}
         avoidCollisions
         className="w-[360px] p-0 border-0 shadow-2xl"
         style={{
