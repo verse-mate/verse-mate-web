@@ -106,7 +106,7 @@ export default function VerseActions({ verse, onClose }: Props) {
   return (
     <>
       <div data-testid="verse-actions-backdrop" className="absolute inset-0 z-40 bg-foreground/20" onClick={onClose} />
-      <div data-testid="verse-actions-sheet" className="absolute inset-x-0 bottom-0 z-50 bg-card rounded-t-2xl shadow-lg border-t border-border animate-slide-up">
+      <div data-testid="verse-actions-sheet" className="verse-actions-sheet absolute inset-x-0 bottom-0 z-50 bg-card rounded-t-2xl shadow-lg border-t border-border animate-slide-up overflow-y-auto">
         {/* Drag handle */}
         <div className="flex justify-center pt-2 pb-1">
           <div className="w-8 h-1 rounded-full bg-muted-foreground/30" />
