@@ -244,6 +244,10 @@ export default function VisualsPanel({ book, chapter }: Props) {
             style={{
               width: 64,
               height: 64,
+              // flexShrink: 0 keeps the circle perfectly round inside the
+              // column-flex overlay — without it a short (zoomed-in) container
+              // squashes the height and the button renders as an ellipse.
+              flexShrink: 0,
               borderRadius: '50%',
               background: vmTokens.gold,
               display: 'flex',

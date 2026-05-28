@@ -258,13 +258,13 @@ export default function LexiconPopover({
         align="center"
         side="bottom"
         sideOffset={6}
-        // Smaller top padding leaves more vertical room for the card so it
-        // isn't cut down to a sliver when the page is zoomed in (the CSS-pixel
-        // viewport shrinks with zoom). Drag handle lets the user move it if it
-        // still runs tall. Bottom uses the standard 16px gutter.
-        collisionPadding={{ top: 56, right: 16, bottom: 16, left: 16 }}
+        // Tight collision padding gives the card as much vertical room as
+        // possible so there's less internal scrolling — especially when the
+        // page is zoomed in (the CSS-pixel viewport shrinks with zoom). Drag
+        // handle lets the user move it if it still runs tall.
+        collisionPadding={{ top: 16, right: 12, bottom: 12, left: 12 }}
         avoidCollisions
-        className="w-[320px] p-0 border-0 shadow-2xl"
+        className="w-[360px] p-0 border-0 shadow-2xl"
         style={{
           backgroundColor: vmTokens.surfaceRaisedBg,
           color: vmTokens.textPrimary,

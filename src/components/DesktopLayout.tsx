@@ -10,8 +10,6 @@ import {
   ChevronDown,
   ChevronUp,
   Menu,
-  PanelLeft,
-  PanelRight,
   User,
   Bookmark,
   FileText,
@@ -75,6 +73,9 @@ const SIDEBAR_COLLAPSED = 56;
 const SIDEBAR_EXPANDED = 220;
 const SIDEBAR_MIN = 56;
 const SIDEBAR_MAX = 320;
+// Dragging the sidebar edge left of this snaps it fully closed (width 0); a
+// thin grab strip at the screen edge then lets the user pull it back out.
+const SIDEBAR_HIDE_SNAP = 48;
 // Below this width the sidebar switches to compact mode (short book codes,
 // abbreviated OT/NT section labels, narrower chapter grid).
 const SIDEBAR_COMPACT_THRESHOLD = 120;
@@ -104,7 +105,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   } = useTopicView();
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(!hideSidebar);
+  const [sidebarOpen] = useState(!hideSidebar);
   // Sidebar always stays at expanded width; expandedBook controls chapter grid visibility.
   // Only pre-expand the active book when the user arrived via an explicit
   // /bible/<slug>/<chapter> URL. On a first visit (root → /read → Genesis 1
@@ -118,7 +119,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   });
   // Right panel can be fully minimized (tablet/desktop) so the reading column
   // expands to full width. Hidden divider + right pane when collapsed.
-  const [rightPanelCollapsed, setRightPanelCollapsed] = useState(false);
+  const [rightPanelCollapsed] = useState(false);
 
   // Per-testament collapse state for the sidebar's OT / NT section headers,
   // persisted across reloads. Default both expanded.
@@ -144,9 +145,6 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const [rightPanelView, setRightPanelView] = useState<RightPanelView>('commentary');
 
   const openRightPanel = (view: RightPanelView) => {
-    // Opening a menu sub-page (Settings, Bookmarks, …) into the right pane
-    // only makes sense if the pane is visible — un-minimize it.
-    setRightPanelCollapsed(false);
     setRightPanelView(view);
   };
   const closeRightPanel = () => {
@@ -176,7 +174,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
       const raw = localStorage.getItem('versemate-sidebar-width');
       if (raw) {
         const n = parseInt(raw, 10);
-        if (!isNaN(n)) return Math.max(SIDEBAR_MIN, Math.min(SIDEBAR_MAX, n));
+        // 0 is a valid (fully-hidden) width; otherwise floor at SIDEBAR_MIN.
+        if (!isNaN(n)) return n <= 0 ? 0 : Math.max(SIDEBAR_MIN, Math.min(SIDEBAR_MAX, n));
       }
     } catch { /* ignore */ }
     return SIDEBAR_EXPANDED;
@@ -274,9 +273,11 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   useEffect(() => {
     const handleMove = (e: PointerEvent) => {
       if (isDraggingSidebar.current) {
-        // Sidebar starts at viewport x = 0
+        // Sidebar starts at viewport x = 0. Dragging the edge below the snap
+        // threshold closes it completely (width 0); otherwise clamp to the
+        // normal [MIN, MAX] band.
         const w = Math.round(e.clientX);
-        setSidebarWidth(Math.max(SIDEBAR_MIN, Math.min(SIDEBAR_MAX, w)));
+        setSidebarWidth(w < SIDEBAR_HIDE_SNAP ? 0 : Math.max(SIDEBAR_MIN, Math.min(SIDEBAR_MAX, w)));
         return;
       }
       if (!isDragging.current || !contentRef.current) return;
@@ -326,22 +327,19 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
   const isSidebarCompact = sidebarWidth < SIDEBAR_COMPACT_THRESHOLD;
 
-  // When the right pane is too narrow to fit the 4-tab Insight pill group
-  // beside the chapter-selector + hamburger, the absolutely-centered pills
-  // collide with the hamburger button. That happens across every iPad size —
-  // portrait (≤1024, incl. iPad Pro 12.9" at exactly 1024) and landscape
-  // (1080–1194). Treat everything up to 1199px as compact so the pills move
-  // to their own row beneath the header; only genuinely wide desktop
-  // viewports (≥1200) keep the inline header pills.
+  // Narrow split: the inline header pills scroll sideways (rather than
+  // wrapping) so they always stay anchored over the right insights column.
   const isCompactSplit = useMediaQuery('(max-width: 1199px)');
 
-  // Panel minimize controls only exist in compact mode (the toggles live in
-  // the header and would overlap the inline pills at wide desktop widths).
   // Derive the effective state so a window resized from compact → wide can't
-  // get stuck with a panel hidden and no toggle to restore it: at wide widths
-  // the right pane is always shown and the sidebar follows its layout default.
+  // get stuck with a panel hidden: at wide widths the right pane is always
+  // shown and the sidebar follows its layout default.
   const effectiveRightCollapsed = isCompactSplit && rightPanelCollapsed;
   const effectiveSidebarOpen = isCompactSplit ? sidebarOpen : !hideSidebar;
+  // The user can drag the sidebar edge fully closed (width 0). When hidden we
+  // drop the <aside> entirely and show a thin grab strip at the screen edge so
+  // it can be pulled back out.
+  const sidebarHidden = sidebarWidth <= 0;
 
   return (
     // Prototype layout: .app-shell wraps the sidebar + main column.
@@ -349,7 +347,22 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     // src/styles/prototype.css. Inline overrides are kept to a minimum.
     <div data-testid="desktop-layout" className="app-shell">
       {/* ─── PERSISTENT SIDEBAR ─── */}
-      {effectiveSidebarOpen && (
+      {effectiveSidebarOpen && sidebarHidden && (
+        // Grab strip — a thin full-height handle pinned to the screen's left
+        // edge. The user drags it right to pull the hidden sidebar back out.
+        <div
+          onPointerDown={handleSidebarDragStart}
+          data-testid="desktop-sidebar-reveal"
+          aria-label="Show book list"
+          role="separator"
+          className="sidebar-reveal-strip"
+        >
+          <div className="divider-dots">
+            {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
+          </div>
+        </div>
+      )}
+      {effectiveSidebarOpen && !sidebarHidden && (
         <aside
           data-testid="desktop-sidebar"
           className="sidebar"
@@ -431,20 +444,23 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             <img src="/versemate-logo-white.png" alt="VerseMate" className="logo-img" />
           </div>
 
-          {/* Commentary pill-group — absolute-positioned at the horizontal
-              center of the right panel (split-aware). On Bible routes
-              this is the Summary/By-Line/Study chooser (plus Visuals on
-              books that have curated visuals); on topic routes the same
-              slot holds the Summary/By-Line/Detailed chooser fed from
-              TopicViewContext. At compact widths the pill row moves below
-              the header so it doesn't overlap the hamburger button (VER-69). */}
-          {!isTopicRoute && rightPanelView === 'commentary' && !isCompactSplit && (
+          {/* Commentary pill-group — absolute-positioned over the right
+              insights column (split-aware: left edge tracks leftPct, right
+              edge clears the hamburger). On Bible routes this is the
+              Summary/By-Line/Study chooser (plus Visuals on books that have
+              curated visuals); on topic routes the same slot holds the
+              Summary/By-Line/Detailed chooser fed from TopicViewContext. The
+              row scrolls sideways when the tabs don't fit so they stay
+              anchored to the right column instead of jumping to mid-screen. */}
+          {!isTopicRoute && rightPanelView === 'commentary' && (
             <div
+              className="header-pill-scroll"
               style={{
                 position: 'absolute',
                 top: '50%',
-                left: `${(100 + leftPct) / 2}%`,
-                transform: 'translate(-50%, -50%)',
+                transform: 'translateY(-50%)',
+                left: `${leftPct}%`,
+                right: 64,
                 zIndex: 2,
               }}
             >
@@ -465,13 +481,15 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               </div>
             </div>
           )}
-          {isTopicRoute && !isCompactSplit && (
+          {isTopicRoute && (
             <div
+              className="header-pill-scroll"
               style={{
                 position: 'absolute',
                 top: '50%',
-                left: `${(100 + leftPct) / 2}%`,
-                transform: 'translate(-50%, -50%)',
+                transform: 'translateY(-50%)',
+                left: `${leftPct}%`,
+                right: 64,
                 zIndex: 2,
               }}
             >
@@ -545,42 +563,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             );
           })()}
 
-          {/* Right: panel toggles + hamburger menu — prototype .icon-btn */}
+          {/* Right: hamburger menu — prototype .icon-btn */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, position: 'relative', zIndex: 3 }}>
-            {/* Panel toggles only render in compact/tablet mode. At wide desktop
-                widths the commentary pills sit inline in the header (absolutely
-                centered over the right pane); adding buttons to this right
-                cluster there would overlap the rightmost pill and swallow its
-                clicks. In compact mode the pills move to their own row beneath
-                the header, so the cluster has room — and tablet portrait is
-                exactly where the minimize controls are wanted. */}
-            {isCompactSplit && (
-              <>
-                {/* Toggle the left book-list sidebar (show / minimize). Lets
-                    tablet-portrait users reveal the book list and collapse it
-                    again without it permanently eating reading width. */}
-                <button
-                  className="icon-btn"
-                  onClick={() => setSidebarOpen(o => !o)}
-                  aria-label={sidebarOpen ? 'Hide book list' : 'Show book list'}
-                  aria-pressed={sidebarOpen}
-                  data-testid="desktop-sidebar-toggle"
-                >
-                  <PanelLeft size={20} color={vmTokens.headerFg} strokeWidth={2} />
-                </button>
-                {/* Fully minimize / restore the right (commentary) panel so the
-                    reading column can take the full width. */}
-                <button
-                  className="icon-btn"
-                  onClick={() => setRightPanelCollapsed(c => !c)}
-                  aria-label={rightPanelCollapsed ? 'Show commentary panel' : 'Minimize commentary panel'}
-                  aria-pressed={!rightPanelCollapsed}
-                  data-testid="desktop-right-panel-toggle"
-                >
-                  <PanelRight size={20} color={vmTokens.headerFg} strokeWidth={2} />
-                </button>
-              </>
-            )}
             <button
               className="icon-btn"
               onClick={() => setShowMenu(!showMenu)}
@@ -591,68 +575,6 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             </button>
           </div>
         </header>
-
-        {/* Compact-width pill row — rendered below the header instead of
-            absolutely positioned inside it so the Insight tabs don't get
-            clipped by the hamburger button at phone-landscape / small-tablet
-            widths (see [[ver-69]]). Mirrors the portrait-mode CommentaryScreen
-            pattern. Hidden on `≥1024px`, where the inline header pills fit. */}
-        {isCompactSplit && !isTopicRoute && rightPanelView === 'commentary' && (
-          <div
-            data-testid="desktop-compact-tab-row"
-            className="shrink-0"
-            style={{
-              backgroundColor: vmTokens.headerBg,
-              display: 'flex',
-              justifyContent: 'center',
-              padding: '8px 16px',
-            }}
-          >
-            <div className="pill-group" role="tablist" aria-label="Commentary view">
-              {tabs.map(t => (
-                <button
-                  key={t.id}
-                  role="tab"
-                  aria-selected={tab === t.id}
-                  tabIndex={tab === t.id ? 0 : -1}
-                  className={`pill ${tab === t.id ? 'active' : ''}`}
-                  onClick={() => setTab(t.id)}
-                  data-testid={`desktop-tab-${t.id}`}
-                >
-                  {t.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-        {isCompactSplit && isTopicRoute && (
-          <div
-            data-testid="desktop-compact-topic-tab-row"
-            className="shrink-0"
-            style={{
-              backgroundColor: vmTokens.headerBg,
-              display: 'flex',
-              justifyContent: 'center',
-              padding: '8px 16px',
-            }}
-          >
-            <div className="pill-group" role="tablist" aria-label="Topic insight view">
-              {TOPIC_INSIGHT_TABS.map(t => (
-                <button
-                  key={t.id}
-                  role="tab"
-                  aria-selected={topicInsightTab === t.id}
-                  tabIndex={topicInsightTab === t.id ? 0 : -1}
-                  className={`pill ${topicInsightTab === t.id ? 'active' : ''}`}
-                  onClick={() => setTopicInsightTab(t.id as TopicInsightTab)}
-                  data-testid={`desktop-topic-tab-${t.id}`}
-                >
-                  {t.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* Prototype .split-body — left/right panels separated by .divider.
             Bible routes split between passage (left) and commentary (right);
