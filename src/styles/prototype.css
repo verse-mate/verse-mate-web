@@ -141,6 +141,26 @@ button { font-family: inherit; }
 .sidebar-scroll::-webkit-scrollbar-thumb { background: var(--bg-sidebar-border); border-radius: 2px; }
 .sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
 
+/* Grab strip shown when the sidebar is dragged fully closed — a thin handle
+   pinned to the screen's left edge that the user drags right to reveal the
+   book list again. */
+.sidebar-reveal-strip {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  cursor: col-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--bg-sidebar-border);
+  touch-action: none;
+  z-index: 40;
+}
+.sidebar-reveal-strip:hover { background-color: var(--hover-bg); }
+
 .section-header {
   display: flex;
   align-items: center;
@@ -293,6 +313,20 @@ button { font-family: inherit; }
 }
 .pill.active:hover { background-color: var(--pill-active); }
 
+/* Header pill row anchored over the right insights column. `safe center`
+   centers the pills when they fit but falls back to start-aligned scrolling
+   when they don't, so every tab stays reachable instead of the row jumping to
+   the middle of the screen or clipping tabs when the viewport is zoomed in. */
+.header-pill-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: safe center;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.header-pill-scroll::-webkit-scrollbar { display: none; }
+
 .icon-btn {
   display: flex;
   align-items: center;
@@ -385,6 +419,14 @@ button { font-family: inherit; }
   padding: 32px 16px 96px;
 }
 @media (max-width: 1024px) { .reading-inner { padding: 24px 16px 80px; } }
+/* Reserve the chapter-nav arrow lane (40px button + 8px gap + a little
+   breathing room, each side) on tablet/desktop. When the reading pane is
+   narrow — e.g. a zoomed-in split view — the arrows floor to the panel edge
+   (`max(4px, …)`); capping the column here keeps the verse text out of that
+   lane so the arrows never overlap the words. */
+@media (min-width: 768px) {
+  .reading-inner { max-width: min(660px, calc(100% - 104px)); }
+}
 
 .chapter-title {
   font-family: 'Roboto', sans-serif;
