@@ -190,11 +190,41 @@ def _translit_word(word: str) -> str:
             out.append(mapping[ch][0] if after_cons else mapping[ch][1])
             continue
 
+        # к + з/с → "x" (Romanian's letter for the /ks/ family). Cyrillic
+        # has no "x"; the script writes these phonetically as к+з / к+с.
+        # Cornilescu Latin maps both back to "x" — Exodul, onix, exact.
+        if ch in ('к', 'К') and next_cyr in ('з', 'З', 'с', 'С'):
+            out.append('X' if ch == 'К' else 'x')
+            chars[i + 1] = ''  # consume the з/с
+            continue
+
+        # к + е/и → "ch" + same vowel (preserves the /k/ sound — Latin
+        # "c" before front vowels is /tʃ/, so Romanian uses "ch" when it
+        # wants /k/). Examples: кема → chema, кип → chip, дескиде →
+        # deschide, Езекиел → Ezechiel.
+        if ch in ('к', 'К') and next_cyr in ('е', 'Е', 'и', 'И'):
+            out.append('Ch' if ch == 'К' else 'ch')
+            continue
+
+        # г + е/и → "gh" + same vowel (preserves the hard /g/ sound, same
+        # principle: Latin "g" before front vowels is /dʒ/, "gh" keeps /g/).
+        # Examples: гичит → ghicit, ынгицит → înghițit.
+        if ch in ('г', 'Г') and next_cyr in ('е', 'Е', 'и', 'И'):
+            out.append('Gh' if ch == 'Г' else 'gh')
+            continue
+
         # Word-final ч → "ci" (Romanian terminal -i pattern: кэч→căci).
         # ч + ь collapses to a single "ci" (both would otherwise emit "i").
+        # ч + consonant (no intervening vowel) → "ci" — catches merged-word
+        # bugs like "Кэчмулць" (publisher forgot a space) which should
+        # transliterate to "Căcimulți" so the downstream merged-word
+        # splitter can pick up "Căci mulți". Romanian doesn't naturally
+        # write ч + consonant in a single token — explicit и always
+        # separates them (e.g. "чинстит" → "cinstit").
         if ch in ('ч', 'Ч') and (
             next_cyr == ''
             or next_cyr in ('ь', 'Ь')
+            or next_cyr in _CYR_CONSONANTS
             or (next_cyr not in _CYR_VOWELS and next_cyr not in _CYR_CONSONANTS)
         ):
             out.append('Ci' if ch == 'Ч' else 'ci')
@@ -225,6 +255,17 @@ def transliterate_mol_cyr_to_ron_latn(text: str) -> str:
     Cyrillic's collapsed 'я' (ea≅ia) doesn't pick the right Latin form.
     """
 
+    # Cyrillic pre-pass: handle the publisher's "Кэч" + (no-space) +
+    # next-word merge. Cornilescu's Cyrillic typography drops the trailing
+    # /i/ of "Căci" when merged with the following token (e.g. "Кэчам"
+    # for "Căci am" or "кэчм-ам" for "căci m-am"). Splitting in Cyrillic
+    # with an explicit space lets the word-final ч rule fire normally and
+    # works for hyphenated cases that the post-transliteration merged-word
+    # splitter would skip. Romanian has no legitimate word starting with
+    # "Кэч/кэч" followed by another letter (the only real lemma is
+    # "Căci/căci" itself), so this is unambiguous.
+    text = re.sub(r"\b([Кк])эч(?=[А-Яа-яЁёӁӂ])", r"\1эч ", text)
+
     def fix_one(tok: str) -> str:
         # Strip leading/trailing punctuation around the alphabetic core so
         # the override lookup matches the bare word ("peară" not "peară,").
@@ -239,6 +280,22 @@ def transliterate_mol_cyr_to_ron_latn(text: str) -> str:
     out = re.sub(r'\S+', lambda m: fix_one(m.group(0)), text)
     for k, v in _TRANSLIT_PHRASE_FIXES.items():
         out = out.replace(k, v)
+
+    # CamelCase split — Latin Romanian has no internal lowercase→uppercase
+    # transitions in legitimate words, so "CăcIoan" / "aceastaTatăl" are
+    # always missing-space typesetting bugs. Insert the space here so the
+    # downstream merged-word splitter can finish the job (or the next post-
+    # pass below picks up bare "căc" → "căci").
+    out = re.sub(r'([a-zăâîșț])([A-ZĂÂÎȘȚ])', r'\1 \2', out)
+
+    # Bare "Căc" / "căc" (not followed by "i") is never a real Romanian
+    # word in Cornilescu — it's always the conjunction "Căci" / "căci"
+    # whose implicit terminal /i/ got lost when the publisher merged it
+    # with the next word and our transliteration produced "Căc<x>" form.
+    # The camelCase split above already separated "CăcIoan" → "Căc Ioan";
+    # this turns the now-standalone "Căc" into "Căci".
+    out = re.sub(r'\b([Cc])ăc\b', r'\1ăci', out)
+
     return out
 
 
@@ -283,13 +340,50 @@ _MANUAL_MERGE_FIXES = {
 }
 
 # Tokens that LOOK like a merge to the auto-detector but are actually
-# legitimate biblical proper nouns (Romanian-form of Hebrew/Greek place
-# names where both halves of the apparent split are common words too).
-# Maintained by hand — add new ones as they're spotted in QA.
+# legitimate biblical proper nouns (Romanian-form of Hebrew/Greek/Latin
+# names where the substring happens to coincide with common Romanian
+# words). The corpus-frequency gate can't catch these — biblical names
+# like "Asa" (King Asa) appear many times standalone, so "Asael" looks
+# like "Asa el" to the splitter. Maintained by hand from QA passes.
 _NEVER_SPLIT = {
-    'Anatotul',  # Anathoth (Jeremiah's hometown). Splitter would pick
-                 # "Ana totul" because both halves are common Romanian
-                 # ("Ana" = barely, "totul" = everything).
+    # OT places / nations / tribes
+    'Anatot', 'Anatotul',     # Anathoth
+    'Baale', 'Baana', 'Bavai', 'Bealot',  # Baal- compounds, places
+    'Calah', 'Calne',         # Mesopotamian cities
+    'Carmelul', 'Carmi',      # Mount Carmel / Reuben's son
+    'Datan', 'Debir', 'Dedan', 'Efata',
+    'Egiptule',               # vocative of Egiptul
+    'Haranul', 'Harar',
+    'Laseia', 'Lotan',
+    'Midin', 'Miclot',
+    'Ninivei',                # Nineveh
+    'Perida',
+    'Salem', 'Sacar', 'Sceva',
+    'Siloam', 'Siloe',
+    'Tabat', 'Teman',
+    # OT/NT personal names
+    'Adama',                  # Hebrew form of Adam + place name in Joshua
+    'Amasa',                  # Absalom's general
+    'Anaia', 'Anani',         # post-exilic priests
+    'Aniam',                  # son of Shemida
+    'Areli', 'Asael', 'Asaia', 'Aziel',
+    'Apeles',                 # Paul's friend (Rom 16:10)
+    'Careah',                 # father of Iohanan
+    'Davide',                 # vocative of David
+    'Elasa', 'Eleale', 'Eleasa',
+    'Filipe', 'Filipi',       # vocative of Filip / Philippi address
+    'Iadai', 'Iamin',
+    'Iliea',                  # vocative of Ilie (Elijah)
+    'Ioanan', 'Ionaa', 'Ionam', 'Ionatane',
+    'Iosife', 'Isuse',        # vocatives
+    'Mareala', 'Măriia',      # Mary (older orthography)
+    'Mical', 'Micael', 'Micaia', 'Micalei',
+    'Meleia', 'Miamin', 'Miiamin',
+    'Răule',                  # vocative of Răul (cosmic Evil), Cornilescu usage
+    'Sabate',                 # vocative of Sabat
+    'Saraei',
+    'Simone',                 # vocative of Simon
+    'Susana', 'Robiia',
 }
 
 
@@ -369,7 +463,11 @@ def split_merged_words_in_chapters(chapters: list[dict]) -> list[tuple[str, str]
             for w in word_re.findall(v['text']):
                 m = re.match(r'^(\W*)(.*?)(\W*)$', w, flags=re.S)
                 core = m.group(2) if m else w
-                if not core or len(core) < 6 or '-' in core:
+                # 5-char floor catches "căcei" / "căcim" style merges; the
+                # common-word gate and hunspell agreement filter keep false
+                # positives in check (short hapax tokens that don't
+                # decompose into common+common pairs are silently kept).
+                if not core or len(core) < 5 or '-' in core:
                     continue
                 if any(c.isdigit() for c in core):
                     continue
@@ -388,23 +486,28 @@ def split_merged_words_in_chapters(chapters: list[dict]) -> list[tuple[str, str]
         for token, sugs in hunspell_results.items():
             if not sugs:
                 continue
-            top = sugs[0]
-            if ' ' not in top or '-' in top:
-                continue
-            parts = top.split(' ')
-            if len(parts) != 2:
-                continue
-            if ''.join(parts).lower() != token.lower():
-                continue
-            # Gate: BOTH halves must be common in this corpus. This
-            # filters proper-noun + suffix splits while keeping legitimate
-            # merges of two everyday words.
-            left_lc, right_lc = parts[0].lower(), parts[1].lower()
-            if freq.get(left_lc, 0) < COMMON_THRESHOLD:
-                continue
-            if freq.get(right_lc, 0) < COMMON_THRESHOLD:
-                continue
-            fixes[token] = top
+            # Iterate through hunspell's ranked suggestions in order. Take
+            # the FIRST one that's a clean two-word space split with both
+            # halves being common corpus words. hunspell sometimes ranks
+            # single-word corrections (e.g. "Călinu" for "Căcinu") above
+            # the correct space-split ("Căci nu"), so taking the top
+            # blindly misses real merges. Common-word gate still filters
+            # proper-noun + suffix false positives.
+            for sug in sugs:
+                if ' ' not in sug or '-' in sug:
+                    continue
+                parts = sug.split(' ')
+                if len(parts) != 2:
+                    continue
+                if ''.join(parts).lower() != token.lower():
+                    continue
+                left_lc, right_lc = parts[0].lower(), parts[1].lower()
+                if freq.get(left_lc, 0) < COMMON_THRESHOLD:
+                    continue
+                if freq.get(right_lc, 0) < COMMON_THRESHOLD:
+                    continue
+                fixes[token] = sug
+                break
 
     # Layer manual fixes on top (these handle hyphenated and edge cases).
     for k, v in _MANUAL_MERGE_FIXES.items():
