@@ -159,7 +159,16 @@ export default function ReadingScreen() {
     red: 'hl-red', teal: 'hl-teal', brown: 'hl-brown',
   };
 
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  // Drag-to-select highlighting (real text selection + SelectionToolbar) is
+  // the desktop interaction model; touch devices instead long-press a verse to
+  // open the tap-menu. Drive the choice off pointer capability, not just width:
+  // a mouse user who zooms in (shrinking the CSS-pixel viewport below 1024px)
+  // should still be able to drag-select words and get the toolbar rather than
+  // falling back to the touch menu. `(pointer: fine)` matches mouse/trackpad
+  // primary input and stays false on phones/tablets.
+  const isWideViewport = useMediaQuery('(min-width: 1024px)');
+  const hasFinePointer = useMediaQuery('(pointer: fine)');
+  const isDesktop = isWideViewport || hasFinePointer;
 
   // Belt-and-suspenders against iOS Safari's native long-press text
   // selection on the scripture body. Even with `user-select: none` on the
