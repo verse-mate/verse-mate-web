@@ -246,6 +246,198 @@ TRANSLITERATORS = {
     'mol-cyrl-to-ron-latn': transliterate_mol_cyr_to_ron_latn,
 }
 
+# ─────────────────────────────────────────────────────────────────────────
+# Merged-word splitter. Some eBible source packages collapse two
+# whitespace-separated words into a single token (e.g. "Fiindcăatât" =
+# "Fiindcă atât", or "izbăvește-nede" = "izbăvește-ne de"). These are
+# typesetting bugs in the upstream USFM, not transliteration bugs — but
+# they show up most jarringly in transliterated VDC where every Cyrillic
+# page that had a merge inherits the merged Latin form.
+#
+# Strategy: use the system's hunspell Romanian dictionary (hunspell-ro).
+# For each unique token in the corpus, query hunspell. If hunspell's
+# TOP-RANKED suggestion is a space-separated two-word split that re-
+# concatenates to the original token (case-insensitive), apply that split.
+# Anchoring on hunspell's *top* suggestion avoids accidentally accepting
+# lower-ranked space-splits when the real correction is something else —
+# e.g. "Împărățiia" (archaic 1924 spelling) has "Împărății" as the top
+# suggestion (modernization to short form), and the space-split
+# "Împărăți ia" comes third; the top-only check rejects this and
+# preserves the 1924 orthography.
+#
+# Hunspell processes hyphenated tokens by splitting on the hyphen first,
+# so it can't detect merges like "izbăvește-nede" → "izbăvește-ne de".
+# Those are picked up by `_MANUAL_MERGE_FIXES` below — short hand-curated
+# list, expanded as new ones are spotted in testing.
+# ─────────────────────────────────────────────────────────────────────────
+
+# Manual fixes for cases hunspell can't detect on its own:
+#   - Hyphenated merges (hunspell splits on '-' before validating).
+#   - Splits where one half requires a character substitution (e.g. mid-
+#     word â that should have been a word-edge î).
+_MANUAL_MERGE_FIXES = {
+    'izbăvește-nede': 'izbăvește-ne de',
+    'facă-sevoia': 'facă-se voia',
+    'precumân': 'precum în',
+    'Precumân': 'Precum în',
+}
+
+# Tokens that LOOK like a merge to the auto-detector but are actually
+# legitimate biblical proper nouns (Romanian-form of Hebrew/Greek place
+# names where both halves of the apparent split are common words too).
+# Maintained by hand — add new ones as they're spotted in QA.
+_NEVER_SPLIT = {
+    'Anatotul',  # Anathoth (Jeremiah's hometown). Splitter would pick
+                 # "Ana totul" because both halves are common Romanian
+                 # ("Ana" = barely, "totul" = everything).
+}
+
+
+def _hunspell_check_batch(words: list[str]) -> dict[str, list[str]]:
+    """Run hunspell-ro on a batch of words. Returns {word: [suggestions]}.
+
+    Hunspell -a output format:
+      '*'                          → correct
+      '& word N M: sug1, sug2, …'  → misspelled with suggestions
+      '# word M'                   → misspelled, no suggestions
+      ''                           → blank between input words
+    """
+    import subprocess
+    if not words:
+        return {}
+    payload = '\n'.join(words) + '\n'
+    proc = subprocess.run(
+        ['hunspell', '-d', 'ro_RO', '-a'],
+        input=payload, capture_output=True, text=True, check=False,
+    )
+    if proc.returncode != 0:
+        raise SystemExit(f'hunspell failed: {proc.stderr[:200]}')
+    out: dict[str, list[str]] = {}
+    lines = iter(proc.stdout.splitlines())
+    next(lines, None)  # skip banner
+    idx = 0
+    for line in lines:
+        if not line or line == '*':
+            continue
+        if line.startswith('+') or line.startswith('-'):
+            continue
+        if line.startswith('&'):
+            # "& word N M: s1, s2, ..."
+            _, rest = line.split(' ', 1)
+            word_part, suggestions = rest.split(':', 1)
+            word = word_part.split(' ', 1)[0]
+            sugs = [s.strip() for s in suggestions.split(',')]
+            out[word] = sugs
+        elif line.startswith('#'):
+            _, rest = line.split(' ', 1)
+            word = rest.split(' ', 1)[0]
+            out[word] = []
+        idx += 1
+    return out
+
+
+def split_merged_words_in_chapters(chapters: list[dict]) -> list[tuple[str, str]]:
+    """Detect and fix merged-word tokens across a version's chapters.
+
+    Mutates verse `text` in place. Returns the list of (merged, split)
+    pairs that were applied, for the build-time log so a reviewer can
+    sanity-check the splits before deployment.
+    """
+    # Build the corpus frequency table — we'll use it to gate hunspell's
+    # suggestions. A real merge bug splits into two COMMON words; a
+    # proper-noun split (e.g. "Abigailei" → "Abigail ei") combines a rare
+    # name with a frequent suffix, which we want to reject.
+    word_re = re.compile(r"\S+")
+    bare_word_re = re.compile(r"[A-Za-zĂăÂâÎîȘșȚț']+")
+    freq: dict[str, int] = {}
+    for ch in chapters:
+        for v in ch['verses']:
+            for w in bare_word_re.findall(v['text']):
+                lc = w.lower()
+                freq[lc] = freq.get(lc, 0) + 1
+
+    # Threshold: 20+ occurrences = "common enough that a missing space
+    # next to it is a real bug". Function words (de, în, și), copulas
+    # (este, sunt), demonstratives (aceasta, aceste), and the kernel
+    # Cornilescu vocabulary (Dumnezeu, Tatăl, Domnul) all clear 20× by
+    # mid-Genesis. Biblical proper nouns largely stay under 20.
+    COMMON_THRESHOLD = 20
+
+    candidates: set[str] = set()
+    for ch in chapters:
+        for v in ch['verses']:
+            for w in word_re.findall(v['text']):
+                m = re.match(r'^(\W*)(.*?)(\W*)$', w, flags=re.S)
+                core = m.group(2) if m else w
+                if not core or len(core) < 6 or '-' in core:
+                    continue
+                if any(c.isdigit() for c in core):
+                    continue
+                # Skip if the bare token is already a common word — no
+                # reason to try splitting "Dumnezeu" even if hunspell
+                # somehow flagged it.
+                if freq.get(core.lower(), 0) >= COMMON_THRESHOLD:
+                    continue
+                if core in _NEVER_SPLIT:
+                    continue
+                candidates.add(core)
+
+    fixes: dict[str, str] = {}
+    if candidates:
+        hunspell_results = _hunspell_check_batch(sorted(candidates))
+        for token, sugs in hunspell_results.items():
+            if not sugs:
+                continue
+            top = sugs[0]
+            if ' ' not in top or '-' in top:
+                continue
+            parts = top.split(' ')
+            if len(parts) != 2:
+                continue
+            if ''.join(parts).lower() != token.lower():
+                continue
+            # Gate: BOTH halves must be common in this corpus. This
+            # filters proper-noun + suffix splits while keeping legitimate
+            # merges of two everyday words.
+            left_lc, right_lc = parts[0].lower(), parts[1].lower()
+            if freq.get(left_lc, 0) < COMMON_THRESHOLD:
+                continue
+            if freq.get(right_lc, 0) < COMMON_THRESHOLD:
+                continue
+            fixes[token] = top
+
+    # Layer manual fixes on top (these handle hyphenated and edge cases).
+    for k, v in _MANUAL_MERGE_FIXES.items():
+        fixes[k] = v
+
+    if not fixes:
+        return []
+
+    def repl(tok: str) -> str:
+        m = re.match(r'^(\W*)(.*?)(\W*)$', tok, flags=re.S)
+        if not m:
+            return tok
+        lead, core, trail = m.group(1), m.group(2), m.group(3)
+        if not core or core not in fixes:
+            return tok
+        return f'{lead}{fixes[core]}{trail}'
+
+    applied: dict[str, str] = {}
+    for ch in chapters:
+        for v in ch['verses']:
+            new_text = word_re.sub(lambda m: repl(m.group(0)), v['text'])
+            if new_text != v['text']:
+                # Record what was applied for the build log
+                for w in word_re.findall(v['text']):
+                    core = re.match(r'^(\W*)(.*?)(\W*)$', w, flags=re.S).group(2)
+                    if core in fixes:
+                        applied[core] = fixes[core]
+            v['text'] = new_text
+        for sub in ch.get('subtitles') or []:
+            sub['subtitle'] = word_re.sub(lambda m: repl(m.group(0)), sub['subtitle'])
+
+    return sorted(applied.items(), key=lambda p: p[0].lower())
+
 
 def license_allows_redistribution(lic: str) -> bool:
     """True only for public-domain or CC BY / BY-SA (never NC, ND, or unknown)."""
@@ -445,6 +637,26 @@ def ingest(version: dict, from_zip: str | None = None) -> dict:
                 sub['subtitle'] = fn(sub['subtitle'])
             if 'book' in ch and isinstance(ch['book'], str):
                 ch['book'] = fn(ch['book'])
+
+        # Fix merged-word typesetting bugs in the source. Self-validating:
+        # only splits a rare token if both halves are common words in the
+        # same corpus. Prints the splits for build-time review.
+        splits = split_merged_words_in_chapters(chapters)
+        if splits:
+            print(f'  {key}: merged-word splitter applied {len(splits)} fixes')
+            # Dump the full list to a sibling file so a reviewer can audit
+            # every split before deploy. Build-log only shows the first 15.
+            log_path = OUT_DIR / key / 'merged-word-splits.log'
+            log_path.parent.mkdir(parents=True, exist_ok=True)
+            log_path.write_text(
+                '\n'.join(f'{orig} → {fix}' for orig, fix in splits) + '\n',
+                encoding='utf-8',
+            )
+            print(f'  {key}: full split list at {log_path}')
+            for orig, fix in splits[:15]:
+                print(f'    {orig!r} → {fix!r}')
+            if len(splits) > 15:
+                print(f'    … and {len(splits) - 15} more')
 
     vdir = OUT_DIR / key
     book_ids: set[int] = set()
