@@ -130,9 +130,12 @@ export default function CommentaryScreen() {
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
       {/* Header — #1A1A1A dark, Insight pill gold (active), Bible pill white (inactive) */}
+      {/* `.safe-top` adds only the real notch inset (0 on desktop / non-notched)
+          so the bar stays its 56px row instead of carrying a fixed status-bar
+          floor that reads as dead space at desktop zoom. */}
       <header
         className="shrink-0 safe-top"
-        style={{ backgroundColor: vmTokens.headerBg, paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}
+        style={{ backgroundColor: vmTokens.headerBg }}
       >
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
           <button

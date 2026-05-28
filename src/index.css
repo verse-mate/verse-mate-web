@@ -470,8 +470,10 @@
 /* Short viewports (zoomed-in desktop, landscape phones): the fixed header +
    action/close chrome crowded the summary down to a sliver. Reclaim space by
    using more of the screen height, dropping the redundant quoted-verse text
-   (the verse ref still shows in the header), and compacting the buttons. */
-@media (max-height: 600px) {
+   (the verse ref still shows in the header), and compacting the buttons. The
+   760px ceiling catches moderate desktop zoom levels, where the Copy/Share/
+   Save + Close stack otherwise swallows nearly all the readable text. */
+@media (max-height: 760px) {
   .verse-insight-sheet {
     min-height: 92%;
     max-height: 100%;
@@ -481,9 +483,14 @@
   }
   .verse-insight-sheet .vis-actions button,
   .verse-insight-sheet .vis-close button {
-    height: 38px;
+    height: 36px;
+  }
+  .verse-insight-sheet .vis-actions {
+    padding-top: 6px;
+    padding-bottom: 4px;
   }
   .verse-insight-sheet .vis-close {
+    padding-top: 4px;
     padding-bottom: 8px;
   }
 }
