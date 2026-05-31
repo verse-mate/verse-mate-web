@@ -3,7 +3,7 @@ import { ChevronDown, ChevronUp, BookOpen, Copy, Check } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import { useApp } from '@/contexts/AppContext';
-import type { InductiveStudy } from '@versemate/studies';
+import { getStudyLabels, type InductiveStudy } from '@versemate/studies';
 import { fetchStudy } from '@/services/bibleService';
 import { usePreferredLanguage } from '@/hooks/usePreferredLanguage';
 import { vmTokens } from '@/styles/themeStyles';
@@ -39,6 +39,9 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   // picker change refetches. Local state holds the resolved study; a `loading`
   // flag covers the first paint on a chapter we haven't seen yet.
   const language = usePreferredLanguage();
+  // Fixed Precept-method UI chrome, localized once per language (see
+  // @versemate/studies labels). English fallback for unsupported languages.
+  const labels = getStudyLabels(language);
   const [study, setStudy] = useState<InductiveStudy | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
@@ -121,7 +124,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   if (loading) {
     return (
       <div>
-        <h2 style={titleStyle}>Inductive Study of {book} {chapter}</h2>
+        <h2 style={titleStyle}>{labels.inductiveStudyOf} {book} {chapter}</h2>
         <div style={{ marginTop: 24, padding: 24, textAlign: 'center', color: vmTokens.textSecondary, fontSize: 14 }}>
           Loading…
         </div>
@@ -132,7 +135,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   if (!study) {
     return (
       <div>
-        <h2 style={titleStyle}>Inductive Study of {book} {chapter}</h2>
+        <h2 style={titleStyle}>{labels.inductiveStudyOf} {book} {chapter}</h2>
         <div style={{ marginTop: 24, padding: 24, borderRadius: 12, backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.surfaceRaisedBorder}`, textAlign: 'center' }}>
           <BookOpen size={28} color={vmTokens.gold} style={{ margin: '0 auto 12px' }} strokeWidth={1.5} />
           <p style={{ color: vmTokens.textPrimary, fontSize: 16, fontWeight: 500, marginBottom: 6 }}>Inductive Study coming soon</p>
@@ -155,7 +158,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
     if (s.kind === 'lists') s.lists.forEach((_, i) => allIds.push(`step-${s.number}-list-${i}`));
   }
   allIds.push('interpretation-intro');
-  for (const m of study.interpretation.movements) allIds.push(`mv-${m.number}`);
+  study.interpretation.movements.forEach((m, i) => allIds.push(`mv-${m.number ?? i}`));
   allIds.push('application');
 
   const allOpen = allIds.every(id => isOpen(id));
@@ -173,7 +176,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
     <div style={{ fontSize: bodyFontSize, lineHeight: `${bodyLineHeight}px` }}>
       {/* Title row — matches Line-by-Line: just the H2 + share. No subtitle / theme banner. */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-        <h2 style={titleStyle}>Inductive Study of {study.title}</h2>
+        <h2 style={titleStyle}>{labels.inductiveStudyOf} {study.title}</h2>
         <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
           <button
             onClick={async () => {
@@ -226,18 +229,18 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
           onClick={() => setAll(!allOpen)}
           style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, color: vmTokens.gold, background: 'none', border: 'none', cursor: 'pointer' }}
         >
-          {allOpen ? 'Collapse All' : 'Expand All'}
+          {allOpen ? labels.collapseAll : labels.expandAll}
         </button>
       </div>
 
-      <SectionHeading label="Observation — 9 Inductive Steps" />
+      <SectionHeading label={labels.observationSection} />
       <Card
         open={isOpen('observation-intro')}
         onToggle={() => toggle('observation-intro')}
-        heading={<span style={cardHeadingTitleStyle}>About the nine observation steps</span>}
+        heading={<span style={cardHeadingTitleStyle}>{labels.aboutObservationTitle}</span>}
       >
         <p style={sectionIntroStyle}>
-          Observation asks what the text <em>says</em> — slowing down to mark the keywords, contrasts, repetitions, and structural cues the author left for you. Each of the nine steps below builds the evidence the interpretation that follows is built on. Don't skip ahead; the meaning comes from what you observed.
+          {renderInlineItalic(labels.aboutObservationBody)}
         </p>
       </Card>
       {study.steps.map(step => (
@@ -249,23 +252,23 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
         />
       ))}
 
-      <SectionHeading label="Interpretation" />
+      <SectionHeading label={labels.interpretationSection} />
       {study.interpretation.intro && (
         <Card
           open={isOpen('interpretation-intro')}
           onToggle={() => toggle('interpretation-intro')}
-          heading={<span style={cardHeadingTitleStyle}>About the interpretation movements</span>}
+          heading={<span style={cardHeadingTitleStyle}>{labels.aboutInterpretationTitle}</span>}
         >
           <p style={sectionIntroStyle}>
             {renderInlineItalic(study.interpretation.intro)}
           </p>
         </Card>
       )}
-      {study.interpretation.movements.map(mv => (
+      {study.interpretation.movements.map((mv, mvIdx) => (
         <Card
-          key={mv.number}
-          open={isOpen(`mv-${mv.number}`)}
-          onToggle={() => toggle(`mv-${mv.number}`)}
+          key={mv.number ?? mvIdx}
+          open={isOpen(`mv-${mv.number ?? mvIdx}`)}
+          onToggle={() => toggle(`mv-${mv.number ?? mvIdx}`)}
           heading={
             // align-items: flex-start so when the title wraps to two lines
             // the pill stays anchored to the first line, not vertically
@@ -273,7 +276,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
             // line look mis-indented under the pill).
             <span style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
               <span style={{ marginTop: 2 }}><RangePill range={mv.range} /></span>
-              <span style={cardHeadingTitleStyle}>Movement {mv.number} — {mv.title}</span>
+              <span style={cardHeadingTitleStyle}>{labels.movement} {mv.number} — {mv.title}</span>
             </span>
           }
         >
@@ -301,11 +304,11 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
         </Card>
       ))}
 
-      <SectionHeading label="Application" />
+      <SectionHeading label={labels.applicationSection} />
       <Card
         open={isOpen('application')}
         onToggle={() => toggle('application')}
-        heading={<span style={cardHeadingTitleStyle}>Apply, one question per movement</span>}
+        heading={<span style={cardHeadingTitleStyle}>{labels.applyOneQuestion}</span>}
       >
         {study.application.intro && (
           <p style={{ ...sectionIntroStyle, marginBottom: 16 }}>
@@ -433,6 +436,7 @@ function QABody({ step, isOpen, toggle }: { step: StepQA; isOpen: (id: string) =
 }
 
 function KeywordsBody({ step }: { step: StepKeywords }) {
+  const labels = getStudyLabels(usePreferredLanguage());
   // Card-style row per keyword so the definition has room to breathe under
   // the metadata line. A 5-column table (Word/Greek/Count/Verses/Definition)
   // would crush the right-panel width; a stacked card scales cleanly.
@@ -480,7 +484,7 @@ function KeywordsBody({ step }: { step: StepKeywords }) {
           </div>
           {/* Verses line */}
           <div style={{ fontSize: 12, color: vmTokens.textMuted, marginBottom: row.definition ? 8 : 0 }}>
-            <span style={{ fontWeight: 600, letterSpacing: '0.4px', textTransform: 'uppercase', marginRight: 6 }}>Verses</span>
+            <span style={{ fontWeight: 600, letterSpacing: '0.4px', textTransform: 'uppercase', marginRight: 6 }}>{labels.versesLabel}</span>
             {row.verses}
           </div>
           {/* Definition */}
@@ -652,6 +656,7 @@ function BulletsBody({ step }: { step: StepBullets }) {
 }
 
 function SegmentsBody({ step }: { step: StepSegments }) {
+  const labels = getStudyLabels(usePreferredLanguage());
   // Segments render as static styled cards (no extra collapse) — the user
   // already opened the parent step, and segments are short enough to read
   // inline. Each card stays visually distinct so they read as their own
@@ -669,7 +674,7 @@ function SegmentsBody({ step }: { step: StepSegments }) {
         }}
       >
         <p style={{ fontSize: 12, fontWeight: 700, color: vmTokens.gold, textTransform: 'uppercase', letterSpacing: '0.6px', margin: 0, marginBottom: 6 }}>
-          Chapter theme
+          {labels.chapterThemeLabel}
         </p>
         <p style={{ fontSize: 17, color: vmTokens.textPrimary, fontStyle: 'italic', margin: 0, lineHeight: '26px', fontWeight: 500 }}>
           {step.themeHeadline}
