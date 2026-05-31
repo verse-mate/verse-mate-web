@@ -3,7 +3,9 @@ import { ChevronDown, ChevronUp, BookOpen, Copy, Check } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import { useApp } from '@/contexts/AppContext';
-import { getStudyFor, type InductiveStudy } from '@versemate/studies';
+import type { InductiveStudy } from '@versemate/studies';
+import { fetchStudy } from '@/services/bibleService';
+import { usePreferredLanguage } from '@/hooks/usePreferredLanguage';
 import { vmTokens } from '@/styles/themeStyles';
 import type {
   StudyStep,
@@ -30,10 +32,13 @@ interface Props {
  */
 export default function StudyPanel({ book, bookId, chapter }: Props) {
   const { state } = useApp();
-  // getStudyFor is async (each chapter is its own code-split chunk; static
-  // bundling of 1,189 chapters would blow Cloudflare Workers' 25 MiB
-  // per-asset limit). Local state holds the resolved study; a `loading`
+  // Study content is now DB-backed (fetchStudy): the backend serves the
+  // translation for the current content language when one exists and falls
+  // back to English; fetchStudy additionally falls back to the bundled
+  // @versemate/studies content on any API failure. Keyed on language so a
+  // picker change refetches. Local state holds the resolved study; a `loading`
   // flag covers the first paint on a chapter we haven't seen yet.
+  const language = usePreferredLanguage();
   const [study, setStudy] = useState<InductiveStudy | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
@@ -44,7 +49,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
     }
     let cancelled = false;
     setLoading(true);
-    getStudyFor(bookId, chapter).then((s) => {
+    fetchStudy(bookId, chapter, language).then((s) => {
       if (cancelled) return;
       setStudy(s);
       setLoading(false);
@@ -52,7 +57,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
     return () => {
       cancelled = true;
     };
-  }, [bookId, chapter]);
+  }, [bookId, chapter, language]);
   // Body text matches the user's reading font size so Study reads at the same
   // weight as the Bible side and the Summary / By Line / Detailed tabs.
   // Sub-elements (pills, tags, captions, definitions) keep their own fixed
