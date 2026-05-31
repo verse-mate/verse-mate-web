@@ -158,7 +158,9 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
     if (s.kind === 'lists') s.lists.forEach((_, i) => allIds.push(`step-${s.number}-list-${i}`));
   }
   allIds.push('interpretation-intro');
-  study.interpretation.movements.forEach((m, i) => allIds.push(`mv-${m.number ?? i}`));
+  study.interpretation.movements.forEach((m, i) => {
+    allIds.push(`mv-${m.number ?? i}`);
+  });
   allIds.push('application');
 
   const allOpen = allIds.every(id => isOpen(id));
