@@ -20,6 +20,7 @@ import {
 import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, getRefreshToken, ApiError, API_BASE_URL } from './api';
 import { bibleVersions, BibleVersionInfo, TestamentCoverage } from '@/constants/bible-versions';
 import { getPreferredLanguageCode } from '@/hooks/usePreferredLanguage';
+import { getStudyFor, type InductiveStudy } from '@versemate/studies';
 
 // ─── Raw API response shapes ─────────────────────────────────────────────
 // Narrow definitions of just the fields we read from each backend payload.
@@ -348,6 +349,46 @@ async function loadExplanations(bookId: number, chapter: number): Promise<Explan
     };
   })();
   _explanationCache.set(key, promise);
+  return promise;
+}
+
+const _studyCache = new Map<string, Promise<InductiveStudy | null>>();
+
+/**
+ * Fetch the inductive study for a chapter, localized to the current language
+ * with English fallback. Mirrors fetchExplanation/loadExplanations: hits the
+ * DB-backed study endpoint (which serves the translation for `lang` when one
+ * exists, English otherwise) and, on any failure, falls back to the bundled
+ * @versemate/studies content. Cached by `${bookId}:${chapter}:${lang}` so
+ * switching language refetches.
+ */
+export async function fetchStudy(
+  bookId: number,
+  chapter: number,
+  lang: string
+): Promise<InductiveStudy | null> {
+  const key = `${bookId}:${chapter}:${lang}`;
+  const existing = _studyCache.get(key);
+  if (existing) return existing;
+  const promise = (async (): Promise<InductiveStudy | null> => {
+    try {
+      const data = await api.get<{ study?: { content?: InductiveStudy } | null }>(
+        `/bible/study/${bookId}/${chapter}`,
+        { lang },
+        { auth: true }
+      );
+      if (data?.study?.content) return data.study.content;
+    } catch {
+      // network/API failure → bundled fallback below
+    }
+    // We only reach here on an API miss/failure. DON'T retain the bundled
+    // fallback in the cache: a transient failure (or a translation that lands
+    // a moment later) must not stick permanently — drop the entry so the next
+    // call retries the API.
+    _studyCache.delete(key);
+    return (await getStudyFor(bookId, chapter)) ?? null;
+  })();
+  _studyCache.set(key, promise);
   return promise;
 }
 
