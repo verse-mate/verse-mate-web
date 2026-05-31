@@ -381,6 +381,11 @@ export async function fetchStudy(
     } catch {
       // network/API failure → bundled fallback below
     }
+    // We only reach here on an API miss/failure. DON'T retain the bundled
+    // fallback in the cache: a transient failure (or a translation that lands
+    // a moment later) must not stick permanently — drop the entry so the next
+    // call retries the API.
+    _studyCache.delete(key);
     return (await getStudyFor(bookId, chapter)) ?? null;
   })();
   _studyCache.set(key, promise);
