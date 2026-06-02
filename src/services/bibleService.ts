@@ -20,7 +20,7 @@ import {
 import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, getRefreshToken, ApiError, API_BASE_URL } from './api';
 import { bibleVersions, BibleVersionInfo, TestamentCoverage } from '@/constants/bible-versions';
 import { getPreferredLanguageCode } from '@/hooks/usePreferredLanguage';
-import { getStudyFor, type InductiveStudy } from '@versemate/studies';
+import { getStudyFor, type InductiveStudy, type StudyLabels } from '@versemate/studies';
 
 // ─── Raw API response shapes ─────────────────────────────────────────────
 // Narrow definitions of just the fields we read from each backend payload.
@@ -390,6 +390,29 @@ export async function fetchStudy(
   })();
   _studyCache.set(key, promise);
   return promise;
+}
+
+/**
+ * Fetch the DB-backed inductive-study UI chrome labels for a language. The
+ * backend family-matches (`ro` ⇄ `ro-RO`) and returns null for English /
+ * unknown languages. Returns the labels object (possibly partial) or null;
+ * the caller (useStudyLabels) merges it over the bundled getStudyLabels
+ * fallback so a missing key degrades to English rather than blanking.
+ */
+export async function fetchStudyLabels(
+  lang: string
+): Promise<Partial<StudyLabels> | null> {
+  try {
+    const data = await api.get<{ labels?: Record<string, string> | null }>(
+      '/bible/study-labels',
+      { lang },
+      { auth: true }
+    );
+    return (data?.labels as Partial<StudyLabels> | undefined) ?? null;
+  } catch {
+    // network/API failure → bundled fallback handled by the caller
+    return null;
+  }
 }
 
 export async function fetchCommentary(book: string, chapter: number): Promise<Commentary[]> {
