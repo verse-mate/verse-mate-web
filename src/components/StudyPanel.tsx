@@ -3,9 +3,10 @@ import { ChevronDown, ChevronUp, BookOpen, Copy, Check } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import { useApp } from '@/contexts/AppContext';
-import { getStudyLabels, type InductiveStudy } from '@versemate/studies';
+import { type InductiveStudy } from '@versemate/studies';
 import { fetchStudy } from '@/services/bibleService';
 import { usePreferredLanguage } from '@/hooks/usePreferredLanguage';
+import { useStudyLabels } from '@/hooks/useStudyLabels';
 import { vmTokens } from '@/styles/themeStyles';
 import type {
   StudyStep,
@@ -39,9 +40,10 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   // picker change refetches. Local state holds the resolved study; a `loading`
   // flag covers the first paint on a chapter we haven't seen yet.
   const language = usePreferredLanguage();
-  // Fixed Precept-method UI chrome, localized once per language (see
-  // @versemate/studies labels). English fallback for unsupported languages.
-  const labels = getStudyLabels(language);
+  // Fixed Precept-method UI chrome, localized per language. DB-backed
+  // (useStudyLabels) so a new language's chrome ships without an app release,
+  // with the bundled @versemate/studies map as offline/English fallback.
+  const labels = useStudyLabels(language);
   const [study, setStudy] = useState<InductiveStudy | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
@@ -438,7 +440,7 @@ function QABody({ step, isOpen, toggle }: { step: StepQA; isOpen: (id: string) =
 }
 
 function KeywordsBody({ step }: { step: StepKeywords }) {
-  const labels = getStudyLabels(usePreferredLanguage());
+  const labels = useStudyLabels(usePreferredLanguage());
   // Card-style row per keyword so the definition has room to breathe under
   // the metadata line. A 5-column table (Word/Greek/Count/Verses/Definition)
   // would crush the right-panel width; a stacked card scales cleanly.
