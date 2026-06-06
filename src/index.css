@@ -457,17 +457,14 @@
   margin-right: auto;
 }
 
-/* Action + close buttons scale with the viewport height so they shrink on
-   short / zoomed-in viewports (where the fixed chrome otherwise crowds the
-   summary out) and stay a comfortable tap size on tall ones — no breakpoint
-   guessing. `vh` tracks the CSS-pixel viewport, which shrinks under browser
-   zoom, so the buttons naturally get smaller exactly when the user complains
+/* The Copy/Share/Save/Close strip scales with the viewport height so it
+   shrinks on short / zoomed-in viewports (where the chrome otherwise crowds
+   the summary out) and stays a comfortable tap size on tall ones — no
+   breakpoint guessing. `vh` tracks the CSS-pixel viewport, which shrinks under
+   browser zoom, so the buttons get smaller exactly when the user complains
    they're too large. */
 .verse-insight-sheet .vis-actions button {
-  height: clamp(32px, 5.5vh, 40px);
-}
-.verse-insight-sheet .vis-close button {
-  height: clamp(34px, 6vh, 48px);
+  height: clamp(30px, 5vh, 38px);
 }
 
 /* Verse-actions sheet (long-press / verse-tap menu). Mirrors the insight
@@ -482,29 +479,18 @@
   max-height: 90%;
 }
 
-/* Short viewports (zoomed-in desktop, landscape phones): the fixed header +
-   action/close chrome crowded the summary down to a sliver. Reclaim space by
-   using more of the screen height, dropping the redundant quoted-verse text
-   (the verse ref still shows in the header), and compacting the buttons. The
-   760px ceiling catches moderate desktop zoom levels, where the Copy/Share/
-   Save + Close stack otherwise swallows nearly all the readable text. */
+/* Short viewports (zoomed-in desktop, landscape phones): use more of the
+   screen height so the single Copy/Share/Save/Close strip and the header
+   don't crowd the summary. Button heights are handled by the responsive
+   clamp() above; here we only claw back a little surrounding padding. */
 @media (max-height: 760px) {
   .verse-insight-sheet {
     min-height: 92%;
     max-height: 100%;
   }
-  .verse-insight-sheet .vis-quote {
-    display: none;
-  }
-  /* Button heights are handled by the responsive clamp() above; here we only
-     tighten the surrounding padding to claw back a little more vertical room. */
   .verse-insight-sheet .vis-actions {
     padding-top: 6px;
     padding-bottom: 4px;
-  }
-  .verse-insight-sheet .vis-close {
-    padding-top: 4px;
-    padding-bottom: 8px;
   }
 }
 
