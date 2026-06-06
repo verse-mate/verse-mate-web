@@ -20,8 +20,13 @@ interface Props {
  */
 function stripDuplicateVerse(text: string): string {
   let result = text;
-  // Remove first heading line (e.g. "Genesis 1:6" or "# Genesis 1:6")
-  result = result.replace(/^#*\s*\S+\s+\d+:\d+\s*\n?/, '');
+  // Remove first heading line (e.g. "Genesis 1:6" or "# Genesis 1:6").
+  // The book name is `.+?` (any non-newline run), NOT `\S+` (a single token):
+  // numbered books like "1 Kings 2:4" or multi-word names like "Song of
+  // Solomon 1:1" would otherwise leave the heading — and the blockquote that
+  // follows — unstripped, repeating the verse inside the summary box. Mirrors
+  // the proven heading pattern in bibleService's splitBylineByVerse.
+  result = result.replace(/^#*\s*.+?\s+\d+:\d+\s*\n?/, '');
   // Remove first blockquote block (the verse text)
   result = result.replace(/^>\s*.*(?:\n>\s*.*)*\n?/, '').trimStart();
   return result;
