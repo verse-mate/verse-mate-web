@@ -304,45 +304,40 @@ export default function VerseInsightSheet({
           </div>
         </div>
 
-        {/* Actions — single row: Copy | Share | Save. Top border + small
-            top padding gives a clear visual separation from the scrolling
-            content above so the last line of commentary never reads as
-            "behind" the buttons. */}
-        <div className="vis-actions shrink-0 px-4 pb-2 pt-3 border-t border-border">
-          <div className="grid grid-cols-3 gap-2">
+        {/* Actions — one compact row: Copy | Share | Save | Close. A single
+            small strip along the bottom keeps the chrome from crowding out the
+            summary on short / zoomed-in viewports. */}
+        <div className="vis-actions shrink-0 px-3 pb-2 pt-2 border-t border-border safe-bottom">
+          <div className="grid grid-cols-4 gap-1.5">
             <button
               onClick={handleCopy}
-              className="h-10 rounded-xl bg-secondary border border-border flex items-center justify-center gap-1.5"
+              className="h-9 rounded-lg bg-secondary border border-border flex items-center justify-center gap-1"
             >
-              {copiedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Copy size={14} className="text-foreground" strokeWidth={1.5} />}
+              {copiedAt ? <Check size={13} className="text-gold" strokeWidth={2} /> : <Copy size={13} className="text-foreground" strokeWidth={1.5} />}
               <span className="text-[12px]" style={{ color: copiedAt ? 'var(--vm-dust)' : 'var(--fg-primary)' }}>{copiedAt ? 'Copied' : 'Copy'}</span>
             </button>
             <button
               onClick={handleShare}
-              className="h-10 rounded-xl bg-secondary border border-border flex items-center justify-center gap-1.5"
+              className="h-9 rounded-lg bg-secondary border border-border flex items-center justify-center gap-1"
             >
-              <ShareIcon size={14} color="#ccc" />
+              <ShareIcon size={13} color="#ccc" />
               <span className="text-[12px] text-foreground">Share</span>
             </button>
             <button
               onClick={handleSaveHighlight}
-              className="h-10 rounded-xl bg-secondary border border-border flex items-center justify-center gap-1.5"
+              className="h-9 rounded-lg bg-secondary border border-border flex items-center justify-center gap-1"
             >
-              {savedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Bookmark size={14} className="text-foreground" strokeWidth={1.5} />}
+              {savedAt ? <Check size={13} className="text-gold" strokeWidth={2} /> : <Bookmark size={13} className="text-foreground" strokeWidth={1.5} />}
               <span className="text-[12px]" style={{ color: savedAt ? 'var(--vm-dust)' : 'var(--fg-primary)' }}>{savedAt ? 'Saved' : 'Save'}</span>
+            </button>
+            <button
+              onClick={onClose}
+              className="h-9 rounded-lg bg-gold text-foreground font-medium text-[12px] flex items-center justify-center"
+            >
+              Close
             </button>
           </div>
           {actionError && <p className="text-[11px] text-destructive text-center mt-1">{actionError}</p>}
-        </div>
-
-        {/* Close button */}
-        <div className="vis-close shrink-0 px-4 pb-4 safe-bottom">
-          <button
-            onClick={onClose}
-            className="w-full h-12 rounded-xl bg-gold text-foreground font-medium text-[15px]"
-          >
-            Close
-          </button>
         </div>
       </div>
     </>
