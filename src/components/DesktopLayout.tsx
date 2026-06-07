@@ -267,6 +267,12 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
       !e.ctrlKey &&
       !e.altKey
     ) {
+      // Swallow this keystroke so the browser doesn't ALSO insert the
+      // character into the search field once it auto-focuses — otherwise the
+      // seeded query and the native input both land and you get "jj". Only
+      // this first opening key is prevented; once the input is focused the
+      // early-return guards above let normal typing through.
+      e.preventDefault();
       setBookSelectorQuery(e.key);
       setShowBookSelector(true);
     }
