@@ -735,7 +735,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               initialQuery={bookSelectorQuery}
               onClose={() => { setShowBookSelector(false); setBookSelectorQuery(''); }}
               onSelect={(book, ch, bookId) => {
-                dispatch({ type: 'JUMP_TO_PASSAGE', book, chapter: ch, bookId });
+                dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
                 setShowBookSelector(false);
                 setBookSelectorQuery('');
                 navigate('/read');
