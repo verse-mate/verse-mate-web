@@ -31,10 +31,6 @@ interface AppState {
   book: string;
   bookId: number;
   chapter: number;
-  // The passage the user was reading before they jumped elsewhere via the
-  // Search / book selector. Powers the "Back to <book> <chapter>" return
-  // button on the destination page. Null when there's nowhere to return to.
-  previousPassage: { book: string; bookId: number; chapter: number } | null;
   selectedVerse: number | null;
   version: BibleVersion;
   bookmarks: Bookmark[];
@@ -54,12 +50,6 @@ interface AppState {
 
 type Action =
   | { type: 'SET_PASSAGE'; book: string; chapter: number; bookId?: number }
-  // Like SET_PASSAGE, but remembers the current passage as `previousPassage`
-  // first so the destination can offer a one-tap return. Dispatched when the
-  // user jumps via the Search / book selector.
-  | { type: 'JUMP_TO_PASSAGE'; book: string; chapter: number; bookId?: number }
-  // Restore the remembered passage (and clear it).
-  | { type: 'RETURN_TO_PREVIOUS' }
   | { type: 'SET_VERSE'; verse: number | null }
   | { type: 'SET_VERSION'; version: BibleVersion }
   | { type: 'SET_BOOKMARKS'; bookmarks: Bookmark[] }
@@ -99,32 +89,6 @@ function reducer(state: AppState, action: Action): AppState {
         selectedVerse: null,
         // Ephemeral (signed-out) highlights are id-prefixed `local-`. Clear
         // them on passage change so they don't bleed across chapters.
-        highlights: state.highlights.filter(h => !h.id.startsWith('local-')),
-      };
-    case 'JUMP_TO_PASSAGE':
-      return {
-        ...state,
-        // Anchor where we came from so the destination shows a "Back to …"
-        // button. Don't capture an empty/half-initialized passage.
-        previousPassage:
-          state.book && state.bookId && state.chapter
-            ? { book: state.book, bookId: state.bookId, chapter: state.chapter }
-            : state.previousPassage,
-        book: action.book,
-        chapter: action.chapter,
-        bookId: action.bookId ?? state.bookId,
-        selectedVerse: null,
-        highlights: state.highlights.filter(h => !h.id.startsWith('local-')),
-      };
-    case 'RETURN_TO_PREVIOUS':
-      if (!state.previousPassage) return state;
-      return {
-        ...state,
-        book: state.previousPassage.book,
-        bookId: state.previousPassage.bookId,
-        chapter: state.previousPassage.chapter,
-        previousPassage: null,
-        selectedVerse: null,
         highlights: state.highlights.filter(h => !h.id.startsWith('local-')),
       };
     case 'SET_VERSE':
@@ -225,7 +189,6 @@ const initialState: AppState = {
   book: initialPassage.book,
   bookId: initialPassage.bookId,
   chapter: initialPassage.chapter,
-  previousPassage: null,
   selectedVerse: null,
   version: initialSettings.defaultVersion,
   bookmarks: [],
