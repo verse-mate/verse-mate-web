@@ -11,6 +11,7 @@ import {
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
+import ReturnToPassageButton from '@/components/ReturnToPassageButton';
 import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
@@ -169,6 +170,12 @@ export default function ReadingScreen() {
   const isWideViewport = useMediaQuery('(min-width: 1024px)');
   const hasFinePointer = useMediaQuery('(pointer: fine)');
   const isDesktop = isWideViewport || hasFinePointer;
+
+  // For reading routes, AppLayout swaps to DesktopLayout at >=768px, so this
+  // ReadingScreen instance is rendered inside the desktop split-view's left
+  // panel. The "Back to <passage>" return button is a desktop-only affordance
+  // (it pairs with desktop's type-to-search jump), so only render it there.
+  const isDesktopLayout = useMediaQuery('(min-width: 768px)');
 
   // Belt-and-suspenders against iOS Safari's native long-press text
   // selection on the scripture body. Even with `user-select: none` on the
@@ -379,6 +386,7 @@ export default function ReadingScreen() {
             zoomed in. */}
         <div className="reading-scroll" ref={scrollRef}>
         <div className="reading-inner">
+        {isDesktopLayout && <ReturnToPassageButton />}
         <div className="chapter-meta">
           <h1 className="chapter-title" data-testid="chapter-header">
             {state.book} {state.chapter}

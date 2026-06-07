@@ -104,6 +104,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     setInsightTab: setTopicInsightTab,
   } = useTopicView();
   const [showBookSelector, setShowBookSelector] = useState(false);
+  // Seed text for the Search modal when it's opened via "just start typing".
+  const [bookSelectorQuery, setBookSelectorQuery] = useState('');
   const [showMenu, setShowMenu] = useState(false);
   const [sidebarOpen] = useState(!hideSidebar);
   // Sidebar always stays at expanded width; expandedBook controls chapter grid visibility.
@@ -243,12 +245,38 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+    if (e.target instanceof HTMLElement && e.target.isContentEditable) return;
     if (e.key === 'ArrowLeft' && state.chapter > 1) {
       dispatch({ type: 'SET_PASSAGE', book: state.book, chapter: state.chapter - 1 });
-    } else if (e.key === 'ArrowRight' && state.chapter < maxChapter) {
-      dispatch({ type: 'SET_PASSAGE', book: state.book, chapter: state.chapter + 1 });
+      return;
     }
-  }, [state.book, state.chapter, maxChapter, dispatch]);
+    if (e.key === 'ArrowRight' && state.chapter < maxChapter) {
+      dispatch({ type: 'SET_PASSAGE', book: state.book, chapter: state.chapter + 1 });
+      return;
+    }
+    // "Just start typing" → open Search seeded with the first character so the
+    // user can jump to another book without reaching for the selector. Only a
+    // bare printable key (no Cmd/Ctrl/Alt) counts, and not while the Search or
+    // menu overlay is already open.
+    if (
+      !showBookSelector &&
+      !showMenu &&
+      e.key.length === 1 &&
+      /[a-zA-Z0-9]/.test(e.key) &&
+      !e.metaKey &&
+      !e.ctrlKey &&
+      !e.altKey
+    ) {
+      // Swallow this keystroke so the browser doesn't ALSO insert the
+      // character into the search field once it auto-focuses — otherwise the
+      // seeded query and the native input both land and you get "jj". Only
+      // this first opening key is prevented; once the input is focused the
+      // early-return guards above let normal typing through.
+      e.preventDefault();
+      setBookSelectorQuery(e.key);
+      setShowBookSelector(true);
+    }
+  }, [state.book, state.chapter, maxChapter, dispatch, showBookSelector, showMenu]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
@@ -429,7 +457,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               like a Bible reference for navigation purposes. */}
           <button
             className="chapter-selector-btn"
-            onClick={() => setShowBookSelector(true)}
+            onClick={() => { setBookSelectorQuery(''); setShowBookSelector(true); }}
             data-testid="desktop-chapter-selector-button"
           >
             <span>
@@ -686,7 +714,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
       {showBookSelector && (
         <>
           <div
-            onClick={() => setShowBookSelector(false)}
+            onClick={() => { setShowBookSelector(false); setBookSelectorQuery(''); }}
             style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 55 }}
           />
           <div style={{
@@ -704,10 +732,12 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           }}>
             <BookSelector
               initialTab={isTopicRoute ? 'Topics' : undefined}
-              onClose={() => setShowBookSelector(false)}
+              initialQuery={bookSelectorQuery}
+              onClose={() => { setShowBookSelector(false); setBookSelectorQuery(''); }}
               onSelect={(book, ch, bookId) => {
-                dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
+                dispatch({ type: 'JUMP_TO_PASSAGE', book, chapter: ch, bookId });
                 setShowBookSelector(false);
+                setBookSelectorQuery('');
                 navigate('/read');
               }}
             />
