@@ -324,12 +324,33 @@ export default function LexiconPopover({
             userSelect: 'none',
           }}
         >
+          {/* Original word as it appears in the verse — the headword of the
+              card (the exact token the reader tapped). */}
+          <div
+            style={{
+              fontSize: 20,
+              fontWeight: 600,
+              color: vmTokens.textPrimary,
+              lineHeight: '26px',
+              marginBottom: 6,
+            }}
+          >
+            {surface}
+          </div>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
+            {/* Transliteration — the readable form, shown first + larger so
+                non-readers of the original script lead with what they can
+                pronounce. */}
+            <span style={{ fontSize: 18, color: vmTokens.gold, fontWeight: 500 }}>
+              {renderEntry.translit}
+            </span>
+            {/* Original-language lemma — the less-readable Greek/Hebrew script,
+                now smaller and after the transliteration. */}
             <span
               dir={isHebrew(renderEntry.lemma) ? 'rtl' : 'ltr'}
               style={{
                 fontFamily: 'Georgia, "Times New Roman", serif',
-                fontSize: 22,
+                fontSize: 15,
                 fontWeight: 500,
                 color: vmTokens.textPrimary,
                 letterSpacing: '0.01em',
@@ -339,9 +360,6 @@ export default function LexiconPopover({
               }}
             >
               {renderEntry.lemma}
-            </span>
-            <span style={{ fontSize: 14, color: vmTokens.gold, fontWeight: 500 }}>
-              {renderEntry.translit}
             </span>
             {/* Transparency that the card's prose is an AI translation, not the
                 original-language reference data. Only shown when the endpoint
