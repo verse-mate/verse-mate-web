@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { fetchBooks, getRecentBooks, fetchTopics } from '@/services/bibleService';
 import { BibleBook, Topic, TopicCategory } from '@/services/types';
@@ -16,6 +16,12 @@ interface Props {
    * viewed Bible book.
    */
   initialTab?: 'OT' | 'NT' | 'Topics';
+  /**
+   * Seed the search box with this text on open and focus it immediately.
+   * Used by the "just start typing" shortcut so the first character the
+   * user pressed lands in the field and the results filter right away.
+   */
+  initialQuery?: string;
 }
 
 type Tab = 'OT' | 'NT' | 'Topics';
@@ -35,16 +41,17 @@ const TOPIC_CATEGORIES: { key: TopicCategory; label: string }[] = [
  * Figma reference: frames 5172:3418 (OT), 5172:7984 (NT), and the Topics layout in frame 5895:4982.
  * Overlayed on top of Reading via a modal-full-screen pattern.
  */
-export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
+export default function BookSelector({ onClose, onSelect, initialTab, initialQuery }: Props) {
   const navigate = useNavigate();
   const { state } = useApp();
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [tab, setTab] = useState<Tab>(() => {
     if (initialTab) return initialTab;
     // Default to whichever testament the current book belongs to
     return ['Matthew','Mark','Luke','John','Acts','Romans','1 Corinthians','2 Corinthians','Galatians','Ephesians','Philippians','Colossians','1 Thessalonians','2 Thessalonians','1 Timothy','2 Timothy','Titus','Philemon','Hebrews','James','1 Peter','2 Peter','1 John','2 John','3 John','Jude','Revelation'].includes(state.book) ? 'NT' : 'OT';
   });
   const [selectedBook, setSelectedBook] = useState<string | null>(null);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(initialQuery ?? '');
   const [topics, setTopics] = useState<Topic[]>([]);
   const [topicCategory, setTopicCategory] = useState<TopicCategory>('EVENT');
   const [allBooks, setAllBooks] = useState<BibleBook[]>([]);
@@ -63,6 +70,20 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
       );
     });
     fetchTopics().then(setTopics);
+  }, []);
+
+  // When opened via the "just start typing" shortcut, focus the search field
+  // and drop the caret after the seeded character so the user keeps typing
+  // straight into the box. Only auto-focus in that case — opening the modal
+  // by tapping the selector on touch devices shouldn't force the keyboard up.
+  useEffect(() => {
+    if (!initialQuery) return;
+    const el = searchInputRef.current;
+    if (!el) return;
+    el.focus();
+    const len = el.value.length;
+    el.setSelectionRange(len, len);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const filteredBooks = useMemo(() => {
@@ -220,6 +241,7 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
         <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-secondary border border-border">
           <Search size={18} className="text-muted-foreground" strokeWidth={2} />
           <input
+            ref={searchInputRef}
             value={query}
             onChange={e => setQuery(e.target.value)}
             data-testid={tab === 'Topics' ? 'topics-search-input' : 'books-search-input'}

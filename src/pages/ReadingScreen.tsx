@@ -11,6 +11,7 @@ import {
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
+import ReturnToPassageButton from '@/components/ReturnToPassageButton';
 import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
@@ -379,6 +380,7 @@ export default function ReadingScreen() {
             zoomed in. */}
         <div className="reading-scroll" ref={scrollRef}>
         <div className="reading-inner">
+        <ReturnToPassageButton />
         <div className="chapter-meta">
           <h1 className="chapter-title" data-testid="chapter-header">
             {state.book} {state.chapter}
@@ -592,7 +594,7 @@ export default function ReadingScreen() {
         <BookSelector
           onClose={() => setShowBookSelector(false)}
           onSelect={(book, ch, bookId) => {
-            dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
+            dispatch({ type: 'JUMP_TO_PASSAGE', book, chapter: ch, bookId });
             setShowBookSelector(false);
           }}
         />
