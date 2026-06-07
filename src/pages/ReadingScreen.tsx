@@ -171,6 +171,12 @@ export default function ReadingScreen() {
   const hasFinePointer = useMediaQuery('(pointer: fine)');
   const isDesktop = isWideViewport || hasFinePointer;
 
+  // For reading routes, AppLayout swaps to DesktopLayout at >=768px, so this
+  // ReadingScreen instance is rendered inside the desktop split-view's left
+  // panel. The "Back to <passage>" return button is a desktop-only affordance
+  // (it pairs with desktop's type-to-search jump), so only render it there.
+  const isDesktopLayout = useMediaQuery('(min-width: 768px)');
+
   // Belt-and-suspenders against iOS Safari's native long-press text
   // selection on the scripture body. Even with `user-select: none` on the
   // verse spans, iOS still fires `selectstart` when the user long-presses
@@ -380,7 +386,7 @@ export default function ReadingScreen() {
             zoomed in. */}
         <div className="reading-scroll" ref={scrollRef}>
         <div className="reading-inner">
-        <ReturnToPassageButton />
+        {isDesktopLayout && <ReturnToPassageButton />}
         <div className="chapter-meta">
           <h1 className="chapter-title" data-testid="chapter-header">
             {state.book} {state.chapter}
@@ -594,7 +600,7 @@ export default function ReadingScreen() {
         <BookSelector
           onClose={() => setShowBookSelector(false)}
           onSelect={(book, ch, bookId) => {
-            dispatch({ type: 'JUMP_TO_PASSAGE', book, chapter: ch, bookId });
+            dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
             setShowBookSelector(false);
           }}
         />

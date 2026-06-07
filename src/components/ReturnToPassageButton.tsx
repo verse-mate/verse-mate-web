@@ -8,9 +8,9 @@ import { useApp } from '@/contexts/AppContext';
  * (AppContext.previousPassage). Renders nothing when there's nowhere to
  * return to.
  *
- * Placed inside ReadingScreen's `.reading-inner`, which is shared by both the
- * phone layout and the desktop split-view left panel, so a single mount
- * covers every reading viewport.
+ * Desktop-only: it pairs with DesktopLayout's type-to-search jump and is
+ * gated behind the desktop layout breakpoint at its call site in
+ * ReadingScreen (the phone single-panel layout never anchors a passage).
  */
 export default function ReturnToPassageButton() {
   const { state, dispatch } = useApp();
