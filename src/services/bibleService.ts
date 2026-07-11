@@ -1305,6 +1305,8 @@ export interface AppSettings {
   notifications: boolean;
   showVerseNumbers: boolean;
   autoHighlights: boolean;
+  /** When true, every verse containing words of Jesus is shown in red (red-letter). */
+  redLetter: boolean;
   /** When false, tapping/clicking a verse does not open the Verse Insight sheet. */
   verseInsightsPopup: boolean;
   readingPlan: 'none' | 'daily' | 'chronological' | 'one-year';
@@ -1324,6 +1326,7 @@ const DEFAULT_SETTINGS: AppSettings = {
   notifications: true,
   showVerseNumbers: true,
   autoHighlights: false,
+  redLetter: false,
   verseInsightsPopup: true,
   readingPlan: 'none',
   language: 'en',

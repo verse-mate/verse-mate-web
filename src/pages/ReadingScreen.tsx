@@ -8,6 +8,7 @@ import {
   trackRecentBook,
   AutoHighlightRange,
 } from '@/services/bibleService';
+import { getRedLetterVerses } from '@/data/redLetter';
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
@@ -152,6 +153,15 @@ export default function ReadingScreen() {
       }
     }
   }
+
+  // Red-letter (words of Jesus). Independent of the API-driven auto-highlight
+  // themes above — it is a local, translation-agnostic dataset toggled by its
+  // own setting. Colors the verse text red rather than adding a background.
+  const redLetterVerses = new Set<number>(
+    state.settings.redLetter && state.bookId
+      ? getRedLetterVerses(state.bookId, state.chapter)
+      : []
+  );
 
   const highlightColorClass: Record<string, string> = {
     yellow: 'hl-yellow', green: 'hl-green', blue: 'hl-blue',
@@ -467,6 +477,7 @@ export default function ReadingScreen() {
                     const hl = getHighlightForVerse(verse.number);
                     const isSelected = state.selectedVerse === verse.number;
                     const autoClass = !hl ? autoHighlightByVerse[verse.number] : undefined;
+                    const isRedLetter = redLetterVerses.has(verse.number);
                     return (
                       <span
                         key={verse.number}
@@ -487,7 +498,7 @@ export default function ReadingScreen() {
                             }
                           },
                         })}
-                        className={`verse-span ${hl ? highlightColorClass[hl.color] : ''} ${autoClass || ''} ${isSelected ? 'selected' : ''}`}
+                        className={`verse-span ${hl ? highlightColorClass[hl.color] : ''} ${autoClass || ''} ${isRedLetter ? 'red-letter' : ''} ${isSelected ? 'selected' : ''}`}
                         style={!isDesktop ? {
                           // Suppress iOS long-press text selection callout
                           WebkitUserSelect: 'none',
