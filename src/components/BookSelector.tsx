@@ -22,6 +22,13 @@ interface Props {
    * user pressed lands in the field and the results filter right away.
    */
   initialQuery?: string;
+  /**
+   * Compact presentation for when the selector is shown inside a size-capped
+   * modal card (mobile layout reached by zooming a desktop browser). Drops the
+   * full-screen safe-area top padding and trims font sizes / row heights so the
+   * content reads as a tidy modal rather than an oversized full-screen page.
+   */
+  compact?: boolean;
 }
 
 type Tab = 'OT' | 'NT' | 'Topics';
@@ -41,7 +48,15 @@ const TOPIC_CATEGORIES: { key: TopicCategory; label: string }[] = [
  * Figma reference: frames 5172:3418 (OT), 5172:7984 (NT), and the Topics layout in frame 5895:4982.
  * Overlayed on top of Reading via a modal-full-screen pattern.
  */
-export default function BookSelector({ onClose, onSelect, initialTab, initialQuery }: Props) {
+export default function BookSelector({ onClose, onSelect, initialTab, initialQuery, compact }: Props) {
+  // Header top padding: full-screen honors the notch inset (min 48px); the
+  // compact modal drops it to a tidy 12px since there's no status bar to clear.
+  const headerPadTop = compact ? 12 : 'max(env(safe-area-inset-top, 0px), 48px)';
+  // Trimmed type scale + row heights for the compact modal.
+  const titleSize = compact ? 16 : 18;
+  const rowText = compact ? 'text-[14px]' : 'text-[16px]';
+  const bookRowH = compact ? 'h-[48px]' : 'h-[56px]';
+  const recentRowH = compact ? 'h-[44px]' : 'h-[52px]';
   const navigate = useNavigate();
   const { state } = useApp();
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -119,9 +134,9 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
       <div data-testid="bible-navigation-modal-chapters" className="absolute inset-0 z-50 bg-background flex flex-col items-center animate-fade-in text-foreground">
         <header
           className="shrink-0 safe-top w-full max-w-[680px]"
-          style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)' }}
+          style={{ paddingTop: headerPadTop }}
         >
-          <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
+          <div className="relative flex items-center justify-center px-3" style={{ height: compact ? 48 : 56 }}>
             <button
               onClick={() => setSelectedBook(null)}
               aria-label="Back"
@@ -130,7 +145,7 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
             >
               <ArrowLeft size={22} className="text-foreground" strokeWidth={2} />
             </button>
-            <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', letterSpacing: '-0.01em' }}>{selectedBook}</h2>
+            <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: titleSize, lineHeight: '24px', letterSpacing: '-0.01em' }}>{selectedBook}</h2>
           </div>
         </header>
 
@@ -161,9 +176,9 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
           on wide or zoomed-in viewports — see the `items-center` on the parent. */}
       <header
         className="shrink-0 safe-top w-full max-w-[680px]"
-        style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)' }}
+        style={{ paddingTop: headerPadTop }}
       >
-        <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
+        <div className="relative flex items-center justify-center px-3" style={{ height: compact ? 48 : 56 }}>
           <button
             onClick={onClose}
             aria-label="Close"
@@ -172,7 +187,7 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
           >
             <ArrowLeft size={22} className="text-foreground" strokeWidth={2} />
           </button>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', letterSpacing: '-0.01em' }}>Search</h2>
+          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: titleSize, lineHeight: '24px', letterSpacing: '-0.01em' }}>Search</h2>
         </div>
       </header>
 
@@ -191,10 +206,10 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
                   setQuery('');
                 }}
                 data-testid={testId}
-                className={`flex-1 h-10 rounded-full transition-colors ${
+                className={`flex-1 ${compact ? 'h-9' : 'h-10'} rounded-full transition-colors ${
                   tab === t ? 'bg-gold text-[#1A1A1A]' : 'text-foreground/80'
                 }`}
-                style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px' }}
+                style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: compact ? 13 : 14, lineHeight: '24px' }}
               >
                 {label}
               </button>
@@ -238,7 +253,7 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
 
       {/* Search input */}
       <div className="px-4 pt-3 w-full max-w-[680px]">
-        <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-secondary border border-border">
+        <div className={`flex items-center gap-2 ${compact ? 'h-10' : 'h-12'} px-4 rounded-full bg-secondary border border-border`}>
           <Search size={18} className="text-muted-foreground" strokeWidth={2} />
           <input
             ref={searchInputRef}
@@ -265,9 +280,9 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
                     navigate(buildTopicUrl(t));
                   }}
                   data-testid={`topic-item-${t.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                  className="flex items-center justify-between w-full h-[56px] border-b border-border"
+                  className={`flex items-center justify-between w-full ${bookRowH} border-b border-border`}
                 >
-                  <span className="text-[16px] text-foreground text-left">{t.name}</span>
+                  <span className={`${rowText} text-foreground text-left`}>{t.name}</span>
                   <ChevronRight size={18} className="text-muted-foreground" />
                 </button>
               ))}
@@ -290,10 +305,10 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
                       key={`recent-${b.bookId}`}
                       onClick={() => setSelectedBook(b.name)}
                       data-testid={`recent-book-item-${b.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                      className="flex items-center justify-between w-full h-[52px] border-b border-border"
+                      className={`flex items-center justify-between w-full ${recentRowH} border-b border-border`}
                     >
                       <span
-                        className={`text-[16px] text-left ${
+                        className={`${rowText} text-left ${
                           isCurrent ? 'text-gold font-medium' : 'text-foreground'
                         }`}
                       >
@@ -315,10 +330,10 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
                   key={b.name}
                   onClick={() => setSelectedBook(b.name)}
                   data-testid={`book-item-${b.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                  className="flex items-center justify-between w-full h-[56px] border-b border-border"
+                  className={`flex items-center justify-between w-full ${bookRowH} border-b border-border`}
                 >
                   <span
-                    className={`text-[16px] text-left ${
+                    className={`${rowText} text-left ${
                       isCurrent ? 'text-gold font-medium' : 'text-foreground'
                     }`}
                   >
