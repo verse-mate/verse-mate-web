@@ -766,9 +766,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               effectiveRightCollapsed
                 // Collapsed → sit at the far right edge (pull the panel back in).
                 ? { top: '50%', right: 8, transform: 'translateY(-50%)' }
-                // Expanded → sit on the divider between reading + insights
-                // (push the panel out to the right).
-                : { top: '50%', left: `${leftPct}%`, transform: 'translate(-50%, -50%)' }
+                // Expanded → sit just inside the insights panel, next to (not
+                // on top of) the divider so the divider stays grabbable for
+                // drag-to-resize.
+                : { top: '50%', left: `calc(${leftPct}% + 24px)`, transform: 'translate(-50%, -50%)' }
             }
           >
             {effectiveRightCollapsed
