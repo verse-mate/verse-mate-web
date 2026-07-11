@@ -18,6 +18,50 @@ import { vmTokens } from '@/styles/themeStyles';
  */
 
 const STORAGE_KEY = 'versemate-onboarding-seen';
+// Companion cookie to the localStorage flag. localStorage can be wiped by
+// privacy tooling (e.g. Safari's Intelligent Tracking Prevention caps
+// script-writable storage) — a first-party cookie is a second, independent
+// "you've been here before" signal so returning visitors don't get the
+// instructional tour again. Either signal suppresses it. No login required.
+const COOKIE_KEY = 'vm_onboarded';
+// 400 days — the maximum lifetime modern browsers honor for a cookie.
+const COOKIE_MAX_AGE_SECONDS = 400 * 24 * 60 * 60;
+
+function readCookie(name: string): string | null {
+  if (typeof document === 'undefined') return null;
+  const escaped = name.replace(/[.$?*|{}()[\]\\/+^]/g, '\\$&');
+  const match = document.cookie.match(new RegExp('(?:^|; )' + escaped + '=([^;]*)'));
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+// True once the visitor has opened the app before (tour completed, skipped, or
+// simply shown once) — recorded in localStorage AND a cookie; either counts.
+function hasVisited(): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    if (localStorage.getItem(STORAGE_KEY) === '1') return true;
+  } catch {
+    /* storage blocked — fall through to the cookie */
+  }
+  return readCookie(COOKIE_KEY) === '1';
+}
+
+// Record the visit in both stores so the tour never shows again — even if the
+// visitor closes the tab mid-tour and even if one store is later cleared.
+function markVisited(): void {
+  try {
+    localStorage.setItem(STORAGE_KEY, '1');
+  } catch {
+    /* private mode — the cookie still records the visit */
+  }
+  try {
+    if (typeof document !== 'undefined') {
+      document.cookie = `${COOKIE_KEY}=1; max-age=${COOKIE_MAX_AGE_SECONDS}; path=/; SameSite=Lax`;
+    }
+  } catch {
+    /* ignore */
+  }
+}
 
 // Faint scripture sample sitting behind the lexicon card preview.
 const SCRIPTURE =
@@ -27,11 +71,7 @@ const goldTint = 'rgba(212, 176, 90, 0.14)';
 
 function shouldShow(): boolean {
   if (typeof window === 'undefined') return false;
-  try {
-    return localStorage.getItem(STORAGE_KEY) !== '1';
-  } catch {
-    return false;
-  }
+  return !hasVisited();
 }
 
 // ─────────────────────────── feature previews ───────────────────────────
@@ -934,11 +974,7 @@ export default function FeatureOnboarding() {
 
   const finish = useCallback(() => {
     setVisible(false);
-    try {
-      localStorage.setItem(STORAGE_KEY, '1');
-    } catch {
-      /* private mode — tour simply shows again next visit */
-    }
+    markVisited();
   }, []);
 
   const next = useCallback(() => {
@@ -952,6 +988,14 @@ export default function FeatureOnboarding() {
   }, [finish]);
 
   const prev = useCallback(() => setIndex((i) => Math.max(0, i - 1)), []);
+
+  // Record the visit the moment the tour is shown — not only when it's
+  // completed/skipped. That way a returning visitor who saw it once (even if
+  // they closed the tab mid-tour) won't get it again. The current session's
+  // tour stays open via React state until they dismiss it.
+  useEffect(() => {
+    if (open) markVisited();
+  }, [open]);
 
   // Lock background scroll + focus the overlay for keyboard nav while open.
   useEffect(() => {

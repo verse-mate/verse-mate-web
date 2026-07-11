@@ -4,6 +4,11 @@ import { MemoryRouter } from 'react-router-dom';
 import FeatureOnboarding from './FeatureOnboarding';
 
 const STORAGE_KEY = 'versemate-onboarding-seen';
+const COOKIE_KEY = 'vm_onboarded';
+
+function clearCookie() {
+  document.cookie = `${COOKIE_KEY}=; max-age=0; path=/`;
+}
 
 // The seven screen titles in their intended order: an opening verse screen and
 // two intro screens, then the three existing reading-feature screens, and the
@@ -29,6 +34,7 @@ function renderOnboarding() {
 describe('FeatureOnboarding', () => {
   beforeEach(() => {
     localStorage.clear();
+    clearCookie();
   });
 
   it('shows the welcome screen first on a fresh visit', () => {
@@ -64,6 +70,24 @@ describe('FeatureOnboarding', () => {
 
   it('does not show once the seen flag is already set', () => {
     localStorage.setItem(STORAGE_KEY, '1');
+    renderOnboarding();
+    expect(screen.queryByText(SCREEN_TITLES[0])).toBeNull();
+  });
+
+  it('records the visit (localStorage + cookie) as soon as the tour is shown', () => {
+    renderOnboarding();
+    // Shown on this fresh visit …
+    expect(screen.getByText(SCREEN_TITLES[0])).toBeInTheDocument();
+    // … and already marked visited, so a returning visitor is suppressed even
+    // if they never click Skip / finish (e.g. they just close the tab).
+    expect(localStorage.getItem(STORAGE_KEY)).toBe('1');
+    expect(document.cookie).toContain(`${COOKIE_KEY}=1`);
+  });
+
+  it('does not show when only the cookie signal is present (localStorage cleared)', () => {
+    // Simulates privacy tooling wiping localStorage while the cookie survives.
+    document.cookie = `${COOKIE_KEY}=1; path=/`;
+    localStorage.clear();
     renderOnboarding();
     expect(screen.queryByText(SCREEN_TITLES[0])).toBeNull();
   });
