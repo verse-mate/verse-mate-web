@@ -182,6 +182,13 @@ export default function ReadingScreen() {
   const isWideViewport = useMediaQuery('(min-width: 1024px)');
   const hasFinePointer = useMediaQuery('(pointer: fine)');
   const isDesktop = isWideViewport || hasFinePointer;
+  // At ≥768px this ReadingScreen is embedded inside DesktopLayout's Outlet
+  // (the split view), so DesktopLayout owns the chrome — chapter selector,
+  // Search modal, and the "just start typing" shortcut. Only when this is the
+  // standalone mobile layout (<768px) should ReadingScreen run its own Search
+  // affordances, otherwise both layers open a duplicate Search modal.
+  const isSplitView = useMediaQuery('(min-width: 768px)');
+  const isStandaloneMobile = !isSplitView;
 
   // Belt-and-suspenders against iOS Safari's native long-press text
   // selection on the scripture body. Even with `user-select: none` on the
@@ -212,7 +219,7 @@ export default function ReadingScreen() {
   // breakpoint. Gated on a fine pointer so it never fires on touch phones
   // (which have no physical keyboard and would only pop the on-screen one).
   useEffect(() => {
-    if (!hasFinePointer) return;
+    if (!hasFinePointer || !isStandaloneMobile) return;
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
       if (e.target instanceof HTMLElement && e.target.isContentEditable) return;
@@ -233,7 +240,7 @@ export default function ReadingScreen() {
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [hasFinePointer, showBookSelector]);
+  }, [hasFinePointer, isStandaloneMobile, showBookSelector]);
 
   const [insightVerse, setInsightVerse] = useState<number | null>(null);
   const openVerseInsight = (verseNum: number) => {
