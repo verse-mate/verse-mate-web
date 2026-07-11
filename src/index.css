@@ -470,6 +470,16 @@
   margin-right: auto;
 }
 
+/* Zoomed-in mobile: centered, size-capped modal (consistent with the Search
+   modal) rather than a bottom sheet. Reset the sheet's auto margins / width
+   cap / min-height so the inline modal sizing wins; the width + max-height are
+   set inline from the shared OVERLAY_MODAL_* constants. */
+.verse-insight-sheet.verse-insight-sheet--modal {
+  max-width: none;
+  min-height: 0 !important;
+  margin: 0;
+}
+
 /* The Copy/Share/Save/Close strip scales with the viewport height so it
    shrinks on short / zoomed-in viewports (where the chrome otherwise crowds
    the summary out) and stays a comfortable tap size on tall ones — no
