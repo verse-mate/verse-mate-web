@@ -126,6 +126,7 @@ export const selectButtonStyle: CSSProperties = {
   width: '100%',
   alignItems: 'center',
   justifyContent: 'space-between',
+  gap: 8,
   paddingTop: 12,
   paddingBottom: 12,
   paddingLeft: 16,
@@ -133,7 +134,11 @@ export const selectButtonStyle: CSSProperties = {
   background: vmTokens.surfaceRaisedBg,
   border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
   borderRadius: 12,
-  height: 48,
+  // minHeight (not a fixed height) so a long selected value — e.g. "New
+  // American Standard Bible 1995 (NASB1995)" — wraps and grows the row
+  // instead of overflowing it and overlapping the section labels above /
+  // below when the panel is narrow (tablet / zoomed-in right panel).
+  minHeight: 48,
   cursor: 'pointer',
   color: vmTokens.textPrimary,
   fontFamily: 'Roboto, sans-serif',
@@ -141,6 +146,7 @@ export const selectButtonStyle: CSSProperties = {
 
 export const selectButtonTextStyle: CSSProperties = {
   flex: 1,
+  minWidth: 0,
   textAlign: 'left',
   fontSize: 16,
   fontWeight: 400,
