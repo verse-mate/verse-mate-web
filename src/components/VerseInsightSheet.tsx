@@ -4,6 +4,8 @@ import { VerseInsight, Chapter, BibleVersion } from '@/services/types';
 import { ChevronLeft, ChevronRight, Copy, Bookmark, Check } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import { useApp } from '@/contexts/AppContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { OVERLAY_MODAL_WIDTH, OVERLAY_MODAL_MAX_HEIGHT } from '@/constants/overlayModal';
 import ShareIcon from '@/components/ShareIcon';
 
 interface Props {
@@ -53,6 +55,15 @@ export default function VerseInsightSheet({
   onClose,
 }: Props) {
   const { state, addHighlight } = useApp();
+  // When the mobile layout is reached by zooming a desktop browser (fine
+  // pointer, below the 768px split-view breakpoint), present the sheet as a
+  // centered, size-capped modal — consistent with the Search modal — instead
+  // of a tall bottom sheet that balloons to near full-screen at high zoom.
+  // Real touch phones (coarse pointer) keep the bottom sheet; the desktop /
+  // tablet split view (≥768px) keeps its anchored sheet (see index.css).
+  const hasFinePointer = useMediaQuery('(pointer: fine)');
+  const isSplitWidth = useMediaQuery('(min-width: 768px)');
+  const asModal = hasFinePointer && !isSplitWidth;
   const [insights, setInsights] = useState<VerseInsight[]>([]);
   const [chapterData, setChapterData] = useState<Chapter | null>(null);
   const [currentVerse, setCurrentVerse] = useState<number>(verse);
@@ -192,15 +203,31 @@ export default function VerseInsightSheet({
         className="absolute inset-0 z-40 bg-black/60 animate-fade-in"
         onClick={onClose}
       />
-      {/* Sheet — slides up from bottom; narrower on desktop */}
+      {/* Sheet — slides up from bottom; narrower on desktop. In the zoomed-in
+          mobile case it becomes a centered, size-capped modal instead. */}
       <div
-        className="verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-background text-foreground rounded-t-[24px] border-t border-border shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
-        style={{
-          maxHeight: '98%',
-          minHeight: '80%',
-          transform: dragOffset > 0 ? `translateY(${dragOffset}px)` : undefined,
-          transition: dragStartYRef.current === null ? 'transform 0.2s ease' : 'none',
-        }}
+        className={
+          asModal
+            ? 'verse-insight-sheet verse-insight-sheet--modal absolute z-50 bg-background text-foreground rounded-[24px] border border-border shadow-[0_10px_40px_rgba(0,0,0,0.5)] flex flex-col'
+            : 'verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-background text-foreground rounded-t-[24px] border-t border-border shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col'
+        }
+        style={
+          asModal
+            ? {
+                left: '50%',
+                top: '50%',
+                width: OVERLAY_MODAL_WIDTH,
+                maxHeight: OVERLAY_MODAL_MAX_HEIGHT,
+                transform: `translate(-50%, calc(-50% + ${dragOffset}px))`,
+                transition: dragStartYRef.current === null ? 'transform 0.2s ease' : 'none',
+              }
+            : {
+                maxHeight: '98%',
+                minHeight: '80%',
+                transform: dragOffset > 0 ? `translateY(${dragOffset}px)` : undefined,
+                transition: dragStartYRef.current === null ? 'transform 0.2s ease' : 'none',
+              }
+        }
         role="dialog"
         aria-label="Verse Insight"
       >

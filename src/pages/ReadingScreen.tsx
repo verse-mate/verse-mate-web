@@ -19,6 +19,7 @@ import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/Chap
 import TokenizedVerse from '@/components/TokenizedVerse';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
+import { OVERLAY_MODAL_WIDTH, OVERLAY_MODAL_HEIGHT } from '@/constants/overlayModal';
 import { loadAlignmentFor, type ChapterAlignment } from '@versemate/lexicon';
 import { vmTokens } from '@/styles/themeStyles';
 
@@ -79,6 +80,8 @@ export default function ReadingScreen() {
   }, [state.bookId, state.chapter, location.pathname, navigate]);
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [showBookSelector, setShowBookSelector] = useState(false);
+  // Seed text for the Search modal when it's opened via "just start typing".
+  const [bookSelectorQuery, setBookSelectorQuery] = useState('');
   // If the user kicked off a chapter-notes save via SSO (Google/Apple), the
   // OAuth round-trip stashed their draft and `useTrackPreAuthLocation`
   // brings them back to this page. Auto-reopen the modal so they don't
@@ -200,6 +203,37 @@ export default function ReadingScreen() {
     document.addEventListener('selectstart', onSelectStart);
     return () => document.removeEventListener('selectstart', onSelectStart);
   }, [isDesktop]);
+
+  // "Just start typing" → open Search seeded with the first character, so a
+  // keyboard user (incl. a zoomed-in desktop browser that has dropped into
+  // this mobile layout) can jump to another book without reaching for the
+  // selector. DesktopLayout has the same shortcut; ReadingScreen lacked it,
+  // so typing did nothing at zoom levels that fall below the split-view
+  // breakpoint. Gated on a fine pointer so it never fires on touch phones
+  // (which have no physical keyboard and would only pop the on-screen one).
+  useEffect(() => {
+    if (!hasFinePointer) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      if (e.target instanceof HTMLElement && e.target.isContentEditable) return;
+      if (
+        !showBookSelector &&
+        e.key.length === 1 &&
+        /[a-zA-Z0-9]/.test(e.key) &&
+        !e.metaKey &&
+        !e.ctrlKey &&
+        !e.altKey
+      ) {
+        // Swallow this keystroke so the browser doesn't ALSO insert the
+        // character once the search field auto-focuses (otherwise "jj").
+        e.preventDefault();
+        setBookSelectorQuery(e.key);
+        setShowBookSelector(true);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [hasFinePointer, showBookSelector]);
 
   const [insightVerse, setInsightVerse] = useState<number | null>(null);
   const openVerseInsight = (verseNum: number) => {
@@ -600,25 +634,32 @@ export default function ReadingScreen() {
 
       {/* ─── Overlays ─── */}
       {showBookSelector && (() => {
-        const selector = (
-          <BookSelector
-            onClose={() => setShowBookSelector(false)}
-            onSelect={(book, ch, bookId) => {
-              dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
-              setShowBookSelector(false);
-            }}
-          />
-        );
+        const closeSelector = () => {
+          setShowBookSelector(false);
+          setBookSelectorQuery('');
+        };
+        const onSelect = (book: string, ch: number, bookId?: number) => {
+          dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
+          closeSelector();
+        };
         // On a genuine touch phone the full-screen search is the right pattern.
         // But when this mobile layout is reached by zooming a desktop browser
         // (fine pointer), a full-screen search reads as broken — so constrain
-        // it to a centered, size-capped modal card instead, matching the
-        // desktop split-view Search modal.
-        if (!isDesktop) return selector;
+        // it to a centered, size-capped compact modal card instead, matching
+        // the desktop split-view Search modal.
+        if (!isDesktop) {
+          return (
+            <BookSelector
+              onClose={closeSelector}
+              onSelect={onSelect}
+              initialQuery={bookSelectorQuery}
+            />
+          );
+        }
         return (
           <>
             <div
-              onClick={() => setShowBookSelector(false)}
+              onClick={closeSelector}
               style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 55 }}
             />
             <div
@@ -628,15 +669,20 @@ export default function ReadingScreen() {
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: 'min(420px, 92vw)',
-                height: 'min(80vh, 720px)',
+                width: OVERLAY_MODAL_WIDTH,
+                height: OVERLAY_MODAL_HEIGHT,
                 zIndex: 56,
                 borderRadius: 16,
                 overflow: 'hidden',
                 boxShadow: '0 8px 40px rgba(0,0,0,0.5)',
               }}
             >
-              {selector}
+              <BookSelector
+                onClose={closeSelector}
+                onSelect={onSelect}
+                initialQuery={bookSelectorQuery}
+                compact
+              />
             </div>
           </>
         );

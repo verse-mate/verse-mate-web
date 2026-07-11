@@ -44,12 +44,12 @@ const SECTION_LABEL_STYLE: React.CSSProperties = {
   letterSpacing: '0.08em',
   color: vmTokens.gold,
   textTransform: 'uppercase',
-  marginBottom: 6,
+  marginBottom: 4,
 };
 
 const SECTION_BODY_STYLE: React.CSSProperties = {
   fontSize: 14,
-  lineHeight: '20px',
+  lineHeight: '19px',
   color: vmTokens.textPrimary,
   margin: 0,
 };
@@ -66,7 +66,7 @@ function Section({
   return (
     <div
       style={{
-        padding: '12px 16px',
+        padding: '9px 14px',
         borderBottom: `1px solid ${vmTokens.divider}`,
         backgroundColor: highlight ? 'rgba(176, 154, 109, 0.07)' : 'transparent',
       }}
@@ -279,7 +279,7 @@ export default function LexiconPopover({
         // possible so there's less internal scrolling — especially when the
         // page is zoomed in (the CSS-pixel viewport shrinks with zoom). Drag
         // handle lets the user move it if it still runs tall.
-        collisionPadding={{ top: 8, right: 8, bottom: 8, left: 8 }}
+        collisionPadding={{ top: 6, right: 6, bottom: 6, left: 6 }}
         avoidCollisions
         className="w-[360px] p-0 border-0 shadow-2xl"
         style={{
@@ -307,7 +307,7 @@ export default function LexiconPopover({
           onPointerUp={onHandlePointerUp}
           onPointerCancel={onHandlePointerUp}
           style={{
-            padding: '14px 16px 10px',
+            padding: '11px 14px 8px',
             borderBottom: `1px solid ${vmTokens.divider}`,
             // Same surface as the popover body. The bottom-border + sticky
             // shadow provide the visual separation. Earlier attempts used
@@ -328,11 +328,11 @@ export default function LexiconPopover({
               card (the exact token the reader tapped). */}
           <div
             style={{
-              fontSize: 20,
+              fontSize: 18,
               fontWeight: 600,
               color: vmTokens.textPrimary,
-              lineHeight: '26px',
-              marginBottom: 6,
+              lineHeight: '22px',
+              marginBottom: 4,
             }}
           >
             {surface}
@@ -341,7 +341,7 @@ export default function LexiconPopover({
             {/* Transliteration — the readable form, shown first + larger so
                 non-readers of the original script lead with what they can
                 pronounce. */}
-            <span style={{ fontSize: 18, color: vmTokens.gold, fontWeight: 500 }}>
+            <span style={{ fontSize: 16, color: vmTokens.gold, fontWeight: 500 }}>
               {renderEntry.translit}
             </span>
             {/* Original-language lemma — the less-readable Greek/Hebrew script,
@@ -383,7 +383,7 @@ export default function LexiconPopover({
               </span>
             )}
           </div>
-          <div style={{ marginTop: 4, fontSize: 12, color: vmTokens.textTertiary }}>
+          <div style={{ marginTop: 3, fontSize: 12, color: vmTokens.textTertiary }}>
             {renderEntry.pos} • {renderEntry.strongs}
             {renderEntry.pronunciation ? ` • ${renderEntry.pronunciation}` : ''}
             {/* Frequency: show NT-only, OT-only, or both depending on which
@@ -418,12 +418,12 @@ export default function LexiconPopover({
                 margin: 0,
                 paddingLeft: 16,
                 fontSize: 13,
-                lineHeight: '19px',
+                lineHeight: '17px',
                 color: vmTokens.textPrimary,
               }}
             >
               {renderEntry.semanticRange.map((s, i) => (
-                <li key={i} style={{ marginBottom: 3 }}>
+                <li key={i} style={{ marginBottom: 2 }}>
                   {s}
                 </li>
               ))}
@@ -434,9 +434,9 @@ export default function LexiconPopover({
         {/* ── RELATED WORDS ── */}
         {renderEntry.related && renderEntry.related.length > 0 && (
           <Section label="Related">
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               {renderEntry.related.map((r, i) => (
-                <div key={i} style={{ fontSize: 13, lineHeight: '18px' }}>
+                <div key={i} style={{ fontSize: 13, lineHeight: '16px' }}>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
                     <span
                       dir={isHebrew(r.lemma) ? 'rtl' : 'ltr'}
