@@ -9,6 +9,8 @@ import {
   ArrowLeft,
   ChevronDown,
   ChevronUp,
+  ChevronLeft,
+  ChevronRight,
   Menu,
   User,
   Bookmark,
@@ -69,6 +71,10 @@ type Tab = 'summary' | 'byline' | 'study' | 'visuals';
 
 const MIN_LEFT_PCT = 35;
 const MAX_LEFT_PCT = 80;
+// Dragging the split divider past this (reading column ≥ this % of the content
+// width) snaps the right insights panel fully closed — the mirror of the
+// sidebar's drag-to-hide. A reveal strip at the right edge pulls it back.
+const RIGHT_HIDE_SNAP_PCT = 90;
 const SIDEBAR_COLLAPSED = 56;
 const SIDEBAR_EXPANDED = 220;
 const SIDEBAR_MIN = 56;
@@ -119,9 +125,22 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     }
     return null;
   });
-  // Right panel can be fully minimized (tablet/desktop) so the reading column
-  // expands to full width. Hidden divider + right pane when collapsed.
-  const [rightPanelCollapsed] = useState(false);
+  // Right panel can be fully minimized to the right (tablet + desktop) so the
+  // reading column expands to full width — mirroring how the left sidebar can
+  // be dragged fully closed. Persisted across reloads. A thin reveal strip +
+  // a round toggle at the right edge bring it back.
+  const [rightPanelCollapsed, setRightPanelCollapsed] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem('versemate-right-panel-collapsed') === '1';
+    } catch {
+      return false;
+    }
+  });
+  useEffect(() => {
+    try {
+      localStorage.setItem('versemate-right-panel-collapsed', rightPanelCollapsed ? '1' : '0');
+    } catch { /* ignore */ }
+  }, [rightPanelCollapsed]);
 
   // Per-testament collapse state for the sidebar's OT / NT section headers,
   // persisted across reloads. Default both expanded.
@@ -147,6 +166,9 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const [rightPanelView, setRightPanelView] = useState<RightPanelView>('commentary');
 
   const openRightPanel = (view: RightPanelView) => {
+    // Opening a menu sub-page (Settings, Bookmarks, …) needs the right pane
+    // visible — un-collapse it if the user had minimized it.
+    setRightPanelCollapsed(false);
     setRightPanelView(view);
   };
   const closeRightPanel = () => {
@@ -298,6 +320,16 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     document.body.style.userSelect = 'none';
   }, []);
 
+  // Drag handle for pulling the collapsed right panel back out (mirror of the
+  // sidebar reveal strip). Reuses the split-resize drag path.
+  const handleRightRevealDragStart = useCallback((e: React.PointerEvent) => {
+    e.preventDefault();
+    setRightPanelCollapsed(false);
+    isDragging.current = true;
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+  }, []);
+
   useEffect(() => {
     const handleMove = (e: PointerEvent) => {
       if (isDraggingSidebar.current) {
@@ -312,7 +344,15 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
       const rect = contentRef.current.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const pct = Math.round((x / rect.width) * 100);
-      setLeftPct(Math.max(MIN_LEFT_PCT, Math.min(MAX_LEFT_PCT, pct)));
+      // Dragging the reading column past the snap threshold collapses the
+      // right panel entirely; otherwise clamp to the normal band and keep it
+      // open.
+      if (pct >= RIGHT_HIDE_SNAP_PCT) {
+        setRightPanelCollapsed(true);
+      } else {
+        setRightPanelCollapsed(false);
+        setLeftPct(Math.max(MIN_LEFT_PCT, Math.min(MAX_LEFT_PCT, pct)));
+      }
     };
     const handleUp = () => {
       if (isDragging.current || isDraggingSidebar.current) {
@@ -359,10 +399,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // wrapping) so they always stay anchored over the right insights column.
   const isCompactSplit = useMediaQuery('(max-width: 1199px)');
 
-  // Derive the effective state so a window resized from compact → wide can't
-  // get stuck with a panel hidden: at wide widths the right pane is always
-  // shown and the sidebar follows its layout default.
-  const effectiveRightCollapsed = isCompactSplit && rightPanelCollapsed;
+  // The right insights panel can be minimized at any width now (tablet +
+  // desktop), mirroring the left sidebar's drag-to-hide. The sidebar still
+  // follows its layout default at wide widths.
+  const effectiveRightCollapsed = rightPanelCollapsed;
   const effectiveSidebarOpen = isCompactSplit ? sidebarOpen : !hideSidebar;
   // The user can drag the sidebar edge fully closed (width 0). When hidden we
   // drop the <aside> entirely and show a thin grab strip at the screen edge so
@@ -480,7 +520,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               Summary/By-Line/Detailed chooser fed from TopicViewContext. The
               row scrolls sideways when the tabs don't fit so they stay
               anchored to the right column instead of jumping to mid-screen. */}
-          {!isTopicRoute && rightPanelView === 'commentary' && (
+          {!isTopicRoute && rightPanelView === 'commentary' && !effectiveRightCollapsed && (
             <div
               className="header-pill-scroll"
               style={{
@@ -509,7 +549,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               </div>
             </div>
           )}
-          {isTopicRoute && (
+          {isTopicRoute && !effectiveRightCollapsed && (
             <div
               className="header-pill-scroll"
               style={{
@@ -541,7 +581,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* Sub-screen back chevron — anchored to the LEFT edge of the
               right pane so it sits flush with the right-pane box. */}
-          {!isTopicRoute && rightPanelView !== 'commentary' && (() => {
+          {!isTopicRoute && rightPanelView !== 'commentary' && !effectiveRightCollapsed && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
             return (
@@ -567,7 +607,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* Sub-screen title — centered horizontally over the right pane,
               independent of the back-chevron position. */}
-          {!isTopicRoute && rightPanelView !== 'commentary' && (() => {
+          {!isTopicRoute && rightPanelView !== 'commentary' && !effectiveRightCollapsed && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
             return (
@@ -694,6 +734,48 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             )}
           </div>
           )}
+
+          {/* Right-panel reveal strip — mirror of the sidebar reveal strip, but
+              pinned to the RIGHT edge. Only shown when the panel is collapsed;
+              drag it left (or click the round toggle below) to bring it back. */}
+          {effectiveRightCollapsed && (
+            <div
+              onPointerDown={handleRightRevealDragStart}
+              data-testid="desktop-right-panel-reveal"
+              aria-label="Show insights panel"
+              role="separator"
+              className="right-panel-reveal-strip"
+            >
+              <div className="divider-dots">
+                {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
+              </div>
+            </div>
+          )}
+
+          {/* Round collapse / expand toggle — vertically centered at the right
+              edge. Lets the user fully minimize the insights panel to the
+              right (and bring it back) the way the sidebar hides to the left. */}
+          <button
+            type="button"
+            onClick={() => setRightPanelCollapsed(v => !v)}
+            aria-label={effectiveRightCollapsed ? 'Show insights panel' : 'Hide insights panel'}
+            aria-expanded={!effectiveRightCollapsed}
+            data-testid="desktop-right-panel-toggle"
+            className="right-panel-toggle"
+            style={
+              effectiveRightCollapsed
+                // Collapsed → sit at the far right edge (pull the panel back in).
+                ? { top: '50%', right: 8, transform: 'translateY(-50%)' }
+                // Expanded → sit just inside the insights panel, next to (not
+                // on top of) the divider so the divider stays grabbable for
+                // drag-to-resize.
+                : { top: '50%', left: `calc(${leftPct}% + 24px)`, transform: 'translate(-50%, -50%)' }
+            }
+          >
+            {effectiveRightCollapsed
+              ? <ChevronLeft size={18} color={vmTokens.textPrimary} strokeWidth={2.25} />
+              : <ChevronRight size={18} color={vmTokens.textPrimary} strokeWidth={2.25} />}
+          </button>
         </div>
       </div>
 

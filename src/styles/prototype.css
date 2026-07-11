@@ -161,6 +161,44 @@ button { font-family: inherit; }
 }
 .sidebar-reveal-strip:hover { background-color: var(--hover-bg); }
 
+/* Mirror of the sidebar reveal strip, pinned to the RIGHT edge. Shown when the
+   insights panel has been minimized; drag it left to pull the panel back. */
+.right-panel-reveal-strip {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  cursor: col-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-commentary);
+  border-left: 1px solid var(--bg-sidebar-border);
+  touch-action: none;
+  z-index: 11;
+}
+.right-panel-reveal-strip:hover { background-color: var(--hover-bg); }
+
+/* Round toggle that collapses / expands the insights panel to the right.
+   Positioning (which edge / boundary it sits on) is set inline since it
+   tracks the live split ratio; the class carries only the appearance. */
+.right-panel-toggle {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-commentary);
+  border: 1px solid var(--bg-sidebar-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  z-index: 12;
+}
+.right-panel-toggle:hover { background-color: var(--hover-bg); }
+
 .section-header {
   display: flex;
   align-items: center;
