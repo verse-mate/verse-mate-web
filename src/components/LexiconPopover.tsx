@@ -1,7 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import type { LexEntry, AlignedToken } from '@versemate/lexicon';
 import { vmTokens } from '@/styles/themeStyles';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { OVERLAY_MODAL_WIDTH } from '@/constants/overlayModal';
 import { usePreferredLanguage } from '@/hooks/usePreferredLanguage';
 import { fetchLemmaCard, apiCardToLexEntry } from '@/services/lemmaApi';
 
@@ -86,6 +89,12 @@ export default function LexiconPopover({
   onActivate,
 }: LexiconPopoverProps) {
   const contextual = token.contextual;
+
+  // On a short (typically zoomed-in) viewport the card can't fit in the space
+  // beside the tapped word, so the anchored popover becomes a scrolling sliver.
+  // There we present it as a centered, near-full-height modal so the reader
+  // sees as much of the card as possible at once.
+  const shortViewport = useMediaQuery('(max-height: 720px)');
 
   // Controlled so we can dismiss the card when the Bible scrolls behind it.
   const [open, setOpen] = useState(false);
@@ -243,63 +252,10 @@ export default function LexiconPopover({
     };
   }, []);
 
-  return (
-    <Popover open={open} onOpenChange={handleOpenChange}>
-      <PopoverTrigger asChild>
-        <span
-          ref={triggerRef}
-          role="button"
-          tabIndex={0}
-          onClick={(e) => {
-            e.stopPropagation();
-            onActivate?.();
-          }}
-          onTouchStart={(e) => e.stopPropagation()}
-          onTouchEnd={(e) => e.stopPropagation()}
-          onMouseDown={(e) => e.stopPropagation()}
-          onMouseUp={(e) => e.stopPropagation()}
-          className={underline ? 'lex-word' : undefined}
-          data-lex-word={entry.translit}
-          aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
-          style={{
-            cursor: 'pointer',
-            color: 'inherit',
-            WebkitTouchCallout: 'none',
-          }}
-        >
-          {children}
-        </span>
-      </PopoverTrigger>
-      <PopoverContent
-        ref={contentRef}
-        align="center"
-        side={side}
-        sideOffset={6}
-        // Tight collision padding gives the card as much vertical room as
-        // possible so there's less internal scrolling — especially when the
-        // page is zoomed in (the CSS-pixel viewport shrinks with zoom). Drag
-        // handle lets the user move it if it still runs tall.
-        collisionPadding={{ top: 6, right: 6, bottom: 6, left: 6 }}
-        avoidCollisions
-        className="w-[360px] p-0 border-0 shadow-2xl"
-        style={{
-          backgroundColor: vmTokens.surfaceRaisedBg,
-          color: vmTokens.textPrimary,
-          border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
-          fontFamily: 'Roboto, sans-serif',
-          // Radix exposes the actual available height after collision detection.
-          // Capping max-height to it guarantees the popover NEVER overflows the
-          // viewport regardless of where the tapped word sits — top-of-screen,
-          // bottom-of-screen, or middle. The internal scroll handles overflow.
-          maxHeight: 'var(--radix-popover-content-available-height)',
-          overflowY: 'auto',
-          // User-applied drag offset, layered on top of Radix's anchored
-          // position (Radix transforms a parent wrapper, not this element).
-          transform: drag.x || drag.y ? `translate(${drag.x}px, ${drag.y}px)` : undefined,
-        }}
-        onClick={(e) => e.stopPropagation()}
-        onTouchStart={(e) => e.stopPropagation()}
-      >
+  // The card content is shared by both presentations (anchored popover on tall
+  // viewports, centered modal on short/zoomed ones).
+  const cardBody = (
+    <>
         {/* ── HEADER (also the drag handle) ── */}
         <div
           onPointerDown={onHandlePointerDown}
@@ -494,6 +450,127 @@ export default function LexiconPopover({
             </div>
           </div>
         )}
+    </>
+  );
+
+  // Short viewport (usually a zoomed-in browser): a centered, near-full-height
+  // modal shows far more of the card at once than the word-anchored popover,
+  // which is capped to the space above/below the tapped word.
+  if (shortViewport) {
+    return (
+      <>
+        <span
+          ref={triggerRef}
+          role="button"
+          tabIndex={0}
+          onClick={(e) => {
+            e.stopPropagation();
+            onActivate?.();
+            const sel = typeof window !== 'undefined' ? window.getSelection() : null;
+            if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
+            setOpen((o) => !o);
+          }}
+          onTouchStart={(e) => e.stopPropagation()}
+          onTouchEnd={(e) => e.stopPropagation()}
+          onMouseDown={(e) => e.stopPropagation()}
+          onMouseUp={(e) => e.stopPropagation()}
+          className={underline ? 'lex-word' : undefined}
+          data-lex-word={entry.translit}
+          aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
+          style={{ cursor: 'pointer', color: 'inherit', WebkitTouchCallout: 'none' }}
+        >
+          {children}
+        </span>
+        {open &&
+          createPortal(
+            <div style={{ position: 'fixed', inset: 0, zIndex: 60 }}>
+              <div
+                onClick={() => setOpen(false)}
+                style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)' }}
+              />
+              <div
+                ref={contentRef}
+                onClick={(e) => e.stopPropagation()}
+                onTouchStart={(e) => e.stopPropagation()}
+                style={{
+                  position: 'absolute',
+                  left: '50%',
+                  top: '50%',
+                  transform: `translate(calc(-50% + ${drag.x}px), calc(-50% + ${drag.y}px))`,
+                  width: OVERLAY_MODAL_WIDTH,
+                  maxWidth: '92vw',
+                  maxHeight: 'min(94vh, 900px)',
+                  overflowY: 'auto',
+                  backgroundColor: vmTokens.surfaceRaisedBg,
+                  color: vmTokens.textPrimary,
+                  border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
+                  borderRadius: 12,
+                  fontFamily: 'Roboto, sans-serif',
+                  boxShadow: '0 10px 40px rgba(0,0,0,0.5)',
+                }}
+              >
+                {cardBody}
+              </div>
+            </div>,
+            document.body,
+          )}
+      </>
+    );
+  }
+
+  return (
+    <Popover open={open} onOpenChange={handleOpenChange}>
+      <PopoverTrigger asChild>
+        <span
+          ref={triggerRef}
+          role="button"
+          tabIndex={0}
+          onClick={(e) => {
+            e.stopPropagation();
+            onActivate?.();
+          }}
+          onTouchStart={(e) => e.stopPropagation()}
+          onTouchEnd={(e) => e.stopPropagation()}
+          onMouseDown={(e) => e.stopPropagation()}
+          onMouseUp={(e) => e.stopPropagation()}
+          className={underline ? 'lex-word' : undefined}
+          data-lex-word={entry.translit}
+          aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
+          style={{
+            cursor: 'pointer',
+            color: 'inherit',
+            WebkitTouchCallout: 'none',
+          }}
+        >
+          {children}
+        </span>
+      </PopoverTrigger>
+      <PopoverContent
+        ref={contentRef}
+        align="center"
+        side={side}
+        sideOffset={6}
+        // Tight collision padding gives the card as much vertical room as
+        // possible so there's less internal scrolling. Drag handle lets the
+        // user move it if it still runs tall.
+        collisionPadding={{ top: 6, right: 6, bottom: 6, left: 6 }}
+        avoidCollisions
+        className="w-[360px] p-0 border-0 shadow-2xl"
+        style={{
+          backgroundColor: vmTokens.surfaceRaisedBg,
+          color: vmTokens.textPrimary,
+          border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
+          fontFamily: 'Roboto, sans-serif',
+          // Radix exposes the actual available height after collision detection;
+          // capping to it guarantees the popover never overflows the viewport.
+          maxHeight: 'var(--radix-popover-content-available-height)',
+          overflowY: 'auto',
+          transform: drag.x || drag.y ? `translate(${drag.x}px, ${drag.y}px)` : undefined,
+        }}
+        onClick={(e) => e.stopPropagation()}
+        onTouchStart={(e) => e.stopPropagation()}
+      >
+        {cardBody}
       </PopoverContent>
     </Popover>
   );
