@@ -14,21 +14,21 @@
   --vm-oslo-gray: #818990;
   --vm-snow: #FFFFFF;
 
-  /* Surfaces — header is dark, reading is cream, commentary is white */
+  /* Surfaces — header is dark, reading is white, commentary is white */
   --bg-app: #1B1B1B;             /* outer chrome / header bg */
-  --bg-sidebar: #FAF6EA;
-  --bg-sidebar-border: #EDE6D2;
+  --bg-sidebar: #FFFFFF;
+  --bg-sidebar-border: #E5E5E5;
   --bg-header: #1B1B1B;
   --bg-header-border: #1B1B1B;
-  --bg-reading: #FAF6EA;         /* scripture surface — cream */
+  --bg-reading: #FFFFFF;         /* scripture surface — white */
   --bg-commentary: #FFFFFF;      /* commentary panel — white */
   --bg-menu: #FFFFFF;
-  /* Sidebar chapter cells (1, 2, 3, … grid under each book). Cream-gold
+  /* Sidebar chapter cells (1, 2, 3, … grid under each book). Neutral
      in light, near-black in dark — flipped via .dark below. */
-  --chapter-cell-bg: #F4ECD4;
-  --chapter-cell-bg-hover: #EDE2C0;
-  --chapter-cell-border: #E8DCB6;
-  --chapter-cell-border-hover: #DCCB9A;
+  --chapter-cell-bg: #F5F5F5;
+  --chapter-cell-bg-hover: #EBEBEB;
+  --chapter-cell-border: #E5E5E5;
+  --chapter-cell-border-hover: #D4D4D4;
 
   /* Text */
   --fg-primary: #1B1B1B;
@@ -45,16 +45,16 @@
   --pill-active-fg: #1B1B1B;
   --pill-inactive-fg: #FFFFFF;
   --card-bg: #FFFFFF;
-  --card-border: #EDE7D8;
-  --divider: #EDE7D8;
-  --divider-strong: #DCD4BD;
+  --card-border: #E5E5E5;
+  --divider: #E5E5E5;
+  --divider-strong: #D4D4D4;
 
   /* Buttons / hover */
-  --hover-bg: #F4EFE0;
+  --hover-bg: #F5F5F5;
   --btn-icon-bg: #FFFFFF;
-  --btn-icon-border: #E8E1CE;
+  --btn-icon-border: #E5E5E5;
 
-  /* Highlight colors — vivid, clearly visible on cream */
+  /* Highlight colors — vivid, clearly visible on white */
   --hl-yellow: rgba(255, 214, 64, 0.62);
   --hl-green:  rgba(82, 199, 122, 0.50);
   --hl-blue:   rgba(74, 144, 226, 0.42);
@@ -534,7 +534,7 @@ button { font-family: inherit; }
 .progress-track {
   flex: 1;
   height: 6px;
-  background-color: #EFEAD9;
+  background-color: #F0F0F0;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -769,7 +769,7 @@ button { font-family: inherit; }
   gap: 12px;
   padding: 10px 14px;
   background-color: var(--card-bg);
-  border: 1px solid #DCD2B0;
+  border: 1px solid #E5E5E5;
   border-radius: 999px;
   margin-bottom: 12px;
   cursor: pointer;
@@ -864,7 +864,7 @@ button { font-family: inherit; }
   width: 40px; height: 40px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  background-color: #EFEAD9;
+  background-color: #F0F0F0;
   flex-shrink: 0;
   color: var(--fg-secondary);
 }
@@ -953,7 +953,7 @@ button { font-family: inherit; }
   display: flex;
   gap: 4px;
   padding: 4px;
-  background: #F0EAD6;
+  background: #F0F0F0;
   border-radius: 100px;
   margin-bottom: 12px;
   width: 100%;
@@ -999,7 +999,7 @@ button { font-family: inherit; }
   align-items: center;
   gap: 8px;
   padding: 10px 14px;
-  background: #F4EFE2;
+  background: #F5F5F5;
   border: 1px solid var(--card-border);
   border-radius: 100px;
   margin-bottom: 6px;
@@ -1037,7 +1037,7 @@ button { font-family: inherit; }
   padding: 14px 4px;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #ECE5D2;
+  border-bottom: 1px solid #E5E5E5;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
@@ -1064,7 +1064,7 @@ button { font-family: inherit; }
 .bs-chapter-cell {
   aspect-ratio: 1.6 / 1;
   border-radius: 10px;
-  background: #F4EFE2;
+  background: #F5F5F5;
   border: 1px solid var(--card-border);
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
@@ -1368,7 +1368,7 @@ button { font-family: inherit; }
   height: 22px;
   padding: 0 7px;
   border-radius: 6px;
-  background: #EFEAD9;
+  background: #F0F0F0;
   font-size: 12px;
   font-weight: 600;
   color: var(--fg-primary);
@@ -2145,7 +2145,7 @@ button { font-family: inherit; }
   width: 100%;
   min-height: 140px;
   padding: 14px;
-  background: #F4EFE2;
+  background: #F5F5F5;
   border: 1px solid var(--card-border);
   border-radius: 10px;
   font-family: 'Roboto', sans-serif;
@@ -2180,7 +2180,7 @@ button { font-family: inherit; }
 .signin-buttons { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 12px; }
 .signin-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 14px 16px; border-radius: 12px; font-family: 'Roboto', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; border: 1px solid var(--card-border); }
 .signin-btn-white { background: #FFFFFF; color: var(--fg-primary); }
-.signin-btn-white:hover { background: #F8F4E8; }
+.signin-btn-white:hover { background: #F5F5F5; }
 .signin-btn-dark { background: #1B1B1B; color: #FFFFFF; border-color: var(--fg-primary); }
 .signin-btn-dark:hover { background: #2A2A2A; }
 .signin-divider { display: flex; align-items: center; gap: 12px; margin: 6px 0; color: var(--fg-muted); font-size: 13px; }
@@ -2318,7 +2318,7 @@ button { font-family: inherit; }
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: #F4EFE2;
+  background: #F5F5F5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2415,14 +2415,14 @@ button { font-family: inherit; }
   align-items: center;
   gap: 14px;
   padding: 16px;
-  background: #EFEAD9;
+  background: #F0F0F0;
   border: 1px solid var(--card-border);
   border-radius: 12px;
 }
 .profile-avatar {
   width: 52px; height: 52px;
   border-radius: 50%;
-  background: #D8D2C0;
+  background: #E0E0E0;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -2530,13 +2530,13 @@ button { font-family: inherit; }
 .font-step-btn {
   width: 36px; height: 36px;
   border-radius: 50%;
-  background: #EFEAD9;
+  background: #F0F0F0;
   border: none;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
-.font-step-btn:hover { background: #E5DCC0; }
+.font-step-btn:hover { background: #E5E5E5; }
 .font-slider-wrap { flex: 1; }
 .font-slider {
   width: 100%;

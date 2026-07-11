@@ -31,13 +31,13 @@
        design handoff (design_handoff_versemate_light/styles/light.css). */
 
     /* Page / outer chrome */
-    --vm-page-bg: #FAF6EA;             /* cream paper — main page background */
-    --vm-chrome-bg: #FAF6EA;           /* desktop centering chrome */
+    --vm-page-bg: #FFFFFF;             /* white — main page background */
+    --vm-chrome-bg: #FFFFFF;           /* desktop centering chrome */
 
     /* Raised surfaces (cards, pickers, modals, inputs) */
     --vm-surface-raised-bg: #FFFFFF;
-    --vm-surface-raised-border: #EDE7D8;
-    --vm-divider: #EDE7D8;
+    --vm-surface-raised-border: #E5E5E5;
+    --vm-divider: #E5E5E5;
 
     /* Text */
     --vm-text-primary: #1B1B1B;
@@ -47,11 +47,11 @@
 
     /* Inputs */
     --vm-input-bg: #FFFFFF;
-    --vm-input-border: #E8E1CE;
+    --vm-input-border: #E5E5E5;
 
     /* Rows / hover / selected */
     --vm-row-selected-bg: rgba(27, 27, 27, 0.05);
-    --vm-hover-bg: #F4EFE0;
+    --vm-hover-bg: #F5F5F5;
 
     /* Status (slightly different per-theme to maintain WCAG on bg) */
     --vm-status-error: #B91C1C;
@@ -60,23 +60,23 @@
     /* Very faint divider — used inside cards for sub-dividers */
     --vm-faint-divider: rgba(27, 27, 27, 0.08);
 
-    /* Desktop books sidebar — cream in light per design's --bg-sidebar */
-    --vm-sidebar-bg: #FAF6EA;
-    --vm-sidebar-border: #EDE6D2;
+    /* Desktop books sidebar — white in light per design's --bg-sidebar */
+    --vm-sidebar-bg: #FFFFFF;
+    --vm-sidebar-border: #E5E5E5;
 
     /* Right-pane commentary surface — white in light per --bg-commentary */
     --vm-commentary-bg: #FFFFFF;
 
     /* Sidebar chapter cells — design spec .chapter-cell */
-    --vm-chapter-cell-bg: #F4ECD4;
-    --vm-chapter-cell-border: #E8DCB6;
+    --vm-chapter-cell-bg: #F5F5F5;
+    --vm-chapter-cell-border: #E5E5E5;
 
     /* Header — always dark for brand consistency, per design spec */
     --header-bg: 0 0% 11%;             /* #1B1B1B */
     --header-fg: 0 0% 100%;
 
-    /* Reading body — cream in light, near-black in dark */
-    --background: 41 50% 95%;          /* #FAF6EA — cream */
+    /* Reading body — white in light, near-black in dark */
+    --background: 0 0% 100%;          /* #FFFFFF — white */
     --foreground: 0 0% 11%;            /* #1B1B1B */
 
     --card: 0 0% 100%;                 /* #FFFFFF */
@@ -88,10 +88,10 @@
     --primary: 0 0% 11%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 41 35% 90%;
+    --secondary: 0 0% 94%;
     --secondary-foreground: 0 0% 11%;
 
-    --muted: 41 25% 88%;
+    --muted: 0 0% 93%;
     --muted-foreground: 0 0% 35%;
 
     /* Gold accent = production --dust (same on both themes) */
@@ -101,8 +101,8 @@
     --destructive: 0 72% 42%;          /* slightly darker for cream bg */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 41 35% 86%;              /* warm cream border */
-    --input: 41 35% 86%;
+    --border: 0 0% 90%;              /* neutral border */
+    --input: 0 0% 90%;
     --ring: 38 29% 56%;
 
     --radius: 0.5rem;
@@ -144,8 +144,8 @@
     --ahl-brown-bg: rgb(121 85 72 / 30%);
     --ahl-brown-border: rgb(121 85 72 / 50%);
 
-    /* Desktop chrome — cream in light, near-black in dark */
-    --chrome-bg: 41 50% 95%;           /* #FAF6EA */
+    /* Desktop chrome — white in light, near-black in dark */
+    --chrome-bg: 0 0% 100%;           /* #FFFFFF */
 
     /* Dark surface (sheets, selectors, menu drawer — overlays stay dark on
        BOTH themes per design spec). These are referenced by .bg-dark-surface
@@ -156,13 +156,13 @@
     --dark-surface-muted: 0 0% 60%;
     --dark-border: 0 0% 19.6%;         /* #323232 */
 
-    --sidebar-background: 41 50% 95%;
+    --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 11%;
     --sidebar-primary: 0 0% 11%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 41 35% 90%;
+    --sidebar-accent: 0 0% 94%;
     --sidebar-accent-foreground: 0 0% 11%;
-    --sidebar-border: 41 35% 86%;
+    --sidebar-border: 0 0% 90%;
     --sidebar-ring: 38 29% 56%;
   }
 
@@ -414,7 +414,7 @@
 
 /* Desktop: centered content with max-width.
    The backdrop behind the centered app shell uses the theme-aware chrome
-   token so it flips to cream (#FAF6EA) in light mode and near-black
+   token so it flips to white (#FFFFFF) in light mode and near-black
    (#1B1B1B) in dark mode. */
 @media (min-width: 1024px) {
   #root {
