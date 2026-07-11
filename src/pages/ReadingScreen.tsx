@@ -588,15 +588,48 @@ export default function ReadingScreen() {
       </div>
 
       {/* ─── Overlays ─── */}
-      {showBookSelector && (
-        <BookSelector
-          onClose={() => setShowBookSelector(false)}
-          onSelect={(book, ch, bookId) => {
-            dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
-            setShowBookSelector(false);
-          }}
-        />
-      )}
+      {showBookSelector && (() => {
+        const selector = (
+          <BookSelector
+            onClose={() => setShowBookSelector(false)}
+            onSelect={(book, ch, bookId) => {
+              dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
+              setShowBookSelector(false);
+            }}
+          />
+        );
+        // On a genuine touch phone the full-screen search is the right pattern.
+        // But when this mobile layout is reached by zooming a desktop browser
+        // (fine pointer), a full-screen search reads as broken — so constrain
+        // it to a centered, size-capped modal card instead, matching the
+        // desktop split-view Search modal.
+        if (!isDesktop) return selector;
+        return (
+          <>
+            <div
+              onClick={() => setShowBookSelector(false)}
+              style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 55 }}
+            />
+            <div
+              data-testid="book-selector-modal"
+              style={{
+                position: 'fixed',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: 'min(420px, 92vw)',
+                height: 'min(80vh, 720px)',
+                zIndex: 56,
+                borderRadius: 16,
+                overflow: 'hidden',
+                boxShadow: '0 8px 40px rgba(0,0,0,0.5)',
+              }}
+            >
+              {selector}
+            </div>
+          </>
+        );
+      })()}
       {longPressVerse !== null && (
         <VerseActions
           verse={longPressVerse}
