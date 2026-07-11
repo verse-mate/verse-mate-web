@@ -9,6 +9,7 @@ import {
   AutoHighlightRange,
 } from '@/services/bibleService';
 import { getRedLetterVerses } from '@/data/redLetter';
+import { shouldSuppressVerseInsightClick } from '@/lib/verseInsightGuard';
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
@@ -244,6 +245,10 @@ export default function ReadingScreen() {
 
   const [insightVerse, setInsightVerse] = useState<number | null>(null);
   const openVerseInsight = (verseNum: number) => {
+    // A click that dismisses an open lexical word-card lands on the scripture
+    // behind it; that same click must not also open Verse Insight. The card's
+    // outside-click handler opens a short suppression window we honor here.
+    if (shouldSuppressVerseInsightClick()) return;
     // Respect the Settings toggle — when Verse Insights are disabled, a verse
     // tap/click is a no-op (text selection on desktop still works).
     if (state.settings.verseInsightsPopup === false) return;

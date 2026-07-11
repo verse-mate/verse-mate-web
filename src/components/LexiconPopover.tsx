@@ -7,6 +7,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { OVERLAY_MODAL_WIDTH } from '@/constants/overlayModal';
 import { usePreferredLanguage } from '@/hooks/usePreferredLanguage';
 import { fetchLemmaCard, apiCardToLexEntry } from '@/services/lemmaApi';
+import { suppressVerseInsightClick } from '@/lib/verseInsightGuard';
 
 // Hebrew + Aramaic block (U+0590-U+05FF) — if a lemma contains any character
 // in this range, render it RTL. Greek lemmas have no Hebrew chars so the
@@ -567,6 +568,11 @@ export default function LexiconPopover({
           overflowY: 'auto',
           transform: drag.x || drag.y ? `translate(${drag.x}px, ${drag.y}px)` : undefined,
         }}
+        // This popover has no backing overlay, so the outside click that
+        // dismisses it also reaches the scripture behind it. Flag the imminent
+        // verse click so it just closes the card instead of also opening the
+        // Verse Insight sheet (openVerseInsight consults the same guard).
+        onPointerDownOutside={() => suppressVerseInsightClick()}
         onClick={(e) => e.stopPropagation()}
         onTouchStart={(e) => e.stopPropagation()}
       >
