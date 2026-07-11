@@ -144,6 +144,10 @@
     --ahl-brown-bg: rgb(121 85 72 / 30%);
     --ahl-brown-border: rgb(121 85 72 / 50%);
 
+    /* Red-letter (words of Jesus) — colors the verse TEXT, not the background.
+       A deep red in light mode; flipped to a lighter red in .dark below. */
+    --red-letter: #c1121f;
+
     /* Desktop chrome — white in light, near-black in dark */
     --chrome-bg: 0 0% 100%;           /* #FFFFFF */
 
@@ -200,6 +204,9 @@
 
     /* Very faint divider — white-with-opacity in dark */
     --vm-faint-divider: rgba(255, 255, 255, 0.1);
+
+    /* Red-letter — lighter red so Jesus' words stay legible on black */
+    --red-letter: #ff6b6b;
 
     /* Desktop books sidebar — near-black in dark */
     --vm-sidebar-bg: #111111;
@@ -373,6 +380,12 @@
   .ahl-red { background-color: var(--ahl-red-bg); border-bottom: 2px solid var(--ahl-red-border); }
   .ahl-teal { background-color: var(--ahl-teal-bg); border-bottom: 2px solid var(--ahl-teal-border); }
   .ahl-brown { background-color: var(--ahl-brown-bg); border-bottom: 2px solid var(--ahl-brown-border); }
+
+  /* Red-letter (words of Jesus) — reddens the verse text. The color cascades
+     into lexicon-tokenized child spans (they set no color of their own). The
+     verse-number <sup> keeps its own muted color, so only the scripture text
+     turns red — matching classic red-letter editions. */
+  .red-letter { color: var(--red-letter); }
 }
 
 /* ─── Tablet+ : hide per-screen headers since DesktopLayout renders a shared one ─── */

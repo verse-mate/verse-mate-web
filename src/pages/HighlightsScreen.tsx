@@ -206,6 +206,30 @@ export default function HighlightsScreen() {
             </div>
           </div>
 
+          {/* Jesus's Words (red-letter). Purely client-side — backed by the
+              shared redLetterVerses dataset, so it works for guests too and
+              is independent of the sign-in-gated API themes above. */}
+          <div style={{ ...themeCardStyle, marginBottom: 12 }} data-testid="red-letter-card">
+            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, flex: 1, minWidth: 0 }}>
+                <span
+                  className={colorDot.red}
+                  style={{ width: 10, height: 10, borderRadius: '50%', flexShrink: 0, marginTop: 5, border: `1px solid ${vmTokens.faintDivider}` }}
+                />
+                <div style={{ minWidth: 0 }}>
+                  <p style={{ fontSize: 14, color: vmTokens.textPrimary, fontWeight: 500 }}>Jesus's Words</p>
+                  <p style={{ fontSize: 12, color: vmTokens.textTertiary, marginTop: 2, lineHeight: 1.4 }}>
+                    Show every verse spoken by Jesus in red (red-letter)
+                  </p>
+                </div>
+              </div>
+              <ThemeToggle
+                value={state.settings.redLetter}
+                onChange={v => dispatch({ type: 'UPDATE_SETTINGS', settings: { redLetter: v } })}
+              />
+            </div>
+          </div>
+
           {themes.length === 0 ? (
             <p style={{ fontSize: 12, color: vmTokens.textTertiary, padding: '16px 0', textAlign: 'center' }}>
               Loading themes...

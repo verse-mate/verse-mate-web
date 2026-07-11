@@ -26,4 +26,25 @@ test.describe('Highlights — Auto-Highlights + back nav', () => {
     await highlights.backButton.click();
     await expect(page).toHaveURL(/\/menu(?:\/|$)/);
   });
+
+  test("Jesus's Words (red-letter) toggle is present and persists", async ({ page }) => {
+    const highlights = new HighlightsPage(page);
+    await highlights.goto();
+
+    const card = page.getByTestId('red-letter-card');
+    await expect(card).toBeVisible({ timeout: 10_000 });
+    await expect(card.getByText(/jesus's words/i)).toBeVisible();
+
+    // Client-side toggle (no sign-in required). Flips aria-checked on click.
+    const toggle = card.getByRole('switch');
+    await expect(toggle).toHaveAttribute('aria-checked', 'false');
+    await toggle.click();
+    await expect(toggle).toHaveAttribute('aria-checked', 'true');
+
+    // Setting is persisted to the local settings blob.
+    const persisted = await page.evaluate(() =>
+      JSON.parse(localStorage.getItem('versemate-settings') || '{}').redLetter
+    );
+    expect(persisted).toBe(true);
+  });
 });
