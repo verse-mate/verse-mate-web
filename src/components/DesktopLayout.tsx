@@ -9,8 +9,6 @@ import {
   ArrowLeft,
   ChevronDown,
   ChevronUp,
-  ChevronLeft,
-  ChevronRight,
   Menu,
   User,
   Bookmark,
@@ -113,7 +111,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // Seed text for the Search modal when it's opened via "just start typing".
   const [bookSelectorQuery, setBookSelectorQuery] = useState('');
   const [showMenu, setShowMenu] = useState(false);
-  const [sidebarOpen] = useState(!hideSidebar);
+  const [sidebarOpen, setSidebarOpen] = useState(!hideSidebar);
   // Sidebar always stays at expanded width; expandedBook controls chapter grid visibility.
   // Only pre-expand the active book when the user arrived via an explicit
   // /bible/<slug>/<chapter> URL. On a first visit (root → /read → Genesis 1
@@ -320,14 +318,17 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     document.body.style.userSelect = 'none';
   }, []);
 
-  // Drag handle for pulling the collapsed right panel back out (mirror of the
-  // sidebar reveal strip). Reuses the split-resize drag path.
-  const handleRightRevealDragStart = useCallback((e: React.PointerEvent) => {
-    e.preventDefault();
+  // Click the left reveal strip → bring the books sidebar back to a usable
+  // width (works on desktop after a drag-to-hide AND on tablet where the
+  // sidebar starts closed). The user resizes further via the sidebar divider.
+  const revealSidebar = useCallback(() => {
+    setSidebarOpen(true);
+    setSidebarWidth(w => (w <= 0 ? SIDEBAR_EXPANDED : w));
+  }, []);
+
+  // Click the right reveal strip → bring the insights panel back.
+  const revealRightPanel = useCallback(() => {
     setRightPanelCollapsed(false);
-    isDragging.current = true;
-    document.body.style.cursor = 'col-resize';
-    document.body.style.userSelect = 'none';
   }, []);
 
   useEffect(() => {
@@ -415,20 +416,22 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     // src/styles/prototype.css. Inline overrides are kept to a minimum.
     <div data-testid="desktop-layout" className="app-shell">
       {/* ─── PERSISTENT SIDEBAR ─── */}
-      {effectiveSidebarOpen && sidebarHidden && (
-        // Grab strip — a thin full-height handle pinned to the screen's left
-        // edge. The user drags it right to pull the hidden sidebar back out.
-        <div
-          onPointerDown={handleSidebarDragStart}
+      {!(effectiveSidebarOpen && !sidebarHidden) && (
+        // Reveal strip — a thin dotted handle pinned to the screen's left edge,
+        // shown whenever the books sidebar isn't visible (dragged closed on
+        // desktop, or closed by default on tablet). Click it to open the menu;
+        // mirror of the right insights-panel reveal strip.
+        <button
+          type="button"
+          onClick={revealSidebar}
           data-testid="desktop-sidebar-reveal"
           aria-label="Show book list"
-          role="separator"
           className="sidebar-reveal-strip"
         >
           <div className="divider-dots">
             {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
           </div>
-        </div>
+        </button>
       )}
       {effectiveSidebarOpen && !sidebarHidden && (
         <aside
@@ -520,14 +523,17 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               Summary/By-Line/Detailed chooser fed from TopicViewContext. The
               row scrolls sideways when the tabs don't fit so they stay
               anchored to the right column instead of jumping to mid-screen. */}
-          {!isTopicRoute && rightPanelView === 'commentary' && !effectiveRightCollapsed && (
+          {!isTopicRoute && rightPanelView === 'commentary' && (
             <div
               className="header-pill-scroll"
               style={{
                 position: 'absolute',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                left: `${leftPct}%`,
+                // When the insights panel is collapsed there's no right column
+                // to anchor over, so right-align the pills next to the
+                // hamburger; clicking one re-opens the panel on that tab.
+                left: effectiveRightCollapsed ? 'auto' : `${leftPct}%`,
                 right: 64,
                 zIndex: 2,
               }}
@@ -540,7 +546,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     aria-selected={tab === t.id}
                     tabIndex={tab === t.id ? 0 : -1}
                     className={`pill ${tab === t.id ? 'active' : ''}`}
-                    onClick={() => setTab(t.id)}
+                    onClick={() => { setTab(t.id); if (effectiveRightCollapsed) setRightPanelCollapsed(false); }}
                     data-testid={`desktop-tab-${t.id}`}
                   >
                     {t.label}
@@ -549,14 +555,14 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               </div>
             </div>
           )}
-          {isTopicRoute && !effectiveRightCollapsed && (
+          {isTopicRoute && (
             <div
               className="header-pill-scroll"
               style={{
                 position: 'absolute',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                left: `${leftPct}%`,
+                left: effectiveRightCollapsed ? 'auto' : `${leftPct}%`,
                 right: 64,
                 zIndex: 2,
               }}
@@ -569,7 +575,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     aria-selected={topicInsightTab === t.id}
                     tabIndex={topicInsightTab === t.id ? 0 : -1}
                     className={`pill ${topicInsightTab === t.id ? 'active' : ''}`}
-                    onClick={() => setTopicInsightTab(t.id as TopicInsightTab)}
+                    onClick={() => { setTopicInsightTab(t.id as TopicInsightTab); if (effectiveRightCollapsed) setRightPanelCollapsed(false); }}
                     data-testid={`desktop-topic-tab-${t.id}`}
                   >
                     {t.label}
@@ -735,47 +741,23 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           </div>
           )}
 
-          {/* Right-panel reveal strip — mirror of the sidebar reveal strip, but
-              pinned to the RIGHT edge. Only shown when the panel is collapsed;
-              drag it left (or click the round toggle below) to bring it back. */}
+          {/* Right-panel reveal strip — mirror of the sidebar reveal strip,
+              pinned to the RIGHT edge. Shown when the insights panel is
+              collapsed; click it to bring the panel back. Collapse the panel
+              by dragging the split divider to the edge. */}
           {effectiveRightCollapsed && (
-            <div
-              onPointerDown={handleRightRevealDragStart}
+            <button
+              type="button"
+              onClick={revealRightPanel}
               data-testid="desktop-right-panel-reveal"
               aria-label="Show insights panel"
-              role="separator"
               className="right-panel-reveal-strip"
             >
               <div className="divider-dots">
                 {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
               </div>
-            </div>
+            </button>
           )}
-
-          {/* Round collapse / expand toggle — vertically centered at the right
-              edge. Lets the user fully minimize the insights panel to the
-              right (and bring it back) the way the sidebar hides to the left. */}
-          <button
-            type="button"
-            onClick={() => setRightPanelCollapsed(v => !v)}
-            aria-label={effectiveRightCollapsed ? 'Show insights panel' : 'Hide insights panel'}
-            aria-expanded={!effectiveRightCollapsed}
-            data-testid="desktop-right-panel-toggle"
-            className="right-panel-toggle"
-            style={
-              effectiveRightCollapsed
-                // Collapsed → sit at the far right edge (pull the panel back in).
-                ? { top: '50%', right: 8, transform: 'translateY(-50%)' }
-                // Expanded → sit just inside the insights panel, next to (not
-                // on top of) the divider so the divider stays grabbable for
-                // drag-to-resize.
-                : { top: '50%', left: `calc(${leftPct}% + 24px)`, transform: 'translate(-50%, -50%)' }
-            }
-          >
-            {effectiveRightCollapsed
-              ? <ChevronLeft size={18} color={vmTokens.textPrimary} strokeWidth={2.25} />
-              : <ChevronRight size={18} color={vmTokens.textPrimary} strokeWidth={2.25} />}
-          </button>
         </div>
       </div>
 
