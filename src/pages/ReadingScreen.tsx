@@ -8,7 +8,7 @@ import {
   trackRecentBook,
   AutoHighlightRange,
 } from '@/services/bibleService';
-import { getRedLetterVerses } from '@/data/redLetter';
+import { getRedLetterVerses } from '@versemate/red-letter';
 import { shouldSuppressVerseInsightClick } from '@/lib/verseInsightGuard';
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
