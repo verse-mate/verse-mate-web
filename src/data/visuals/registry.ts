@@ -9855,17 +9855,17 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
   'matthew': {
   "videos": [
     {
-      "youtubeId": "iriW0zX492c",
+      "youtubeId": "3Dv4-n6OYGI",
       "title": "Matthew 1–13 — Overview",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/iriW0zX492c?autoplay=1&rel=0&modestbranding=1",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/3Dv4-n6OYGI?autoplay=1&rel=0&modestbranding=1",
       "page": "https://bibleproject.com/videos/matthew/",
       "chapterStart": 1,
       "chapterEnd": 13
     },
     {
-      "youtubeId": "VSVPCPK-Zf8",
+      "youtubeId": "GGCF3OPWN14",
       "title": "Matthew 14–28 — Overview",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/VSVPCPK-Zf8?autoplay=1&rel=0&modestbranding=1",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/GGCF3OPWN14?autoplay=1&rel=0&modestbranding=1",
       "page": "https://bibleproject.com/videos/matthew/",
       "chapterStart": 14,
       "chapterEnd": 28
@@ -12062,17 +12062,17 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
   'romans': {
   "videos": [
     {
-      "youtubeId": "6KrQ1ZwUlPU",
+      "youtubeId": "ej_6dVdJSIU",
       "title": "Romans 1–4 — Overview",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/6KrQ1ZwUlPU?autoplay=1&rel=0&modestbranding=1",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/ej_6dVdJSIU?autoplay=1&rel=0&modestbranding=1",
       "page": "https://bibleproject.com/videos/romans/",
       "chapterStart": 1,
       "chapterEnd": 4
     },
     {
-      "youtubeId": "ZuEsGgIFdso",
+      "youtubeId": "0SVTl4Xa5fY",
       "title": "Romans 5–16 — Overview",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/ZuEsGgIFdso?autoplay=1&rel=0&modestbranding=1",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/0SVTl4Xa5fY?autoplay=1&rel=0&modestbranding=1",
       "page": "https://bibleproject.com/videos/romans/",
       "chapterStart": 5,
       "chapterEnd": 16
@@ -12173,9 +12173,9 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
   '1-corinthians': {
   "videos": [
     {
-      "youtubeId": "veU6dB3996o",
+      "youtubeId": "yiHf8klCCc4",
       "title": "1 Corinthians — Overview",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/veU6dB3996o?autoplay=1&rel=0&modestbranding=1",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/yiHf8klCCc4?autoplay=1&rel=0&modestbranding=1",
       "page": "https://bibleproject.com/videos/1-corinthians/",
       "chapterStart": 1,
       "chapterEnd": 16
@@ -13150,9 +13150,9 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
   'titus': {
   "videos": [
     {
-      "youtubeId": "qgAZH5ExwrM",
+      "youtubeId": "PUEYCVXJM3k",
       "title": "Titus — Overview",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/qgAZH5ExwrM?autoplay=1&rel=0&modestbranding=1",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/PUEYCVXJM3k?autoplay=1&rel=0&modestbranding=1",
       "page": "https://bibleproject.com/videos/titus/",
       "chapterStart": 1,
       "chapterEnd": 3
@@ -13245,9 +13245,9 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
   'hebrews': {
   "videos": [
     {
-      "youtubeId": "z9wqN-nwSzE",
+      "youtubeId": "1fNWTZZwgbs",
       "title": "Hebrews — Overview",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/z9wqN-nwSzE?autoplay=1&rel=0&modestbranding=1",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/1fNWTZZwgbs?autoplay=1&rel=0&modestbranding=1",
       "page": "https://bibleproject.com/videos/hebrews/",
       "chapterStart": 1,
       "chapterEnd": 13
