@@ -81,8 +81,8 @@ VIDEOS: dict[str, list[dict]] = {
 
     # === NEW TESTAMENT ===
     "matthew": [
-        {"youtubeId": "iriW0zX492c", "title": "Matthew 1–13 — Overview",  "chapterRange": [1, 13]},
-        {"youtubeId": "VSVPCPK-Zf8", "title": "Matthew 14–28 — Overview", "chapterRange": [14, 28]},
+        {"youtubeId": "3Dv4-n6OYGI", "title": "Matthew 1–13 — Overview",  "chapterRange": [1, 13]},
+        {"youtubeId": "GGCF3OPWN14", "title": "Matthew 14–28 — Overview", "chapterRange": [14, 28]},
     ],
     "mark": [{"youtubeId": "HGHqu9-DtXk", "title": "Mark — Overview", "chapterRange": [1, 16]}],
     "luke": [
@@ -98,10 +98,10 @@ VIDEOS: dict[str, list[dict]] = {
         {"youtubeId": "Z-17KxpjL0Q", "title": "Acts 13–28 — Overview", "chapterRange": [13, 28]},
     ],
     "romans": [
-        {"youtubeId": "6KrQ1ZwUlPU", "title": "Romans 1–4 — Overview",  "chapterRange": [1, 4]},
-        {"youtubeId": "ZuEsGgIFdso", "title": "Romans 5–16 — Overview", "chapterRange": [5, 16]},
+        {"youtubeId": "ej_6dVdJSIU", "title": "Romans 1–4 — Overview",  "chapterRange": [1, 4]},
+        {"youtubeId": "0SVTl4Xa5fY", "title": "Romans 5–16 — Overview", "chapterRange": [5, 16]},
     ],
-    "1-corinthians":   [{"youtubeId": "veU6dB3996o", "title": "1 Corinthians — Overview",   "chapterRange": [1, 16]}],
+    "1-corinthians":   [{"youtubeId": "yiHf8klCCc4", "title": "1 Corinthians — Overview",   "chapterRange": [1, 16]}],
     "2-corinthians":   [{"youtubeId": "3lfPK2vfC54", "title": "2 Corinthians — Overview",   "chapterRange": [1, 13]}],
     "galatians":       [{"youtubeId": "vmx4UjRFp0M", "title": "Galatians — Overview",       "chapterRange": [1, 6]}],
     "ephesians":       [{"youtubeId": "Y71r-T98E2Q", "title": "Ephesians — Overview",       "chapterRange": [1, 6]}],
@@ -111,9 +111,9 @@ VIDEOS: dict[str, list[dict]] = {
     "2-thessalonians": [{"youtubeId": "kbPBDKOn1cc", "title": "2 Thessalonians — Overview", "chapterRange": [1, 3]}],
     "1-timothy":       [{"youtubeId": "7RoqnGcEjcs", "title": "1 Timothy — Overview",       "chapterRange": [1, 6]}],
     "2-timothy":       [{"youtubeId": "urlvnxCaL00", "title": "2 Timothy — Overview",       "chapterRange": [1, 4]}],
-    "titus":           [{"youtubeId": "qgAZH5ExwrM", "title": "Titus — Overview",           "chapterRange": [1, 3]}],
+    "titus":           [{"youtubeId": "PUEYCVXJM3k", "title": "Titus — Overview",           "chapterRange": [1, 3]}],
     "philemon":        [{"youtubeId": "aW9Q3Jt6Yvk", "title": "Philemon — Overview",        "chapterRange": [1, 1]}],
-    "hebrews":         [{"youtubeId": "z9wqN-nwSzE", "title": "Hebrews — Overview",         "chapterRange": [1, 13]}],
+    "hebrews":         [{"youtubeId": "1fNWTZZwgbs", "title": "Hebrews — Overview",         "chapterRange": [1, 13]}],
     "james":           [{"youtubeId": "qn-hLHWwRYY", "title": "James — Overview",           "chapterRange": [1, 5]}],
     "1-peter":         [{"youtubeId": "WhP7AZQlzCg", "title": "1 Peter — Overview",         "chapterRange": [1, 5]}],
     "2-peter":         [{"youtubeId": "wWLv_ITyKYc", "title": "2 Peter — Overview",         "chapterRange": [1, 3]}],
