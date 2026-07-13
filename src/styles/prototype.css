@@ -585,7 +585,9 @@ button { font-family: inherit; }
   padding: 20px 24px 40px 18px;
   font-family: 'Roboto Serif', Georgia, serif;
   font-weight: 300;
-  line-height: 1.5;
+  /* Shared commentary body line-height (Summary/By Line/Study all read the
+     same). Study sets the same 1.55 in JS. */
+  line-height: 1.55;
 }
 .commentary-body::-webkit-scrollbar { width: 8px; }
 .commentary-body::-webkit-scrollbar-thumb { background: var(--bg-sidebar-border); border-radius: 4px; }
@@ -1475,8 +1477,10 @@ button { font-family: inherit; }
 }
 .byline-summary-text {
   font-family: 'Roboto Serif', Georgia, serif;
-  font-size: 0.85em;
-  line-height: 1.7;
+  /* Match the Summary / Study body: full reading font size + the shared 1.55
+     line-height so all three commentary tabs read identically. */
+  font-size: 1em;
+  line-height: 1.55;
   color: var(--fg-primary);
   margin: 0;
   text-wrap: pretty;
