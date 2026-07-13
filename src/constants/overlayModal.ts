@@ -7,6 +7,7 @@
  */
 export const OVERLAY_MODAL_WIDTH = 'min(420px, 92vw)';
 export const OVERLAY_MODAL_HEIGHT = 'min(80vh, 720px)';
-// Verse Insight carries more chrome (stepper + action row), so it gets a
-// slightly taller ceiling but the same width cap for visual consistency.
-export const OVERLAY_MODAL_MAX_HEIGHT = 'min(86vh, 760px)';
+// Verse Insight carries more chrome (stepper + action row) and reads as the
+// primary content, so it gets a tall ceiling to occupy more of the screen
+// (same width cap as the others for visual consistency).
+export const OVERLAY_MODAL_MAX_HEIGHT = 'min(92vh, 860px)';
