@@ -429,6 +429,11 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const isTablet = hideSidebar;
   const effectiveLeftPct = isTablet ? (effectiveRightCollapsed ? 100 : 0) : leftPct;
   const panelFullWidth = isTablet && !effectiveRightCollapsed;
+  // On tablet the reading (Bible) and a commentary tab are separate full-screen
+  // views, so a pill should only read as "active" when its view is actually on
+  // screen — while reading, no pill is highlighted. On desktop the commentary
+  // pane is always visible, so the active tab is always highlighted.
+  const showTabHighlight = !isTablet || panelFullWidth;
   const effectiveSidebarOpen = isCompactSplit ? sidebarOpen : !hideSidebar;
   // The user can drag the sidebar edge fully closed (width 0). When hidden we
   // drop the <aside> entirely and show a thin grab strip at the screen edge so
@@ -614,7 +619,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     role="tab"
                     aria-selected={tab === t.id}
                     tabIndex={tab === t.id ? 0 : -1}
-                    className={`pill ${tab === t.id ? 'active' : ''}`}
+                    className={`pill ${(tab === t.id && showTabHighlight) ? 'active' : ''}`}
                     onClick={() => { setTab(t.id); if (effectiveRightCollapsed) setRightPanelCollapsed(false); }}
                     data-testid={`desktop-tab-${t.id}`}
                   >
@@ -649,7 +654,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     role="tab"
                     aria-selected={topicInsightTab === t.id}
                     tabIndex={topicInsightTab === t.id ? 0 : -1}
-                    className={`pill ${topicInsightTab === t.id ? 'active' : ''}`}
+                    className={`pill ${(topicInsightTab === t.id && showTabHighlight) ? 'active' : ''}`}
                     onClick={() => { setTopicInsightTab(t.id as TopicInsightTab); if (effectiveRightCollapsed) setRightPanelCollapsed(false); }}
                     data-testid={`desktop-topic-tab-${t.id}`}
                   >
