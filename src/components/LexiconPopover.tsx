@@ -486,7 +486,15 @@ export default function LexiconPopover({
           createPortal(
             <div style={{ position: 'fixed', inset: 0, zIndex: 60 }}>
               <div
-                onClick={() => setOpen(false)}
+                // This portal is a DOM child of <body>, but React events still
+                // bubble through the *component* tree — up to the verse span's
+                // onClick that opens Verse Insight. Stop propagation (and flag
+                // the guard) so dismissing the card doesn't also open the sheet.
+                onClick={(e) => {
+                  e.stopPropagation();
+                  suppressVerseInsightClick();
+                  setOpen(false);
+                }}
                 style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)' }}
               />
               <div
