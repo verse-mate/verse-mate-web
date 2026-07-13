@@ -129,9 +129,15 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // a round toggle at the right edge bring it back.
   const [rightPanelCollapsed, setRightPanelCollapsed] = useState<boolean>(() => {
     try {
-      return localStorage.getItem('versemate-right-panel-collapsed') === '1';
+      const stored = localStorage.getItem('versemate-right-panel-collapsed');
+      // Tablet has no room for a comfortable split, so it uses a full-screen
+      // swap (reading OR insight/sub-page, never both). Start on the reading
+      // with the panel collapsed; tapping a pill / opening a menu page reveals
+      // the panel full-width.
+      if (stored === null) return hideSidebar;
+      return stored === '1';
     } catch {
-      return false;
+      return hideSidebar;
     }
   });
   useEffect(() => {
@@ -171,6 +177,17 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   };
   const closeRightPanel = () => {
     setRightPanelView('commentary');
+    // On tablet a sub-page is shown full-screen (there is no reading beside
+    // it), so backing out of it should return to the reading rather than to a
+    // full-screen commentary tab the user never asked for.
+    if (hideSidebar) setRightPanelCollapsed(true);
+  };
+  // Tablet: leave the full-screen insight/sub-page view and return to the
+  // reading. Reset the view so the next reveal starts on commentary, not the
+  // sub-page the user just backed out of.
+  const tabletBackToReading = () => {
+    setRightPanelView('commentary');
+    setRightPanelCollapsed(true);
   };
 
   // Topic routes (`/topic/<cat>/<slug>`, `/topics/:topicId`,
@@ -404,6 +421,14 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // desktop), mirroring the left sidebar's drag-to-hide. The sidebar still
   // follows its layout default at wide widths.
   const effectiveRightCollapsed = rightPanelCollapsed;
+  // Tablet (hideSidebar) collapses the resizable split into a full-screen swap:
+  // the reading and the insight/sub-page panel each take the full width and the
+  // user toggles between them (no cramped 35%-wide pane). When the panel is
+  // open the reading is forced to 0% width (still mounted, so its scroll is
+  // preserved behind the panel); on desktop the real drag ratio is kept.
+  const isTablet = hideSidebar;
+  const effectiveLeftPct = isTablet ? (effectiveRightCollapsed ? 100 : 0) : leftPct;
+  const panelFullWidth = isTablet && !effectiveRightCollapsed;
   const effectiveSidebarOpen = isCompactSplit ? sidebarOpen : !hideSidebar;
   // The user can drag the sidebar edge fully closed (width 0). When hidden we
   // drop the <aside> entirely and show a thin grab strip at the screen edge so
@@ -495,25 +520,46 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             hamburger icon-btn RIGHT. Padding comes from prototype.css
             (0 16px 0 64px). */}
         <header className="app-header">
-          {/* Topic routes show the topic name in the same dropdown
-              slot the Bible side uses for "Genesis 1" — treats a topic
-              like a Bible reference for navigation purposes. */}
-          <button
-            className="chapter-selector-btn"
-            onClick={() => { setBookSelectorQuery(''); setShowBookSelector(true); }}
-            data-testid="desktop-chapter-selector-button"
-          >
-            <span>
-              {isTopicRoute
-                ? currentTopic?.name || 'Topic'
-                : `${state.book} ${state.chapter}`}
-            </span>
-            <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
-          </button>
+          {/* Header LEFT slot. On tablet the split becomes a full-screen swap,
+              so while the insight/sub-page panel is open the chapter selector
+              is replaced by a back chevron that returns to the reading — the
+              single, discoverable way out of the full-screen view. */}
+          {panelFullWidth ? (
+            <button
+              className="chapter-selector-btn"
+              onClick={tabletBackToReading}
+              aria-label="Back to reading"
+              data-testid="desktop-tablet-back-to-reading"
+            >
+              <ArrowLeft size={20} color={vmTokens.headerFg} strokeWidth={2} />
+              <span>Reading</span>
+            </button>
+          ) : (
+            // Topic routes show the topic name in the same dropdown slot the
+            // Bible side uses for "Genesis 1" — a topic behaves like a Bible
+            // reference for navigation purposes.
+            <button
+              className="chapter-selector-btn"
+              onClick={() => { setBookSelectorQuery(''); setShowBookSelector(true); }}
+              data-testid="desktop-chapter-selector-button"
+            >
+              <span>
+                {isTopicRoute
+                  ? currentTopic?.name || 'Topic'
+                  : `${state.book} ${state.chapter}`}
+              </span>
+              <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
+            </button>
+          )}
 
-          <div className="logo-mark">
-            <img src="/versemate-logo-white.png" alt="VerseMate" className="logo-img" />
-          </div>
+          {/* Logo — desktop only. On tablet the header is too narrow to fit a
+              centered logo alongside the pill row without overlap/clipping, so
+              the logo is dropped there (the pills own the center instead). */}
+          {!isTablet && (
+            <div className="logo-mark">
+              <img src="/versemate-logo-white.png" alt="VerseMate" className="logo-img" />
+            </div>
+          )}
 
           {/* Commentary pill-group — absolute-positioned over the right
               insights column (split-aware: left edge tracks leftPct, right
@@ -532,9 +578,12 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 transform: 'translateY(-50%)',
                 // When the insights panel is collapsed there's no right column
                 // to anchor over, so right-align the pills next to the
-                // hamburger; clicking one re-opens the panel on that tab.
-                left: effectiveRightCollapsed ? 'auto' : `${leftPct}%`,
+                // hamburger. Bound the left edge past the centered logo so a
+                // wide pill row (4 tabs) can never overlap the VerseMate mark —
+                // the row scrolls sideways within the bounded band instead.
+                left: isTablet ? 140 : (effectiveRightCollapsed ? 'calc(50% + 108px)' : `${effectiveLeftPct}%`),
                 right: 64,
+                justifyContent: isTablet ? 'center' : (effectiveRightCollapsed ? 'flex-end' : undefined),
                 zIndex: 2,
               }}
             >
@@ -562,8 +611,9 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 position: 'absolute',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                left: effectiveRightCollapsed ? 'auto' : `${leftPct}%`,
+                left: isTablet ? 140 : (effectiveRightCollapsed ? 'calc(50% + 108px)' : `${effectiveLeftPct}%`),
                 right: 64,
+                justifyContent: isTablet ? 'center' : (effectiveRightCollapsed ? 'flex-end' : undefined),
                 zIndex: 2,
               }}
             >
@@ -586,8 +636,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           )}
 
           {/* Sub-screen back chevron — anchored to the LEFT edge of the
-              right pane so it sits flush with the right-pane box. */}
-          {!isTopicRoute && rightPanelView !== 'commentary' && !effectiveRightCollapsed && (() => {
+              right pane so it sits flush with the right-pane box. Desktop only:
+              on tablet the full-screen sub-page uses the header-left "Reading"
+              chevron instead (there is no right-pane edge to anchor to). */}
+          {!isTopicRoute && rightPanelView !== 'commentary' && !effectiveRightCollapsed && !isTablet && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
             return (
@@ -599,7 +651,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 style={{
                   position: 'absolute',
                   top: '50%',
-                  left: `${leftPct}%`,
+                  left: `${effectiveLeftPct}%`,
                   transform: 'translateY(-50%)',
                   marginLeft: 12,
                   zIndex: 2,
@@ -622,7 +674,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 style={{
                   position: 'absolute',
                   top: '50%',
-                  left: `${(100 + leftPct) / 2}%`,
+                  left: `${(100 + effectiveLeftPct) / 2}%`,
                   transform: 'translate(-50%, -50%)',
                   zIndex: 2,
                   fontFamily: 'Roboto, sans-serif',
@@ -663,20 +715,21 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           // Expose the reading-panel width so overlays rendered inside the
           // reading column (e.g. the Verse Insight sheet) can center
           // themselves over the Bible portion instead of the whole split.
-          style={{ '--reading-pct': `${effectiveRightCollapsed ? 100 : leftPct}%` } as React.CSSProperties}
+          style={{ '--reading-pct': `${effectiveRightCollapsed ? 100 : effectiveLeftPct}%` } as React.CSSProperties}
         >
           <div
             data-testid="desktop-left-panel"
             className="left-panel"
-            style={{ width: effectiveRightCollapsed ? '100%' : `${leftPct}%` }}
+            style={{ width: effectiveRightCollapsed ? '100%' : `${effectiveLeftPct}%` }}
           >
             <Outlet />
           </div>
 
           {/* Drag handle — prototype .divider with .divider-dots. Hidden when
               the right panel is minimized so the reading column owns the full
-              width. */}
-          {!effectiveRightCollapsed && (
+              width. Also hidden on tablet, which swaps full-screen views
+              instead of sharing a resizable split. */}
+          {!effectiveRightCollapsed && !isTablet && (
             <div
               className="divider"
               onPointerDown={handleDragStart}
