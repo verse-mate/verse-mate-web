@@ -435,6 +435,17 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // it can be pulled back out.
   const sidebarHidden = sidebarWidth <= 0;
 
+  // Full-screen commentary/insight on tablet spans the whole width, so cap the
+  // text to a centered readable column with comfortable left/right gutters
+  // instead of running edge-to-edge. (Split panes are already narrow, so this
+  // only applies to the tablet full-width view.)
+  const fullWidthContentPad: React.CSSProperties | undefined = panelFullWidth
+    ? {
+        paddingLeft: 'max(24px, calc((100% - 760px) / 2))',
+        paddingRight: 'max(24px, calc((100% - 760px) / 2))',
+      }
+    : undefined;
+
   return (
     // Prototype layout: .app-shell wraps the sidebar + main column.
     // .sidebar / .sidebar-header / .sidebar-scroll come straight from
@@ -530,9 +541,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               onClick={tabletBackToReading}
               aria-label="Back to reading"
               data-testid="desktop-tablet-back-to-reading"
+              // Pull it toward the screen edge (the header carries a wide 64px
+              // left pad meant for the desktop reveal strip, which tablet
+              // doesn't need here).
+              style={{ marginLeft: -44 }}
             >
               <ArrowLeft size={20} color={vmTokens.headerFg} strokeWidth={2} />
-              <span>Reading</span>
+              <span>Bible</span>
             </button>
           ) : (
             // Topic routes show the topic name in the same dropdown slot the
@@ -585,9 +600,14 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 right: 64,
                 justifyContent: isTablet ? 'center' : (effectiveRightCollapsed ? 'flex-end' : undefined),
                 zIndex: 2,
+                // Tablet centers the pills across the whole header. Make the
+                // empty container area click-through so it never blocks the
+                // back button / chapter-selector carrot beneath it — only the
+                // pills themselves stay interactive.
+                pointerEvents: isTablet ? 'none' : undefined,
               }}
             >
-              <div className="pill-group" role="tablist" aria-label="Commentary view">
+              <div className="pill-group" role="tablist" aria-label="Commentary view" style={{ pointerEvents: 'auto' }}>
                 {tabs.map(t => (
                   <button
                     key={t.id}
@@ -615,9 +635,14 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 right: 64,
                 justifyContent: isTablet ? 'center' : (effectiveRightCollapsed ? 'flex-end' : undefined),
                 zIndex: 2,
+                // Tablet centers the pills across the whole header. Make the
+                // empty container area click-through so it never blocks the
+                // back button / chapter-selector carrot beneath it — only the
+                // pills themselves stay interactive.
+                pointerEvents: isTablet ? 'none' : undefined,
               }}
             >
-              <div className="pill-group" role="tablist" aria-label="Topic insight view">
+              <div className="pill-group" role="tablist" aria-label="Topic insight view" style={{ pointerEvents: 'auto' }}>
                 {TOPIC_INSIGHT_TABS.map(t => (
                   <button
                     key={t.id}
@@ -747,7 +772,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             {isTopicRoute ? (
               <div
                 className="commentary-body"
-                style={{ fontSize: `${state.settings.fontSize}px` }}
+                style={{ fontSize: `${state.settings.fontSize}px`, ...fullWidthContentPad }}
                 data-testid="desktop-topic-insight-pane"
               >
                 <TopicExplanationTab
@@ -766,7 +791,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               <div
                 ref={commentaryScrollRef}
                 className="commentary-body"
-                style={{ fontSize: `${state.settings.fontSize}px` }}
+                style={{ fontSize: `${state.settings.fontSize}px`, ...fullWidthContentPad }}
               >
                 <CommentaryPanel
                   tab={tab}
@@ -836,20 +861,30 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           />
           <div style={{
             position: 'fixed',
-            top: '10vh',
-            /* Center over Bible (left) panel */
-            left: `${(sidebarOpen ? sidebarWidth : 0) + (contentRef.current ? contentRef.current.getBoundingClientRect().width * leftPct / 100 / 2 : 300)}px`,
-            transform: 'translateX(-50%)',
+            // Vertically centered. Tablet uses a full-screen swap (no split), so
+            // center on screen; desktop centers over the Bible (left) panel.
+            top: '50%',
+            left: isTablet
+              ? '50%'
+              : `${(sidebarOpen ? sidebarWidth : 0) + (contentRef.current ? contentRef.current.getBoundingClientRect().width * leftPct / 100 / 2 : 300)}px`,
+            transform: 'translate(-50%, -50%)',
             width: 420,
+            maxWidth: '92vw',
             height: '80vh',
+            maxHeight: '80vh',
             zIndex: 56,
             borderRadius: 16,
             overflow: 'hidden',
             boxShadow: '0 8px 40px rgba(0,0,0,0.5)',
           }}>
+            {/* `compact` caps the type scale to the lexicon-card sizes and drops
+                the full-screen top padding, so the search reads as a tidy modal
+                (not oversized) regardless of zoom / tablet, showing more of the
+                recents and book list. */}
             <BookSelector
               initialTab={isTopicRoute ? 'Topics' : undefined}
               initialQuery={bookSelectorQuery}
+              compact
               onClose={() => { setShowBookSelector(false); setBookSelectorQuery(''); }}
               onSelect={(book, ch, bookId) => {
                 dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
