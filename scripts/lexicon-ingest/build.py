@@ -505,6 +505,13 @@ def build_book(book_name: str, bsb_df: pd.DataFrame, lexicon: dict[str, dict],
         chapters[chapter][verse].append({
             'surface': english,
             'lemma': lemma_key,
+            # Canonical per-token Strong's (G####/H####). The lemma_key slug
+            # collapses homographs (e.g. Hebrew אֵת obj-marker / plowshare and
+            # עֵת "time" all slugify to "et"), so the renderer needs the exact
+            # Strong's to resolve the right sense via loadStrongsIndex —
+            # otherwise Ps 31:15 "my times" (H6256) shows the bare-slug winner
+            # "plowshare" (H0855). Emitting it here is what feeds that lookup.
+            'strongs': strongs,
         })
 
     out_chapters = []
