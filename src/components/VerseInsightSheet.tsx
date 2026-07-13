@@ -55,6 +55,10 @@ export default function VerseInsightSheet({
   onClose,
 }: Props) {
   const { state, addHighlight } = useApp();
+  // Cap the summary type scale so the popup matches the Search / lexicon
+  // definition modals instead of ballooning with the reading font size
+  // (which ranges 13–26px). 16px is the search/definition ceiling.
+  const insightFontPx = Math.min(state.settings.fontSize, 16);
   // When the mobile layout is reached by zooming a desktop browser (fine
   // pointer, below the 768px split-view breakpoint), present the sheet as a
   // centered, size-capped modal — consistent with the Search modal — instead
@@ -223,7 +227,9 @@ export default function VerseInsightSheet({
               }
             : {
                 maxHeight: '98%',
-                minHeight: '80%',
+                // Taller resting height so the sheet occupies more of the
+                // screen (was 80%).
+                minHeight: '92%',
                 transform: dragOffset > 0 ? `translateY(${dragOffset}px)` : undefined,
                 transition: dragStartYRef.current === null ? 'transform 0.2s ease' : 'none',
               }
@@ -303,16 +309,15 @@ export default function VerseInsightSheet({
           )}
           <div
             className="rounded-xl bg-secondary border border-border p-5 mb-6"
-            // Inherit the user's reading font size so commentary matches the
-            // scripture body (set in ReadingScreen via state.settings.fontSize).
-            // Without this the panel hardcoded 15px while the bible side
-            // defaulted to 20px, making the insight feel cramped.
-            style={{ fontSize: `${state.settings.fontSize}px` }}
+            // Capped to the Search / definition ceiling (insightFontPx) so the
+            // summary stays a comfortable modal size regardless of the reading
+            // font size or browser zoom.
+            style={{ fontSize: `${insightFontPx}px` }}
           >
             {insight ? (
               <MarkdownBlock text={stripDuplicateVerse(insight.historicalContext)} />
             ) : (
-              <p className="text-muted-foreground text-center py-4" style={{ fontSize: `${state.settings.fontSize}px` }}>
+              <p className="text-muted-foreground text-center py-4" style={{ fontSize: `${insightFontPx}px` }}>
                 No insight available for this verse.
               </p>
             )}
