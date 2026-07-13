@@ -440,15 +440,14 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // it can be pulled back out.
   const sidebarHidden = sidebarWidth <= 0;
 
-  // Full-screen commentary/insight on tablet spans the whole width, so cap the
-  // text to a centered readable column with comfortable left/right gutters
-  // instead of running edge-to-edge. (Split panes are already narrow, so this
-  // only applies to the tablet full-width view.)
+  // Full-screen commentary/insight on tablet spans the whole width, so give it
+  // the SAME left/right gutter as the Bible reading column (.reading-inner:
+  // max-width 660px, centered, with 16px inner padding — i.e. a 68px floor that
+  // opens up as the panel widens) so the two views line up. Split panes are
+  // already narrow, so this only applies to the tablet full-width view.
+  const readingGutter = 'max(68px, calc((100% - 660px) / 2 + 16px))';
   const fullWidthContentPad: React.CSSProperties | undefined = panelFullWidth
-    ? {
-        paddingLeft: 'max(24px, calc((100% - 760px) / 2))',
-        paddingRight: 'max(24px, calc((100% - 760px) / 2))',
-      }
+    ? { paddingLeft: readingGutter, paddingRight: readingGutter }
     : undefined;
 
   return (
@@ -546,10 +545,6 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               onClick={tabletBackToReading}
               aria-label="Back to reading"
               data-testid="desktop-tablet-back-to-reading"
-              // Pull it toward the screen edge (the header carries a wide 64px
-              // left pad meant for the desktop reveal strip, which tablet
-              // doesn't need here).
-              style={{ marginLeft: -44 }}
             >
               <ArrowLeft size={20} color={vmTokens.headerFg} strokeWidth={2} />
               <span>Bible</span>
