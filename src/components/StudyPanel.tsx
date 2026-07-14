@@ -660,7 +660,7 @@ function BulletsBody({ step }: { step: StepBullets }) {
 }
 
 function SegmentsBody({ step }: { step: StepSegments }) {
-  const labels = getStudyLabels(usePreferredLanguage());
+  const labels = useStudyLabels(usePreferredLanguage());
   // Segments render as static styled cards (no extra collapse) — the user
   // already opened the parent step, and segments are short enough to read
   // inline. Each card stays visually distinct so they read as their own
