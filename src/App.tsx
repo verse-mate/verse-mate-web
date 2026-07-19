@@ -27,6 +27,9 @@ import AboutScreen from "@/pages/AboutScreen";
 import GivingScreen from "@/pages/GivingScreen";
 import HelpScreen from "@/pages/HelpScreen";
 import SignInScreen from "@/pages/SignInScreen";
+import CoachDashboardScreen from "@/pages/CoachDashboardScreen";
+import CoachTrendsScreen from "@/pages/CoachTrendsScreen";
+import CoachFeedbackScreen from "@/pages/CoachFeedbackScreen";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -73,6 +76,11 @@ const App = () => (
               <Route path="/notes" element={<NotesScreen />} />
               <Route path="/notes/:book/:chapter" element={<NotesScreen />} />
               <Route path="/highlights" element={<HighlightsScreen />} />
+              {/* Bible-Coach portal — gated in-screen (any signed-in user;
+                  non-coaches see a friendly gate). */}
+              <Route path="/coach" element={<CoachDashboardScreen />} />
+              <Route path="/coach/trends" element={<CoachTrendsScreen />} />
+              <Route path="/coach/feedback" element={<CoachFeedbackScreen />} />
               <Route path="/menu" element={<MenuScreen />} />
               <Route path="/menu/settings" element={<SettingsScreen />} />
               <Route path="/menu/about" element={<AboutScreen />} />
