@@ -52,7 +52,7 @@ export default function CoachDashboardScreen() {
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 16, maxWidth: 640, margin: '0 auto' }}>
             {/* Greeting */}
-            {me.data && (
+            {me.data?.profile && (
               <div>
                 <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>
                   {firstName(me.data.profile.name)}’s coaching
@@ -115,7 +115,7 @@ export default function CoachDashboardScreen() {
             </div>
 
             {/* Meeting link */}
-            {me.data && <ZoomLinkCard initialLink={me.data.zoomLink} />}
+            {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
 
             {/* Feedback documents */}
             {reports.data && reports.data.length > 0 && (

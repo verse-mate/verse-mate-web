@@ -8,7 +8,7 @@
  */
 
 import { useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   Bar,
   BarChart,
@@ -22,7 +22,13 @@ import {
 } from 'recharts';
 import ScreenHeader from '@/components/ScreenHeader';
 import { vmTokens } from '@/styles/themeStyles';
-import { useCoachTrends, useCoachReports, coachState } from '@/hooks/useCoach';
+import {
+  useCoachTrends,
+  useCoachReports,
+  useCoachTrendsFor,
+  useCoachReportsFor,
+  coachState,
+} from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel } from '@/components/coach/CoachUi';
 
 // Cluster palette — mid-tone hues that read on both light and dark surfaces.
@@ -39,12 +45,30 @@ const GRID = 'rgba(150,150,150,0.2)';
 
 export default function CoachTrendsScreen() {
   const navigate = useNavigate();
-  const trendsQuery = useCoachTrends();
-  const reportsQuery = useCoachReports();
-  const trends = coachState(trendsQuery);
-  const reports = coachState(reportsQuery);
+  // When a :coachId param is present this is an admin drilling into a specific
+  // leader (admin-only endpoints); otherwise it's the signed-in coach's own
+  // trends. Only the active pair of queries is enabled.
+  const { coachId } = useParams();
+  const adminView = !!coachId;
 
-  const latest = reports.data && reports.data.length ? reports.data[0] : null;
+  const selfTrends = useCoachTrends({ enabled: !adminView });
+  const selfReports = useCoachReports({ enabled: !adminView });
+  const forTrends = useCoachTrendsFor(coachId ?? '');
+  const forReports = useCoachReportsFor(coachId ?? '');
+
+  const trendsQuery = adminView ? forTrends : selfTrends;
+  const trends = coachState(trendsQuery);
+  // coachState is called per-branch: the admin reports query ({ profile,
+  // reports }) and the self query (CoachReport[]) have different data shapes,
+  // so they can't be unioned before coachState. Only loading/auth/error are
+  // read here — the report list is normalized separately below.
+  const reports = adminView ? coachState(forReports) : coachState(selfReports);
+
+  // Self reports query returns CoachReport[]; the admin one returns
+  // { profile, reports }. Normalize to the report list for the dimension bars.
+  const reportList = adminView ? forReports.data?.reports : selfReports.data;
+  const latest = reportList && reportList.length ? reportList[0] : null;
+  const backTo = adminView ? `/coach/leader/${coachId}` : '/coach';
 
   const scoreData = useMemo(
     () => (trends.data?.scoreSeries || []).map((p) => ({ ...p, label: shortDate(p.date) })),
@@ -57,7 +81,7 @@ export default function CoachTrendsScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader title="Trends" onBack={() => navigate('/coach')} backTestId="coach-trends-back-button" />
+      <ScreenHeader title="Trends" onBack={() => navigate(backTo)} backTestId="coach-trends-back-button" />
 
       <div
         data-testid="coach-trends"
@@ -69,7 +93,7 @@ export default function CoachTrendsScreen() {
           error={trends.error || reports.error}
           onRetry={() => {
             trendsQuery.refetch();
-            reportsQuery.refetch();
+            (adminView ? forReports : selfReports).refetch();
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 16, maxWidth: 640, margin: '0 auto' }}>
