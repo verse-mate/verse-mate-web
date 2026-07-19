@@ -73,12 +73,40 @@ export interface StatusBand {
 }
 
 export interface CoachMe {
-  isCoach: true;
-  profile: CoachProfile;
+  /** True when the signed-in account maps to an evaluated leader. */
+  isCoach: boolean;
+  /** True for program admins — oversight over every leader. */
+  isAdmin: boolean;
+  /** The leader's own record; null for an admin who isn't a coachee. */
+  profile: CoachProfile | null;
   zoomLink: string;
   model: string;
   clusters: { name: string; weight: number }[];
   statusBands: StatusBand[];
+}
+
+/** One row in the admin oversight roster. */
+export interface CoachSummary {
+  id: string;
+  name: string;
+  group: string;
+  coachName: string;
+  sessionCount: number;
+  latest: {
+    date: string;
+    dateLabel: string;
+    score: number;
+    status: string;
+    statusEmoji: string;
+  } | null;
+}
+
+/** Header identifying which leader an admin is viewing. */
+export interface CoachProfileHeader {
+  id: string;
+  name: string;
+  group: string;
+  coachName: string;
 }
 
 export interface ScorePoint {
@@ -144,6 +172,29 @@ export async function fetchCoachReports(): Promise<CoachReport[]> {
 /** GET /api/coach/trends — derived score / cluster / dimension series. */
 export function fetchCoachTrends(): Promise<CoachTrends> {
   return coachRequest<CoachTrends>('trends');
+}
+
+// ─── Admin oversight (program admins only) ─────────────────────────────────
+
+/** GET /coach/admin/coaches — every leader's roster summary. 403 for
+ *  non-admins → surfaces as CoachAuthError('not_a_coach'). */
+export async function fetchAdminCoaches(): Promise<CoachSummary[]> {
+  const data = await coachRequest<{ coaches: CoachSummary[] }>('admin/coaches');
+  return data.coaches || [];
+}
+
+/** GET /coach/admin/coaches/:id/reports — a specific leader's documents. */
+export function fetchCoachReportsFor(
+  coachId: string,
+): Promise<{ profile: CoachProfileHeader; reports: CoachReport[] }> {
+  return coachRequest<{ profile: CoachProfileHeader; reports: CoachReport[] }>(
+    `admin/coaches/${encodeURIComponent(coachId)}/reports`,
+  );
+}
+
+/** GET /coach/admin/coaches/:id/trends — a specific leader's trends. */
+export function fetchCoachTrendsFor(coachId: string): Promise<CoachTrends> {
+  return coachRequest<CoachTrends>(`admin/coaches/${encodeURIComponent(coachId)}/trends`);
 }
 
 /** PUT /api/coach/zoom-link — persist the coach's meeting link. */

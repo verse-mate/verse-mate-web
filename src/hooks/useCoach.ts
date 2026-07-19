@@ -10,17 +10,25 @@ import {
   CoachAuthError,
   type CoachAuthReason,
   type CoachMe,
+  type CoachProfileHeader,
   type CoachReport,
+  type CoachSummary,
   type CoachTrends,
+  fetchAdminCoaches,
   fetchCoachMe,
   fetchCoachReports,
+  fetchCoachReportsFor,
   fetchCoachTrends,
+  fetchCoachTrendsFor,
 } from '@/services/coachService';
 
 export const coachKeys = {
   me: ['coach', 'me'] as const,
   reports: ['coach', 'reports'] as const,
   trends: ['coach', 'trends'] as const,
+  adminCoaches: ['coach', 'admin', 'coaches'] as const,
+  adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
+  adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
 };
 
 /** Normalize a query's error into the shape <CoachStateBoundary> expects. */
@@ -43,10 +51,46 @@ export function useCoachMe(): UseQueryResult<CoachMe> {
   return useQuery({ queryKey: coachKeys.me, queryFn: fetchCoachMe, retry: false });
 }
 
-export function useCoachReports(): UseQueryResult<CoachReport[]> {
-  return useQuery({ queryKey: coachKeys.reports, queryFn: fetchCoachReports, retry: false });
+export function useCoachReports(opts: { enabled?: boolean } = {}): UseQueryResult<CoachReport[]> {
+  return useQuery({
+    queryKey: coachKeys.reports,
+    queryFn: fetchCoachReports,
+    retry: false,
+    enabled: opts.enabled ?? true,
+  });
 }
 
-export function useCoachTrends(): UseQueryResult<CoachTrends> {
-  return useQuery({ queryKey: coachKeys.trends, queryFn: fetchCoachTrends, retry: false });
+export function useCoachTrends(opts: { enabled?: boolean } = {}): UseQueryResult<CoachTrends> {
+  return useQuery({
+    queryKey: coachKeys.trends,
+    queryFn: fetchCoachTrends,
+    retry: false,
+    enabled: opts.enabled ?? true,
+  });
+}
+
+// ─── Admin oversight ────────────────────────────────────────────────────────
+
+export function useAdminCoaches(): UseQueryResult<CoachSummary[]> {
+  return useQuery({ queryKey: coachKeys.adminCoaches, queryFn: fetchAdminCoaches, retry: false });
+}
+
+export function useCoachReportsFor(
+  coachId: string,
+): UseQueryResult<{ profile: CoachProfileHeader; reports: CoachReport[] }> {
+  return useQuery({
+    queryKey: coachKeys.adminReports(coachId),
+    queryFn: () => fetchCoachReportsFor(coachId),
+    retry: false,
+    enabled: !!coachId,
+  });
+}
+
+export function useCoachTrendsFor(coachId: string): UseQueryResult<CoachTrends> {
+  return useQuery({
+    queryKey: coachKeys.adminTrends(coachId),
+    queryFn: () => fetchCoachTrendsFor(coachId),
+    retry: false,
+    enabled: !!coachId,
+  });
 }

@@ -5,7 +5,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   CoachAuthError,
+  fetchAdminCoaches,
   fetchCoachReports,
+  fetchCoachReportsFor,
   fetchCoachMe,
   saveCoachZoomLink,
   statusColor,
@@ -84,5 +86,30 @@ describe('coachService', () => {
   it('assigns distinct status colors, gold for Exceptional', () => {
     expect(statusColor('Exceptional')).toBe('var(--vm-dust)');
     expect(statusColor('Exceptional')).not.toBe(statusColor('Strong'));
+  });
+
+  it('fetches the admin roster', async () => {
+    mockFetch((url) => {
+      expect(url).toContain('/coach/admin/coaches');
+      return jsonResponse({ coaches: [{ id: 'jeff-ward', name: 'Jeff Ward', sessionCount: 3 }] });
+    });
+    const coaches = await fetchAdminCoaches();
+    expect(coaches).toHaveLength(1);
+    expect(coaches[0].id).toBe('jeff-ward');
+  });
+
+  it('fetches a specific leader (admin drill-in) with profile + reports', async () => {
+    mockFetch((url) => {
+      expect(url).toContain('/coach/admin/coaches/jeff-ward/reports');
+      return jsonResponse({ profile: { id: 'jeff-ward', name: 'Jeff Ward' }, reports: [{ id: 'r1' }] });
+    });
+    const data = await fetchCoachReportsFor('jeff-ward');
+    expect(data.profile.id).toBe('jeff-ward');
+    expect(data.reports).toHaveLength(1);
+  });
+
+  it('maps admin 403 (non-admin coach) to a not_a_coach error', async () => {
+    mockFetch(() => jsonResponse({ error: 'not_a_coach' }, 403));
+    await expect(fetchAdminCoaches()).rejects.toBeInstanceOf(CoachAuthError);
   });
 });
