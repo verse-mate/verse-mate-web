@@ -9,6 +9,7 @@ import {
   Info,
   Heart,
   HelpCircle,
+  GraduationCap,
   LogOut,
   X,
 } from 'lucide-react';
@@ -108,6 +109,19 @@ export default function MenuScreen() {
             </p>
           </div>
         </button>
+
+        {/* Coaching portal — shown to signed-in users; non-coaches see a
+            friendly gate on the screen itself. */}
+        {state.isSignedIn && (
+          <div className="mb-2">
+            <MenuRow
+              icon={<GraduationCap size={18} style={{ color: vmTokens.gold }} strokeWidth={1.75} />}
+              label="Coaching"
+              testId="menu-item-coaching"
+              onClick={() => navigate('/coach')}
+            />
+          </div>
+        )}
 
         {/* Primary list */}
         <div className="space-y-2">
