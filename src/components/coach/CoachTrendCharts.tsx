@@ -38,18 +38,43 @@ const CLUSTER_ORDER = ['Teaching Craft', 'Building Ministry', 'Engaging People',
 const AXIS = '#9a9a9a';
 const GRID = 'rgba(150,150,150,0.2)';
 
-export function ScoreTrendCard({ trends }: { trends: CoachTrends | undefined }) {
+/** recharts click state carries the clicked row under activePayload[0].payload;
+ *  pull the ISO date so the parent can open that session's report. */
+function pickDate(state: { activePayload?: { payload?: { date?: string | number } }[] } | null): string | null {
+  const d = state?.activePayload?.[0]?.payload?.date;
+  return d != null ? String(d) : null;
+}
+
+export function ScoreTrendCard({
+  trends,
+  onSelectDate,
+}: {
+  trends: CoachTrends | undefined;
+  onSelectDate?: (isoDate: string) => void;
+}) {
   const scoreData = useMemo(
     () => (trends?.scoreSeries || []).map((p) => ({ ...p, label: shortDate(p.date) })),
     [trends],
   );
+  const clickable = !!onSelectDate;
+  const handleClick = clickable
+    ? (state: Parameters<NonNullable<React.ComponentProps<typeof LineChart>['onClick']>>[0]) => {
+        const d = pickDate(state);
+        if (d) onSelectDate?.(d);
+      }
+    : undefined;
 
   return (
     <CoachCard testId="coach-trend-score">
-      <SectionLabel>Session score over time</SectionLabel>
+      <SectionLabel>Session score over time{clickable ? ' · tap a point to open' : ''}</SectionLabel>
       {scoreData.length >= 2 ? (
         <ResponsiveContainer width="100%" height={200}>
-          <LineChart data={scoreData} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
+          <LineChart
+            data={scoreData}
+            margin={{ top: 6, right: 8, left: -18, bottom: 0 }}
+            onClick={handleClick}
+            style={clickable ? { cursor: 'pointer' } : undefined}
+          >
             <CartesianGrid stroke={GRID} vertical={false} />
             <XAxis dataKey="label" tick={{ fill: AXIS, fontSize: 11 }} tickLine={false} axisLine={{ stroke: GRID }} />
             <YAxis domain={[0, 100]} tick={{ fill: AXIS, fontSize: 11 }} tickLine={false} axisLine={false} width={40} />
@@ -60,7 +85,7 @@ export function ScoreTrendCard({ trends }: { trends: CoachTrends | undefined }) 
               stroke={vmTokens.gold}
               strokeWidth={2.5}
               dot={{ r: 3, fill: vmTokens.gold }}
-              activeDot={{ r: 5 }}
+              activeDot={{ r: 6, cursor: clickable ? 'pointer' : undefined }}
             />
           </LineChart>
         </ResponsiveContainer>
@@ -71,19 +96,37 @@ export function ScoreTrendCard({ trends }: { trends: CoachTrends | undefined }) 
   );
 }
 
-export function ClusterTrendCard({ trends }: { trends: CoachTrends | undefined }) {
+export function ClusterTrendCard({
+  trends,
+  onSelectDate,
+}: {
+  trends: CoachTrends | undefined;
+  onSelectDate?: (isoDate: string) => void;
+}) {
   const clusterData = useMemo(
     () => (trends?.clusterSeries || []).map((r) => ({ ...r, label: shortDate(String(r.date)) })),
     [trends],
   );
+  const clickable = !!onSelectDate;
+  const handleClick = clickable
+    ? (state: Parameters<NonNullable<React.ComponentProps<typeof BarChart>['onClick']>>[0]) => {
+        const d = pickDate(state);
+        if (d) onSelectDate?.(d);
+      }
+    : undefined;
 
   return (
     <CoachCard testId="coach-trend-cluster">
-      <SectionLabel>Cluster contributions per session</SectionLabel>
+      <SectionLabel>Cluster contributions per session{clickable ? ' · tap a bar to open' : ''}</SectionLabel>
       {clusterData.length >= 1 ? (
         <>
           <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={clusterData} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
+            <BarChart
+              data={clusterData}
+              margin={{ top: 6, right: 8, left: -18, bottom: 0 }}
+              onClick={handleClick}
+              style={clickable ? { cursor: 'pointer' } : undefined}
+            >
               <CartesianGrid stroke={GRID} vertical={false} />
               <XAxis dataKey="label" tick={{ fill: AXIS, fontSize: 11 }} tickLine={false} axisLine={{ stroke: GRID }} />
               <YAxis domain={[0, 100]} tick={{ fill: AXIS, fontSize: 11 }} tickLine={false} axisLine={false} width={40} />

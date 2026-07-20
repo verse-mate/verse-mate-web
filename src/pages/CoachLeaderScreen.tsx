@@ -12,6 +12,7 @@
  * mobile it stays the single-column, tap-to-expand experience.
  */
 
+import { useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { TrendingUp } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -40,14 +41,31 @@ export default function CoachLeaderScreen() {
   // and the earlier-documents list alike.
   const reports = [...(state.data?.reports || [])].sort(byDateDesc);
   const latest = reports[0] || null;
-  const prev = reports[1] || null;
-  const delta = latest && prev ? Math.round((latest.score - prev.score) * 100) / 100 : null;
+
+  // Which session the full report shows — defaults to the latest; tapping a
+  // trend point opens that session here.
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const detailRef = useRef<HTMLDivElement>(null);
+  const selected = (selectedId && reports.find((r) => r.id === selectedId)) || latest;
+  const selIdx = selected ? reports.findIndex((r) => r.id === selected.id) : -1;
+  const selPrev = selIdx >= 0 ? reports[selIdx + 1] : undefined;
+  const delta =
+    selected && selPrev ? Math.round((selected.score - selPrev.score) * 100) / 100 : null;
+
+  const openByDate = (isoDate: string) => {
+    const match = reports.find((r) => r.date === isoDate);
+    if (match) {
+      setSelectedId(match.id);
+      requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+    }
+  };
 
   const header = profile && (
     <div>
       <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>{profile.name}</h2>
       <p style={{ margin: '4px 0 0', fontSize: 13, color: vmTokens.textTertiary }}>
-        {profile.group} · Coached by {profile.coachName}
+        {profile.group}
+        {profile.coachName ? ` · Coached by ${profile.coachName}` : ''}
       </p>
     </div>
   );
@@ -73,22 +91,32 @@ export default function CoachLeaderScreen() {
               {/* No standalone hero on desktop — the latest-session detail below
                   already leads with the score, status, and delta. */}
 
-              {/* Trends over time — open by default on desktop */}
+              {/* Trends over time — open by default on desktop. Tapping a point
+                  opens that session's report below. */}
               {reports.length > 0 && (
                 <div>
                   <SectionLabel>Trends over time</SectionLabel>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-                    <ScoreTrendCard trends={trendsQuery.data} />
-                    <ClusterTrendCard trends={trendsQuery.data} />
+                    <ScoreTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
+                    <ClusterTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
                   </div>
                 </div>
               )}
 
-              {/* Most-recent session in full detail */}
-              {latest && (
-                <div>
-                  <SectionLabel>Latest session — full report</SectionLabel>
-                  <ReportDetail report={latest} leaderName={profile?.name || ''} delta={delta} />
+              {/* Selected session in full detail (defaults to the latest). */}
+              {selected && (
+                <div ref={detailRef} style={{ scrollMarginTop: 12 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                    <SectionLabel>
+                      {selected.id === latest?.id ? 'Latest session — full report' : 'Selected session — full report'}
+                    </SectionLabel>
+                    {selected.id !== latest?.id && (
+                      <button onClick={() => setSelectedId(null)} style={leaderLinkBtn} data-testid="coach-leader-view-latest">
+                        View latest
+                      </button>
+                    )}
+                  </div>
+                  <ReportDetail report={selected} leaderName={profile?.name || ''} delta={delta} />
                 </div>
               )}
 
@@ -153,3 +181,15 @@ export default function CoachLeaderScreen() {
 function byDateDesc(a: { date: string }, b: { date: string }): number {
   return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
 }
+
+const leaderLinkBtn: React.CSSProperties = {
+  background: 'none',
+  border: 'none',
+  padding: 0,
+  color: vmTokens.gold,
+  fontWeight: 600,
+  fontSize: 12.5,
+  cursor: 'pointer',
+  textDecoration: 'underline',
+  whiteSpace: 'nowrap',
+};
