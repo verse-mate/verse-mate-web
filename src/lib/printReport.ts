@@ -59,7 +59,7 @@ function dimensionRows(report: CoachReport): string {
   return report.dimensions
     .map(
       (d) =>
-        `<tr><td>${esc(d.name)}</td><td class="num">${d.score == null ? 'N/A' : `${d.score}/5`}</td></tr>`,
+        `<tr><td>${esc(d.name)}</td><td class="num">${d.score == null ? 'N/A' : `${d.score}/5`}</td><td class="note">${esc(d.note || '')}</td></tr>`,
     )
     .join('');
 }
@@ -87,8 +87,9 @@ function buildHtml(report: CoachReport, leaderName: string): string {
   h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .5px; color: #333; border-bottom: 2px solid #eee;
        padding-bottom: 4px; margin: 20px 0 8px; }
   table { width: 100%; border-collapse: collapse; margin: 4px 0; }
-  td { padding: 5px 8px; border-bottom: 1px solid #eee; vertical-align: middle; }
+  td { padding: 5px 8px; border-bottom: 1px solid #eee; vertical-align: top; }
   td.num { text-align: right; white-space: nowrap; color: #444; }
+  td.note { font-size: 10.5px; color: #666; line-height: 1.4; }
   .barcell { width: 34%; }
   .bar { display: block; height: 7px; background: ${GOLD}; border-radius: 4px; }
   ul { margin: 4px 0 4px 0; padding-left: 18px; }

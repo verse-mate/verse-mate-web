@@ -34,6 +34,8 @@ export interface CoachDimension {
   name: string;
   /** 1–5, or null for N/A (no penalty; reduces the cluster max). */
   score: number | null;
+  /** Coach's rationale for this session's score ("why this score"); may be empty. */
+  note?: string;
 }
 
 export interface CoachReport {
