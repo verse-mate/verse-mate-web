@@ -13,6 +13,7 @@
  * mobile it stays the single-column, tap-to-expand experience.
  */
 
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowUpRight, MessageSquareText, TrendingUp } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -48,9 +49,27 @@ export default function CoachDashboardScreen() {
   // detail and the earlier-documents list alike.
   const list = [...(reports.data || [])].sort(byDateDesc);
   const latest = list.length > 0 ? list[0] : null;
-  const prev = list.length > 1 ? list[1] : null;
-  const delta = latest && prev ? Math.round((latest.score - prev.score) * 100) / 100 : null;
   const leaderName = me.data?.profile?.name || '';
+
+  // Which session the full report shows. Defaults to the latest; tapping a
+  // point on a trend chart (or an earlier document) opens that session here.
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const detailRef = useRef<HTMLDivElement>(null);
+  const selected = (selectedId && list.find((r) => r.id === selectedId)) || latest;
+  const selIdx = selected ? list.findIndex((r) => r.id === selected.id) : -1;
+  const selPrev = selIdx >= 0 ? list[selIdx + 1] : undefined;
+  const delta =
+    selected && selPrev ? Math.round((selected.score - selPrev.score) * 100) / 100 : null;
+
+  const openReport = (id: string) => {
+    setSelectedId(id);
+    // Let the state commit, then bring the full report into view.
+    requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  };
+  const openByDate = (isoDate: string) => {
+    const match = list.find((r) => r.date === isoDate);
+    if (match) openReport(match.id);
+  };
 
   const greeting = me.data?.profile && (
     <div>
@@ -58,7 +77,8 @@ export default function CoachDashboardScreen() {
         {firstName(me.data.profile.name)}’s coaching
       </h2>
       <p style={{ margin: '4px 0 0', fontSize: 13, color: vmTokens.textTertiary }}>
-        {me.data.profile.group} · Coached by {me.data.profile.coachName}
+        {me.data.profile.group}
+        {me.data.profile.coachName ? ` · Coached by ${me.data.profile.coachName}` : ''}
       </p>
     </div>
   );
@@ -105,22 +125,32 @@ export default function CoachDashboardScreen() {
                   already leads with the score, status, and delta. */}
               {!latest && emptyState}
 
-              {/* Trends over time — open by default on desktop */}
+              {/* Trends over time — open by default on desktop. Tapping a point
+                  opens that session's report below. */}
               {list.length > 0 && (
                 <div>
                   <SectionLabel>Trends over time</SectionLabel>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-                    <ScoreTrendCard trends={trendsQuery.data} />
-                    <ClusterTrendCard trends={trendsQuery.data} />
+                    <ScoreTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
+                    <ClusterTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
                   </div>
                 </div>
               )}
 
-              {/* Most-recent session in full detail */}
-              {latest && (
-                <div>
-                  <SectionLabel>Latest session — full report</SectionLabel>
-                  <ReportDetail report={latest} leaderName={leaderName} delta={delta} />
+              {/* Selected session in full detail (defaults to the latest). */}
+              {selected && (
+                <div ref={detailRef} style={{ scrollMarginTop: 12 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                    <SectionLabel>
+                      {selected.id === latest?.id ? 'Latest session — full report' : 'Selected session — full report'}
+                    </SectionLabel>
+                    {selected.id !== latest?.id && (
+                      <button onClick={() => setSelectedId(null)} style={linkBtn} data-testid="coach-view-latest">
+                        View latest
+                      </button>
+                    )}
+                  </div>
+                  <ReportDetail report={selected} leaderName={leaderName} delta={delta} />
                 </div>
               )}
 
@@ -185,6 +215,18 @@ export default function CoachDashboardScreen() {
 function firstName(name: string): string {
   return (name || '').trim().split(/\s+/)[0] || name;
 }
+
+const linkBtn: React.CSSProperties = {
+  background: 'none',
+  border: 'none',
+  padding: 0,
+  color: vmTokens.gold,
+  fontWeight: 600,
+  fontSize: 12.5,
+  cursor: 'pointer',
+  textDecoration: 'underline',
+  whiteSpace: 'nowrap',
+};
 
 /** Sort reports newest-first by ISO session date (yyyy-mm-dd sorts lexically). */
 function byDateDesc(a: { date: string }, b: { date: string }): number {
