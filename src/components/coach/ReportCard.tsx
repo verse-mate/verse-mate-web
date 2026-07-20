@@ -223,6 +223,14 @@ function DimensionRow({ dim }: { dim: CoachDimension }) {
           <p style={{ margin: '8px 0 0', fontSize: 12, color: vmTokens.textTertiary }}>
             <span style={{ fontWeight: 600 }}>Target:</span> {info.target}
           </p>
+          {dim.note && (
+            <div style={{ marginTop: 10, paddingTop: 10, borderTop: `1px solid ${vmTokens.divider}` }}>
+              <p style={{ margin: '0 0 4px', fontSize: 11, fontWeight: 600, letterSpacing: 0.3, textTransform: 'uppercase', color: vmTokens.gold }}>
+                Why this score
+              </p>
+              <p style={{ margin: 0, fontSize: 12.5, color: vmTokens.textSecondary, lineHeight: 1.5 }}>{dim.note}</p>
+            </div>
+          )}
         </div>
       )}
     </div>
