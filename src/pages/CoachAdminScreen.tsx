@@ -23,7 +23,7 @@ export default function CoachAdminScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader title="All leaders" onBack={() => navigate('/menu')} backTestId="coach-admin-back-button" />
+      <ScreenHeader title="All leaders" onBack={() => navigate('/read')} backTestId="coach-admin-back-button" />
 
       <div
         data-testid="coach-admin"

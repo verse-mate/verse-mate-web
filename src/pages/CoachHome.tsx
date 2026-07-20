@@ -26,7 +26,7 @@ export default function CoachHome() {
   if (me.loading || me.authError || me.error) {
     return (
       <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-        <ScreenHeader title="Coaching" onBack={() => navigate('/menu')} backTestId="coach-back-button" />
+        <ScreenHeader title="Coaching" onBack={() => navigate('/read')} backTestId="coach-back-button" />
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', borderTop: `1px solid ${vmTokens.divider}` }}>
           <CoachStateBoundary
             loading={me.loading}
