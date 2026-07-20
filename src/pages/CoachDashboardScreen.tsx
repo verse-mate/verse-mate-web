@@ -6,21 +6,36 @@
  * (coming-soon) coach-feedback thread, and the full list of feedback
  * documents. Signed-out / not-a-coach states are handled by
  * <CoachStateBoundary>.
+ *
+ * Responsive: on desktop (≥1024px) the view expands to use the width — the two
+ * trend charts open by default and the most-recent session is rendered in full
+ * prose (<ReportDetail>), with older sessions as compact cards below. On
+ * mobile it stays the single-column, tap-to-expand experience.
  */
 
 import { useNavigate } from 'react-router-dom';
 import { ArrowUpRight, MessageSquareText, TrendingUp } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
-import { useCoachMe, useCoachReports, coachState } from '@/hooks/useCoach';
-import { CoachCard, CoachStateBoundary, ScoreRing, SectionLabel, StatusPill } from '@/components/coach/CoachUi';
+import { useCoachMe, useCoachReports, useCoachTrends, coachState } from '@/hooks/useCoach';
+import {
+  CoachCard,
+  CoachStateBoundary,
+  LatestSessionHero,
+  SectionLabel,
+} from '@/components/coach/CoachUi';
+import { ScoreTrendCard, ClusterTrendCard } from '@/components/coach/CoachTrendCharts';
 import ReportCard from '@/components/coach/ReportCard';
+import ReportDetail from '@/components/coach/ReportDetail';
 import ZoomLinkCard from '@/components/coach/ZoomLinkCard';
 
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const meQuery = useCoachMe();
   const reportsQuery = useCoachReports();
+  const trendsQuery = useCoachTrends();
 
   const me = coachState(meQuery);
   const reports = coachState(reportsQuery);
@@ -29,9 +44,39 @@ export default function CoachDashboardScreen() {
   // both (same token), so `me` is the canonical signal.
   const loading = me.loading || reports.loading;
 
-  const latest = reports.data && reports.data.length > 0 ? reports.data[0] : null;
-  const prev = reports.data && reports.data.length > 1 ? reports.data[1] : null;
+  const list = reports.data || [];
+  const latest = list.length > 0 ? list[0] : null;
+  const prev = list.length > 1 ? list[1] : null;
   const delta = latest && prev ? Math.round((latest.score - prev.score) * 100) / 100 : null;
+  const leaderName = me.data?.profile?.name || '';
+
+  const greeting = me.data?.profile && (
+    <div>
+      <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>
+        {firstName(me.data.profile.name)}’s coaching
+      </h2>
+      <p style={{ margin: '4px 0 0', fontSize: 13, color: vmTokens.textTertiary }}>
+        {me.data.profile.group} · Coached by {me.data.profile.coachName}
+      </p>
+    </div>
+  );
+
+  const emptyState = !loading && (
+    <CoachCard>
+      <p style={{ margin: 0, fontSize: 14, color: vmTokens.textSecondary }}>
+        No sessions scored yet. Once your first session is recorded, your feedback and scores appear here.
+      </p>
+    </CoachCard>
+  );
+
+  const feedbackTile = (
+    <ActionTile
+      icon={<MessageSquareText size={18} strokeWidth={1.9} />}
+      label="Coach feedback"
+      testId="coach-action-feedback"
+      onClick={() => navigate('/coach/feedback')}
+    />
+  );
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
@@ -50,85 +95,83 @@ export default function CoachDashboardScreen() {
             reportsQuery.refetch();
           }}
         >
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 16, maxWidth: 640, margin: '0 auto' }}>
-            {/* Greeting */}
-            {me.data?.profile && (
-              <div>
-                <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>
-                  {firstName(me.data.profile.name)}’s coaching
-                </h2>
-                <p style={{ margin: '4px 0 0', fontSize: 13, color: vmTokens.textTertiary }}>
-                  {me.data.profile.group} · Coached by {me.data.profile.coachName}
-                </p>
-              </div>
-            )}
+          {isDesktop ? (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 24, maxWidth: 1180, margin: '0 auto' }}>
+              {greeting}
 
-            {/* Latest session hero */}
-            {latest ? (
-              <CoachCard testId="coach-latest-card" style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
-                <ScoreRing value={latest.score} status={latest.status} />
-                <div style={{ minWidth: 0, flex: 1 }}>
-                  <SectionLabel>Latest session</SectionLabel>
-                  <p style={{ margin: 0, fontSize: 15, fontWeight: 600, color: vmTokens.textPrimary }}>{latest.session}</p>
-                  <p style={{ margin: '2px 0 8px', fontSize: 12.5, color: vmTokens.textTertiary }}>{latest.dateLabel}</p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                    <StatusPill status={latest.status} emoji={latest.statusEmoji} />
-                    {delta !== null && (
-                      <span
-                        style={{
-                          fontSize: 12,
-                          fontWeight: 600,
-                          color: delta >= 0 ? vmTokens.statusSuccess : vmTokens.statusError,
-                        }}
-                      >
-                        {delta >= 0 ? '▲' : '▼'} {Math.abs(delta).toFixed(1)} vs. prior
-                      </span>
-                    )}
+              {latest ? <LatestSessionHero latest={latest} delta={delta} /> : emptyState}
+
+              {/* Trends over time — open by default on desktop */}
+              {list.length > 0 && (
+                <div>
+                  <SectionLabel>Trends over time</SectionLabel>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                    <ScoreTrendCard trends={trendsQuery.data} />
+                    <ClusterTrendCard trends={trendsQuery.data} />
                   </div>
                 </div>
-              </CoachCard>
-            ) : (
-              !loading && (
-                <CoachCard>
-                  <p style={{ margin: 0, fontSize: 14, color: vmTokens.textSecondary }}>
-                    No sessions scored yet. Once your first session is recorded, your feedback and scores appear here.
-                  </p>
-                </CoachCard>
-              )
-            )}
+              )}
 
-            {/* Quick actions */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-              <ActionTile
-                icon={<TrendingUp size={18} strokeWidth={1.9} />}
-                label="Trends over time"
-                testId="coach-action-trends"
-                disabled={!reports.data || reports.data.length === 0}
-                onClick={() => navigate('/coach/trends')}
-              />
-              <ActionTile
-                icon={<MessageSquareText size={18} strokeWidth={1.9} />}
-                label="Coach feedback"
-                testId="coach-action-feedback"
-                onClick={() => navigate('/coach/feedback')}
-              />
-            </div>
-
-            {/* Meeting link */}
-            {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
-
-            {/* Feedback documents */}
-            {reports.data && reports.data.length > 0 && (
-              <div>
-                <SectionLabel>Feedback documents</SectionLabel>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  {reports.data.map((r) => (
-                    <ReportCard key={r.id} report={r} leaderName={me.data?.profile?.name || ''} />
-                  ))}
+              {/* Most-recent session in full detail */}
+              {latest && (
+                <div>
+                  <SectionLabel>Latest session — full report</SectionLabel>
+                  <ReportDetail report={latest} leaderName={leaderName} delta={delta} />
                 </div>
+              )}
+
+              {/* Meeting link + coach-feedback entry */}
+              <div style={{ display: 'grid', gridTemplateColumns: me.data?.isCoach ? '2fr 1fr' : '1fr', gap: 12, alignItems: 'start' }}>
+                {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
+                {feedbackTile}
               </div>
-            )}
-          </div>
+
+              {/* Earlier sessions, compact */}
+              {list.length > 1 && (
+                <div>
+                  <SectionLabel>Earlier feedback documents</SectionLabel>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, alignItems: 'start' }}>
+                    {list.slice(1).map((r) => (
+                      <ReportCard key={r.id} report={r} leaderName={leaderName} />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 16, maxWidth: 640, margin: '0 auto' }}>
+              {greeting}
+
+              {latest ? <LatestSessionHero latest={latest} delta={delta} /> : emptyState}
+
+              {/* Quick actions */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                <ActionTile
+                  icon={<TrendingUp size={18} strokeWidth={1.9} />}
+                  label="Trends over time"
+                  testId="coach-action-trends"
+                  disabled={list.length === 0}
+                  onClick={() => navigate('/coach/trends')}
+                />
+                {feedbackTile}
+              </div>
+
+              {/* Meeting link */}
+              {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
+
+              {/* Feedback documents */}
+              {list.length > 0 && (
+                <div>
+                  <SectionLabel>Feedback documents</SectionLabel>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                    {list.map((r) => (
+                      <ReportCard key={r.id} report={r} leaderName={leaderName} />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </CoachStateBoundary>
       </div>
     </div>

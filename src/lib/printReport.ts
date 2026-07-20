@@ -8,7 +8,7 @@
  * dependency — the PDF always matches what's shown on-site.
  */
 
-import type { CoachReport } from '@/services/coachService';
+import type { CoachFeedbackPoint, CoachReport } from '@/services/coachService';
 
 const GOLD = '#B09A6D';
 
@@ -38,6 +38,22 @@ function esc(s: string): string {
 function list(items: string[]): string {
   if (!items.length) return '<p class="muted">None recorded.</p>';
   return `<ul>${items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
+}
+
+/** Full prose from the pipeline when present (titled write-ups), otherwise the
+ *  terse bullet list — so the PDF mirrors the on-page desktop report. */
+function proseOrList(points: CoachFeedbackPoint[] | undefined, bullets: string[]): string {
+  if (points?.length) {
+    return points
+      .map(
+        (p) =>
+          `${p.title ? `<p class="prose-title">${esc(p.title)}</p>` : ''}${p.paragraphs
+            .map((para) => `<p>${esc(para)}</p>`)
+            .join('')}`,
+      )
+      .join('');
+  }
+  return list(bullets);
 }
 
 function clusterRows(report: CoachReport): string {
@@ -95,6 +111,8 @@ function buildHtml(report: CoachReport, leaderName: string): string {
   ul { margin: 4px 0 4px 0; padding-left: 18px; }
   li { margin-bottom: 5px; }
   .headline { font-size: 14px; font-weight: 600; margin: 6px 0 14px; }
+  .prose-title { font-size: 12.5px; font-weight: 700; margin: 10px 0 2px; color: #241d0e; }
+  p { margin: 0 0 7px; }
   .muted { color: #999; font-style: italic; }
   .foot { margin-top: 24px; font-size: 10px; color: #aaa; border-top: 1px solid #eee; padding-top: 8px; }
 </style></head><body>
@@ -117,18 +135,19 @@ function buildHtml(report: CoachReport, leaderName: string): string {
   </div>
 
   <p class="headline">${esc(report.feedback.headline)}</p>
+  ${(report.feedback.overview || []).map((p) => `<p>${esc(p)}</p>`).join('')}
 
   <h2>Cluster breakdown</h2>
   <table><tbody>${clusterRows(report)}</tbody></table>
 
   <h2>Top strengths</h2>
-  ${list(report.feedback.strengths)}
+  ${proseOrList(report.feedback.strengthsProse, report.feedback.strengths)}
 
   <h2>Growth areas</h2>
-  ${list(report.feedback.improvements)}
+  ${proseOrList(report.feedback.improvementsProse, report.feedback.improvements)}
 
   <h2>Recommendations for next session</h2>
-  ${list(report.feedback.recommendations)}
+  ${proseOrList(report.feedback.recommendationsProse, report.feedback.recommendations)}
 
   ${report.bigIdeas.length ? `<h2>Big ideas</h2>${list(report.bigIdeas)}` : ''}
 
