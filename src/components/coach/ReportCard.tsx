@@ -117,6 +117,37 @@ export default function ReportCard({
             })}
           </div>
 
+          {report.dimensions?.length > 0 && (
+            <>
+              <p style={sectionLabel}>12 dimensions</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                {report.dimensions.map((d) => {
+                  const na = d.score == null;
+                  return (
+                    <div key={d.n}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
+                        <span style={{ fontSize: 12, color: vmTokens.textSecondary }}>
+                          {d.n}. {d.name}
+                        </span>
+                        <span style={{ fontSize: 12, color: vmTokens.textTertiary }}>{na ? 'N/A' : `${d.score}/5`}</span>
+                      </div>
+                      <div style={{ height: 6, borderRadius: 3, background: vmTokens.divider, overflow: 'hidden' }}>
+                        <div
+                          style={{
+                            width: na ? '0%' : `${((d.score as number) / 5) * 100}%`,
+                            height: '100%',
+                            background: vmTokens.gold,
+                            borderRadius: 3,
+                          }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
+
           {report.bigIdeas.length > 0 && (
             <>
               <p style={sectionLabel}>Big ideas</p>
