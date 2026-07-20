@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import { GraduationCap, LogIn } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { statusColor } from '@/services/coachService';
-import type { CoachAuthReason } from '@/services/coachService';
+import type { CoachAuthReason, CoachReport } from '@/services/coachService';
 
 // ─── Card ──────────────────────────────────────────────────────────────────
 
@@ -135,6 +135,46 @@ export function ScoreRing({
         <span style={{ fontSize: 10, color: vmTokens.textTertiary, marginTop: 2 }}>/ 100</span>
       </div>
     </div>
+  );
+}
+
+// ─── Latest-session hero ─────────────────────────────────────────────────────
+
+/** The "latest session at a glance" card: score ring + session/date + status
+ *  and the delta vs. the prior session. Shared by the leader (admin drill-in)
+ *  and the coach's own dashboard so the two stay identical. */
+export function LatestSessionHero({
+  latest,
+  delta,
+  testId = 'coach-latest-card',
+}: {
+  latest: CoachReport;
+  delta: number | null;
+  testId?: string;
+}) {
+  return (
+    <CoachCard testId={testId} style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+      <ScoreRing value={latest.score} status={latest.status} />
+      <div style={{ minWidth: 0, flex: 1 }}>
+        <SectionLabel>Latest session</SectionLabel>
+        <p style={{ margin: 0, fontSize: 15, fontWeight: 600, color: vmTokens.textPrimary }}>{latest.session}</p>
+        <p style={{ margin: '2px 0 8px', fontSize: 12.5, color: vmTokens.textTertiary }}>{latest.dateLabel}</p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+          <StatusPill status={latest.status} emoji={latest.statusEmoji} />
+          {delta !== null && (
+            <span
+              style={{
+                fontSize: 12,
+                fontWeight: 600,
+                color: delta >= 0 ? vmTokens.statusSuccess : vmTokens.statusError,
+              }}
+            >
+              {delta >= 0 ? '▲' : '▼'} {Math.abs(delta).toFixed(1)} vs. prior
+            </span>
+          )}
+        </div>
+      </div>
+    </CoachCard>
   );
 }
 
