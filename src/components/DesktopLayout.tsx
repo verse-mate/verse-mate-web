@@ -18,6 +18,7 @@ import {
   Info,
   Heart,
   HelpCircle,
+  GraduationCap,
   LogOut,
   X,
   Copy,
@@ -1398,6 +1399,20 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
             </p>
           </div>
         </button>
+
+        {/* Coaching portal — shown to signed-in users; the /coach screen
+            renders its own not-a-coach gate. Full route (not a right-panel
+            view), so it always navigates rather than using onOpenPage. */}
+        {state.isSignedIn && (
+          <button
+            onClick={() => { navigate('/coach'); onClose(); }}
+            data-testid="menu-item-coaching"
+            className="menu-item"
+          >
+            <GraduationCap size={18} color={vmTokens.gold} strokeWidth={1.75} />
+            <span>Coaching</span>
+          </button>
+        )}
 
         {/* Nav items — prototype .menu-item */}
         {menuItems.map(item => (
