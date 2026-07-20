@@ -39,7 +39,7 @@ describe('ReportDetail', () => {
   it('renders the terse bullets when the pipeline has not supplied prose', () => {
     render(<ReportDetail report={makeReport()} leaderName="Bryan Bailey" />);
     expect(screen.getByText('Strong cross-referencing anchored the discussion.')).toBeInTheDocument();
-    expect(screen.getByText('Top strengths')).toBeInTheDocument();
+    expect(screen.getByText('Top Strengths')).toBeInTheDocument();
   });
 
   it('renders the full prose (title + paragraphs + overview) when present', () => {
