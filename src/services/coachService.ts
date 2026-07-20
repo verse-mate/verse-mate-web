@@ -54,8 +54,17 @@ export interface CoachReport {
   clusters: CoachCluster[];
   dimensions: CoachDimension[];
   bigIdeas: string[];
+  /** Coaching feedback rendered directly on the page (no Google Docs hop). */
+  feedback: CoachFeedback;
   docUrl: string;
   pdfUrl: string;
+}
+
+export interface CoachFeedback {
+  headline: string;
+  strengths: string[];
+  improvements: string[];
+  recommendations: string[];
 }
 
 export interface CoachProfile {

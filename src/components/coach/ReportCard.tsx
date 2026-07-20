@@ -1,16 +1,25 @@
 /**
  * One coaching "feedback document" in the reports list. Collapsed it shows
- * date / session / status / score; expanded it reveals the 4-cluster
- * breakdown, big ideas, and a link to open the full document on Drive.
+ * date / session / status / score; expanded it renders the coaching feedback
+ * directly on the page (headline, strengths, growth areas, recommendations),
+ * the 4-cluster breakdown, and big ideas — plus a per-session PDF download.
+ * No Google Docs hop.
  */
 
 import { useState } from 'react';
-import { ChevronDown, ExternalLink, FileText } from 'lucide-react';
+import { ChevronDown, Download, FileText } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { statusColor, type CoachReport } from '@/services/coachService';
+import { downloadReportPdf } from '@/lib/printReport';
 import { CoachCard, StatusPill } from './CoachUi';
 
-export default function ReportCard({ report }: { report: CoachReport }) {
+export default function ReportCard({
+  report,
+  leaderName = '',
+}: {
+  report: CoachReport;
+  leaderName?: string;
+}) {
   const [open, setOpen] = useState(false);
   const color = statusColor(report.status);
 
@@ -72,6 +81,22 @@ export default function ReportCard({ report }: { report: CoachReport }) {
             {report.newcomers === 1 ? '' : 's'}
           </p>
 
+          {report.feedback?.headline && (
+            <p style={{ fontSize: 14, fontWeight: 600, color: vmTokens.textPrimary, lineHeight: 1.45, margin: '10px 0 2px' }}>
+              {report.feedback.headline}
+            </p>
+          )}
+
+          {report.feedback?.strengths?.length > 0 && (
+            <FeedbackList label="Top strengths" items={report.feedback.strengths} accent={vmTokens.statusSuccess} />
+          )}
+          {report.feedback?.improvements?.length > 0 && (
+            <FeedbackList label="Growth areas" items={report.feedback.improvements} accent="#C2620F" />
+          )}
+          {report.feedback?.recommendations?.length > 0 && (
+            <FeedbackList label="Recommendations for next session" items={report.feedback.recommendations} accent={vmTokens.gold} />
+          )}
+
           <p style={sectionLabel}>Cluster breakdown</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {report.clusters.map((c) => {
@@ -103,28 +128,45 @@ export default function ReportCard({ report }: { report: CoachReport }) {
             </>
           )}
 
-          {report.docUrl && (
-            <a
-              href={report.docUrl}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 6,
-                marginTop: 14,
-                fontSize: 13,
-                fontWeight: 600,
-                color: vmTokens.gold,
-                textDecoration: 'none',
-              }}
-            >
-              Open full document <ExternalLink size={14} />
-            </a>
-          )}
+          <button
+            onClick={() => downloadReportPdf(report, leaderName)}
+            data-testid={`coach-report-pdf-${report.id}`}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              marginTop: 16,
+              padding: '8px 14px',
+              borderRadius: 9,
+              border: `1px solid ${vmTokens.gold}`,
+              background: 'transparent',
+              color: vmTokens.gold,
+              fontSize: 13,
+              fontWeight: 600,
+              cursor: 'pointer',
+            }}
+          >
+            <Download size={15} strokeWidth={2} /> Download PDF
+          </button>
         </div>
       )}
     </CoachCard>
+  );
+}
+
+function FeedbackList({ label, items, accent }: { label: string; items: string[]; accent: string }) {
+  return (
+    <>
+      <p style={sectionLabel}>{label}</p>
+      <ul style={{ margin: 0, paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>
+        {items.map((t, i) => (
+          <li key={i} style={{ display: 'flex', gap: 8, fontSize: 13, color: vmTokens.textSecondary, lineHeight: 1.45 }}>
+            <span aria-hidden style={{ color: accent, fontWeight: 700, flexShrink: 0 }}>•</span>
+            <span>{t}</span>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 

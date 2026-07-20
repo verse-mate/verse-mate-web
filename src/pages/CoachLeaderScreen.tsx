@@ -102,7 +102,7 @@ export default function CoachLeaderScreen() {
                 <SectionLabel>Feedback documents</SectionLabel>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {reports.map((r) => (
-                    <ReportCard key={r.id} report={r} />
+                    <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} />
                   ))}
                 </div>
               </div>
