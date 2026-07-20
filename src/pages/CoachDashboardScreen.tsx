@@ -44,7 +44,9 @@ export default function CoachDashboardScreen() {
   // both (same token), so `me` is the canonical signal.
   const loading = me.loading || reports.loading;
 
-  const list = reports.data || [];
+  // Newest first by session date — the primary sort for the latest-session
+  // detail and the earlier-documents list alike.
+  const list = [...(reports.data || [])].sort(byDateDesc);
   const latest = list.length > 0 ? list[0] : null;
   const prev = list.length > 1 ? list[1] : null;
   const delta = latest && prev ? Math.round((latest.score - prev.score) * 100) / 100 : null;
@@ -99,7 +101,9 @@ export default function CoachDashboardScreen() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 24, maxWidth: 1180, margin: '0 auto' }}>
               {greeting}
 
-              {latest ? <LatestSessionHero latest={latest} delta={delta} /> : emptyState}
+              {/* No standalone hero on desktop — the latest-session detail below
+                  already leads with the score, status, and delta. */}
+              {!latest && emptyState}
 
               {/* Trends over time — open by default on desktop */}
               {list.length > 0 && (
@@ -180,6 +184,11 @@ export default function CoachDashboardScreen() {
 
 function firstName(name: string): string {
   return (name || '').trim().split(/\s+/)[0] || name;
+}
+
+/** Sort reports newest-first by ISO session date (yyyy-mm-dd sorts lexically). */
+function byDateDesc(a: { date: string }, b: { date: string }): number {
+  return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
 }
 
 function ActionTile({

@@ -36,7 +36,9 @@ export default function CoachLeaderScreen() {
   const state = coachState(query);
 
   const profile = state.data?.profile;
-  const reports = state.data?.reports || [];
+  // Newest first by session date — primary sort for the latest-session detail
+  // and the earlier-documents list alike.
+  const reports = [...(state.data?.reports || [])].sort(byDateDesc);
   const latest = reports[0] || null;
   const prev = reports[1] || null;
   const delta = latest && prev ? Math.round((latest.score - prev.score) * 100) / 100 : null;
@@ -68,7 +70,8 @@ export default function CoachLeaderScreen() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 24, maxWidth: 1180, margin: '0 auto' }}>
               {header}
 
-              {latest && <LatestSessionHero latest={latest} delta={delta} testId="coach-leader-latest" />}
+              {/* No standalone hero on desktop — the latest-session detail below
+                  already leads with the score, status, and delta. */}
 
               {/* Trends over time — open by default on desktop */}
               {reports.length > 0 && (
@@ -144,4 +147,9 @@ export default function CoachLeaderScreen() {
       </div>
     </div>
   );
+}
+
+/** Sort reports newest-first by ISO session date (yyyy-mm-dd sorts lexically). */
+function byDateDesc(a: { date: string }, b: { date: string }): number {
+  return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
 }
