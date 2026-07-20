@@ -35,7 +35,7 @@ export default function CoachDashboardScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader title="Coaching" onBack={() => navigate('/menu')} backTestId="coach-back-button" />
+      <ScreenHeader title="Coaching" onBack={() => navigate('/read')} backTestId="coach-back-button" />
 
       <div
         data-testid="coach-dashboard"
