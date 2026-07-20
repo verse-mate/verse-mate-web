@@ -96,7 +96,7 @@ export default function CoachLeaderScreen() {
               {reports.length > 1 && (
                 <div>
                   <SectionLabel>Earlier feedback documents</SectionLabel>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, alignItems: 'start' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                     {reports.slice(1).map((r) => (
                       <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} />
                     ))}
