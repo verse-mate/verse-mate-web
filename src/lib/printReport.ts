@@ -56,6 +56,30 @@ function proseOrList(points: CoachFeedbackPoint[] | undefined, bullets: string[]
   return list(bullets);
 }
 
+/** Additional pipeline sections (key moments, timeline, …) as PDF blocks. */
+function sectionsHtml(report: CoachReport): string {
+  if (!report.sections?.length) return '';
+  return report.sections
+    .map((s) => {
+      const paras = (s.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join('');
+      const bullets = s.bullets?.length
+        ? `<ul>${s.bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>`
+        : '';
+      const moments = s.moments?.length
+        ? `<table><tbody>${s.moments
+            .map(
+              (m) =>
+                `<tr><td class="num" style="color:#8a7a4e;font-weight:600">${esc(m.timestamp || '')}</td><td>${esc(m.detail)}</td></tr>`,
+            )
+            .join('')}</tbody></table>`
+        : '';
+      const body = paras + bullets + moments;
+      if (!body) return '';
+      return `<h2>${esc(s.title)}</h2>${body}`;
+    })
+    .join('');
+}
+
 function clusterRows(report: CoachReport): string {
   return report.clusters
     .map((c) => {
@@ -148,6 +172,8 @@ function buildHtml(report: CoachReport, leaderName: string): string {
 
   <h2>Recommendations for next session</h2>
   ${proseOrList(report.feedback.recommendationsProse, report.feedback.recommendations)}
+
+  ${sectionsHtml(report)}
 
   ${report.bigIdeas.length ? `<h2>Big ideas</h2>${list(report.bigIdeas)}` : ''}
 

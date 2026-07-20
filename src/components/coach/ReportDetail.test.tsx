@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import ReportDetail from './ReportDetail';
 import type { CoachReport } from '@/services/coachService';
 
@@ -68,5 +68,38 @@ describe('ReportDetail', () => {
     expect(screen.getByText(/the group carried it/)).toBeInTheDocument();
     // The terse strengths bullet is replaced by the prose, not shown alongside.
     expect(screen.queryByText('Strong cross-referencing anchored the discussion.')).not.toBeInTheDocument();
+  });
+
+  it('keeps the 12 dimensions collapsed until tapped', () => {
+    render(<ReportDetail report={makeReport()} leaderName="Bryan Bailey" />);
+    // The dimension line is visible…
+    expect(screen.getByText(/Session Structure & Flow/)).toBeInTheDocument();
+    // …but its "why this score" detail is hidden until the row is expanded.
+    expect(screen.queryByText('Solid blueprint.')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByTestId('coach-dim-1'));
+    expect(screen.getByText('Solid blueprint.')).toBeInTheDocument();
+  });
+
+  it('renders additional pipeline sections (key moments) when present', () => {
+    render(
+      <ReportDetail
+        report={{
+          ...makeReport(),
+          sections: [
+            {
+              title: 'Key moments',
+              moments: [
+                { timestamp: '[50:03]', detail: 'The leader shared a personal coping mechanism for suffering.' },
+                { timestamp: '[63:01]', detail: 'Admitted an ongoing struggle with prayer feeling like a task.' },
+              ],
+            },
+          ],
+        }}
+        leaderName="Bryan Bailey"
+      />,
+    );
+    expect(screen.getByText('Key moments')).toBeInTheDocument();
+    expect(screen.getByText('[50:03]')).toBeInTheDocument();
+    expect(screen.getByText(/personal coping mechanism/)).toBeInTheDocument();
   });
 });

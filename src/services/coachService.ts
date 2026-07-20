@@ -58,8 +58,33 @@ export interface CoachReport {
   bigIdeas: string[];
   /** Coaching feedback rendered directly on the page (no Google Docs hop). */
   feedback: CoachFeedback;
+  /** Additional named report sections straight from the pipeline — e.g. "Key
+   *  moments", "Session flow timeline", "Vulnerability moments". Optional and
+   *  ordered; the desktop report renders each in order after the recommendations
+   *  so the portal can match the depth of the full PDF without further UI work
+   *  as the pipeline adds sections. */
+  sections?: CoachReportSection[];
   docUrl: string;
   pdfUrl: string;
+}
+
+/** One timestamped moment within a report section (e.g. a key moment or a
+ *  point on the session-flow timeline). */
+export interface CoachMoment {
+  /** Source timestamp, e.g. "[50:03]" or "55:18–58:18". Optional. */
+  timestamp?: string;
+  /** What happened. */
+  detail: string;
+}
+
+/** A free-form report section from the pipeline. Any combination of prose
+ *  paragraphs, bullet points, and timestamped moments — whatever the section
+ *  needs — so new PDF sections surface on the portal without a schema change. */
+export interface CoachReportSection {
+  title: string;
+  paragraphs?: string[];
+  bullets?: string[];
+  moments?: CoachMoment[];
 }
 
 /** One fully-written coaching point: a short title plus prose paragraphs.

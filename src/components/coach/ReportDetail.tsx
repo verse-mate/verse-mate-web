@@ -2,21 +2,24 @@
  * Full, document-style rendering of a single coaching report — the desktop
  * counterpart to the compact, tap-to-expand <ReportCard>.
  *
- * Where the mobile card hides most of the writing behind a collapsed shell and
- * per-dimension taps, this lays the whole report out as prose: the headline,
- * the full strengths / growth / recommendations, the cluster breakdown, and —
- * critically — every dimension's "what it measures", its target, AND the
- * coach's "why this score" rationale, all inline. Nothing is truncated or
- * gated. Used for the most-recent session on the desktop dashboard / leader
- * views; mobile keeps <ReportCard>.
+ * Where the mobile card hides the whole report behind a collapsed shell, this
+ * lays the writing out as prose: the headline, the full strengths / growth /
+ * recommendations, any additional pipeline sections (key moments, timeline…),
+ * the cluster breakdown, and the 12 dimensions as tappable lines that expand
+ * for detail. Used for the most-recent session on the desktop dashboard /
+ * leader views; mobile keeps <ReportCard>.
  */
 
 import { Download } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
-import { type CoachDimension, type CoachFeedbackPoint, type CoachReport } from '@/services/coachService';
+import {
+  type CoachFeedbackPoint,
+  type CoachReport,
+  type CoachReportSection,
+} from '@/services/coachService';
 import { downloadReportPdf } from '@/lib/printReport';
-import { DIMENSION_INFO, scoreBand } from './dimensionInfo';
 import { CoachCard, ScoreRing, StatusPill } from './CoachUi';
+import DimensionRow from './DimensionRow';
 
 export default function ReportDetail({
   report,
@@ -104,6 +107,11 @@ export default function ReportDetail({
         bullets={report.feedback?.recommendations}
       />
 
+      {/* Additional pipeline sections — key moments, timeline, etc. */}
+      {report.sections?.map((section, i) => (
+        <ReportSection key={i} section={section} />
+      ))}
+
       {/* Cluster breakdown + big ideas, side-by-side on wide screens. */}
       <div style={proseGrid}>
         <div>
@@ -140,13 +148,21 @@ export default function ReportDetail({
         )}
       </div>
 
-      {/* All 12 dimensions, fully expanded — measure, target, and rationale. */}
+      {/* The 12 dimensions as tappable lines — collapsed by default, expand
+          for the measure, target, and "why this score" rationale. */}
       {report.dimensions?.length > 0 && (
         <>
-          <p style={sectionLabel}>The 12 dimensions</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 12 }}>
+          <p style={sectionLabel}>The 12 dimensions · tap for detail</p>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+              gap: '10px 32px',
+              alignItems: 'start',
+            }}
+          >
             {report.dimensions.map((d) => (
-              <DimensionDetail key={d.n} dim={d} />
+              <DimensionRow key={d.n} dim={d} />
             ))}
           </div>
         </>
@@ -155,51 +171,49 @@ export default function ReportDetail({
   );
 }
 
-function DimensionDetail({ dim }: { dim: CoachDimension }) {
-  const na = dim.score == null;
-  const info = DIMENSION_INFO[dim.n];
-  const pct = na ? 0 : ((dim.score as number) / 5) * 100;
+/** A free-form pipeline section (key moments, timeline, …): title plus any of
+ *  prose paragraphs, bullets, and timestamped moments. */
+function ReportSection({ section }: { section: CoachReportSection }) {
+  const hasBody =
+    section.paragraphs?.length || section.bullets?.length || section.moments?.length;
+  if (!hasBody) return null;
   return (
-    <div
-      style={{
-        padding: '12px 14px',
-        borderRadius: 12,
-        background: vmTokens.pageBg,
-        border: `1px solid ${vmTokens.divider}`,
-      }}
-    >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 8, marginBottom: 4 }}>
-        <span style={{ fontSize: 13, fontWeight: 600, color: vmTokens.textPrimary }}>
-          {dim.n}. {dim.name}
-        </span>
-        <span style={{ fontSize: 12.5, fontWeight: 700, color: vmTokens.textPrimary, flexShrink: 0 }}>
-          {na ? 'N/A' : `${dim.score}/5`}
-          {!na && info ? ` · ${scoreBand(dim.score)}` : ''}
-        </span>
-      </div>
-      <div style={{ height: 6, borderRadius: 3, background: vmTokens.divider, overflow: 'hidden', marginBottom: 8 }}>
-        <div style={{ width: `${pct}%`, height: '100%', background: vmTokens.gold, borderRadius: 3 }} />
-      </div>
-      {info && (
-        <>
-          <p style={{ margin: 0, fontSize: 11, fontWeight: 600, color: vmTokens.gold }}>
-            {info.cluster} · weight {info.clusterWeight}
-          </p>
-          <p style={{ margin: '5px 0 0', fontSize: 12.5, color: vmTokens.textSecondary, lineHeight: 1.5 }}>{info.what}</p>
-          <p style={{ margin: '6px 0 0', fontSize: 12, color: vmTokens.textTertiary }}>
-            <span style={{ fontWeight: 600 }}>Target:</span> {info.target}
-          </p>
-        </>
-      )}
-      {dim.note && (
-        <div style={{ marginTop: 10, paddingTop: 10, borderTop: `1px solid ${vmTokens.divider}` }}>
-          <p style={{ margin: '0 0 4px', fontSize: 10.5, fontWeight: 600, letterSpacing: 0.3, textTransform: 'uppercase', color: vmTokens.gold }}>
-            Why this score
-          </p>
-          <p style={{ margin: 0, fontSize: 12.5, color: vmTokens.textSecondary, lineHeight: 1.55 }}>{dim.note}</p>
+    <>
+      <p style={sectionLabel}>{section.title}</p>
+      {section.paragraphs?.map((para, i) => (
+        <p key={`p${i}`} style={proseParagraph}>{para}</p>
+      ))}
+      {section.bullets?.length ? (
+        <ul style={{ margin: '0 0 8px', paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 6 }}>
+          {section.bullets.map((b, i) => (
+            <li key={`b${i}`} style={{ fontSize: 13.5, color: vmTokens.textSecondary, lineHeight: 1.55 }}>{b}</li>
+          ))}
+        </ul>
+      ) : null}
+      {section.moments?.length ? (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          {section.moments.map((m, i) => (
+            <div key={`m${i}`} style={{ display: 'flex', gap: 10 }}>
+              {m.timestamp && (
+                <span
+                  style={{
+                    flexShrink: 0,
+                    fontSize: 11.5,
+                    fontWeight: 600,
+                    color: vmTokens.gold,
+                    fontVariantNumeric: 'tabular-nums',
+                    paddingTop: 1,
+                  }}
+                >
+                  {m.timestamp}
+                </span>
+              )}
+              <span style={{ fontSize: 13.5, color: vmTokens.textSecondary, lineHeight: 1.55 }}>{m.detail}</span>
+            </div>
+          ))}
         </div>
-      )}
-    </div>
+      ) : null}
+    </>
   );
 }
 

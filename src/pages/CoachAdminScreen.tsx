@@ -8,6 +8,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight, Users } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
 import { useAdminCoaches, coachState } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel, StatusPill } from '@/components/coach/CoachUi';
@@ -15,6 +16,7 @@ import { statusColor, type CoachSummary } from '@/services/coachService';
 
 export default function CoachAdminScreen() {
   const navigate = useNavigate();
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const coachesQuery = useAdminCoaches();
   const coaches = coachState(coachesQuery);
 
@@ -35,7 +37,16 @@ export default function CoachAdminScreen() {
           error={coaches.error}
           onRetry={() => coachesQuery.refetch()}
         >
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 16, maxWidth: 640, margin: '0 auto' }}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 16,
+              padding: isDesktop ? 24 : 16,
+              maxWidth: isDesktop ? 1000 : 640,
+              margin: '0 auto',
+            }}
+          >
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <Users size={20} style={{ color: vmTokens.gold }} strokeWidth={1.9} />
               <div>
@@ -49,7 +60,14 @@ export default function CoachAdminScreen() {
 
             <div>
               <SectionLabel>Leaders</SectionLabel>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: isDesktop ? '1fr 1fr' : '1fr',
+                  gap: isDesktop ? 12 : 10,
+                  alignItems: 'start',
+                }}
+              >
                 {sorted.map((c) => (
                   <RosterRow key={c.id} coach={c} onOpen={() => navigate(`/coach/leader/${c.id}`)} />
                 ))}
