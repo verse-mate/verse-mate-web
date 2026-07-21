@@ -15,7 +15,7 @@
 
 import { useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { TrendingUp } from 'lucide-react';
+import { Maximize2, Minimize2, TrendingUp } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -47,6 +47,9 @@ export default function CoachLeaderScreen() {
   // Which session the full report shows — defaults to the latest; tapping a
   // trend point opens that session here.
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  // When minimized, the selected session collapses from the full prose report
+  // to a compact card — so every session on the page reads as a minimized card.
+  const [minimized, setMinimized] = useState(false);
   const detailRef = useRef<HTMLDivElement>(null);
   const selected = (selectedId && reports.find((r) => r.id === selectedId)) || latest;
   const selIdx = selected ? reports.findIndex((r) => r.id === selected.id) : -1;
@@ -65,10 +68,11 @@ export default function CoachLeaderScreen() {
   const header = profile && (
     <div>
       <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>{profile.name}</h2>
-      <p style={{ margin: '4px 0 0', fontSize: 13, color: vmTokens.textTertiary }}>
-        {profile.group}
-        {profile.coachName ? ` · Coached by ${profile.coachName}` : ''}
-      </p>
+      {profile.coachName ? (
+        <p style={{ margin: '4px 0 0', fontSize: 13, color: vmTokens.textTertiary }}>
+          Coached by {profile.coachName}
+        </p>
+      ) : null}
     </div>
   );
 
@@ -105,26 +109,42 @@ export default function CoachLeaderScreen() {
                 </div>
               )}
 
-              {/* Selected session in full detail (defaults to the latest). */}
+              {/* Selected session (defaults to the latest) — full prose report,
+                  or a compact card when minimized. */}
               {selected && (
                 <div ref={detailRef} style={{ scrollMarginTop: 12 }}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
                     <SectionLabel>
                       {selected.id === latest?.id ? 'Latest session — full report' : 'Selected session — full report'}
                     </SectionLabel>
-                    {selected.id !== latest?.id && (
-                      <button onClick={() => setSelectedId(null)} style={leaderLinkBtn} data-testid="coach-leader-view-latest">
-                        View latest
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                      {selected.id !== latest?.id && (
+                        <button onClick={() => setSelectedId(null)} style={leaderLinkBtn} data-testid="coach-leader-view-latest">
+                          View latest
+                        </button>
+                      )}
+                      <button
+                        onClick={() => setMinimized((v) => !v)}
+                        style={leaderIconBtn}
+                        aria-pressed={minimized}
+                        data-testid="coach-leader-minimize"
+                      >
+                        {minimized ? <Maximize2 size={13} strokeWidth={2} /> : <Minimize2 size={13} strokeWidth={2} />}
+                        {minimized ? 'Expand' : 'Minimize'}
                       </button>
-                    )}
+                    </div>
                   </div>
-                  <ReportDetail
-                    report={selected}
-                    leaderName={profile?.name || ''}
-                    delta={delta}
-                    admin
-                    coachId={coachId}
-                  />
+                  {minimized ? (
+                    <ReportCard report={selected} leaderName={profile?.name || ''} admin coachId={coachId} />
+                  ) : (
+                    <ReportDetail
+                      report={selected}
+                      leaderName={profile?.name || ''}
+                      delta={delta}
+                      admin
+                      coachId={coachId}
+                    />
+                  )}
                 </div>
               )}
 
@@ -199,5 +219,19 @@ const leaderLinkBtn: React.CSSProperties = {
   fontSize: 12.5,
   cursor: 'pointer',
   textDecoration: 'underline',
+  whiteSpace: 'nowrap',
+};
+
+const leaderIconBtn: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 5,
+  background: 'none',
+  border: 'none',
+  padding: 0,
+  color: vmTokens.gold,
+  fontWeight: 600,
+  fontSize: 12.5,
+  cursor: 'pointer',
   whiteSpace: 'nowrap',
 };
