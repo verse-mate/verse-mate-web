@@ -28,6 +28,7 @@ import GivingScreen from "@/pages/GivingScreen";
 import HelpScreen from "@/pages/HelpScreen";
 import SignInScreen from "@/pages/SignInScreen";
 import CoachHome from "@/pages/CoachHome";
+import CoachMonthlyScreen from "@/pages/CoachMonthlyScreen";
 import CoachTrendsScreen from "@/pages/CoachTrendsScreen";
 import CoachFeedbackScreen from "@/pages/CoachFeedbackScreen";
 import CoachLeaderScreen from "@/pages/CoachLeaderScreen";
@@ -81,6 +82,8 @@ const App = () => (
                   non-coaches see a friendly gate). /coach branches to the
                   admin roster or the coachee's own dashboard. */}
               <Route path="/coach" element={<CoachHome />} />
+              {/* Cross-leader monthly analysis (admin only; gated in-screen). */}
+              <Route path="/coach/monthly" element={<CoachMonthlyScreen />} />
               <Route path="/coach/trends" element={<CoachTrendsScreen />} />
               <Route path="/coach/feedback" element={<CoachFeedbackScreen />} />
               {/* Admin drill-in: view a specific leader's feedback + trends. */}

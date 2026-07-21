@@ -20,6 +20,7 @@ import {
 import { downloadReportPdf } from '@/lib/printReport';
 import { CoachCard, ScoreRing, StatusPill } from './CoachUi';
 import DimensionRow from './DimensionRow';
+import SessionNotes from './SessionNotes';
 
 // Accents.
 const AMBER = '#C2620F';
@@ -32,10 +33,16 @@ export default function ReportDetail({
   report,
   leaderName = '',
   delta = null,
+  admin = false,
+  coachId,
 }: {
   report: CoachReport;
   leaderName?: string;
   delta?: number | null;
+  /** When true (admin drill-in), the recording link + notes are editable. */
+  admin?: boolean;
+  /** The leader whose report this is — required for admin edits. */
+  coachId?: string;
 }) {
   const [showBreakdown, setShowBreakdown] = useState(false);
 
@@ -109,6 +116,10 @@ export default function ReportDetail({
         {report.duration} · {report.attendees} attending · {report.newcomers} newcomer
         {report.newcomers === 1 ? '' : 's'}
       </p>
+
+      {/* Recording link + coaching notes — editable for admins, read-only for
+          the leader. */}
+      <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} />
 
       {/* Summary + Big Ideas, side by side on wide screens. */}
       <div style={summaryGrid}>
