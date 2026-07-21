@@ -15,7 +15,7 @@
 
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowUpRight, MessageSquareText, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, CalendarCog, MessageSquareText, TrendingUp } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
@@ -102,13 +102,43 @@ export default function CoachDashboardScreen() {
     />
   );
 
+  // Coaches manage the classes/meeting links the notetaker bot joins here.
+  const classSetupAction = me.data?.isCoach ? (
+    <button
+      type="button"
+      onClick={() => navigate('/coach/classes')}
+      data-testid="coach-class-setup-button"
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 6,
+        padding: '6px 12px',
+        borderRadius: 999,
+        border: `1px solid ${vmTokens.headerFg}55`,
+        background: 'transparent',
+        color: vmTokens.headerFg,
+        fontSize: 13,
+        fontWeight: 600,
+        cursor: 'pointer',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      <CalendarCog size={15} strokeWidth={2} /> Class Setup
+    </button>
+  ) : undefined;
+
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader
         title="Coaching"
         onBack={() => navigate('/read')}
         backTestId="coach-back-button"
-        rightAction={<CoachProfileAvatar />}
+        rightAction={
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {classSetupAction}
+            <CoachProfileAvatar />
+          </div>
+        }
       />
 
       <div

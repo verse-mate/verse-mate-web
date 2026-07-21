@@ -7,14 +7,18 @@ import {
   addCoachLeader,
   addCoachNote,
   CoachAuthError,
+  createCoachClass,
+  deleteCoachClass,
   fetchAdminCoaches,
   fetchAdminMonthly,
+  fetchCoachClasses,
   fetchCoachReports,
   fetchCoachReportsFor,
   fetchCoachMe,
   saveCoachZoomLink,
   saveRecordingLink,
   statusColor,
+  updateCoachClass,
 } from './coachService';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -115,6 +119,67 @@ describe('coachService', () => {
   it('maps admin 403 (non-admin coach) to a not_a_coach error', async () => {
     mockFetch(() => jsonResponse({ error: 'not_a_coach' }, 403));
     await expect(fetchAdminCoaches()).rejects.toBeInstanceOf(CoachAuthError);
+  });
+
+  it('fetches the coach classes list', async () => {
+    mockFetch((url) => {
+      expect(url).toContain('/coach/classes');
+      return jsonResponse({
+        classes: [
+          { id: 'c1', name: 'Thursday — James', classDate: '2026-07-23', recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1' },
+        ],
+      });
+    });
+    const classes = await fetchCoachClasses();
+    expect(classes).toHaveLength(1);
+    expect(classes[0].id).toBe('c1');
+  });
+
+  it('POSTs a new class and returns the created record', async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/classes');
+      expect(init?.method).toBe('POST');
+      const body = JSON.parse(String(init?.body));
+      return jsonResponse({ class: { id: 'new', ...body, classDate: body.classDate || null } });
+    });
+    const created = await createCoachClass({
+      name: 'Saturday — Kings',
+      classDate: '',
+      recurrence: 'weekly',
+      zoomLink: 'https://meet.google.com/abc',
+    });
+    expect(created.id).toBe('new');
+    expect(created.classDate).toBeNull();
+    expect(created.zoomLink).toBe('https://meet.google.com/abc');
+  });
+
+  it('PUTs an updated class to its id-scoped URL', async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/classes/c1');
+      expect(init?.method).toBe('PUT');
+      const body = JSON.parse(String(init?.body));
+      return jsonResponse({ class: { id: 'c1', ...body, classDate: body.classDate || null } });
+    });
+    const updated = await updateCoachClass('c1', {
+      name: 'Renamed',
+      classDate: '2026-08-01',
+      recurrence: 'biweekly',
+      zoomLink: '',
+    });
+    expect(updated.name).toBe('Renamed');
+    expect(updated.recurrence).toBe('biweekly');
+  });
+
+  it('DELETEs a class by id', async () => {
+    let seen: { url: string; method?: string } | null = null;
+    mockFetch((url, init) => {
+      seen = { url, method: init?.method };
+      return jsonResponse({ success: true });
+    });
+    await deleteCoachClass('c1');
+    expect(seen).not.toBeNull();
+    expect(seen?.url).toContain('/coach/classes/c1');
+    expect(seen?.method).toBe('DELETE');
   });
 
   it('POSTs a new leader by email and returns the roster summary', async () => {
