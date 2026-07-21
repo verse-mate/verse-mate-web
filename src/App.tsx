@@ -29,6 +29,7 @@ import HelpScreen from "@/pages/HelpScreen";
 import SignInScreen from "@/pages/SignInScreen";
 import CoachHome from "@/pages/CoachHome";
 import CoachClassesScreen from "@/pages/CoachClassesScreen";
+import CoachSettingsScreen from "@/pages/CoachSettingsScreen";
 import CoachMonthlyScreen from "@/pages/CoachMonthlyScreen";
 import CoachTrendsScreen from "@/pages/CoachTrendsScreen";
 import CoachFeedbackScreen from "@/pages/CoachFeedbackScreen";
@@ -83,6 +84,9 @@ const App = () => (
                   non-coaches see a friendly gate). /coach branches to the
                   admin roster or the coachee's own dashboard. */}
               <Route path="/coach" element={<CoachHome />} />
+              {/* Coach Settings — coach-scoped profile, church affiliation,
+                  and Bible-coach selection (reached from the header avatar). */}
+              <Route path="/coach/settings" element={<CoachSettingsScreen />} />
               {/* Class Setup — register the classes/meeting links the coaching
                   Notetaker bot joins. */}
               <Route path="/coach/classes" element={<CoachClassesScreen />} />

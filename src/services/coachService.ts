@@ -174,6 +174,8 @@ export interface CoachMe {
   zoomLink: string;
   /** The leader's affiliated church (free-form; empty when unset). */
   affiliatedChurch: string;
+  /** The leader's selected Bible coach (empty → portal defaults to Bryan). */
+  bibleCoach: string;
   model: string;
   clusters: { name: string; weight: number }[];
   statusBands: StatusBand[];
@@ -346,6 +348,21 @@ export async function saveCoachAffiliatedChurch(affiliatedChurch: string): Promi
   });
   return data.affiliatedChurch;
 }
+
+/** PUT /api/coach/bible-coach — persist the coach's selected Bible coach. */
+export async function saveCoachBibleCoach(bibleCoach: string): Promise<string> {
+  const data = await coachRequest<{ bibleCoach: string }>('bible-coach', {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ bibleCoach }),
+  });
+  return data.bibleCoach;
+}
+
+/** Bible coaches a leader can be paired with. Bryan is the only option today;
+ *  the list grows as more coaches join, and the picker defaults to Bryan. */
+export const BIBLE_COACHES = ['Bryan Bailey'] as const;
+export const DEFAULT_BIBLE_COACH = BIBLE_COACHES[0];
 
 // ─── Admin writes: add leader · recording link · notes ─────────────────────
 
