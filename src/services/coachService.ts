@@ -442,6 +442,9 @@ export interface CoachMonthly {
     delta: number | null;
   };
   leaders: MonthlyLeader[];
+  /** Every YYYY-MM month with at least one report, newest first. Drives the
+   *  month picker so only months that were actually done are selectable. */
+  availableMonths: string[];
 }
 
 /** GET /coach/admin/monthly?month=YYYY-MM — program-wide + per-leader rollup. */
