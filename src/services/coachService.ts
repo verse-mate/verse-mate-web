@@ -126,6 +126,29 @@ export interface StatusBand {
   emoji: string;
 }
 
+/** Allowed recurrence keywords for a class (mirrors the backend DTO). */
+export type CoachClassRecurrence = 'none' | 'daily' | 'weekly' | 'biweekly' | 'monthly';
+
+/** One registered class. Its `zoomLink` is a meeting the coaching Notetaker
+ *  bot joins; a leader can register several. */
+export interface CoachClass {
+  id: string;
+  name: string;
+  /** ISO yyyy-mm-dd, or null when no date is pinned (recurrence only). */
+  classDate: string | null;
+  recurrence: CoachClassRecurrence;
+  zoomLink: string;
+}
+
+/** Fields a caller sends when creating / updating a class. `classDate` is an
+ *  ISO yyyy-mm-dd string or '' (no pinned date). */
+export interface CoachClassInput {
+  name: string;
+  classDate: string;
+  recurrence: CoachClassRecurrence;
+  zoomLink: string;
+}
+
 export interface CoachMe {
   /** True when the signed-in account maps to an evaluated leader. */
   isCoach: boolean;
@@ -259,6 +282,42 @@ export async function saveCoachZoomLink(zoomLink: string): Promise<string> {
     body: JSON.stringify({ zoomLink }),
   });
   return data.zoomLink;
+}
+
+// ─── Classes (Class Setup) ──────────────────────────────────────────────────
+
+/** GET /api/coach/classes — this coach's registered classes, newest-edited
+ *  first. */
+export async function fetchCoachClasses(): Promise<CoachClass[]> {
+  const data = await coachRequest<{ classes: CoachClass[] }>('classes');
+  return data.classes || [];
+}
+
+/** POST /api/coach/classes — register a new class. */
+export async function createCoachClass(input: CoachClassInput): Promise<CoachClass> {
+  const data = await coachRequest<{ class: CoachClass }>('classes', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(input),
+  });
+  return data.class;
+}
+
+/** PUT /api/coach/classes/:id — update an existing class. */
+export async function updateCoachClass(id: string, input: CoachClassInput): Promise<CoachClass> {
+  const data = await coachRequest<{ class: CoachClass }>(`classes/${encodeURIComponent(id)}`, {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(input),
+  });
+  return data.class;
+}
+
+/** DELETE /api/coach/classes/:id — remove a class. */
+export async function deleteCoachClass(id: string): Promise<void> {
+  await coachRequest<{ success: boolean }>(`classes/${encodeURIComponent(id)}`, {
+    method: 'DELETE',
+  });
 }
 
 // ─── Small view helpers (shared across the coach screens) ──────────────────

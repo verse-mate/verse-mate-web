@@ -9,12 +9,14 @@ import { useQuery, type UseQueryResult } from '@tanstack/react-query';
 import {
   CoachAuthError,
   type CoachAuthReason,
+  type CoachClass,
   type CoachMe,
   type CoachProfileHeader,
   type CoachReport,
   type CoachSummary,
   type CoachTrends,
   fetchAdminCoaches,
+  fetchCoachClasses,
   fetchCoachMe,
   fetchCoachReports,
   fetchCoachReportsFor,
@@ -26,6 +28,7 @@ export const coachKeys = {
   me: ['coach', 'me'] as const,
   reports: ['coach', 'reports'] as const,
   trends: ['coach', 'trends'] as const,
+  classes: ['coach', 'classes'] as const,
   adminCoaches: ['coach', 'admin', 'coaches'] as const,
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
@@ -64,6 +67,15 @@ export function useCoachTrends(opts: { enabled?: boolean } = {}): UseQueryResult
   return useQuery({
     queryKey: coachKeys.trends,
     queryFn: fetchCoachTrends,
+    retry: false,
+    enabled: opts.enabled ?? true,
+  });
+}
+
+export function useCoachClasses(opts: { enabled?: boolean } = {}): UseQueryResult<CoachClass[]> {
+  return useQuery({
+    queryKey: coachKeys.classes,
+    queryFn: fetchCoachClasses,
     retry: false,
     enabled: opts.enabled ?? true,
   });
