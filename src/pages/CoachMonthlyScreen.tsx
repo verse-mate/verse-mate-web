@@ -9,7 +9,7 @@
  * reflects the current v3 weighted model.
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BarChart3, ChevronLeft, ChevronRight } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -26,6 +26,34 @@ export default function CoachMonthlyScreen() {
   const query = useAdminMonthly(month);
   const state = coachState(query);
   const data = state.data;
+
+  // Months that actually have reports (newest first). Held in local state so
+  // the picker stays populated across month changes and transient errors —
+  // the list is program-wide and identical in every response.
+  const [knownMonths, setKnownMonths] = useState<string[]>([]);
+  const availableMonths = data?.availableMonths;
+  useEffect(() => {
+    if (availableMonths && availableMonths.length > 0) setKnownMonths(availableMonths);
+  }, [availableMonths]);
+
+  // If we land on a month with no sessions (e.g. the current month before any
+  // session is recorded) but the program has data elsewhere, snap to the most
+  // recent completed month so the page always shows the latest summary. The
+  // picker + arrows keep the user within `knownMonths`, so this only fires for
+  // the initial default month.
+  useEffect(() => {
+    if (data && data.leaders.length === 0 && knownMonths.length > 0 && !knownMonths.includes(month)) {
+      setMonth(knownMonths[0]);
+    }
+  }, [data, knownMonths, month]);
+
+  // Newest-first list → index 0 is the most recent month. "Newer" steps toward
+  // the present, "older" toward the past; both null at the ends (or when the
+  // selected month isn't yet in the list), which disables the arrow.
+  const monthIndex = knownMonths.indexOf(month);
+  const newerMonth = monthIndex > 0 ? knownMonths[monthIndex - 1] : null;
+  const olderMonth =
+    monthIndex >= 0 && monthIndex < knownMonths.length - 1 ? knownMonths[monthIndex + 1] : null;
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
@@ -45,24 +73,51 @@ export default function CoachMonthlyScreen() {
             margin: '0 auto',
           }}
         >
-          {/* Month selector */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+          {/* Month selector — a picker of completed months plus prev/next
+              arrows that step only between months that actually have data. */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <BarChart3 size={20} style={{ color: vmTokens.gold }} strokeWidth={1.9} />
               <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>
                 {data?.monthLabel ?? labelFor(month)}
               </h2>
             </div>
-            <div style={{ display: 'flex', gap: 8 }}>
-              <button onClick={() => setMonth((m) => shiftMonth(m, -1))} aria-label="Previous month" data-testid="coach-monthly-prev" style={navBtn}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              {knownMonths.length > 0 && (
+                <select
+                  value={knownMonths.includes(month) ? month : ''}
+                  onChange={(e) => setMonth(e.target.value)}
+                  aria-label="Select month"
+                  data-testid="coach-monthly-select"
+                  style={monthSelect}
+                >
+                  {!knownMonths.includes(month) && (
+                    <option value="" disabled>
+                      {labelFor(month)}
+                    </option>
+                  )}
+                  {knownMonths.map((m) => (
+                    <option key={m} value={m}>
+                      {labelFor(m)}
+                    </option>
+                  ))}
+                </select>
+              )}
+              <button
+                onClick={() => olderMonth && setMonth(olderMonth)}
+                aria-label="Previous month"
+                data-testid="coach-monthly-prev"
+                disabled={!olderMonth}
+                style={{ ...navBtn, opacity: olderMonth ? 1 : 0.4, cursor: olderMonth ? 'pointer' : 'default' }}
+              >
                 <ChevronLeft size={18} />
               </button>
               <button
-                onClick={() => setMonth((m) => shiftMonth(m, 1))}
+                onClick={() => newerMonth && setMonth(newerMonth)}
                 aria-label="Next month"
                 data-testid="coach-monthly-next"
-                disabled={month >= currentMonth()}
-                style={{ ...navBtn, opacity: month >= currentMonth() ? 0.4 : 1 }}
+                disabled={!newerMonth}
+                style={{ ...navBtn, opacity: newerMonth ? 1 : 0.4, cursor: newerMonth ? 'pointer' : 'default' }}
               >
                 <ChevronRight size={18} />
               </button>
@@ -275,12 +330,6 @@ function currentMonth(): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
 }
 
-function shiftMonth(m: string, delta: number): string {
-  const [y, mo] = m.split('-').map(Number);
-  const d = new Date(y, mo - 1 + delta, 1);
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
-}
-
 function labelFor(m: string): string {
   const [y, mo] = m.split('-').map(Number);
   const names = [
@@ -299,6 +348,18 @@ const navBtn: React.CSSProperties = {
   border: `1px solid ${vmTokens.divider}`,
   background: vmTokens.surfaceRaisedBg,
   color: vmTokens.textSecondary,
+  cursor: 'pointer',
+};
+
+const monthSelect: React.CSSProperties = {
+  height: 34,
+  borderRadius: 9,
+  border: `1px solid ${vmTokens.divider}`,
+  background: vmTokens.surfaceRaisedBg,
+  color: vmTokens.textPrimary,
+  fontSize: 13.5,
+  fontWeight: 600,
+  padding: '0 10px',
   cursor: 'pointer',
 };
 

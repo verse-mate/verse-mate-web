@@ -6,6 +6,7 @@
  */
 
 import {
+  keepPreviousData,
   useMutation,
   type UseMutationResult,
   useQuery,
@@ -133,6 +134,9 @@ export function useAdminMonthly(month: string): UseQueryResult<CoachMonthly> {
     queryFn: () => fetchAdminMonthly(month),
     retry: false,
     enabled: !!month,
+    // Keep showing the prior month's data (and the month picker) while the
+    // next month loads, so stepping between months doesn't flash a spinner.
+    placeholderData: keepPreviousData,
   });
 }
 
