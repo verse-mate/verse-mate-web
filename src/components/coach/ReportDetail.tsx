@@ -17,7 +17,6 @@ import {
   type CoachReport,
   type CoachReportSection,
 } from '@/services/coachService';
-import { downloadReportPdf } from '@/lib/printReport';
 import { CoachCard, ScoreRing, StatusPill } from './CoachUi';
 import DimensionRow from './DimensionRow';
 import SessionNotes from './SessionNotes';
@@ -98,13 +97,17 @@ export default function ReportDetail({
                 {delta >= 0 ? '▲' : '▼'} {Math.abs(delta).toFixed(1)} vs. prior
               </span>
             )}
-            <button
-              onClick={() => downloadReportPdf(report, leaderName)}
-              data-testid={`coach-report-pdf-${report.id}`}
-              style={pdfBtn}
-            >
-              <Download size={15} strokeWidth={2} /> Download PDF
-            </button>
+            {report.pdfUrl && (
+              <a
+                href={report.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid={`coach-report-pdf-${report.id}`}
+                style={pdfBtn}
+              >
+                <Download size={15} strokeWidth={2} /> Download PDF
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -757,4 +760,5 @@ const pdfBtn: React.CSSProperties = {
   fontSize: 13,
   fontWeight: 600,
   cursor: 'pointer',
+  textDecoration: 'none',
 };
