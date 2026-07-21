@@ -27,9 +27,11 @@ import {
   SectionLabel,
 } from '@/components/coach/CoachUi';
 import { ScoreTrendCard, ClusterTrendCard } from '@/components/coach/CoachTrendCharts';
+import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import ReportCard from '@/components/coach/ReportCard';
 import ReportDetail from '@/components/coach/ReportDetail';
 import ZoomLinkCard from '@/components/coach/ZoomLinkCard';
+import AffiliatedChurchCard from '@/components/coach/AffiliatedChurchCard';
 
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
@@ -131,7 +133,12 @@ export default function CoachDashboardScreen() {
         title="Coaching"
         onBack={() => navigate('/read')}
         backTestId="coach-back-button"
-        rightAction={classSetupAction}
+        rightAction={
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {classSetupAction}
+            <CoachProfileAvatar />
+          </div>
+        }
       />
 
       <div
@@ -184,11 +191,19 @@ export default function CoachDashboardScreen() {
                 </div>
               )}
 
-              {/* Meeting link + coach-feedback entry */}
-              <div style={{ display: 'grid', gridTemplateColumns: me.data?.isCoach ? '2fr 1fr' : '1fr', gap: 12, alignItems: 'start' }}>
-                {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
-                {feedbackTile}
-              </div>
+              {/* Coach setup (meeting link + affiliated church) + feedback entry */}
+              {me.data?.isCoach ? (
+                <div>
+                  <SectionLabel>Your setup</SectionLabel>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, alignItems: 'start' }}>
+                    <ZoomLinkCard initialLink={me.data.zoomLink} />
+                    <AffiliatedChurchCard initialChurch={me.data.affiliatedChurch} />
+                  </div>
+                  <div style={{ marginTop: 12 }}>{feedbackTile}</div>
+                </div>
+              ) : (
+                feedbackTile
+              )}
 
               {/* Earlier sessions, compact */}
               {list.length > 1 && (
@@ -220,8 +235,14 @@ export default function CoachDashboardScreen() {
                 {feedbackTile}
               </div>
 
-              {/* Meeting link */}
-              {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
+              {/* Coach setup (meeting link + affiliated church) */}
+              {me.data?.isCoach && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  <SectionLabel>Your setup</SectionLabel>
+                  <ZoomLinkCard initialLink={me.data.zoomLink} />
+                  <AffiliatedChurchCard initialChurch={me.data.affiliatedChurch} />
+                </div>
+              )}
 
               {/* Feedback documents */}
               {list.length > 0 && (

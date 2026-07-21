@@ -4,15 +4,19 @@
  */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
+  addCoachLeader,
+  addCoachNote,
   CoachAuthError,
   createCoachClass,
   deleteCoachClass,
   fetchAdminCoaches,
+  fetchAdminMonthly,
   fetchCoachClasses,
   fetchCoachReports,
   fetchCoachReportsFor,
   fetchCoachMe,
   saveCoachZoomLink,
+  saveRecordingLink,
   statusColor,
   updateCoachClass,
 } from './coachService';
@@ -176,5 +180,59 @@ describe('coachService', () => {
     expect(seen).not.toBeNull();
     expect(seen?.url).toContain('/coach/classes/c1');
     expect(seen?.method).toBe('DELETE');
+  });
+
+  it('POSTs a new leader by email and returns the roster summary', async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/admin/leaders');
+      expect(init?.method).toBe('POST');
+      const body = JSON.parse(String(init?.body));
+      expect(body.email).toBe('new@leader.com');
+      return jsonResponse({
+        coach: { id: 'x', name: 'New Leader', group: '', coachName: '', sessionCount: 0, latest: null },
+      });
+    });
+    const coach = await addCoachLeader({ email: 'new@leader.com' });
+    expect(coach.id).toBe('x');
+    expect(coach.sessionCount).toBe(0);
+  });
+
+  it('PUTs a session recording link', async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/admin/coaches/jeff-ward/reports/r1/recording');
+      expect(init?.method).toBe('PUT');
+      const body = JSON.parse(String(init?.body));
+      return jsonResponse({ recordingUrl: body.recordingUrl });
+    });
+    const saved = await saveRecordingLink('jeff-ward', 'r1', 'https://zoom.us/rec/abc');
+    expect(saved).toBe('https://zoom.us/rec/abc');
+  });
+
+  it('POSTs a coaching note and returns it', async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/admin/coaches/jeff-ward/reports/r1/notes');
+      expect(init?.method).toBe('POST');
+      return jsonResponse({
+        note: { id: 'n1', body: 'Great job.', createdAt: '2026-07-21T00:00:00.000Z', emailed: true },
+      });
+    });
+    const note = await addCoachNote('jeff-ward', 'r1', 'Great job.');
+    expect(note.id).toBe('n1');
+    expect(note.emailed).toBe(true);
+  });
+
+  it('fetches the monthly rollup for a given month', async () => {
+    mockFetch((url) => {
+      expect(url).toContain('/coach/admin/monthly?month=2026-07');
+      return jsonResponse({
+        month: '2026-07',
+        monthLabel: 'July 2026',
+        program: { sessions: 4, activeLeaders: 2, newcomers: 6, avgScore: 82, clusters: [], delta: 1.5 },
+        leaders: [],
+      });
+    });
+    const data = await fetchAdminMonthly('2026-07');
+    expect(data.monthLabel).toBe('July 2026');
+    expect(data.program.sessions).toBe(4);
   });
 });

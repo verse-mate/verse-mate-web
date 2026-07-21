@@ -66,6 +66,21 @@ export interface CoachReport {
   sections?: CoachReportSection[];
   docUrl: string;
   pdfUrl: string;
+  /** Admin-editable recording URL for this session (Zoom / Fireflies / Drive).
+   *  Empty string when none set. */
+  recordingUrl?: string;
+  /** Coaching notes on this session, newest first. Shown editable to admins
+   *  (composer + history) and read-only to the leader on their dashboard. */
+  notes?: CoachNote[];
+}
+
+/** A coaching note on a session — written by an admin, emailed to the leader. */
+export interface CoachNote {
+  id: string;
+  body: string;
+  createdAt: string; // ISO timestamp
+  /** True once the note was handed to the mailer. */
+  emailed: boolean;
 }
 
 /** One timestamped moment within a report section (e.g. a key moment or a
@@ -157,6 +172,8 @@ export interface CoachMe {
   /** The leader's own record; null for an admin who isn't a coachee. */
   profile: CoachProfile | null;
   zoomLink: string;
+  /** The leader's affiliated church (free-form; empty when unset). */
+  affiliatedChurch: string;
   model: string;
   clusters: { name: string; weight: number }[];
   statusBands: StatusBand[];
@@ -318,6 +335,101 @@ export async function deleteCoachClass(id: string): Promise<void> {
   await coachRequest<{ success: boolean }>(`classes/${encodeURIComponent(id)}`, {
     method: 'DELETE',
   });
+}
+
+/** PUT /api/coach/affiliated-church — persist the coach's affiliated church. */
+export async function saveCoachAffiliatedChurch(affiliatedChurch: string): Promise<string> {
+  const data = await coachRequest<{ affiliatedChurch: string }>('affiliated-church', {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ affiliatedChurch }),
+  });
+  return data.affiliatedChurch;
+}
+
+// ─── Admin writes: add leader · recording link · notes ─────────────────────
+
+/** POST /coach/admin/leaders — add a leader by email (+ optional name/group).
+ *  The backend sends them an invite email. Returns the new roster summary. */
+export async function addCoachLeader(input: {
+  email: string;
+  name?: string;
+  group?: string;
+  coachName?: string;
+}): Promise<CoachSummary> {
+  const data = await coachRequest<{ coach: CoachSummary }>('admin/leaders', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(input),
+  });
+  return data.coach;
+}
+
+/** PUT a session's recording URL. Empty string clears it. */
+export async function saveRecordingLink(
+  coachId: string,
+  reportId: string,
+  recordingUrl: string,
+): Promise<string> {
+  const data = await coachRequest<{ recordingUrl: string }>(
+    `admin/coaches/${encodeURIComponent(coachId)}/reports/${encodeURIComponent(reportId)}/recording`,
+    {
+      method: 'PUT',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ recordingUrl }),
+    },
+  );
+  return data.recordingUrl;
+}
+
+/** POST a coaching note on a session — persisted + emailed to the leader. */
+export async function addCoachNote(
+  coachId: string,
+  reportId: string,
+  body: string,
+): Promise<CoachNote> {
+  const data = await coachRequest<{ note: CoachNote }>(
+    `admin/coaches/${encodeURIComponent(coachId)}/reports/${encodeURIComponent(reportId)}/notes`,
+    {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ body }),
+    },
+  );
+  return data.note;
+}
+
+// ─── Monthly cross-leader analysis ─────────────────────────────────────────
+
+export interface MonthlyLeader {
+  id: string;
+  name: string;
+  group: string;
+  sessions: number;
+  avgScore: number | null;
+  status: string;
+  statusEmoji: string;
+  dimensions: { n: number; name: string; avg: number | null }[];
+  delta: number | null;
+}
+
+export interface CoachMonthly {
+  month: string; // "2026-07"
+  monthLabel: string; // "July 2026"
+  program: {
+    sessions: number;
+    activeLeaders: number;
+    newcomers: number;
+    avgScore: number | null;
+    clusters: { name: string; weight: number; avg: number | null }[];
+    delta: number | null;
+  };
+  leaders: MonthlyLeader[];
+}
+
+/** GET /coach/admin/monthly?month=YYYY-MM — program-wide + per-leader rollup. */
+export function fetchAdminMonthly(month: string): Promise<CoachMonthly> {
+  return coachRequest<CoachMonthly>(`admin/monthly?month=${encodeURIComponent(month)}`);
 }
 
 // ─── Small view helpers (shared across the coach screens) ──────────────────

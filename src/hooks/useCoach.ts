@@ -5,23 +5,35 @@
  * to <CoachStateBoundary>.
  */
 
-import { useQuery, type UseQueryResult } from '@tanstack/react-query';
 import {
+  useMutation,
+  type UseMutationResult,
+  useQuery,
+  useQueryClient,
+  type UseQueryResult,
+} from '@tanstack/react-query';
+import {
+  addCoachLeader,
+  addCoachNote,
   CoachAuthError,
   type CoachAuthReason,
   type CoachClass,
   type CoachMe,
+  type CoachMonthly,
+  type CoachNote,
   type CoachProfileHeader,
   type CoachReport,
   type CoachSummary,
   type CoachTrends,
   fetchAdminCoaches,
+  fetchAdminMonthly,
   fetchCoachClasses,
   fetchCoachMe,
   fetchCoachReports,
   fetchCoachReportsFor,
   fetchCoachTrends,
   fetchCoachTrendsFor,
+  saveRecordingLink,
 } from '@/services/coachService';
 
 export const coachKeys = {
@@ -32,6 +44,7 @@ export const coachKeys = {
   adminCoaches: ['coach', 'admin', 'coaches'] as const,
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
+  adminMonthly: (month: string) => ['coach', 'admin', 'monthly', month] as const,
 };
 
 /** Normalize a query's error into the shape <CoachStateBoundary> expects. */
@@ -104,5 +117,60 @@ export function useCoachTrendsFor(coachId: string): UseQueryResult<CoachTrends> 
     queryFn: () => fetchCoachTrendsFor(coachId),
     retry: false,
     enabled: !!coachId,
+  });
+}
+
+export function useAdminMonthly(month: string): UseQueryResult<CoachMonthly> {
+  return useQuery({
+    queryKey: coachKeys.adminMonthly(month),
+    queryFn: () => fetchAdminMonthly(month),
+    retry: false,
+    enabled: !!month,
+  });
+}
+
+// ─── Admin mutations ─────────────────────────────────────────────────────────
+
+/** Add a leader by email; refreshes the roster on success. */
+export function useAddLeader(): UseMutationResult<
+  CoachSummary,
+  Error,
+  { email: string; name?: string; group?: string; coachName?: string }
+> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: addCoachLeader,
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: coachKeys.adminCoaches });
+    },
+  });
+}
+
+/** Save (or clear) a session's recording URL; refreshes that leader's reports. */
+export function useSetRecordingLink(
+  coachId: string,
+): UseMutationResult<string, Error, { reportId: string; recordingUrl: string }> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ reportId, recordingUrl }) =>
+      saveRecordingLink(coachId, reportId, recordingUrl),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: coachKeys.adminReports(coachId) });
+    },
+  });
+}
+
+/** Post a coaching note on a session; refreshes that leader's reports (and the
+ *  leader's own reports view, where the note renders read-only). */
+export function useAddNote(
+  coachId: string,
+): UseMutationResult<CoachNote, Error, { reportId: string; body: string }> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ reportId, body }) => addCoachNote(coachId, reportId, body),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: coachKeys.adminReports(coachId) });
+      qc.invalidateQueries({ queryKey: coachKeys.reports });
+    },
   });
 }

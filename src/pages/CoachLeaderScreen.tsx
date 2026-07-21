@@ -1,8 +1,9 @@
 /**
  * Admin drill-in: one leader's dashboard (/coach/leader/:coachId), reached
  * from the oversight roster. Same feedback view a leader sees of themselves —
- * latest score, delta, and the full list of feedback documents — but
- * read-only (no meeting-link editor). Access is gated by the admin-only
+ * latest score, delta, and the full list of feedback documents — plus admin
+ * controls on each session: attach a recording link and write coaching notes
+ * that are emailed to the leader. Access is gated by the admin-only
  * /coach/admin/* endpoints; a non-admin hitting this route gets the
  * not-a-coach boundary.
  *
@@ -16,6 +17,7 @@ import { useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { TrendingUp } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
 import { useCoachReportsFor, useCoachTrendsFor, coachState } from '@/hooks/useCoach';
@@ -72,7 +74,7 @@ export default function CoachLeaderScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader title={profile?.name || 'Leader'} onBack={() => navigate('/coach')} backTestId="coach-leader-back-button" />
+      <ScreenHeader title={profile?.name || 'Leader'} onBack={() => navigate('/coach')} backTestId="coach-leader-back-button" rightAction={<CoachProfileAvatar />} />
 
       <div
         data-testid="coach-leader"
@@ -116,7 +118,13 @@ export default function CoachLeaderScreen() {
                       </button>
                     )}
                   </div>
-                  <ReportDetail report={selected} leaderName={profile?.name || ''} delta={delta} />
+                  <ReportDetail
+                    report={selected}
+                    leaderName={profile?.name || ''}
+                    delta={delta}
+                    admin
+                    coachId={coachId}
+                  />
                 </div>
               )}
 
@@ -126,7 +134,7 @@ export default function CoachLeaderScreen() {
                   <SectionLabel>Earlier feedback documents</SectionLabel>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                     {reports.slice(1).map((r) => (
-                      <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} />
+                      <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} admin coachId={coachId} />
                     ))}
                   </div>
                 </div>
@@ -164,7 +172,7 @@ export default function CoachLeaderScreen() {
                   <SectionLabel>Feedback documents</SectionLabel>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     {reports.map((r) => (
-                      <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} />
+                      <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} admin coachId={coachId} />
                     ))}
                   </div>
                 </div>
