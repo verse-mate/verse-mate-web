@@ -3,9 +3,10 @@
  *
  * Pulls the signed-in user's avatar (falling back to their initials) from the
  * app context — the same source the Settings screen uses — and doubles as the
- * entry point to overall VerseMate settings: tapping it navigates to
- * /menu/settings, where the leader can update their email, name, Bible
- * version, language, and theme.
+ * entry point to Coach Settings: tapping it navigates to /coach/settings,
+ * where the leader can update their name + email, church affiliation, and
+ * Bible coach. Back from there returns to the coach dashboard (not the app
+ * Menu), which is the bug this navigation target fixes.
  *
  * Rendered as the ScreenHeader `rightAction` across the coach screens. Renders
  * nothing when signed out (the coach gate handles that state separately).
@@ -34,9 +35,9 @@ export default function CoachProfileAvatar() {
   return (
     <button
       type="button"
-      onClick={() => navigate('/menu/settings')}
-      aria-label="Open settings"
-      title="Settings"
+      onClick={() => navigate('/coach/settings')}
+      aria-label="Open coach settings"
+      title="Coach settings"
       data-testid="coach-profile-avatar"
       style={{
         display: 'inline-flex',
