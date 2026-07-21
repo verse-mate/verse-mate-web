@@ -13,13 +13,20 @@ import { statusColor, type CoachReport } from '@/services/coachService';
 import { downloadReportPdf } from '@/lib/printReport';
 import { CoachCard, StatusPill } from './CoachUi';
 import DimensionRow from './DimensionRow';
+import SessionNotes from './SessionNotes';
 
 export default function ReportCard({
   report,
   leaderName = '',
+  admin = false,
+  coachId,
 }: {
   report: CoachReport;
   leaderName?: string;
+  /** When true (admin drill-in) the recording + notes are editable. */
+  admin?: boolean;
+  /** The leader whose report this is — required for admin edits. */
+  coachId?: string;
 }) {
   const [open, setOpen] = useState(false);
   const color = statusColor(report.status);
@@ -160,6 +167,8 @@ export default function ReportCard({
           >
             <Download size={15} strokeWidth={2} /> Download PDF
           </button>
+
+          <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} compact />
         </div>
       )}
     </CoachCard>
