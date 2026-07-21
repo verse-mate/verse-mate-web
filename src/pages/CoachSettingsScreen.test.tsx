@@ -92,4 +92,20 @@ describe('CoachSettingsScreen', () => {
       expect(coachService.saveCoachBibleCoach).toHaveBeenCalledWith('Bryan Bailey'),
     );
   });
+
+  it('shows church affiliation + Bible coach to an admin who is not a coachee', async () => {
+    // Regression: program admins (isAdmin, isCoach=false) were missing these
+    // sections because they were gated on isCoach.
+    vi.mocked(coachService.fetchCoachMe).mockResolvedValue({
+      ...meCoach,
+      isCoach: false,
+      isAdmin: true,
+      profile: null,
+      affiliatedChurch: '',
+    } as never);
+
+    renderScreen();
+    expect(await screen.findByTestId('coach-church-input')).toBeInTheDocument();
+    expect(screen.getByTestId('coach-bible-coach-select')).toBeInTheDocument();
+  });
 });
