@@ -17,7 +17,6 @@ import {
   type CoachReport,
   type CoachReportSection,
 } from '@/services/coachService';
-import { downloadReportPdf } from '@/lib/printReport';
 import { CoachCard, ScoreRing, StatusPill } from './CoachUi';
 import DimensionRow from './DimensionRow';
 import SessionNotes from './SessionNotes';
@@ -98,13 +97,17 @@ export default function ReportDetail({
                 {delta >= 0 ? '▲' : '▼'} {Math.abs(delta).toFixed(1)} vs. prior
               </span>
             )}
-            <button
-              onClick={() => downloadReportPdf(report, leaderName)}
-              data-testid={`coach-report-pdf-${report.id}`}
-              style={pdfBtn}
-            >
-              <Download size={15} strokeWidth={2} /> Download PDF
-            </button>
+            {report.pdfUrl && (
+              <a
+                href={report.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid={`coach-report-pdf-${report.id}`}
+                style={pdfBtn}
+              >
+                <Download size={15} strokeWidth={2} /> Download PDF
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -121,33 +124,39 @@ export default function ReportDetail({
           the leader. */}
       <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} />
 
-      {/* Summary + Big Ideas, side by side on wide screens. */}
-      <div style={summaryGrid}>
-        {(report.feedback?.headline || report.feedback?.overview?.length) && (
-          <CollapsibleSection title="Summary" accent={vmTokens.gold}>
-            {report.feedback?.headline && (
-              <p style={{ fontSize: 17, fontWeight: 600, color: vmTokens.textPrimary, lineHeight: 1.55, margin: '0 0 10px' }}>
-                {report.feedback.headline}
-              </p>
+      {/* Summary + Big Ideas — one collapse for both, side by side on wide screens. */}
+      {(report.feedback?.headline || report.feedback?.overview?.length || report.bigIdeas.length > 0) && (
+        <CollapsibleSection title="Summary & Big Ideas" accent={vmTokens.gold}>
+          <div style={summaryGrid}>
+            {(report.feedback?.headline || report.feedback?.overview?.length) && (
+              <div>
+                <p style={subHeading}>Summary</p>
+                {report.feedback?.headline && (
+                  <p style={{ fontSize: 17, fontWeight: 600, color: vmTokens.textPrimary, lineHeight: 1.55, margin: '0 0 10px' }}>
+                    {report.feedback.headline}
+                  </p>
+                )}
+                {report.feedback?.overview?.map((para, i) => (
+                  <p key={i} style={proseParagraph}>{para}</p>
+                ))}
+              </div>
             )}
-            {report.feedback?.overview?.map((para, i) => (
-              <p key={i} style={proseParagraph}>{para}</p>
-            ))}
-          </CollapsibleSection>
-        )}
-        {report.bigIdeas.length > 0 && (
-          <CollapsibleSection title="Big Ideas" accent={vmTokens.gold}>
-            <ul style={{ margin: 0, paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {report.bigIdeas.map((b, i) => (
-                <li key={i} style={{ display: 'flex', gap: 8, fontSize: 15, color: BODY, lineHeight: 1.55 }}>
-                  <span aria-hidden style={{ color: vmTokens.gold, fontWeight: 700, flexShrink: 0 }}>◆</span>
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
-          </CollapsibleSection>
-        )}
-      </div>
+            {report.bigIdeas.length > 0 && (
+              <div>
+                <p style={subHeading}>Big Ideas</p>
+                <ul style={{ margin: 0, paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {report.bigIdeas.map((b, i) => (
+                    <li key={i} style={{ display: 'flex', gap: 8, fontSize: 15, color: BODY, lineHeight: 1.55 }}>
+                      <span aria-hidden style={{ color: vmTokens.gold, fontWeight: 700, flexShrink: 0 }}>◆</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </CollapsibleSection>
+      )}
 
       {/* Full prose feedback. */}
       <ProseSection
@@ -703,7 +712,16 @@ const metaLine: React.CSSProperties = {
 const summaryGrid: React.CSSProperties = {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-  gap: '0 32px',
+  gap: '4px 32px',
+};
+
+const subHeading: React.CSSProperties = {
+  margin: '0 0 8px',
+  fontSize: 12,
+  fontWeight: 700,
+  letterSpacing: 0.5,
+  textTransform: 'uppercase',
+  color: vmTokens.textTertiary,
 };
 
 const headingText: React.CSSProperties = {
@@ -742,4 +760,5 @@ const pdfBtn: React.CSSProperties = {
   fontSize: 13,
   fontWeight: 600,
   cursor: 'pointer',
+  textDecoration: 'none',
 };
