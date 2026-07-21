@@ -5,12 +5,14 @@
  * edit a leader's meeting link.
  */
 
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ChevronRight, Users } from 'lucide-react';
+import { BarChart3, ChevronRight, Plus, Users, X } from 'lucide-react';
+import { toast } from 'sonner';
 import ScreenHeader from '@/components/ScreenHeader';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
-import { useAdminCoaches, coachState } from '@/hooks/useCoach';
+import { useAddLeader, useAdminCoaches, coachState } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel, StatusPill } from '@/components/coach/CoachUi';
 import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { statusColor, type CoachSummary } from '@/services/coachService';
@@ -20,6 +22,7 @@ export default function CoachAdminScreen() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   const coachesQuery = useAdminCoaches();
   const coaches = coachState(coachesQuery);
+  const [addOpen, setAddOpen] = useState(false);
 
   const sorted = [...(coaches.data || [])].sort(byScoreDesc);
   const scored = sorted.filter((c) => c.latest);
@@ -53,14 +56,28 @@ export default function CoachAdminScreen() {
               margin: '0 auto',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <Users size={20} style={{ color: vmTokens.gold }} strokeWidth={1.9} />
-              <div>
-                <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>Coaching oversight</h2>
-                <p style={{ margin: '2px 0 0', fontSize: 13, color: vmTokens.textTertiary }}>
-                  {sorted.length} leader{sorted.length === 1 ? '' : 's'}
-                  {scored.length ? ` · avg ${avgScore(scored)}` : ''}
-                </p>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <Users size={20} style={{ color: vmTokens.gold }} strokeWidth={1.9} />
+                <div>
+                  <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>Coaching oversight</h2>
+                  <p style={{ margin: '2px 0 0', fontSize: 13, color: vmTokens.textTertiary }}>
+                    {sorted.length} leader{sorted.length === 1 ? '' : 's'}
+                    {scored.length ? ` · avg ${avgScore(scored)}` : ''}
+                  </p>
+                </div>
+              </div>
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                <button
+                  onClick={() => navigate('/coach/monthly')}
+                  data-testid="coach-admin-monthly"
+                  style={secondaryBtn}
+                >
+                  <BarChart3 size={16} strokeWidth={2} /> Monthly summary
+                </button>
+                <button onClick={() => setAddOpen(true)} data-testid="coach-admin-add-leader" style={goldBtn}>
+                  <Plus size={16} strokeWidth={2.2} /> Add leader
+                </button>
               </div>
             </div>
 
@@ -82,9 +99,172 @@ export default function CoachAdminScreen() {
           </div>
         </CoachStateBoundary>
       </div>
+
+      {addOpen && <AddLeaderModal onClose={() => setAddOpen(false)} />}
     </div>
   );
 }
+
+/** Add a leader by email (+ optional name/group). On success the backend sends
+ *  an invite email and the roster refreshes. */
+function AddLeaderModal({ onClose }: { onClose: () => void }) {
+  const addLeader = useAddLeader();
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [group, setGroup] = useState('');
+
+  const submit = () => {
+    const trimmed = email.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(trimmed)) {
+      toast.error('Enter a valid email address');
+      return;
+    }
+    addLeader.mutate(
+      { email: trimmed, name: name.trim() || undefined, group: group.trim() || undefined },
+      {
+        onSuccess: (coach) => {
+          toast.success(`${coach.name} added — invite sent`);
+          onClose();
+        },
+        onError: (err) => {
+          const msg = /409|already/i.test(String(err?.message)) ? 'That email is already a leader' : 'Could not add the leader';
+          toast.error(msg);
+        },
+      },
+    );
+  };
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        background: 'rgba(0,0,0,0.45)',
+        display: 'grid',
+        placeItems: 'center',
+        padding: 16,
+        zIndex: 60,
+      }}
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        data-testid="coach-add-leader-modal"
+        style={{
+          width: '100%',
+          maxWidth: 440,
+          background: vmTokens.commentaryBg,
+          borderRadius: 16,
+          border: `1px solid ${vmTokens.divider}`,
+          padding: 22,
+          boxShadow: '0 20px 60px rgba(0,0,0,0.35)',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
+          <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: vmTokens.textPrimary }}>Add a leader</h3>
+          <button onClick={onClose} aria-label="Close" style={{ background: 'none', border: 'none', cursor: 'pointer', color: vmTokens.textTertiary }}>
+            <X size={20} />
+          </button>
+        </div>
+        <p style={{ margin: '0 0 16px', fontSize: 13.5, color: vmTokens.textTertiary, lineHeight: 1.5 }}>
+          Enter the leader's email. They'll get an invite to the coaching portal and appear in your roster right away.
+        </p>
+
+        <Field label="Email *">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="leader@example.com"
+            data-testid="coach-add-leader-email"
+            style={fieldInput}
+            autoFocus
+          />
+        </Field>
+        <Field label="Name (optional)">
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Derived from the email if left blank"
+            data-testid="coach-add-leader-name"
+            style={fieldInput}
+          />
+        </Field>
+        <Field label="Group (optional)">
+          <input
+            value={group}
+            onChange={(e) => setGroup(e.target.value)}
+            placeholder="e.g. Thursday Evening Study"
+            data-testid="coach-add-leader-group"
+            style={fieldInput}
+          />
+        </Field>
+
+        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10, marginTop: 20 }}>
+          <button onClick={onClose} style={secondaryBtn}>Cancel</button>
+          <button
+            onClick={submit}
+            disabled={addLeader.isPending || !email.trim()}
+            data-testid="coach-add-leader-submit"
+            style={{ ...goldBtn, opacity: addLeader.isPending || !email.trim() ? 0.6 : 1 }}
+          >
+            {addLeader.isPending ? 'Adding…' : 'Add & invite'}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <label style={{ display: 'block', marginBottom: 12 }}>
+      <span style={{ display: 'block', fontSize: 12.5, fontWeight: 600, color: vmTokens.textSecondary, marginBottom: 5 }}>
+        {label}
+      </span>
+      {children}
+    </label>
+  );
+}
+
+const fieldInput: React.CSSProperties = {
+  width: '100%',
+  padding: '10px 12px',
+  borderRadius: 9,
+  border: `1px solid ${vmTokens.divider}`,
+  background: vmTokens.surfaceRaisedBg,
+  color: vmTokens.textPrimary,
+  fontSize: 14.5,
+  boxSizing: 'border-box',
+};
+
+const goldBtn: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 6,
+  padding: '9px 16px',
+  borderRadius: 9,
+  border: 'none',
+  background: vmTokens.gold,
+  color: '#1a1206',
+  fontSize: 13.5,
+  fontWeight: 700,
+  cursor: 'pointer',
+};
+
+const secondaryBtn: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 6,
+  padding: '9px 14px',
+  borderRadius: 9,
+  border: `1px solid ${vmTokens.divider}`,
+  background: vmTokens.surfaceRaisedBg,
+  color: vmTokens.textSecondary,
+  fontSize: 13.5,
+  fontWeight: 600,
+  cursor: 'pointer',
+};
 
 function RosterRow({ coach, onOpen }: { coach: CoachSummary; onOpen: () => void }) {
   const color = coach.latest ? statusColor(coach.latest.status) : vmTokens.textTertiary;
