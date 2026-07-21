@@ -20,13 +20,14 @@ import ScreenHeader from '@/components/ScreenHeader';
 import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
-import { useCoachReportsFor, useCoachTrendsFor, coachState } from '@/hooks/useCoach';
+import { useAdminClasses, useCoachReportsFor, useCoachTrendsFor, coachState } from '@/hooks/useCoach';
 import {
   CoachStateBoundary,
   LatestSessionHero,
   SectionLabel,
 } from '@/components/coach/CoachUi';
 import { ScoreTrendCard, ClusterTrendCard } from '@/components/coach/CoachTrendCharts';
+import ClassLinkList from '@/components/coach/ClassLinkList';
 import ReportCard from '@/components/coach/ReportCard';
 import ReportDetail from '@/components/coach/ReportDetail';
 
@@ -37,6 +38,14 @@ export default function CoachLeaderScreen() {
   const query = useCoachReportsFor(coachId);
   const trendsQuery = useCoachTrendsFor(coachId);
   const state = coachState(query);
+
+  // This leader's registered classes + meeting links, filtered from the admin
+  // export (shared cache with the all-leaders Class links screen).
+  const classesQuery = useAdminClasses();
+  const leaderClasses = (classesQuery.data || []).filter((c) => c.leader.id === coachId);
+  // Show the section once the leader's reports have loaded (same admin gate);
+  // only suppress it while the classes request itself is still in flight.
+  const showClasses = !state.loading && !classesQuery.isLoading && !classesQuery.error;
 
   const profile = state.data?.profile;
   // Newest first by session date — primary sort for the latest-session detail
@@ -76,6 +85,14 @@ export default function CoachLeaderScreen() {
     </div>
   );
 
+  // The leader's class links — the meetings the Notetaker bot joins for them.
+  const classLinksSection = showClasses && (
+    <div>
+      <SectionLabel>Class links</SectionLabel>
+      <ClassLinkList classes={leaderClasses} />
+    </div>
+  );
+
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title={profile?.name || 'Leader'} onBack={() => navigate('/coach')} backTestId="coach-leader-back-button" rightAction={<CoachProfileAvatar />} />
@@ -108,6 +125,8 @@ export default function CoachLeaderScreen() {
                   </div>
                 </div>
               )}
+
+              {classLinksSection}
 
               {/* Selected session (defaults to the latest) — full prose report,
                   or a compact card when minimized. */}
@@ -186,6 +205,8 @@ export default function CoachLeaderScreen() {
                 <TrendingUp size={18} style={{ color: vmTokens.gold }} strokeWidth={1.9} />
                 <span style={{ fontSize: 13.5, fontWeight: 600 }}>Trends over time</span>
               </button>
+
+              {classLinksSection}
 
               {reports.length > 0 && (
                 <div>
