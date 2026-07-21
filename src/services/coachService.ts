@@ -164,6 +164,13 @@ export interface CoachClassInput {
   zoomLink: string;
 }
 
+/** One class in the admin all-leaders export — the class plus the leader it
+ *  belongs to. This is the single feed the Fireflies bot's auto-joins are
+ *  configured from, so admins can see every meeting link across the cohort. */
+export interface AdminCoachClass extends CoachClass {
+  leader: { id: string | null; name: string; email: string };
+}
+
 export interface CoachMe {
   /** True when the signed-in account maps to an evaluated leader. */
   isCoach: boolean;
@@ -337,6 +344,14 @@ export async function deleteCoachClass(id: string): Promise<void> {
   await coachRequest<{ success: boolean }>(`classes/${encodeURIComponent(id)}`, {
     method: 'DELETE',
   });
+}
+
+/** GET /coach/admin/classes — every leader's classes with owner identity
+ *  (admin only; 403 for non-admins). The single feed the Fireflies bot's
+ *  auto-joins are configured from. */
+export async function fetchAllCoachClasses(): Promise<AdminCoachClass[]> {
+  const data = await coachRequest<{ classes: AdminCoachClass[] }>('admin/classes');
+  return data.classes || [];
 }
 
 /** PUT /api/coach/affiliated-church — persist the coach's affiliated church. */

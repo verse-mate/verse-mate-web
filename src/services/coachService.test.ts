@@ -11,6 +11,7 @@ import {
   deleteCoachClass,
   fetchAdminCoaches,
   fetchAdminMonthly,
+  fetchAllCoachClasses,
   fetchCoachClasses,
   fetchCoachReports,
   fetchCoachReportsFor,
@@ -119,6 +120,33 @@ describe('coachService', () => {
   it('maps admin 403 (non-admin coach) to a not_a_coach error', async () => {
     mockFetch(() => jsonResponse({ error: 'not_a_coach' }, 403));
     await expect(fetchAdminCoaches()).rejects.toBeInstanceOf(CoachAuthError);
+  });
+
+  it('fetches every leader’s classes (admin export) with owner identity', async () => {
+    mockFetch((url) => {
+      expect(url).toContain('/coach/admin/classes');
+      return jsonResponse({
+        classes: [
+          {
+            id: 'c1',
+            name: 'Thursday — James',
+            classDate: '2026-07-23',
+            recurrence: 'weekly',
+            zoomLink: 'https://zoom.us/j/1',
+            leader: { id: 'jeff-ward', name: 'Jeff Ward', email: 'jeff@example.com' },
+          },
+        ],
+      });
+    });
+    const classes = await fetchAllCoachClasses();
+    expect(classes).toHaveLength(1);
+    expect(classes[0].leader.name).toBe('Jeff Ward');
+    expect(classes[0].zoomLink).toBe('https://zoom.us/j/1');
+  });
+
+  it('maps admin/classes 403 to a not_a_coach error', async () => {
+    mockFetch(() => jsonResponse({ error: 'not_a_coach' }, 403));
+    await expect(fetchAllCoachClasses()).rejects.toBeInstanceOf(CoachAuthError);
   });
 
   it('fetches the coach classes list', async () => {
