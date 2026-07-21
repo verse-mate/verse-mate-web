@@ -8,6 +8,7 @@
 import { useNavigate } from 'react-router-dom';
 import { MessageSquareText } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { vmTokens } from '@/styles/themeStyles';
 import { useCoachMe, coachState } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary } from '@/components/coach/CoachUi';
@@ -19,7 +20,7 @@ export default function CoachFeedbackScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader title="Coach feedback" onBack={() => navigate('/coach')} backTestId="coach-feedback-back-button" />
+      <ScreenHeader title="Coach feedback" onBack={() => navigate('/coach')} backTestId="coach-feedback-back-button" rightAction={<CoachProfileAvatar />} />
 
       <div
         data-testid="coach-feedback"

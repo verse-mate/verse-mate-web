@@ -134,6 +134,8 @@ export interface CoachMe {
   /** The leader's own record; null for an admin who isn't a coachee. */
   profile: CoachProfile | null;
   zoomLink: string;
+  /** The leader's affiliated church (free-form; empty when unset). */
+  affiliatedChurch: string;
   model: string;
   clusters: { name: string; weight: number }[];
   statusBands: StatusBand[];
@@ -259,6 +261,16 @@ export async function saveCoachZoomLink(zoomLink: string): Promise<string> {
     body: JSON.stringify({ zoomLink }),
   });
   return data.zoomLink;
+}
+
+/** PUT /api/coach/affiliated-church — persist the coach's affiliated church. */
+export async function saveCoachAffiliatedChurch(affiliatedChurch: string): Promise<string> {
+  const data = await coachRequest<{ affiliatedChurch: string }>('affiliated-church', {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ affiliatedChurch }),
+  });
+  return data.affiliatedChurch;
 }
 
 // ─── Small view helpers (shared across the coach screens) ──────────────────
