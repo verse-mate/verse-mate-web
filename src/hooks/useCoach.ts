@@ -17,6 +17,7 @@ import {
   addCoachNote,
   CoachAuthError,
   type CoachAuthReason,
+  type AdminCoachClass,
   type CoachClass,
   type CoachMe,
   type CoachMonthly,
@@ -27,6 +28,7 @@ import {
   type CoachTrends,
   fetchAdminCoaches,
   fetchAdminMonthly,
+  fetchAllCoachClasses,
   fetchCoachClasses,
   fetchCoachMe,
   fetchCoachReports,
@@ -42,6 +44,7 @@ export const coachKeys = {
   trends: ['coach', 'trends'] as const,
   classes: ['coach', 'classes'] as const,
   adminCoaches: ['coach', 'admin', 'coaches'] as const,
+  adminClasses: ['coach', 'admin', 'classes'] as const,
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
   adminMonthly: (month: string) => ['coach', 'admin', 'monthly', month] as const,
@@ -95,6 +98,10 @@ export function useCoachClasses(opts: { enabled?: boolean } = {}): UseQueryResul
 }
 
 // ─── Admin oversight ────────────────────────────────────────────────────────
+
+export function useAdminClasses(): UseQueryResult<AdminCoachClass[]> {
+  return useQuery({ queryKey: coachKeys.adminClasses, queryFn: fetchAllCoachClasses, retry: false });
+}
 
 export function useAdminCoaches(): UseQueryResult<CoachSummary[]> {
   return useQuery({ queryKey: coachKeys.adminCoaches, queryFn: fetchAdminCoaches, retry: false });
