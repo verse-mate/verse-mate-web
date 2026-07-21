@@ -10,7 +10,6 @@ import { useState } from 'react';
 import { ChevronDown, Download, FileText } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { statusColor, type CoachReport } from '@/services/coachService';
-import { downloadReportPdf } from '@/lib/printReport';
 import { CoachCard, StatusPill } from './CoachUi';
 import DimensionRow from './DimensionRow';
 import SessionNotes from './SessionNotes';
@@ -147,26 +146,31 @@ export default function ReportCard({
             </>
           )}
 
-          <button
-            onClick={() => downloadReportPdf(report, leaderName)}
-            data-testid={`coach-report-pdf-${report.id}`}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 6,
-              marginTop: 16,
-              padding: '8px 14px',
-              borderRadius: 9,
-              border: `1px solid ${vmTokens.gold}`,
-              background: 'transparent',
-              color: vmTokens.gold,
-              fontSize: 13,
-              fontWeight: 600,
-              cursor: 'pointer',
-            }}
-          >
-            <Download size={15} strokeWidth={2} /> Download PDF
-          </button>
+          {report.pdfUrl && (
+            <a
+              href={report.pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid={`coach-report-pdf-${report.id}`}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                marginTop: 16,
+                padding: '8px 14px',
+                borderRadius: 9,
+                border: `1px solid ${vmTokens.gold}`,
+                background: 'transparent',
+                color: vmTokens.gold,
+                fontSize: 13,
+                fontWeight: 600,
+                cursor: 'pointer',
+                textDecoration: 'none',
+              }}
+            >
+              <Download size={15} strokeWidth={2} /> Download PDF
+            </a>
+          )}
 
           <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} compact />
         </div>
