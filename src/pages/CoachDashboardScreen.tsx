@@ -31,7 +31,6 @@ import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import ReportCard from '@/components/coach/ReportCard';
 import ReportDetail from '@/components/coach/ReportDetail';
 import ZoomLinkCard from '@/components/coach/ZoomLinkCard';
-import AffiliatedChurchCard from '@/components/coach/AffiliatedChurchCard';
 
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
@@ -191,19 +190,12 @@ export default function CoachDashboardScreen() {
                 </div>
               )}
 
-              {/* Coach setup (meeting link + affiliated church) + feedback entry */}
-              {me.data?.isCoach ? (
-                <div>
-                  <SectionLabel>Your setup</SectionLabel>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, alignItems: 'start' }}>
-                    <ZoomLinkCard initialLink={me.data.zoomLink} />
-                    <AffiliatedChurchCard initialChurch={me.data.affiliatedChurch} />
-                  </div>
-                  <div style={{ marginTop: 12 }}>{feedbackTile}</div>
-                </div>
-              ) : (
-                feedbackTile
-              )}
+              {/* Meeting link + coach-feedback entry (church + Bible coach now
+                  live in Coach Settings, reached via the header avatar). */}
+              <div style={{ display: 'grid', gridTemplateColumns: me.data?.isCoach ? '2fr 1fr' : '1fr', gap: 12, alignItems: 'start' }}>
+                {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
+                {feedbackTile}
+              </div>
 
               {/* Earlier sessions, compact */}
               {list.length > 1 && (
@@ -235,14 +227,8 @@ export default function CoachDashboardScreen() {
                 {feedbackTile}
               </div>
 
-              {/* Coach setup (meeting link + affiliated church) */}
-              {me.data?.isCoach && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  <SectionLabel>Your setup</SectionLabel>
-                  <ZoomLinkCard initialLink={me.data.zoomLink} />
-                  <AffiliatedChurchCard initialChurch={me.data.affiliatedChurch} />
-                </div>
-              )}
+              {/* Meeting link (church + Bible coach live in Coach Settings) */}
+              {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
 
               {/* Feedback documents */}
               {list.length > 0 && (
