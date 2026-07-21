@@ -92,9 +92,21 @@ function checkLegacyRedirects(url) {
   return null;
 }
 
+// Bible-study visuals are hosted on DigitalOcean Spaces + CDN, not bundled
+// into the app. registry.ts still uses root-relative `/visuals/...` paths, and
+// older mobile builds fetch them from app.versemate.org, so every `/visuals/*`
+// request is redirected to the Spaces CDN. 302 (not 301) so the origin can be
+// changed later without poisoning browser caches.
+const VISUALS_CDN_ORIGIN = "https://versemate.nyc3.cdn.digitaloceanspaces.com";
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    // 0. Visuals are served from the Spaces CDN, not this app's bundle.
+    if (url.pathname.startsWith("/visuals/")) {
+      return Response.redirect(VISUALS_CDN_ORIGIN + url.pathname, 302);
+    }
 
     // 1. Legacy URL → canonical slug URL (301)
     const redirect = checkLegacyRedirects(url);
