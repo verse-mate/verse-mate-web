@@ -72,8 +72,11 @@ export default function CoachSettingsScreen() {
           >
             <ProfileSection />
 
-            {/* Church affiliation + Bible coach — coachees only. */}
-            {me.data?.isCoach && (
+            {/* Church affiliation + Bible coach — available to any portal
+                member (coachee or admin), so program admins can set their own
+                church + coach too. Past the boundary, me.data is always a
+                portal member. */}
+            {me.data && (
               <>
                 <div>
                   <SectionLabel>Church affiliation</SectionLabel>
