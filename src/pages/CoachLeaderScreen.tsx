@@ -16,6 +16,7 @@ import { useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { TrendingUp } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
 import { useCoachReportsFor, useCoachTrendsFor, coachState } from '@/hooks/useCoach';
@@ -72,7 +73,7 @@ export default function CoachLeaderScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader title={profile?.name || 'Leader'} onBack={() => navigate('/coach')} backTestId="coach-leader-back-button" />
+      <ScreenHeader title={profile?.name || 'Leader'} onBack={() => navigate('/coach')} backTestId="coach-leader-back-button" rightAction={<CoachProfileAvatar />} />
 
       <div
         data-testid="coach-leader"

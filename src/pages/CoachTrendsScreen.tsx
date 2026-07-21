@@ -12,6 +12,7 @@
 
 import { useNavigate, useParams } from 'react-router-dom';
 import ScreenHeader from '@/components/ScreenHeader';
+import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
 import {
@@ -54,7 +55,7 @@ export default function CoachTrendsScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader title="Trends" onBack={() => navigate(backTo)} backTestId="coach-trends-back-button" />
+      <ScreenHeader title="Trends" onBack={() => navigate(backTo)} backTestId="coach-trends-back-button" rightAction={<CoachProfileAvatar />} />
 
       <div
         data-testid="coach-trends"
