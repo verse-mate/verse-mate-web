@@ -7,7 +7,7 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BarChart3, ChevronRight, Plus, Users, X } from 'lucide-react';
+import { BarChart3, CalendarCog, ChevronRight, Plus, Users, X } from 'lucide-react';
 import { toast } from 'sonner';
 import ScreenHeader from '@/components/ScreenHeader';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -74,6 +74,13 @@ export default function CoachAdminScreen() {
                   style={secondaryBtn}
                 >
                   <BarChart3 size={16} strokeWidth={2} /> Monthly summary
+                </button>
+                <button
+                  onClick={() => navigate('/coach/admin/classes')}
+                  data-testid="coach-admin-classes-link"
+                  style={secondaryBtn}
+                >
+                  <CalendarCog size={16} strokeWidth={2} /> Class links
                 </button>
                 <button onClick={() => setAddOpen(true)} data-testid="coach-admin-add-leader" style={goldBtn}>
                   <Plus size={16} strokeWidth={2.2} /> Add leader
