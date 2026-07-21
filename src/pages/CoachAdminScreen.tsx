@@ -12,6 +12,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
 import { useAdminCoaches, coachState } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel, StatusPill } from '@/components/coach/CoachUi';
+import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { statusColor, type CoachSummary } from '@/services/coachService';
 
 export default function CoachAdminScreen() {
@@ -25,7 +26,12 @@ export default function CoachAdminScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader title="All leaders" onBack={() => navigate('/read')} backTestId="coach-admin-back-button" />
+      <ScreenHeader
+        title="All leaders"
+        onBack={() => navigate('/read')}
+        backTestId="coach-admin-back-button"
+        rightAction={<CoachProfileAvatar />}
+      />
 
       <div
         data-testid="coach-admin"
