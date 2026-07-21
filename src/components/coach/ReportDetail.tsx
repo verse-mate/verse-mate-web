@@ -167,9 +167,9 @@ export default function ReportDetail({
       {/* The 12 dimensions as a single tappable list. */}
       {report.dimensions?.length > 0 && (
         <CollapsibleSection title="The 12 Dimensions · tap a row for detail" accent={BLUE}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {report.dimensions.map((d) => (
-              <DimensionRow key={d.n} dim={d} />
+              <DimensionRow key={d.n} dim={d} size="comfortable" />
             ))}
           </div>
         </CollapsibleSection>
