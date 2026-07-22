@@ -12,13 +12,19 @@
  */
 
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
-import { useCoachReports, useCoachClasses, coachKeys, coachState } from '@/hooks/useCoach';
+import {
+  useCoachReports,
+  useCoachReportsFor,
+  useCoachClasses,
+  useAdminClasses,
+  coachKeys,
+  coachState,
+} from '@/hooks/useCoach';
 import {
   createCoachClass,
-  updateCoachClass,
   deleteCoachClass,
   type CoachClass,
   type CoachClassInput,
@@ -39,10 +45,24 @@ const RECURRENCE_OPTIONS: { value: CoachClassRecurrence; label: string }[] = [
 export default function CoachSessionsScreen() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
-  const reportsQuery = useCoachReports();
-  const classesQuery = useCoachClasses();
-  const reports = coachState(reportsQuery);
-  const classes = coachState(classesQuery);
+  // Admin drill-in when a :coachId is present — classes are read-only (an admin
+  // views a leader's registered classes; only the leader manages their own).
+  const { coachId } = useParams();
+  const admin = !!coachId;
+  const base = admin ? `/coach/leader/${coachId}` : '/coach';
+
+  const selfReports = useCoachReports({ enabled: !admin });
+  const forReports = useCoachReportsFor(coachId ?? '');
+  const selfClasses = useCoachClasses({ enabled: !admin });
+  const adminClasses = useAdminClasses({ enabled: admin });
+
+  const reports = admin ? coachState(forReports) : coachState(selfReports);
+  const reportList = admin ? forReports.data?.reports : selfReports.data;
+  const classesState = admin ? coachState(adminClasses) : coachState(selfClasses);
+  const classList: CoachClass[] = admin
+    ? (adminClasses.data || []).filter((c) => c.leader.id === coachId)
+    : selfClasses.data || [];
+  const leaderName = admin ? forReports.data?.profile?.name || '' : '';
 
   const [showAdd, setShowAdd] = useState(false);
 
@@ -65,18 +85,17 @@ export default function CoachSessionsScreen() {
     onError: () => toast.error('Could not remove the class'),
   });
 
-  const classList = classes.data || [];
-  const sessionList = [...(reports.data || [])].sort(byDateDesc);
+  const sessionList = [...(reportList || [])].sort(byDateDesc);
 
   return (
-    <CoachDashboardShell active="sessions">
+    <CoachDashboardShell active="sessions" coachId={coachId} leaderName={leaderName}>
       <CoachGate
-        loading={reports.loading || classes.loading}
-        authError={reports.authError || classes.authError}
-        error={reports.error || classes.error}
+        loading={reports.loading || classesState.loading}
+        authError={reports.authError || classesState.authError}
+        error={reports.error || classesState.error}
         onRetry={() => {
-          reportsQuery.refetch();
-          classesQuery.refetch();
+          (admin ? forReports : selfReports).refetch();
+          (admin ? adminClasses : selfClasses).refetch();
         }}
       >
         <div style={{ padding: '36px 0 6px' }}>
@@ -85,24 +104,28 @@ export default function CoachSessionsScreen() {
               Sessions
             </h1>
             <p style={{ fontSize: 16, color: dt.textMuted, margin: 0 }}>
-              Manage your recurring classes and revisit past coaching reports.
+              {admin
+                ? 'This leader’s registered classes and past coaching reports.'
+                : 'Manage your recurring classes and revisit past coaching reports.'}
             </p>
           </div>
 
           {/* Recurring classes */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 16 }}>
             <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 23, margin: 0 }}>Recurring classes</h2>
-            <button
-              type="button"
-              onClick={() => setShowAdd((v) => !v)}
-              data-testid="coach-sessions-add"
-              style={{ background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13.5, padding: '10px 16px', borderRadius: 9, border: 'none', cursor: 'pointer' }}
-            >
-              + Add a class
-            </button>
+            {!admin && (
+              <button
+                type="button"
+                onClick={() => setShowAdd((v) => !v)}
+                data-testid="coach-sessions-add"
+                style={{ background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13.5, padding: '10px 16px', borderRadius: 9, border: 'none', cursor: 'pointer' }}
+              >
+                + Add a class
+              </button>
+            )}
           </div>
 
-          {showAdd && (
+          {!admin && showAdd && (
             <AddClassForm
               busy={createMutation.isPending}
               onCancel={() => setShowAdd(false)}
@@ -116,16 +139,20 @@ export default function CoachSessionsScreen() {
                 <ClassCard
                   key={c.id}
                   cls={c}
-                  onRemove={() => {
-                    if (window.confirm(`Remove “${c.name}”? This can’t be undone.`)) deleteMutation.mutate(c.id);
-                  }}
+                  onRemove={
+                    admin
+                      ? undefined
+                      : () => {
+                          if (window.confirm(`Remove “${c.name}”? This can’t be undone.`)) deleteMutation.mutate(c.id);
+                        }
+                  }
                 />
               ))}
             </div>
           ) : (
             !showAdd && (
               <div style={{ background: dt.innerBg, border: `1px dashed ${dt.dashed}`, borderRadius: 13, padding: '20px 22px', marginBottom: 44, fontSize: 14, color: dt.textMuted }}>
-                No classes yet. Add your first class so your sessions get recorded and coached.
+                {admin ? 'This leader hasn’t registered any classes yet.' : 'No classes yet. Add your first class so your sessions get recorded and coached.'}
               </div>
             )
           )}
@@ -135,7 +162,7 @@ export default function CoachSessionsScreen() {
           {sessionList.length > 0 ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {sessionList.map((s) => (
-                <PastSessionRow key={s.id} report={s} onView={() => navigate(`/coach?s=${encodeURIComponent(s.id)}`)} />
+                <PastSessionRow key={s.id} report={s} onView={() => navigate(`${base}?s=${encodeURIComponent(s.id)}`)} />
               ))}
             </div>
           ) : (
@@ -151,16 +178,18 @@ export default function CoachSessionsScreen() {
 
 // ─── Class card ──────────────────────────────────────────────────────────────
 
-function ClassCard({ cls, onRemove }: { cls: CoachClass; onRemove: () => void }) {
+function ClassCard({ cls, onRemove }: { cls: CoachClass; onRemove?: () => void }) {
   return (
     <div style={{ background: dt.innerBg, border: `1px solid ${dt.border2}`, borderRadius: 13, padding: '20px 22px' }} data-testid="coach-class-card">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 11.5, fontWeight: 700, letterSpacing: '.03em', color: dt.gold2, background: dt.goldChip, padding: '5px 11px', borderRadius: 99 }}>
           ● {classPill(cls)}
         </div>
-        <button type="button" onClick={onRemove} data-testid="coach-class-remove" style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12.5, fontWeight: 600, color: dt.rust }}>
-          Remove
-        </button>
+        {onRemove && (
+          <button type="button" onClick={onRemove} data-testid="coach-class-remove" style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12.5, fontWeight: 600, color: dt.rust }}>
+            Remove
+          </button>
+        )}
       </div>
       <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 20, margin: '14px 0 10px', lineHeight: 1.2 }}>{cls.name}</h3>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, fontSize: 13 }}>
