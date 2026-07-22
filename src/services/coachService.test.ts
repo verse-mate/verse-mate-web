@@ -268,6 +268,36 @@ describe('coachService', () => {
     expect(data.availableMonths).toEqual(['2026-07', '2026-06', '2026-05']);
     expect(data.narrative?.executiveSummary[0]).toContain('July 2026');
   });
+
+  it("fetches a leader's own monthly summary", async () => {
+    mockFetch((url) => {
+      expect(url).toContain('/coach/monthly-summary?month=2026-06');
+      return jsonResponse({
+        profile: { id: 'bryan-bailey', name: 'Bryan Bailey', group: 'James' },
+        summary: { month: '2026-06', monthLabel: 'June 2026', composite: 79, clusters: [], sessions: [] },
+        availableMonths: ['2026-06', '2026-05'],
+      });
+    });
+    const { fetchMyMonthlySummary } = await import('./coachService');
+    const data = await fetchMyMonthlySummary('2026-06');
+    expect(data.summary?.monthLabel).toBe('June 2026');
+    expect(data.availableMonths).toEqual(['2026-06', '2026-05']);
+  });
+
+  it("fetches a leader's monthly summary for admin drill-in", async () => {
+    mockFetch((url) => {
+      expect(url).toContain('/coach/admin/coaches/jeff-ward/monthly-summary?month=2026-05');
+      return jsonResponse({
+        profile: { id: 'jeff-ward', name: 'Jeff Ward', group: 'Colossians' },
+        summary: null,
+        availableMonths: ['2026-05'],
+      });
+    });
+    const { fetchLeaderMonthlySummary } = await import('./coachService');
+    const data = await fetchLeaderMonthlySummary('jeff-ward', '2026-05');
+    expect(data.profile.id).toBe('jeff-ward');
+    expect(data.summary).toBeNull();
+  });
 });
 
 describe('pdfDownloadUrl', () => {

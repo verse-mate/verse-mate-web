@@ -15,7 +15,7 @@
 
 import { useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Maximize2, Minimize2, TrendingUp } from 'lucide-react';
+import { BarChart3, Maximize2, Minimize2, TrendingUp } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -83,6 +83,29 @@ export default function CoachLeaderScreen() {
     </div>
   );
 
+  // Admin entry into this leader's rich monthly summary (PDF parity).
+  const monthlyButton = (
+    <button
+      onClick={() => navigate(`/coach/leader/${coachId}/monthly`)}
+      data-testid="coach-leader-monthly-link"
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 10,
+        padding: '14px',
+        borderRadius: 12,
+        border: `1px solid ${vmTokens.divider}`,
+        background: vmTokens.surfaceRaisedBg,
+        color: vmTokens.textPrimary,
+        cursor: 'pointer',
+        width: '100%',
+      }}
+    >
+      <BarChart3 size={18} style={{ color: vmTokens.gold }} strokeWidth={1.9} />
+      <span style={{ fontSize: 13.5, fontWeight: 600 }}>Monthly summaries</span>
+    </button>
+  );
+
   // The leader's class links — the meetings the Notetaker bot joins for them.
   // Always rendered once the page itself has loaded (the reports query is the
   // admin gate), so the section is discoverable even before any classes exist
@@ -138,6 +161,8 @@ export default function CoachLeaderScreen() {
                   </div>
                 </div>
               )}
+
+              {monthlyButton}
 
               {classLinksSection}
 
@@ -218,6 +243,8 @@ export default function CoachLeaderScreen() {
                 <TrendingUp size={18} style={{ color: vmTokens.gold }} strokeWidth={1.9} />
                 <span style={{ fontSize: 13.5, fontWeight: 600 }}>Trends over time</span>
               </button>
+
+              {monthlyButton}
 
               {classLinksSection}
 

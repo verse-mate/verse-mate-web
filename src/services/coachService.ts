@@ -477,6 +477,90 @@ export function fetchAdminMonthly(month: string): Promise<CoachMonthly> {
   return coachRequest<CoachMonthly>(`admin/monthly?month=${encodeURIComponent(month)}`);
 }
 
+// ─── Per-leader monthly summary (full parity with the individual monthly PDF)
+
+export interface LeaderMonthlyClusterAvg {
+  tc: number | null;
+  bm: number | null;
+  ep: number | null;
+  br: number | null;
+}
+export interface LeaderMonthlyGlanceRow {
+  date: string;
+  session: string;
+  bm: number | null;
+  tc: number | null;
+  ep: number | null;
+  br: number | null;
+  composite: number;
+  status: string;
+}
+export interface LeaderMonthlyCluster {
+  key: string;
+  name: string;
+  weight: number;
+  avgPct: number | null;
+  statusLabel: string;
+  strongestDim: { name: string; val: number } | null;
+  weakestDim: { name: string; val: number } | null;
+  insight: string;
+}
+export interface LeaderMonthlySessionDetail {
+  date: string;
+  session: string;
+  composite: number;
+  status: string;
+  dimensions: { n: number; name: string; cluster: string; score: number | null; note: string }[];
+}
+export interface LeaderMonthlySummary {
+  month: string;
+  monthLabel: string;
+  priorMonthLabel: string;
+  leaderId: string;
+  leaderName: string;
+  group: string;
+  sessionsCount: number;
+  composite: number;
+  status: { label: string; emoji: string };
+  priorComposite: number | null;
+  delta: number | null;
+  clusterAvg: LeaderMonthlyClusterAvg;
+  glance: {
+    rows: LeaderMonthlyGlanceRow[];
+    avg: { bm: number | null; tc: number | null; ep: number | null; br: number | null; composite: number; status: string };
+  };
+  trajectory: { date: string; session: string; composite: number; status: string; delta: number | null }[];
+  clusters: LeaderMonthlyCluster[];
+  strengths: { text: string; session: string }[];
+  growth: { text: string; session: string }[];
+  trends: string[];
+  conversationGuide: { label: string; q: string }[];
+  focus: { clusterName: string; clusterPct: number | null; goals: string[] };
+  sessions: LeaderMonthlySessionDetail[];
+}
+
+export interface LeaderMonthlyResponse {
+  profile: { id: string; name: string; group: string };
+  summary: LeaderMonthlySummary | null;
+  /** Months this leader has a summary for, newest first. */
+  availableMonths: string[];
+}
+
+/** GET /coach/monthly-summary?month=YYYY-MM — the signed-in leader's own. */
+export function fetchMyMonthlySummary(month: string): Promise<LeaderMonthlyResponse> {
+  return coachRequest<LeaderMonthlyResponse>(`monthly-summary?month=${encodeURIComponent(month)}`);
+}
+
+/** GET /coach/admin/coaches/:id/monthly-summary?month=YYYY-MM — admin drill-in. */
+export function fetchLeaderMonthlySummary(
+  coachId: string,
+  month: string,
+): Promise<LeaderMonthlyResponse> {
+  return coachRequest<LeaderMonthlyResponse>(
+    `admin/coaches/${encodeURIComponent(coachId)}/monthly-summary?month=${encodeURIComponent(month)}`,
+  );
+}
+
 // ─── Small view helpers (shared across the coach screens) ──────────────────
 
 /** Brand-aligned color for a status label. Gold = the app's accent for the
