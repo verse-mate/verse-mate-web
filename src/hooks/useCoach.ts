@@ -106,8 +106,13 @@ export function useCoachClasses(opts: { enabled?: boolean } = {}): UseQueryResul
 
 // ─── Admin oversight ────────────────────────────────────────────────────────
 
-export function useAdminClasses(): UseQueryResult<AdminCoachClass[]> {
-  return useQuery({ queryKey: coachKeys.adminClasses, queryFn: fetchAllCoachClasses, retry: false });
+export function useAdminClasses(opts: { enabled?: boolean } = {}): UseQueryResult<AdminCoachClass[]> {
+  return useQuery({
+    queryKey: coachKeys.adminClasses,
+    queryFn: fetchAllCoachClasses,
+    retry: false,
+    enabled: opts.enabled ?? true,
+  });
 }
 
 export function useAdminCoaches(): UseQueryResult<CoachSummary[]> {

@@ -1,30 +1,22 @@
 /**
  * Coaching dashboard — Trends.
  *
- * Two modes, one route family:
- *   • The signed-in leader's own trends (/coach/trends) render the design
- *     handoff's monthly view — month pills, a dark month-summary band, a score
- *     trajectory, month-at-a-glance table, cluster deep dive, strengths /
- *     growth, recommended focus, and expandable per-session detail — wired to
- *     the real /coach/monthly-summary API.
- *   • An admin drilling into a leader (/coach/leader/:coachId/trends) keeps the
- *     existing score / cluster / dimension chart view unchanged.
+ * Renders the design handoff's monthly view — month pills, a dark month-summary
+ * band, a score trajectory, month-at-a-glance table, cluster deep dive,
+ * strengths / growth, recommended focus, and expandable per-session detail.
+ *
+ * Two data sources, same design: the signed-in leader's own months
+ * (/coach/trends → /coach/monthly-summary) and an admin drilling into a leader
+ * (/coach/leader/:coachId/trends → the admin monthly-summary endpoint).
  */
 
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import ScreenHeader from '@/components/ScreenHeader';
-import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
-import { vmTokens } from '@/styles/themeStyles';
+import { useParams } from 'react-router-dom';
 import {
-  useCoachTrendsFor,
-  useCoachReportsFor,
   useMyMonthlySummary,
+  useLeaderMonthlySummary,
   coachState,
 } from '@/hooks/useCoach';
-import { CoachCard, CoachStateBoundary, SectionLabel } from '@/components/coach/CoachUi';
-import { ScoreTrendCard, ClusterTrendCard } from '@/components/coach/CoachTrendCharts';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachLineChart from '@/components/coach/CoachLineChart';
 import { dt, statusBand, clusterCode, clusterMeta } from '@/components/coach/dashboardTheme';
@@ -32,20 +24,23 @@ import type { LeaderMonthlySummary } from '@/services/coachService';
 
 export default function CoachTrendsScreen() {
   const { coachId } = useParams();
-  if (coachId) return <AdminTrends coachId={coachId} />;
-  return <LeaderTrends />;
+  return <LeaderTrends coachId={coachId} />;
 }
 
-// ─── Leader's own monthly trends (design handoff) ───────────────────────────
+// ─── Monthly trends (design handoff) — self or admin drill-in ───────────────
 
-function LeaderTrends() {
+function LeaderTrends({ coachId }: { coachId?: string }) {
+  const admin = !!coachId;
   const [month, setMonth] = useState(currentMonth());
   const [openApp, setOpenApp] = useState<number | null>(null);
 
-  const query = useMyMonthlySummary(month);
+  const selfQuery = useMyMonthlySummary(admin ? '' : month);
+  const adminQuery = useLeaderMonthlySummary(coachId ?? '', admin ? month : '');
+  const query = admin ? adminQuery : selfQuery;
   const state = coachState(query);
   const data = state.data;
   const summary = data?.summary ?? null;
+  const leaderName = data?.profile?.name ?? '';
 
   const [knownMonths, setKnownMonths] = useState<string[]>([]);
   const availableMonths = data?.availableMonths;
@@ -63,7 +58,7 @@ function LeaderTrends() {
   const months = knownMonths.length > 0 ? knownMonths : [month];
 
   return (
-    <CoachDashboardShell active="trends">
+    <CoachDashboardShell active="trends" coachId={coachId} leaderName={leaderName}>
       <div style={{ padding: '36px 0 6px' }}>
         <div style={{ marginBottom: 22 }}>
           <h1 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 40, lineHeight: 1.05, letterSpacing: '-.02em', margin: '0 0 8px' }}>
@@ -380,73 +375,4 @@ function labelFor(m: string): string {
   const [y, mo] = m.split('-').map(Number);
   const names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   return mo >= 1 && mo <= 12 ? `${names[mo - 1]} ${y}` : m;
-}
-
-// ─── Admin drill-in: existing score / cluster / dimension chart view ─────────
-
-function AdminTrends({ coachId }: { coachId: string }) {
-  const navigate = useNavigate();
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
-  const trendsQuery = useCoachTrendsFor(coachId);
-  const reportsQuery = useCoachReportsFor(coachId);
-  const trends = coachState(trendsQuery);
-  const reports = coachState(reportsQuery);
-  const reportList = reportsQuery.data?.reports;
-  const latest = reportList && reportList.length ? reportList[0] : null;
-
-  return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader title="Trends" onBack={() => navigate(`/coach/leader/${coachId}`)} backTestId="coach-trends-back-button" rightAction={<CoachProfileAvatar />} />
-      <div data-testid="coach-trends" style={{ flex: 1, overflowY: 'auto', borderTop: `1px solid ${vmTokens.divider}` }}>
-        <CoachStateBoundary
-          loading={trends.loading || reports.loading}
-          authError={trends.authError || reports.authError}
-          error={trends.error || reports.error}
-          onRetry={() => {
-            trendsQuery.refetch();
-            reportsQuery.refetch();
-          }}
-        >
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: isDesktop ? 24 : 16, maxWidth: isDesktop ? 1000 : 640, margin: '0 auto' }}>
-            {trends.data?.delta && (
-              <CoachCard testId="coach-trends-delta">
-                <SectionLabel>Since last session</SectionLabel>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-                  <span style={{ fontSize: 30, fontWeight: 700, color: trends.data.delta.score >= 0 ? vmTokens.statusSuccess : vmTokens.statusError }}>
-                    {trends.data.delta.score >= 0 ? '+' : ''}
-                    {trends.data.delta.score.toFixed(1)}
-                  </span>
-                  <span style={{ fontSize: 13, color: vmTokens.textTertiary }}>
-                    {trends.data.delta.from.toFixed(1)} → {trends.data.delta.to.toFixed(1)} points
-                  </span>
-                </div>
-              </CoachCard>
-            )}
-            <div style={{ display: 'grid', gridTemplateColumns: isDesktop ? '1fr 1fr' : '1fr', gap: 16 }}>
-              <ScoreTrendCard trends={trends.data} />
-              <ClusterTrendCard trends={trends.data} />
-            </div>
-            {latest && (
-              <CoachCard>
-                <SectionLabel>Latest session — 12 dimensions</SectionLabel>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-                  {latest.dimensions.map((d) => (
-                    <div key={d.n}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
-                        <span style={{ fontSize: 12.5, color: vmTokens.textSecondary }}>{d.name}</span>
-                        <span style={{ fontSize: 12, color: vmTokens.textTertiary }}>{d.score == null ? 'N/A' : `${d.score}/5`}</span>
-                      </div>
-                      <div style={{ height: 6, borderRadius: 3, background: vmTokens.divider, overflow: 'hidden' }}>
-                        <div style={{ width: d.score == null ? '0%' : `${(d.score / 5) * 100}%`, height: '100%', background: vmTokens.gold, borderRadius: 3 }} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CoachCard>
-            )}
-          </div>
-        </CoachStateBoundary>
-      </div>
-    </div>
-  );
 }
