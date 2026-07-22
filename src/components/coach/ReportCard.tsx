@@ -11,7 +11,7 @@
 import { useState } from 'react';
 import { ChevronDown, Download, FileText } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
-import { statusColor, type CoachReport } from '@/services/coachService';
+import { pdfDownloadUrl, statusColor, type CoachReport } from '@/services/coachService';
 import { CoachCard, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import SessionNotes from './SessionNotes';
@@ -31,6 +31,8 @@ export default function ReportCard({
 }) {
   const [open, setOpen] = useState(false);
   const color = statusColor(report.status);
+  // Direct-download link to the coach-produced PDF; null hides the button.
+  const pdfHref = pdfDownloadUrl(report.pdfUrl);
 
   return (
     <CoachCard testId={`coach-report-${report.id}`} style={{ padding: 0, overflow: 'hidden' }}>
@@ -114,11 +116,12 @@ export default function ReportCard({
           {/* The full coaching narrative — identical to <ReportDetail>. */}
           <ReportBody report={report} />
 
-          {report.pdfUrl && (
+          {pdfHref && (
             <a
-              href={report.pdfUrl}
+              href={pdfHref}
               target="_blank"
               rel="noopener noreferrer"
+              download
               data-testid={`coach-report-pdf-${report.id}`}
               style={{
                 display: 'inline-flex',
