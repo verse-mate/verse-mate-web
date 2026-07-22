@@ -1,9 +1,11 @@
 /**
  * One coaching "feedback document" in the reports list. Collapsed it shows
- * date / session / status / score; expanded it renders the coaching feedback
- * directly on the page (headline, strengths, growth areas, recommendations),
- * the 4-cluster breakdown, and big ideas — plus a per-session PDF download.
- * No Google Docs hop.
+ * date / session / status / score; expanded (tap the chevron) it renders the
+ * SAME full coaching narrative as the document-style <ReportDetail> — Summary
+ * & Big Ideas, full-prose strengths / growth areas / recommendations, the
+ * pipeline's PDF-parity sections, and the 12 dimensions — via the shared
+ * <ReportBody>, plus a compact cluster breakdown, coaching notes, and a
+ * per-session PDF download. No Google Docs hop.
  */
 
 import { useState } from 'react';
@@ -11,7 +13,7 @@ import { ChevronDown, Download, FileText } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { statusColor, type CoachReport } from '@/services/coachService';
 import { CoachCard, StatusPill } from './CoachUi';
-import DimensionRow from './DimensionRow';
+import ReportBody from './ReportBody';
 import SessionNotes from './SessionNotes';
 
 export default function ReportCard({
@@ -88,22 +90,7 @@ export default function ReportCard({
             {report.newcomers === 1 ? '' : 's'}
           </p>
 
-          {report.feedback?.headline && (
-            <p style={{ fontSize: 14, fontWeight: 600, color: vmTokens.textPrimary, lineHeight: 1.45, margin: '10px 0 2px' }}>
-              {report.feedback.headline}
-            </p>
-          )}
-
-          {report.feedback?.strengths?.length > 0 && (
-            <FeedbackList label="Top strengths" items={report.feedback.strengths} accent={vmTokens.statusSuccess} />
-          )}
-          {report.feedback?.improvements?.length > 0 && (
-            <FeedbackList label="Growth areas" items={report.feedback.improvements} accent="#C2620F" />
-          )}
-          {report.feedback?.recommendations?.length > 0 && (
-            <FeedbackList label="Recommendations for next session" items={report.feedback.recommendations} accent={vmTokens.gold} />
-          )}
-
+          {/* Compact cluster breakdown — the card's at-a-glance score visual. */}
           <p style={sectionLabel}>Cluster breakdown</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {report.clusters.map((c) => {
@@ -124,27 +111,8 @@ export default function ReportCard({
             })}
           </div>
 
-          {report.dimensions?.length > 0 && (
-            <>
-              <p style={sectionLabel}>12 dimensions · tap for detail</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                {report.dimensions.map((d) => (
-                  <DimensionRow key={d.n} dim={d} />
-                ))}
-              </div>
-            </>
-          )}
-
-          {report.bigIdeas.length > 0 && (
-            <>
-              <p style={sectionLabel}>Big ideas</p>
-              <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 4 }}>
-                {report.bigIdeas.map((b, i) => (
-                  <li key={i} style={{ fontSize: 13, color: vmTokens.textSecondary, lineHeight: 1.4 }}>{b}</li>
-                ))}
-              </ul>
-            </>
-          )}
+          {/* The full coaching narrative — identical to <ReportDetail>. */}
+          <ReportBody report={report} />
 
           {report.pdfUrl && (
             <a
@@ -176,22 +144,6 @@ export default function ReportCard({
         </div>
       )}
     </CoachCard>
-  );
-}
-
-function FeedbackList({ label, items, accent }: { label: string; items: string[]; accent: string }) {
-  return (
-    <>
-      <p style={sectionLabel}>{label}</p>
-      <ul style={{ margin: 0, paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>
-        {items.map((t, i) => (
-          <li key={i} style={{ display: 'flex', gap: 8, fontSize: 13, color: vmTokens.textSecondary, lineHeight: 1.45 }}>
-            <span aria-hidden style={{ color: accent, fontWeight: 700, flexShrink: 0 }}>•</span>
-            <span>{t}</span>
-          </li>
-        ))}
-      </ul>
-    </>
   );
 }
 
