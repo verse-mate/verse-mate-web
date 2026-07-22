@@ -30,6 +30,9 @@ vi.mock('@/services/coachService', async (importOriginal) => {
     fetchCoachTrends: vi.fn(),
     fetchCoachClasses: vi.fn(),
     fetchMyMonthlySummary: vi.fn(),
+    fetchCoachReportsFor: vi.fn(),
+    fetchCoachTrendsFor: vi.fn(),
+    fetchAllCoachClasses: vi.fn(),
   };
 });
 
@@ -197,6 +200,15 @@ beforeEach(() => {
   vi.mocked(coachService.fetchCoachTrends).mockResolvedValue(trends);
   vi.mocked(coachService.fetchCoachClasses).mockResolvedValue(classes);
   vi.mocked(coachService.fetchMyMonthlySummary).mockResolvedValue(monthly);
+  // Admin drill-in ("For") endpoints — same shapes, per-leader.
+  vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
+    profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning', coachName: '' },
+    reports,
+  });
+  vi.mocked(coachService.fetchCoachTrendsFor).mockResolvedValue(trends);
+  vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue(
+    classes.map((c) => ({ ...c, leader: { id: 'bryan', name: 'Bryan Bailey', email: 'b@x.com' } })),
+  );
 });
 
 describe('Coaching dashboard — Home', () => {
@@ -238,5 +250,25 @@ describe('Coaching dashboard — Trends', () => {
     // Per-session appendix expands.
     fireEvent.click(await screen.findByTestId('coach-appendix-0'));
     expect(screen.getByText('Session Structure')).toBeInTheDocument();
+  });
+});
+
+describe('Coaching dashboard — admin drill-in', () => {
+  it('renders a leader’s dashboard via the per-leader endpoints with the admin context bar', async () => {
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    render(
+      <QueryClientProvider client={client}>
+        <MemoryRouter initialEntries={['/coach/leader/bryan']}>
+          <Routes>
+            <Route path="/coach/leader/:coachId" element={<CoachDashboardScreen />} />
+          </Routes>
+        </MemoryRouter>
+      </QueryClientProvider>,
+    );
+    // Data-dependent element first (waits for the "For" endpoint to resolve).
+    expect(await screen.findByText('/100 · Exceptional')).toBeInTheDocument();
+    // Admin context bar + a way back to the roster.
+    expect(screen.getByTestId('coach-admin-tools')).toBeInTheDocument();
+    expect(screen.getByText(/All leaders/)).toBeInTheDocument();
   });
 });

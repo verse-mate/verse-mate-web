@@ -19,17 +19,17 @@ import { dt } from './dashboardTheme';
 
 type Page = 'home' | 'sessions' | 'trends';
 
-const NAV: { page: Page; label: string; to: string }[] = [
-  { page: 'home', label: 'Home', to: '/coach' },
-  { page: 'sessions', label: 'Sessions', to: '/coach/sessions' },
-  { page: 'trends', label: 'Trends', to: '/coach/trends' },
-];
-
 export default function CoachDashboardShell({
   active,
+  coachId,
+  leaderName,
   children,
 }: {
   active: Page;
+  /** Present when an admin is drilling into a specific leader — switches the
+   *  nav + data to that leader and shows the admin context bar. */
+  coachId?: string;
+  leaderName?: string;
   children: ReactNode;
 }) {
   return (
@@ -59,7 +59,8 @@ export default function CoachDashboardShell({
             boxShadow: dt.shadow,
           }}
         >
-          <TopBar active={active} />
+          <TopBar active={active} coachId={coachId} />
+          {coachId && <AdminContextBar coachId={coachId} leaderName={leaderName} />}
           {children}
         </div>
       </div>
@@ -67,9 +68,64 @@ export default function CoachDashboardShell({
   );
 }
 
-function TopBar({ active }: { active: Page }) {
+/** Where the nav points: the leader-scoped drill-in or the leader's own. */
+function basePathFor(coachId?: string): string {
+  return coachId ? `/coach/leader/${coachId}` : '/coach';
+}
+
+/** An admin drilling into a leader gets a context strip: which leader, a way
+ *  back to the roster, and a link to the admin tools (notes + recording links)
+ *  that live on the classic management screen. */
+function AdminContextBar({ coachId, leaderName }: { coachId: string; leaderName?: string }) {
+  const navigate = useNavigate();
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        gap: 12,
+        margin: '16px 0 -8px',
+        padding: '10px 14px',
+        borderRadius: 10,
+        background: dt.goldChip,
+        border: `1px solid ${dt.goldChipBorder}`,
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+        <button
+          type="button"
+          onClick={() => navigate('/coach')}
+          style={{ background: 'none', border: 'none', cursor: 'pointer', color: dt.gold2, fontWeight: 700, fontSize: 12.5, padding: 0 }}
+        >
+          ← All leaders
+        </button>
+        <span style={{ fontSize: 12.5, color: dt.gold2 }}>
+          Admin view · {leaderName || 'leader'}
+        </span>
+      </div>
+      <button
+        type="button"
+        onClick={() => navigate(`/coach/leader/${coachId}/manage`)}
+        data-testid="coach-admin-tools"
+        style={{ background: 'none', border: 'none', cursor: 'pointer', color: dt.gold2, fontWeight: 700, fontSize: 12.5, padding: 0 }}
+      >
+        Admin tools — notes &amp; recordings →
+      </button>
+    </div>
+  );
+}
+
+function TopBar({ active, coachId }: { active: Page; coachId?: string }) {
   const navigate = useNavigate();
   const { state } = useApp();
+  const base = basePathFor(coachId);
+  const NAV: { page: Page; label: string; to: string }[] = [
+    { page: 'home', label: 'Home', to: base },
+    { page: 'sessions', label: 'Sessions', to: `${base}/sessions` },
+    { page: 'trends', label: 'Trends', to: `${base}/trends` },
+  ];
 
   const initials = (() => {
     const f = (state.userFirstName || '').trim();

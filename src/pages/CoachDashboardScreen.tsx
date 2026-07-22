@@ -13,12 +13,15 @@
  */
 
 import { useMemo } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
   useCoachMe,
   useCoachReports,
+  useCoachReportsFor,
   useCoachTrends,
+  useCoachTrendsFor,
   useCoachClasses,
+  useAdminClasses,
   coachState,
 } from '@/hooks/useCoach';
 import type { CoachClass, CoachReport, CoachTrends } from '@/services/coachService';
@@ -30,16 +33,30 @@ import { dt, firstName, ratingForScore } from '@/components/coach/dashboardTheme
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
   const [params, setParams] = useSearchParams();
+  // When a :coachId is present this is an admin drilling into a specific leader
+  // (admin-only endpoints); otherwise it's the signed-in leader's own dashboard.
+  const { coachId } = useParams();
+  const admin = !!coachId;
+  const base = admin ? `/coach/leader/${coachId}` : '/coach';
 
+  // Only the active branch's queries are enabled.
   const meQuery = useCoachMe();
-  const reportsQuery = useCoachReports();
-  const trendsQuery = useCoachTrends();
-  const classesQuery = useCoachClasses();
+  const selfReports = useCoachReports({ enabled: !admin });
+  const forReports = useCoachReportsFor(coachId ?? '');
+  const selfTrends = useCoachTrends({ enabled: !admin });
+  const forTrends = useCoachTrendsFor(coachId ?? '');
+  const selfClasses = useCoachClasses({ enabled: !admin });
+  const adminClasses = useAdminClasses({ enabled: admin });
 
   const me = coachState(meQuery);
-  const reports = coachState(reportsQuery);
+  const reports = admin ? coachState(forReports) : coachState(selfReports);
+  const reportList = admin ? forReports.data?.reports : selfReports.data;
+  const trends: CoachTrends | undefined = admin ? forTrends.data : selfTrends.data;
+  const classes: CoachClass[] = admin
+    ? (adminClasses.data || []).filter((c) => c.leader.id === coachId)
+    : selfClasses.data || [];
 
-  const list = useMemo(() => [...(reports.data || [])].sort(byDateDesc), [reports.data]);
+  const list = useMemo(() => [...(reportList || [])].sort(byDateDesc), [reportList]);
   const selId = params.get('s');
   const selectedIdx = selId ? Math.max(0, list.findIndex((r) => r.id === selId)) : 0;
   const selected: CoachReport | null = list[selectedIdx] ?? null;
@@ -47,22 +64,21 @@ export default function CoachDashboardScreen() {
   const latest = list[0] ?? null;
   const delta = selected && prev ? Math.round((selected.score - prev.score) * 100) / 100 : null;
 
-  const leaderName = me.data?.profile?.name || '';
-  const nextClass = pickNextClass(classesQuery.data);
+  const leaderName = admin ? forReports.data?.profile?.name || '' : me.data?.profile?.name || '';
 
   return (
-    <CoachDashboardShell active="home">
+    <CoachDashboardShell active="home" coachId={coachId} leaderName={leaderName}>
       <CoachGate
-        loading={me.loading || reports.loading}
+        loading={admin ? reports.loading : me.loading || reports.loading}
         authError={me.authError || reports.authError}
         error={me.error || reports.error}
         onRetry={() => {
           meQuery.refetch();
-          reportsQuery.refetch();
+          (admin ? forReports : selfReports).refetch();
         }}
       >
         {!latest || !selected ? (
-          <EmptyHome leaderName={leaderName} onAddClass={() => navigate('/coach/sessions')} />
+          <EmptyHome leaderName={leaderName} admin={admin} onAddClass={() => navigate(`${base}/sessions`)} />
         ) : (
           <>
             <Hero
@@ -71,8 +87,13 @@ export default function CoachDashboardScreen() {
               latest={latest}
               delta={list.length > 1 ? Math.round((latest.score - list[1].score) * 100) / 100 : null}
             />
-            <NextClassBand nextClass={nextClass} latest={latest} onManage={() => navigate('/coach/sessions')} />
-            <Trajectory trends={trendsQuery.data} selected={selected} prev={prev} onViewTrends={() => navigate('/coach/trends')} />
+            <NextClassBand
+              nextClass={pickNextClass(classes)}
+              latest={latest}
+              admin={admin}
+              onManage={() => navigate(`${base}/sessions`)}
+            />
+            <Trajectory trends={trends} selected={selected} prev={prev} onViewTrends={() => navigate(`${base}/trends`)} />
             <CoachSessionDetail
               report={selected}
               delta={delta}
@@ -82,7 +103,7 @@ export default function CoachDashboardScreen() {
             {selected.id !== latest.id && (
               <div style={{ marginTop: 16 }}>
                 <button type="button" onClick={() => setParams({}, { replace: true })} style={linkBtn}>
-                  ← Back to your most recent session
+                  ← Back to the most recent session
                 </button>
               </div>
             )}
@@ -175,10 +196,12 @@ function StatTile({ label, labelColor, children }: { label: string; labelColor: 
 function NextClassBand({
   nextClass,
   latest,
+  admin,
   onManage,
 }: {
   nextClass: CoachClass | null;
   latest: CoachReport;
+  admin?: boolean;
   onManage: () => void;
 }) {
   const focus = focusReminders(latest);
@@ -203,9 +226,11 @@ function NextClassBand({
             </>
           ) : (
             <>
-              <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, lineHeight: 1.15, margin: '0 0 12px' }}>No class scheduled</h2>
+              <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, lineHeight: 1.15, margin: '0 0 12px' }}>
+                {admin ? 'No classes registered' : 'No class scheduled'}
+              </h2>
               <button type="button" onClick={onManage} style={{ fontSize: 13, fontWeight: 700, color: dt.brightGold, background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
-                Add a recurring class →
+                {admin ? 'View sessions →' : 'Add a recurring class →'}
               </button>
             </>
           )}
@@ -345,23 +370,23 @@ function MiniCard({ label, labelC, bg, name, sub, subC }: { label: string; label
 
 // ─── Empty state ─────────────────────────────────────────────────────────────
 
-function EmptyHome({ leaderName, onAddClass }: { leaderName: string; onAddClass: () => void }) {
+function EmptyHome({ leaderName, admin, onAddClass }: { leaderName: string; admin?: boolean; onAddClass: () => void }) {
   return (
     <div style={{ padding: '48px 0' }}>
       <h1 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 40, margin: '0 0 12px', letterSpacing: '-.02em' }}>
-        {greeting()}
-        {leaderName ? `, ${firstName(leaderName)}` : ''}
+        {admin ? leaderName || 'This leader' : `${greeting()}${leaderName ? `, ${firstName(leaderName)}` : ''}`}
       </h1>
       <p style={{ fontSize: 16, color: dt.textMuted, margin: '0 0 20px', maxWidth: 560, lineHeight: 1.6 }}>
-        No sessions have been scored yet. Once your first session is recorded and coached, your feedback, scores, and
-        trends appear here. Register the classes your notetaker should join to get started.
+        {admin
+          ? 'No sessions have been scored for this leader yet. Once a session is recorded and coached, its feedback, scores, and trends appear here.'
+          : 'No sessions have been scored yet. Once your first session is recorded and coached, your feedback, scores, and trends appear here. Register the classes your notetaker should join to get started.'}
       </p>
       <button
         type="button"
         onClick={onAddClass}
         style={{ background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13.5, padding: '10px 16px', borderRadius: 9, border: 'none', cursor: 'pointer' }}
       >
-        + Add a class
+        {admin ? 'View sessions →' : '+ Add a class'}
       </button>
     </div>
   );

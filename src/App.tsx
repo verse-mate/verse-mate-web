@@ -28,6 +28,7 @@ import GivingScreen from "@/pages/GivingScreen";
 import HelpScreen from "@/pages/HelpScreen";
 import SignInScreen from "@/pages/SignInScreen";
 import CoachHome from "@/pages/CoachHome";
+import CoachDashboardScreen from "@/pages/CoachDashboardScreen";
 import CoachSessionsScreen from "@/pages/CoachSessionsScreen";
 import CoachClassesScreen from "@/pages/CoachClassesScreen";
 import CoachAdminClassesScreen from "@/pages/CoachAdminClassesScreen";
@@ -105,9 +106,14 @@ const App = () => (
               <Route path="/coach/monthly-summary" element={<CoachLeaderMonthlyScreen />} />
               <Route path="/coach/trends" element={<CoachTrendsScreen />} />
               <Route path="/coach/feedback" element={<CoachFeedbackScreen />} />
-              {/* Admin drill-in: view a specific leader's feedback + trends + monthly. */}
-              <Route path="/coach/leader/:coachId" element={<CoachLeaderScreen />} />
+              {/* Admin drill-in: a leader's dashboard in the coaching-dashboard
+                  design (Home / Sessions / Trends), wired to that leader's data.
+                  The classic management screen (coaching notes + recording
+                  links) stays reachable at .../manage. */}
+              <Route path="/coach/leader/:coachId" element={<CoachDashboardScreen />} />
+              <Route path="/coach/leader/:coachId/sessions" element={<CoachSessionsScreen />} />
               <Route path="/coach/leader/:coachId/trends" element={<CoachTrendsScreen />} />
+              <Route path="/coach/leader/:coachId/manage" element={<CoachLeaderScreen />} />
               <Route path="/coach/leader/:coachId/monthly" element={<CoachLeaderMonthlyScreen />} />
               <Route path="/menu" element={<MenuScreen />} />
               <Route path="/menu/settings" element={<SettingsScreen />} />
