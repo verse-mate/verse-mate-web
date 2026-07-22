@@ -16,6 +16,7 @@ import {
   type CoachFeedbackPoint,
   type CoachReport,
   type CoachReportSection,
+  pdfDownloadUrl,
 } from '@/services/coachService';
 import { CoachCard, ScoreRing, StatusPill } from './CoachUi';
 import DimensionRow from './DimensionRow';
@@ -44,6 +45,9 @@ export default function ReportDetail({
   coachId?: string;
 }) {
   const [showBreakdown, setShowBreakdown] = useState(false);
+  // A link that downloads the coach-produced PDF; null hides the button when
+  // there is no real per-session PDF (empty or a Drive-folder fallback).
+  const pdfHref = pdfDownloadUrl(report.pdfUrl);
 
   // Drop the pipeline's "Score composition" section — that content is the ring
   // breakdown now, so it must not render inline as well.
@@ -97,11 +101,12 @@ export default function ReportDetail({
                 {delta >= 0 ? '▲' : '▼'} {Math.abs(delta).toFixed(1)} vs. prior
               </span>
             )}
-            {report.pdfUrl && (
+            {pdfHref && (
               <a
-                href={report.pdfUrl}
+                href={pdfHref}
                 target="_blank"
                 rel="noopener noreferrer"
+                download
                 data-testid={`coach-report-pdf-${report.id}`}
                 style={pdfBtn}
               >

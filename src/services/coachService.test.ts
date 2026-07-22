@@ -17,6 +17,7 @@ import {
   fetchCoachReportsFor,
   fetchCoachMe,
   saveCoachZoomLink,
+  pdfDownloadUrl,
   saveRecordingLink,
   statusColor,
   updateCoachClass,
@@ -266,5 +267,43 @@ describe('coachService', () => {
     expect(data.program.sessions).toBe(4);
     expect(data.availableMonths).toEqual(['2026-07', '2026-06', '2026-05']);
     expect(data.narrative?.executiveSummary[0]).toContain('July 2026');
+  });
+});
+
+describe('pdfDownloadUrl', () => {
+  it('returns null for empty / missing values', () => {
+    expect(pdfDownloadUrl(undefined)).toBeNull();
+    expect(pdfDownloadUrl('')).toBeNull();
+    expect(pdfDownloadUrl('   ')).toBeNull();
+  });
+
+  it('returns null for a Drive folder link (the exporter fallback)', () => {
+    expect(
+      pdfDownloadUrl('https://drive.google.com/drive/folders/1vvVpdPk2ARawV3wOM9LeXJ0BtpVJ2qjV'),
+    ).toBeNull();
+  });
+
+  it('rewrites a Drive file /view link to a direct download', () => {
+    expect(pdfDownloadUrl('https://drive.google.com/file/d/ABC123def/view?usp=drivesdk')).toBe(
+      'https://drive.google.com/uc?export=download&id=ABC123def',
+    );
+  });
+
+  it('rewrites an ?id= Drive link to a direct download', () => {
+    expect(pdfDownloadUrl('https://drive.google.com/open?id=XYZ-789')).toBe(
+      'https://drive.google.com/uc?export=download&id=XYZ-789',
+    );
+  });
+
+  it('exports Google Docs links as PDF', () => {
+    expect(pdfDownloadUrl('https://docs.google.com/document/d/DOC_1/edit?usp=drivesdk')).toBe(
+      'https://docs.google.com/document/d/DOC_1/export?format=pdf',
+    );
+  });
+
+  it('passes a plain absolute PDF URL through unchanged', () => {
+    expect(pdfDownloadUrl('https://cdn.versemate.org/reports/x.pdf')).toBe(
+      'https://cdn.versemate.org/reports/x.pdf',
+    );
   });
 });

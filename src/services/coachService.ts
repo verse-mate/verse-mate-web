@@ -495,3 +495,34 @@ export function statusColor(status: string): string {
       return '#B91C1C';
   }
 }
+
+/**
+ * Turn a report's `pdfUrl` into a link that *downloads* the coach-produced PDF
+ * rather than opening a Drive viewer or a folder.
+ *
+ * The pipeline stores each session's `pdfUrl` as a Google Drive / Docs share
+ * URL. A `/view` (or `/edit`) link opens the online viewer; we rewrite it to
+ * the direct-download form so the button saves the file. Returns `null` when
+ * there is no real per-session PDF to download — an empty value, or a Drive
+ * *folder* link (the exporter's fallback when a session has no captured PDF) —
+ * so callers can hide the button instead of dropping the user in a folder.
+ */
+export function pdfDownloadUrl(pdfUrl: string | undefined): string | null {
+  const url = pdfUrl?.trim();
+  if (!url) return null;
+
+  // A Drive folder link is not a downloadable file — treat as "no PDF".
+  if (/drive\.google\.com\/drive\/folders\//i.test(url)) return null;
+
+  // Google Docs/Sheets/Slides → native PDF export.
+  const docs = url.match(/docs\.google\.com\/\w+\/d\/([\w-]+)/i);
+  if (docs) return `https://docs.google.com/document/d/${docs[1]}/export?format=pdf`;
+
+  // Drive file link (`/file/d/ID/...` or `?id=ID` / `&id=ID`) → direct download.
+  const fileId = url.match(/\/file\/d\/([\w-]+)/i)?.[1] ?? url.match(/[?&]id=([\w-]+)/i)?.[1];
+  if (fileId) return `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+  // Some other absolute link (e.g. a direct PDF URL) — hand it back unchanged.
+  if (/^https?:\/\//i.test(url)) return url;
+  return null;
+}
