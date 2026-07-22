@@ -32,6 +32,7 @@ import CoachClassesScreen from "@/pages/CoachClassesScreen";
 import CoachAdminClassesScreen from "@/pages/CoachAdminClassesScreen";
 import CoachSettingsScreen from "@/pages/CoachSettingsScreen";
 import CoachMonthlyScreen from "@/pages/CoachMonthlyScreen";
+import CoachLeaderMonthlyScreen from "@/pages/CoachLeaderMonthlyScreen";
 import CoachTrendsScreen from "@/pages/CoachTrendsScreen";
 import CoachFeedbackScreen from "@/pages/CoachFeedbackScreen";
 import CoachLeaderScreen from "@/pages/CoachLeaderScreen";
@@ -96,11 +97,14 @@ const App = () => (
               <Route path="/coach/admin/classes" element={<CoachAdminClassesScreen />} />
               {/* Cross-leader monthly analysis (admin only; gated in-screen). */}
               <Route path="/coach/monthly" element={<CoachMonthlyScreen />} />
+              {/* The signed-in leader's own rich monthly summary. */}
+              <Route path="/coach/monthly-summary" element={<CoachLeaderMonthlyScreen />} />
               <Route path="/coach/trends" element={<CoachTrendsScreen />} />
               <Route path="/coach/feedback" element={<CoachFeedbackScreen />} />
-              {/* Admin drill-in: view a specific leader's feedback + trends. */}
+              {/* Admin drill-in: view a specific leader's feedback + trends + monthly. */}
               <Route path="/coach/leader/:coachId" element={<CoachLeaderScreen />} />
               <Route path="/coach/leader/:coachId/trends" element={<CoachTrendsScreen />} />
+              <Route path="/coach/leader/:coachId/monthly" element={<CoachLeaderMonthlyScreen />} />
               <Route path="/menu" element={<MenuScreen />} />
               <Route path="/menu/settings" element={<SettingsScreen />} />
               <Route path="/menu/about" element={<AboutScreen />} />
