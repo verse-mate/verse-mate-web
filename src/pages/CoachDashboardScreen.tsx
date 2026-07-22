@@ -15,7 +15,7 @@
 
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowUpRight, CalendarCog, MessageSquareText, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, BarChart3, CalendarCog, MessageSquareText, TrendingUp } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
@@ -98,6 +98,15 @@ export default function CoachDashboardScreen() {
       label="Coach feedback"
       testId="coach-action-feedback"
       onClick={() => navigate('/coach/feedback')}
+    />
+  );
+
+  const monthlyTile = (
+    <ActionTile
+      icon={<BarChart3 size={18} strokeWidth={1.9} />}
+      label="Monthly summaries"
+      testId="coach-action-monthly"
+      onClick={() => navigate('/coach/monthly-summary')}
     />
   );
 
@@ -195,6 +204,7 @@ export default function CoachDashboardScreen() {
               <div style={{ display: 'grid', gridTemplateColumns: me.data?.isCoach ? '2fr 1fr' : '1fr', gap: 12, alignItems: 'start' }}>
                 {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
                 {feedbackTile}
+                {monthlyTile}
               </div>
 
               {/* Earlier sessions, compact */}
@@ -225,6 +235,7 @@ export default function CoachDashboardScreen() {
                   onClick={() => navigate('/coach/trends')}
                 />
                 {feedbackTile}
+                {monthlyTile}
               </div>
 
               {/* Meeting link (church + Bible coach live in Coach Settings) */}

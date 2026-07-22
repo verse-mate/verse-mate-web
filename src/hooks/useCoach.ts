@@ -29,6 +29,9 @@ import {
   type CoachTrends,
   fetchAdminCoaches,
   fetchAdminMonthly,
+  fetchLeaderMonthlySummary,
+  fetchMyMonthlySummary,
+  type LeaderMonthlyResponse,
   fetchAllCoachClasses,
   fetchCoachClasses,
   fetchCoachMe,
@@ -49,6 +52,9 @@ export const coachKeys = {
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
   adminMonthly: (month: string) => ['coach', 'admin', 'monthly', month] as const,
+  monthlySummary: (month: string) => ['coach', 'monthly-summary', month] as const,
+  adminMonthlySummary: (id: string, month: string) =>
+    ['coach', 'admin', 'monthly-summary', id, month] as const,
 };
 
 /** Normalize a query's error into the shape <CoachStateBoundary> expects. */
@@ -136,6 +142,31 @@ export function useAdminMonthly(month: string): UseQueryResult<CoachMonthly> {
     enabled: !!month,
     // Keep showing the prior month's data (and the month picker) while the
     // next month loads, so stepping between months doesn't flash a spinner.
+    placeholderData: keepPreviousData,
+  });
+}
+
+/** The signed-in leader's own monthly summary for a month. */
+export function useMyMonthlySummary(month: string): UseQueryResult<LeaderMonthlyResponse> {
+  return useQuery({
+    queryKey: coachKeys.monthlySummary(month),
+    queryFn: () => fetchMyMonthlySummary(month),
+    retry: false,
+    enabled: !!month,
+    placeholderData: keepPreviousData,
+  });
+}
+
+/** A specific leader's monthly summary (admin drill-in). */
+export function useLeaderMonthlySummary(
+  coachId: string,
+  month: string,
+): UseQueryResult<LeaderMonthlyResponse> {
+  return useQuery({
+    queryKey: coachKeys.adminMonthlySummary(coachId, month),
+    queryFn: () => fetchLeaderMonthlySummary(coachId, month),
+    retry: false,
+    enabled: !!coachId && !!month,
     placeholderData: keepPreviousData,
   });
 }
