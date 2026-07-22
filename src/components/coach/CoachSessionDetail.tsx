@@ -17,7 +17,7 @@ import {
   pdfDownloadUrl,
 } from '@/services/coachService';
 import { DIMENSION_INFO } from './dimensionInfo';
-import { dt, ratingForScore, statusBand } from './dashboardTheme';
+import { dt, letterGrade, ratingForScore, statusBand } from './dashboardTheme';
 
 type Tab = 'report' | 'scorecard' | 'questions' | 'nextsteps';
 
@@ -103,9 +103,9 @@ export default function CoachSessionDetail({
             }}
           >
             <span style={{ fontFamily: dt.serif, fontWeight: 600, fontSize: 26, lineHeight: 1, color: dt.gold2 }}>
-              {Math.round(report.score)}
+              {letterGrade(report.score)}
             </span>
-            <span style={{ fontSize: 12, color: dt.gold, fontWeight: 600 }}>/100</span>
+            <span style={{ fontSize: 12, color: dt.gold, fontWeight: 600 }}>{Math.round(report.score)}/100</span>
           </div>
         </div>
       </div>

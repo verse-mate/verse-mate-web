@@ -32,7 +32,7 @@ import {
   type CoachReport,
 } from '@/services/coachService';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
-import { dt, statusBand } from '@/components/coach/dashboardTheme';
+import { dt, letterGrade, statusBand } from '@/components/coach/dashboardTheme';
 
 const RECURRENCE_OPTIONS: { value: CoachClassRecurrence; label: string }[] = [
   { value: 'weekly', label: 'Weekly' },
@@ -285,7 +285,9 @@ function PastSessionRow({ report, onView }: { report: CoachReport; onView: () =>
       <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.04em', padding: '5px 9px', borderRadius: 6, textAlign: 'center', color: band.c, background: band.bg }}>
         {band.label}
       </div>
-      <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>{Math.round(report.score)}/100</div>
+      <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>
+        {Math.round(report.score)}/100 · {letterGrade(report.score)}
+      </div>
       <button type="button" onClick={onView} data-testid="coach-view-report" style={{ justifySelf: 'end', cursor: 'pointer', fontSize: 13, fontWeight: 700, color: dt.gold2, background: dt.goldChip, border: `1px solid ${dt.goldChipBorder}`, padding: '8px 14px', borderRadius: 8 }}>
         View report →
       </button>

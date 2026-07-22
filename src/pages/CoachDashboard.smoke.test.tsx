@@ -214,8 +214,10 @@ beforeEach(() => {
 describe('Coaching dashboard — Home', () => {
   it('renders the greeting, latest score, next class and session detail', async () => {
     renderAt('/coach', <CoachDashboardScreen />);
-    // Latest /100 composite (real data, not the mock /55 grade).
-    expect(await screen.findByText('/100 · Exceptional')).toBeInTheDocument();
+    // Session detail header (waits for reports to resolve).
+    expect((await screen.findAllByText('James — Lesson 9: Wealth & Patience')).length).toBeGreaterThan(0);
+    // Latest score shown as a letter grade + real /100 composite (tile + ring).
+    expect(screen.getAllByText(/87\/100/).length).toBeGreaterThan(0);
     // Next class band pulls the recurring class.
     expect(screen.getByText('James — Saturday Morning Group')).toBeInTheDocument();
     // Session detail header + tabs.
@@ -266,7 +268,8 @@ describe('Coaching dashboard — admin drill-in', () => {
       </QueryClientProvider>,
     );
     // Data-dependent element first (waits for the "For" endpoint to resolve).
-    expect(await screen.findByText('/100 · Exceptional')).toBeInTheDocument();
+    expect((await screen.findAllByText('James — Lesson 9: Wealth & Patience')).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/87\/100/).length).toBeGreaterThan(0);
     // Admin context bar + a way back to the roster.
     expect(screen.getByTestId('coach-admin-tools')).toBeInTheDocument();
     expect(screen.getByText(/All leaders/)).toBeInTheDocument();

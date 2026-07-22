@@ -125,3 +125,22 @@ export function clusterCode(name: string): string {
 export function firstName(name: string): string {
   return (name || '').trim().split(/\s+/)[0] || name;
 }
+
+/** Conventional letter grade for a 0–100 composite — the design leads with a
+ *  letter grade (the number stays visible alongside it). */
+export function letterGrade(score: number): string {
+  const s = Math.round(score);
+  if (s >= 97) return 'A+';
+  if (s >= 93) return 'A';
+  if (s >= 90) return 'A-';
+  if (s >= 87) return 'B+';
+  if (s >= 83) return 'B';
+  if (s >= 80) return 'B-';
+  if (s >= 77) return 'C+';
+  if (s >= 73) return 'C';
+  if (s >= 70) return 'C-';
+  if (s >= 67) return 'D+';
+  if (s >= 63) return 'D';
+  if (s >= 60) return 'D-';
+  return 'F';
+}

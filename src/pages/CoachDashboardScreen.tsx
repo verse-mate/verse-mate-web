@@ -28,7 +28,7 @@ import type { CoachClass, CoachReport, CoachTrends } from '@/services/coachServi
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import CoachLineChart from '@/components/coach/CoachLineChart';
-import { dt, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
+import { dt, firstName, letterGrade, ratingForScore } from '@/components/coach/dashboardTheme';
 
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
@@ -83,7 +83,9 @@ export default function CoachDashboardScreen() {
           <>
             <Hero
               leaderName={leaderName}
-              sessionCount={list.length}
+              admin={admin}
+              streakWeeks={weeklyStreak(list)}
+              quarterSessions={quarterCount(list)}
               latest={latest}
               delta={list.length > 1 ? Math.round((latest.score - list[1].score) * 100) / 100 : null}
             />
@@ -118,12 +120,16 @@ export default function CoachDashboardScreen() {
 
 function Hero({
   leaderName,
-  sessionCount,
+  admin,
+  streakWeeks,
+  quarterSessions,
   latest,
   delta,
 }: {
   leaderName: string;
-  sessionCount: number;
+  admin?: boolean;
+  streakWeeks: number;
+  quarterSessions: number;
   latest: CoachReport;
   delta: number | null;
 }) {
@@ -150,21 +156,20 @@ function Hero({
               marginBottom: 16,
             }}
           >
-            ● {sessionCount} session{sessionCount === 1 ? '' : 's'} coached
+            ● {streakWeeks}-week streak · {quarterSessions} session{quarterSessions === 1 ? '' : 's'} this quarter
           </div>
           <h1 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 44, lineHeight: 1.05, letterSpacing: '-.02em', margin: '0 0 10px' }}>
-            {greeting()}
-            {leaderName ? `, ${firstName(leaderName)}` : ''}
+            {admin ? leaderName || 'This leader' : `${greeting()}${leaderName ? `, ${firstName(leaderName)}` : ''}`}
           </h1>
           <p style={{ fontSize: 16.5, lineHeight: 1.5, color: dt.textMuted, margin: 0 }}>
-            {subgreeting(latest, delta)}
+            {subgreeting(latest, delta, streakWeeks, admin)}
           </p>
         </div>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <StatTile label="LATEST SESSION" labelColor={dt.gold}>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-              <span style={{ fontFamily: dt.serif, fontSize: 30, lineHeight: 1, color: dt.gold2 }}>{Math.round(latest.score)}</span>
-              <span style={{ fontSize: 14, color: dt.textLight, fontWeight: 600 }}>/100 · {latest.status}</span>
+              <span style={{ fontFamily: dt.serif, fontSize: 30, lineHeight: 1, color: dt.gold2 }}>{letterGrade(latest.score)}</span>
+              <span style={{ fontSize: 14, color: dt.textLight, fontWeight: 600 }}>{Math.round(latest.score)}/100</span>
             </div>
             <div style={{ fontSize: 13, fontWeight: 600, color: deltaColor, marginTop: 6 }}>{deltaText} vs. last</div>
           </StatTile>
@@ -274,7 +279,11 @@ function Trajectory({
   const [dim, setDim] = useSelectedTrendDim();
 
   const dims = selected.dimensions;
-  const options = [{ key: 'overall', label: 'Overall (per session)' }, ...dims.map((d) => ({ key: d.name, label: d.name }))];
+  const options = [
+    { key: 'months', label: 'Monthly composite' },
+    { key: 'overall', label: 'Overall (per session)' },
+    ...dims.map((d) => ({ key: d.name, label: d.name })),
+  ];
 
   let values: number[];
   let max: number;
@@ -283,7 +292,17 @@ function Trajectory({
   let trendLabel: string;
   let trendSub: string;
 
-  if (dim === 'overall') {
+  if (dim === 'months') {
+    const monthly = monthlyComposite(trends?.scoreSeries ?? []);
+    values = monthly.values;
+    labels = monthly.labels;
+    max = 100;
+    color = dt.gold;
+    trendLabel = 'Monthly composite (out of 100)';
+    const n = values.length;
+    const d = n >= 2 ? Math.round((values[n - 1] - values[n - 2]) * 10) / 10 : null;
+    trendSub = d == null ? '' : `${d >= 0 ? '▲ ' : '▼ '}${Math.abs(d)} vs. prior month`;
+  } else if (dim === 'overall') {
     const series = trends?.scoreSeries ?? [];
     values = series.map((p) => Math.round(p.score * 10) / 10);
     labels = series.map((p) => shortDate(p.date));
@@ -312,7 +331,7 @@ function Trajectory({
         <div>
           <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.12em', color: dt.gold, marginBottom: 6 }}>YOUR TRAJECTORY</div>
           <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 27, margin: 0, letterSpacing: '-.01em' }}>
-            Sessions, at a glance
+            Months and sessions, at a glance
           </h2>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -401,20 +420,45 @@ const DARK_CHIP: Record<string, { c: string; bg: string }> = {
   'N/A': { c: '#B7AD98', bg: '#33302A' },
 };
 
+/** The "focus on, based on last week" reminders — the session's transferable
+ *  next-week actions (recommendations), tagged with a status band drawn from
+ *  the weakest dimensions, matching the design. Falls back to the weakest
+ *  dimensions themselves when a report carries no written recommendations. */
 function focusReminders(latest: CoachReport): { band: string; c: string; bg: string; title: string; note: string }[] {
-  const scored = latest.dimensions.filter((d) => d.score != null);
-  const sorted = [...scored].sort((a, b) => (a.score ?? 0) - (b.score ?? 0)).slice(0, 5);
-  return sorted.map((d) => {
-    const band = ratingForScore(d.score).label;
-    const chip = DARK_CHIP[band] ?? DARK_CHIP['N/A'];
-    return {
-      band,
-      c: chip.c,
-      bg: chip.bg,
-      title: d.name,
-      note: truncate(d.note?.trim() || 'Focus here to lift next week’s composite.', 120),
-    };
-  });
+  const weak = [...latest.dimensions.filter((d) => d.score != null)].sort((a, b) => (a.score ?? 0) - (b.score ?? 0));
+  const bandFor = (i: number) => {
+    const label = ratingForScore(weak[i]?.score ?? null).label;
+    const chip = DARK_CHIP[label] ?? DARK_CHIP['N/A'];
+    return { band: label, c: chip.c, bg: chip.bg };
+  };
+
+  const recs = recommendationList(latest);
+  if (recs.length > 0) {
+    return recs.slice(0, 5).map((r, i) => ({ ...bandFor(i), title: r.title, note: truncate(r.note, 120) }));
+  }
+
+  return weak.slice(0, 5).map((d, i) => ({
+    ...bandFor(i),
+    title: d.name,
+    note: truncate(d.note?.trim() || 'Focus here to lift next week’s composite.', 120),
+  }));
+}
+
+/** Recommendations as { title, note } — prefers the pipeline's titled prose,
+ *  falls back to terse bullets (split on the first dash into title + note). */
+function recommendationList(report: CoachReport): { title: string; note: string }[] {
+  const prose = report.feedback?.recommendationsProse;
+  if (prose?.length) {
+    return prose.map((p) => ({ title: p.title, note: (p.paragraphs || []).join(' ') }));
+  }
+  const bullets = report.feedback?.recommendations;
+  if (bullets?.length) {
+    return bullets.map((b) => {
+      const m = b.match(/^(.{3,60}?)\s+[—–-]\s+([\s\S]+)$/);
+      return m ? { title: m[1].trim(), note: m[2].trim() } : { title: b.trim(), note: '' };
+    });
+  }
+  return [];
 }
 
 function weakestDimension(report: CoachReport): { name: string; score: number } | null {
@@ -486,17 +530,89 @@ function greeting(): string {
   return 'Good evening';
 }
 
-function subgreeting(latest: CoachReport, delta: number | null): string {
-  if (delta != null && delta > 0) return `${latest.session} just landed your best score in a while — up ${delta} points.`;
-  return `Here's where you stand after ${latest.session}.`;
+function subgreeting(latest: CoachReport, delta: number | null, streakWeeks: number, admin?: boolean): string {
+  const lesson = lessonLabel(latest.session);
+  if (admin) {
+    return delta != null && delta > 0
+      ? `${lesson} just landed their best score in a while — up ${delta} points.`
+      : `Where they stand after ${lesson}.`;
+  }
+  const rising = delta != null && delta > 0;
+  return `You're on a ${streakWeeks}-week coaching streak — and ${lesson} just landed your best score ${rising ? 'yet' : 'in a while'}.`;
+}
+
+/** A short label for the session — e.g. "Lesson 9" pulled from the title. */
+function lessonLabel(session: string): string {
+  const m = session.match(/Lesson\s+\d+/i);
+  return m ? m[0] : session;
+}
+
+/** Weeks-in-a-row (ending at the most recent session) that had a session. */
+function weeklyStreak(list: { date: string }[]): number {
+  if (list.length === 0) return 0;
+  const weeks = new Set(list.map((r) => isoWeekKey(r.date)));
+  const cursor = weekStart(list[0].date); // list is newest-first
+  let streak = 0;
+  while (weeks.has(isoWeekKeyFromDate(cursor))) {
+    streak += 1;
+    cursor.setDate(cursor.getDate() - 7);
+  }
+  return streak;
+}
+
+/** Sessions within ~13 weeks (a quarter) of the most recent session. */
+function quarterCount(list: { date: string }[]): number {
+  if (list.length === 0) return 0;
+  const latest = dateValue(list[0].date);
+  const cutoff = latest - 91 * 24 * 3600 * 1000;
+  return list.filter((r) => dateValue(r.date) >= cutoff).length;
+}
+
+function weekStart(iso: string): Date {
+  const [y, m, d] = iso.split('-').map(Number);
+  const dt2 = new Date(y, (m || 1) - 1, d || 1);
+  const day = (dt2.getDay() + 6) % 7; // Monday = 0
+  dt2.setDate(dt2.getDate() - day);
+  dt2.setHours(0, 0, 0, 0);
+  return dt2;
+}
+
+function isoWeekKey(iso: string): string {
+  return isoWeekKeyFromDate(weekStart(iso));
+}
+
+function isoWeekKeyFromDate(d: Date): string {
+  return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+}
+
+/** Average the per-session score series into a monthly composite series. */
+function monthlyComposite(series: { date: string; score: number }[]): { values: number[]; labels: string[] } {
+  const groups = new Map<string, number[]>();
+  for (const p of series) {
+    const key = p.date.slice(0, 7); // YYYY-MM
+    (groups.get(key) ?? groups.set(key, []).get(key)!).push(p.score);
+  }
+  const keys = [...groups.keys()].sort();
+  const values = keys.map((k) => {
+    const arr = groups.get(k)!;
+    return Math.round((arr.reduce((a, b) => a + b, 0) / arr.length) * 10) / 10;
+  });
+  const labels = keys.map(monthShort);
+  return { values, labels };
+}
+
+function monthShort(ym: string): string {
+  const [y, m] = ym.split('-').map(Number);
+  const names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return m >= 1 && m <= 12 ? `${names[m - 1]}` : ym;
 }
 
 function useSelectedTrendDim(): [string, (v: string) => void] {
   const [params, setParams] = useSearchParams();
-  const dim = params.get('t') || 'overall';
+  const dim = params.get('t') || 'months';
   const setDim = (v: string) => {
     const next = new URLSearchParams(params);
-    if (v === 'overall') next.delete('t');
+    if (v === 'months') next.delete('t');
     else next.set('t', v);
     setParams(next, { replace: true });
   };
