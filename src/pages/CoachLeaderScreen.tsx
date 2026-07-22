@@ -22,6 +22,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
 import { useAdminClasses, useCoachReportsFor, useCoachTrendsFor, coachState } from '@/hooks/useCoach';
 import {
+  CoachCard,
   CoachStateBoundary,
   LatestSessionHero,
   SectionLabel,
@@ -43,9 +44,6 @@ export default function CoachLeaderScreen() {
   // export (shared cache with the all-leaders Class links screen).
   const classesQuery = useAdminClasses();
   const leaderClasses = (classesQuery.data || []).filter((c) => c.leader.id === coachId);
-  // Show the section once the leader's reports have loaded (same admin gate);
-  // only suppress it while the classes request itself is still in flight.
-  const showClasses = !state.loading && !classesQuery.isLoading && !classesQuery.error;
 
   const profile = state.data?.profile;
   // Newest first by session date — primary sort for the latest-session detail
@@ -86,10 +84,25 @@ export default function CoachLeaderScreen() {
   );
 
   // The leader's class links — the meetings the Notetaker bot joins for them.
-  const classLinksSection = showClasses && (
+  // Always rendered once the page itself has loaded (the reports query is the
+  // admin gate), so the section is discoverable even before any classes exist
+  // or if the classes request can't load — rather than silently vanishing.
+  const classLinksSection = !state.loading && (
     <div>
       <SectionLabel>Class links</SectionLabel>
-      <ClassLinkList classes={leaderClasses} />
+      {classesQuery.isLoading ? (
+        <CoachCard testId="coach-class-links-loading">
+          <p style={{ margin: 0, fontSize: 13.5, color: vmTokens.textTertiary }}>Loading class links…</p>
+        </CoachCard>
+      ) : classesQuery.error ? (
+        <CoachCard testId="coach-class-links-error">
+          <p style={{ margin: 0, fontSize: 13.5, color: vmTokens.textSecondary, lineHeight: 1.5 }}>
+            Class links aren’t available yet. They’ll appear here once class setup is live for your program.
+          </p>
+        </CoachCard>
+      ) : (
+        <ClassLinkList classes={leaderClasses} />
+      )}
     </div>
   );
 
