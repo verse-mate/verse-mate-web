@@ -460,6 +460,16 @@ export interface CoachMonthly {
   /** Every YYYY-MM month with at least one report, newest first. Drives the
    *  month picker so only months that were actually done are selectable. */
   availableMonths: string[];
+  /** Program-wide narrative prose for the month (Executive Summary + Trends),
+   *  or null. Comes straight from the coaching pipeline's shared generator, so
+   *  this reads identically to the monthly PDF. */
+  narrative: MonthlyNarrative | null;
+}
+
+/** Program-wide monthly narrative — the same prose the monthly PDF carries. */
+export interface MonthlyNarrative {
+  executiveSummary: string[];
+  trends: string[];
 }
 
 /** GET /coach/admin/monthly?month=YYYY-MM — program-wide + per-leader rollup. */
