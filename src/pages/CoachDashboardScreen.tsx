@@ -1,324 +1,513 @@
 /**
- * Coach dashboard (/coach) — the portal home for a Bible-study leader.
+ * Coaching dashboard — Home (/coach for an evaluated leader).
  *
- * Shows the latest session at a glance (score ring + status + delta), a link
- * into the trends view, the editable meeting link, an entry point to the
- * (coming-soon) coach-feedback thread, and the full list of feedback
- * documents. Signed-out / not-a-coach states are handled by
- * <CoachStateBoundary>.
+ * The morning landing view from the design handoff: a greeting + streak, two
+ * stat tiles (latest score, this week's focus), a dark "Next class" band with
+ * focus reminders drawn from last week's weakest dimensions, a trajectory chart
+ * with a dimension selector, and the most-recent session in full depth
+ * (Full report · Scorecard · Question coaching · Next steps).
  *
- * Responsive: on desktop (≥1024px) the view expands to use the width — the two
- * trend charts open by default and the most-recent session is rendered in full
- * prose (<ReportDetail>), with older sessions as compact cards below. On
- * mobile it stays the single-column, tap-to-expand experience.
+ * Wired to the real /coach API (profile, reports, trends, classes). The mock's
+ * /55 letter grade is presented as the live /100 composite + status label.
+ * Choosing a session from the Sessions page opens it here via ?s=<id>.
  */
 
-import { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ArrowUpRight, BarChart3, CalendarCog, MessageSquareText, TrendingUp } from 'lucide-react';
-import ScreenHeader from '@/components/ScreenHeader';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
-import { vmTokens } from '@/styles/themeStyles';
-import { useCoachMe, useCoachReports, useCoachTrends, coachState } from '@/hooks/useCoach';
+import { useMemo } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import {
-  CoachCard,
-  CoachStateBoundary,
-  LatestSessionHero,
-  SectionLabel,
-} from '@/components/coach/CoachUi';
-import { ScoreTrendCard, ClusterTrendCard } from '@/components/coach/CoachTrendCharts';
-import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
-import ReportCard from '@/components/coach/ReportCard';
-import ReportDetail from '@/components/coach/ReportDetail';
-import ZoomLinkCard from '@/components/coach/ZoomLinkCard';
+  useCoachMe,
+  useCoachReports,
+  useCoachTrends,
+  useCoachClasses,
+  coachState,
+} from '@/hooks/useCoach';
+import type { CoachClass, CoachReport, CoachTrends } from '@/services/coachService';
+import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
+import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
+import CoachLineChart from '@/components/coach/CoachLineChart';
+import { dt, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
 
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const [params, setParams] = useSearchParams();
+
   const meQuery = useCoachMe();
   const reportsQuery = useCoachReports();
   const trendsQuery = useCoachTrends();
+  const classesQuery = useCoachClasses();
 
   const me = coachState(meQuery);
   const reports = coachState(reportsQuery);
 
-  // The boundary reads whichever query is gating: auth errors match across
-  // both (same token), so `me` is the canonical signal.
-  const loading = me.loading || reports.loading;
+  const list = useMemo(() => [...(reports.data || [])].sort(byDateDesc), [reports.data]);
+  const selId = params.get('s');
+  const selectedIdx = selId ? Math.max(0, list.findIndex((r) => r.id === selId)) : 0;
+  const selected: CoachReport | null = list[selectedIdx] ?? null;
+  const prev = list[selectedIdx + 1];
+  const latest = list[0] ?? null;
+  const delta = selected && prev ? Math.round((selected.score - prev.score) * 100) / 100 : null;
 
-  // Newest first by session date — the primary sort for the latest-session
-  // detail and the earlier-documents list alike.
-  const list = [...(reports.data || [])].sort(byDateDesc);
-  const latest = list.length > 0 ? list[0] : null;
   const leaderName = me.data?.profile?.name || '';
-
-  // Which session the full report shows. Defaults to the latest; tapping a
-  // point on a trend chart (or an earlier document) opens that session here.
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-  const detailRef = useRef<HTMLDivElement>(null);
-  const selected = (selectedId && list.find((r) => r.id === selectedId)) || latest;
-  const selIdx = selected ? list.findIndex((r) => r.id === selected.id) : -1;
-  const selPrev = selIdx >= 0 ? list[selIdx + 1] : undefined;
-  const delta =
-    selected && selPrev ? Math.round((selected.score - selPrev.score) * 100) / 100 : null;
-
-  const openReport = (id: string) => {
-    setSelectedId(id);
-    // Let the state commit, then bring the full report into view.
-    requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
-  };
-  const openByDate = (isoDate: string) => {
-    const match = list.find((r) => r.date === isoDate);
-    if (match) openReport(match.id);
-  };
-
-  const greeting = me.data?.profile && (
-    <div>
-      <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>
-        {firstName(me.data.profile.name)}’s coaching
-      </h2>
-      <p style={{ margin: '4px 0 0', fontSize: 13, color: vmTokens.textTertiary }}>
-        {me.data.profile.group}
-        {me.data.profile.coachName ? ` · Coached by ${me.data.profile.coachName}` : ''}
-      </p>
-    </div>
-  );
-
-  const emptyState = !loading && (
-    <CoachCard>
-      <p style={{ margin: 0, fontSize: 14, color: vmTokens.textSecondary }}>
-        No sessions scored yet. Once your first session is recorded, your feedback and scores appear here.
-      </p>
-    </CoachCard>
-  );
-
-  const feedbackTile = (
-    <ActionTile
-      icon={<MessageSquareText size={18} strokeWidth={1.9} />}
-      label="Coach feedback"
-      testId="coach-action-feedback"
-      onClick={() => navigate('/coach/feedback')}
-    />
-  );
-
-  const monthlyTile = (
-    <ActionTile
-      icon={<BarChart3 size={18} strokeWidth={1.9} />}
-      label="Monthly summaries"
-      testId="coach-action-monthly"
-      onClick={() => navigate('/coach/monthly-summary')}
-    />
-  );
-
-  // Coaches manage the classes/meeting links the notetaker bot joins here.
-  const classSetupAction = me.data?.isCoach ? (
-    <button
-      type="button"
-      onClick={() => navigate('/coach/classes')}
-      data-testid="coach-class-setup-button"
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: 6,
-        padding: '6px 12px',
-        borderRadius: 999,
-        border: `1px solid ${vmTokens.headerFg}55`,
-        background: 'transparent',
-        color: vmTokens.headerFg,
-        fontSize: 13,
-        fontWeight: 600,
-        cursor: 'pointer',
-        whiteSpace: 'nowrap',
-      }}
-    >
-      <CalendarCog size={15} strokeWidth={2} /> Class Setup
-    </button>
-  ) : undefined;
+  const nextClass = pickNextClass(classesQuery.data);
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader
-        title="Coaching"
-        onBack={() => navigate('/read')}
-        backTestId="coach-back-button"
-        rightAction={
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            {classSetupAction}
-            <CoachProfileAvatar />
-          </div>
-        }
-      />
-
-      <div
-        data-testid="coach-dashboard"
-        style={{ flex: 1, overflowY: 'auto', borderTop: `1px solid ${vmTokens.divider}` }}
+    <CoachDashboardShell active="home">
+      <CoachGate
+        loading={me.loading || reports.loading}
+        authError={me.authError || reports.authError}
+        error={me.error || reports.error}
+        onRetry={() => {
+          meQuery.refetch();
+          reportsQuery.refetch();
+        }}
       >
-        <CoachStateBoundary
-          loading={loading}
-          authError={me.authError || reports.authError}
-          error={me.error || reports.error}
-          onRetry={() => {
-            meQuery.refetch();
-            reportsQuery.refetch();
-          }}
-        >
-          {isDesktop ? (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 24, maxWidth: 1180, margin: '0 auto' }}>
-              {greeting}
-
-              {/* No standalone hero on desktop — the latest-session detail below
-                  already leads with the score, status, and delta. */}
-              {!latest && emptyState}
-
-              {/* Trends over time — open by default on desktop. Tapping a point
-                  opens that session's report below. */}
-              {list.length > 0 && (
-                <div>
-                  <SectionLabel>Trends over time</SectionLabel>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-                    <ScoreTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
-                    <ClusterTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
-                  </div>
-                </div>
-              )}
-
-              {/* Selected session in full detail (defaults to the latest). */}
-              {selected && (
-                <div ref={detailRef} style={{ scrollMarginTop: 12 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
-                    <SectionLabel>
-                      {selected.id === latest?.id ? 'Latest session — full report' : 'Selected session — full report'}
-                    </SectionLabel>
-                    {selected.id !== latest?.id && (
-                      <button onClick={() => setSelectedId(null)} style={linkBtn} data-testid="coach-view-latest">
-                        View latest
-                      </button>
-                    )}
-                  </div>
-                  <ReportDetail report={selected} leaderName={leaderName} delta={delta} />
-                </div>
-              )}
-
-              {/* Meeting link + coach-feedback entry (church + Bible coach now
-                  live in Coach Settings, reached via the header avatar). */}
-              <div style={{ display: 'grid', gridTemplateColumns: me.data?.isCoach ? '2fr 1fr' : '1fr', gap: 12, alignItems: 'start' }}>
-                {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
-                {feedbackTile}
-                {monthlyTile}
+        {!latest || !selected ? (
+          <EmptyHome leaderName={leaderName} onAddClass={() => navigate('/coach/sessions')} />
+        ) : (
+          <>
+            <Hero
+              leaderName={leaderName}
+              sessionCount={list.length}
+              latest={latest}
+              delta={list.length > 1 ? Math.round((latest.score - list[1].score) * 100) / 100 : null}
+            />
+            <NextClassBand nextClass={nextClass} latest={latest} onManage={() => navigate('/coach/sessions')} />
+            <Trajectory trends={trendsQuery.data} selected={selected} prev={prev} onViewTrends={() => navigate('/coach/trends')} />
+            <CoachSessionDetail
+              report={selected}
+              delta={delta}
+              prev={prev}
+              label={selected.id === latest.id ? 'MOST RECENT SESSION' : 'SELECTED SESSION'}
+            />
+            {selected.id !== latest.id && (
+              <div style={{ marginTop: 16 }}>
+                <button type="button" onClick={() => setParams({}, { replace: true })} style={linkBtn}>
+                  ← Back to your most recent session
+                </button>
               </div>
+            )}
+          </>
+        )}
+      </CoachGate>
+    </CoachDashboardShell>
+  );
+}
 
-              {/* Earlier sessions, compact */}
-              {list.length > 1 && (
-                <div>
-                  <SectionLabel>Earlier feedback documents</SectionLabel>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                    {list.slice(1).map((r) => (
-                      <ReportCard key={r.id} report={r} leaderName={leaderName} />
-                    ))}
-                  </div>
-                </div>
-              )}
+// ─── Hero ────────────────────────────────────────────────────────────────────
+
+function Hero({
+  leaderName,
+  sessionCount,
+  latest,
+  delta,
+}: {
+  leaderName: string;
+  sessionCount: number;
+  latest: CoachReport;
+  delta: number | null;
+}) {
+  const weakest = weakestDimension(latest);
+  const deltaText = delta == null ? '—' : delta > 0 ? `▲ ${delta} pts` : delta < 0 ? `▼ ${Math.abs(delta)} pts` : 'no change';
+  const deltaColor = delta == null ? dt.textLight : delta >= 0 ? dt.green : dt.rust;
+
+  return (
+    <div style={{ padding: '34px 0 6px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 32, flexWrap: 'wrap', marginBottom: 26 }}>
+        <div>
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 8,
+              fontSize: 12.5,
+              fontWeight: 600,
+              letterSpacing: '.03em',
+              color: dt.gold2,
+              background: dt.goldChip,
+              padding: '6px 12px',
+              borderRadius: 99,
+              marginBottom: 16,
+            }}
+          >
+            ● {sessionCount} session{sessionCount === 1 ? '' : 's'} coached
+          </div>
+          <h1 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 44, lineHeight: 1.05, letterSpacing: '-.02em', margin: '0 0 10px' }}>
+            {greeting()}
+            {leaderName ? `, ${firstName(leaderName)}` : ''}
+          </h1>
+          <p style={{ fontSize: 16.5, lineHeight: 1.5, color: dt.textMuted, margin: 0 }}>
+            {subgreeting(latest, delta)}
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <StatTile label="LATEST SESSION" labelColor={dt.gold}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+              <span style={{ fontFamily: dt.serif, fontSize: 30, lineHeight: 1, color: dt.gold2 }}>{Math.round(latest.score)}</span>
+              <span style={{ fontSize: 14, color: dt.textLight, fontWeight: 600 }}>/100 · {latest.status}</span>
             </div>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 16, maxWidth: 640, margin: '0 auto' }}>
-              {greeting}
-
-              {latest ? <LatestSessionHero latest={latest} delta={delta} /> : emptyState}
-
-              {/* Quick actions */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-                <ActionTile
-                  icon={<TrendingUp size={18} strokeWidth={1.9} />}
-                  label="Trends over time"
-                  testId="coach-action-trends"
-                  disabled={list.length === 0}
-                  onClick={() => navigate('/coach/trends')}
-                />
-                {feedbackTile}
-                {monthlyTile}
-              </div>
-
-              {/* Meeting link (church + Bible coach live in Coach Settings) */}
-              {me.data?.isCoach && <ZoomLinkCard initialLink={me.data.zoomLink} />}
-
-              {/* Feedback documents */}
-              {list.length > 0 && (
-                <div>
-                  <SectionLabel>Feedback documents</SectionLabel>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                    {list.map((r) => (
-                      <ReportCard key={r.id} report={r} leaderName={leaderName} />
-                    ))}
-                  </div>
-                </div>
-              )}
+            <div style={{ fontSize: 13, fontWeight: 600, color: deltaColor, marginTop: 6 }}>{deltaText} vs. last</div>
+          </StatTile>
+          <StatTile label="THIS WEEK'S FOCUS" labelColor={dt.rust}>
+            <div style={{ fontFamily: dt.serif, fontSize: 20, lineHeight: 1.1, color: dt.textPrimary }}>
+              {weakest ? weakest.name : 'All dimensions solid'}
             </div>
-          )}
-        </CoachStateBoundary>
+            <div style={{ fontSize: 13, fontWeight: 600, color: dt.rust, marginTop: 6 }}>
+              {weakest ? `${weakest.score}/5 · ${ratingForScore(weakest.score).label.toLowerCase()}` : 'no weak spot this week'}
+            </div>
+          </StatTile>
+        </div>
       </div>
     </div>
   );
 }
 
-function firstName(name: string): string {
-  return (name || '').trim().split(/\s+/)[0] || name;
+function StatTile({ label, labelColor, children }: { label: string; labelColor: string; children: React.ReactNode }) {
+  return (
+    <div style={{ flex: 1, minWidth: 190, background: dt.innerBg, border: `1px solid ${dt.border2}`, borderRadius: 12, padding: '16px 18px' }}>
+      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', color: labelColor, marginBottom: 8 }}>{label}</div>
+      {children}
+    </div>
+  );
+}
+
+// ─── Next class band ─────────────────────────────────────────────────────────
+
+function NextClassBand({
+  nextClass,
+  latest,
+  onManage,
+}: {
+  nextClass: CoachClass | null;
+  latest: CoachReport;
+  onManage: () => void;
+}) {
+  const focus = focusReminders(latest);
+  return (
+    <div style={{ background: dt.darkBg, color: dt.darkText, borderRadius: 14, padding: '26px 30px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))', gap: 30 }}>
+        <div style={{ borderRight: `1px solid ${dt.darkBorder}`, paddingRight: 28 }}>
+          <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', color: dt.brightGold, marginBottom: 12 }}>NEXT CLASS</div>
+          {nextClass ? (
+            <>
+              <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 25, lineHeight: 1.15, margin: '0 0 12px' }}>{nextClass.name}</h2>
+              <div style={{ fontSize: 13.5, color: dt.darkMuted, lineHeight: 1.7 }}>
+                {classDateLine(nextClass)}
+                <br />
+                {recurrenceLabel(nextClass.recurrence)}
+              </div>
+              {nextClass.zoomLink && (
+                <a href={nextClass.zoomLink} target="_blank" rel="noreferrer" style={{ display: 'inline-block', marginTop: 12, fontSize: 13, fontWeight: 700, color: dt.brightGold }}>
+                  Join meeting →
+                </a>
+              )}
+            </>
+          ) : (
+            <>
+              <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, lineHeight: 1.15, margin: '0 0 12px' }}>No class scheduled</h2>
+              <button type="button" onClick={onManage} style={{ fontSize: 13, fontWeight: 700, color: dt.brightGold, background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
+                Add a recurring class →
+              </button>
+            </>
+          )}
+        </div>
+        <div>
+          <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.1em', color: dt.darkMuted2, marginBottom: 10 }}>
+            FOCUS ON, BASED ON LAST WEEK
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: '4px 28px' }}>
+            {focus.map((f, i) => (
+              <div key={i} style={{ display: 'grid', gridTemplateColumns: '84px 1fr', gap: 11, padding: '9px 0', borderTop: `1px solid ${dt.darkBorder}`, alignItems: 'start' }}>
+                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '.03em', textAlign: 'center', color: f.c, background: f.bg, padding: '4px 0', borderRadius: 5, width: '100%' }}>
+                  {f.band}
+                </div>
+                <div>
+                  <div style={{ fontWeight: 600, fontSize: 13, color: dt.darkText, lineHeight: 1.3 }}>{f.title}</div>
+                  <div style={{ fontSize: 12, color: dt.darkMuted, lineHeight: 1.4, marginTop: 2 }}>{f.note}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Trajectory ──────────────────────────────────────────────────────────────
+
+function Trajectory({
+  trends,
+  selected,
+  prev,
+  onViewTrends,
+}: {
+  trends: CoachTrends | undefined;
+  selected: CoachReport;
+  prev?: CoachReport;
+  onViewTrends: () => void;
+}) {
+  const [dim, setDim] = useSelectedTrendDim();
+
+  const dims = selected.dimensions;
+  const options = [{ key: 'overall', label: 'Overall (per session)' }, ...dims.map((d) => ({ key: d.name, label: d.name }))];
+
+  let values: number[];
+  let max: number;
+  let color: string;
+  let labels: string[];
+  let trendLabel: string;
+  let trendSub: string;
+
+  if (dim === 'overall') {
+    const series = trends?.scoreSeries ?? [];
+    values = series.map((p) => Math.round(p.score * 10) / 10);
+    labels = series.map((p) => shortDate(p.date));
+    max = 100;
+    color = dt.gold;
+    trendLabel = 'Overall score (per session, /100)';
+    const d = prev ? Math.round((selected.score - prev.score) * 10) / 10 : null;
+    trendSub = d == null ? '' : `${d >= 0 ? '▲ ' : '▼ '}${Math.abs(d)} vs. last session`;
+  } else {
+    const series = trends?.dimensionSeries ?? [];
+    values = series.map((r) => numberOr0(r[dim]));
+    labels = series.map((r) => shortDate(String(r.date)));
+    max = 5;
+    color = dt.green;
+    trendLabel = `${dim} (per session, /5)`;
+    const n = values.length;
+    const d = n >= 2 ? Math.round((values[n - 1] - values[n - 2]) * 10) / 10 : null;
+    trendSub = d == null ? '' : `${d >= 0 ? '▲ ' : '▼ '}${Math.abs(d)} vs. last session`;
+  }
+
+  const cards = statCards(selected, prev);
+
+  return (
+    <div style={{ marginTop: 34, borderTop: `1px solid ${dt.border2}`, paddingTop: 30 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 14, marginBottom: 18 }}>
+        <div>
+          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.12em', color: dt.gold, marginBottom: 6 }}>YOUR TRAJECTORY</div>
+          <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 27, margin: 0, letterSpacing: '-.01em' }}>
+            Sessions, at a glance
+          </h2>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <button type="button" onClick={onViewTrends} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 13.5, fontWeight: 700, color: dt.gold }}>
+            View full trends →
+          </button>
+          <select
+            value={dim}
+            onChange={(e) => setDim(e.target.value)}
+            aria-label="Trend series"
+            data-testid="coach-trend-select"
+            style={{ fontFamily: dt.sans, fontSize: 14, fontWeight: 600, color: dt.textPrimary, background: dt.fill1, border: `1px solid ${dt.inputBorder}`, borderRadius: 9, padding: '9px 13px', cursor: 'pointer' }}
+          >
+            {options.map((o) => (
+              <option key={o.key} value={o.key}>
+                {o.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 260px', gap: 26, alignItems: 'center' }}>
+        <div style={{ background: dt.innerBg, border: `1px solid ${dt.border2}`, borderRadius: 12, padding: '20px 22px 12px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 6 }}>
+            <span style={{ fontSize: 13.5, fontWeight: 600, color: dt.textMuted }}>{trendLabel}</span>
+            {trendSub && <span style={{ fontSize: 13, fontWeight: 600, color: dt.green }}>{trendSub}</span>}
+          </div>
+          {values.length > 0 ? (
+            <CoachLineChart values={values} max={max} color={color} labels={labels} />
+          ) : (
+            <div style={{ padding: '30px 0', textAlign: 'center', color: dt.textLight, fontSize: 13 }}>
+              Your trend line appears once you have a couple of scored sessions.
+            </div>
+          )}
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <MiniCard label="STRONGEST" labelC={dt.green} bg={dt.greenBg} name={cards.strongest.name} sub={`${cards.strongest.score}/5`} subC="#5C7A5F" />
+          <MiniCard label="MOST IMPROVED" labelC={dt.gold} bg={dt.goldChip} name={cards.improved.name} sub={cards.improved.diff > 0 ? `▲ ${cards.improved.diff} since last` : 'holding steady'} subC={dt.gold} />
+          <MiniCard label="NEEDS WORK" labelC={dt.rust} bg={dt.rustBg} name={cards.weakest.name} sub={`${cards.weakest.score}/5`} subC={dt.rust} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MiniCard({ label, labelC, bg, name, sub, subC }: { label: string; labelC: string; bg: string; name: string; sub: string; subC: string }) {
+  return (
+    <div style={{ background: bg, borderRadius: 11, padding: '14px 16px' }}>
+      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', color: labelC }}>{label}</div>
+      <div style={{ fontFamily: dt.serif, fontSize: 18, marginTop: 3 }}>{name}</div>
+      <div style={{ fontSize: 13, color: subC, fontWeight: 600 }}>{sub}</div>
+    </div>
+  );
+}
+
+// ─── Empty state ─────────────────────────────────────────────────────────────
+
+function EmptyHome({ leaderName, onAddClass }: { leaderName: string; onAddClass: () => void }) {
+  return (
+    <div style={{ padding: '48px 0' }}>
+      <h1 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 40, margin: '0 0 12px', letterSpacing: '-.02em' }}>
+        {greeting()}
+        {leaderName ? `, ${firstName(leaderName)}` : ''}
+      </h1>
+      <p style={{ fontSize: 16, color: dt.textMuted, margin: '0 0 20px', maxWidth: 560, lineHeight: 1.6 }}>
+        No sessions have been scored yet. Once your first session is recorded and coached, your feedback, scores, and
+        trends appear here. Register the classes your notetaker should join to get started.
+      </p>
+      <button
+        type="button"
+        onClick={onAddClass}
+        style={{ background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13.5, padding: '10px 16px', borderRadius: 9, border: 'none', cursor: 'pointer' }}
+      >
+        + Add a class
+      </button>
+    </div>
+  );
+}
+
+// ─── Data helpers ────────────────────────────────────────────────────────────
+
+const DARK_CHIP: Record<string, { c: string; bg: string }> = {
+  'NEEDS WORK': { c: '#E8A87C', bg: '#4A3227' },
+  'ON TARGET': { c: '#E4C878', bg: '#403820' },
+  STRONG: { c: '#9FCBA8', bg: '#2A3A2E' },
+  'N/A': { c: '#B7AD98', bg: '#33302A' },
+};
+
+function focusReminders(latest: CoachReport): { band: string; c: string; bg: string; title: string; note: string }[] {
+  const scored = latest.dimensions.filter((d) => d.score != null);
+  const sorted = [...scored].sort((a, b) => (a.score ?? 0) - (b.score ?? 0)).slice(0, 5);
+  return sorted.map((d) => {
+    const band = ratingForScore(d.score).label;
+    const chip = DARK_CHIP[band] ?? DARK_CHIP['N/A'];
+    return {
+      band,
+      c: chip.c,
+      bg: chip.bg,
+      title: d.name,
+      note: truncate(d.note?.trim() || 'Focus here to lift next week’s composite.', 120),
+    };
+  });
+}
+
+function weakestDimension(report: CoachReport): { name: string; score: number } | null {
+  const scored = report.dimensions.filter((d) => d.score != null) as { name: string; score: number }[];
+  if (scored.length === 0) return null;
+  return scored.reduce((min, d) => (d.score < min.score ? d : min));
+}
+
+function statCards(report: CoachReport, prev?: CoachReport) {
+  const scored = report.dimensions.filter((d) => d.score != null) as { n: number; name: string; score: number }[];
+  const strongest = scored.reduce((m, d) => (d.score > m.score ? d : m), scored[0] ?? { name: '—', score: 0 });
+  const weakest = scored.reduce((m, d) => (d.score < m.score ? d : m), scored[0] ?? { name: '—', score: 0 });
+  let improved = { name: '—', diff: 0 };
+  if (prev) {
+    let best = -Infinity;
+    for (const d of report.dimensions) {
+      const p = prev.dimensions.find((x) => x.n === d.n);
+      if (d.score == null || p?.score == null) continue;
+      const diff = Math.round((d.score - p.score) * 10) / 10;
+      if (diff > best) {
+        best = diff;
+        improved = { name: d.name, diff };
+      }
+    }
+  }
+  return { strongest, weakest, improved };
+}
+
+function pickNextClass(classes: CoachClass[] | undefined): CoachClass | null {
+  if (!classes || classes.length === 0) return null;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const dated = classes
+    .filter((c) => c.classDate)
+    .map((c) => ({ c, t: dateValue(c.classDate!) }))
+    .filter((x) => x.t >= today.getTime())
+    .sort((a, b) => a.t - b.t);
+  if (dated.length) return dated[0].c;
+  // No future-dated class → the first recurring one is the "next" class.
+  return classes.find((c) => c.recurrence !== 'none') ?? classes[0];
+}
+
+function classDateLine(c: CoachClass): string {
+  if (!c.classDate) return 'Recurring — no date pinned';
+  const [y, m, d] = c.classDate.split('-').map(Number);
+  if (!y || !m || !d) return c.classDate;
+  return new Date(y, m - 1, d).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+}
+
+function recurrenceLabel(r: string): string {
+  switch (r) {
+    case 'weekly':
+      return 'Repeats weekly';
+    case 'biweekly':
+      return 'Repeats every other week';
+    case 'monthly':
+      return 'Repeats monthly';
+    case 'daily':
+      return 'Repeats daily';
+    default:
+      return 'One-time class';
+  }
+}
+
+function greeting(): string {
+  const h = new Date().getHours();
+  if (h < 12) return 'Good morning';
+  if (h < 18) return 'Good afternoon';
+  return 'Good evening';
+}
+
+function subgreeting(latest: CoachReport, delta: number | null): string {
+  if (delta != null && delta > 0) return `${latest.session} just landed your best score in a while — up ${delta} points.`;
+  return `Here's where you stand after ${latest.session}.`;
+}
+
+function useSelectedTrendDim(): [string, (v: string) => void] {
+  const [params, setParams] = useSearchParams();
+  const dim = params.get('t') || 'overall';
+  const setDim = (v: string) => {
+    const next = new URLSearchParams(params);
+    if (v === 'overall') next.delete('t');
+    else next.set('t', v);
+    setParams(next, { replace: true });
+  };
+  return [dim, setDim];
+}
+
+function byDateDesc(a: { date: string }, b: { date: string }): number {
+  return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
+}
+
+function shortDate(iso: string): string {
+  const d = new Date(iso + 'T00:00:00Z');
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+}
+
+function dateValue(iso: string): number {
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(y, (m || 1) - 1, d || 1).getTime();
+}
+
+function numberOr0(v: unknown): number {
+  const n = typeof v === 'number' ? v : Number(v);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function truncate(s: string, n: number): string {
+  return s.length > n ? `${s.slice(0, n - 1).trimEnd()}…` : s;
 }
 
 const linkBtn: React.CSSProperties = {
   background: 'none',
   border: 'none',
   padding: 0,
-  color: vmTokens.gold,
-  fontWeight: 600,
-  fontSize: 12.5,
+  color: dt.gold,
+  fontWeight: 700,
+  fontSize: 13.5,
   cursor: 'pointer',
-  textDecoration: 'underline',
-  whiteSpace: 'nowrap',
 };
-
-/** Sort reports newest-first by ISO session date (yyyy-mm-dd sorts lexically). */
-function byDateDesc(a: { date: string }, b: { date: string }): number {
-  return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
-}
-
-function ActionTile({
-  icon,
-  label,
-  onClick,
-  disabled,
-  testId,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  onClick: () => void;
-  disabled?: boolean;
-  testId?: string;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      disabled={disabled}
-      data-testid={testId}
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: 8,
-        padding: '14px 14px',
-        borderRadius: 12,
-        border: `1px solid ${vmTokens.divider}`,
-        background: vmTokens.surfaceRaisedBg,
-        color: disabled ? vmTokens.textTertiary : vmTokens.textPrimary,
-        cursor: disabled ? 'default' : 'pointer',
-        opacity: disabled ? 0.6 : 1,
-        textAlign: 'left',
-      }}
-    >
-      <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <span style={{ color: vmTokens.gold }}>{icon}</span>
-        <span style={{ fontSize: 13.5, fontWeight: 600 }}>{label}</span>
-      </span>
-      <ArrowUpRight size={16} style={{ color: vmTokens.textTertiary }} />
-    </button>
-  );
-}

@@ -28,6 +28,7 @@ import GivingScreen from "@/pages/GivingScreen";
 import HelpScreen from "@/pages/HelpScreen";
 import SignInScreen from "@/pages/SignInScreen";
 import CoachHome from "@/pages/CoachHome";
+import CoachSessionsScreen from "@/pages/CoachSessionsScreen";
 import CoachClassesScreen from "@/pages/CoachClassesScreen";
 import CoachAdminClassesScreen from "@/pages/CoachAdminClassesScreen";
 import CoachSettingsScreen from "@/pages/CoachSettingsScreen";
@@ -86,6 +87,9 @@ const App = () => (
                   non-coaches see a friendly gate). /coach branches to the
                   admin roster or the coachee's own dashboard. */}
               <Route path="/coach" element={<CoachHome />} />
+              {/* Sessions — manage recurring classes + revisit past reports
+                  (coaching-dashboard design). */}
+              <Route path="/coach/sessions" element={<CoachSessionsScreen />} />
               {/* Coach Settings — coach-scoped profile, church affiliation,
                   and Bible-coach selection (reached from the header avatar). */}
               <Route path="/coach/settings" element={<CoachSettingsScreen />} />
