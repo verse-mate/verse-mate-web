@@ -258,11 +258,13 @@ describe('coachService', () => {
         program: { sessions: 4, activeLeaders: 2, newcomers: 6, avgScore: 82, clusters: [], delta: 1.5 },
         leaders: [],
         availableMonths: ['2026-07', '2026-06', '2026-05'],
+        narrative: { executiveSummary: ['In July 2026, ...'], trends: ['The program ...'] },
       });
     });
     const data = await fetchAdminMonthly('2026-07');
     expect(data.monthLabel).toBe('July 2026');
     expect(data.program.sessions).toBe(4);
     expect(data.availableMonths).toEqual(['2026-07', '2026-06', '2026-05']);
+    expect(data.narrative?.executiveSummary[0]).toContain('July 2026');
   });
 });

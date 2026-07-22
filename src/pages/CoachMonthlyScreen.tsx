@@ -138,6 +138,31 @@ export default function CoachMonthlyScreen() {
               </CoachCard>
             ) : data ? (
               <>
+                {/* Program narrative (same prose as the monthly PDF) */}
+                {data.narrative &&
+                (data.narrative.executiveSummary.length > 0 || data.narrative.trends.length > 0) ? (
+                  <div data-testid="coach-monthly-narrative">
+                    <SectionLabel>Executive summary</SectionLabel>
+                    <CoachCard style={{ padding: isDesktop ? 22 : 16 }}>
+                      {data.narrative.executiveSummary.map((p) => (
+                        <p key={p} style={narrativePara}>
+                          {p}
+                        </p>
+                      ))}
+                      {data.narrative.trends.length > 0 ? (
+                        <>
+                          <p style={narrativeSubhead}>Program-wide trends</p>
+                          {data.narrative.trends.map((p) => (
+                            <p key={p} style={narrativePara}>
+                              {p}
+                            </p>
+                          ))}
+                        </>
+                      ) : null}
+                    </CoachCard>
+                  </div>
+                ) : null}
+
                 {/* Program-wide rollup */}
                 <div>
                   <SectionLabel>Program summary</SectionLabel>
@@ -349,6 +374,22 @@ const navBtn: React.CSSProperties = {
   background: vmTokens.surfaceRaisedBg,
   color: vmTokens.textSecondary,
   cursor: 'pointer',
+};
+
+const narrativePara: React.CSSProperties = {
+  margin: '0 0 12px',
+  fontSize: 14.5,
+  lineHeight: 1.65,
+  color: vmTokens.textSecondary,
+};
+
+const narrativeSubhead: React.CSSProperties = {
+  margin: '8px 0 10px',
+  fontSize: 11.5,
+  fontWeight: 700,
+  letterSpacing: 0.5,
+  textTransform: 'uppercase',
+  color: vmTokens.textTertiary,
 };
 
 const monthSelect: React.CSSProperties = {
