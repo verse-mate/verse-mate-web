@@ -38,6 +38,7 @@ import type {
   CoachTrends,
   LeaderMonthlySummary,
   AdminCoachClass,
+  TrendRow,
 } from '@/services/coachService';
 import { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
@@ -459,12 +460,22 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
     return nums.length ? Math.round((nums.reduce((a, b) => a + b, 0) / nums.length) * 10) / 10 : (d.score ?? 0);
   });
 
-  const clusters = monthly
+  // Cluster mix should never be blank. Prefer the full monthly summary; when it
+  // isn't available yet (mid-month, too few sessions), fall back to whatever
+  // scored sessions we do have — the current month's if any, otherwise the most
+  // recent — so the leader always sees a mix.
+  const monthlyClusters = monthly
+    ? { bm: monthly.clusterAvg.bm, tc: monthly.clusterAvg.tc, ep: monthly.clusterAvg.ep, br: monthly.clusterAvg.br }
+    : null;
+  const fallback = monthlyClusters ? null : clusterAvgsFromSessions(trends?.dimensionSeries ?? [], latest);
+  const clusterAvg = monthlyClusters ?? fallback?.avg ?? null;
+  const clustersArePartial = !monthlyClusters && !!fallback;
+  const clusters = clusterAvg
     ? [
-        { name: 'Building Ministry', pct: monthly.clusterAvg.bm },
-        { name: 'Teaching Craft', pct: monthly.clusterAvg.tc },
-        { name: 'Engaging People', pct: monthly.clusterAvg.ep },
-        { name: 'Being Real', pct: monthly.clusterAvg.br },
+        { name: 'Building Ministry', pct: clusterAvg.bm },
+        { name: 'Teaching Craft', pct: clusterAvg.tc },
+        { name: 'Engaging People', pct: clusterAvg.ep },
+        { name: 'Being Real', pct: clusterAvg.br },
       ]
     : [];
 
@@ -495,13 +506,14 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
           </div>
         </div>
         <div style={innerCard}>
-          <div style={{ ...kicker, marginBottom: 14 }}>CLUSTER MIX · {monthLabel(currentMonth()).toUpperCase()}</div>
+          <div style={{ ...kicker, marginBottom: clustersArePartial ? 4 : 14 }}>CLUSTER MIX · {monthLabel(currentMonth()).toUpperCase()}</div>
+          {clustersArePartial && <div style={{ fontSize: 11.5, color: dt.textLight, marginBottom: 12 }}>Sessions so far — updates as the month fills in.</div>}
           {clusters.length > 0 ? clusters.map((c) => (
             <div key={c.name} style={{ marginBottom: 14 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, marginBottom: 5 }}><span style={{ color: dt.textMuted }}>{c.name}</span><span style={{ fontWeight: 700 }}>{c.pct == null ? 'N/A' : `${c.pct}%`}</span></div>
               <div style={{ height: 8, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}><div style={{ height: '100%', borderRadius: 99, width: `${c.pct ?? 0}%`, background: dt.brightGold }} /></div>
             </div>
-          )) : <p style={{ fontSize: 13, color: dt.textLight, margin: 0 }}>Cluster mix appears once a monthly summary is available.</p>}
+          )) : <p style={{ fontSize: 13, color: dt.textLight, margin: 0 }}>Cluster mix appears once this leader has a scored session.</p>}
         </div>
       </div>
 
@@ -1105,6 +1117,45 @@ function clusterAvgs(l: CoachMonthly['leaders'][number]): { bm: number | null; t
   }
   const pct = (arr: number[]) => (arr.length ? Math.round((arr.reduce((a, b) => a + b, 0) / arr.length / 5) * 100) : null);
   return { bm: pct(buckets.BM), tc: pct(buckets.TC), ep: pct(buckets.EP), br: pct(buckets.BR) };
+}
+
+/** Cluster mix fallback for the Development panel when there's no full monthly
+ *  summary yet. Averages each dimension across the sessions we DO have — the
+ *  current month's rows if any, otherwise every scored session in the series,
+ *  and as a last resort the single latest report — then rolls the dimension
+ *  means up into the four v3 clusters. Returns null only when there is truly no
+ *  dimension data to draw on. */
+function clusterAvgsFromSessions(
+  dimensionSeries: TrendRow[],
+  latest: CoachReport,
+): { avg: { bm: number | null; tc: number | null; ep: number | null; br: number | null } } | null {
+  const nameToNum = new Map(latest.dimensions.map((d) => [d.name, d.n]));
+  const thisMonth = dimensionSeries.filter((r) => String(r.date).startsWith(currentMonth()));
+  const rows = thisMonth.length ? thisMonth : dimensionSeries;
+
+  const perDim = new Map<number, number[]>();
+  const push = (n: number, v: number) => {
+    if (!Number.isFinite(v)) return;
+    const arr = perDim.get(n);
+    if (arr) arr.push(v);
+    else perDim.set(n, [v]);
+  };
+  if (rows.length) {
+    for (const r of rows) {
+      for (const [name, n] of nameToNum) push(n, Number(r[name]));
+    }
+  } else {
+    for (const d of latest.dimensions) if (d.score != null) push(d.n, d.score);
+  }
+  if (perDim.size === 0) return null;
+
+  const buckets: Record<string, number[]> = { BM: [], TC: [], EP: [], BR: [] };
+  for (const [n, arr] of perDim) {
+    if (!arr.length) continue;
+    buckets[clusterForDim(n)]?.push(arr.reduce((a, b) => a + b, 0) / arr.length);
+  }
+  const pct = (arr: number[]) => (arr.length ? Math.round((arr.reduce((a, b) => a + b, 0) / arr.length / 5) * 100) : null);
+  return { avg: { bm: pct(buckets.BM), tc: pct(buckets.TC), ep: pct(buckets.EP), br: pct(buckets.BR) } };
 }
 
 /** Which cluster (code) a dimension number belongs to (v3 model). */
