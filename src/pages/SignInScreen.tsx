@@ -324,7 +324,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
               className="mt-4 text-[24px] font-normal leading-tight"
               style={{ color: vmTokens.textPrimary, fontFamily: 'Roboto, "Google Sans", sans-serif' }}
             >
-              {isSignup ? 'Create your account' : 'Welcome to VerseMate'}
+              {isSignup ? 'Create your VerseMate account' : 'Welcome to VerseMate'}
             </h2>
             <p className="text-[14px] mt-2 leading-relaxed" style={{ color: vmTokens.textSecondary }}>
               {isSignup
