@@ -885,7 +885,7 @@ function TrendsDetail({
           {showKey && <div style={{ padding: '10px 12px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.7 }}>{DIM_KEY}</div>}
           {leaders.map((l) => (
             <div key={l.id} style={{ display: 'grid', gridTemplateColumns: '150px repeat(12, 1fr)', gap: 3, padding: '5px 12px', borderTop: `1px solid ${dt.rowDivider}`, alignItems: 'center' }}>
-              <div style={{ fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{l.name}</div>
+              <button type="button" onClick={() => onOpenLeader(l.id)} title={`Open ${l.name}'s page`} style={{ ...leaderNameButton, fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{l.name}</button>
               {l.dimensions.map((d) => {
                 const v = d.avg;
                 const cc = cellColor(v);
@@ -921,7 +921,7 @@ function TrendsDetail({
               const weak = [...l.dimensions].filter((d) => d.avg != null).sort((a, b) => (a.avg ?? 0) - (b.avg ?? 0))[0];
               return (
                 <div key={l.id} style={{ display: 'grid', gridTemplateColumns: '150px 56px 110px 1.4fr', gap: 12, padding: '12px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'start' }}>
-                  <div style={{ fontWeight: 600, paddingTop: 1 }}>{l.name}</div>
+                  <button type="button" onClick={() => onOpenLeader(l.id)} title={`Open ${l.name}'s page`} style={{ ...leaderNameButton, fontWeight: 600, paddingTop: 1 }}>{l.name}</button>
                   <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', paddingTop: 1 }}>{l.avgScore?.toFixed(1) ?? '—'}</div>
                   <div><span style={{ fontSize: 10.5, fontWeight: 700, color: pri.c, background: pri.bg, padding: '4px 8px', borderRadius: 6, display: 'inline-block' }}>{pri.label}</span></div>
                   <div style={{ fontSize: 12.5, color: dt.body, lineHeight: 1.5 }}>{weak ? `Lowest dimension: ${weak.name} (${weak.avg?.toFixed(1)}/5).` : '—'}</div>
@@ -1234,6 +1234,17 @@ const rosterRow: React.CSSProperties = {
   cursor: 'pointer',
   width: '100%',
   textAlign: 'left',
+};
+
+// Leader names render as buttons that open the leader's dedicated page.
+// Styled to read like the surrounding text (no chrome) but with a dotted
+// underline — the same affordance the D# column headers use — to signal
+// they're clickable.
+const leaderNameButton: React.CSSProperties = {
+  background: 'none', border: 'none', padding: 0, margin: 0, font: 'inherit',
+  color: 'inherit', cursor: 'pointer', textAlign: 'left',
+  textDecoration: 'underline dotted', textUnderlineOffset: 3,
+  display: 'block', maxWidth: '100%',
 };
 
 const goldPill: React.CSSProperties = {
