@@ -440,7 +440,7 @@ function focusReminders(latest: CoachReport): { band: string; c: string; bg: str
   return weak.slice(0, 5).map((d, i) => ({
     ...bandFor(i),
     title: d.name,
-    note: truncate(d.note?.trim() || 'Focus here to lift next week’s composite.', 120),
+    note: truncate(d.note?.trim() || '', 120),
   }));
 }
 
@@ -532,13 +532,10 @@ function greeting(): string {
 
 function subgreeting(latest: CoachReport, delta: number | null, streakWeeks: number, admin?: boolean): string {
   const lesson = lessonLabel(latest.session);
-  if (admin) {
-    return delta != null && delta > 0
-      ? `${lesson} just landed their best score in a while — up ${delta} points.`
-      : `Where they stand after ${lesson}.`;
-  }
-  const rising = delta != null && delta > 0;
-  return `You're on a ${streakWeeks}-week coaching streak — and ${lesson} just landed your best score ${rising ? 'yet' : 'in a while'}.`;
+  const move = delta == null ? '' : delta > 0 ? ` — up ${delta} points on the last session` : delta < 0 ? ` — down ${Math.abs(delta)} on the last session` : '';
+  if (admin) return `Where they stand after ${lesson}${move}.`;
+  const streak = streakWeeks > 1 ? `You're on a ${streakWeeks}-week coaching streak. ` : '';
+  return `${streak}Here's where you stand after ${lesson}${move}.`;
 }
 
 /** A short label for the session — e.g. "Lesson 9" pulled from the title. */
