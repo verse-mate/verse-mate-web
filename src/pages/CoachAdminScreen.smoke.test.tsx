@@ -123,4 +123,16 @@ describe('Coach Oversight', () => {
     fireEvent.click(screen.getByTestId('oversight-nav-links'));
     expect(await screen.findByText(/The meeting links your notetaker joins/)).toBeInTheDocument();
   });
+
+  it('opens a leader page from a clickable leader name in the trends tables', async () => {
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-nav-trends'));
+    await screen.findByText('Dimension heat map');
+    // Every leader name across the trends tables is a button that opens that
+    // leader's dedicated page. Clicking one drills into the leader detail view.
+    const nameButtons = screen.getAllByTitle("Open Joel Hurt's page");
+    expect(nameButtons.length).toBeGreaterThan(0);
+    fireEvent.click(nameButtons[0]);
+    expect(await screen.findByText('Development · the coaching conversation')).toBeInTheDocument();
+  });
 });
