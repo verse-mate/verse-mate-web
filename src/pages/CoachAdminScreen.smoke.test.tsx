@@ -102,6 +102,18 @@ describe('Coach Oversight', () => {
     expect(await screen.findByTestId('oversight-comment-s6')).toBeInTheDocument();
   });
 
+  it('falls back to available sessions for cluster mix when no monthly summary yet', async () => {
+    vi.mocked(coachService.fetchLeaderMonthlySummary).mockResolvedValueOnce({ ...leaderMonthly, summary: null });
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-roster-bryan'));
+    // Cluster mix still renders (never blank) using the sessions we have.
+    expect(await screen.findByText(/Sessions so far/)).toBeInTheDocument();
+    expect(screen.getByText('Building Ministry')).toBeInTheDocument();
+    expect(screen.getByText('Teaching Craft')).toBeInTheDocument();
+    // The old empty-state copy must be gone.
+    expect(screen.queryByText(/appears once a monthly summary is available/)).not.toBeInTheDocument();
+  });
+
   it('switches to program trends and class links', async () => {
     renderScreen();
     fireEvent.click(await screen.findByTestId('oversight-nav-trends'));
