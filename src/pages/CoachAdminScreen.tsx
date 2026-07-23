@@ -208,6 +208,11 @@ function RosterView({
   const composite = monthly?.program.avgScore ?? (scored.length ? Number(avg) : null);
   const delta = monthly?.program.delta ?? null;
 
+  // Real program-composite line from the loaded months.
+  const loaded = threeMonths.filter((m) => m.data?.program.avgScore != null);
+  const programLine = loaded.map((m) => Math.round((m.data!.program.avgScore ?? 0) * 10) / 10);
+  const programLabels = loaded.map((m) => m.label.split(' ')[0]);
+
   return (
     <div style={{ paddingTop: 28 }}>
       {/* Title */}
@@ -224,7 +229,7 @@ function RosterView({
         <div style={{ maxWidth: 560 }}>
           <div style={kicker}>PROGRAM HEALTH · {monthLabel(month).toUpperCase()}</div>
           <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 30, lineHeight: 1.12, letterSpacing: '-.01em', margin: '0 0 8px' }}>
-            Your {roster.length} leaders are averaging {avg}{composite != null ? ' — a Strong program month.' : '.'}
+            Your {roster.length} leaders are averaging {avg}{composite != null ? ` — a ${compositeStatus(composite)} program month.` : '.'}
           </h2>
           <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>{strongPlus} Strong or better · {needs} worth a check-in this week.</p>
         </div>
@@ -245,14 +250,18 @@ function RosterView({
 
       {/* Status mix */}
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 300px', gap: 20, marginBottom: 34 }}>
-        <div style={innerCard}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 10 }}>
-            <span style={{ ...kicker, marginBottom: 0 }}>PROGRAM AT A GLANCE</span>
+        <div style={{ ...innerCard, padding: '20px 22px 12px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 4 }}>
+            <span style={{ ...kicker, marginBottom: 0 }}>PROGRAM COMPOSITE · LAST {programLine.length || 3} MONTHS</span>
             <button type="button" onClick={onViewTrends} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12.5, fontWeight: 700, color: dt.gold }}>View full trends →</button>
           </div>
-          <p style={{ fontSize: 14, color: dt.textMuted, lineHeight: 1.6, margin: 0 }}>
-            {scored.length} of {roster.length} leaders have a scored session. Open <strong>Trends</strong> for the cohort leaderboard, dimension heat map, and coaching priorities.
-          </p>
+          {programLine.length > 1 ? (
+            <AxisLineChart values={programLine} min={50} max={100} color={dt.gold} labels={programLabels} />
+          ) : (
+            <p style={{ fontSize: 14, color: dt.textMuted, lineHeight: 1.6, margin: '10px 0 8px' }}>
+              {scored.length} of {roster.length} leaders have a scored session. The program trend line appears once two or more months are analyzed.
+            </p>
+          )}
         </div>
         <div style={innerCard}>
           <div style={{ ...kicker, marginBottom: 14 }}>STATUS MIX</div>
@@ -568,8 +577,9 @@ function ClassCard({
         </div>
         {micro && <div style={{ fontSize: 12.5, color: dt.body, lineHeight: 1.5, marginTop: 11 }}>{micro}</div>}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center', marginTop: 11 }}>
-          <span style={{ fontSize: 11.5, color: dt.body }}><strong style={{ color: dt.textPrimary }}>Takeaway ·</strong> {strong} carried the hour; sharpen {weak} next.</span>
+          <span style={{ fontSize: 11.5, color: dt.body }}><strong style={{ color: dt.textPrimary }}>Strongest</strong></span>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '.03em', color: dt.green, background: dt.greenBg, padding: '3px 8px', borderRadius: 5 }}>↑ {strong}</span>
+          <span style={{ fontSize: 11.5, color: dt.body, marginLeft: 4 }}><strong style={{ color: dt.textPrimary }}>Growth edge</strong></span>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '.03em', color: dt.rust, background: dt.rustBg, padding: '3px 8px', borderRadius: 5 }}>↓ {weak}</span>
         </div>
         {improveList.length > 0 && (
@@ -579,7 +589,7 @@ function ClassCard({
               {improveList.map((d) => (
                 <div key={d.n} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                   <span style={{ flex: 'none', fontSize: 10, fontWeight: 700, color: dt.rust, background: dt.rustBg, padding: '3px 7px', borderRadius: 5 }}>{d.name} · {d.score}/5</span>
-                  <span style={{ fontSize: 12, color: dt.body, lineHeight: 1.45 }}>{d.note?.trim() || `Pick one concrete move for ${d.name.toLowerCase()} next week and name it before you close.`}</span>
+                  {d.note?.trim() && <span style={{ fontSize: 12, color: dt.body, lineHeight: 1.45 }}>{d.note.trim()}</span>}
                 </div>
               ))}
             </div>
@@ -914,7 +924,7 @@ function TrendsDetail({
                   <div style={{ fontWeight: 600, paddingTop: 1 }}>{l.name}</div>
                   <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', paddingTop: 1 }}>{l.avgScore?.toFixed(1) ?? '—'}</div>
                   <div><span style={{ fontSize: 10.5, fontWeight: 700, color: pri.c, background: pri.bg, padding: '4px 8px', borderRadius: 6, display: 'inline-block' }}>{pri.label}</span></div>
-                  <div style={{ fontSize: 12.5, color: dt.body, lineHeight: 1.5 }}>{weak ? `${weak.name} is the lowest dimension (${weak.avg?.toFixed(1)}/5) — the clearest place to focus next.` : 'Sustain the gains; broaden participation beyond the core voices.'}</div>
+                  <div style={{ fontSize: 12.5, color: dt.body, lineHeight: 1.5 }}>{weak ? `Lowest dimension: ${weak.name} (${weak.avg?.toFixed(1)}/5).` : '—'}</div>
                 </div>
               );
             })}
