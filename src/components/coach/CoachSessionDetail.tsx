@@ -366,10 +366,8 @@ function Scorecard({ report }: { report: CoachReport }) {
                     </span>
                     <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', color: dt.gold }}>COACH FEEDBACK</span>
                   </div>
-                  <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: dt.body }}>
-                    {d.note?.trim() ||
-                      DIMENSION_INFO[d.n]?.what ||
-                      'Detailed dimension-level coaching for this session is in the downloadable report.'}
+                  <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: d.note?.trim() ? dt.body : dt.textLight }}>
+                    {d.note?.trim() || 'No session-specific coach note recorded for this dimension.'}
                   </p>
                 </div>
               </div>
