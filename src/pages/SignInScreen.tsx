@@ -24,6 +24,73 @@ interface SignInScreenProps {
   initialMode?: Mode;
 }
 
+/**
+ * Official multi-color Google "G" mark (Google branding guidelines).
+ * Rendered at a fixed 18px so it reads the same in light and dark — the
+ * four brand colors are constant across themes, which is exactly how
+ * Google's own "Sign in with Google" button behaves. Kept as a standalone
+ * component so both the button and any future callout can reuse it.
+ */
+function GoogleGLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" aria-hidden="true">
+      <path
+        fill="#EA4335"
+        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
+      />
+      <path
+        fill="#4285F4"
+        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
+      />
+      <path
+        fill="#34A853"
+        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
+      />
+    </svg>
+  );
+}
+
+/** Apple "" mark. Monochrome, so it follows the current text color and
+ *  reads correctly on both the light and dark card surface. */
+function AppleLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+    </svg>
+  );
+}
+
+/**
+ * Shared style for the three provider buttons. Google's "Sign in with
+ * Google" button spec: 40–48px tall, 1px neutral outline, 14px medium
+ * Roboto label, logo left-aligned with the label centered as a group.
+ * Uses the raised-surface token so the button is white-on-cream in light
+ * and a subtle grey-on-black in dark, matching Google's own light/dark
+ * button treatment. Radius 100px gives the pill shape Google moved to in
+ * its latest identity buttons.
+ */
+const providerButtonStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: 12,
+  width: '100%',
+  height: 44,
+  borderRadius: 100,
+  fontFamily: 'Roboto, "Google Sans", sans-serif',
+  fontWeight: 500,
+  fontSize: 14,
+  letterSpacing: 0.25,
+  background: vmTokens.surfaceRaisedBg,
+  border: `1px solid ${vmTokens.divider}`,
+  color: vmTokens.textPrimary,
+  cursor: 'pointer',
+} as const;
+
 export default function SignInScreen({ initialMode = 'signin' }: SignInScreenProps = {}) {
   const navigate = useNavigate();
   const { dispatch } = useApp();
@@ -128,77 +195,100 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
           </div>
         </header>
 
-        <div className="flex-1 px-6 pt-4 pb-6" style={{ backgroundColor: vmTokens.commentaryBg }}>
-          {mode === 'signup' && (
+        <div className="flex-1 overflow-y-auto px-6 py-8" style={{ backgroundColor: vmTokens.commentaryBg }}>
+          {/* Material-style centered card, mirroring the providers view. */}
+          <div
+            className="mx-auto w-full"
+            style={{
+              maxWidth: 400,
+              background: vmTokens.surfaceRaisedBg,
+              border: `1px solid ${vmTokens.divider}`,
+              borderRadius: 16,
+              padding: 28,
+              boxShadow: '0 1px 2px rgba(60,64,67,0.10), 0 1px 6px rgba(60,64,67,0.08)',
+            }}
+          >
+            <div className="flex flex-col items-center text-center mb-6">
+              <GoogleGLogo size={26} />
+              <h2 className="mt-3 text-[22px] font-normal" style={{ color: vmTokens.textPrimary, fontFamily: 'Roboto, "Google Sans", sans-serif' }}>
+                {mode === 'signin' ? 'Sign in' : 'Create your account'}
+              </h2>
+              <p className="mt-1 text-[14px]" style={{ color: vmTokens.textSecondary }}>
+                to continue to VerseMate
+              </p>
+            </div>
+
+            {mode === 'signup' && (
+              <div className="mb-3">
+                <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Name</label>
+                <input
+                  value={name}
+                  onChange={e => setName(e.target.value)}
+                  data-testid="signup-name"
+                  className="mt-1.5 w-full h-[52px] px-4 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4285F4]"
+                  style={{ backgroundColor: vmTokens.inputBg, border: `1px solid ${vmTokens.inputBorder}`, color: vmTokens.textPrimary }}
+                  placeholder="Your name"
+                />
+              </div>
+            )}
             <div className="mb-3">
-              <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Name</label>
+              <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Email</label>
               <input
-                value={name}
-                onChange={e => setName(e.target.value)}
-                data-testid="signup-name"
-                className="mt-1.5 w-full h-[52px] px-4 rounded-xl text-[15px] focus:outline-none focus:ring-2 focus:ring-[#B09A6D]"
-                style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, color: vmTokens.textPrimary }}
-                placeholder="Your name"
+                type="email"
+                autoComplete="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                data-testid="login-email"
+                className="mt-1.5 w-full h-[52px] px-4 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4285F4]"
+                style={{ backgroundColor: vmTokens.inputBg, border: `1px solid ${vmTokens.inputBorder}`, color: vmTokens.textPrimary }}
+                placeholder="you@example.com"
               />
             </div>
-          )}
-          <div className="mb-3">
-            <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Email</label>
-            <input
-              type="email"
-              autoComplete="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              data-testid="login-email"
-              className="mt-1.5 w-full h-[52px] px-4 rounded-xl text-[15px] focus:outline-none focus:ring-2 focus:ring-[#B09A6D]"
-              style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, color: vmTokens.textPrimary }}
-              placeholder="you@example.com"
-            />
-          </div>
-          <div className="mb-3">
-            <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Password</label>
-            <input
-              type="password"
-              autoComplete={mode === 'signin' ? 'current-password' : 'new-password'}
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              data-testid="login-password"
-              className="mt-1.5 w-full h-[52px] px-4 rounded-xl text-[15px] focus:outline-none focus:ring-2 focus:ring-[#B09A6D]"
-              style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, color: vmTokens.textPrimary }}
-              placeholder="••••••••"
-            />
-          </div>
-          {error && <p data-testid="login-error" className="text-[13px] text-red-400 mt-1">{error}</p>}
+            <div className="mb-3">
+              <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Password</label>
+              <input
+                type="password"
+                autoComplete={mode === 'signin' ? 'current-password' : 'new-password'}
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                data-testid="login-password"
+                className="mt-1.5 w-full h-[52px] px-4 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4285F4]"
+                style={{ backgroundColor: vmTokens.inputBg, border: `1px solid ${vmTokens.inputBorder}`, color: vmTokens.textPrimary }}
+                placeholder="••••••••"
+              />
+            </div>
+            {error && <p data-testid="login-error" className="text-[13px] mt-1" style={{ color: vmTokens.statusError }}>{error}</p>}
 
-          <button
-            onClick={handleEmailSubmit}
-            disabled={submitting}
-            data-testid={mode === 'signin' ? 'login-submit' : 'signup-submit'}
-            className="mt-5 w-full h-12 rounded-xl font-medium text-[15px] disabled:opacity-40"
-            style={{ backgroundColor: vmTokens.gold, color: vmTokens.goldOnLight }}
-          >
-            {submitting
-              ? mode === 'signin'
-                ? 'Signing in...'
-                : 'Creating account...'
-              : mode === 'signin'
-              ? 'Sign In'
-              : 'Create Account'}
-          </button>
+            <button
+              onClick={handleEmailSubmit}
+              disabled={submitting}
+              data-testid={mode === 'signin' ? 'login-submit' : 'signup-submit'}
+              className="mt-5 w-full h-11 rounded-full font-medium text-[15px] disabled:opacity-40"
+              style={{ backgroundColor: '#4285F4', color: '#ffffff', fontFamily: 'Roboto, "Google Sans", sans-serif' }}
+            >
+              {submitting
+                ? mode === 'signin'
+                  ? 'Signing in...'
+                  : 'Creating account...'
+                : mode === 'signin'
+                ? 'Sign In'
+                : 'Create Account'}
+            </button>
 
-          <button
-            onClick={() => {
-              setMode(mode === 'signin' ? 'signup' : 'signin');
-              setError(null);
-            }}
-            data-testid="login-mode-toggle"
-            className="w-full mt-4 text-[13px]"
-            style={{ color: vmTokens.textTertiary }}
-          >
-            {mode === 'signin'
-              ? "Don't have an account? Create one"
-              : 'Already have an account? Sign in'}
-          </button>
+            <button
+              onClick={() => {
+                setMode(mode === 'signin' ? 'signup' : 'signin');
+                setError(null);
+              }}
+              data-testid="login-mode-toggle"
+              className="w-full mt-4 text-[13px]"
+              style={{ color: '#4285F4', fontWeight: 500 }}
+            >
+              {mode === 'signin'
+                ? "Don't have an account? Create one"
+                : 'Already have an account? Sign in'}
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -212,79 +302,94 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
         backTestId="login-back-button"
       />
 
-      <div className="flex-1 flex flex-col px-6 pb-6" style={{ backgroundColor: vmTokens.commentaryBg }}>
-        <div className="mt-4 mb-8 text-center">
-          <h2 className="text-[22px] font-bold" style={{ color: vmTokens.textPrimary }}>
-            {isSignup ? 'Create your VerseMate account' : 'Welcome to VerseMate'}
-          </h2>
-          <p className="text-[14px] mt-2 leading-relaxed" style={{ color: vmTokens.textTertiary }}>
-            {isSignup
-              ? 'Sign up to save your bookmarks, notes, and highlights across devices.'
-              : 'Sign in to sync your bookmarks, notes, and highlights across devices.'}
-          </p>
-        </div>
-
-        <div className="flex-1 flex flex-col justify-center space-y-3">
-          <button
-            onClick={handleGoogleSSO}
-            disabled={submitting}
-            data-testid="login-google-button"
-            className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] disabled:opacity-60"
-            style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: '1px solid #e0e0e0', color: vmTokens.textPrimary }}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.05 20.28c-1.74.97-3.28 1.22-5.05 1.22-4.13 0-8.18-2.79-8.18-8.18S7.87 5 12 5c2.18 0 4.04.78 5.52 2.08l-2.24 2.16c-.6-.57-1.65-1.24-3.28-1.24-2.81 0-5.1 2.33-5.1 5.2s2.29 5.2 5.1 5.2c3.26 0 4.49-2.34 4.68-3.55H12v-2.84h7.82c.08.47.13.94.13 1.56 0 3.85-2.57 6.71-6.9 6.71z" />
-            </svg>
-            Continue with Google
-          </button>
-          <button
-            onClick={handleAppleSSO}
-            disabled={submitting}
-            data-testid="login-apple-button"
-            className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] disabled:opacity-60"
-            style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: '1px solid #e0e0e0', color: vmTokens.textPrimary }}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-            </svg>
-            Continue with Apple
-          </button>
-
-          <div className="flex items-center gap-3 py-2">
-            <div className="flex-1 h-px" style={{ backgroundColor: vmTokens.surfaceRaisedBg }} />
-            <span className="text-[11px]" style={{ color: vmTokens.textMuted }}>or</span>
-            <div className="flex-1 h-px" style={{ backgroundColor: vmTokens.surfaceRaisedBg }} />
+      <div className="flex-1 overflow-y-auto flex flex-col justify-center px-6 py-8" style={{ backgroundColor: vmTokens.commentaryBg }}>
+        {/* Google-style centered account card. Uses raised-surface tokens so
+            it renders white-on-cream in light and grey-on-black in dark,
+            following the browser's prefers-color-scheme via the `.dark`
+            class on <html>. */}
+        <div
+          className="mx-auto w-full"
+          style={{
+            maxWidth: 400,
+            background: vmTokens.surfaceRaisedBg,
+            border: `1px solid ${vmTokens.divider}`,
+            borderRadius: 16,
+            padding: 32,
+            boxShadow: '0 1px 2px rgba(60,64,67,0.10), 0 1px 6px rgba(60,64,67,0.08)',
+          }}
+        >
+          <div className="flex flex-col items-center text-center mb-8">
+            <GoogleGLogo size={30} />
+            <h2
+              className="mt-4 text-[24px] font-normal leading-tight"
+              style={{ color: vmTokens.textPrimary, fontFamily: 'Roboto, "Google Sans", sans-serif' }}
+            >
+              {isSignup ? 'Create your VerseMate account' : 'Welcome to VerseMate'}
+            </h2>
+            <p className="text-[14px] mt-2 leading-relaxed" style={{ color: vmTokens.textSecondary }}>
+              {isSignup
+                ? 'Sign up to save your bookmarks, notes, and highlights across devices.'
+                : 'Sign in to sync your bookmarks, notes, and highlights across devices.'}
+            </p>
           </div>
 
-          <button
-            onClick={() => setScreen('email')}
-            data-testid="login-email-button"
-            className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px]"
-            style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, color: vmTokens.textPrimary }}
-          >
-            <Mail size={18} />
-            {isSignup ? 'Sign up with Email' : 'Continue with Email'}
-          </button>
+          <div className="flex flex-col space-y-3">
+            <button
+              onClick={handleGoogleSSO}
+              disabled={submitting}
+              data-testid="login-google-button"
+              className="disabled:opacity-60"
+              style={{ ...providerButtonStyle }}
+            >
+              <GoogleGLogo size={18} />
+              Continue with Google
+            </button>
+            <button
+              onClick={handleAppleSSO}
+              disabled={submitting}
+              data-testid="login-apple-button"
+              className="disabled:opacity-60"
+              style={{ ...providerButtonStyle }}
+            >
+              <AppleLogo size={18} />
+              Continue with Apple
+            </button>
 
-          {error && (
-            <p data-testid="login-error" className="text-[12px] text-red-400 mt-2 text-center">{error}</p>
-          )}
+            <div className="flex items-center gap-3 py-2">
+              <div className="flex-1 h-px" style={{ backgroundColor: vmTokens.divider }} />
+              <span className="text-[11px] uppercase tracking-wide" style={{ color: vmTokens.textMuted }}>or</span>
+              <div className="flex-1 h-px" style={{ backgroundColor: vmTokens.divider }} />
+            </div>
 
-          {/* Cross-link to the opposite mode so users on the wrong screen
-              can switch without losing their context (issue #45). */}
-          <button
-            onClick={() => {
-              setMode(isSignup ? 'signin' : 'signup');
-              navigate(isSignup ? '/login' : '/create-account', { replace: true });
-            }}
-            data-testid="login-providers-mode-toggle"
-            className="w-full mt-3 text-[13px]"
-            style={{ color: vmTokens.textTertiary }}
-          >
-            {isSignup
-              ? 'Already have an account? Sign in'
-              : "Don't have an account? Create one"}
-          </button>
+            <button
+              onClick={() => setScreen('email')}
+              data-testid="login-email-button"
+              style={{ ...providerButtonStyle }}
+            >
+              <Mail size={18} />
+              {isSignup ? 'Sign up with Email' : 'Continue with Email'}
+            </button>
+
+            {error && (
+              <p data-testid="login-error" className="text-[12px] mt-2 text-center" style={{ color: vmTokens.statusError }}>{error}</p>
+            )}
+
+            {/* Cross-link to the opposite mode so users on the wrong screen
+                can switch without losing their context (issue #45). */}
+            <button
+              onClick={() => {
+                setMode(isSignup ? 'signin' : 'signup');
+                navigate(isSignup ? '/login' : '/create-account', { replace: true });
+              }}
+              data-testid="login-providers-mode-toggle"
+              className="w-full mt-3 text-[13px]"
+              style={{ color: '#4285F4', fontWeight: 500 }}
+            >
+              {isSignup
+                ? 'Already have an account? Sign in'
+                : "Don't have an account? Create one"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
