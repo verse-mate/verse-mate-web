@@ -1,24 +1,23 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import ScreenHeader from '@/components/ScreenHeader';
+import { JesusEventCardView } from '@/components/jesus/JesusEventParts';
 import {
   JesusCount,
   JesusEmpty,
-  JesusEntryCard,
   JesusLoading,
   JesusPageBody,
   JesusSectionLabel,
 } from '@/components/jesus/JesusParts';
 import { useApp } from '@/contexts/AppContext';
-import { useOpenReference } from '@/hooks/useOpenReference';
 import { JESUS_ROOT } from '@/lib/jesusSlugs';
 import {
-  fetchJesusCollection,
-  fetchJesusEntries,
-  fetchJesusOverview,
+  fetchJesusEventCollection,
+  fetchJesusEventOverview,
+  fetchJesusEvents,
   fetchJesusThemes,
 } from '@/services/jesusService';
-import type { JesusEntry } from '@/services/types';
+import type { JesusEventCard } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
 
 const FONT = 'Roboto, sans-serif';
@@ -40,8 +39,8 @@ interface ListHeader {
  * JesusListScreen — one screen behind three routes.
  *
  * /jesus/browse/<kind>, /jesus/theme/<theme> and /jesus/study/<collection> are
- * the same thing to the reader: a titled list of entry cards. They differ only
- * in which filter goes to `GET /jesus/entries` and where the title comes from,
+ * the same thing to the reader: a titled list of event cards. They differ only
+ * in which filter goes to `GET /jesus/events` and where the title comes from,
  * so they share a component rather than triplicating the list, the pagination
  * and the empty states.
  *
@@ -57,12 +56,11 @@ export default function JesusListScreen({ mode }: Props) {
   }>();
   const navigate = useNavigate();
   const { state } = useApp();
-  const openReference = useOpenReference();
 
   const slug = params.kindSlug ?? params.themeSlug ?? params.collectionSlug ?? '';
 
   const [header, setHeader] = useState<ListHeader | null>(null);
-  const [entries, setEntries] = useState<JesusEntry[] | null>(null);
+  const [events, setEvents] = useState<JesusEventCard[] | null>(null);
   const [total, setTotal] = useState(0);
   const [loadingMore, setLoadingMore] = useState(false);
   const [notFound, setNotFound] = useState(false);
@@ -71,7 +69,7 @@ export default function JesusListScreen({ mode }: Props) {
   // title. Runs before the fetch effect below on the same commit.
   useEffect(() => {
     setHeader(null);
-    setEntries(null);
+    setEvents(null);
     setTotal(0);
     setNotFound(false);
   }, [mode, slug]);
@@ -86,7 +84,7 @@ export default function JesusListScreen({ mode }: Props) {
       }
 
       if (mode === 'study') {
-        const data = await fetchJesusCollection(slug, state.version);
+        const data = await fetchJesusEventCollection(slug, state.version);
         if (cancelled) return;
         if (!data) {
           setNotFound(true);
@@ -96,22 +94,22 @@ export default function JesusListScreen({ mode }: Props) {
           title: data.collection.name,
           description: data.collection.description ?? data.collection.subtitle,
         });
-        setEntries(data.entries);
-        setTotal(data.collection.entry_count || data.entries.length);
+        setEvents(data.events);
+        setTotal(data.collection.event_count || data.events.length);
         return;
       }
 
       if (mode === 'kind') {
-        const overview = await fetchJesusOverview(state.version);
+        const overview = await fetchJesusEventOverview(state.version);
         if (cancelled) return;
-        const kind = overview.sections
-          .flatMap((s) => s.kinds)
-          .find((k) => k.slug === slug);
-        if (!kind) {
+        const type = overview.sections
+          .flatMap((s) => s.types)
+          .find((t) => t.slug === slug);
+        if (!type) {
           setNotFound(true);
           return;
         }
-        setHeader({ title: kind.label, description: kind.blurb });
+        setHeader({ title: type.label, description: type.blurb });
       } else {
         const themes = await fetchJesusThemes(state.version);
         if (cancelled) return;
@@ -123,13 +121,13 @@ export default function JesusListScreen({ mode }: Props) {
         setHeader({ title: theme.name, description: theme.description });
       }
 
-      const query = mode === 'kind' ? { kind: slug } : { theme: slug };
-      const page = await fetchJesusEntries(
+      const query = mode === 'kind' ? { type: slug } : { theme: slug };
+      const page = await fetchJesusEvents(
         { ...query, limit: PAGE_SIZE, offset: 0 },
         state.version,
       );
       if (cancelled) return;
-      setEntries(page.entries);
+      setEvents(page.events);
       setTotal(page.total);
     })();
 
@@ -139,20 +137,20 @@ export default function JesusListScreen({ mode }: Props) {
   }, [mode, slug, state.version]);
 
   const loadMore = useCallback(async () => {
-    if (!entries || mode === 'study') return;
+    if (!events || mode === 'study') return;
     setLoadingMore(true);
-    const query = mode === 'kind' ? { kind: slug } : { theme: slug };
-    const page = await fetchJesusEntries(
-      { ...query, limit: PAGE_SIZE, offset: entries.length },
+    const query = mode === 'kind' ? { type: slug } : { theme: slug };
+    const page = await fetchJesusEvents(
+      { ...query, limit: PAGE_SIZE, offset: events.length },
       state.version,
     );
-    setEntries((current) => [...(current ?? []), ...page.entries]);
+    setEvents((current) => [...(current ?? []), ...page.events]);
     setTotal(page.total);
     setLoadingMore(false);
-  }, [entries, mode, slug, state.version]);
+  }, [events, mode, slug, state.version]);
 
-  const loading = entries === null && !notFound;
-  const hasMore = entries !== null && entries.length < total;
+  const loading = events === null && !notFound;
+  const hasMore = events !== null && events.length < total;
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
@@ -186,25 +184,18 @@ export default function JesusListScreen({ mode }: Props) {
             )}
 
             <JesusSectionLabel action={<JesusCount count={total} />}>
-              {total === 1 ? '1 entry' : `${total} entries`}
+              {total === 1 ? '1 event' : `${total} events`}
             </JesusSectionLabel>
 
-            {entries.length === 0 ? (
+            {events.length === 0 ? (
               <JesusEmpty label="Nothing here yet." />
             ) : (
               <div
                 style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
                 data-testid="jesus-entry-list"
               >
-                {entries.map((entry) => (
-                  <JesusEntryCard
-                    key={entry.slug}
-                    entry={entry}
-                    // A kind list is already filtered to one kind, so the
-                    // eyebrow would repeat the page title on every card.
-                    showKind={mode !== 'kind'}
-                    onOpenReference={openReference}
-                  />
+                {events.map((event) => (
+                  <JesusEventCardView key={event.slug} event={event} />
                 ))}
               </div>
             )}
@@ -228,7 +219,7 @@ export default function JesusListScreen({ mode }: Props) {
                   color: loadingMore ? vmTokens.textTertiary : vmTokens.textPrimary,
                 }}
               >
-                {loadingMore ? 'Loading…' : `Show more (${total - entries.length} left)`}
+                {loadingMore ? 'Loading…' : `Show more (${total - events.length} left)`}
               </button>
             )}
           </>
