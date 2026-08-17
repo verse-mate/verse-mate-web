@@ -16,6 +16,10 @@ import ReadingScreen from "@/pages/ReadingScreen";
 import TopicsScreen from "@/pages/TopicsScreen";
 import TopicEventsScreen from "@/pages/TopicEventsScreen";
 import TopicEventDetailScreen from "@/pages/TopicEventDetailScreen";
+import JesusHubScreen from "@/pages/JesusHubScreen";
+import JesusLifeScreen from "@/pages/JesusLifeScreen";
+import JesusListScreen from "@/pages/JesusListScreen";
+import JesusEntryScreen from "@/pages/JesusEntryScreen";
 import MostQuotedScreen from "@/pages/MostQuotedScreen";
 import BookmarksScreen from "@/pages/BookmarksScreen";
 import NotesScreen from "@/pages/NotesScreen";
@@ -76,6 +80,17 @@ const App = () => (
               {/* Lovable-only routes — never indexed, kept as internal UX paths */}
               <Route path="/read" element={<ReadingScreen />} />
               <Route path="/read/:book/:chapter/commentary" element={<CommentaryScreen />} />
+              {/* Jesus — hub, chronology, browse-by-facet, and entry detail.
+                  All flat, shareable URLs; `/browse`, `/theme`, `/study` and
+                  `/entry` are literal segments so a kind slug can never
+                  collide with `life` or a future top-level route. */}
+              <Route path="/jesus" element={<JesusHubScreen />} />
+              <Route path="/jesus/life" element={<JesusLifeScreen />} />
+              <Route path="/jesus/life/:periodSlug" element={<JesusLifeScreen />} />
+              <Route path="/jesus/browse/:kindSlug" element={<JesusListScreen mode="kind" />} />
+              <Route path="/jesus/theme/:themeSlug" element={<JesusListScreen mode="theme" />} />
+              <Route path="/jesus/study/:collectionSlug" element={<JesusListScreen mode="study" />} />
+              <Route path="/jesus/entry/:entrySlug" element={<JesusEntryScreen />} />
               <Route path="/topics" element={<TopicsScreen />} />
               <Route path="/topics/:topicId" element={<TopicEventsScreen />} />
               <Route path="/topics/:topicId/:eventId" element={<TopicEventDetailScreen />} />

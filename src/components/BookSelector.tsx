@@ -1,10 +1,26 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { fetchBooks, getRecentBooks, fetchTopics } from '@/services/bibleService';
-import { BibleBook, Topic, TopicCategory } from '@/services/types';
+import { fetchJesusEntries, fetchJesusOverview } from '@/services/jesusService';
+import {
+  BibleBook,
+  JesusEntry,
+  JesusOverview,
+  Topic,
+  TopicCategory,
+} from '@/services/types';
 import { ChevronRight, Search, ArrowLeft, Clock } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { buildTopicUrl } from '@/lib/topicSlugs';
+import {
+  buildJesusEntryUrl,
+  buildJesusKindUrl,
+  buildJesusLifeUrl,
+  buildJesusStudyUrl,
+  jesusTestId,
+  JESUS_ROOT,
+} from '@/lib/jesusSlugs';
 
 interface Props {
   onClose: () => void;
@@ -15,7 +31,7 @@ interface Props {
    * instead of OT/NT, which would otherwise depend on the previously
    * viewed Bible book.
    */
-  initialTab?: 'OT' | 'NT' | 'Topics';
+  initialTab?: 'OT' | 'NT' | 'Jesus' | 'Topics';
   /**
    * Seed the search box with this text on open and focus it immediately.
    * Used by the "just start typing" shortcut so the first character the
@@ -31,7 +47,19 @@ interface Props {
   compact?: boolean;
 }
 
-type Tab = 'OT' | 'NT' | 'Topics';
+type Tab = 'OT' | 'NT' | 'Jesus' | 'Topics';
+
+/**
+ * One row in the Jesus tab's browse list. The tab is a jumping-off point into
+ * the full feature rather than a second implementation of it, so each row is
+ * just a label and a destination.
+ */
+interface JesusNavRow {
+  label: string;
+  count: number;
+  to: string;
+  testId: string;
+}
 
 // Category pills inside the Topics tab. Order matches verse-mate-mobile's
 // BibleNavigationModal so users see the same default landing tab (Events)
@@ -71,6 +99,11 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   const [topicCategory, setTopicCategory] = useState<TopicCategory>('EVENT');
   const [allBooks, setAllBooks] = useState<BibleBook[]>([]);
   const [recents, setRecents] = useState<BibleBook[]>([]);
+  const [jesusOverview, setJesusOverview] = useState<JesusOverview | null>(null);
+  const [jesusResults, setJesusResults] = useState<JesusEntry[]>([]);
+  // Four tabs don't fit "Old Testament" / "New Testament" on a narrow phone,
+  // so those two abbreviate below ~420px. The test ids stay constant.
+  const roomForLongLabels = useMediaQuery('(min-width: 420px)');
 
   useEffect(() => {
     fetchBooks().then(books => {
@@ -86,6 +119,63 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
     });
     fetchTopics().then(setTopics);
   }, []);
+
+  // The Jesus overview is small and drives the whole tab, so it's fetched once
+  // on open rather than lazily when the tab is first selected — switching tabs
+  // should never show a spinner.
+  useEffect(() => {
+    fetchJesusOverview(state.version).then(setJesusOverview);
+  }, [state.version]);
+
+  // Searching inside the Jesus tab hits the backend rather than filtering the
+  // browse rows: the useful thing to find is an entry ("every question about
+  // prayer"), not the name of a category.
+  useEffect(() => {
+    const term = query.trim();
+    if (tab !== 'Jesus' || !term) {
+      setJesusResults([]);
+      return;
+    }
+    let cancelled = false;
+    const timer = setTimeout(() => {
+      fetchJesusEntries({ q: term, limit: 40 }, state.version).then(data => {
+        if (!cancelled) setJesusResults(data.entries);
+      });
+    }, 250);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [tab, query, state.version]);
+
+  // Follow His Life, then every kind, then the featured studies — the same
+  // order as the hub screen so the two read as one feature.
+  const jesusRows = useMemo<JesusNavRow[]>(() => {
+    if (!jesusOverview) return [];
+    const lifeCount = jesusOverview.periods.reduce((n, p) => n + p.entry_count, 0);
+    return [
+      {
+        label: 'Follow His Life',
+        count: lifeCount,
+        to: buildJesusLifeUrl(),
+        testId: 'jesus-tab-follow-his-life',
+      },
+      ...jesusOverview.sections.flatMap(section =>
+        section.kinds.map(kind => ({
+          label: kind.label,
+          count: kind.entry_count,
+          to: buildJesusKindUrl(kind.slug),
+          testId: jesusTestId('jesus-tab-kind', kind.slug),
+        })),
+      ),
+      ...jesusOverview.collections.map(collection => ({
+        label: collection.name,
+        count: collection.entry_count,
+        to: buildJesusStudyUrl(collection.slug),
+        testId: jesusTestId('jesus-tab-study', collection.slug),
+      })),
+    ];
+  }, [jesusOverview]);
 
   // When opened via the "just start typing" shortcut, focus the search field
   // and drop the caret after the seeded character so the user keeps typing
@@ -194,10 +284,25 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
       {/* Segmented tabs */}
       <div className="px-4 pt-2 w-full max-w-[680px]">
         <div className="flex items-center rounded-full bg-secondary p-1">
-          {(['OT', 'NT', 'Topics'] as Tab[]).map(t => {
-            const label = t === 'OT' ? 'Old Testament' : t === 'NT' ? 'New Testament' : 'Topics';
+          {(['OT', 'NT', 'Jesus', 'Topics'] as Tab[]).map(t => {
+            const label =
+              t === 'OT'
+                ? roomForLongLabels
+                  ? 'Old Testament'
+                  : 'OT'
+                : t === 'NT'
+                  ? roomForLongLabels
+                    ? 'New Testament'
+                    : 'NT'
+                  : t;
             const testId =
-              t === 'OT' ? 'tab-old-testament' : t === 'NT' ? 'tab-new-testament' : 'tab-topics';
+              t === 'OT'
+                ? 'tab-old-testament'
+                : t === 'NT'
+                  ? 'tab-new-testament'
+                  : t === 'Jesus'
+                    ? 'tab-jesus'
+                    : 'tab-topics';
             return (
               <button
                 key={t}
@@ -209,7 +314,15 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
                 className={`flex-1 ${compact ? 'h-9' : 'h-10'} rounded-full transition-colors ${
                   tab === t ? 'bg-gold text-[#1A1A1A]' : 'text-foreground/80'
                 }`}
-                style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: compact ? 13 : 14, lineHeight: '24px' }}
+                style={{
+                  fontFamily: 'Roboto, sans-serif',
+                  fontWeight: 400,
+                  // Four tabs share the row, so the type scale drops a step
+                  // from the previous three-tab layout.
+                  fontSize: compact ? 12 : 13,
+                  lineHeight: '24px',
+                  whiteSpace: 'nowrap',
+                }}
               >
                 {label}
               </button>
@@ -259,8 +372,14 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
             ref={searchInputRef}
             value={query}
             onChange={e => setQuery(e.target.value)}
-            data-testid={tab === 'Topics' ? 'topics-search-input' : 'books-search-input'}
-            placeholder="Search..."
+            data-testid={
+              tab === 'Topics'
+                ? 'topics-search-input'
+                : tab === 'Jesus'
+                  ? 'jesus-search-input'
+                  : 'books-search-input'
+            }
+            placeholder={tab === 'Jesus' ? 'Search His words and actions...' : 'Search...'}
             className="flex-1 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none"
             style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '24px' }}
           />
@@ -269,7 +388,72 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
 
       {/* List */}
       <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6 w-full max-w-[680px]">
-        {tab === 'Topics' ? (
+        {tab === 'Jesus' ? (
+          query.trim() ? (
+            jesusResults.length > 0 ? (
+              <div data-testid="jesus-tab-results">
+                {jesusResults.map(entry => (
+                  <button
+                    key={entry.slug}
+                    onClick={() => {
+                      onClose();
+                      navigate(buildJesusEntryUrl(entry.slug));
+                    }}
+                    data-testid={jesusTestId('jesus-tab-entry', entry.slug)}
+                    className={`flex items-center justify-between gap-3 w-full ${bookRowH} border-b border-border`}
+                  >
+                    <span className="flex flex-col items-start min-w-0">
+                      <span className={`${rowText} text-foreground text-left truncate max-w-full`}>
+                        {entry.title}
+                      </span>
+                      <span className="text-[11px] text-muted-foreground">
+                        {entry.kind_label}
+                        {entry.references[0] ? ` · ${entry.references[0].display}` : ''}
+                      </span>
+                    </span>
+                    <ChevronRight size={18} className="text-muted-foreground shrink-0" />
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <EmptyState query={query} loading={false} what="entries" />
+            )
+          ) : jesusRows.length > 0 ? (
+            <div data-testid="jesus-tab-list">
+              {jesusRows.map(row => (
+                <button
+                  key={row.to}
+                  onClick={() => {
+                    onClose();
+                    navigate(row.to);
+                  }}
+                  data-testid={row.testId}
+                  className={`flex items-center justify-between gap-3 w-full ${bookRowH} border-b border-border`}
+                >
+                  <span className={`${rowText} text-foreground text-left`}>{row.label}</span>
+                  <span className="flex items-center gap-2 shrink-0">
+                    {row.count > 0 && (
+                      <span className="text-[12px] text-muted-foreground">{row.count}</span>
+                    )}
+                    <ChevronRight size={18} className="text-muted-foreground" />
+                  </span>
+                </button>
+              ))}
+              <button
+                onClick={() => {
+                  onClose();
+                  navigate(JESUS_ROOT);
+                }}
+                data-testid="jesus-tab-open-hub"
+                className="w-full py-4 text-[14px] text-gold"
+              >
+                Open the Jesus tab →
+              </button>
+            </div>
+          ) : (
+            <EmptyState query={query} loading={jesusOverview === null} what="entries" />
+          )
+        ) : tab === 'Topics' ? (
           filteredTopics.length > 0 ? (
             <div>
               {filteredTopics.map(t => (
@@ -352,7 +536,15 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   );
 }
 
-function EmptyState({ query, loading, what }: { query: string; loading: boolean; what: 'books' | 'topics' }) {
+function EmptyState({
+  query,
+  loading,
+  what,
+}: {
+  query: string;
+  loading: boolean;
+  what: 'books' | 'topics' | 'entries';
+}) {
   if (loading) {
     return <p className="text-center text-muted-foreground text-[14px] py-8">Loading {what}…</p>;
   }
