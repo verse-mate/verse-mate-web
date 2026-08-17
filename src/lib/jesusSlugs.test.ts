@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   JESUS_ROOT,
   buildJesusEntryUrl,
+  buildJesusEventUrl,
   buildJesusHubUrl,
   buildJesusKindUrl,
   buildJesusLifeUrl,
@@ -70,6 +71,22 @@ describe('jesusSlugs', () => {
     );
     expect(jesusTestId('jesus-passage', '  John 8:12')).toBe(
       'jesus-passage-john-8-12',
+    );
+  });
+});
+
+describe('jesusSlugs — event graph', () => {
+  it('builds an event url', () => {
+    expect(buildJesusEventUrl('event-storm-stilled')).toBe(
+      '/jesus/event/event-storm-stilled',
+    );
+  });
+
+  it('keeps event and entry urls on distinct paths', () => {
+    // Both resolve to the same event server-side, but they must not collide in
+    // the router — /jesus/entry/<slug> is the legacy shape we still honour.
+    expect(buildJesusEventUrl('why-are-you-afraid')).not.toBe(
+      buildJesusEntryUrl('why-are-you-afraid'),
     );
   });
 });

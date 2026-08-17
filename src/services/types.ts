@@ -349,3 +349,159 @@ export interface MostQuotedVerse {
   text: string;
   quoteCount: number;
 }
+
+// ─── Jesus event graph ────────────────────────────────────────────────────
+//
+// Supersedes the entry types above. An event is the Gospel pericope; facets are
+// the typed things Jesus said and did within it. Categories are views over
+// facets, which is why a card carries `matched_facets` — browsing Questions
+// shows the storm event labelled with the question inside it.
+
+/** How much weight a claim carries. See specs/jesus-event-graph.md §5. */
+export type JesusProvenance = 1 | 2 | 3;
+
+/** Hedging on a reconstruction. `high` needs no caveat in the UI. */
+export type JesusConfidence = 'high' | 'probable' | 'disputed';
+
+export interface JesusEventPassage {
+  book_id: number;
+  book_name: string;
+  chapter: number;
+  verse_start: number | null;
+  verse_end: number | null;
+  is_primary: boolean;
+  display: string;
+  /** Present once the passage has been hydrated with scripture. */
+  verses?: { verse_number: number; text: string }[];
+  emphasis?: string | null;
+  unique_to_account?: string | null;
+}
+
+export interface JesusFacet {
+  slug: string;
+  mode: 'WORD' | 'ACTION';
+  type: string;
+  type_slug: string;
+  type_label: string;
+  /** Set on WORD facets — who spoke. */
+  speaker: string | null;
+  /** Set on ACTION facets — who acted. */
+  actor: string | null;
+  title: string;
+  text: string | null;
+  summary: string | null;
+  provenance: number;
+  reference: string | null;
+  book_id: number | null;
+  chapter: number | null;
+  verse_start: number | null;
+  verse_end: number | null;
+}
+
+export interface JesusEventCard {
+  slug: string;
+  title: string;
+  summary: string | null;
+  period_slug: string | null;
+  period_name: string | null;
+  sequence: number | null;
+  chronology_confidence: JesusConfidence;
+  parallel_confidence: JesusConfidence;
+  gospels: string[];
+  passages: JesusEventPassage[];
+  facet_counts: {
+    words: number;
+    actions: number;
+    by_type: Record<string, number>;
+  };
+  matched_facets: JesusFacet[];
+  themes: JesusThemeRef[];
+}
+
+export interface JesusReveal {
+  content: string;
+  source_ref: string | null;
+  provenance: number;
+}
+
+export interface JesusEventDetail {
+  event: JesusEventCard & {
+    location: string | null;
+    approximate_date: string | null;
+    people: { person: string; role: string | null }[];
+  };
+  words: JesusFacet[];
+  actions: JesusFacet[];
+  passages: JesusEventPassage[];
+  /** Kept apart so the narrator's voice is never merged into Jesus'. */
+  reveals: {
+    says_about_himself: JesusReveal[];
+    demonstrates: JesusReveal[];
+    others_say: JesusReveal[];
+    narrator_says: JesusReveal[];
+  };
+  reactions: { who: string; what: string; source_ref: string | null; provenance: number }[];
+  explanation: Record<string, string>;
+  related: JesusEventCard[];
+}
+
+export interface JesusCompareAccount {
+  book_id: number;
+  gospel: string;
+  records_it: boolean;
+  passages: JesusEventPassage[];
+}
+
+export interface JesusCompare {
+  event: JesusEventCard;
+  accounts: JesusCompareAccount[];
+  shared_by: string[];
+  note: string;
+  note_provenance: number | null;
+  parallel_confidence: JesusConfidence;
+}
+
+export interface JesusFacetTypeSummary {
+  type: string;
+  mode: 'WORD' | 'ACTION';
+  slug: string;
+  label: string;
+  singular: string;
+  blurb: string;
+  facet_count: number;
+}
+
+export interface JesusEventSection {
+  section: string;
+  label: string;
+  blurb: string;
+  sort_order: number;
+  facet_count: number;
+  types: JesusFacetTypeSummary[];
+}
+
+export interface JesusEventOverview {
+  total_events: number;
+  total_facets: number;
+  sections: JesusEventSection[];
+  periods: (JesusPeriodSummary & { event_count: number })[];
+  themes: (JesusThemeSummary & { event_count: number })[];
+  collections: (JesusCollectionSummary & { event_count: number })[];
+}
+
+export interface JesusEventLifePeriod {
+  slug: string;
+  name: string;
+  subtitle: string | null;
+  description: string | null;
+  sort_order: number;
+  event_count: number;
+  events: JesusEventCard[];
+}
+
+export interface JesusEventList {
+  events: JesusEventCard[];
+  total: number;
+  limit: number;
+  offset: number;
+}
