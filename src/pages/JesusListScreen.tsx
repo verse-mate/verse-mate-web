@@ -7,9 +7,11 @@ import {
   JesusEmpty,
   JesusLoading,
   JesusPageBody,
+  JesusPageTitle,
   JesusSectionLabel,
 } from '@/components/jesus/JesusParts';
 import { useApp } from '@/contexts/AppContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { JESUS_ROOT } from '@/lib/jesusSlugs';
 import {
   fetchJesusEventCollection,
@@ -56,6 +58,9 @@ export default function JesusListScreen({ mode }: Props) {
   }>();
   const navigate = useNavigate();
   const { state } = useApp();
+  // At ≥768px DesktopLayout supplies the header, so a second one here
+  // would stack two title bars in the split pane.
+  const inSplit = useMediaQuery('(min-width: 768px)');
 
   const slug = params.kindSlug ?? params.themeSlug ?? params.collectionSlug ?? '';
 
@@ -154,14 +159,19 @@ export default function JesusListScreen({ mode }: Props) {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
+      {!inSplit && (
       <ScreenHeader
         title={header?.title ?? 'Jesus'}
         onBack={() => navigate(JESUS_ROOT)}
         backTestId="jesus-list-back-button"
         titleTestId="jesus-list-title"
       />
+      )}
 
-      <JesusPageBody>
+      <JesusPageBody wide={inSplit}>
+        {inSplit && (
+          <JesusPageTitle testId="jesus-list-title">{header?.title ?? 'Jesus'}</JesusPageTitle>
+        )}
         {notFound ? (
           <JesusEmpty label="That page doesn't exist." />
         ) : loading ? (

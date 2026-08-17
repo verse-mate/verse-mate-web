@@ -47,7 +47,11 @@ test.beforeEach(() => {
  * on visibility rather than document order, which differs by breakpoint.
  */
 function chapterSelector(page: import('@playwright/test').Page) {
-  return page.locator('[data-testid="chapter-selector-button"]:visible').first();
+  return page
+    .locator(
+      '[data-testid="chapter-selector-button"]:visible, [data-testid="desktop-chapter-selector-button"]:visible',
+    )
+    .first();
 }
 
 test.describe('Jesus — hub', () => {
@@ -76,7 +80,7 @@ test.describe('Jesus — hub', () => {
 
     await expect(page.getByTestId('jesus-search-results')).toBeVisible({ timeout: 15_000 });
     await expect(
-      page.getByTestId('jesus-entry-card-parable-of-the-prodigal-son'),
+      page.getByTestId('jesus-event-card-parable-of-the-prodigal-son'),
     ).toBeVisible();
   });
 
@@ -121,10 +125,10 @@ test.describe('Jesus — studies', () => {
     });
     await expect(page.getByTestId('jesus-entry-list')).toBeVisible();
     await expect(
-      page.getByTestId('jesus-entry-card-i-am-the-bread-of-life'),
+      page.getByTestId('jesus-event-card-i-am-the-bread-of-life'),
     ).toBeVisible();
     await expect(
-      page.getByTestId('jesus-entry-card-before-abraham-was-i-am'),
+      page.getByTestId('jesus-event-card-before-abraham-was-i-am'),
     ).toBeVisible();
   });
 
