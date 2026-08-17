@@ -190,6 +190,156 @@ export interface TopicDetails {
   };
 }
 
+// ─── Jesus tab ────────────────────────────────────────────────────────────
+//
+// Mirrors the backend's /jesus/* contract. The hub is rendered from
+// `JesusOverview` rather than from hardcoded section names, so a taxonomy
+// change on the backend reaches web and mobile without a client release.
+
+/** The nine kinds an entry can take. */
+export type JesusKind =
+  | 'TEACHING'
+  | 'QUESTION'
+  | 'COMMAND'
+  | 'CLAIM'
+  | 'MIRACLE'
+  | 'ENCOUNTER'
+  | 'COMPASSION'
+  | 'CONFRONTATION'
+  | 'PARABLE';
+
+/** Top-level groupings on the hub: His Words, His Actions, Parables. */
+export type JesusSection = 'words' | 'actions' | 'parables';
+
+/**
+ * A scripture reference in both machine and human form. `book_id`/`chapter`
+ * drive the deep link into the reader; `display` is what the pill shows.
+ */
+export interface JesusReference {
+  book_id: number;
+  book_name: string;
+  chapter: number;
+  verse_start: number | null;
+  verse_end: number | null;
+  is_primary: boolean;
+  display: string;
+}
+
+export interface JesusThemeRef {
+  slug: string;
+  name: string;
+}
+
+/** The card shape every Jesus list endpoint returns. */
+export interface JesusEntry {
+  slug: string;
+  kind: JesusKind | string;
+  kind_slug: string;
+  kind_label: string;
+  section: JesusSection | string | null;
+  title: string;
+  summary: string | null;
+  /** The saying itself, when the entry is a saying. */
+  quote: string | null;
+  quote_reference: string | null;
+  period_slug: string | null;
+  period_name: string | null;
+  is_translated: boolean;
+  references: JesusReference[];
+  themes: JesusThemeRef[];
+}
+
+export interface JesusKindSummary {
+  kind: string;
+  slug: string;
+  label: string;
+  singular: string;
+  blurb: string;
+  entry_count: number;
+}
+
+export interface JesusSectionSummary {
+  section: string;
+  label: string;
+  blurb: string;
+  sort_order: number;
+  entry_count: number;
+  kinds: JesusKindSummary[];
+}
+
+export interface JesusPeriodSummary {
+  slug: string;
+  name: string;
+  subtitle: string | null;
+  description: string | null;
+  sort_order: number;
+  entry_count: number;
+}
+
+export interface JesusThemeSummary {
+  slug: string;
+  name: string;
+  description: string | null;
+  sort_order: number;
+  entry_count: number;
+}
+
+export interface JesusCollectionSummary {
+  slug: string;
+  name: string;
+  subtitle: string | null;
+  description: string | null;
+  is_featured?: boolean;
+  sort_order: number;
+  entry_count: number;
+}
+
+/** Everything the hub screen needs, in one request. */
+export interface JesusOverview {
+  total_entries: number;
+  sections: JesusSectionSummary[];
+  periods: JesusPeriodSummary[];
+  themes: JesusThemeSummary[];
+  collections: JesusCollectionSummary[];
+}
+
+export interface JesusPassage {
+  reference: string;
+  book_id: number;
+  book_name: string;
+  chapter: number;
+  verse_start: number | null;
+  verse_end: number | null;
+  is_primary: boolean;
+  verses: { verse_number: number; text: string }[];
+}
+
+export interface JesusEntryDetail {
+  entry: JesusEntry & {
+    harmony_key: string | null;
+    chronology_order: number | null;
+  };
+  /** Scripture resolved into the reader's Bible version. */
+  passages: JesusPassage[];
+  explanation: {
+    summary: string;
+    byline: string;
+    detailed: string;
+  };
+  related: JesusEntry[];
+}
+
+export interface JesusLifePeriod extends JesusPeriodSummary {
+  entries: JesusEntry[];
+}
+
+export interface JesusEntryList {
+  entries: JesusEntry[];
+  total: number;
+  limit: number;
+  offset: number;
+}
+
 export interface MostQuotedVerse {
   reference: string;
   book: string;
