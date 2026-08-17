@@ -19,6 +19,12 @@ import type {
   JesusOverview,
   JesusThemeSummary,
   JesusCollectionSummary,
+  JesusCompare,
+  JesusEventCard,
+  JesusEventDetail,
+  JesusEventLifePeriod,
+  JesusEventList,
+  JesusEventOverview,
 } from './types';
 
 /** Filters accepted by `GET /jesus/entries`. All are AND-ed by the backend. */
@@ -159,6 +165,155 @@ export async function fetchJesusCollection(
       entries: JesusEntry[];
     }>(
       `/jesus/collections/${encodeURIComponent(slug)}`,
+      compact({ bible_version: bibleVersion }),
+      { auth: false },
+    );
+    return data?.collection ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+// ─── Event graph ──────────────────────────────────────────────────────────
+
+export interface JesusEventQuery {
+  type?: string;
+  section?: string;
+  mode?: string;
+  theme?: string;
+  period?: string;
+  collection?: string;
+  person?: string;
+  book_id?: number;
+  q?: string;
+  limit?: number;
+  offset?: number;
+}
+
+const EMPTY_EVENT_OVERVIEW: JesusEventOverview = {
+  total_events: 0,
+  total_facets: 0,
+  sections: [],
+  periods: [],
+  themes: [],
+  collections: [],
+};
+
+export async function fetchJesusEventOverview(
+  bibleVersion?: string,
+): Promise<JesusEventOverview> {
+  try {
+    const data = await api.get<JesusEventOverview>(
+      '/jesus/events/overview',
+      compact({ bible_version: bibleVersion }),
+      { auth: false },
+    );
+    return data ?? EMPTY_EVENT_OVERVIEW;
+  } catch {
+    return EMPTY_EVENT_OVERVIEW;
+  }
+}
+
+export async function fetchJesusEvents(
+  query: JesusEventQuery = {},
+  bibleVersion?: string,
+): Promise<JesusEventList> {
+  const limit = query.limit ?? 50;
+  const offset = query.offset ?? 0;
+  try {
+    const data = await api.get<JesusEventList>(
+      '/jesus/events',
+      compact({ ...query, limit, offset, bible_version: bibleVersion }),
+      { auth: false },
+    );
+    return data ?? { events: [], total: 0, limit, offset };
+  } catch {
+    return { events: [], total: 0, limit, offset };
+  }
+}
+
+export async function fetchJesusEvent(
+  slug: string,
+  bibleVersion?: string,
+): Promise<JesusEventDetail | null> {
+  try {
+    const data = await api.get<JesusEventDetail>(
+      `/jesus/events/${encodeURIComponent(slug)}`,
+      compact({ bible_version: bibleVersion }),
+      { auth: false },
+    );
+    return data?.event ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+export async function fetchJesusCompare(
+  slug: string,
+  bibleVersion?: string,
+): Promise<JesusCompare | null> {
+  try {
+    const data = await api.get<JesusCompare>(
+      `/jesus/events/${encodeURIComponent(slug)}/compare`,
+      compact({ bible_version: bibleVersion }),
+      { auth: false },
+    );
+    return data?.accounts ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * The reader bridge. Called while reading a chapter, so it must fail silently
+ * and cheaply — a missing event is the common case, not an error.
+ */
+export async function fetchJesusEventsForPassage(
+  bookId: number,
+  chapter: number,
+  verse?: number,
+  bibleVersion?: string,
+): Promise<JesusEventCard[]> {
+  try {
+    const data = await api.get<{ events: JesusEventCard[] }>(
+      '/jesus/for-passage',
+      compact({ book_id: bookId, chapter, verse, bible_version: bibleVersion }),
+      { auth: false },
+    );
+    return data?.events ?? [];
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchJesusEventLife(
+  bibleVersion?: string,
+): Promise<JesusEventLifePeriod[]> {
+  try {
+    const data = await api.get<{ periods: JesusEventLifePeriod[] }>(
+      '/jesus/events/life',
+      compact({ bible_version: bibleVersion }),
+      { auth: false },
+    );
+    return data?.periods ?? [];
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchJesusEventCollection(
+  slug: string,
+  bibleVersion?: string,
+): Promise<{
+  collection: JesusCollectionSummary & { event_count: number };
+  events: JesusEventCard[];
+} | null> {
+  try {
+    const data = await api.get<{
+      collection: JesusCollectionSummary & { event_count: number };
+      events: JesusEventCard[];
+    }>(
+      `/jesus/events/collections/${encodeURIComponent(slug)}`,
       compact({ bible_version: bibleVersion }),
       { auth: false },
     );

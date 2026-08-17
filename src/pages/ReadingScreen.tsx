@@ -13,6 +13,7 @@ import { shouldSuppressVerseInsightClick } from '@/lib/verseInsightGuard';
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
+import JesusEventLink from '@/components/jesus/JesusEventLink';
 import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
@@ -586,6 +587,15 @@ export default function ReadingScreen() {
             ));
           })()}
         </div>
+
+        {/* The bridge into the Jesus graph. Sits after the verse column so it
+            never interrupts reading, and renders nothing when the chapter
+            contains no catalogued event. */}
+        <JesusEventLink
+          bookId={state.bookId}
+          chapter={state.chapter}
+          bibleVersion={state.version}
+        />
         </div>{/* end .reading-inner */}
         </div>{/* end .reading-scroll */}
 

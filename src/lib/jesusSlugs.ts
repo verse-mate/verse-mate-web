@@ -48,3 +48,8 @@ export function buildJesusEntryUrl(entrySlug: string): string {
 export function jesusTestId(prefix: string, slug: string): string {
   return `${prefix}-${slug.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
 }
+
+/** Event pages. Facet slugs resolve here too — the API falls back to them. */
+export function buildJesusEventUrl(eventSlug: string): string {
+  return `${JESUS_ROOT}/event/${eventSlug}`;
+}

@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CalendarClock, Search } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import { JesusEventCardView } from '@/components/jesus/JesusEventParts';
 import {
   JesusCount,
   JesusEmpty,
-  JesusEntryCard,
   JesusLoading,
   JesusNavCard,
   JesusPageBody,
@@ -13,7 +13,6 @@ import {
   JesusSectionLabel,
 } from '@/components/jesus/JesusParts';
 import { useApp } from '@/contexts/AppContext';
-import { useOpenReference } from '@/hooks/useOpenReference';
 import {
   buildJesusKindUrl,
   buildJesusLifeUrl,
@@ -21,8 +20,8 @@ import {
   buildJesusThemeUrl,
   jesusTestId,
 } from '@/lib/jesusSlugs';
-import { fetchJesusEntries, fetchJesusOverview } from '@/services/jesusService';
-import type { JesusEntry, JesusOverview } from '@/services/types';
+import { fetchJesusEventOverview, fetchJesusEvents } from '@/services/jesusService';
+import type { JesusEventCard, JesusEventOverview } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
 
 const FONT = 'Roboto, sans-serif';
@@ -30,9 +29,9 @@ const FONT = 'Roboto, sans-serif';
 /**
  * JesusHubScreen — the landing screen of the Jesus tab.
  *
- * Rendered entirely from `GET /jesus/overview`: sections, kinds, counts,
- * periods, themes and featured studies all come off the wire. Nothing about
- * the taxonomy is hardcoded here, so adding a kind or renaming a section on
+ * Rendered entirely from `GET /jesus/events/overview`: sections, facet types,
+ * counts, periods, themes and featured studies all come off the wire. Nothing
+ * about the taxonomy is hardcoded here, so adding a type or renaming a section on
  * the backend reaches this screen (and mobile) without a client change.
  *
  * Searching swaps the browse layout for a flat result list — the same
@@ -42,16 +41,15 @@ const FONT = 'Roboto, sans-serif';
 export default function JesusHubScreen() {
   const navigate = useNavigate();
   const { state } = useApp();
-  const openReference = useOpenReference();
 
-  const [overview, setOverview] = useState<JesusOverview | null>(null);
+  const [overview, setOverview] = useState<JesusEventOverview | null>(null);
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<JesusEntry[] | null>(null);
+  const [results, setResults] = useState<JesusEventCard[] | null>(null);
   const [searching, setSearching] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    fetchJesusOverview(state.version).then((data) => {
+    fetchJesusEventOverview(state.version).then((data) => {
       if (!cancelled) setOverview(data);
     });
     return () => {
@@ -72,9 +70,9 @@ export default function JesusHubScreen() {
     setSearching(true);
     let cancelled = false;
     const timer = setTimeout(() => {
-      fetchJesusEntries({ q: term, limit: 50 }, state.version).then((data) => {
+      fetchJesusEvents({ q: term, limit: 50 }, state.version).then((data) => {
         if (cancelled) return;
-        setResults(data.entries);
+        setResults(data.events);
         setSearching(false);
       });
     }, 250);
@@ -86,7 +84,7 @@ export default function JesusHubScreen() {
   }, [query, state.version]);
 
   const loading = overview === null;
-  const lifeCount = overview?.periods.reduce((n, p) => n + p.entry_count, 0) ?? 0;
+  const lifeCount = overview?.periods.reduce((n, p) => n + p.event_count, 0) ?? 0;
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
@@ -109,10 +107,10 @@ export default function JesusHubScreen() {
           }}
         >
           Explore His life, words, and actions
-          {overview && overview.total_entries > 0 ? (
+          {overview && overview.total_events > 0 ? (
             <span style={{ color: vmTokens.textTertiary }}>
               {' '}
-              · {overview.total_entries} entries
+              · {overview.total_events} events
             </span>
           ) : null}
         </p>
@@ -150,12 +148,7 @@ export default function JesusHubScreen() {
         </div>
 
         {results !== null ? (
-          <SearchResults
-            results={results}
-            searching={searching}
-            query={query}
-            onOpenReference={openReference}
-          />
+          <SearchResults results={results} searching={searching} query={query} />
         ) : loading ? (
           <JesusLoading label="Loading…" />
         ) : (
@@ -177,7 +170,7 @@ export default function JesusHubScreen() {
             {overview.sections.map((section) => (
               <div key={section.section}>
                 <JesusSectionLabel
-                  action={<JesusCount count={section.entry_count} />}
+                  action={<JesusCount count={section.facet_count} />}
                 >
                   {section.label}
                 </JesusSectionLabel>
@@ -193,14 +186,14 @@ export default function JesusHubScreen() {
                   {section.blurb}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  {section.kinds.map((kind) => (
+                  {section.types.map((type) => (
                     <JesusNavCard
-                      key={kind.kind}
-                      title={kind.label}
-                      blurb={kind.blurb}
-                      count={kind.entry_count}
-                      onClick={() => navigate(buildJesusKindUrl(kind.slug))}
-                      testId={jesusTestId('jesus-kind', kind.slug)}
+                      key={type.type}
+                      title={type.label}
+                      blurb={type.blurb}
+                      count={type.facet_count}
+                      onClick={() => navigate(buildJesusKindUrl(type.slug))}
+                      testId={jesusTestId('jesus-kind', type.slug)}
                     />
                   ))}
                 </div>
@@ -219,7 +212,7 @@ export default function JesusHubScreen() {
                     <JesusPill
                       key={theme.slug}
                       label={theme.name}
-                      count={theme.entry_count}
+                      count={theme.event_count}
                       onClick={() => navigate(buildJesusThemeUrl(theme.slug))}
                       testId={jesusTestId('jesus-theme', theme.slug)}
                     />
@@ -241,7 +234,7 @@ export default function JesusHubScreen() {
                       key={collection.slug}
                       title={collection.name}
                       blurb={collection.subtitle}
-                      count={collection.entry_count}
+                      count={collection.event_count}
                       onClick={() => navigate(buildJesusStudyUrl(collection.slug))}
                       testId={jesusTestId('jesus-study', collection.slug)}
                     />
@@ -260,12 +253,10 @@ function SearchResults({
   results,
   searching,
   query,
-  onOpenReference,
 }: {
-  results: JesusEntry[];
+  results: JesusEventCard[];
   searching: boolean;
   query: string;
-  onOpenReference: ReturnType<typeof useOpenReference>;
 }) {
   if (searching && results.length === 0) return <JesusLoading label="Searching…" />;
   if (results.length === 0) {
@@ -281,12 +272,8 @@ function SearchResults({
         style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
         data-testid="jesus-search-results"
       >
-        {results.map((entry) => (
-          <JesusEntryCard
-            key={entry.slug}
-            entry={entry}
-            onOpenReference={onOpenReference}
-          />
+        {results.map((event) => (
+          <JesusEventCardView key={event.slug} event={event} />
         ))}
       </div>
     </>

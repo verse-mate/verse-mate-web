@@ -1,19 +1,18 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import ScreenHeader from '@/components/ScreenHeader';
+import { JesusEventCardView } from '@/components/jesus/JesusEventParts';
 import {
   JesusCount,
   JesusEmpty,
-  JesusEntryCard,
   JesusLoading,
   JesusPageBody,
   JesusPill,
 } from '@/components/jesus/JesusParts';
 import { useApp } from '@/contexts/AppContext';
-import { useOpenReference } from '@/hooks/useOpenReference';
 import { buildJesusLifeUrl, jesusTestId, JESUS_ROOT } from '@/lib/jesusSlugs';
-import { fetchJesusLife } from '@/services/jesusService';
-import type { JesusLifePeriod } from '@/services/types';
+import { fetchJesusEventLife } from '@/services/jesusService';
+import type { JesusEventLifePeriod } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
 
 const FONT = 'Roboto, sans-serif';
@@ -25,7 +24,7 @@ const FONT = 'Roboto, sans-serif';
  *   /jesus/life                 the whole arc, period by period
  *   /jesus/life/<periodSlug>    one period, expanded
  *
- * Periods with no entries are still rendered. The gospels are uneven — thirty
+ * Periods with no events are still rendered. The gospels are uneven — thirty
  * years pass in a sentence — and showing an empty stretch with its description
  * tells that story better than silently skipping it would.
  */
@@ -33,13 +32,12 @@ export default function JesusLifeScreen() {
   const { periodSlug } = useParams<{ periodSlug?: string }>();
   const navigate = useNavigate();
   const { state } = useApp();
-  const openReference = useOpenReference();
 
-  const [periods, setPeriods] = useState<JesusLifePeriod[] | null>(null);
+  const [periods, setPeriods] = useState<JesusEventLifePeriod[] | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    fetchJesusLife(state.version).then((data) => {
+    fetchJesusEventLife(state.version).then((data) => {
       if (!cancelled) setPeriods(data);
     });
     return () => {
@@ -93,7 +91,7 @@ export default function JesusLifeScreen() {
                 <JesusPill
                   key={period.slug}
                   label={period.name}
-                  count={period.entry_count}
+                  count={period.event_count}
                   active={period.slug === periodSlug}
                   onClick={() => navigate(buildJesusLifeUrl(period.slug))}
                   testId={jesusTestId('jesus-life-period', period.slug)}
@@ -109,7 +107,6 @@ export default function JesusLifeScreen() {
                   key={period.slug}
                   period={period}
                   expanded={!!periodSlug}
-                  onOpenReference={openReference}
                   onOpenPeriod={() => navigate(buildJesusLifeUrl(period.slug))}
                 />
               ))
@@ -121,22 +118,20 @@ export default function JesusLifeScreen() {
   );
 }
 
-/** How many entries a period shows before it asks you to open it. */
+/** How many events a period shows before it asks you to open it. */
 const PREVIEW_COUNT = 4;
 
 function PeriodBlock({
   period,
   expanded,
-  onOpenReference,
   onOpenPeriod,
 }: {
-  period: JesusLifePeriod;
+  period: JesusEventLifePeriod;
   expanded: boolean;
-  onOpenReference: ReturnType<typeof useOpenReference>;
   onOpenPeriod: () => void;
 }) {
-  const entries = expanded ? period.entries : period.entries.slice(0, PREVIEW_COUNT);
-  const remaining = period.entries.length - entries.length;
+  const events = expanded ? period.events : period.events.slice(0, PREVIEW_COUNT);
+  const remaining = period.events.length - events.length;
 
   return (
     <section
@@ -156,7 +151,7 @@ function PeriodBlock({
         >
           {period.name}
         </h2>
-        <JesusCount count={period.entry_count} />
+        <JesusCount count={period.event_count} />
       </div>
 
       {period.subtitle && (
@@ -187,7 +182,7 @@ function PeriodBlock({
         </p>
       )}
 
-      {entries.length > 0 ? (
+      {events.length > 0 ? (
         <div
           style={{
             display: 'flex',
@@ -199,13 +194,8 @@ function PeriodBlock({
             paddingLeft: 12,
           }}
         >
-          {entries.map((entry, i) => (
-            <JesusEntryCard
-              key={entry.slug}
-              entry={entry}
-              index={i + 1}
-              onOpenReference={onOpenReference}
-            />
+          {events.map((event, i) => (
+            <JesusEventCardView key={event.slug} event={event} index={i + 1} />
           ))}
 
           {remaining > 0 && (
@@ -225,7 +215,7 @@ function PeriodBlock({
                 color: vmTokens.gold,
               }}
             >
-              Show all {period.entry_count} in {period.name} →
+              Show all {period.event_count} in {period.name} →
             </button>
           )}
         </div>

@@ -20,6 +20,7 @@ import JesusHubScreen from "@/pages/JesusHubScreen";
 import JesusLifeScreen from "@/pages/JesusLifeScreen";
 import JesusListScreen from "@/pages/JesusListScreen";
 import JesusEntryScreen from "@/pages/JesusEntryScreen";
+import JesusEventScreen from "@/pages/JesusEventScreen";
 import MostQuotedScreen from "@/pages/MostQuotedScreen";
 import BookmarksScreen from "@/pages/BookmarksScreen";
 import NotesScreen from "@/pages/NotesScreen";
@@ -90,6 +91,9 @@ const App = () => (
               <Route path="/jesus/browse/:kindSlug" element={<JesusListScreen mode="kind" />} />
               <Route path="/jesus/theme/:themeSlug" element={<JesusListScreen mode="theme" />} />
               <Route path="/jesus/study/:collectionSlug" element={<JesusListScreen mode="study" />} />
+              <Route path="/jesus/event/:eventSlug" element={<JesusEventScreen />} />
+              {/* Legacy entry URLs still resolve — the API falls back from a
+                  facet slug to the event that absorbed it. */}
               <Route path="/jesus/entry/:entrySlug" element={<JesusEntryScreen />} />
               <Route path="/topics" element={<TopicsScreen />} />
               <Route path="/topics/:topicId" element={<TopicEventsScreen />} />
