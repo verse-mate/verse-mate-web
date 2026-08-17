@@ -35,6 +35,9 @@ import { BOOKS_WITH_VISUALS } from '@/data/visuals/booksWithVisuals';
 import { nameToSlug } from '@/lib/bookSlugs';
 import { RightPanelProvider } from '@/contexts/RightPanelContext';
 import { useTopicView } from '@/contexts/TopicViewContext';
+import { useJesusView } from '@/contexts/JesusViewContext';
+import { JESUS_TABS } from '@/lib/jesusTabs';
+import JesusTabBodies from '@/components/jesus/JesusTabBodies';
 import {
   ExplanationTab as TopicExplanationTab,
   INSIGHT_TABS as TOPIC_INSIGHT_TABS,
@@ -108,6 +111,11 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     insightTab: topicInsightTab,
     setInsightTab: setTopicInsightTab,
   } = useTopicView();
+  // Jesus context — populated by JesusEventScreen when an event resolves, and
+  // read here so the chrome (selector label, pill group, right pane) mirrors
+  // the Bible and topic sides rather than inventing a third arrangement.
+  const { detail: jesusDetail, tab: jesusTab, setTab: setJesusTab } = useJesusView();
+
   const [showBookSelector, setShowBookSelector] = useState(false);
   // Seed text for the Search modal when it's opened via "just start typing".
   const [bookSelectorQuery, setBookSelectorQuery] = useState('');
@@ -202,6 +210,14 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const isTopicRoute =
     location.pathname.startsWith('/topic/') ||
     location.pathname.startsWith('/topics');
+
+  // Jesus routes render their own content in the LEFT panel. The right pane is
+  // only meaningful once an event is open — the hub, the browse lists and the
+  // timeline have no passage for a commentary pane to comment on, so they take
+  // the full split width the way topic routes do.
+  const isJesusRoute = location.pathname.startsWith('/jesus');
+  const hasJesusEvent = isJesusRoute && !!jesusDetail;
+  const jesusFullWidth = isJesusRoute && !jesusDetail;
 
   // Resizable split state (percentage of content area, not including sidebar)
   const [leftPct, setLeftPct] = useState(65);
@@ -421,7 +437,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // The right insights panel can be minimized at any width now (tablet +
   // desktop), mirroring the left sidebar's drag-to-hide. The sidebar still
   // follows its layout default at wide widths.
-  const effectiveRightCollapsed = rightPanelCollapsed;
+  const effectiveRightCollapsed = rightPanelCollapsed || jesusFullWidth;
   // Tablet (hideSidebar) collapses the resizable split into a full-screen swap:
   // the reading and the insight/sub-page panel each take the full width and the
   // user toggles between them (no cramped 35%-wide pane). When the panel is
@@ -560,9 +576,11 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               data-testid="desktop-chapter-selector-button"
             >
               <span>
-                {isTopicRoute
-                  ? currentTopic?.name || 'Topic'
-                  : `${state.book} ${state.chapter}`}
+                {isJesusRoute
+                  ? jesusDetail?.event.title || 'Jesus'
+                  : isTopicRoute
+                    ? currentTopic?.name || 'Topic'
+                    : `${state.book} ${state.chapter}`}
               </span>
               <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
             </button>
@@ -585,7 +603,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               Summary/By-Line/Detailed chooser fed from TopicViewContext. The
               row scrolls sideways when the tabs don't fit so they stay
               anchored to the right column instead of jumping to mid-screen. */}
-          {!isTopicRoute && rightPanelView === 'commentary' && (
+          {!isTopicRoute && !isJesusRoute && rightPanelView === 'commentary' && (
             <div
               className="header-pill-scroll"
               style={{
@@ -653,6 +671,38 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     className={`pill ${(topicInsightTab === t.id && showTabHighlight) ? 'active' : ''}`}
                     onClick={() => { setTopicInsightTab(t.id as TopicInsightTab); if (effectiveRightCollapsed) setRightPanelCollapsed(false); }}
                     data-testid={`desktop-topic-tab-${t.id}`}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {hasJesusEvent && (
+            <div
+              className="header-pill-scroll"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                left: isTablet ? 140 : (effectiveRightCollapsed ? 'calc(50% + 108px)' : `${effectiveLeftPct}%`),
+                right: 64,
+                justifyContent: isTablet ? 'center' : (effectiveRightCollapsed ? 'flex-end' : undefined),
+                zIndex: 2,
+                pointerEvents: isTablet ? 'none' : undefined,
+              }}
+            >
+              <div className="pill-group" role="tablist" aria-label="Jesus event view" style={{ pointerEvents: 'auto' }}>
+                {JESUS_TABS.map(t => (
+                  <button
+                    key={t.id}
+                    role="tab"
+                    aria-selected={jesusTab === t.id}
+                    tabIndex={jesusTab === t.id ? 0 : -1}
+                    className={`pill ${(jesusTab === t.id && showTabHighlight) ? 'active' : ''}`}
+                    onClick={() => { setJesusTab(t.id); if (effectiveRightCollapsed) setRightPanelCollapsed(false); }}
+                    data-testid={`desktop-jesus-tab-${t.id}`}
                   >
                     {t.label}
                   </button>
@@ -770,7 +820,15 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           {/* Right panel */}
           {!effectiveRightCollapsed && (
           <div data-testid="desktop-right-panel" className="right-panel">
-            {isTopicRoute ? (
+            {hasJesusEvent ? (
+              <div
+                className="commentary-body"
+                style={{ fontSize: `${state.settings.fontSize}px`, ...fullWidthContentPad }}
+                data-testid="desktop-jesus-pane"
+              >
+                <JesusTabBodies tab={jesusTab} detail={jesusDetail} />
+              </div>
+            ) : isTopicRoute ? (
               <div
                 className="commentary-body"
                 style={{ fontSize: `${state.settings.fontSize}px`, ...fullWidthContentPad }}

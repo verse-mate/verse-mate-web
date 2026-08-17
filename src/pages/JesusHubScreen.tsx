@@ -13,6 +13,7 @@ import {
   JesusSectionLabel,
 } from '@/components/jesus/JesusParts';
 import { useApp } from '@/contexts/AppContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import {
   buildJesusKindUrl,
   buildJesusLifeUrl,
@@ -41,6 +42,9 @@ const FONT = 'Roboto, sans-serif';
 export default function JesusHubScreen() {
   const navigate = useNavigate();
   const { state } = useApp();
+  // At ≥768px DesktopLayout supplies the header, so a second one here
+  // would stack two title bars in the split pane.
+  const inSplit = useMediaQuery('(min-width: 768px)');
 
   const [overview, setOverview] = useState<JesusEventOverview | null>(null);
   const [query, setQuery] = useState('');
@@ -88,14 +92,16 @@ export default function JesusHubScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
+      {!inSplit && (
       <ScreenHeader
         title="Jesus"
         onBack={() => navigate('/read')}
         backTestId="jesus-back-button"
         titleTestId="jesus-screen-title"
       />
+      )}
 
-      <JesusPageBody>
+      <JesusPageBody wide={inSplit}>
         <p
           data-testid="jesus-hub-tagline"
           style={{

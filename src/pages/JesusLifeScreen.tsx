@@ -10,6 +10,7 @@ import {
   JesusPill,
 } from '@/components/jesus/JesusParts';
 import { useApp } from '@/contexts/AppContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { buildJesusLifeUrl, jesusTestId, JESUS_ROOT } from '@/lib/jesusSlugs';
 import { fetchJesusEventLife } from '@/services/jesusService';
 import type { JesusEventLifePeriod } from '@/services/types';
@@ -32,6 +33,9 @@ export default function JesusLifeScreen() {
   const { periodSlug } = useParams<{ periodSlug?: string }>();
   const navigate = useNavigate();
   const { state } = useApp();
+  // At ≥768px DesktopLayout supplies the header, so a second one here
+  // would stack two title bars in the split pane.
+  const inSplit = useMediaQuery('(min-width: 768px)');
 
   const [periods, setPeriods] = useState<JesusEventLifePeriod[] | null>(null);
 
@@ -55,14 +59,16 @@ export default function JesusLifeScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
+      {!inSplit && (
       <ScreenHeader
         title={activePeriod ? activePeriod.name : 'Follow His Life'}
         onBack={() => navigate(periodSlug ? buildJesusLifeUrl() : JESUS_ROOT)}
         backTestId="jesus-life-back-button"
         titleTestId="jesus-life-title"
       />
+      )}
 
-      <JesusPageBody>
+      <JesusPageBody wide={inSplit}>
         {loading ? (
           <JesusLoading />
         ) : periods.length === 0 ? (

@@ -480,7 +480,14 @@ export function JesusEmpty({ label }: { label: string }) {
 }
 
 /** Shared page frame: header slot + scrollable body capped to a reading column. */
-export function JesusPageBody({ children }: { children: ReactNode }) {
+export function JesusPageBody({
+  children,
+  wide = false,
+}: {
+  children: ReactNode;
+  /** Widen the measure when the body fills the split pane rather than a phone. */
+  wide?: boolean;
+}) {
   return (
     <div
       style={{
@@ -489,7 +496,13 @@ export function JesusPageBody({ children }: { children: ReactNode }) {
         backgroundColor: vmTokens.commentaryBg,
       }}
     >
-      <div style={{ maxWidth: 680, margin: '0 auto', padding: '4px 16px 40px' }}>
+      <div
+        style={{
+          maxWidth: wide ? 920 : 680,
+          margin: '0 auto',
+          padding: wide ? '20px 20px 72px' : '4px 16px 40px',
+        }}
+      >
         {children}
       </div>
     </div>

@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import DesktopLayout from '@/components/DesktopLayout';
 import { AudioPlayerRoot } from '@/audio';
+import { JesusViewProvider } from '@/contexts/JesusViewContext';
 import { TopicViewProvider } from '@/contexts/TopicViewContext';
 import { vmTokens } from '@/styles/themeStyles';
 
@@ -36,13 +37,19 @@ export default function AppLayout() {
     location.pathname === '/read' ||
     location.pathname.startsWith('/read/') ||
     location.pathname.startsWith('/topic/') ||
-    location.pathname.startsWith('/topics');
+    location.pathname.startsWith('/topics') ||
+    // Jesus routes join the split-view for the same reason topics did: an
+    // event behaves like a Bible reference, and dropping to the single-panel
+    // layout was what made the tab look like a phone screen on a desktop.
+    location.pathname.startsWith('/jesus');
 
   if (isDesktop && isReadingPath) {
     return (
       <AudioPlayerRoot>
         <TopicViewProvider>
-          <DesktopLayout />
+          <JesusViewProvider>
+            <DesktopLayout />
+          </JesusViewProvider>
         </TopicViewProvider>
       </AudioPlayerRoot>
     );
@@ -52,7 +59,9 @@ export default function AppLayout() {
     return (
       <AudioPlayerRoot>
         <TopicViewProvider>
-          <DesktopLayout hideSidebar />
+          <JesusViewProvider>
+            <DesktopLayout hideSidebar />
+          </JesusViewProvider>
         </TopicViewProvider>
       </AudioPlayerRoot>
     );
@@ -61,12 +70,14 @@ export default function AppLayout() {
   return (
     <AudioPlayerRoot>
       <TopicViewProvider>
-        <div
-          className="relative flex flex-col w-full overflow-hidden"
-          style={{ backgroundColor: vmTokens.chromeBg, height: '100dvh' }}
-        >
-          <Outlet />
-        </div>
+        <JesusViewProvider>
+          <div
+            className="relative flex flex-col w-full overflow-hidden"
+            style={{ backgroundColor: vmTokens.chromeBg, height: '100dvh' }}
+          >
+            <Outlet />
+          </div>
+        </JesusViewProvider>
       </TopicViewProvider>
     </AudioPlayerRoot>
   );
