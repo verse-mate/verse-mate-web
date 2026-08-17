@@ -9,6 +9,7 @@ import {
   JesusLoading,
   JesusNavCard,
   JesusPageBody,
+  JesusPageTitle,
   JesusPill,
   JesusSectionLabel,
 } from '@/components/jesus/JesusParts';
@@ -102,6 +103,9 @@ export default function JesusHubScreen() {
       )}
 
       <JesusPageBody wide={inSplit}>
+        {inSplit && (
+          <JesusPageTitle testId="jesus-screen-title">{'Jesus'}</JesusPageTitle>
+        )}
         <p
           data-testid="jesus-hub-tagline"
           style={{

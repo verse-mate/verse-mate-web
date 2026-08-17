@@ -7,6 +7,7 @@ import {
   JesusEmpty,
   JesusLoading,
   JesusPageBody,
+  JesusPageTitle,
   JesusSectionLabel,
 } from '@/components/jesus/JesusParts';
 import { useApp } from '@/contexts/AppContext';
@@ -168,6 +169,9 @@ export default function JesusListScreen({ mode }: Props) {
       )}
 
       <JesusPageBody wide={inSplit}>
+        {inSplit && (
+          <JesusPageTitle testId="jesus-list-title">{header?.title ?? 'Jesus'}</JesusPageTitle>
+        )}
         {notFound ? (
           <JesusEmpty label="That page doesn't exist." />
         ) : loading ? (

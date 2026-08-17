@@ -480,6 +480,38 @@ export function JesusEmpty({ label }: { label: string }) {
 }
 
 /** Shared page frame: header slot + scrollable body capped to a reading column. */
+/**
+ * The screen's title when it sits in the split pane.
+ *
+ * Below 768px `ScreenHeader` carries the title; at ≥768px DesktopLayout owns
+ * the header bar, so the title moves into the content the way a browse list's
+ * heading does. Both carry the same test id and only one is ever mounted.
+ */
+export function JesusPageTitle({
+  children,
+  testId,
+}: {
+  children: ReactNode;
+  testId?: string;
+}) {
+  return (
+    <h1
+      data-testid={testId}
+      style={{
+        fontFamily: FONT,
+        fontSize: 24,
+        fontWeight: 600,
+        lineHeight: '30px',
+        letterSpacing: '-0.01em',
+        color: vmTokens.textPrimary,
+        margin: '0 0 6px',
+      }}
+    >
+      {children}
+    </h1>
+  );
+}
+
 export function JesusPageBody({
   children,
   wide = false,

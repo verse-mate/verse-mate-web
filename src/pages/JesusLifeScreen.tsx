@@ -7,6 +7,7 @@ import {
   JesusEmpty,
   JesusLoading,
   JesusPageBody,
+  JesusPageTitle,
   JesusPill,
 } from '@/components/jesus/JesusParts';
 import { useApp } from '@/contexts/AppContext';
@@ -69,6 +70,9 @@ export default function JesusLifeScreen() {
       )}
 
       <JesusPageBody wide={inSplit}>
+        {inSplit && (
+          <JesusPageTitle testId="jesus-life-title">{activePeriod ? activePeriod.name : 'Follow His Life'}</JesusPageTitle>
+        )}
         {loading ? (
           <JesusLoading />
         ) : periods.length === 0 ? (
