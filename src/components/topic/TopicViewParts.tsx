@@ -8,9 +8,16 @@
  * Summary / By-Line / Detailed insights.
  */
 
-import { BookOpen } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
-import type { TopicSection, TopicVerse } from '@/services/types';
+import {
+  ReferencePill,
+  ReferencePillRow,
+  ScriptureSection,
+  ScriptureSectionList,
+  ScriptureText,
+  ScripturePlaceholder,
+} from '@/components/scripture/ScriptureBlock';
+import type { TopicSection } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
 
 export type InsightTab = 'summary' | 'byline' | 'detailed';
@@ -46,94 +53,38 @@ export function ContentTab({
             No content available for this topic yet.
           </p>
         ) : (
-          <div className="space-y-6">
-            {sections.map((section) => (
-              <section
+          <ScriptureSectionList>
+            {sections.map((section, i) => (
+              <ScriptureSection
                 key={section.id}
-                data-testid={`topic-section-${section.id}`}
-                className="pb-5 last:border-b-0"
-                style={{ borderBottom: `1px solid ${vmTokens.divider}` }}
+                subtitle={section.subtitle}
+                testId={`topic-section-${section.id}`}
+                isLast={i === sections.length - 1}
               >
-                <h3
-                  className="text-[18px] font-semibold mb-2"
-                  style={{ color: vmTokens.textPrimary }}
-                >
-                  {section.subtitle}
-                </h3>
-
                 {section.references.length > 0 && (
-                  <div className="flex flex-wrap gap-1.5 mb-3">
+                  <ReferencePillRow>
                     {section.references.map((ref) => (
-                      <button
-                        key={ref}
-                        onClick={() => onOpenReference(ref)}
-                        className="flex items-center gap-1.5 text-[12px] rounded-full px-3 py-1.5 transition-colors"
-                        style={{
-                          backgroundColor: vmTokens.surfaceRaisedBg,
-                          border: `1px solid ${vmTokens.divider}`,
-                          color: vmTokens.textPrimary,
-                        }}
-                      >
-                        <BookOpen size={12} strokeWidth={1.75} />
-                        {ref}
-                      </button>
+                      <ReferencePill key={ref} label={ref} onClick={() => onOpenReference(ref)} />
                     ))}
-                  </div>
+                  </ReferencePillRow>
                 )}
 
                 {section.verses.length > 0 ? (
-                  <VerseList verses={section.verses} fontSize={20} />
+                  <ScriptureText
+                    verses={section.verses.map((v) => ({
+                      number: v.verseNumber,
+                      text: v.text,
+                      reference: v.reference,
+                    }))}
+                  />
                 ) : (
-                  <p className="text-[13px]" style={{ color: vmTokens.textTertiary }}>
-                    No verses parsed for this section.
-                  </p>
+                  <ScripturePlaceholder>No verses parsed for this section.</ScripturePlaceholder>
                 )}
-              </section>
+              </ScriptureSection>
             ))}
-          </div>
+          </ScriptureSectionList>
         )}
       </div>
-    </div>
-  );
-}
-
-function VerseList({ verses, fontSize }: { verses: TopicVerse[]; fontSize: number }) {
-  return (
-    <div
-      className="leading-relaxed"
-      style={{
-        fontSize,
-        fontFamily: "'Roboto Serif', Georgia, serif",
-        fontWeight: 300,
-        lineHeight: '1.7',
-        color: vmTokens.textPrimary,
-      }}
-    >
-      {verses.map((v, i) => (
-        <span key={`${v.verseNumber}-${i}`}>
-          <sup
-            style={{
-              fontSize: '0.7em',
-              marginRight: 2,
-              verticalAlign: 'super',
-              lineHeight: 0,
-              color: vmTokens.gold,
-              fontWeight: 500,
-            }}
-          >
-            {v.verseNumber}
-          </sup>
-          {v.text}
-          {v.reference && (
-            <>
-              {' '}
-              <span style={{ color: vmTokens.textTertiary, fontSize: '0.85em' }}>
-                ({v.reference})
-              </span>
-            </>
-          )}{' '}
-        </span>
-      ))}
     </div>
   );
 }
