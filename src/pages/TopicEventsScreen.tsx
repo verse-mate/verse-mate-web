@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ChevronDown, Menu } from 'lucide-react';
 import { fetchTopicDetails, fetchTopics } from '@/services/bibleService';
 import type { Topic, TopicSection } from '@/services/types';
 import { useApp } from '@/contexts/AppContext';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useTopicView, type InsightTab } from '@/contexts/TopicViewContext';
 import BookSelector from '@/components/BookSelector';
+import { InsightHeader, PillTabs } from '@/components/InsightChrome';
 import {
   ContentTab,
   ExplanationTab,
@@ -166,147 +166,23 @@ export default function TopicEventsScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
-      {/* Phone header — mirrors CommentaryScreen pattern.
-          Topic name acts as the chapter-selector dropdown; Bible /
-          Insight pills sit on the right with Insight active. No
-          standalone back arrow (the topic is the page, not a sub-screen). */}
-      <header
-        className="reading-screen-header shrink-0 safe-top"
-        style={{
-          backgroundColor: vmTokens.headerBg,
-          paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)',
-        }}
-      >
-        <div
-          className="flex items-center justify-between px-4"
-          style={{ height: 56 }}
-        >
-          <button
-            onClick={() => setShowBookSelector(true)}
-            data-testid="topic-selector-button"
-            className="flex items-center gap-1.5 min-h-[44px] pr-2 -ml-1"
-            style={{ color: vmTokens.headerFg }}
-          >
-            <span
-              style={{
-                fontFamily: 'Roboto, sans-serif',
-                fontWeight: 400,
-                fontSize: 14,
-                lineHeight: '24px',
-                color: vmTokens.headerFg,
-                maxWidth: 180,
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {topic?.name || 'Topic'}
-            </span>
-            <ChevronDown size={18} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
-          </button>
+      {/* Phone chrome — the topic name acts as the chapter-selector dropdown,
+          Bible / Insight sits on the right with Insight active. No standalone
+          back arrow: the topic is the page, not a sub-screen. */}
+      <InsightHeader
+        title={topic?.name || 'Topic'}
+        titleTestId="topic-selector-button"
+        onTitleClick={() => setShowBookSelector(true)}
+        onBible={() => navigate('/read')}
+      />
 
-          <div className="flex items-center gap-2">
-            <div
-              style={{
-                display: 'flex',
-                backgroundColor: vmTokens.pillBg,
-                borderRadius: 100,
-                padding: '3px',
-              }}
-            >
-              <button
-                aria-label="Bible"
-                data-testid="bible-view-icon"
-                onClick={() => navigate('/read')}
-                style={{
-                  fontFamily: 'Roboto, sans-serif',
-                  fontWeight: 400,
-                  fontSize: 14,
-                  lineHeight: '24px',
-                  padding: '2px 12px',
-                  borderRadius: 100,
-                  backgroundColor: 'transparent',
-                  color: vmTokens.headerFg,
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
-              >
-                Bible
-              </button>
-              <button
-                aria-label="Insight"
-                data-testid="commentary-view-icon"
-                style={{
-                  fontFamily: 'Roboto, sans-serif',
-                  fontWeight: 400,
-                  fontSize: 14,
-                  lineHeight: '24px',
-                  padding: '2px 12px',
-                  borderRadius: 100,
-                  backgroundColor: vmTokens.gold,
-                  color: vmTokens.pageBg,
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
-              >
-                Insight
-              </button>
-            </div>
-            <button
-              onClick={() => navigate('/menu')}
-              aria-label="Open menu"
-              data-testid="hamburger-menu-button"
-              className="flex items-center justify-center w-[44px] h-[44px] -mr-2"
-            >
-              <Menu size={22} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Topic tab pills */}
-      <div
-        className="shrink-0"
-        style={{
-          backgroundColor: vmTokens.headerBg,
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '12px 16px',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            backgroundColor: vmTokens.pillBg,
-            borderRadius: 100,
-            padding: '3px',
-            gap: 0,
-          }}
-        >
-          {PHONE_TABS.map((t) => (
-            <button
-              key={t.id}
-              onClick={() => handlePhoneTabChange(t.id)}
-              data-testid={`topic-tab-${t.id}`}
-              style={{
-                borderRadius: 100,
-                padding: '4px 16px',
-                fontFamily: 'Roboto, sans-serif',
-                fontSize: 14,
-                fontWeight: 400,
-                lineHeight: '24px',
-                whiteSpace: 'nowrap',
-                backgroundColor: phoneTab === t.id ? vmTokens.gold : 'transparent',
-                color: phoneTab === t.id ? vmTokens.headerBg : vmTokens.headerFg,
-                border: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      <PillTabs
+        tabs={PHONE_TABS}
+        active={phoneTab}
+        onSelect={(id) => handlePhoneTabChange(id)}
+        testIdPrefix="topic-tab-"
+        ariaLabel="Topic view"
+      />
 
       <div
         className="flex-1 overflow-y-auto px-4 pb-8"
