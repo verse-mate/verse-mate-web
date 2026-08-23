@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { fetchCommentary, fetchBooks } from '@/services/bibleService';
 import { Commentary } from '@/services/types';
 import { parseBookParam, nameToSlug } from '@/lib/bookSlugs';
-import { ChevronDown, ChevronUp, Menu, Copy, Check } from 'lucide-react';
+import { ChevronDown, ChevronUp, Copy, Check } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import ShareIcon from '@/components/ShareIcon';
 import StudyPanel from '@/components/StudyPanel';
@@ -129,119 +129,20 @@ export default function CommentaryScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
-      {/* Header — #1A1A1A dark, Insight pill gold (active), Bible pill white (inactive) */}
-      {/* `.safe-top` adds only the real notch inset (0 on desktop / non-notched)
-          so the bar stays its 56px row instead of carrying a fixed status-bar
-          floor that reads as dead space at desktop zoom. */}
-      <header
-        className="shrink-0 safe-top"
-        style={{ backgroundColor: vmTokens.headerBg }}
-      >
-        <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
-          <button
-            onClick={() => navigate(`/read`)}
-            data-testid="chapter-selector-button"
-            className="flex items-center gap-1.5 min-h-[44px] pr-2 -ml-1"
-            style={{ color: vmTokens.headerFg }}
-          >
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: vmTokens.headerFg }}>
-              {decodedBook} {chapterNum}
-            </span>
-            <ChevronDown size={18} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
-          </button>
+      <InsightHeader
+        title={`${decodedBook} ${chapterNum}`}
+        titleTestId="chapter-selector-button"
+        onTitleClick={() => navigate('/read')}
+        onBible={() => navigate('/read')}
+      />
 
-          <div className="flex items-center gap-2">
-            {/* Pill container */}
-            <div style={{ display: 'flex', backgroundColor: vmTokens.pillBg, borderRadius: 100, padding: '3px' }}>
-              {/* Bible pill — inactive */}
-              <button
-                aria-label="Bible"
-                data-testid="bible-view-icon"
-                onClick={() => navigate('/read')}
-                style={{
-                  fontFamily: 'Roboto, sans-serif',
-                  fontWeight: 400,
-                  fontSize: 14,
-                  lineHeight: '24px',
-                  padding: '2px 12px',
-                  borderRadius: 100,
-                  backgroundColor: 'transparent',
-                  color: vmTokens.headerFg,
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
-              >
-                Bible
-              </button>
-              {/* Insight pill — active (gold) */}
-              <button
-                aria-label="Insight"
-                data-testid="commentary-view-icon"
-                style={{
-                  fontFamily: 'Roboto, sans-serif',
-                  fontWeight: 400,
-                  fontSize: 14,
-                  lineHeight: '24px',
-                  padding: '2px 12px',
-                  borderRadius: 100,
-                  backgroundColor: vmTokens.gold,
-                  color: vmTokens.pageBg,
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
-              >
-                Insight
-              </button>
-            </div>
-            <button
-              onClick={() => navigate('/menu')}
-              aria-label="Open menu"
-              data-testid="hamburger-menu-button"
-              className="flex items-center justify-center w-[44px] h-[44px] -mr-2"
-            >
-              <Menu size={22} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Tab pills — dark subheader (#1A1A1A), pills in #323232 container */}
-      <div
-        className="shrink-0"
-        style={{ backgroundColor: vmTokens.headerBg, display: 'flex', justifyContent: 'center', padding: '12px 16px' }}
-      >
-        <div
-          role="tablist"
-          aria-label="Commentary view"
-          style={{ display: 'flex', backgroundColor: vmTokens.pillBg, borderRadius: 100, padding: '3px', gap: 0 }}
-        >
-          {tabs.map(t => (
-            <button
-              key={t.id}
-              role="tab"
-              aria-selected={tab === t.id}
-              tabIndex={tab === t.id ? 0 : -1}
-              onClick={() => setTab(t.id)}
-              data-testid={`tab-${t.id}`}
-              style={{
-                borderRadius: 100,
-                padding: '4px 16px',
-                fontFamily: 'Roboto, sans-serif',
-                fontSize: 14,
-                fontWeight: 400,
-                lineHeight: '24px',
-                whiteSpace: 'nowrap',
-                backgroundColor: tab === t.id ? vmTokens.gold : 'transparent',
-                color: tab === t.id ? vmTokens.headerBg : vmTokens.headerFg,
-                border: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      <PillTabs
+        tabs={tabs}
+        active={tab}
+        onSelect={(id) => setTab(id)}
+        testIdPrefix="tab-"
+        ariaLabel="Commentary view"
+      />
 
       {/* Body — theme-aware reading surface (cream in light, black in dark)
           with primary text so content stays legible in both themes. */}
@@ -498,6 +399,7 @@ function CommentaryBody({ text }: { text: string }) {
 }
 
 import React from 'react';
+import { InsightHeader, PillTabs } from '@/components/InsightChrome';
 import { vmTokens } from '@/styles/themeStyles';
 
 function stripMarkdown(text: string): string {

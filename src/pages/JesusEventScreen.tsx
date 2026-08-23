@@ -1,6 +1,7 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import ScreenHeader from '@/components/ScreenHeader';
+import BookSelector from '@/components/BookSelector';
+import { InsightHeader, PillTabs } from '@/components/InsightChrome';
 import {
   JesusEmpty,
   JesusLoading,
@@ -19,11 +20,23 @@ import { useJesusView } from '@/contexts/JesusViewContext';
 import { JESUS_TABS, isJesusTab, type JesusTab } from '@/lib/jesusTabs';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useOpenReference } from '@/hooks/useOpenReference';
-import { buildJesusLifeUrl, buildJesusThemeUrl, jesusTestId, JESUS_ROOT } from '@/lib/jesusSlugs';
+import { buildJesusLifeUrl, buildJesusThemeUrl, jesusTestId } from '@/lib/jesusSlugs';
 import { fetchJesusEvent } from '@/services/jesusService';
 import { vmTokens } from '@/styles/themeStyles';
 
 const FONT = 'Roboto, sans-serif';
+
+/**
+ * Phone puts the event itself behind a Content pill, the way a topic puts its
+ * scripture behind one — on a single column there is no second pane for the
+ * commentary to live in, so the views take turns.
+ */
+type PhoneTab = 'content' | JesusTab;
+
+const PHONE_TABS: { id: PhoneTab; label: string }[] = [
+  { id: 'content', label: 'Content' },
+  ...JESUS_TABS.map((t) => ({ id: t.id as PhoneTab, label: t.label })),
+];
 
 /**
  * JesusEventScreen — the event's scripture column.
@@ -35,8 +48,9 @@ const FONT = 'Roboto, sans-serif';
  * routes already use — an event behaves like a Bible reference for navigation,
  * so it gets the reference's chrome rather than a second pattern.
  *
- * Below 768px there is no split, so this screen renders its own header and the
- * tab bodies inline.
+ * Below 768px there is no split, so this screen renders the same phone chrome
+ * the reader and the topic screen wear — event-name dropdown, Bible / Insight
+ * toggle, and a pill group whose first view, Content, is the event itself.
  *
  * Either way the passage is the left-hand content and the commentary is the
  * right-hand content, which is what keeps the Jesus tab feeling like the rest
@@ -46,11 +60,12 @@ export default function JesusEventScreen() {
   const { eventSlug } = useParams<{ eventSlug: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
-  const { state } = useApp();
+  const { state, dispatch } = useApp();
   const openReference = useOpenReference();
   const inSplit = useMediaQuery('(min-width: 768px)');
 
-  const { detail, setDetail, tab, setTab } = useJesusView();
+  const { detail, setDetail, setTab } = useJesusView();
+  const [showBookSelector, setShowBookSelector] = useState(false);
 
   const tabParam = searchParams.get('tab');
   const urlTab: JesusTab = isJesusTab(tabParam) ? tabParam : 'summary';
@@ -61,10 +76,15 @@ export default function JesusEventScreen() {
     setTab(urlTab);
   }, [urlTab, setTab]);
 
-  const selectTab = (next: JesusTab) => {
+  /**
+   * `null` means the phone's Content view. The param is written for every real
+   * tab — including Summary — because an absent `tab` means Content on phone
+   * and Summary on the split, so Summary can't also be "no param".
+   */
+  const selectTab = (next: JesusTab | null) => {
     const params = new URLSearchParams(searchParams);
-    if (next === 'summary') params.delete('tab');
-    else params.set('tab', next);
+    if (next) params.set('tab', next);
+    else params.delete('tab');
     setSearchParams(params, { replace: true });
   };
 
@@ -232,65 +252,56 @@ export default function JesusEventScreen() {
     );
   }
 
-  // ── phone: header, passage, then the tabs inline ──
-  return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
-      <ScreenHeader
-        title="Jesus"
-        onBack={() => navigate(JESUS_ROOT)}
-        backTestId="jesus-event-back-button"
-        titleTestId="jesus-event-header-title"
-      />
-      <JesusPageBody>
-        {notFound && !detail ? <JesusEmpty label="That event doesn't exist." /> : column}
+  // ── phone: the topic screen's chrome — title dropdown, Bible / Insight,
+  //    then a pill group whose first view is the event itself ──
+  const phoneTab: PhoneTab = isJesusTab(tabParam) ? tabParam : 'content';
 
-        {detail && event && (
-          <>
-            <div
-              data-testid="jesus-event-tabs"
-              style={{
-                display: 'flex',
-                gap: 2,
-                marginTop: 24,
-                marginBottom: 4,
-                overflowX: 'auto',
-                borderBottom: `1px solid ${vmTokens.divider}`,
-                scrollbarWidth: 'none',
-              }}
-            >
-              {JESUS_TABS.map((t) => {
-                const active = tab === t.id;
-                return (
-                  <button
-                    key={t.id}
-                    type="button"
-                    onClick={() => selectTab(t.id)}
-                    data-testid={`jesus-event-tab-${t.id}`}
-                    aria-pressed={active}
-                    style={{
-                      padding: '10px 14px',
-                      whiteSpace: 'nowrap',
-                      background: 'none',
-                      border: 'none',
-                      borderBottom: `2px solid ${active ? vmTokens.gold : 'transparent'}`,
-                      cursor: 'pointer',
-                      fontFamily: FONT,
-                      fontSize: 14,
-                      fontWeight: active ? 600 : 400,
-                      color: active ? vmTokens.textPrimary : vmTokens.textSecondary,
-                    }}
-                  >
-                    {t.label}
-                  </button>
-                );
-              })}
-            </div>
-            <div data-testid={`jesus-event-panel-${tab}`} style={{ paddingTop: 8 }}>
-              <JesusTabBodies tab={tab} detail={detail} />
-            </div>
-          </>
+  return (
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
+      <InsightHeader
+        title={event?.title || 'Jesus'}
+        titleTestId="jesus-selector-button"
+        onTitleClick={() => setShowBookSelector(true)}
+        onBible={() => navigate('/read')}
+      />
+
+      <PillTabs
+        tabs={PHONE_TABS}
+        active={phoneTab}
+        onSelect={(id) => selectTab(id === 'content' ? null : id)}
+        testIdPrefix="jesus-event-tab-"
+        ariaLabel="Jesus event view"
+        containerTestId="jesus-event-tabs"
+      />
+
+      {/* JesusPageBody is the scroll container — don't nest it in another. */}
+      <JesusPageBody>
+        {phoneTab === 'content' ? (
+          notFound && !detail ? (
+            <JesusEmpty label="That event doesn't exist." />
+          ) : (
+            column
+          )
+        ) : !detail ? (
+          <JesusLoading />
+        ) : (
+          <div data-testid={`jesus-event-panel-${phoneTab}`} style={{ paddingTop: 8 }}>
+            <JesusTabBodies tab={phoneTab} detail={detail} />
+          </div>
         )}
       </JesusPageBody>
+
+      {showBookSelector && (
+        <BookSelector
+          initialTab="Jesus"
+          onClose={() => setShowBookSelector(false)}
+          onSelect={(book, chapter, bookId) => {
+            setShowBookSelector(false);
+            dispatch({ type: 'SET_PASSAGE', book, chapter, bookId });
+            navigate('/read');
+          }}
+        />
+      )}
     </div>
   );
 }
