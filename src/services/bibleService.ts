@@ -223,6 +223,54 @@ export async function fetchChapter(
   if (!bookId) {
     return { book, bookId: 0, chapter, verses: [] };
   }
+  return fetchChapterById(bookId, book, chapter, version);
+}
+
+/**
+ * In-flight + resolved chapters, keyed by book, chapter and version.
+ *
+ * The request is anonymous (`auth: false`) and a chapter's text never changes
+ * for a given version, so a session-lifetime cache is safe. It matters because
+ * several surfaces now want the same chapter at once: the reader, the Verse
+ * Insight sheet it opens, and each Jesus passage block asking for the Strong's
+ * tokens behind its words. Without it a reader stepping through an event's
+ * parallel accounts re-downloads the same chapters.
+ *
+ * Empty results are evicted so an offline blip (or a version that doesn't
+ * carry the book yet) isn't pinned for the rest of the session.
+ */
+const chapterCache = new Map<string, Promise<Chapter>>();
+
+/**
+ * Fetch a chapter when the caller already knows the book id — the Jesus graph
+ * and topic references store references structurally, so they'd otherwise pay
+ * for a book-list round trip just to look the id back up from the name.
+ *
+ * `bookName` is only the display fallback for a response that omits it.
+ */
+export function fetchChapterById(
+  bookId: number,
+  bookName: string,
+  chapter: number,
+  version: BibleVersion
+): Promise<Chapter> {
+  const key = `${bookId}:${chapter}:${version ?? ''}`;
+  const cached = chapterCache.get(key);
+  if (cached) return cached;
+  const pending = requestChapter(bookId, bookName, chapter, version).then(ch => {
+    if (ch.verses.length === 0) chapterCache.delete(key);
+    return ch;
+  });
+  chapterCache.set(key, pending);
+  return pending;
+}
+
+async function requestChapter(
+  bookId: number,
+  book: string,
+  chapter: number,
+  version: BibleVersion
+): Promise<Chapter> {
   try {
     // Request Strong's-tagged tokens for every fetch. The backend serves
     // tokens only for rows that have been seeded; rows without are returned
@@ -518,8 +566,17 @@ function splitBylineByVerse(text: string): Map<number, string> {
 // ─── Verse insights ──────────────────────────────────────────────────────
 // For a per-verse insight we return the matching byline section. Falls back
 // to the chapter summary when the specific verse isn't found.
-export async function fetchVerseInsights(book: string, chapter: number): Promise<VerseInsight[]> {
-  const bookId = await resolveBookId(book);
+/**
+ * `knownBookId` lets a caller that already holds the id (the Jesus graph, the
+ * topic references) skip the name lookup — and stay correct even if the book
+ * name it was given doesn't match the book list verbatim.
+ */
+export async function fetchVerseInsights(
+  book: string,
+  chapter: number,
+  knownBookId?: number
+): Promise<VerseInsight[]> {
+  const bookId = knownBookId || (await resolveBookId(book));
   if (!bookId) return [];
   try {
     const cache = await loadExplanations(bookId, chapter);
