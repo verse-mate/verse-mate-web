@@ -19,6 +19,12 @@ const API_BASE = (process.env.VITE_API_URL || 'https://api.versemate.org').repla
 
 /** null = not probed yet. Cached per worker so we hit the API once. */
 let corpusReady: boolean | null = null;
+/**
+ * Whether the API serves the topic-grouped browse. The web app falls back to
+ * the flat list without it, so the topic assertions gate on this separately
+ * rather than turning the suite red between the two repos' deploys.
+ */
+let topicBrowseReady: boolean | null = null;
 
 test.beforeAll(async () => {
   if (corpusReady !== null) return;
@@ -31,6 +37,14 @@ test.beforeAll(async () => {
   }
   if (!corpusReady) {
     console.warn(`[jesus] corpus not present at ${API_BASE}/jesus/overview — skipping suite`);
+  }
+
+  try {
+    const res = await fetch(`${API_BASE}/jesus/events/browse/teachings`);
+    const body = res.ok ? ((await res.json()) as { topics?: unknown[] }) : null;
+    topicBrowseReady = Array.isArray(body?.topics);
+  } catch {
+    topicBrowseReady = false;
   }
 });
 
@@ -90,7 +104,67 @@ test.describe('Jesus — hub', () => {
 
     await expect(page).toHaveURL(/\/jesus\/browse\/miracles$/);
     await expect(page.getByTestId('jesus-list-title')).toHaveText(/miracles/i);
-    await expect(page.getByTestId('jesus-entry-list')).toBeVisible({ timeout: 15_000 });
+    // Topic-grouped against a current API, flat against one that predates the
+    // browse endpoint — either is a correctly rendered category.
+    await expect(
+      page
+        .locator('[data-testid="jesus-topic-list"], [data-testid="jesus-entry-list"]')
+        .first(),
+    ).toBeVisible({ timeout: 15_000 });
+  });
+});
+
+test.describe('Jesus — a category, grouped by topic', () => {
+  test.beforeEach(() => {
+    test.skip(
+      !topicBrowseReady,
+      `${API_BASE} does not serve /jesus/events/browse yet — the app falls back to the flat list`,
+    );
+  });
+
+  test('Teachings says what He addresses before showing examples', async ({ page }) => {
+    await page.goto('/jesus/browse/teachings');
+
+    await expect(page.getByTestId('jesus-list-title')).toHaveText(/teachings/i, {
+      timeout: 15_000,
+    });
+    await expect(page.getByTestId('jesus-category-intro')).not.toBeEmpty();
+    await expect(page.getByTestId('jesus-category-stats')).toContainText(/teaching/i);
+
+    // A topic names itself, then quotes Him, then lists the events.
+    const topic = page.locator('[data-testid^="jesus-topic-section-"]').first();
+    await expect(topic).toBeVisible();
+    await expect(topic.locator('[data-testid^="jesus-topic-name-"]')).not.toBeEmpty();
+    await expect(topic.locator('[data-testid^="jesus-topic-events-"]')).toBeVisible();
+  });
+
+  test('a topic chip jumps to that topic', async ({ page }) => {
+    await page.goto('/jesus/browse/teachings');
+    await expect(page.getByTestId('jesus-topic-nav')).toBeVisible({ timeout: 15_000 });
+
+    const chip = page.locator('[data-testid^="jesus-topic-chip-"]').nth(1);
+    const slug = (await chip.getAttribute('data-testid'))?.replace(
+      'jesus-topic-chip-',
+      '',
+    );
+    await chip.click();
+
+    await expect(page.getByTestId(`jesus-topic-section-${slug}`)).toBeInViewport();
+  });
+
+  test('every category gets the same treatment', async ({ page }) => {
+    for (const category of ['questions', 'commands', 'claims', 'parables']) {
+      await page.goto(`/jesus/browse/${category}`);
+      await expect(page.getByTestId('jesus-category-intro')).toBeVisible({
+        timeout: 15_000,
+      });
+      await expect(page.getByTestId('jesus-topic-list')).toBeVisible();
+    }
+  });
+
+  test('an unknown category shows an empty state rather than erroring', async ({ page }) => {
+    await page.goto('/jesus/browse/not-a-real-category');
+    await expect(page.getByTestId('jesus-empty')).toBeVisible({ timeout: 15_000 });
   });
 });
 

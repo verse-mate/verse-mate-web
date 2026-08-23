@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import ScreenHeader from '@/components/ScreenHeader';
 import { JesusEventCardView } from '@/components/jesus/JesusEventParts';
+import { JesusTopicBrowse } from '@/components/jesus/JesusTopicParts';
 import {
   JesusCount,
   JesusEmpty,
@@ -14,12 +15,13 @@ import { useApp } from '@/contexts/AppContext';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { JESUS_ROOT } from '@/lib/jesusSlugs';
 import {
+  fetchJesusBrowse,
   fetchJesusEventCollection,
   fetchJesusEventOverview,
   fetchJesusEvents,
   fetchJesusThemes,
 } from '@/services/jesusService';
-import type { JesusEventCard } from '@/services/types';
+import type { JesusBrowse, JesusEventCard } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
 
 const FONT = 'Roboto, sans-serif';
@@ -46,6 +48,14 @@ interface ListHeader {
  * so they share a component rather than triplicating the list, the pagination
  * and the empty states.
  *
+ * A category (/jesus/browse/<kind>) gets more than a list: `GET
+ * /jesus/events/browse/<kind>` returns the same corpus grouped under the topics
+ * it addresses, so the screen can say what He teaches, asks or claims about
+ * each before showing the examples. Every category tab renders that way. The
+ * flat list below is the fallback for a backend that predates the endpoint —
+ * this repo deploys independently of the API, so the screen has to work against
+ * both.
+ *
  * Curated studies are the one case where order is editorial rather than
  * alphabetical, so those come back whole from the collection endpoint instead
  * of being paged.
@@ -65,6 +75,7 @@ export default function JesusListScreen({ mode }: Props) {
   const slug = params.kindSlug ?? params.themeSlug ?? params.collectionSlug ?? '';
 
   const [header, setHeader] = useState<ListHeader | null>(null);
+  const [browse, setBrowse] = useState<JesusBrowse | null>(null);
   const [events, setEvents] = useState<JesusEventCard[] | null>(null);
   const [total, setTotal] = useState(0);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -74,6 +85,7 @@ export default function JesusListScreen({ mode }: Props) {
   // title. Runs before the fetch effect below on the same commit.
   useEffect(() => {
     setHeader(null);
+    setBrowse(null);
     setEvents(null);
     setTotal(0);
     setNotFound(false);
@@ -105,6 +117,15 @@ export default function JesusListScreen({ mode }: Props) {
       }
 
       if (mode === 'kind') {
+        const grouped = await fetchJesusBrowse(slug, state.version);
+        if (cancelled) return;
+        if (grouped) {
+          setHeader({ title: grouped.type.label, description: null });
+          setBrowse(grouped);
+          setTotal(grouped.total_events);
+          return;
+        }
+
         const overview = await fetchJesusEventOverview(state.version);
         if (cancelled) return;
         const type = overview.sections
@@ -154,7 +175,7 @@ export default function JesusListScreen({ mode }: Props) {
     setLoadingMore(false);
   }, [events, mode, slug, state.version]);
 
-  const loading = events === null && !notFound;
+  const loading = events === null && browse === null && !notFound;
   const hasMore = events !== null && events.length < total;
 
   return (
@@ -176,7 +197,9 @@ export default function JesusListScreen({ mode }: Props) {
           <JesusEmpty label="That page doesn't exist." />
         ) : loading ? (
           <JesusLoading />
-        ) : (
+        ) : browse ? (
+          <JesusTopicBrowse browse={browse} />
+        ) : events ? (
           <>
             {header?.description && (
               <p
@@ -233,7 +256,7 @@ export default function JesusListScreen({ mode }: Props) {
               </button>
             )}
           </>
-        )}
+        ) : null}
       </JesusPageBody>
     </div>
   );

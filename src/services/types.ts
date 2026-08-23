@@ -505,3 +505,58 @@ export interface JesusEventList {
   limit: number;
   offset: number;
 }
+
+// ─── Topic-grouped category browse ────────────────────────────────────────
+//
+// `GET /jesus/events/browse/:type` returns the same corpus as `?type=` on
+// /jesus/events, reorganised: the category is introduced, then each topic says
+// what it is about and quotes what He says there, then the events follow. Every
+// category — Teachings, Questions, Commands, Claims and the rest — comes back
+// in this one shape.
+
+/** One "what He says here" line, lifted from a matched facet. */
+export interface JesusTopicPoint {
+  slug: string;
+  title: string;
+  text: string | null;
+  summary: string | null;
+  reference: string | null;
+  provenance: number;
+}
+
+export interface JesusTopicGroup {
+  /** null on the catch-all group for events carrying no theme. */
+  slug: string | null;
+  name: string;
+  description: string | null;
+  sort_order: number;
+  event_count: number;
+  facet_count: number;
+  gospels: string[];
+  points: JesusTopicPoint[];
+  events: JesusEventCard[];
+}
+
+export interface JesusBrowseCategory {
+  type: string;
+  mode: 'WORD' | 'ACTION' | string;
+  slug: string;
+  label: string;
+  singular: string;
+  /** The noun to count with, lower-case: "8 teachings", "3 acts of compassion". */
+  plural: string;
+  section: string;
+  blurb: string;
+  /** The paragraph under the title: what this category is and how it's laid out. */
+  intro: string;
+  event_count: number;
+  facet_count: number;
+}
+
+export interface JesusBrowse {
+  type: JesusBrowseCategory;
+  topics: JesusTopicGroup[];
+  total_events: number;
+  /** True when the category hit the server's ceiling and was cut short. */
+  truncated: boolean;
+}
