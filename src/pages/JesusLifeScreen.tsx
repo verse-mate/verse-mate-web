@@ -3,15 +3,26 @@ import { useNavigate, useParams } from 'react-router-dom';
 import ScreenHeader from '@/components/ScreenHeader';
 import { JesusEventCardView } from '@/components/jesus/JesusEventParts';
 import {
-  JesusCount,
+  JesusArcBand,
+  JesusGospelStrip,
+  JesusOrdinal,
+  JesusPeriodCard,
+  JesusPeriodChip,
+  JesusPeriodHero,
+  JesusPeriodStep,
+  JesusStatRow,
+  type JesusPeriodView,
+} from '@/components/jesus/JesusLifeParts';
+import {
   JesusEmpty,
   JesusLoading,
   JesusPageBody,
   JesusPageTitle,
-  JesusPill,
+  JesusSectionLabel,
 } from '@/components/jesus/JesusParts';
 import { useApp } from '@/contexts/AppContext';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { jesusPeriodWeight, pluralize, summarizeJesusPeriod } from '@/lib/jesusLife';
 import { buildJesusLifeUrl, jesusTestId, JESUS_ROOT } from '@/lib/jesusSlugs';
 import { fetchJesusEventLife } from '@/services/jesusService';
 import type { JesusEventLifePeriod } from '@/services/types';
@@ -25,6 +36,14 @@ const FONT = 'Roboto, sans-serif';
  * Two modes off one route family:
  *   /jesus/life                 the whole arc, period by period
  *   /jesus/life/<periodSlug>    one period, expanded
+ *
+ * Navigation is a map, not a scroller. The arc band sizes each period by how
+ * much of the record it holds, and the card grid below it wraps — so the last
+ * week of Jesus' life is never hidden past the right edge of a pill row the way
+ * it was when this screen navigated by horizontal scroll. Each card carries
+ * what `GET /jesus/events/life` already knows about the stretch: its scripture
+ * span, which gospels cover it, how many sayings and deeds are catalogued, and
+ * the themes it keeps returning to.
  *
  * Periods with no events are still rendered. The gospels are uneven — thirty
  * years pass in a sentence — and showing an empty stretch with its description
@@ -50,74 +69,144 @@ export default function JesusLifeScreen() {
     };
   }, [state.version]);
 
-  const activePeriod = useMemo(
-    () => periods?.find((p) => p.slug === periodSlug) ?? null,
-    [periods, periodSlug],
+  /** Every period with the numbers its card renders, derived once per payload. */
+  const views: JesusPeriodView[] = useMemo(
+    () =>
+      (periods ?? []).map((period, i) => ({
+        period,
+        stats: summarizeJesusPeriod(period.events),
+        ordinal: i + 1,
+      })),
+    [periods],
+  );
+
+  const activeIndex = useMemo(
+    () => views.findIndex((v) => v.period.slug === periodSlug),
+    [views, periodSlug],
+  );
+  const active = activeIndex >= 0 ? views[activeIndex] : null;
+  const counts = useMemo(() => views.map((v) => v.stats.events), [views]);
+
+  const totals = useMemo(
+    () =>
+      views.reduce(
+        (acc, v) => ({
+          events: acc.events + v.stats.events,
+          words: acc.words + v.stats.words,
+          actions: acc.actions + v.stats.actions,
+        }),
+        { events: 0, words: 0, actions: 0 },
+      ),
+    [views],
   );
 
   const loading = periods === null;
-  const visible = periodSlug ? (activePeriod ? [activePeriod] : []) : (periods ?? []);
+  const title = active ? active.period.name : 'Follow His Life';
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       {!inSplit && (
-      <ScreenHeader
-        title={activePeriod ? activePeriod.name : 'Follow His Life'}
-        onBack={() => navigate(periodSlug ? buildJesusLifeUrl() : JESUS_ROOT)}
-        backTestId="jesus-life-back-button"
-        titleTestId="jesus-life-title"
-      />
+        <ScreenHeader
+          title={title}
+          onBack={() => navigate(periodSlug ? buildJesusLifeUrl() : JESUS_ROOT)}
+          backTestId="jesus-life-back-button"
+          titleTestId="jesus-life-title"
+        />
       )}
 
       <JesusPageBody wide={inSplit}>
-        {inSplit && (
-          <JesusPageTitle testId="jesus-life-title">{activePeriod ? activePeriod.name : 'Follow His Life'}</JesusPageTitle>
-        )}
+        {inSplit && <JesusPageTitle testId="jesus-life-title">{title}</JesusPageTitle>}
+
         {loading ? (
           <JesusLoading />
-        ) : periods.length === 0 ? (
+        ) : views.length === 0 ? (
           <JesusEmpty label="The timeline isn't available right now." />
         ) : (
           <>
-            {/* Period jump row — always the full set, so the reader can move
-                between stretches of the ministry without going back first. */}
-            <div
-              style={{
-                display: 'flex',
-                gap: 8,
-                overflowX: 'auto',
-                padding: '16px 0 4px',
-                scrollbarWidth: 'none',
-              }}
-              data-testid="jesus-life-period-row"
-            >
-              <JesusPill
-                label="All"
-                onClick={() => navigate(buildJesusLifeUrl())}
-                active={!periodSlug}
-                testId="jesus-life-period-all"
-              />
-              {periods.map((period) => (
-                <JesusPill
-                  key={period.slug}
-                  label={period.name}
-                  count={period.event_count}
-                  active={period.slug === periodSlug}
-                  onClick={() => navigate(buildJesusLifeUrl(period.slug))}
-                  testId={jesusTestId('jesus-life-period', period.slug)}
-                />
-              ))}
-            </div>
+            {!periodSlug && (
+              <p
+                data-testid="jesus-life-overview-line"
+                style={{
+                  fontFamily: FONT,
+                  fontSize: 14,
+                  lineHeight: '21px',
+                  color: vmTokens.textSecondary,
+                }}
+              >
+                {pluralize(views.length, 'period')} from the manger to the ascension —{' '}
+                {pluralize(totals.events, 'event')}, {pluralize(totals.words, 'saying')} and{' '}
+                {pluralize(totals.actions, 'deed')} catalogued across the four Gospels.
+              </p>
+            )}
 
-            {periodSlug && !activePeriod ? (
+            {/* The arc at a glance. Doubles as navigation in both modes, so the
+                reader can jump stretches without going back to the map first. */}
+            <JesusArcBand
+              views={views}
+              activeSlug={periodSlug}
+              onSelect={(slug) => navigate(buildJesusLifeUrl(slug))}
+            />
+
+            {!periodSlug && (
+              <div className="jl-grid" data-testid="jesus-life-period-row">
+                {views.map((view) => (
+                  <JesusPeriodCard
+                    key={view.period.slug}
+                    view={view}
+                    weight={jesusPeriodWeight(view.stats.events, counts)}
+                    onOpen={() => navigate(buildJesusLifeUrl(view.period.slug))}
+                    testId={jesusTestId('jesus-life-period', view.period.slug)}
+                  />
+                ))}
+              </div>
+            )}
+
+            {periodSlug && !active ? (
               <JesusEmpty label="That part of the timeline doesn't exist." />
+            ) : active ? (
+              <>
+                <JesusPeriodHero view={active} total={views.length} />
+                <PeriodEvents view={active} expanded />
+                <JesusPeriodStep
+                  previous={views[activeIndex - 1]}
+                  next={views[activeIndex + 1]}
+                  onGo={(slug) => navigate(buildJesusLifeUrl(slug))}
+                />
+
+                {/* Named jumps, below the stretch the reader came for. The arc
+                    band above already covers a quick hop; this is the version
+                    that says where you would be going. It wraps rather than
+                    scrolls, so no period is hidden off the edge. */}
+                <JesusSectionLabel>Jump to another period</JesusSectionLabel>
+                <div
+                  data-testid="jesus-life-period-row"
+                  style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}
+                >
+                  <JesusPeriodChip
+                    label="All periods"
+                    active={false}
+                    onClick={() => navigate(buildJesusLifeUrl())}
+                    testId="jesus-life-period-all"
+                  />
+                  {views.map((view) => (
+                    <JesusPeriodChip
+                      key={view.period.slug}
+                      label={view.period.name}
+                      count={view.stats.events}
+                      active={view.period.slug === periodSlug}
+                      onClick={() => navigate(buildJesusLifeUrl(view.period.slug))}
+                      testId={jesusTestId('jesus-life-period', view.period.slug)}
+                    />
+                  ))}
+                </div>
+              </>
             ) : (
-              visible.map((period) => (
-                <PeriodBlock
-                  key={period.slug}
-                  period={period}
-                  expanded={!!periodSlug}
-                  onOpenPeriod={() => navigate(buildJesusLifeUrl(period.slug))}
+              views.map((view) => (
+                <PeriodEvents
+                  key={view.period.slug}
+                  view={view}
+                  expanded={false}
+                  onOpenPeriod={() => navigate(buildJesusLifeUrl(view.period.slug))}
                 />
               ))
             )}
@@ -128,87 +217,81 @@ export default function JesusLifeScreen() {
   );
 }
 
-/** How many events a period shows before it asks you to open it. */
-const PREVIEW_COUNT = 4;
+/** How many events a period shows on the map before it asks you to open it. */
+const PREVIEW_COUNT = 3;
 
-function PeriodBlock({
-  period,
+/**
+ * A period's events on the timeline rail.
+ *
+ * On the map the header stays light — the card above already carries the
+ * description — and only the first few events are shown. Opened, the period
+ * leads with its hero instead and every event is listed.
+ */
+function PeriodEvents({
+  view,
   expanded,
   onOpenPeriod,
 }: {
-  period: JesusEventLifePeriod;
+  view: JesusPeriodView;
   expanded: boolean;
-  onOpenPeriod: () => void;
+  onOpenPeriod?: () => void;
 }) {
+  const { period, stats, ordinal } = view;
   const events = expanded ? period.events : period.events.slice(0, PREVIEW_COUNT);
   const remaining = period.events.length - events.length;
 
   return (
-    <section
-      data-testid={jesusTestId('jesus-life-section', period.slug)}
-      style={{ marginTop: 26 }}
-    >
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-        <h2
-          style={{
-            flex: 1,
-            fontFamily: FONT,
-            fontSize: 18,
-            fontWeight: 500,
-            lineHeight: '24px',
-            color: vmTokens.textPrimary,
-          }}
-        >
-          {period.name}
-        </h2>
-        <JesusCount count={period.event_count} />
-      </div>
+    <section data-testid={jesusTestId('jesus-life-section', period.slug)} style={{ marginTop: 24 }}>
+      {!expanded && (
+        <>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+            <JesusOrdinal n={ordinal} />
+            <h2
+              style={{
+                flex: 1,
+                minWidth: 0,
+                fontFamily: FONT,
+                fontSize: 17,
+                fontWeight: 600,
+                lineHeight: '23px',
+                color: vmTokens.textPrimary,
+              }}
+            >
+              {period.name}
+            </h2>
+            <JesusGospelStrip gospels={stats.gospels} label={false} />
+          </div>
 
-      {period.subtitle && (
-        <p
-          style={{
-            marginTop: 3,
-            fontFamily: FONT,
-            fontSize: 12,
-            letterSpacing: '0.02em',
-            color: vmTokens.gold,
-          }}
-        >
-          {period.subtitle}
-        </p>
-      )}
+          {period.subtitle && (
+            <p
+              style={{
+                marginTop: 4,
+                marginLeft: 35,
+                fontFamily: FONT,
+                fontSize: 12,
+                letterSpacing: '0.02em',
+                color: vmTokens.gold,
+              }}
+            >
+              {period.subtitle}
+            </p>
+          )}
 
-      {period.description && (
-        <p
-          style={{
-            marginTop: 8,
-            fontFamily: FONT,
-            fontSize: 14,
-            lineHeight: '21px',
-            color: vmTokens.textSecondary,
-          }}
-        >
-          {period.description}
-        </p>
+          {stats.events > 0 && (
+            <div style={{ marginTop: 6, marginLeft: 35 }}>
+              <JesusStatRow stats={stats} compact />
+            </div>
+          )}
+        </>
       )}
 
       {events.length > 0 ? (
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 8,
-            marginTop: 12,
-            // The rail that makes the timeline read as a walk rather than a list.
-            borderLeft: `1px solid ${vmTokens.divider}`,
-            paddingLeft: 12,
-          }}
-        >
+        <div className="jl-rail">
           {events.map((event, i) => (
             <JesusEventCardView key={event.slug} event={event} index={i + 1} />
           ))}
 
-          {remaining > 0 && (
+          {remaining > 0 && onOpenPeriod && (
             <button
               type="button"
               onClick={onOpenPeriod}
