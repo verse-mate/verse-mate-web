@@ -11,6 +11,13 @@ import {
   JesusPill,
   JesusSectionLabel,
 } from '@/components/jesus/JesusParts';
+import {
+  ReferencePill,
+  ReferencePillRow,
+  ScriptureSection,
+  ScriptureText,
+  ScripturePlaceholder,
+} from '@/components/scripture/ScriptureBlock';
 import { useApp } from '@/contexts/AppContext';
 import { useOpenReference } from '@/hooks/useOpenReference';
 import {
@@ -220,14 +227,12 @@ export default function JesusEntryScreen() {
             </JesusSectionLabel>
 
             {detail.passages.length > 0 ? (
-              <div
-                style={{ display: 'flex', flexDirection: 'column', gap: 10 }}
-                data-testid="jesus-entry-passages"
-              >
-                {detail.passages.map((passage) => (
+              <div className="space-y-6" data-testid="jesus-entry-passages">
+                {detail.passages.map((passage, i) => (
                   <PassageBlock
                     key={passage.reference}
                     passage={passage}
+                    isLast={i === detail.passages.length - 1}
                     onOpen={() =>
                       openReference({
                         book_id: passage.book_id,
@@ -354,83 +359,39 @@ export default function JesusEntryScreen() {
   );
 }
 
-/** One passage, with its verses inline and a tap target into the reader. */
+/**
+ * One passage, set the way the Topics section sets scripture — reference pill
+ * over serif verse text, ruled off rather than boxed.
+ */
 function PassageBlock({
   passage,
   onOpen,
+  isLast = false,
 }: {
   passage: JesusPassage;
   onOpen: () => void;
+  isLast?: boolean;
 }) {
   return (
-    <article
-      data-testid={jesusTestId('jesus-passage', passage.reference)}
-      style={{
-        padding: 14,
-        borderRadius: 12,
-        backgroundColor: vmTokens.surfaceRaisedBg,
-        border: `1px solid ${vmTokens.divider}`,
-      }}
-    >
-      <button
-        type="button"
-        onClick={onOpen}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 6,
-          padding: 0,
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          fontFamily: FONT,
-          fontSize: 13,
-          fontWeight: 500,
-          color: vmTokens.gold,
-        }}
-      >
-        <BookOpen size={13} strokeWidth={1.75} />
-        {passage.reference}
-      </button>
+    <ScriptureSection testId={jesusTestId('jesus-passage', passage.reference)} isLast={isLast}>
+      <ReferencePillRow>
+        <ReferencePill
+          label={passage.reference}
+          onClick={onOpen}
+          testId={jesusTestId('jesus-passage-reference', passage.reference)}
+        />
+      </ReferencePillRow>
 
       {passage.verses.length > 0 ? (
-        <p
-          style={{
-            marginTop: 8,
-            fontFamily: FONT,
-            fontSize: 15,
-            lineHeight: '25px',
-            color: vmTokens.textPrimary,
-          }}
-        >
-          {passage.verses.map((verse) => (
-            <span key={verse.verse_number}>
-              <sup
-                style={{
-                  fontSize: 10,
-                  color: vmTokens.textTertiary,
-                  marginRight: 3,
-                }}
-              >
-                {verse.verse_number}
-              </sup>
-              {verse.text}{' '}
-            </span>
-          ))}
-        </p>
+        <ScriptureText
+          verses={passage.verses.map((verse) => ({
+            number: verse.verse_number,
+            text: verse.text,
+          }))}
+        />
       ) : (
-        <p
-          style={{
-            marginTop: 8,
-            fontFamily: FONT,
-            fontSize: 14,
-            fontStyle: 'italic',
-            color: vmTokens.textTertiary,
-          }}
-        >
-          Open in the reader to view this passage.
-        </p>
+        <ScripturePlaceholder>Open in the reader to view this passage.</ScripturePlaceholder>
       )}
-    </article>
+    </ScriptureSection>
   );
 }

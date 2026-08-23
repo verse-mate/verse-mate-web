@@ -13,6 +13,7 @@ import {
   JesusPassageBlock,
 } from '@/components/jesus/JesusEventParts';
 import JesusTabBodies from '@/components/jesus/JesusTabBodies';
+import { ScriptureSectionList } from '@/components/scripture/ScriptureBlock';
 import { useApp } from '@/contexts/AppContext';
 import { useJesusView } from '@/contexts/JesusViewContext';
 import { JESUS_TABS, isJesusTab, type JesusTab } from '@/lib/jesusTabs';
@@ -169,22 +170,19 @@ export default function JesusEventScreen() {
             </p>
           )}
 
-          <p
-            data-testid="jesus-event-accounts"
-            style={{ marginTop: 10, fontFamily: FONT, fontSize: 13, color: vmTokens.textTertiary }}
-          >
-            {event.passages.map((p) => p.display).join(' · ')}
-          </p>
-
-          {/* The scripture itself — the left column everywhere else in the app. */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 18 }}>
-            {passages.map((p) => (
-              <JesusPassageBlock
-                key={p.display}
-                passage={p}
-                onOpen={() => openReference(p)}
-              />
-            ))}
+          {/* The scripture itself — the left column everywhere else in the app,
+              set with the same sections/pills/serif the Topics pane uses. */}
+          <div style={{ marginTop: 18 }} data-testid="jesus-event-passages">
+            <ScriptureSectionList>
+              {passages.map((p, i) => (
+                <JesusPassageBlock
+                  key={p.display}
+                  passage={p}
+                  onOpen={() => openReference(p)}
+                  isLast={i === passages.length - 1}
+                />
+              ))}
+            </ScriptureSectionList>
           </div>
 
           {event.themes.length > 0 && (
@@ -226,9 +224,10 @@ export default function JesusEventScreen() {
     return (
       <div
         data-testid="jesus-event-column"
-        style={{ flex: 1, minHeight: 0, overflowY: 'auto', backgroundColor: vmTokens.pageBg }}
+        className="flex flex-col h-full overflow-y-auto px-4 pb-8"
+        style={{ backgroundColor: vmTokens.commentaryBg, color: vmTokens.textPrimary }}
       >
-        <div style={{ maxWidth: 660, margin: '0 auto', padding: '32px 16px 96px' }}>{column}</div>
+        <div className="pt-4">{column}</div>
       </div>
     );
   }
