@@ -8,9 +8,10 @@ import { CommentaryPage } from '../pages/commentary.page';
  *
  * `commentary-tabs.spec.ts` covers Summary / By-Line / Detailed but skips
  * the fourth tab, Study. The Study tab renders `StudyPanel` which either
- * shows the "Inductive Study of <book> <chapter>" heading (when API data
- * is present) or the "Inductive Study coming soon" placeholder. Both are
- * acceptable signals that the tab body mounted.
+ * shows the "Inductive Study of <book> <chapter>" heading (the normal case —
+ * all 1,189 chapters have a study, bundled in @versemate/studies) or the
+ * "didn't load" state. Both are acceptable signals that the tab body
+ * mounted.
  *
  * Desktop project skipped — DesktopLayout renders its own commentary
  * pane alongside the inner CommentaryScreen and duplicates tab testids.
@@ -34,13 +35,13 @@ test.describe('Commentary — Study tab', () => {
 
     await commentary.tabStudy.click();
 
-    // Production currently renders BOTH the populated heading ("Inductive
-    // Study of Genesis 1") AND a "Inductive Study coming soon" placeholder
-    // paragraph in the same panel. Either signal is fine — use `.first()`
+    // The populated heading ("Inductive Study of Genesis 1") is the expected
+    // case; the "didn't load" state is accepted so a flaky fetch fails the
+    // right test rather than this one. Either signal is fine — use `.first()`
     // to avoid strict-mode multi-match errors.
     const populated = page.getByText(/inductive study of genesis 1/i);
-    const placeholder = page.getByText(/inductive study coming soon/i);
-    await expect(populated.or(placeholder).first()).toBeVisible({ timeout: 15_000 });
+    const failedToLoad = page.getByTestId('study-unavailable');
+    await expect(populated.or(failedToLoad).first()).toBeVisible({ timeout: 15_000 });
   });
 
   test('share buttons that belong to other tabs are NOT visible on Study', async ({ page }) => {

@@ -122,7 +122,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
 
   // Loading state — the chapter chunk is being fetched. First visit to a
   // chapter is typically <50ms once the bundle CDN edge is warm. Show a
-  // bare placeholder so we don't flash the "coming soon" empty state.
+  // bare placeholder so we don't flash the unavailable state.
   if (loading) {
     return (
       <div>
@@ -134,15 +134,20 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
     );
   }
 
+  // Not a roadmap state. Every chapter of the Bible has a study — all 1,189
+  // ship in @versemate/studies and fetchStudy falls back to them when the API
+  // misses — so reaching here means this particular chapter failed to load,
+  // not that its study hasn't been written. Say that, and give the reader the
+  // one action that actually helps.
   if (!study) {
     return (
       <div>
         <h2 style={titleStyle}>{labels.inductiveStudyOf} {book} {chapter}</h2>
-        <div style={{ marginTop: 24, padding: 24, borderRadius: 12, backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.surfaceRaisedBorder}`, textAlign: 'center' }}>
+        <div data-testid="study-unavailable" style={{ marginTop: 24, padding: 24, borderRadius: 12, backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.surfaceRaisedBorder}`, textAlign: 'center' }}>
           <BookOpen size={28} color={vmTokens.gold} style={{ margin: '0 auto 12px' }} strokeWidth={1.5} />
-          <p style={{ color: vmTokens.textPrimary, fontSize: 16, fontWeight: 500, marginBottom: 6 }}>Inductive Study coming soon</p>
+          <p style={{ color: vmTokens.textPrimary, fontSize: 16, fontWeight: 500, marginBottom: 6 }}>Inductive Study didn't load</p>
           <p style={{ color: vmTokens.textSecondary, fontSize: 14, lineHeight: '22px' }}>
-            We're rolling out the 9-step Precept inductive method chapter by chapter. James 1 is the first chapter live — try it from any verse in James 1.
+            Every chapter has a 9-step Precept inductive study — this one just didn't come through. Reopen the chapter to try again.
           </p>
         </div>
       </div>
