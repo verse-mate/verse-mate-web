@@ -283,7 +283,7 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
 
       {/* Segmented tabs */}
       <div className="px-4 pt-2 w-full max-w-[680px]">
-        <div className="flex items-center rounded-full bg-secondary p-1">
+        <div className="flex items-center gap-0.5 rounded-full bg-secondary p-1">
           {(['OT', 'NT', 'Jesus', 'Topics'] as Tab[]).map(t => {
             const label =
               t === 'OT'
@@ -311,7 +311,11 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
                   setQuery('');
                 }}
                 data-testid={testId}
-                className={`flex-1 ${compact ? 'h-9' : 'h-10'} rounded-full transition-colors ${
+                // `flex-auto` (not `flex-1`) so each tab starts at its own
+                // label width and only the leftover space is split evenly.
+                // Equal-width tabs crowded "Old Testament" and "New Testament"
+                // together while padding out "Jesus" / "Topics".
+                className={`flex-auto ${compact ? 'h-9 px-2' : 'h-10 px-2.5'} rounded-full transition-colors ${
                   tab === t ? 'bg-gold text-[#1A1A1A]' : 'text-foreground/80'
                 }`}
                 style={{
