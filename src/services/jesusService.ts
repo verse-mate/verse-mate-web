@@ -25,6 +25,7 @@ import type {
   JesusEventLifePeriod,
   JesusEventList,
   JesusEventOverview,
+  JesusBrowse,
 } from './types';
 
 /** Filters accepted by `GET /jesus/entries`. All are AND-ed by the backend. */
@@ -229,6 +230,30 @@ export async function fetchJesusEvents(
     return data ?? { events: [], total: 0, limit, offset };
   } catch {
     return { events: [], total: 0, limit, offset };
+  }
+}
+
+/**
+ * A category, grouped by the topics it addresses.
+ *
+ * Returns null both for an unknown category and for a backend that predates
+ * the endpoint, which is deliberate: the caller falls back to the flat
+ * `?type=` list either way rather than showing an error for a category that
+ * plainly exists.
+ */
+export async function fetchJesusBrowse(
+  typeSlug: string,
+  bibleVersion?: string,
+): Promise<JesusBrowse | null> {
+  try {
+    const data = await api.get<JesusBrowse>(
+      `/jesus/events/browse/${encodeURIComponent(typeSlug)}`,
+      compact({ bible_version: bibleVersion }),
+      { auth: false },
+    );
+    return data?.type ? data : null;
+  } catch {
+    return null;
   }
 }
 
