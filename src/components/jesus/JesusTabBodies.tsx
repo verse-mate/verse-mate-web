@@ -1,8 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Check, ChevronDown, ChevronUp, Copy } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
-import ShareIcon from '@/components/ShareIcon';
 import { JesusConfidenceNote, JesusProvenanceChip } from '@/components/jesus/JesusEventParts';
+import JesusStudyBody from '@/components/jesus/JesusStudyBody';
+import {
+  JesusTabEmpty,
+  JesusTabSectionLabel,
+  JesusTabToolbar,
+} from '@/components/jesus/JesusTabParts';
 import { useApp } from '@/contexts/AppContext';
 import type { JesusTab } from '@/lib/jesusTabs';
 import { buildJesusByline, stripBylineHeader } from '@/lib/jesusByline';
@@ -17,10 +22,11 @@ const FONT = 'Roboto, sans-serif';
  * The right-pane bodies for a Jesus event — the same four tabs the Bible side
  * uses, filled from the event graph.
  *
- * Only Summary and Compare have a generated source. By-Line is assembled from
- * the chapter commentary the Bible already has (see `lib/jesusByline`), and
- * Study has no event-scoped source at all yet, so it states that plainly rather
- * than rendering an empty shell.
+ * Only Summary and Compare have a generated source. The other two are
+ * assembled from what the Bible side already serves, narrowed to the verses
+ * this event spans: By-Line from the chapter commentary (`lib/jesusByline`),
+ * Study from the chapter's inductive study (`lib/jesusStudy`, rendered by
+ * `JesusStudyBody`).
  */
 export default function JesusTabBodies({
   tab,
@@ -31,96 +37,8 @@ export default function JesusTabBodies({
 }) {
   if (tab === 'summary') return <SummaryBody detail={detail} />;
   if (tab === 'byline') return <BylineBody detail={detail} />;
-  if (tab === 'study') return <StudyBody detail={detail} />;
+  if (tab === 'study') return <JesusStudyBody detail={detail} />;
   return <CompareBody detail={detail} />;
-}
-
-// ─── shared chrome ───────────────────────────────────────────────────────────
-
-function Toolbar({
-  title,
-  provenance,
-  copyText,
-}: {
-  title: string;
-  provenance?: number | null;
-  copyText: string;
-}) {
-  const [copied, setCopied] = useState(false);
-  const copy = async () => {
-    try {
-      await navigator.clipboard?.writeText(copyText);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
-    } catch {
-      /* ignore */
-    }
-  };
-  return (
-    <div className="commentary-toolbar">
-      <h2 className="commentary-h2">
-        {title}
-        {provenance != null && provenance > 1 && (
-          <span style={{ marginLeft: 8, verticalAlign: 3 }}>
-            <JesusProvenanceChip level={provenance} />
-          </span>
-        )}
-      </h2>
-      <div className="commentary-actions">
-        <button onClick={copy} className="icon-btn" aria-label={`Copy ${title}`} title="Copy">
-          {copied ? (
-            <Check size={18} color={vmTokens.gold} strokeWidth={2} />
-          ) : (
-            <Copy size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />
-          )}
-        </button>
-        <button
-          onClick={() =>
-            navigator.share?.({ title, text: copyText, url: window.location.href }).catch(() => {})
-          }
-          className="icon-btn"
-          aria-label={`Share ${title}`}
-        >
-          <ShareIcon size={18} color={vmTokens.textPrimary} />
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function Empty({ children, testId }: { children: React.ReactNode; testId?: string }) {
-  return (
-    <p
-      data-testid={testId}
-      style={{
-        fontFamily: FONT,
-        fontSize: 14,
-        lineHeight: '21px',
-        color: vmTokens.textTertiary,
-        fontStyle: 'italic',
-      }}
-    >
-      {children}
-    </p>
-  );
-}
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <h3
-      style={{
-        fontFamily: FONT,
-        fontSize: 13,
-        fontWeight: 700,
-        color: vmTokens.gold,
-        textTransform: 'uppercase',
-        letterSpacing: '0.6px',
-        margin: '22px 0 10px',
-      }}
-    >
-      {children}
-    </h3>
-  );
 }
 
 // ─── Summary ─────────────────────────────────────────────────────────────────
@@ -144,7 +62,7 @@ function SummaryBody({ detail }: { detail: JesusEventDetail }) {
 
   return (
     <div>
-      <Toolbar
+      <JesusTabToolbar
         title={`Summary of ${event.title}`}
         provenance={overview ? 2 : null}
         copyText={`${event.title}\n\n${overview ?? event.summary ?? ''}`}
@@ -164,15 +82,15 @@ function SummaryBody({ detail }: { detail: JesusEventDetail }) {
       ) : event.summary ? (
         <>
           <p style={{ marginBottom: 12 }}>{event.summary}</p>
-          <Empty testId="jesus-summary-ungenerated">
+          <JesusTabEmpty testId="jesus-summary-ungenerated">
             The long-form overview for this event hasn’t been generated yet.
-          </Empty>
+          </JesusTabEmpty>
         </>
       ) : (
-        <Empty testId="jesus-summary-ungenerated">Nothing written for this event yet.</Empty>
+        <JesusTabEmpty testId="jesus-summary-ungenerated">Nothing written for this event yet.</JesusTabEmpty>
       )}
 
-      <SectionLabel>What this reveals</SectionLabel>
+      <JesusTabSectionLabel>What this reveals</JesusTabSectionLabel>
       {hasReveals ? (
         <div data-testid="jesus-event-reveals">
           {revealGroups.map((g) => {
@@ -213,10 +131,10 @@ function SummaryBody({ detail }: { detail: JesusEventDetail }) {
           })}
         </div>
       ) : (
-        <Empty>Nothing recorded for this event yet.</Empty>
+        <JesusTabEmpty>Nothing recorded for this event yet.</JesusTabEmpty>
       )}
 
-      <SectionLabel>How people reacted</SectionLabel>
+      <JesusTabSectionLabel>How people reacted</JesusTabSectionLabel>
       {reactions.length > 0 ? (
         <ul style={{ margin: 0, paddingLeft: 18 }} data-testid="jesus-event-reactions">
           {reactions.map((r, i) => (
@@ -229,7 +147,7 @@ function SummaryBody({ detail }: { detail: JesusEventDetail }) {
           ))}
         </ul>
       ) : (
-        <Empty>Nothing recorded for this event yet.</Empty>
+        <JesusTabEmpty>Nothing recorded for this event yet.</JesusTabEmpty>
       )}
 
       <JesusConfidenceNote
@@ -279,17 +197,17 @@ function BylineBody({ detail }: { detail: JesusEventDetail }) {
 
   return (
     <div>
-      <Toolbar
+      <JesusTabToolbar
         title={`Line-by-Line Analysis of ${detail.event.title}`}
         copyText={rows.map((r) => `${r.reference}\n${stripBylineHeader(r.detail)}`).join('\n\n')}
       />
 
       {commentaries === null ? (
-        <Empty>Loading…</Empty>
+        <JesusTabEmpty>Loading…</JesusTabEmpty>
       ) : rows.length === 0 ? (
-        <Empty testId="jesus-byline-empty">
+        <JesusTabEmpty testId="jesus-byline-empty">
           No line-by-line commentary is available for {primary?.display ?? 'this passage'} yet.
-        </Empty>
+        </JesusTabEmpty>
       ) : (
         <>
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
@@ -336,100 +254,6 @@ function BylineBody({ detail }: { detail: JesusEventDetail }) {
   );
 }
 
-// ─── Study ───────────────────────────────────────────────────────────────────
-
-/**
- * The inductive study is chapter-scoped (`fetchStudy(bookId, chapter)`) and its
- * steps are built around a whole chapter's argument, so it does not decompose
- * to a pericope. Until event-scoped study content exists this states that
- * rather than rendering a hollow imitation of the Bible side's Study tab.
- */
-function StudyBody({ detail }: { detail: JesusEventDetail }) {
-  const { words, actions } = detail;
-  return (
-    <div>
-      <Toolbar title={`Inductive Study of ${detail.event.title}`} copyText={detail.event.title} />
-      <Empty testId="jesus-study-ungenerated">
-        An event-scoped inductive study hasn’t been written yet. The Bible side’s Study tab is built
-        per chapter, so it can’t be narrowed to this passage automatically.
-      </Empty>
-
-      <SectionLabel>Observation — what He says</SectionLabel>
-      {words.length ? (
-        <FacetTable facets={words} column="Speaker" pick={(f) => f.speaker} />
-      ) : (
-        <Empty>No speech recorded for this event.</Empty>
-      )}
-
-      <SectionLabel>Observation — what He does</SectionLabel>
-      {actions.length ? (
-        <FacetTable facets={actions} column="Actor" pick={(f) => f.actor} />
-      ) : (
-        <Empty>No actions recorded for this event.</Empty>
-      )}
-    </div>
-  );
-}
-
-function FacetTable({
-  facets,
-  column,
-  pick,
-}: {
-  facets: JesusEventDetail['words'];
-  column: string;
-  pick: (f: JesusEventDetail['words'][number]) => string | null;
-}) {
-  const th: React.CSSProperties = {
-    textAlign: 'left',
-    fontSize: 11,
-    fontWeight: 700,
-    textTransform: 'uppercase',
-    letterSpacing: '0.5px',
-    color: vmTokens.gold,
-    borderBottom: `1px solid ${vmTokens.divider}`,
-    padding: '8px 10px',
-    fontFamily: FONT,
-  };
-  const td: React.CSSProperties = {
-    padding: '10px',
-    verticalAlign: 'top',
-    borderBottom: `1px solid ${vmTokens.divider}`,
-    color: vmTokens.textPrimary,
-    lineHeight: '22px',
-    fontFamily: FONT,
-    fontSize: 14,
-  };
-  return (
-    <div style={{ overflowX: 'auto' }}>
-      <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: 8 }}>
-        <thead>
-          <tr>
-            <th style={th}>Type</th>
-            <th style={th}>Text</th>
-            <th style={th}>{column}</th>
-            <th style={th}>Where</th>
-          </tr>
-        </thead>
-        <tbody>
-          {facets.map((f) => (
-            <tr key={f.slug}>
-              <td style={{ ...td, whiteSpace: 'nowrap', color: vmTokens.gold, fontWeight: 600 }}>
-                {f.type_label ?? f.type}
-              </td>
-              <td style={td}>{f.text ?? f.title}</td>
-              <td style={{ ...td, whiteSpace: 'nowrap' }}>{pick(f) ?? '—'}</td>
-              <td style={{ ...td, whiteSpace: 'nowrap', color: vmTokens.textTertiary }}>
-                {f.reference ?? '—'}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
 // ─── Compare ─────────────────────────────────────────────────────────────────
 
 function CompareBody({ detail }: { detail: JesusEventDetail }) {
@@ -452,14 +276,14 @@ function CompareBody({ detail }: { detail: JesusEventDetail }) {
     };
   }, [slug, state.version]);
 
-  if (failed) return <Empty>Couldn’t load the comparison.</Empty>;
-  if (!compare) return <Empty>Loading…</Empty>;
+  if (failed) return <JesusTabEmpty>Couldn’t load the comparison.</JesusTabEmpty>;
+  if (!compare) return <JesusTabEmpty>Loading…</JesusTabEmpty>;
 
   const recorded = compare.accounts.filter((a) => a.records_it).length;
 
   return (
     <div>
-      <Toolbar
+      <JesusTabToolbar
         title={`Compare the accounts of ${detail.event.title}`}
         provenance={compare.note_provenance}
         copyText={`${detail.event.title}\n\n${compare.note ?? ''}`}
@@ -539,15 +363,15 @@ function CompareBody({ detail }: { detail: JesusEventDetail }) {
 
       {compare.note ? (
         <>
-          <SectionLabel>Where they differ</SectionLabel>
+          <JesusTabSectionLabel>Where they differ</JesusTabSectionLabel>
           <MarkdownBlock text={compare.note} />
         </>
       ) : (
         <>
-          <SectionLabel>Where they differ</SectionLabel>
-          <Empty testId="jesus-compare-ungenerated">
+          <JesusTabSectionLabel>Where they differ</JesusTabSectionLabel>
+          <JesusTabEmpty testId="jesus-compare-ungenerated">
             The comparison hasn’t been written for this event yet.
-          </Empty>
+          </JesusTabEmpty>
         </>
       )}
 
