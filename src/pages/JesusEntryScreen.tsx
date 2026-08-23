@@ -11,11 +11,11 @@ import {
   JesusPill,
   JesusSectionLabel,
 } from '@/components/jesus/JesusParts';
+import PassageScripture from '@/components/scripture/PassageScripture';
 import {
   ReferencePill,
   ReferencePillRow,
   ScriptureSection,
-  ScriptureText,
   ScripturePlaceholder,
 } from '@/components/scripture/ScriptureBlock';
 import { useApp } from '@/contexts/AppContext';
@@ -361,7 +361,9 @@ export default function JesusEntryScreen() {
 
 /**
  * One passage, set the way the Topics section sets scripture — reference pill
- * over serif verse text, ruled off rather than boxed.
+ * over serif verse text, ruled off rather than boxed. The verses carry the
+ * reader's interactions: tap a verse for its Verse Insight card, tap a word
+ * for its definition.
  */
 function PassageBlock({
   passage,
@@ -383,7 +385,10 @@ function PassageBlock({
       </ReferencePillRow>
 
       {passage.verses.length > 0 ? (
-        <ScriptureText
+        <PassageScripture
+          bookId={passage.book_id}
+          bookName={passage.book_name}
+          chapter={passage.chapter}
           verses={passage.verses.map((verse) => ({
             number: verse.verse_number,
             text: verse.text,

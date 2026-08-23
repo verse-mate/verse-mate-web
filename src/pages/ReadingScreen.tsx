@@ -18,7 +18,7 @@ import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
 import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/ChapterNotesSheet';
-import TokenizedVerse from '@/components/TokenizedVerse';
+import LexicalVerseText from '@/components/LexicalVerseText';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
 import { OVERLAY_MODAL_WIDTH, OVERLAY_MODAL_HEIGHT } from '@/constants/overlayModal';
@@ -28,23 +28,6 @@ import { vmTokens } from '@/styles/themeStyles';
 // Style primitives come from @/styles/themeStyles so colors flip with the
 // active theme. Hex values that are intentionally constant across themes
 // (gold accent, header chrome) reference vmTokens.* instead.
-
-/**
- * Placeholder alignment passed to TokenizedVerse when the backend supplied
- * Strong's tokens but the legacy lexicon alignment hasn't loaded yet (or
- * doesn't exist for this book — e.g. non-English chapters where backend
- * tokens are the only source). TokenizedVerse short-circuits to the
- * wireTokens path before touching this object, so the empty bookId/verses
- * are never read.
- */
-const EMPTY_ALIGNMENT = {
-  bookId: 0,
-  book: '',
-  chapter: 0,
-  version: '',
-  verses: {},
-  lexicon: {},
-} as unknown as ChapterAlignment;
 
 export default function ReadingScreen() {
   const { state, dispatch, addBookmark, removeBookmark } = useApp();
@@ -557,28 +540,12 @@ export default function ReadingScreen() {
                             {verse.number}
                           </sup>
                         )}
-                        {lexAlignment ? (
-                          <TokenizedVerse
-                            text={verse.text}
-                            verseNumber={verse.number}
-                            alignment={lexAlignment}
-                            wireTokens={verse.tokens}
-                          />
-                        ) : verse.tokens && verse.tokens.length > 0 ? (
-                          // Tagged tokens arrived before the lexicon
-                          // alignment finished loading — render them
-                          // immediately. The lexicon-overlay path is
-                          // unused when wireTokens is supplied, so passing
-                          // an empty alignment is harmless.
-                          <TokenizedVerse
-                            text={verse.text}
-                            verseNumber={verse.number}
-                            alignment={EMPTY_ALIGNMENT}
-                            wireTokens={verse.tokens}
-                          />
-                        ) : (
-                          verse.text
-                        )}{' '}
+                        <LexicalVerseText
+                          text={verse.text}
+                          verseNumber={verse.number}
+                          alignment={lexAlignment}
+                          wireTokens={verse.tokens}
+                        />{' '}
                       </span>
                     );
                   })}
