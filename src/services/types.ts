@@ -196,13 +196,14 @@ export interface TopicDetails {
 // `JesusOverview` rather than from hardcoded section names, so a taxonomy
 // change on the backend reaches web and mobile without a client release.
 
-/** The nine kinds an entry can take. */
+/** The ten kinds an entry can take. Mirrors `JESUS_KINDS` on the backend. */
 export type JesusKind =
   | 'TEACHING'
   | 'QUESTION'
   | 'COMMAND'
   | 'CLAIM'
   | 'MIRACLE'
+  | 'HEALING'
   | 'ENCOUNTER'
   | 'COMPASSION'
   | 'CONFRONTATION'
