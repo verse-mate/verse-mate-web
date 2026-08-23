@@ -9,11 +9,11 @@
 import { BookOpen, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { JesusEmpty } from '@/components/jesus/JesusParts';
+import PassageScripture from '@/components/scripture/PassageScripture';
 import {
   ReferencePill,
   ReferencePillRow,
   ScriptureSection,
-  ScriptureText,
   ScripturePlaceholder,
 } from '@/components/scripture/ScriptureBlock';
 import type { useOpenReference } from '@/hooks/useOpenReference';
@@ -114,6 +114,9 @@ export function JesusConfidenceNote({
  * Parallel accounts of the same event stack as sibling sections, so a reader
  * comparing Matthew and Mark scans one continuous column instead of a run of
  * cards.
+ *
+ * The verses are live, not a quotation: tapping one opens its Verse Insight
+ * card and tapping a word opens its definition, exactly as in the reader.
  */
 export function JesusPassageBlock({
   passage,
@@ -135,7 +138,10 @@ export function JesusPassageBlock({
       </ReferencePillRow>
 
       {passage.verses && passage.verses.length > 0 ? (
-        <ScriptureText
+        <PassageScripture
+          bookId={passage.book_id}
+          bookName={passage.book_name}
+          chapter={passage.chapter}
           verses={passage.verses.map((verse) => ({
             number: verse.verse_number,
             text: verse.text,

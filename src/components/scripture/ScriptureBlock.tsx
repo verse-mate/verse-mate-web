@@ -66,14 +66,25 @@ export function ReferencePillRow({ children }: { children: React.ReactNode }) {
 /**
  * The verses themselves, run together as prose the way a printed Bible sets
  * them — one flowing paragraph with superscript numbers, not a list of rows.
+ *
+ * `onVerseClick` and `renderVerseText` are how a surface makes its scripture
+ * behave like the reader's — a verse that opens Verse Insight, words that open
+ * their lexical card — without this file learning to fetch anything. Omit both
+ * and the passage renders exactly as it always has.
  */
 export function ScriptureText({
   verses,
   fontSize = 20,
+  onVerseClick,
+  renderVerseText,
 }: {
   verses: ScriptureVerse[];
   /** Defaults to the reading size a content pane uses. */
   fontSize?: number;
+  /** Makes each verse a tap target. The caller decides what a tap means. */
+  onVerseClick?: (verse: ScriptureVerse) => void;
+  /** Replaces the plain verse text — the lexical word cards, today. */
+  renderVerseText?: (verse: ScriptureVerse) => React.ReactNode;
 }) {
   return (
     <div
@@ -86,31 +97,57 @@ export function ScriptureText({
         color: vmTokens.textPrimary,
       }}
     >
-      {verses.map((v, i) => (
-        <span key={`${v.number}-${i}`}>
-          <sup
-            style={{
-              fontSize: '0.7em',
-              marginRight: 2,
-              verticalAlign: 'super',
-              lineHeight: 0,
-              color: vmTokens.gold,
-              fontWeight: 500,
-            }}
+      {verses.map((v, i) => {
+        // A drag that ends inside the verse is a text selection, not a tap —
+        // the same rule the reader applies, so copying a phrase out of a
+        // passage doesn't also pop the sheet open.
+        const activate = onVerseClick
+          ? () => {
+              const sel = window.getSelection();
+              if (sel && !sel.isCollapsed && sel.toString().trim()) return;
+              onVerseClick(v);
+            }
+          : undefined;
+        return (
+          // No `role="button"` on the verse, deliberately: a button's children
+          // are presentational to assistive tech, which would bury the word
+          // triggers `renderVerseText` puts inside it. The reader's verse spans
+          // are plain spans with a click handler for the same reason.
+          <span
+            key={`${v.number}-${i}`}
+            data-verse={v.number}
+            {...(activate
+              ? {
+                  className: 'verse-span',
+                  'data-testid': `scripture-verse-${v.number}`,
+                  onClick: activate,
+                }
+              : {})}
           >
-            {v.number}
-          </sup>
-          {v.text}
-          {v.reference && (
-            <>
-              {' '}
-              <span style={{ color: vmTokens.textTertiary, fontSize: '0.85em' }}>
-                ({v.reference})
-              </span>
-            </>
-          )}{' '}
-        </span>
-      ))}
+            <sup
+              style={{
+                fontSize: '0.7em',
+                marginRight: 2,
+                verticalAlign: 'super',
+                lineHeight: 0,
+                color: vmTokens.gold,
+                fontWeight: 500,
+              }}
+            >
+              {v.number}
+            </sup>
+            {renderVerseText ? renderVerseText(v) : v.text}
+            {v.reference && (
+              <>
+                {' '}
+                <span style={{ color: vmTokens.textTertiary, fontSize: '0.85em' }}>
+                  ({v.reference})
+                </span>
+              </>
+            )}{' '}
+          </span>
+        );
+      })}
     </div>
   );
 }

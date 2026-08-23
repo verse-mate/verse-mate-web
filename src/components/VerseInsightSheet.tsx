@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { fetchVerseInsights, fetchChapter } from '@/services/bibleService';
+import { fetchVerseInsights, fetchChapter, fetchChapterById } from '@/services/bibleService';
 import { VerseInsight, Chapter, BibleVersion } from '@/services/types';
 import { ChevronLeft, ChevronRight, Copy, Bookmark, Check } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
@@ -13,6 +13,14 @@ interface Props {
   chapter: number;
   verse: number;
   version: BibleVersion;
+  /**
+   * The book the verse belongs to, when the opener knows it. The reader's own
+   * `state.bookId` is only right when the sheet was opened from the chapter
+   * being read — a Jesus passage opens the sheet on whatever book that passage
+   * cites, and a highlight saved against the reader's book would land on the
+   * wrong verse entirely.
+   */
+  bookId?: number;
   onClose: () => void;
 }
 
@@ -52,9 +60,11 @@ export default function VerseInsightSheet({
   chapter,
   verse,
   version,
+  bookId,
   onClose,
 }: Props) {
   const { state, addHighlight } = useApp();
+  const resolvedBookId = bookId || state.bookId;
   // Cap the summary type scale so the popup matches the Search / lexicon
   // definition modals instead of ballooning with the reading font size
   // (which ranges 13–26px). 16px is the search/definition ceiling.
@@ -102,9 +112,12 @@ export default function VerseInsightSheet({
   };
 
   useEffect(() => {
-    fetchVerseInsights(book, chapter).then(setInsights);
-    fetchChapter(book, chapter, version).then(setChapterData);
-  }, [book, chapter, version]);
+    fetchVerseInsights(book, chapter, bookId).then(setInsights);
+    const chapterPromise = bookId
+      ? fetchChapterById(bookId, book, chapter, version)
+      : fetchChapter(book, chapter, version);
+    chapterPromise.then(setChapterData);
+  }, [book, bookId, chapter, version]);
 
   useEffect(() => {
     setCurrentVerse(verse);
@@ -185,7 +198,7 @@ export default function VerseInsightSheet({
     }
     try {
       await addHighlight({
-        bookId: state.bookId,
+        bookId: resolvedBookId,
         book,
         chapter,
         verse: currentVerse,
