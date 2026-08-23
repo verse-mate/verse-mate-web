@@ -535,6 +535,15 @@ export interface JesusTopicGroup {
   gospels: string[];
   points: JesusTopicPoint[];
   events: JesusEventCard[];
+  /**
+   * What He addresses in THIS category, as opposed to what the theme is in
+   * general — the difference between "what does He teach about the Kingdom?"
+   * and "what is the Kingdom?". Null until the brief has been generated for
+   * this (category × topic) pair, which is why `description` still travels
+   * alongside it.
+   */
+  brief: string | null;
+  brief_provenance: number | null;
 }
 
 export interface JesusBrowseCategory {
