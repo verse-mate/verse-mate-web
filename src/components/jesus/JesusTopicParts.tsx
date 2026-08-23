@@ -11,7 +11,10 @@
  */
 
 import { useCallback } from 'react';
-import { JesusEventCardView } from '@/components/jesus/JesusEventParts';
+import {
+  JesusEventCardView,
+  JesusProvenanceChip,
+} from '@/components/jesus/JesusEventParts';
 import { JesusEmpty, JesusPill } from '@/components/jesus/JesusParts';
 import {
   categoryStats,
@@ -153,19 +156,44 @@ export function JesusTopicSection({
         </span>
       </div>
 
-      {topic.description && (
+      {/*
+        The brief says what He addresses here; the theme's own blurb says what
+        the theme is. Where a brief exists it replaces the blurb rather than
+        stacking on top of it — two descriptions under one heading is one more
+        than the reader will read, and the specific one is the reason this
+        screen exists.
+      */}
+      {topic.brief ? (
         <p
-          data-testid={jesusTestId('jesus-topic-description', testKey)}
+          data-testid={jesusTestId('jesus-topic-brief', testKey)}
           style={{
-            marginTop: 4,
+            marginTop: 6,
             fontFamily: FONT,
-            fontSize: 14,
-            lineHeight: '21px',
+            fontSize: 15,
+            lineHeight: '23px',
             color: vmTokens.textSecondary,
           }}
         >
-          {topic.description}
+          {topic.brief}
+          {topic.brief_provenance !== null && (
+            <JesusProvenanceChip level={topic.brief_provenance} />
+          )}
         </p>
+      ) : (
+        topic.description && (
+          <p
+            data-testid={jesusTestId('jesus-topic-description', testKey)}
+            style={{
+              marginTop: 4,
+              fontFamily: FONT,
+              fontSize: 14,
+              lineHeight: '21px',
+              color: vmTokens.textSecondary,
+            }}
+          >
+            {topic.description}
+          </p>
+        )
       )}
 
       {gospels && (

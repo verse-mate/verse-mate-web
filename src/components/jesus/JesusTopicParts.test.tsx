@@ -62,6 +62,8 @@ function topic(overrides: Partial<JesusTopicGroup> = {}): JesusTopicGroup {
     event_count: events.length,
     facet_count: events.length,
     gospels: ['Matthew', 'John'],
+    brief: null,
+    brief_provenance: null,
     points: events.flatMap((e) =>
       e.matched_facets.map((f) => ({
         slug: f.slug,
@@ -140,6 +142,37 @@ describe('JesusTopicBrowse', () => {
       'The reign of God breaking into the world.',
     );
     expect(screen.getByTestId('jesus-topic-name-faith')).toHaveTextContent('Faith');
+  });
+
+  it('leads with the brief when the topic has one, and hedges it', () => {
+    renderBrowse(
+      browse({
+        topics: [
+          topic({
+            brief:
+              'He treats the Kingdom as something entered rather than earned.',
+            brief_provenance: 2,
+          }),
+        ],
+      }),
+    );
+
+    expect(screen.getByTestId('jesus-topic-brief-kingdom')).toHaveTextContent(
+      /something entered rather than earned/,
+    );
+    // Level 2 is an interpretation and is labelled as one.
+    expect(screen.getByTestId('jesus-provenance-2')).toBeInTheDocument();
+    // The generic theme blurb steps aside rather than stacking under it.
+    expect(screen.queryByTestId('jesus-topic-description-kingdom')).toBeNull();
+  });
+
+  it('falls back to the theme blurb until the brief is generated', () => {
+    renderBrowse(browse());
+
+    expect(screen.queryByTestId('jesus-topic-brief-kingdom')).toBeNull();
+    expect(
+      screen.getByTestId('jesus-topic-description-kingdom'),
+    ).toHaveTextContent('The reign of God breaking into the world.');
   });
 
   it('quotes what He says in the topic before listing the examples', () => {

@@ -20,6 +20,8 @@ function topic(overrides: Partial<JesusTopicGroup> = {}): JesusTopicGroup {
     gospels: ['Matthew', 'Mark'],
     points: [],
     events: [],
+    brief: null,
+    brief_provenance: null,
     ...overrides,
   };
 }
