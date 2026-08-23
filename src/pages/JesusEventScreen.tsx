@@ -27,16 +27,12 @@ import { vmTokens } from '@/styles/themeStyles';
 const FONT = 'Roboto, sans-serif';
 
 /**
- * Phone puts the event itself behind a Content pill, the way a topic puts its
- * scripture behind one — on a single column there is no second pane for the
- * commentary to live in, so the views take turns.
+ * Phone puts the event itself behind the header's Bible pill, exactly as the
+ * reader does — on a single column there is no second pane for the commentary
+ * to live in, so the two views take turns. The pill group below the bar names
+ * the insight views only, which is what it names everywhere else in the app.
  */
-type PhoneTab = 'content' | JesusTab;
-
-const PHONE_TABS: { id: PhoneTab; label: string }[] = [
-  { id: 'content', label: 'Content' },
-  ...JESUS_TABS.map((t) => ({ id: t.id as PhoneTab, label: t.label })),
-];
+type PhoneView = 'bible' | 'insight';
 
 /**
  * JesusEventScreen — the event's scripture column.
@@ -49,8 +45,10 @@ const PHONE_TABS: { id: PhoneTab; label: string }[] = [
  * so it gets the reference's chrome rather than a second pattern.
  *
  * Below 768px there is no split, so this screen renders the same phone chrome
- * the reader and the topic screen wear — event-name dropdown, Bible / Insight
- * toggle, and a pill group whose first view, Content, is the event itself.
+ * the reader wears — event-name dropdown, Bible / Insight toggle, and a pill
+ * group for the insight views. Bible shows the event itself; Insight shows the
+ * commentary tabs. There is no Content pill: the event's scripture is what the
+ * Bible side of the toggle means here, the same as on a chapter.
  *
  * Either way the passage is the left-hand content and the commentary is the
  * right-hand content, which is what keeps the Jesus tab feeling like the rest
@@ -66,9 +64,17 @@ export default function JesusEventScreen() {
 
   const { detail, setDetail, setTab } = useJesusView();
   const [showBookSelector, setShowBookSelector] = useState(false);
+  const [missing, setMissing] = useState(false);
 
   const tabParam = searchParams.get('tab');
   const urlTab: JesusTab = isJesusTab(tabParam) ? tabParam : 'summary';
+
+  // Which insight tab the Insight pill returns to. Toggling to Bible drops the
+  // param, so without this every trip back through Bible would land on Summary.
+  const [lastInsightTab, setLastInsightTab] = useState<JesusTab>(urlTab);
+  useEffect(() => {
+    if (isJesusTab(tabParam)) setLastInsightTab(tabParam);
+  }, [tabParam]);
 
   // The query string is the source of truth so a link to an event's Compare tab
   // is shareable; the context mirrors it so DesktopLayout's pills can read it.
@@ -77,9 +83,10 @@ export default function JesusEventScreen() {
   }, [urlTab, setTab]);
 
   /**
-   * `null` means the phone's Content view. The param is written for every real
-   * tab — including Summary — because an absent `tab` means Content on phone
-   * and Summary on the split, so Summary can't also be "no param".
+   * `null` means the phone's Bible view — the event itself. The param is
+   * written for every real tab, Summary included, because an absent `tab`
+   * means Bible on phone and Summary on the split, so Summary can't also be
+   * "no param".
    */
   const selectTab = (next: JesusTab | null) => {
     const params = new URLSearchParams(searchParams);
@@ -94,9 +101,12 @@ export default function JesusEventScreen() {
     if (!eventSlug) return;
     let cancelled = false;
     setDetail(null);
+    setMissing(false);
 
     fetchJesusEvent(eventSlug, state.version).then((data) => {
-      if (!cancelled) setDetail(data ?? null);
+      if (cancelled) return;
+      if (!data) setMissing(true);
+      else setDetail(data);
     });
 
     return () => {
@@ -106,16 +116,15 @@ export default function JesusEventScreen() {
   }, [eventSlug, state.version, setDetail]);
 
   const event = detail?.event ?? null;
-  const notFound = !!eventSlug && detail === null;
 
   const passages = useMemo(() => detail?.passages ?? [], [detail]);
 
   const column = (
     <>
-      {!detail ? (
-        <JesusLoading />
-      ) : !event ? (
+      {missing || !eventSlug ? (
         <JesusEmpty label="That event doesn't exist." />
+      ) : !detail || !event ? (
+        <JesusLoading />
       ) : (
         <>
           {/* On the split layout the title lives in the header's selector slot,
@@ -252,41 +261,45 @@ export default function JesusEventScreen() {
     );
   }
 
-  // ── phone: the topic screen's chrome — title dropdown, Bible / Insight,
-  //    then a pill group whose first view is the event itself ──
-  const phoneTab: PhoneTab = isJesusTab(tabParam) ? tabParam : 'content';
+  // ── phone: the reader's chrome — title dropdown, Bible / Insight, and the
+  //    insight pills. Bible is the event itself; Insight is the commentary ──
+  const phoneView: PhoneView = isJesusTab(tabParam) ? 'insight' : 'bible';
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
       <InsightHeader
         title={event?.title || 'Jesus'}
         titleTestId="jesus-selector-button"
+        view={phoneView}
         onTitleClick={() => setShowBookSelector(true)}
-        onBible={() => navigate('/read')}
+        onBible={() => selectTab(null)}
+        onInsight={() => selectTab(lastInsightTab)}
       />
 
-      <PillTabs
-        tabs={PHONE_TABS}
-        active={phoneTab}
-        onSelect={(id) => selectTab(id === 'content' ? null : id)}
-        testIdPrefix="jesus-event-tab-"
-        ariaLabel="Jesus event view"
-        containerTestId="jesus-event-tabs"
-      />
+      {/* Pills name the insight views only, so they belong to that side of the
+          toggle — the reader hides them on its Bible view for the same reason. */}
+      {phoneView === 'insight' && (
+        <PillTabs
+          tabs={JESUS_TABS}
+          active={urlTab}
+          onSelect={(id) => selectTab(id)}
+          testIdPrefix="jesus-event-tab-"
+          ariaLabel="Jesus event view"
+          containerTestId="jesus-event-tabs"
+        />
+      )}
 
       {/* JesusPageBody is the scroll container — don't nest it in another. */}
       <JesusPageBody>
-        {phoneTab === 'content' ? (
-          notFound && !detail ? (
-            <JesusEmpty label="That event doesn't exist." />
-          ) : (
-            column
-          )
+        {phoneView === 'bible' ? (
+          column
+        ) : missing ? (
+          <JesusEmpty label="That event doesn't exist." />
         ) : !detail ? (
           <JesusLoading />
         ) : (
-          <div data-testid={`jesus-event-panel-${phoneTab}`} style={{ paddingTop: 8 }}>
-            <JesusTabBodies tab={phoneTab} detail={detail} />
+          <div data-testid={`jesus-event-panel-${urlTab}`} style={{ paddingTop: 8 }}>
+            <JesusTabBodies tab={urlTab} detail={detail} />
           </div>
         )}
       </JesusPageBody>
