@@ -99,6 +99,7 @@ test.describe('Jesus — Follow His Life', () => {
     await page.goto('/jesus/life');
 
     await expect(page.getByTestId('jesus-life-title')).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByTestId('jesus-life-arc')).toBeVisible();
     await expect(page.getByTestId('jesus-life-period-row')).toBeVisible();
 
     // The arc is shown whole — a stretch of the ministry with nothing
@@ -107,12 +108,49 @@ test.describe('Jesus — Follow His Life', () => {
     await expect(page.getByTestId('jesus-life-section-passion-week')).toBeVisible();
   });
 
-  test('a period pill drills into that period', async ({ page }) => {
+  test('the period map wraps instead of scrolling sideways', async ({ page }) => {
+    await page.goto('/jesus/life');
+    const row = page.getByTestId('jesus-life-period-row');
+    await expect(row).toBeVisible({ timeout: 15_000 });
+
+    // The whole ministry has to be reachable without a horizontal scroller —
+    // the last week of Jesus' life used to sit off the right edge of a pill row.
+    const overflow = await row.evaluate((el) => el.scrollWidth - el.clientWidth);
+    expect(overflow).toBeLessThanOrEqual(1);
+  });
+
+  test('a period card carries its scripture span and counts', async ({ page }) => {
+    await page.goto('/jesus/life');
+    const card = page.getByTestId('jesus-life-period-passion-week');
+    await expect(card).toBeVisible({ timeout: 15_000 });
+
+    await expect(card).toContainText(/Matthew/);
+    await expect(card).toContainText(/events/);
+    await expect(card).toContainText(/sayings|saying/);
+  });
+
+  test('a period card drills into that period', async ({ page }) => {
     await page.goto('/jesus/life');
     await page.getByTestId('jesus-life-period-passion-week').click();
 
     await expect(page).toHaveURL(/\/jesus\/life\/passion-week$/);
     await expect(page.getByTestId('jesus-life-title')).toHaveText(/passion week/i);
+
+    // Opened, the period leads with its own masthead and offers the stretch
+    // that follows rather than making the reader go back to the map.
+    await expect(page.getByTestId('jesus-life-period-hero')).toBeVisible();
+    await expect(page.getByTestId('jesus-life-period-step')).toBeVisible();
+  });
+
+  test('the next-period step walks the arc forward', async ({ page }) => {
+    await page.goto('/jesus/life/passion-week');
+    await expect(page.getByTestId('jesus-life-period-next')).toBeVisible({ timeout: 15_000 });
+
+    await page.getByTestId('jesus-life-period-next').click();
+    // Which period follows is a curation decision, so assert only that the walk
+    // moved on — not which stretch it moved on to.
+    await expect(page).toHaveURL(/\/jesus\/life\/(?!passion-week$)[a-z0-9-]+$/);
+    await expect(page.getByTestId('jesus-life-period-hero')).toBeVisible();
   });
 });
 

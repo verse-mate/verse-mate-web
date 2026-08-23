@@ -2766,6 +2766,89 @@ button { font-family: inherit; }
 }
 .selection-toolbar .icon-btn { width: 36px; height: 36px; }
 
+/* ─── Jesus — Follow His Life ─────────────────────────────────────────────
+   The timeline's map. Layout and hover live here rather than inline because
+   the card grid needs a media-query-free wrapping rule and the description
+   needs a line clamp, neither of which an inline style expresses. Colours stay
+   on the theme variables so both themes are covered by one block. */
+.jl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+.jl-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+.jl-card:hover {
+  border-color: var(--vm-dust);
+  transform: translateY(-1px);
+}
+/* A period with nothing catalogued is still part of the arc — it recedes
+   rather than disappearing. */
+.jl-card.is-empty { opacity: 0.72; }
+.jl-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+/* Prev / next period. Not `.jl-card`: this one lays out in a row and must not
+   stretch to the full column width. */
+.jl-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 48%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: var(--fg-primary);
+  transition: border-color 0.15s ease;
+}
+.jl-step:hover { border-color: var(--vm-dust); }
+.jl-chip { transition: border-color 0.15s ease, color 0.15s ease; }
+.jl-chip:hover { border-color: var(--vm-dust); color: var(--vm-dust); }
+.jl-arc-seg { transition: filter 0.15s ease; }
+.jl-arc-seg:hover { filter: brightness(1.25); }
+/* The rail that makes a period read as a walk rather than a list. */
+.jl-rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding-left: 16px;
+  border-left: 1px solid var(--divider);
+}
+.jl-rail::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--vm-dust);
+}
+
 /* ────────────────────────────────────────────────────────────────────────
    DARK theme overrides — every prototype variable that resolves to a
    light value above gets its dark counterpart here. Active when the
