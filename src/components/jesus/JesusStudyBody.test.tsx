@@ -135,6 +135,26 @@ const study: InductiveStudy = {
       items: [{ tag: 'POSTURE', text: 'Willingness to sit under Luke.' }],
     },
     {
+      number: 2,
+      kind: 'qa',
+      title: "Ask the 5 W's and an H",
+      summary: 'Who, what, when, where, why, how.',
+      items: [{ tag: 'WHO', q: 'Who is in the temple?', a: 'The boy and the teachers (2:46).' }],
+    },
+    {
+      number: 4,
+      kind: 'lists',
+      title: 'Make lists',
+      summary: 'What the text says about the main person.',
+      lists: [
+        {
+          title: 'What Luke says about the boy',
+          columns: ['Verse', 'Truth'],
+          rows: [{ ref: '2:47', truth: 'All who heard Him were amazed.' }],
+        },
+      ],
+    },
+    {
       number: 6,
       kind: 'bullets',
       title: 'Note expressions of time',
@@ -182,7 +202,9 @@ beforeEach(() => {
 describe('JesusStudyBody', () => {
   it('titles the study after the event and says where the content came from', async () => {
     renderTab();
-    expect(screen.getByText(/Inductive Study of The boy in the temple/i)).toBeInTheDocument();
+    // The header names the passage, exactly as the Bible side's does.
+    expect(screen.getByText('Inductive Study of Luke 2:41-52')).toBeInTheDocument();
+    expect(screen.queryByText(/Inductive Study of The boy in the temple/i)).not.toBeInTheDocument();
     const scope = await screen.findByTestId('jesus-study-scope');
     expect(scope).toHaveTextContent('Luke 2 inductive study');
     expect(scope).toHaveTextContent('Luke 2:41-52');
@@ -224,23 +246,81 @@ describe('JesusStudyBody', () => {
     expect(screen.getByText('Note expressions of time')).toBeInTheDocument();
   });
 
-  it('renders the event graph as observation alongside the chapter steps', async () => {
+  it('folds the event’s setting into the step that asks the five Ws', async () => {
     renderTab();
     await screen.findByTestId('jesus-study-scope');
+    // Closed, the step still says it carries the event's own record.
+    expect(screen.queryByText('The event in its setting')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByText(/Ask the 5 W's and an H/));
+    fireEvent.click(screen.getByText('The event in its setting'));
+    expect(screen.getByTestId('jesus-study-setting')).toHaveTextContent('Jerusalem, the temple');
+  });
+
+  it('folds His words, His acts and the reactions into the lists step', async () => {
+    renderTab();
+    await screen.findByTestId('jesus-study-scope');
+    expect(screen.queryByText('What He says')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByText('Make lists'));
+
     fireEvent.click(screen.getByText('What He says'));
     expect(screen.getByTestId('jesus-study-words')).toBeInTheDocument();
     fireEvent.click(screen.getByText('What He does'));
     expect(screen.getByTestId('jesus-study-actions')).toBeInTheDocument();
     fireEvent.click(screen.getByText('How people responded'));
     expect(screen.getByTestId('jesus-study-reactions')).toHaveTextContent('The teachers');
-    fireEvent.click(screen.getByText('The event in its setting'));
-    expect(screen.getByTestId('jesus-study-setting')).toHaveTextContent('Jerusalem, the temple');
+    // The step's own list is still there — the event is added to it, not
+    // swapped in for it.
+    expect(screen.getByText(/What Luke says about the boy/)).toBeInTheDocument();
   });
 
-  it('puts what the event reveals under Interpretation', async () => {
+  it('marks the steps that carry the event’s record so a closed card says so', async () => {
     renderTab();
     await screen.findByTestId('jesus-study-scope');
-    fireEvent.click(screen.getByText(/What this event reveals about Him/));
+    const badges = screen.getAllByTestId('jesus-study-event-badge');
+    // Step 2 (the setting), step 4 (three blocks of one item each) and the
+    // movement the one reveal was filed under.
+    expect(badges).toHaveLength(3);
+    expect(badges[1]).toHaveTextContent('3');
+  });
+
+  it('gives the event’s blocks their own cards when no step can host them', async () => {
+    vi.mocked(bibleService.fetchStudy).mockResolvedValue({
+      ...study,
+      steps: study.steps.filter((step) => step.number !== 2 && step.number !== 4),
+    });
+    renderTab();
+    await screen.findByTestId('jesus-study-scope');
+    fireEvent.click(screen.getByText('What He says'));
+    expect(screen.getByTestId('jesus-study-words')).toBeInTheDocument();
+    fireEvent.click(screen.getByText('The event in its setting'));
+    expect(screen.getByTestId('jesus-study-setting')).toHaveTextContent('Jerusalem, the temple');
+    // Nothing claims to carry event material inside an observation step.
+    expect(screen.queryByTestId('jesus-study-event-inset')).not.toBeInTheDocument();
+  });
+
+  it('puts what the event reveals inside the movement whose verses it cites', async () => {
+    renderTab();
+    await screen.findByTestId('jesus-study-scope');
+    expect(screen.queryByText('What He says about Himself')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByText(/The temple at twelve/));
+    fireEvent.click(screen.getByText('What He says about Himself'));
+    expect(screen.getByTestId('jesus-study-reveal-says_about_himself')).toHaveTextContent(
+      'Father’s house',
+    );
+  });
+
+  it('keeps a reveal no movement covers in the Interpretation section', async () => {
+    vi.mocked(bibleService.fetchStudy).mockResolvedValue({
+      ...study,
+      interpretation: {
+        ...study.interpretation,
+        movements: [{ number: 4, title: 'The temple at twelve', range: '2:41-48', body: 'x' }],
+      },
+    });
+    renderTab();
+    await screen.findByTestId('jesus-study-scope');
+    fireEvent.click(screen.getByText(/About the interpretation/i));
+    fireEvent.click(screen.getByText('What He says about Himself'));
     expect(screen.getByTestId('jesus-study-reveals')).toHaveTextContent('Father’s house');
   });
 
@@ -251,7 +331,9 @@ describe('JesusStudyBody', () => {
     expect(bulk).toHaveTextContent('Expand All');
     fireEvent.click(bulk);
     expect(bulk).toHaveTextContent('Collapse All');
+    // Reaches the blocks nested inside the steps, not just the top-level cards.
     expect(screen.getByTestId('jesus-study-words')).toBeInTheDocument();
+    expect(screen.getByTestId('jesus-study-reveal-says_about_himself')).toBeInTheDocument();
     fireEvent.click(bulk);
     expect(screen.queryByTestId('jesus-study-words')).not.toBeInTheDocument();
   });
@@ -270,6 +352,8 @@ describe('JesusStudyBody', () => {
     renderTab();
     await waitFor(() => expect(screen.getByTestId('jesus-study-no-chapter')).toBeInTheDocument());
     expect(screen.getByText('What He says')).toBeInTheDocument();
+    fireEvent.click(screen.getByText(/What this event reveals about Him/));
+    expect(screen.getByTestId('jesus-study-reveals')).toHaveTextContent('Father’s house');
     expect(screen.queryByTestId('jesus-study-scope')).not.toBeInTheDocument();
   });
 });

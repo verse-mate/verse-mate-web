@@ -42,6 +42,7 @@ export function StepCard({
   isOpen,
   toggle,
   badge,
+  addendum,
 }: {
   step: StudyStep;
   isOpen: (id: string) => boolean;
@@ -52,6 +53,13 @@ export function StepCard({
    * tags, so it could not be narrowed to the event's passage.
    */
   badge?: React.ReactNode;
+  /**
+   * Optional block rendered after the step's own content. The Jesus event's
+   * Study tab folds what the event graph observes — the setting, His words,
+   * His acts, the reactions — into the step that asks for it, behind a rail
+   * that keeps it visibly separate from the chapter study's own lines.
+   */
+  addendum?: React.ReactNode;
 }) {
   const id = `step-${step.number}`;
   const open = isOpen(id);
@@ -72,6 +80,7 @@ export function StepCard({
       subheading={step.summary}
     >
       {renderStepBody(step, isOpen, toggle)}
+      {addendum}
     </Card>
   );
 }
