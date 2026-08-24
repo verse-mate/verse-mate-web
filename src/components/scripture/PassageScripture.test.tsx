@@ -133,6 +133,37 @@ describe('PassageScripture', () => {
     );
   });
 
+  it("sets the passage at the reader's own font size", async () => {
+    // A passage is scripture wherever it appears, so the Font Size slider in
+    // Settings has to reach it — the Bible tab and the Jesus tab can't drift
+    // apart just because one of them hard-codes the reading size.
+    appState.settings = { ...appState.settings, fontSize: 26 };
+    const { container } = renderPassage();
+
+    await screen.findByText(/For God so loved the world/);
+    const body = container.querySelector('.leading-relaxed') as HTMLElement;
+    expect(body).toHaveStyle({ fontSize: '26px' });
+  });
+
+  it('lets a caller override the reading size explicitly', async () => {
+    appState.settings = { ...appState.settings, fontSize: 26 };
+    const { container } = render(
+      <MemoryRouter>
+        <PassageScripture
+          bookId={43}
+          bookName="John"
+          chapter={3}
+          fontSize={15}
+          verses={[{ number: 16, text: 'For God so loved the world' }]}
+        />
+      </MemoryRouter>,
+    );
+
+    await screen.findByText(/For God so loved the world/);
+    const body = container.querySelector('.leading-relaxed') as HTMLElement;
+    expect(body).toHaveStyle({ fontSize: '15px' });
+  });
+
   it('still renders the passage when neither the lexicon nor the chapter resolves', async () => {
     loadAlignmentFor.mockResolvedValue(null);
     vi.mocked(bibleService.fetchChapterById).mockResolvedValue({

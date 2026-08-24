@@ -19,6 +19,7 @@ import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
 import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/ChapterNotesSheet';
 import LexicalVerseText from '@/components/LexicalVerseText';
+import { useHorizontalSwipe } from '@/hooks/useHorizontalSwipe';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
 import { OVERLAY_MODAL_WIDTH, OVERLAY_MODAL_HEIGHT } from '@/constants/overlayModal';
@@ -281,23 +282,9 @@ export default function ReadingScreen() {
     pressStartPosRef.current = null;
   };
 
-  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
-  const handleBodyTouchStart = (e: React.TouchEvent) => {
-    const t = e.touches[0];
-    touchStartRef.current = { x: t.clientX, y: t.clientY };
-  };
-  const handleBodyTouchEnd = (e: React.TouchEvent) => {
-    const start = touchStartRef.current;
-    if (!start) return;
-    const t = e.changedTouches[0];
-    const dx = t.clientX - start.x;
-    const dy = t.clientY - start.y;
-    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 2) {
-      if (dx < 0) goToChapter(1);
-      else goToChapter(-1);
-    }
-    touchStartRef.current = null;
-  };
+  // The chapter pager. Shared with the Jesus event screen, which pages the
+  // chronology with the same gesture at the same thresholds.
+  const bodySwipe = useHorizontalSwipe(goToChapter);
 
   const subtitles = chapter?.subtitles || [];
   const verseCount = chapter?.verses.length || 0;
@@ -408,8 +395,7 @@ export default function ReadingScreen() {
           .chapter-meta holds the h1 + icon buttons. .font-scripture is the
           verse body. All layout / colors come from prototype.css. */}
       <div
-        onTouchStart={handleBodyTouchStart}
-        onTouchEnd={handleBodyTouchEnd}
+        {...bodySwipe}
         data-testid="chapter-pager-view"
         className="reading-body"
       >
