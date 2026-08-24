@@ -111,6 +111,11 @@ export function parseVerseRefs(
   return refs;
 }
 
+/** Do two parsed references cover any verse in common? */
+export function refsOverlap(a: VerseRef, b: VerseRef): boolean {
+  return a.chapter === b.chapter && a.end >= b.start && a.start <= b.end;
+}
+
 /** Does a parsed reference land inside the event's verses? */
 export function refTouchesSpan(ref: VerseRef, span: EventVerseSpan): boolean {
   if (ref.chapter !== span.chapter) return false;

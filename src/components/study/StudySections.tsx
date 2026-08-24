@@ -21,6 +21,8 @@ export function MovementCard({
   label,
   open,
   onToggle,
+  badge,
+  addendum,
 }: {
   movement: StudyMovement;
   /** Book the excerpt is quoted from — "James", "Luke". */
@@ -29,6 +31,14 @@ export function MovementCard({
   label: string;
   open: boolean;
   onToggle: () => void;
+  /** Optional marker beside the movement title — see `addendum`. */
+  badge?: React.ReactNode;
+  /**
+   * Optional block rendered after the movement's body. The Jesus event's
+   * Study tab nests what the event reveals about Him inside the movement
+   * whose verses the reveal cites, rather than in a card of its own.
+   */
+  addendum?: React.ReactNode;
 }) {
   return (
     <Card
@@ -42,6 +52,7 @@ export function MovementCard({
         <span style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
           <span style={{ marginTop: 2 }}><RangePill range={movement.range} /></span>
           <span style={cardHeadingTitleStyle}>{label} {movement.number} — {movement.title}</span>
+          {badge && <span style={{ marginTop: 3 }}>{badge}</span>}
         </span>
       }
     >
@@ -66,6 +77,7 @@ export function MovementCard({
         </blockquote>
       )}
       <MarkdownBlock text={movement.body} />
+      {addendum}
     </Card>
   );
 }
