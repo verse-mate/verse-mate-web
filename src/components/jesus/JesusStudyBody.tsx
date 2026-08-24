@@ -1,7 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
+import type React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { JesusFacetList, JesusProvenanceChip } from '@/components/jesus/JesusEventParts';
+import {
+  EventAddendum,
+  EventBlockCard,
+  EventInsideBadge,
+} from '@/components/jesus/JesusStudyEmbeds';
 import { JesusTabEmpty, JesusTabToolbar } from '@/components/jesus/JesusTabParts';
 import { Card, SectionHeading } from '@/components/study/StudyPrimitives';
 import { ApplicationCard, MovementCard } from '@/components/study/StudySections';
@@ -21,10 +27,18 @@ import {
   type EventVerseSpan,
   type NarrowedStudy,
 } from '@/lib/jesusStudy';
-import { buildEventStudyCopyText, REVEAL_GROUPS } from '@/lib/jesusStudyCopy';
+import {
+  movementKey,
+  planObservationPlacement,
+  planRevealPlacement,
+  REVEAL_GROUPS,
+  type EventObservationKey,
+  type RevealGroup,
+} from '@/lib/jesusStudyEmbed';
+import { buildEventStudyCopyText } from '@/lib/jesusStudyCopy';
 import { buildJesusEventUrl, jesusTestId } from '@/lib/jesusSlugs';
 import { fetchStudy } from '@/services/bibleService';
-import type { JesusEventDetail } from '@/services/types';
+import type { JesusEventDetail, JesusReveal } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
 import type { InductiveStudy } from '@versemate/studies';
 
@@ -45,6 +59,16 @@ const FONT = 'Roboto, sans-serif';
  *    people reacted, what it reveals — which the chapter study has no way to
  *    know. These are observation and interpretation in the Precept sense, so
  *    they sit inside those sections rather than in a sidebar of their own.
+ *
+ * The event's material is folded *into* the study rather than stacked above
+ * it: the setting answers step 2's five W's, His words and acts and the
+ * crowd's reaction are step 4's lists, and what the event reveals about Him
+ * belongs to the movement whose verses the reveal cites (`lib/jesusStudyEmbed`
+ * decides each home). Each embedded block keeps its own heading behind a
+ * labelled rail, so the reader can still tell the event record apart from the
+ * chapter study's own lines, and anything with no home — a study missing that
+ * step, a reveal citing verses no movement covers — still renders rather than
+ * being dropped.
  *
  * Cards whose chapter content carries no verse tags (the prayer step, the
  * chapter theme) are kept and marked "chapter context" instead of dropped:
@@ -122,13 +146,118 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
   };
 
   const { words, actions, reactions, reveals, event } = detail;
-  const revealGroups = REVEAL_GROUPS.filter((g) => reveals[g.key]?.length);
+
+  // ── What the event contributes, and where it goes ───────────────────────
+  const blocks: Record<
+    EventObservationKey,
+    { title: string; subheading: string; count?: number; body: React.ReactNode }
+  > = {
+    setting: {
+      title: 'The event in its setting',
+      subheading: 'Where it happens, when, and who is in the room.',
+      body: <EventSetting detail={detail} />,
+    },
+    words: {
+      title: 'What He says',
+      subheading: 'Every recorded word of Jesus in this event, typed by what it does.',
+      count: words.length,
+      body: (
+        <JesusFacetList
+          facets={words}
+          emptyLabel="No speech recorded for this event."
+          onOpenReference={onOpenReference}
+          testId="jesus-study-words"
+        />
+      ),
+    },
+    actions: {
+      title: 'What He does',
+      subheading: 'The acts the account records, and who performs them.',
+      count: actions.length,
+      body: (
+        <JesusFacetList
+          facets={actions}
+          emptyLabel="No actions recorded for this event."
+          onOpenReference={onOpenReference}
+          testId="jesus-study-actions"
+        />
+      ),
+    },
+    reactions: {
+      title: 'How people responded',
+      subheading: "Observation, not verdict — the text's own report of the reaction.",
+      count: reactions.length,
+      body: (
+        <ul style={{ margin: 0, paddingLeft: 18 }} data-testid="jesus-study-reactions">
+          {reactions.map((r, i) => (
+            <li key={i} style={{ marginBottom: 6 }}>
+              <strong style={{ fontWeight: 600 }}>{r.who}</strong> — {r.what}
+              {r.source_ref && <span style={{ color: vmTokens.textTertiary }}> ({r.source_ref})</span>}
+              <JesusProvenanceChip level={r.provenance} />
+            </li>
+          ))}
+        </ul>
+      ),
+    },
+  };
+
+  const present: EventObservationKey[] = ['setting'];
+  if (words.length) present.push('words');
+  if (actions.length) present.push('actions');
+  if (reactions.length) present.push('reactions');
+
+  const placement = planObservationPlacement(narrowed?.study.steps, present);
+
+  const movements = narrowed?.study.interpretation.movements ?? [];
+  const revealPlacement = narrowed
+    ? planRevealPlacement(reveals, movements, narrowed.study)
+    : null;
+  // No study to fold them into, or an Interpretation section with nowhere to
+  // put them: the reveals keep their own card rather than disappearing.
+  const leftoverReveals: RevealGroup[] = revealPlacement
+    ? revealPlacement.leftovers
+    : REVEAL_GROUPS_FALLBACK(reveals);
+  const leftoversHaveHome = Boolean(narrowed?.study.interpretation.intro);
+
+  const blockId = (key: EventObservationKey) => `event-${key}`;
+  const revealId = (home: string, group: RevealGroup) => `reveal-${home}-${group.key}`;
+
+  const renderEmbeddedBlocks = (keys: EventObservationKey[]) => (
+    <EventAddendum testId="jesus-study-event-inset">
+      {keys.map((key) => (
+        <EventBlockCard
+          key={key}
+          open={isOpen(blockId(key))}
+          onToggle={() => toggle(blockId(key))}
+          title={blocks[key].title}
+          count={blocks[key].count}
+          subheading={blocks[key].subheading}
+        >
+          {blocks[key].body}
+        </EventBlockCard>
+      ))}
+    </EventAddendum>
+  );
+
+  const renderRevealGroups = (home: string, groups: RevealGroup[], testId?: string) => (
+    <EventAddendum label="What this event reveals" testId={testId}>
+      {groups.map((group) => (
+        <EventBlockCard
+          key={group.key}
+          open={isOpen(revealId(home, group))}
+          onToggle={() => toggle(revealId(home, group))}
+          title={group.label}
+          count={group.items.length}
+        >
+          <RevealList items={group.items} testId={`jesus-study-reveal-${group.key}`} />
+        </EventBlockCard>
+      ))}
+    </EventAddendum>
+  );
 
   // Every collapsible on the page, so Expand All really means all of it.
-  const allIds: string[] = ['observation-intro', 'event-setting'];
-  if (words.length) allIds.push('event-words');
-  if (actions.length) allIds.push('event-actions');
-  if (reactions.length) allIds.push('event-reactions');
+  const allIds: string[] = ['observation-intro'];
+  for (const key of present) allIds.push(blockId(key));
   for (const step of narrowed?.study.steps ?? []) {
     allIds.push(`step-${step.number}`);
     if (step.kind === 'qa') step.items.forEach((_, i) => allIds.push(`step-${step.number}-qa-${i}`));
@@ -136,8 +265,15 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
       step.lists.forEach((_, i) => allIds.push(`step-${step.number}-list-${i}`));
   }
   if (narrowed?.study.interpretation.intro) allIds.push('interpretation-intro');
-  if (revealGroups.length) allIds.push('event-reveals');
-  narrowed?.study.interpretation.movements.forEach((mv, i) => allIds.push(`mv-${mv.number ?? i}`));
+  if (leftoverReveals.length && !leftoversHaveHome) allIds.push('event-reveals');
+  for (const group of leftoverReveals) allIds.push(revealId('leftover', group));
+  movements.forEach((mv, i) => {
+    const key = movementKey(mv, i);
+    allIds.push(`mv-${key}`);
+    for (const group of revealPlacement?.byMovement.get(key) ?? []) {
+      allIds.push(revealId(key, group));
+    }
+  });
   if (narrowed) allIds.push('application');
   if (detail.related.length) allIds.push('event-related');
 
@@ -183,94 +319,52 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
         <p style={sectionIntroStyle}>{renderInlineItalic(labels.aboutObservationBody)}</p>
       </Card>
 
-      <Card
-        open={isOpen('event-setting')}
-        onToggle={() => toggle('event-setting')}
-        heading={<span style={cardHeadingTitleStyle}>The event in its setting</span>}
-        subheading="Where it happens, when, and who is in the room."
-      >
-        <EventSetting detail={detail} />
-      </Card>
-
-      {words.length > 0 && (
+      {/* Blocks the study has no step for keep the card they always had. */}
+      {placement.unplaced.map((key) => (
         <Card
-          open={isOpen('event-words')}
-          onToggle={() => toggle('event-words')}
+          key={key}
+          open={isOpen(blockId(key))}
+          onToggle={() => toggle(blockId(key))}
           heading={
             <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={cardHeadingTitleStyle}>What He says</span>
-              <CountPill count={words.length} />
+              <span style={cardHeadingTitleStyle}>{blocks[key].title}</span>
+              {blocks[key].count != null && <CountPill count={blocks[key].count as number} />}
             </span>
           }
-          subheading="Every recorded word of Jesus in this event, typed by what it does."
+          subheading={blocks[key].subheading}
         >
-          <JesusFacetList
-            facets={words}
-            emptyLabel="No speech recorded for this event."
-            onOpenReference={onOpenReference}
-            testId="jesus-study-words"
-          />
+          {blocks[key].body}
         </Card>
-      )}
-
-      {actions.length > 0 && (
-        <Card
-          open={isOpen('event-actions')}
-          onToggle={() => toggle('event-actions')}
-          heading={
-            <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={cardHeadingTitleStyle}>What He does</span>
-              <CountPill count={actions.length} />
-            </span>
-          }
-          subheading="The acts the account records, and who performs them."
-        >
-          <JesusFacetList
-            facets={actions}
-            emptyLabel="No actions recorded for this event."
-            onOpenReference={onOpenReference}
-            testId="jesus-study-actions"
-          />
-        </Card>
-      )}
-
-      {reactions.length > 0 && (
-        <Card
-          open={isOpen('event-reactions')}
-          onToggle={() => toggle('event-reactions')}
-          heading={
-            <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={cardHeadingTitleStyle}>How people responded</span>
-              <CountPill count={reactions.length} />
-            </span>
-          }
-          subheading="Observation, not verdict — the text's own report of the reaction."
-        >
-          <ul style={{ margin: 0, paddingLeft: 18 }} data-testid="jesus-study-reactions">
-            {reactions.map((r, i) => (
-              <li key={i} style={{ marginBottom: 6 }}>
-                <strong style={{ fontWeight: 600 }}>{r.who}</strong> — {r.what}
-                {r.source_ref && (
-                  <span style={{ color: vmTokens.textTertiary }}> ({r.source_ref})</span>
-                )}
-                <JesusProvenanceChip level={r.provenance} />
-              </li>
-            ))}
-          </ul>
-        </Card>
-      )}
+      ))}
 
       {loading && <JesusTabEmpty>Loading the chapter study…</JesusTabEmpty>}
 
-      {narrowed?.study.steps.map((step) => (
-        <StepCard
-          key={step.number}
-          step={step}
-          isOpen={isOpen}
-          toggle={toggle}
-          badge={narrowed.chapterScopedSteps.has(step.number) ? <ChapterContextBadge /> : undefined}
-        />
-      ))}
+      {narrowed?.study.steps.map((step) => {
+        const embedded = placement.byStep.get(step.number) ?? [];
+        const chapterScoped = narrowed.chapterScopedSteps.has(step.number);
+        const embeddedCount = embedded.reduce((sum, key) => sum + (blocks[key].count ?? 0), 0);
+        return (
+          <StepCard
+            key={step.number}
+            step={step}
+            isOpen={isOpen}
+            toggle={toggle}
+            badge={
+              chapterScoped || embedded.length ? (
+                <span
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}
+                >
+                  {chapterScoped && <ChapterContextBadge />}
+                  {embedded.length > 0 && (
+                    <EventInsideBadge count={embeddedCount || undefined} />
+                  )}
+                </span>
+              ) : undefined
+            }
+            addendum={embedded.length ? renderEmbeddedBlocks(embedded) : undefined}
+          />
+        );
+      })}
 
       {/* ── Interpretation ──────────────────────────────────────────── */}
       <SectionHeading label={labels.interpretationSection} />
@@ -278,15 +372,29 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
         <Card
           open={isOpen('interpretation-intro')}
           onToggle={() => toggle('interpretation-intro')}
-          heading={<span style={cardHeadingTitleStyle}>{labels.aboutInterpretationTitle}</span>}
+          heading={
+            // Inline rather than a flex row: the title wraps on a phone, and a
+            // wrapped badge on its own line reads as a stray chip.
+            <span style={cardHeadingTitleStyle}>
+              {labels.aboutInterpretationTitle}{' '}
+              {leftoverReveals.length > 0 && (
+                <EventInsideBadge
+                  count={leftoverReveals.reduce((sum, g) => sum + g.items.length, 0)}
+                />
+              )}
+            </span>
+          }
         >
           <p style={sectionIntroStyle}>
             {renderInlineItalic(narrowed.study.interpretation.intro)}
           </p>
+          {leftoverReveals.length > 0 &&
+            renderRevealGroups('leftover', leftoverReveals, 'jesus-study-reveals')}
         </Card>
       )}
 
-      {revealGroups.length > 0 && (
+      {/* Nothing to fold them into — the reveals keep a card of their own. */}
+      {leftoverReveals.length > 0 && !leftoversHaveHome && (
         <Card
           open={isOpen('event-reveals')}
           onToggle={() => toggle('event-reveals')}
@@ -294,8 +402,8 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
           subheading="Kept in four voices so His claims are never merged with other people's."
         >
           <div data-testid="jesus-study-reveals">
-            {revealGroups.map((g) => (
-              <div key={g.key} style={{ marginBottom: 14 }}>
+            {leftoverReveals.map((group) => (
+              <div key={group.key} style={{ marginBottom: 14 }}>
                 <p
                   style={{
                     fontFamily: FONT,
@@ -307,35 +415,32 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
                     margin: '0 0 5px',
                   }}
                 >
-                  {g.label}
+                  {group.label}
                 </p>
-                <ul style={{ margin: 0, paddingLeft: 18 }}>
-                  {(reveals[g.key] ?? []).map((item, i) => (
-                    <li key={i} style={{ marginBottom: 5 }}>
-                      {item.content}
-                      {item.source_ref && (
-                        <span style={{ color: vmTokens.textTertiary }}> ({item.source_ref})</span>
-                      )}
-                      <JesusProvenanceChip level={item.provenance} />
-                    </li>
-                  ))}
-                </ul>
+                <RevealList items={group.items} testId={`jesus-study-reveal-${group.key}`} />
               </div>
             ))}
           </div>
         </Card>
       )}
 
-      {narrowed?.study.interpretation.movements.map((mv, i) => (
-        <MovementCard
-          key={mv.number ?? i}
-          movement={mv}
-          bookName={narrowed.study.bookName}
-          label={labels.movement}
-          open={isOpen(`mv-${mv.number ?? i}`)}
-          onToggle={() => toggle(`mv-${mv.number ?? i}`)}
-        />
-      ))}
+      {movements.map((mv, i) => {
+        const key = movementKey(mv, i);
+        const groups = revealPlacement?.byMovement.get(key) ?? [];
+        const count = groups.reduce((sum, g) => sum + g.items.length, 0);
+        return (
+          <MovementCard
+            key={key}
+            movement={mv}
+            bookName={narrowed?.study.bookName ?? ''}
+            label={labels.movement}
+            open={isOpen(`mv-${key}`)}
+            onToggle={() => toggle(`mv-${key}`)}
+            badge={groups.length ? <EventInsideBadge count={count} /> : undefined}
+            addendum={groups.length ? renderRevealGroups(key, groups) : undefined}
+          />
+        );
+      })}
 
       {!loading && !narrowed && (
         <JesusTabEmpty testId="jesus-study-no-chapter">
@@ -447,6 +552,30 @@ function readStored(key: string): {
     /* ignore */
   }
   return { bulkState: 'collapsed', overrides: {} };
+}
+
+/** The four voices, unrouted — what the reveals fall back to with no study. */
+function REVEAL_GROUPS_FALLBACK(reveals: JesusEventDetail['reveals']): RevealGroup[] {
+  return REVEAL_GROUPS.filter((g) => reveals[g.key]?.length).map((g) => ({
+    ...g,
+    items: reveals[g.key],
+  }));
+}
+
+function RevealList({ items, testId }: { items: JesusReveal[]; testId?: string }) {
+  return (
+    <ul style={{ margin: 0, paddingLeft: 18 }} data-testid={testId}>
+      {items.map((item, i) => (
+        <li key={i} style={{ marginBottom: 5 }}>
+          {item.content}
+          {item.source_ref && (
+            <span style={{ color: vmTokens.textTertiary }}> ({item.source_ref})</span>
+          )}
+          <JesusProvenanceChip level={item.provenance} />
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 /**

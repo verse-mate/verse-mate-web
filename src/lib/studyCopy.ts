@@ -42,6 +42,16 @@ export function buildStudyCopyText(
     title?: string;
     /** Extra lines after the theme — the Jesus tab notes its scope there. */
     preamble?: string[];
+    /**
+     * Lines appended inside a step, keyed by step number. The Jesus tab folds
+     * the event's own observations into the step that asks for them, and the
+     * clipboard payload follows the page rather than re-ordering it.
+     */
+    stepAddenda?: Map<number, string[]>;
+    /** Lines appended inside a movement, keyed by `mv.number ?? index`. */
+    movementAddenda?: Map<string, string[]>;
+    /** Lines appended right under the INTERPRETATION heading. */
+    interpretationAddenda?: string[];
   } = {},
 ): string {
   const lines: string[] = [];
@@ -122,16 +132,30 @@ export function buildStudyCopyText(
         }
         break;
     }
+    const addendum = options.stepAddenda?.get(step.number);
+    if (addendum?.length) {
+      lines.push('');
+      lines.push(...addendum);
+    }
   }
   lines.push('');
   lines.push('INTERPRETATION');
-  for (const mv of study.interpretation.movements) {
+  if (options.interpretationAddenda?.length) {
+    lines.push('');
+    lines.push(...options.interpretationAddenda);
+  }
+  study.interpretation.movements.forEach((mv, index) => {
     lines.push('');
     lines.push(`Movement ${mv.number} — ${mv.title} (${mv.range})`);
     if (mv.excerpt) lines.push(`   "${mv.excerpt}"`);
     lines.push('');
     lines.push(stripStudyMarkdown(mv.body));
-  }
+    const addendum = options.movementAddenda?.get(String(mv.number ?? index));
+    if (addendum?.length) {
+      lines.push('');
+      lines.push(...addendum);
+    }
+  });
   lines.push('');
   lines.push('APPLICATION');
   if (study.application.intro) {
