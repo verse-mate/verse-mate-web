@@ -283,7 +283,10 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
     setOverrides({});
   };
 
-  const title = `${labels.inductiveStudyOf} ${event.title}`;
+  // The same header the Bible side's StudyPanel carries — "Inductive Study
+  // of <passage>". The event's own title already heads the screen above the
+  // tab bar, and repeating it here turned a one-line header into three.
+  const title = `${labels.inductiveStudyOf} ${span?.display ?? event.title}`;
   const copyText = buildEventStudyCopyText(detail, span, narrowed, title);
 
   return (

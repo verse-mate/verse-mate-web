@@ -83,7 +83,9 @@ export function buildEventStudyCopyText(
   title: string,
 ): string {
   const { event, words, actions, reactions, reveals } = detail;
-  const heading = span ? `${title} (${span.display})` : title;
+  // The header on screen names the passage, so the payload leads with the
+  // event — the one thing the study's own title no longer says.
+  const heading = span ? `${event.title} — ${span.display}` : event.title;
 
   const present: EventObservationKey[] = ['setting'];
   if (words.length) present.push('words');
@@ -139,7 +141,7 @@ export function buildEventStudyCopyText(
     : [];
 
   return `${heading}${observationLead.join('\n')}\n\n${buildStudyCopyText(narrowed.study, {
-    title: `Inductive Study of ${narrowed.study.title}, scoped to ${span?.display ?? event.title}`,
+    title,
     preamble,
     stepAddenda,
     movementAddenda,

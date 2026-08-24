@@ -113,7 +113,7 @@ describe('buildEventStudyCopyText', () => {
     detail,
     span,
     narrowStudyToEvent(study, span!),
-    'Inductive Study of The boy in the temple',
+    'Inductive Study of Luke 2:41-52',
   );
 
   it('files the event’s observations under the step that hosts them on screen', () => {
@@ -138,12 +138,14 @@ describe('buildEventStudyCopyText', () => {
     expect(text.indexOf('His mother kept these things.')).toBeLessThan(movement);
   });
 
-  it('says what it was narrowed from', () => {
+  it('leads with the event and says what it was narrowed from', () => {
+    expect(text.split('\n')[0]).toBe('The boy in the temple — Luke 2:41-52');
+    expect(text).toContain('Inductive Study of Luke 2:41-52');
     expect(text).toContain('Scope: Luke 2:41-52');
   });
 
   it('leads with the event’s record when the chapter has no study', () => {
-    const bare = buildEventStudyCopyText(detail, span, null, 'The boy in the temple');
+    const bare = buildEventStudyCopyText(detail, span, null, 'Inductive Study of Luke 2:41-52');
     expect(bare).toContain('The event in its setting');
     expect(bare).toContain('What He says');
     expect(bare).toContain('What this event reveals');

@@ -202,7 +202,9 @@ beforeEach(() => {
 describe('JesusStudyBody', () => {
   it('titles the study after the event and says where the content came from', async () => {
     renderTab();
-    expect(screen.getByText(/Inductive Study of The boy in the temple/i)).toBeInTheDocument();
+    // The header names the passage, exactly as the Bible side's does.
+    expect(screen.getByText('Inductive Study of Luke 2:41-52')).toBeInTheDocument();
+    expect(screen.queryByText(/Inductive Study of The boy in the temple/i)).not.toBeInTheDocument();
     const scope = await screen.findByTestId('jesus-study-scope');
     expect(scope).toHaveTextContent('Luke 2 inductive study');
     expect(scope).toHaveTextContent('Luke 2:41-52');
