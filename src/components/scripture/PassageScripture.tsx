@@ -29,6 +29,11 @@ interface Props {
   bookName: string;
   chapter: number;
   verses: ScriptureVerse[];
+  /**
+   * Overrides the reader's own font-size setting. Left off almost everywhere:
+   * a passage is scripture wherever it appears, so it should answer the Font
+   * Size slider in Settings exactly as the Bible tab does.
+   */
   fontSize?: number;
 }
 
@@ -105,7 +110,7 @@ export default function PassageScripture({ bookId, bookName, chapter, verses, fo
     <>
       <ScriptureText
         verses={verses}
-        fontSize={fontSize}
+        fontSize={fontSize ?? state.settings.fontSize}
         onVerseClick={openInsight}
         renderVerseText={verse => {
           const number = singleVerseNumber(verse);

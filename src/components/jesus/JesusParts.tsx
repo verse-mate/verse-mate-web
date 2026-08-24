@@ -9,6 +9,7 @@
  */
 
 import type { CSSProperties, ReactNode } from 'react';
+import type { SwipeHandlers } from '@/hooks/useHorizontalSwipe';
 import { BookOpen, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import type { JesusEntry, JesusReference } from '@/services/types';
@@ -515,13 +516,25 @@ export function JesusPageTitle({
 export function JesusPageBody({
   children,
   wide = false,
+  swipe,
+  testId,
 }: {
   children: ReactNode;
   /** Widen the measure when the body fills the split pane rather than a phone. */
   wide?: boolean;
+  /**
+   * Horizontal-swipe handlers from `useHorizontalSwipe`. They belong on the
+   * scroller itself — a wrapper around it would have to re-create the flex
+   * sizing that makes the body scroll in the first place.
+   */
+  swipe?: SwipeHandlers;
+  /** Names the scroller for tests, the way the reader names its chapter pager. */
+  testId?: string;
 }) {
   return (
     <div
+      {...swipe}
+      data-testid={testId}
       style={{
         flex: 1,
         overflowY: 'auto',

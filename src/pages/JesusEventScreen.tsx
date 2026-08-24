@@ -18,9 +18,17 @@ import { ScriptureSectionList } from '@/components/scripture/ScriptureBlock';
 import { useApp } from '@/contexts/AppContext';
 import { useJesusView } from '@/contexts/JesusViewContext';
 import { JESUS_TABS, isJesusTab, type JesusTab } from '@/lib/jesusTabs';
+import { useHorizontalSwipe } from '@/hooks/useHorizontalSwipe';
+import { useJesusChronology } from '@/hooks/useJesusChronology';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useOpenReference } from '@/hooks/useOpenReference';
-import { buildJesusLifeUrl, buildJesusThemeUrl, jesusTestId } from '@/lib/jesusSlugs';
+import { adjacentJesusEvents } from '@/lib/jesusChronology';
+import {
+  buildJesusEventUrl,
+  buildJesusLifeUrl,
+  buildJesusThemeUrl,
+  jesusTestId,
+} from '@/lib/jesusSlugs';
 import { fetchJesusEvent } from '@/services/jesusService';
 import { vmTokens } from '@/styles/themeStyles';
 
@@ -118,6 +126,28 @@ export default function JesusEventScreen() {
   const event = detail?.event ?? null;
 
   const passages = useMemo(() => detail?.passages ?? [], [detail]);
+
+  // ── paging through the arc ────────────────────────────────────────────────
+  // The reader pages chapters with a sideways swipe; an event is this tab's
+  // chapter, so the same gesture walks the chronology "Follow His Life" lays
+  // out. The tab travels with it — swiping while reading the Study tab keeps
+  // showing Study, the way changing chapter keeps the reader's current view.
+  const chronology = useJesusChronology(state.version);
+  const { prev, next } = useMemo(
+    () => adjacentJesusEvents(chronology, eventSlug),
+    [chronology, eventSlug],
+  );
+
+  const goToEvent = (direction: 1 | -1) => {
+    const target = direction === 1 ? next : prev;
+    // Nothing at the ends of the arc, and nothing for an event that isn't on
+    // it — a swipe that can't go anywhere simply doesn't move.
+    if (!target) return;
+    const query = searchParams.toString();
+    navigate(`${buildJesusEventUrl(target.slug)}${query ? `?${query}` : ''}`);
+  };
+
+  const swipe = useHorizontalSwipe(goToEvent);
 
   const column = (
     <>
@@ -255,6 +285,7 @@ export default function JesusEventScreen() {
         data-testid="jesus-event-column"
         className="flex flex-col h-full overflow-y-auto px-4 pb-8"
         style={{ backgroundColor: vmTokens.commentaryBg, color: vmTokens.textPrimary }}
+        {...swipe}
       >
         <div className="pt-4">{column}</div>
       </div>
@@ -290,7 +321,7 @@ export default function JesusEventScreen() {
       )}
 
       {/* JesusPageBody is the scroll container — don't nest it in another. */}
-      <JesusPageBody>
+      <JesusPageBody swipe={swipe} testId="jesus-event-pager-view">
         {phoneView === 'bible' ? (
           column
         ) : missing ? (
