@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
-import { JesusProvenanceChip } from '@/components/jesus/JesusEventParts';
 import { vmTokens } from '@/styles/themeStyles';
 
 /**
@@ -16,11 +15,9 @@ const FONT = 'Roboto, sans-serif';
 
 export function JesusTabToolbar({
   title,
-  provenance,
   copyText,
 }: {
   title: string;
-  provenance?: number | null;
   copyText: string;
 }) {
   const [copied, setCopied] = useState(false);
@@ -35,14 +32,7 @@ export function JesusTabToolbar({
   };
   return (
     <div className="commentary-toolbar">
-      <h2 className="commentary-h2">
-        {title}
-        {provenance != null && provenance > 1 && (
-          <span style={{ marginLeft: 8, verticalAlign: 3 }}>
-            <JesusProvenanceChip level={provenance} />
-          </span>
-        )}
-      </h2>
+      <h2 className="commentary-h2">{title}</h2>
       <div className="commentary-actions">
         <button onClick={copy} className="icon-btn" aria-label={`Copy ${title}`} title="Copy">
           {copied ? (

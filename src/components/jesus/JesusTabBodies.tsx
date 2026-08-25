@@ -64,7 +64,6 @@ function SummaryBody({ detail }: { detail: JesusEventDetail }) {
     <div>
       <JesusTabToolbar
         title={`Summary of ${event.title}`}
-        provenance={overview ? 2 : null}
         copyText={`${event.title}\n\n${overview ?? event.summary ?? ''}`}
       />
 
@@ -285,7 +284,6 @@ function CompareBody({ detail }: { detail: JesusEventDetail }) {
     <div>
       <JesusTabToolbar
         title={`Compare the accounts of ${detail.event.title}`}
-        provenance={compare.note_provenance}
         copyText={`${detail.event.title}\n\n${compare.note ?? ''}`}
       />
       <p style={{ fontFamily: FONT, fontSize: 14, color: vmTokens.textSecondary, margin: '0 0 14px' }}>
