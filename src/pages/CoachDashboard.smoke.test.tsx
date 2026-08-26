@@ -232,6 +232,26 @@ describe('Coaching dashboard — Home', () => {
   });
 });
 
+describe('Coaching dashboard — deep link', () => {
+  it('shows "not found" for an unknown ?s= id instead of silently opening the latest session', async () => {
+    renderAt('/coach?s=this-report-does-not-exist', <CoachDashboardScreen />);
+    // The regression this guards: a stale link used to clamp findIndex(-1) to 0
+    // and render the MOST RECENT session, so a leader silently read the wrong
+    // report. It must now say the session could not be found...
+    expect(await screen.findByTestId('coach-report-not-found')).toBeInTheDocument();
+    // ...and must NOT render the latest session's detail.
+    expect(screen.queryByText('James — Lesson 9: Wealth & Patience')).toBeNull();
+  });
+
+  it('still opens the requested session when the id matches', async () => {
+    renderAt('/coach?s=L9', <CoachDashboardScreen />);
+    expect(
+      (await screen.findAllByText('James — Lesson 9: Wealth & Patience')).length,
+    ).toBeGreaterThan(0);
+    expect(screen.queryByTestId('coach-report-not-found')).toBeNull();
+  });
+});
+
 describe('Coaching dashboard — Sessions', () => {
   it('lists recurring classes and past sessions with the view action', async () => {
     renderAt('/coach/sessions', <CoachSessionsScreen />);

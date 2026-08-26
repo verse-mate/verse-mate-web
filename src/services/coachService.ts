@@ -286,6 +286,50 @@ export async function fetchAdminCoaches(): Promise<CoachSummary[]> {
   return data.coaches || [];
 }
 
+/** A session as it appears in the paginated list: card fields, never prose. */
+export interface CoachReportSummary {
+  id: string;
+  date: string;
+  dateLabel?: string;
+  session?: string;
+  topic?: string;
+  score?: number;
+  status?: string;
+  statusEmoji?: string;
+  pdfUrl?: string;
+}
+
+/**
+ * GET /coach/reports/summary — one page of this coach's sessions.
+ * Bounded by design: a long history no longer arrives in a single response.
+ */
+export async function fetchCoachReportSummaries(opts: {
+  limit?: number;
+  offset?: number;
+} = {}): Promise<{ items: CoachReportSummary[]; total: number }> {
+  const params = new URLSearchParams();
+  if (opts.limit !== undefined) params.set('limit', String(opts.limit));
+  if (opts.offset !== undefined) params.set('offset', String(opts.offset));
+  const qs = params.toString();
+  return coachRequest<{ items: CoachReportSummary[]; total: number }>(
+    `reports/summary${qs ? `?${qs}` : ''}`,
+  );
+}
+
+/**
+ * GET /coach/reports/:id — one session's full content, loaded on demand.
+ * Resolves an immutable OR a previously-issued id; an unknown id 404s rather
+ * than silently returning a different session.
+ */
+export async function fetchCoachReportDetail(
+  reportId: string,
+): Promise<CoachReport> {
+  const data = await coachRequest<{ report: CoachReport }>(
+    `reports/${encodeURIComponent(reportId)}`,
+  );
+  return data.report;
+}
+
 /** GET /coach/admin/coaches/:id/reports — a specific leader's documents. */
 export function fetchCoachReportsFor(
   coachId: string,
