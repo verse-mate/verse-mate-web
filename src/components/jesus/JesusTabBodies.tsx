@@ -80,74 +80,67 @@ function SummaryBody({ detail }: { detail: JesusEventDetail }) {
       {overview ? (
         <MarkdownBlock text={overview} />
       ) : event.summary ? (
+        <p style={{ marginBottom: 12 }}>{event.summary}</p>
+      ) : null}
+
+      {hasReveals && (
         <>
-          <p style={{ marginBottom: 12 }}>{event.summary}</p>
-          <JesusTabEmpty testId="jesus-summary-ungenerated">
-            The long-form overview for this event hasn’t been generated yet.
-          </JesusTabEmpty>
+          <JesusTabSectionLabel>What this reveals</JesusTabSectionLabel>
+          <div data-testid="jesus-event-reveals">
+            {revealGroups.map((g) => {
+              const items = reveals[g.key] ?? [];
+              if (!items.length) return null;
+              return (
+                <div key={g.key} style={{ marginBottom: 14 }}>
+                  <p
+                    style={{
+                      fontFamily: FONT,
+                      fontSize: 10.5,
+                      fontWeight: 700,
+                      letterSpacing: '0.08em',
+                      textTransform: 'uppercase',
+                      color: vmTokens.gold,
+                      margin: '0 0 5px',
+                    }}
+                  >
+                    {g.label}
+                  </p>
+                  <ul style={{ margin: 0, paddingLeft: 18 }}>
+                    {items.map((item, i) => (
+                      <li key={i} style={{ marginBottom: 5 }}>
+                        {item.content}
+                        {item.source_ref && (
+                          <span style={{ color: vmTokens.textTertiary }}> ({item.source_ref})</span>
+                        )}
+                        {item.provenance > 1 && (
+                          <span style={{ marginLeft: 6 }}>
+                            <JesusProvenanceChip level={item.provenance} />
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
         </>
-      ) : (
-        <JesusTabEmpty testId="jesus-summary-ungenerated">Nothing written for this event yet.</JesusTabEmpty>
       )}
 
-      <JesusTabSectionLabel>What this reveals</JesusTabSectionLabel>
-      {hasReveals ? (
-        <div data-testid="jesus-event-reveals">
-          {revealGroups.map((g) => {
-            const items = reveals[g.key] ?? [];
-            if (!items.length) return null;
-            return (
-              <div key={g.key} style={{ marginBottom: 14 }}>
-                <p
-                  style={{
-                    fontFamily: FONT,
-                    fontSize: 10.5,
-                    fontWeight: 700,
-                    letterSpacing: '0.08em',
-                    textTransform: 'uppercase',
-                    color: vmTokens.gold,
-                    margin: '0 0 5px',
-                  }}
-                >
-                  {g.label}
-                </p>
-                <ul style={{ margin: 0, paddingLeft: 18 }}>
-                  {items.map((item, i) => (
-                    <li key={i} style={{ marginBottom: 5 }}>
-                      {item.content}
-                      {item.source_ref && (
-                        <span style={{ color: vmTokens.textTertiary }}> ({item.source_ref})</span>
-                      )}
-                      {item.provenance > 1 && (
-                        <span style={{ marginLeft: 6 }}>
-                          <JesusProvenanceChip level={item.provenance} />
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-        </div>
-      ) : (
-        <JesusTabEmpty>Nothing recorded for this event yet.</JesusTabEmpty>
-      )}
-
-      <JesusTabSectionLabel>How people reacted</JesusTabSectionLabel>
-      {reactions.length > 0 ? (
-        <ul style={{ margin: 0, paddingLeft: 18 }} data-testid="jesus-event-reactions">
-          {reactions.map((r, i) => (
-            <li key={i} style={{ marginBottom: 5 }}>
-              <strong style={{ fontWeight: 600 }}>{r.who}</strong> — {r.what}
-              {r.source_ref && (
-                <span style={{ color: vmTokens.textTertiary }}> ({r.source_ref})</span>
-              )}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <JesusTabEmpty>Nothing recorded for this event yet.</JesusTabEmpty>
+      {reactions.length > 0 && (
+        <>
+          <JesusTabSectionLabel>How people reacted</JesusTabSectionLabel>
+          <ul style={{ margin: 0, paddingLeft: 18 }} data-testid="jesus-event-reactions">
+            {reactions.map((r, i) => (
+              <li key={i} style={{ marginBottom: 5 }}>
+                <strong style={{ fontWeight: 600 }}>{r.who}</strong> — {r.what}
+                {r.source_ref && (
+                  <span style={{ color: vmTokens.textTertiary }}> ({r.source_ref})</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </>
       )}
 
       <JesusConfidenceNote
@@ -361,17 +354,10 @@ function CompareBody({ detail }: { detail: JesusEventDetail }) {
         ))}
       </div>
 
-      {compare.note ? (
+      {compare.note && (
         <>
           <JesusTabSectionLabel>Where they differ</JesusTabSectionLabel>
           <MarkdownBlock text={compare.note} />
-        </>
-      ) : (
-        <>
-          <JesusTabSectionLabel>Where they differ</JesusTabSectionLabel>
-          <JesusTabEmpty testId="jesus-compare-ungenerated">
-            The comparison hasn’t been written for this event yet.
-          </JesusTabEmpty>
         </>
       )}
 

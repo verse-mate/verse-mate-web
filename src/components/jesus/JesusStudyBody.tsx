@@ -164,7 +164,6 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
       body: (
         <JesusFacetList
           facets={words}
-          emptyLabel="No speech recorded for this event."
           onOpenReference={onOpenReference}
           testId="jesus-study-words"
         />
@@ -177,7 +176,6 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
       body: (
         <JesusFacetList
           facets={actions}
-          emptyLabel="No actions recorded for this event."
           onOpenReference={onOpenReference}
           testId="jesus-study-actions"
         />
