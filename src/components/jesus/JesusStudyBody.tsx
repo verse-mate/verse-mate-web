@@ -24,7 +24,6 @@ import { useStudyLabels } from '@/hooks/useStudyLabels';
 import {
   eventVerseSpan,
   narrowStudyToEvent,
-  type EventVerseSpan,
   type NarrowedStudy,
 } from '@/lib/jesusStudy';
 import {
@@ -292,8 +291,6 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
   return (
     <div style={{ fontSize: bodyFontSize, lineHeight: `${bodyLineHeight}px` }}>
       <JesusTabToolbar title={title} copyText={copyText} />
-
-      <ScopeNote span={span} narrowed={narrowed} loading={loading} />
 
       <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
         <button
@@ -578,41 +575,6 @@ function RevealList({ items, testId }: { items: JesusReveal[]; testId?: string }
         </li>
       ))}
     </ul>
-  );
-}
-
-/**
- * Says where the study came from before the reader reads a word of it — an
- * event study is the chapter's study filtered, and pretending otherwise would
- * be the one dishonest thing this tab could do.
- */
-function ScopeNote({
-  span,
-  narrowed,
-  loading,
-}: {
-  span: EventVerseSpan | null;
-  narrowed: NarrowedStudy | null;
-  loading: boolean;
-}) {
-  if (loading || !span || !narrowed) return null;
-  const { study, kept, total } = narrowed;
-  return (
-    <p
-      data-testid="jesus-study-scope"
-      style={{
-        fontFamily: FONT,
-        fontSize: 12.5,
-        lineHeight: '19px',
-        color: vmTokens.textTertiary,
-        margin: '0 0 14px',
-      }}
-    >
-      Drawn from the {study.title} inductive study, narrowed to{' '}
-      <strong style={{ color: vmTokens.textSecondary, fontWeight: 600 }}>{span.display}</strong> —{' '}
-      {kept.movements} of {total.movements} movements and {kept.questions} of {total.questions}{' '}
-      application questions touch this passage.
-    </p>
   );
 }
 

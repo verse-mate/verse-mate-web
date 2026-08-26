@@ -181,6 +181,16 @@ const study: InductiveStudy = {
   },
 };
 
+/**
+ * The chapter study is fetched, so every assertion below waits for it to
+ * land — the tab renders its spine immediately and fills in after.
+ */
+async function waitForStudy() {
+  await waitFor(() =>
+    expect(screen.queryByText(/Loading the chapter study/i)).not.toBeInTheDocument(),
+  );
+}
+
 function renderTab() {
   const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
   return render(
@@ -200,22 +210,21 @@ beforeEach(() => {
 });
 
 describe('JesusStudyBody', () => {
-  it('titles the study after the event and says where the content came from', async () => {
+  it('heads the study with the passage and nothing else', async () => {
     renderTab();
     // The header names the passage, exactly as the Bible side's does.
     expect(screen.getByText('Inductive Study of Luke 2:41-52')).toBeInTheDocument();
     expect(screen.queryByText(/Inductive Study of The boy in the temple/i)).not.toBeInTheDocument();
-    const scope = await screen.findByTestId('jesus-study-scope');
-    expect(scope).toHaveTextContent('Luke 2 inductive study');
-    expect(scope).toHaveTextContent('Luke 2:41-52');
-    // 1 of 2 movements and 1 of 2 questions touch 2:41-52.
-    expect(scope).toHaveTextContent('1 of 2 movements');
-    expect(scope).toHaveTextContent('1 of 2 application questions');
+    await waitForStudy();
+    // No provenance blurb under the title — the Bible side's Study tab has
+    // none, and this one reads the same.
+    expect(screen.queryByTestId('jesus-study-scope')).not.toBeInTheDocument();
+    expect(screen.queryByText(/Drawn from the/i)).not.toBeInTheDocument();
   });
 
   it('renders the full three-section Precept spine, not a placeholder', async () => {
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     expect(screen.getByText(/Observation — 9 Inductive Steps/i)).toBeInTheDocument();
     expect(screen.getByText(/^Interpretation$/i)).toBeInTheDocument();
     expect(screen.getByText(/^Application$/i)).toBeInTheDocument();
@@ -225,7 +234,7 @@ describe('JesusStudyBody', () => {
 
   it('keeps only the movement and question that touch the event', async () => {
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     expect(screen.getByText(/The temple at twelve/)).toBeInTheDocument();
     expect(screen.queryByText(/The birth/)).not.toBeInTheDocument();
 
@@ -238,7 +247,7 @@ describe('JesusStudyBody', () => {
 
   it('marks a step it could not narrow as chapter context', async () => {
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     // Step 1 tags its bullets POSTURE / EYES — no verse scope to narrow by.
     const badges = screen.getAllByTestId('jesus-study-chapter-badge');
     expect(badges).toHaveLength(1);
@@ -248,7 +257,7 @@ describe('JesusStudyBody', () => {
 
   it('folds the event’s setting into the step that asks the five Ws', async () => {
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     // Closed, the step still says it carries the event's own record.
     expect(screen.queryByText('The event in its setting')).not.toBeInTheDocument();
     fireEvent.click(screen.getByText(/Ask the 5 W's and an H/));
@@ -258,7 +267,7 @@ describe('JesusStudyBody', () => {
 
   it('folds His words, His acts and the reactions into the lists step', async () => {
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     expect(screen.queryByText('What He says')).not.toBeInTheDocument();
     fireEvent.click(screen.getByText('Make lists'));
 
@@ -275,7 +284,7 @@ describe('JesusStudyBody', () => {
 
   it('marks the steps that carry the event’s record so a closed card says so', async () => {
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     const badges = screen.getAllByTestId('jesus-study-event-badge');
     // Step 2 (the setting), step 4 (three blocks of one item each) and the
     // movement the one reveal was filed under.
@@ -289,7 +298,7 @@ describe('JesusStudyBody', () => {
       steps: study.steps.filter((step) => step.number !== 2 && step.number !== 4),
     });
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     fireEvent.click(screen.getByText('What He says'));
     expect(screen.getByTestId('jesus-study-words')).toBeInTheDocument();
     fireEvent.click(screen.getByText('The event in its setting'));
@@ -300,7 +309,7 @@ describe('JesusStudyBody', () => {
 
   it('puts what the event reveals inside the movement whose verses it cites', async () => {
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     expect(screen.queryByText('What He says about Himself')).not.toBeInTheDocument();
     fireEvent.click(screen.getByText(/The temple at twelve/));
     fireEvent.click(screen.getByText('What He says about Himself'));
@@ -318,7 +327,7 @@ describe('JesusStudyBody', () => {
       },
     });
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     fireEvent.click(screen.getByText(/About the interpretation/i));
     fireEvent.click(screen.getByText('What He says about Himself'));
     expect(screen.getByTestId('jesus-study-reveals')).toHaveTextContent('Father’s house');
@@ -326,7 +335,7 @@ describe('JesusStudyBody', () => {
 
   it('expands and collapses every card at once', async () => {
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     const bulk = screen.getByTestId('jesus-study-expand-all');
     expect(bulk).toHaveTextContent('Expand All');
     fireEvent.click(bulk);
@@ -340,7 +349,7 @@ describe('JesusStudyBody', () => {
 
   it('links out to the events that read alongside this one', async () => {
     renderTab();
-    await screen.findByTestId('jesus-study-scope');
+    await waitForStudy();
     fireEvent.click(screen.getByText(/Events that read with this one/));
     expect(screen.getByTestId('jesus-study-related')).toHaveTextContent(
       'The presentation in the temple',
@@ -354,6 +363,5 @@ describe('JesusStudyBody', () => {
     expect(screen.getByText('What He says')).toBeInTheDocument();
     fireEvent.click(screen.getByText(/What this event reveals about Him/));
     expect(screen.getByTestId('jesus-study-reveals')).toHaveTextContent('Father’s house');
-    expect(screen.queryByTestId('jesus-study-scope')).not.toBeInTheDocument();
   });
 });
