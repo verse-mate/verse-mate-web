@@ -58,7 +58,12 @@ export default function CoachLeaderScreen() {
   // to a compact card — so every session on the page reads as a minimized card.
   const [minimized, setMinimized] = useState(false);
   const detailRef = useRef<HTMLDivElement>(null);
-  const selected = (selectedId && reports.find((r) => r.id === selectedId)) || latest;
+  // An explicitly-selected id that matches nothing must not silently fall back
+  // to the latest session (it showed the wrong report); only default to latest
+  // when no session was requested at all.
+  const requested = selectedId ? reports.find((r) => r.id === selectedId) : null;
+  const selectionMissing = Boolean(selectedId) && !requested;
+  const selected = selectedId ? (requested ?? null) : latest;
   const selIdx = selected ? reports.findIndex((r) => r.id === selected.id) : -1;
   const selPrev = selIdx >= 0 ? reports[selIdx + 1] : undefined;
   const delta =

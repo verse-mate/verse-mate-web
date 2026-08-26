@@ -35,6 +35,9 @@ import {
   fetchAllCoachClasses,
   fetchCoachClasses,
   fetchCoachMe,
+  type CoachReportSummary,
+  fetchCoachReportDetail,
+  fetchCoachReportSummaries,
   fetchCoachReports,
   fetchCoachReportsFor,
   fetchCoachTrends,
@@ -45,6 +48,9 @@ import {
 export const coachKeys = {
   me: ['coach', 'me'] as const,
   reports: ['coach', 'reports'] as const,
+  reportSummaries: (limit: number, offset: number) =>
+    ['coach', 'reports', 'summary', limit, offset] as const,
+  reportDetail: (id: string) => ['coach', 'reports', 'detail', id] as const,
   trends: ['coach', 'trends'] as const,
   classes: ['coach', 'classes'] as const,
   adminCoaches: ['coach', 'admin', 'coaches'] as const,
@@ -83,6 +89,40 @@ export function useCoachReports(opts: { enabled?: boolean } = {}): UseQueryResul
     queryFn: fetchCoachReports,
     retry: false,
     enabled: opts.enabled ?? true,
+  });
+}
+
+/**
+ * One page of the signed-in coach's sessions (summary rows only, no prose), so
+ * a long history no longer arrives in a single response.
+ */
+export function useCoachReportSummaries(
+  opts: { limit?: number; offset?: number; enabled?: boolean } = {},
+): UseQueryResult<{ items: CoachReportSummary[]; total: number }> {
+  const limit = opts.limit ?? 25;
+  const offset = opts.offset ?? 0;
+  return useQuery({
+    queryKey: coachKeys.reportSummaries(limit, offset),
+    queryFn: () => fetchCoachReportSummaries({ limit, offset }),
+    retry: false,
+    enabled: opts.enabled ?? true,
+  });
+}
+
+/**
+ * One session's full content, loaded when it is actually opened. An unknown id
+ * surfaces as an error so the caller can show "not found" instead of silently
+ * rendering a different session.
+ */
+export function useCoachReportDetail(
+  reportId: string | null,
+  opts: { enabled?: boolean } = {},
+): UseQueryResult<CoachReport> {
+  return useQuery({
+    queryKey: coachKeys.reportDetail(reportId ?? ''),
+    queryFn: () => fetchCoachReportDetail(reportId as string),
+    retry: false,
+    enabled: (opts.enabled ?? true) && Boolean(reportId),
   });
 }
 

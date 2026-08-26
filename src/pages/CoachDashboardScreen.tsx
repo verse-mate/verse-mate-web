@@ -29,6 +29,7 @@ import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboar
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import CoachLineChart from '@/components/coach/CoachLineChart';
 import { dt, firstName, letterGrade, ratingForScore } from '@/components/coach/dashboardTheme';
+import { vmTokens } from '@/styles/themeStyles';
 
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
@@ -58,8 +59,15 @@ export default function CoachDashboardScreen() {
 
   const list = useMemo(() => [...(reportList || [])].sort(byDateDesc), [reportList]);
   const selId = params.get('s');
-  const selectedIdx = selId ? Math.max(0, list.findIndex((r) => r.id === selId)) : 0;
-  const selected: CoachReport | null = list[selectedIdx] ?? null;
+  // A deep-linked id that matches nothing must NOT fall back to the latest
+  // session — that silently showed a leader the wrong report. Track the miss so
+  // the page can say so instead.
+  const foundIdx = selId ? list.findIndex((r) => r.id === selId) : 0;
+  const deepLinkMissing = Boolean(selId) && foundIdx < 0;
+  const selectedIdx = foundIdx < 0 ? 0 : foundIdx;
+  const selected: CoachReport | null = deepLinkMissing
+    ? null
+    : (list[selectedIdx] ?? null);
   const prev = list[selectedIdx + 1];
   const latest = list[0] ?? null;
   const delta = selected && prev ? Math.round((selected.score - prev.score) * 100) / 100 : null;
@@ -77,7 +85,23 @@ export default function CoachDashboardScreen() {
           (admin ? forReports : selfReports).refetch();
         }}
       >
-        {!latest || !selected ? (
+        {deepLinkMissing ? (
+          <div
+            data-testid="coach-report-not-found"
+            style={{
+              padding: 24,
+              textAlign: 'center',
+              color: vmTokens.textSecondary,
+            }}
+          >
+            <p style={{ fontWeight: 700, color: vmTokens.textPrimary }}>
+              We couldn't find that session
+            </p>
+            <p style={{ fontSize: 14 }}>
+              The link may be out of date. Open any session below to keep going.
+            </p>
+          </div>
+        ) : !latest || !selected ? (
           <EmptyHome leaderName={leaderName} admin={admin} onAddClass={() => navigate(`${base}/sessions`)} />
         ) : (
           <>
