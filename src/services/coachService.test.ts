@@ -21,6 +21,8 @@ import {
   saveRecordingLink,
   statusColor,
   updateCoachClass,
+  fetchCoachReportDetail,
+  fetchCoachReportSummaries,
 } from './coachService';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -335,5 +337,52 @@ describe('pdfDownloadUrl', () => {
     expect(pdfDownloadUrl('https://cdn.versemate.org/reports/x.pdf')).toBe(
       'https://cdn.versemate.org/reports/x.pdf',
     );
+  });
+});
+
+describe('report store list/detail endpoints', () => {
+  it('fetchCoachReportSummaries requests the paginated route and returns items + total', async () => {
+    mockFetch((url) => {
+      if (url.includes('/coach/reports/summary')) {
+        return jsonResponse({
+          items: [{ id: 'r1', date: '2026-08-22', session: 'Joel', pdfUrl: 'u' }],
+          total: 7,
+        });
+      }
+      return jsonResponse({}, 404);
+    });
+
+    const page = await fetchCoachReportSummaries({ limit: 5, offset: 10 });
+    expect(page.total).toBe(7);
+    expect(page.items[0].id).toBe('r1');
+    // pagination must actually reach the server, not be dropped client-side
+    expect(calls[0].url).toContain('limit=5');
+    expect(calls[0].url).toContain('offset=10');
+  });
+
+  it('fetchCoachReportSummaries omits paging params when none are given', async () => {
+    mockFetch(() => jsonResponse({ items: [], total: 0 }));
+    await fetchCoachReportSummaries();
+    expect(calls[0].url).not.toContain('limit=');
+    expect(calls[0].url).not.toContain('offset=');
+  });
+
+  it('fetchCoachReportDetail unwraps the report and encodes the id', async () => {
+    mockFetch((url) => {
+      if (url.includes('/coach/reports/')) {
+        return jsonResponse({ report: { id: 'a b/c', session: 'Joel 1-3' } });
+      }
+      return jsonResponse({}, 404);
+    });
+
+    const report = await fetchCoachReportDetail('a b/c');
+    expect(report.session).toBe('Joel 1-3');
+    // an id with a slash must not become a second path segment
+    expect(calls[0].url).toContain(encodeURIComponent('a b/c'));
+  });
+
+  it('fetchCoachReportDetail surfaces a 404 as an error (never a silent substitute)', async () => {
+    mockFetch(() => jsonResponse({ error: 'NOT_FOUND' }, 404));
+    await expect(fetchCoachReportDetail('missing')).rejects.toBeTruthy();
   });
 });
