@@ -10,7 +10,8 @@ import {
 } from '@/components/jesus/JesusTabParts';
 import { useApp } from '@/contexts/AppContext';
 import type { JesusTab } from '@/lib/jesusTabs';
-import { buildJesusByline, stripBylineHeader } from '@/lib/jesusByline';
+import { bylineChapters, buildJesusBylineSections, stripBylineHeader } from '@/lib/jesusByline';
+import { jesusTestId } from '@/lib/jesusSlugs';
 import { fetchCommentary } from '@/services/bibleService';
 import { fetchJesusCompare } from '@/services/jesusService';
 import type { Commentary, JesusCompare, JesusEventDetail } from '@/services/types';
@@ -160,93 +161,137 @@ function SummaryBody({ detail }: { detail: JesusEventDetail }) {
 
 // ─── By-Line ─────────────────────────────────────────────────────────────────
 
+/** Sentinel for "every row open", the state the tab lands in. */
+const ALL_OPEN = '*';
+
 /**
  * Assembled from the chapter commentary the Bible side already serves, filtered
  * to the verses this event spans — so it carries real content today rather than
  * waiting on event-scoped generation.
+ *
+ * Every account gets a section, not just the primary one. An event that Matthew
+ * and Mark both tell prints both in the left column, and a By-Line tab that
+ * covered only Matthew left Mark's verses looking like they had no explanation
+ * at all. Accounts whose chapter has no byline generated yet say so in place,
+ * which is the honest version of the same gap.
  */
 function BylineBody({ detail }: { detail: JesusEventDetail }) {
-  const primary = useMemo(
-    () => detail.passages.find((p) => p.is_primary) ?? detail.passages[0] ?? null,
-    [detail.passages],
-  );
-  const [commentaries, setCommentaries] = useState<Commentary[] | null>(null);
-  const [expanded, setExpanded] = useState<number | null>(-2); // -2 = all open
+  const passages = detail.passages;
+  const chapters = useMemo(() => bylineChapters(passages), [passages]);
+
+  // Keyed by `bylineChapterKey`; null until every chapter has answered.
+  const [byChapter, setByChapter] = useState<Map<string, Commentary[]> | null>(null);
+  const [expanded, setExpanded] = useState<string | null>(ALL_OPEN);
 
   useEffect(() => {
-    if (!primary) {
-      setCommentaries([]);
+    let cancelled = false;
+    setByChapter(null);
+    if (chapters.length === 0) {
+      setByChapter(new Map());
       return;
     }
-    let cancelled = false;
-    setCommentaries(null);
-    fetchCommentary(primary.book_name, primary.chapter).then((rows) => {
-      if (!cancelled) setCommentaries(rows);
+    Promise.all(
+      chapters.map((c) =>
+        fetchCommentary(c.book_name, c.chapter).then(
+          (rows) => [c.key, rows] as const,
+          () => [c.key, [] as Commentary[]] as const,
+        ),
+      ),
+    ).then((entries) => {
+      if (!cancelled) setByChapter(new Map(entries));
     });
     return () => {
       cancelled = true;
     };
-  }, [primary]);
+  }, [chapters]);
 
-  const rows = useMemo(
-    () => buildJesusByline(primary, commentaries ?? []),
-    [primary, commentaries],
+  const sections = useMemo(
+    () => (byChapter ? buildJesusBylineSections(passages, byChapter) : []),
+    [passages, byChapter],
   );
-  const allExpanded = expanded === -2;
+
+  const total = sections.reduce((n, s) => n + s.rows.length, 0);
+  const allExpanded = expanded === ALL_OPEN;
+  // One account needs no heading — the toolbar title and every row already
+  // name it. Two or more, and the reader has to be told which telling is which.
+  const labelled = sections.length > 1;
 
   return (
     <div>
       <JesusTabToolbar
         title={`Line-by-Line Analysis of ${detail.event.title}`}
-        copyText={rows.map((r) => `${r.reference}\n${stripBylineHeader(r.detail)}`).join('\n\n')}
+        copyText={sections
+          .filter((s) => s.rows.length > 0)
+          .map((s) =>
+            [
+              labelled ? s.display : null,
+              ...s.rows.map((r) => `${r.reference}\n${stripBylineHeader(r.detail)}`),
+            ]
+              .filter(Boolean)
+              .join('\n\n'),
+          )
+          .join('\n\n')}
       />
 
-      {commentaries === null ? (
+      {byChapter === null ? (
         <JesusTabEmpty>Loading…</JesusTabEmpty>
-      ) : rows.length === 0 ? (
+      ) : total === 0 ? (
         <JesusTabEmpty testId="jesus-byline-empty">
-          No line-by-line commentary is available for {primary?.display ?? 'this passage'} yet.
+          No line-by-line commentary is available for{' '}
+          {passages.map((p) => p.display).join(', ') || 'this passage'} yet.
         </JesusTabEmpty>
       ) : (
         <>
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
             <button
               className="expand-all-btn"
-              onClick={() => setExpanded(allExpanded ? null : -2)}
+              onClick={() => setExpanded(allExpanded ? null : ALL_OPEN)}
               data-testid="jesus-byline-expand-all"
             >
               {allExpanded ? 'Collapse All' : 'Expand All'}
             </button>
           </div>
-          <div className="byline-list" data-testid="jesus-byline-list">
-            {rows.map((row) => {
-              const open = allExpanded || expanded === row.verse;
-              return (
-                <div key={row.verse} className={`byline-row ${open ? 'open' : ''}`}>
-                  <button
-                    className="byline-toggle"
-                    onClick={() => setExpanded(open ? null : row.verse)}
-                  >
-                    <span className="byline-ref-sm">{row.reference}</span>
-                    {open ? (
-                      <ChevronUp size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
-                    ) : (
-                      <ChevronDown size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
-                    )}
-                  </button>
-                  {open && (
-                    <div className="byline-body">
-                      {row.text && <blockquote className="byline-verse-quote">{row.text}</blockquote>}
-                      <div className="byline-summary-label">Summary</div>
-                      <div className="byline-summary-text">
-                        <MarkdownBlock text={stripBylineHeader(row.detail)} />
+
+          {sections.map((section) => (
+            <div key={section.display} data-testid={jesusTestId('jesus-byline-account', section.display)}>
+              {labelled && <JesusTabSectionLabel>{section.display}</JesusTabSectionLabel>}
+              {section.rows.length === 0 ? (
+                <JesusTabEmpty testId={jesusTestId('jesus-byline-account-empty', section.display)}>
+                  The line-by-line reading of {section.display} hasn’t been generated yet.
+                </JesusTabEmpty>
+              ) : (
+                <div className="byline-list" data-testid="jesus-byline-list">
+                  {section.rows.map((row) => {
+                    const open = allExpanded || expanded === row.key;
+                    return (
+                      <div key={row.key} className={`byline-row ${open ? 'open' : ''}`}>
+                        <button
+                          className="byline-toggle"
+                          onClick={() => setExpanded(open ? null : row.key)}
+                        >
+                          <span className="byline-ref-sm">{row.reference}</span>
+                          {open ? (
+                            <ChevronUp size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
+                          ) : (
+                            <ChevronDown size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
+                          )}
+                        </button>
+                        {open && (
+                          <div className="byline-body">
+                            {row.text && <blockquote className="byline-verse-quote">{row.text}</blockquote>}
+                            <div className="byline-summary-label">Summary</div>
+                            <div className="byline-summary-text">
+                              <MarkdownBlock text={stripBylineHeader(row.detail)} />
+                            </div>
+                          </div>
+                        )}
                       </div>
-                    </div>
-                  )}
+                    );
+                  })}
                 </div>
-              );
-            })}
-          </div>
+              )}
+            </div>
+          ))}
         </>
       )}
     </div>
