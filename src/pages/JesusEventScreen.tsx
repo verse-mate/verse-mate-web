@@ -23,6 +23,7 @@ import { useJesusChronology } from '@/hooks/useJesusChronology';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useOpenReference } from '@/hooks/useOpenReference';
 import { adjacentJesusEvents } from '@/lib/jesusChronology';
+import { limitRelated } from '@/lib/jesusRelated';
 import {
   buildJesusEventUrl,
   buildJesusLifeUrl,
@@ -260,14 +261,14 @@ export default function JesusEventScreen() {
             </>
           )}
 
-          {detail.related.length > 0 && (
+          {limitRelated(detail.related).length > 0 && (
             <>
               <JesusSectionLabel>Related events</JesusSectionLabel>
               <div
                 style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
                 data-testid="jesus-event-related"
               >
-                {detail.related.map((r) => (
+                {limitRelated(detail.related).map((r) => (
                   <JesusEventCardView key={r.slug} event={r} />
                 ))}
               </div>

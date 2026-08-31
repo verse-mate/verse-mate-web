@@ -9,6 +9,13 @@ import type { Commentary, JesusEventPassage } from '@/services/types';
  * verses it spans. Filtering the chapter's rows to that span gives a real
  * line-by-line reading of the pericope today, without waiting on generation.
  *
+ * An event usually spans more than one passage — the same episode as Matthew,
+ * Mark and Luke each tell it — and every one of those accounts is scripture the
+ * left column prints. So the tab is built per passage and every passage gets a
+ * section, including the accounts whose chapter has no byline generated yet:
+ * an account that is silently absent reads as "this verse has no explanation",
+ * which is a different claim from "it hasn't been written".
+ *
  * A passage with a null `verse_start` covers the whole chapter, which is why
  * the range test treats null as unbounded rather than as verse 0.
  */
@@ -20,6 +27,16 @@ export interface JesusBylineRow {
   /** The verse text, when the passage was hydrated with scripture. */
   text: string | null;
   detail: string;
+  /** Stable across accounts: verse numbers repeat between chapters. */
+  key: string;
+}
+
+/** One account's worth of rows, in the order the left column prints them. */
+export interface JesusBylineSection {
+  /** "Mark 1:14-15" — the account's own reference. */
+  display: string;
+  passage: JesusEventPassage;
+  rows: JesusBylineRow[];
 }
 
 function covers(passage: JesusEventPassage, verse: number): boolean {
@@ -30,12 +47,52 @@ function covers(passage: JesusEventPassage, verse: number): boolean {
 }
 
 /**
- * @param passage  the account being read in the left column
+ * The chapter a passage's commentary is fetched under. Two accounts of one
+ * event can share a chapter (Mark 1:14-15 and Mark 1:16-20), so this is what
+ * keeps the tab from fetching the same chapter twice.
+ */
+export function bylineChapterKey(passage: {
+  book_id: number;
+  chapter: number;
+}): string {
+  return `${passage.book_id}:${passage.chapter}`;
+}
+
+/** The distinct chapters an event's passages span, in passage order. */
+export function bylineChapters(
+  passages: JesusEventPassage[],
+): { key: string; book_id: number; book_name: string; chapter: number }[] {
+  const seen = new Set<string>();
+  const chapters: {
+    key: string;
+    book_id: number;
+    book_name: string;
+    chapter: number;
+  }[] = [];
+  for (const p of passages) {
+    const key = bylineChapterKey(p);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    chapters.push({
+      key,
+      book_id: p.book_id,
+      book_name: p.book_name,
+      chapter: p.chapter,
+    });
+  }
+  return chapters;
+}
+
+/**
+ * @param passage  the account being read
  * @param commentaries  the whole chapter's rows, straight from `fetchCommentary`
+ * @param taken  verse keys already rendered by an earlier account, so two
+ *   passages that overlap inside one chapter don't print the same verse twice
  */
 export function buildJesusByline(
   passage: JesusEventPassage | null,
   commentaries: Commentary[],
+  taken?: Set<string>,
 ): JesusBylineRow[] {
   if (!passage) return [];
 
@@ -47,10 +104,42 @@ export function buildJesusByline(
     .sort((a, b) => a.verse - b.verse)
     .map((c) => ({
       verse: c.verse,
+      key: `${bylineChapterKey(passage)}:${c.verse}`,
       reference: `${passage.book_name} ${passage.chapter}:${c.verse}`,
       text: textByVerse.get(c.verse) ?? null,
       detail: c.detail,
-    }));
+    }))
+    .filter((row) => {
+      if (!taken) return true;
+      if (taken.has(row.key)) return false;
+      taken.add(row.key);
+      return true;
+    });
+}
+
+/**
+ * Every account of the event, each with the byline rows for its own verses.
+ *
+ * Sections come back for passages with no rows too — the caller says so on
+ * screen rather than dropping the account, so a reader looking for Mark's
+ * telling learns it is ungenerated instead of finding nothing.
+ *
+ * @param commentariesByChapter  keyed by `bylineChapterKey`
+ */
+export function buildJesusBylineSections(
+  passages: JesusEventPassage[],
+  commentariesByChapter: Map<string, Commentary[]>,
+): JesusBylineSection[] {
+  const taken = new Set<string>();
+  return passages.map((passage) => ({
+    display: passage.display,
+    passage,
+    rows: buildJesusByline(
+      passage,
+      commentariesByChapter.get(bylineChapterKey(passage)) ?? [],
+      taken,
+    ),
+  }));
 }
 
 /**

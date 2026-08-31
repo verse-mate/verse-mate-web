@@ -26,6 +26,7 @@ import {
   jesusTestId,
   JESUS_ROOT,
 } from '@/lib/jesusSlugs';
+import { limitRelated } from '@/lib/jesusRelated';
 import { fetchJesusEntry } from '@/services/jesusService';
 import type { JesusEntryDetail, JesusPassage } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
@@ -335,14 +336,14 @@ export default function JesusEntryScreen() {
             </div>
 
             {/* Read next */}
-            {detail.related.length > 0 && (
+            {limitRelated(detail.related).length > 0 && (
               <>
                 <JesusSectionLabel>Read next</JesusSectionLabel>
                 <div
                   style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
                   data-testid="jesus-entry-related"
                 >
-                  {detail.related.map((related) => (
+                  {limitRelated(detail.related).map((related) => (
                     <JesusEntryCard
                       key={related.slug}
                       entry={related}

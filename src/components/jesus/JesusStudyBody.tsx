@@ -35,6 +35,7 @@ import {
   type RevealGroup,
 } from '@/lib/jesusStudyEmbed';
 import { buildEventStudyCopyText } from '@/lib/jesusStudyCopy';
+import { limitRelated } from '@/lib/jesusRelated';
 import { buildJesusEventUrl, jesusTestId } from '@/lib/jesusSlugs';
 import { fetchStudy } from '@/services/bibleService';
 import type { JesusEventDetail, JesusReveal } from '@/services/types';
@@ -272,7 +273,7 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
     }
   });
   if (narrowed) allIds.push('application');
-  if (detail.related.length) allIds.push('event-related');
+  if (limitRelated(detail.related).length) allIds.push('event-related');
 
   const allOpen = allIds.every((id) => isOpen(id));
   const setAll = (open: boolean) => {
@@ -461,7 +462,7 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
         </>
       )}
 
-      {detail.related.length > 0 && (
+      {limitRelated(detail.related).length > 0 && (
         <>
           <SectionHeading label="Study alongside" />
           <Card
@@ -471,7 +472,7 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
             subheading="Same period, people, or theme — the next passage to observe."
           >
             <div style={{ display: 'flex', flexDirection: 'column' }} data-testid="jesus-study-related">
-              {detail.related.map((related) => (
+              {limitRelated(detail.related).map((related) => (
                 <button
                   key={related.slug}
                   type="button"
