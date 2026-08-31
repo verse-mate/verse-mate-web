@@ -61,7 +61,49 @@ describe('JesusTabBodies', () => {
     renderTab('summary');
     expect(screen.getByText('Summary of Stilling the storm')).toBeInTheDocument();
     expect(screen.getByLabelText('Copy Summary of Stilling the storm')).toBeInTheDocument();
+  });
+
+  // A section heading is a promise of content. Discourse events (a teaching with
+  // no narrative frame) legitimately have no reveals and no recorded reaction,
+  // and the enrichment pipeline is required to return [] rather than invent
+  // them — so the headings must not render an empty state under themselves.
+  it('omits the Summary sections that have nothing under them', () => {
+    renderTab('summary');
+    expect(screen.queryByText(/What this reveals/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/How people reacted/i)).not.toBeInTheDocument();
+    expect(screen.queryByTestId('jesus-event-reveals')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('jesus-event-reactions')).not.toBeInTheDocument();
+  });
+
+  it('renders the Summary sections once there is something to show', () => {
+    const filled = {
+      ...detail,
+      reveals: {
+        says_about_himself: [],
+        demonstrates: [
+          { content: 'He commands the wind and it obeys.', source_ref: 'Mark 4:39', provenance: 2 },
+        ],
+        others_say: [],
+        narrator_says: [],
+      },
+      reactions: [{ who: 'The disciples', what: 'were terrified', source_ref: 'Mark 4:41' }],
+    } as unknown as JesusEventDetail;
+
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    render(
+      <QueryClientProvider client={client}>
+        <MemoryRouter>
+          <AppProvider>
+            <JesusTabBodies tab="summary" detail={filled} />
+          </AppProvider>
+        </MemoryRouter>
+      </QueryClientProvider>,
+    );
+
     expect(screen.getByText(/What this reveals/i)).toBeInTheDocument();
+    expect(screen.getByTestId('jesus-event-reveals')).toBeInTheDocument();
+    expect(screen.getByText(/How people reacted/i)).toBeInTheDocument();
+    expect(screen.getByTestId('jesus-event-reactions')).toBeInTheDocument();
   });
 
   it('renders the By-Line tab', async () => {

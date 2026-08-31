@@ -8,7 +8,6 @@
 
 import { BookOpen, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { JesusEmpty } from '@/components/jesus/JesusParts';
 import PassageScripture from '@/components/scripture/PassageScripture';
 import {
   ReferencePill,
@@ -162,16 +161,15 @@ export function JesusPassageBlock({
  */
 export function JesusFacetList({
   facets,
-  emptyLabel,
   onOpenReference,
   testId,
 }: {
   facets: JesusFacet[];
-  emptyLabel: string;
   onOpenReference: ReturnType<typeof useOpenReference>;
   testId: string;
 }) {
-  if (facets.length === 0) return <JesusEmpty label={emptyLabel} />;
+  // Nothing to say is said by omitting the card, not by a placeholder inside it.
+  if (facets.length === 0) return null;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }} data-testid={testId}>
