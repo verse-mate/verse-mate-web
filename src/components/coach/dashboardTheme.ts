@@ -100,25 +100,29 @@ export function statusBand(status: string): Band {
   }
 }
 
-/** Cluster short-code → display name + accent (handoff `clusterMeta`). */
-export function clusterMeta(code: string): { name: string; c: string; bg: string } {
-  const map: Record<string, { name: string; c: string; bg: string }> = {
-    TC: { name: 'Teaching Craft', c: dt.gold, bg: dt.goldChip },
-    BM: { name: 'Building Ministry', c: dt.blue, bg: dt.blueBg },
-    EP: { name: 'Engaging People', c: dt.green, bg: dt.greenBg },
-    BR: { name: 'Being Real', c: dt.purple, bg: dt.purpleBg },
-  };
-  return map[code] || { name: code, c: dt.textLight, bg: dt.fill1 };
-}
+/**
+ * Cluster accents, by POSITION in the served cluster order.
+ *
+ * These were a name→colour map with the four cluster names written out, which
+ * made this file one of five hand-maintained copies of the rubric: renaming a
+ * cluster silently dropped its accent, and the name-substring matcher below it
+ * ("includes('teaching')") would have quietly mis-coded a new one.
+ */
+const CLUSTER_ACCENTS = [
+  { c: dt.gold, bg: dt.goldChip },
+  { c: dt.blue, bg: dt.blueBg },
+  { c: dt.green, bg: dt.greenBg },
+  { c: dt.purple, bg: dt.purpleBg },
+];
 
-/** Map a full cluster name → its short code (for the monthly per-session table). */
-export function clusterCode(name: string): string {
-  const n = name.toLowerCase();
-  if (n.includes('teaching')) return 'TC';
-  if (n.includes('building') || n.includes('ministry')) return 'BM';
-  if (n.includes('engaging')) return 'EP';
-  if (n.includes('being') || n.includes('real')) return 'BR';
-  return name;
+/** Cluster name → display name + accent, given the served cluster order. */
+export function clusterMeta(
+  name: string,
+  clusterNames: string[] = [],
+): { name: string; c: string; bg: string } {
+  const i = clusterNames.indexOf(name);
+  const accent = i >= 0 ? CLUSTER_ACCENTS[i % CLUSTER_ACCENTS.length] : undefined;
+  return { name, c: accent?.c ?? dt.textLight, bg: accent?.bg ?? dt.fill1 };
 }
 
 /** First name from a full name (for the greeting). */

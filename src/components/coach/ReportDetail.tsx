@@ -10,9 +10,8 @@
  */
 
 import { useState } from 'react';
-import { Download } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
-import { type CoachReport, pdfDownloadUrl } from '@/services/coachService';
+import { type CoachReport } from '@/services/coachService';
 import { CoachCard, ScoreRing, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import SessionNotes from './SessionNotes';
@@ -38,7 +37,6 @@ export default function ReportDetail({
   const [showBreakdown, setShowBreakdown] = useState(false);
   // A link that downloads the coach-produced PDF; null hides the button when
   // there is no real per-session PDF (empty or a Drive-folder fallback).
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
 
   return (
     <CoachCard testId={`coach-report-detail-${report.id}`} style={{ padding: 24 }}>
@@ -85,18 +83,6 @@ export default function ReportDetail({
               >
                 {delta >= 0 ? '▲' : '▼'} {Math.abs(delta).toFixed(1)} vs. prior
               </span>
-            )}
-            {pdfHref && (
-              <a
-                href={pdfHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                download
-                data-testid={`coach-report-pdf-${report.id}`}
-                style={pdfBtn}
-              >
-                <Download size={15} strokeWidth={2} /> Download PDF
-              </a>
             )}
           </div>
         </div>

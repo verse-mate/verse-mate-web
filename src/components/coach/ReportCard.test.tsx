@@ -29,8 +29,6 @@ function makeReport(overrides: Partial<CoachReport> = {}): CoachReport {
       improvements: ['Leader talk crowded out discussion.'],
       recommendations: ['Hold silence for a full 5 seconds.'],
     },
-    docUrl: '',
-    pdfUrl: '',
     ...overrides,
   };
 }

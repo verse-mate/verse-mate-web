@@ -11,6 +11,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MemoryRouter } from 'react-router-dom';
 import CoachAdminScreen from './CoachAdminScreen';
 import * as coachService from '@/services/coachService';
+import { primeRubricCache } from '@/hooks/useRubric';
 import type { CoachSummary, CoachMonthly, CoachReport, CoachTrends, LeaderMonthlyResponse, AdminCoachClass } from '@/services/coachService';
 
 vi.mock('@/services/coachService', async (io) => {
@@ -50,7 +51,7 @@ const report: CoachReport = {
   dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, score: [4, 4, 5, 4, 4, 4, 2, 4, 3, 4, 4, 3][i], note: `Note ${n}.` })),
   bigIdeas: ['Faith without works is dead.'],
   feedback: { headline: 'Scripture carried the hour.', strengths: [], improvements: [], recommendations: [], overview: [], strengthsProse: [], improvementsProse: [], recommendationsProse: [] },
-  sections: [], docUrl: '', pdfUrl: '', notes: [{ id: 'n1', body: 'Great job on the pairings.', createdAt: '2026-07-19', emailed: true }],
+  sections: [], notes: [{ id: 'n1', body: 'Great job on the pairings.', createdAt: '2026-07-19', emailed: true }],
 };
 const reportsFor = { profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning Study', coachName: '' }, reports: [report] };
 const trendsFor: CoachTrends = {
@@ -66,6 +67,26 @@ const classes: AdminCoachClass[] = [
 ];
 
 beforeEach(() => {
+  // Cluster names and band labels are served, not hardcoded, so the screen
+  // needs the rubric to render them (tasks 8.1-8.3).
+  primeRubricCache({
+    model: 'v3-weighted-100',
+    clusters: [
+      { name: 'Teaching Craft', weight: 33 },
+      { name: 'Building Ministry', weight: 31 },
+      { name: 'Engaging People', weight: 18 },
+      { name: 'Being Real', weight: 18 },
+    ],
+    dimensions: [],
+    statusBands: [
+      { min: 85, label: 'Exceptional', emoji: '🔷' },
+      { min: 72, label: 'Strong', emoji: '🟢' },
+      { min: 60, label: 'On Target', emoji: '🟡' },
+      { min: 45, label: 'Developing', emoji: '🟠' },
+      { min: 0, label: 'Early Stage', emoji: '🔴' },
+    ],
+    dimensionBands: [],
+  });
   vi.mocked(coachService.fetchAdminCoaches).mockResolvedValue(roster);
   vi.mocked(coachService.fetchAdminMonthly).mockResolvedValue(monthly);
   vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue(reportsFor);

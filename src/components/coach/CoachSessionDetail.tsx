@@ -1,6 +1,6 @@
 /**
  * The "Most recent session" detail block on the coaching dashboard Home:
- * a session header (identity, Download PDF, status + delta, score badge) and a
+ * a session header (identity, status + delta, score badge) and a
  * tab bar — Full report · Scorecard · Question coaching · Next steps.
  *
  * Recreated from the design handoff, wired to the real /coach report shape
@@ -14,9 +14,8 @@ import { useMemo, useState } from 'react';
 import {
   type CoachReport,
   type CoachReportSection,
-  pdfDownloadUrl,
 } from '@/services/coachService';
-import { DIMENSION_INFO } from './dimensionInfo';
+import { useRubric } from '@/hooks/useRubric';
 import { dt, letterGrade, ratingForScore, statusBand } from './dashboardTheme';
 
 type Tab = 'report' | 'scorecard' | 'questions' | 'nextsteps';
@@ -33,7 +32,6 @@ export default function CoachSessionDetail({
   label?: string;
 }) {
   const [tab, setTab] = useState<Tab>('report');
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
   const band = statusBand(report.status);
   const deltaText =
     delta == null ? '' : delta > 0 ? `▲ ${delta} pts` : delta < 0 ? `▼ ${Math.abs(delta)} pts` : 'no change';
@@ -61,30 +59,6 @@ export default function CoachSessionDetail({
           </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          {pdfHref && (
-            <a
-              href={pdfHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              data-testid={`coach-report-pdf-${report.id}`}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 7,
-                fontSize: 13,
-                fontWeight: 700,
-                color: dt.gold2,
-                background: dt.goldChip,
-                border: `1px solid ${dt.goldChipBorder}`,
-                padding: '10px 15px',
-                borderRadius: 9,
-                textDecoration: 'none',
-              }}
-            >
-              ↓ Download PDF
-            </a>
-          )}
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.06em', color: band.c }}>{band.label}</div>
             {deltaText && <div style={{ fontSize: 12.5, color: dt.textLight }}>{deltaText} vs. last</div>}
@@ -146,7 +120,6 @@ export default function CoachSessionDetail({
 // ─── Full report ─────────────────────────────────────────────────────────────
 
 function FullReport({ report }: { report: CoachReport }) {
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
   const snapshot = buildSnapshot(report);
   const strengths = feedbackPoints(report.feedback?.strengthsProse, report.feedback?.strengths);
   const improvements = feedbackPoints(report.feedback?.improvementsProse, report.feedback?.improvements);
@@ -284,12 +257,8 @@ function FullReport({ report }: { report: CoachReport }) {
 
       <div style={{ marginTop: 24, fontSize: 13.5, color: dt.textLight, borderTop: `1px dashed ${dt.dashed}`, paddingTop: 16 }}>
         Full metrics — Score Composition & the appendix (attendance, timeline, talk ratio, engagement, monologues,
-        vulnerability, the full dimension scorecard, cross-references, drift log) — are in the downloadable report.{' '}
-        {pdfHref ? (
-          <a href={pdfHref} target="_blank" rel="noopener noreferrer" download style={{ color: dt.gold, fontWeight: 600 }}>
-            Download the full PDF →
-          </a>
-        ) : null}
+        vulnerability, the full dimension scorecard, cross-references, drift log) — are on this page, in the sections
+        above. Nothing is held back in a separate document.
       </div>
     </div>
   );
@@ -299,6 +268,9 @@ function FullReport({ report }: { report: CoachReport }) {
 
 function Scorecard({ report }: { report: CoachReport }) {
   const [open, setOpen] = useState<number | null>(null);
+  // The dimension targets come from the served rubric, so the scorecard shows
+  // what the score was actually computed against (task 8.3).
+  const { rubric } = useRubric();
   if (!report.dimensions?.length) {
     return <EmptyPanel>No dimension scorecard is available for this session yet.</EmptyPanel>;
   }
@@ -311,7 +283,7 @@ function Scorecard({ report }: { report: CoachReport }) {
         const r = ratingForScore(d.score);
         const isOpen = open === d.n;
         const pct = d.score == null ? 0 : (d.score / 5) * 100;
-        const desc = DIMENSION_INFO[d.n]?.target ?? '';
+        const desc = rubric?.dimensions.find((x) => x.n === d.n)?.target ?? '';
         return (
           <div key={d.n} style={{ borderBottom: `1px solid ${dt.rowDivider}` }}>
             <button

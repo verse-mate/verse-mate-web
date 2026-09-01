@@ -9,9 +9,10 @@
  */
 
 import { useState } from 'react';
-import { ChevronDown, Download, FileText } from 'lucide-react';
+import { ChevronDown, FileText } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
-import { pdfDownloadUrl, statusColor, type CoachReport } from '@/services/coachService';
+import { useRubric } from '@/hooks/useRubric';
+import { statusColor, type CoachReport } from '@/services/coachService';
 import { CoachCard, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import SessionNotes from './SessionNotes';
@@ -30,9 +31,10 @@ export default function ReportCard({
   coachId?: string;
 }) {
   const [open, setOpen] = useState(false);
-  const color = statusColor(report.status);
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const color = statusColor(report.status, bandLabels);
   // Direct-download link to the coach-produced PDF; null hides the button.
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
 
   return (
     <CoachCard testId={`coach-report-${report.id}`} style={{ padding: 0, overflow: 'hidden' }}>
@@ -115,33 +117,6 @@ export default function ReportCard({
 
           {/* The full coaching narrative — identical to <ReportDetail>. */}
           <ReportBody report={report} />
-
-          {pdfHref && (
-            <a
-              href={pdfHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              data-testid={`coach-report-pdf-${report.id}`}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 6,
-                marginTop: 16,
-                padding: '8px 14px',
-                borderRadius: 9,
-                border: `1px solid ${vmTokens.gold}`,
-                background: 'transparent',
-                color: vmTokens.gold,
-                fontSize: 13,
-                fontWeight: 600,
-                cursor: 'pointer',
-                textDecoration: 'none',
-              }}
-            >
-              <Download size={15} strokeWidth={2} /> Download PDF
-            </a>
-          )}
 
           <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} compact />
         </div>

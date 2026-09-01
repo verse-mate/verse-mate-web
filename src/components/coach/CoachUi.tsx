@@ -11,6 +11,7 @@ import { CSSProperties, ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { GraduationCap, LogIn } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
+import { useRubric } from '@/hooks/useRubric';
 import { statusColor } from '@/services/coachService';
 import type { CoachAuthReason, CoachReport } from '@/services/coachService';
 
@@ -69,7 +70,11 @@ export function StatusPill({
   emoji?: string;
   size?: 'sm' | 'md';
 }) {
-  const color = statusColor(status);
+  // Band labels come from the served rubric, so a renamed band keeps its
+  // colour instead of falling through to the bottom one.
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const color = statusColor(status, bandLabels);
   return (
     <span
       style={{
@@ -104,7 +109,11 @@ export function ScoreRing({
   status: string;
   diameter?: number;
 }) {
-  const color = statusColor(status);
+  // Band labels come from the served rubric, so a renamed band keeps its
+  // colour instead of falling through to the bottom one.
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const color = statusColor(status, bandLabels);
   const pct = Math.max(0, Math.min(100, value));
   return (
     <div

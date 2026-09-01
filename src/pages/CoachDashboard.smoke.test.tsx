@@ -107,8 +107,6 @@ function makeReport(over: Partial<CoachReport> = {}): CoachReport {
         bullets: ['Mike, what are you thinking about your wealth? — Level 4 — apply to life — The session signature moment.'],
       },
     ],
-    docUrl: '',
-    pdfUrl: 'https://drive.google.com/file/d/abc/view',
     ...over,
   };
 }

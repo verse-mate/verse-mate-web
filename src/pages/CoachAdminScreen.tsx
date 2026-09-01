@@ -44,6 +44,8 @@ import { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName } from '@/components/coach/dashboardTheme';
+import { clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
+import type { RubricContract } from '@/services/rubric';
 
 type View = 'leaders' | 'leader' | 'trends' | 'links';
 
@@ -448,6 +450,8 @@ function StrengthsGrowth({ summary }: { summary: LeaderMonthlySummary }) {
 }
 
 function Development({ trends, latest, monthly }: { trends: CoachTrends | undefined; latest: CoachReport; monthly: LeaderMonthlySummary | null }) {
+  // Cluster names and order from the served rubric (task 8.2).
+  const { rubric } = useRubric();
   const scoreSeries = trends?.scoreSeries ?? [];
   const trendValues = scoreSeries.slice(-7).map((p) => Math.round(p.score));
   const trendLabels = scoreSeries.slice(-7).map((p) => shortDate(p.date));
@@ -470,13 +474,15 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
   const fallback = monthlyClusters ? null : clusterAvgsFromSessions(trends?.dimensionSeries ?? [], latest);
   const clusterAvg = monthlyClusters ?? fallback?.avg ?? null;
   const clustersArePartial = !monthlyClusters && !!fallback;
-  const clusters = clusterAvg
-    ? [
-        { name: 'Building Ministry', pct: clusterAvg.bm },
-        { name: 'Teaching Craft', pct: clusterAvg.tc },
-        { name: 'Engaging People', pct: clusterAvg.ep },
-        { name: 'Being Real', pct: clusterAvg.br },
-      ]
+  // Names and order from the SERVED rubric; the bm/tc/ep/br keys the monthly
+  // payload uses are DERIVED from each name's initials rather than written out
+  // again here. Four cluster names in this file was a fifth copy of the rubric.
+  const clusterKeyed = clusterAvg as Record<string, number | null> | null;
+  const clusters = clusterKeyed
+    ? clusterOrder(rubric).map((name) => ({
+        name,
+        pct: clusterKeyed[shortCode(name).toLowerCase()] ?? null,
+      }))
     : [];
 
   // Dimensions over time — last 4 dated columns from the dimension series.
@@ -735,8 +741,25 @@ function TrendsView({ onOpenLeader, onBack }: { onOpenLeader: (id: string) => vo
   );
 }
 
-const CLUSTER_KEY = 'BM = Building Ministry · TC = Teaching Craft · EP = Engaging People · BR = Being Real · SESS = Sessions · COMP = Composite (out of 100)';
-const DIM_KEY = 'D1 Structure & Flow · D2 Newcomer Welcome · D3 Scripture · D4 Facilitation · D5 Application · D6 Participation · D7 Visual Aids · D8 Vulnerability · D9 Memory · D10 Homework · D11 Prayer · D12 Leader Dev';
+/**
+ * Column legends, BUILT from the served rubric rather than written out.
+ *
+ * Both were full copies of the definition — four cluster names in one and all
+ * twelve dimension names in the other — so a rename left the legend describing
+ * columns that no longer existed, which is worse than no legend.
+ */
+function clusterKeyLine(rubric: RubricContract | null): string {
+  const clusters = (rubric?.clusters ?? [])
+    .map((c) => `${shortCode(c.name)} = ${c.name}`)
+    .join(' · ');
+  return [clusters, 'SESS = Sessions', 'COMP = Composite (out of 100)']
+    .filter(Boolean)
+    .join(' · ');
+}
+
+function dimKeyLine(rubric: RubricContract | null): string {
+  return (rubric?.dimensions ?? []).map((d) => `D${d.n} ${d.name}`).join(' · ');
+}
 
 function TrendsDetail({
   data,
@@ -757,6 +780,8 @@ function TrendsDetail({
 }) {
   const composite = data.program.avgScore;
   const band = statusBand(compositeStatus(composite));
+  // Legends are built from the served rubric (task 8.2).
+  const { rubric } = useRubric();
   const leaders = [...data.leaders].sort((a, b) => (b.avgScore ?? 0) - (a.avgScore ?? 0));
   const top = leaders[0];
 
@@ -844,7 +869,7 @@ function TrendsDetail({
               ))}
               <div style={{ textAlign: 'right' }}>STATUS</div>
             </div>
-            {showKey && <div style={{ padding: '10px 16px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.6 }}>{CLUSTER_KEY}</div>}
+            {showKey && <div style={{ padding: '10px 16px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.6 }}>{clusterKeyLine(rubric)}</div>}
             {leaders.map((l, i) => {
               const b = statusBand(l.status);
               const cl = clusterAvgs(l);
@@ -894,7 +919,7 @@ function TrendsDetail({
               <button key={i} type="button" onClick={onToggleKey} style={{ textAlign: 'center', cursor: 'pointer', background: 'none', border: 'none', font: 'inherit', color: 'inherit', textDecoration: 'underline dotted', textUnderlineOffset: 3 }}>D{i + 1}</button>
             ))}
           </div>
-          {showKey && <div style={{ padding: '10px 12px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.7 }}>{DIM_KEY}</div>}
+          {showKey && <div style={{ padding: '10px 12px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.7 }}>{dimKeyLine(rubric)}</div>}
           {leaders.map((l) => (
             <div key={l.id} style={{ display: 'grid', gridTemplateColumns: '150px repeat(12, 1fr)', gap: 3, padding: '5px 12px', borderTop: `1px solid ${dt.rowDivider}`, alignItems: 'center' }}>
               <button type="button" onClick={() => onOpenLeader(l.id)} title={`Open ${l.name}'s page`} style={{ ...leaderNameButton, fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{l.name}</button>

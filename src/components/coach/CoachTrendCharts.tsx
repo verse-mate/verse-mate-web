@@ -24,16 +24,23 @@ import {
 } from 'recharts';
 import { vmTokens } from '@/styles/themeStyles';
 import type { CoachTrends } from '@/services/coachService';
+import { useRubric } from '@/hooks/useRubric';
 import { CoachCard, SectionLabel } from './CoachUi';
 
-// Cluster palette — mid-tone hues that read on both light and dark surfaces.
-const CLUSTER_COLORS: Record<string, string> = {
-  'Teaching Craft': '#B09A6D', // brand gold
-  'Building Ministry': '#4F86C6',
-  'Engaging People': '#5FA777',
-  'Being Real': '#C77DA6',
-};
-const CLUSTER_ORDER = ['Teaching Craft', 'Building Ministry', 'Engaging People', 'Being Real'];
+/**
+ * Cluster palette — mid-tone hues that read on both light and dark surfaces.
+ *
+ * Keyed by POSITION in the served cluster order, not by cluster NAME. A name
+ * map was a fifth copy of the rubric: renaming a cluster silently dropped its
+ * colour, and adding one gave it no colour at all.
+ */
+const CLUSTER_PALETTE = [
+  '#B09A6D', // brand gold
+  '#4F86C6',
+  '#5FA777',
+  '#C77DA6',
+];
+const FALLBACK_CLUSTER_COLOR = '#9a9a9a';
 
 const AXIS = '#9a9a9a';
 const GRID = 'rgba(150,150,150,0.2)';
@@ -107,6 +114,21 @@ export function ClusterTrendCard({
     () => (trends?.clusterSeries || []).map((r) => ({ ...r, label: shortDate(String(r.date)) })),
     [trends],
   );
+  // Cluster names and their order come from the SERVED rubric. Until it
+  // arrives, fall back to the keys the series itself carries — the chart is
+  // about the leader's own data and must not wait on an explainer.
+  const { rubric } = useRubric();
+  const clusterNames = useMemo(() => {
+    const served = (rubric?.clusters ?? []).map((c) => c.name);
+    if (served.length > 0) return served;
+    const fromData = new Set<string>();
+    for (const row of clusterData) {
+      for (const key of Object.keys(row)) {
+        if (key !== 'date' && key !== 'label') fromData.add(key);
+      }
+    }
+    return [...fromData];
+  }, [rubric, clusterData]);
   const clickable = !!onSelectDate;
   const handleClick = clickable
     ? (state: Parameters<NonNullable<React.ComponentProps<typeof BarChart>['onClick']>>[0]) => {
@@ -131,12 +153,18 @@ export function ClusterTrendCard({
               <XAxis dataKey="label" tick={{ fill: AXIS, fontSize: 11 }} tickLine={false} axisLine={{ stroke: GRID }} />
               <YAxis domain={[0, 100]} tick={{ fill: AXIS, fontSize: 11 }} tickLine={false} axisLine={false} width={40} />
               <Tooltip content={<ClusterTooltip />} cursor={{ fill: 'rgba(150,150,150,0.08)' }} />
-              {CLUSTER_ORDER.map((name) => (
-                <Bar key={name} dataKey={name} stackId="c" fill={CLUSTER_COLORS[name]} radius={[0, 0, 0, 0]} />
+              {clusterNames.map((name, i) => (
+                <Bar
+                  key={name}
+                  dataKey={name}
+                  stackId="c"
+                  fill={CLUSTER_PALETTE[i] ?? FALLBACK_CLUSTER_COLOR}
+                  radius={[0, 0, 0, 0]}
+                />
               ))}
             </BarChart>
           </ResponsiveContainer>
-          <Legend />
+          <Legend clusterNames={clusterNames} />
         </>
       ) : (
         <EmptyChart>No sessions yet.</EmptyChart>
@@ -145,12 +173,12 @@ export function ClusterTrendCard({
   );
 }
 
-function Legend() {
+function Legend({ clusterNames }: { clusterNames: string[] }) {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 12, justifyContent: 'center' }}>
-      {CLUSTER_ORDER.map((name) => (
+      {clusterNames.map((name, i) => (
         <span key={name} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11.5, color: vmTokens.textSecondary }}>
-          <span style={{ width: 10, height: 10, borderRadius: 3, background: CLUSTER_COLORS[name] }} />
+          <span style={{ width: 10, height: 10, borderRadius: 3, background: CLUSTER_PALETTE[i] ?? FALLBACK_CLUSTER_COLOR }} />
           {name}
         </span>
       ))}
