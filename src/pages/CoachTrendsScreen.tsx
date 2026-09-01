@@ -19,7 +19,8 @@ import {
 } from '@/hooks/useCoach';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachLineChart from '@/components/coach/CoachLineChart';
-import { dt, statusBand, clusterCode, clusterMeta } from '@/components/coach/dashboardTheme';
+import { dt, statusBand, clusterMeta } from '@/components/coach/dashboardTheme';
+import { clusterOrder, useRubric } from '@/hooks/useRubric';
 import type { LeaderMonthlySummary } from '@/services/coachService';
 
 export default function CoachTrendsScreen() {
@@ -127,6 +128,10 @@ function MonthDetail({
   setOpenApp: (v: number | null) => void;
 }) {
   const band = statusBand(s.status.label);
+  // Cluster accents follow the served order, so a renamed or added cluster
+  // keeps its chip instead of falling through to grey.
+  const { rubric } = useRubric();
+  const clusterNames = clusterOrder(rubric);
   const deltaText =
     s.delta == null ? 'Baseline month' : `${s.delta > 0 ? '▲ ' : '▼ '}${Math.abs(s.delta).toFixed(1)} vs. ${s.priorMonthLabel}`;
   const best = [...s.trajectory].sort((a, b) => b.composite - a.composite)[0];
@@ -326,7 +331,7 @@ function MonthDetail({
               {isOpen && (
                 <div style={{ padding: '4px 18px 16px', background: dt.innerBg, borderTop: `1px solid ${dt.rowDivider}` }}>
                   {sess.dimensions.map((d) => {
-                    const cm = clusterMeta(clusterCode(d.cluster));
+                    const cm = clusterMeta(d.cluster, clusterNames);
                     return (
                       <div key={d.n} style={{ display: 'grid', gridTemplateColumns: '20px 1.3fr 138px 48px 2fr', gap: 12, alignItems: 'center', padding: '9px 0', borderTop: `1px solid ${dt.rowDivider}` }}>
                         <div style={{ fontSize: 12, color: '#B7A98A', fontWeight: 600 }}>{d.n}</div>

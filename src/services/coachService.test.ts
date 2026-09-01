@@ -17,7 +17,6 @@ import {
   fetchCoachReportsFor,
   fetchCoachMe,
   saveCoachZoomLink,
-  pdfDownloadUrl,
   saveRecordingLink,
   statusColor,
   updateCoachClass,
@@ -93,9 +92,27 @@ describe('coachService', () => {
     expect(saved).toBe('https://zoom.us/j/123');
   });
 
-  it('assigns distinct status colors, gold for Exceptional', () => {
-    expect(statusColor('Exceptional')).toBe('var(--vm-dust)');
-    expect(statusColor('Exceptional')).not.toBe(statusColor('Strong'));
+  // Band labels are now SERVED, so the colour follows a band's POSITION rather
+  // than its name. The switch this replaced named all five labels, which made
+  // it a copy of the rubric: renaming a band dropped its colour to the red
+  // default, showing a leader in the TOP band the colour of the bottom one.
+  const BANDS = ['Exceptional', 'Strong', 'On Target', 'Developing', 'Early Stage'];
+
+  it('assigns distinct status colors, gold for the top band', () => {
+    expect(statusColor('Exceptional', BANDS)).toBe('var(--vm-dust)');
+    expect(statusColor('Exceptional', BANDS)).not.toBe(
+      statusColor('Strong', BANDS),
+    );
+  });
+
+  it('a RENAMED top band still gets the top colour', () => {
+    expect(statusColor('Outstanding', ['Outstanding', 'Strong'])).toBe(
+      'var(--vm-dust)',
+    );
+  });
+
+  it('an unknown label falls back rather than throwing', () => {
+    expect(statusColor('Nonsense', BANDS)).toBe('#B91C1C');
   });
 
   it('fetches the admin roster', async () => {
@@ -300,40 +317,3 @@ describe('coachService', () => {
   });
 });
 
-describe('pdfDownloadUrl', () => {
-  it('returns null for empty / missing values', () => {
-    expect(pdfDownloadUrl(undefined)).toBeNull();
-    expect(pdfDownloadUrl('')).toBeNull();
-    expect(pdfDownloadUrl('   ')).toBeNull();
-  });
-
-  it('returns null for a Drive folder link (the exporter fallback)', () => {
-    expect(
-      pdfDownloadUrl('https://drive.google.com/drive/folders/1vvVpdPk2ARawV3wOM9LeXJ0BtpVJ2qjV'),
-    ).toBeNull();
-  });
-
-  it('rewrites a Drive file /view link to a direct download', () => {
-    expect(pdfDownloadUrl('https://drive.google.com/file/d/ABC123def/view?usp=drivesdk')).toBe(
-      'https://drive.google.com/uc?export=download&id=ABC123def',
-    );
-  });
-
-  it('rewrites an ?id= Drive link to a direct download', () => {
-    expect(pdfDownloadUrl('https://drive.google.com/open?id=XYZ-789')).toBe(
-      'https://drive.google.com/uc?export=download&id=XYZ-789',
-    );
-  });
-
-  it('exports Google Docs links as PDF', () => {
-    expect(pdfDownloadUrl('https://docs.google.com/document/d/DOC_1/edit?usp=drivesdk')).toBe(
-      'https://docs.google.com/document/d/DOC_1/export?format=pdf',
-    );
-  });
-
-  it('passes a plain absolute PDF URL through unchanged', () => {
-    expect(pdfDownloadUrl('https://cdn.versemate.org/reports/x.pdf')).toBe(
-      'https://cdn.versemate.org/reports/x.pdf',
-    );
-  });
-});
