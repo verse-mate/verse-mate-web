@@ -58,8 +58,17 @@ export default function CoachDashboardScreen() {
 
   const list = useMemo(() => [...(reportList || [])].sort(byDateDesc), [reportList]);
   const selId = params.get('s');
-  const selectedIdx = selId ? Math.max(0, list.findIndex((r) => r.id === selId)) : 0;
-  const selected: CoachReport | null = list[selectedIdx] ?? null;
+  // findIndex returns -1 when the id matches nothing, and Math.max(0, -1) is 0
+  // — so an unknown deep link silently showed the LATEST session instead. An
+  // emailed link carrying a stale id would have shown the leader a different
+  // session's score with nothing to indicate it. An unknown id is now an
+  // explicit not-found (spec: "Deep link to an unknown session").
+  const foundIdx = selId ? list.findIndex((r) => r.id === selId) : 0;
+  const deepLinkMissing = selId != null && list.length > 0 && foundIdx === -1;
+  const selectedIdx = foundIdx === -1 ? 0 : foundIdx;
+  const selected: CoachReport | null = deepLinkMissing
+    ? null
+    : (list[selectedIdx] ?? null);
   const prev = list[selectedIdx + 1];
   const latest = list[0] ?? null;
   const delta = selected && prev ? Math.round((selected.score - prev.score) * 100) / 100 : null;
@@ -77,7 +86,9 @@ export default function CoachDashboardScreen() {
           (admin ? forReports : selfReports).refetch();
         }}
       >
-        {!latest || !selected ? (
+        {deepLinkMissing ? (
+          <SessionNotFound onBack={() => setParams({}, { replace: true })} />
+        ) : !latest || !selected ? (
           <EmptyHome leaderName={leaderName} admin={admin} onAddClass={() => navigate(`${base}/sessions`)} />
         ) : (
           <>
@@ -649,3 +660,28 @@ const linkBtn: React.CSSProperties = {
   fontSize: 13.5,
   cursor: 'pointer',
 };
+
+/**
+ * A deep link whose session id matches nothing this leader can see.
+ *
+ * Says so plainly rather than falling back to the most recent session: the link
+ * came from an email, and showing a DIFFERENT session's score under it is worse
+ * than showing nothing, because nothing about the page would reveal the
+ * substitution.
+ */
+function SessionNotFound({ onBack }: { onBack: () => void }) {
+  return (
+    <div data-testid="coach-session-not-found" style={{ padding: '32px 0' }}>
+      <h2 style={{ fontSize: 20, fontWeight: 600, margin: '0 0 8px' }}>
+        We couldn&apos;t find that session
+      </h2>
+      <p style={{ margin: '0 0 16px', fontSize: 15, color: '#666' }}>
+        The link may be out of date, or the session may belong to another
+        leader. Your other sessions are unaffected.
+      </p>
+      <button type="button" onClick={onBack} style={linkBtn}>
+        ← Back to the most recent session
+      </button>
+    </div>
+  );
+}
