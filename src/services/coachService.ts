@@ -67,6 +67,12 @@ export interface CoachReport {
   /** Admin-editable recording URL for this session (Zoom / Fireflies / Drive).
    *  Empty string when none set. */
   recordingUrl?: string;
+  /**
+   * DETAIL-ONLY (task 4.5). Whether VerseMate holds a recording for this
+   * session — never WHERE it is. The address is minted per session by
+   * `mintRecordingUrl`, so opening a list mints nothing.
+   */
+  hasRetainedRecording?: boolean;
   /** Coaching notes on this session, newest first. Shown editable to admins
    *  (composer + history) and read-only to the leader on their dashboard. */
   notes?: CoachNote[];
@@ -268,6 +274,67 @@ export function fetchCoachMe(): Promise<CoachMe> {
 export async function fetchCoachReports(): Promise<CoachReport[]> {
   const data = await coachRequest<{ reports: CoachReport[] }>('reports');
   return data.reports || [];
+}
+
+/**
+ * Mint a short-lived address for ONE session's retained recording.
+ *
+ * Called at PLAYBACK START, not at render: an address minted when a detail view
+ * opens is already spent by the time someone left the tab and came back, and
+ * minting per rendered row would sign one URL per session on every page load.
+ */
+export async function mintRecordingUrl(
+  reportId: string,
+): Promise<{ url: string; expiresInSeconds: number } | null> {
+  try {
+    return await coachRequest<{ url: string; expiresInSeconds: number }>(
+      `reports/${encodeURIComponent(reportId)}/recording-url`,
+    );
+  } catch {
+    // Every refusal looks the same by design (no session, not yours, nothing
+    // retained), so there is nothing to distinguish here either.
+    return null;
+  }
+}
+
+/** A session whose recording could not be retrieved (tasks 4.9a, 8.5a). */
+export interface PendingReshare {
+  sourceSessionId: string;
+  coachId: string | null;
+  title: string;
+  sessionDate: string;
+  requestedAt: string;
+  attempts: number;
+}
+
+/** GET /api/coach/admin/reshares — admin only. */
+export async function fetchPendingReshares(): Promise<PendingReshare[]> {
+  const data = await coachRequest<{ requests: PendingReshare[] }>(
+    'admin/reshares',
+  );
+  return data.requests || [];
+}
+
+/** POST /api/coach/admin/reshares/:id/send — asks the leader to re-share. */
+export function sendReshareRequest(sourceSessionId: string): Promise<{ sent: boolean }> {
+  return coachRequest<{ sent: boolean }>(
+    `admin/reshares/${encodeURIComponent(sourceSessionId)}/send`,
+    { method: 'POST' },
+  );
+}
+
+/**
+ * POST /api/coach/admin/reshares/:id/resolve — the session re-enters
+ * retrieval. Intake idempotence means the report it eventually produces is not
+ * a duplicate.
+ */
+export function resolveReshareRequest(
+  sourceSessionId: string,
+): Promise<{ resolved: boolean }> {
+  return coachRequest<{ resolved: boolean }>(
+    `admin/reshares/${encodeURIComponent(sourceSessionId)}/resolve`,
+    { method: 'POST' },
+  );
 }
 
 /** GET /api/coach/trends — derived score / cluster / dimension series. */

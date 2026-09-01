@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { Send, Video } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
+import RetainedRecording from './RetainedRecording';
 import type { CoachNote, CoachReport } from '@/services/coachService';
 import { useAddNote, useSetRecordingLink } from '@/hooks/useCoach';
 
@@ -37,9 +38,13 @@ export default function SessionNotes({
   const editable = admin && !!coachId;
   const recording = report.recordingUrl?.trim() || '';
   const notes = report.notes ?? [];
+  // Sessions VerseMate ingested carry their own recording — no admin
+  // attachment step (task 8.5).
+  const retained = report.hasRetainedRecording === true;
 
-  // Nothing to show for a leader with no recording and no notes.
-  if (!editable && !recording && notes.length === 0) return null;
+  // Nothing to show for a leader with no recording, nothing retained and no
+  // notes.
+  if (!editable && !recording && !retained && notes.length === 0) return null;
 
   return (
     <section
@@ -52,6 +57,15 @@ export default function SessionNotes({
     >
       <p style={{ margin: '0 0 10px', ...labelStyle(compact) }}>Recording &amp; coaching notes</p>
       <RecordingRow report={report} editable={editable} coachId={coachId} recording={recording} />
+      {retained && !recording && (
+        <div style={{ margin: '8px 0 4px' }}>
+          <RetainedRecording
+            reportId={report.id}
+            hasRetained={retained}
+            attachedUrl={recording}
+          />
+        </div>
+      )}
       <NotesPanel
         report={report}
         editable={editable}

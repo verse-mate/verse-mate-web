@@ -42,6 +42,7 @@ import type {
 } from '@/services/coachService';
 import { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
+import PendingReshares from '@/components/coach/PendingReshares';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName } from '@/components/coach/dashboardTheme';
 import { clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
@@ -858,6 +859,10 @@ function TrendsDetail({
       )}
 
       {/* Leaderboard */}
+      {/* Sessions waiting on a re-shared recording (task 8.5a). Rendered
+          above the leaderboard because they are the sessions that produce no
+          report at all — the ones a leaderboard cannot show. */}
+      <PendingReshares />
       <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: '0 0 12px' }}>Leader leaderboard</h3>
       <div style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 12, overflow: 'hidden', marginBottom: 30 }}>
         <div style={{ overflowX: 'auto' }}>
