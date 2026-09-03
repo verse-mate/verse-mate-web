@@ -15,7 +15,9 @@ import {
   type CoachReport,
   type CoachReportSection,
 } from '@/services/coachService';
+import { useCoachReportDetail } from '@/hooks/useCoach';
 import { useRubric } from '@/hooks/useRubric';
+import RetainedRecording from './RetainedRecording';
 import { dt, letterGrade, ratingForScore, statusBand } from './dashboardTheme';
 
 type Tab = 'report' | 'scorecard' | 'questions' | 'nextsteps';
@@ -33,6 +35,14 @@ export default function CoachSessionDetail({
 }) {
   const [tab, setTab] = useState<Tab>('report');
   const band = statusBand(report.status);
+  // Whether VerseMate holds this session's recording is a DETAIL-only field:
+  // the reports list deliberately does not carry it, because a list that knew
+  // would be one step from minting an address per row. So the flag is fetched
+  // here, where exactly one session is open, which is also the only place the
+  // spec allows an address to be issued at all.
+  const detail = useCoachReportDetail(report.id).data;
+  const attachedRecording = (detail?.recordingUrl ?? report.recordingUrl ?? '').trim();
+  const hasRetained = detail?.hasRetainedRecording === true;
   const deltaText =
     delta == null ? '' : delta > 0 ? `▲ ${delta} pts` : delta < 0 ? `▼ ${Math.abs(delta)} pts` : 'no change';
 
@@ -83,6 +93,19 @@ export default function CoachSessionDetail({
           </div>
         </div>
       </div>
+
+      {/* The session's own recording, for the leader whose session it is.
+          Sessions VerseMate ingested carry one with no admin attachment step;
+          an admin's pasted link still takes precedence. */}
+      {(hasRetained || attachedRecording) && (
+        <div style={{ marginTop: 18 }}>
+          <RetainedRecording
+            reportId={report.id}
+            hasRetained={hasRetained}
+            attachedUrl={attachedRecording}
+          />
+        </div>
+      )}
 
       {/* Tabs */}
       <div style={{ display: 'flex', gap: 6, margin: '22px 0 4px', borderBottom: `1px solid ${dt.border2}`, flexWrap: 'wrap' }}>

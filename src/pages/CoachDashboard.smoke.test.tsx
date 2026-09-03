@@ -33,6 +33,8 @@ vi.mock('@/services/coachService', async (importOriginal) => {
     fetchCoachReportsFor: vi.fn(),
     fetchCoachTrendsFor: vi.fn(),
     fetchAllCoachClasses: vi.fn(),
+    fetchCoachReportDetail: vi.fn(),
+    mintRecordingUrl: vi.fn(),
   };
 });
 
@@ -198,6 +200,8 @@ beforeEach(() => {
   vi.mocked(coachService.fetchCoachTrends).mockResolvedValue(trends);
   vi.mocked(coachService.fetchCoachClasses).mockResolvedValue(classes);
   vi.mocked(coachService.fetchMyMonthlySummary).mockResolvedValue(monthly);
+  // No retained recording by default; the case below opts in.
+  vi.mocked(coachService.fetchCoachReportDetail).mockResolvedValue(null);
   // Admin drill-in ("For") endpoints, same shapes, per-leader.
   vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
     profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning', coachName: '' },
@@ -220,6 +224,32 @@ describe('Coaching dashboard, Home', () => {
     expect(screen.getByText('James — Saturday Morning Group')).toBeInTheDocument();
     // Session detail header + tabs.
     expect(screen.getByTestId('coach-tab-scorecard')).toBeInTheDocument();
+  });
+
+  it('offers the RECORDING on a session VerseMate ingested', async () => {
+    // The component and its endpoint both existed and were tested, and neither
+    // was reachable: SessionNotes (which mounts it) renders only on the
+    // admin-gated manage screen, so a leader opening their own session saw
+    // nothing. Found by driving the real portal against a real backend.
+    vi.mocked(coachService.fetchCoachReportDetail).mockResolvedValue({
+      ...reports[0],
+      hasRetainedRecording: true,
+    } as CoachReport);
+
+    renderAt('/coach', <CoachDashboardScreen />);
+    expect(
+      await screen.findByTestId(`coach-recording-play-${reports[0].id}`),
+    ).toBeInTheDocument();
+    // And nothing is minted just by opening the session.
+    expect(coachService.mintRecordingUrl).not.toHaveBeenCalled();
+  });
+
+  it('offers NOTHING when the session has no retained recording', async () => {
+    renderAt('/coach', <CoachDashboardScreen />);
+    await screen.findByText(/Good (morning|afternoon|evening), Bryan/);
+    expect(
+      screen.queryByTestId(`coach-recording-play-${reports[0].id}`),
+    ).toBeNull();
   });
 
   it('switches to the Scorecard tab and expands a dimension', async () => {
