@@ -4,7 +4,7 @@
  *
  * These screens follow a dedicated, high-fidelity handoff (see
  * design_handoff_coaching_dashboard) with a fixed warm-cream + Newsreader-serif
- * look — deliberately its own surface, distinct from the app's theme-aware
+ * look, deliberately its own surface, distinct from the app's theme-aware
  * `vmTokens`. The palette is therefore hard-coded here (light only) so the
  * dashboard renders identically regardless of the app's Auto/Light/Dark
  * setting, exactly as the handoff specifies.
@@ -84,41 +84,55 @@ export function ratingForScore(score: number | null): Band {
   return { label: 'NEEDS WORK', c: dt.rust, bg: dt.rustBg };
 }
 
-/** Color styling for a session/month status label (Exceptional…Early Stage). */
-export function statusBand(status: string): Band {
-  switch (status) {
-    case 'Exceptional':
-      return { label: status, c: dt.green, bg: dt.greenBg };
-    case 'Strong':
-      return { label: status, c: dt.gold, bg: dt.goldChip };
-    case 'On Target':
-      return { label: status, c: dt.gold, bg: dt.goldChip };
-    case 'Developing':
-      return { label: status, c: dt.rust, bg: dt.rustBg };
-    default:
-      return { label: status || 'Early Stage', c: dt.rust, bg: dt.rustBg };
-  }
+/**
+ * Styling for a status label, keyed by the band's POSITION in the served order.
+ *
+ * This was a switch naming all five labels with a rust default, which made it
+ * the sixth hand-maintained copy of the rubric and put the bottom band's colour
+ * on any label it did not recognise. It is the leader's own dashboard, so a
+ * renamed or added band showed every leader in it the worst colour on the
+ * page. Same treatment as `coachService.statusColor`, for the same reason.
+ */
+const BAND_STYLES: Band[] = [
+  { label: '', c: dt.green, bg: dt.greenBg },
+  { label: '', c: dt.gold, bg: dt.goldChip },
+  { label: '', c: dt.gold, bg: dt.goldChip },
+  { label: '', c: dt.rust, bg: dt.rustBg },
+  { label: '', c: dt.rust, bg: dt.rustBg },
+];
+
+/** Neutral, for a label this cannot place: unknown is not the same as bad. */
+const BAND_UNPLACED = { c: dt.textLight, bg: dt.fill1 };
+
+export function statusBand(status: string, bandLabels: string[] = []): Band {
+  const i = bandLabels.indexOf(status);
+  const style = i < 0 ? BAND_UNPLACED : (BAND_STYLES[i] ?? BAND_UNPLACED);
+  return { label: status, c: style.c, bg: style.bg };
 }
 
-/** Cluster short-code → display name + accent (handoff `clusterMeta`). */
-export function clusterMeta(code: string): { name: string; c: string; bg: string } {
-  const map: Record<string, { name: string; c: string; bg: string }> = {
-    TC: { name: 'Teaching Craft', c: dt.gold, bg: dt.goldChip },
-    BM: { name: 'Building Ministry', c: dt.blue, bg: dt.blueBg },
-    EP: { name: 'Engaging People', c: dt.green, bg: dt.greenBg },
-    BR: { name: 'Being Real', c: dt.purple, bg: dt.purpleBg },
-  };
-  return map[code] || { name: code, c: dt.textLight, bg: dt.fill1 };
-}
+/**
+ * Cluster accents, by POSITION in the served cluster order.
+ *
+ * These were a name→colour map with the four cluster names written out, which
+ * made this file one of five hand-maintained copies of the rubric: renaming a
+ * cluster silently dropped its accent, and the name-substring matcher below it
+ * ("includes('teaching')") would have quietly mis-coded a new one.
+ */
+const CLUSTER_ACCENTS = [
+  { c: dt.gold, bg: dt.goldChip },
+  { c: dt.blue, bg: dt.blueBg },
+  { c: dt.green, bg: dt.greenBg },
+  { c: dt.purple, bg: dt.purpleBg },
+];
 
-/** Map a full cluster name → its short code (for the monthly per-session table). */
-export function clusterCode(name: string): string {
-  const n = name.toLowerCase();
-  if (n.includes('teaching')) return 'TC';
-  if (n.includes('building') || n.includes('ministry')) return 'BM';
-  if (n.includes('engaging')) return 'EP';
-  if (n.includes('being') || n.includes('real')) return 'BR';
-  return name;
+/** Cluster name → display name + accent, given the served cluster order. */
+export function clusterMeta(
+  name: string,
+  clusterNames: string[] = [],
+): { name: string; c: string; bg: string } {
+  const i = clusterNames.indexOf(name);
+  const accent = i >= 0 ? CLUSTER_ACCENTS[i % CLUSTER_ACCENTS.length] : undefined;
+  return { name, c: accent?.c ?? dt.textLight, bg: accent?.bg ?? dt.fill1 };
 }
 
 /** First name from a full name (for the greeting). */
@@ -126,7 +140,7 @@ export function firstName(name: string): string {
   return (name || '').trim().split(/\s+/)[0] || name;
 }
 
-/** Conventional letter grade for a 0–100 composite — the design leads with a
+/** Conventional letter grade for a 0–100 composite, the design leads with a
  *  letter grade (the number stays visible alongside it). */
 export function letterGrade(score: number): string {
   const s = Math.round(score);

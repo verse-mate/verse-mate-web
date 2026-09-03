@@ -1,5 +1,5 @@
 /**
- * Coaching dashboard — Home (/coach for an evaluated leader).
+ * Coaching dashboard, Home (/coach for an evaluated leader).
  *
  * The morning landing view from the design handoff: a greeting + streak, two
  * stat tiles (latest score, this week's focus), a dark "Next class" band with
@@ -29,6 +29,7 @@ import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboar
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import CoachLineChart from '@/components/coach/CoachLineChart';
 import { dt, firstName, letterGrade, ratingForScore } from '@/components/coach/dashboardTheme';
+import { resolveDeepLink } from './coachDeepLink';
 
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
@@ -58,8 +59,14 @@ export default function CoachDashboardScreen() {
 
   const list = useMemo(() => [...(reportList || [])].sort(byDateDesc), [reportList]);
   const selId = params.get('s');
-  const selectedIdx = selId ? Math.max(0, list.findIndex((r) => r.id === selId)) : 0;
-  const selected: CoachReport | null = list[selectedIdx] ?? null;
+  // An unknown id is an explicit not-found, never a silent substitution
+  // (spec: "Deep link to an unknown session"). The resolution lives in its own
+  // module so the test exercises THIS code rather than a copy of it.
+  const {
+    missing: deepLinkMissing,
+    index: selectedIdx,
+    selected,
+  } = resolveDeepLink<CoachReport>(list, selId);
   const prev = list[selectedIdx + 1];
   const latest = list[0] ?? null;
   const delta = selected && prev ? Math.round((selected.score - prev.score) * 100) / 100 : null;
@@ -77,7 +84,9 @@ export default function CoachDashboardScreen() {
           (admin ? forReports : selfReports).refetch();
         }}
       >
-        {!latest || !selected ? (
+        {deepLinkMissing ? (
+          <SessionNotFound onBack={() => setParams({}, { replace: true })} />
+        ) : !latest || !selected ? (
           <EmptyHome leaderName={leaderName} admin={admin} onAddClass={() => navigate(`${base}/sessions`)} />
         ) : (
           <>
@@ -420,7 +429,7 @@ const DARK_CHIP: Record<string, { c: string; bg: string }> = {
   'N/A': { c: '#B7AD98', bg: '#33302A' },
 };
 
-/** The "focus on, based on last week" reminders — the session's transferable
+/** The "focus on, based on last week" reminders, the session's transferable
  *  next-week actions (recommendations), tagged with a status band drawn from
  *  the weakest dimensions, matching the design. Falls back to the weakest
  *  dimensions themselves when a report carries no written recommendations. */
@@ -444,7 +453,7 @@ function focusReminders(latest: CoachReport): { band: string; c: string; bg: str
   }));
 }
 
-/** Recommendations as { title, note } — prefers the pipeline's titled prose,
+/** Recommendations as { title, note }, prefers the pipeline's titled prose,
  *  falls back to terse bullets (split on the first dash into title + note). */
 function recommendationList(report: CoachReport): { title: string; note: string }[] {
   const prose = report.feedback?.recommendationsProse;
@@ -502,7 +511,7 @@ function pickNextClass(classes: CoachClass[] | undefined): CoachClass | null {
 }
 
 function classDateLine(c: CoachClass): string {
-  if (!c.classDate) return 'Recurring — no date pinned';
+  if (!c.classDate) return 'Recurring, no date pinned';
   const [y, m, d] = c.classDate.split('-').map(Number);
   if (!y || !m || !d) return c.classDate;
   return new Date(y, m - 1, d).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
@@ -532,13 +541,13 @@ function greeting(): string {
 
 function subgreeting(latest: CoachReport, delta: number | null, streakWeeks: number, admin?: boolean): string {
   const lesson = lessonLabel(latest.session);
-  const move = delta == null ? '' : delta > 0 ? ` — up ${delta} points on the last session` : delta < 0 ? ` — down ${Math.abs(delta)} on the last session` : '';
+  const move = delta == null ? '' : delta > 0 ? `, up ${delta} points on the last session` : delta < 0 ? `, down ${Math.abs(delta)} on the last session` : '';
   if (admin) return `Where they stand after ${lesson}${move}.`;
   const streak = streakWeeks > 1 ? `You're on a ${streakWeeks}-week coaching streak. ` : '';
   return `${streak}Here's where you stand after ${lesson}${move}.`;
 }
 
-/** A short label for the session — e.g. "Lesson 9" pulled from the title. */
+/** A short label for the session, e.g. "Lesson 9" pulled from the title. */
 function lessonLabel(session: string): string {
   const m = session.match(/Lesson\s+\d+/i);
   return m ? m[0] : session;
@@ -649,3 +658,28 @@ const linkBtn: React.CSSProperties = {
   fontSize: 13.5,
   cursor: 'pointer',
 };
+
+/**
+ * A deep link whose session id matches nothing this leader can see.
+ *
+ * Says so plainly rather than falling back to the most recent session: the link
+ * came from an email, and showing a DIFFERENT session's score under it is worse
+ * than showing nothing, because nothing about the page would reveal the
+ * substitution.
+ */
+function SessionNotFound({ onBack }: { onBack: () => void }) {
+  return (
+    <div data-testid="coach-session-not-found" style={{ padding: '32px 0' }}>
+      <h2 style={{ fontSize: 20, fontWeight: 600, margin: '0 0 8px' }}>
+        We couldn&apos;t find that session
+      </h2>
+      <p style={{ margin: '0 0 16px', fontSize: 15, color: '#666' }}>
+        The link may be out of date, or the session may belong to another
+        leader. Your other sessions are unaffected.
+      </p>
+      <button type="button" onClick={onBack} style={linkBtn}>
+        ← Back to the most recent session
+      </button>
+    </div>
+  );
+}
