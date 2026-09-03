@@ -4,7 +4,7 @@
  *
  * These screens follow a dedicated, high-fidelity handoff (see
  * design_handoff_coaching_dashboard) with a fixed warm-cream + Newsreader-serif
- * look — deliberately its own surface, distinct from the app's theme-aware
+ * look, deliberately its own surface, distinct from the app's theme-aware
  * `vmTokens`. The palette is therefore hard-coded here (light only) so the
  * dashboard renders identically regardless of the app's Auto/Light/Dark
  * setting, exactly as the handoff specifies.
@@ -130,7 +130,7 @@ export function firstName(name: string): string {
   return (name || '').trim().split(/\s+/)[0] || name;
 }
 
-/** Conventional letter grade for a 0–100 composite — the design leads with a
+/** Conventional letter grade for a 0–100 composite, the design leads with a
  *  letter grade (the number stays visible alongside it). */
 export function letterGrade(score: number): string {
   const s = Math.round(score);

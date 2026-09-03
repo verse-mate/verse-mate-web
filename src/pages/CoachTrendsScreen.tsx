@@ -1,7 +1,7 @@
 /**
- * Coaching dashboard — Trends.
+ * Coaching dashboard, Trends.
  *
- * Renders the design handoff's monthly view — month pills, a dark month-summary
+ * Renders the design handoff's monthly view, month pills, a dark month-summary
  * band, a score trajectory, month-at-a-glance table, cluster deep dive,
  * strengths / growth, recommended focus, and expandable per-session detail.
  *
@@ -28,7 +28,7 @@ export default function CoachTrendsScreen() {
   return <LeaderTrends coachId={coachId} />;
 }
 
-// ─── Monthly trends (design handoff) — self or admin drill-in ───────────────
+// ─── Monthly trends (design handoff), self or admin drill-in ───────────────
 
 function LeaderTrends({ coachId }: { coachId?: string }) {
   const admin = !!coachId;

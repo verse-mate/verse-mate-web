@@ -3,8 +3,8 @@
  * shown both on the dedicated /coach/trends screen AND inline (open by default)
  * on the desktop dashboard / leader views:
  *
- *   • ScoreTrendCard   — session score over time (line, 0–100)
- *   • ClusterTrendCard — per-session cluster contributions (stacked bars)
+ *   • ScoreTrendCard  , session score over time (line, 0–100)
+ *   • ClusterTrendCard, per-session cluster contributions (stacked bars)
  *
  * Both take the already-fetched CoachTrends payload so a parent decides how to
  * lay them out (stacked on mobile, side-by-side on desktop).
@@ -28,7 +28,7 @@ import { useRubric } from '@/hooks/useRubric';
 import { CoachCard, SectionLabel } from './CoachUi';
 
 /**
- * Cluster palette — mid-tone hues that read on both light and dark surfaces.
+ * Cluster palette, mid-tone hues that read on both light and dark surfaces.
  *
  * Keyed by POSITION in the served cluster order, not by cluster NAME. A name
  * map was a fifth copy of the rubric: renaming a cluster silently dropped its
@@ -97,7 +97,7 @@ export function ScoreTrendCard({
           </LineChart>
         </ResponsiveContainer>
       ) : (
-        <EmptyChart>One session so far — the trend line appears after your next scored session.</EmptyChart>
+        <EmptyChart>One session so far, the trend line appears after your next scored session.</EmptyChart>
       )}
     </CoachCard>
   );
@@ -115,7 +115,7 @@ export function ClusterTrendCard({
     [trends],
   );
   // Cluster names and their order come from the SERVED rubric. Until it
-  // arrives, fall back to the keys the series itself carries — the chart is
+  // arrives, fall back to the keys the series itself carries, the chart is
   // about the leader's own data and must not wait on an explainer.
   const { rubric } = useRubric();
   const clusterNames = useMemo(() => {

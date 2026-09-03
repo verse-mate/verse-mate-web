@@ -47,7 +47,7 @@ describe('the rubric is fetched once, not once per chart', () => {
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
-  it('a failure is not cached — the next attempt retries', async () => {
+  it('a failure is not cached, the next attempt retries', async () => {
     const spy = vi
       .spyOn(globalThis, 'fetch')
       .mockResolvedValueOnce(new Response('nope', { status: 500 }))
@@ -62,7 +62,7 @@ describe('the rubric is fetched once, not once per chart', () => {
 describe('cluster codes are derived, not tabulated', () => {
   it('takes the initials of the served name', () => {
     // The portal held a hardcoded TC/BM/EP/BR map in TWO files, so renaming or
-    // adding a cluster meant editing both — and the per-session table would
+    // adding a cluster meant editing both, and the per-session table would
     // silently keep the old code.
     expect(shortCode('Teaching Craft')).toBe('TC');
     expect(shortCode('Building Ministry')).toBe('BM');

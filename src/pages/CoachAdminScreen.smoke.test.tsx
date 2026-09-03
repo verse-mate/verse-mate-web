@@ -1,5 +1,5 @@
 /**
- * Smoke test for the Coach Oversight page — renders the four views (roster,
+ * Smoke test for the Coach Oversight page, renders the four views (roster,
  * leader detail, program trends, class links) against mocked admin data and
  * exercises the nav + drill-in, guarding against runtime crashes and confirming
  * the design's key sections land on the page.

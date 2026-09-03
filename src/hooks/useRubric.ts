@@ -78,7 +78,7 @@ export function clusterOrder(rubric: RubricContract | null): string[] {
 }
 
 /**
- * A cluster's short code — the first letters of its words.
+ * A cluster's short code, the first letters of its words.
  *
  * DERIVED, not a lookup table: the portal held a hardcoded TC/BM/EP/BR map in
  * two files, so renaming or adding a cluster meant editing both and the

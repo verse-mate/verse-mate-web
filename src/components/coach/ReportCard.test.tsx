@@ -69,7 +69,7 @@ describe('ReportCard', () => {
 
     fireEvent.click(screen.getByRole('button', { expanded: false }));
 
-    // The full prose block — title + both paragraphs + overview narrative.
+    // The full prose block, title + both paragraphs + overview narrative.
     expect(screen.getByText(/landed strongest in scripture engagement/)).toBeInTheDocument();
     expect(screen.getByText('Exceptional discussion balance')).toBeInTheDocument();
     expect(screen.getByText(/talk ratio during discussion was ~32%/)).toBeInTheDocument();

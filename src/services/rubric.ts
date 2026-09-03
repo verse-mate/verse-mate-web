@@ -4,7 +4,7 @@ import { API_BASE_URL } from './api';
  * The rubric contract, served by the backend (change: port-coach-pipeline,
  * tasks 8.1-8.3).
  *
- * Everything here used to be hand-maintained in the portal — `dimensionInfo.ts`
+ * Everything here used to be hand-maintained in the portal, `dimensionInfo.ts`
  * held the dimension explainers and cluster mapping, `dashboardTheme.ts` and
  * `CoachTrendCharts.tsx` held cluster names and the bm/tc/ep/br keys,
  * `CoachAdminScreen.tsx` held band labels, and `coachService.statusColor` held
