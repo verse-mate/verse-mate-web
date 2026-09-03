@@ -45,7 +45,7 @@ import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import PendingReshares from '@/components/coach/PendingReshares';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName } from '@/components/coach/dashboardTheme';
-import { clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
+import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
 import type { RubricContract } from '@/services/rubric';
 
 type View = 'leaders' | 'leader' | 'trends' | 'links';
@@ -299,7 +299,10 @@ function RosterView({
 }
 
 function RosterRow({ leader, last3, onOpen }: { leader: CoachSummary; last3: number[]; onOpen: () => void }) {
-  const st = leader.latest ? statusBand(leader.latest.status) : statusBand('');
+  const bandLabels = bandLabelsOf(useRubric().rubric);
+  const st = leader.latest
+    ? statusBand(leader.latest.status, bandLabels)
+    : statusBand('', bandLabels);
   const score = leader.latest ? Math.round(leader.latest.score) : null;
   // Prefer the real last-3 monthly composites; fall back to the latest score.
   const chips = (last3.length > 0 ? last3 : score != null ? [score] : []).map((v) => ({ v: Math.round(v), ...compBand(v) }));
@@ -358,7 +361,7 @@ function LeaderDetailView({
   const name = profile?.name || summary?.name || 'Leader';
   const study = profile?.group || summary?.group || '';
   const status = summary?.latest?.status || (reports[0] ? deriveStatus(reports[0].score) : 'On Target');
-  const st = statusBand(status);
+  const st = statusBand(status, bandLabelsOf(useRubric().rubric));
 
   const [page, setPage] = useState(0);
   const [openClass, setOpenClass] = useState<string | null>(null);
@@ -780,9 +783,11 @@ function TrendsDetail({
   onOpenLeader: (id: string) => void;
 }) {
   const composite = data.program.avgScore;
-  const band = statusBand(compositeStatus(composite));
-  // Legends are built from the served rubric (task 8.2).
+  // Legends are built from the served rubric (task 8.2), and so are the band
+  // colours: they follow a band's POSITION in the served order.
   const { rubric } = useRubric();
+  const bandLabels = bandLabelsOf(rubric);
+  const band = statusBand(compositeStatus(composite), bandLabels);
   const leaders = [...data.leaders].sort((a, b) => (b.avgScore ?? 0) - (a.avgScore ?? 0));
   const top = leaders[0];
 
@@ -800,7 +805,7 @@ function TrendsDetail({
   // Score distribution by status.
   const distribution = ['Exceptional', 'Strong', 'On Target', 'Developing'].map((label) => {
     const rows = leaders.filter((l) => l.status === label);
-    const bd = statusBand(label);
+    const bd = statusBand(label, bandLabels);
     return { label, count: rows.length, names: rows.map((r) => r.name).join(', ') || '—', c: bd.c, bg: bd.bg };
   });
 
@@ -876,7 +881,7 @@ function TrendsDetail({
             </div>
             {showKey && <div style={{ padding: '10px 16px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.6 }}>{clusterKeyLine(rubric)}</div>}
             {leaders.map((l, i) => {
-              const b = statusBand(l.status);
+              const b = statusBand(l.status, bandLabels);
               const cl = clusterAvgs(l);
               return (
                 <button key={l.id} type="button" onClick={() => onOpenLeader(l.id)} style={{ display: 'grid', gridTemplateColumns: '34px 1fr 54px 46px 46px 46px 46px 64px 96px', gap: 8, padding: '8px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center', cursor: 'pointer', width: '100%', background: 'none', border: 'none', textAlign: 'left' }}>

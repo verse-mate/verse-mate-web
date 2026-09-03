@@ -72,6 +72,11 @@ export function useRubric(): UseRubric {
   return { rubric, loading, error };
 }
 
+/** The served band labels, in order, for anything keyed by band position. */
+export function bandLabelsOf(rubric: RubricContract | null): string[] {
+  return (rubric?.statusBands ?? []).map((b) => b.label);
+}
+
 /** Cluster display order, from the served definition. */
 export function clusterOrder(rubric: RubricContract | null): string[] {
   return (rubric?.clusters ?? []).map((c) => c.name);

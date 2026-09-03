@@ -34,7 +34,11 @@ export default function CoachSessionDetail({
   label?: string;
 }) {
   const [tab, setTab] = useState<Tab>('report');
-  const band = statusBand(report.status);
+  // The band's colour follows its POSITION in the served order, so a renamed
+  // or added band keeps a sensible colour instead of falling to the worst one.
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const band = statusBand(report.status, bandLabels);
   // Whether VerseMate holds this session's recording is a DETAIL-only field:
   // the reports list deliberately does not carry it, because a list that knew
   // would be one step from minting an address per row. So the flag is fetched

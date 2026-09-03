@@ -84,20 +84,30 @@ export function ratingForScore(score: number | null): Band {
   return { label: 'NEEDS WORK', c: dt.rust, bg: dt.rustBg };
 }
 
-/** Color styling for a session/month status label (Exceptional…Early Stage). */
-export function statusBand(status: string): Band {
-  switch (status) {
-    case 'Exceptional':
-      return { label: status, c: dt.green, bg: dt.greenBg };
-    case 'Strong':
-      return { label: status, c: dt.gold, bg: dt.goldChip };
-    case 'On Target':
-      return { label: status, c: dt.gold, bg: dt.goldChip };
-    case 'Developing':
-      return { label: status, c: dt.rust, bg: dt.rustBg };
-    default:
-      return { label: status || 'Early Stage', c: dt.rust, bg: dt.rustBg };
-  }
+/**
+ * Styling for a status label, keyed by the band's POSITION in the served order.
+ *
+ * This was a switch naming all five labels with a rust default, which made it
+ * the sixth hand-maintained copy of the rubric and put the bottom band's colour
+ * on any label it did not recognise. It is the leader's own dashboard, so a
+ * renamed or added band showed every leader in it the worst colour on the
+ * page. Same treatment as `coachService.statusColor`, for the same reason.
+ */
+const BAND_STYLES: Band[] = [
+  { label: '', c: dt.green, bg: dt.greenBg },
+  { label: '', c: dt.gold, bg: dt.goldChip },
+  { label: '', c: dt.gold, bg: dt.goldChip },
+  { label: '', c: dt.rust, bg: dt.rustBg },
+  { label: '', c: dt.rust, bg: dt.rustBg },
+];
+
+/** Neutral, for a label this cannot place: unknown is not the same as bad. */
+const BAND_UNPLACED = { c: dt.textLight, bg: dt.fill1 };
+
+export function statusBand(status: string, bandLabels: string[] = []): Band {
+  const i = bandLabels.indexOf(status);
+  const style = i < 0 ? BAND_UNPLACED : (BAND_STYLES[i] ?? BAND_UNPLACED);
+  return { label: status, c: style.c, bg: style.bg };
 }
 
 /**
