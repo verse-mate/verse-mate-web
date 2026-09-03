@@ -12,8 +12,11 @@ const ONE = [
     sessionDate: '2026-08-22',
     requestedAt: '2026-08-25T00:00:00Z',
     attempts: 5,
+    asked: false,
   },
 ];
+
+const ASKED = [{ ...ONE[0], asked: true }];
 
 afterEach(() => vi.restoreAllMocks());
 
@@ -29,10 +32,26 @@ describe('the re-share queue is visible', () => {
     expect(screen.getByText(/5 attempts/)).toBeInTheDocument();
   });
 
-  it('an EMPTY queue renders nothing — the normal case is not a panel', async () => {
+  it('an EMPTY queue renders nothing, the normal case is not a panel', async () => {
     vi.spyOn(coachService, 'fetchPendingReshares').mockResolvedValue([]);
     const { container } = render(<PendingReshares />);
     await waitFor(() => expect(container).toBeEmptyDOMElement());
+  });
+
+  it('a session already asked about cannot be asked about twice', async () => {
+    // The backend refuses the second send, so an enabled button here would
+    // only produce an error the admin cannot act on.
+    vi.spyOn(coachService, 'fetchPendingReshares').mockResolvedValue(ASKED);
+    const send = vi.spyOn(coachService, 'sendReshareRequest');
+    render(<PendingReshares />);
+
+    const button = await screen.findByTestId('coach-reshare-send-ff-1');
+    expect(button).toBeDisabled();
+    expect(button).toHaveTextContent('Asked');
+    fireEvent.click(button);
+    expect(send).not.toHaveBeenCalled();
+    // Marking it re-shared is still available: that is the other way back in.
+    expect(screen.getByTestId('coach-reshare-resolve-ff-1')).not.toBeDisabled();
   });
 
   it('a non-admin (403) sees nothing rather than an error', async () => {

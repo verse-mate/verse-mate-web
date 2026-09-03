@@ -1,9 +1,9 @@
 /**
  * One coaching "feedback document" in the reports list. Collapsed it shows
  * date / session / status / score; expanded (tap the chevron) it renders the
- * SAME full coaching narrative as the document-style <ReportDetail> — Summary
+ * SAME full coaching narrative as the document-style <ReportDetail>, Summary
  * & Big Ideas, full-prose strengths / growth areas / recommendations, the
- * pipeline's PDF-parity sections, and the 12 dimensions — via the shared
+ * pipeline's PDF-parity sections, and the 12 dimensions, via the shared
  * <ReportBody>, plus a compact cluster breakdown, coaching notes, and a
  * per-session PDF download. No Google Docs hop.
  */
@@ -27,7 +27,7 @@ export default function ReportCard({
   leaderName?: string;
   /** When true (admin drill-in) the recording + notes are editable. */
   admin?: boolean;
-  /** The leader whose report this is — required for admin edits. */
+  /** The leader whose report this is, required for admin edits. */
   coachId?: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -94,7 +94,7 @@ export default function ReportCard({
             {report.newcomers === 1 ? '' : 's'}
           </p>
 
-          {/* Compact cluster breakdown — the card's at-a-glance score visual. */}
+          {/* Compact cluster breakdown, the card's at-a-glance score visual. */}
           <p style={sectionLabel}>Cluster breakdown</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {report.clusters.map((c) => {
@@ -115,7 +115,7 @@ export default function ReportCard({
             })}
           </div>
 
-          {/* The full coaching narrative — identical to <ReportDetail>. */}
+          {/* The full coaching narrative, identical to <ReportDetail>. */}
           <ReportBody report={report} />
 
           <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} compact />

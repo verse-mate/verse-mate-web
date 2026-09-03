@@ -12,7 +12,7 @@ import {
  * Sessions waiting on a re-shared recording (change: port-coach-pipeline,
  * task 8.5a).
  *
- * A session that exhausts its retrieval budget produces NO report — by design,
+ * A session that exhausts its retrieval budget produces NO report, by design,
  * because a report from partial material would mean something different from
  * every other report. So the queue has to be visible, or those sessions simply
  * disappear and the leader is left wondering why one week has no feedback.
@@ -111,14 +111,17 @@ export default function PendingReshares() {
             </div>
           </div>
           <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
+            {/* Asked already? The backend refuses a second send, so an
+                enabled button here would just produce an error the admin
+                cannot act on. */}
             <button
               type="button"
               onClick={() => act(r.sourceSessionId, 'send')}
-              disabled={busy === r.sourceSessionId}
+              disabled={busy === r.sourceSessionId || r.asked}
               data-testid={`coach-reshare-send-${r.sourceSessionId}`}
-              style={btn}
+              style={r.asked ? { ...btn, color: vmTokens.textTertiary, cursor: 'default' } : btn}
             >
-              Ask the leader
+              {r.asked ? 'Asked' : 'Ask the leader'}
             </button>
             <button
               type="button"

@@ -198,7 +198,7 @@ beforeEach(() => {
   vi.mocked(coachService.fetchCoachTrends).mockResolvedValue(trends);
   vi.mocked(coachService.fetchCoachClasses).mockResolvedValue(classes);
   vi.mocked(coachService.fetchMyMonthlySummary).mockResolvedValue(monthly);
-  // Admin drill-in ("For") endpoints — same shapes, per-leader.
+  // Admin drill-in ("For") endpoints, same shapes, per-leader.
   vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
     profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning', coachName: '' },
     reports,
@@ -209,7 +209,7 @@ beforeEach(() => {
   );
 });
 
-describe('Coaching dashboard — Home', () => {
+describe('Coaching dashboard, Home', () => {
   it('renders the greeting, latest score, next class and session detail', async () => {
     renderAt('/coach', <CoachDashboardScreen />);
     // Session detail header (waits for reports to resolve).
@@ -230,7 +230,7 @@ describe('Coaching dashboard — Home', () => {
   });
 });
 
-describe('Coaching dashboard — Sessions', () => {
+describe('Coaching dashboard, Sessions', () => {
   it('lists recurring classes and past sessions with the view action', async () => {
     renderAt('/coach/sessions', <CoachSessionsScreen />);
     expect(await screen.findByText('James — Saturday Morning Group')).toBeInTheDocument();
@@ -241,7 +241,7 @@ describe('Coaching dashboard — Sessions', () => {
   });
 });
 
-describe('Coaching dashboard — Trends', () => {
+describe('Coaching dashboard, Trends', () => {
   it('renders the monthly summary band and per-session detail', async () => {
     renderAt('/coach/trends', <CoachTrendsScreen />);
     expect(await screen.findByText('MONTHLY COACHING SUMMARY')).toBeInTheDocument();
@@ -253,7 +253,7 @@ describe('Coaching dashboard — Trends', () => {
   });
 });
 
-describe('Coaching dashboard — admin drill-in', () => {
+describe('Coaching dashboard, admin drill-in', () => {
   it('renders a leader’s dashboard via the per-leader endpoints with the admin context bar', async () => {
     const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
     render(

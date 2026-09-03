@@ -1,7 +1,7 @@
 /**
  * The "Most recent session" detail block on the coaching dashboard Home:
  * a session header (identity, status + delta, score badge) and a
- * tab bar — Full report · Scorecard · Question coaching · Next steps.
+ * tab bar, Full report · Scorecard · Question coaching · Next steps.
  *
  * Recreated from the design handoff, wired to the real /coach report shape
  * (CoachReport): the mock's /55 letter grade is presented as the live /100
@@ -245,7 +245,7 @@ function FullReport({ report }: { report: CoachReport }) {
         <>
           <SectionHeading title="This week's playbook" pill={`${plays.length} plays`} pillC={dt.gold2} pillBg={dt.goldChip} />
           <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>
-            Concrete, transferable changes for next session — each one testable in a single class.
+            Concrete, transferable changes for next session, each one testable in a single class.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {plays.map((r, i) => (
@@ -256,8 +256,8 @@ function FullReport({ report }: { report: CoachReport }) {
       )}
 
       <div style={{ marginTop: 24, fontSize: 13.5, color: dt.textLight, borderTop: `1px dashed ${dt.dashed}`, paddingTop: 16 }}>
-        Full metrics — Score Composition & the appendix (attendance, timeline, talk ratio, engagement, monologues,
-        vulnerability, the full dimension scorecard, cross-references, drift log) — are on this page, in the sections
+        Full metrics (Score Composition and the appendix: attendance, timeline, talk ratio, engagement, monologues,
+        vulnerability, the full dimension scorecard, cross-references, drift log) are on this page, in the sections
         above. Nothing is held back in a separate document.
       </div>
     </div>
@@ -550,7 +550,7 @@ function feedbackPoints(
     }));
   }
   if (bullets?.length) {
-    // Terse bullets sometimes read "Title — body"; split on the first em/en dash.
+    // Terse bullets sometimes read "Title, body"; split on the first em/en dash.
     return bullets.map((b) => {
       const m = b.match(/^(.{3,60}?)\s+[—–-]\s+([\s\S]+)$/);
       return m ? { title: m[1].trim(), body: m[2].trim() } : { title: b.trim(), body: '' };

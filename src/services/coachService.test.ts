@@ -112,7 +112,16 @@ describe('coachService', () => {
   });
 
   it('an unknown label falls back rather than throwing', () => {
-    expect(statusColor('Nonsense', BANDS)).toBe('#B91C1C');
+    expect(statusColor('Nonsense', BANDS)).toBe('#8A8272');
+  });
+
+  it('a status is NOT red before the bands have loaded', () => {
+    // Every caller passes [] on first paint. Keyed by position with a
+    // last-entry fallback, the top band rendered in the bottom band's red
+    // until the fetch resolved.
+    const bottom = statusColor('Early Stage', BANDS);
+    expect(statusColor('Exceptional', [])).not.toBe(bottom);
+    expect(statusColor('Exceptional', [])).toBe('#8A8272');
   });
 
   it('fetches the admin roster', async () => {

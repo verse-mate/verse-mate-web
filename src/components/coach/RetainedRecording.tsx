@@ -28,11 +28,26 @@ export default function RetainedRecording({
   const [src, setSrc] = useState<string | null>(null);
   const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
   const remintedRef = useRef(false);
+  const [renderedFor, setRenderedFor] = useState(reportId);
+
+  // A detail view that swaps one session for another keeps this component
+  // mounted in the same position, so React reuses the instance and every piece
+  // of state above survives the swap. The leader then saw the PREVIOUS
+  // session's recording playing under the new session's heading. Resetting in
+  // render (rather than in an effect) means the wrong src never paints.
+  if (renderedFor !== reportId) {
+    setRenderedFor(reportId);
+    setSrc(null);
+    setState('idle');
+    remintedRef.current = false;
+  }
 
   const attached = attachedUrl?.trim();
 
   const start = useCallback(async () => {
     setState('loading');
+    // A fresh press is a fresh attempt, so it gets its own re-mint budget.
+    remintedRef.current = false;
     const minted = await mintRecordingUrl(reportId);
     if (!minted) {
       setState('error');
@@ -46,12 +61,18 @@ export default function RetainedRecording({
     // Re-mint ONCE. Looping would hammer the endpoint when the failure is the
     // recording itself rather than an expired address.
     if (remintedRef.current) {
+      // Drop the src with it. Left in place, the `if (src)` branch below kept
+      // rendering the broken <video> and the failure message never reached the
+      // screen, which is exactly the dead player this component exists to
+      // avoid.
+      setSrc(null);
       setState('error');
       return;
     }
     remintedRef.current = true;
     const minted = await mintRecordingUrl(reportId);
     if (!minted) {
+      setSrc(null);
       setState('error');
       return;
     }
@@ -59,7 +80,7 @@ export default function RetainedRecording({
   }, [reportId]);
 
   // An admin attached a link deliberately, usually because it is the better
-  // copy — so it wins over anything retained.
+  // copy, so it wins over anything retained.
   if (attached) {
     return (
       <a
@@ -115,7 +136,7 @@ export default function RetainedRecording({
       {state === 'loading'
         ? 'Opening the recording…'
         : state === 'error'
-          ? 'Recording unavailable — try again'
+          ? 'Recording unavailable, try again'
           : 'Play the recording'}
     </button>
   );

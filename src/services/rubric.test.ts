@@ -67,7 +67,7 @@ describe('the portal reads the rubric instead of keeping one', () => {
     expect(fetchSpy.mock.calls[0][0]).toContain('/coach/rubric');
   });
 
-  it('does NOT send credentials — the explainer is not leader data', async () => {
+  it('does NOT send credentials, the explainer is not leader data', async () => {
     // It describes the scoring model, so it must render for anyone who can
     // already see a score.
     const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValue(

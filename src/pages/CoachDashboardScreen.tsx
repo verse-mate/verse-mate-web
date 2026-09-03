@@ -1,5 +1,5 @@
 /**
- * Coaching dashboard — Home (/coach for an evaluated leader).
+ * Coaching dashboard, Home (/coach for an evaluated leader).
  *
  * The morning landing view from the design handoff: a greeting + streak, two
  * stat tiles (latest score, this week's focus), a dark "Next class" band with
@@ -29,6 +29,7 @@ import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboar
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import CoachLineChart from '@/components/coach/CoachLineChart';
 import { dt, firstName, letterGrade, ratingForScore } from '@/components/coach/dashboardTheme';
+import { resolveDeepLink } from './coachDeepLink';
 
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
@@ -58,17 +59,14 @@ export default function CoachDashboardScreen() {
 
   const list = useMemo(() => [...(reportList || [])].sort(byDateDesc), [reportList]);
   const selId = params.get('s');
-  // findIndex returns -1 when the id matches nothing, and Math.max(0, -1) is 0
-  // — so an unknown deep link silently showed the LATEST session instead. An
-  // emailed link carrying a stale id would have shown the leader a different
-  // session's score with nothing to indicate it. An unknown id is now an
-  // explicit not-found (spec: "Deep link to an unknown session").
-  const foundIdx = selId ? list.findIndex((r) => r.id === selId) : 0;
-  const deepLinkMissing = selId != null && list.length > 0 && foundIdx === -1;
-  const selectedIdx = foundIdx === -1 ? 0 : foundIdx;
-  const selected: CoachReport | null = deepLinkMissing
-    ? null
-    : (list[selectedIdx] ?? null);
+  // An unknown id is an explicit not-found, never a silent substitution
+  // (spec: "Deep link to an unknown session"). The resolution lives in its own
+  // module so the test exercises THIS code rather than a copy of it.
+  const {
+    missing: deepLinkMissing,
+    index: selectedIdx,
+    selected,
+  } = resolveDeepLink<CoachReport>(list, selId);
   const prev = list[selectedIdx + 1];
   const latest = list[0] ?? null;
   const delta = selected && prev ? Math.round((selected.score - prev.score) * 100) / 100 : null;
@@ -431,7 +429,7 @@ const DARK_CHIP: Record<string, { c: string; bg: string }> = {
   'N/A': { c: '#B7AD98', bg: '#33302A' },
 };
 
-/** The "focus on, based on last week" reminders — the session's transferable
+/** The "focus on, based on last week" reminders, the session's transferable
  *  next-week actions (recommendations), tagged with a status band drawn from
  *  the weakest dimensions, matching the design. Falls back to the weakest
  *  dimensions themselves when a report carries no written recommendations. */
@@ -455,7 +453,7 @@ function focusReminders(latest: CoachReport): { band: string; c: string; bg: str
   }));
 }
 
-/** Recommendations as { title, note } — prefers the pipeline's titled prose,
+/** Recommendations as { title, note }, prefers the pipeline's titled prose,
  *  falls back to terse bullets (split on the first dash into title + note). */
 function recommendationList(report: CoachReport): { title: string; note: string }[] {
   const prose = report.feedback?.recommendationsProse;
@@ -513,7 +511,7 @@ function pickNextClass(classes: CoachClass[] | undefined): CoachClass | null {
 }
 
 function classDateLine(c: CoachClass): string {
-  if (!c.classDate) return 'Recurring — no date pinned';
+  if (!c.classDate) return 'Recurring, no date pinned';
   const [y, m, d] = c.classDate.split('-').map(Number);
   if (!y || !m || !d) return c.classDate;
   return new Date(y, m - 1, d).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
@@ -543,13 +541,13 @@ function greeting(): string {
 
 function subgreeting(latest: CoachReport, delta: number | null, streakWeeks: number, admin?: boolean): string {
   const lesson = lessonLabel(latest.session);
-  const move = delta == null ? '' : delta > 0 ? ` — up ${delta} points on the last session` : delta < 0 ? ` — down ${Math.abs(delta)} on the last session` : '';
+  const move = delta == null ? '' : delta > 0 ? `, up ${delta} points on the last session` : delta < 0 ? `, down ${Math.abs(delta)} on the last session` : '';
   if (admin) return `Where they stand after ${lesson}${move}.`;
   const streak = streakWeeks > 1 ? `You're on a ${streakWeeks}-week coaching streak. ` : '';
   return `${streak}Here's where you stand after ${lesson}${move}.`;
 }
 
-/** A short label for the session — e.g. "Lesson 9" pulled from the title. */
+/** A short label for the session, e.g. "Lesson 9" pulled from the title. */
 function lessonLabel(session: string): string {
   const m = session.match(/Lesson\s+\d+/i);
   return m ? m[0] : session;

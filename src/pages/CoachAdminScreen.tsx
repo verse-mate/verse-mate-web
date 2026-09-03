@@ -1,15 +1,15 @@
 /**
- * Coach Oversight (/coach for program admins) — the Bible Leader Coach's view
+ * Coach Oversight (/coach for program admins), the Bible Leader Coach's view
  * across their whole cohort. Recreates the design handoff's four views in the
  * coaching-dashboard design language (see dashboardTheme):
  *
- *   Dashboard (roster)   — program health + every leader, alphabetical
- *   Leader detail        — one leader: strengths/growth, development charts,
+ *   Dashboard (roster)  , program health + every leader, alphabetical
+ *   Leader detail       , one leader: strengths/growth, development charts,
  *                          and each class (deep dive = the full session report)
  *                          with a coaching comment thread
- *   Trends (program)     — cohort composite, leaderboard, dimension heat map,
+ *   Trends (program)    , cohort composite, leaderboard, dimension heat map,
  *                          coaching priority matrix, program initiatives
- *   Class links          — the meeting links the notetaker joins, per leader
+ *   Class links         , the meeting links the notetaker joins, per leader
  *
  * Wired to the real admin API (useAdminCoaches / useAdminMonthly /
  * useCoachReportsFor / useCoachTrendsFor / useLeaderMonthlySummary /
@@ -233,7 +233,7 @@ function RosterView({
         <div style={{ maxWidth: 560 }}>
           <div style={kicker}>PROGRAM HEALTH · {monthLabel(month).toUpperCase()}</div>
           <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 30, lineHeight: 1.12, letterSpacing: '-.01em', margin: '0 0 8px' }}>
-            Your {roster.length} leaders are averaging {avg}{composite != null ? ` — a ${compositeStatus(composite)} program month.` : '.'}
+            Your {roster.length} leaders are averaging {avg}{composite != null ? `, a ${compositeStatus(composite)} program month.` : '.'}
           </h2>
           <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>{strongPlus} Strong or better · {needs} worth a check-in this week.</p>
         </div>
@@ -395,7 +395,7 @@ function LeaderDetailView({
               <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: 0 }}>Classes</h3>
               <span style={{ fontSize: 11.5, fontWeight: 700, color: dt.gold2, background: dt.goldChip, padding: '4px 10px', borderRadius: 99 }}>Comment to coach</span>
             </div>
-            <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>Leave coaching notes on a session — {firstName(name)} sees them on their session report.</p>
+            <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>Leave coaching notes on a session, {firstName(name)} sees them on their session report.</p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {pageReports.map((r) => (
@@ -467,8 +467,8 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
 
   // Cluster mix should never be blank. Prefer the full monthly summary; when it
   // isn't available yet (mid-month, too few sessions), fall back to whatever
-  // scored sessions we do have — the current month's if any, otherwise the most
-  // recent — so the leader always sees a mix.
+  // scored sessions we do have, the current month's if any, otherwise the most
+  // recent, so the leader always sees a mix.
   const monthlyClusters = monthly
     ? { bm: monthly.clusterAvg.bm, tc: monthly.clusterAvg.tc, ep: monthly.clusterAvg.ep, br: monthly.clusterAvg.br }
     : null;
@@ -486,7 +486,7 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
       }))
     : [];
 
-  // Dimensions over time — last 4 dated columns from the dimension series.
+  // Dimensions over time, last 4 dated columns from the dimension series.
   const dimSeries = (trends?.dimensionSeries ?? []).slice(-4);
   const matrixDates = dimSeries.map((r) => shortDate(String(r.date)));
 
@@ -514,7 +514,7 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
         </div>
         <div style={innerCard}>
           <div style={{ ...kicker, marginBottom: clustersArePartial ? 4 : 14 }}>CLUSTER MIX · {monthLabel(currentMonth()).toUpperCase()}</div>
-          {clustersArePartial && <div style={{ fontSize: 11.5, color: dt.textLight, marginBottom: 12 }}>Sessions so far — updates as the month fills in.</div>}
+          {clustersArePartial && <div style={{ fontSize: 11.5, color: dt.textLight, marginBottom: 12 }}>Sessions so far, updates as the month fills in.</div>}
           {clusters.length > 0 ? clusters.map((c) => (
             <div key={c.name} style={{ marginBottom: 14 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, marginBottom: 5 }}><span style={{ color: dt.textMuted }}>{c.name}</span><span style={{ fontWeight: 700 }}>{c.pct == null ? 'N/A' : `${c.pct}%`}</span></div>
@@ -745,8 +745,8 @@ function TrendsView({ onOpenLeader, onBack }: { onOpenLeader: (id: string) => vo
 /**
  * Column legends, BUILT from the served rubric rather than written out.
  *
- * Both were full copies of the definition — four cluster names in one and all
- * twelve dimension names in the other — so a rename left the legend describing
+ * Both were full copies of the definition, four cluster names in one and all
+ * twelve dimension names in the other, so a rename left the legend describing
  * columns that no longer existed, which is worse than no legend.
  */
 function clusterKeyLine(rubric: RubricContract | null): string {
@@ -861,7 +861,7 @@ function TrendsDetail({
       {/* Leaderboard */}
       {/* Sessions waiting on a re-shared recording (task 8.5a). Rendered
           above the leaderboard because they are the sessions that produce no
-          report at all — the ones a leaderboard cannot show. */}
+          report at all, the ones a leaderboard cannot show. */}
       <PendingReshares />
       <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: '0 0 12px' }}>Leader leaderboard</h3>
       <div style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 12, overflow: 'hidden', marginBottom: 30 }}>
@@ -1069,7 +1069,7 @@ function InviteModal({ onClose }: { onClose: () => void }) {
     addLeader.mutate(
       { email: e, name: name.trim() || undefined, group: study.trim() || undefined },
       {
-        onSuccess: (c) => { toast.success(`${c.name} added — invite sent`); onClose(); },
+        onSuccess: (c) => { toast.success(`${c.name} added, invite sent`); onClose(); },
         onError: (err) => toast.error(/409|already/i.test(String(err?.message)) ? 'That email is already a leader' : 'Could not add the leader'),
       },
     );
@@ -1150,9 +1150,9 @@ function clusterAvgs(l: CoachMonthly['leaders'][number]): { bm: number | null; t
 }
 
 /** Cluster mix fallback for the Development panel when there's no full monthly
- *  summary yet. Averages each dimension across the sessions we DO have — the
+ *  summary yet. Averages each dimension across the sessions we DO have, the
  *  current month's rows if any, otherwise every scored session in the series,
- *  and as a last resort the single latest report — then rolls the dimension
+ *  and as a last resort the single latest report, then rolls the dimension
  *  means up into the four v3 clusters. Returns null only when there is truly no
  *  dimension data to draw on. */
 function clusterAvgsFromSessions(
@@ -1319,7 +1319,7 @@ const rosterRow: React.CSSProperties = {
 
 // Leader names render as buttons that open the leader's dedicated page.
 // Styled to read like the surrounding text (no chrome) but with a dotted
-// underline — the same affordance the D# column headers use — to signal
+// underline, the same affordance the D# column headers use, to signal
 // they're clickable.
 const leaderNameButton: React.CSSProperties = {
   background: 'none', border: 'none', padding: 0, margin: 0, font: 'inherit',

@@ -29,7 +29,7 @@ export default function SessionNotes({
   report: CoachReport;
   /** When true (admin drill-in) the recording + notes are editable. */
   admin?: boolean;
-  /** The leader whose report this is — required for admin edits. */
+  /** The leader whose report this is, required for admin edits. */
   coachId?: string;
   leaderName?: string;
   /** Tighter type sizing for the compact card. */
@@ -38,7 +38,7 @@ export default function SessionNotes({
   const editable = admin && !!coachId;
   const recording = report.recordingUrl?.trim() || '';
   const notes = report.notes ?? [];
-  // Sessions VerseMate ingested carry their own recording — no admin
+  // Sessions VerseMate ingested carry their own recording, no admin
   // attachment step (task 8.5).
   const retained = report.hasRetainedRecording === true;
 
@@ -231,7 +231,7 @@ function NotesPanel({
           <textarea
             value={body}
             onChange={(e) => setBody(e.target.value)}
-            placeholder={`Write a note to ${leaderName || 'this leader'} — it's saved here and emailed to them.`}
+            placeholder={`Write a note to ${leaderName || 'this leader'}, it's saved here and emailed to them.`}
             data-testid={`coach-note-input-${report.id}`}
             rows={3}
             style={textareaStyle}
