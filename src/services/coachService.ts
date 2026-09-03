@@ -277,6 +277,26 @@ export async function fetchCoachReports(): Promise<CoachReport[]> {
 }
 
 /**
+ * GET /api/coach/reports/:id, one session in full.
+ *
+ * The `hasRetainedRecording` flag is detail-only by design (a list must not
+ * mint, and it does not carry the field), so opening a single session is the
+ * only way to learn that VerseMate holds its recording.
+ */
+export async function fetchCoachReportDetail(
+  reportId: string,
+): Promise<CoachReport | null> {
+  try {
+    const data = await coachRequest<{ report: CoachReport }>(
+      `reports/${encodeURIComponent(reportId)}`,
+    );
+    return data.report ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Mint a short-lived address for ONE session's retained recording.
  *
  * Called at PLAYBACK START, not at render: an address minted when a detail view
