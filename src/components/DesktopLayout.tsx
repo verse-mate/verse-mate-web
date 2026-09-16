@@ -736,7 +736,15 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           {/* Sub-screen back chevron — anchored to the LEFT edge of the
               right pane so it sits flush with the right-pane box. Desktop only:
               on tablet the full-screen sub-page uses the header-left "Reading"
-              chevron instead (there is no right-pane edge to anchor to). */}
+              chevron instead (there is no right-pane edge to anchor to).
+
+              #300 suppressed this chrome on topic / Jesus-event routes because
+              a sub-page there left an orphaned chevron and title painted over
+              the route's own pills. That was the old bug's other half: the
+              sub-page set `rightPanelView` but never rendered, so only its
+              chrome showed. Now the sub-page owns the pane and the route's
+              pills step aside for it, so the chevron is the way back out —
+              suppressing it would strand the user in the sub-page. */}
           {isSubPage && !effectiveRightCollapsed && !isTablet && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
@@ -964,8 +972,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 the full-screen top padding, so the search reads as a tidy modal
                 (not oversized) regardless of zoom / tablet, showing more of the
                 recents and book list. */}
+            {/* The landing tab is derived from the current route inside
+                BookSelector (Jesus / Topics / testament of the current book),
+                so no initialTab is needed here. */}
             <BookSelector
-              initialTab={isTopicRoute ? 'Topics' : undefined}
               initialQuery={bookSelectorQuery}
               compact
               onClose={() => { setShowBookSelector(false); setBookSelectorQuery(''); }}
