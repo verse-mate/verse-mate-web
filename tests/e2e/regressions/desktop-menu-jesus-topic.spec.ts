@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { DesktopReaderPage } from '../pages/desktop.page';
+import { BookSelectorPage } from '../pages/book-selector.page';
 
 /**
  * Regression — the side menu was dead on the Jesus and Topic tabs.
@@ -31,7 +32,12 @@ async function openMenuItem(page: import('@playwright/test').Page, label: RegExp
   // The hamburger can be overlapped by absolutely-positioned header elements;
   // fire the DOM click directly (same approach as desktop-panel-bugs.spec.ts).
   await desktop.hamburgerMenu.evaluate((el) => (el as HTMLElement).click());
-  await page.getByRole('button', { name: label }).first().click();
+  // Scope to the drawer (`.menu-panel`) so a same-named button elsewhere on
+  // the page — in the topic content or the pane behind it — can't be picked
+  // up instead.
+  const drawer = page.locator('.menu-panel');
+  await expect(drawer).toBeVisible();
+  await drawer.getByRole('button', { name: label }).first().click();
 }
 
 const ROUTES: { name: string; url: string }[] = [
@@ -73,14 +79,19 @@ for (const route of ROUTES) {
 
 test('topic detail — every side-menu item reaches its sub-page', async ({ page }) => {
   const desktop = new DesktopReaderPage(page);
+  const picker = new BookSelectorPage(page);
 
-  await page.goto('/topics');
-  await expect(desktop.layoutRoot).toBeVisible();
-
-  const firstTopic = page.locator('[data-testid^="topic-item-"]').first();
-  test.skip((await firstTopic.count()) === 0, 'No seeded topics to drill into');
-  await firstTopic.click();
+  // Drill into a real topic the way a user does: chapter selector → Topics
+  // tab → first topic. `/topics` itself renders no `topic-item-*` testids —
+  // those live in BookSelector — so this is the only path that lands on a
+  // topic DETAIL route (where the Summary/By-Line/Detailed pills exist).
+  await desktop.goto('james', 1);
+  await desktop.chapterSelector.click();
+  await expect(picker.modal).toBeVisible();
+  await picker.tabTopics.click();
+  await page.locator('[data-testid^="topic-item-"]').first().click();
   await expect(page).toHaveURL(/\/topics?\//);
+  await expect(page.getByTestId('desktop-topic-tab-summary')).toBeVisible();
 
   // Every item the drawer offers — not just Bookmarks — has to land somewhere.
   for (const [label, title] of [
@@ -92,9 +103,13 @@ test('topic detail — every side-menu item reaches its sub-page', async ({ page
     const bannerTitle = page.getByTestId('desktop-right-panel-title');
     await expect(bannerTitle).toBeVisible();
     await expect(bannerTitle).toHaveText(title);
+    // The topic's own pills stay out of the way while the sub-page is up.
+    await expect(page.getByTestId('desktop-topic-tab-summary')).toHaveCount(0);
   }
 
-  // Backing out returns the pane to the topic's own insight tabs.
+  // Backing out returns the pane to the topic's own insight tabs, still on
+  // the topic route — the sub-page never navigated away from it.
   await page.getByTestId('desktop-right-panel-close').click();
   await expect(page.getByTestId('desktop-topic-tab-summary')).toBeVisible();
+  await expect(page).toHaveURL(/\/topics?\//);
 });
