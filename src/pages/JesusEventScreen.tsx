@@ -3,6 +3,7 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import BookSelector from '@/components/BookSelector';
 import { InsightHeader, PillTabs } from '@/components/InsightChrome';
 import {
+  JESUS_SPLIT_MEASURE,
   JesusEmpty,
   JesusLoading,
   JesusPageBody,
@@ -284,11 +285,18 @@ export default function JesusEventScreen() {
     return (
       <div
         data-testid="jesus-event-column"
-        className="flex flex-col h-full overflow-y-auto px-4 pb-8"
+        className="flex flex-col h-full overflow-y-auto pb-8"
         style={{ backgroundColor: vmTokens.commentaryBg, color: vmTokens.textPrimary }}
         {...swipe}
       >
-        <div className="pt-4">{column}</div>
+        {/* Same gutter the reading column keeps, so the event's scripture
+            doesn't sit tighter to the pane edge than a chapter's does. */}
+        <div
+          className="pt-4"
+          style={{ width: '100%', maxWidth: JESUS_SPLIT_MEASURE, margin: '0 auto' }}
+        >
+          {column}
+        </div>
       </div>
     );
   }

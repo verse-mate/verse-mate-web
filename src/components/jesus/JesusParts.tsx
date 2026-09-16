@@ -18,6 +18,18 @@ import { vmTokens } from '@/styles/themeStyles';
 
 const FONT = 'Roboto, sans-serif';
 
+/**
+ * The gutter a Jesus surface leaves on each side of a split pane.
+ *
+ * The Bible reader caps its column at `min(660px, 100% - 104px)` so the verse
+ * text never runs into the pane's edge (`.reading-inner` in prototype.css).
+ * The Jesus screens sat at a flat 20px instead, which reads as cramped beside
+ * the reading column it shares a screen with. Same shape, wider measure: the
+ * card lists want more room than a verse column, but they floor at the same
+ * 52px-a-side gutter so the two panes line up.
+ */
+export const JESUS_SPLIT_MEASURE = 'min(920px, calc(100% - 104px))';
+
 const jesusCardStyle: CSSProperties = {
   backgroundColor: vmTokens.surfaceRaisedBg,
   border: `1px solid ${vmTokens.divider}`,
@@ -543,9 +555,10 @@ export function JesusPageBody({
     >
       <div
         style={{
-          maxWidth: wide ? 920 : 680,
+          width: '100%',
+          maxWidth: wide ? JESUS_SPLIT_MEASURE : 680,
           margin: '0 auto',
-          padding: wide ? '20px 20px 72px' : '4px 16px 40px',
+          padding: wide ? '20px 0 72px' : '4px 16px 40px',
         }}
       >
         {children}
