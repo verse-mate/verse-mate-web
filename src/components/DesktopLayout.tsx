@@ -714,8 +714,12 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           {/* Sub-screen back chevron — anchored to the LEFT edge of the
               right pane so it sits flush with the right-pane box. Desktop only:
               on tablet the full-screen sub-page uses the header-left "Reading"
-              chevron instead (there is no right-pane edge to anchor to). */}
-          {!isTopicRoute && rightPanelView !== 'commentary' && !effectiveRightCollapsed && !isTablet && (() => {
+              chevron instead (there is no right-pane edge to anchor to).
+              A resolved Jesus event owns the right pane outright, so the
+              sub-screen chrome steps aside there the way it does on a topic —
+              otherwise a sub-page opened earlier leaves its chevron and title
+              painted over the event's pills. */}
+          {!isTopicRoute && !hasJesusEvent && rightPanelView !== 'commentary' && !effectiveRightCollapsed && !isTablet && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
             return (
@@ -741,7 +745,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* Sub-screen title — centered horizontally over the right pane,
               independent of the back-chevron position. */}
-          {!isTopicRoute && rightPanelView !== 'commentary' && !effectiveRightCollapsed && (() => {
+          {!isTopicRoute && !hasJesusEvent && rightPanelView !== 'commentary' && !effectiveRightCollapsed && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
             return (
