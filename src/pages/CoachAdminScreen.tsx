@@ -1,15 +1,15 @@
 /**
- * Coach Oversight (/coach for program admins) — the Bible Leader Coach's view
+ * Coach Oversight (/coach for program admins), the Bible Leader Coach's view
  * across their whole cohort. Recreates the design handoff's four views in the
  * coaching-dashboard design language (see dashboardTheme):
  *
- *   Dashboard (roster)   — program health + every leader, alphabetical
- *   Leader detail        — one leader: strengths/growth, development charts,
+ *   Dashboard (roster)  , program health + every leader, alphabetical
+ *   Leader detail       , one leader: strengths/growth, development charts,
  *                          and each class (deep dive = the full session report)
  *                          with a coaching comment thread
- *   Trends (program)     — cohort composite, leaderboard, dimension heat map,
+ *   Trends (program)    , cohort composite, leaderboard, dimension heat map,
  *                          coaching priority matrix, program initiatives
- *   Class links          — the meeting links the notetaker joins, per leader
+ *   Class links         , the meeting links the notetaker joins, per leader
  *
  * Wired to the real admin API (useAdminCoaches / useAdminMonthly /
  * useCoachReportsFor / useCoachTrendsFor / useLeaderMonthlySummary /
@@ -42,8 +42,11 @@ import type {
 } from '@/services/coachService';
 import { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
+import PendingReshares from '@/components/coach/PendingReshares';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName } from '@/components/coach/dashboardTheme';
+import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
+import type { RubricContract } from '@/services/rubric';
 
 type View = 'leaders' | 'leader' | 'trends' | 'links';
 
@@ -230,7 +233,7 @@ function RosterView({
         <div style={{ maxWidth: 560 }}>
           <div style={kicker}>PROGRAM HEALTH · {monthLabel(month).toUpperCase()}</div>
           <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 30, lineHeight: 1.12, letterSpacing: '-.01em', margin: '0 0 8px' }}>
-            Your {roster.length} leaders are averaging {avg}{composite != null ? ` — a ${compositeStatus(composite)} program month.` : '.'}
+            Your {roster.length} leaders are averaging {avg}{composite != null ? `, a ${compositeStatus(composite)} program month.` : '.'}
           </h2>
           <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>{strongPlus} Strong or better · {needs} worth a check-in this week.</p>
         </div>
@@ -296,7 +299,10 @@ function RosterView({
 }
 
 function RosterRow({ leader, last3, onOpen }: { leader: CoachSummary; last3: number[]; onOpen: () => void }) {
-  const st = leader.latest ? statusBand(leader.latest.status) : statusBand('');
+  const bandLabels = bandLabelsOf(useRubric().rubric);
+  const st = leader.latest
+    ? statusBand(leader.latest.status, bandLabels)
+    : statusBand('', bandLabels);
   const score = leader.latest ? Math.round(leader.latest.score) : null;
   // Prefer the real last-3 monthly composites; fall back to the latest score.
   const chips = (last3.length > 0 ? last3 : score != null ? [score] : []).map((v) => ({ v: Math.round(v), ...compBand(v) }));
@@ -355,7 +361,7 @@ function LeaderDetailView({
   const name = profile?.name || summary?.name || 'Leader';
   const study = profile?.group || summary?.group || '';
   const status = summary?.latest?.status || (reports[0] ? deriveStatus(reports[0].score) : 'On Target');
-  const st = statusBand(status);
+  const st = statusBand(status, bandLabelsOf(useRubric().rubric));
 
   const [page, setPage] = useState(0);
   const [openClass, setOpenClass] = useState<string | null>(null);
@@ -392,7 +398,7 @@ function LeaderDetailView({
               <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: 0 }}>Classes</h3>
               <span style={{ fontSize: 11.5, fontWeight: 700, color: dt.gold2, background: dt.goldChip, padding: '4px 10px', borderRadius: 99 }}>Comment to coach</span>
             </div>
-            <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>Leave coaching notes on a session — {firstName(name)} sees them on their session report.</p>
+            <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>Leave coaching notes on a session, {firstName(name)} sees them on their session report.</p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {pageReports.map((r) => (
@@ -448,6 +454,8 @@ function StrengthsGrowth({ summary }: { summary: LeaderMonthlySummary }) {
 }
 
 function Development({ trends, latest, monthly }: { trends: CoachTrends | undefined; latest: CoachReport; monthly: LeaderMonthlySummary | null }) {
+  // Cluster names and order from the served rubric (task 8.2).
+  const { rubric } = useRubric();
   const scoreSeries = trends?.scoreSeries ?? [];
   const trendValues = scoreSeries.slice(-7).map((p) => Math.round(p.score));
   const trendLabels = scoreSeries.slice(-7).map((p) => shortDate(p.date));
@@ -462,24 +470,26 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
 
   // Cluster mix should never be blank. Prefer the full monthly summary; when it
   // isn't available yet (mid-month, too few sessions), fall back to whatever
-  // scored sessions we do have — the current month's if any, otherwise the most
-  // recent — so the leader always sees a mix.
+  // scored sessions we do have, the current month's if any, otherwise the most
+  // recent, so the leader always sees a mix.
   const monthlyClusters = monthly
     ? { bm: monthly.clusterAvg.bm, tc: monthly.clusterAvg.tc, ep: monthly.clusterAvg.ep, br: monthly.clusterAvg.br }
     : null;
   const fallback = monthlyClusters ? null : clusterAvgsFromSessions(trends?.dimensionSeries ?? [], latest);
   const clusterAvg = monthlyClusters ?? fallback?.avg ?? null;
   const clustersArePartial = !monthlyClusters && !!fallback;
-  const clusters = clusterAvg
-    ? [
-        { name: 'Building Ministry', pct: clusterAvg.bm },
-        { name: 'Teaching Craft', pct: clusterAvg.tc },
-        { name: 'Engaging People', pct: clusterAvg.ep },
-        { name: 'Being Real', pct: clusterAvg.br },
-      ]
+  // Names and order from the SERVED rubric; the bm/tc/ep/br keys the monthly
+  // payload uses are DERIVED from each name's initials rather than written out
+  // again here. Four cluster names in this file was a fifth copy of the rubric.
+  const clusterKeyed = clusterAvg as Record<string, number | null> | null;
+  const clusters = clusterKeyed
+    ? clusterOrder(rubric).map((name) => ({
+        name,
+        pct: clusterKeyed[shortCode(name).toLowerCase()] ?? null,
+      }))
     : [];
 
-  // Dimensions over time — last 4 dated columns from the dimension series.
+  // Dimensions over time, last 4 dated columns from the dimension series.
   const dimSeries = (trends?.dimensionSeries ?? []).slice(-4);
   const matrixDates = dimSeries.map((r) => shortDate(String(r.date)));
 
@@ -507,7 +517,7 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
         </div>
         <div style={innerCard}>
           <div style={{ ...kicker, marginBottom: clustersArePartial ? 4 : 14 }}>CLUSTER MIX · {monthLabel(currentMonth()).toUpperCase()}</div>
-          {clustersArePartial && <div style={{ fontSize: 11.5, color: dt.textLight, marginBottom: 12 }}>Sessions so far — updates as the month fills in.</div>}
+          {clustersArePartial && <div style={{ fontSize: 11.5, color: dt.textLight, marginBottom: 12 }}>Sessions so far, updates as the month fills in.</div>}
           {clusters.length > 0 ? clusters.map((c) => (
             <div key={c.name} style={{ marginBottom: 14 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, marginBottom: 5 }}><span style={{ color: dt.textMuted }}>{c.name}</span><span style={{ fontWeight: 700 }}>{c.pct == null ? 'N/A' : `${c.pct}%`}</span></div>
@@ -735,8 +745,25 @@ function TrendsView({ onOpenLeader, onBack }: { onOpenLeader: (id: string) => vo
   );
 }
 
-const CLUSTER_KEY = 'BM = Building Ministry · TC = Teaching Craft · EP = Engaging People · BR = Being Real · SESS = Sessions · COMP = Composite (out of 100)';
-const DIM_KEY = 'D1 Structure & Flow · D2 Newcomer Welcome · D3 Scripture · D4 Facilitation · D5 Application · D6 Participation · D7 Visual Aids · D8 Vulnerability · D9 Memory · D10 Homework · D11 Prayer · D12 Leader Dev';
+/**
+ * Column legends, BUILT from the served rubric rather than written out.
+ *
+ * Both were full copies of the definition, four cluster names in one and all
+ * twelve dimension names in the other, so a rename left the legend describing
+ * columns that no longer existed, which is worse than no legend.
+ */
+function clusterKeyLine(rubric: RubricContract | null): string {
+  const clusters = (rubric?.clusters ?? [])
+    .map((c) => `${shortCode(c.name)} = ${c.name}`)
+    .join(' · ');
+  return [clusters, 'SESS = Sessions', 'COMP = Composite (out of 100)']
+    .filter(Boolean)
+    .join(' · ');
+}
+
+function dimKeyLine(rubric: RubricContract | null): string {
+  return (rubric?.dimensions ?? []).map((d) => `D${d.n} ${d.name}`).join(' · ');
+}
 
 function TrendsDetail({
   data,
@@ -756,7 +783,11 @@ function TrendsDetail({
   onOpenLeader: (id: string) => void;
 }) {
   const composite = data.program.avgScore;
-  const band = statusBand(compositeStatus(composite));
+  // Legends are built from the served rubric (task 8.2), and so are the band
+  // colours: they follow a band's POSITION in the served order.
+  const { rubric } = useRubric();
+  const bandLabels = bandLabelsOf(rubric);
+  const band = statusBand(compositeStatus(composite), bandLabels);
   const leaders = [...data.leaders].sort((a, b) => (b.avgScore ?? 0) - (a.avgScore ?? 0));
   const top = leaders[0];
 
@@ -774,7 +805,7 @@ function TrendsDetail({
   // Score distribution by status.
   const distribution = ['Exceptional', 'Strong', 'On Target', 'Developing'].map((label) => {
     const rows = leaders.filter((l) => l.status === label);
-    const bd = statusBand(label);
+    const bd = statusBand(label, bandLabels);
     return { label, count: rows.length, names: rows.map((r) => r.name).join(', ') || '—', c: bd.c, bg: bd.bg };
   });
 
@@ -833,6 +864,10 @@ function TrendsDetail({
       )}
 
       {/* Leaderboard */}
+      {/* Sessions waiting on a re-shared recording (task 8.5a). Rendered
+          above the leaderboard because they are the sessions that produce no
+          report at all, the ones a leaderboard cannot show. */}
+      <PendingReshares />
       <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: '0 0 12px' }}>Leader leaderboard</h3>
       <div style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 12, overflow: 'hidden', marginBottom: 30 }}>
         <div style={{ overflowX: 'auto' }}>
@@ -844,9 +879,9 @@ function TrendsDetail({
               ))}
               <div style={{ textAlign: 'right' }}>STATUS</div>
             </div>
-            {showKey && <div style={{ padding: '10px 16px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.6 }}>{CLUSTER_KEY}</div>}
+            {showKey && <div style={{ padding: '10px 16px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.6 }}>{clusterKeyLine(rubric)}</div>}
             {leaders.map((l, i) => {
-              const b = statusBand(l.status);
+              const b = statusBand(l.status, bandLabels);
               const cl = clusterAvgs(l);
               return (
                 <button key={l.id} type="button" onClick={() => onOpenLeader(l.id)} style={{ display: 'grid', gridTemplateColumns: '34px 1fr 54px 46px 46px 46px 46px 64px 96px', gap: 8, padding: '8px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center', cursor: 'pointer', width: '100%', background: 'none', border: 'none', textAlign: 'left' }}>
@@ -894,7 +929,7 @@ function TrendsDetail({
               <button key={i} type="button" onClick={onToggleKey} style={{ textAlign: 'center', cursor: 'pointer', background: 'none', border: 'none', font: 'inherit', color: 'inherit', textDecoration: 'underline dotted', textUnderlineOffset: 3 }}>D{i + 1}</button>
             ))}
           </div>
-          {showKey && <div style={{ padding: '10px 12px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.7 }}>{DIM_KEY}</div>}
+          {showKey && <div style={{ padding: '10px 12px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.7 }}>{dimKeyLine(rubric)}</div>}
           {leaders.map((l) => (
             <div key={l.id} style={{ display: 'grid', gridTemplateColumns: '150px repeat(12, 1fr)', gap: 3, padding: '5px 12px', borderTop: `1px solid ${dt.rowDivider}`, alignItems: 'center' }}>
               <button type="button" onClick={() => onOpenLeader(l.id)} title={`Open ${l.name}'s page`} style={{ ...leaderNameButton, fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{l.name}</button>
@@ -1039,7 +1074,7 @@ function InviteModal({ onClose }: { onClose: () => void }) {
     addLeader.mutate(
       { email: e, name: name.trim() || undefined, group: study.trim() || undefined },
       {
-        onSuccess: (c) => { toast.success(`${c.name} added — invite sent`); onClose(); },
+        onSuccess: (c) => { toast.success(`${c.name} added, invite sent`); onClose(); },
         onError: (err) => toast.error(/409|already/i.test(String(err?.message)) ? 'That email is already a leader' : 'Could not add the leader'),
       },
     );
@@ -1120,9 +1155,9 @@ function clusterAvgs(l: CoachMonthly['leaders'][number]): { bm: number | null; t
 }
 
 /** Cluster mix fallback for the Development panel when there's no full monthly
- *  summary yet. Averages each dimension across the sessions we DO have — the
+ *  summary yet. Averages each dimension across the sessions we DO have, the
  *  current month's rows if any, otherwise every scored session in the series,
- *  and as a last resort the single latest report — then rolls the dimension
+ *  and as a last resort the single latest report, then rolls the dimension
  *  means up into the four v3 clusters. Returns null only when there is truly no
  *  dimension data to draw on. */
 function clusterAvgsFromSessions(
@@ -1289,7 +1324,7 @@ const rosterRow: React.CSSProperties = {
 
 // Leader names render as buttons that open the leader's dedicated page.
 // Styled to read like the surrounding text (no chrome) but with a dotted
-// underline — the same affordance the D# column headers use — to signal
+// underline, the same affordance the D# column headers use, to signal
 // they're clickable.
 const leaderNameButton: React.CSSProperties = {
   background: 'none', border: 'none', padding: 0, margin: 0, font: 'inherit',

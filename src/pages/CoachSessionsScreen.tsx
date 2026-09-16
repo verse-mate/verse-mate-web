@@ -33,6 +33,7 @@ import {
 } from '@/services/coachService';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import { dt, letterGrade, statusBand } from '@/components/coach/dashboardTheme';
+import { useRubric } from '@/hooks/useRubric';
 
 const RECURRENCE_OPTIONS: { value: CoachClassRecurrence; label: string }[] = [
   { value: 'weekly', label: 'Weekly' },
@@ -274,7 +275,11 @@ function AddClassForm({
 // ─── Past session row ────────────────────────────────────────────────────────
 
 function PastSessionRow({ report, onView }: { report: CoachReport; onView: () => void }) {
-  const band = statusBand(report.status);
+  const { rubric } = useRubric();
+  const band = statusBand(
+    report.status,
+    (rubric?.statusBands ?? []).map((b) => b.label),
+  );
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '76px 1fr 108px 118px 128px', gap: 16, alignItems: 'center', padding: '15px 18px', border: `1px solid ${dt.border2}`, borderRadius: 12, background: dt.innerBg }}>
       <div style={{ fontSize: 13, color: dt.textLight, fontWeight: 600 }}>{shortDate(report.date)}</div>
