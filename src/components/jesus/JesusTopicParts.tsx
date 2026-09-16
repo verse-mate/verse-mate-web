@@ -3,11 +3,11 @@
  *
  * A browse screen that answers "what did He teach?" with 29 undifferentiated
  * cards leaves the reader to do the synthesis. These pieces put the synthesis
- * first: the category says what it is, each topic says what it is about and
- * quotes what He says there, and the events follow as the examples. Every
- * category tab — Teachings, Questions, Commands, Claims, Miracles and the rest
- * — renders through here, so the shape of the screen never depends on which
- * tab was opened.
+ * first: the category says what it is and each topic says what it is about,
+ * then the sayings themselves follow as the cards. Every category tab —
+ * Teachings, Questions, Commands, Claims, Miracles and the rest — renders
+ * through here, so the shape of the screen never depends on which tab was
+ * opened.
  */
 
 import { useCallback } from 'react';
@@ -27,11 +27,6 @@ import type { JesusBrowse, JesusTopicGroup } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
 
 const FONT = 'Roboto, sans-serif';
-
-/** Words are said, actions are done — the points panel is labelled accordingly. */
-function pointsHeading(mode: string): string {
-  return mode === 'ACTION' ? 'What He does here' : 'What He says here';
-}
 
 /**
  * The category's own introduction: what this is, how much of it there is, and
@@ -99,23 +94,18 @@ export function JesusCategoryIntro({
   );
 }
 
-/** One topic: what it is about, what He says in it, then the examples. */
+/** One topic: what it is about, then the sayings themselves. */
 export function JesusTopicSection({
   topic,
   singular,
   plural,
-  mode,
 }: {
   topic: JesusTopicGroup;
   singular: string;
   plural: string;
-  mode: string;
 }) {
   const gospels = topicGospels(topic);
   const testKey = topic.slug ?? 'other';
-  // Sayings already quoted in the panel above are not quoted again on their
-  // own card a few hundred pixels below.
-  const quoted = new Set(topic.points.map((point) => point.slug));
 
   return (
     <section
@@ -209,72 +199,6 @@ export function JesusTopicSection({
         </p>
       )}
 
-      {topic.points.length > 0 && (
-        <div
-          data-testid={jesusTestId('jesus-topic-points', testKey)}
-          style={{
-            marginTop: 12,
-            padding: 14,
-            borderRadius: 12,
-            backgroundColor: 'rgba(176,154,109,0.08)',
-            border: `1px solid ${vmTokens.divider}`,
-          }}
-        >
-          <p
-            style={{
-              fontFamily: FONT,
-              fontSize: 11,
-              fontWeight: 500,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: vmTokens.gold,
-            }}
-          >
-            {pointsHeading(mode)}
-          </p>
-
-          <ul style={{ margin: '10px 0 0', padding: 0, listStyle: 'none' }}>
-            {topic.points.map((point) => (
-              <li
-                key={point.slug}
-                style={{
-                  paddingLeft: 10,
-                  borderLeft: `2px solid ${vmTokens.gold}`,
-                  marginBottom: 10,
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: FONT,
-                    fontSize: 14,
-                    lineHeight: '21px',
-                    fontStyle: point.text ? 'italic' : 'normal',
-                    color: vmTokens.textPrimary,
-                  }}
-                >
-                  {point.text ? `“${point.text}”` : point.title}
-                </p>
-                {(point.reference || (point.text && point.summary)) && (
-                  <p
-                    style={{
-                      marginTop: 2,
-                      fontFamily: FONT,
-                      fontSize: 12,
-                      lineHeight: '18px',
-                      color: vmTokens.textTertiary,
-                    }}
-                  >
-                    {[point.text ? point.summary : null, point.reference]
-                      .filter(Boolean)
-                      .join(' · ')}
-                  </p>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
       <div
         data-testid={jesusTestId('jesus-topic-events', testKey)}
         style={{
@@ -285,12 +209,7 @@ export function JesusTopicSection({
         }}
       >
         {topic.events.map((event) => (
-          <JesusEventCardView
-            key={event.slug}
-            event={event}
-            detail
-            hideQuote={quoted.has(event.matched_facets[0]?.slug)}
-          />
+          <JesusEventCardView key={event.slug} event={event} detail />
         ))}
       </div>
     </section>
@@ -318,7 +237,6 @@ export function JesusTopicBrowse({ browse }: { browse: JesusBrowse }) {
             topic={topic}
             singular={browse.type.singular}
             plural={browse.type.plural}
-            mode={browse.type.mode}
           />
         ))}
       </div>

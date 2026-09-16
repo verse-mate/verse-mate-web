@@ -175,23 +175,17 @@ describe('JesusTopicBrowse', () => {
     ).toHaveTextContent('The reign of God breaking into the world.');
   });
 
-  it('quotes what He says in the topic before listing the examples', () => {
+  it('lists the sayings as cards rather than digesting them first', () => {
     renderBrowse(browse());
 
-    const points = screen.getByTestId('jesus-topic-points-kingdom');
-    expect(points).toHaveTextContent('What He says here');
-    expect(points).toHaveTextContent(/unless one is born again/);
-    expect(points).toHaveTextContent('John 3:3');
-  });
+    // The topic used to repeat its sayings in a "What He says here" panel
+    // above the cards. The cards carry them now, so nothing stands between
+    // the topic's blurb and the examples themselves.
+    expect(screen.queryByTestId('jesus-topic-points-kingdom')).toBeNull();
+    expect(screen.queryByText('What He says here')).toBeNull();
 
-  it('labels the panel for actions rather than words on an action category', () => {
-    const data = browse();
-    data.type.mode = 'ACTION';
-    renderBrowse(data);
-
-    expect(screen.getByTestId('jesus-topic-points-kingdom')).toHaveTextContent(
-      'What He does here',
-    );
+    const events = within(screen.getByTestId('jesus-topic-events-kingdom'));
+    expect(events.getByText(/unless one is born again/)).toBeInTheDocument();
   });
 
   it('shows each example with its scripture and its summary', () => {
@@ -205,19 +199,19 @@ describe('JesusTopicBrowse', () => {
     ).toBeInTheDocument();
   });
 
-  it('does not repeat a saying the panel above already quoted', () => {
+  it('quotes each saying exactly once, on its own card', () => {
     renderBrowse(browse());
 
-    // Quoted once, in the topic's digest — not again on the card below it.
     expect(
       screen.getAllByText(/unless one is born again/),
     ).toHaveLength(1);
-    // The card still carries the saying's title and the episode it sits in.
+    // The card carries the saying's title and the episode it sits in too.
     const events = within(screen.getByTestId('jesus-topic-events-kingdom'));
     expect(events.getByText('You must be born again')).toBeInTheDocument();
+    expect(events.getByText('in Nicodemus comes by night')).toBeInTheDocument();
   });
 
-  it('still quotes an example the digest had no room for', () => {
+  it('quotes every example in the topic, not just the first', () => {
     const spare = event({
       slug: 'the-two-debtors',
       title: 'Simon and the two debtors',
@@ -231,8 +225,6 @@ describe('JesusTopicBrowse', () => {
       ],
     });
     const data = browse();
-    // The topic's digest covers only the first saying; the second card has to
-    // speak for itself.
     data.topics = [topic({ events: [event(), spare], points: topic().points })];
     renderBrowse(data);
 

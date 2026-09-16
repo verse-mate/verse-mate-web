@@ -131,7 +131,8 @@ test.describe('Jesus — a category, grouped by topic', () => {
     await expect(page.getByTestId('jesus-category-intro')).not.toBeEmpty();
     await expect(page.getByTestId('jesus-category-stats')).toContainText(/teaching/i);
 
-    // A topic names itself, then quotes Him, then lists the events.
+    // A topic names itself, then lists the events — the sayings ride on the
+    // cards rather than in a digest panel above them.
     const topic = page.locator('[data-testid^="jesus-topic-section-"]').first();
     await expect(topic).toBeVisible();
     await expect(topic.locator('[data-testid^="jesus-topic-name-"]')).not.toBeEmpty();
