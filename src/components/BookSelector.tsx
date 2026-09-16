@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchBooks, getRecentBooks, fetchTopics } from '@/services/bibleService';
 import { fetchJesusEntries, fetchJesusOverview } from '@/services/jesusService';
 import {
@@ -26,10 +26,9 @@ interface Props {
   onClose: () => void;
   onSelect: (book: string, chapter: number, bookId?: number) => void;
   /**
-   * Forces the modal to open on a specific tab. Used when the modal is
-   * launched from a topic page so the user lands on the Topics list
-   * instead of OT/NT, which would otherwise depend on the previously
-   * viewed Bible book.
+   * Forces the modal to open on a specific tab, overriding the route-derived
+   * default below. Callers that already know the section they belong to (a
+   * topic or Jesus screen) can pass it explicitly.
    */
   initialTab?: 'OT' | 'NT' | 'Jesus' | 'Topics';
   /**
@@ -86,11 +85,18 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   const bookRowH = compact ? 'h-[48px]' : 'h-[56px]';
   const recentRowH = compact ? 'h-[44px]' : 'h-[52px]';
   const navigate = useNavigate();
+  const location = useLocation();
   const { state } = useApp();
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [tab, setTab] = useState<Tab>(() => {
     if (initialTab) return initialTab;
-    // Default to whichever testament the current book belongs to
+    // Open on the tab matching whatever the user is currently looking at, so
+    // reopening the search from a Jesus or Topics screen lands back on that
+    // tab — the same way OT/NT follows the book being read.
+    if (location.pathname.startsWith('/jesus')) return 'Jesus';
+    // Covers both URL shapes: /topic/<category>/<slug> and /topics[/...].
+    if (location.pathname.startsWith('/topic')) return 'Topics';
+    // Otherwise default to whichever testament the current book belongs to
     return ['Matthew','Mark','Luke','John','Acts','Romans','1 Corinthians','2 Corinthians','Galatians','Ephesians','Philippians','Colossians','1 Thessalonians','2 Thessalonians','1 Timothy','2 Timothy','Titus','Philemon','Hebrews','James','1 Peter','2 Peter','1 John','2 John','3 John','Jude','Revelation'].includes(state.book) ? 'NT' : 'OT';
   });
   const [selectedBook, setSelectedBook] = useState<string | null>(null);
