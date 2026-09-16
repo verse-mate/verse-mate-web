@@ -940,8 +940,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 the full-screen top padding, so the search reads as a tidy modal
                 (not oversized) regardless of zoom / tablet, showing more of the
                 recents and book list. */}
+            {/* The landing tab is derived from the current route inside
+                BookSelector (Jesus / Topics / testament of the current book),
+                so no initialTab is needed here. */}
             <BookSelector
-              initialTab={isTopicRoute ? 'Topics' : undefined}
               initialQuery={bookSelectorQuery}
               compact
               onClose={() => { setShowBookSelector(false); setBookSelectorQuery(''); }}
