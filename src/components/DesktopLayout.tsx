@@ -177,6 +177,12 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
   // Right panel: only one menu page at a time, back always returns to commentary
   const [rightPanelView, setRightPanelView] = useState<RightPanelView>('commentary');
+  // A menu sub-page (Settings, Bookmarks, …) is open. It takes over the right
+  // pane on EVERY route — Bible, topic and Jesus alike. Without this the topic
+  // and Jesus panes swallowed the pane unconditionally, so tapping a menu item
+  // from those tabs looked like nothing happened at all (issue: side menu dead
+  // on the Jesus / Topic tabs).
+  const isSubPage = rightPanelView !== 'commentary';
 
   const openRightPanel = (view: RightPanelView) => {
     // Opening a menu sub-page (Settings, Bookmarks, …) needs the right pane
@@ -281,6 +287,19 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     setRightPanelView('commentary');
     setTab('byline');
   }, [state.book, state.chapter, state.version]);
+
+  // Navigating to a different topic / Jesus event is the topic-side
+  // equivalent of a chapter change, so it clears any open menu sub-page the
+  // same way the chapter effect above does. Without this, a sub-page opened
+  // from the side menu would stay pinned over the new route's own insight
+  // pane. Sub-pages don't touch the URL, so this only fires on real
+  // navigation.
+  const subPageRoute = useRef(location.pathname);
+  useEffect(() => {
+    if (subPageRoute.current === location.pathname) return;
+    subPageRoute.current = location.pathname;
+    setRightPanelView('commentary');
+  }, [location.pathname]);
 
   // Auto-scroll removed — users scroll the Insights panel independently
 
@@ -437,7 +456,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // The right insights panel can be minimized at any width now (tablet +
   // desktop), mirroring the left sidebar's drag-to-hide. The sidebar still
   // follows its layout default at wide widths.
-  const effectiveRightCollapsed = rightPanelCollapsed || jesusFullWidth;
+  // A menu sub-page always needs the pane on screen, even where the route
+  // would otherwise run full-width (the Jesus hub / browse lists) or where the
+  // user had dragged the pane closed.
+  const effectiveRightCollapsed = isSubPage ? false : (rightPanelCollapsed || jesusFullWidth);
   // Tablet (hideSidebar) collapses the resizable split into a full-screen swap:
   // the reading and the insight/sub-page panel each take the full width and the
   // user toggles between them (no cramped 35%-wide pane). When the panel is
@@ -643,7 +665,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               </div>
             </div>
           )}
-          {isTopicRoute && (
+          {isTopicRoute && !isSubPage && (
             <div
               className="header-pill-scroll"
               style={{
@@ -679,7 +701,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             </div>
           )}
 
-          {hasJesusEvent && (
+          {hasJesusEvent && !isSubPage && (
             <div
               className="header-pill-scroll"
               style={{
@@ -714,8 +736,16 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           {/* Sub-screen back chevron — anchored to the LEFT edge of the
               right pane so it sits flush with the right-pane box. Desktop only:
               on tablet the full-screen sub-page uses the header-left "Reading"
-              chevron instead (there is no right-pane edge to anchor to). */}
-          {!isTopicRoute && rightPanelView !== 'commentary' && !effectiveRightCollapsed && !isTablet && (() => {
+              chevron instead (there is no right-pane edge to anchor to).
+
+              #300 suppressed this chrome on topic / Jesus-event routes because
+              a sub-page there left an orphaned chevron and title painted over
+              the route's own pills. That was the old bug's other half: the
+              sub-page set `rightPanelView` but never rendered, so only its
+              chrome showed. Now the sub-page owns the pane and the route's
+              pills step aside for it, so the chevron is the way back out —
+              suppressing it would strand the user in the sub-page. */}
+          {isSubPage && !effectiveRightCollapsed && !isTablet && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
             return (
@@ -741,7 +771,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* Sub-screen title — centered horizontally over the right pane,
               independent of the back-chevron position. */}
-          {!isTopicRoute && rightPanelView !== 'commentary' && !effectiveRightCollapsed && (() => {
+          {isSubPage && !effectiveRightCollapsed && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
             return (
@@ -820,7 +850,20 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           {/* Right panel */}
           {!effectiveRightCollapsed && (
           <div data-testid="desktop-right-panel" className="right-panel">
-            {hasJesusEvent ? (
+            {/* A menu sub-page wins over every route-specific pane: it is what
+                the user just asked for from the side menu. */}
+            {isSubPage ? (
+              <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
+                <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                  {(() => {
+                    const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
+                    if (!entry) return null;
+                    const PageComponent = entry.component;
+                    return <PageComponent />;
+                  })()}
+                </div>
+              </RightPanelProvider>
+            ) : hasJesusEvent ? (
               <div
                 className="commentary-body"
                 style={{ fontSize: `${state.settings.fontSize}px`, ...fullWidthContentPad }}
@@ -846,7 +889,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                   loading={topicDetails === null}
                 />
               </div>
-            ) : rightPanelView === 'commentary' ? (
+            ) : (
               <div
                 ref={commentaryScrollRef}
                 className="commentary-body"
@@ -863,17 +906,6 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                   chapter={state.chapter}
                 />
               </div>
-            ) : (
-              <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
-                <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                  {(() => {
-                    const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
-                    if (!entry) return null;
-                    const PageComponent = entry.component;
-                    return <PageComponent />;
-                  })()}
-                </div>
-              </RightPanelProvider>
             )}
           </div>
           )}
@@ -940,8 +972,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 the full-screen top padding, so the search reads as a tidy modal
                 (not oversized) regardless of zoom / tablet, showing more of the
                 recents and book list. */}
+            {/* The landing tab is derived from the current route inside
+                BookSelector (Jesus / Topics / testament of the current book),
+                so no initialTab is needed here. */}
             <BookSelector
-              initialTab={isTopicRoute ? 'Topics' : undefined}
               initialQuery={bookSelectorQuery}
               compact
               onClose={() => { setShowBookSelector(false); setBookSelectorQuery(''); }}

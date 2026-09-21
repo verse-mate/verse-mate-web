@@ -292,7 +292,6 @@ export function JesusEventCardView({
   event,
   index,
   detail = false,
-  hideQuote = false,
 }: {
   event: JesusEventCard;
   index?: number;
@@ -302,12 +301,6 @@ export function JesusEventCardView({
    * worked example, so what He said and what was going on both belong on it.
    */
   detail?: boolean;
-  /**
-   * Drop the pulled quote because the surrounding screen already carries it.
-   * The topic browse quotes its headline sayings above the cards, and printing
-   * the same sentence twice within a screen's height reads as a bug.
-   */
-  hideQuote?: boolean;
 }) {
   const navigate = useNavigate();
   // On a filtered list the API labels which facets matched, so a Questions
@@ -404,7 +397,7 @@ export function JesusEventCardView({
             </p>
           )}
 
-          {highlight?.text && !hideQuote && (
+          {highlight?.text && (
             <blockquote
               style={{
                 margin: '8px 0 0',
