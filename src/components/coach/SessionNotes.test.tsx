@@ -25,8 +25,6 @@ function makeReport(over: Partial<CoachReport> = {}): CoachReport {
     dimensions: [],
     bigIdeas: [],
     feedback: { headline: '', strengths: [], improvements: [], recommendations: [] },
-    docUrl: '',
-    pdfUrl: '',
     ...over,
   };
 }

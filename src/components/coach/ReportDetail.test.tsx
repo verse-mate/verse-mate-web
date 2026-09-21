@@ -30,8 +30,6 @@ function makeReport(overrides: Partial<CoachReport['feedback']> = {}): CoachRepo
       recommendations: ['Hold silence for a full 5 seconds.'],
       ...overrides,
     },
-    docUrl: '',
-    pdfUrl: '',
   };
 }
 

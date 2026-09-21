@@ -4,7 +4,7 @@
  * Talks to the VerseMate backend's coach module at `${API_BASE_URL}/coach/*`
  * (verse-mate/packages/backend-base/src/coach). Auth reuses the app's
  * `fetchWithAuth`, which attaches the existing Bearer access token and
- * transparently refreshes on 401 — so a signed-in VerseMate user is a
+ * transparently refreshes on 401, so a signed-in VerseMate user is a
  * signed-in coach with no extra login step. Unlike the shared `request()`
  * helper, `fetchWithAuth` does NOT hard-redirect to /logout on auth failure,
  * so this module can render its own sign-in / not-a-coach gates.
@@ -58,23 +58,27 @@ export interface CoachReport {
   bigIdeas: string[];
   /** Coaching feedback rendered directly on the page (no Google Docs hop). */
   feedback: CoachFeedback;
-  /** Additional named report sections straight from the pipeline — e.g. "Key
+  /** Additional named report sections straight from the pipeline, e.g. "Key
    *  moments", "Session flow timeline", "Vulnerability moments". Optional and
    *  ordered; the desktop report renders each in order after the recommendations
    *  so the portal can match the depth of the full PDF without further UI work
    *  as the pipeline adds sections. */
   sections?: CoachReportSection[];
-  docUrl: string;
-  pdfUrl: string;
   /** Admin-editable recording URL for this session (Zoom / Fireflies / Drive).
    *  Empty string when none set. */
   recordingUrl?: string;
+  /**
+   * DETAIL-ONLY (task 4.5). Whether VerseMate holds a recording for this
+   * session, never WHERE it is. The address is minted per session by
+   * `mintRecordingUrl`, so opening a list mints nothing.
+   */
+  hasRetainedRecording?: boolean;
   /** Coaching notes on this session, newest first. Shown editable to admins
    *  (composer + history) and read-only to the leader on their dashboard. */
   notes?: CoachNote[];
 }
 
-/** A coaching note on a session — written by an admin, emailed to the leader. */
+/** A coaching note on a session, written by an admin, emailed to the leader. */
 export interface CoachNote {
   id: string;
   body: string;
@@ -93,8 +97,8 @@ export interface CoachMoment {
 }
 
 /** A free-form report section from the pipeline. Any combination of prose
- *  paragraphs, bullet points, and timestamped moments — whatever the section
- *  needs — so new PDF sections surface on the portal without a schema change. */
+ *  paragraphs, bullet points, and timestamped moments, whatever the section
+ *  needs, so new PDF sections surface on the portal without a schema change. */
 export interface CoachReportSection {
   title: string;
   paragraphs?: string[];
@@ -114,11 +118,11 @@ export interface CoachFeedbackPoint {
 
 export interface CoachFeedback {
   headline: string;
-  /** Terse one-line bullets — the compact (mobile) presentation. */
+  /** Terse one-line bullets, the compact (mobile) presentation. */
   strengths: string[];
   improvements: string[];
   recommendations: string[];
-  /** Full prose straight from the coaching pipeline — the expanded (desktop)
+  /** Full prose straight from the coaching pipeline, the expanded (desktop)
    *  presentation. All optional: a report generated before prose export simply
    *  falls back to the terse bullets above, so old and new data both render. */
   overview?: string[];
@@ -164,7 +168,7 @@ export interface CoachClassInput {
   zoomLink: string;
 }
 
-/** One class in the admin all-leaders export — the class plus the leader it
+/** One class in the admin all-leaders export, the class plus the leader it
  *  belongs to. This is the single feed the Fireflies bot's auto-joins are
  *  configured from, so admins can see every meeting link across the cohort. */
 export interface AdminCoachClass extends CoachClass {
@@ -174,7 +178,7 @@ export interface AdminCoachClass extends CoachClass {
 export interface CoachMe {
   /** True when the signed-in account maps to an evaluated leader. */
   isCoach: boolean;
-  /** True for program admins — oversight over every leader. */
+  /** True for program admins, oversight over every leader. */
   isAdmin: boolean;
   /** The leader's own record; null for an admin who isn't a coachee. */
   profile: CoachProfile | null;
@@ -261,32 +265,115 @@ async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T>
   return (await res.json()) as T;
 }
 
-/** GET /api/coach/me — profile + saved Zoom link + model metadata. */
+/** GET /api/coach/me, profile + saved Zoom link + model metadata. */
 export function fetchCoachMe(): Promise<CoachMe> {
   return coachRequest<CoachMe>('me');
 }
 
-/** GET /api/coach/reports — this coach's feedback documents, newest first. */
+/** GET /api/coach/reports, this coach's feedback documents, newest first. */
 export async function fetchCoachReports(): Promise<CoachReport[]> {
   const data = await coachRequest<{ reports: CoachReport[] }>('reports');
   return data.reports || [];
 }
 
-/** GET /api/coach/trends — derived score / cluster / dimension series. */
+/**
+ * GET /api/coach/reports/:id, one session in full.
+ *
+ * The `hasRetainedRecording` flag is detail-only by design (a list must not
+ * mint, and it does not carry the field), so opening a single session is the
+ * only way to learn that VerseMate holds its recording.
+ */
+export async function fetchCoachReportDetail(
+  reportId: string,
+): Promise<CoachReport | null> {
+  try {
+    const data = await coachRequest<{ report: CoachReport }>(
+      `reports/${encodeURIComponent(reportId)}`,
+    );
+    return data.report ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Mint a short-lived address for ONE session's retained recording.
+ *
+ * Called at PLAYBACK START, not at render: an address minted when a detail view
+ * opens is already spent by the time someone left the tab and came back, and
+ * minting per rendered row would sign one URL per session on every page load.
+ */
+export async function mintRecordingUrl(
+  reportId: string,
+): Promise<{ url: string; expiresInSeconds: number } | null> {
+  try {
+    return await coachRequest<{ url: string; expiresInSeconds: number }>(
+      `reports/${encodeURIComponent(reportId)}/recording-url`,
+    );
+  } catch {
+    // Every refusal looks the same by design (no session, not yours, nothing
+    // retained), so there is nothing to distinguish here either.
+    return null;
+  }
+}
+
+/** A session whose recording could not be retrieved (tasks 4.9a, 8.5a). */
+export interface PendingReshare {
+  sourceSessionId: string;
+  coachId: string | null;
+  title: string;
+  sessionDate: string;
+  requestedAt: string;
+  attempts: number;
+  /** True once the leader has actually been emailed about this session. */
+  asked: boolean;
+}
+
+/** GET /api/coach/admin/reshares, admin only. */
+export async function fetchPendingReshares(): Promise<PendingReshare[]> {
+  const data = await coachRequest<{ requests: PendingReshare[] }>(
+    'admin/reshares',
+  );
+  return data.requests || [];
+}
+
+/** POST /api/coach/admin/reshares/:id/send, asks the leader to re-share. */
+export function sendReshareRequest(sourceSessionId: string): Promise<{ sent: boolean }> {
+  return coachRequest<{ sent: boolean }>(
+    `admin/reshares/${encodeURIComponent(sourceSessionId)}/send`,
+    { method: 'POST' },
+  );
+}
+
+/**
+ * POST /api/coach/admin/reshares/:id/resolve, the session re-enters
+ * retrieval. Intake idempotence means the report it eventually produces is not
+ * a duplicate.
+ */
+export function resolveReshareRequest(
+  sourceSessionId: string,
+): Promise<{ resolved: boolean }> {
+  return coachRequest<{ resolved: boolean }>(
+    `admin/reshares/${encodeURIComponent(sourceSessionId)}/resolve`,
+    { method: 'POST' },
+  );
+}
+
+/** GET /api/coach/trends, derived score / cluster / dimension series. */
 export function fetchCoachTrends(): Promise<CoachTrends> {
   return coachRequest<CoachTrends>('trends');
 }
 
 // ─── Admin oversight (program admins only) ─────────────────────────────────
 
-/** GET /coach/admin/coaches — every leader's roster summary. 403 for
+/** GET /coach/admin/coaches, every leader's roster summary. 403 for
  *  non-admins → surfaces as CoachAuthError('not_a_coach'). */
 export async function fetchAdminCoaches(): Promise<CoachSummary[]> {
   const data = await coachRequest<{ coaches: CoachSummary[] }>('admin/coaches');
   return data.coaches || [];
 }
 
-/** GET /coach/admin/coaches/:id/reports — a specific leader's documents. */
+/** GET /coach/admin/coaches/:id/reports, a specific leader's documents. */
 export function fetchCoachReportsFor(
   coachId: string,
 ): Promise<{ profile: CoachProfileHeader; reports: CoachReport[] }> {
@@ -295,12 +382,12 @@ export function fetchCoachReportsFor(
   );
 }
 
-/** GET /coach/admin/coaches/:id/trends — a specific leader's trends. */
+/** GET /coach/admin/coaches/:id/trends, a specific leader's trends. */
 export function fetchCoachTrendsFor(coachId: string): Promise<CoachTrends> {
   return coachRequest<CoachTrends>(`admin/coaches/${encodeURIComponent(coachId)}/trends`);
 }
 
-/** PUT /api/coach/zoom-link — persist the coach's meeting link. */
+/** PUT /api/coach/zoom-link, persist the coach's meeting link. */
 export async function saveCoachZoomLink(zoomLink: string): Promise<string> {
   const data = await coachRequest<{ zoomLink: string }>('zoom-link', {
     method: 'PUT',
@@ -312,14 +399,14 @@ export async function saveCoachZoomLink(zoomLink: string): Promise<string> {
 
 // ─── Classes (Class Setup) ──────────────────────────────────────────────────
 
-/** GET /api/coach/classes — this coach's registered classes, newest-edited
+/** GET /api/coach/classes, this coach's registered classes, newest-edited
  *  first. */
 export async function fetchCoachClasses(): Promise<CoachClass[]> {
   const data = await coachRequest<{ classes: CoachClass[] }>('classes');
   return data.classes || [];
 }
 
-/** POST /api/coach/classes — register a new class. */
+/** POST /api/coach/classes, register a new class. */
 export async function createCoachClass(input: CoachClassInput): Promise<CoachClass> {
   const data = await coachRequest<{ class: CoachClass }>('classes', {
     method: 'POST',
@@ -329,7 +416,7 @@ export async function createCoachClass(input: CoachClassInput): Promise<CoachCla
   return data.class;
 }
 
-/** PUT /api/coach/classes/:id — update an existing class. */
+/** PUT /api/coach/classes/:id, update an existing class. */
 export async function updateCoachClass(id: string, input: CoachClassInput): Promise<CoachClass> {
   const data = await coachRequest<{ class: CoachClass }>(`classes/${encodeURIComponent(id)}`, {
     method: 'PUT',
@@ -339,14 +426,14 @@ export async function updateCoachClass(id: string, input: CoachClassInput): Prom
   return data.class;
 }
 
-/** DELETE /api/coach/classes/:id — remove a class. */
+/** DELETE /api/coach/classes/:id, remove a class. */
 export async function deleteCoachClass(id: string): Promise<void> {
   await coachRequest<{ success: boolean }>(`classes/${encodeURIComponent(id)}`, {
     method: 'DELETE',
   });
 }
 
-/** GET /coach/admin/classes — every leader's classes with owner identity
+/** GET /coach/admin/classes, every leader's classes with owner identity
  *  (admin only; 403 for non-admins). The single feed the Fireflies bot's
  *  auto-joins are configured from. */
 export async function fetchAllCoachClasses(): Promise<AdminCoachClass[]> {
@@ -354,7 +441,7 @@ export async function fetchAllCoachClasses(): Promise<AdminCoachClass[]> {
   return data.classes || [];
 }
 
-/** PUT /api/coach/affiliated-church — persist the coach's affiliated church. */
+/** PUT /api/coach/affiliated-church, persist the coach's affiliated church. */
 export async function saveCoachAffiliatedChurch(affiliatedChurch: string): Promise<string> {
   const data = await coachRequest<{ affiliatedChurch: string }>('affiliated-church', {
     method: 'PUT',
@@ -364,7 +451,7 @@ export async function saveCoachAffiliatedChurch(affiliatedChurch: string): Promi
   return data.affiliatedChurch;
 }
 
-/** PUT /api/coach/bible-coach — persist the coach's selected Bible coach. */
+/** PUT /api/coach/bible-coach, persist the coach's selected Bible coach. */
 export async function saveCoachBibleCoach(bibleCoach: string): Promise<string> {
   const data = await coachRequest<{ bibleCoach: string }>('bible-coach', {
     method: 'PUT',
@@ -381,7 +468,7 @@ export const DEFAULT_BIBLE_COACH = BIBLE_COACHES[0];
 
 // ─── Admin writes: add leader · recording link · notes ─────────────────────
 
-/** POST /coach/admin/leaders — add a leader by email (+ optional name/group).
+/** POST /coach/admin/leaders, add a leader by email (+ optional name/group).
  *  The backend sends them an invite email. Returns the new roster summary. */
 export async function addCoachLeader(input: {
   email: string;
@@ -414,7 +501,7 @@ export async function saveRecordingLink(
   return data.recordingUrl;
 }
 
-/** POST a coaching note on a session — persisted + emailed to the leader. */
+/** POST a coaching note on a session, persisted + emailed to the leader. */
 export async function addCoachNote(
   coachId: string,
   reportId: string,
@@ -466,13 +553,13 @@ export interface CoachMonthly {
   narrative: MonthlyNarrative | null;
 }
 
-/** Program-wide monthly narrative — the same prose the monthly PDF carries. */
+/** Program-wide monthly narrative, the same prose the monthly PDF carries. */
 export interface MonthlyNarrative {
   executiveSummary: string[];
   trends: string[];
 }
 
-/** GET /coach/admin/monthly?month=YYYY-MM — program-wide + per-leader rollup. */
+/** GET /coach/admin/monthly?month=YYYY-MM, program-wide + per-leader rollup. */
 export function fetchAdminMonthly(month: string): Promise<CoachMonthly> {
   return coachRequest<CoachMonthly>(`admin/monthly?month=${encodeURIComponent(month)}`);
 }
@@ -546,12 +633,12 @@ export interface LeaderMonthlyResponse {
   availableMonths: string[];
 }
 
-/** GET /coach/monthly-summary?month=YYYY-MM — the signed-in leader's own. */
+/** GET /coach/monthly-summary?month=YYYY-MM, the signed-in leader's own. */
 export function fetchMyMonthlySummary(month: string): Promise<LeaderMonthlyResponse> {
   return coachRequest<LeaderMonthlyResponse>(`monthly-summary?month=${encodeURIComponent(month)}`);
 }
 
-/** GET /coach/admin/coaches/:id/monthly-summary?month=YYYY-MM — admin drill-in. */
+/** GET /coach/admin/coaches/:id/monthly-summary?month=YYYY-MM, admin drill-in. */
 export function fetchLeaderMonthlySummary(
   coachId: string,
   month: string,
@@ -563,50 +650,39 @@ export function fetchLeaderMonthlySummary(
 
 // ─── Small view helpers (shared across the coach screens) ──────────────────
 
-/** Brand-aligned color for a status label. Gold = the app's accent for the
- *  top band; the rest step down through green/amber/orange/red. */
-export function statusColor(status: string): string {
-  switch (status) {
-    case 'Exceptional':
-      return 'var(--vm-dust)'; // brand gold
-    case 'Strong':
-      return '#15803D';
-    case 'On Target':
-      return '#B08900';
-    case 'Developing':
-      return '#C2620F';
-    default:
-      return '#B91C1C';
-  }
-}
+/**
+ * Brand-aligned colour for a status label, highest band first.
+ *
+ * Keyed by the band's POSITION in the served order, not by its label. The
+ * switch this replaces named all five labels, which made it a copy of the
+ * rubric: renaming a band dropped its colour to the red default, so a leader
+ * in the TOP band would have been shown the colour of the bottom one.
+ */
+const STATUS_PALETTE = [
+  'var(--vm-dust)', // brand gold, top band
+  '#15803D',
+  '#B08900',
+  '#C2620F',
+  '#B91C1C',
+];
 
 /**
- * Turn a report's `pdfUrl` into a link that *downloads* the coach-produced PDF
- * rather than opening a Drive viewer or a folder.
+ * Neutral, for a status this function cannot place in the served order.
  *
- * The pipeline stores each session's `pdfUrl` as a Google Drive / Docs share
- * URL. A `/view` (or `/edit`) link opens the online viewer; we rewrite it to
- * the direct-download form so the button saves the file. Returns `null` when
- * there is no real per-session PDF to download — an empty value, or a Drive
- * *folder* link (the exporter's fallback when a session has no captured PDF) —
- * so callers can hide the button instead of dropping the user in a folder.
+ * Falling back to the palette's last entry was wrong twice over. The bands
+ * arrive asynchronously, so on first paint every caller passed `[]` and every
+ * status, including the top one, rendered in the bottom band's red. And an
+ * unrecognised label is unknown, not bad: colouring it red asserts something
+ * about the leader's session that nothing in the data supports.
  */
-export function pdfDownloadUrl(pdfUrl: string | undefined): string | null {
-  const url = pdfUrl?.trim();
-  if (!url) return null;
+const STATUS_UNKNOWN = '#8A8272';
 
-  // A Drive folder link is not a downloadable file — treat as "no PDF".
-  if (/drive\.google\.com\/drive\/folders\//i.test(url)) return null;
-
-  // Google Docs/Sheets/Slides → native PDF export.
-  const docs = url.match(/docs\.google\.com\/\w+\/d\/([\w-]+)/i);
-  if (docs) return `https://docs.google.com/document/d/${docs[1]}/export?format=pdf`;
-
-  // Drive file link (`/file/d/ID/...` or `?id=ID` / `&id=ID`) → direct download.
-  const fileId = url.match(/\/file\/d\/([\w-]+)/i)?.[1] ?? url.match(/[?&]id=([\w-]+)/i)?.[1];
-  if (fileId) return `https://drive.google.com/uc?export=download&id=${fileId}`;
-
-  // Some other absolute link (e.g. a direct PDF URL) — hand it back unchanged.
-  if (/^https?:\/\//i.test(url)) return url;
-  return null;
+export function statusColor(
+  status: string,
+  bandLabels: string[] = [],
+): string {
+  const i = bandLabels.indexOf(status);
+  if (i < 0) return STATUS_UNKNOWN;
+  return STATUS_PALETTE[i] ?? STATUS_UNKNOWN;
 }
+

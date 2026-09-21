@@ -33,6 +33,8 @@ vi.mock('@/services/coachService', async (importOriginal) => {
     fetchCoachReportsFor: vi.fn(),
     fetchCoachTrendsFor: vi.fn(),
     fetchAllCoachClasses: vi.fn(),
+    fetchCoachReportDetail: vi.fn(),
+    mintRecordingUrl: vi.fn(),
   };
 });
 
@@ -107,8 +109,6 @@ function makeReport(over: Partial<CoachReport> = {}): CoachReport {
         bullets: ['Mike, what are you thinking about your wealth? — Level 4 — apply to life — The session signature moment.'],
       },
     ],
-    docUrl: '',
-    pdfUrl: 'https://drive.google.com/file/d/abc/view',
     ...over,
   };
 }
@@ -200,7 +200,9 @@ beforeEach(() => {
   vi.mocked(coachService.fetchCoachTrends).mockResolvedValue(trends);
   vi.mocked(coachService.fetchCoachClasses).mockResolvedValue(classes);
   vi.mocked(coachService.fetchMyMonthlySummary).mockResolvedValue(monthly);
-  // Admin drill-in ("For") endpoints — same shapes, per-leader.
+  // No retained recording by default; the case below opts in.
+  vi.mocked(coachService.fetchCoachReportDetail).mockResolvedValue(null);
+  // Admin drill-in ("For") endpoints, same shapes, per-leader.
   vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
     profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning', coachName: '' },
     reports,
@@ -211,7 +213,7 @@ beforeEach(() => {
   );
 });
 
-describe('Coaching dashboard — Home', () => {
+describe('Coaching dashboard, Home', () => {
   it('renders the greeting, latest score, next class and session detail', async () => {
     renderAt('/coach', <CoachDashboardScreen />);
     // Session detail header (waits for reports to resolve).
@@ -224,6 +226,32 @@ describe('Coaching dashboard — Home', () => {
     expect(screen.getByTestId('coach-tab-scorecard')).toBeInTheDocument();
   });
 
+  it('offers the RECORDING on a session VerseMate ingested', async () => {
+    // The component and its endpoint both existed and were tested, and neither
+    // was reachable: SessionNotes (which mounts it) renders only on the
+    // admin-gated manage screen, so a leader opening their own session saw
+    // nothing. Found by driving the real portal against a real backend.
+    vi.mocked(coachService.fetchCoachReportDetail).mockResolvedValue({
+      ...reports[0],
+      hasRetainedRecording: true,
+    } as CoachReport);
+
+    renderAt('/coach', <CoachDashboardScreen />);
+    expect(
+      await screen.findByTestId(`coach-recording-play-${reports[0].id}`),
+    ).toBeInTheDocument();
+    // And nothing is minted just by opening the session.
+    expect(coachService.mintRecordingUrl).not.toHaveBeenCalled();
+  });
+
+  it('offers NOTHING when the session has no retained recording', async () => {
+    renderAt('/coach', <CoachDashboardScreen />);
+    await screen.findByText(/Good (morning|afternoon|evening), Bryan/);
+    expect(
+      screen.queryByTestId(`coach-recording-play-${reports[0].id}`),
+    ).toBeNull();
+  });
+
   it('switches to the Scorecard tab and expands a dimension', async () => {
     renderAt('/coach', <CoachDashboardScreen />);
     fireEvent.click(await screen.findByTestId('coach-tab-scorecard'));
@@ -232,7 +260,7 @@ describe('Coaching dashboard — Home', () => {
   });
 });
 
-describe('Coaching dashboard — Sessions', () => {
+describe('Coaching dashboard, Sessions', () => {
   it('lists recurring classes and past sessions with the view action', async () => {
     renderAt('/coach/sessions', <CoachSessionsScreen />);
     expect(await screen.findByText('James — Saturday Morning Group')).toBeInTheDocument();
@@ -243,7 +271,7 @@ describe('Coaching dashboard — Sessions', () => {
   });
 });
 
-describe('Coaching dashboard — Trends', () => {
+describe('Coaching dashboard, Trends', () => {
   it('renders the monthly summary band and per-session detail', async () => {
     renderAt('/coach/trends', <CoachTrendsScreen />);
     expect(await screen.findByText('MONTHLY COACHING SUMMARY')).toBeInTheDocument();
@@ -255,7 +283,7 @@ describe('Coaching dashboard — Trends', () => {
   });
 });
 
-describe('Coaching dashboard — admin drill-in', () => {
+describe('Coaching dashboard, admin drill-in', () => {
   it('renders a leader’s dashboard via the per-leader endpoints with the admin context bar', async () => {
     const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
     render(

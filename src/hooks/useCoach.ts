@@ -35,6 +35,7 @@ import {
   fetchAllCoachClasses,
   fetchCoachClasses,
   fetchCoachMe,
+  fetchCoachReportDetail,
   fetchCoachReports,
   fetchCoachReportsFor,
   fetchCoachTrends,
@@ -83,6 +84,23 @@ export function useCoachReports(opts: { enabled?: boolean } = {}): UseQueryResul
     queryFn: fetchCoachReports,
     retry: false,
     enabled: opts.enabled ?? true,
+  });
+}
+
+/**
+ * One session in full, fetched only when a single session is open.
+ *
+ * Separate from the reports list on purpose: the list must not learn anything
+ * that would make it mint a recording address per row.
+ */
+export function useCoachReportDetail(
+  reportId: string | undefined,
+): UseQueryResult<CoachReport | null> {
+  return useQuery({
+    queryKey: [...coachKeys.reports, 'detail', reportId ?? ''],
+    queryFn: () => fetchCoachReportDetail(reportId as string),
+    enabled: Boolean(reportId),
+    retry: false,
   });
 }
 
