@@ -122,6 +122,33 @@ export const ME = {
   clusters: RUBRIC.clusters,
 };
 
+export const ADMIN_ME = {
+  ...ME,
+  isCoach: false,
+  isAdmin: true,
+  profile: null,
+  statusBands: RUBRIC.statusBands,
+};
+
+export const LEADER_ID = 'leader';
+
+export const TRENDS = {
+  scoreSeries: REPORTS.map((r) => ({
+    date: r.date,
+    dateLabel: r.dateLabel,
+    score: r.score,
+    session: r.session,
+    status: r.status,
+  })).reverse(),
+  clusterSeries: REPORTS.map((r) => ({
+    date: r.date,
+    dateLabel: r.dateLabel,
+    ...Object.fromEntries(r.clusters.map((c) => [c.name, c.contribution])),
+  })).reverse(),
+  dimensionSeries: [],
+  delta: null,
+};
+
 /**
  * One second of black, 1.7 KB, generated with ffmpeg. Real bytes rather than a
  * stub, so a spec can tell "the player plays" from "the player failed and
@@ -138,6 +165,7 @@ export interface CoachApiOptions {
   onMint?: (reportId: string) => void;
   /** Make the minted address unreachable, the failed-playback path. */
   breakPlayback?: boolean;
+  admin?: boolean;
 }
 
 /**
@@ -167,7 +195,27 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     await route.fulfill({ json: RUBRIC });
   });
 
-  await page.route(`${API}/coach/me`, (route) => route.fulfill({ json: ME }));
+  await page.route(`${API}/coach/me`, (route) =>
+    route.fulfill({ json: opts.admin ? ADMIN_ME : ME }),
+  );
+
+  await page.route(`${API}/coach/trends`, (route) => route.fulfill({ json: TRENDS }));
+
+  await page.route(`${API}/coach/admin/coaches/*/reports`, (route) => {
+    if (!opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } });
+    return route.fulfill({
+      json: {
+        profile: { ...ME.profile, id: LEADER_ID },
+        reports: REPORTS,
+      },
+    });
+  });
+
+  await page.route(`${API}/coach/admin/coaches/*/trends`, (route) =>
+    opts.admin
+      ? route.fulfill({ json: TRENDS })
+      : route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } }),
+  );
 
   await page.route(`${API}/coach/reports`, (route) =>
     route.fulfill({ json: { reports: REPORTS } }),
@@ -201,6 +249,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   });
 
   await page.route(`${API}/coach/reports/*`, (route) => {
+    if (opts.admin) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND' } });
     const id = decodeURIComponent(
       new URL(route.request().url()).pathname.split('/').at(-1) ?? '',
     );

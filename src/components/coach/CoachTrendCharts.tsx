@@ -114,21 +114,18 @@ export function ClusterTrendCard({
     () => (trends?.clusterSeries || []).map((r) => ({ ...r, label: shortDate(String(r.date)) })),
     [trends],
   );
-  // Cluster names and their order come from the SERVED rubric. Until it
-  // arrives, fall back to the keys the series itself carries, the chart is
-  // about the leader's own data and must not wait on an explainer.
   const { rubric } = useRubric();
   const clusterNames = useMemo(() => {
     const served = (rubric?.clusters ?? []).map((c) => c.name);
     if (served.length > 0) return served;
     const fromData = new Set<string>();
-    for (const row of clusterData) {
-      for (const key of Object.keys(row)) {
-        if (key !== 'date' && key !== 'label') fromData.add(key);
+    for (const row of trends?.clusterSeries ?? []) {
+      for (const [key, value] of Object.entries(row)) {
+        if (typeof value === 'number') fromData.add(key);
       }
     }
     return [...fromData];
-  }, [rubric, clusterData]);
+  }, [rubric, trends]);
   const clickable = !!onSelectDate;
   const handleClick = clickable
     ? (state: Parameters<NonNullable<React.ComponentProps<typeof BarChart>['onClick']>>[0]) => {
