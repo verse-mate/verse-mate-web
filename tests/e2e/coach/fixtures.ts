@@ -149,6 +149,43 @@ export const TRENDS = {
   delta: null,
 };
 
+export const MONTHLY_LEADERS: Record<string, { name: string; strength: string }> = {
+  alice: { name: 'Alice Adams', strength: 'Alice opened every session with a newcomer welcome.' },
+  bob: { name: 'Bob Brown', strength: 'Bob tied every question back to the passage.' },
+};
+
+function monthlyFor(id: string, month: string) {
+  const leader = MONTHLY_LEADERS[id];
+  const avg = { tc: 80, bm: 80, ep: 80, br: 80 };
+  return {
+    profile: { id, name: leader.name, group: 'Saturday Morning Study' },
+    availableMonths: [month],
+    summary: {
+      month,
+      monthLabel: month,
+      priorMonthLabel: '',
+      leaderId: id,
+      leaderName: leader.name,
+      group: 'Saturday Morning Study',
+      sessionsCount: 2,
+      composite: 80,
+      status: { label: 'Strong', emoji: '🟢' },
+      priorComposite: null,
+      delta: null,
+      clusterAvg: avg,
+      glance: { rows: [], avg: { ...avg, composite: 80, status: 'Strong' } },
+      trajectory: [],
+      clusters: [],
+      strengths: [{ text: leader.strength, session: 'Obadiah, Lesson 4' }],
+      growth: [],
+      trends: [],
+      conversationGuide: [],
+      focus: { clusterName: 'Teaching Craft', clusterPct: 80, goals: [] },
+      sessions: [],
+    },
+  };
+}
+
 /**
  * One second of black, 1.7 KB, generated with ffmpeg. Real bytes rather than a
  * stub, so a spec can tell "the player plays" from "the player failed and
@@ -166,6 +203,7 @@ export interface CoachApiOptions {
   /** Make the minted address unreachable, the failed-playback path. */
   breakPlayback?: boolean;
   mintDelayMs?: number;
+  monthlyDelayMs?: Record<string, number>;
   admin?: boolean;
 }
 
@@ -210,6 +248,16 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
         reports: REPORTS,
       },
     });
+  });
+
+  await page.route(/\/coach\/admin\/coaches\/[^/]+\/monthly-summary/, async (route) => {
+    if (!opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } });
+    const url = new URL(route.request().url());
+    const id = decodeURIComponent(url.pathname.split('/').at(-2) ?? '');
+    if (!MONTHLY_LEADERS[id]) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND' } });
+    const delay = opts.monthlyDelayMs?.[id];
+    if (delay) await new Promise((r) => setTimeout(r, delay));
+    return route.fulfill({ json: monthlyFor(id, url.searchParams.get('month') ?? '') });
   });
 
   await page.route(`${API}/coach/admin/coaches/*/trends`, (route) =>
