@@ -28,7 +28,15 @@ import type { CoachClass, CoachReport, CoachTrends } from '@/services/coachServi
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import CoachLineChart from '@/components/coach/CoachLineChart';
-import { dt, firstName, letterGrade, ratingForScore } from '@/components/coach/dashboardTheme';
+import {
+  dimensionBandIndex,
+  type DimensionBand,
+  dt,
+  firstName,
+  letterGrade,
+  ratingForScore,
+} from '@/components/coach/dashboardTheme';
+import { useRubric } from '@/hooks/useRubric';
 import { resolveDeepLink } from './coachDeepLink';
 
 export default function CoachDashboardScreen() {
@@ -143,6 +151,7 @@ function Hero({
   delta: number | null;
 }) {
   const weakest = weakestDimension(latest);
+  const dimensionBands = useRubric().rubric?.dimensionBands ?? [];
   const deltaText = delta == null ? '—' : delta > 0 ? `▲ ${delta} pts` : delta < 0 ? `▼ ${Math.abs(delta)} pts` : 'no change';
   const deltaColor = delta == null ? dt.textLight : delta >= 0 ? dt.green : dt.rust;
 
@@ -187,7 +196,7 @@ function Hero({
               {weakest ? weakest.name : 'All dimensions solid'}
             </div>
             <div style={{ fontSize: 13, fontWeight: 600, color: dt.rust, marginTop: 6 }}>
-              {weakest ? `${weakest.score}/5 · ${ratingForScore(weakest.score).label.toLowerCase()}` : 'no weak spot this week'}
+              {weakest ? `${weakest.score}/5 · ${ratingForScore(weakest.score, dimensionBands).label.toLowerCase()}` : 'no weak spot this week'}
             </div>
           </StatTile>
         </div>
@@ -218,7 +227,7 @@ function NextClassBand({
   admin?: boolean;
   onManage: () => void;
 }) {
-  const focus = focusReminders(latest);
+  const focus = focusReminders(latest, useRubric().rubric?.dimensionBands ?? []);
   return (
     <div style={{ background: dt.darkBg, color: dt.darkText, borderRadius: 14, padding: '26px 30px' }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))', gap: 30 }}>
@@ -257,7 +266,7 @@ function NextClassBand({
             {focus.map((f, i) => (
               <div key={i} style={{ display: 'grid', gridTemplateColumns: '84px 1fr', gap: 11, padding: '9px 0', borderTop: `1px solid ${dt.darkBorder}`, alignItems: 'start' }}>
                 <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '.03em', textAlign: 'center', color: f.c, background: f.bg, padding: '4px 0', borderRadius: 5, width: '100%' }}>
-                  {f.band}
+                  {f.band.toUpperCase()}
                 </div>
                 <div>
                   <div style={{ fontWeight: 600, fontSize: 13, color: dt.darkText, lineHeight: 1.3 }}>{f.title}</div>
@@ -422,22 +431,26 @@ function EmptyHome({ leaderName, admin, onAddClass }: { leaderName: string; admi
 
 // ─── Data helpers ────────────────────────────────────────────────────────────
 
-const DARK_CHIP: Record<string, { c: string; bg: string }> = {
-  'NEEDS WORK': { c: '#E8A87C', bg: '#4A3227' },
-  'ON TARGET': { c: '#E4C878', bg: '#403820' },
-  STRONG: { c: '#9FCBA8', bg: '#2A3A2E' },
-  'N/A': { c: '#B7AD98', bg: '#33302A' },
-};
+const DARK_CHIP_GREEN = { c: '#9FCBA8', bg: '#2A3A2E' };
+const DARK_CHIP_GOLD = { c: '#E4C878', bg: '#403820' };
+const DARK_CHIP_RUST = { c: '#E8A87C', bg: '#4A3227' };
+const DARK_CHIP_UNPLACED = { c: '#B7AD98', bg: '#33302A' };
+const DARK_CHIPS = [DARK_CHIP_GREEN, DARK_CHIP_GOLD, DARK_CHIP_GOLD, DARK_CHIP_RUST, DARK_CHIP_RUST];
 
 /** The "focus on, based on last week" reminders, the session's transferable
  *  next-week actions (recommendations), tagged with a status band drawn from
  *  the weakest dimensions, matching the design. Falls back to the weakest
  *  dimensions themselves when a report carries no written recommendations. */
-function focusReminders(latest: CoachReport): { band: string; c: string; bg: string; title: string; note: string }[] {
+function focusReminders(
+  latest: CoachReport,
+  dimensionBands: DimensionBand[],
+): { band: string; c: string; bg: string; title: string; note: string }[] {
   const weak = [...latest.dimensions.filter((d) => d.score != null)].sort((a, b) => (a.score ?? 0) - (b.score ?? 0));
   const bandFor = (i: number) => {
-    const label = ratingForScore(weak[i]?.score ?? null).label;
-    const chip = DARK_CHIP[label] ?? DARK_CHIP['N/A'];
+    const score = weak[i]?.score ?? null;
+    const label = ratingForScore(score, dimensionBands).label;
+    const chip =
+      score == null ? DARK_CHIP_UNPLACED : (DARK_CHIPS[dimensionBandIndex(score, dimensionBands)] ?? DARK_CHIP_UNPLACED);
     return { band: label, c: chip.c, bg: chip.bg };
   };
 
