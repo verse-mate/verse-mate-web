@@ -41,6 +41,13 @@ import {
   fetchCoachTrends,
   fetchCoachTrendsFor,
   saveRecordingLink,
+  fetchPipelineFailures,
+  requeuePipelineFailure,
+  releaseHeldReport,
+  fetchCoverage,
+  type PipelineFailure,
+  type CoverageReport,
+  type ReleaseOutcome,
 } from '@/services/coachService';
 
 export const coachKeys = {
@@ -50,6 +57,8 @@ export const coachKeys = {
   classes: ['coach', 'classes'] as const,
   adminCoaches: ['coach', 'admin', 'coaches'] as const,
   adminClasses: ['coach', 'admin', 'classes'] as const,
+  pipelineFailures: ['coach', 'admin', 'pipeline-failures'] as const,
+  coverage: ['coach', 'admin', 'coverage'] as const,
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
   adminMonthly: (month: string) => ['coach', 'admin', 'monthly', month] as const,
@@ -237,6 +246,32 @@ export function useAddNote(
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: coachKeys.adminReports(coachId) });
       qc.invalidateQueries({ queryKey: coachKeys.reports });
+    },
+  });
+}
+
+export function usePipelineFailures(): UseQueryResult<PipelineFailure[]> {
+  return useQuery({ queryKey: coachKeys.pipelineFailures, queryFn: fetchPipelineFailures, retry: false });
+}
+
+export function useCoverage(): UseQueryResult<CoverageReport> {
+  return useQuery({ queryKey: coachKeys.coverage, queryFn: () => fetchCoverage(), retry: false });
+}
+
+export function useRequeuePipelineFailure(): UseMutationResult<{ requeued: boolean }, Error, string> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: requeuePipelineFailure,
+    onSuccess: () => qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures }),
+  });
+}
+
+export function useReleaseHeldReport(): UseMutationResult<ReleaseOutcome, Error, string> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: releaseHeldReport,
+    onSuccess: (outcome) => {
+      if (outcome.delivered) qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
     },
   });
 }

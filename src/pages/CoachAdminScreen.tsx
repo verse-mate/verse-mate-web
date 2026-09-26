@@ -43,12 +43,13 @@ import type {
 import { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import PendingReshares from '@/components/coach/PendingReshares';
+import PipelineHealth from '@/components/coach/PipelineHealth';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName } from '@/components/coach/dashboardTheme';
 import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
 import type { RubricContract } from '@/services/rubric';
 
-type View = 'leaders' | 'leader' | 'trends' | 'links';
+type View = 'leaders' | 'leader' | 'trends' | 'links' | 'pipeline';
 
 const DIM_SHORT = [
   'Structure & Flow', 'Newcomer Welcome', 'Scripture', 'Facilitation', 'Application', 'Participation',
@@ -152,10 +153,11 @@ export default function CoachAdminScreen() {
               <span style={{ fontFamily: dt.serif, fontSize: 20, fontWeight: 600, letterSpacing: '-.01em' }}>VerseMate</span>
               <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.14em', color: dt.gold, borderLeft: '1px solid #DEDEDC', paddingLeft: 11 }}>COACHING</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 22, fontSize: 14, fontWeight: 500, color: dt.textMuted }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap', fontSize: 14, fontWeight: 500, color: dt.textMuted }}>
               <NavItem label="Dashboard" active={view === 'leaders' || view === 'leader'} onClick={() => setView('leaders')} testId="oversight-nav-dashboard" />
               <NavItem label="Trends" active={view === 'trends'} onClick={() => setView('trends')} testId="oversight-nav-trends" />
               <NavItem label="Class links" active={view === 'links'} onClick={() => setView('links')} testId="oversight-nav-links" />
+              <NavItem label="Pipeline" active={view === 'pipeline'} onClick={() => setView('pipeline')} testId="oversight-nav-pipeline" />
               <button type="button" onClick={() => navigate('/coach/settings')} aria-label="Coach settings" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#9A9484', fontSize: 16 }}>⚙</button>
               <div style={avatarChip}>{state.userAvatarUrl ? <img src={state.userAvatarUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} /> : initials}</div>
             </div>
@@ -166,6 +168,7 @@ export default function CoachAdminScreen() {
             {view === 'leader' && selLeader && <LeaderDetailView leaderId={selLeader} summary={roster.find((r) => r.id === selLeader)} onBack={() => setView('leaders')} />}
             {view === 'trends' && <TrendsView onOpenLeader={openLeader} onBack={() => setView('leaders')} />}
             {view === 'links' && <ClassLinksView roster={roster} onBack={() => setView('leaders')} onInvite={() => setInvite(true)} />}
+            {view === 'pipeline' && <PipelineHealth />}
           </CoachGate>
         </div>
       </div>
