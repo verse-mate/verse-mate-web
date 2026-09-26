@@ -64,9 +64,8 @@ export interface CoachReport {
    *  so the portal can match the depth of the full PDF without further UI work
    *  as the pipeline adds sections. */
   sections?: CoachReportSection[];
-  /** Admin-editable recording URL for this session (Zoom / Fireflies / Drive).
-   *  Empty string when none set. */
   recordingUrl?: string;
+  attachedRecordingUrl?: string | null;
   /**
    * DETAIL-ONLY (task 4.5). Whether VerseMate holds a recording for this
    * session, never WHERE it is. The address is minted per session by

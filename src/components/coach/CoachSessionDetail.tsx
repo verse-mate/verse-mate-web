@@ -42,7 +42,7 @@ export default function CoachSessionDetail({
   const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
   const band = statusBand(report.status, bandLabels);
   const detail = useCoachReportDetail(coachId ? undefined : report.id).data;
-  const attachedRecording = (detail?.recordingUrl ?? report.recordingUrl ?? '').trim();
+  const attachedRecording = (detail?.attachedRecordingUrl ?? report.attachedRecordingUrl ?? '').trim();
   const hasRetained = (coachId ? report : detail)?.hasRetainedRecording === true;
   const deltaText =
     delta == null ? '' : delta > 0 ? `▲ ${delta} pts` : delta < 0 ? `▼ ${Math.abs(delta)} pts` : 'no change';

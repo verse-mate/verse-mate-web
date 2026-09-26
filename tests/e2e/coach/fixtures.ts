@@ -11,7 +11,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import type { Page } from '@playwright/test';
+import type { Locator, Page, TestInfo } from '@playwright/test';
 
 export const API = process.env.VITE_API_URL ?? 'https://api.versemate.org';
 
@@ -47,6 +47,8 @@ export const RUBRIC = {
   ],
 };
 
+export const MEETING_LINK = 'https://zoom.us/j/5551234567';
+
 export const NEWEST_ID = 'leader-2026-08-29-saturday-morning';
 export const OLDER_ID = 'leader-2026-08-22-saturday-morning';
 
@@ -79,6 +81,8 @@ function report(over: Record<string, unknown>) {
       note: 'a real reason',
     })),
     bigIdeas: ['Pride goes before a fall'],
+    recordingUrl: MEETING_LINK,
+    attachedRecordingUrl: null,
     feedback: {
       headline: 'A strong session',
       strengths: [],
@@ -115,7 +119,7 @@ export const ME = {
     group: 'Saturday Morning Study',
     coachName: '',
   },
-  zoomLink: '',
+  zoomLink: MEETING_LINK,
   affiliatedChurch: '',
   bibleCoach: '',
   model: RUBRIC.model,
@@ -204,6 +208,7 @@ export interface CoachApiOptions {
   mintDelayMs?: number;
   monthlyDelayMs?: Record<string, number>;
   admin?: boolean;
+  attached?: Record<string, string>;
 }
 
 /**
@@ -212,6 +217,9 @@ export interface CoachApiOptions {
  */
 export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   const retained = new Set(opts.retained ?? []);
+  const attached = opts.attached ?? {};
+  const withAttached = <T extends { id: string }>(r: T) =>
+    attached[r.id] ? { ...r, attachedRecordingUrl: attached[r.id], recordingUrl: attached[r.id] } : r;
   let minted = 0;
 
   await page.context().addCookies([
@@ -244,7 +252,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return route.fulfill({
       json: {
         profile: { ...ME.profile, id: LEADER_ID },
-        reports: REPORTS.map((r) => ({ ...r, hasRetainedRecording: retained.has(r.id) })),
+        reports: REPORTS.map((r) => ({ ...withAttached(r), hasRetainedRecording: retained.has(r.id) })),
       },
     });
   });
@@ -305,7 +313,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   );
 
   await page.route(`${API}/coach/reports`, (route) =>
-    route.fulfill({ json: { reports: REPORTS } }),
+    route.fulfill({ json: { reports: REPORTS.map(withAttached) } }),
   );
 
   await page.route(`${API}/fake-object-store/**`, (route) =>
@@ -346,8 +354,15 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     const found = REPORTS.find((r) => r.id === id);
     if (!found) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND' } });
     return route.fulfill({
-      json: { report: { ...found, hasRetainedRecording: retained.has(id) } },
+      json: { report: { ...withAttached(found), hasRetainedRecording: retained.has(id) } },
     });
   });
 
+}
+
+export async function capture(page: Page, testInfo: TestInfo, name: string, focus?: Locator) {
+  const dir = process.env.E2E_CAPTURE_DIR;
+  if (!dir) return;
+  await focus?.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: join(dir, `${name}-${testInfo.project.name}.png`), fullPage: true });
 }

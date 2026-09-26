@@ -36,7 +36,7 @@ export default function SessionNotes({
   compact?: boolean;
 }) {
   const editable = admin && !!coachId;
-  const recording = report.recordingUrl?.trim() || '';
+  const recording = report.attachedRecordingUrl?.trim() || '';
   const notes = report.notes ?? [];
   // Sessions VerseMate ingested carry their own recording, no admin
   // attachment step (task 8.5).
