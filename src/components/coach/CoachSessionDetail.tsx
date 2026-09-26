@@ -307,7 +307,7 @@ function Scorecard({ report }: { report: CoachReport }) {
         Tap any dimension to read the session-specific coaching behind its score.
       </div>
       {report.dimensions.map((d) => {
-        const r = ratingForScore(d.score);
+        const r = ratingForScore(d.score, rubric?.dimensionBands ?? []);
         const isOpen = open === d.n;
         const pct = d.score == null ? 0 : (d.score / 5) * 100;
         const desc = rubric?.dimensions.find((x) => x.n === d.n)?.target ?? '';
@@ -346,6 +346,7 @@ function Scorecard({ report }: { report: CoachReport }) {
                   fontSize: 10.5,
                   fontWeight: 700,
                   letterSpacing: '.04em',
+                  textTransform: 'uppercase',
                   padding: '5px 9px',
                   borderRadius: 6,
                   color: r.c,

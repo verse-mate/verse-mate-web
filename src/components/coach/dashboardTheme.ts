@@ -76,14 +76,6 @@ export interface Band {
   bg: string;
 }
 
-/** Rating for a 1–5 dimension score (handoff `rating()`). */
-export function ratingForScore(score: number | null): Band {
-  if (score == null) return { label: 'N/A', c: dt.textLight, bg: dt.fill1 };
-  if (score >= 5) return { label: 'STRONG', c: dt.green, bg: dt.greenBg };
-  if (score >= 3) return { label: 'ON TARGET', c: dt.gold, bg: dt.goldChip };
-  return { label: 'NEEDS WORK', c: dt.rust, bg: dt.rustBg };
-}
-
 /**
  * Styling for a status label, keyed by the band's POSITION in the served order.
  *
@@ -108,6 +100,24 @@ export function statusBand(status: string, bandLabels: string[] = []): Band {
   const i = bandLabels.indexOf(status);
   const style = i < 0 ? BAND_UNPLACED : (BAND_STYLES[i] ?? BAND_UNPLACED);
   return { label: status, c: style.c, bg: style.bg };
+}
+
+export interface DimensionBand {
+  min: number;
+  label: string;
+}
+
+export function dimensionBandIndex(score: number, bands: DimensionBand[]): number {
+  if (bands.length === 0) return -1;
+  const i = bands.findIndex((b) => score >= b.min);
+  return i < 0 ? bands.length - 1 : i;
+}
+
+export function ratingForScore(score: number | null, bands: DimensionBand[] = []): Band {
+  if (score == null) return { label: 'N/A', ...BAND_UNPLACED };
+  const i = dimensionBandIndex(score, bands);
+  const style = BAND_STYLES[i] ?? BAND_UNPLACED;
+  return { label: bands[i]?.label ?? '', c: style.c, bg: style.bg };
 }
 
 /**
