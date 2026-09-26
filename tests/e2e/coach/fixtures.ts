@@ -165,6 +165,7 @@ export interface CoachApiOptions {
   onMint?: (reportId: string) => void;
   /** Make the minted address unreachable, the failed-playback path. */
   breakPlayback?: boolean;
+  mintDelayMs?: number;
   admin?: boolean;
 }
 
@@ -227,11 +228,14 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       : route.fulfill({ contentType: 'video/mp4', body: TINY_MP4 }),
   );
 
-  await page.route(`${API}/coach/reports/*/recording-url`, (route) => {
+  await page.route(`${API}/coach/reports/*/recording-url`, async (route) => {
     const id = decodeURIComponent(
       new URL(route.request().url()).pathname.split('/').at(-2) ?? '',
     );
     opts.onMint?.(id);
+    if (opts.mintDelayMs) {
+      await new Promise((r) => setTimeout(r, opts.mintDelayMs));
+    }
     if (!retained.has(id)) {
       return route.fulfill({ status: 404, json: { error: 'NOT_FOUND' } });
     }

@@ -29,6 +29,8 @@ export default function RetainedRecording({
   const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
   const remintedRef = useRef(false);
   const [renderedFor, setRenderedFor] = useState(reportId);
+  const openReportRef = useRef(reportId);
+  openReportRef.current = reportId;
 
   // A detail view that swaps one session for another keeps this component
   // mounted in the same position, so React reuses the instance and every piece
@@ -49,6 +51,7 @@ export default function RetainedRecording({
     // A fresh press is a fresh attempt, so it gets its own re-mint budget.
     remintedRef.current = false;
     const minted = await mintRecordingUrl(reportId);
+    if (openReportRef.current !== reportId) return;
     if (!minted) {
       setState('error');
       return;
@@ -71,6 +74,7 @@ export default function RetainedRecording({
     }
     remintedRef.current = true;
     const minted = await mintRecordingUrl(reportId);
+    if (openReportRef.current !== reportId) return;
     if (!minted) {
       setSrc(null);
       setState('error');
