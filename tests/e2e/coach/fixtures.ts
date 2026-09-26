@@ -209,7 +209,62 @@ export interface CoachApiOptions {
   monthlyDelayMs?: Record<string, number>;
   admin?: boolean;
   attached?: Record<string, string>;
+  pipelineStatus?: number;
+  onPipelineRequest?: (url: string) => void;
 }
+
+export const PARKED_SESSION = {
+  sourceSessionId: 'ff-parked',
+  coachId: LEADER_ID,
+  title: 'Obadiah, Lesson 2',
+  sessionDate: '2026-08-15',
+  state: 'scoring_failed',
+  attempts: 3,
+  reportId: null,
+  reason: 'the model answer failed validation three times',
+  updatedAt: '2026-08-16T00:00:00Z',
+};
+
+export const HELD_SESSION = {
+  sourceSessionId: 'ff-held',
+  coachId: LEADER_ID,
+  title: 'Obadiah, Lesson 5',
+  sessionDate: '2026-09-05',
+  state: 'scored',
+  attempts: 0,
+  reportId: 'held-report',
+  reason: 'held for review: injection tripwire',
+  updatedAt: '2026-09-06T00:00:00Z',
+};
+
+export const COVERAGE = {
+  windowDays: 30,
+  allCovered: false,
+  leaders: [
+    {
+      coachId: LEADER_ID,
+      name: 'Bryan Bailey',
+      email: 'leader@example.test',
+      covered: true,
+      basis: 'observed',
+      observedSessions: 4,
+      accountStatus: 'active',
+      linkedClassName: 'Saturday Morning Study',
+      classAlert: false,
+    },
+    {
+      coachId: 'uncovered',
+      name: 'Carol Chen',
+      email: 'carol@example.test',
+      covered: false,
+      basis: 'none',
+      observedSessions: 0,
+      accountStatus: 'active',
+      linkedClassName: null,
+      classAlert: true,
+    },
+  ],
+};
 
 /**
  * Sign the browser in as a leader and answer every coach call from the
@@ -233,6 +288,32 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   await page.route(`${API}/**`, (route) =>
     route.fulfill({ json: { reports: [], classes: [], months: [], summary: null } }),
   );
+
+  const stuck = [PARKED_SESSION, HELD_SESSION];
+  await page.route(/\/coach\/admin\/(pipeline-failures|coverage|reports\/[^/]+\/release)/, (route) => {
+    const url = new URL(route.request().url());
+    opts.onPipelineRequest?.(url.pathname);
+    if (!opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Admin access required' } });
+    if (opts.pipelineStatus) {
+      return route.fulfill({ status: opts.pipelineStatus, json: { error: 'INTERNAL', message: 'database unavailable' } });
+    }
+    if (url.pathname.endsWith('/coverage')) return route.fulfill({ json: COVERAGE });
+    const requeue = url.pathname.match(/pipeline-failures\/([^/]+)\/requeue$/);
+    if (requeue) {
+      const i = stuck.findIndex((x) => x.sourceSessionId === decodeURIComponent(requeue[1]));
+      if (i < 0) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'No parked session' } });
+      stuck.splice(i, 1);
+      return route.fulfill({ json: { requeued: true } });
+    }
+    const release = url.pathname.match(/reports\/([^/]+)\/release$/);
+    if (release) {
+      const i = stuck.findIndex((x) => x.reportId === decodeURIComponent(release[1]));
+      if (i < 0) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'No report held for review' } });
+      stuck.splice(i, 1);
+      return route.fulfill({ json: { delivered: true } });
+    }
+    return route.fulfill({ json: { sessions: stuck } });
+  });
 
   await page.route(`${API}/coach/rubric`, async (route) => {
     if (opts.rubricDelayMs) {

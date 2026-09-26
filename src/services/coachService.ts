@@ -251,6 +251,17 @@ export class CoachAuthError extends Error {
   }
 }
 
+export class CoachApiError extends Error {
+  constructor(
+    path: string,
+    public status: number,
+    public serverMessage: string,
+  ) {
+    super(`coach api ${path} failed: ${status}`);
+    this.name = 'CoachApiError';
+  }
+}
+
 // ─── Requests ──────────────────────────────────────────────────────────────
 
 async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T> {
@@ -260,7 +271,10 @@ async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T>
   });
   if (res.status === 401) throw new CoachAuthError('signed_out');
   if (res.status === 403) throw new CoachAuthError('not_a_coach');
-  if (!res.ok) throw new Error(`coach api ${path} failed: ${res.status}`);
+  if (!res.ok) {
+    const body = (await res.json().catch(() => null)) as { message?: string } | null;
+    throw new CoachApiError(path, res.status, body?.message ?? '');
+  }
   return (await res.json()) as T;
 }
 
@@ -356,6 +370,65 @@ export function resolveReshareRequest(
     `admin/reshares/${encodeURIComponent(sourceSessionId)}/resolve`,
     { method: 'POST' },
   );
+}
+
+export interface PipelineFailure {
+  sourceSessionId: string;
+  coachId: string | null;
+  title: string;
+  sessionDate: string;
+  state: string;
+  attempts: number;
+  reportId: string | null;
+  reason: string | null;
+  updatedAt: string;
+}
+
+export async function fetchPipelineFailures(): Promise<PipelineFailure[]> {
+  const data = await coachRequest<{ sessions: PipelineFailure[] }>('admin/pipeline-failures');
+  return data.sessions || [];
+}
+
+export function requeuePipelineFailure(sourceSessionId: string): Promise<{ requeued: boolean }> {
+  return coachRequest<{ requeued: boolean }>(
+    `admin/pipeline-failures/${encodeURIComponent(sourceSessionId)}/requeue`,
+    { method: 'POST' },
+  );
+}
+
+export interface ReleaseOutcome {
+  delivered: boolean;
+  refusal?: string;
+  violations?: string[];
+  shortfalls?: string[];
+}
+
+export function releaseHeldReport(reportId: string): Promise<ReleaseOutcome> {
+  return coachRequest<ReleaseOutcome>(`admin/reports/${encodeURIComponent(reportId)}/release`, {
+    method: 'POST',
+  });
+}
+
+export interface CoverageLeader {
+  coachId: string;
+  name: string;
+  email: string;
+  covered: boolean;
+  basis: string;
+  observedSessions: number;
+  accountStatus: string;
+  linkedClassName: string | null;
+  classAlert: boolean;
+}
+
+export interface CoverageReport {
+  windowDays: number;
+  allCovered: boolean;
+  leaders: CoverageLeader[];
+}
+
+export function fetchCoverage(windowDays = 30): Promise<CoverageReport> {
+  return coachRequest<CoverageReport>(`admin/coverage?windowDays=${windowDays}`);
 }
 
 /** GET /api/coach/trends, derived score / cluster / dimension series. */
