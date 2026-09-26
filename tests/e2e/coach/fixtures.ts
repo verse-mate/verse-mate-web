@@ -153,6 +153,15 @@ export const TRENDS = {
   delta: null,
 };
 
+export const ADMIN_TRENDS = {
+  ...TRENDS,
+  dimensionSeries: REPORTS.map((r) => ({
+    date: r.date,
+    dateLabel: r.dateLabel,
+    ...Object.fromEntries(r.dimensions.map((d) => [d.name, d.score])),
+  })).reverse(),
+};
+
 export const MONTHLY_LEADERS: Record<string, { name: string; strength: string }> = {
   alice: { name: 'Alice Adams', strength: 'Alice opened every session with a newcomer welcome.' },
   bob: { name: 'Bob Brown', strength: 'Bob tied every question back to the passage.' },
@@ -210,6 +219,7 @@ export interface CoachApiOptions {
   admin?: boolean;
   attached?: Record<string, string>;
   pipelineStatus?: number;
+  programAvg?: number;
   onPipelineRequest?: (url: string) => void;
 }
 
@@ -354,7 +364,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       json: {
         month,
         monthLabel: month,
-        program: { sessions: 0, activeLeaders: 0, newcomers: 0, avgScore: null, clusters: [], delta: null },
+        program: { sessions: 0, activeLeaders: 0, newcomers: 0, avgScore: opts.programAvg ?? null, clusters: [], delta: null },
         leaders: [],
         availableMonths: [],
         narrative: null,
@@ -389,7 +399,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
 
   await page.route(`${API}/coach/admin/coaches/*/trends`, (route) =>
     opts.admin
-      ? route.fulfill({ json: TRENDS })
+      ? route.fulfill({ json: ADMIN_TRENDS })
       : route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } }),
   );
 

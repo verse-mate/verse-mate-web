@@ -45,40 +45,20 @@ import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import PendingReshares from '@/components/coach/PendingReshares';
 import PipelineHealth from '@/components/coach/PipelineHealth';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
-import { dt, statusBand, firstName } from '@/components/coach/dashboardTheme';
+import { dt, statusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
 import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
-import type { RubricContract } from '@/services/rubric';
+import { type RubricContract, statusForScore } from '@/services/rubric';
 
 type View = 'leaders' | 'leader' | 'trends' | 'links' | 'pipeline';
 
-const DIM_SHORT = [
-  'Structure & Flow', 'Newcomer Welcome', 'Scripture', 'Facilitation', 'Application', 'Participation',
-  'Visual Aids', 'Vulnerability', 'Memory', 'Homework', 'Prayer', 'Leader Dev',
-];
-
 // ─── Shared color helpers (handoff scoring model) ───────────────────────────
 
-/** Score chip color for a /100 composite (roster last-3, class badge). */
-function compBand(v: number): { c: string; bg: string } {
-  if (v >= 85) return { c: '#3E6E9A', bg: '#E4ECF3' };
-  if (v >= 72) return { c: '#3E7A54', bg: '#E8EFE6' };
-  if (v >= 60) return { c: '#9A6E1F', bg: '#F6EFD8' };
-  return { c: '#A94E2B', bg: '#F4E1D7' };
+function compBand(v: number, rubric: RubricContract | null): { c: string; bg: string } {
+  return statusBand(compositeStatus(v, rubric), bandLabelsOf(rubric));
 }
 
-/** Heat-map cell color for a 1–5 dimension score. */
-function cellColor(v: number | null): { c: string; bg: string } {
-  if (v == null) return { c: '#9A9484', bg: '#EFEFED' };
-  if (v >= 4.0) return { c: '#2F6A45', bg: '#DDEBDD' };
-  if (v >= 3.0) return { c: '#8A6A1F', bg: '#F6EACF' };
-  return { c: '#A94E2B', bg: '#F3DDD2' };
-}
-
-/** Rating for a 1–5 score in the deep-dive / dimensions-over-time. */
-function rate5(v: number): { label: string; c: string; bg: string } {
-  if (v >= 4) return { label: 'STRONG', c: '#3E7A54', bg: '#E8EFE6' };
-  if (v >= 3) return { label: 'ON TARGET', c: '#9A6E1F', bg: '#F6EFD8' };
-  return { label: 'NEEDS WORK', c: '#A94E2B', bg: '#F4E1D7' };
+function cellColor(v: number | null, rubric: RubricContract | null): { c: string; bg: string } {
+  return ratingForScore(v, rubric?.dimensionBands ?? []);
 }
 
 function initialsOf(name: string): string {
@@ -201,18 +181,20 @@ function RosterView({
   const scored = roster.filter((r) => r.latest);
   const avg = scored.length ? (scored.reduce((s, r) => s + (r.latest?.score ?? 0), 0) / scored.length).toFixed(1) : '—';
 
-  const strongPlus = roster.filter((r) => r.latest && (r.latest.status === 'Strong' || r.latest.status === 'Exceptional')).length;
-  const onTarget = roster.filter((r) => r.latest?.status === 'On Target').length;
-  const developing = roster.filter((r) => r.latest && r.latest.status !== 'Strong' && r.latest.status !== 'Exceptional' && r.latest.status !== 'On Target').length;
+  const { rubric } = useRubric();
+  const bands = rubric?.statusBands ?? [];
+  const bandLabels = bandLabelsOf(rubric);
   const total = roster.length || 1;
-  const dist = [
-    { band: 'Strong or better', count: strongPlus, pct: Math.round((strongPlus / total) * 100), c: '#3E7A54' },
-    { band: 'On Target', count: onTarget, pct: Math.round((onTarget / total) * 100), c: '#9A6E1F' },
-    { band: 'Developing / new', count: developing, pct: Math.round((developing / total) * 100), c: '#A94E2B' },
-  ];
-  const needs = onTarget + developing;
+  const dist = bands.map((b) => {
+    const count = roster.filter((r) => r.latest?.status === b.label).length;
+    return { band: b.label, count, pct: Math.round((count / total) * 100), c: statusBand(b.label, bandLabels).c };
+  });
+  const topTwo = dist.slice(0, 2);
+  const strongPlus = topTwo.reduce((n, d) => n + d.count, 0);
+  const needs = scored.length - strongPlus;
 
   const composite = monthly?.program.avgScore ?? (scored.length ? Number(avg) : null);
+  const programStatus = compositeStatus(composite, rubric);
   const delta = monthly?.program.delta ?? null;
 
   // Real program-composite line from the loaded months.
@@ -236,9 +218,11 @@ function RosterView({
         <div style={{ maxWidth: 560 }}>
           <div style={kicker}>PROGRAM HEALTH · {monthLabel(month).toUpperCase()}</div>
           <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 30, lineHeight: 1.12, letterSpacing: '-.01em', margin: '0 0 8px' }}>
-            Your {roster.length} leaders are averaging {avg}{composite != null ? `, a ${compositeStatus(composite)} program month.` : '.'}
+            Your {roster.length} leaders are averaging {avg}{programStatus ? `, a ${programStatus} program month.` : '.'}
           </h2>
-          <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>{strongPlus} Strong or better · {needs} worth a check-in this week.</p>
+          <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>
+            {topTwo.length ? `${strongPlus} ${topTwo[topTwo.length - 1].band} or better · ` : ''}{needs} worth a check-in this week.
+          </p>
         </div>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <StatBox label="PROGRAM COMPOSITE" labelC={dt.gold}>
@@ -272,8 +256,9 @@ function RosterView({
         </div>
         <div style={innerCard}>
           <div style={{ ...kicker, marginBottom: 14 }}>STATUS MIX</div>
+          <div data-testid="oversight-status-mix">
           {dist.map((d) => (
-            <div key={d.band} style={{ marginBottom: 13 }}>
+            <div key={d.band} data-testid={`oversight-status-mix-${d.band}`} style={{ marginBottom: 13 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12.5, marginBottom: 5 }}>
                 <span style={{ color: dt.textMuted }}>{d.band}</span>
                 <span style={{ fontWeight: 700, color: d.c }}>{d.count}</span>
@@ -283,6 +268,7 @@ function RosterView({
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
 
@@ -302,13 +288,14 @@ function RosterView({
 }
 
 function RosterRow({ leader, last3, onOpen }: { leader: CoachSummary; last3: number[]; onOpen: () => void }) {
-  const bandLabels = bandLabelsOf(useRubric().rubric);
+  const { rubric } = useRubric();
+  const bandLabels = bandLabelsOf(rubric);
   const st = leader.latest
     ? statusBand(leader.latest.status, bandLabels)
     : statusBand('', bandLabels);
   const score = leader.latest ? Math.round(leader.latest.score) : null;
   // Prefer the real last-3 monthly composites; fall back to the latest score.
-  const chips = (last3.length > 0 ? last3 : score != null ? [score] : []).map((v) => ({ v: Math.round(v), ...compBand(v) }));
+  const chips = (last3.length > 0 ? last3 : score != null ? [score] : []).map((v) => ({ v: Math.round(v), ...compBand(v, rubric) }));
   return (
     <button type="button" onClick={onOpen} data-testid={`oversight-roster-${leader.id}`} style={rosterRow}>
       <div style={{ width: 52, height: 52, borderRadius: 12, background: st.bg, color: st.c, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 15 }}>{initialsOf(leader.name)}</div>
@@ -363,8 +350,9 @@ function LeaderDetailView({
 
   const name = profile?.name || summary?.name || 'Leader';
   const study = profile?.group || summary?.group || '';
-  const status = summary?.latest?.status || (reports[0] ? deriveStatus(reports[0].score) : 'On Target');
-  const st = statusBand(status, bandLabelsOf(useRubric().rubric));
+  const { rubric } = useRubric();
+  const status = summary?.latest?.status || (reports[0] ? compositeStatus(reports[0].score, rubric) : '');
+  const st = statusBand(status, bandLabelsOf(rubric));
 
   const [page, setPage] = useState(0);
   const [openClass, setOpenClass] = useState<string | null>(null);
@@ -475,10 +463,8 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
   // isn't available yet (mid-month, too few sessions), fall back to whatever
   // scored sessions we do have, the current month's if any, otherwise the most
   // recent, so the leader always sees a mix.
-  const monthlyClusters = monthly
-    ? { bm: monthly.clusterAvg.bm, tc: monthly.clusterAvg.tc, ep: monthly.clusterAvg.ep, br: monthly.clusterAvg.br }
-    : null;
-  const fallback = monthlyClusters ? null : clusterAvgsFromSessions(trends?.dimensionSeries ?? [], latest);
+  const monthlyClusters: ClusterPcts | null = monthly ? { ...monthly.clusterAvg } : null;
+  const fallback = monthlyClusters ? null : clusterAvgsFromSessions(trends?.dimensionSeries ?? [], latest, rubric);
   const clusterAvg = monthlyClusters ?? fallback?.avg ?? null;
   const clustersArePartial = !monthlyClusters && !!fallback;
   // Names and order from the SERVED rubric; the bm/tc/ep/br keys the monthly
@@ -504,9 +490,9 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
       <div style={{ ...innerCard, padding: '20px 22px 12px', marginBottom: 16 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, marginBottom: 6 }}>
           <span style={{ ...kicker, marginBottom: 0 }}>SESSION SCORE OVER TIME</span>
-          <span style={{ fontSize: 11.5, color: dt.textLight }}>Bands · 🔷85+ · 🟢72 · 🟡60 · 🟠45 · 🔴</span>
+          <span style={{ fontSize: 11.5, color: dt.textLight }}>Bands · {(rubric?.statusBands ?? []).map((b) => (b.min > 0 ? `${b.emoji}${b.min}+` : b.emoji)).join(' · ')}</span>
         </div>
-        {trendValues.length > 0 ? <BandedTrend values={trendValues} labels={trendLabels} /> : <div style={{ padding: '30px 0', textAlign: 'center', color: dt.textLight, fontSize: 13 }}>Trend appears after a couple of scored sessions.</div>}
+        {trendValues.length > 0 ? <BandedTrend values={trendValues} labels={trendLabels} bands={rubric?.statusBands ?? []} /> : <div style={{ padding: '30px 0', textAlign: 'center', color: dt.textLight, fontSize: 13 }}>Trend appears after a couple of scored sessions.</div>}
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 380px) minmax(0, 1fr)', gap: 16, marginBottom: 16 }}>
@@ -522,7 +508,7 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
           <div style={{ ...kicker, marginBottom: clustersArePartial ? 4 : 14 }}>CLUSTER MIX · {monthLabel(currentMonth()).toUpperCase()}</div>
           {clustersArePartial && <div style={{ fontSize: 11.5, color: dt.textLight, marginBottom: 12 }}>Sessions so far, updates as the month fills in.</div>}
           {clusters.length > 0 ? clusters.map((c) => (
-            <div key={c.name} style={{ marginBottom: 14 }}>
+            <div key={c.name} data-testid={`oversight-cluster-mix-${c.name}`} style={{ marginBottom: 14 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, marginBottom: 5 }}><span style={{ color: dt.textMuted }}>{c.name}</span><span style={{ fontWeight: 700 }}>{c.pct == null ? 'N/A' : `${c.pct}%`}</span></div>
               <div style={{ height: 8, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}><div style={{ height: '100%', borderRadius: 99, width: `${c.pct ?? 0}%`, background: dt.brightGold }} /></div>
             </div>
@@ -542,11 +528,11 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
                 </div>
                 {latest.dimensions.map((dim) => (
                   <div key={dim.n} style={{ display: 'grid', gridTemplateColumns: `1fr repeat(${matrixDates.length}, 62px)`, gap: 8, padding: '6px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center' }}>
-                    <div style={{ fontWeight: 600 }}>{DIM_SHORT[dim.n - 1] ?? dim.name}</div>
+                    <div style={{ fontWeight: 600 }}>{dim.name}</div>
                     {dimSeries.map((r, i) => {
                       const raw = Number(r[dim.name]);
                       const v = Number.isFinite(raw) ? Math.round(raw) : null;
-                      const cc = cellColor(v);
+                      const cc = cellColor(v, rubric);
                       return <div key={i} style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 5 }}>{v ?? 'N/A'}</div>;
                     })}
                   </div>
@@ -573,7 +559,7 @@ function ClassCard({
   open: boolean;
   onToggle: () => void;
 }) {
-  const cb = compBand(report.score);
+  const cb = compBand(report.score, useRubric().rubric);
   const scored = report.dimensions.filter((d) => d.score != null) as { n: number; name: string; score: number; note?: string }[];
   const sortedDesc = [...scored].sort((a, b) => b.score - a.score);
   const strong = sortedDesc[0]?.name ?? '—';
@@ -790,8 +776,11 @@ function TrendsDetail({
   // colours: they follow a band's POSITION in the served order.
   const { rubric } = useRubric();
   const bandLabels = bandLabelsOf(rubric);
-  const band = statusBand(compositeStatus(composite), bandLabels);
+  const programStatus = compositeStatus(composite, rubric);
+  const band = statusBand(programStatus, bandLabels);
   const leaders = [...data.leaders].sort((a, b) => (b.avgScore ?? 0) - (a.avgScore ?? 0));
+  const clusterCodes = clusterOrder(rubric).map(shortCode);
+  const leaderboardGrid = `34px 1fr 54px ${clusterCodes.map(() => '46px').join(' ')} 64px 96px`;
   const top = leaders[0];
 
   // Multi-month program composite + per-leader comparison.
@@ -806,7 +795,7 @@ function TrendsDetail({
     .filter((s) => s.values.length > 1);
 
   // Score distribution by status.
-  const distribution = ['Exceptional', 'Strong', 'On Target', 'Developing'].map((label) => {
+  const distribution = bandLabels.map((label) => {
     const rows = leaders.filter((l) => l.status === label);
     const bd = statusBand(label, bandLabels);
     return { label, count: rows.length, names: rows.map((r) => r.name).join(', ') || '—', c: bd.c, bg: bd.bg };
@@ -824,7 +813,7 @@ function TrendsDetail({
           </div>
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontFamily: dt.serif, fontSize: 40, lineHeight: 1, color: dt.darkText }}>{composite != null ? composite.toFixed(1) : '—'}<span style={{ fontSize: 18, color: dt.darkMuted2 }}> / 100</span></div>
-            <div style={{ display: 'inline-block', marginTop: 8, fontSize: 11, fontWeight: 700, letterSpacing: '.05em', color: band.c, background: band.bg, padding: '4px 10px', borderRadius: 6 }}>{compositeStatus(composite)}</div>
+            <div style={{ display: 'inline-block', marginTop: 8, fontSize: 11, fontWeight: 700, letterSpacing: '.05em', color: band.c, background: band.bg, padding: '4px 10px', borderRadius: 6 }}>{programStatus}</div>
             {data.program.delta != null && <div style={{ fontSize: 12.5, color: '#9FCBA8', marginTop: 6 }}>{data.program.delta >= 0 ? '▲ ' : '▼ '}{Math.abs(data.program.delta).toFixed(1)} vs. prior month</div>}
           </div>
         </div>
@@ -875,9 +864,9 @@ function TrendsDetail({
       <div style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 12, overflow: 'hidden', marginBottom: 30 }}>
         <div style={{ overflowX: 'auto' }}>
           <div style={{ minWidth: 640 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '34px 1fr 54px 46px 46px 46px 46px 64px 96px', gap: 8, padding: '11px 16px', background: '#F6EFD8', fontSize: 10.5, fontWeight: 700, letterSpacing: '.03em', color: dt.gold }}>
+            <div style={{ display: 'grid', gridTemplateColumns: leaderboardGrid, gap: 8, padding: '11px 16px', background: '#F6EFD8', fontSize: 10.5, fontWeight: 700, letterSpacing: '.03em', color: dt.gold }}>
               <div>#</div><div>LEADER</div>
-              {['SESS', 'BM', 'TC', 'EP', 'BR', 'COMP'].map((h) => (
+              {['SESS', ...clusterCodes, 'COMP'].map((h) => (
                 <button key={h} type="button" onClick={onToggleKey} style={{ textAlign: 'right', cursor: 'pointer', background: 'none', border: 'none', font: 'inherit', color: 'inherit', textDecoration: 'underline dotted', textUnderlineOffset: 3 }}>{h}</button>
               ))}
               <div style={{ textAlign: 'right' }}>STATUS</div>
@@ -885,16 +874,15 @@ function TrendsDetail({
             {showKey && <div style={{ padding: '10px 16px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.6 }}>{clusterKeyLine(rubric)}</div>}
             {leaders.map((l, i) => {
               const b = statusBand(l.status, bandLabels);
-              const cl = clusterAvgs(l);
+              const cl = clusterAvgs(l, rubric);
               return (
-                <button key={l.id} type="button" onClick={() => onOpenLeader(l.id)} style={{ display: 'grid', gridTemplateColumns: '34px 1fr 54px 46px 46px 46px 46px 64px 96px', gap: 8, padding: '8px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center', cursor: 'pointer', width: '100%', background: 'none', border: 'none', textAlign: 'left' }}>
+                <button key={l.id} type="button" data-testid={`oversight-leaderboard-${l.id}`} onClick={() => onOpenLeader(l.id)} style={{ display: 'grid', gridTemplateColumns: leaderboardGrid, gap: 8, padding: '8px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center', cursor: 'pointer', width: '100%', background: 'none', border: 'none', textAlign: 'left' }}>
                   <div style={{ color: dt.textLighter, fontWeight: 700 }}>{i + 1}</div>
                   <div style={{ fontWeight: 600 }}>{l.name}</div>
                   <div style={{ textAlign: 'right', color: dt.textLight }}>{l.sessions}</div>
-                  <div style={{ textAlign: 'right', color: dt.textMuted, fontVariantNumeric: 'tabular-nums' }}>{cl.bm ?? '—'}</div>
-                  <div style={{ textAlign: 'right', color: dt.textMuted, fontVariantNumeric: 'tabular-nums' }}>{cl.tc ?? '—'}</div>
-                  <div style={{ textAlign: 'right', color: dt.textMuted, fontVariantNumeric: 'tabular-nums' }}>{cl.ep ?? '—'}</div>
-                  <div style={{ textAlign: 'right', color: dt.textMuted, fontVariantNumeric: 'tabular-nums' }}>{cl.br ?? '—'}</div>
+                  {clusterCodes.map((code) => (
+                    <div key={code} style={{ textAlign: 'right', color: dt.textMuted, fontVariantNumeric: 'tabular-nums' }}>{cl[code.toLowerCase()] ?? '—'}</div>
+                  ))}
                   <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>{l.avgScore?.toFixed(1) ?? '—'}</div>
                   <div style={{ justifySelf: 'end', fontSize: 9.5, fontWeight: 700, padding: '4px 7px', borderRadius: 5, color: b.c, background: b.bg }}>{l.status}</div>
                 </button>
@@ -908,7 +896,7 @@ function TrendsDetail({
       <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: '0 0 12px' }}>Score distribution</h3>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 12, marginBottom: 30 }}>
         {distribution.map((d) => (
-          <div key={d.label} style={{ ...innerCard, padding: '16px 18px' }}>
+          <div key={d.label} data-testid={`oversight-distribution-${d.label}`} style={{ ...innerCard, padding: '16px 18px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
               <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', color: d.c, background: d.bg, padding: '4px 9px', borderRadius: 6 }}>{d.label}</span>
               <span style={{ fontWeight: 700, fontSize: 18 }}>{d.count}</span>
@@ -921,7 +909,7 @@ function TrendsDetail({
       {/* Heat map */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 11, margin: '0 0 6px' }}>
         <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: 0 }}>Dimension heat map</h3>
-        <span style={{ fontSize: 11.5, fontWeight: 600, color: dt.textLight }}>Green ≥ 4.0 · Amber 3.0–3.9 · Red ≤ 2.9</span>
+        <span style={{ fontSize: 11.5, fontWeight: 600, color: dt.textLight }}>{(rubric?.dimensionBands ?? []).map((b) => `${b.label} ≥ ${b.min}`).join(' · ')}</span>
       </div>
       <p style={{ margin: '0 0 12px', fontSize: 12.5, color: dt.textLight }}>Tap any <strong style={{ color: dt.gold }}>D#</strong> column header to see what it measures.</p>
       <div style={{ overflowX: 'auto', border: `1px solid ${dt.cardBorder}`, borderRadius: 12, marginBottom: 30 }}>
@@ -938,7 +926,7 @@ function TrendsDetail({
               <button type="button" onClick={() => onOpenLeader(l.id)} title={`Open ${l.name}'s page`} style={{ ...leaderNameButton, fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{l.name}</button>
               {l.dimensions.map((d) => {
                 const v = d.avg;
-                const cc = cellColor(v);
+                const cc = cellColor(v, rubric);
                 return <div key={d.n} style={{ textAlign: 'center', fontSize: 11, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 4 }}>{v == null ? 'N/A' : v.toFixed(1)}</div>;
               })}
             </div>
@@ -1134,27 +1122,32 @@ function byDateDesc(a: { date: string }, b: { date: string }): number {
   return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
 }
 
-function deriveStatus(score: number): string {
-  return compositeStatus(score);
+function compositeStatus(score: number | null, rubric: RubricContract | null): string {
+  if (score == null) return '';
+  return statusForScore(score, rubric?.statusBands ?? [])?.label ?? '';
 }
 
-function compositeStatus(score: number | null): string {
-  if (score == null) return 'On Target';
-  if (score >= 85) return 'Exceptional';
-  if (score >= 72) return 'Strong';
-  if (score >= 60) return 'On Target';
-  return 'Developing';
-}
+type ClusterPcts = Record<string, number | null>;
 
-/** Per-cluster average % for a monthly leader row (rounded whole numbers). */
-function clusterAvgs(l: CoachMonthly['leaders'][number]): { bm: number | null; tc: number | null; ep: number | null; br: number | null } {
-  const buckets: Record<string, number[]> = { BM: [], TC: [], EP: [], BR: [] };
-  for (const d of l.dimensions) {
-    if (d.avg == null) continue;
-    buckets[clusterForDim(d.n)]?.push(d.avg);
+function rollUpClusters(means: Map<number, number>, rubric: RubricContract | null): ClusterPcts {
+  const buckets = new Map<string, number[]>();
+  for (const [n, v] of means) {
+    const cluster = rubric?.dimensions.find((d) => d.n === n)?.cluster;
+    if (!cluster) continue;
+    buckets.set(cluster, [...(buckets.get(cluster) ?? []), v]);
   }
-  const pct = (arr: number[]) => (arr.length ? Math.round((arr.reduce((a, b) => a + b, 0) / arr.length / 5) * 100) : null);
-  return { bm: pct(buckets.BM), tc: pct(buckets.TC), ep: pct(buckets.EP), br: pct(buckets.BR) };
+  return Object.fromEntries(
+    clusterOrder(rubric).map((name) => {
+      const arr = buckets.get(name) ?? [];
+      return [shortCode(name).toLowerCase(), arr.length ? Math.round((arr.reduce((a, b) => a + b, 0) / arr.length / 5) * 100) : null];
+    }),
+  );
+}
+
+function clusterAvgs(l: CoachMonthly['leaders'][number], rubric: RubricContract | null): ClusterPcts {
+  const means = new Map<number, number>();
+  for (const d of l.dimensions) if (d.avg != null) means.set(d.n, d.avg);
+  return rollUpClusters(means, rubric);
 }
 
 /** Cluster mix fallback for the Development panel when there's no full monthly
@@ -1166,7 +1159,8 @@ function clusterAvgs(l: CoachMonthly['leaders'][number]): { bm: number | null; t
 function clusterAvgsFromSessions(
   dimensionSeries: TrendRow[],
   latest: CoachReport,
-): { avg: { bm: number | null; tc: number | null; ep: number | null; br: number | null } } | null {
+  rubric: RubricContract | null,
+): { avg: ClusterPcts } | null {
   const nameToNum = new Map(latest.dimensions.map((d) => [d.name, d.n]));
   const thisMonth = dimensionSeries.filter((r) => String(r.date).startsWith(currentMonth()));
   const rows = thisMonth.length ? thisMonth : dimensionSeries;
@@ -1187,22 +1181,9 @@ function clusterAvgsFromSessions(
   }
   if (perDim.size === 0) return null;
 
-  const buckets: Record<string, number[]> = { BM: [], TC: [], EP: [], BR: [] };
-  for (const [n, arr] of perDim) {
-    if (!arr.length) continue;
-    buckets[clusterForDim(n)]?.push(arr.reduce((a, b) => a + b, 0) / arr.length);
-  }
-  const pct = (arr: number[]) => (arr.length ? Math.round((arr.reduce((a, b) => a + b, 0) / arr.length / 5) * 100) : null);
-  return { avg: { bm: pct(buckets.BM), tc: pct(buckets.TC), ep: pct(buckets.EP), br: pct(buckets.BR) } };
-}
-
-/** Which cluster (code) a dimension number belongs to (v3 model). */
-function clusterForDim(n: number): string {
-  // TC: 1,3,5,7,9 · BM: 2,10,12 · EP: 4,6 · BR: 8,11
-  if ([1, 3, 5, 7, 9].includes(n)) return 'TC';
-  if ([2, 10, 12].includes(n)) return 'BM';
-  if ([4, 6].includes(n)) return 'EP';
-  return 'BR';
+  const means = new Map<number, number>();
+  for (const [n, arr] of perDim) if (arr.length) means.set(n, arr.reduce((a, b) => a + b, 0) / arr.length);
+  return { avg: rollUpClusters(means, rubric) };
 }
 
 /** Default comparison lines: the top leaders (by newest month) with ≥2 points. */

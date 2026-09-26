@@ -115,3 +115,31 @@ test.describe('The admin pipeline surface', () => {
     expect(calls).toEqual([]);
   });
 });
+
+test.describe('The admin screen reads the served rubric', () => {
+  test('names a program composite of 30 by the served band it falls in', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, programAvg: 30 });
+    await page.goto('/coach');
+
+    await expect(page.getByText(/a Early Stage program month/)).toBeVisible();
+    await expect(page.getByText(/a Developing program month/)).toHaveCount(0);
+    const mix = page.getByTestId('oversight-status-mix');
+    for (const band of ['Exceptional', 'Strong', 'On Target', 'Developing', 'Early Stage']) {
+      await expect(mix.getByTestId(`oversight-status-mix-${band}`)).toBeVisible();
+    }
+    await expect(mix.getByTestId('oversight-status-mix-Strong')).toContainText('1');
+    await capture(page, testInfo, 'r6-program-band', mix);
+  });
+
+  test('shows served dimension names and rolls them up by the served clusters', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true });
+    await page.goto('/coach');
+    await page.getByTestId(`oversight-roster-${LEADER_ID}`).click();
+
+    await expect(page.getByTestId('oversight-cluster-mix-Teaching Craft')).toContainText('80%');
+    await expect(page.getByTestId('oversight-cluster-mix-Building Ministry')).toContainText('N/A');
+    await expect(page.getByText('Dimension 1', { exact: true }).first()).toBeVisible();
+    await expect(page.getByText('Structure & Flow')).toHaveCount(0);
+    await capture(page, testInfo, 'r6-served-dimensions-and-clusters', page.getByTestId('oversight-cluster-mix-Teaching Craft'));
+  });
+});
