@@ -2,7 +2,7 @@ import { join } from 'node:path';
 
 import { expect, type Page, type TestInfo, test } from '@playwright/test';
 
-import { LEADER_ID, NEWEST_ID, OLDER_ID, useCoachApi } from './fixtures';
+import { LEADER_ID, MONTHLY_LEADERS, NEWEST_ID, OLDER_ID, useCoachApi } from './fixtures';
 
 async function capture(page: Page, testInfo: TestInfo, name: string) {
   const dir = process.env.E2E_CAPTURE_DIR;
@@ -67,5 +67,26 @@ test.describe('A recording minted for one session', () => {
     expect(await page.locator('video').evaluateAll((els) => els.map((v) => (v as HTMLVideoElement).src))).toEqual([]);
     await expect(page.getByTestId(`coach-recording-play-${NEWEST_ID}`)).toHaveText('Play the recording');
     await capture(page, testInfo, 'item5-stale-mint-dropped');
+  });
+});
+
+test.describe("A leader's monthly trends, navigating between leaders", () => {
+  test("never shows one leader's summary under the next leader's page", async ({
+    page,
+  }, testInfo) => {
+    await useCoachApi(page, { admin: true, monthlyDelayMs: { bob: 3000 } });
+    await page.goto('/coach/leader/alice/trends');
+    await expect(page.getByText(MONTHLY_LEADERS.alice.strength)).toBeVisible();
+
+    await page.evaluate(() => {
+      window.history.pushState({}, '', '/coach/leader/bob/trends');
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    });
+    await expect(page.getByText(MONTHLY_LEADERS.alice.strength)).toHaveCount(0, { timeout: 1000 });
+    await expect(page.getByText(MONTHLY_LEADERS.alice.name)).toHaveCount(0, { timeout: 1000 });
+    await capture(page, testInfo, 'item3-leader-switch-loading');
+
+    await expect(page.getByText(MONTHLY_LEADERS.bob.strength)).toBeVisible();
+    await capture(page, testInfo, 'item3-leader-switch-loaded');
   });
 });

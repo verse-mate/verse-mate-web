@@ -190,7 +190,8 @@ export function useLeaderMonthlySummary(
     queryFn: () => fetchLeaderMonthlySummary(coachId, month),
     retry: false,
     enabled: !!coachId && !!month,
-    placeholderData: keepPreviousData,
+    placeholderData: (previous, previousQuery) =>
+      previousQuery?.queryKey[3] === coachId ? keepPreviousData(previous) : undefined,
   });
 }
 
