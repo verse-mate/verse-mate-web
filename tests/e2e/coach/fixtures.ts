@@ -194,7 +194,6 @@ function monthlyFor(id: string, month: string) {
 const TINY_MP4 = readFileSync(join(import.meta.dirname, 'tiny.mp4'));
 
 export interface CoachApiOptions {
-  /** Report ids whose DETAIL says VerseMate holds a recording. */
   retained?: string[];
   /** Hold the rubric response this long, to observe the pre-rubric paint. */
   rubricDelayMs?: number;
@@ -245,7 +244,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return route.fulfill({
       json: {
         profile: { ...ME.profile, id: LEADER_ID },
-        reports: REPORTS,
+        reports: REPORTS.map((r) => ({ ...r, hasRetainedRecording: retained.has(r.id) })),
       },
     });
   });
@@ -259,6 +258,45 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     if (delay) await new Promise((r) => setTimeout(r, delay));
     return route.fulfill({ json: monthlyFor(id, url.searchParams.get('month') ?? '') });
   });
+
+  await page.route(/\/coach\/admin\/monthly\?/, (route) => {
+    const month = new URL(route.request().url()).searchParams.get('month') ?? '';
+    return route.fulfill({
+      json: {
+        month,
+        monthLabel: month,
+        program: { sessions: 0, activeLeaders: 0, newcomers: 0, avgScore: null, clusters: [], delta: null },
+        leaders: [],
+        availableMonths: [],
+        narrative: null,
+      },
+    });
+  });
+
+  await page.route(`${API}/coach/admin/coaches`, (route) =>
+    opts.admin
+      ? route.fulfill({
+          json: {
+            coaches: [
+              {
+                id: LEADER_ID,
+                name: ME.profile.name,
+                group: ME.profile.group,
+                coachName: '',
+                sessionCount: REPORTS.length,
+                latest: {
+                  date: REPORTS[0].date,
+                  dateLabel: REPORTS[0].dateLabel,
+                  score: REPORTS[0].score,
+                  status: REPORTS[0].status,
+                  statusEmoji: REPORTS[0].statusEmoji,
+                },
+              },
+            ],
+          },
+        })
+      : route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } }),
+  );
 
   await page.route(`${API}/coach/admin/coaches/*/trends`, (route) =>
     opts.admin

@@ -27,11 +27,13 @@ export default function CoachSessionDetail({
   delta,
   prev,
   label = 'MOST RECENT SESSION',
+  coachId,
 }: {
   report: CoachReport;
   delta: number | null;
   prev?: CoachReport;
   label?: string;
+  coachId?: string;
 }) {
   const [tab, setTab] = useState<Tab>('report');
   // The band's colour follows its POSITION in the served order, so a renamed
@@ -39,14 +41,9 @@ export default function CoachSessionDetail({
   const { rubric } = useRubric();
   const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
   const band = statusBand(report.status, bandLabels);
-  // Whether VerseMate holds this session's recording is a DETAIL-only field:
-  // the reports list deliberately does not carry it, because a list that knew
-  // would be one step from minting an address per row. So the flag is fetched
-  // here, where exactly one session is open, which is also the only place the
-  // spec allows an address to be issued at all.
-  const detail = useCoachReportDetail(report.id).data;
+  const detail = useCoachReportDetail(coachId ? undefined : report.id).data;
   const attachedRecording = (detail?.recordingUrl ?? report.recordingUrl ?? '').trim();
-  const hasRetained = detail?.hasRetainedRecording === true;
+  const hasRetained = (coachId ? report : detail)?.hasRetainedRecording === true;
   const deltaText =
     delta == null ? '' : delta > 0 ? `▲ ${delta} pts` : delta < 0 ? `▼ ${Math.abs(delta)} pts` : 'no change';
 

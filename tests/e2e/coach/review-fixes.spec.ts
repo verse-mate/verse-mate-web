@@ -90,3 +90,39 @@ test.describe("A leader's monthly trends, navigating between leaders", () => {
     await capture(page, testInfo, 'item3-leader-switch-loaded');
   });
 });
+
+test.describe("An admin opening a leader's session", () => {
+  test('is offered the retained recording and can play it', async ({ page }, testInfo) => {
+    const mints: string[] = [];
+    await useCoachApi(page, { admin: true, retained: [NEWEST_ID], onMint: (id) => mints.push(id) });
+    await page.goto(`/coach/leader/${LEADER_ID}`);
+
+    const play = page.getByTestId(`coach-recording-play-${NEWEST_ID}`);
+    await expect(play).toBeVisible();
+    expect(mints).toEqual([]);
+    await play.click();
+    await expect(page.getByTestId(`coach-recording-player-${NEWEST_ID}`)).toBeVisible();
+    expect(mints).toEqual([NEWEST_ID]);
+    await capture(page, testInfo, 'item2-admin-recording-playing');
+  });
+
+  test('from the oversight roster, too', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, retained: [NEWEST_ID] });
+    await page.goto('/coach');
+
+    await page.getByTestId(`oversight-roster-${LEADER_ID}`).click();
+    await page.getByTestId(`oversight-class-${NEWEST_ID}`).click();
+    await expect(page.getByTestId(`coach-recording-play-${NEWEST_ID}`)).toBeVisible();
+    await capture(page, testInfo, 'item2-admin-oversight-recording');
+  });
+
+  test('sees no recording affordance when nothing is retained', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true });
+    await page.goto(`/coach/leader/${LEADER_ID}`);
+
+    await expect(page.getByText('Obadiah, Lesson 4').first()).toBeVisible();
+    await expect(page.getByTestId('coach-tab-report')).toBeVisible();
+    expect(await page.locator('[data-testid^="coach-recording-"]').count()).toBe(0);
+    await capture(page, testInfo, 'item2-admin-nothing-retained');
+  });
+});

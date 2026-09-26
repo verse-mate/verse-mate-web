@@ -118,6 +118,7 @@ export default function CoachDashboardScreen() {
               delta={delta}
               prev={prev}
               label={selected.id === latest.id ? 'MOST RECENT SESSION' : 'SELECTED SESSION'}
+              coachId={coachId}
             />
             {selected.id !== latest.id && (
               <div style={{ marginTop: 16 }}>
