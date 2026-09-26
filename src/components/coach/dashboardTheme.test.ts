@@ -1,41 +1,43 @@
 import { describe, expect, it } from 'vitest';
 
-import { dt, statusBand } from './dashboardTheme';
+import { statusBand } from './dashboardTheme';
 
-/**
- * The band colours on the leader's own dashboard.
- *
- * This was a switch naming all five labels with a rust default, the sixth
- * hand-maintained copy of the rubric in the portal. `coachService.statusColor`
- * had the same shape and was fixed; this one survived because nothing pointed
- * at it, and it is the copy the leader actually sees.
- */
 const BANDS = ['Exceptional', 'Strong', 'On Target', 'Developing', 'Early Stage'];
 
+const GREEN = '#3E7A54';
+const GREEN_BG = '#E8EFE6';
+const GOLD = '#9A6E1F';
+const GOLD_CHIP = '#F4EAD4';
+const RUST = '#A94E2B';
+const RUST_BG = '#F4E1D7';
+const NEUTRAL = '#8A8272';
+const NEUTRAL_BG = '#F2F2F0';
+
 describe('a status band is coloured by its POSITION in the served order', () => {
-  it('gives the top band the top colour and the bottom band the bottom one', () => {
-    expect(statusBand('Exceptional', BANDS).c).toBe(dt.green);
-    expect(statusBand('Early Stage', BANDS).c).toBe(dt.rust);
+  it('paints each of the five served bands the colour the handoff chose', () => {
+    expect(BANDS.map((b) => statusBand(b, BANDS))).toEqual([
+      { label: 'Exceptional', c: GREEN, bg: GREEN_BG },
+      { label: 'Strong', c: GOLD, bg: GOLD_CHIP },
+      { label: 'On Target', c: GOLD, bg: GOLD_CHIP },
+      { label: 'Developing', c: RUST, bg: RUST_BG },
+      { label: 'Early Stage', c: RUST, bg: RUST_BG },
+    ]);
   });
 
   it('a RENAMED top band keeps the top colour', () => {
-    // Renaming a band in the backend used to drop it to the rust default, so
-    // the leader having the best month on record was shown the worst colour.
-    expect(statusBand('Outstanding', ['Outstanding', 'Strong']).c).toBe(dt.green);
+    expect(statusBand('Outstanding', ['Outstanding', 'Strong']).c).toBe(GREEN);
   });
 
   it('is NEUTRAL before the served bands arrive', () => {
-    // Every caller passes [] on first paint while the rubric is in flight.
-    expect(statusBand('Strong', []).c).toBe(dt.textLight);
-    expect(statusBand('Strong', []).c).not.toBe(dt.rust);
+    expect(statusBand('Strong', [])).toEqual({ label: 'Strong', c: NEUTRAL, bg: NEUTRAL_BG });
   });
 
   it('an unplaceable label is neutral, not the worst', () => {
-    expect(statusBand('Nonsense', BANDS).c).toBe(dt.textLight);
-    expect(statusBand('', BANDS).c).toBe(dt.textLight);
+    expect(statusBand('Nonsense', BANDS).c).toBe(NEUTRAL);
+    expect(statusBand('', BANDS).c).toBe(NEUTRAL);
   });
 
-  it('keeps the label it was given', () => {
-    expect(statusBand('On Target', BANDS).label).toBe('On Target');
+  it('a sixth band past the styled five is neutral', () => {
+    expect(statusBand('Sixth', [...BANDS, 'Sixth']).c).toBe(NEUTRAL);
   });
 });
