@@ -132,3 +132,49 @@ describe('sessions without retained material', () => {
     expect(screen.queryByTestId('coach-recording-attached-r1')).toBeNull();
   });
 });
+
+describe('a mint that resolves after the session changed', () => {
+  function deferred() {
+    let resolve!: (v: { url: string; expiresInSeconds: number }) => void;
+    const promise = new Promise<{ url: string; expiresInSeconds: number }>((r) => {
+      resolve = r;
+    });
+    return { promise, resolve };
+  }
+
+  it('is dropped, so the new session never plays the old recording', async () => {
+    const pending = deferred();
+    vi.spyOn(coachService, 'mintRecordingUrl').mockReturnValueOnce(pending.promise);
+
+    const { rerender } = render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    rerender(<RetainedRecording reportId="r2" hasRetained />);
+
+    pending.resolve({ url: 'https://storage.test/r1.mp4', expiresInSeconds: 86400 });
+    await pending.promise;
+    await new Promise((r) => setTimeout(r, 0));
+
+    expect(screen.queryByTestId('coach-recording-player-r2')).toBeNull();
+    expect(document.querySelector('video')).toBeNull();
+    expect(screen.getByTestId('coach-recording-play-r2')).toHaveTextContent('Play the recording');
+  });
+
+  it('a re-mint that resolves after the switch is dropped too', async () => {
+    const remint = deferred();
+    vi.spyOn(coachService, 'mintRecordingUrl')
+      .mockResolvedValueOnce({ url: 'https://storage.test/r1-stale.mp4', expiresInSeconds: 86400 })
+      .mockReturnValueOnce(remint.promise);
+
+    const { rerender } = render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    fireEvent.error(await screen.findByTestId('coach-recording-player-r1'));
+    rerender(<RetainedRecording reportId="r2" hasRetained />);
+
+    remint.resolve({ url: 'https://storage.test/r1-fresh.mp4', expiresInSeconds: 86400 });
+    await remint.promise;
+    await new Promise((r) => setTimeout(r, 0));
+
+    expect(document.querySelector('video')).toBeNull();
+    expect(screen.getByTestId('coach-recording-play-r2')).toBeInTheDocument();
+  });
+});
