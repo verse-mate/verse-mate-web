@@ -93,8 +93,17 @@ function report(over: Record<string, unknown>) {
   };
 }
 
+export const NEWEST_SCORES: Record<number, number> = { 2: 5, 3: 3, 4: 2, 5: 1 };
+
 export const REPORTS = [
-  report({}),
+  report({
+    dimensions: RUBRIC.dimensions.map((d) => ({
+      n: d.n,
+      name: d.name,
+      score: NEWEST_SCORES[d.n] ?? 4,
+      note: 'a real reason',
+    })),
+  }),
   report({
     id: OLDER_ID,
     date: '2026-08-22',
