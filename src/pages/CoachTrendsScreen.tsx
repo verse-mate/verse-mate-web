@@ -20,7 +20,7 @@ import {
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachLineChart from '@/components/coach/CoachLineChart';
 import { dt, statusBand, clusterMeta } from '@/components/coach/dashboardTheme';
-import { bandLabelsOf, clusterOrder, useRubric } from '@/hooks/useRubric';
+import { bandLabelsOf, clusterKey, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
 import type { LeaderMonthlySummary } from '@/services/coachService';
 
 const NO_MONTHS: string[] = [];
@@ -129,6 +129,9 @@ function MonthDetail({
   // to the worst on the page.
   const { rubric } = useRubric();
   const clusterNames = clusterOrder(rubric);
+  const glanceClusters = clusterNames.map((name) => ({ code: shortCode(name), key: clusterKey(name) as keyof LeaderMonthlySummary['clusterAvg'] }));
+  const dimensionCount = rubric?.dimensions.length ?? 0;
+  const glanceColumns = `58px 1fr ${glanceClusters.map(() => '44px').join(' ')} 66px 96px`;
   const bandLabels = bandLabelsOf(rubric);
   const band = statusBand(s.status.label, bandLabels);
   const deltaText =
@@ -144,7 +147,7 @@ function MonthDetail({
             <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.12em', color: dt.brightGold, marginBottom: 8 }}>MONTHLY COACHING SUMMARY</div>
             <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 30, margin: '0 0 6px' }}>{s.monthLabel}</h2>
             <div style={{ fontSize: 13.5, color: dt.darkMuted }}>
-              {s.sessionsCount} session{s.sessionsCount === 1 ? '' : 's'} analyzed · weighted composite (v3 model, 12 dimensions × 4 clusters)
+              {s.sessionsCount} session{s.sessionsCount === 1 ? '' : 's'} analyzed · weighted composite{rubric ? ` (${rubric.model}, ${dimensionCount} dimensions × ${clusterNames.length} clusters)` : ''}
             </div>
           </div>
           <div style={{ textAlign: 'right' }}>
@@ -197,26 +200,24 @@ function MonthDetail({
       <div style={{ border: `1px solid ${dt.border2}`, borderRadius: 12, overflow: 'hidden', marginBottom: 34 }}>
         <div style={{ overflowX: 'auto' }}>
           <div style={{ minWidth: 620 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '58px 1fr 44px 44px 44px 44px 66px 96px', gap: 10, padding: '11px 16px', background: dt.fill1, fontSize: 10.5, fontWeight: 700, letterSpacing: '.04em', color: dt.gold }}>
+            <div style={{ display: 'grid', gridTemplateColumns: glanceColumns, gap: 10, padding: '11px 16px', background: dt.fill1, fontSize: 10.5, fontWeight: 700, letterSpacing: '.04em', color: dt.gold }}>
               <div>DATE</div>
               <div>SESSION</div>
-              <div style={{ textAlign: 'right' }}>BM</div>
-              <div style={{ textAlign: 'right' }}>TC</div>
-              <div style={{ textAlign: 'right' }}>EP</div>
-              <div style={{ textAlign: 'right' }}>BR</div>
+              {glanceClusters.map((c) => (
+                <div key={c.key} style={{ textAlign: 'right' }}>{c.code}</div>
+              ))}
               <div style={{ textAlign: 'right' }}>COMP</div>
               <div style={{ textAlign: 'right' }}>STATUS</div>
             </div>
             {s.glance.rows.map((g, i) => {
               const gb = statusBand(g.status, bandLabels);
               return (
-                <div key={i} style={{ display: 'grid', gridTemplateColumns: '58px 1fr 44px 44px 44px 44px 66px 96px', gap: 10, padding: '12px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center' }}>
+                <div key={i} style={{ display: 'grid', gridTemplateColumns: glanceColumns, gap: 10, padding: '12px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center' }}>
                   <div style={{ color: dt.textLight, fontWeight: 600 }}>{g.date.slice(5)}</div>
                   <div style={{ fontWeight: 600 }}>{g.session}</div>
-                  <PctCell v={g.bm} />
-                  <PctCell v={g.tc} />
-                  <PctCell v={g.ep} />
-                  <PctCell v={g.br} />
+                  {glanceClusters.map((c) => (
+                    <PctCell key={c.key} v={g[c.key] ?? null} />
+                  ))}
                   <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>{g.composite.toFixed(1)}</div>
                   <div style={{ justifySelf: 'end', fontSize: 9.5, fontWeight: 700, padding: '4px 7px', borderRadius: 5, color: gb.c, background: gb.bg }}>{g.status}</div>
                 </div>
@@ -306,9 +307,9 @@ function MonthDetail({
       {/* Per-session detail */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 11, margin: '0 0 4px' }}>
         <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 23, margin: 0 }}>Per-session detail</h3>
-        <span style={{ fontSize: 11.5, fontWeight: 700, color: dt.gold2, background: dt.goldChip, padding: '4px 10px', borderRadius: 99 }}>All 12 dimensions</span>
+        <span style={{ fontSize: 11.5, fontWeight: 700, color: dt.gold2, background: dt.goldChip, padding: '4px 10px', borderRadius: 99 }}>{`All ${dimensionCount} dimensions`}</span>
       </div>
-      <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>Every session this month, scored across all twelve dimensions. Click a session to expand.</p>
+      <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>Every session this month, scored across all {dimensionCount} dimensions. Click a session to expand.</p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {s.sessions.map((sess, i) => {
           const sb = statusBand(sess.status, bandLabels);

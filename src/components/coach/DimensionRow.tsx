@@ -1,12 +1,3 @@
-/**
- * One of the 12 coaching dimensions as a compact, tappable line: name + score
- * and a 0–5 bar, collapsed by default. Expanding reveals what the dimension
- * measures, its target, and the coach's "why this score" rationale.
- *
- * Shared by <ReportCard> (mobile) and <ReportDetail> (desktop) so the two stay
- * identical and the "lines, expand for detail" interaction lives in one place.
- */
-
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';

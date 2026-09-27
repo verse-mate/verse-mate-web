@@ -1,13 +1,3 @@
-/**
- * One coaching "feedback document" in the reports list. Collapsed it shows
- * date / session / status / score; expanded (tap the chevron) it renders the
- * SAME full coaching narrative as the document-style <ReportDetail>, Summary
- * & Big Ideas, full-prose strengths / growth areas / recommendations, the
- * pipeline's PDF-parity sections, and the 12 dimensions, via the shared
- * <ReportBody>, plus a compact cluster breakdown, coaching notes, and a
- * per-session PDF download. No Google Docs hop.
- */
-
 import { useState } from 'react';
 import { ChevronDown, FileText } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';

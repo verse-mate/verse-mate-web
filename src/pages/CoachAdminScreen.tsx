@@ -47,7 +47,7 @@ import PipelineHealth from '@/components/coach/PipelineHealth';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
 import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
-import { type RubricContract, statusForScore } from '@/services/rubric';
+import { type RubricContract, bandFloor, statusForScore } from '@/services/rubric';
 
 type View = 'leaders' | 'leader' | 'trends' | 'links' | 'pipeline';
 
@@ -247,7 +247,7 @@ function RosterView({
             <button type="button" onClick={onViewTrends} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12.5, fontWeight: 700, color: dt.gold }}>View full trends →</button>
           </div>
           {programLine.length > 1 ? (
-            <AxisLineChart values={programLine} min={50} max={100} color={dt.gold} labels={programLabels} />
+            <AxisLineChart values={programLine} min={bandFloor(bands, programLine)} max={100} color={dt.gold} labels={programLabels} />
           ) : (
             <p style={{ fontSize: 14, color: dt.textMuted, lineHeight: 1.6, margin: '10px 0 8px' }}>
               {scored.length} of {roster.length} leaders have a scored session. The program trend line appears once two or more months are analyzed.
@@ -451,7 +451,6 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
   const trendValues = scoreSeries.slice(-7).map((p) => Math.round(p.score));
   const trendLabels = scoreSeries.slice(-7).map((p) => shortDate(p.date));
 
-  // Radar: latest session's 12 dimensions (0 for N/A) + 3-session rolling avg.
   const vals = latest.dimensions.map((d) => d.score ?? 0);
   const recent = (trends?.dimensionSeries ?? []).slice(-3);
   const avg = latest.dimensions.map((d) => {
@@ -497,7 +496,7 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
 
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 380px) minmax(0, 1fr)', gap: 16, marginBottom: 16 }}>
         <div style={innerCard}>
-          <div style={{ ...kicker, marginBottom: 6 }}>12-DIMENSION SHAPE</div>
+          <div style={{ ...kicker, marginBottom: 6 }}>{`${vals.length}-DIMENSION SHAPE`}</div>
           <RadarChart vals={vals} avg={avg} />
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', fontSize: 12, color: dt.textMuted, marginTop: 4 }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 14, height: 3, background: dt.gold, display: 'inline-block' }} />This session</span>
@@ -533,7 +532,7 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
                       const raw = Number(r[dim.name]);
                       const v = Number.isFinite(raw) ? Math.round(raw) : null;
                       const cc = cellColor(v, rubric);
-                      return <div key={i} style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 5 }}>{v ?? 'N/A'}</div>;
+                      return <div key={i} data-testid={`oversight-dim-cell-${dim.name}-${i}`} style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 5 }}>{v ?? 'N/A'}</div>;
                     })}
                   </div>
                 ))}
@@ -794,6 +793,9 @@ function TrendsDetail({
     .map((id, i) => ({ name: nameFor(id), color: CLUSTER_PALETTE[i % CLUSTER_PALETTE.length], values: series.get(id) ?? [] }))
     .filter((s) => s.values.length > 1);
 
+  const heatDims = rubric?.dimensions ?? [];
+  const heatColumns = `150px repeat(${heatDims.length}, 1fr)`;
+
   // Score distribution by status.
   const distribution = bandLabels.map((label) => {
     const rows = leaders.filter((l) => l.status === label);
@@ -832,7 +834,7 @@ function TrendsDetail({
             <span style={{ ...kicker, marginBottom: 0 }}>LEADER TRAJECTORIES · {loadedMonths.map((m) => m.label.split(' ')[0]).join(' → ')}</span>
             <span style={{ fontSize: 12, color: dt.textLight }}>Tap a leader to add or remove their line</span>
           </div>
-          <MultiLineChart series={compareSeries} min={50} max={100} labels={loadedMonths.map((m) => m.label.split(' ')[0])} />
+          <MultiLineChart series={compareSeries} min={bandFloor(rubric?.statusBands ?? [], compareSeries.flatMap((s) => s.values))} max={100} labels={loadedMonths.map((m) => m.label.split(' ')[0])} />
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 12 }}>
             {leaders.filter((l) => (series.get(l.id) ?? []).length > 1).map((l) => {
               const idx = activeCompare.indexOf(l.id);
@@ -851,7 +853,7 @@ function TrendsDetail({
       {programLine.length > 1 && (
         <div style={{ ...innerCard, padding: '20px 22px 12px', marginBottom: 26 }}>
           <div style={{ ...kicker, marginBottom: 4 }}>PROGRAM COMPOSITE · LAST {programLine.length} MONTHS</div>
-          <AxisLineChart values={programLine} min={50} max={100} color={dt.gold} labels={programLabels} />
+          <AxisLineChart values={programLine} min={bandFloor(rubric?.statusBands ?? [], programLine)} max={100} color={dt.gold} labels={programLabels} />
         </div>
       )}
 
@@ -914,20 +916,20 @@ function TrendsDetail({
       <p style={{ margin: '0 0 12px', fontSize: 12.5, color: dt.textLight }}>Tap any <strong style={{ color: dt.gold }}>D#</strong> column header to see what it measures.</p>
       <div style={{ overflowX: 'auto', border: `1px solid ${dt.cardBorder}`, borderRadius: 12, marginBottom: 30 }}>
         <div style={{ minWidth: 760 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '150px repeat(12, 1fr)', gap: 3, padding: '10px 12px', background: '#F6EFD8', fontSize: 10, fontWeight: 700, color: dt.gold }}>
+          <div style={{ display: 'grid', gridTemplateColumns: heatColumns, gap: 3, padding: '10px 12px', background: '#F6EFD8', fontSize: 10, fontWeight: 700, color: dt.gold }}>
             <div>LEADER</div>
-            {Array.from({ length: 12 }, (_, i) => (
-              <button key={i} type="button" onClick={onToggleKey} style={{ textAlign: 'center', cursor: 'pointer', background: 'none', border: 'none', font: 'inherit', color: 'inherit', textDecoration: 'underline dotted', textUnderlineOffset: 3 }}>D{i + 1}</button>
+            {heatDims.map((d) => (
+              <button key={d.n} type="button" onClick={onToggleKey} style={{ textAlign: 'center', cursor: 'pointer', background: 'none', border: 'none', font: 'inherit', color: 'inherit', textDecoration: 'underline dotted', textUnderlineOffset: 3 }}>{`D${d.n}`}</button>
             ))}
           </div>
           {showKey && <div style={{ padding: '10px 12px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.7 }}>{dimKeyLine(rubric)}</div>}
           {leaders.map((l) => (
-            <div key={l.id} style={{ display: 'grid', gridTemplateColumns: '150px repeat(12, 1fr)', gap: 3, padding: '5px 12px', borderTop: `1px solid ${dt.rowDivider}`, alignItems: 'center' }}>
+            <div key={l.id} style={{ display: 'grid', gridTemplateColumns: heatColumns, gap: 3, padding: '5px 12px', borderTop: `1px solid ${dt.rowDivider}`, alignItems: 'center' }}>
               <button type="button" onClick={() => onOpenLeader(l.id)} title={`Open ${l.name}'s page`} style={{ ...leaderNameButton, fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{l.name}</button>
               {l.dimensions.map((d) => {
                 const v = d.avg;
                 const cc = cellColor(v, rubric);
-                return <div key={d.n} style={{ textAlign: 'center', fontSize: 11, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 4 }}>{v == null ? 'N/A' : v.toFixed(1)}</div>;
+                return <div key={d.n} data-testid={`oversight-heat-${l.id}-${d.n}`} style={{ textAlign: 'center', fontSize: 11, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 4 }}>{v == null ? 'N/A' : v.toFixed(1)}</div>;
               })}
             </div>
           ))}
@@ -1150,12 +1152,6 @@ function clusterAvgs(l: CoachMonthly['leaders'][number], rubric: RubricContract 
   return rollUpClusters(means, rubric);
 }
 
-/** Cluster mix fallback for the Development panel when there's no full monthly
- *  summary yet. Averages each dimension across the sessions we DO have, the
- *  current month's rows if any, otherwise every scored session in the series,
- *  and as a last resort the single latest report, then rolls the dimension
- *  means up into the four v3 clusters. Returns null only when there is truly no
- *  dimension data to draw on. */
 function clusterAvgsFromSessions(
   dimensionSeries: TrendRow[],
   latest: CoachReport,

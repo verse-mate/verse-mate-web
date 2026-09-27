@@ -51,7 +51,7 @@ export interface CoachReport {
   base: number;
   newcomerBonus: number;
   sizeBonus: number;
-  status: string; // Exceptional | Strong | On Target | Developing | Early Stage
+  status: string;
   statusEmoji: string;
   clusters: CoachCluster[];
   dimensions: CoachDimension[];
