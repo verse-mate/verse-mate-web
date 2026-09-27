@@ -118,6 +118,42 @@ export const REPORTS = [
   }),
 ];
 
+export function olderId(i: number) {
+  return `leader-older-${i}`;
+}
+
+function history(length: number) {
+  return Array.from({ length }, (_, i) => {
+    const d = new Date(Date.UTC(2026, 7, 15 - 7 * i));
+    const date = d.toISOString().slice(0, 10);
+    return report({
+      id: olderId(i),
+      date,
+      dateLabel: date,
+      session: `Older session ${i}`,
+      score: 70,
+      base: 70,
+      newcomerBonus: 0,
+      sizeBonus: 0,
+      status: 'On Target',
+      statusEmoji: '🟡',
+    });
+  });
+}
+
+function summaryOf(r: ReturnType<typeof report>) {
+  return {
+    id: r.id,
+    date: r.date,
+    dateLabel: r.dateLabel,
+    session: r.session,
+    topic: r.topic,
+    score: r.score,
+    status: r.status,
+    statusEmoji: r.statusEmoji,
+  };
+}
+
 export const ME = {
   isCoach: true,
   isAdmin: false,
@@ -231,6 +267,8 @@ export interface CoachApiOptions {
   attached?: Record<string, string>;
   pipelineStatus?: number;
   programAvg?: number;
+  historyLength?: number;
+  onReportsRequest?: (url: string) => void;
   onPipelineRequest?: (url: string) => void;
 }
 
@@ -293,6 +331,7 @@ export const COVERAGE = {
  */
 export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   const retained = new Set(opts.retained ?? []);
+  const all = [...REPORTS, ...history(opts.historyLength ?? 0)];
   const attached = opts.attached ?? {};
   const withAttached = <T extends { id: string }>(r: T) =>
     attached[r.id] ? { ...r, attachedRecordingUrl: attached[r.id], recordingUrl: attached[r.id] } : r;
@@ -414,9 +453,10 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       : route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } }),
   );
 
-  await page.route(`${API}/coach/reports`, (route) =>
-    route.fulfill({ json: { reports: REPORTS.map(withAttached) } }),
-  );
+  await page.route(`${API}/coach/reports`, (route) => {
+    opts.onReportsRequest?.(new URL(route.request().url()).pathname);
+    return route.fulfill({ json: { reports: all.map(withAttached) } });
+  });
 
   await page.route(`${API}/fake-object-store/**`, (route) =>
     opts.breakPlayback
@@ -453,10 +493,22 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     const id = decodeURIComponent(
       new URL(route.request().url()).pathname.split('/').at(-1) ?? '',
     );
-    const found = REPORTS.find((r) => r.id === id);
-    if (!found) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND' } });
+    opts.onReportsRequest?.(new URL(route.request().url()).pathname);
+    const found = all.find((r) => r.id === id);
+    if (!found) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'Report not found' } });
     return route.fulfill({
       json: { report: { ...withAttached(found), hasRetainedRecording: retained.has(id) } },
+    });
+  });
+
+  await page.route(/\/coach\/reports\/summary(\?|$)/, (route) => {
+    const url = new URL(route.request().url());
+    opts.onReportsRequest?.(`${url.pathname}${url.search}`);
+    if (opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Not a coaching account' } });
+    const limit = Number(url.searchParams.get('limit') ?? 25);
+    const offset = Number(url.searchParams.get('offset') ?? 0);
+    return route.fulfill({
+      json: { items: all.slice(offset, offset + limit).map(summaryOf), total: all.length },
     });
   });
 

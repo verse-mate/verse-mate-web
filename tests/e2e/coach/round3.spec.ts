@@ -6,6 +6,8 @@ import {
   LEADER_ID,
   MEETING_LINK,
   NEWEST_ID,
+  OLDER_ID,
+  olderId,
   PARKED_SESSION,
   useCoachApi,
 } from './fixtures';
@@ -213,5 +215,45 @@ test.describe("The leader's own dashboard rates dimensions with the served bands
 
     const chip = page.getByTestId('coach-dim-1').getByText('Strong', { exact: true });
     expect(await chip.evaluate((el) => (el as HTMLElement).innerText)).toBe('STRONG');
+  });
+});
+
+test.describe("A leader's history loads as a paginated summary", () => {
+  test('the dashboard never fetches every full report', async ({ page }, testInfo) => {
+    const calls: string[] = [];
+    await useCoachApi(page, { historyLength: 60, onReportsRequest: (u) => calls.push(u) });
+    await page.goto('/coach');
+
+    await expect(page.getByText('August 29, 2026').first()).toBeVisible();
+    await page.getByTestId('coach-tab-scorecard').click();
+    await expect(page.getByTestId('coach-dim-1')).toContainText('4/5');
+    expect(calls).not.toContain('/coach/reports');
+    expect(calls.some((u) => u.startsWith('/coach/reports/summary'))).toBe(true);
+    const details = calls.filter((u) => /^\/coach\/reports\/(?!summary)[^/]+$/.test(u));
+    expect(new Set(details)).toEqual(new Set([`/coach/reports/${NEWEST_ID}`, `/coach/reports/${OLDER_ID}`]));
+    await capture(page, testInfo, 'item6-dashboard-from-summary');
+  });
+
+  test('the sessions list pages through a long history', async ({ page }, testInfo) => {
+    const calls: string[] = [];
+    await useCoachApi(page, { historyLength: 60, onReportsRequest: (u) => calls.push(u) });
+    await page.goto('/coach/sessions');
+
+    const rows = page.getByTestId('coach-view-report');
+    await expect(rows).toHaveCount(50);
+    await page.getByTestId('coach-sessions-more').click();
+    await expect(rows).toHaveCount(62);
+    await expect(page.getByTestId('coach-sessions-more')).toHaveCount(0);
+    expect(calls).not.toContain('/coach/reports');
+    expect(calls.filter((u) => /^\/coach\/reports\/(?!summary)/.test(u))).toEqual([]);
+    await capture(page, testInfo, 'item6-sessions-paged', page.getByText('Older session 59'));
+  });
+
+  test('a deep link to a session past the first page opens that session', async ({ page }) => {
+    await useCoachApi(page, { historyLength: 60 });
+    await page.goto(`/coach?s=${olderId(59)}`);
+
+    await expect(page.getByText('Older session 59').first()).toBeVisible();
+    await expect(page.getByText(/couldn't find that session/i)).toHaveCount(0);
   });
 });

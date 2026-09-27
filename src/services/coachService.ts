@@ -283,10 +283,21 @@ export function fetchCoachMe(): Promise<CoachMe> {
   return coachRequest<CoachMe>('me');
 }
 
-/** GET /api/coach/reports, this coach's feedback documents, newest first. */
-export async function fetchCoachReports(): Promise<CoachReport[]> {
-  const data = await coachRequest<{ reports: CoachReport[] }>('reports');
-  return data.reports || [];
+export type CoachReportSummary = Pick<
+  CoachReport,
+  'id' | 'date' | 'dateLabel' | 'session' | 'topic' | 'score' | 'status' | 'statusEmoji'
+>;
+
+export const REPORT_PAGE_SIZE = 50;
+
+export async function fetchCoachReportSummaries(
+  offset = 0,
+  limit = REPORT_PAGE_SIZE,
+): Promise<{ items: CoachReportSummary[]; total: number }> {
+  const data = await coachRequest<{ items: CoachReportSummary[]; total: number }>(
+    `reports/summary?limit=${limit}&offset=${offset}`,
+  );
+  return { items: data.items || [], total: data.total ?? 0 };
 }
 
 /**
@@ -304,8 +315,9 @@ export async function fetchCoachReportDetail(
       `reports/${encodeURIComponent(reportId)}`,
     );
     return data.report ?? null;
-  } catch {
-    return null;
+  } catch (err) {
+    if (err instanceof CoachApiError && err.status === 404) return null;
+    throw err;
   }
 }
 
