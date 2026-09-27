@@ -1,5 +1,5 @@
 /**
- * Coaching dashboard — Home (/coach for an evaluated leader).
+ * Coaching dashboard, Home (/coach for an evaluated leader).
  *
  * The morning landing view from the design handoff: a greeting + streak, two
  * stat tiles (latest score, this week's focus), a dark "Next class" band with
@@ -16,7 +16,8 @@ import { useMemo } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
   useCoachMe,
-  useCoachReports,
+  useCoachReportSummaries,
+  useCoachReportDetail,
   useCoachReportsFor,
   useCoachTrends,
   useCoachTrendsFor,
@@ -24,11 +25,20 @@ import {
   useAdminClasses,
   coachState,
 } from '@/hooks/useCoach';
-import type { CoachClass, CoachReport, CoachTrends } from '@/services/coachService';
+import type { CoachClass, CoachReport, CoachReportSummary, CoachTrends } from '@/services/coachService';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import CoachLineChart from '@/components/coach/CoachLineChart';
-import { dt, firstName, letterGrade, ratingForScore } from '@/components/coach/dashboardTheme';
+import {
+  dimensionBandIndex,
+  type DimensionBand,
+  dt,
+  firstName,
+  letterGrade,
+  ratingForScore,
+} from '@/components/coach/dashboardTheme';
+import { useRubric } from '@/hooks/useRubric';
+import { resolveDeepLink } from './coachDeepLink';
 
 export default function CoachDashboardScreen() {
   const navigate = useNavigate();
@@ -41,7 +51,7 @@ export default function CoachDashboardScreen() {
 
   // Only the active branch's queries are enabled.
   const meQuery = useCoachMe();
-  const selfReports = useCoachReports({ enabled: !admin });
+  const selfReports = useCoachReportSummaries({ enabled: !admin });
   const forReports = useCoachReportsFor(coachId ?? '');
   const selfTrends = useCoachTrends({ enabled: !admin });
   const forTrends = useCoachTrendsFor(coachId ?? '');
@@ -50,7 +60,9 @@ export default function CoachDashboardScreen() {
 
   const me = coachState(meQuery);
   const reports = admin ? coachState(forReports) : coachState(selfReports);
-  const reportList = admin ? forReports.data?.reports : selfReports.data;
+  const reportList: CoachReportSummary[] | undefined = admin
+    ? forReports.data?.reports
+    : selfReports.data?.pages[0]?.items;
   const trends: CoachTrends | undefined = admin ? forTrends.data : selfTrends.data;
   const classes: CoachClass[] = admin
     ? (adminClasses.data || []).filter((c) => c.leader.id === coachId)
@@ -58,26 +70,41 @@ export default function CoachDashboardScreen() {
 
   const list = useMemo(() => [...(reportList || [])].sort(byDateDesc), [reportList]);
   const selId = params.get('s');
-  const selectedIdx = selId ? Math.max(0, list.findIndex((r) => r.id === selId)) : 0;
-  const selected: CoachReport | null = list[selectedIdx] ?? null;
-  const prev = list[selectedIdx + 1];
-  const latest = list[0] ?? null;
-  const delta = selected && prev ? Math.round((selected.score - prev.score) * 100) / 100 : null;
+  const resolved = resolveDeepLink<CoachReportSummary>(list, selId);
+  const offPage = !admin && resolved.missing;
+  const selectedId = offPage ? selId : resolved.selected?.id;
+  const prevSummary = offPage ? undefined : list[resolved.index + 1];
+  const latestSummary = list[0];
+
+  const adminReports = forReports.data?.reports;
+  const selectedFull = useFullReport(admin, adminReports, selectedId ?? undefined);
+  const latestFull = useFullReport(admin, adminReports, latestSummary?.id);
+  const prevFull = useFullReport(admin, adminReports, prevSummary?.id);
+
+  const deepLinkMissing = offPage ? selectedFull.settled && !selectedFull.report : resolved.missing;
+  const selected = selectedFull.report;
+  const latest = latestFull.report;
+  const prev = prevFull.report ?? undefined;
+  const delta = selected && prevSummary ? Math.round((selected.score - prevSummary.score) * 100) / 100 : null;
+  const detailLoading = selectedFull.loading || latestFull.loading || prevFull.loading;
+  const detailError = selectedFull.error || latestFull.error || prevFull.error;
 
   const leaderName = admin ? forReports.data?.profile?.name || '' : me.data?.profile?.name || '';
 
   return (
     <CoachDashboardShell active="home" coachId={coachId} leaderName={leaderName}>
       <CoachGate
-        loading={admin ? reports.loading : me.loading || reports.loading}
+        loading={admin ? reports.loading : me.loading || reports.loading || detailLoading}
         authError={me.authError || reports.authError}
-        error={me.error || reports.error}
+        error={me.error || reports.error || detailError}
         onRetry={() => {
           meQuery.refetch();
           (admin ? forReports : selfReports).refetch();
         }}
       >
-        {!latest || !selected ? (
+        {deepLinkMissing ? (
+          <SessionNotFound onBack={() => setParams({}, { replace: true })} />
+        ) : !latestSummary || !latest || !selected ? (
           <EmptyHome leaderName={leaderName} admin={admin} onAddClass={() => navigate(`${base}/sessions`)} />
         ) : (
           <>
@@ -87,7 +114,7 @@ export default function CoachDashboardScreen() {
               streakWeeks={weeklyStreak(list)}
               quarterSessions={quarterCount(list)}
               latest={latest}
-              delta={list.length > 1 ? Math.round((latest.score - list[1].score) * 100) / 100 : null}
+              delta={list.length > 1 ? Math.round((latestSummary.score - list[1].score) * 100) / 100 : null}
             />
             <NextClassBand
               nextClass={pickNextClass(classes)}
@@ -101,6 +128,7 @@ export default function CoachDashboardScreen() {
               delta={delta}
               prev={prev}
               label={selected.id === latest.id ? 'MOST RECENT SESSION' : 'SELECTED SESSION'}
+              coachId={coachId}
             />
             {selected.id !== latest.id && (
               <div style={{ marginTop: 16 }}>
@@ -114,6 +142,22 @@ export default function CoachDashboardScreen() {
       </CoachGate>
     </CoachDashboardShell>
   );
+}
+
+function useFullReport(
+  admin: boolean,
+  adminReports: CoachReport[] | undefined,
+  id: string | undefined,
+): { report: CoachReport | null; loading: boolean; error: boolean; settled: boolean } {
+  const detail = useCoachReportDetail(admin ? undefined : id);
+  if (!id) return { report: null, loading: false, error: false, settled: true };
+  if (admin) return { report: adminReports?.find((r) => r.id === id) ?? null, loading: false, error: false, settled: true };
+  return {
+    report: detail.data ?? null,
+    loading: detail.isLoading,
+    error: !!detail.error,
+    settled: detail.isSuccess,
+  };
 }
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
@@ -134,6 +178,7 @@ function Hero({
   delta: number | null;
 }) {
   const weakest = weakestDimension(latest);
+  const dimensionBands = useRubric().rubric?.dimensionBands ?? [];
   const deltaText = delta == null ? '—' : delta > 0 ? `▲ ${delta} pts` : delta < 0 ? `▼ ${Math.abs(delta)} pts` : 'no change';
   const deltaColor = delta == null ? dt.textLight : delta >= 0 ? dt.green : dt.rust;
 
@@ -178,7 +223,7 @@ function Hero({
               {weakest ? weakest.name : 'All dimensions solid'}
             </div>
             <div style={{ fontSize: 13, fontWeight: 600, color: dt.rust, marginTop: 6 }}>
-              {weakest ? `${weakest.score}/5 · ${ratingForScore(weakest.score).label.toLowerCase()}` : 'no weak spot this week'}
+              {weakest ? `${weakest.score}/5 · ${ratingForScore(weakest.score, dimensionBands).label.toLowerCase()}` : 'no weak spot this week'}
             </div>
           </StatTile>
         </div>
@@ -209,7 +254,7 @@ function NextClassBand({
   admin?: boolean;
   onManage: () => void;
 }) {
-  const focus = focusReminders(latest);
+  const focus = focusReminders(latest, useRubric().rubric?.dimensionBands ?? []);
   return (
     <div style={{ background: dt.darkBg, color: dt.darkText, borderRadius: 14, padding: '26px 30px' }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))', gap: 30 }}>
@@ -247,8 +292,8 @@ function NextClassBand({
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: '4px 28px' }}>
             {focus.map((f, i) => (
               <div key={i} style={{ display: 'grid', gridTemplateColumns: '84px 1fr', gap: 11, padding: '9px 0', borderTop: `1px solid ${dt.darkBorder}`, alignItems: 'start' }}>
-                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '.03em', textAlign: 'center', color: f.c, background: f.bg, padding: '4px 0', borderRadius: 5, width: '100%' }}>
-                  {f.band}
+                <div data-testid={`coach-focus-chip-${i}`} style={{ fontSize: 9, fontWeight: 700, letterSpacing: '.03em', textAlign: 'center', color: f.c, background: f.bg, padding: '4px 0', borderRadius: 5, width: '100%' }}>
+                  {f.band.toUpperCase()}
                 </div>
                 <div>
                   <div style={{ fontWeight: 600, fontSize: 13, color: dt.darkText, lineHeight: 1.3 }}>{f.title}</div>
@@ -413,22 +458,26 @@ function EmptyHome({ leaderName, admin, onAddClass }: { leaderName: string; admi
 
 // ─── Data helpers ────────────────────────────────────────────────────────────
 
-const DARK_CHIP: Record<string, { c: string; bg: string }> = {
-  'NEEDS WORK': { c: '#E8A87C', bg: '#4A3227' },
-  'ON TARGET': { c: '#E4C878', bg: '#403820' },
-  STRONG: { c: '#9FCBA8', bg: '#2A3A2E' },
-  'N/A': { c: '#B7AD98', bg: '#33302A' },
-};
+const DARK_CHIP_GREEN = { c: '#9FCBA8', bg: '#2A3A2E' };
+const DARK_CHIP_GOLD = { c: '#E4C878', bg: '#403820' };
+const DARK_CHIP_RUST = { c: '#E8A87C', bg: '#4A3227' };
+const DARK_CHIP_UNPLACED = { c: '#B7AD98', bg: '#33302A' };
+const DARK_CHIPS = [DARK_CHIP_GREEN, DARK_CHIP_GOLD, DARK_CHIP_GOLD, DARK_CHIP_RUST, DARK_CHIP_RUST];
 
-/** The "focus on, based on last week" reminders — the session's transferable
+/** The "focus on, based on last week" reminders, the session's transferable
  *  next-week actions (recommendations), tagged with a status band drawn from
  *  the weakest dimensions, matching the design. Falls back to the weakest
  *  dimensions themselves when a report carries no written recommendations. */
-function focusReminders(latest: CoachReport): { band: string; c: string; bg: string; title: string; note: string }[] {
+function focusReminders(
+  latest: CoachReport,
+  dimensionBands: DimensionBand[],
+): { band: string; c: string; bg: string; title: string; note: string }[] {
   const weak = [...latest.dimensions.filter((d) => d.score != null)].sort((a, b) => (a.score ?? 0) - (b.score ?? 0));
   const bandFor = (i: number) => {
-    const label = ratingForScore(weak[i]?.score ?? null).label;
-    const chip = DARK_CHIP[label] ?? DARK_CHIP['N/A'];
+    const score = weak[i]?.score ?? null;
+    const label = ratingForScore(score, dimensionBands).label;
+    const chip =
+      score == null ? DARK_CHIP_UNPLACED : (DARK_CHIPS[dimensionBandIndex(score, dimensionBands)] ?? DARK_CHIP_UNPLACED);
     return { band: label, c: chip.c, bg: chip.bg };
   };
 
@@ -444,7 +493,7 @@ function focusReminders(latest: CoachReport): { band: string; c: string; bg: str
   }));
 }
 
-/** Recommendations as { title, note } — prefers the pipeline's titled prose,
+/** Recommendations as { title, note }, prefers the pipeline's titled prose,
  *  falls back to terse bullets (split on the first dash into title + note). */
 function recommendationList(report: CoachReport): { title: string; note: string }[] {
   const prose = report.feedback?.recommendationsProse;
@@ -502,7 +551,7 @@ function pickNextClass(classes: CoachClass[] | undefined): CoachClass | null {
 }
 
 function classDateLine(c: CoachClass): string {
-  if (!c.classDate) return 'Recurring — no date pinned';
+  if (!c.classDate) return 'Recurring, no date pinned';
   const [y, m, d] = c.classDate.split('-').map(Number);
   if (!y || !m || !d) return c.classDate;
   return new Date(y, m - 1, d).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
@@ -532,13 +581,13 @@ function greeting(): string {
 
 function subgreeting(latest: CoachReport, delta: number | null, streakWeeks: number, admin?: boolean): string {
   const lesson = lessonLabel(latest.session);
-  const move = delta == null ? '' : delta > 0 ? ` — up ${delta} points on the last session` : delta < 0 ? ` — down ${Math.abs(delta)} on the last session` : '';
+  const move = delta == null ? '' : delta > 0 ? `, up ${delta} points on the last session` : delta < 0 ? `, down ${Math.abs(delta)} on the last session` : '';
   if (admin) return `Where they stand after ${lesson}${move}.`;
   const streak = streakWeeks > 1 ? `You're on a ${streakWeeks}-week coaching streak. ` : '';
   return `${streak}Here's where you stand after ${lesson}${move}.`;
 }
 
-/** A short label for the session — e.g. "Lesson 9" pulled from the title. */
+/** A short label for the session, e.g. "Lesson 9" pulled from the title. */
 function lessonLabel(session: string): string {
   const m = session.match(/Lesson\s+\d+/i);
   return m ? m[0] : session;
@@ -649,3 +698,28 @@ const linkBtn: React.CSSProperties = {
   fontSize: 13.5,
   cursor: 'pointer',
 };
+
+/**
+ * A deep link whose session id matches nothing this leader can see.
+ *
+ * Says so plainly rather than falling back to the most recent session: the link
+ * came from an email, and showing a DIFFERENT session's score under it is worse
+ * than showing nothing, because nothing about the page would reveal the
+ * substitution.
+ */
+function SessionNotFound({ onBack }: { onBack: () => void }) {
+  return (
+    <div data-testid="coach-session-not-found" style={{ padding: '32px 0' }}>
+      <h2 style={{ fontSize: 20, fontWeight: 600, margin: '0 0 8px' }}>
+        We couldn&apos;t find that session
+      </h2>
+      <p style={{ margin: '0 0 16px', fontSize: 15, color: '#666' }}>
+        The link may be out of date, or the session may belong to another
+        leader. Your other sessions are unaffected.
+      </p>
+      <button type="button" onClick={onBack} style={linkBtn}>
+        ← Back to the most recent session
+      </button>
+    </div>
+  );
+}

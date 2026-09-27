@@ -1,7 +1,7 @@
 /**
  * The "Most recent session" detail block on the coaching dashboard Home:
- * a session header (identity, Download PDF, status + delta, score badge) and a
- * tab bar — Full report · Scorecard · Question coaching · Next steps.
+ * a session header (identity, status + delta, score badge) and a
+ * tab bar, Full report · Scorecard · Question coaching · Next steps.
  *
  * Recreated from the design handoff, wired to the real /coach report shape
  * (CoachReport): the mock's /55 letter grade is presented as the live /100
@@ -14,9 +14,10 @@ import { useMemo, useState } from 'react';
 import {
   type CoachReport,
   type CoachReportSection,
-  pdfDownloadUrl,
 } from '@/services/coachService';
-import { DIMENSION_INFO } from './dimensionInfo';
+import { useCoachReportDetail } from '@/hooks/useCoach';
+import { useRubric } from '@/hooks/useRubric';
+import RetainedRecording from './RetainedRecording';
 import { dt, letterGrade, ratingForScore, statusBand } from './dashboardTheme';
 
 type Tab = 'report' | 'scorecard' | 'questions' | 'nextsteps';
@@ -26,15 +27,23 @@ export default function CoachSessionDetail({
   delta,
   prev,
   label = 'MOST RECENT SESSION',
+  coachId,
 }: {
   report: CoachReport;
   delta: number | null;
   prev?: CoachReport;
   label?: string;
+  coachId?: string;
 }) {
   const [tab, setTab] = useState<Tab>('report');
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
-  const band = statusBand(report.status);
+  // The band's colour follows its POSITION in the served order, so a renamed
+  // or added band keeps a sensible colour instead of falling to the worst one.
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const band = statusBand(report.status, bandLabels);
+  const detail = useCoachReportDetail(coachId ? undefined : report.id).data;
+  const attachedRecording = (detail?.attachedRecordingUrl ?? report.attachedRecordingUrl ?? '').trim();
+  const hasRetained = (coachId ? report : detail)?.hasRetainedRecording === true;
   const deltaText =
     delta == null ? '' : delta > 0 ? `▲ ${delta} pts` : delta < 0 ? `▼ ${Math.abs(delta)} pts` : 'no change';
 
@@ -61,30 +70,6 @@ export default function CoachSessionDetail({
           </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          {pdfHref && (
-            <a
-              href={pdfHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              data-testid={`coach-report-pdf-${report.id}`}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 7,
-                fontSize: 13,
-                fontWeight: 700,
-                color: dt.gold2,
-                background: dt.goldChip,
-                border: `1px solid ${dt.goldChipBorder}`,
-                padding: '10px 15px',
-                borderRadius: 9,
-                textDecoration: 'none',
-              }}
-            >
-              ↓ Download PDF
-            </a>
-          )}
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.06em', color: band.c }}>{band.label}</div>
             {deltaText && <div style={{ fontSize: 12.5, color: dt.textLight }}>{deltaText} vs. last</div>}
@@ -109,6 +94,19 @@ export default function CoachSessionDetail({
           </div>
         </div>
       </div>
+
+      {/* The session's own recording, for the leader whose session it is.
+          Sessions VerseMate ingested carry one with no admin attachment step;
+          an admin's pasted link still takes precedence. */}
+      {(hasRetained || attachedRecording) && (
+        <div style={{ marginTop: 18 }}>
+          <RetainedRecording
+            reportId={report.id}
+            hasRetained={hasRetained}
+            attachedUrl={attachedRecording}
+          />
+        </div>
+      )}
 
       {/* Tabs */}
       <div style={{ display: 'flex', gap: 6, margin: '22px 0 4px', borderBottom: `1px solid ${dt.border2}`, flexWrap: 'wrap' }}>
@@ -146,7 +144,6 @@ export default function CoachSessionDetail({
 // ─── Full report ─────────────────────────────────────────────────────────────
 
 function FullReport({ report }: { report: CoachReport }) {
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
   const snapshot = buildSnapshot(report);
   const strengths = feedbackPoints(report.feedback?.strengthsProse, report.feedback?.strengths);
   const improvements = feedbackPoints(report.feedback?.improvementsProse, report.feedback?.improvements);
@@ -272,7 +269,7 @@ function FullReport({ report }: { report: CoachReport }) {
         <>
           <SectionHeading title="This week's playbook" pill={`${plays.length} plays`} pillC={dt.gold2} pillBg={dt.goldChip} />
           <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>
-            Concrete, transferable changes for next session — each one testable in a single class.
+            Concrete, transferable changes for next session, each one testable in a single class.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {plays.map((r, i) => (
@@ -283,13 +280,9 @@ function FullReport({ report }: { report: CoachReport }) {
       )}
 
       <div style={{ marginTop: 24, fontSize: 13.5, color: dt.textLight, borderTop: `1px dashed ${dt.dashed}`, paddingTop: 16 }}>
-        Full metrics — Score Composition & the appendix (attendance, timeline, talk ratio, engagement, monologues,
-        vulnerability, the full dimension scorecard, cross-references, drift log) — are in the downloadable report.{' '}
-        {pdfHref ? (
-          <a href={pdfHref} target="_blank" rel="noopener noreferrer" download style={{ color: dt.gold, fontWeight: 600 }}>
-            Download the full PDF →
-          </a>
-        ) : null}
+        Full metrics (Score Composition and the appendix: attendance, timeline, talk ratio, engagement, monologues,
+        vulnerability, the full dimension scorecard, cross-references, drift log) are on this page, in the sections
+        above. Nothing is held back in a separate document.
       </div>
     </div>
   );
@@ -299,6 +292,9 @@ function FullReport({ report }: { report: CoachReport }) {
 
 function Scorecard({ report }: { report: CoachReport }) {
   const [open, setOpen] = useState<number | null>(null);
+  // The dimension targets come from the served rubric, so the scorecard shows
+  // what the score was actually computed against (task 8.3).
+  const { rubric } = useRubric();
   if (!report.dimensions?.length) {
     return <EmptyPanel>No dimension scorecard is available for this session yet.</EmptyPanel>;
   }
@@ -308,10 +304,10 @@ function Scorecard({ report }: { report: CoachReport }) {
         Tap any dimension to read the session-specific coaching behind its score.
       </div>
       {report.dimensions.map((d) => {
-        const r = ratingForScore(d.score);
+        const r = ratingForScore(d.score, rubric?.dimensionBands ?? []);
         const isOpen = open === d.n;
         const pct = d.score == null ? 0 : (d.score / 5) * 100;
-        const desc = DIMENSION_INFO[d.n]?.target ?? '';
+        const desc = rubric?.dimensions.find((x) => x.n === d.n)?.target ?? '';
         return (
           <div key={d.n} style={{ borderBottom: `1px solid ${dt.rowDivider}` }}>
             <button
@@ -347,6 +343,7 @@ function Scorecard({ report }: { report: CoachReport }) {
                   fontSize: 10.5,
                   fontWeight: 700,
                   letterSpacing: '.04em',
+                  textTransform: 'uppercase',
                   padding: '5px 9px',
                   borderRadius: 6,
                   color: r.c,
@@ -578,7 +575,7 @@ function feedbackPoints(
     }));
   }
   if (bullets?.length) {
-    // Terse bullets sometimes read "Title — body"; split on the first em/en dash.
+    // Terse bullets sometimes read "Title, body"; split on the first em/en dash.
     return bullets.map((b) => {
       const m = b.match(/^(.{3,60}?)\s+[—–-]\s+([\s\S]+)$/);
       return m ? { title: m[1].trim(), body: m[2].trim() } : { title: b.trim(), body: '' };

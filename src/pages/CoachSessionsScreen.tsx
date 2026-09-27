@@ -8,7 +8,7 @@
  *
  * Wired to the real /coach API: classes via /coach/classes (CoachClassInput —
  * name, next date, recurrence, meeting link) and past sessions via
- * /coach/reports. The mock's /55 grade is shown as the live /100 + status.
+ * /coach/reports/summary, one page at a time. The mock's /55 grade is shown as the live /100 + status.
  */
 
 import { useState } from 'react';
@@ -16,7 +16,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import {
-  useCoachReports,
+  useCoachReportSummaries,
   useCoachReportsFor,
   useCoachClasses,
   useAdminClasses,
@@ -29,10 +29,11 @@ import {
   type CoachClass,
   type CoachClassInput,
   type CoachClassRecurrence,
-  type CoachReport,
+  type CoachReportSummary,
 } from '@/services/coachService';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import { dt, letterGrade, statusBand } from '@/components/coach/dashboardTheme';
+import { useRubric } from '@/hooks/useRubric';
 
 const RECURRENCE_OPTIONS: { value: CoachClassRecurrence; label: string }[] = [
   { value: 'weekly', label: 'Weekly' },
@@ -51,13 +52,15 @@ export default function CoachSessionsScreen() {
   const admin = !!coachId;
   const base = admin ? `/coach/leader/${coachId}` : '/coach';
 
-  const selfReports = useCoachReports({ enabled: !admin });
+  const selfReports = useCoachReportSummaries({ enabled: !admin });
   const forReports = useCoachReportsFor(coachId ?? '');
   const selfClasses = useCoachClasses({ enabled: !admin });
   const adminClasses = useAdminClasses({ enabled: admin });
 
   const reports = admin ? coachState(forReports) : coachState(selfReports);
-  const reportList = admin ? forReports.data?.reports : selfReports.data;
+  const reportList: CoachReportSummary[] | undefined = admin
+    ? forReports.data?.reports
+    : selfReports.data?.pages.flatMap((p) => p.items);
   const classesState = admin ? coachState(adminClasses) : coachState(selfClasses);
   const classList: CoachClass[] = admin
     ? (adminClasses.data || []).filter((c) => c.leader.id === coachId)
@@ -164,6 +167,20 @@ export default function CoachSessionsScreen() {
               {sessionList.map((s) => (
                 <PastSessionRow key={s.id} report={s} onView={() => navigate(`${base}?s=${encodeURIComponent(s.id)}`)} />
               ))}
+              {!admin && selfReports.hasNextPage && (
+                <button
+                  type="button"
+                  onClick={() => selfReports.fetchNextPage()}
+                  disabled={selfReports.isFetchingNextPage}
+                  data-testid="coach-sessions-more"
+                  style={{ alignSelf: 'center', marginTop: 8, cursor: 'pointer', fontSize: 13.5, fontWeight: 700, color: dt.gold2, background: dt.goldChip, border: `1px solid ${dt.goldChipBorder}`, padding: '9px 16px', borderRadius: 8 }}
+                >
+                  {selfReports.isFetchingNextPage ? 'Loading…' : 'Show more sessions'}
+                </button>
+              )}
+              {!admin && selfReports.isFetchNextPageError && (
+                <div style={{ fontSize: 13, color: dt.rust, textAlign: 'center' }}>Could not load more sessions. Try again.</div>
+              )}
             </div>
           ) : (
             <div style={{ background: dt.innerBg, border: `1px dashed ${dt.dashed}`, borderRadius: 13, padding: '20px 22px', fontSize: 14, color: dt.textMuted }}>
@@ -273,8 +290,12 @@ function AddClassForm({
 
 // ─── Past session row ────────────────────────────────────────────────────────
 
-function PastSessionRow({ report, onView }: { report: CoachReport; onView: () => void }) {
-  const band = statusBand(report.status);
+function PastSessionRow({ report, onView }: { report: CoachReportSummary; onView: () => void }) {
+  const { rubric } = useRubric();
+  const band = statusBand(
+    report.status,
+    (rubric?.statusBands ?? []).map((b) => b.label),
+  );
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '76px 1fr 108px 118px 128px', gap: 16, alignItems: 'center', padding: '15px 18px', border: `1px solid ${dt.border2}`, borderRadius: 12, background: dt.innerBg }}>
       <div style={{ fontSize: 13, color: dt.textLight, fontWeight: 600 }}>{shortDate(report.date)}</div>

@@ -13,11 +13,11 @@ import {
   fetchAdminMonthly,
   fetchAllCoachClasses,
   fetchCoachClasses,
-  fetchCoachReports,
+  fetchCoachReportDetail,
+  fetchCoachReportSummaries,
   fetchCoachReportsFor,
   fetchCoachMe,
   saveCoachZoomLink,
-  pdfDownloadUrl,
   saveRecordingLink,
   statusColor,
   updateCoachClass,
@@ -54,19 +54,27 @@ afterEach(() => {
 });
 
 describe('coachService', () => {
-  it('fetches reports and attaches the bearer token', async () => {
+  it('fetches one page of report summaries and attaches the bearer token', async () => {
     mockFetch((url) => {
-      if (url.endsWith('/coach/reports')) {
-        return jsonResponse({ reports: [{ id: 'r1', session: 'James L5', score: 86 }] });
+      if (url.endsWith('/coach/reports/summary?limit=50&offset=50')) {
+        return jsonResponse({ items: [{ id: 'r1', session: 'James L5', score: 86 }], total: 51 });
       }
       return jsonResponse({}, 404);
     });
 
-    const reports = await fetchCoachReports();
-    expect(reports).toHaveLength(1);
-    expect(reports[0].id).toBe('r1');
+    const page = await fetchCoachReportSummaries(50);
+    expect(page.total).toBe(51);
+    expect(page.items[0].id).toBe('r1');
+    expect(calls.map((c) => c.url).some((u) => u.endsWith('/coach/reports'))).toBe(false);
     const auth = new Headers(calls[0].init?.headers).get('Authorization');
     expect(auth).toBe('Bearer test-token');
+  });
+
+  it('reads an unknown report as not found, and a server failure as a failure', async () => {
+    mockFetch(() => jsonResponse({ error: 'NOT_FOUND', message: 'Report not found' }, 404));
+    await expect(fetchCoachReportDetail('gone')).resolves.toBeNull();
+    mockFetch(() => jsonResponse({ error: 'INTERNAL', message: 'boom' }, 500));
+    await expect(fetchCoachReportDetail('r1')).rejects.toThrow();
   });
 
   it('maps 401 to a signed_out auth error', async () => {
@@ -93,9 +101,36 @@ describe('coachService', () => {
     expect(saved).toBe('https://zoom.us/j/123');
   });
 
-  it('assigns distinct status colors, gold for Exceptional', () => {
-    expect(statusColor('Exceptional')).toBe('var(--vm-dust)');
-    expect(statusColor('Exceptional')).not.toBe(statusColor('Strong'));
+  // Band labels are now SERVED, so the colour follows a band's POSITION rather
+  // than its name. The switch this replaced named all five labels, which made
+  // it a copy of the rubric: renaming a band dropped its colour to the red
+  // default, showing a leader in the TOP band the colour of the bottom one.
+  const BANDS = ['Exceptional', 'Strong', 'On Target', 'Developing', 'Early Stage'];
+
+  it('assigns distinct status colors, gold for the top band', () => {
+    expect(statusColor('Exceptional', BANDS)).toBe('var(--vm-dust)');
+    expect(statusColor('Exceptional', BANDS)).not.toBe(
+      statusColor('Strong', BANDS),
+    );
+  });
+
+  it('a RENAMED top band still gets the top colour', () => {
+    expect(statusColor('Outstanding', ['Outstanding', 'Strong'])).toBe(
+      'var(--vm-dust)',
+    );
+  });
+
+  it('an unknown label falls back rather than throwing', () => {
+    expect(statusColor('Nonsense', BANDS)).toBe('#8A8272');
+  });
+
+  it('a status is NOT red before the bands have loaded', () => {
+    // Every caller passes [] on first paint. Keyed by position with a
+    // last-entry fallback, the top band rendered in the bottom band's red
+    // until the fetch resolved.
+    const bottom = statusColor('Early Stage', BANDS);
+    expect(statusColor('Exceptional', [])).not.toBe(bottom);
+    expect(statusColor('Exceptional', [])).toBe('#8A8272');
   });
 
   it('fetches the admin roster', async () => {
@@ -300,40 +335,3 @@ describe('coachService', () => {
   });
 });
 
-describe('pdfDownloadUrl', () => {
-  it('returns null for empty / missing values', () => {
-    expect(pdfDownloadUrl(undefined)).toBeNull();
-    expect(pdfDownloadUrl('')).toBeNull();
-    expect(pdfDownloadUrl('   ')).toBeNull();
-  });
-
-  it('returns null for a Drive folder link (the exporter fallback)', () => {
-    expect(
-      pdfDownloadUrl('https://drive.google.com/drive/folders/1vvVpdPk2ARawV3wOM9LeXJ0BtpVJ2qjV'),
-    ).toBeNull();
-  });
-
-  it('rewrites a Drive file /view link to a direct download', () => {
-    expect(pdfDownloadUrl('https://drive.google.com/file/d/ABC123def/view?usp=drivesdk')).toBe(
-      'https://drive.google.com/uc?export=download&id=ABC123def',
-    );
-  });
-
-  it('rewrites an ?id= Drive link to a direct download', () => {
-    expect(pdfDownloadUrl('https://drive.google.com/open?id=XYZ-789')).toBe(
-      'https://drive.google.com/uc?export=download&id=XYZ-789',
-    );
-  });
-
-  it('exports Google Docs links as PDF', () => {
-    expect(pdfDownloadUrl('https://docs.google.com/document/d/DOC_1/edit?usp=drivesdk')).toBe(
-      'https://docs.google.com/document/d/DOC_1/export?format=pdf',
-    );
-  });
-
-  it('passes a plain absolute PDF URL through unchanged', () => {
-    expect(pdfDownloadUrl('https://cdn.versemate.org/reports/x.pdf')).toBe(
-      'https://cdn.versemate.org/reports/x.pdf',
-    );
-  });
-});

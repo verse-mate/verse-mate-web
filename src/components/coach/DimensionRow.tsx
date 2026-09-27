@@ -11,12 +11,17 @@ import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import type { CoachDimension } from '@/services/coachService';
-import { DIMENSION_INFO, scoreBand } from './dimensionInfo';
+import { useRubric } from '@/hooks/useRubric';
+import { dimensionBandLabel } from '@/services/rubric';
 
 export default function DimensionRow({ dim }: { dim: CoachDimension }) {
   const [open, setOpen] = useState(false);
   const na = dim.score == null;
-  const info = DIMENSION_INFO[dim.n];
+  // From the SERVED rubric, not a local copy: the explainer a leader reads is
+  // the same definition that computed the score they are looking at.
+  const { rubric } = useRubric();
+  const info = rubric?.dimensions.find((d) => d.n === dim.n);
+  const bandLabel = dimensionBandLabel(dim.score, rubric?.dimensionBands ?? []);
   return (
     <div>
       <button
@@ -47,7 +52,11 @@ export default function DimensionRow({ dim }: { dim: CoachDimension }) {
         </div>
       </button>
 
-      {open && info && (
+      {/* Opens on `open` alone, NOT on the rubric having loaded. The coach's
+          "why this score" is the leader's own content; a failed explainer fetch
+          must not take it with it. The rubric-derived parts below are each
+          conditional instead. */}
+      {open && (
         <div
           style={{
             marginTop: 8,
@@ -60,16 +69,20 @@ export default function DimensionRow({ dim }: { dim: CoachDimension }) {
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 8, marginBottom: 6 }}>
             <span style={{ fontSize: 12.5, fontWeight: 600, color: vmTokens.gold }}>
-              {info.cluster} · weight {info.clusterWeight}
+              {info ? `${info.cluster} · weight ${info.clusterWeight}` : ''}
             </span>
             <span style={{ fontSize: 14, fontWeight: 700, color: vmTokens.textPrimary, flexShrink: 0 }}>
-              {na ? 'N/A' : `${dim.score}/5`} · {scoreBand(dim.score)}
+              {na ? 'N/A' : `${dim.score}/5`}{bandLabel ? ` · ${bandLabel}` : ''}
             </span>
           </div>
-          <p style={{ margin: 0, fontSize: 15, color: vmTokens.textSecondary, lineHeight: 1.6 }}>{info.what}</p>
-          <p style={{ margin: '8px 0 0', fontSize: 14, color: vmTokens.textTertiary }}>
-            <span style={{ fontWeight: 600 }}>Target:</span> {info.target}
-          </p>
+          {info && (
+            <>
+              <p style={{ margin: 0, fontSize: 15, color: vmTokens.textSecondary, lineHeight: 1.6 }}>{info.what}</p>
+              <p style={{ margin: '8px 0 0', fontSize: 14, color: vmTokens.textTertiary }}>
+                <span style={{ fontWeight: 600 }}>Target:</span> {info.target}
+              </p>
+            </>
+          )}
           {dim.note && (
             <div style={{ marginTop: 10, paddingTop: 10, borderTop: `1px solid ${vmTokens.divider}` }}>
               <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 600, letterSpacing: 0.3, textTransform: 'uppercase', color: vmTokens.gold }}>

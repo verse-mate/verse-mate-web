@@ -1,17 +1,18 @@
 /**
  * One coaching "feedback document" in the reports list. Collapsed it shows
  * date / session / status / score; expanded (tap the chevron) it renders the
- * SAME full coaching narrative as the document-style <ReportDetail> — Summary
+ * SAME full coaching narrative as the document-style <ReportDetail>, Summary
  * & Big Ideas, full-prose strengths / growth areas / recommendations, the
- * pipeline's PDF-parity sections, and the 12 dimensions — via the shared
+ * pipeline's PDF-parity sections, and the 12 dimensions, via the shared
  * <ReportBody>, plus a compact cluster breakdown, coaching notes, and a
  * per-session PDF download. No Google Docs hop.
  */
 
 import { useState } from 'react';
-import { ChevronDown, Download, FileText } from 'lucide-react';
+import { ChevronDown, FileText } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
-import { pdfDownloadUrl, statusColor, type CoachReport } from '@/services/coachService';
+import { useRubric } from '@/hooks/useRubric';
+import { statusColor, type CoachReport } from '@/services/coachService';
 import { CoachCard, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import SessionNotes from './SessionNotes';
@@ -26,13 +27,14 @@ export default function ReportCard({
   leaderName?: string;
   /** When true (admin drill-in) the recording + notes are editable. */
   admin?: boolean;
-  /** The leader whose report this is — required for admin edits. */
+  /** The leader whose report this is, required for admin edits. */
   coachId?: string;
 }) {
   const [open, setOpen] = useState(false);
-  const color = statusColor(report.status);
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const color = statusColor(report.status, bandLabels);
   // Direct-download link to the coach-produced PDF; null hides the button.
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
 
   return (
     <CoachCard testId={`coach-report-${report.id}`} style={{ padding: 0, overflow: 'hidden' }}>
@@ -92,7 +94,7 @@ export default function ReportCard({
             {report.newcomers === 1 ? '' : 's'}
           </p>
 
-          {/* Compact cluster breakdown — the card's at-a-glance score visual. */}
+          {/* Compact cluster breakdown, the card's at-a-glance score visual. */}
           <p style={sectionLabel}>Cluster breakdown</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {report.clusters.map((c) => {
@@ -113,35 +115,8 @@ export default function ReportCard({
             })}
           </div>
 
-          {/* The full coaching narrative — identical to <ReportDetail>. */}
+          {/* The full coaching narrative, identical to <ReportDetail>. */}
           <ReportBody report={report} />
-
-          {pdfHref && (
-            <a
-              href={pdfHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              data-testid={`coach-report-pdf-${report.id}`}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 6,
-                marginTop: 16,
-                padding: '8px 14px',
-                borderRadius: 9,
-                border: `1px solid ${vmTokens.gold}`,
-                background: 'transparent',
-                color: vmTokens.gold,
-                fontSize: 13,
-                fontWeight: 600,
-                cursor: 'pointer',
-                textDecoration: 'none',
-              }}
-            >
-              <Download size={15} strokeWidth={2} /> Download PDF
-            </a>
-          )}
 
           <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} compact />
         </div>

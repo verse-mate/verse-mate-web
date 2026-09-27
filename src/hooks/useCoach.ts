@@ -7,6 +7,9 @@
 
 import {
   keepPreviousData,
+  useInfiniteQuery,
+  type UseInfiniteQueryResult,
+  type InfiniteData,
   useMutation,
   type UseMutationResult,
   useQuery,
@@ -35,11 +38,20 @@ import {
   fetchAllCoachClasses,
   fetchCoachClasses,
   fetchCoachMe,
-  fetchCoachReports,
+  fetchCoachReportDetail,
+  fetchCoachReportSummaries,
+  type CoachReportSummary,
   fetchCoachReportsFor,
   fetchCoachTrends,
   fetchCoachTrendsFor,
   saveRecordingLink,
+  fetchPipelineFailures,
+  requeuePipelineFailure,
+  releaseHeldReport,
+  fetchCoverage,
+  type PipelineFailure,
+  type CoverageReport,
+  type ReleaseOutcome,
 } from '@/services/coachService';
 
 export const coachKeys = {
@@ -49,6 +61,8 @@ export const coachKeys = {
   classes: ['coach', 'classes'] as const,
   adminCoaches: ['coach', 'admin', 'coaches'] as const,
   adminClasses: ['coach', 'admin', 'classes'] as const,
+  pipelineFailures: ['coach', 'admin', 'pipeline-failures'] as const,
+  coverage: ['coach', 'admin', 'coverage'] as const,
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
   adminMonthly: (month: string) => ['coach', 'admin', 'monthly', month] as const,
@@ -58,7 +72,7 @@ export const coachKeys = {
 };
 
 /** Normalize a query's error into the shape <CoachStateBoundary> expects. */
-export function coachState<T>(q: UseQueryResult<T>): {
+export function coachState<T>(q: { isLoading: boolean; error: unknown; data: T | undefined }): {
   loading: boolean;
   authError: CoachAuthReason | null;
   error: boolean;
@@ -77,12 +91,38 @@ export function useCoachMe(): UseQueryResult<CoachMe> {
   return useQuery({ queryKey: coachKeys.me, queryFn: fetchCoachMe, retry: false });
 }
 
-export function useCoachReports(opts: { enabled?: boolean } = {}): UseQueryResult<CoachReport[]> {
-  return useQuery({
-    queryKey: coachKeys.reports,
-    queryFn: fetchCoachReports,
+type SummaryPage = { items: CoachReportSummary[]; total: number };
+
+export function useCoachReportSummaries(
+  opts: { enabled?: boolean } = {},
+): UseInfiniteQueryResult<InfiniteData<SummaryPage, number>> {
+  return useInfiniteQuery({
+    queryKey: [...coachKeys.reports, 'summary'],
+    queryFn: ({ pageParam }) => fetchCoachReportSummaries(pageParam),
+    initialPageParam: 0,
+    getNextPageParam: (last, pages) => {
+      const loaded = pages.reduce((n, p) => n + p.items.length, 0);
+      return loaded < last.total && last.items.length > 0 ? loaded : undefined;
+    },
     retry: false,
     enabled: opts.enabled ?? true,
+  });
+}
+
+/**
+ * One session in full, fetched only when a single session is open.
+ *
+ * Separate from the reports list on purpose: the list must not learn anything
+ * that would make it mint a recording address per row.
+ */
+export function useCoachReportDetail(
+  reportId: string | undefined,
+): UseQueryResult<CoachReport | null> {
+  return useQuery({
+    queryKey: [...coachKeys.reports, 'detail', reportId ?? ''],
+    queryFn: () => fetchCoachReportDetail(reportId as string),
+    enabled: Boolean(reportId),
+    retry: false,
   });
 }
 
@@ -172,7 +212,8 @@ export function useLeaderMonthlySummary(
     queryFn: () => fetchLeaderMonthlySummary(coachId, month),
     retry: false,
     enabled: !!coachId && !!month,
-    placeholderData: keepPreviousData,
+    placeholderData: (previous, previousQuery) =>
+      previousQuery?.queryKey[3] === coachId ? keepPreviousData(previous) : undefined,
   });
 }
 
@@ -218,6 +259,32 @@ export function useAddNote(
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: coachKeys.adminReports(coachId) });
       qc.invalidateQueries({ queryKey: coachKeys.reports });
+    },
+  });
+}
+
+export function usePipelineFailures(): UseQueryResult<PipelineFailure[]> {
+  return useQuery({ queryKey: coachKeys.pipelineFailures, queryFn: fetchPipelineFailures, retry: false });
+}
+
+export function useCoverage(): UseQueryResult<CoverageReport> {
+  return useQuery({ queryKey: coachKeys.coverage, queryFn: () => fetchCoverage(), retry: false });
+}
+
+export function useRequeuePipelineFailure(): UseMutationResult<{ requeued: boolean }, Error, string> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: requeuePipelineFailure,
+    onSuccess: () => qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures }),
+  });
+}
+
+export function useReleaseHeldReport(): UseMutationResult<ReleaseOutcome, Error, string> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: releaseHeldReport,
+    onSuccess: (outcome) => {
+      if (outcome.delivered) qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
     },
   });
 }

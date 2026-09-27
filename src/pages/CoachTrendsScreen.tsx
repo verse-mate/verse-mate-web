@@ -1,7 +1,7 @@
 /**
- * Coaching dashboard — Trends.
+ * Coaching dashboard, Trends.
  *
- * Renders the design handoff's monthly view — month pills, a dark month-summary
+ * Renders the design handoff's monthly view, month pills, a dark month-summary
  * band, a score trajectory, month-at-a-glance table, cluster deep dive,
  * strengths / growth, recommended focus, and expandable per-session detail.
  *
@@ -19,15 +19,18 @@ import {
 } from '@/hooks/useCoach';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachLineChart from '@/components/coach/CoachLineChart';
-import { dt, statusBand, clusterCode, clusterMeta } from '@/components/coach/dashboardTheme';
+import { dt, statusBand, clusterMeta } from '@/components/coach/dashboardTheme';
+import { bandLabelsOf, clusterOrder, useRubric } from '@/hooks/useRubric';
 import type { LeaderMonthlySummary } from '@/services/coachService';
+
+const NO_MONTHS: string[] = [];
 
 export default function CoachTrendsScreen() {
   const { coachId } = useParams();
   return <LeaderTrends coachId={coachId} />;
 }
 
-// ─── Monthly trends (design handoff) — self or admin drill-in ───────────────
+// ─── Monthly trends (design handoff), self or admin drill-in ───────────────
 
 function LeaderTrends({ coachId }: { coachId?: string }) {
   const admin = !!coachId;
@@ -42,11 +45,7 @@ function LeaderTrends({ coachId }: { coachId?: string }) {
   const summary = data?.summary ?? null;
   const leaderName = data?.profile?.name ?? '';
 
-  const [knownMonths, setKnownMonths] = useState<string[]>([]);
-  const availableMonths = data?.availableMonths;
-  useEffect(() => {
-    if (availableMonths && availableMonths.length > 0) setKnownMonths(availableMonths);
-  }, [availableMonths]);
+  const knownMonths = data?.availableMonths ?? NO_MONTHS;
 
   // Land on the most recent completed month when the current month is empty.
   useEffect(() => {
@@ -69,41 +68,40 @@ function LeaderTrends({ coachId }: { coachId?: string }) {
           </p>
         </div>
 
-        {/* Month pills */}
-        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 24 }}>
-          {months.map((m) => {
-            const active = m === month;
-            const isLoaded = summary && summary.month === m;
-            return (
-              <button
-                key={m}
-                type="button"
-                onClick={() => {
-                  setMonth(m);
-                  setOpenApp(null);
-                }}
-                data-testid={`coach-month-${m}`}
-                style={{
-                  cursor: 'pointer',
-                  textAlign: 'left',
-                  background: active ? dt.darkBg : dt.innerBg,
-                  color: active ? dt.goldChip : dt.textPrimary,
-                  border: `1px solid ${active ? dt.darkBg : dt.cardBorder}`,
-                  borderRadius: 12,
-                  padding: '12px 18px',
-                  minWidth: 132,
-                }}
-              >
-                <div style={{ fontWeight: 700, fontSize: 14 }}>{labelFor(m)}</div>
-                <div style={{ fontSize: 12.5, opacity: 0.72, marginTop: 2 }}>
-                  {isLoaded ? `${summary.composite.toFixed(1)} · ${summary.sessionsCount} sessions` : 'View summary'}
-                </div>
-              </button>
-            );
-          })}
-        </div>
-
         <CoachGate loading={state.loading} authError={state.authError} error={state.error} onRetry={() => query.refetch()}>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 24 }}>
+            {months.map((m) => {
+              const active = m === month;
+              const isLoaded = summary && summary.month === m;
+              return (
+                <button
+                  key={m}
+                  type="button"
+                  onClick={() => {
+                    setMonth(m);
+                    setOpenApp(null);
+                  }}
+                  data-testid={`coach-month-${m}`}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: 'left',
+                    background: active ? dt.darkBg : dt.innerBg,
+                    color: active ? dt.goldChip : dt.textPrimary,
+                    border: `1px solid ${active ? dt.darkBg : dt.cardBorder}`,
+                    borderRadius: 12,
+                    padding: '12px 18px',
+                    minWidth: 132,
+                  }}
+                >
+                  <div style={{ fontWeight: 700, fontSize: 14 }}>{labelFor(m)}</div>
+                  <div style={{ fontSize: 12.5, opacity: 0.72, marginTop: 2 }}>
+                    {isLoaded ? `${summary.composite.toFixed(1)} · ${summary.sessionsCount} sessions` : 'View summary'}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
           {summary ? (
             <MonthDetail summary={summary} openApp={openApp} setOpenApp={setOpenApp} />
           ) : (
@@ -126,7 +124,13 @@ function MonthDetail({
   openApp: number | null;
   setOpenApp: (v: number | null) => void;
 }) {
-  const band = statusBand(s.status.label);
+  // Cluster accents and band colours both follow the SERVED order, so a
+  // renamed or added one keeps a sensible colour rather than falling through
+  // to the worst on the page.
+  const { rubric } = useRubric();
+  const clusterNames = clusterOrder(rubric);
+  const bandLabels = bandLabelsOf(rubric);
+  const band = statusBand(s.status.label, bandLabels);
   const deltaText =
     s.delta == null ? 'Baseline month' : `${s.delta > 0 ? '▲ ' : '▼ '}${Math.abs(s.delta).toFixed(1)} vs. ${s.priorMonthLabel}`;
   const best = [...s.trajectory].sort((a, b) => b.composite - a.composite)[0];
@@ -173,7 +177,7 @@ function MonthDetail({
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 34 }}>
             {s.trajectory.map((t, i) => {
-              const dband = t.delta == null ? statusBand('') : t.delta >= 0 ? { c: dt.green, bg: dt.greenBg } : { c: dt.rust, bg: dt.rustBg };
+              const dband = t.delta == null ? statusBand('', bandLabels) : t.delta >= 0 ? { c: dt.green, bg: dt.greenBg } : { c: dt.rust, bg: dt.rustBg };
               return (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, background: dt.innerBg, border: `1px solid ${dt.border2}`, borderRadius: 9, padding: '8px 12px', fontSize: 12.5 }}>
                   <span style={{ color: dt.textLight, fontWeight: 600 }}>{t.date.slice(5)}</span>
@@ -204,7 +208,7 @@ function MonthDetail({
               <div style={{ textAlign: 'right' }}>STATUS</div>
             </div>
             {s.glance.rows.map((g, i) => {
-              const gb = statusBand(g.status);
+              const gb = statusBand(g.status, bandLabels);
               return (
                 <div key={i} style={{ display: 'grid', gridTemplateColumns: '58px 1fr 44px 44px 44px 44px 66px 96px', gap: 10, padding: '12px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center' }}>
                   <div style={{ color: dt.textLight, fontWeight: 600 }}>{g.date.slice(5)}</div>
@@ -228,7 +232,7 @@ function MonthDetail({
           <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 23, margin: '0 0 14px' }}>Cluster deep dive</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 14, marginBottom: 34 }}>
             {s.clusters.map((c) => {
-              const cb = statusBand(c.statusLabel);
+              const cb = statusBand(c.statusLabel, bandLabels);
               return (
                 <div key={c.key} style={{ background: dt.innerBg, border: `1px solid ${dt.border2}`, borderRadius: 13, padding: '20px 22px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
@@ -307,7 +311,7 @@ function MonthDetail({
       <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>Every session this month, scored across all twelve dimensions. Click a session to expand.</p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {s.sessions.map((sess, i) => {
-          const sb = statusBand(sess.status);
+          const sb = statusBand(sess.status, bandLabels);
           const isOpen = openApp === i;
           return (
             <div key={i} style={{ border: `1px solid ${dt.border2}`, borderRadius: 12, overflow: 'hidden' }}>
@@ -326,7 +330,7 @@ function MonthDetail({
               {isOpen && (
                 <div style={{ padding: '4px 18px 16px', background: dt.innerBg, borderTop: `1px solid ${dt.rowDivider}` }}>
                   {sess.dimensions.map((d) => {
-                    const cm = clusterMeta(clusterCode(d.cluster));
+                    const cm = clusterMeta(d.cluster, clusterNames);
                     return (
                       <div key={d.n} style={{ display: 'grid', gridTemplateColumns: '20px 1.3fr 138px 48px 2fr', gap: 12, alignItems: 'center', padding: '9px 0', borderTop: `1px solid ${dt.rowDivider}` }}>
                         <div style={{ fontSize: 12, color: '#B7A98A', fontWeight: 600 }}>{d.n}</div>

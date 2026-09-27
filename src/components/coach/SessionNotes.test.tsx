@@ -25,8 +25,6 @@ function makeReport(over: Partial<CoachReport> = {}): CoachReport {
     dimensions: [],
     bigIdeas: [],
     feedback: { headline: '', strengths: [], improvements: [], recommendations: [] },
-    docUrl: '',
-    pdfUrl: '',
     ...over,
   };
 }
@@ -47,6 +45,7 @@ describe('SessionNotes', () => {
       <SessionNotes
         report={makeReport({
           recordingUrl: 'https://zoom.us/rec/abc',
+          attachedRecordingUrl: 'https://zoom.us/rec/abc',
           notes: [
             { id: 'n1', body: 'Strong session — keep it up.', createdAt: '2026-07-21T00:00:00.000Z', emailed: true },
           ],
@@ -68,5 +67,28 @@ describe('SessionNotes', () => {
     expect(screen.getByTestId('coach-note-input-r1')).toBeInTheDocument();
     expect(screen.getByTestId('coach-note-send-r1')).toBeInTheDocument();
     expect(screen.getByTestId('coach-recording-edit-r1')).toBeInTheDocument();
+  });
+
+  it('offers the retained recording when the only link is the leader meeting link', () => {
+    renderWithClient(
+      <SessionNotes
+        report={makeReport({
+          recordingUrl: 'https://zoom.us/j/5551234567',
+          attachedRecordingUrl: null,
+          hasRetainedRecording: true,
+        })}
+        admin
+        coachId="jeff-ward"
+      />,
+    );
+    expect(screen.getByTestId('coach-recording-play-r1')).toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: /watch the recording/i })).not.toBeInTheDocument();
+  });
+
+  it('never labels the meeting link a recording for a leader', () => {
+    const { container } = renderWithClient(
+      <SessionNotes report={makeReport({ recordingUrl: 'https://zoom.us/j/5551234567', attachedRecordingUrl: null })} />,
+    );
+    expect(container).toBeEmptyDOMElement();
   });
 });

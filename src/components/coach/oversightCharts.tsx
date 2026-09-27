@@ -61,7 +61,9 @@ export function AxisLineChart({
 }
 
 // ── Session score over time with the five composite bands shaded ────────────
-export function BandedTrend({ values, labels }: { values: number[]; labels: string[] }) {
+const BAND_FILLS = ['#E1EAF4', '#E2EEE2', '#F7EDD6', '#F2E2D5', '#F4DFD5'];
+
+export function BandedTrend({ values, labels, bands: served }: { values: number[]; labels: string[]; bands: { min: number }[] }) {
   const W = 640;
   const H = 200;
   const L = 40;
@@ -74,20 +76,19 @@ export function BandedTrend({ values, labels }: { values: number[]; labels: stri
   if (n === 0) return null;
   const px = (i: number) => (n > 1 ? L + (i * (W - L - R)) / (n - 1) : (L + W - R) / 2);
   const py = (v: number) => H - B - ((v - min) / (max - min)) * (H - B - T);
-  const bands: [number, number, string][] = [
-    [85, 100, '#E1EAF4'],
-    [72, 85, '#E2EEE2'],
-    [60, 72, '#F7EDD6'],
-    [45, 60, '#F2E2D5'],
-    [40, 45, '#F4DFD5'],
-  ];
+  const bands: [number, number, string][] = served.map((b, i) => [
+    Math.max(b.min, min),
+    i === 0 ? max : Math.max(served[i - 1].min, min),
+    BAND_FILLS[i] ?? BAND_FILLS[BAND_FILLS.length - 1],
+  ]);
+  const ticks = served.map((b) => b.min).filter((m) => m > min).reverse();
   const pts = values.map((v, i) => [px(i), py(v)] as const);
   return (
     <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', height: 'auto', overflow: 'visible' }} role="img" aria-label="Session score over time">
       {bands.map((b, i) => (
         <rect key={`b${i}`} x={L} y={py(b[1])} width={W - L - R} height={py(b[0]) - py(b[1])} fill={b[2]} />
       ))}
-      {[45, 60, 72, 85].map((tv, i) => (
+      {ticks.map((tv, i) => (
         <text key={`y${i}`} x={L - 8} y={py(tv) + 3} textAnchor="end" fontSize={9} fill="#9A9484" fontFamily={SANS}>{tv}</text>
       ))}
       {n > 1 && <polyline points={pts.map((p) => `${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ')} fill="none" stroke="#4A453B" strokeWidth={2.5} strokeLinejoin="round" strokeLinecap="round" />}
