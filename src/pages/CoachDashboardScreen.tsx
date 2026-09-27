@@ -16,7 +16,8 @@ import { useMemo } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
   useCoachMe,
-  useCoachReports,
+  useCoachReportSummaries,
+  useCoachReportDetail,
   useCoachReportsFor,
   useCoachTrends,
   useCoachTrendsFor,
@@ -24,7 +25,7 @@ import {
   useAdminClasses,
   coachState,
 } from '@/hooks/useCoach';
-import type { CoachClass, CoachReport, CoachTrends } from '@/services/coachService';
+import type { CoachClass, CoachReport, CoachReportSummary, CoachTrends } from '@/services/coachService';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import CoachLineChart from '@/components/coach/CoachLineChart';
@@ -50,7 +51,7 @@ export default function CoachDashboardScreen() {
 
   // Only the active branch's queries are enabled.
   const meQuery = useCoachMe();
-  const selfReports = useCoachReports({ enabled: !admin });
+  const selfReports = useCoachReportSummaries({ enabled: !admin });
   const forReports = useCoachReportsFor(coachId ?? '');
   const selfTrends = useCoachTrends({ enabled: !admin });
   const forTrends = useCoachTrendsFor(coachId ?? '');
@@ -59,7 +60,9 @@ export default function CoachDashboardScreen() {
 
   const me = coachState(meQuery);
   const reports = admin ? coachState(forReports) : coachState(selfReports);
-  const reportList = admin ? forReports.data?.reports : selfReports.data;
+  const reportList: CoachReportSummary[] | undefined = admin
+    ? forReports.data?.reports
+    : selfReports.data?.pages[0]?.items;
   const trends: CoachTrends | undefined = admin ? forTrends.data : selfTrends.data;
   const classes: CoachClass[] = admin
     ? (adminClasses.data || []).filter((c) => c.leader.id === coachId)
@@ -67,26 +70,33 @@ export default function CoachDashboardScreen() {
 
   const list = useMemo(() => [...(reportList || [])].sort(byDateDesc), [reportList]);
   const selId = params.get('s');
-  // An unknown id is an explicit not-found, never a silent substitution
-  // (spec: "Deep link to an unknown session"). The resolution lives in its own
-  // module so the test exercises THIS code rather than a copy of it.
-  const {
-    missing: deepLinkMissing,
-    index: selectedIdx,
-    selected,
-  } = resolveDeepLink<CoachReport>(list, selId);
-  const prev = list[selectedIdx + 1];
-  const latest = list[0] ?? null;
-  const delta = selected && prev ? Math.round((selected.score - prev.score) * 100) / 100 : null;
+  const resolved = resolveDeepLink<CoachReportSummary>(list, selId);
+  const offPage = !admin && resolved.missing;
+  const selectedId = offPage ? selId : resolved.selected?.id;
+  const prevSummary = offPage ? undefined : list[resolved.index + 1];
+  const latestSummary = list[0];
+
+  const adminReports = forReports.data?.reports;
+  const selectedFull = useFullReport(admin, adminReports, selectedId ?? undefined);
+  const latestFull = useFullReport(admin, adminReports, latestSummary?.id);
+  const prevFull = useFullReport(admin, adminReports, prevSummary?.id);
+
+  const deepLinkMissing = offPage ? selectedFull.settled && !selectedFull.report : resolved.missing;
+  const selected = selectedFull.report;
+  const latest = latestFull.report;
+  const prev = prevFull.report ?? undefined;
+  const delta = selected && prevSummary ? Math.round((selected.score - prevSummary.score) * 100) / 100 : null;
+  const detailLoading = selectedFull.loading || latestFull.loading || prevFull.loading;
+  const detailError = selectedFull.error || latestFull.error || prevFull.error;
 
   const leaderName = admin ? forReports.data?.profile?.name || '' : me.data?.profile?.name || '';
 
   return (
     <CoachDashboardShell active="home" coachId={coachId} leaderName={leaderName}>
       <CoachGate
-        loading={admin ? reports.loading : me.loading || reports.loading}
+        loading={admin ? reports.loading : me.loading || reports.loading || detailLoading}
         authError={me.authError || reports.authError}
-        error={me.error || reports.error}
+        error={me.error || reports.error || detailError}
         onRetry={() => {
           meQuery.refetch();
           (admin ? forReports : selfReports).refetch();
@@ -94,7 +104,7 @@ export default function CoachDashboardScreen() {
       >
         {deepLinkMissing ? (
           <SessionNotFound onBack={() => setParams({}, { replace: true })} />
-        ) : !latest || !selected ? (
+        ) : !latestSummary || !latest || !selected ? (
           <EmptyHome leaderName={leaderName} admin={admin} onAddClass={() => navigate(`${base}/sessions`)} />
         ) : (
           <>
@@ -104,7 +114,7 @@ export default function CoachDashboardScreen() {
               streakWeeks={weeklyStreak(list)}
               quarterSessions={quarterCount(list)}
               latest={latest}
-              delta={list.length > 1 ? Math.round((latest.score - list[1].score) * 100) / 100 : null}
+              delta={list.length > 1 ? Math.round((latestSummary.score - list[1].score) * 100) / 100 : null}
             />
             <NextClassBand
               nextClass={pickNextClass(classes)}
@@ -132,6 +142,22 @@ export default function CoachDashboardScreen() {
       </CoachGate>
     </CoachDashboardShell>
   );
+}
+
+function useFullReport(
+  admin: boolean,
+  adminReports: CoachReport[] | undefined,
+  id: string | undefined,
+): { report: CoachReport | null; loading: boolean; error: boolean; settled: boolean } {
+  const detail = useCoachReportDetail(admin ? undefined : id);
+  if (!id) return { report: null, loading: false, error: false, settled: true };
+  if (admin) return { report: adminReports?.find((r) => r.id === id) ?? null, loading: false, error: false, settled: true };
+  return {
+    report: detail.data ?? null,
+    loading: detail.isLoading,
+    error: !!detail.error,
+    settled: detail.isSuccess,
+  };
 }
 
 // ─── Hero ────────────────────────────────────────────────────────────────────

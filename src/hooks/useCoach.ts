@@ -7,6 +7,9 @@
 
 import {
   keepPreviousData,
+  useInfiniteQuery,
+  type UseInfiniteQueryResult,
+  type InfiniteData,
   useMutation,
   type UseMutationResult,
   useQuery,
@@ -36,7 +39,8 @@ import {
   fetchCoachClasses,
   fetchCoachMe,
   fetchCoachReportDetail,
-  fetchCoachReports,
+  fetchCoachReportSummaries,
+  type CoachReportSummary,
   fetchCoachReportsFor,
   fetchCoachTrends,
   fetchCoachTrendsFor,
@@ -68,7 +72,7 @@ export const coachKeys = {
 };
 
 /** Normalize a query's error into the shape <CoachStateBoundary> expects. */
-export function coachState<T>(q: UseQueryResult<T>): {
+export function coachState<T>(q: { isLoading: boolean; error: unknown; data: T | undefined }): {
   loading: boolean;
   authError: CoachAuthReason | null;
   error: boolean;
@@ -87,10 +91,19 @@ export function useCoachMe(): UseQueryResult<CoachMe> {
   return useQuery({ queryKey: coachKeys.me, queryFn: fetchCoachMe, retry: false });
 }
 
-export function useCoachReports(opts: { enabled?: boolean } = {}): UseQueryResult<CoachReport[]> {
-  return useQuery({
-    queryKey: coachKeys.reports,
-    queryFn: fetchCoachReports,
+type SummaryPage = { items: CoachReportSummary[]; total: number };
+
+export function useCoachReportSummaries(
+  opts: { enabled?: boolean } = {},
+): UseInfiniteQueryResult<InfiniteData<SummaryPage, number>> {
+  return useInfiniteQuery({
+    queryKey: [...coachKeys.reports, 'summary'],
+    queryFn: ({ pageParam }) => fetchCoachReportSummaries(pageParam),
+    initialPageParam: 0,
+    getNextPageParam: (last, pages) => {
+      const loaded = pages.reduce((n, p) => n + p.items.length, 0);
+      return loaded < last.total && last.items.length > 0 ? loaded : undefined;
+    },
     retry: false,
     enabled: opts.enabled ?? true,
   });

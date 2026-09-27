@@ -26,7 +26,7 @@ vi.mock('@/services/coachService', async (importOriginal) => {
   return {
     ...actual,
     fetchCoachMe: vi.fn(),
-    fetchCoachReports: vi.fn(),
+    fetchCoachReportSummaries: vi.fn(),
     fetchCoachTrends: vi.fn(),
     fetchCoachClasses: vi.fn(),
     fetchMyMonthlySummary: vi.fn(),
@@ -196,12 +196,13 @@ function renderAt(path: string, element: React.ReactNode) {
 
 beforeEach(() => {
   vi.mocked(coachService.fetchCoachMe).mockResolvedValue(me);
-  vi.mocked(coachService.fetchCoachReports).mockResolvedValue(reports);
+  vi.mocked(coachService.fetchCoachReportSummaries).mockResolvedValue({ items: reports, total: reports.length });
   vi.mocked(coachService.fetchCoachTrends).mockResolvedValue(trends);
   vi.mocked(coachService.fetchCoachClasses).mockResolvedValue(classes);
   vi.mocked(coachService.fetchMyMonthlySummary).mockResolvedValue(monthly);
-  // No retained recording by default; the case below opts in.
-  vi.mocked(coachService.fetchCoachReportDetail).mockResolvedValue(null);
+  vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(
+    async (id) => reports.find((r) => r.id === id) ?? null,
+  );
   // Admin drill-in ("For") endpoints, same shapes, per-leader.
   vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
     profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning', coachName: '' },
@@ -231,10 +232,10 @@ describe('Coaching dashboard, Home', () => {
     // was reachable: SessionNotes (which mounts it) renders only on the
     // admin-gated manage screen, so a leader opening their own session saw
     // nothing. Found by driving the real portal against a real backend.
-    vi.mocked(coachService.fetchCoachReportDetail).mockResolvedValue({
-      ...reports[0],
-      hasRetainedRecording: true,
-    } as CoachReport);
+    vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(async (id) => {
+      const found = reports.find((r) => r.id === id) ?? null;
+      return found && found.id === reports[0].id ? ({ ...found, hasRetainedRecording: true } as CoachReport) : found;
+    });
 
     renderAt('/coach', <CoachDashboardScreen />);
     expect(

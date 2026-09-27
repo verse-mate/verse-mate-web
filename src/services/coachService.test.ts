@@ -13,7 +13,8 @@ import {
   fetchAdminMonthly,
   fetchAllCoachClasses,
   fetchCoachClasses,
-  fetchCoachReports,
+  fetchCoachReportDetail,
+  fetchCoachReportSummaries,
   fetchCoachReportsFor,
   fetchCoachMe,
   saveCoachZoomLink,
@@ -53,19 +54,27 @@ afterEach(() => {
 });
 
 describe('coachService', () => {
-  it('fetches reports and attaches the bearer token', async () => {
+  it('fetches one page of report summaries and attaches the bearer token', async () => {
     mockFetch((url) => {
-      if (url.endsWith('/coach/reports')) {
-        return jsonResponse({ reports: [{ id: 'r1', session: 'James L5', score: 86 }] });
+      if (url.endsWith('/coach/reports/summary?limit=50&offset=50')) {
+        return jsonResponse({ items: [{ id: 'r1', session: 'James L5', score: 86 }], total: 51 });
       }
       return jsonResponse({}, 404);
     });
 
-    const reports = await fetchCoachReports();
-    expect(reports).toHaveLength(1);
-    expect(reports[0].id).toBe('r1');
+    const page = await fetchCoachReportSummaries(50);
+    expect(page.total).toBe(51);
+    expect(page.items[0].id).toBe('r1');
+    expect(calls.map((c) => c.url).some((u) => u.endsWith('/coach/reports'))).toBe(false);
     const auth = new Headers(calls[0].init?.headers).get('Authorization');
     expect(auth).toBe('Bearer test-token');
+  });
+
+  it('reads an unknown report as not found, and a server failure as a failure', async () => {
+    mockFetch(() => jsonResponse({ error: 'NOT_FOUND', message: 'Report not found' }, 404));
+    await expect(fetchCoachReportDetail('gone')).resolves.toBeNull();
+    mockFetch(() => jsonResponse({ error: 'INTERNAL', message: 'boom' }, 500));
+    await expect(fetchCoachReportDetail('r1')).rejects.toThrow();
   });
 
   it('maps 401 to a signed_out auth error', async () => {
