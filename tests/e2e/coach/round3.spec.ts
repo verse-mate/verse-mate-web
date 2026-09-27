@@ -143,3 +143,38 @@ test.describe('The admin screen reads the served rubric', () => {
     await capture(page, testInfo, 'r6-served-dimensions-and-clusters', page.getByTestId('oversight-cluster-mix-Teaching Craft'));
   });
 });
+
+async function switchLeader(page: import('@playwright/test').Page, path: string) {
+  await page.evaluate((to) => {
+    window.history.pushState({}, '', to);
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  }, path);
+}
+
+test.describe("The month picker, switching between leaders", () => {
+  test("drops the previous leader's months on the trends page", async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, monthlyDelayMs: { carol: 2500 } });
+    await page.goto('/coach/leader/alice/trends');
+    await expect(page.getByTestId('coach-month-2026-07')).toBeVisible();
+
+    await switchLeader(page, '/coach/leader/carol/trends');
+    await expect(page.getByTestId('coach-loading')).toBeVisible();
+    await expect(page.locator('[data-testid^="coach-month-"]')).toHaveCount(0);
+    await capture(page, testInfo, 'item4-trends-switch-loading');
+
+    await expect(page.getByText(/No monthly summary for/)).toBeVisible();
+    await expect(page.getByTestId('coach-month-2026-07')).toHaveCount(0);
+    await capture(page, testInfo, 'item4-trends-switch-loaded');
+  });
+
+  test("drops the previous leader's months on the monthly summary page", async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true });
+    await page.goto('/coach/leader/alice/monthly');
+    await expect(page.getByTestId('coach-leader-monthly-select')).toContainText('July 2026');
+
+    await switchLeader(page, '/coach/leader/carol/monthly');
+    await expect(page.getByText(/No monthly summary for/)).toBeVisible();
+    await expect(page.getByTestId('coach-leader-monthly-select')).toHaveCount(0);
+    await capture(page, testInfo, 'item4-monthly-switch-loaded');
+  });
+});

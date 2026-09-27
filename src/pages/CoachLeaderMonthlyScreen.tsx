@@ -21,6 +21,8 @@ import { useMyMonthlySummary, useLeaderMonthlySummary, coachState } from '@/hook
 import { CoachCard, CoachStateBoundary, SectionLabel, StatusPill } from '@/components/coach/CoachUi';
 import type { LeaderMonthlySummary } from '@/services/coachService';
 
+const NO_MONTHS: string[] = [];
+
 export default function CoachLeaderMonthlyScreen() {
   const navigate = useNavigate();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -35,11 +37,7 @@ export default function CoachLeaderMonthlyScreen() {
   const data = state.data;
   const summary = data?.summary ?? null;
 
-  const [knownMonths, setKnownMonths] = useState<string[]>([]);
-  const availableMonths = data?.availableMonths;
-  useEffect(() => {
-    if (availableMonths && availableMonths.length > 0) setKnownMonths(availableMonths);
-  }, [availableMonths]);
+  const knownMonths = data?.availableMonths ?? NO_MONTHS;
 
   // Land on the most recent completed month when the current month has no
   // summary yet (only fires for the initial default month).
