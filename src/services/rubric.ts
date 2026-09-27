@@ -68,6 +68,11 @@ export function statusForScore(
   return bands.find((b) => score >= b.min) ?? bands[bands.length - 1];
 }
 
+export function bandFloor(bands: Array<{ min: number }>, values: number[] = []): number {
+  const floors = [...bands.map((b) => b.min), ...values];
+  return floors.length ? Math.min(...floors) : 0;
+}
+
 /**
  * Plain-English read of a single 1-5 dimension score, from the SERVED labels.
  *

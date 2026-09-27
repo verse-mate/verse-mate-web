@@ -97,6 +97,10 @@ export function shortCode(clusterName: string): string {
     .join('');
 }
 
+export function clusterKey(clusterName: string): string {
+  return shortCode(clusterName).toLowerCase();
+}
+
 /** Reverse of shortCode, against the served clusters. */
 export function clusterForCode(
   code: string,

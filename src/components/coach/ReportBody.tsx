@@ -1,14 +1,3 @@
-/**
- * Shared full-prose body of a coaching report — the narrative that both the
- * document-style <ReportDetail> and the tap-to-expand <ReportCard> render, so
- * the two presentations never drift apart. It renders everything below a
- * report's score/identity header: Summary & Big Ideas, the full prose
- * feedback (Top Strengths / Areas of Improvement / Recommendations, each
- * falling back to the terse bullets when the pipeline hasn't supplied prose),
- * the PDF-parity pipeline sections (scorecard tables, monologues, key moments,
- * DOK-scored application questions), and the 12 dimensions.
- */
-
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
@@ -95,9 +84,8 @@ export default function ReportBody({ report }: { report: CoachReport }) {
         <ReportSection key={i} section={section} />
       ))}
 
-      {/* The 12 dimensions as a single tappable list. */}
       {report.dimensions?.length > 0 && (
-        <CollapsibleSection title="The 12 Dimensions · tap a row for detail" accent={BLUE}>
+        <CollapsibleSection title={`The ${report.dimensions.length} Dimensions · tap a row for detail`} accent={BLUE}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
             {report.dimensions.map((d) => (
               <DimensionRow key={d.n} dim={d} />

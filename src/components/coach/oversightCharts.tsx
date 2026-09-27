@@ -1,13 +1,4 @@
-/**
- * Custom inline-SVG charts for the Coach Oversight page — faithful recreations
- * of the design handoff's prototype charts (do not port the prototype runtime).
- * All share the handoff's muted, low-ink style.
- *
- *   AxisLineChart  — line + area, Y-axis ticks, emphasized last point
- *   BandedTrend    — session score over time with the 5 composite bands shaded
- *   RadarChart     — 12-dimension shape (gold) overlaid with a dashed 3-session avg
- *   MultiLineChart — overlaid leader trajectories across months
- */
+import { bandFloor } from '@/services/rubric';
 
 const SANS = "'Public Sans', system-ui, sans-serif";
 
@@ -60,7 +51,6 @@ export function AxisLineChart({
   );
 }
 
-// ── Session score over time with the five composite bands shaded ────────────
 const BAND_FILLS = ['#E1EAF4', '#E2EEE2', '#F7EDD6', '#F2E2D5', '#F4DFD5'];
 
 export function BandedTrend({ values, labels, bands: served }: { values: number[]; labels: string[]; bands: { min: number }[] }) {
@@ -71,7 +61,7 @@ export function BandedTrend({ values, labels, bands: served }: { values: number[
   const T = 12;
   const B = 34;
   const n = values.length;
-  const min = 40;
+  const min = bandFloor(served, values);
   const max = 100;
   if (n === 0) return null;
   const px = (i: number) => (n > 1 ? L + (i * (W - L - R)) / (n - 1) : (L + W - R) / 2);
@@ -103,19 +93,18 @@ export function BandedTrend({ values, labels, bands: served }: { values: number[
   );
 }
 
-// ── 12-dimension radar (gold) + dashed 3-session average ────────────────────
 export function RadarChart({ vals, avg }: { vals: number[]; avg?: number[] }) {
   const W = 380;
   const H = 330;
   const cx = 190;
   const cy = 160;
   const rad = 112;
-  const N = 12;
+  const N = vals.length;
   const ang = (i: number) => ((-90 + i * (360 / N)) * Math.PI) / 180;
   const pt = (v: number, i: number) => [cx + rad * (v / 5) * Math.cos(ang(i)), cy + rad * (v / 5) * Math.sin(ang(i))] as const;
   const polyPoints = (arr: number[]) => arr.map((v, i) => { const q = pt(v, i); return `${q[0].toFixed(1)},${q[1].toFixed(1)}`; }).join(' ');
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', height: 'auto', overflow: 'visible', maxWidth: 380, margin: '0 auto' }} role="img" aria-label="12-dimension radar">
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', height: 'auto', overflow: 'visible', maxWidth: 380, margin: '0 auto' }} role="img" aria-label={`${N}-dimension radar`}>
       {[1, 2, 3, 4, 5].map((lv, ri) => {
         const p = [];
         for (let i = 0; i < N; i++) { const q = pt(lv, i); p.push(`${q[0].toFixed(1)},${q[1].toFixed(1)}`); }

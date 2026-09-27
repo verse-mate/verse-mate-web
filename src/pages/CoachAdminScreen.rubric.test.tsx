@@ -159,4 +159,73 @@ describe('the admin screen renders the served rubric, never a copy of it', () =>
     fireEvent.click(await screen.findByTestId('oversight-nav-trends'));
     expect(await screen.findByTestId('oversight-distribution-Starting')).toHaveTextContent('Cal Start');
   });
+
+  it('colours a dimension cell by the served band, top band green and bottom band rust', async () => {
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-roster-cal'));
+    await screen.findByText('DIMENSIONS OVER TIME');
+    const top = screen.getByTestId('oversight-dim-cell-Served D1-0');
+    const bottom = screen.getByTestId('oversight-dim-cell-Served D12-0');
+    expect(top.style.color).toBe('rgb(62, 122, 84)');
+    expect(bottom.style.color).toBe('rgb(169, 78, 43)');
+  });
+
+  it('colours a heat map cell by the served band, top band green and bottom band rust', async () => {
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-nav-trends'));
+    await screen.findByText('Dimension heat map');
+    const top = screen.getByTestId('oversight-heat-cal-1');
+    const bottom = screen.getByTestId('oversight-heat-cal-12');
+    expect(top.style.color).toBe('rgb(62, 122, 84)');
+    expect(bottom.style.color).toBe('rgb(169, 78, 43)');
+  });
+
+  it('keeps a program composite of 30 on the roster composite chart', async () => {
+    renderScreen();
+    await screen.findByTestId('oversight-roster-cal');
+    const chart = await screen.findByRole('img', { name: 'Trend line' });
+    expect(within(chart as unknown as HTMLElement).getByText('0')).toBeTruthy();
+  });
+
+  it('keeps a program composite of 30 on the composite charts', async () => {
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-nav-trends'));
+    await screen.findByText('Leader leaderboard');
+    for (const label of ['Trend line', 'Leader trajectories']) {
+      const chart = screen.getByRole('img', { name: label });
+      expect(within(chart as unknown as HTMLElement).getByText('0')).toBeTruthy();
+    }
+  });
+
+  describe('with a served rubric of ten dimensions', () => {
+    const TEN = { ...SERVED, dimensions: SERVED.dimensions.slice(0, 10) };
+    const TEN_DIMS = TEN.dimensions.map((d) => d.name);
+
+    beforeEach(() => {
+      primeRubricCache(TEN);
+      vi.mocked(coachService.fetchAdminMonthly).mockResolvedValue({
+        ...monthly,
+        leaders: [{ ...monthly.leaders[0], dimensions: TEN_DIMS.map((name, i) => ({ n: i + 1, name, avg: 3 })) }],
+      });
+      vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
+        profile: { id: 'cal', name: 'Cal Start', group: 'G', coachName: '' },
+        reports: [{ ...report, dimensions: TEN_DIMS.map((name, i) => ({ n: i + 1, name, score: 3 })) }],
+      });
+    });
+
+    it('heads the heat map with one column per served dimension', async () => {
+      renderScreen();
+      fireEvent.click(await screen.findByTestId('oversight-nav-trends'));
+      await screen.findByText('Dimension heat map');
+      expect(screen.getByRole('button', { name: 'D10' })).toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'D11' })).toBeNull();
+    });
+
+    it('names the radar by the served dimension count', async () => {
+      renderScreen();
+      fireEvent.click(await screen.findByTestId('oversight-roster-cal'));
+      expect(await screen.findByText('10-DIMENSION SHAPE')).toBeInTheDocument();
+      expect(screen.getByRole('img', { name: '10-dimension radar' })).toBeInTheDocument();
+    });
+  });
 });
