@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from 'react';
 
 import { vmTokens } from '@/styles/themeStyles';
 import { mintRecordingUrl } from '@/services/coachService';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 
 /**
  * A session's retained recording (change: port-coach-pipeline, task 8.5).
@@ -91,6 +92,7 @@ export default function RetainedRecording({
         href={attached}
         target="_blank"
         rel="noopener noreferrer"
+        className={REPLAY_BLOCK_CLASS}
         data-testid={`coach-recording-attached-${reportId}`}
         style={{ fontSize: 14, fontWeight: 600, color: vmTokens.gold }}
       >
@@ -111,6 +113,7 @@ export default function RetainedRecording({
         controls
         autoPlay
         onError={handleError}
+        className={REPLAY_BLOCK_CLASS}
         data-testid={`coach-recording-player-${reportId}`}
         style={{ width: '100%', borderRadius: 10, background: '#000' }}
       />

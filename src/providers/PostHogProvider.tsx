@@ -3,6 +3,7 @@ import { PostHogProvider as PHProvider } from 'posthog-js/react';
 import { type ReactNode, useCallback, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { analytics } from '@/lib/analytics';
+import { scrubEvent, scrubNetworkRequest, stripQuery } from '@/lib/analyticsPrivacy';
 import { collectErrorContext, shouldExcludeError } from '@/lib/errorFilters';
 
 const POSTHOG_KEY = (import.meta.env.VITE_POSTHOG_KEY as string | undefined) || '';
@@ -40,6 +41,8 @@ export function PostHogProvider({ children }: PostHogProviderProps) {
       capture_pageview: false, // captured manually below on route change
       capture_pageleave: true,
       disable_session_recording: !POSTHOG_SESSION_REPLAY,
+      session_recording: { maskCapturedNetworkRequestFn: scrubNetworkRequest },
+      before_send: scrubEvent,
       persistence: 'localStorage+cookie',
       loaded: (instance) => {
         if (import.meta.env.DEV) instance.debug();
@@ -80,9 +83,8 @@ function PageviewTracker() {
   useEffect(() => {
     if (!analytics.isEnabled()) return;
     posthog.capture('$pageview', {
-      $current_url: window.location.href,
+      $current_url: stripQuery(window.location.href),
       pathname: location.pathname,
-      search: location.search,
     });
   }, [location.pathname, location.search]);
   return null;
