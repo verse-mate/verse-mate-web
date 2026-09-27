@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 import {
+  API,
   capture,
   HELD_SESSION,
   LEADER_ID,
@@ -247,6 +248,26 @@ test.describe("A leader's history loads as a paginated summary", () => {
     expect(calls).not.toContain('/coach/reports');
     expect(calls.filter((u) => /^\/coach\/reports\/(?!summary)/.test(u))).toEqual([]);
     await capture(page, testInfo, 'item6-sessions-paged', page.getByText('Older session 59'));
+  });
+
+  test('every leader screen reaches only the leader routes, never an admin one or the full corpus', async ({ page }) => {
+    const LEADER_ROUTES =
+      /^\/coach\/(me|rubric|trends|monthly-summary|zoom-link|affiliated-church|bible-coach|classes(\/[^/]+)?|reports\/summary|reports\/[^/]+(\/recording-url)?)$/;
+    const paths: string[] = [];
+    page.on('request', (req) => {
+      const url = new URL(req.url());
+      if (url.origin === new URL(API).origin && url.pathname.startsWith('/coach/')) paths.push(url.pathname);
+    });
+    await useCoachApi(page, { historyLength: 60, retained: [NEWEST_ID] });
+
+    for (const route of ['/coach', `/coach?s=${olderId(59)}`, '/coach/sessions', '/coach/trends', '/coach/monthly-summary', '/coach/settings', '/coach/classes', '/coach/feedback']) {
+      await page.goto(route);
+      await page.waitForLoadState('networkidle');
+    }
+
+    expect(paths.length).toBeGreaterThan(0);
+    expect(paths.filter((p) => !LEADER_ROUTES.test(p))).toEqual([]);
+    expect(paths).toContain('/coach/reports/summary');
   });
 
   test('a deep link to a session past the first page opens that session', async ({ page }) => {
