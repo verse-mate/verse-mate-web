@@ -42,9 +42,9 @@ vi.mock('@/contexts/AppContext', () => ({
   useApp: () => ({
     state: {
       isSignedIn: true,
-      userFirstName: 'Bryan',
-      userLastName: 'Bailey',
-      userEmail: 'bryan@example.com',
+      userFirstName: 'Avery',
+      userLastName: 'Hollis',
+      userEmail: 'avery@example.com',
       userAvatarUrl: '',
     },
   }),
@@ -53,7 +53,7 @@ vi.mock('@/contexts/AppContext', () => ({
 const me: CoachMe = {
   isCoach: true,
   isAdmin: false,
-  profile: { id: 'bryan', name: 'Bryan Bailey', email: 'bryan@example.com', group: 'Saturday Morning', coachName: '' },
+  profile: { id: 'avery', name: 'Avery Hollis', email: 'avery@example.com', group: 'Saturday Morning', coachName: '' },
   zoomLink: '',
   affiliatedChurch: '',
   bibleCoach: '',
@@ -132,18 +132,18 @@ const trends: CoachTrends = {
 };
 
 const classes: CoachClass[] = [
-  { id: 'sat', name: 'James — Saturday Morning Group', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1' },
+  { id: 'sat', name: 'James — Riverbend Sunday Group', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1' },
 ];
 
 const monthly: LeaderMonthlyResponse = {
-  profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning' },
+  profile: { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning' },
   availableMonths: ['2026-06'],
   summary: {
     month: '2026-06',
     monthLabel: 'June 2026',
     priorMonthLabel: 'May 2026',
-    leaderId: 'bryan',
-    leaderName: 'Bryan Bailey',
+    leaderId: 'avery',
+    leaderName: 'Avery Hollis',
     group: 'Saturday Morning',
     sessionsCount: 6,
     composite: 82.4,
@@ -205,12 +205,12 @@ beforeEach(() => {
   );
   // Admin drill-in ("For") endpoints, same shapes, per-leader.
   vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
-    profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning', coachName: '' },
+    profile: { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning', coachName: '' },
     reports,
   });
   vi.mocked(coachService.fetchCoachTrendsFor).mockResolvedValue(trends);
   vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue(
-    classes.map((c) => ({ ...c, leader: { id: 'bryan', name: 'Bryan Bailey', email: 'b@x.com' } })),
+    classes.map((c) => ({ ...c, leader: { id: 'avery', name: 'Avery Hollis', email: 'b@x.com' } })),
   );
 });
 
@@ -222,9 +222,25 @@ describe('Coaching dashboard, Home', () => {
     // Latest score shown as a letter grade + real /100 composite (tile + ring).
     expect(screen.getAllByText(/87\/100/).length).toBeGreaterThan(0);
     // Next class band pulls the recurring class.
-    expect(screen.getByText('James — Saturday Morning Group')).toBeInTheDocument();
+    expect(screen.getByText('James — Riverbend Sunday Group')).toBeInTheDocument();
     // Session detail header + tabs.
     expect(screen.getByTestId('coach-tab-scorecard')).toBeInTheDocument();
+  });
+
+  it('clears a failed session detail when Retry is pressed', async () => {
+    let fail = true;
+    vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(async (id) => {
+      if (fail) throw new coachService.CoachApiError(`reports/${id}`, 500, 'boom');
+      return reports.find((r) => r.id === id) ?? null;
+    });
+
+    renderAt('/coach', <CoachDashboardScreen />);
+    await screen.findByTestId('coach-error');
+    fail = false;
+    fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
+
+    expect(await screen.findByTestId('coach-tab-scorecard', {}, { timeout: 3000 })).toBeInTheDocument();
+    expect(screen.queryByTestId('coach-error')).toBeNull();
   });
 
   it('offers the RECORDING on a session VerseMate ingested', async () => {
@@ -247,7 +263,7 @@ describe('Coaching dashboard, Home', () => {
 
   it('offers NOTHING when the session has no retained recording', async () => {
     renderAt('/coach', <CoachDashboardScreen />);
-    await screen.findByText(/Good (morning|afternoon|evening), Bryan/);
+    await screen.findByText(/Good (morning|afternoon|evening), Avery/);
     expect(
       screen.queryByTestId(`coach-recording-play-${reports[0].id}`),
     ).toBeNull();
@@ -264,7 +280,7 @@ describe('Coaching dashboard, Home', () => {
 describe('Coaching dashboard, Sessions', () => {
   it('lists recurring classes and past sessions with the view action', async () => {
     renderAt('/coach/sessions', <CoachSessionsScreen />);
-    expect(await screen.findByText('James — Saturday Morning Group')).toBeInTheDocument();
+    expect(await screen.findByText('James — Riverbend Sunday Group')).toBeInTheDocument();
     expect(screen.getAllByTestId('coach-view-report').length).toBeGreaterThan(0);
     // Add form toggles.
     fireEvent.click(screen.getByTestId('coach-sessions-add'));
@@ -289,7 +305,7 @@ describe('Coaching dashboard, admin drill-in', () => {
     const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
     render(
       <QueryClientProvider client={client}>
-        <MemoryRouter initialEntries={['/coach/leader/bryan']}>
+        <MemoryRouter initialEntries={['/coach/leader/avery']}>
           <Routes>
             <Route path="/coach/leader/:coachId" element={<CoachDashboardScreen />} />
           </Routes>
