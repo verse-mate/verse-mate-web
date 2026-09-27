@@ -23,6 +23,8 @@ import { dt, statusBand, clusterMeta } from '@/components/coach/dashboardTheme';
 import { bandLabelsOf, clusterOrder, useRubric } from '@/hooks/useRubric';
 import type { LeaderMonthlySummary } from '@/services/coachService';
 
+const NO_MONTHS: string[] = [];
+
 export default function CoachTrendsScreen() {
   const { coachId } = useParams();
   return <LeaderTrends coachId={coachId} />;
@@ -43,11 +45,7 @@ function LeaderTrends({ coachId }: { coachId?: string }) {
   const summary = data?.summary ?? null;
   const leaderName = data?.profile?.name ?? '';
 
-  const [knownMonths, setKnownMonths] = useState<string[]>([]);
-  const availableMonths = data?.availableMonths;
-  useEffect(() => {
-    if (availableMonths && availableMonths.length > 0) setKnownMonths(availableMonths);
-  }, [availableMonths]);
+  const knownMonths = data?.availableMonths ?? NO_MONTHS;
 
   // Land on the most recent completed month when the current month is empty.
   useEffect(() => {
@@ -70,41 +68,40 @@ function LeaderTrends({ coachId }: { coachId?: string }) {
           </p>
         </div>
 
-        {/* Month pills */}
-        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 24 }}>
-          {months.map((m) => {
-            const active = m === month;
-            const isLoaded = summary && summary.month === m;
-            return (
-              <button
-                key={m}
-                type="button"
-                onClick={() => {
-                  setMonth(m);
-                  setOpenApp(null);
-                }}
-                data-testid={`coach-month-${m}`}
-                style={{
-                  cursor: 'pointer',
-                  textAlign: 'left',
-                  background: active ? dt.darkBg : dt.innerBg,
-                  color: active ? dt.goldChip : dt.textPrimary,
-                  border: `1px solid ${active ? dt.darkBg : dt.cardBorder}`,
-                  borderRadius: 12,
-                  padding: '12px 18px',
-                  minWidth: 132,
-                }}
-              >
-                <div style={{ fontWeight: 700, fontSize: 14 }}>{labelFor(m)}</div>
-                <div style={{ fontSize: 12.5, opacity: 0.72, marginTop: 2 }}>
-                  {isLoaded ? `${summary.composite.toFixed(1)} · ${summary.sessionsCount} sessions` : 'View summary'}
-                </div>
-              </button>
-            );
-          })}
-        </div>
-
         <CoachGate loading={state.loading} authError={state.authError} error={state.error} onRetry={() => query.refetch()}>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 24 }}>
+            {months.map((m) => {
+              const active = m === month;
+              const isLoaded = summary && summary.month === m;
+              return (
+                <button
+                  key={m}
+                  type="button"
+                  onClick={() => {
+                    setMonth(m);
+                    setOpenApp(null);
+                  }}
+                  data-testid={`coach-month-${m}`}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: 'left',
+                    background: active ? dt.darkBg : dt.innerBg,
+                    color: active ? dt.goldChip : dt.textPrimary,
+                    border: `1px solid ${active ? dt.darkBg : dt.cardBorder}`,
+                    borderRadius: 12,
+                    padding: '12px 18px',
+                    minWidth: 132,
+                  }}
+                >
+                  <div style={{ fontWeight: 700, fontSize: 14 }}>{labelFor(m)}</div>
+                  <div style={{ fontSize: 12.5, opacity: 0.72, marginTop: 2 }}>
+                    {isLoaded ? `${summary.composite.toFixed(1)} · ${summary.sessionsCount} sessions` : 'View summary'}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
           {summary ? (
             <MonthDetail summary={summary} openApp={openApp} setOpenApp={setOpenApp} />
           ) : (

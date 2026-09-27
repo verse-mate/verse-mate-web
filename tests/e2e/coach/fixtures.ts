@@ -162,18 +162,20 @@ export const ADMIN_TRENDS = {
   })).reverse(),
 };
 
-export const MONTHLY_LEADERS: Record<string, { name: string; strength: string }> = {
-  alice: { name: 'Alice Adams', strength: 'Alice opened every session with a newcomer welcome.' },
+export const MONTHLY_LEADERS: Record<string, { name: string; strength: string; months?: string[] }> = {
+  alice: { name: 'Alice Adams', strength: 'Alice opened every session with a newcomer welcome.', months: ['2026-07'] },
   bob: { name: 'Bob Brown', strength: 'Bob tied every question back to the passage.' },
+  carol: { name: 'Carol Chen', strength: '', months: [] },
 };
 
 function monthlyFor(id: string, month: string) {
   const leader = MONTHLY_LEADERS[id];
   const avg = { tc: 80, bm: 80, ep: 80, br: 80 };
+  const months = leader.months ?? [month];
   return {
     profile: { id, name: leader.name, group: 'Saturday Morning Study' },
-    availableMonths: [month],
-    summary: {
+    availableMonths: months,
+    summary: months.length === 0 ? null : {
       month,
       monthLabel: month,
       priorMonthLabel: '',
