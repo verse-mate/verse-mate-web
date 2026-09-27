@@ -266,7 +266,7 @@ function NextClassBand({
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: '4px 28px' }}>
             {focus.map((f, i) => (
               <div key={i} style={{ display: 'grid', gridTemplateColumns: '84px 1fr', gap: 11, padding: '9px 0', borderTop: `1px solid ${dt.darkBorder}`, alignItems: 'start' }}>
-                <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '.03em', textAlign: 'center', color: f.c, background: f.bg, padding: '4px 0', borderRadius: 5, width: '100%' }}>
+                <div data-testid={`coach-focus-chip-${i}`} style={{ fontSize: 9, fontWeight: 700, letterSpacing: '.03em', textAlign: 'center', color: f.c, background: f.bg, padding: '4px 0', borderRadius: 5, width: '100%' }}>
                   {f.band.toUpperCase()}
                 </div>
                 <div>

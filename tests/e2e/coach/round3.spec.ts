@@ -136,7 +136,7 @@ test.describe('The admin screen reads the served rubric', () => {
     await page.goto('/coach');
     await page.getByTestId(`oversight-roster-${LEADER_ID}`).click();
 
-    await expect(page.getByTestId('oversight-cluster-mix-Teaching Craft')).toContainText('80%');
+    await expect(page.getByTestId('oversight-cluster-mix-Teaching Craft')).toContainText('76%');
     await expect(page.getByTestId('oversight-cluster-mix-Building Ministry')).toContainText('N/A');
     await expect(page.getByText('Dimension 1', { exact: true }).first()).toBeVisible();
     await expect(page.getByText('Structure & Flow')).toHaveCount(0);
@@ -176,5 +176,42 @@ test.describe("The month picker, switching between leaders", () => {
     await expect(page.getByText(/No monthly summary for/)).toBeVisible();
     await expect(page.getByTestId('coach-leader-monthly-select')).toHaveCount(0);
     await capture(page, testInfo, 'item4-monthly-switch-loaded');
+  });
+});
+
+test.describe("The leader's own dashboard rates dimensions with the served bands", () => {
+  test('names the weak spot in the hero', async ({ page }) => {
+    await useCoachApi(page);
+    await page.goto('/coach');
+
+    await expect(page.getByText('Dimension 5', { exact: true }).first()).toBeVisible();
+    await expect(page.getByText('1/5 · early stage', { exact: true })).toBeVisible();
+  });
+
+  test('labels and colours each focus chip by its band', async ({ page }) => {
+    await useCoachApi(page);
+    await page.goto('/coach');
+
+    const chips = [0, 1, 2, 3].map((i) => page.getByTestId(`coach-focus-chip-${i}`));
+    await expect(chips[0]).toHaveText('EARLY STAGE');
+    await expect(chips[1]).toHaveText('DEVELOPING');
+    await expect(chips[2]).toHaveText('ON TARGET');
+    await expect(chips[3]).toHaveText('STRONG');
+    const colours = await Promise.all(chips.map((c) => c.evaluate((el) => getComputedStyle(el).color)));
+    expect(colours).toEqual([
+      'rgb(232, 168, 124)',
+      'rgb(232, 168, 124)',
+      'rgb(228, 200, 120)',
+      'rgb(228, 200, 120)',
+    ]);
+  });
+
+  test('shows the scorecard band in capitals, as the handoff does', async ({ page }) => {
+    await useCoachApi(page);
+    await page.goto('/coach');
+    await page.getByTestId('coach-tab-scorecard').click();
+
+    const chip = page.getByTestId('coach-dim-1').getByText('Strong', { exact: true });
+    expect(await chip.evaluate((el) => (el as HTMLElement).innerText)).toBe('STRONG');
   });
 });
