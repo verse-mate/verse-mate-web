@@ -1,11 +1,11 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { renderHook, waitFor } from '@testing-library/react';
+import { act, renderHook, waitFor } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import * as coachService from '@/services/coachService';
-import type { LeaderMonthlyResponse } from '@/services/coachService';
-import { useLeaderMonthlySummary } from './useCoach';
+import type { CoachReportSummary, LeaderMonthlyResponse } from '@/services/coachService';
+import { useCoachReportSummaries, useLeaderMonthlySummary } from './useCoach';
 
 function monthlyFor(id: string, name: string): LeaderMonthlyResponse {
   return {
@@ -55,5 +55,25 @@ describe("a leader's monthly summary while navigating", () => {
     rerender({ id: 'alice', month: '2026-07' });
     expect(result.current.data?.profile.name).toBe('Alice Adams');
     expect(result.current.isPlaceholderData).toBe(true);
+  });
+});
+
+describe("a leader's paginated history", () => {
+  it('stops paging when the server returns an empty page short of its own total', async () => {
+    const item = (id: string) => ({ id }) as CoachReportSummary;
+    const fetch = vi.spyOn(coachService, 'fetchCoachReportSummaries').mockImplementation((offset = 0) =>
+      Promise.resolve(offset === 0 ? { items: [item('a'), item('b')], total: 3 } : { items: [], total: 3 }),
+    );
+
+    const { result } = renderHook(() => useCoachReportSummaries(), { wrapper: wrapper() });
+    await waitFor(() => expect(result.current.hasNextPage).toBe(true));
+
+    await act(() => result.current.fetchNextPage());
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
+    await waitFor(() => expect(result.current.isFetching).toBe(false));
+
+    expect(result.current.hasNextPage).toBe(false);
+    await act(() => result.current.fetchNextPage());
+    expect(fetch).toHaveBeenCalledTimes(2);
   });
 });
