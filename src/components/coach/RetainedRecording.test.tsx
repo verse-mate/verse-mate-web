@@ -178,3 +178,21 @@ describe('a mint that resolves after the session changed', () => {
     expect(screen.getByTestId('coach-recording-play-r2')).toBeInTheDocument();
   });
 });
+
+describe('a playing recording in a session replay', () => {
+  it('is blocked from the replay, so its signed address is never recorded', async () => {
+    vi.spyOn(coachService, 'mintRecordingUrl').mockResolvedValue({
+      url: 'https://storage.test/rec.mp4?sig=1',
+      expiresInSeconds: 86400,
+    });
+    render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+
+    expect(await screen.findByTestId('coach-recording-player-r1')).toHaveClass('ph-no-capture');
+  });
+
+  it('blocks an attached link from the replay too', () => {
+    render(<RetainedRecording reportId="r1" hasRetained attachedUrl="https://drive.test/rec?token=1" />);
+    expect(screen.getByTestId('coach-recording-attached-r1')).toHaveClass('ph-no-capture');
+  });
+});
