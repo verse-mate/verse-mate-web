@@ -13,8 +13,10 @@
  */
 
 import { useMemo } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
+  coachKeys,
   useCoachMe,
   useCoachReportSummaries,
   useCoachReportDetail,
@@ -50,6 +52,7 @@ export default function CoachDashboardScreen() {
   const base = admin ? `/coach/leader/${coachId}` : '/coach';
 
   // Only the active branch's queries are enabled.
+  const queryClient = useQueryClient();
   const meQuery = useCoachMe();
   const selfReports = useCoachReportSummaries({ enabled: !admin });
   const forReports = useCoachReportsFor(coachId ?? '');
@@ -99,7 +102,8 @@ export default function CoachDashboardScreen() {
         error={me.error || reports.error || detailError}
         onRetry={() => {
           meQuery.refetch();
-          (admin ? forReports : selfReports).refetch();
+          if (admin) forReports.refetch();
+          else queryClient.invalidateQueries({ queryKey: coachKeys.reports });
         }}
       >
         {deepLinkMissing ? (
