@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -13,6 +13,12 @@ vi.mock('@/components/coach/ReportDetail', () => ({
 }));
 vi.mock('@/components/coach/ReportCard', () => ({ default: () => null }));
 vi.mock('@/components/coach/CoachProfileAvatar', () => ({ default: () => null }));
+vi.mock('@/components/coach/CoachTrendCharts', () => ({
+  ScoreTrendCard: ({ onSelectDate }: { onSelectDate: (d: string) => void }) => (
+    <button type="button" data-testid="trend-point-2026-01-05" onClick={() => onSelectDate('2026-01-05')} />
+  ),
+  ClusterTrendCard: () => null,
+}));
 
 const summary = (id: string, date: string) =>
   ({ id, date, dateLabel: date, session: id, topic: '', score: 80, status: 'Strong', statusEmoji: '' }) as CoachReportSummary;
@@ -62,5 +68,27 @@ describe('the management screen', () => {
     expect(await screen.findByTestId('coach-leader-more-failed')).toHaveTextContent('Could not load more sessions');
     expect(screen.getByTestId('selected-report')).toHaveTextContent('r1');
     expect(screen.getByTestId('coach-leader-more')).not.toBeDisabled();
+  });
+});
+
+describe('a trend point on the management screen', () => {
+  it('opens its session even when that session is not on a loaded page', async () => {
+    const pages = vi
+      .spyOn(coachService, 'fetchCoachReportSummaries')
+      .mockResolvedValueOnce({
+        items: [summary('r1', '2026-03-01'), summary('r2', '2026-02-01')],
+        total: 3,
+        streakWeeks: 0,
+        quarterSessions: 0,
+      })
+      .mockResolvedValueOnce({ items: [summary('r3', '2026-01-05')], total: 3, streakWeeks: 0, quarterSessions: 0 });
+    renderScreen();
+
+    expect(await screen.findByTestId('selected-report')).toHaveTextContent('r1');
+    fireEvent.click(screen.getByTestId('trend-point-2026-01-05'));
+
+    await waitFor(() => expect(screen.getByTestId('selected-report')).toHaveTextContent('r3'));
+    expect(pages).toHaveBeenLastCalledWith(2, 50, 'avery');
+    expect(coachService.fetchCoachReportDetail).toHaveBeenCalledWith('r3', 'avery');
   });
 });

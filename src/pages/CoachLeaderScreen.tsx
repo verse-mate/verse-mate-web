@@ -65,12 +65,18 @@ export default function CoachLeaderScreen() {
   const selectedDetail = useCoachReportDetail(selectedSummary?.id, coachId);
   const selected = selectedDetail.data ?? null;
 
-  const openByDate = (isoDate: string) => {
-    const match = reports.find((r) => r.date === isoDate);
-    if (match) {
-      setSelectedId(match.id);
-      requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  const openByDate = async (isoDate: string) => {
+    let match = reports.find((r) => r.date === isoDate);
+    let more = summaries.hasNextPage;
+    while (!match && more) {
+      const next = await summaries.fetchNextPage();
+      if (next.isError) return;
+      match = next.data?.pages.flatMap((p) => p.items).find((r) => r.date === isoDate);
+      more = next.hasNextPage;
     }
+    if (!match) return;
+    setSelectedId(match.id);
+    requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
   };
 
   const header = profile && (
