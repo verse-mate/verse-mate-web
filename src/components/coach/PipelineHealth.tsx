@@ -25,7 +25,9 @@ import {
   PARALLEL_RUN_COPY,
   PIPELINE_PAGE_SIZE,
   type PipelineFailure,
+  COLD_RECALL_WHY,
   refusalText,
+  refusalWords,
   type ReleaseOutcome,
   sessionDateText,
 } from '@/services/coachService';
@@ -33,7 +35,6 @@ import { dt } from './dashboardTheme';
 
 type Outcome = { tone: 'ok' | 'refused'; text: string; held?: string[] };
 
-const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
 const COLD_RECALL_FIX =
   "To clear it, open the report's review (the leader, then this session), replace the held items under Improvements, and release it again from this list. If it is not a first lesson, clear the first-lesson flag there instead and release it again.";
 
@@ -66,7 +67,7 @@ function releaseText(outcome: ReleaseOutcome): Outcome {
   const reasons = [...(outcome.violations ?? []), ...(outcome.shortfalls ?? [])];
   return {
     tone: 'refused',
-    text: `Not delivered: ${outcome.refusal ?? 'refused'}${reasons.length ? ` (${reasons.join(', ')})` : ''}`,
+    text: `Not delivered: ${refusalWords(outcome.refusal)}${reasons.length ? ` (${reasons.join(', ')})` : ''}`,
   };
 }
 

@@ -1,6 +1,16 @@
 import { expect, test } from '@playwright/test';
 
-import { API, capture, LEADER_ID, OLDER_ID, PARALLEL_RUN_RESHARE, PARALLEL_RUN_SESSION, PARALLEL_RUN_SESSION_REFUSAL, useCoachApi } from './fixtures';
+import {
+  API,
+  capture,
+  LEADER_ID,
+  OLDER_ID,
+  PARALLEL_RUN_RESHARE,
+  PARALLEL_RUN_SESSION,
+  PARALLEL_RUN_SESSION_REFUSAL,
+  PENDING_RESHARE,
+  useCoachApi,
+} from './fixtures';
 
 const LABEL = 'Parallel-run copy: kept for comparison, never sent.';
 
@@ -33,6 +43,19 @@ test.describe('A session observed during the parallel run', () => {
     await row.getByTestId(`coach-reshare-resolve-${PARALLEL_RUN_RESHARE.sourceSessionId}`).click();
     await expect(page.getByTestId('coach-pending-reshares')).toHaveCount(0);
     expect(writes).toEqual([`POST /coach/admin/reshares/${PARALLEL_RUN_RESHARE.sourceSessionId}/resolve`]);
+  });
+
+  test('a re-share ask sent before cutover is refused in the words the server gives for its code', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, pendingReshare: true });
+    await page.goto('/coach');
+    await page.getByTestId('oversight-nav-trends').click();
+
+    const row = page.getByTestId(`coach-reshare-${PENDING_RESHARE.sourceSessionId}`);
+    await row.getByTestId(`coach-reshare-send-${PENDING_RESHARE.sourceSessionId}`).click();
+    const error = page.getByTestId('coach-reshare-error');
+    await expect(error).toHaveText('Not sent. The pipeline is in its parallel run: nothing is sent until cutover.');
+    await expect(error).not.toContainText('parallel-run');
+    await capture(page, testInfo, 'pb2-reshare-refused-in-words', page.getByTestId('coach-pending-reshares'));
   });
 
   test('is labelled on its review, and saved improvements are said never to be sent', async ({ page }, testInfo) => {

@@ -85,7 +85,7 @@ test.describe('Amending a delivered report', () => {
       'a failed send',
       { revisionSend: 'fail' },
       'Revision 1 is stored, but the send failed. Send it again from the kept versions.',
-      'Not sent: send-failed. Failed: leader@example.test (mailbox unavailable).',
+      'Not sent: the mail service did not take it for every recipient. Failed: leader@example.test (mailbox unavailable).',
     ],
   ];
   for (const [name, options, stored, refused] of pendingCases) {
@@ -142,7 +142,7 @@ test.describe('Amending a delivered report', () => {
     await expect(kept.getByTestId('coach-revision-requeue-1')).toBeVisible();
     await capture(page, testInfo, 'p6-revision-requeue-offered', panel.getByTestId('coach-revisions'));
     await kept.getByTestId('coach-revision-send-1').click();
-    await expect(panel.getByTestId('coach-revision-outcome')).toContainText('Not sent: send-failed.');
+    await expect(panel.getByTestId('coach-revision-outcome')).toContainText('Not sent: the mail service did not take it for every recipient.');
     await expect(kept.getByTestId('coach-revision-requeue-1')).toBeVisible();
 
     await kept.getByTestId('coach-revision-requeue-1').click();

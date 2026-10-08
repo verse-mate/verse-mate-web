@@ -4,6 +4,7 @@ import { vmTokens } from '@/styles/themeStyles';
 import {
   CoachApiError,
   PARALLEL_RUN_COPY,
+  refusalCode,
   type PendingReshare,
   fetchPendingReshares,
   resolveReshareRequest,
@@ -23,11 +24,6 @@ import {
  * Two actions, matching the two ways back in (task 4.9a): ask the leader, or
  * mark it resolved and let retrieval try again.
  */
-const SEND_REFUSALS: Record<string, string> = {
-  'Re-share not sent: parallel-run-session':
-    'Not sent: this session was observed during the parallel run, so it is kept for comparison and never sent.',
-};
-
 export default function PendingReshares() {
   const [requests, setRequests] = useState<PendingReshare[] | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
@@ -56,10 +52,10 @@ export default function PendingReshares() {
         else await resolveReshareRequest(id);
         await load();
       } catch (err) {
-        const refusal = err instanceof CoachApiError ? SEND_REFUSALS[err.serverMessage] : undefined;
+        const refused = err instanceof CoachApiError && refusalCode(err) ? `Not sent. ${err.serverMessage}.` : undefined;
         setError(
           action === 'send'
-            ? refusal ?? 'The request could not be sent. Nothing was recorded as asked.'
+            ? refused ?? 'The request could not be sent. Nothing was recorded as asked.'
             : 'The request could not be resolved.',
         );
       } finally {

@@ -16,6 +16,7 @@ import {
   AMENDABLE_BODY_FIELDS,
   type AmendableBodyField,
   CoachApiError,
+  COLD_RECALL_WHY,
   type CoachFeedbackPoint,
   PARALLEL_RUN_COPY,
   type CoachReport,
@@ -23,7 +24,9 @@ import {
   type ProseField,
   RATIONALE_MAX,
   type ProseList,
+  refusalCode,
   refusalText,
+  refusalWords,
   type ReportAmendment,
   type ReportReviewState,
   type ReportRevision,
@@ -77,8 +80,8 @@ const CORRECTED_MEANWHILE =
   'This report was delivered meanwhile, so the correction goes through an amendment, which sends the leader a revised copy. Check it and confirm.';
 const CLEARED = 'Cleared: the leader reads the list instead';
 const MAX_POINTS = 10;
+const DELIVERY_UNDER_WAY = new Set(['already-delivered', 'partially-delivered', 'in-flight']);
 const REQUEUED = 'Requeued. The next send mails the recipients whose send was never confirmed.';
-const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
 const IMPROVEMENTS_SAVED =
   'Improvements saved. Nothing was sent: the leader gets them when the report is delivered, and a held report goes out once it is released from the Pipeline list.';
 const IMPROVEMENTS_SAVED_PARALLEL_RUN = 'Improvements saved. Nothing was sent: this is a parallel-run copy, kept for comparison and never sent.';
@@ -255,7 +258,7 @@ function amendOutcome(r: RevisionResult): Outcome {
         text: `Not saved and not sent: ${COLD_RECALL_WHY}. Replace the held items under Improvements and submit again.`,
       };
     }
-    return { tone: 'refused', text: `Not saved: ${r.refusal ?? 'refused'}.` };
+    return { tone: 'refused', text: `Not saved: ${refusalWords(r.refusal)}.` };
   }
   const saved = `Revision ${r.revision}`;
   const score = r.score !== undefined ? ` Score ${r.score} (${r.status}).` : '';
@@ -267,7 +270,7 @@ function amendOutcome(r: RevisionResult): Outcome {
 }
 
 function sendOutcome(r: RevisionSendResult): Outcome {
-  if (!r.sent) return { tone: 'refused', text: `Not sent: ${r.refusal ?? 'refused'}.${failedText(r)}` };
+  if (!r.sent) return { tone: 'refused', text: `Not sent: ${refusalWords(r.refusal)}.${failedText(r)}` };
   const delivered = (r.sends ?? []).filter((s) => s.delivered).length;
   return {
     tone: 'ok',
@@ -534,7 +537,7 @@ function DimensionCorrections({
         },
         onError: (err) => {
           setOutcome({ tone: 'refused', text: refusalText(err) });
-          if (err instanceof CoachApiError && err.status < 500) {
+          if (DELIVERY_UNDER_WAY.has(refusalCode(err) ?? '')) {
             onCarry({
               last: { outcome: { tone: 'refused', text: CORRECTED_MEANWHILE } },
               draft: (d) => ({ ...d, dims: { ...d.dims, [n]: { score, rationale } } }),
@@ -689,13 +692,13 @@ function ImprovementsEditor({
           onCarry(null);
           return;
         }
-        const why = r.refusal === 'cold-recall-improvement' ? `${COLD_RECALL_WHY}. Replace the held items and save again` : r.refusal ?? 'refused';
+        const why = r.refusal === 'cold-recall-improvement' ? `${COLD_RECALL_WHY}. Replace the held items and save again` : refusalWords(r.refusal);
         setLast({ outcome: { tone: 'refused', text: `Not saved: ${why}.` }, held: r.coldRecall });
       },
       onError: (err) => {
         const outcome: Outcome = { tone: 'refused', text: refusalText(err) };
         setLast({ outcome });
-        if (err instanceof CoachApiError && err.status === 409) {
+        if (DELIVERY_UNDER_WAY.has(refusalCode(err) ?? '')) {
           const { body: text, prose, clearProse } = edit.draft;
           onCarry({
             last: { outcome },
@@ -1164,7 +1167,7 @@ function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachI
       onError: (err) =>
         setOutcome({
           tone: 'refused',
-          text: err instanceof CoachApiError && err.status === 404 ? `Nothing to requeue: ${err.serverMessage}.` : refusalText(err),
+          text: err instanceof CoachApiError && refusalCode(err) === 'nothing-to-requeue' ? `Nothing to requeue: ${err.serverMessage}.` : refusalText(err),
         }),
       onSettled: () => {
         flying.current = false;
