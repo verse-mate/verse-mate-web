@@ -53,6 +53,7 @@ import {
   type ReleaseOutcome,
   updateLeaderEmail,
   attributeSession,
+  setNotTeaching,
 } from '@/services/coachService';
 
 export const coachKeys = {
@@ -309,5 +310,13 @@ export function useAttributeSession(): UseMutationResult<
       qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
       qc.invalidateQueries({ queryKey: coachKeys.coverage });
     },
+  });
+}
+
+export function useSetNotTeaching(): UseMutationResult<{ attested: boolean }, Error, { coachId: string; attested: boolean }> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ coachId, attested }) => setNotTeaching(coachId, attested),
+    onSuccess: () => qc.invalidateQueries({ queryKey: coachKeys.coverage }),
   });
 }

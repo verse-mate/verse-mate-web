@@ -459,6 +459,8 @@ export interface CoverageLeader {
   accountStatus: string;
   linkedClassName: string | null;
   classAlert: boolean;
+  attestedAt: string | null;
+  attestedBy: string | null;
 }
 
 export interface CoverageReport {
@@ -469,6 +471,12 @@ export interface CoverageReport {
 
 export function fetchCoverage(windowDays = 30): Promise<CoverageReport> {
   return coachRequest<CoverageReport>(`admin/coverage?windowDays=${windowDays}`);
+}
+
+export function setNotTeaching(coachId: string, attested: boolean): Promise<{ attested: boolean }> {
+  return coachRequest<{ attested: boolean }>(`admin/leaders/${encodeURIComponent(coachId)}/not-teaching`, {
+    method: attested ? 'POST' : 'DELETE',
+  });
 }
 
 /** GET /api/coach/trends, derived score / cluster / dimension series. */
