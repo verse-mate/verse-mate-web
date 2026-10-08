@@ -100,6 +100,10 @@ const COVERAGE = {
   ],
 };
 
+function page(sessions: coachService.PipelineFailure[], total = sessions.length, offset = 0) {
+  return { sessions, total, limit: 50, offset };
+}
+
 function renderView() {
   const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
   return render(
@@ -117,7 +121,7 @@ afterEach(() => vi.restoreAllMocks());
 
 describe('what is stuck in the pipeline', () => {
   it('lists each stuck session with why it is stuck', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([PARKED, HELD]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([PARKED, HELD]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     renderView();
 
@@ -130,8 +134,8 @@ describe('what is stuck in the pipeline', () => {
   it('puts a parked session back in the queue', async () => {
     const list = vi
       .spyOn(coachService, 'fetchPipelineFailures')
-      .mockResolvedValueOnce([PARKED])
-      .mockResolvedValueOnce([]);
+      .mockResolvedValueOnce(page([PARKED]))
+      .mockResolvedValueOnce(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     const requeue = vi.spyOn(coachService, 'requeuePipelineFailure').mockResolvedValue({ requeued: true });
     renderView();
@@ -143,7 +147,7 @@ describe('what is stuck in the pipeline', () => {
   });
 
   it('keeps the session title out of the confirmation toast, which sits outside the replay block', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([PARKED]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([PARKED]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     vi.spyOn(coachService, 'requeuePipelineFailure').mockResolvedValue({ requeued: true });
     const success = vi.spyOn(toast, 'success');
@@ -155,7 +159,7 @@ describe('what is stuck in the pipeline', () => {
   });
 
   it('releases a report held for review, by its report id', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([HELD]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([HELD]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     const release = vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue({ delivered: true });
     renderView();
@@ -167,7 +171,7 @@ describe('what is stuck in the pipeline', () => {
 
   it('keeps a release disabled while it is in flight, whatever another row does', async () => {
     const other = { ...HELD, sourceSessionId: 'ff-3', reportId: 'rep-3', title: 'Ruth, Lesson 2' };
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([HELD, other]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([HELD, other]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     const pending: Record<string, (o: { delivered: boolean }) => void> = {};
     const release = vi
@@ -192,7 +196,7 @@ describe('what is stuck in the pipeline', () => {
   });
 
   it('offers no release on a session that has no report', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([PARKED]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([PARKED]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     renderView();
 
@@ -201,7 +205,7 @@ describe('what is stuck in the pipeline', () => {
   });
 
   it('shows a release the server declined, with its reasons', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([HELD]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([HELD]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue({
       delivered: false,
@@ -217,7 +221,7 @@ describe('what is stuck in the pipeline', () => {
   });
 
   it('shows an action the server refused as a refusal', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([PARKED]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([PARKED]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     vi.spyOn(coachService, 'requeuePipelineFailure').mockRejectedValue(
       new CoachApiError('admin/pipeline-failures/ff-1/requeue', 404, 'No parked session'),
@@ -228,8 +232,60 @@ describe('what is stuck in the pipeline', () => {
     expect(await screen.findByTestId('coach-pipeline-outcome-ff-1')).toHaveTextContent('No parked session');
   });
 
+  it('shows one page at a time with the total, and asks the server for the next and previous page', async () => {
+    const list = vi
+      .spyOn(coachService, 'fetchPipelineFailures')
+      .mockImplementation(async (offset = 0) =>
+        page([{ ...PARKED, sourceSessionId: `ff-at-${offset}`, title: `Session at ${offset}` }], 120, offset),
+      );
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    expect(await screen.findByTestId('coach-pipeline-ff-at-0')).toBeInTheDocument();
+    expect(screen.getByTestId('coach-pipeline-paging')).toHaveTextContent('1 to 50 of 120');
+    expect(screen.getByTestId('coach-pipeline-newer')).toBeDisabled();
+    fireEvent.click(screen.getByTestId('coach-pipeline-older'));
+    expect(await screen.findByTestId('coach-pipeline-ff-at-50')).toBeInTheDocument();
+    expect(screen.getByTestId('coach-pipeline-paging')).toHaveTextContent('51 to 100 of 120');
+    fireEvent.click(screen.getByTestId('coach-pipeline-older'));
+    expect(await screen.findByTestId('coach-pipeline-ff-at-100')).toBeInTheDocument();
+    expect(screen.getByTestId('coach-pipeline-paging')).toHaveTextContent('101 to 120 of 120');
+    expect(screen.getByTestId('coach-pipeline-older')).toBeDisabled();
+    fireEvent.click(screen.getByTestId('coach-pipeline-newer'));
+    expect(await screen.findByTestId('coach-pipeline-ff-at-50')).toBeInTheDocument();
+    expect(list.mock.calls.map((c) => c[0])).toEqual([0, 50, 100, 50]);
+  });
+
+  it('steps back a page when acting on the last row of the last page empties it', async () => {
+    let total = 51;
+    const list = vi.spyOn(coachService, 'fetchPipelineFailures').mockImplementation(async (offset = 0) => {
+      if (offset === 0) return page([{ ...PARKED, sourceSessionId: 'ff-first' }], total, 0);
+      return page(total > 50 ? [{ ...PARKED, sourceSessionId: 'ff-last' }] : [], total, offset);
+    });
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'requeuePipelineFailure').mockImplementation(async () => {
+      total = 50;
+      return { requeued: true };
+    });
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-pipeline-older'));
+    fireEvent.click(await screen.findByTestId('coach-pipeline-requeue-ff-last'));
+    expect(await screen.findByTestId('coach-pipeline-ff-first')).toBeInTheDocument();
+    expect(list.mock.calls.at(-1)?.[0]).toBe(0);
+  });
+
+  it('offers no paging when everything fits on one page', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([PARKED]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    await screen.findByTestId('coach-pipeline-ff-1');
+    expect(screen.queryByTestId('coach-pipeline-paging')).toBeNull();
+  });
+
   it('says so when nothing is stuck', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     renderView();
 
@@ -259,7 +315,7 @@ describe('what is stuck in the pipeline', () => {
 
 describe('recording-bot coverage', () => {
   it('shows every leader with whether the bot covers them', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     renderView();
 
@@ -269,7 +325,7 @@ describe('recording-bot coverage', () => {
   });
 
   it('shows a coverage refusal as a refusal', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockRejectedValue(new CoachAuthError('not_a_coach'));
     renderView();
 
@@ -286,7 +342,7 @@ describe("a leader's address", () => {
   };
 
   it('shows a placeholder address as no real address yet, and a real one only outside session replay', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [COVERAGE.leaders[0], PLACEHOLDER] });
     renderView();
 
@@ -299,7 +355,7 @@ describe("a leader's address", () => {
   });
 
   it("replaces a leader's address and reads the roster again", async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     const coverage = vi
       .spyOn(coachService, 'fetchCoverage')
       .mockResolvedValueOnce({ ...COVERAGE, leaders: [PLACEHOLDER] })
@@ -320,7 +376,7 @@ describe("a leader's address", () => {
   });
 
   it('keeps the editor open with the refusal when the address is already taken', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [PLACEHOLDER] });
     vi.spyOn(coachService, 'updateLeaderEmail').mockRejectedValue(
       new CoachApiError('admin/leaders/wyatt-wellington/email', 409, 'Another leader already uses that address'),
@@ -344,8 +400,8 @@ describe('an unresolved session', () => {
   it('is assigned to a leader picked from the roster, and leaves the list', async () => {
     const list = vi
       .spyOn(coachService, 'fetchPipelineFailures')
-      .mockResolvedValueOnce([UNRESOLVED])
-      .mockResolvedValue([]);
+      .mockResolvedValueOnce(page([UNRESOLVED]))
+      .mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     const attribute = vi
       .spyOn(coachService, 'attributeSession')
@@ -363,7 +419,7 @@ describe('an unresolved session', () => {
   });
 
   it('offers no assignment until a leader is picked, and no release or requeue at all', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([UNRESOLVED]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([UNRESOLVED]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     renderView();
 
@@ -373,7 +429,7 @@ describe('an unresolved session', () => {
   });
 
   it('keeps the assignment disabled while it is in flight, and shows a refusal', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([UNRESOLVED]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([UNRESOLVED]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     let refuse: (e: Error) => void = () => {};
     vi.spyOn(coachService, 'attributeSession').mockImplementation(
@@ -396,7 +452,7 @@ describe('an unresolved session', () => {
 
 describe('a send skipped for a placeholder address', () => {
   it("names the leader, keeps the address out of replay, and offers to fix it instead of release or requeue", async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([SKIPPED]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([SKIPPED]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     renderView();
 
@@ -409,7 +465,7 @@ describe('a send skipped for a placeholder address', () => {
   });
 
   it('a release that skipped a placeholder says so, without the address', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([HELD]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([HELD]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue({
       delivered: true,
@@ -438,7 +494,7 @@ describe('a leader who is not teaching', () => {
   };
 
   it('is told apart from a leader the bot has not observed, with who attested and when', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [COVERAGE.leaders[1], ATTESTED] });
     renderView();
 
@@ -453,7 +509,7 @@ describe('a leader who is not teaching', () => {
   });
 
   it('is attested from the coverage list, and coverage is read again', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     const coverage = vi
       .spyOn(coachService, 'fetchCoverage')
       .mockResolvedValueOnce(COVERAGE)
@@ -468,7 +524,7 @@ describe('a leader who is not teaching', () => {
   });
 
   it('has the attestation cleared, the button held while the request is in flight', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [ATTESTED] });
     let settle: (v: { attested: boolean }) => void = () => {};
     const set = vi
@@ -486,7 +542,7 @@ describe('a leader who is not teaching', () => {
   });
 
   it('shows a refused attestation on the row', async () => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     vi.spyOn(coachService, 'setNotTeaching').mockRejectedValue(
       new CoachApiError('admin/leaders/amy-lee/not-teaching', 404, 'Leader not found'),
@@ -500,7 +556,7 @@ describe('a leader who is not teaching', () => {
 
 describe("a leader's title keywords and alternate addresses", () => {
   beforeEach(() => {
-    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [COVERAGE.leaders[0]] });
   });
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { toast } from 'sonner';
 
@@ -19,6 +19,7 @@ import {
   CoachAuthError,
   type CoverageLeader,
   isPlaceholderAddress,
+  PIPELINE_PAGE_SIZE,
   type PipelineFailure,
   refusalText,
   type ReleaseOutcome,
@@ -79,7 +80,14 @@ function QueryState<T>({
 }
 
 export default function PipelineHealth() {
-  const failures = usePipelineFailures();
+  const [offset, setOffset] = useState(0);
+  const failures = usePipelineFailures(offset);
+  const shown = failures.data;
+  useEffect(() => {
+    if (shown && shown.offset === offset && offset > 0 && offset >= shown.total) {
+      setOffset(Math.max(0, Math.ceil(shown.total / PIPELINE_PAGE_SIZE) - 1) * PIPELINE_PAGE_SIZE);
+    }
+  }, [shown, offset]);
   const coverage = useCoverage();
   const requeue = useRequeuePipelineFailure();
   const release = useReleaseHeldReport();
@@ -140,12 +148,38 @@ export default function PipelineHealth() {
 
       <h3 style={h3}>Stuck sessions</h3>
       <QueryState query={failures} name="pipeline" label="stuck sessions">
-        {(sessions) =>
-          sessions.length === 0 ? (
+        {({ sessions, total }) =>
+          total === 0 ? (
             <div data-testid="coach-pipeline-empty" style={note}>
               Nothing is stuck. Every session reached its leader or is still in progress.
             </div>
           ) : (
+            <>
+            {total > PIPELINE_PAGE_SIZE && (
+              <div data-testid="coach-pipeline-paging" style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 10, fontSize: 13, color: dt.textLight }}>
+                <button
+                  type="button"
+                  onClick={() => setOffset(Math.max(0, offset - PIPELINE_PAGE_SIZE))}
+                  disabled={offset === 0}
+                  data-testid="coach-pipeline-newer"
+                  style={btn}
+                >
+                  Newer
+                </button>
+                <span>
+                  {Math.min(offset + 1, total)} to {Math.min(offset + PIPELINE_PAGE_SIZE, total)} of {total}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setOffset(offset + PIPELINE_PAGE_SIZE)}
+                  disabled={offset + PIPELINE_PAGE_SIZE >= total}
+                  data-testid="coach-pipeline-older"
+                  style={btn}
+                >
+                  Older
+                </button>
+              </div>
+            )}
             <div style={table}>
               {sessions.map((s) => {
                 const outcome = outcomes[s.sourceSessionId];
@@ -228,6 +262,7 @@ export default function PipelineHealth() {
                 );
               })}
             </div>
+            </>
           )
         }
       </QueryState>
