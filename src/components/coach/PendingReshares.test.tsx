@@ -14,6 +14,7 @@ const ONE = [
     attempts: 5,
     asked: false,
     parallelRun: false,
+    sessionStartedAt: null,
   },
 ];
 
@@ -61,6 +62,22 @@ describe('the re-share queue is visible', () => {
     );
     const { container } = render(<PendingReshares />);
     await waitFor(() => expect(container).toBeEmptyDOMElement());
+  });
+});
+
+describe('when a session started', () => {
+  it('shows the start time beside the date, in the time zone the date is counted in', async () => {
+    vi.spyOn(coachService, 'fetchPendingReshares').mockResolvedValue([
+      { ...ONE[0], sessionDate: '2026-08-21', sessionStartedAt: '2026-08-22T00:15:00.000Z' },
+    ]);
+    render(<PendingReshares />);
+    expect(await screen.findByTestId('coach-reshare-ff-1')).toHaveTextContent('2026-08-21 · started 7:15 PM CDT ·');
+  });
+
+  it('shows the date alone when the start was not stored', async () => {
+    vi.spyOn(coachService, 'fetchPendingReshares').mockResolvedValue(ONE);
+    render(<PendingReshares />);
+    expect(await screen.findByTestId('coach-reshare-ff-1')).not.toHaveTextContent('started');
   });
 });
 

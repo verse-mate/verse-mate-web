@@ -8,6 +8,7 @@ import {
   fetchPendingReshares,
   resolveReshareRequest,
   sendReshareRequest,
+  sessionDateText,
 } from '@/services/coachService';
 
 /**
@@ -114,7 +115,7 @@ export default function PendingReshares() {
               {r.title || 'Untitled session'}
             </div>
             <div style={{ fontSize: 12.5, color: vmTokens.textTertiary }}>
-              {r.coachId ?? 'unattributed'} · {r.sessionDate} · {r.attempts}{' '}
+              {r.coachId ?? 'unattributed'} · {sessionDateText(r)} · {r.attempts}{' '}
               attempts
             </div>
             {r.parallelRun && (

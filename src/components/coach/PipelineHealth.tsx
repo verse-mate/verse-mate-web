@@ -27,6 +27,7 @@ import {
   type PipelineFailure,
   refusalText,
   type ReleaseOutcome,
+  sessionDateText,
 } from '@/services/coachService';
 import { dt } from './dashboardTheme';
 
@@ -215,7 +216,7 @@ export default function PipelineHealth() {
                     <div style={{ minWidth: 0 }}>
                       <div style={{ fontWeight: 600, fontSize: 14 }}>{s.title || 'Untitled session'}</div>
                       <div style={{ fontSize: 12.5, color: dt.textLight }}>
-                        {s.coachId ? nameOf(s.coachId) : 'unattributed'} · {s.sessionDate} · {s.state} · {s.attempts} attempts
+                        {s.coachId ? nameOf(s.coachId) : 'unattributed'} · {sessionDateText(s)} · {s.state} · {s.attempts} attempts
                       </div>
                       {s.parallelRun && (
                         <div data-testid={`coach-pipeline-parallel-run-${s.sourceSessionId}`} style={{ fontSize: 12.5, fontWeight: 600, color: dt.gold }}>

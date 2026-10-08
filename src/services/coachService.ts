@@ -372,6 +372,7 @@ export interface PendingReshare {
   coachId: string | null;
   title: string;
   sessionDate: string;
+  sessionStartedAt: string | null;
   requestedAt: string;
   attempts: number;
   /** True once the leader has actually been emailed about this session. */
@@ -409,6 +410,17 @@ export function resolveReshareRequest(
   );
 }
 
+export function sessionDateText(session: { sessionDate: string; sessionStartedAt: string | null }): string {
+  if (!session.sessionStartedAt) return session.sessionDate;
+  const time = new Date(session.sessionStartedAt).toLocaleTimeString('en-US', {
+    timeZone: 'America/Chicago',
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZoneName: 'short',
+  });
+  return `${session.sessionDate} · started ${time}`;
+}
+
 export const PARALLEL_RUN_COPY = 'Parallel-run copy: kept for comparison, never sent.';
 
 export type HoldKind = 'review' | 'reattributed' | 'calibration' | 'governance' | 'cold-recall' | 'no-mailer' | 'send-failed';
@@ -418,6 +430,7 @@ export interface PipelineFailure {
   coachId: string | null;
   title: string;
   sessionDate: string;
+  sessionStartedAt: string | null;
   state: string;
   attempts: number;
   reportId: string | null;

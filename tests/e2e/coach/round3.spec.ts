@@ -65,6 +65,8 @@ test.describe('The admin pipeline surface', () => {
 
     const parked = page.getByTestId(`coach-pipeline-${PARKED_SESSION.sourceSessionId}`);
     await expect(parked).toContainText(PARKED_SESSION.title);
+    await expect(parked).toContainText('2026-08-15 · started 7:30 PM CDT ·');
+    await expect(page.getByTestId(`coach-pipeline-${HELD_SESSION.sourceSessionId}`)).not.toContainText('started');
     await expect(parked).toContainText(PARKED_SESSION.reason);
     await expect(page.getByTestId(`coach-pipeline-${HELD_SESSION.sourceSessionId}`)).toContainText(HELD_SESSION.reason);
     await capture(page, testInfo, 'r3-pipeline-stuck', parked);

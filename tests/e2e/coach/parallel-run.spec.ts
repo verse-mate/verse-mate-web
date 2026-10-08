@@ -27,6 +27,7 @@ test.describe('A session observed during the parallel run', () => {
 
     const row = page.getByTestId(`coach-reshare-${PARALLEL_RUN_RESHARE.sourceSessionId}`);
     await expect(row).toContainText(LABEL);
+    await expect(row).toContainText('2026-08-15 · started 9:00 AM CDT ·');
     await expect(row.getByTestId(`coach-reshare-send-${PARALLEL_RUN_RESHARE.sourceSessionId}`)).toHaveCount(0);
     await capture(page, testInfo, 'pb1-parallel-run-reshare-row', row);
     await row.getByTestId(`coach-reshare-resolve-${PARALLEL_RUN_RESHARE.sourceSessionId}`).click();

@@ -20,6 +20,7 @@ const PARKED = {
   reason: 'the model answer failed validation',
   holdKind: null,
   parallelRun: false,
+  sessionStartedAt: null,
   action: 'requeue' as const,
   updatedAt: '2026-08-23T00:00:00Z',
 };
@@ -35,6 +36,7 @@ const HELD = {
   reason: 'injection tripwire',
   holdKind: 'review' as const,
   parallelRun: false,
+  sessionStartedAt: null,
   action: 'release' as const,
   updatedAt: '2026-08-30T00:00:00Z',
 };
@@ -50,6 +52,7 @@ const UNRESOLVED = {
   reason: 'unattributed: no leader matched the session title',
   holdKind: null,
   parallelRun: false,
+  sessionStartedAt: null,
   action: 'attribute' as const,
   updatedAt: '2026-09-30T00:00:00Z',
 };
@@ -65,6 +68,7 @@ const SKIPPED = {
   reason: 'delivered, but not emailed to wyatt-wellington@needs-real-email.invalid: placeholder address',
   holdKind: null,
   parallelRun: false,
+  sessionStartedAt: null,
   action: null,
   updatedAt: '2026-09-28T00:00:00Z',
 };
@@ -684,6 +688,19 @@ describe('a first lesson held for a cold-recall improvement', () => {
       expect(within(outcome).getByText(item).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
     }
     expect(outcome).toHaveTextContent(FIX);
+  });
+});
+
+describe('when a session started', () => {
+  it('shows the start time beside the date, in the time zone the date is counted in', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(
+      page([{ ...PARKED, sessionDate: '2026-09-19', sessionStartedAt: '2026-09-20T01:30:00.000Z' }, HELD]),
+    );
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    expect(await screen.findByTestId('coach-pipeline-ff-1')).toHaveTextContent('2026-09-19 · started 8:30 PM CDT ·');
+    expect(screen.getByTestId('coach-pipeline-ff-2')).not.toHaveTextContent('started');
   });
 });
 
