@@ -5,6 +5,21 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   addCoachLeader,
+  amendReport,
+  fetchCoverage,
+  fetchLeaderAttribution,
+  fetchPendingReshares,
+  fetchPipelineFailures,
+  fetchReportReview,
+  fetchReportRevisions,
+  mintRecordingUrl,
+  releaseHeldReport,
+  requeuePipelineFailure,
+  resolveReshareRequest,
+  saveLeaderAttribution,
+  sendReshareRequest,
+  sendRevision,
+  setFirstLesson,
   addCoachNote,
   attributeSession,
   CoachAuthError,
@@ -375,5 +390,52 @@ describe('coachService', () => {
     expect(data.profile.id).toBe('milo-kerr');
     expect(data.summary).toBeNull();
   });
-});
 
+  it.each<[string, () => Promise<unknown>, string, string, unknown]>([
+    ['mint a recording address', () => mintRecordingUrl('r/1'), 'GET', '/coach/reports/r%2F1/recording-url', undefined],
+    ['list pending re-shares', () => fetchPendingReshares(), 'GET', '/coach/admin/reshares', undefined],
+    ['ask for a re-share', () => sendReshareRequest('ff/1'), 'POST', '/coach/admin/reshares/ff%2F1/send', undefined],
+    ['resolve a re-share', () => resolveReshareRequest('ff/1'), 'POST', '/coach/admin/reshares/ff%2F1/resolve', undefined],
+    ['list pipeline failures', () => fetchPipelineFailures(), 'GET', '/coach/admin/pipeline-failures', undefined],
+    ['requeue a failure', () => requeuePipelineFailure('ff/1'), 'POST', '/coach/admin/pipeline-failures/ff%2F1/requeue', undefined],
+    ['assign a session', () => attributeSession('ff/4', 'amy-lee'), 'POST', '/coach/admin/sessions/ff%2F4/attribute', { coachId: 'amy-lee' }],
+    ['release a held report', () => releaseHeldReport('rep/2'), 'POST', '/coach/admin/reports/rep%2F2/release', undefined],
+    ['read a report review', () => fetchReportReview('rep/1'), 'GET', '/coach/admin/reports/rep%2F1/review', undefined],
+    [
+      'amend a report',
+      () => amendReport('rep/1', { body: { headline: 'x' } }),
+      'POST',
+      '/coach/admin/reports/rep%2F1/amend',
+      { body: { headline: 'x' } },
+    ],
+    [
+      'set the first-lesson flag',
+      () => setFirstLesson('rep/1', { firstLesson: false, score: 3, rationale: 'r' }),
+      'PUT',
+      '/coach/admin/reports/rep%2F1/first-lesson',
+      { firstLesson: false, score: 3, rationale: 'r' },
+    ],
+    ['list kept versions', () => fetchReportRevisions('rep/1'), 'GET', '/coach/admin/reports/rep%2F1/revisions', undefined],
+    ['send the latest revision', () => sendRevision('rep/1'), 'POST', '/coach/admin/reports/rep%2F1/revision/send', undefined],
+    ['read coverage', () => fetchCoverage(14), 'GET', '/coach/admin/coverage?windowDays=14', undefined],
+    ['attest not teaching', () => setNotTeaching('amy/lee', true), 'POST', '/coach/admin/leaders/amy%2Flee/not-teaching', undefined],
+    ['clear the attestation', () => setNotTeaching('amy/lee', false), 'DELETE', '/coach/admin/leaders/amy%2Flee/not-teaching', undefined],
+    ['change a leader address', () => updateLeaderEmail('amy/lee', 'a@example.test'), 'PUT', '/coach/admin/leaders/amy%2Flee/email', { email: 'a@example.test' }],
+    ['read keywords and addresses', () => fetchLeaderAttribution('amy/lee'), 'GET', '/coach/admin/leaders/amy%2Flee/attribution', undefined],
+    [
+      'save keywords and addresses',
+      () => saveLeaderAttribution('amy/lee', { titleMatch: ['ruth'], altEmails: [] }),
+      'PUT',
+      '/coach/admin/leaders/amy%2Flee/attribution',
+      { titleMatch: ['ruth'], altEmails: [] },
+    ],
+  ])('%s: exactly one request, with its method, path and body', async (_name, call, method, path, body) => {
+    mockFetch(() => jsonResponse({ email: 'a@example.test' }));
+    await call();
+    expect(calls).toHaveLength(1);
+    const [{ url, init }] = calls;
+    expect(init?.method ?? 'GET').toBe(method);
+    expect(url.slice(-path.length)).toBe(path);
+    expect(init?.body === undefined ? undefined : JSON.parse(String(init.body))).toEqual(body);
+  });
+});
