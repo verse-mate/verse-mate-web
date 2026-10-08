@@ -5,6 +5,8 @@ import {
   AWAITING_RELEASE_SESSIONS,
   capture,
   EMAIL_RULE,
+  FAILED_SEND_LEADER,
+  FAILED_SEND_SESSIONS,
   LEADER_ID,
   NEWEST_ID,
   OLDER_ID,
@@ -215,6 +217,49 @@ test.describe('The failures list', () => {
     await expect(row.getByTestId(`coach-address-edit-${PLACEHOLDER_LEADER.id}`)).toBeVisible();
     await expect(row.getByRole('button', { name: /release|queue/i })).toHaveCount(0);
     await capture(page, testInfo, 'w2a-skipped-placeholder', row);
+  });
+});
+
+test.describe('A failed send in the pipeline list', () => {
+  test('says why out of session replay, offers the address fix beside it, and the requeue once retries run out', async ({ page }, testInfo) => {
+    const writes: Array<[string, unknown]> = [];
+    const pipeline: string[] = [];
+    await useCoachApi(page, {
+      admin: true,
+      failedSends: true,
+      onAdminWrite: (m, p, b) => writes.push([`${m} ${p}`, b]),
+      onPipelineRequest: (u) => pipeline.push(u),
+    });
+    await openPipeline(page);
+    const [retrying, exhausted] = FAILED_SEND_SESSIONS;
+
+    for (const session of FAILED_SEND_SESSIONS) {
+      const row = page.getByTestId(`coach-pipeline-${session.sourceSessionId}`);
+      await expect(row).toContainText(FAILED_SEND_LEADER.name);
+      await expect(row).toContainText(`Why: ${session.reason}`);
+      await expect(row.locator(REPLAY_BLOCKED).filter({ hasText: 'send failed to' })).toHaveCount(1);
+      await expect(row.locator(REPLAY_BLOCKED).filter({ hasText: FAILED_SEND_LEADER.email })).not.toHaveCount(0);
+      await expect(row.getByTestId(`coach-address-edit-${FAILED_SEND_LEADER.id}`)).toBeVisible();
+      await expect(row.getByTestId(`coach-pipeline-release-${session.sourceSessionId}`)).toHaveCount(0);
+    }
+    const retryRow = page.getByTestId(`coach-pipeline-${retrying.sourceSessionId}`);
+    await expect(retryRow.getByTestId(`coach-pipeline-requeue-${retrying.sourceSessionId}`)).toHaveCount(0);
+    await capture(page, testInfo, 'p5-failed-send-retrying', retryRow);
+
+    const row = page.getByTestId(`coach-pipeline-${exhausted.sourceSessionId}`);
+    await expect(row).toContainText('retries exhausted: fix the failing address, then requeue it');
+    await row.getByTestId(`coach-address-edit-${FAILED_SEND_LEADER.id}`).click();
+    await row.getByTestId(`coach-address-input-${FAILED_SEND_LEADER.id}`).fill('carol@church.test');
+    await capture(page, testInfo, 'p5-failed-send-address-fix', row);
+    await row.getByTestId(`coach-address-save-${FAILED_SEND_LEADER.id}`).click();
+    await expect(row.getByTestId(`coach-address-${FAILED_SEND_LEADER.id}`)).toHaveText('carol@church.test');
+
+    await row.getByTestId(`coach-pipeline-requeue-${exhausted.sourceSessionId}`).click();
+    await expect(page.getByTestId(`coach-pipeline-${exhausted.sourceSessionId}`)).toHaveCount(0);
+    await expect(retryRow).toBeVisible();
+    expect(writes).toEqual([[`PUT /coach/admin/leaders/${FAILED_SEND_LEADER.id}/email`, { email: 'carol@church.test' }]]);
+    expect(pipeline.filter((u) => u.endsWith('/requeue'))).toEqual([`/coach/admin/pipeline-failures/${exhausted.sourceSessionId}/requeue`]);
+    await capture(page, testInfo, 'p5-failed-send-requeued');
   });
 });
 

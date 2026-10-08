@@ -284,6 +284,7 @@ export interface CoachApiOptions {
   prose?: boolean;
   firstLessonHeld?: boolean;
   awaitingRelease?: boolean;
+  failedSends?: boolean;
 }
 
 type ReviewKind = 'delivered' | 'undelivered' | 'in-flight' | 'partial' | 'legacy';
@@ -339,8 +340,9 @@ export const IN_FLIGHT_CORRECTION =
 export const NOT_LIVE_SEND =
   'The report is not live for the leader this revision was made for: it is held, not delivered, or re-attributed';
 const PARALLEL_RUN = 'The pipeline is in its parallel run: nothing is sent until cutover';
-const PARTIALLY_DELIVERED =
-  'Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.';
+export const PARTIALLY_DELIVERED =
+  "Refused: the report was already emailed to some of its recipients, so it can no longer be corrected or edited. Its remaining sends are retried automatically. If one keeps failing, fix that recipient's address and requeue the report from the pipeline failures list. Once every recipient has it, amend it.";
+export const EMPTY_EDIT = 'The edit changes nothing: give at least one improvement, different from the current ones';
 const ALREADY_DELIVERED = 'Refused: the report was already delivered. Amend it instead, which sends the leader a revised copy.';
 const PROSE_OF: Record<string, string> = {
   strengths: 'strengthsProse',
@@ -426,6 +428,7 @@ async function revisionRoutes(
   reviews: Map<string, Review>,
 ) {
   const revisions = new Map<string, Array<Record<string, unknown>>>();
+  const edits = new Map<string, Array<Record<string, unknown>>>();
   const recipients = { sentTo: ['leader@example.test'], skipped: [PLACEHOLDER_LEADER.email] };
   const failedSend = [{ email: 'leader@example.test', delivered: false, error: 'mailbox unavailable' }];
   const legacy = 'Refused: this is a legacy report, which is read-only. Change it at its source and it arrives through the backfill.';
@@ -502,6 +505,7 @@ async function revisionRoutes(
     const kept = revisions.get(reportId) ?? [];
     const revision = kept.length + 1;
     kept.unshift({
+      kind: 'revision',
       revision,
       previous: {},
       changes,
@@ -534,16 +538,34 @@ async function revisionRoutes(
     if (!Array.isArray(body?.improvements) || body.improvements.length > 10 || !body.improvements.every((x) => text(x, 4000)) || !validProse) {
       return json(route, 422, 'VALIDATION', 'Expected improvements: at most 10 items of at most 4000 characters, and at most 10 written-out points');
     }
+    if (body.improvements.length === 0) return invalid(route, EMPTY_EDIT);
     if (!review) return conflict(route, legacy);
     if (opts.deliveredBeforeFlag === reportId) review.delivered = true;
     if (review.delivered) return conflict(route, ALREADY_DELIVERED);
     if (review.partial) return conflict(route, PARTIALLY_DELIVERED);
     if (review.inFlight) return conflict(route, IN_FLIGHT_CORRECTION);
     const stored = store.get(reportId) as StoredReport;
-    const { improvementsProse: _cleared, ...kept } = stored.feedback as Record<string, unknown>;
+    const previous = stored.feedback as Record<string, unknown>;
+    const listOrNull = (v: unknown) => JSON.stringify(Array.isArray(v) && v.length > 0 ? v : null);
+    if (listOrNull(previous.improvements) === listOrNull(body.improvements) && listOrNull(previous.improvementsProse) === listOrNull(prose)) {
+      return invalid(route, EMPTY_EDIT);
+    }
+    const { improvementsProse: _cleared, ...kept } = previous;
     const feedback = { ...kept, improvements: body.improvements, ...(prose ? { improvementsProse: prose } : {}) };
     const coldRecall = review.firstLesson ? coldRecallIn(feedback) : [];
     if (coldRecall.length) return route.fulfill({ json: { applied: false, refusal: 'cold-recall-improvement', coldRecall } });
+    const made = edits.get(reportId) ?? [];
+    made.unshift({
+      kind: 'edit',
+      edit: made.length + 1,
+      changes: {
+        improvements: { from: previous.improvements ?? null, to: body.improvements },
+        improvementsProse: { from: previous.improvementsProse ?? null, to: prose ?? null },
+      },
+      editedBy: 'admin@example.test',
+      editedAt: new Date(Date.UTC(2026, 9, 7, 12 + made.length)).toISOString(),
+    });
+    edits.set(reportId, made);
     stored.feedback = feedback as StoredReport['feedback'];
     return route.fulfill({ json: { applied: true } });
   };
@@ -564,7 +586,9 @@ async function revisionRoutes(
       const { inFlight: _inFlight, partial: _partial, ...state } = review;
       return route.fulfill({ json: state });
     }
-    if (action === 'revisions') return route.fulfill({ json: { revisions: revisions.get(reportId) ?? [] } });
+    if (action === 'revisions') {
+      return route.fulfill({ json: { revisions: [...(revisions.get(reportId) ?? []), ...(edits.get(reportId) ?? [])] } });
+    }
     if (action === 'revision/send') {
       if (!review) return conflict(route, legacy);
       const send = sendLatest(reportId);
@@ -633,6 +657,36 @@ export const AWAITING_RELEASE_SESSIONS = (['delivery_pending', 'delivery_failed'
   action: 'release',
   updatedAt: `2026-09-1${3 + i}T00:00:00Z`,
 }));
+
+export const FAILED_SEND_LEADER = { id: 'uncovered', name: 'Carol Chen', email: 'carol@example.test' };
+const SEND_FAILED = `send failed to ${FAILED_SEND_LEADER.email} (mailbox unavailable); already emailed to leader@example.test`;
+
+export const FAILED_SEND_SESSIONS = [
+  {
+    sourceSessionId: 'ff-send-retrying',
+    coachId: FAILED_SEND_LEADER.id,
+    title: 'Ruth, Lesson 2',
+    sessionDate: '2026-09-19',
+    state: 'delivery_pending',
+    attempts: 2,
+    reportId: 'send-retrying',
+    reason: `${SEND_FAILED}; retried automatically (attempt 2 of 5), fix the failing address if it is wrong`,
+    action: null,
+    updatedAt: '2026-09-20T00:00:00Z',
+  },
+  {
+    sourceSessionId: 'ff-send-exhausted',
+    coachId: FAILED_SEND_LEADER.id,
+    title: 'Ruth, Lesson 3',
+    sessionDate: '2026-09-26',
+    state: 'delivery_failed',
+    attempts: 5,
+    reportId: 'send-exhausted',
+    reason: `${SEND_FAILED}; retries exhausted: fix the failing address, then requeue it`,
+    action: 'requeue',
+    updatedAt: '2026-09-27T00:00:00Z',
+  },
+];
 
 export const PLACEHOLDER_LEADER = { id: 'dana-diaz', name: 'Dana Diaz', email: 'dana-diaz@needs-real-email.invalid' };
 
@@ -761,9 +815,11 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     { ...HELD_SESSION },
     ...(opts.firstLessonHeld ? [{ ...FIRST_LESSON_HELD_SESSION }] : []),
     ...(opts.awaitingRelease ? AWAITING_RELEASE_SESSIONS.map((x) => ({ ...x })) : []),
+    ...(opts.failedSends ? FAILED_SEND_SESSIONS.map((x) => ({ ...x })) : []),
   ];
   const coverage = { ...COVERAGE, leaders: COVERAGE.leaders.map((l) => ({ ...l })) };
   const roster = [{ id: LEADER_ID, name: ME.profile.name }];
+  if (opts.failedSends) roster.push({ id: FAILED_SEND_LEADER.id, name: FAILED_SEND_LEADER.name });
   if (opts.leaderAdmin) {
     stuck.push({ ...UNRESOLVED_SESSION }, { ...SKIPPED_SESSION });
     coverage.leaders.push(...LEADER_ADMIN_COVERAGE.map((l) => ({ ...l })));
