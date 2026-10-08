@@ -1,7 +1,8 @@
-import { describe, it, expect } from 'vitest';
+import { afterEach, describe, it, expect, vi } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import SessionNotes from './SessionNotes';
+import * as coachService from '@/services/coachService';
 import type { CoachReport } from '@/services/coachService';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 
@@ -106,4 +107,24 @@ describe('SessionNotes', () => {
     fireEvent.click(screen.getByTestId('coach-recording-edit-r1'));
     expect(blocked(screen.getByTestId('coach-recording-input-r1'))).not.toBeNull();
   });
+
+  it('shows why a note on a held report was refused, and keeps the draft', async () => {
+    vi.spyOn(coachService, 'addCoachNote').mockRejectedValue(
+      new coachService.CoachApiError(
+        'x',
+        409,
+        'This report is held from its leader, so a note would email them about a report they cannot open. Release it first.',
+      ),
+    );
+    renderWithClient(<SessionNotes report={makeReport()} admin coachId="milo-kerr" leaderName="Milo Kerr" />);
+    fireEvent.change(screen.getByTestId('coach-note-input-r1'), { target: { value: 'Well done.' } });
+    fireEvent.click(screen.getByTestId('coach-note-send-r1'));
+
+    expect(await screen.findByTestId('coach-note-error-r1')).toHaveTextContent(
+      'Refused (409): This report is held from its leader, so a note would email them about a report they cannot open. Release it first.',
+    );
+    expect(screen.getByTestId('coach-note-input-r1')).toHaveValue('Well done.');
+  });
 });
+
+afterEach(() => vi.restoreAllMocks());
