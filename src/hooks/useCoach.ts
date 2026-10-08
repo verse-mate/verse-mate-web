@@ -59,6 +59,8 @@ import {
   fetchReportRevisions,
   sendRevision,
   setFirstLesson,
+  editImprovements,
+  type ImprovementsEdit,
   fetchLeaderAttribution,
   saveLeaderAttribution,
   type LeaderAttribution,
@@ -396,6 +398,16 @@ export function useSetFirstLesson(
   const refresh = useRefreshReport(coachId, reportId);
   return useMutation({
     mutationFn: (input) => setFirstLesson(reportId, input),
+    onSuccess: (result) => {
+      if (result.applied) refresh();
+    },
+  });
+}
+
+export function useEditImprovements(coachId: string, reportId: string): UseMutationResult<RevisionResult, Error, ImprovementsEdit> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({
+    mutationFn: (edit) => editImprovements(reportId, edit),
     onSuccess: (result) => {
       if (result.applied) refresh();
     },

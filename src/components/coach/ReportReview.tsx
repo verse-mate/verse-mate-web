@@ -1,11 +1,19 @@
 import { Fragment, useRef, useState } from 'react';
 
-import { useAmendReport, useReportReview, useReportRevisions, useSendRevision, useSetFirstLesson } from '@/hooks/useCoach';
+import {
+  useAmendReport,
+  useEditImprovements,
+  useReportReview,
+  useReportRevisions,
+  useSendRevision,
+  useSetFirstLesson,
+} from '@/hooks/useCoach';
 import { useRubric } from '@/hooks/useRubric';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import {
   AMENDABLE_BODY_FIELDS,
   type AmendableBodyField,
+  CoachApiError,
   type CoachFeedbackPoint,
   type CoachReport,
   PROSE_LISTS,
@@ -62,6 +70,9 @@ const CHANGE_LABELS: Record<AmendableBodyField | ProseField, string> = {
 const DELIVERED_MEANWHILE = 'This report was delivered meanwhile, so the flag goes through an amendment.';
 const CLEARED = 'Cleared: the leader reads the list instead';
 const MAX_POINTS = 10;
+const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
+const IMPROVEMENTS_SAVED =
+  'Improvements saved. Nothing was sent: the leader gets them when the report is delivered, and a held report goes out once it is released from the Pipeline list.';
 
 const PENDING_TEXT: Record<string, string> = {
   'parallel-run':
@@ -232,7 +243,7 @@ function amendOutcome(r: RevisionResult): Outcome {
     if (r.refusal === 'cold-recall-improvement') {
       return {
         tone: 'refused',
-        text: 'Not saved and not sent: a first lesson cannot carry an improvement that asks for recall of earlier lessons. Replace the held items under Improvements and submit again.',
+        text: `Not saved and not sent: ${COLD_RECALL_WHY}. Replace the held items under Improvements and submit again.`,
       };
     }
     return { tone: 'refused', text: `Not saved: ${r.refusal ?? 'refused'}.` };
@@ -295,7 +306,7 @@ export default function ReportReview({ report, coachId }: { report: CoachReport;
       setCarry(c);
       review.refetch();
     };
-    return <FirstLessonPanel review={review.data} reportId={report.id} coachId={coachId} onDelivered={delivered} />;
+    return <FirstLessonPanel review={review.data} report={report} coachId={coachId} onDelivered={delivered} />;
   }
   return <AmendPanel review={review.data} report={report} coachId={coachId} carry={carry} />;
 }
@@ -321,15 +332,16 @@ function firstLessonOutcome(r: RevisionResult, mr: string, clearedScore?: number
 
 function FirstLessonPanel({
   review,
-  reportId,
+  report,
   coachId,
   onDelivered,
 }: {
   review: ReportReviewState;
-  reportId: string;
+  report: CoachReport;
   coachId: string;
   onDelivered: (carry: Carry) => void;
 }) {
+  const reportId = report.id;
   const { rubric } = useRubric();
   const mr = rubric?.dimensions.find((d) => d.n === MEMORY_REINFORCEMENT)?.name ?? `Dimension ${MEMORY_REINFORCEMENT}`;
   const set = useSetFirstLesson(coachId, reportId);
@@ -437,6 +449,132 @@ function FirstLessonPanel({
               {set.isPending ? 'Saving…' : 'Clear the flag'}
             </button>
             <button type="button" onClick={() => setClearing(null)} disabled={set.isPending} style={linkBtn}>
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
+      <ImprovementsEditor
+        review={review}
+        report={report}
+        coachId={coachId}
+        onConflict={(outcome) => onDelivered({ firstLesson: review.firstLesson, applied: true, outcome })}
+      />
+    </div>
+  );
+}
+
+function ImprovementsEditor({
+  review,
+  report,
+  coachId,
+  onConflict,
+}: {
+  review: ReportReviewState;
+  report: CoachReport;
+  coachId: string;
+  onConflict: (outcome: Outcome) => void;
+}) {
+  const save = useEditImprovements(coachId, report.id);
+  const [edit, setEdit] = useState<{ initial: Draft; draft: Draft } | null>(null);
+  const [last, setLast] = useState<Last | null>(null);
+  const flying = useRef(false);
+  const body = edit ? amendmentOf(edit.initial, edit.draft).body : undefined;
+  const update = (next: (d: Draft) => Draft) => setEdit((e) => (e ? { ...e, draft: next(e.draft) } : e));
+
+  const open = () => {
+    const initial = initialDraft(review, report);
+    setEdit({ initial, draft: initial });
+    setLast(null);
+  };
+
+  const submit = () => {
+    if (!edit || !body || flying.current) return;
+    flying.current = true;
+    const input = {
+      improvements: (body.improvements as string[] | undefined) ?? lines(edit.initial.body.improvements),
+      ...(body.improvementsProse ? { improvementsProse: body.improvementsProse } : {}),
+    };
+    save.mutate(input, {
+      onSuccess: (r) => {
+        if (r.applied) {
+          setLast({ outcome: { tone: 'ok', text: IMPROVEMENTS_SAVED } });
+          setEdit(null);
+          return;
+        }
+        const why = r.refusal === 'cold-recall-improvement' ? `${COLD_RECALL_WHY}. Replace the held items and save again` : r.refusal ?? 'refused';
+        setLast({ outcome: { tone: 'refused', text: `Not saved: ${why}.` }, held: r.coldRecall });
+      },
+      onError: (err) => {
+        const outcome: Outcome = { tone: 'refused', text: refusalText(err) };
+        setLast({ outcome });
+        if (err instanceof CoachApiError && err.status === 409) onConflict(outcome);
+      },
+      onSettled: () => {
+        flying.current = false;
+      },
+    });
+  };
+
+  return (
+    <div>
+      <h4 style={h4}>Improvements</h4>
+      {last && (
+        <div data-testid="coach-improvements-outcome" role="status" style={{ ...outcomeStyle, color: toneColor(last.outcome.tone) }}>
+          {last.outcome.text}
+          {last.held?.length ? (
+            <ul data-testid="coach-improvements-held" style={list}>
+              {last.held.map((h) => (
+                <li key={h}>{h}</li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      )}
+      {!edit && (
+        <button type="button" onClick={open} data-testid="coach-improvements-open" style={btn}>
+          Edit the Improvements
+        </button>
+      )}
+      {edit && (
+        <div data-testid="coach-improvements-editor">
+          <p style={muted}>Saving replaces the report's Improvements before it goes out. Nothing is sent from here.</p>
+          <label style={fieldLabel} htmlFor={`improvements-${report.id}`}>
+            Improvements, one item per line
+          </label>
+          <textarea
+            id={`improvements-${report.id}`}
+            value={edit.draft.body.improvements}
+            onChange={(e) => {
+              const text = e.target.value;
+              update((d) => ({ ...d, body: { ...d.body, improvements: text } }));
+            }}
+            rows={4}
+            data-testid="coach-improvements-text"
+            style={textarea}
+          />
+          {edit.draft.prose.improvements && (
+            <ProsePoints
+              list="improvements"
+              items={edit.draft.prose.improvements}
+              listEdited={body?.improvements !== undefined}
+              pointsEdited={proseEdited(edit.initial, edit.draft, 'improvements')}
+              clear={!!edit.draft.clearProse.improvements}
+              onItems={(items) => update((d) => ({ ...d, prose: { ...d.prose, improvements: items } }))}
+              onClear={(clear) => update((d) => ({ ...d, clearProse: { ...d.clearProse, improvements: clear } }))}
+            />
+          )}
+          <div style={actions}>
+            <button
+              type="button"
+              onClick={submit}
+              disabled={!body || save.isPending}
+              data-testid="coach-improvements-save"
+              style={primaryBtn}
+            >
+              {save.isPending ? 'Saving…' : 'Save the Improvements'}
+            </button>
+            <button type="button" onClick={() => setEdit(null)} disabled={save.isPending} data-testid="coach-improvements-cancel" style={linkBtn}>
               Cancel
             </button>
           </div>
