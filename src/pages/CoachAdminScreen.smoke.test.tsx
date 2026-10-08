@@ -6,7 +6,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MemoryRouter } from 'react-router-dom';
 import CoachAdminScreen from './CoachAdminScreen';
@@ -25,6 +25,7 @@ vi.mock('@/services/coachService', async (io) => {
     fetchCoachTrendsFor: vi.fn(),
     fetchLeaderMonthlySummary: vi.fn(),
     fetchAllCoachClasses: vi.fn(),
+    addCoachLeader: vi.fn(),
   };
 });
 vi.mock('@/contexts/AppContext', () => ({
@@ -156,5 +157,50 @@ describe('Coach Oversight', () => {
     expect(nameButtons.length).toBeGreaterThan(0);
     fireEvent.click(nameButtons[0]);
     expect(await screen.findByText('Development · the coaching conversation')).toBeInTheDocument();
+  });
+});
+
+describe('adding a leader', () => {
+  const fillInvite = async () => {
+    fireEvent.click(await screen.findByTestId('oversight-add-leader'));
+    fireEvent.change(screen.getByTestId('oversight-invite-name'), { target: { value: 'Ezra Holt' } });
+    fireEvent.change(screen.getByTestId('oversight-invite-email'), { target: { value: 'joel2@example.test' } });
+    fireEvent.click(screen.getByTestId('oversight-invite-send'));
+  };
+
+  it("shows the server's refusal of a name whose id is taken, and keeps the form open", async () => {
+    vi.mocked(coachService.addCoachLeader).mockRejectedValue(
+      new coachService.CoachApiError(
+        'admin/leaders',
+        409,
+        'Another leader already uses the id "ezra-holt". Enter a different name.',
+      ),
+    );
+    renderScreen();
+    await fillInvite();
+
+    expect(await screen.findByTestId('oversight-invite-error')).toHaveTextContent(
+      'Another leader already uses the id "ezra-holt". Enter a different name.',
+    );
+    expect(screen.getByTestId('oversight-invite-modal')).toBeInTheDocument();
+    expect(screen.getByTestId('oversight-invite-name')).toHaveValue('Ezra Holt');
+  });
+
+  it('opens the new leader by the id the server returned', async () => {
+    vi.mocked(coachService.addCoachLeader).mockResolvedValue({
+      id: 'ezra-holt-2',
+      name: 'Ezra Holt',
+      group: '',
+      coachName: '',
+      sessionCount: 0,
+      latest: null,
+    });
+    renderScreen();
+    await fillInvite();
+
+    await waitFor(() => expect(screen.queryByTestId('oversight-invite-modal')).toBeNull());
+    await waitFor(() =>
+      expect(coachService.fetchCoachReportSummaries).toHaveBeenCalledWith(0, 50, 'ezra-holt-2'),
+    );
   });
 });
