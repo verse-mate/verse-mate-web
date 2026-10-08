@@ -94,7 +94,7 @@ export default function PipelineHealth() {
 
   const record = (s: PipelineFailure, outcome: Outcome) => {
     setOutcomes((o) => ({ ...o, [s.sourceSessionId]: outcome }));
-    if (outcome.tone === 'ok') toast.success(`${s.title || 'Session'}: ${outcome.text}`);
+    if (outcome.tone === 'ok') toast.success(outcome.text);
   };
 
   const run = async (s: PipelineFailure, act: () => Promise<Outcome>) => {
