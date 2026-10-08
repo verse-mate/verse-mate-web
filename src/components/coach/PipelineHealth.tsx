@@ -76,35 +76,37 @@ export default function PipelineHealth() {
   const requeue = useRequeuePipelineFailure();
   const release = useReleaseHeldReport();
   const [outcomes, setOutcomes] = useState<Record<string, Outcome>>({});
-  const [busy, setBusy] = useState<string | null>(null);
+  const [busy, setBusy] = useState<ReadonlySet<string>>(() => new Set());
 
   const record = (s: PipelineFailure, outcome: Outcome) => {
     setOutcomes((o) => ({ ...o, [s.sourceSessionId]: outcome }));
     if (outcome.tone === 'ok') toast.success(`${s.title || 'Session'}: ${outcome.text}`);
   };
 
-  const doRequeue = async (s: PipelineFailure) => {
-    setBusy(s.sourceSessionId);
+  const run = async (s: PipelineFailure, act: () => Promise<Outcome>) => {
+    const id = s.sourceSessionId;
+    setBusy((b) => new Set(b).add(id));
     try {
-      await requeue.mutateAsync(s.sourceSessionId);
-      record(s, { tone: 'ok', text: 'Back in the queue.' });
+      record(s, await act());
     } catch (err) {
       record(s, { tone: 'refused', text: refusalText(err) });
     } finally {
-      setBusy(null);
+      setBusy((b) => {
+        const next = new Set(b);
+        next.delete(id);
+        return next;
+      });
     }
   };
 
-  const doRelease = async (s: PipelineFailure, reportId: string) => {
-    setBusy(s.sourceSessionId);
-    try {
-      record(s, releaseText(await release.mutateAsync(reportId)));
-    } catch (err) {
-      record(s, { tone: 'refused', text: refusalText(err) });
-    } finally {
-      setBusy(null);
-    }
-  };
+  const doRequeue = (s: PipelineFailure) =>
+    run(s, async () => {
+      await requeue.mutateAsync(s.sourceSessionId);
+      return { tone: 'ok', text: 'Back in the queue.' };
+    });
+
+  const doRelease = (s: PipelineFailure, reportId: string) =>
+    run(s, async () => releaseText(await release.mutateAsync(reportId)));
 
   return (
     <div style={{ paddingTop: 22 }} data-testid="coach-pipeline">
@@ -149,7 +151,7 @@ export default function PipelineHealth() {
                         <button
                           type="button"
                           onClick={() => doRelease(s, reportId)}
-                          disabled={busy === s.sourceSessionId}
+                          disabled={busy.has(s.sourceSessionId)}
                           data-testid={`coach-pipeline-release-${s.sourceSessionId}`}
                           style={btn}
                         >
@@ -159,7 +161,7 @@ export default function PipelineHealth() {
                       <button
                         type="button"
                         onClick={() => doRequeue(s)}
-                        disabled={busy === s.sourceSessionId}
+                        disabled={busy.has(s.sourceSessionId)}
                         data-testid={`coach-pipeline-requeue-${s.sourceSessionId}`}
                         style={btn}
                       >

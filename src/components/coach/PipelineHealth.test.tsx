@@ -8,7 +8,7 @@ import PipelineHealth from './PipelineHealth';
 
 const PARKED = {
   sourceSessionId: 'ff-1',
-  coachId: 'jeff-ward',
+  coachId: 'milo-kerr',
   title: 'Obadiah, Lesson 4',
   sessionDate: '2026-08-22',
   state: 'scoring_failed',
@@ -35,9 +35,9 @@ const COVERAGE = {
   allCovered: false,
   leaders: [
     {
-      coachId: 'jeff-ward',
-      name: 'Jeff Ward',
-      email: 'jeff@example.test',
+      coachId: 'milo-kerr',
+      name: 'Milo Kerr',
+      email: 'milo@example.test',
       covered: true,
       basis: 'observed',
       observedSessions: 4,
@@ -106,6 +106,32 @@ describe('what is stuck in the pipeline', () => {
     fireEvent.click(await screen.findByTestId('coach-pipeline-release-ff-2'));
     await waitFor(() => expect(release).toHaveBeenCalledWith('rep-2'));
     expect(await screen.findByTestId('coach-pipeline-outcome-ff-2')).toHaveTextContent(/delivered/i);
+  });
+
+  it('keeps a release disabled while it is in flight, whatever another row does', async () => {
+    const other = { ...HELD, sourceSessionId: 'ff-3', reportId: 'rep-3', title: 'Ruth, Lesson 2' };
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([HELD, other]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    const pending: Record<string, (o: { delivered: boolean }) => void> = {};
+    const release = vi
+      .spyOn(coachService, 'releaseHeldReport')
+      .mockImplementation((id) => new Promise((resolve) => { pending[id] = resolve; }));
+    renderView();
+
+    const first = await screen.findByTestId('coach-pipeline-release-ff-2');
+    fireEvent.click(first);
+    fireEvent.click(screen.getByTestId('coach-pipeline-release-ff-3'));
+    await waitFor(() => expect(release).toHaveBeenCalledTimes(2));
+    expect(first).toBeDisabled();
+
+    pending['rep-3']({ delivered: false });
+    await screen.findByTestId('coach-pipeline-outcome-ff-3');
+    expect(first).toBeDisabled();
+    fireEvent.click(first);
+    expect(release).toHaveBeenCalledTimes(2);
+
+    pending['rep-2']({ delivered: false });
+    await waitFor(() => expect(first).not.toBeDisabled());
   });
 
   it('offers no release on a session that has no report', async () => {
@@ -181,7 +207,7 @@ describe('recording-bot coverage', () => {
     renderView();
 
     expect(await screen.findByTestId('coach-coverage-summary')).toHaveTextContent(/1 of 2/);
-    expect(screen.getByTestId('coach-coverage-jeff-ward')).toHaveTextContent(/covered/i);
+    expect(screen.getByTestId('coach-coverage-milo-kerr')).toHaveTextContent(/covered/i);
     expect(screen.getByTestId('coach-coverage-amy-lee')).toHaveTextContent(/not covered/i);
   });
 
