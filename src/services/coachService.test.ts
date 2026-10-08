@@ -44,6 +44,7 @@ import {
   statusColor,
   updateCoachClass,
   updateLeaderEmail,
+  needsBenchmarkConfirm,
 } from './coachService';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -317,6 +318,20 @@ describe('coachService', () => {
       return jsonResponse({ email: 'wyatt@example.test', noticeSent: true });
     });
     expect(await updateLeaderEmail('wyatt-wellington', 'Wyatt@Example.test')).toEqual({ email: 'wyatt@example.test', noticeSent: true });
+  });
+
+  it("asks for the benchmark confirm on the server's confirm-required refusal code, never on the wording of its message", async () => {
+    mockFetch(() =>
+      jsonResponse({ error: 'CONFLICT', message: 'Reworded by the server', details: { refusal: 'confirm-required' } }, 409),
+    );
+    const coded = await updateLeaderEmail('nora-quill', 'nora@example.org').catch((e) => e);
+    expect(needsBenchmarkConfirm(coded)).toBe(true);
+
+    mockFetch(() =>
+      jsonResponse({ error: 'CONFLICT', message: 'Another leader already uses that address; send confirm: true to change it' }, 409),
+    );
+    const worded = await updateLeaderEmail('nora-quill', 'nora@example.org').catch((e) => e);
+    expect(needsBenchmarkConfirm(worded)).toBe(false);
   });
 
   it('POSTs the leader a session is assigned to', async () => {
