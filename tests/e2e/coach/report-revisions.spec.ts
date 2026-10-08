@@ -595,6 +595,53 @@ test.describe('The fake API holds the portal to the real methods', () => {
   });
 
 
+  async function call(page: Page, path: string, method: string, body?: unknown) {
+    return page.evaluate(
+      async ({ api, path, method, body }) => {
+        const r = await fetch(`${api}/coach/${path}`, {
+          method,
+          headers: { 'content-type': 'application/json' },
+          body: body === undefined ? undefined : JSON.stringify(body),
+        });
+        return { status: r.status, body: await r.json() };
+      },
+      { api: process.env.VITE_API_URL ?? 'https://api.versemate.org', path, method, body },
+    );
+  }
+
+  test('a send checks for a mailer before the parallel run, and an amendment checks the parallel run first', async ({ page }) => {
+    await useCoachApi(page, { admin: true, noMailer: true });
+    await page.goto('/coach');
+    expect(await call(page, `admin/reports/${NEWEST_ID}/revision/send`, 'POST')).toEqual({
+      status: 409,
+      body: { error: 'CONFLICT', message: 'No mailer is configured' },
+    });
+    const amended = await call(page, `admin/reports/${NEWEST_ID}/amend`, 'POST', { body: { headline: 'Revised' } });
+    expect(amended.body).toMatchObject({ applied: true, sent: false, pending: 'parallel-run' });
+  });
+
+  test('a send on a legacy report finds no revision', async ({ page }) => {
+    await useCoachApi(page, { admin: true, pipelineLive: true, reviews: { [NEWEST_ID]: 'legacy' } });
+    await page.goto('/coach');
+    expect(await call(page, `admin/reports/${NEWEST_ID}/revision/send`, 'POST')).toEqual({
+      status: 404,
+      body: { error: 'NOT_FOUND', message: 'That report has no revision' },
+    });
+  });
+
+  test('a leader is flagged for a class disagreement only when a class is linked, and never once marked not teaching', async ({ page }) => {
+    await useCoachApi(page, { admin: true, leaderAdmin: true });
+    await page.goto('/coach');
+    type Leader = { coachId: string; classAlert: boolean; linkedClassName: string | null };
+    const before = (await call(page, 'admin/coverage', 'GET')).body.leaders as Leader[];
+    expect(before.filter((l) => l.classAlert && l.linkedClassName === null)).toEqual([]);
+    const alerted = before.find((l) => l.classAlert);
+    expect(alerted).toBeDefined();
+    await call(page, `admin/leaders/${alerted?.coachId}/not-teaching`, 'POST');
+    const after = (await call(page, 'admin/coverage', 'GET')).body.leaders as Leader[];
+    expect(after.find((l) => l.coachId === alerted?.coachId)?.classAlert).toBe(false);
+  });
+
   test('a write sent with the wrong method is not found', async ({ page }) => {
     await useCoachApi(page, { admin: true, leaderAdmin: true });
     await page.goto('/coach');
