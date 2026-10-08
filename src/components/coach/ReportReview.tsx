@@ -398,7 +398,8 @@ function FirstLessonPanel({
 
   return (
     <div data-testid={`coach-review-${reportId}`} className={REPLAY_BLOCK_CLASS} style={panel}>
-      <h3 style={h3}>First lesson</h3>
+      <h3 style={h3}>Review before delivery</h3>
+      <h4 style={h4}>First lesson</h4>
       <FirstLessonState review={review} />
       {outcome && (
         <div data-testid="coach-first-lesson-outcome" role="status" style={{ ...outcomeStyle, color: toneColor(outcome.tone) }}>
