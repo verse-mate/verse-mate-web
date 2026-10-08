@@ -195,6 +195,27 @@ describe('amending a delivered report', () => {
     );
   });
 
+  it('shows an amendment refused while a revised copy is being sent in words, and keeps the draft to submit again', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'amendReport').mockRejectedValue(
+      new CoachApiError(
+        'x',
+        409,
+        'Refused: a revised copy of this report is being sent right now. Amend it again once that send finishes.',
+      ),
+    );
+    renderReview();
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'New' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+
+    const outcome = await screen.findByTestId('coach-amend-outcome');
+    expect(outcome).toHaveTextContent('a revised copy of this report is being sent right now. Amend it again once that send finishes.');
+    expect(outcome).not.toHaveTextContent('revision-sending');
+    expect(screen.getByTestId('coach-amend-headline')).toHaveValue('New');
+  });
+
   it('shows an amendment refused while the report is being delivered or re-scored', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
     vi.spyOn(coachService, 'amendReport').mockRejectedValue(
