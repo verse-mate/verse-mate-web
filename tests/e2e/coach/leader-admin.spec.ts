@@ -48,6 +48,43 @@ test.describe("A leader's address", () => {
   });
 });
 
+test.describe("A leader's title keywords and alternate addresses", () => {
+  test('load the current lists, refuse a short keyword, and a saved keyword resolves a session', async ({ page }, testInfo) => {
+    const writes: Array<[string, unknown]> = [];
+    await useCoachApi(page, { admin: true, leaderAdmin: true, onAdminWrite: (_m, p, b) => writes.push([p, b]) });
+    await openPipeline(page);
+
+    const row = page.getByTestId('coach-coverage-evan-ellis');
+    await row.getByTestId('coach-attribution-edit-evan-ellis').click();
+    const keywords = row.getByTestId('coach-attribution-keywords-evan-ellis');
+    await expect(keywords).toHaveValue('tuesday night');
+    await expect(row.getByTestId('coach-attribution-emails-evan-ellis')).toHaveValue('evan.personal@example.test');
+    await expect(keywords.locator('xpath=ancestor::*[contains(@class,"ph-no-capture")]')).toHaveCount(1);
+
+    await keywords.fill('tuesday night\nhb');
+    await expect(row.getByTestId('coach-attribution-error-evan-ellis')).toContainText('at least three characters: hb');
+    await expect(row.getByTestId('coach-attribution-save-evan-ellis')).toBeDisabled();
+    await capture(page, testInfo, 'w2b-attribution-short-keyword', row);
+
+    await row.getByTestId('coach-attribution-emails-evan-ellis').fill('evan.personal@example.test\nnot-an-address');
+    await keywords.fill('tuesday night\nHabakkuk study');
+    await row.getByTestId('coach-attribution-save-evan-ellis').click();
+    await expect(row.getByTestId('coach-attribution-error-evan-ellis')).toContainText(
+      'Refused (400): Each alternate address must be a valid email address',
+    );
+
+    await row.getByTestId('coach-attribution-emails-evan-ellis').fill('evan.personal@example.test');
+    await row.getByTestId('coach-attribution-save-evan-ellis').click();
+    await expect(row.getByTestId('coach-attribution-saved-evan-ellis')).toHaveText('Saved. 1 unattributed session now matches a leader.');
+    await expect(page.getByTestId(`coach-pipeline-${UNRESOLVED_SESSION.sourceSessionId}`)).toHaveCount(0);
+    expect(writes.at(-1)).toEqual([
+      '/coach/admin/leaders/evan-ellis/attribution',
+      { titleMatch: ['tuesday night', 'Habakkuk study'], altEmails: ['evan.personal@example.test'] },
+    ]);
+    await capture(page, testInfo, 'w2b-attribution-saved', row);
+  });
+});
+
 test.describe('The failures list', () => {
   test('assigns an unresolved session to a leader from the roster', async ({ page }, testInfo) => {
     const writes: Array<[string, unknown]> = [];

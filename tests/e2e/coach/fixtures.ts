@@ -563,12 +563,36 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     coverage.leaders.push(...LEADER_ADMIN_COVERAGE.map((l) => ({ ...l })));
     roster.push({ id: PLACEHOLDER_LEADER.id, name: PLACEHOLDER_LEADER.name }, { id: 'evan-ellis', name: 'Evan Ellis' });
   }
+  const attributions: Record<string, { titleMatch: string[]; altEmails: string[] }> = {
+    'evan-ellis': { titleMatch: ['tuesday night'], altEmails: ['evan.personal@example.test'] },
+  };
   const write = async (route: Route) => {
     const req = route.request();
     const url = new URL(req.url());
     const body = req.postData() ? JSON.parse(req.postData() as string) : null;
-    opts.onAdminWrite?.(req.method(), url.pathname, body);
+    if (req.method() !== 'GET') opts.onAdminWrite?.(req.method(), url.pathname, body);
     const leaderOf = (id: string) => coverage.leaders.find((l) => l.coachId === id);
+    const attribution = url.pathname.match(/admin\/leaders\/([^/]+)\/attribution$/);
+    if (attribution) {
+      const id = decodeURIComponent(attribution[1]);
+      if (!leaderOf(id)) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'Leader not found' } });
+      const lists = (attributions[id] ??= { titleMatch: [], altEmails: [] });
+      if (req.method() === 'GET') return route.fulfill({ json: lists });
+      if (body.titleMatch.some((k: string) => k.trim().length < 3)) {
+        return route.fulfill({ status: 400, json: { error: 'VALIDATION', message: 'Each title keyword needs at least three characters' } });
+      }
+      if (body.altEmails.some((e: string) => !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e.trim()))) {
+        return route.fulfill({ status: 400, json: { error: 'VALIDATION', message: 'Each alternate address must be a valid email address' } });
+      }
+      lists.titleMatch = body.titleMatch.map((k: string) => k.trim().toLowerCase());
+      lists.altEmails = body.altEmails.map((e: string) => e.trim().toLowerCase());
+      const before = stuck.length;
+      for (let i = stuck.length - 1; i >= 0; i--) {
+        const title = String(stuck[i].title).toLowerCase();
+        if (stuck[i].action === 'attribute' && lists.titleMatch.some((k) => title.includes(k))) stuck.splice(i, 1);
+      }
+      return route.fulfill({ json: { ...lists, resolved: before - stuck.length } });
+    }
     const email = url.pathname.match(/admin\/leaders\/([^/]+)\/email$/);
     if (email) {
       const taken = coverage.leaders.find((l) => l.email === body.email && l.coachId !== email[1]);
