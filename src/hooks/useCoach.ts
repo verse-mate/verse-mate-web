@@ -427,7 +427,7 @@ export function useSetFirstLesson(
 export function useCorrectDimension(
   coachId: string,
   reportId: string,
-): UseMutationResult<{ base: number; status: string }, Error, { n: number } & DimensionCorrection> {
+): UseMutationResult<{ base: number; score: number; status: string }, Error, { n: number } & DimensionCorrection> {
   const refresh = useRefreshReport(coachId, reportId);
   return useMutation({
     mutationFn: ({ n, ...correction }) => correctDimension(reportId, n, correction),
