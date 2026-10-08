@@ -14,6 +14,7 @@ import { vmTokens } from '@/styles/themeStyles';
 import { type CoachReport } from '@/services/coachService';
 import { CoachCard, ScoreRing, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
+import ReportReview from './ReportReview';
 import SessionNotes from './SessionNotes';
 
 // Darker body grey than the token default, matches the shared <ReportBody>.
@@ -102,6 +103,8 @@ export default function ReportDetail({
 
       {/* The coaching narrative, shared with the expanded <ReportCard>. */}
       <ReportBody report={report} />
+
+      {admin && coachId && <ReportReview report={report} coachId={coachId} />}
     </CoachCard>
   );
 }

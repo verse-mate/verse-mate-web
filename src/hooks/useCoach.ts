@@ -54,6 +54,15 @@ import {
   updateLeaderEmail,
   attributeSession,
   setNotTeaching,
+  amendReport,
+  fetchReportReview,
+  fetchReportRevisions,
+  sendRevision,
+  type ReportAmendment,
+  type ReportReviewState,
+  type ReportRevision,
+  type RevisionResult,
+  type RevisionSendResult,
 } from '@/services/coachService';
 
 export const coachKeys = {
@@ -66,6 +75,8 @@ export const coachKeys = {
   pipelineFailures: ['coach', 'admin', 'pipeline-failures'] as const,
   coverage: ['coach', 'admin', 'coverage'] as const,
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
+  reportReview: (reportId: string) => ['coach', 'admin', 'review', reportId] as const,
+  reportRevisions: (reportId: string) => ['coach', 'admin', 'revisions', reportId] as const,
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
   adminMonthly: (month: string) => ['coach', 'admin', 'monthly', month] as const,
   monthlySummary: (month: string) => ['coach', 'monthly-summary', month] as const,
@@ -323,4 +334,43 @@ export function useSetNotTeaching(): UseMutationResult<{ attested: boolean }, Er
     mutationFn: ({ coachId, attested }) => setNotTeaching(coachId, attested),
     onSuccess: () => qc.invalidateQueries({ queryKey: coachKeys.coverage }),
   });
+}
+
+export function useReportReview(reportId: string): UseQueryResult<ReportReviewState | null> {
+  return useQuery({ queryKey: coachKeys.reportReview(reportId), queryFn: () => fetchReportReview(reportId), retry: false });
+}
+
+export function useReportRevisions(reportId: string, enabled: boolean): UseQueryResult<ReportRevision[]> {
+  return useQuery({
+    queryKey: coachKeys.reportRevisions(reportId),
+    queryFn: () => fetchReportRevisions(reportId),
+    retry: false,
+    enabled,
+  });
+}
+
+function useRefreshReport(coachId: string, reportId: string) {
+  const qc = useQueryClient();
+  return () => {
+    qc.invalidateQueries({ queryKey: coachKeys.reportReview(reportId) });
+    qc.invalidateQueries({ queryKey: coachKeys.reportRevisions(reportId) });
+    qc.invalidateQueries({ queryKey: coachKeys.adminReports(coachId) });
+    qc.invalidateQueries({ queryKey: coachKeys.adminTrends(coachId) });
+    qc.invalidateQueries({ queryKey: coachKeys.reports });
+  };
+}
+
+export function useAmendReport(coachId: string, reportId: string): UseMutationResult<RevisionResult, Error, ReportAmendment> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({
+    mutationFn: (amendment) => amendReport(reportId, amendment),
+    onSuccess: (result) => {
+      if (result.applied) refresh();
+    },
+  });
+}
+
+export function useSendRevision(coachId: string, reportId: string): UseMutationResult<RevisionSendResult, Error, void> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({ mutationFn: () => sendRevision(reportId), onSettled: refresh });
 }

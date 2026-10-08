@@ -14,25 +14,16 @@ import {
 } from '@/hooks/useCoach';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import {
-  CoachApiError,
   CoachAuthError,
   type CoverageLeader,
   isPlaceholderAddress,
   type PipelineFailure,
+  refusalText,
   type ReleaseOutcome,
 } from '@/services/coachService';
 import { dt } from './dashboardTheme';
 
 type Outcome = { tone: 'ok' | 'refused'; text: string };
-
-function refusalText(err: unknown): string {
-  if (err instanceof CoachAuthError) return 'Refused: this account does not have admin access.';
-  if (err instanceof CoachApiError) {
-    const kind = err.status >= 500 ? 'Server error' : 'Refused';
-    return `${kind} (${err.status})${err.serverMessage ? `: ${err.serverMessage}` : ''}`;
-  }
-  return 'The request failed.';
-}
 
 function releaseText(outcome: ReleaseOutcome): Outcome {
   if (outcome.delivered) {
