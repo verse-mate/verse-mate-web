@@ -327,3 +327,90 @@ describe('a legacy report', () => {
     expect(screen.queryByTestId('coach-amend-open')).toBeNull();
   });
 });
+
+describe('the first-lesson flag on an undelivered report', () => {
+  const UNDELIVERED: ReportReviewState = { ...REVIEW, delivered: false };
+
+  it('says whether the flag was detected or set by hand, and names the passage book', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...UNDELIVERED, firstLesson: true, firstLessonSource: 'detected' });
+    renderReview();
+    const state = await screen.findByTestId('coach-first-lesson-state');
+    expect(state).toHaveTextContent('First lesson: yes, detected by the pipeline. Passage book: Jonah.');
+    expect(screen.queryByTestId('coach-amend-open')).toBeNull();
+  });
+
+  it('says when the book is not known and the flag was set by hand', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({
+      ...UNDELIVERED,
+      firstLesson: true,
+      firstLessonSource: 'admin',
+      passageBook: null,
+    });
+    renderReview();
+    expect(await screen.findByTestId('coach-first-lesson-state')).toHaveTextContent(
+      'First lesson: yes, set by hand. Passage book not known.',
+    );
+  });
+
+  it('sets the flag', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    const set = vi
+      .spyOn(coachService, 'setFirstLesson')
+      .mockResolvedValue({ applied: true, firstLesson: true, base: 82, score: 84, status: 'Strong' });
+    renderReview();
+    expect(await screen.findByTestId('coach-first-lesson-state')).toHaveTextContent('First lesson: no.');
+    fireEvent.click(screen.getByTestId('coach-first-lesson-set'));
+    await waitFor(() => expect(set).toHaveBeenCalledWith('rep-1', { firstLesson: true }));
+    expect(await screen.findByTestId('coach-first-lesson-outcome')).toHaveTextContent(
+      'Marked a first lesson. Memory Reinforcement is not applicable. Score 84 (Strong).',
+    );
+  });
+
+  it('clearing asks for the Memory Reinforcement score and rationale', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...UNDELIVERED, firstLesson: true, firstLessonSource: 'detected' });
+    const set = vi
+      .spyOn(coachService, 'setFirstLesson')
+      .mockResolvedValue({ applied: true, firstLesson: false, base: 79, score: 81, status: 'Strong' });
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-first-lesson-clear'));
+    const save = screen.getByTestId('coach-first-lesson-save');
+    expect(save).toBeDisabled();
+    expect(screen.getByLabelText('Memory Reinforcement score')).toBeInTheDocument();
+    fireEvent.change(screen.getByTestId('coach-first-lesson-score'), { target: { value: '3' } });
+    expect(save).toBeDisabled();
+    fireEvent.change(screen.getByTestId('coach-first-lesson-rationale'), { target: { value: ' Reviewed last week before the new text ' } });
+    expect(screen.getByTestId('coach-first-lesson-rationale').closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    fireEvent.click(save);
+    await waitFor(() =>
+      expect(set).toHaveBeenCalledWith('rep-1', {
+        firstLesson: false,
+        score: 3,
+        rationale: 'Reviewed last week before the new text',
+      }),
+    );
+    expect(await screen.findByTestId('coach-first-lesson-outcome')).toHaveTextContent(
+      'First-lesson flag cleared. Memory Reinforcement is scored 3, recorded as corrected by hand. Score 81 (Strong).',
+    );
+  });
+
+  it('shows the refusal when the server will not change the flag', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    vi.spyOn(coachService, 'setFirstLesson').mockRejectedValue(
+      new CoachApiError('x', 409, 'Refused: this is a legacy report, which is read-only.'),
+    );
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-first-lesson-set'));
+    expect(await screen.findByTestId('coach-first-lesson-outcome')).toHaveTextContent(
+      'Refused (409): Refused: this is a legacy report, which is read-only.',
+    );
+  });
+});
+
+describe('the first-lesson flag on a delivered report', () => {
+  it('shows where the flag came from beside the amend action', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...REVIEW, firstLesson: true, firstLessonSource: 'admin' });
+    renderReview();
+    expect(await screen.findByTestId('coach-first-lesson-state')).toHaveTextContent('First lesson: yes, set by hand.');
+    expect(screen.queryByTestId('coach-first-lesson-set')).toBeNull();
+  });
+});

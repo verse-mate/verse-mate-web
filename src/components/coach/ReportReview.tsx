@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 
-import { useAmendReport, useReportReview, useReportRevisions, useSendRevision } from '@/hooks/useCoach';
+import { useAmendReport, useReportReview, useReportRevisions, useSendRevision, useSetFirstLesson } from '@/hooks/useCoach';
 import { useRubric } from '@/hooks/useRubric';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import {
@@ -200,8 +200,128 @@ export default function ReportReview({ report, coachId }: { report: CoachReport;
       </div>
     );
   }
-  if (!review.data.delivered) return null;
+  if (!review.data.delivered) return <FirstLessonPanel review={review.data} reportId={report.id} coachId={coachId} />;
   return <AmendPanel review={review.data} report={report} coachId={coachId} />;
+}
+
+function FirstLessonState({ review }: { review: ReportReviewState }) {
+  const source =
+    review.firstLessonSource === 'admin' ? ', set by hand' : review.firstLessonSource === 'detected' ? ', detected by the pipeline' : '';
+  const book = review.passageBook ? `Passage book: ${review.passageBook}.` : 'Passage book not known.';
+  return (
+    <p data-testid="coach-first-lesson-state" style={muted}>
+      First lesson: {review.firstLesson ? `yes${source}` : 'no'}. {book}
+    </p>
+  );
+}
+
+function firstLessonOutcome(r: RevisionResult, mr: string, clearedScore?: number): Outcome {
+  if (!r.applied) return amendOutcome(r);
+  const score = r.score !== undefined ? ` Score ${r.score} (${r.status}).` : '';
+  return r.firstLesson
+    ? { tone: 'ok', text: `Marked a first lesson. ${mr} is not applicable.${score}` }
+    : { tone: 'ok', text: `First-lesson flag cleared. ${mr} is scored ${clearedScore}, recorded as corrected by hand.${score}` };
+}
+
+function FirstLessonPanel({ review, reportId, coachId }: { review: ReportReviewState; reportId: string; coachId: string }) {
+  const { rubric } = useRubric();
+  const mr = rubric?.dimensions.find((d) => d.n === MEMORY_REINFORCEMENT)?.name ?? `Dimension ${MEMORY_REINFORCEMENT}`;
+  const set = useSetFirstLesson(coachId, reportId);
+  const [clearing, setClearing] = useState<{ score: number | null; rationale: string } | null>(null);
+  const [outcome, setOutcome] = useState<Outcome | null>(null);
+
+  const submit = (input: { firstLesson: boolean; score?: number; rationale?: string }) => {
+    setOutcome(null);
+    set.mutate(input, {
+      onSuccess: (r) => {
+        setOutcome(firstLessonOutcome(r, mr, input.score));
+        if (r.applied) setClearing(null);
+      },
+      onError: (err) => setOutcome({ tone: 'refused', text: refusalText(err) }),
+    });
+  };
+
+  return (
+    <div data-testid={`coach-review-${reportId}`} className={REPLAY_BLOCK_CLASS} style={panel}>
+      <h3 style={h3}>First lesson</h3>
+      <FirstLessonState review={review} />
+      {outcome && (
+        <div data-testid="coach-first-lesson-outcome" role="status" style={{ ...outcomeStyle, color: toneColor(outcome.tone) }}>
+          {outcome.text}
+        </div>
+      )}
+      {!review.firstLesson && (
+        <button
+          type="button"
+          onClick={() => submit({ firstLesson: true })}
+          disabled={set.isPending}
+          data-testid="coach-first-lesson-set"
+          style={btn}
+        >
+          Mark as first lesson
+        </button>
+      )}
+      {review.firstLesson && !clearing && (
+        <button
+          type="button"
+          onClick={() => setClearing({ score: null, rationale: '' })}
+          data-testid="coach-first-lesson-clear"
+          style={btn}
+        >
+          Clear first lesson
+        </button>
+      )}
+      {review.firstLesson && clearing && (
+        <div>
+          <p style={muted}>Clearing the flag scores {mr} again. Give its score and rationale.</p>
+          <select
+            value={clearing.score ?? ''}
+            onChange={(e) => {
+              const score = e.target.value === '' ? null : Number(e.target.value);
+              setClearing((c) => (c ? { ...c, score } : c));
+            }}
+            aria-label={`${mr} score`}
+            data-testid="coach-first-lesson-score"
+            style={input}
+          >
+            <option value="">Score…</option>
+            {[1, 2, 3, 4, 5].map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+          <textarea
+            value={clearing.rationale}
+            onChange={(e) => {
+              const rationale = e.target.value;
+              setClearing((c) => (c ? { ...c, rationale } : c));
+            }}
+            rows={3}
+            aria-label={`${mr} rationale`}
+            data-testid="coach-first-lesson-rationale"
+            style={{ ...textarea, marginTop: 8 }}
+          />
+          <div style={actions}>
+            <button
+              type="button"
+              onClick={() =>
+                clearing.score !== null && submit({ firstLesson: false, score: clearing.score, rationale: clearing.rationale.trim() })
+              }
+              disabled={set.isPending || clearing.score === null || !clearing.rationale.trim()}
+              data-testid="coach-first-lesson-save"
+              style={primaryBtn}
+            >
+              {set.isPending ? 'Saving…' : 'Clear the flag'}
+            </button>
+            <button type="button" onClick={() => setClearing(null)} disabled={set.isPending} style={linkBtn}>
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
 
 function AmendPanel({ review, report, coachId }: { review: ReportReviewState; report: CoachReport; coachId: string }) {
@@ -239,6 +359,7 @@ function AmendPanel({ review, report, coachId }: { review: ReportReviewState; re
         An amendment is kept as a new version and re-sent to the same recipients under the same link, marked revised.
         Leaders see only the latest version.
       </p>
+      <FirstLessonState review={review} />
 
       {last && (
         <div data-testid="coach-amend-outcome" role="status" style={{ ...outcomeStyle, color: toneColor(last.outcome.tone) }}>
