@@ -436,7 +436,18 @@ function LeaderDetailView({
             </div>
 
             {pageReports.length === 0 && (
-              <div style={dashedNote}>{summaries.isFetchNextPageError ? 'Could not load these classes.' : 'Loading…'}</div>
+              <div style={dashedNote}>
+                {summaries.isFetchNextPageError ? (
+                  <>
+                    Could not load these classes.{' '}
+                    <button type="button" onClick={() => summaries.fetchNextPage()} data-testid="oversight-classes-retry" style={{ ...backLink, fontSize: 14.5 }}>
+                      Try again
+                    </button>
+                  </>
+                ) : (
+                  'Loading…'
+                )}
+              </div>
             )}
 
             {totalPages > 1 && (

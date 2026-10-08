@@ -204,3 +204,24 @@ describe('adding a leader', () => {
     );
   });
 });
+
+describe("a leader's older classes", () => {
+  it('offers a retry when the next page fails, and loads it on retry', async () => {
+    const row = (i: number) => ({ ...report, id: `s${i}`, date: `2026-07-${String(17 - i).padStart(2, '0')}` });
+    const first = [report, row(1), row(2), row(3), row(4)];
+    vi.mocked(coachService.fetchCoachReportSummaries).mockClear();
+    vi.mocked(coachService.fetchCoachReportSummaries)
+      .mockResolvedValueOnce({ items: first, total: 7, streakWeeks: 1, quarterSessions: 1 })
+      .mockRejectedValueOnce(new coachService.CoachApiError('admin/coaches/avery/reports/summary', 500, ''))
+      .mockResolvedValueOnce({ items: [row(5), row(7)], total: 7, streakWeeks: 1, quarterSessions: 1 });
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
+    fireEvent.click(await screen.findByText('Older →'));
+
+    expect(await screen.findByText('Could not load these classes.')).toBeInTheDocument();
+    fireEvent.click(screen.getByTestId('oversight-classes-retry'));
+
+    expect(await screen.findByTestId('oversight-class-pending-s5')).toBeInTheDocument();
+    expect(coachService.fetchCoachReportSummaries).toHaveBeenCalledTimes(3);
+  });
+});

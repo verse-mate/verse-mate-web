@@ -85,15 +85,22 @@ export default function CoachLeaderScreen() {
   );
 
   const moreButton = summaries.hasNextPage && (
-    <button
-      type="button"
-      onClick={() => summaries.fetchNextPage()}
-      disabled={summaries.isFetchingNextPage}
-      data-testid="coach-leader-more"
-      style={{ ...leaderLinkBtn, alignSelf: 'center', padding: 8 }}
-    >
-      {summaries.isFetchingNextPage ? 'Loading…' : 'Show more sessions'}
-    </button>
+    <>
+      <button
+        type="button"
+        onClick={() => summaries.fetchNextPage()}
+        disabled={summaries.isFetchingNextPage}
+        data-testid="coach-leader-more"
+        style={{ ...leaderLinkBtn, alignSelf: 'center', padding: 8 }}
+      >
+        {summaries.isFetchingNextPage ? 'Loading…' : 'Show more sessions'}
+      </button>
+      {summaries.isFetchNextPageError && (
+        <p data-testid="coach-leader-more-failed" style={{ margin: 0, alignSelf: 'center', fontSize: 13, color: vmTokens.textSecondary }}>
+          Could not load more sessions. Try again.
+        </p>
+      )}
+    </>
   );
 
   // Admin entry into this leader's rich monthly summary (PDF parity).

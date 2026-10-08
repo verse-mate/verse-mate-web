@@ -73,8 +73,12 @@ export const coachKeys = {
     ['coach', 'admin', 'monthly-summary', id, month] as const,
 };
 
-/** Normalize a query's error into the shape <CoachStateBoundary> expects. */
-export function coachState<T>(q: { isLoading: boolean; error: unknown; data: T | undefined }): {
+export function coachState<T>(q: {
+  isLoading: boolean;
+  error: unknown;
+  data: T | undefined;
+  isFetchNextPageError?: boolean;
+}): {
   loading: boolean;
   authError: CoachAuthReason | null;
   error: boolean;
@@ -84,7 +88,7 @@ export function coachState<T>(q: { isLoading: boolean; error: unknown; data: T |
   return {
     loading: q.isLoading,
     authError,
-    error: !!q.error && !authError,
+    error: !!q.error && !authError && !q.isFetchNextPageError,
     data: q.data,
   };
 }
