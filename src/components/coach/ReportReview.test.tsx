@@ -1071,6 +1071,41 @@ describe('editing the Improvements of an undelivered report', () => {
     expect(screen.getByTestId('coach-improvements-text')).toHaveValue('Ask newcomers first');
   });
 
+  it('shows the refusal of an edit that changes nothing in the editor and keeps the draft', async () => {
+    const nothing = 'The edit changes nothing: give at least one improvement, different from the current ones';
+    vi.spyOn(coachService, 'editImprovements').mockRejectedValue(new CoachApiError('x', 400, nothing));
+    await openImprovements();
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: '' } });
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    expect(await screen.findByTestId('coach-improvements-outcome')).toHaveTextContent(`Refused (400): ${nothing}`);
+    expect(screen.getByTestId('coach-improvements-editor')).toBeInTheDocument();
+    expect(screen.getByTestId('coach-improvements-text')).toHaveValue('');
+    expect(screen.getByTestId('coach-review-rep-1')).toBeInTheDocument();
+    expect(screen.queryByTestId('coach-amend-open')).toBeNull();
+  });
+
+  it('keeps Save off while the bullets and the points equal the current ones', async () => {
+    await openImprovements(WITH_PROSE);
+    const save = screen.getByTestId('coach-improvements-save');
+    const text = screen.getByTestId('coach-improvements-text');
+    const point = screen.getByTestId('coach-amend-improvements-prose-text-0');
+    const title = screen.getByTestId('coach-amend-improvements-prose-title-0');
+    expect(save).toBeDisabled();
+
+    fireEvent.change(text, { target: { value: 'Call on quiet members by name' } });
+    expect(save).toBeEnabled();
+    fireEvent.change(text, { target: { value: '  Call on quiet members \n\n' } });
+    expect(save).toBeDisabled();
+
+    fireEvent.change(point, { target: { value: 'Something else.' } });
+    expect(save).toBeEnabled();
+    fireEvent.change(point, { target: { value: (POINTS[0].paragraphs ?? []).join('\n\n') } });
+    expect(save).toBeDisabled();
+
+    fireEvent.change(title, { target: { value: `  ${POINTS[0].title}  ` } });
+    expect(save).toBeDisabled();
+  });
+
   it('a report delivered meanwhile is read again, so the amend action is offered with the refusal', async () => {
     const delivered = 'Refused: the report was already delivered. Amend it instead, which sends the leader a revised copy.';
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValueOnce(UNDELIVERED).mockResolvedValue(REVIEW);
