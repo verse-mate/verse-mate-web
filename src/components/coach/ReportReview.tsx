@@ -6,7 +6,11 @@ import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import {
   AMENDABLE_BODY_FIELDS,
   type AmendableBodyField,
+  type CoachFeedbackPoint,
   type CoachReport,
+  PROSE_LISTS,
+  type ProseField,
+  type ProseList,
   refusalText,
   type ReportAmendment,
   type ReportReviewState,
@@ -19,10 +23,14 @@ import { dt } from './dashboardTheme';
 
 type Outcome = { tone: 'ok' | 'pending' | 'refused'; text: string };
 type Change = { label: string; from: string; to: string };
+type ProseDraft = { title: string; text: string };
 type Draft = {
   dims: Record<number, { score: number | null; rationale: string }>;
   firstLesson: boolean;
   body: Record<AmendableBodyField, string>;
+  stored: Partial<Record<ProseList, CoachFeedbackPoint[]>>;
+  prose: Partial<Record<ProseList, ProseDraft[]>>;
+  clearProse: Partial<Record<ProseList, boolean>>;
 };
 
 const MEMORY_REINFORCEMENT = 9;
@@ -37,6 +45,20 @@ const BODY_LABELS: Record<AmendableBodyField, string> = {
   improvements: 'Improvements',
   recommendations: 'Recommendations',
 };
+
+const CHANGE_LABELS: Record<AmendableBodyField | ProseField, string> = {
+  headline: 'Headline',
+  overview: 'Overview',
+  strengths: 'Strengths',
+  strengthsProse: 'Strengths, written out',
+  improvements: 'Improvements',
+  improvementsProse: 'Improvements, written out',
+  recommendations: 'Recommendations',
+  recommendationsProse: 'Recommendations, written out',
+};
+
+const CLEARED = 'Cleared: the leader reads the list instead';
+const MAX_POINTS = 10;
 
 const PENDING_TEXT: Record<string, string> = {
   'parallel-run':
@@ -56,8 +78,33 @@ function lines(text: string): string[] {
 }
 
 function textOf(value: unknown): string {
-  if (Array.isArray(value)) return value.join('\n');
-  return value == null ? '' : String(value);
+  if (!Array.isArray(value)) return value == null ? '' : String(value);
+  if (value.every((v) => typeof v === 'string')) return value.join('\n');
+  return (value as CoachFeedbackPoint[]).map((p) => [p.title, ...(p.paragraphs ?? [])].join('\n')).join('\n\n');
+}
+
+function proseField(list: ProseList): ProseField {
+  return `${list}Prose`;
+}
+
+function isProseList(field: string): field is ProseList {
+  return (PROSE_LISTS as readonly string[]).includes(field);
+}
+
+function pointsOf(items: ProseDraft[]): CoachFeedbackPoint[] {
+  return items
+    .map((i) => ({
+      title: i.title.trim(),
+      paragraphs: i.text
+        .split(/\n\s*\n/)
+        .map((p) => p.trim())
+        .filter(Boolean),
+    }))
+    .filter((p) => p.title || p.paragraphs.length);
+}
+
+function proseEdited(initial: Draft, draft: Draft, list: ProseList): boolean {
+  return JSON.stringify(pointsOf(draft.prose[list] ?? [])) !== JSON.stringify(pointsOf(initial.prose[list] ?? []));
 }
 
 function scored(d: { score: number | null; rationale: string }): string {
@@ -66,10 +113,24 @@ function scored(d: { score: number | null; rationale: string }): string {
 
 function initialDraft(review: ReportReviewState, report: CoachReport): Draft {
   const feedback = (report.feedback ?? {}) as unknown as Record<string, unknown>;
+  const stored = Object.fromEntries(
+    PROSE_LISTS.flatMap((list) => {
+      const points = feedback[proseField(list)];
+      return Array.isArray(points) && points.length ? [[list, points as CoachFeedbackPoint[]]] : [];
+    }),
+  ) as Draft['stored'];
   return {
     dims: Object.fromEntries(review.dimensions.map((d) => [d.n, { score: d.score, rationale: d.rationale }])),
     firstLesson: review.firstLesson,
     body: Object.fromEntries(AMENDABLE_BODY_FIELDS.map((f) => [f, textOf(feedback[f])])) as Record<AmendableBodyField, string>,
+    stored,
+    prose: Object.fromEntries(
+      Object.entries(stored).map(([list, points]) => [
+        list,
+        points.map((p) => ({ title: p.title ?? '', text: (p.paragraphs ?? []).join('\n\n') })),
+      ]),
+    ),
+    clearProse: {},
   };
 }
 
@@ -93,6 +154,14 @@ function amendmentOf(initial: Draft, draft: Draft): ReportAmendment {
       body[field] = lines(draft.body[field]);
     }
   }
+  for (const list of PROSE_LISTS) {
+    const stored = draft.stored[list];
+    if (!stored) continue;
+    if (proseEdited(initial, draft, list)) body[proseField(list)] = pointsOf(draft.prose[list] ?? []);
+    else if (body[list] && !draft.clearProse[list]) {
+      body[proseField(list)] = stored.map(({ title, paragraphs }) => ({ title, paragraphs }));
+    }
+  }
   if (Object.keys(body).length) amendment.body = body;
   return amendment;
 }
@@ -110,20 +179,30 @@ function changesOf(revision: ReportRevision['changes'], dimName: (n: number) => 
       to: revision.firstLesson.to ? 'Yes' : 'No',
     });
   }
-  for (const field of AMENDABLE_BODY_FIELDS) {
+  for (const field of Object.keys(CHANGE_LABELS) as Array<AmendableBodyField | ProseField>) {
     const change = revision.body?.[field];
-    if (change) out.push({ label: BODY_LABELS[field], from: textOf(change.from), to: textOf(change.to) });
+    if (change && JSON.stringify(change.from) !== JSON.stringify(change.to)) {
+      out.push({ label: CHANGE_LABELS[field], from: textOf(change.from), to: textOf(change.to) });
+    }
   }
   return out;
 }
 
 function draftChanges(amendment: ReportAmendment, initial: Draft): ReportRevision['changes'] {
+  const body = amendment.body ?? {};
+  const cleared = PROSE_LISTS.filter((list) => initial.stored[list] && body[list] !== undefined && body[proseField(list)] === undefined);
   return {
     dimensions: (amendment.dimensions ?? []).map((d) => ({ n: d.n, from: initial.dims[d.n], to: d })),
     ...(amendment.firstLesson !== undefined ? { firstLesson: { from: initial.firstLesson, to: amendment.firstLesson } } : {}),
-    body: Object.fromEntries(
-      Object.entries(amendment.body ?? {}).map(([field, to]) => [field, { from: initial.body[field as AmendableBodyField], to }]),
-    ),
+    body: {
+      ...Object.fromEntries(
+        Object.entries(body).map(([field, to]) => [
+          field,
+          { from: field.endsWith('Prose') ? initial.stored[field.slice(0, -5) as ProseList] : initial.body[field as AmendableBodyField], to },
+        ]),
+      ),
+      ...Object.fromEntries(cleared.map((list) => [proseField(list), { from: initial.stored[list], to: CLEARED }])),
+    },
   };
 }
 
@@ -530,6 +609,17 @@ function AmendPanel({ review, report, coachId }: { review: ReportReviewState; re
                   style={textarea}
                 />
               )}
+              {isProseList(field) && edit.draft.prose[field] && (
+                <ProsePoints
+                  list={field}
+                  items={edit.draft.prose[field] ?? []}
+                  listEdited={amendment.body?.[field] !== undefined}
+                  pointsEdited={proseEdited(edit.initial, edit.draft, field)}
+                  clear={!!edit.draft.clearProse[field]}
+                  onItems={(items) => update((d) => ({ ...d, prose: { ...d.prose, [field]: items } }))}
+                  onClear={(clear) => update((d) => ({ ...d, clearProse: { ...d.clearProse, [field]: clear } }))}
+                />
+              )}
             </div>
           ))}
 
@@ -551,6 +641,88 @@ function AmendPanel({ review, report, coachId }: { review: ReportReviewState; re
       )}
 
       <KeptVersions reportId={report.id} coachId={coachId} dimName={dimName} />
+    </div>
+  );
+}
+
+function ProsePoints({
+  list,
+  items,
+  listEdited,
+  pointsEdited,
+  clear,
+  onItems,
+  onClear,
+}: {
+  list: ProseList;
+  items: ProseDraft[];
+  listEdited: boolean;
+  pointsEdited: boolean;
+  clear: boolean;
+  onItems: (items: ProseDraft[]) => void;
+  onClear: (clear: boolean) => void;
+}) {
+  const label = BODY_LABELS[list];
+  const set = (i: number, patch: Partial<ProseDraft>) => onItems(items.map((item, j) => (j === i ? { ...item, ...patch } : item)));
+  return (
+    <div data-testid={`coach-amend-${list}-prose`} style={prosePoints}>
+      <span style={fieldLabel}>{label}, written out</span>
+      <p style={muted}>The leader reads these points first. The list above shows only when there are none.</p>
+      {items.map((item, i) => (
+        <div key={i} style={dimRow}>
+          <input
+            value={item.title}
+            onChange={(e) => set(i, { title: e.target.value })}
+            aria-label={`${label} point ${i + 1} title`}
+            data-testid={`coach-amend-${list}-prose-title-${i}`}
+            style={{ ...input, width: '100%' }}
+          />
+          <textarea
+            value={item.text}
+            onChange={(e) => set(i, { text: e.target.value })}
+            rows={4}
+            aria-label={`${label} point ${i + 1}, a blank line between paragraphs`}
+            data-testid={`coach-amend-${list}-prose-text-${i}`}
+            style={textarea}
+          />
+          <button
+            type="button"
+            onClick={() => onItems(items.filter((_, j) => j !== i))}
+            data-testid={`coach-amend-${list}-prose-remove-${i}`}
+            style={{ ...linkBtn, alignSelf: 'flex-start' }}
+          >
+            Remove this point
+          </button>
+        </div>
+      ))}
+      {items.length < MAX_POINTS && (
+        <button
+          type="button"
+          onClick={() => onItems([...items, { title: '', text: '' }])}
+          data-testid={`coach-amend-${list}-prose-add`}
+          style={btn}
+        >
+          Add a point
+        </button>
+      )}
+      {listEdited && !pointsEdited && (
+        <div style={{ marginTop: 8 }}>
+          <label style={{ ...fieldLabel, display: 'flex', gap: 8, alignItems: 'center', fontWeight: 400 }}>
+            <input
+              type="checkbox"
+              checked={clear}
+              onChange={(e) => onClear(e.target.checked)}
+              data-testid={`coach-amend-${list}-prose-clear`}
+            />
+            Clear these points, so the leader reads the edited list instead
+          </label>
+          {!clear && (
+            <p data-testid={`coach-amend-${list}-prose-kept`} style={muted}>
+              The leader still reads these points first, unchanged.
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -665,6 +837,7 @@ const list: React.CSSProperties = { margin: '4px 0 0', paddingLeft: 18 };
 const fieldLabel: React.CSSProperties = { display: 'block', fontSize: 13, fontWeight: 600, marginBottom: 4 };
 const dimRow: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 10 };
 const actions: React.CSSProperties = { display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap', marginTop: 12 };
+const prosePoints: React.CSSProperties = { borderLeft: `2px solid ${dt.rowDivider}`, paddingLeft: 12, marginTop: 8 };
 const revisionRow: React.CSSProperties = { borderTop: `1px solid ${dt.rowDivider}`, padding: '10px 0' };
 const changeGrid: React.CSSProperties = {
   display: 'grid',

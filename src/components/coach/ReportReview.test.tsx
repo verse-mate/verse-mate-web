@@ -373,6 +373,127 @@ describe('amending a delivered report', () => {
   });
 });
 
+const POINTS = [{ title: 'Quiet members', paragraphs: ['Call on them by name.', 'Wait for the answer.'] }];
+const WITH_PROSE = {
+  ...REPORT,
+  feedback: {
+    ...REPORT.feedback,
+    strengthsProse: [{ title: 'Scripture first', paragraphs: ['Opened with the text.'] }],
+    improvementsProse: POINTS,
+  },
+} as unknown as CoachReport;
+
+describe('amending the written-out points the leader reads first', () => {
+  async function confirmWith(edit: () => void) {
+    renderReview(WITH_PROSE);
+    await openEditor();
+    edit();
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+  }
+
+  beforeEach(() => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+  });
+
+  it('shows each point of a list that has them, and sends an edited point with its list', async () => {
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, sent: true });
+    renderReview(WITH_PROSE);
+    await openEditor();
+    expect(screen.getByTestId('coach-amend-improvements-prose-title-0')).toHaveValue('Quiet members');
+    expect(screen.getByTestId('coach-amend-improvements-prose-text-0')).toHaveValue('Call on them by name.\n\nWait for the answer.');
+    expect(screen.getByTestId('coach-amend-strengths-prose-title-0')).toHaveValue('Scripture first');
+    expect(screen.queryByTestId('coach-amend-recommendations-prose')).toBeNull();
+    for (const id of ['coach-amend-improvements-prose-title-0', 'coach-amend-improvements-prose-text-0']) {
+      expect(screen.getByTestId(id).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    }
+
+    fireEvent.change(screen.getByTestId('coach-amend-improvements-prose-text-0'), {
+      target: { value: 'Call on them by name.\n\n  Give them time to answer.  ' },
+    });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    const diff = screen.getByTestId('coach-amend-diff');
+    expect(within(diff).getByText('Improvements, written out')).toBeInTheDocument();
+    expect(diff).toHaveTextContent('Wait for the answer.');
+    expect(diff).toHaveTextContent('Give them time to answer.');
+    expect(diff).not.toHaveTextContent('[object Object]');
+
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    await waitFor(() =>
+      expect(amend).toHaveBeenCalledWith('rep-1', {
+        body: { improvementsProse: [{ title: 'Quiet members', paragraphs: ['Call on them by name.', 'Give them time to answer.'] }] },
+      }),
+    );
+  });
+
+  it('a list edited without its points keeps the points as they were', async () => {
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, sent: true });
+    await confirmWith(() => {
+      fireEvent.change(screen.getByTestId('coach-amend-improvements'), { target: { value: 'Call on quiet members by name' } });
+      expect(screen.getByTestId('coach-amend-improvements-prose-kept')).toHaveTextContent(
+        'The leader still reads these points first, unchanged.',
+      );
+    });
+    await waitFor(() =>
+      expect(amend).toHaveBeenCalledWith('rep-1', {
+        body: { improvements: ['Call on quiet members by name'], improvementsProse: POINTS },
+      }),
+    );
+  });
+
+  it('clears the points of an edited list only when the admin says so, and the check step shows it', async () => {
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, sent: true });
+    renderReview(WITH_PROSE);
+    await openEditor();
+    expect(screen.queryByTestId('coach-amend-improvements-prose-clear')).toBeNull();
+    fireEvent.change(screen.getByTestId('coach-amend-improvements'), { target: { value: 'Call on quiet members by name' } });
+    fireEvent.click(screen.getByTestId('coach-amend-improvements-prose-clear'));
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    expect(screen.getByTestId('coach-amend-diff')).toHaveTextContent('Cleared: the leader reads the list instead');
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    await waitFor(() => expect(amend).toHaveBeenCalledWith('rep-1', { body: { improvements: ['Call on quiet members by name'] } }));
+  });
+
+  it('removes a point and adds one', async () => {
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, sent: true });
+    await confirmWith(() => {
+      fireEvent.click(screen.getByTestId('coach-amend-improvements-prose-remove-0'));
+      fireEvent.click(screen.getByTestId('coach-amend-improvements-prose-add'));
+      fireEvent.change(screen.getByTestId('coach-amend-improvements-prose-title-0'), { target: { value: 'Newcomers' } });
+      fireEvent.change(screen.getByTestId('coach-amend-improvements-prose-text-0'), { target: { value: 'Ask them first.' } });
+    });
+    await waitFor(() =>
+      expect(amend).toHaveBeenCalledWith('rep-1', {
+        body: { improvementsProse: [{ title: 'Newcomers', paragraphs: ['Ask them first.'] }] },
+      }),
+    );
+  });
+
+  it('a point edited only by spaces or blank lines changes nothing', async () => {
+    renderReview(WITH_PROSE);
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-improvements-prose-title-0'), { target: { value: ' Quiet members ' } });
+    fireEvent.change(screen.getByTestId('coach-amend-improvements-prose-text-0'), {
+      target: { value: '\nCall on them by name.\n\n\n\nWait for the answer.\n' },
+    });
+    expect(screen.getByTestId('coach-amend-review')).toBeDisabled();
+  });
+
+  it('the kept versions show a change to the points in words', async () => {
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
+      {
+        ...revision(1, null),
+        changes: { dimensions: [], body: { improvementsProse: { from: POINTS, to: [{ title: 'Newcomers', paragraphs: ['Ask them first.'] }] } } },
+      },
+    ]);
+    renderReview(WITH_PROSE);
+    const row = await screen.findByTestId('coach-revision-1');
+    expect(within(row).getByText('Improvements, written out')).toBeInTheDocument();
+    expect(row).toHaveTextContent('Ask them first.');
+    expect(row).not.toHaveTextContent('[object Object]');
+  });
+});
+
 function revision(n: number, sentAt: string | null): coachService.ReportRevision {
   return {
     revision: n,
