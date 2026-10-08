@@ -7,7 +7,7 @@ import { vmTokens } from '@/styles/themeStyles';
 import { useAdminMonthly, coachState } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel, StatusPill } from '@/components/coach/CoachUi';
 import { statusColor, type MonthlyLeader } from '@/services/coachService';
-import { dimensionBandIndex, type DimensionBand } from '@/components/coach/dashboardTheme';
+import { bandHeat, type DimensionBand } from '@/components/coach/dashboardTheme';
 import { useRubric } from '@/hooks/useRubric';
 
 export default function CoachMonthlyScreen() {
@@ -341,7 +341,7 @@ const HEAT_NA = 'color-mix(in srgb, var(--fg-primary) 8%, transparent)';
 
 function heatColor(avg: number | null, bands: DimensionBand[]): string {
   if (avg == null) return HEAT_NA;
-  return HEAT_BY_BAND[dimensionBandIndex(avg, bands)] ?? HEAT_NA;
+  return bandHeat(avg, bands, HEAT_BY_BAND) ?? HEAT_NA;
 }
 
 function fmt(n: number | null): string {

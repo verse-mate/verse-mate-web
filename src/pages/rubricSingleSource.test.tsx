@@ -180,6 +180,46 @@ describe('the program monthly heatmap reads the served dimension bands', () => {
   });
 });
 
+describe('the program monthly heatmap with more bands than the palette has stops', () => {
+  it('colours a sixth served band, best to worst across the palette', async () => {
+    primeRubricCache({
+      ...SERVED,
+      dimensionBands: [
+        { min: 5, label: 'Exemplary' },
+        { min: 4, label: 'Strong' },
+        { min: 3.5, label: 'Solid' },
+        { min: 3, label: 'On target' },
+        { min: 2, label: 'Developing' },
+        { min: 0, label: 'Early stage' },
+      ],
+    });
+    vi.mocked(coachService.fetchAdminMonthly).mockResolvedValue({
+      month: MONTH,
+      monthLabel: 'July 2026',
+      program: { sessions: 1, activeLeaders: 1, newcomers: 0, avgScore: 50, clusters: [], delta: null },
+      availableMonths: [MONTH],
+      leaders: [
+        {
+          id: 'x', name: 'X', group: '', sessions: 1, avgScore: 50, status: 'Growing', statusEmoji: '', delta: null,
+          dimensions: [
+            { n: 1, name: 'Served D1', avg: 5 },
+            { n: 2, name: 'Served D2', avg: 2.5 },
+            { n: 3, name: 'Served D3', avg: 1 },
+          ],
+        },
+      ],
+      narrative: null,
+    });
+    renderAt('/coach/monthly', '/coach/monthly', <CoachMonthlyScreen />);
+    const best = await screen.findByTitle('Served D1: 5.0');
+    const fifth = screen.getByTitle('Served D2: 2.5');
+    const sixth = screen.getByTitle('Served D3: 1.0');
+    expect(best.style.background).toBe('rgb(134, 239, 172)');
+    expect(sixth.style.background).toBe('rgb(252, 165, 165)');
+    expect(fifth.style.background).not.toBe(sixth.style.background);
+  });
+});
+
 describe('a report body counts the dimensions it carries', () => {
   it('titles the list with the number of dimensions scored', () => {
     const report = {
