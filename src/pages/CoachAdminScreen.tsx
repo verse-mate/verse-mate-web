@@ -673,7 +673,7 @@ function ClassCardBody({
       {open && (
         <div style={{ padding: '16px 20px', borderBottom: `1px solid ${dt.rowDivider}` }}>
           <CoachSessionDetail report={report} delta={null} label="FULL SESSION REPORT" coachId={leaderId} />
-          <ReportReview report={report} coachId={leaderId} />
+          <ReportReview key={report.id} report={report} coachId={leaderId} />
         </div>
       )}
 

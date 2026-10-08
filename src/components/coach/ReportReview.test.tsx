@@ -2,11 +2,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { coachKeys } from '@/hooks/useCoach';
 import { primeRubricCache } from '@/hooks/useRubric';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import * as coachService from '@/services/coachService';
 import { CoachApiError, type CoachReport, type ReportReviewState } from '@/services/coachService';
 import type { RubricContract } from '@/services/rubric';
+import ReportDetail from './ReportDetail';
 import ReportReview from './ReportReview';
 
 const RUBRIC: RubricContract = {
@@ -1129,5 +1131,98 @@ describe('editing the Improvements of an undelivered report', () => {
     fireEvent.click(save);
     await waitFor(() => expect(save).toBeDisabled());
     expect(edit).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('switching the screen to another report', () => {
+  const full = (id: string, headline: string): CoachReport =>
+    ({
+      id,
+      date: '2026-07-16',
+      dateLabel: `Session ${id}`,
+      session: `Session ${id}`,
+      topic: 'James 5',
+      duration: '58 min',
+      attendees: 9,
+      newcomers: 1,
+      score: 79,
+      base: 79,
+      newcomerBonus: 0,
+      sizeBonus: 0,
+      status: 'Strong',
+      statusEmoji: '',
+      clusters: [],
+      dimensions: [],
+      bigIdeas: [],
+      feedback: { ...REPORT.feedback, headline },
+    }) as unknown as CoachReport;
+  const A = full('A', 'Headline of A');
+  const B = full('B', 'Headline of B');
+
+  async function renderDetail(report: CoachReport, next: CoachReport) {
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    await client.prefetchQuery({ queryKey: coachKeys.reportReview(next.id), queryFn: () => coachService.fetchReportReview(next.id) });
+    const view = (r: CoachReport) => (
+      <QueryClientProvider client={client}>
+        <ReportDetail report={r} admin coachId="leader" />
+      </QueryClientProvider>
+    );
+    const result = render(view(report));
+    return (next: CoachReport) => result.rerender(view(next));
+  }
+
+  it('closes an amend draft, so the confirm of A never posts against B', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockImplementation(async (id) => ({ ...REVIEW, reportId: id }));
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, firstLesson: false, sent: true });
+    const show = await renderDetail(A, B);
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'Edited for A' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    expect(screen.getByTestId('coach-amend-confirm')).toBeInTheDocument();
+
+    show(B);
+    await screen.findByTestId('coach-review-B');
+    expect(screen.queryByTestId('coach-amend-confirm')).toBeNull();
+    expect(screen.queryByTestId('coach-amend-editor')).toBeNull();
+    await openEditor();
+    expect(screen.getByTestId('coach-amend-headline')).toHaveValue('Headline of B');
+    expect(amend).not.toHaveBeenCalled();
+  });
+
+  it('closes an Improvements draft and a note draft written for A', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockImplementation(async (id) => ({ ...REVIEW, reportId: id, delivered: false }));
+    const edit = vi.spyOn(coachService, 'editImprovements').mockResolvedValue({ applied: true });
+    const show = await renderDetail(A, B);
+    fireEvent.click(await screen.findByTestId('coach-improvements-open'));
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Draft for A' } });
+    fireEvent.change(screen.getByTestId('coach-note-input-A'), { target: { value: 'Note for A' } });
+
+    show(B);
+    await screen.findByTestId('coach-review-B');
+    expect(screen.queryByTestId('coach-improvements-editor')).toBeNull();
+    expect(screen.getByTestId('coach-note-input-B')).toHaveValue('');
+    expect(edit).not.toHaveBeenCalled();
+  });
+
+  it('drops the draft and the outcome carried from A when the report delivered meanwhile', async () => {
+    let aDelivered = false;
+    vi.spyOn(coachService, 'fetchReportReview').mockImplementation(async (id) =>
+      id === 'A' ? { ...REVIEW, reportId: 'A', delivered: aDelivered } : { ...REVIEW, reportId: id },
+    );
+    vi.spyOn(coachService, 'setFirstLesson').mockImplementation(async () => {
+      aDelivered = true;
+      return { applied: false, refusal: 'cold-recall-improvement', coldRecall: ['Call on quiet members'] };
+    });
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, firstLesson: true, sent: true });
+    const show = await renderDetail(A, B);
+    fireEvent.click(await screen.findByTestId('coach-first-lesson-set'));
+    await screen.findByTestId('coach-amend-editor');
+    expect(screen.getByTestId('coach-amend-first-lesson')).toBeChecked();
+
+    show(B);
+    await screen.findByTestId('coach-review-B');
+    expect(screen.queryByTestId('coach-amend-editor')).toBeNull();
+    expect(screen.queryByTestId('coach-amend-outcome')).toBeNull();
+    expect(amend).not.toHaveBeenCalled();
   });
 });

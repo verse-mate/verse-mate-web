@@ -11,7 +11,15 @@ vi.mock('@/hooks/useMediaQuery', () => ({ useMediaQuery: () => true }));
 vi.mock('@/components/coach/ReportDetail', () => ({
   default: ({ report }: { report: CoachReport }) => <div data-testid="selected-report">{report.id}</div>,
 }));
-vi.mock('@/components/coach/ReportCard', () => ({ default: () => null }));
+vi.mock('@/components/coach/ReportCard', async () => {
+  const { useState } = await import('react');
+  return {
+    default: function Card({ report }: { report: CoachReport }) {
+      const [first] = useState(report.id);
+      return <div data-testid={`card-${report.id}`} data-first={first} />;
+    },
+  };
+});
 vi.mock('@/components/coach/CoachProfileAvatar', () => ({ default: () => null }));
 vi.mock('@/components/coach/CoachTrendCharts', () => ({
   ScoreTrendCard: ({ onSelectDate }: { onSelectDate: (d: string, reportId?: string) => void }) => (
@@ -156,5 +164,25 @@ describe('a trend point that carries its report id', () => {
 
     await waitFor(() => expect(screen.getByTestId('selected-report')).toHaveTextContent('r7'));
     expect(pages).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('the minimized selected report', () => {
+  it('starts afresh for another session, so a draft never follows the screen', async () => {
+    vi.spyOn(coachService, 'fetchCoachReportSummaries').mockResolvedValue({
+      items: [summary('r1', '2026-03-01')],
+      total: 60,
+      streakWeeks: 0,
+      quarterSessions: 0,
+    });
+    renderScreen();
+    expect(await screen.findByTestId('selected-report')).toHaveTextContent('r1');
+    fireEvent.click(screen.getByTestId('trend-point-r9'));
+    await waitFor(() => expect(screen.getByTestId('selected-report')).toHaveTextContent('r9'));
+    fireEvent.click(screen.getByTestId('coach-leader-minimize'));
+    expect(screen.getByTestId('card-r9')).toHaveAttribute('data-first', 'r9');
+
+    fireEvent.click(screen.getByTestId('coach-leader-view-latest'));
+    expect(screen.getByTestId('card-r1')).toHaveAttribute('data-first', 'r1');
   });
 });

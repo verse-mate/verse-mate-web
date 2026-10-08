@@ -235,7 +235,7 @@ export default function CoachLeaderScreen() {
                     </div>
                   </div>
                   {minimized ? (
-                    <ReportCard report={selected} leaderName={profile?.name || ''} admin coachId={coachId} />
+                    <ReportCard key={selected.id} report={selected} leaderName={profile?.name || ''} admin coachId={coachId} />
                   ) : (
                     <ReportDetail
                       report={selected}
