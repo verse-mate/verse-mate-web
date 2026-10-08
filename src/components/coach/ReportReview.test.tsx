@@ -1164,12 +1164,12 @@ describe('correcting a dimension of an undelivered report', () => {
 
   it('corrects a score and rationale, shows the recomputed score and band, and reads the review again', async () => {
     const load = vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
-    const save = vi.spyOn(coachService, 'correctDimension').mockResolvedValue({ base: 76.04, status: 'Strong' });
+    const save = vi.spyOn(coachService, 'correctDimension').mockResolvedValue({ base: 76.04, score: 80.04, status: 'Strong' });
     renderReview();
     await correct(5, '2', '  fewer questions  ');
     await waitFor(() => expect(save).toHaveBeenCalledWith('rep-1', 5, { score: 2, rationale: 'fewer questions' }));
     expect(await screen.findByTestId('coach-review-dim-outcome')).toHaveTextContent(
-      'Served dimension 5 corrected to 2, recorded as corrected by hand. Base (clusters) now 76.0 / 100, band Strong.',
+      'Served dimension 5 corrected to 2, recorded as corrected by hand. Base (clusters) now 76.0 / 100, score 80.0 with bonuses, band Strong.',
     );
     await waitFor(() => expect(load).toHaveBeenCalledTimes(2));
     expect(screen.queryByTestId('coach-review-dim-save-5')).toBeNull();

@@ -345,7 +345,7 @@ test.describe('Correcting a dimension of an undelivered report', () => {
     await panel.getByTestId('coach-review-dim-save-3').click();
 
     await expect(panel.getByTestId('coach-review-dim-outcome')).toHaveText(
-      'Dimension 3 corrected to 2, recorded as corrected by hand. Base (clusters) now 76.7 / 100, band 🟢 Strong.',
+      'Dimension 3 corrected to 2, recorded as corrected by hand. Base (clusters) now 76.7 / 100, score 76.7 with bonuses, band 🟢 Strong.',
     );
     await expect(panel.getByTestId('coach-review-dim-provenance-3')).toHaveText('Corrected by hand');
     await expect(panel.getByTestId('coach-review-dim-3')).toContainText('The passage was read but never opened up.');

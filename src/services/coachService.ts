@@ -596,8 +596,8 @@ export function correctDimension(
   reportId: string,
   dimensionN: number,
   correction: DimensionCorrection,
-): Promise<{ base: number; status: string }> {
-  return coachRequest<{ base: number; status: string }>(adminReportPath(reportId, `dimensions/${dimensionN}`), {
+): Promise<{ base: number; score: number; status: string }> {
+  return coachRequest<{ base: number; score: number; status: string }>(adminReportPath(reportId, `dimensions/${dimensionN}`), {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(correction),
