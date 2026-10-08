@@ -2,6 +2,7 @@ import { Fragment, useRef, useState } from 'react';
 
 import {
   useAmendReport,
+  useCorrectDimension,
   useEditImprovements,
   useReportReview,
   useReportRevisions,
@@ -19,6 +20,7 @@ import {
   type CoachReport,
   PROSE_LISTS,
   type ProseField,
+  RATIONALE_MAX,
   type ProseList,
   refusalText,
   type ReportAmendment,
@@ -70,6 +72,8 @@ const CHANGE_LABELS: Record<AmendableBodyField | ProseField, string> = {
 };
 
 const DELIVERED_MEANWHILE = 'This report was delivered meanwhile, so the flag goes through an amendment.';
+const CORRECTED_MEANWHILE =
+  'This report was delivered meanwhile, so the correction goes through an amendment, which sends the leader a revised copy. Check it and confirm.';
 const CLEARED = 'Cleared: the leader reads the list instead';
 const MAX_POINTS = 10;
 const NEVER_CONFIRMED = /never confirmed, so it is not sent again until the revision is requeued/;
@@ -471,12 +475,170 @@ function FirstLessonPanel({
           </div>
         </div>
       )}
+      <DimensionCorrections review={review} reportId={reportId} coachId={coachId} onCarry={onCarry} />
       <ImprovementsEditor
         review={review}
         report={report}
         coachId={coachId}
         onCarry={onCarry}
       />
+    </div>
+  );
+}
+
+function provenanceText(d: ReportReviewState['dimensions'][number]): string {
+  if (d.provenance === 'human') return 'Corrected by hand';
+  return d.modelVersion ? `Scored by the model (${d.modelVersion})` : 'Scored by the model';
+}
+
+function DimensionCorrections({
+  review,
+  reportId,
+  coachId,
+  onCarry,
+}: {
+  review: ReportReviewState;
+  reportId: string;
+  coachId: string;
+  onCarry: (carry: Carry | null) => void;
+}) {
+  const { rubric } = useRubric();
+  const dimName = (n: number) => rubric?.dimensions.find((d) => d.n === n)?.name ?? `Dimension ${n}`;
+  const save = useCorrectDimension(coachId, reportId);
+  const [editing, setEditing] = useState<{ n: number; score: number | null; rationale: string } | null>(null);
+  const [outcome, setOutcome] = useState<Outcome | null>(null);
+
+  const submit = () => {
+    if (!editing || editing.score === null) return;
+    const { n, score } = editing;
+    const rationale = editing.rationale.trim();
+    setOutcome(null);
+    save.mutate(
+      { n, score, rationale },
+      {
+        onSuccess: (r) => {
+          const emoji = rubric?.statusBands.find((b) => b.label === r.status)?.emoji;
+          setOutcome({
+            tone: 'ok',
+            text: `${dimName(n)} corrected to ${score}, recorded as corrected by hand. Base (clusters) now ${r.base.toFixed(1)} / 100, band ${emoji ? `${emoji} ` : ''}${r.status}.`,
+          });
+          setEditing(null);
+          onCarry(null);
+        },
+        onError: (err) => {
+          setOutcome({ tone: 'refused', text: refusalText(err) });
+          if (err instanceof CoachApiError && err.status < 500) {
+            onCarry({
+              last: { outcome: { tone: 'refused', text: CORRECTED_MEANWHILE } },
+              draft: (d) => ({ ...d, dims: { ...d.dims, [n]: { score, rationale } } }),
+            });
+          }
+        },
+      },
+    );
+  };
+
+  return (
+    <div>
+      <h4 style={h4}>Dimensions</h4>
+      {outcome && (
+        <div data-testid="coach-review-dim-outcome" role="status" style={{ ...outcomeStyle, color: toneColor(outcome.tone) }}>
+          {outcome.text}
+        </div>
+      )}
+      {review.dimensions.map((d) => {
+        const open = editing?.n === d.n ? editing : null;
+        const notApplicable = d.n === MEMORY_REINFORCEMENT && review.firstLesson;
+        const tooLong = open ? open.rationale.trim().length > RATIONALE_MAX : false;
+        const changed = open ? open.score !== d.score || open.rationale.trim() !== d.rationale.trim() : false;
+        return (
+          <div key={d.n} data-testid={`coach-review-dim-${d.n}`} style={{ ...dimRow, ...revisionRow }}>
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+              <span style={{ fontWeight: 600, fontSize: 13.5 }}>{dimName(d.n)}</span>
+              <span style={{ fontSize: 13, fontVariantNumeric: 'tabular-nums' }}>{d.score ?? 'N/A'}</span>
+              <span data-testid={`coach-review-dim-provenance-${d.n}`} style={{ fontSize: 12, color: d.provenance === 'human' ? dt.gold : dt.textMuted }}>
+                {provenanceText(d)}
+              </span>
+            </div>
+            {!open && <p style={{ ...muted, margin: 0, color: dt.body }}>{d.rationale}</p>}
+            {notApplicable && <p style={{ ...muted, margin: 0 }}>Not applicable on a first lesson. Clear the first-lesson flag to score it.</p>}
+            {!notApplicable && !open && (
+              <button
+                type="button"
+                onClick={() => {
+                  setEditing({ n: d.n, score: d.score, rationale: d.rationale });
+                  setOutcome(null);
+                }}
+                disabled={save.isPending}
+                data-testid={`coach-review-dim-correct-${d.n}`}
+                style={{ ...linkBtn, alignSelf: 'flex-start' }}
+              >
+                Correct this score
+              </button>
+            )}
+            {open && (
+              <div>
+                <select
+                  value={open.score ?? ''}
+                  onChange={(e) => {
+                    const score = e.target.value === '' ? null : Number(e.target.value);
+                    setEditing((c) => (c ? { ...c, score } : c));
+                  }}
+                  aria-label={`${dimName(d.n)} score`}
+                  data-testid={`coach-review-dim-score-${d.n}`}
+                  style={input}
+                >
+                  <option value="">Score…</option>
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))}
+                </select>
+                <textarea
+                  value={open.rationale}
+                  onChange={(e) => {
+                    const rationale = e.target.value;
+                    setEditing((c) => (c ? { ...c, rationale } : c));
+                  }}
+                  rows={3}
+                  aria-label={`${dimName(d.n)} rationale`}
+                  data-testid={`coach-review-dim-rationale-${d.n}`}
+                  style={{ ...textarea, marginTop: 8 }}
+                />
+                {tooLong && (
+                  <p data-testid={`coach-review-dim-too-long-${d.n}`} style={{ ...muted, color: dt.rust }}>
+                    A rationale is at most {RATIONALE_MAX} characters. This one has {open.rationale.trim().length}.
+                  </p>
+                )}
+                <div style={actions}>
+                  <button
+                    type="button"
+                    onClick={submit}
+                    disabled={save.isPending || open.score === null || !changed || tooLong}
+                    data-testid={`coach-review-dim-save-${d.n}`}
+                    style={primaryBtn}
+                  >
+                    {save.isPending ? 'Saving…' : 'Save the correction'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setEditing(null);
+                      onCarry(null);
+                    }}
+                    disabled={save.isPending}
+                    data-testid={`coach-review-dim-cancel-${d.n}`}
+                    style={linkBtn}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }

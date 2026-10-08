@@ -6,6 +6,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   addCoachLeader,
   amendReport,
+  correctDimension,
   fetchCoverage,
   fetchLeaderAttribution,
   fetchPendingReshares,
@@ -462,6 +463,13 @@ describe('coachService', () => {
     ],
     ['release a held report', () => releaseHeldReport('rep/2'), 'POST', '/coach/admin/reports/rep%2F2/release', undefined],
     ['read a report review', () => fetchReportReview('rep/1'), 'GET', '/coach/admin/reports/rep%2F1/review', undefined],
+    [
+      'correct a dimension of an undelivered report',
+      () => correctDimension('rep/1', 9, { score: 3, rationale: 'r' }),
+      'POST',
+      '/coach/admin/reports/rep%2F1/dimensions/9',
+      { score: 3, rationale: 'r' },
+    ],
     [
       'amend a report',
       () => amendReport('rep/1', { body: { headline: 'x' } }),

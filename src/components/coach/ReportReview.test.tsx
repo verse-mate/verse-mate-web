@@ -1052,6 +1052,146 @@ describe('the first-lesson flag on a delivered report', () => {
   });
 });
 
+describe('correcting a dimension of an undelivered report', () => {
+  const UNDELIVERED: ReportReviewState = {
+    ...REVIEW,
+    delivered: false,
+    humanCorrected: true,
+    dimensions: REVIEW.dimensions.map((d) => (d.n === 3 ? { ...d, score: 1, rationale: 'set by an admin', provenance: 'human' } : d)),
+  };
+  const IN_FLIGHT = 'Refused: the report is being delivered or re-scored. Correct it once that finishes, or amend it after delivery.';
+  const LEGACY = 'Correction refused: this is a legacy report, which is read-only. Change it at its source and it arrives through the backfill.';
+
+  async function correct(n: number, score: string, rationale: string) {
+    fireEvent.click(await screen.findByTestId(`coach-review-dim-correct-${n}`));
+    fireEvent.change(screen.getByTestId(`coach-review-dim-score-${n}`), { target: { value: score } });
+    fireEvent.change(screen.getByTestId(`coach-review-dim-rationale-${n}`), { target: { value: rationale } });
+    fireEvent.click(screen.getByTestId(`coach-review-dim-save-${n}`));
+  }
+
+  it('shows every dimension by its served name with whether the model scored it or an admin corrected it', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    renderReview();
+    const corrected = await screen.findByTestId('coach-review-dim-3');
+    expect(corrected).toHaveTextContent('Served dimension 3');
+    expect(corrected).toHaveTextContent('set by an admin');
+    expect(within(corrected).getByTestId('coach-review-dim-provenance-3')).toHaveTextContent('Corrected by hand');
+    expect(within(screen.getByTestId('coach-review-dim-1')).getByTestId('coach-review-dim-provenance-1')).toHaveTextContent('Scored by the model (v3)');
+    expect(screen.getAllByTestId(/^coach-review-dim-provenance-/)).toHaveLength(12);
+    expect(corrected.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+  });
+
+  it('corrects a score and rationale, shows the recomputed score and band, and reads the review again', async () => {
+    const load = vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    const save = vi.spyOn(coachService, 'correctDimension').mockResolvedValue({ base: 76.04, status: 'Strong' });
+    renderReview();
+    await correct(5, '2', '  fewer questions  ');
+    await waitFor(() => expect(save).toHaveBeenCalledWith('rep-1', 5, { score: 2, rationale: 'fewer questions' }));
+    expect(await screen.findByTestId('coach-review-dim-outcome')).toHaveTextContent(
+      'Served dimension 5 corrected to 2, recorded as corrected by hand. Base (clusters) now 76.0 / 100, band Strong.',
+    );
+    await waitFor(() => expect(load).toHaveBeenCalledTimes(2));
+    expect(screen.queryByTestId('coach-review-dim-save-5')).toBeNull();
+  });
+
+  it('keeps Save off until the score or rationale changes, and while the rationale is over 4000 characters', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    const save = vi.spyOn(coachService, 'correctDimension');
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-review-dim-correct-5'));
+    const button = screen.getByTestId('coach-review-dim-save-5');
+    expect(button).toBeDisabled();
+    fireEvent.change(screen.getByTestId('coach-review-dim-rationale-5'), { target: { value: ' machine 5 ' } });
+    expect(button).toBeDisabled();
+    fireEvent.change(screen.getByTestId('coach-review-dim-rationale-5'), { target: { value: 'x'.repeat(4001) } });
+    expect(button).toBeDisabled();
+    expect(screen.getByTestId('coach-review-dim-too-long-5')).toHaveTextContent('A rationale is at most 4000 characters. This one has 4001.');
+    fireEvent.change(screen.getByTestId('coach-review-dim-rationale-5'), { target: { value: 'x'.repeat(4000) } });
+    expect(button).not.toBeDisabled();
+    expect(screen.queryByTestId('coach-review-dim-too-long-5')).toBeNull();
+    fireEvent.click(button);
+    await waitFor(() => expect(save).toHaveBeenCalledTimes(1));
+  });
+
+  it('offers only whole scores 1 to 5, and no save for a dimension the model left unscored until one is picked', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({
+      ...UNDELIVERED,
+      dimensions: UNDELIVERED.dimensions.map((d) => (d.n === 4 ? { ...d, score: null } : d)),
+    });
+    renderReview();
+    expect(await screen.findByTestId('coach-review-dim-4')).toHaveTextContent('N/A');
+    fireEvent.click(screen.getByTestId('coach-review-dim-correct-4'));
+    const select = screen.getByTestId('coach-review-dim-score-4') as HTMLSelectElement;
+    expect([...select.options].filter((o) => o.value !== '').map((o) => o.value)).toEqual(['1', '2', '3', '4', '5']);
+    fireEvent.change(screen.getByTestId('coach-review-dim-rationale-4'), { target: { value: 'a reason' } });
+    expect(screen.getByTestId('coach-review-dim-save-4')).toBeDisabled();
+    fireEvent.change(select, { target: { value: '3' } });
+    expect(screen.getByTestId('coach-review-dim-save-4')).not.toBeDisabled();
+  });
+
+  it('does not offer to correct Memory Reinforcement on a first lesson, and says how to score it', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({
+      ...UNDELIVERED,
+      firstLesson: true,
+      firstLessonSource: 'detected',
+      dimensions: UNDELIVERED.dimensions.map((d) => (d.n === 9 ? { ...d, score: null } : d)),
+    });
+    renderReview();
+    const mr = await screen.findByTestId('coach-review-dim-9');
+    expect(mr).toHaveTextContent('Not applicable on a first lesson. Clear the first-lesson flag to score it.');
+    expect(screen.queryByTestId('coach-review-dim-correct-9')).toBeNull();
+    expect(screen.getByTestId('coach-review-dim-correct-8')).toBeInTheDocument();
+  });
+
+  it.each([
+    ['being delivered or re-scored', IN_FLIGHT],
+    ['already emailed to some recipients', PARTIALLY_DELIVERED],
+    ['legacy', LEGACY],
+  ])('shows a correction refused for a report %s in words and keeps the draft', async (_name, message) => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    vi.spyOn(coachService, 'correctDimension').mockRejectedValue(new CoachApiError('x', 409, message));
+    renderReview();
+    await correct(5, '2', 'fewer questions');
+    expect(await screen.findByTestId('coach-review-dim-outcome')).toHaveTextContent(`Refused (409): ${message}`);
+    expect(screen.getByTestId('coach-review-dim-rationale-5')).toHaveValue('fewer questions');
+    await waitFor(() => expect(screen.getByTestId('coach-review-dim-save-5')).not.toBeDisabled());
+  });
+
+  it('a report delivered meanwhile is read again, and the amend editor opens with the correction as its draft', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValueOnce(UNDELIVERED).mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'correctDimension').mockRejectedValue(new CoachApiError('x', 400, 'Correction refused: already-delivered'));
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, firstLesson: false, sent: true });
+    renderReview();
+    await correct(5, '2', 'fewer questions');
+
+    const editor = await screen.findByTestId('coach-amend-editor');
+    expect(screen.getByTestId('coach-amend-outcome')).toHaveTextContent(
+      'This report was delivered meanwhile, so the correction goes through an amendment, which sends the leader a revised copy. Check it and confirm.',
+    );
+    expect(screen.getByTestId('coach-amend-outcome')).not.toHaveTextContent('already-delivered');
+    expect(within(editor).getByTestId('coach-amend-dim-score-5')).toHaveValue('2');
+    expect(within(editor).getByTestId('coach-amend-dim-rationale-5')).toHaveValue('fewer questions');
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    await waitFor(() =>
+      expect(amend).toHaveBeenCalledWith('rep-1', { dimensions: [{ n: 5, score: 2, rationale: 'fewer questions' }] }),
+    );
+  });
+
+  it('a double click saves once', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    const save = vi.spyOn(coachService, 'correctDimension').mockReturnValue(new Promise(() => {}));
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-review-dim-correct-5'));
+    fireEvent.change(screen.getByTestId('coach-review-dim-score-5'), { target: { value: '2' } });
+    const button = screen.getByTestId('coach-review-dim-save-5');
+    fireEvent.click(button);
+    fireEvent.click(button);
+    await waitFor(() => expect(button).toBeDisabled());
+    expect(save).toHaveBeenCalledTimes(1);
+  });
+});
+
 describe('editing the Improvements of an undelivered report', () => {
   const UNDELIVERED: ReportReviewState = { ...REVIEW, delivered: false, firstLesson: true, firstLessonSource: 'detected' };
   const SAVED = 'Improvements saved. Nothing was sent: the leader gets them when the report is delivered, and a held report goes out once it is released from the Pipeline list.';
@@ -1336,6 +1476,19 @@ describe('switching the screen to another report', () => {
     expect(screen.queryByTestId('coach-improvements-editor')).toBeNull();
     expect(screen.getByTestId('coach-note-input-B')).toHaveValue('');
     expect(edit).not.toHaveBeenCalled();
+  });
+
+  it('closes a dimension correction written for A', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockImplementation(async (id) => ({ ...REVIEW, reportId: id, delivered: false }));
+    const save = vi.spyOn(coachService, 'correctDimension');
+    const show = await renderDetail(A, B);
+    fireEvent.click(await screen.findByTestId('coach-review-dim-correct-5'));
+    fireEvent.change(screen.getByTestId('coach-review-dim-rationale-5'), { target: { value: 'Draft for A' } });
+
+    show(B);
+    await screen.findByTestId('coach-review-B');
+    expect(screen.queryByTestId('coach-review-dim-rationale-5')).toBeNull();
+    expect(save).not.toHaveBeenCalled();
   });
 
   it('drops the draft and the outcome carried from A when the report delivered meanwhile', async () => {
