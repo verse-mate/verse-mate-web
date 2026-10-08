@@ -20,7 +20,7 @@ import { vmTokens } from '@/styles/themeStyles';
 import { useMyMonthlySummary, useLeaderMonthlySummary, coachState } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel, StatusPill } from '@/components/coach/CoachUi';
 import type { LeaderMonthlySummary } from '@/services/coachService';
-import { dimensionBandIndex } from '@/components/coach/dashboardTheme';
+import { bandHeat } from '@/components/coach/dashboardTheme';
 import { clusterKey, shortCode, useRubric } from '@/hooks/useRubric';
 import type { StatusBand } from '@/services/rubric';
 
@@ -457,7 +457,7 @@ const HEAT_BY_BAND = ['#15803D', '#4D7C0F', '#B08900', '#C2620F', '#B91C1C'];
 
 function heatFor(pct: number | null, bands: StatusBand[]): string {
   if (pct == null) return vmTokens.textTertiary;
-  return HEAT_BY_BAND[dimensionBandIndex(pct, bands)] ?? vmTokens.textTertiary;
+  return bandHeat(pct, bands, HEAT_BY_BAND) ?? vmTokens.textTertiary;
 }
 
 function currentMonth(): string {

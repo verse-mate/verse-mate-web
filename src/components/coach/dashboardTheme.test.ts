@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { ratingForScore, statusBand } from './dashboardTheme';
+import { bandHeat, ratingForScore, statusBand } from './dashboardTheme';
 
 const BANDS = ['Exceptional', 'Strong', 'On Target', 'Developing', 'Early Stage'];
 
@@ -81,5 +81,30 @@ describe('a dimension rating reads the SERVED dimension bands', () => {
 
   it('an unscored dimension is N/A', () => {
     expect(ratingForScore(null, DIMENSION_BANDS)).toEqual({ label: 'N/A', c: NEUTRAL, bg: NEUTRAL_BG });
+  });
+});
+
+describe('a heat colour is picked by the band\'s position across however many bands are served', () => {
+  const PALETTE = ['best', 'good', 'mid', 'low', 'worst'];
+  const bands = (n: number) => Array.from({ length: n }, (_, i) => ({ min: n - 1 - i, label: `b${i}` }));
+
+  it('maps five bands one to one', () => {
+    expect([4, 3, 2, 1, 0].map((score) => bandHeat(score, bands(5), PALETTE))).toEqual(PALETTE);
+  });
+
+  it('gives every one of six bands a colour, the first the best and the last the worst', () => {
+    const heats = [5, 4, 3, 2, 1, 0].map((score) => bandHeat(score, bands(6), PALETTE));
+    expect(heats[0]).toBe('best');
+    expect(heats[5]).toBe('worst');
+    expect(heats.every((h) => PALETTE.includes(h as string))).toBe(true);
+  });
+
+  it('spreads three bands over the ends and the middle', () => {
+    expect([2, 1, 0].map((score) => bandHeat(score, bands(3), PALETTE))).toEqual(['best', 'mid', 'worst']);
+  });
+
+  it('a single band takes the best colour, and no bands give no colour', () => {
+    expect(bandHeat(1, bands(1), PALETTE)).toBe('best');
+    expect(bandHeat(1, [], PALETTE)).toBeUndefined();
   });
 });

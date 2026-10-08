@@ -113,6 +113,13 @@ export function dimensionBandIndex(score: number, bands: DimensionBand[]): numbe
   return i < 0 ? bands.length - 1 : i;
 }
 
+export function bandHeat(score: number, bands: DimensionBand[], palette: readonly string[]): string | undefined {
+  const i = dimensionBandIndex(score, bands);
+  if (i < 0) return undefined;
+  const last = bands.length - 1;
+  return palette[last === 0 ? 0 : Math.round((i * (palette.length - 1)) / last)];
+}
+
 export function ratingForScore(score: number | null, bands: DimensionBand[] = []): Band {
   if (score == null) return { label: 'N/A', ...BAND_UNPLACED };
   const i = dimensionBandIndex(score, bands);
