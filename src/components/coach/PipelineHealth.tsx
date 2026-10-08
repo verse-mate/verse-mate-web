@@ -9,12 +9,14 @@ import {
   usePipelineFailures,
   useReleaseHeldReport,
   useRequeuePipelineFailure,
+  useSetNotTeaching,
   useUpdateLeaderEmail,
 } from '@/hooks/useCoach';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import {
   CoachApiError,
   CoachAuthError,
+  type CoverageLeader,
   isPlaceholderAddress,
   type PipelineFailure,
   type ReleaseOutcome,
@@ -261,19 +263,15 @@ export default function PipelineHealth() {
                         {l.linkedClassName ?? 'no linked class'}
                         {l.classAlert ? ' · registered class disagrees with what was observed' : ''}
                       </div>
+                      {l.attestedAt && (
+                        <div data-testid={`coach-coverage-attested-${l.coachId}`} style={{ fontSize: 12.5, color: dt.textLight }}>
+                          Marked not teaching by{' '}
+                          <span className={REPLAY_BLOCK_CLASS}>{l.attestedBy ?? 'an admin'}</span> on{' '}
+                          {new Date(l.attestedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                        </div>
+                      )}
                     </div>
-                    <div
-                      style={{
-                        fontSize: 12,
-                        fontWeight: 700,
-                        padding: '4px 8px',
-                        borderRadius: 6,
-                        color: l.covered ? dt.green : dt.rust,
-                        background: l.covered ? dt.greenBg : dt.rustBg,
-                      }}
-                    >
-                      {l.covered ? `Covered (${l.basis})` : 'Not covered'}
-                    </div>
+                    <NotTeaching leader={l} />
                   </div>
                 ))}
               </div>
@@ -281,6 +279,59 @@ export default function PipelineHealth() {
           );
         }}
       </QueryState>
+    </div>
+  );
+}
+
+function coverageBadge(l: CoverageLeader): { text: string; ok: boolean } {
+  if (l.basis === 'attested-not-teaching') return { text: 'Not teaching (attested)', ok: true };
+  if (l.covered) return { text: `Covered · ${l.observedSessions} observed`, ok: true };
+  return { text: 'Not covered · Not observed', ok: false };
+}
+
+function NotTeaching({ leader }: { leader: CoverageLeader }) {
+  const set = useSetNotTeaching();
+  const [error, setError] = useState<string | null>(null);
+  const attested = Boolean(leader.attestedAt);
+  const badge = coverageBadge(leader);
+
+  const toggle = () => {
+    setError(null);
+    set.mutate(
+      { coachId: leader.coachId, attested: !attested },
+      { onError: (err) => setError(refusalText(err)) },
+    );
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6 }}>
+      <div
+        data-testid={`coach-coverage-basis-${leader.coachId}`}
+        style={{
+          fontSize: 12,
+          fontWeight: 700,
+          padding: '4px 8px',
+          borderRadius: 6,
+          color: badge.ok ? dt.green : dt.rust,
+          background: badge.ok ? dt.greenBg : dt.rustBg,
+        }}
+      >
+        {badge.text}
+      </div>
+      <button
+        type="button"
+        onClick={toggle}
+        disabled={set.isPending}
+        data-testid={`coach-coverage-not-teaching-${leader.coachId}`}
+        style={btn}
+      >
+        {set.isPending ? 'Saving…' : attested ? 'Clear not teaching' : 'Mark not teaching'}
+      </button>
+      {error && (
+        <div role="alert" data-testid={`coach-coverage-error-${leader.coachId}`} style={{ fontSize: 12.5, color: dt.rust }}>
+          {error}
+        </div>
+      )}
     </div>
   );
 }

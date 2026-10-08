@@ -80,6 +80,8 @@ const COVERAGE = {
       accountStatus: 'active',
       linkedClassName: 'Saturday Morning',
       classAlert: false,
+      attestedAt: null,
+      attestedBy: null,
     },
     {
       coachId: 'amy-lee',
@@ -91,6 +93,8 @@ const COVERAGE = {
       accountStatus: 'active',
       linkedClassName: null,
       classAlert: true,
+      attestedAt: null,
+      attestedBy: null,
     },
   ],
 };
@@ -404,5 +408,79 @@ describe('a send skipped for a placeholder address', () => {
     const outcome = await screen.findByTestId('coach-pipeline-outcome-ff-2');
     expect(outcome).toHaveTextContent(/1 placeholder address/);
     expect(outcome).not.toHaveTextContent('needs-real-email');
+  });
+});
+
+describe('a leader who is not teaching', () => {
+  const ATTESTED = {
+    ...COVERAGE.leaders[1],
+    coachId: 'desmond-vane',
+    name: 'Desmond Vane',
+    email: 'desmond@example.test',
+    covered: true,
+    basis: 'attested-not-teaching',
+    classAlert: false,
+    attestedAt: '2026-10-01T15:00:00.000Z',
+    attestedBy: 'admin@example.test',
+  };
+
+  it('is told apart from a leader the bot has not observed, with who attested and when', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [COVERAGE.leaders[1], ATTESTED] });
+    renderView();
+
+    const attested = await screen.findByTestId('coach-coverage-desmond-vane');
+    expect(within(attested).getByTestId('coach-coverage-basis-desmond-vane')).toHaveTextContent('Not teaching (attested)');
+    const by = within(attested).getByTestId('coach-coverage-attested-desmond-vane');
+    expect(by).toHaveTextContent('admin@example.test');
+    expect(by).toHaveTextContent('Oct 1, 2026');
+    expect(within(by).getByText('admin@example.test').closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    expect(screen.getByTestId('coach-coverage-basis-amy-lee')).toHaveTextContent('Not observed');
+    expect(screen.queryByTestId('coach-coverage-attested-amy-lee')).toBeNull();
+  });
+
+  it('is attested from the coverage list, and coverage is read again', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    const coverage = vi
+      .spyOn(coachService, 'fetchCoverage')
+      .mockResolvedValueOnce(COVERAGE)
+      .mockResolvedValue({ ...COVERAGE, leaders: [COVERAGE.leaders[0], { ...ATTESTED, coachId: 'amy-lee', name: 'Amy Lee' }] });
+    const set = vi.spyOn(coachService, 'setNotTeaching').mockResolvedValue({ attested: true });
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-coverage-not-teaching-amy-lee'));
+    await waitFor(() => expect(set).toHaveBeenCalledWith('amy-lee', true));
+    await waitFor(() => expect(screen.getByTestId('coach-coverage-basis-amy-lee')).toHaveTextContent('Not teaching (attested)'));
+    expect(coverage).toHaveBeenCalledTimes(2);
+  });
+
+  it('has the attestation cleared, the button held while the request is in flight', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [ATTESTED] });
+    let settle: (v: { attested: boolean }) => void = () => {};
+    const set = vi
+      .spyOn(coachService, 'setNotTeaching')
+      .mockImplementation(() => new Promise((resolve) => { settle = resolve; }));
+    renderView();
+
+    const button = await screen.findByTestId('coach-coverage-not-teaching-desmond-vane');
+    expect(button).toHaveTextContent('Clear not teaching');
+    fireEvent.click(button);
+    await waitFor(() => expect(set).toHaveBeenCalledWith('desmond-vane', false));
+    expect(button).toBeDisabled();
+    settle({ attested: false });
+    await waitFor(() => expect(button).not.toBeDisabled());
+  });
+
+  it('shows a refused attestation on the row', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'setNotTeaching').mockRejectedValue(
+      new CoachApiError('admin/leaders/amy-lee/not-teaching', 404, 'Leader not found'),
+    );
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-coverage-not-teaching-amy-lee'));
+    expect(await screen.findByTestId('coach-coverage-error-amy-lee')).toHaveTextContent('Leader not found');
   });
 });

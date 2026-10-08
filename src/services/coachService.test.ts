@@ -19,6 +19,7 @@ import {
   fetchCoachMe,
   saveCoachZoomLink,
   saveRecordingLink,
+  setNotTeaching,
   statusColor,
   updateCoachClass,
   updateLeaderEmail,
@@ -289,6 +290,17 @@ describe('coachService', () => {
       return jsonResponse({ coachId: 'amy-lee', state: 'retained' });
     });
     expect(await attributeSession('ff/4', 'amy-lee')).toEqual({ coachId: 'amy-lee', state: 'retained' });
+  });
+
+  it('POSTs a not-teaching attestation and DELETEs it to clear', async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/admin/leaders/amy-lee/not-teaching');
+      return jsonResponse({ attested: init?.method === 'POST' });
+    });
+    expect(await setNotTeaching('amy-lee', true)).toEqual({ attested: true });
+    expect(calls[0].init?.method).toBe('POST');
+    expect(await setNotTeaching('amy-lee', false)).toEqual({ attested: false });
+    expect(calls[1].init?.method).toBe('DELETE');
   });
 
   it('PUTs a session recording link', async () => {
