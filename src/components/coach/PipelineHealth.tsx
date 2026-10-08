@@ -222,7 +222,7 @@ export default function PipelineHealth() {
                         {s.reason?.startsWith(COLD_RECALL_HOLD) ? (
                           <>
                             Why: held, because {COLD_RECALL_WHY}.
-                            <ColdRecallHeld items={s.reason.slice(COLD_RECALL_HOLD.length).split('; ')} />
+                            <ColdRecallHeld items={[s.reason.slice(COLD_RECALL_HOLD.length)]} />
                           </>
                         ) : s.reason ? (
                           `Why: ${s.reason}`

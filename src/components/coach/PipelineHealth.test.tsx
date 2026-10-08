@@ -619,12 +619,24 @@ describe('a first lesson held for a cold-recall improvement', () => {
     const row = await screen.findByTestId('coach-pipeline-ff-7');
     expect(row).toHaveTextContent(`Why: held, because ${WHY}.`);
     expect(row).not.toHaveTextContent('held: a first lesson');
-    for (const item of HELD_ITEMS) {
-      expect(within(row).getByText(item).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
-    }
+    expect(within(row).getByText(HELD_ITEMS.join('; ')).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
     expect(row).toHaveTextContent(FIX);
     expect(row).not.toHaveTextContent('once the report is delivered');
     expect(within(row).getByTestId('coach-pipeline-release-ff-7')).toBeInTheDocument();
+  });
+
+  it('shows the held items whole, out of session replay, when one of them contains "; "', async () => {
+    const items = "Recall last week's idea; then open the new passage; Review the previous lesson";
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(
+      page([{ ...COLD, reason: `held: a first lesson with a cold-recall improvement: ${items}` }]),
+    );
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-7');
+    const shown = within(row).getByText(items);
+    expect(shown.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    expect(within(row).queryByText('then open the new passage')).toBeNull();
   });
 
   it('a release refused for it says so in words, with the held items and how to clear it', async () => {
