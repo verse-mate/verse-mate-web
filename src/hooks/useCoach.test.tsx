@@ -5,7 +5,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import * as coachService from '@/services/coachService';
 import type { CoachReportSummary, LeaderMonthlyResponse } from '@/services/coachService';
-import { useCoachReportSummaries, useLeaderMonthlySummary } from './useCoach';
+import { coachState, useCoachReportSummaries, useLeaderMonthlySummary } from './useCoach';
 
 function monthlyFor(id: string, name: string): LeaderMonthlyResponse {
   return {
@@ -80,5 +80,29 @@ describe("a leader's paginated history", () => {
     expect(result.current.hasNextPage).toBe(false);
     await act(() => result.current.fetchNextPage());
     expect(fetch).toHaveBeenCalledTimes(2);
+  });
+
+  it('a failed next page is not a failure of the page already shown', async () => {
+    const item = (id: string) => ({ id }) as CoachReportSummary;
+    vi.spyOn(coachService, 'fetchCoachReportSummaries').mockImplementation((offset = 0) =>
+      offset === 0
+        ? Promise.resolve({ items: [item('a')], total: 2, streakWeeks: 0, quarterSessions: 0 })
+        : Promise.reject(new coachService.CoachApiError('reports/summary', 500, '')),
+    );
+
+    const { result } = renderHook(
+      () => {
+        const query = useCoachReportSummaries();
+        return { query, state: coachState(query) };
+      },
+      { wrapper: wrapper() },
+    );
+    await waitFor(() => expect(result.current.query.hasNextPage).toBe(true));
+    await act(() => result.current.query.fetchNextPage());
+    await waitFor(() => expect(result.current.query.isFetching).toBe(false));
+
+    expect(result.current.query.isFetchNextPageError).toBe(true);
+    expect(result.current.state.error).toBe(false);
+    expect(result.current.state.data?.pages[0].items).toEqual([item('a')]);
   });
 });
