@@ -26,6 +26,7 @@ vi.mock('@/services/coachService', async (io) => {
     fetchLeaderMonthlySummary: vi.fn(),
     fetchAllCoachClasses: vi.fn(),
     addCoachLeader: vi.fn(),
+    addCoachNote: vi.fn(),
   };
 });
 vi.mock('@/contexts/AppContext', () => ({
@@ -139,6 +140,25 @@ describe('Coach Oversight', () => {
 
     expect(await screen.findByTestId('coach-pipeline-copy-s7')).toHaveTextContent('Pipeline copy, not visible to the leader');
     expect(screen.queryByTestId('coach-pipeline-copy-s6')).toBeNull();
+  });
+
+  it('shows why a comment on a held report was refused, and keeps the draft', async () => {
+    vi.mocked(coachService.addCoachNote).mockRejectedValue(
+      new coachService.CoachApiError(
+        'x',
+        409,
+        'This report is held from its leader, so a note would email them about a report they cannot open. Release it first.',
+      ),
+    );
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
+    fireEvent.change(await screen.findByTestId('oversight-comment-s6'), { target: { value: 'Well led.' } });
+    fireEvent.click(screen.getByTestId('oversight-comment-send-s6'));
+
+    expect(await screen.findByTestId('oversight-comment-error-s6')).toHaveTextContent(
+      'Refused (409): This report is held from its leader, so a note would email them about a report they cannot open. Release it first.',
+    );
+    expect(screen.getByTestId('oversight-comment-s6')).toHaveValue('Well led.');
   });
 
   it('falls back to available sessions for cluster mix when no monthly summary yet', async () => {

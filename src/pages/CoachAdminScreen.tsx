@@ -32,7 +32,7 @@ import {
   useAddNote,
   coachState,
 } from '@/hooks/useCoach';
-import { CoachApiError, badAddressText } from '@/services/coachService';
+import { CoachApiError, badAddressText, refusalText } from '@/services/coachService';
 import type {
   CoachSummary,
   CoachMonthly,
@@ -685,11 +685,13 @@ function ClassCardBody({
 function CommentThread({ report, leaderId }: { report: CoachReport; leaderId: string }) {
   const addNote = useAddNote(leaderId);
   const [draft, setDraft] = useState('');
+  const [refusal, setRefusal] = useState<string | null>(null);
   const notes = report.notes ?? [];
 
   const submit = () => {
     const body = draft.trim();
     if (!body) return;
+    setRefusal(null);
     addNote.mutate(
       { reportId: report.id, body },
       {
@@ -697,7 +699,7 @@ function CommentThread({ report, leaderId }: { report: CoachReport; leaderId: st
           setDraft('');
           toast.success('Comment sent to the leader');
         },
-        onError: () => toast.error('Could not post the comment'),
+        onError: (err) => setRefusal(refusalText(err)),
       },
     );
   };
@@ -726,10 +728,15 @@ function CommentThread({ report, leaderId }: { report: CoachReport; leaderId: st
           data-testid={`oversight-comment-${report.id}`}
           style={{ flex: 1, resize: 'vertical', fontSize: 13.5, padding: '10px 12px', border: `1px solid ${dt.inputBorder}`, borderRadius: 9, background: dt.cardBg, color: dt.textPrimary, lineHeight: 1.5, fontFamily: dt.sans }}
         />
-        <button type="button" onClick={submit} disabled={addNote.isPending || !draft.trim()} style={{ flex: 'none', background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13, padding: '11px 16px', borderRadius: 9, border: 'none', cursor: draft.trim() ? 'pointer' : 'default', opacity: addNote.isPending || !draft.trim() ? 0.6 : 1 }}>
+        <button type="button" onClick={submit} disabled={addNote.isPending || !draft.trim()} data-testid={`oversight-comment-send-${report.id}`} style={{ flex: 'none', background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13, padding: '11px 16px', borderRadius: 9, border: 'none', cursor: draft.trim() ? 'pointer' : 'default', opacity: addNote.isPending || !draft.trim() ? 0.6 : 1 }}>
           {addNote.isPending ? 'Sending…' : 'Comment'}
         </button>
       </div>
+      {refusal && (
+        <div role="alert" data-testid={`oversight-comment-error-${report.id}`} style={{ marginTop: 8, fontSize: 13, color: dt.rust }}>
+          {refusal}
+        </div>
+      )}
     </div>
   );
 }
