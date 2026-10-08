@@ -39,6 +39,24 @@ describe('the analytics client', () => {
     ).toBe('https://a.test/coach');
   });
 
+  it('masks a coach request in the replay: no ids in its address and no bodies', async () => {
+    await mount('/coach');
+    const mask = init.mock.calls[0][1].session_recording.maskCapturedNetworkRequestFn;
+    const out = mask({
+      name: 'https://api.test/coach/admin/reports/rep-77/dimensions/5?leader=milo-kerr',
+      entryType: 'resource',
+      startTime: 0,
+      duration: 1,
+      requestBody: '{"score":2,"rationale":"never opened the passage"}',
+      responseBody: '{"base":76,"status":"Strong"}',
+    });
+    expect(out).toMatchObject({
+      name: 'https://api.test/coach/admin/reports/:id/dimensions/:id',
+      requestBody: null,
+      responseBody: null,
+    });
+  });
+
   it('sends a pageview without the query string', async () => {
     await mount('/coach?s=report-1&leader=l1');
     const [, props] = capture.mock.calls.find(([event]) => event === '$pageview') ?? [];
