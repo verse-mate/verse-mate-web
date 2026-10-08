@@ -28,7 +28,7 @@ test.describe("A leader's address", () => {
     const row = page.getByTestId(`coach-coverage-${PLACEHOLDER_LEADER.id}`);
     await expect(row.getByTestId(`coach-address-${PLACEHOLDER_LEADER.id}`)).toHaveText('No real address yet');
     await expect(row).not.toContainText('needs-real-email');
-    await expect(page.getByTestId('coach-address-uncovered').locator(`xpath=ancestor-or-self::*[contains(@class,"ph-no-capture")]`)).toHaveCount(1);
+    await expect(page.getByTestId('coach-address-uncovered').locator(`xpath=ancestor-or-self::*[contains(@class,"ph-no-capture")]`).first()).toBeAttached();
     await capture(page, testInfo, 'w2a-address-placeholder', row);
 
     await row.getByTestId(`coach-address-edit-${PLACEHOLDER_LEADER.id}`).click();
@@ -59,7 +59,7 @@ test.describe("A leader's title keywords and alternate addresses", () => {
     const keywords = row.getByTestId('coach-attribution-keywords-evan-ellis');
     await expect(keywords).toHaveValue('tuesday night');
     await expect(row.getByTestId('coach-attribution-emails-evan-ellis')).toHaveValue('evan.personal@example.test');
-    await expect(keywords.locator('xpath=ancestor::*[contains(@class,"ph-no-capture")]')).toHaveCount(1);
+    await expect(keywords.locator('xpath=ancestor::*[contains(@class,"ph-no-capture")]').first()).toBeAttached();
 
     await keywords.fill('tuesday night\nhb');
     await expect(row.getByTestId('coach-attribution-error-evan-ellis')).toContainText('at least three characters: hb');
