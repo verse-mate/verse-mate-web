@@ -405,6 +405,7 @@ export interface PipelineFailure {
   attempts: number;
   reportId: string | null;
   reason: string | null;
+  action: 'release' | 'requeue' | 'attribute' | null;
   updatedAt: string;
 }
 
@@ -420,11 +421,26 @@ export function requeuePipelineFailure(sourceSessionId: string): Promise<{ reque
   );
 }
 
+export function attributeSession(
+  sourceSessionId: string,
+  coachId: string,
+): Promise<{ coachId: string; state: string }> {
+  return coachRequest<{ coachId: string; state: string }>(
+    `admin/sessions/${encodeURIComponent(sourceSessionId)}/attribute`,
+    {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ coachId }),
+    },
+  );
+}
+
 export interface ReleaseOutcome {
   delivered: boolean;
   refusal?: string;
   violations?: string[];
   shortfalls?: string[];
+  skipped?: string[];
 }
 
 export function releaseHeldReport(reportId: string): Promise<ReleaseOutcome> {

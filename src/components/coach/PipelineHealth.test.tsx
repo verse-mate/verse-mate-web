@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 
@@ -17,6 +17,7 @@ const PARKED = {
   attempts: 3,
   reportId: null,
   reason: 'the model answer failed validation',
+  action: 'requeue' as const,
   updatedAt: '2026-08-23T00:00:00Z',
 };
 
@@ -29,8 +30,41 @@ const HELD = {
   attempts: 0,
   reportId: 'rep-2',
   reason: 'injection tripwire',
+  action: 'release' as const,
   updatedAt: '2026-08-30T00:00:00Z',
 };
+
+const UNRESOLVED = {
+  sourceSessionId: 'ff-4',
+  coachId: null,
+  title: 'Zephaniah study',
+  sessionDate: '2026-09-29',
+  state: 'observed',
+  attempts: 0,
+  reportId: null,
+  reason: 'unattributed: no leader matched the session title',
+  action: 'attribute' as const,
+  updatedAt: '2026-09-30T00:00:00Z',
+};
+
+const SKIPPED = {
+  sourceSessionId: 'ff-5',
+  coachId: 'wyatt-wellington',
+  title: 'Micah, Lesson 2',
+  sessionDate: '2026-09-27',
+  state: 'delivered',
+  attempts: 0,
+  reportId: 'rep-5',
+  reason: 'delivered, but not emailed to wyatt-wellington@needs-real-email.invalid: placeholder address',
+  action: null,
+  updatedAt: '2026-09-28T00:00:00Z',
+};
+
+const ROSTER = [
+  { id: 'milo-kerr', name: 'Milo Kerr', group: '', coachName: '', sessionCount: 4, latest: null },
+  { id: 'amy-lee', name: 'Amy Lee', group: '', coachName: '', sessionCount: 1, latest: null },
+  { id: 'wyatt-wellington', name: 'Wyatt Wellington', group: '', coachName: '', sessionCount: 2, latest: null },
+];
 
 const COVERAGE = {
   windowDays: 30,
@@ -69,6 +103,10 @@ function renderView() {
     </QueryClientProvider>,
   );
 }
+
+beforeEach(() => {
+  vi.spyOn(coachService, 'fetchAdminCoaches').mockResolvedValue(ROSTER);
+});
 
 afterEach(() => vi.restoreAllMocks());
 
@@ -282,5 +320,89 @@ describe("a leader's address", () => {
       'Another leader already uses that address',
     );
     expect(screen.getByTestId('coach-address-input-wyatt-wellington')).toHaveValue('milo@example.test');
+  });
+});
+
+describe('an unresolved session', () => {
+  it('is assigned to a leader picked from the roster, and leaves the list', async () => {
+    const list = vi
+      .spyOn(coachService, 'fetchPipelineFailures')
+      .mockResolvedValueOnce([UNRESOLVED])
+      .mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    const attribute = vi
+      .spyOn(coachService, 'attributeSession')
+      .mockResolvedValue({ coachId: 'amy-lee', state: 'observed' });
+    renderView();
+
+    const picker = await screen.findByTestId('coach-pipeline-assign-to-ff-4');
+    await waitFor(() => expect(within(picker).getByRole('option', { name: 'Amy Lee' })).toBeInTheDocument());
+    fireEvent.change(picker, { target: { value: 'amy-lee' } });
+    fireEvent.click(screen.getByTestId('coach-pipeline-assign-ff-4'));
+
+    await waitFor(() => expect(attribute).toHaveBeenCalledWith('ff-4', 'amy-lee'));
+    await waitFor(() => expect(screen.queryByTestId('coach-pipeline-ff-4')).toBeNull());
+    expect(list).toHaveBeenCalledTimes(2);
+  });
+
+  it('offers no assignment until a leader is picked, and no release or requeue at all', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([UNRESOLVED]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    expect(await screen.findByTestId('coach-pipeline-assign-ff-4')).toBeDisabled();
+    expect(screen.queryByTestId('coach-pipeline-release-ff-4')).toBeNull();
+    expect(screen.queryByTestId('coach-pipeline-requeue-ff-4')).toBeNull();
+  });
+
+  it('keeps the assignment disabled while it is in flight, and shows a refusal', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([UNRESOLVED]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    let refuse: (e: Error) => void = () => {};
+    vi.spyOn(coachService, 'attributeSession').mockImplementation(
+      () => new Promise((_, reject) => { refuse = reject; }),
+    );
+    renderView();
+
+    const picker = await screen.findByTestId('coach-pipeline-assign-to-ff-4');
+    await waitFor(() => expect(within(picker).getByRole('option', { name: 'Milo Kerr' })).toBeInTheDocument());
+    fireEvent.change(picker, { target: { value: 'milo-kerr' } });
+    const assign = screen.getByTestId('coach-pipeline-assign-ff-4');
+    fireEvent.click(assign);
+    await waitFor(() => expect(assign).toBeDisabled());
+
+    refuse(new CoachApiError('admin/sessions/ff-4/attribute', 409, "The session's report is being delivered right now; try again shortly"));
+    expect(await screen.findByTestId('coach-pipeline-outcome-ff-4')).toHaveTextContent('being delivered right now');
+    await waitFor(() => expect(assign).not.toBeDisabled());
+  });
+});
+
+describe('a send skipped for a placeholder address', () => {
+  it("names the leader, keeps the address out of replay, and offers to fix it instead of release or requeue", async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([SKIPPED]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-5');
+    await waitFor(() => expect(row).toHaveTextContent('Wyatt Wellington'));
+    expect(within(row).getByText(/placeholder address/).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    expect(within(row).getByTestId('coach-address-edit-wyatt-wellington')).toBeInTheDocument();
+    expect(screen.queryByTestId('coach-pipeline-release-ff-5')).toBeNull();
+    expect(screen.queryByTestId('coach-pipeline-requeue-ff-5')).toBeNull();
+  });
+
+  it('a release that skipped a placeholder says so, without the address', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([HELD]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue({
+      delivered: true,
+      skipped: ['amy@needs-real-email.invalid'],
+    });
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-pipeline-release-ff-2'));
+    const outcome = await screen.findByTestId('coach-pipeline-outcome-ff-2');
+    expect(outcome).toHaveTextContent(/1 placeholder address/);
+    expect(outcome).not.toHaveTextContent('needs-real-email');
   });
 });
