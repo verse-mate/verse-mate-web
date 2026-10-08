@@ -303,6 +303,7 @@ export interface CoachApiOptions {
   awaitingRelease?: boolean;
   failedSends?: boolean;
   parallelRunCopies?: boolean;
+  pendingReshare?: boolean;
 }
 
 type ReviewKind = 'delivered' | 'undelivered' | 'in-flight' | 'partial' | 'legacy';
@@ -830,6 +831,15 @@ export const PARALLEL_RUN_RESHARE = {
   parallelRun: true,
 };
 
+export const PENDING_RESHARE = {
+  ...PARALLEL_RUN_RESHARE,
+  sourceSessionId: 'ff-pending-reshare',
+  title: 'Obadiah, Lesson 1',
+  sessionDate: '2026-08-08',
+  sessionStartedAt: '2026-08-08T14:00:00.000Z',
+  parallelRun: false,
+};
+
 export const PLACEHOLDER_LEADER = { id: 'dana-diaz', name: 'Dana Diaz', email: 'dana-diaz@needs-real-email.invalid' };
 
 export const UNRESOLVED_SESSION = {
@@ -964,7 +974,10 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     ...(opts.failedSends ? [...FAILED_SEND_SESSIONS, UNCONFIRMED_SEND_SESSION].map((x) => ({ ...x })) : []),
     ...(opts.parallelRunCopies ? [{ ...PARALLEL_RUN_SESSION }] : []),
   ];
-  const reshares: Array<Record<string, unknown>> = opts.parallelRunCopies ? [{ ...PARALLEL_RUN_RESHARE }] : [];
+  const reshares: Array<Record<string, unknown>> = [
+    ...(opts.parallelRunCopies ? [{ ...PARALLEL_RUN_RESHARE }] : []),
+    ...(opts.pendingReshare ? [{ ...PENDING_RESHARE }] : []),
+  ];
   const coverage = { ...COVERAGE, leaders: COVERAGE.leaders.map((l) => ({ ...l })) };
   const roster = [{ id: LEADER_ID, name: ME.profile.name }];
   if (opts.failedSends) roster.push({ id: FAILED_SEND_LEADER.id, name: FAILED_SEND_LEADER.name });

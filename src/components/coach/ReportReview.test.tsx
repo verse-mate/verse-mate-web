@@ -689,7 +689,7 @@ describe('the kept versions', () => {
     renderReview();
     fireEvent.click(await screen.findByTestId('coach-revision-send-1'));
     expect(await screen.findByTestId('coach-revision-outcome')).toHaveTextContent(
-      'Not sent: send-failed. Failed: leader@example.test (rejected).',
+      'Not sent: the mail service did not take it for every recipient. Failed: leader@example.test (rejected).',
     );
   });
 
@@ -762,7 +762,9 @@ describe('the kept versions', () => {
     vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null)]);
     vi.spyOn(coachService, 'sendRevision').mockResolvedValue(unconfirmedSend);
     vi.spyOn(coachService, 'requeueRevision').mockRejectedValue(
-      new CoachApiError('x', 404, 'That report has no unsent revision with a send left unconfirmed, or its send is still in flight'),
+      new CoachApiError('x', 404, 'That report has no unsent revision with a send left unconfirmed, or its send is still in flight', {
+        refusal: 'nothing-to-requeue',
+      }),
     );
     renderReview();
     fireEvent.click(await screen.findByTestId('coach-revision-send-1'));
@@ -770,6 +772,19 @@ describe('the kept versions', () => {
     expect(await screen.findByTestId('coach-revision-outcome')).toHaveTextContent(
       'Nothing to requeue: That report has no unsent revision with a send left unconfirmed, or its send is still in flight.',
     );
+  });
+
+  it('a requeue answered 404 with no refusal code is a failure, not nothing to requeue', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null)]);
+    vi.spyOn(coachService, 'sendRevision').mockResolvedValue(unconfirmedSend);
+    vi.spyOn(coachService, 'requeueRevision').mockRejectedValue(new CoachApiError('x', 404, 'Route not found'));
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-revision-send-1'));
+    fireEvent.click(await screen.findByTestId('coach-revision-requeue-1'));
+    const outcome = await screen.findByTestId('coach-revision-outcome');
+    expect(outcome).toHaveTextContent('Refused (404): Route not found');
+    expect(outcome).not.toHaveTextContent('Nothing to requeue');
   });
 
   it('lists who amended, when, what changed, and whether it was sent', async () => {
@@ -1225,17 +1240,18 @@ describe('correcting a dimension of an undelivered report', () => {
   });
 
   it.each([
-    ['being delivered or re-scored', IN_FLIGHT],
-    ['already emailed to some recipients', PARTIALLY_DELIVERED],
-    ['legacy', LEGACY],
-  ])('shows a correction refused for a report %s in words and keeps the draft', async (_name, message) => {
-    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
-    vi.spyOn(coachService, 'correctDimension').mockRejectedValue(new CoachApiError('x', 409, message));
+    ['being delivered or re-scored', 'in-flight', IN_FLIGHT, 2],
+    ['already emailed to some recipients', 'partially-delivered', PARTIALLY_DELIVERED, 2],
+    ['legacy', 'legacy-report', LEGACY, 1],
+  ])('shows a correction refused for a report %s in words and keeps the draft', async (_name, refusal, message, reads) => {
+    const load = vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    vi.spyOn(coachService, 'correctDimension').mockRejectedValue(new CoachApiError('x', 409, message, { refusal }));
     renderReview();
     await correct(5, '2', 'fewer questions');
     expect(await screen.findByTestId('coach-review-dim-outcome')).toHaveTextContent(`Refused (409): ${message}`);
     expect(screen.getByTestId('coach-review-dim-rationale-5')).toHaveValue('fewer questions');
     await waitFor(() => expect(screen.getByTestId('coach-review-dim-save-5')).not.toBeDisabled());
+    await waitFor(() => expect(load).toHaveBeenCalledTimes(reads));
   });
 
   it('a report delivered meanwhile is read again, and the amend editor opens with the correction as its draft', async () => {
@@ -1421,7 +1437,7 @@ describe('editing the Improvements of an undelivered report', () => {
   it('a report delivered meanwhile is read again, and the amend editor opens with the Improvements draft and the refusal', async () => {
     const delivered = 'Refused: the report was already delivered. Amend it instead, which sends the leader a revised copy.';
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValueOnce(UNDELIVERED).mockResolvedValue(REVIEW);
-    vi.spyOn(coachService, 'editImprovements').mockRejectedValue(new CoachApiError('x', 409, delivered));
+    vi.spyOn(coachService, 'editImprovements').mockRejectedValue(new CoachApiError('x', 409, delivered, { refusal: 'already-delivered' }));
     const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, firstLesson: false, sent: true });
     await openImprovements(WITH_PROSE);
     fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Ask newcomers first' } });
@@ -1448,7 +1464,9 @@ describe('editing the Improvements of an undelivered report', () => {
     const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
     const load = vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
     vi.spyOn(coachService, 'editImprovements').mockRejectedValue(
-      new CoachApiError('x', 409, 'Refused: the report is being delivered or re-scored. Correct it once that finishes, or amend it after delivery.'),
+      new CoachApiError('x', 409, 'Refused: the report is being delivered or re-scored. Correct it once that finishes, or amend it after delivery.', {
+        refusal: 'in-flight',
+      }),
     );
     render(
       <QueryClientProvider client={client}>
@@ -1471,7 +1489,7 @@ describe('editing the Improvements of an undelivered report', () => {
   it('a draft cancelled after an in-flight refusal is not carried into the amend editor', async () => {
     const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
     const load = vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
-    vi.spyOn(coachService, 'editImprovements').mockRejectedValue(new CoachApiError('x', 409, 'Refused: in flight'));
+    vi.spyOn(coachService, 'editImprovements').mockRejectedValue(new CoachApiError('x', 409, 'Refused: in flight', { refusal: 'in-flight' }));
     render(
       <QueryClientProvider client={client}>
         <ReportReview report={REPORT} coachId="leader" />

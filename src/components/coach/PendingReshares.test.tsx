@@ -2,6 +2,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import * as coachService from '@/services/coachService';
+import contract from '../../../tests/e2e/coach/coach-contract.snapshot.json';
 import PendingReshares from './PendingReshares';
 
 const ONE = [
@@ -94,16 +95,27 @@ describe('a session observed during the parallel run', () => {
     expect(screen.getByTestId('coach-reshare-resolve-ff-1')).not.toBeDisabled();
   });
 
-  it('a send refused because the list predates the mark says why in words', async () => {
+  it.each(Object.entries(contract.refusals['POST /coach/admin/reshares/:sourceSessionId/send']))(
+    'a send refused as %s says why in the words the server gives for that code',
+    async (refusal, { status, message }) => {
+      vi.spyOn(coachService, 'fetchPendingReshares').mockResolvedValue(ONE);
+      vi.spyOn(coachService, 'sendReshareRequest').mockRejectedValue(new coachService.CoachApiError('x', status, message, { refusal }));
+      render(<PendingReshares />);
+      fireEvent.click(await screen.findByTestId('coach-reshare-send-ff-1'));
+      const error = await screen.findByTestId('coach-reshare-error');
+      expect(error).toHaveTextContent(`Not sent. ${message}.`);
+      expect(error).not.toHaveTextContent(refusal);
+    },
+  );
+
+  it('a send that fails with no refusal code is reported as not sent, whatever its message says', async () => {
     vi.spyOn(coachService, 'fetchPendingReshares').mockResolvedValue(ONE);
     vi.spyOn(coachService, 'sendReshareRequest').mockRejectedValue(
-      new coachService.CoachApiError('x', 400, 'Re-share not sent: parallel-run-session'),
+      new coachService.CoachApiError('x', 409, 'This session was observed during the parallel run: it is kept for admin comparison and never sent'),
     );
     render(<PendingReshares />);
     fireEvent.click(await screen.findByTestId('coach-reshare-send-ff-1'));
-    const error = await screen.findByTestId('coach-reshare-error');
-    expect(error).toHaveTextContent('Not sent: this session was observed during the parallel run, so it is kept for comparison and never sent.');
-    expect(error).not.toHaveTextContent('parallel-run-session');
+    expect(await screen.findByTestId('coach-reshare-error')).toHaveTextContent('The request could not be sent. Nothing was recorded as asked.');
   });
 });
 

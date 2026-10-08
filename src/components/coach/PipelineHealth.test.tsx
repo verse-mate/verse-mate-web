@@ -216,21 +216,36 @@ describe('what is stuck in the pipeline', () => {
     expect(screen.queryByTestId('coach-pipeline-release-ff-1')).toBeNull();
   });
 
-  it('shows a release the server declined, with its reasons', async () => {
+  it('shows a release the server declined in words, with its reasons', async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([HELD]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue({
       delivered: false,
-      refusal: 'governance',
-      violations: ['benchmark-name'],
+      refusal: 'governance-blocked',
+      violations: ['benchmark-name: in the body'],
     });
     renderView();
 
     fireEvent.click(await screen.findByTestId('coach-pipeline-release-ff-2'));
     const outcome = await screen.findByTestId('coach-pipeline-outcome-ff-2');
-    expect(outcome).toHaveTextContent('governance');
-    expect(outcome).toHaveTextContent('benchmark-name');
+    expect(outcome).toHaveTextContent('Not delivered: it breaks a governance rule (benchmark-name: in the body)');
+    expect(outcome).not.toHaveTextContent('governance-blocked');
   });
+
+  it.each(['send-failed', 'calibration-blocked', 'awaiting-release', 'already-delivered', 'in-flight', 'unknown-report'])(
+    'shows a release declined as %s in words, never as its code',
+    async (refusal) => {
+      vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([HELD]));
+      vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+      vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue({ delivered: false, refusal });
+      renderView();
+
+      fireEvent.click(await screen.findByTestId('coach-pipeline-release-ff-2'));
+      const outcome = await screen.findByTestId('coach-pipeline-outcome-ff-2');
+      expect(outcome).toHaveTextContent(`Not delivered: ${coachService.refusalWords(refusal)}`);
+      expect(outcome).not.toHaveTextContent(refusal);
+    },
+  );
 
   it('shows an action the server refused as a refusal', async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([PARKED]));

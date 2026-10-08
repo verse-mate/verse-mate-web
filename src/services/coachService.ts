@@ -257,6 +257,30 @@ export class CoachApiError extends Error {
   }
 }
 
+export const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
+
+const REFUSAL_WORDS: Record<string, string> = {
+  'send-failed': 'the mail service did not take it for every recipient',
+  'governance-blocked': 'it breaks a governance rule',
+  'cold-recall-improvement': COLD_RECALL_WHY,
+  'calibration-blocked': 'the scoring has not passed its calibration check',
+  'awaiting-release': 'it is held until an admin releases it',
+  'already-delivered': 'it was already delivered',
+  'in-flight': 'another request is delivering it right now',
+  'unknown-report': 'the report no longer exists',
+  'parallel-run': 'the pipeline is in its parallel run, so nothing is sent until cutover',
+  'parallel-run-session': 'this session was observed during the parallel run, so it is kept for comparison and never sent',
+  'no-mailer': 'no mailer is configured',
+};
+
+export function refusalWords(code: string | undefined): string {
+  return REFUSAL_WORDS[code ?? ''] ?? `the server refused it for a reason this page does not know (${code ?? 'none given'})`;
+}
+
+export function refusalCode(err: unknown): string | undefined {
+  return err instanceof CoachApiError && typeof err.details.refusal === 'string' ? err.details.refusal : undefined;
+}
+
 export function refusalText(err: unknown): string {
   if (err instanceof CoachAuthError) return 'Refused: this account does not have admin access.';
   if (err instanceof CoachApiError) {
@@ -580,7 +604,7 @@ export async function fetchReportReview(reportId: string): Promise<ReportReviewS
   try {
     return await coachRequest<ReportReviewState>(adminReportPath(reportId, 'review'));
   } catch (err) {
-    if (err instanceof CoachApiError && err.status === 404) return null;
+    if (refusalCode(err) === 'unknown-report') return null;
     throw err;
   }
 }
