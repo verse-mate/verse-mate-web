@@ -333,6 +333,9 @@ test.describe('Amending the written-out points the leader reads first', () => {
     await capture(page, testInfo, 'p3-prose-cleared-confirm', panel.getByTestId('coach-amend-diff'));
     await panel.getByTestId('coach-amend-confirm').click();
     await expect(panel.getByTestId('coach-amend-outcome')).toContainText('Revision 2 saved and re-sent');
+    await expect(panel.getByTestId('coach-revision-2')).toContainText('Improvements, written out');
+    await expect(panel.getByTestId('coach-revision-2')).toContainText('Cleared: the leader reads the list instead');
+    await capture(page, testInfo, 'p4-kept-version-cleared', panel.getByTestId('coach-revision-2'));
     await panel.getByTestId('coach-amend-open').click();
     await expect(panel.getByTestId('coach-amend-improvements-prose')).toHaveCount(0);
     await expect(panel.getByTestId('coach-amend-strengths-prose')).toBeVisible();
@@ -404,6 +407,122 @@ test.describe('A first lesson held for a cold-recall improvement', () => {
   });
 });
 
+test.describe("Replacing an undelivered report's Improvements", () => {
+  const HELD_ITEM = "Recall last week's big idea before the new passage";
+  const COLD = 'Not saved: a first lesson cannot carry an improvement that asks for recall of earlier lessons. Replace the held items and save again.';
+  const SAVED = 'Improvements saved. Nothing was sent';
+  const PARTIAL =
+    'Refused (409): Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.';
+  const edits = (writes: Array<[string, unknown]>) =>
+    writes.filter(([p]) => p === `PUT /coach/admin/reports/${OLDER_ID}/improvements`).map(([, b]) => b);
+
+  async function openPipeline(page: Page) {
+    await page.goto('/coach');
+    await page.getByTestId('oversight-nav-pipeline').click();
+  }
+
+  test('a first lesson held for a cold-recall item is fixed on its review, and the release then goes out', async ({ page }, testInfo) => {
+    const writes: Array<[string, unknown]> = [];
+    await useCoachApi(page, {
+      admin: true,
+      pipelineLive: true,
+      firstLessonHeld: true,
+      onAdminWrite: (m, p, b) => writes.push([`${m} ${p}`, b]),
+    });
+    const id = FIRST_LESSON_HELD_SESSION.sourceSessionId;
+    await openPipeline(page);
+    await expect(page.getByTestId(`coach-pipeline-${id}`)).toContainText(
+      "open the report's review (the leader, then this session), replace the held items under Improvements, and release it again from this list",
+    );
+
+    await openSession(page, OLDER_ID);
+    const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await panel.getByTestId('coach-improvements-open').click();
+    const text = panel.getByTestId('coach-improvements-text');
+    await expect(text).toHaveValue(HELD_ITEM);
+    await text.fill(`${HELD_ITEM}\nAsk a quiet member first`);
+    await panel.getByTestId('coach-improvements-save').click();
+    await expect(panel.getByTestId('coach-improvements-outcome')).toContainText(COLD);
+    await expect(panel.getByTestId('coach-improvements-held')).toHaveText(HELD_ITEM);
+    await expect(text).toHaveValue(`${HELD_ITEM}\nAsk a quiet member first`);
+    await capture(page, testInfo, 'p4-improvements-held', panel);
+
+    await text.fill("Name the book's big idea in the first five minutes\nAsk a quiet member first");
+    await panel.getByTestId('coach-improvements-save').click();
+    await expect(panel.getByTestId('coach-improvements-outcome')).toContainText(SAVED);
+    await expect(panel.getByTestId('coach-improvements-editor')).toHaveCount(0);
+    await capture(page, testInfo, 'p4-improvements-saved', panel);
+
+    await openPipeline(page);
+    await page.getByTestId(`coach-pipeline-release-${id}`).click();
+    await expect(page.getByTestId(`coach-pipeline-${id}`)).toHaveCount(0);
+    await capture(page, testInfo, 'p4-release-after-improvements');
+    expect(edits(writes)).toEqual([
+      { improvements: [HELD_ITEM, 'Ask a quiet member first'] },
+      { improvements: ["Name the book's big idea in the first five minutes", 'Ask a quiet member first'] },
+    ]);
+  });
+
+  test('written-out points are kept unless the admin clears them, so a cold-recall point is held until cleared', async ({ page }, testInfo) => {
+    const POINT = PROSE.improvementsProse[0];
+    const writes: Array<[string, unknown]> = [];
+    await useCoachApi(page, {
+      admin: true,
+      firstLessonHeld: true,
+      prose: true,
+      onAdminWrite: (m, p, b) => writes.push([`${m} ${p}`, b]),
+    });
+    await openSession(page, OLDER_ID);
+    const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await panel.getByTestId('coach-improvements-open').click();
+    await expect(panel.getByTestId('coach-amend-improvements-prose-title-0')).toHaveValue(POINT.title);
+    await panel.getByTestId('coach-improvements-text').fill('Name the big idea early');
+    await expect(panel.getByTestId('coach-amend-improvements-prose-kept')).toHaveText('The leader still reads these points first, unchanged.');
+    await panel.getByTestId('coach-improvements-save').click();
+    await expect(panel.getByTestId('coach-improvements-held')).toHaveText(`${POINT.title} ${POINT.paragraphs.join(' ')}`);
+
+    await panel.getByTestId('coach-amend-improvements-prose-clear').check();
+    await capture(page, testInfo, 'p4-improvements-prose-clear', panel);
+    await panel.getByTestId('coach-improvements-save').click();
+    await expect(panel.getByTestId('coach-improvements-outcome')).toContainText(SAVED);
+    await panel.getByTestId('coach-improvements-open').click();
+    await expect(panel.getByTestId('coach-improvements-text')).toHaveValue('Name the big idea early');
+    await expect(panel.getByTestId('coach-amend-improvements-prose')).toHaveCount(0);
+    expect(edits(writes)).toEqual([
+      { improvements: ['Name the big idea early'], improvementsProse: PROSE.improvementsProse },
+      { improvements: ['Name the big idea early'] },
+    ]);
+  });
+
+  test('a report already emailed to some recipients refuses the edit and the flag in words', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, reviews: { [NEWEST_ID]: 'delivered', [OLDER_ID]: 'partial' } });
+    await openSession(page, OLDER_ID);
+    const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await panel.getByTestId('coach-improvements-open').click();
+    await panel.getByTestId('coach-improvements-text').fill('Ask a quiet member first');
+    await panel.getByTestId('coach-improvements-save').click();
+    await expect(panel.getByTestId('coach-improvements-outcome')).toHaveText(PARTIAL);
+    await expect(panel.getByTestId('coach-improvements-text')).toHaveValue('Ask a quiet member first');
+    await panel.getByTestId('coach-first-lesson-set').click();
+    await expect(panel.getByTestId('coach-first-lesson-outcome')).toHaveText(PARTIAL);
+    await capture(page, testInfo, 'p4-partially-delivered', panel);
+  });
+
+  test('a report delivered meanwhile is refused with "amend it instead", and the amend action is offered', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, deliveredBeforeFlag: OLDER_ID });
+    await openSession(page, OLDER_ID);
+    const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await panel.getByTestId('coach-improvements-open').click();
+    await panel.getByTestId('coach-improvements-text').fill('Ask a quiet member first');
+    await panel.getByTestId('coach-improvements-save').click();
+    await expect(panel.getByTestId('coach-amend-outcome')).toHaveText(
+      'Refused (409): Refused: the report was already delivered. Amend it instead, which sends the leader a revised copy.',
+    );
+    await expect(panel.getByTestId('coach-amend-open')).toBeVisible();
+    await capture(page, testInfo, 'p4-improvements-delivered-meanwhile', panel);
+  });
+});
+
 test.describe('The fake API holds the portal to the real methods', () => {
   test('a write sent with the wrong method is not found', async ({ page }) => {
     await useCoachApi(page, { admin: true, leaderAdmin: true });
@@ -414,11 +533,12 @@ test.describe('The fake API holds the portal to the real methods', () => {
       return [
         await call('admin/reports/x/first-lesson', 'POST'),
         await call('admin/reports/x/amend', 'PUT'),
+        await call('admin/reports/x/improvements', 'POST'),
         await call('admin/leaders/evan-ellis/attribution', 'POST'),
         await call('admin/leaders/evan-ellis/email', 'POST'),
         await call('admin/pipeline-failures/ff-parked/requeue', 'GET'),
       ];
     }, process.env.VITE_API_URL ?? 'https://api.versemate.org');
-    expect(statuses).toEqual([404, 404, 404, 404, 404]);
+    expect(statuses).toEqual([404, 404, 404, 404, 404, 404]);
   });
 });
