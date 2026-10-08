@@ -32,7 +32,7 @@ import {
   useAddNote,
   coachState,
 } from '@/hooks/useCoach';
-import { CoachApiError } from '@/services/coachService';
+import { CoachApiError, badAddressText } from '@/services/coachService';
 import type {
   CoachSummary,
   CoachMonthly,
@@ -1125,8 +1125,9 @@ function InviteModal({ onClose, onAdded }: { onClose: () => void; onAdded: (id: 
 
   const submit = () => {
     const e = email.trim();
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)) {
-      toast.error('Enter a valid email address');
+    const bad = e ? badAddressText(e) : 'Enter the leader\'s email address';
+    if (bad) {
+      setError(bad);
       return;
     }
     setError(null);

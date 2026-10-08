@@ -422,6 +422,36 @@ describe("a leader's address", () => {
     expect(screen.queryByTestId('coach-address-confirm-milo-kerr')).toBeNull();
   });
 
+  it('holds an address that breaks the rule before it reaches the server, naming the rule', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    const update = vi.spyOn(coachService, 'updateLeaderEmail');
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-address-edit-milo-kerr'));
+    fireEvent.change(screen.getByTestId('coach-address-input-milo-kerr'), { target: { value: 'milo,kerr@example.test' } });
+
+    expect(screen.getByTestId('coach-address-error-milo-kerr')).toHaveTextContent(coachService.EMAIL_RULE);
+    expect(screen.getByTestId('coach-address-save-milo-kerr')).toBeDisabled();
+    fireEvent.click(screen.getByTestId('coach-address-save-milo-kerr'));
+    expect(update).not.toHaveBeenCalled();
+  });
+
+  it("shows the server's own wording when it refuses the address", async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'updateLeaderEmail').mockRejectedValue(
+      new CoachApiError('admin/leaders/milo-kerr/email', 400, coachService.EMAIL_RULE),
+    );
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-address-edit-milo-kerr'));
+    fireEvent.change(screen.getByTestId('coach-address-input-milo-kerr'), { target: { value: 'milo@example.test' } });
+    fireEvent.click(screen.getByTestId('coach-address-save-milo-kerr'));
+
+    expect(await screen.findByTestId('coach-address-error-milo-kerr')).toHaveTextContent(`Refused (400): ${coachService.EMAIL_RULE}`);
+  });
+
   it('keeps the editor open with the refusal when the address is already taken', async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [PLACEHOLDER] });
@@ -675,20 +705,36 @@ describe("a leader's title keywords and alternate addresses", () => {
     expect(save).not.toHaveBeenCalled();
   });
 
-  it("shows the server's refusal and keeps the edit", async () => {
+  it('holds an alternate address that breaks the rule before it reaches the server, naming the address', async () => {
+    vi.spyOn(coachService, 'fetchLeaderAttribution').mockResolvedValue({ titleMatch: [], altEmails: [] });
+    const save = vi.spyOn(coachService, 'saveLeaderAttribution');
+    renderView();
+    fireEvent.click(await screen.findByTestId('coach-attribution-edit-milo-kerr'));
+    fireEvent.change(await screen.findByTestId('coach-attribution-emails-milo-kerr'), {
+      target: { value: 'milo.w@example.test\nnot-an-email' },
+    });
+
+    expect(screen.getByTestId('coach-attribution-error-milo-kerr')).toHaveTextContent(
+      `Alternate address "not-an-email": ${coachService.EMAIL_RULE}`,
+    );
+    expect(screen.getByTestId('coach-attribution-save-milo-kerr')).toBeDisabled();
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  it("shows the server's refusal of a keyword inside another leader's name, and keeps the edit", async () => {
     vi.spyOn(coachService, 'fetchLeaderAttribution').mockResolvedValue({ titleMatch: [], altEmails: [] });
     vi.spyOn(coachService, 'saveLeaderAttribution').mockRejectedValue(
-      new CoachApiError('x', 400, 'Each alternate address must be a valid email address'),
+      new CoachApiError('x', 409, 'Keywords refused: "amy" is inside the name of amy-lee'),
     );
     renderView();
     fireEvent.click(await screen.findByTestId('coach-attribution-edit-milo-kerr'));
-    fireEvent.change(await screen.findByTestId('coach-attribution-emails-milo-kerr'), { target: { value: 'not-an-email' } });
+    fireEvent.change(await screen.findByTestId('coach-attribution-keywords-milo-kerr'), { target: { value: 'amy' } });
     fireEvent.click(screen.getByTestId('coach-attribution-save-milo-kerr'));
 
     expect(await screen.findByTestId('coach-attribution-error-milo-kerr')).toHaveTextContent(
-      'Refused (400): Each alternate address must be a valid email address',
+      'Refused (409): Keywords refused: "amy" is inside the name of amy-lee',
     );
-    expect(screen.getByTestId('coach-attribution-emails-milo-kerr')).toHaveValue('not-an-email');
+    expect(screen.getByTestId('coach-attribution-keywords-milo-kerr')).toHaveValue('amy');
   });
 
   it('says so when the lists cannot be read', async () => {

@@ -202,6 +202,18 @@ describe('adding a leader', () => {
     expect(screen.getByTestId('oversight-invite-name')).toHaveValue('Ezra Holt');
   });
 
+  it('holds an address that breaks the rule before it reaches the server, naming the rule', async () => {
+    vi.mocked(coachService.addCoachLeader).mockClear();
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-add-leader'));
+    fireEvent.change(screen.getByTestId('oversight-invite-name'), { target: { value: 'Ezra Holt' } });
+    fireEvent.change(screen.getByTestId('oversight-invite-email'), { target: { value: 'ezra.@example.test' } });
+    fireEvent.click(screen.getByTestId('oversight-invite-send'));
+
+    expect(await screen.findByTestId('oversight-invite-error')).toHaveTextContent(coachService.EMAIL_RULE);
+    expect(coachService.addCoachLeader).not.toHaveBeenCalled();
+  });
+
   it('opens the new leader by the id the server returned', async () => {
     vi.mocked(coachService.addCoachLeader).mockResolvedValue({
       id: 'ezra-holt-2',
