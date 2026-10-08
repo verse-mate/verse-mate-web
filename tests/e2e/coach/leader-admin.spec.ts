@@ -61,7 +61,7 @@ test.describe("A leader's address", () => {
 
   test("the benchmark leader's address changes only after the admin confirms it", async ({ page }, testInfo) => {
     const writes: Array<[string, unknown]> = [];
-    await useCoachApi(page, { admin: true, leaderAdmin: true, onAdminWrite: (_m, p, b) => writes.push([p, b]) });
+    await useCoachApi(page, { admin: true, leaderAdmin: true, pipelineLive: true, onAdminWrite: (_m, p, b) => writes.push([p, b]) });
     await openPipeline(page);
 
     const row = page.getByTestId(`coach-coverage-${LEADER_ID}`);
@@ -329,7 +329,7 @@ test.describe("A leader's history on the admin screens", () => {
     await page.route(/\/coach\/admin\/coaches\/[^/]+\/reports\/summary\?.*offset=50/, (route) => {
       if (!failNext) return route.fallback();
       failNext = false;
-      return route.fulfill({ status: 500, json: { error: 'INTERNAL', message: 'database unavailable' } });
+      return route.fulfill({ status: 500, json: { error: 'INTERNAL_SERVER_ERROR', message: 'database unavailable' } });
     });
     await page.goto('/coach');
     await page.getByTestId(`oversight-roster-${LEADER_ID}`).click();

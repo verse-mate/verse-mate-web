@@ -11,9 +11,26 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import type { Locator, Page, Route, TestInfo } from '@playwright/test';
+import { expect, type Locator, type Page, type Route, type TestInfo } from '@playwright/test';
+
+import { ERROR_CODES, INVALID_REQUEST, UNMATCHED_ROUTE, contractErrors, contractRoute, refusalOf } from './contract';
 
 export const API = process.env.VITE_API_URL ?? 'https://api.versemate.org';
+
+function serve(page: Page, url: string | RegExp, handler: (route: Route) => unknown) {
+  return page.route(url, (route) => {
+    const fulfill = route.fulfill.bind(route);
+    route.fulfill = (answer = {}) => {
+      const req = route.request();
+      const status = answer.status ?? 200;
+      expect
+        .soft(contractErrors(req.method(), new URL(req.url()).pathname, status, answer.json), `${req.method()} ${req.url()} answered ${status}`)
+        .toEqual([]);
+      return fulfill(answer);
+    };
+    return handler(route);
+  });
+}
 
 export const RUBRIC = {
   model: 'v3-weighted-100',
@@ -169,6 +186,7 @@ export const ME = {
   bibleCoach: '',
   model: RUBRIC.model,
   clusters: RUBRIC.clusters,
+  statusBands: RUBRIC.statusBands,
 };
 
 export const ADMIN_ME = {
@@ -176,7 +194,6 @@ export const ADMIN_ME = {
   isCoach: false,
   isAdmin: true,
   profile: null,
-  statusBands: RUBRIC.statusBands,
 };
 
 export const LEADER_ID = 'leader';
@@ -335,31 +352,33 @@ function coldRecallIn(feedback: Record<string, unknown>): string[] {
 export const FIRST_LESSON_RATIONALE =
   'Not applicable: the first lesson of a new study, so there are no prior big ideas to review.';
 const MEMORY_REINFORCEMENT = 9;
-const MR_REQUIRED = 'Clearing the first-lesson flag needs a Memory Reinforcement score and rationale';
-export const IN_FLIGHT_CORRECTION =
-  'Refused: the report is being delivered or re-scored. Correct it once that finishes, or amend it after delivery.';
-export const NOT_LIVE_SEND =
-  'The report is not live for the leader this revision was made for: it is held, not delivered, or re-attributed';
-const PARALLEL_RUN = 'The pipeline is in its parallel run: nothing is sent until cutover';
-const REVISION_SENDING = 'Refused: a revised copy of this report is being sent right now. Amend it again once that send finishes.';
-export const PARALLEL_RUN_SESSION_REFUSAL =
-  'This session was observed during the parallel run: it is kept for admin comparison and never sent';
-export const PARTIALLY_DELIVERED =
-  "Refused: the report was already emailed to some of its recipients, so it can no longer be corrected or edited. Its remaining sends are retried automatically. If one keeps failing, fix that recipient's address and requeue the report from the pipeline failures list. Once every recipient has it, amend it.";
-export const EMPTY_EDIT = 'The edit changes nothing: give at least one improvement, different from the current ones';
-const ALREADY_DELIVERED = 'Refused: the report was already delivered. Amend it instead, which sends the leader a revised copy.';
+const REPORT_EDIT = 'PUT /coach/admin/reports/:reportId/improvements';
+export const IN_FLIGHT_CORRECTION = refusalOf(REPORT_EDIT, 'in-flight').message;
+export const NOT_LIVE_SEND = refusalOf('POST /coach/admin/reports/:reportId/revision/send', 'not-live').message;
+export const PARALLEL_RUN_SESSION_REFUSAL = refusalOf('POST /coach/admin/reports/:reportId/release', 'parallel-run-session').message;
+export const PARTIALLY_DELIVERED = refusalOf(REPORT_EDIT, 'partially-delivered').message;
+export const EMPTY_EDIT = refusalOf(REPORT_EDIT, 'empty-edit').message;
 const PROSE_OF: Record<string, string> = {
   strengths: 'strengthsProse',
   improvements: 'improvementsProse',
   recommendations: 'recommendationsProse',
 };
 
-const json = (route: Route, status: number, error: string, message: string) =>
-  route.fulfill({ status, json: { error, message } });
-const notFound = (route: Route, message = 'NOT_FOUND') => json(route, 404, 'NOT_FOUND', message);
-const conflict = (route: Route, message: string) => json(route, 409, 'CONFLICT', message);
-const invalid = (route: Route, message: string) => json(route, 400, 'VALIDATION', message);
-const forbidden = (route: Route) => json(route, 403, 'FORBIDDEN', 'Admin access required');
+const unmatched = (route: Route) => route.fulfill({ status: 404, json: UNMATCHED_ROUTE });
+const invalidRequest = (route: Route) => route.fulfill({ status: 422, json: INVALID_REQUEST });
+const forbidden = (route: Route) => route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Admin access required' } });
+const notFound = (route: Route, message = 'Report not found') => route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message } });
+
+function refuse(route: Route, code: string, words?: { message?: string; details?: Record<string, unknown> }) {
+  const req = route.request();
+  const served = contractRoute(req.method(), new URL(req.url()).pathname);
+  if (!served) throw new Error(`${req.method()} ${req.url()} is no route in the contract`);
+  const { status, message } = refusalOf(served.route, code);
+  return route.fulfill({
+    status,
+    json: { error: ERROR_CODES[status], message: words?.message ?? message, details: { refusal: code, ...words?.details } },
+  });
+}
 
 function reviewOf(reportId: string, kind: ReviewKind) {
   return {
@@ -449,18 +468,14 @@ async function revisionRoutes(
   ];
   const unconfirmed = new Set<string>();
   const requeued = new Set<string>();
-  const legacy = 'Refused: this is a legacy report, which is read-only. Change it at its source and it arrives through the backfill.';
-
   const sendLatest = (reportId: string) => {
-    if (opts.noMailer) return { status: 409, message: 'No mailer is configured', pending: 'no-mailer' } as const;
-    if (!opts.pipelineLive) return { status: 409, message: PARALLEL_RUN, pending: 'parallel-run' } as const;
+    if (opts.noMailer) return { status: 409, refusal: 'no-mailer', pending: 'no-mailer' } as const;
+    if (!opts.pipelineLive) return { status: 409, refusal: 'parallel-run', pending: 'parallel-run' } as const;
     const latest = revisions.get(reportId)?.[0];
-    if (!latest) return { status: 404, message: 'That report has no revision' } as const;
-    if (latest.sentAt) return { status: 409, message: 'The latest revision was already sent' } as const;
-    if (opts.revisionSend === 'in-flight') {
-      return { status: 409, message: 'The revision is being sent by another request', pending: 'in-flight' } as const;
-    }
-    if (opts.revisionSend === 'not-live') return { status: 409, message: NOT_LIVE_SEND, pending: 'not-live' } as const;
+    if (!latest) return { status: 404, refusal: 'no-revision' } as const;
+    if (latest.sentAt) return { status: 409, refusal: 'already-sent' } as const;
+    if (opts.revisionSend === 'in-flight') return { status: 409, refusal: 'in-flight', pending: 'in-flight' } as const;
+    if (opts.revisionSend === 'not-live') return { status: 409, refusal: 'not-live', pending: 'not-live' } as const;
     if (opts.revisionSend === 'unconfirmed' && !requeued.has(reportId)) {
       unconfirmed.add(reportId);
       latest.attemptedTo = unconfirmedSend.map((x) => x.email);
@@ -488,14 +503,14 @@ async function revisionRoutes(
     const dims = body.dimensions ?? [];
     const changed = Object.entries(body.body ?? {}).filter(([, v]) => v !== undefined);
     if (dims.length === 0 && body.firstLesson === undefined && changed.length === 0) {
-      return invalid(route, 'The amendment changes nothing');
+      return refuse(route, 'empty-amendment');
     }
-    if (!review.delivered) return conflict(route, 'Refused: the report is not delivered yet. Correct it through the review instead.');
+    if (!review.delivered) return refuse(route, 'not-delivered');
     const latest = revisions.get(reportId)?.[0];
-    if (opts.revisionSend === 'in-flight' && latest && !latest.sentAt) return conflict(route, REVISION_SENDING);
+    if (opts.revisionSend === 'in-flight' && latest && !latest.sentAt) return refuse(route, 'revision-sending');
     const given = dims.find((d) => d.n === MEMORY_REINFORCEMENT);
     if (body.firstLesson === false && review.firstLesson && (!given || given.score === null || !given.rationale.trim())) {
-      return invalid(route, MR_REQUIRED);
+      return refuse(route, 'memory-reinforcement-required');
     }
     const stored = store.get(reportId) as StoredReport;
     const before = stored.feedback as Record<string, unknown>;
@@ -567,19 +582,19 @@ async function revisionRoutes(
           (p) => text(p?.title, 500) && Array.isArray(p?.paragraphs) && p.paragraphs.length <= 10 && p.paragraphs.every((x: unknown) => text(x, 4000)),
         ));
     if (!Array.isArray(body?.improvements) || body.improvements.length > 10 || !body.improvements.every((x) => text(x, 4000)) || !validProse) {
-      return json(route, 422, 'VALIDATION', 'Expected improvements: at most 10 items of at most 4000 characters, and at most 10 written-out points');
+      return invalidRequest(route);
     }
-    if (body.improvements.length === 0) return invalid(route, EMPTY_EDIT);
-    if (!review) return conflict(route, legacy);
+    if (body.improvements.length === 0) return refuse(route, 'empty-edit');
+    if (!review) return refuse(route, 'legacy-report');
     if (opts.deliveredBeforeFlag === reportId) review.delivered = true;
-    if (review.delivered) return conflict(route, ALREADY_DELIVERED);
-    if (review.partial) return conflict(route, PARTIALLY_DELIVERED);
-    if (review.inFlight) return conflict(route, IN_FLIGHT_CORRECTION);
+    if (review.delivered) return refuse(route, 'already-delivered');
+    if (review.partial) return refuse(route, 'partially-delivered');
+    if (review.inFlight) return refuse(route, 'in-flight');
     const stored = store.get(reportId) as StoredReport;
     const previous = stored.feedback as Record<string, unknown>;
     const listOrNull = (v: unknown) => JSON.stringify(Array.isArray(v) && v.length > 0 ? v : null);
     if (listOrNull(previous.improvements) === listOrNull(body.improvements) && listOrNull(previous.improvementsProse) === listOrNull(prose)) {
-      return invalid(route, EMPTY_EDIT);
+      return refuse(route, 'empty-edit');
     }
     const { improvementsProse: _cleared, ...kept } = previous;
     const feedback = { ...kept, improvements: body.improvements, ...(prose ? { improvementsProse: prose } : {}) };
@@ -603,38 +618,38 @@ async function revisionRoutes(
 
   const correctDimension = (route: Route, reportId: string, review: Review | undefined, n: number, body: { score?: unknown; rationale?: unknown }) => {
     const { score, rationale } = body;
-    if (!Number.isInteger(score) || (score as number) < 1 || (score as number) > 5) return invalid(route, 'Expected an integer score from 1 to 5');
-    if (typeof rationale !== 'string' || rationale.length > 4000) return invalid(route, 'Expected a rationale of at most 4000 characters');
-    if (!review) {
-      return conflict(route, 'Correction refused: this is a legacy report, which is read-only. Change it at its source and it arrives through the backfill.');
-    }
+    const validScore = score === null || (Number.isInteger(score) && (score as number) >= 1 && (score as number) <= 5);
+    if (!validScore || typeof rationale !== 'string' || rationale.length > 4000) return invalidRequest(route);
+    if (!Number.isInteger(n) || n < 1 || n > 12) return refuse(route, 'invalid-dimension');
+    if (!review) return refuse(route, 'legacy-report');
     if (opts.deliveredBeforeFlag === reportId) review.delivered = true;
-    if (review.delivered) return invalid(route, 'Correction refused: already-delivered');
-    if (review.partial) return conflict(route, PARTIALLY_DELIVERED);
-    if (review.inFlight) return conflict(route, IN_FLIGHT_CORRECTION);
+    if (review.delivered) return refuse(route, 'already-delivered');
+    if (review.partial) return refuse(route, 'partially-delivered');
+    if (review.inFlight) return refuse(route, 'in-flight');
     const dim = review.dimensions[n - 1];
-    if (!dim) return invalid(route, 'Correction refused: unknown-dimension');
     Object.assign(dim, { score, rationale, provenance: 'human' });
     const scores = review.dimensions.map((d) => d.score).filter((v): v is number => v !== null);
     const base = Math.round((scores.reduce((a, b) => a + b, 0) / scores.length / 5) * 10000) / 100;
     Object.assign(review, { base, humanCorrected: true });
-    const status = RUBRIC.statusBands.find((b) => base >= b.min)?.label ?? '';
-    return route.fulfill({ json: { base, status } });
+    const stored = store.get(reportId);
+    const composite = Math.round((base + (stored?.newcomerBonus ?? 0) + (stored?.sizeBonus ?? 0)) * 100) / 100;
+    const status = RUBRIC.statusBands.find((b) => composite >= b.min)?.label ?? '';
+    return route.fulfill({ json: { base, score: composite, status } });
   };
 
-  await page.route(/\/coach\/admin\/reports\/[^/]+\/dimensions\/[^/]+$/, (route) => {
+  await serve(page, /\/coach\/admin\/reports\/[^/]+\/dimensions\/[^/]+$/, (route) => {
     if (!opts.admin) return forbidden(route);
     const req = route.request();
     const url = new URL(req.url());
     const [, id, n] = url.pathname.match(/\/admin\/reports\/([^/]+)\/dimensions\/([^/]+)$/) ?? [];
-    if (req.method() !== 'POST') return notFound(route);
+    if (req.method() !== 'POST') return unmatched(route);
     const reportId = decodeURIComponent(id);
     const body = req.postData() ? JSON.parse(req.postData() as string) : {};
     opts.onAdminWrite?.(req.method(), url.pathname, body);
     return correctDimension(route, reportId, reviews.get(reportId), Number(n), body);
   });
 
-  await page.route(/\/coach\/admin\/reports\/[^/]+\/(review|amend|revisions|revision\/send|revision\/requeue|first-lesson|improvements)$/, (route) => {
+  await serve(page, /\/coach\/admin\/reports\/[^/]+\/(review|amend|revisions|revision\/send|revision\/requeue|first-lesson|improvements)$/, (route) => {
     if (!opts.admin) return forbidden(route);
     const req = route.request();
     const url = new URL(req.url());
@@ -648,13 +663,13 @@ async function revisionRoutes(
       'first-lesson': 'PUT',
       improvements: 'PUT',
     }[action];
-    if (req.method() !== method) return notFound(route);
+    if (req.method() !== method) return unmatched(route);
     const reportId = decodeURIComponent(id);
     const body = req.postData() ? JSON.parse(req.postData() as string) : null;
     if (req.method() !== 'GET') opts.onAdminWrite?.(req.method(), url.pathname, body);
     const review = reviews.get(reportId);
     if (action === 'review') {
-      if (!review) return notFound(route, 'No scores for that report');
+      if (!review) return refuse(route, 'unknown-report');
       const { inFlight: _inFlight, partial: _partial, ...state } = review;
       return route.fulfill({ json: state });
     }
@@ -664,7 +679,7 @@ async function revisionRoutes(
     if (action === 'revision/requeue') {
       const latest = revisions.get(reportId)?.[0];
       if (!latest || latest.sentAt || !unconfirmed.delete(reportId)) {
-        return notFound(route, 'That report has no unsent revision with a send left unconfirmed, or its send is still in flight');
+        return refuse(route, 'nothing-to-requeue');
       }
       requeued.add(reportId);
       latest.attemptedTo = [];
@@ -672,15 +687,15 @@ async function revisionRoutes(
     }
     if (action === 'revision/send') {
       const send = sendLatest(reportId);
-      return send.status === 200 ? route.fulfill({ json: send.json }) : json(route, send.status, send.status === 404 ? 'NOT_FOUND' : 'CONFLICT', send.message);
+      return send.status === 200 ? route.fulfill({ json: send.json }) : refuse(route, send.refusal);
     }
     if (action === 'improvements') return editImprovements(route, reportId, review, body);
     if (action === 'first-lesson') {
-      if (!body.firstLesson && (body.score == null || !String(body.rationale ?? '').trim())) return invalid(route, MR_REQUIRED);
-      if (!review) return conflict(route, legacy);
+      if (!body.firstLesson && (body.score == null || !String(body.rationale ?? '').trim())) return refuse(route, 'memory-reinforcement-required');
+      if (!review) return refuse(route, 'legacy-report');
       if (opts.deliveredBeforeFlag === reportId) review.delivered = true;
-      if (review.partial) return conflict(route, PARTIALLY_DELIVERED);
-      if (review.inFlight) return conflict(route, IN_FLIGHT_CORRECTION);
+      if (review.partial) return refuse(route, 'partially-delivered');
+      if (review.inFlight) return refuse(route, 'in-flight');
       if (review.delivered) {
         return amend(route, reportId, review, {
           firstLesson: body.firstLesson,
@@ -694,7 +709,7 @@ async function revisionRoutes(
       Object.assign(review, { firstLesson: body.firstLesson, firstLessonSource: 'admin', humanCorrected: true });
       return route.fulfill({ json: { applied: true, firstLesson: body.firstLesson, base: 82, score: 84, status: 'Strong' } });
     }
-    if (!review) return conflict(route, legacy);
+    if (!review) return refuse(route, 'legacy-report');
     return amend(route, reportId, review, body);
   });
 }
@@ -931,12 +946,14 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     { name: 'accessToken', value: 'e2e-token', domain: 'localhost', path: '/' },
   ]);
 
-  // Registered FIRST, because Playwright matches the most recently added route
-  // first: this is the fallback the specific handlers below take precedence
-  // over. It exists because the fake token would otherwise draw a real 401 from
-  // the production API and the app would navigate to /logout mid-test.
-  await page.route(`${API}/**`, (route) =>
-    route.fulfill({ json: { reports: [], classes: [], months: [], summary: null } }),
+  await serve(page, `${API}/**`, unmatched);
+  const notACoach = (route: Route) => route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Not a coaching account' } });
+  await serve(page, `${API}/coach/classes`, (route) => (opts.admin ? notACoach(route) : route.fulfill({ json: { classes: [] } })));
+  await serve(page, `${API}/coach/admin/classes`, (route) => (opts.admin ? route.fulfill({ json: { classes: [] } }) : forbidden(route)));
+  await serve(page, /\/coach\/monthly-summary(\?|$)/, (route) =>
+    opts.admin
+      ? notACoach(route)
+      : route.fulfill({ json: { profile: { id: LEADER_ID, name: ME.profile.name, group: ME.profile.group }, availableMonths: [], summary: null } }),
   );
 
   const stuck: Array<Record<string, unknown>> = [
@@ -976,16 +993,18 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     const leaderOf = (id: string) => coverage.leaders.find((l) => l.coachId === id);
     const attribution = url.pathname.match(/admin\/leaders\/([^/]+)\/attribution$/);
     if (attribution) {
-      if (method !== 'GET' && method !== 'PUT') return notFound(route);
+      if (method !== 'GET' && method !== 'PUT') return unmatched(route);
       const id = decodeURIComponent(attribution[1]);
-      if (!leaderOf(id)) return notFound(route, 'Leader not found');
+      if (!leaderOf(id)) return refuse(route, 'unknown-leader');
       const lists = (attributions[id] ??= { titleMatch: [], altEmails: [] });
       if (method === 'GET') return route.fulfill({ json: lists });
       if (body.titleMatch.some((k: string) => k.trim().length < 3)) {
-        return invalid(route, 'Each title keyword needs at least three characters');
+        return refuse(route, 'keyword-too-short');
       }
       const badAlt = body.altEmails.find((e: string) => !isEmailAddress(e.trim().toLowerCase()));
-      if (badAlt !== undefined) return invalid(route, `Alternate address "${badAlt}": ${EMAIL_RULE}`);
+      if (badAlt !== undefined) {
+        return refuse(route, 'invalid-alternate-address', { message: `Alternate address "${badAlt}": ${EMAIL_RULE}`, details: { address: badAlt } });
+      }
       const normalized = (values: string[]) => [
         ...new Set(values.map((v) => v.trim().replace(/\s+/g, ' ').toLowerCase()).filter(Boolean)),
       ];
@@ -1001,7 +1020,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
             return containsWords(titleWords(other.name), words) ? [`"${keyword}" is inside the name of ${other.id}`] : [];
           }),
       );
-      if (conflicts.length) return conflict(route, `Keywords refused: ${conflicts.join('; ')}`);
+      if (conflicts.length) return refuse(route, 'keyword-conflict', { message: `Keywords refused: ${conflicts.join('; ')}`, details: { conflicts } });
       lists.titleMatch = titleMatch;
       lists.altEmails = normalized(body.altEmails);
       const swept = stuck.filter(
@@ -1013,25 +1032,14 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     }
     const email = url.pathname.match(/admin\/leaders\/([^/]+)\/email$/);
     if (email) {
-      if (method !== 'PUT') return notFound(route);
+      if (method !== 'PUT') return unmatched(route);
       const address = String(body.email).trim().toLowerCase();
-      if (!isEmailAddress(address)) return invalid(route, EMAIL_RULE);
+      if (!isEmailAddress(address)) return refuse(route, 'invalid-address');
       const leader = leaderOf(decodeURIComponent(email[1]));
-      if (!leader) return notFound(route, 'Leader not found');
-      if (coverage.leaders.some((l) => l.email === address && l.coachId !== leader.coachId)) {
-        return conflict(route, 'Another leader already uses that address');
-      }
-      if (leader.coachId === LEADER_ID && body.confirm !== true) {
-        return route.fulfill({
-          status: 409,
-          json: {
-            error: 'CONFLICT',
-            message: "This is the benchmark leader, whose address receives every leader's reports: send confirm: true to change it",
-            details: { refusal: 'confirm-required' },
-          },
-        });
-      }
-      const noticeSent = !isPlaceholder(leader.email);
+      if (!leader) return refuse(route, 'unknown-leader');
+      if (coverage.leaders.some((l) => l.email === address && l.coachId !== leader.coachId)) return refuse(route, 'taken');
+      if (leader.coachId === LEADER_ID && body.confirm !== true) return refuse(route, 'confirm-required');
+      const noticeSent = leader.email !== address && !isPlaceholder(leader.email) && !!opts.pipelineLive && !opts.noMailer;
       leader.email = address;
       const i = stuck.findIndex((x) => x.coachId === leader.coachId && x.state === 'delivered');
       if (i >= 0) stuck.splice(i, 1);
@@ -1039,9 +1047,9 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     }
     const notTeaching = url.pathname.match(/admin\/leaders\/([^/]+)\/not-teaching$/);
     if (notTeaching) {
-      if (method !== 'POST' && method !== 'DELETE') return notFound(route);
+      if (method !== 'POST' && method !== 'DELETE') return unmatched(route);
       const leader = leaderOf(decodeURIComponent(notTeaching[1]));
-      if (!leader) return notFound(route, 'Leader not found');
+      if (!leader) return refuse(route, 'unknown-leader');
       const attested = method === 'POST';
       leader.attestedAt = attested ? '2026-10-08T13:00:00.000Z' : null;
       leader.attestedBy = attested ? 'admin@example.test' : null;
@@ -1053,29 +1061,26 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     }
     const attribute = url.pathname.match(/admin\/sessions\/([^/]+)\/attribute$/);
     if (attribute) {
-      if (method !== 'POST') return notFound(route);
-      if (typeof body?.coachId !== 'string' || !body.coachId || !('expectedCoachId' in body)) {
-        return json(route, 422, 'VALIDATION', 'Expected coachId and expectedCoachId');
-      }
-      if (!roster.some((r) => r.id === body.coachId)) return notFound(route, 'Leader not found');
+      if (method !== 'POST') return unmatched(route);
+      if (typeof body?.coachId !== 'string' || !body.coachId || !('expectedCoachId' in body)) return invalidRequest(route);
+      if (!roster.some((r) => r.id === body.coachId)) return refuse(route, 'unknown-leader');
       const i = stuck.findIndex((x) => x.sourceSessionId === decodeURIComponent(attribute[1]));
-      if (i < 0) return notFound(route, 'Session not found');
-      if (stuck[i].coachId !== body.expectedCoachId) {
-        return conflict(route, "The session's leader changed since this list was loaded; reload it and assign again");
-      }
-      if (stuck[i].coachId === body.coachId) return conflict(route, 'The session is already assigned to that leader');
+      if (i < 0) return refuse(route, 'unknown-session');
+      if (stuck[i].coachId !== body.expectedCoachId) return refuse(route, 'attribution-changed');
+      if (stuck[i].coachId === body.coachId) return refuse(route, 'already-assigned');
       const prior = String(stuck[i].state);
       const state = ['scored', 'scoring_failed', 'delivery_pending', 'delivery_failed', 'delivered'].includes(prior) ? 'retained' : prior;
       reattribute(i, body.coachId, state);
       return route.fulfill({ json: { coachId: body.coachId, state } });
     }
     if (url.pathname.endsWith('/admin/leaders')) {
-      if (method !== 'POST') return notFound(route);
+      if (method !== 'POST') return unmatched(route);
       const address = String(body.email).trim().toLowerCase();
-      if (!isEmailAddress(address)) return invalid(route, EMAIL_RULE);
-      if (coverage.leaders.some((l) => l.email === address)) return conflict(route, 'That email is already a leader');
-      if (body.name?.trim().toLowerCase() === 'avery hollis') {
-        return conflict(route, 'Another leader already uses the id "avery-hollis". Enter a different name.');
+      if (!isEmailAddress(address)) return refuse(route, 'invalid-address');
+      if (coverage.leaders.some((l) => l.email === address)) return refuse(route, 'email-taken');
+      const id = String(body.name ?? '').trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      if (id === 'avery-hollis' || roster.some((r) => r.id === id)) {
+        return refuse(route, 'slug-taken', { message: `Another leader already uses the id "${id}". Enter a different name.`, details: { slug: id } });
       }
       const name = titleWords(String(body.name ?? ''));
       const inName = roster.flatMap((leader) =>
@@ -1084,46 +1089,44 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
           .map((keyword) => `it contains "${keyword}", a keyword of ${leader.id}`),
       );
       if (inName.length) {
-        return conflict(
-          route,
-          `Name refused: ${inName.join('; ')}. Their sessions would be routed to that leader. Enter a different name or change that leader's keywords first.`,
-        );
+        return refuse(route, 'keyword-conflict', {
+          message: `Name refused: ${inName.join('; ')}. Their sessions would be routed to that leader. Enter a different name or change that leader's keywords first.`,
+        });
       }
-      const id = String(body.name).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
       roster.push({ id, name: body.name });
       return route.fulfill({ json: { coach: { id, name: body.name, group: body.group ?? '', coachName: '', sessionCount: 0, latest: null } } });
     }
-    return notFound(route);
+    return unmatched(route);
   };
-  await page.route(/\/coach\/admin\/(leaders|sessions)(\/|$)/, (route) => (opts.admin ? write(route) : forbidden(route)));
-  await page.route(/\/coach\/admin\/(pipeline-failures|coverage|reports\/[^/]+\/release)/, (route) => {
+  await serve(page, /\/coach\/admin\/(leaders|sessions)(\/|$)/, (route) => (opts.admin ? write(route) : forbidden(route)));
+  await serve(page, /\/coach\/admin\/(pipeline-failures|coverage|reports\/[^/]+\/release)/, (route) => {
     const url = new URL(route.request().url());
     const method = route.request().method();
     opts.onPipelineRequest?.(url.pathname);
     if (!opts.admin) return forbidden(route);
     if (opts.pipelineStatus) {
-      return route.fulfill({ status: opts.pipelineStatus, json: { error: 'INTERNAL', message: 'database unavailable' } });
+      return route.fulfill({ status: opts.pipelineStatus, json: { error: ERROR_CODES[opts.pipelineStatus], message: 'database unavailable' } });
     }
-    if (url.pathname.endsWith('/coverage')) return method === 'GET' ? route.fulfill({ json: coverage }) : notFound(route);
+    if (url.pathname.endsWith('/coverage')) return method === 'GET' ? route.fulfill({ json: coverage }) : unmatched(route);
     const requeue = url.pathname.match(/pipeline-failures\/([^/]+)\/requeue$/);
     if (requeue) {
-      if (method !== 'POST') return notFound(route);
+      if (method !== 'POST') return unmatched(route);
       const i = stuck.findIndex(
         (x) => x.sourceSessionId === decodeURIComponent(requeue[1]) && ['scoring_failed', 'delivery_failed'].includes(String(x.state)),
       );
-      if (i < 0) return notFound(route, 'No parked session');
-      if (stuck[i].parallelRun && stuck[i].state === 'delivery_failed') return conflict(route, PARALLEL_RUN_SESSION_REFUSAL);
+      if (i < 0) return refuse(route, 'not-parked');
+      if (stuck[i].parallelRun && stuck[i].state === 'delivery_failed') return refuse(route, 'parallel-run-session');
       stuck.splice(i, 1);
       return route.fulfill({ json: { requeued: true } });
     }
     const release = url.pathname.match(/reports\/([^/]+)\/release$/);
     if (release) {
-      if (method !== 'POST') return notFound(route);
+      if (method !== 'POST') return unmatched(route);
       const i = stuck.findIndex((x) => x.reportId === decodeURIComponent(release[1]) && (x.action === 'release' || x.parallelRun));
-      if (i < 0) return notFound(route, 'No report held for review');
-      if (stuck[i].parallelRun) return conflict(route, PARALLEL_RUN_SESSION_REFUSAL);
-      if (opts.noMailer) return conflict(route, 'No mailer is configured');
-      if (!opts.pipelineLive) return conflict(route, PARALLEL_RUN);
+      if (i < 0) return refuse(route, 'not-held');
+      if (stuck[i].parallelRun) return refuse(route, 'parallel-run-session');
+      if (opts.noMailer) return refuse(route, 'no-mailer');
+      if (!opts.pipelineLive) return refuse(route, 'parallel-run');
       const reportId = String(stuck[i].reportId);
       const review = reviews.get(reportId);
       const stored = store.get(reportId);
@@ -1140,7 +1143,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
         json: { delivered: true, ...(leader && isPlaceholder(leader.email) ? { skipped: [leader.email] } : {}) },
       });
     }
-    if (method !== 'GET') return notFound(route);
+    if (method !== 'GET') return unmatched(route);
     const limit = Number(url.searchParams.get('limit') ?? 50);
     const offset = Number(url.searchParams.get('offset') ?? 0);
     const sessions = stuck.slice(offset, offset + limit).map((x) => {
@@ -1151,52 +1154,53 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return route.fulfill({ json: { sessions, total: stuck.length, limit, offset } });
   });
 
-  await page.route(/\/coach\/admin\/reshares(\/[^/]+\/(send|resolve))?$/, (route) => {
+  await serve(page, /\/coach\/admin\/reshares(\/[^/]+\/(send|resolve))?$/, (route) => {
     if (!opts.admin) return forbidden(route);
     const req = route.request();
     const url = new URL(req.url());
     const [, id, action] = url.pathname.match(/\/admin\/reshares\/([^/]+)\/(send|resolve)$/) ?? [];
-    if (!action) return req.method() === 'GET' ? route.fulfill({ json: { requests: reshares } }) : notFound(route);
-    if (req.method() !== 'POST') return notFound(route);
+    if (!action) return req.method() === 'GET' ? route.fulfill({ json: { requests: reshares } }) : unmatched(route);
+    if (req.method() !== 'POST') return unmatched(route);
     opts.onAdminWrite?.(req.method(), url.pathname, null);
     const i = reshares.findIndex((r) => r.sourceSessionId === decodeURIComponent(id));
-    if (i < 0) return action === 'send' ? invalid(route, 'Re-share not sent: unknown-session') : notFound(route, 'No pending re-share');
+    if (i < 0) return refuse(route, action === 'send' ? 'unknown-session' : 'not-pending');
     if (action === 'resolve') {
       reshares.splice(i, 1);
       return route.fulfill({ json: { resolved: true } });
     }
-    if (reshares[i].parallelRun) return invalid(route, 'Re-share not sent: parallel-run-session');
-    if (!opts.pipelineLive) return invalid(route, 'Re-share not sent: parallel-run');
+    if (reshares[i].parallelRun) return refuse(route, 'parallel-run-session');
+    if (!opts.pipelineLive) return refuse(route, 'parallel-run');
+    if (reshares[i].asked) return refuse(route, 'already-asked');
     reshares[i].asked = true;
     return route.fulfill({ json: { sent: true } });
   });
 
   await revisionRoutes(page, opts, store, reviews);
 
-  await page.route(`${API}/coach/rubric`, async (route) => {
+  await serve(page, `${API}/coach/rubric`, async (route) => {
     if (opts.rubricDelayMs) {
       await new Promise((r) => setTimeout(r, opts.rubricDelayMs));
     }
     await route.fulfill({ json: RUBRIC });
   });
 
-  await page.route(`${API}/coach/me`, (route) =>
+  await serve(page, `${API}/coach/me`, (route) =>
     route.fulfill({ json: opts.admin ? ADMIN_ME : ME }),
   );
 
-  await page.route(`${API}/coach/trends`, (route) => route.fulfill({ json: TRENDS }));
+  await serve(page, `${API}/coach/trends`, (route) => route.fulfill({ json: TRENDS }));
 
-  await page.route(/\/coach\/admin\/coaches\/[^/]+\/monthly-summary/, async (route) => {
-    if (!opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } });
+  await serve(page, /\/coach\/admin\/coaches\/[^/]+\/monthly-summary/, async (route) => {
+    if (!opts.admin) return forbidden(route);
     const url = new URL(route.request().url());
     const id = decodeURIComponent(url.pathname.split('/').at(-2) ?? '');
-    if (!MONTHLY_LEADERS[id]) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND' } });
+    if (!MONTHLY_LEADERS[id]) return refuse(route, 'unknown-leader');
     const delay = opts.monthlyDelayMs?.[id];
     if (delay) await new Promise((r) => setTimeout(r, delay));
     return route.fulfill({ json: monthlyFor(id, url.searchParams.get('month') ?? '') });
   });
 
-  await page.route(/\/coach\/admin\/monthly\?/, (route) => {
+  await serve(page, /\/coach\/admin\/monthly\?/, (route) => {
     const month = new URL(route.request().url()).searchParams.get('month') ?? '';
     return route.fulfill({
       json: {
@@ -1210,7 +1214,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     });
   });
 
-  await page.route(`${API}/coach/admin/coaches`, (route) =>
+  await serve(page, `${API}/coach/admin/coaches`, (route) =>
     opts.admin
       ? route.fulfill({
           json: {
@@ -1234,16 +1238,16 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
             ),
           },
         })
-      : route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } }),
+      : forbidden(route),
   );
 
-  await page.route(`${API}/coach/admin/coaches/*/trends`, (route) =>
+  await serve(page, `${API}/coach/admin/coaches/*/trends`, (route) =>
     opts.admin
       ? route.fulfill({ json: ADMIN_TRENDS })
-      : route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } }),
+      : forbidden(route),
   );
 
-  await page.route(`${API}/coach/reports`, (route) => {
+  await serve(page, `${API}/coach/reports`, (route) => {
     opts.onReportsRequest?.(new URL(route.request().url()).pathname);
     return route.fulfill({ json: { reports: all().filter((r) => !held.has(r.id)).map(withAttached) } });
   });
@@ -1254,7 +1258,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       : route.fulfill({ contentType: 'video/mp4', body: TINY_MP4 }),
   );
 
-  await page.route(`${API}/coach/reports/*/recording-url`, async (route) => {
+  await serve(page, `${API}/coach/reports/*/recording-url`, async (route) => {
     const id = decodeURIComponent(
       new URL(route.request().url()).pathname.split('/').at(-2) ?? '',
     );
@@ -1262,9 +1266,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     if (opts.mintDelayMs) {
       await new Promise((r) => setTimeout(r, opts.mintDelayMs));
     }
-    if (!retained.has(id) || held.has(id)) {
-      return route.fulfill({ status: 404, json: { error: 'NOT_FOUND' } });
-    }
+    if (!retained.has(id) || held.has(id)) return notFound(route, 'No retained recording');
     // A fresh address every time, as a real signed URL is: the signature and
     // timestamp differ per mint. It matters here, because a re-mint that
     // returned a byte-identical src would not make the media element load
@@ -1278,20 +1280,20 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     });
   });
 
-  await page.route(`${API}/coach/reports/*`, (route) => {
-    if (opts.admin) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND' } });
+  await serve(page, `${API}/coach/reports/*`, (route) => {
+    if (opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Not a coaching account' } });
     const id = decodeURIComponent(
       new URL(route.request().url()).pathname.split('/').at(-1) ?? '',
     );
     opts.onReportsRequest?.(new URL(route.request().url()).pathname);
     const found = store.get(id);
-    if (!found || held.has(id)) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'Report not found' } });
+    if (!found || held.has(id)) return notFound(route, 'Session not found');
     return route.fulfill({
       json: { report: { ...withAttached(found), hasRetainedRecording: retained.has(id) } },
     });
   });
 
-  await page.route(/\/coach\/reports\/summary(\?|$)/, (route) => {
+  await serve(page, /\/coach\/reports\/summary(\?|$)/, (route) => {
     const url = new URL(route.request().url());
     opts.onReportsRequest?.(`${url.pathname}${url.search}`);
     if (opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Not a coaching account' } });
@@ -1303,46 +1305,41 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     });
   });
 
-  await page.route(/\/coach\/admin\/coaches\/[^/]+\/reports\/(?!summary(?:\?|$))[^/?]+$/, (route) => {
+  await serve(page, /\/coach\/admin\/coaches\/[^/]+\/reports\/(?!summary(?:\?|$))[^/?]+$/, (route) => {
     if (!opts.admin) return forbidden(route);
-    if (route.request().method() !== 'GET') return notFound(route);
+    if (route.request().method() !== 'GET') return unmatched(route);
     const id = decodeURIComponent(new URL(route.request().url()).pathname.split('/').at(-1) ?? '');
     const found = store.get(id);
-    if (!found) return notFound(route, 'Session not found');
+    if (!found) return refuse(route, 'unknown-report');
     return route.fulfill({ json: { report: { ...withAttached(found), hasRetainedRecording: retained.has(id) } } });
   });
 
-  await page.route(/\/coach\/admin\/coaches\/[^/]+\/reports\/[^/]+\/(notes|recording)$/, (route) => {
+  await serve(page, /\/coach\/admin\/coaches\/[^/]+\/reports\/[^/]+\/(notes|recording)$/, (route) => {
     if (!opts.admin) return forbidden(route);
     const req = route.request();
     const url = new URL(req.url());
     const [, , id, action] = url.pathname.match(/\/admin\/coaches\/([^/]+)\/reports\/([^/]+)\/(notes|recording)$/) ?? [];
-    if (req.method() !== (action === 'notes' ? 'POST' : 'PUT')) return notFound(route);
+    if (req.method() !== (action === 'notes' ? 'POST' : 'PUT')) return unmatched(route);
     const body = req.postData() ? JSON.parse(req.postData() as string) : null;
     opts.onAdminWrite?.(req.method(), url.pathname, body);
     const found = store.get(decodeURIComponent(id));
     if (action === 'recording') {
       const recordingUrl = String(body.recordingUrl).trim();
-      if (recordingUrl && !/^https?:\/\/\S+$/i.test(recordingUrl)) return invalid(route, 'Enter a valid http(s) link');
-      if (!found) return notFound(route, 'Session not found');
+      if (recordingUrl && !/^https?:\/\/\S+$/i.test(recordingUrl)) return refuse(route, 'invalid-link');
+      if (!found) return refuse(route, 'unknown-report');
       attached[found.id] = recordingUrl;
       return route.fulfill({ json: { recordingUrl } });
     }
     const text = String(body.body).trim();
-    if (!text) return invalid(route, 'Note cannot be empty');
-    if (!found) return notFound(route, 'Session not found');
-    if (held.has(found.id)) {
-      return conflict(
-        route,
-        'This report is held from its leader, so a note would email them about a report they cannot open. Release it first.',
-      );
-    }
+    if (!text) return refuse(route, 'empty-note');
+    if (!found) return refuse(route, 'unknown-report');
+    if (held.has(found.id)) return refuse(route, 'held');
     const note = { id: `note-${(found.notes?.length ?? 0) + 1}`, body: text, createdAt: '2026-10-08T16:00:00.000Z', emailed: true };
     found.notes = [note, ...(found.notes ?? [])];
     return route.fulfill({ json: { note } });
   });
 
-  await page.route(/\/coach\/admin\/coaches\/[^/]+\/reports\/summary(\?|$)/, (route) => {
+  await serve(page, /\/coach\/admin\/coaches\/[^/]+\/reports\/summary(\?|$)/, (route) => {
     if (!opts.admin) return forbidden(route);
     const url = new URL(route.request().url());
     const limit = Number(url.searchParams.get('limit') ?? 25);

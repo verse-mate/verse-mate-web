@@ -8,6 +8,7 @@ import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import * as coachService from '@/services/coachService';
 import { CoachApiError, type CoachReport, type ReportReviewState } from '@/services/coachService';
 import type { RubricContract } from '@/services/rubric';
+import contract from '../../../tests/e2e/coach/coach-contract.snapshot.json';
 import ReportDetail from './ReportDetail';
 import ReportReview from './ReportReview';
 
@@ -55,8 +56,8 @@ const REVIEW: ReportReviewState = {
   })),
 };
 
-const PARTIALLY_DELIVERED =
-  "Refused: the report was already emailed to some of its recipients, so it can no longer be corrected or edited. Its remaining sends are retried automatically. If one keeps failing, fix that recipient's address and requeue the report from the pipeline failures list. Once every recipient has it, amend it.";
+const CORRECTION_REFUSALS = contract.refusals['POST /coach/admin/reports/:reportId/dimensions/:dimensionN'];
+const PARTIALLY_DELIVERED = CORRECTION_REFUSALS['partially-delivered'].message;
 
 function renderReview(report: CoachReport = REPORT) {
   const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
@@ -1239,7 +1240,9 @@ describe('correcting a dimension of an undelivered report', () => {
 
   it('a report delivered meanwhile is read again, and the amend editor opens with the correction as its draft', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValueOnce(UNDELIVERED).mockResolvedValue(REVIEW);
-    vi.spyOn(coachService, 'correctDimension').mockRejectedValue(new CoachApiError('x', 400, 'Correction refused: already-delivered'));
+    vi.spyOn(coachService, 'correctDimension').mockRejectedValue(
+      new CoachApiError('x', 409, CORRECTION_REFUSALS['already-delivered'].message, { refusal: 'already-delivered' }),
+    );
     const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, firstLesson: false, sent: true });
     renderReview();
     await correct(5, '2', 'fewer questions');

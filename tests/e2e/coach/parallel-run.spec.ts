@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-import { API, capture, LEADER_ID, OLDER_ID, PARALLEL_RUN_RESHARE, PARALLEL_RUN_SESSION, useCoachApi } from './fixtures';
+import { API, capture, LEADER_ID, OLDER_ID, PARALLEL_RUN_RESHARE, PARALLEL_RUN_SESSION, PARALLEL_RUN_SESSION_REFUSAL, useCoachApi } from './fixtures';
 
 const LABEL = 'Parallel-run copy: kept for comparison, never sent.';
 
@@ -61,15 +61,16 @@ test.describe('A session observed during the parallel run', () => {
       async ([api, reportId, reshareId]) => {
         const post = async (path: string) => {
           const res = await fetch(`${api}/coach/${path}`, { method: 'POST' });
-          return [res.status, (await res.json()).message];
+          const body = await res.json();
+          return [res.status, body.details?.refusal, body.message];
         };
         return [await post(`admin/reports/${reportId}/release`), await post(`admin/reshares/${reshareId}/send`)];
       },
       [API, OLDER_ID, PARALLEL_RUN_RESHARE.sourceSessionId],
     );
     expect(answers).toEqual([
-      [409, 'This session was observed during the parallel run: it is kept for admin comparison and never sent'],
-      [400, 'Re-share not sent: parallel-run-session'],
+      [409, 'parallel-run-session', PARALLEL_RUN_SESSION_REFUSAL],
+      [409, 'parallel-run-session', PARALLEL_RUN_SESSION_REFUSAL],
     ]);
   });
 });
