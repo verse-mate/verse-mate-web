@@ -375,9 +375,10 @@ function FirstLessonPanel({
         if (r.applied) setClearing(null);
         if (!r.applied || r.revision !== undefined) {
           const outcome = amendOutcome(r);
+          const mrDim = input.score === undefined ? {} : { [MEMORY_REINFORCEMENT]: { score: input.score, rationale: input.rationale ?? '' } };
           onCarry({
             last: { outcome: { ...outcome, text: `${DELIVERED_MEANWHILE} ${outcome.text}` }, held: r.coldRecall, violations: r.violations },
-            draft: r.applied ? undefined : (d) => ({ ...d, firstLesson: input.firstLesson }),
+            draft: r.applied ? undefined : (d) => ({ ...d, firstLesson: input.firstLesson, dims: { ...d.dims, ...mrDim } }),
           });
         }
       },

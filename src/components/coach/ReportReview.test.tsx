@@ -917,6 +917,32 @@ describe('the first-lesson flag on an undelivered report', () => {
     );
   });
 
+  it('clearing the flag refused on a report delivered meanwhile carries the Memory Reinforcement score and rationale into the amend editor', async () => {
+    vi.spyOn(coachService, 'fetchReportReview')
+      .mockResolvedValueOnce({ ...UNDELIVERED, firstLesson: true, firstLessonSource: 'detected' })
+      .mockResolvedValue({ ...REVIEW, firstLesson: true, firstLessonSource: 'detected' });
+    vi.spyOn(coachService, 'setFirstLesson').mockResolvedValue({ applied: false, refusal: 'governance-blocked' });
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, firstLesson: false, sent: true });
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-first-lesson-clear'));
+    fireEvent.change(screen.getByTestId('coach-first-lesson-score'), { target: { value: '3' } });
+    fireEvent.change(screen.getByTestId('coach-first-lesson-rationale'), { target: { value: 'Reviewed last week' } });
+    fireEvent.click(screen.getByTestId('coach-first-lesson-save'));
+
+    const editor = await screen.findByTestId('coach-amend-editor');
+    expect(within(editor).getByTestId('coach-amend-first-lesson')).not.toBeChecked();
+    expect(within(editor).getByTestId('coach-amend-dim-score-9')).toHaveValue('3');
+    expect(within(editor).getByTestId('coach-amend-dim-rationale-9')).toHaveValue('Reviewed last week');
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    await waitFor(() =>
+      expect(amend).toHaveBeenCalledWith('rep-1', {
+        dimensions: [{ n: 9, score: 3, rationale: 'Reviewed last week' }],
+        firstLesson: false,
+      }),
+    );
+  });
+
   it('a flag saved as a revision because the report was delivered meanwhile shows the amend panel and what was saved', async () => {
     vi.spyOn(coachService, 'fetchReportReview')
       .mockResolvedValueOnce(UNDELIVERED)
