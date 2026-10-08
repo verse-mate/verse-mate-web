@@ -307,6 +307,12 @@ describe('coachService', () => {
     expect(await attributeSession('ff/4', 'amy-lee')).toEqual({ coachId: 'amy-lee', state: 'retained' });
   });
 
+  it('reads one page of stuck sessions with the total the server counted', async () => {
+    const stuck = { sourceSessionId: 'ff-1', coachId: null, title: 't', sessionDate: '2026-09-01', state: 'observed', attempts: 0, reportId: null, reason: null, action: 'attribute', updatedAt: '2026-09-02T00:00:00Z' };
+    mockFetch(() => jsonResponse({ sessions: [stuck], total: 120, limit: 50, offset: 50 }));
+    expect(await fetchPipelineFailures(50)).toEqual({ sessions: [stuck], total: 120, limit: 50, offset: 50 });
+  });
+
   it('POSTs a not-teaching attestation and DELETEs it to clear', async () => {
     mockFetch((url, init) => {
       expect(url).toContain('/coach/admin/leaders/amy-lee/not-teaching');
@@ -396,7 +402,8 @@ describe('coachService', () => {
     ['list pending re-shares', () => fetchPendingReshares(), 'GET', '/coach/admin/reshares', undefined],
     ['ask for a re-share', () => sendReshareRequest('ff/1'), 'POST', '/coach/admin/reshares/ff%2F1/send', undefined],
     ['resolve a re-share', () => resolveReshareRequest('ff/1'), 'POST', '/coach/admin/reshares/ff%2F1/resolve', undefined],
-    ['list pipeline failures', () => fetchPipelineFailures(), 'GET', '/coach/admin/pipeline-failures', undefined],
+    ['list pipeline failures', () => fetchPipelineFailures(), 'GET', '/coach/admin/pipeline-failures?limit=50&offset=0', undefined],
+    ['list a later page of pipeline failures', () => fetchPipelineFailures(100, 25), 'GET', '/coach/admin/pipeline-failures?limit=25&offset=100', undefined],
     ['requeue a failure', () => requeuePipelineFailure('ff/1'), 'POST', '/coach/admin/pipeline-failures/ff%2F1/requeue', undefined],
     ['assign a session', () => attributeSession('ff/4', 'amy-lee'), 'POST', '/coach/admin/sessions/ff%2F4/attribute', { coachId: 'amy-lee' }],
     ['release a held report', () => releaseHeldReport('rep/2'), 'POST', '/coach/admin/reports/rep%2F2/release', undefined],

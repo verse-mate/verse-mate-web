@@ -419,9 +419,17 @@ export interface PipelineFailure {
   updatedAt: string;
 }
 
-export async function fetchPipelineFailures(): Promise<PipelineFailure[]> {
-  const data = await coachRequest<{ sessions: PipelineFailure[] }>('admin/pipeline-failures');
-  return data.sessions || [];
+export interface PipelineFailurePage {
+  sessions: PipelineFailure[];
+  total: number;
+  limit: number;
+  offset: number;
+}
+
+export const PIPELINE_PAGE_SIZE = 50;
+
+export function fetchPipelineFailures(offset = 0, limit = PIPELINE_PAGE_SIZE): Promise<PipelineFailurePage> {
+  return coachRequest<PipelineFailurePage>(`admin/pipeline-failures?limit=${limit}&offset=${offset}`);
 }
 
 export function requeuePipelineFailure(sourceSessionId: string): Promise<{ requeued: boolean }> {

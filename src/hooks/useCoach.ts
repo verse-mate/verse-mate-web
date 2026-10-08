@@ -48,7 +48,7 @@ import {
   requeuePipelineFailure,
   releaseHeldReport,
   fetchCoverage,
-  type PipelineFailure,
+  type PipelineFailurePage,
   type CoverageReport,
   type ReleaseOutcome,
   updateLeaderEmail,
@@ -281,8 +281,13 @@ export function useAddNote(
   });
 }
 
-export function usePipelineFailures(): UseQueryResult<PipelineFailure[]> {
-  return useQuery({ queryKey: coachKeys.pipelineFailures, queryFn: fetchPipelineFailures, retry: false });
+export function usePipelineFailures(offset = 0): UseQueryResult<PipelineFailurePage> {
+  return useQuery({
+    queryKey: [...coachKeys.pipelineFailures, offset],
+    queryFn: () => fetchPipelineFailures(offset),
+    retry: false,
+    placeholderData: keepPreviousData,
+  });
 }
 
 export function useCoverage(): UseQueryResult<CoverageReport> {

@@ -661,7 +661,9 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       stuck.splice(i, 1);
       return route.fulfill({ json: { delivered: true } });
     }
-    return route.fulfill({ json: { sessions: stuck } });
+    const limit = Number(url.searchParams.get('limit') ?? 50);
+    const offset = Number(url.searchParams.get('offset') ?? 0);
+    return route.fulfill({ json: { sessions: stuck.slice(offset, offset + limit), total: stuck.length, limit, offset } });
   });
 
   await revisionRoutes(page, opts);
