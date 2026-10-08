@@ -719,6 +719,26 @@ export async function updateLeaderEmail(coachId: string, email: string): Promise
   return data.email;
 }
 
+export interface LeaderAttribution {
+  titleMatch: string[];
+  altEmails: string[];
+}
+
+export function fetchLeaderAttribution(coachId: string): Promise<LeaderAttribution> {
+  return coachRequest<LeaderAttribution>(`admin/leaders/${encodeURIComponent(coachId)}/attribution`);
+}
+
+export function saveLeaderAttribution(
+  coachId: string,
+  attribution: LeaderAttribution,
+): Promise<LeaderAttribution & { resolved: number }> {
+  return coachRequest<LeaderAttribution & { resolved: number }>(`admin/leaders/${encodeURIComponent(coachId)}/attribution`, {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(attribution),
+  });
+}
+
 export function isPlaceholderAddress(email: string): boolean {
   return /\.invalid$/i.test(email.trim());
 }

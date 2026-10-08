@@ -59,6 +59,9 @@ import {
   fetchReportRevisions,
   sendRevision,
   setFirstLesson,
+  fetchLeaderAttribution,
+  saveLeaderAttribution,
+  type LeaderAttribution,
   type ReportAmendment,
   type ReportReviewState,
   type ReportRevision,
@@ -75,6 +78,7 @@ export const coachKeys = {
   adminClasses: ['coach', 'admin', 'classes'] as const,
   pipelineFailures: ['coach', 'admin', 'pipeline-failures'] as const,
   coverage: ['coach', 'admin', 'coverage'] as const,
+  attribution: (coachId: string) => ['coach', 'admin', 'attribution', coachId] as const,
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
   reportReview: (reportId: string) => ['coach', 'admin', 'review', reportId] as const,
   reportRevisions: (reportId: string) => ['coach', 'admin', 'revisions', reportId] as const,
@@ -385,6 +389,29 @@ export function useSetFirstLesson(
     mutationFn: (input) => setFirstLesson(reportId, input),
     onSuccess: (result) => {
       if (result.applied) refresh();
+    },
+  });
+}
+
+export function useLeaderAttribution(coachId: string, enabled: boolean): UseQueryResult<LeaderAttribution> {
+  return useQuery({
+    queryKey: coachKeys.attribution(coachId),
+    queryFn: () => fetchLeaderAttribution(coachId),
+    retry: false,
+    enabled,
+  });
+}
+
+export function useSaveLeaderAttribution(
+  coachId: string,
+): UseMutationResult<LeaderAttribution & { resolved: number }, Error, LeaderAttribution> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (attribution) => saveLeaderAttribution(coachId, attribution),
+    onSuccess: (saved) => {
+      qc.setQueryData(coachKeys.attribution(coachId), { titleMatch: saved.titleMatch, altEmails: saved.altEmails });
+      qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
+      qc.invalidateQueries({ queryKey: coachKeys.coverage });
     },
   });
 }

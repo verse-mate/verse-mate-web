@@ -6,9 +6,11 @@ import {
   useAdminCoaches,
   useAttributeSession,
   useCoverage,
+  useLeaderAttribution,
   usePipelineFailures,
   useReleaseHeldReport,
   useRequeuePipelineFailure,
+  useSaveLeaderAttribution,
   useSetNotTeaching,
   useUpdateLeaderEmail,
 } from '@/hooks/useCoach';
@@ -249,6 +251,7 @@ export default function PipelineHealth() {
                     <div style={{ minWidth: 0 }}>
                       <div style={{ fontWeight: 600, fontSize: 14 }}>{l.name}</div>
                       <LeaderAddress coachId={l.coachId} email={l.email} />
+                      <LeaderAttribution coachId={l.coachId} />
                       <div style={{ fontSize: 12.5, color: dt.textLight }}>
                         account {l.accountStatus} · {l.observedSessions} observed sessions ·{' '}
                         {l.linkedClassName ?? 'no linked class'}
@@ -397,6 +400,125 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
         <div role="alert" data-testid={`coach-address-error-${coachId}`} style={{ color: dt.rust, marginTop: 4 }}>
           {error}
         </div>
+      )}
+    </div>
+  );
+}
+
+function listLines(text: string): string[] {
+  return text
+    .split('\n')
+    .map((l) => l.trim())
+    .filter(Boolean);
+}
+
+function LeaderAttribution({ coachId }: { coachId: string }) {
+  const [open, setOpen] = useState(false);
+  const current = useLeaderAttribution(coachId, open);
+  const save = useSaveLeaderAttribution(coachId);
+  const [draft, setDraft] = useState<{ keywords: string; emails: string } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [saved, setSaved] = useState<string | null>(null);
+
+  const shown = draft ?? {
+    keywords: (current.data?.titleMatch ?? []).join('\n'),
+    emails: (current.data?.altEmails ?? []).join('\n'),
+  };
+  const short = listLines(shown.keywords).filter((k) => k.length < 3);
+  const shownError =
+    error ?? (short.length ? `Each title keyword needs at least three characters: ${short.join(', ')}` : null);
+
+  const submit = () => {
+    setError(null);
+    setSaved(null);
+    save.mutate(
+      { titleMatch: listLines(shown.keywords), altEmails: listLines(shown.emails) },
+      {
+        onSuccess: (r) => {
+          setDraft(null);
+          setSaved(`Saved. ${r.resolved} unattributed session${r.resolved === 1 ? '' : 's'} now match${r.resolved === 1 ? 'es' : ''} a leader.`);
+        },
+        onError: (err) => setError(refusalText(err)),
+      },
+    );
+  };
+
+  if (!open) {
+    return (
+      <button type="button" onClick={() => setOpen(true)} data-testid={`coach-attribution-edit-${coachId}`} style={{ ...linkBtn, fontSize: 12.5 }}>
+        Title keywords and other addresses
+      </button>
+    );
+  }
+
+  return (
+    <div className={REPLAY_BLOCK_CLASS} style={{ fontSize: 12.5, color: dt.textLight, margin: '6px 0', display: 'flex', flexDirection: 'column', gap: 6 }}>
+      {current.isLoading ? (
+        <span>Loading keywords and addresses…</span>
+      ) : current.error ? (
+        <div role="alert" data-testid={`coach-attribution-error-${coachId}`} style={{ color: dt.rust }}>
+          Could not load the keywords and addresses. {refusalText(current.error)}
+        </div>
+      ) : (
+        <>
+          <label htmlFor={`attribution-keywords-${coachId}`}>Session title keywords, one per line (at least three characters)</label>
+          <textarea
+            id={`attribution-keywords-${coachId}`}
+            value={shown.keywords}
+            onChange={(e) => {
+              setDraft({ ...shown, keywords: e.target.value });
+              setError(null);
+            }}
+            rows={3}
+            data-testid={`coach-attribution-keywords-${coachId}`}
+            style={input}
+          />
+          <label htmlFor={`attribution-emails-${coachId}`}>Other addresses the leader records from, one per line</label>
+          <textarea
+            id={`attribution-emails-${coachId}`}
+            value={shown.emails}
+            onChange={(e) => {
+              setDraft({ ...shown, emails: e.target.value });
+              setError(null);
+            }}
+            rows={2}
+            data-testid={`coach-attribution-emails-${coachId}`}
+            style={input}
+          />
+          <span style={{ display: 'inline-flex', gap: 10, alignItems: 'center' }}>
+            <button
+              type="button"
+              onClick={submit}
+              disabled={save.isPending || short.length > 0}
+              data-testid={`coach-attribution-save-${coachId}`}
+              style={btn}
+            >
+              {save.isPending ? 'Saving…' : 'Save keywords and addresses'}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false);
+                setDraft(null);
+                setError(null);
+              }}
+              disabled={save.isPending}
+              style={linkBtn}
+            >
+              Close
+            </button>
+          </span>
+          {shownError && (
+            <div role="alert" data-testid={`coach-attribution-error-${coachId}`} style={{ color: dt.rust }}>
+              {shownError}
+            </div>
+          )}
+          {saved && (
+            <div data-testid={`coach-attribution-saved-${coachId}`} style={{ color: dt.green }}>
+              {saved}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

@@ -484,3 +484,80 @@ describe('a leader who is not teaching', () => {
     expect(await screen.findByTestId('coach-coverage-error-amy-lee')).toHaveTextContent('Leader not found');
   });
 });
+
+describe("a leader's title keywords and alternate addresses", () => {
+  beforeEach(() => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [COVERAGE.leaders[0]] });
+  });
+
+  it('loads the current lists, and saves the edited ones whole', async () => {
+    const load = vi
+      .spyOn(coachService, 'fetchLeaderAttribution')
+      .mockResolvedValue({ titleMatch: ['saturday morning'], altEmails: ['milo.w@example.test'] });
+    const save = vi
+      .spyOn(coachService, 'saveLeaderAttribution')
+      .mockResolvedValue({ titleMatch: ['saturday morning', 'obadiah'], altEmails: ['milo.w@example.test'], resolved: 2 });
+    renderView();
+
+    expect(load).not.toHaveBeenCalled();
+    fireEvent.click(await screen.findByTestId('coach-attribution-edit-milo-kerr'));
+    const keywords = await screen.findByTestId('coach-attribution-keywords-milo-kerr');
+    expect(keywords).toHaveValue('saturday morning');
+    expect(screen.getByTestId('coach-attribution-emails-milo-kerr')).toHaveValue('milo.w@example.test');
+    expect(keywords.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+
+    fireEvent.change(keywords, { target: { value: 'saturday morning\n Obadiah \n\n' } });
+    fireEvent.click(screen.getByTestId('coach-attribution-save-milo-kerr'));
+
+    await waitFor(() =>
+      expect(save).toHaveBeenCalledWith('milo-kerr', {
+        titleMatch: ['saturday morning', 'Obadiah'],
+        altEmails: ['milo.w@example.test'],
+      }),
+    );
+    expect(await screen.findByTestId('coach-attribution-saved-milo-kerr')).toHaveTextContent(
+      'Saved. 2 unattributed sessions now match a leader.',
+    );
+  });
+
+  it('holds a keyword shorter than three characters before it reaches the server', async () => {
+    vi.spyOn(coachService, 'fetchLeaderAttribution').mockResolvedValue({ titleMatch: [], altEmails: [] });
+    const save = vi.spyOn(coachService, 'saveLeaderAttribution');
+    renderView();
+    fireEvent.click(await screen.findByTestId('coach-attribution-edit-milo-kerr'));
+    fireEvent.change(await screen.findByTestId('coach-attribution-keywords-milo-kerr'), { target: { value: 'ok keyword\nab' } });
+
+    expect(screen.getByTestId('coach-attribution-error-milo-kerr')).toHaveTextContent(
+      'Each title keyword needs at least three characters: ab',
+    );
+    expect(screen.getByTestId('coach-attribution-save-milo-kerr')).toBeDisabled();
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  it("shows the server's refusal and keeps the edit", async () => {
+    vi.spyOn(coachService, 'fetchLeaderAttribution').mockResolvedValue({ titleMatch: [], altEmails: [] });
+    vi.spyOn(coachService, 'saveLeaderAttribution').mockRejectedValue(
+      new CoachApiError('x', 400, 'Each alternate address must be a valid email address'),
+    );
+    renderView();
+    fireEvent.click(await screen.findByTestId('coach-attribution-edit-milo-kerr'));
+    fireEvent.change(await screen.findByTestId('coach-attribution-emails-milo-kerr'), { target: { value: 'not-an-email' } });
+    fireEvent.click(screen.getByTestId('coach-attribution-save-milo-kerr'));
+
+    expect(await screen.findByTestId('coach-attribution-error-milo-kerr')).toHaveTextContent(
+      'Refused (400): Each alternate address must be a valid email address',
+    );
+    expect(screen.getByTestId('coach-attribution-emails-milo-kerr')).toHaveValue('not-an-email');
+  });
+
+  it('says so when the lists cannot be read', async () => {
+    vi.spyOn(coachService, 'fetchLeaderAttribution').mockRejectedValue(new CoachApiError('x', 404, 'Leader not found'));
+    renderView();
+    fireEvent.click(await screen.findByTestId('coach-attribution-edit-milo-kerr'));
+    expect(await screen.findByTestId('coach-attribution-error-milo-kerr')).toHaveTextContent(
+      'Could not load the keywords and addresses. Refused (404): Leader not found',
+    );
+    expect(screen.queryByTestId('coach-attribution-save-milo-kerr')).toBeNull();
+  });
+});
