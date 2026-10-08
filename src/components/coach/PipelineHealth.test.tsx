@@ -508,10 +508,14 @@ describe('an unresolved session', () => {
     expect(list).toHaveBeenCalledTimes(2);
   });
 
-  it('says the assigned session is held until an admin releases it, whether or not it has a report yet', async () => {
+  it.each([
+    ['observed', 'It is observed now: a later pipeline run scores it for them'],
+    ['retained', 'It is retained now: a later pipeline run scores it for them'],
+  ])('says a session assigned while %s is scored on a later run, then held until an admin releases it', async (state, said) => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([UNRESOLVED]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
-    vi.spyOn(coachService, 'attributeSession').mockResolvedValue({ coachId: 'amy-lee', state: 'retained' });
+    vi.spyOn(coachService, 'attributeSession').mockResolvedValue({ coachId: 'amy-lee', state });
+    const success = vi.spyOn(toast, 'success');
     renderView();
 
     const picker = await screen.findByTestId('coach-pipeline-assign-to-ff-4');
@@ -519,9 +523,9 @@ describe('an unresolved session', () => {
     fireEvent.change(picker, { target: { value: 'amy-lee' } });
     fireEvent.click(screen.getByTestId('coach-pipeline-assign-ff-4'));
 
-    expect(await screen.findByTestId('coach-pipeline-outcome-ff-4')).toHaveTextContent(
-      'Assigned to Amy Lee. It is scored for them and held: nothing reaches them until an admin releases it from this list.',
-    );
+    const text = `Assigned to Amy Lee. ${said}, and it is then held until an admin releases it from this list.`;
+    expect(await screen.findByTestId('coach-pipeline-outcome-ff-4')).toHaveTextContent(text);
+    expect(success).toHaveBeenCalledWith(text);
   });
 
   it('shows the refusal when the session moved since the list loaded, and reads the list again', async () => {

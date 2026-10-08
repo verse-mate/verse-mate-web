@@ -828,17 +828,13 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   const attributions: Record<string, { titleMatch: string[]; altEmails: string[] }> = {
     'evan-ellis': { titleMatch: ['tuesday night'], altEmails: ['evan.personal@example.test'] },
   };
-  const holdForRelease = (i: number, coachId: string) => {
+  const reattribute = (i: number, coachId: string, state: string) => {
     const session = stuck[i];
-    stuck[i] = {
-      ...session,
-      coachId,
-      state: 'scored',
-      attempts: 0,
-      reportId: session.reportId ?? `${session.sourceSessionId}-report`,
-      reason: 're-attributed: held until an admin releases it',
-      action: 'release',
-    };
+    if (!['scored', 'scoring_failed', 'delivery_pending', 'delivery_failed'].includes(state)) {
+      stuck.splice(i, 1);
+      return;
+    }
+    stuck[i] = { ...session, coachId, state, reason: 're-attributed: held until an admin releases it', action: 'release' };
   };
   const write = async (route: Route) => {
     const req = route.request();
@@ -877,14 +873,11 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       if (conflicts.length) return conflict(route, `Keywords refused: ${conflicts.join('; ')}`);
       lists.titleMatch = titleMatch;
       lists.altEmails = normalized(body.altEmails);
-      let resolved = 0;
-      stuck.forEach((session, i) => {
-        const title = titleWords(String(session.title));
-        if (session.coachId === null && lists.titleMatch.some((k) => containsWords(title, titleWords(k)))) {
-          holdForRelease(i, id);
-          resolved += 1;
-        }
-      });
+      const swept = stuck.filter(
+        (session) => session.coachId === null && lists.titleMatch.some((k) => containsWords(titleWords(String(session.title)), titleWords(k))),
+      );
+      for (const session of swept) reattribute(stuck.indexOf(session), id, String(session.state));
+      const resolved = swept.length;
       return route.fulfill({ json: { ...lists, resolved } });
     }
     const email = url.pathname.match(/admin\/leaders\/([^/]+)\/email$/);
@@ -935,8 +928,9 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
         return conflict(route, "The session's leader changed since this list was loaded; reload it and assign again");
       }
       if (stuck[i].coachId === body.coachId) return conflict(route, 'The session is already assigned to that leader');
-      const state = stuck[i].state === 'observed' ? 'observed' : 'retained';
-      holdForRelease(i, body.coachId);
+      const prior = String(stuck[i].state);
+      const state = ['scored', 'scoring_failed', 'delivery_pending', 'delivery_failed', 'delivered'].includes(prior) ? 'retained' : prior;
+      reattribute(i, body.coachId, state);
       return route.fulfill({ json: { coachId: body.coachId, state } });
     }
     if (url.pathname.endsWith('/admin/leaders')) {
