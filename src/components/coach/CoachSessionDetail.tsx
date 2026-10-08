@@ -134,7 +134,7 @@ export default function CoachSessionDetail({
         ))}
       </div>
 
-      {tab === 'report' && <FullReport report={report} />}
+      {tab === 'report' && <FullReport report={report} onOpenMetrics={() => setTab('scorecard')} />}
       {tab === 'scorecard' && <Scorecard report={report} />}
       {tab === 'questions' && <QuestionCoaching report={report} />}
       {tab === 'nextsteps' && <NextSteps report={report} />}
@@ -144,7 +144,7 @@ export default function CoachSessionDetail({
 
 // ─── Full report ─────────────────────────────────────────────────────────────
 
-function FullReport({ report }: { report: CoachReport }) {
+function FullReport({ report, onOpenMetrics }: { report: CoachReport; onOpenMetrics: () => void }) {
   const snapshot = buildSnapshot(report);
   const strengths = feedbackPoints(report.feedback?.strengthsProse, report.feedback?.strengths);
   const improvements = feedbackPoints(report.feedback?.improvementsProse, report.feedback?.improvements);
@@ -203,29 +203,6 @@ function FullReport({ report }: { report: CoachReport }) {
         </>
       )}
 
-      {/* Cluster breakdown */}
-      {report.clusters.length > 0 && (
-        <>
-          <SectionKicker>CLUSTER BREAKDOWN · BASE {report.base.toFixed(1)}</SectionKicker>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 11, margin: '14px 0 34px' }}>
-            {report.clusters.map((c) => {
-              const pct = c.scorePct == null ? 0 : c.scorePct;
-              return (
-                <div key={c.name} style={{ display: 'grid', gridTemplateColumns: '180px 1fr 52px', gap: 16, alignItems: 'center' }}>
-                  <div style={{ fontWeight: 600, fontSize: 14.5 }}>{c.name}</div>
-                  <div style={{ height: 9, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}>
-                    <div style={{ height: '100%', borderRadius: 99, width: `${pct}%`, background: dt.brightGold }} />
-                  </div>
-                  <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', fontSize: 14 }}>
-                    {c.scorePct == null ? 'N/A' : `${Math.round(c.scorePct)}%`}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </>
-      )}
-
       {/* Strengths */}
       {strengths.length > 0 && (
         <>
@@ -280,10 +257,19 @@ function FullReport({ report }: { report: CoachReport }) {
         </>
       )}
 
-      <div style={{ marginTop: 24, fontSize: 13.5, color: dt.textLight, borderTop: `1px dashed ${dt.dashed}`, paddingTop: 16 }}>
-        Full metrics (Score Composition and the appendix: attendance, timeline, talk ratio, engagement, monologues,
-        vulnerability, the full dimension scorecard, cross-references, drift log) are on this page, in the sections
-        above. Nothing is held back in a separate document.
+      <div
+        data-testid="coach-metrics-link"
+        style={{ marginTop: 24, fontSize: 13.5, color: dt.textLight, borderTop: `1px dashed ${dt.dashed}`, paddingTop: 16 }}
+      >
+        The full session metrics are kept apart from this report: the score composition first, then every dimension
+        against its target.{' '}
+        <button
+          type="button"
+          onClick={onOpenMetrics}
+          style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', font: 'inherit', fontWeight: 700, color: dt.gold }}
+        >
+          Open the full metrics
+        </button>
       </div>
     </div>
   );
@@ -297,10 +283,16 @@ function Scorecard({ report }: { report: CoachReport }) {
   // what the score was actually computed against (task 8.3).
   const { rubric } = useRubric();
   if (!report.dimensions?.length) {
-    return <EmptyPanel>No dimension scorecard is available for this session yet.</EmptyPanel>;
+    return (
+      <>
+        <ScoreComposition report={report} />
+        <EmptyPanel>No dimension scorecard is available for this session yet.</EmptyPanel>
+      </>
+    );
   }
   return (
     <div style={{ paddingTop: 8 }}>
+      <ScoreComposition report={report} />
       <div style={{ fontSize: 12.5, color: dt.textLight, marginBottom: 4 }}>
         Tap any dimension to read the session-specific coaching behind its score.
       </div>
@@ -373,6 +365,40 @@ function Scorecard({ report }: { report: CoachReport }) {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+function ScoreComposition({ report }: { report: CoachReport }) {
+  const bonuses = [
+    report.newcomerBonus ? ` + newcomer growth ${report.newcomerBonus}` : '',
+    report.sizeBonus ? ` + group size ${report.sizeBonus}` : '',
+  ].join('');
+  return (
+    <div data-testid="coach-score-composition" style={{ paddingTop: 12 }}>
+      <SectionKicker>SCORE COMPOSITION</SectionKicker>
+      <p style={{ fontSize: 13.5, color: dt.textLight, margin: '6px 0 14px' }}>
+        Base {report.base.toFixed(1)}
+        {bonuses} = {report.score} / 100
+      </p>
+      {report.clusters.length > 0 && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 11, margin: '0 0 30px' }}>
+          {report.clusters.map((c) => {
+            const pct = c.scorePct == null ? 0 : c.scorePct;
+            return (
+              <div key={c.name} style={{ display: 'grid', gridTemplateColumns: '180px 1fr 52px', gap: 16, alignItems: 'center' }}>
+                <div style={{ fontWeight: 600, fontSize: 14.5 }}>{c.name}</div>
+                <div style={{ height: 9, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}>
+                  <div style={{ height: '100%', borderRadius: 99, width: `${pct}%`, background: dt.brightGold }} />
+                </div>
+                <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', fontSize: 14 }}>
+                  {c.scorePct == null ? 'N/A' : `${Math.round(c.scorePct)}%`}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
