@@ -226,6 +226,95 @@ describe('amending a delivered report', () => {
     expect(await screen.findByTestId('coach-amend-outcome')).toHaveTextContent(
       'Refused (400): Clearing the first-lesson flag needs a Memory Reinforcement score and rationale',
     );
+    expect(screen.getByTestId('coach-amend-headline')).toHaveValue('x');
+  });
+
+  it('a double click on confirm saves and sends one revision', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    const amend = vi.spyOn(coachService, 'amendReport').mockReturnValue(new Promise(() => {}));
+    renderReview();
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'x' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    const confirm = screen.getByTestId('coach-amend-confirm');
+    fireEvent.click(confirm);
+    fireEvent.click(confirm);
+
+    await waitFor(() => expect(confirm).toBeDisabled());
+    expect(amend).toHaveBeenCalledTimes(1);
+  });
+
+  it('an edit that only adds spaces or blank lines changes nothing', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    renderReview();
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-dim-rationale-5'), { target: { value: '  machine 5  ' } });
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: ' A steady session ' } });
+    fireEvent.change(screen.getByTestId('coach-amend-overview'), { target: { value: '\n  First paragraph  \n\n' } });
+    expect(screen.getByTestId('coach-amend-review')).toBeDisabled();
+  });
+
+  it.each([
+    ['no-mailer', 'Revision 3 is stored but not sent: no mailer is configured. Send it from the kept versions once one is.'],
+    ['send-failed', 'Revision 3 is stored, but the send failed. Send it again from the kept versions.'],
+    ['in-flight', 'Revision 3 is stored, and another request is sending it right now.'],
+    ['something-new', 'Revision 3 is stored but not sent (something-new).'],
+  ])('says why a revision is stored but not sent (%s)', async (pending, text) => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 3, sent: false, pending });
+    renderReview();
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'x' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    expect(await screen.findByTestId('coach-amend-outcome')).toHaveTextContent(text);
+  });
+
+  it('names each recipient the re-send failed for, and why', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'amendReport').mockResolvedValue({
+      applied: true,
+      revision: 1,
+      sent: true,
+      sends: [
+        { email: 'leader@example.test', delivered: true },
+        { email: 'coach@example.test', delivered: false, error: 'mailbox full' },
+        { email: 'other@example.test', delivered: false },
+      ],
+    });
+    renderReview();
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'x' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    const outcome = await screen.findByTestId('coach-amend-outcome');
+    expect(outcome).toHaveTextContent('Failed: coach@example.test (mailbox full), other@example.test.');
+    expect(outcome.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+  });
+
+  it('labels the left column delivered when the latest version went out', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, '2026-10-07T14:00:05.000Z')]);
+    renderReview();
+    await screen.findByTestId('coach-revision-1');
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'x' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    expect(within(screen.getByTestId('coach-amend-diff')).getByText('Delivered')).toBeInTheDocument();
+  });
+
+  it('does not call an unsent latest version delivered', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(2, null), revision(1, '2026-10-07T14:00:05.000Z')]);
+    renderReview();
+    await screen.findByTestId('coach-revision-2');
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'x' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    const diff = screen.getByTestId('coach-amend-diff');
+    expect(within(diff).queryByText('Delivered')).toBeNull();
+    expect(within(diff).getByText('Latest, not sent')).toBeInTheDocument();
+    expect(screen.getByText(/Check the latest version, which was not sent, against the amended one/)).toBeInTheDocument();
   });
 
   it('cannot review an amendment that changes nothing', async () => {
@@ -245,7 +334,72 @@ describe('amending a delivered report', () => {
   });
 });
 
+function revision(n: number, sentAt: string | null): coachService.ReportRevision {
+  return {
+    revision: n,
+    previous: {},
+    changes: { dimensions: [], body: { headline: { from: `h${n - 1}`, to: `h${n}` } } },
+    amendedBy: 'admin@example.test',
+    amendedAt: '2026-10-08T14:00:00.000Z',
+    sentTo: sentAt ? ['leader@example.test'] : [],
+    skipped: [],
+    sentAt,
+  };
+}
+
 describe('the kept versions', () => {
+  it('offers the send only on the latest unsent version, whatever order the list arrives in', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null), revision(2, null)]);
+    renderReview();
+    expect(within(await screen.findByTestId('coach-revision-2')).getByTestId('coach-revision-send-2')).toBeInTheDocument();
+    expect(screen.queryByTestId('coach-revision-send-1')).toBeNull();
+  });
+
+  it('offers no send when the latest version went out, even if an older one did not', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null), revision(2, '2026-10-08T14:00:05.000Z')]);
+    renderReview();
+    await screen.findByTestId('coach-revision-2');
+    expect(screen.queryByTestId('coach-revision-send-1')).toBeNull();
+    expect(screen.queryByTestId('coach-revision-send-2')).toBeNull();
+  });
+
+  it('a double click on send sends the revision once', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null)]);
+    const send = vi.spyOn(coachService, 'sendRevision').mockReturnValue(new Promise(() => {}));
+    renderReview();
+    const button = await screen.findByTestId('coach-revision-send-1');
+    fireEvent.click(button);
+    fireEvent.click(button);
+    await waitFor(() => expect(button).toBeDisabled());
+    expect(send).toHaveBeenCalledTimes(1);
+  });
+
+  it("names the amending admin by address and keeps it out of session replay", async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null)]);
+    renderReview();
+    const by = within(await screen.findByTestId('coach-revision-1')).getByText(/admin@example\.test/);
+    expect(by.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+  });
+
+  it('names each recipient a send failed for', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null)]);
+    vi.spyOn(coachService, 'sendRevision').mockResolvedValue({
+      sent: false,
+      refusal: 'send-failed',
+      sends: [{ email: 'leader@example.test', delivered: false, error: 'rejected' }],
+    });
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-revision-send-1'));
+    expect(await screen.findByTestId('coach-revision-outcome')).toHaveTextContent(
+      'Not sent: send-failed. Failed: leader@example.test (rejected).',
+    );
+  });
+
   it('lists who amended, when, what changed, and whether it was sent', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
     vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
@@ -317,6 +471,21 @@ describe('the kept versions', () => {
   });
 });
 
+describe('a review that fails to load', () => {
+  it('says the load failed and offers a retry, and does not call the report legacy', async () => {
+    const load = vi
+      .spyOn(coachService, 'fetchReportReview')
+      .mockRejectedValueOnce(new CoachApiError('admin/reports/rep-1/review', 500, ''))
+      .mockResolvedValueOnce(REVIEW);
+    renderReview();
+    expect(await screen.findByTestId('coach-review-failed')).toHaveTextContent('Could not load the review. Server error (500)');
+    expect(screen.queryByTestId('coach-review-readonly')).toBeNull();
+    fireEvent.click(screen.getByText('Try again'));
+    expect(await screen.findByTestId('coach-amend-open')).toBeInTheDocument();
+    expect(load).toHaveBeenCalledTimes(2);
+  });
+});
+
 describe('a legacy report', () => {
   it('offers no amend action and says why', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(null);
@@ -364,6 +533,17 @@ describe('the first-lesson flag on an undelivered report', () => {
     expect(await screen.findByTestId('coach-first-lesson-outcome')).toHaveTextContent(
       'Marked a first lesson. Memory Reinforcement is not applicable. Score 84 (Strong).',
     );
+  });
+
+  it('a double click sets the flag once', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    const set = vi.spyOn(coachService, 'setFirstLesson').mockReturnValue(new Promise(() => {}));
+    renderReview();
+    const button = await screen.findByTestId('coach-first-lesson-set');
+    fireEvent.click(button);
+    fireEvent.click(button);
+    await waitFor(() => expect(button).toBeDisabled());
+    expect(set).toHaveBeenCalledTimes(1);
   });
 
   it('clearing asks for the Memory Reinforcement score and rationale', async () => {
