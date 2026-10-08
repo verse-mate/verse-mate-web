@@ -419,6 +419,7 @@ export interface PipelineFailure {
   reportId: string | null;
   reason: string | null;
   holdKind: HoldKind | null;
+  coldRecall?: string[];
   action: 'release' | 'requeue' | 'attribute' | null;
   updatedAt: string;
 }

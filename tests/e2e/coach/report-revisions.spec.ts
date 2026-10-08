@@ -481,7 +481,7 @@ test.describe('A first lesson held for a cold-recall improvement', () => {
     await expect(row).toContainText(
       'Why: held, because a first lesson cannot carry an improvement that asks for recall of earlier lessons.',
     );
-    await expect(row).toContainText("Recall last week's big idea before the new passage");
+    await expect(row.getByRole('listitem')).toHaveText(["Recall last week's big idea before the new passage"]);
 
     await row.getByTestId(`coach-pipeline-release-${id}`).click();
     const outcome = page.getByTestId(`coach-pipeline-outcome-${id}`);

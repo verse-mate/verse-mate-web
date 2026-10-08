@@ -31,7 +31,6 @@ import { dt } from './dashboardTheme';
 
 type Outcome = { tone: 'ok' | 'refused'; text: string; held?: string[] };
 
-const COLD_RECALL_HOLD = 'held: a first lesson with a cold-recall improvement: ';
 const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
 const COLD_RECALL_FIX =
   "To clear it, open the report's review (the leader, then this session), replace the held items under Improvements, and release it again from this list. If it is not a first lesson, clear the first-lesson flag there instead and release it again.";
@@ -218,10 +217,10 @@ export default function PipelineHealth() {
                         {s.coachId ? nameOf(s.coachId) : 'unattributed'} · {s.sessionDate} · {s.state} · {s.attempts} attempts
                       </div>
                       <div className={REPLAY_BLOCK_CLASS} style={{ fontSize: 13, color: dt.body, marginTop: 4 }}>
-                        {s.reason?.startsWith(COLD_RECALL_HOLD) ? (
+                        {s.holdKind === 'cold-recall' ? (
                           <>
                             Why: held, because {COLD_RECALL_WHY}.
-                            <ColdRecallHeld items={[s.reason.slice(COLD_RECALL_HOLD.length)]} />
+                            <ColdRecallHeld items={s.coldRecall ?? []} />
                           </>
                         ) : s.reason ? (
                           `Why: ${s.reason}`
