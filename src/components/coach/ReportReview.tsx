@@ -315,9 +315,12 @@ export default function ReportReview({ report, coachId }: { report: CoachReport;
     );
   }
   if (!review.data.delivered) {
-    const carryOver = (c: Carry) => {
+    const carryOver = (c: Carry | null) => {
       setCarry(c);
-      review.refetch();
+      if (!c) return;
+      review.refetch().then((r) => {
+        if (!r.data?.delivered) setCarry((now) => (now === c ? { ...c, last: null } : now));
+      });
     };
     return <FirstLessonPanel review={review.data} report={report} coachId={coachId} onCarry={carryOver} />;
   }
@@ -352,7 +355,7 @@ function FirstLessonPanel({
   review: ReportReviewState;
   report: CoachReport;
   coachId: string;
-  onCarry: (carry: Carry) => void;
+  onCarry: (carry: Carry | null) => void;
 }) {
   const reportId = report.id;
   const { rubric } = useRubric();
@@ -483,7 +486,7 @@ function ImprovementsEditor({
   review: ReportReviewState;
   report: CoachReport;
   coachId: string;
-  onCarry: (carry: Carry) => void;
+  onCarry: (carry: Carry | null) => void;
 }) {
   const save = useEditImprovements(coachId, report.id);
   const [edit, setEdit] = useState<{ initial: Draft; draft: Draft } | null>(null);
@@ -510,6 +513,7 @@ function ImprovementsEditor({
         if (r.applied) {
           setLast({ outcome: { tone: 'ok', text: IMPROVEMENTS_SAVED } });
           setEdit(null);
+          onCarry(null);
           return;
         }
         const why = r.refusal === 'cold-recall-improvement' ? `${COLD_RECALL_WHY}. Replace the held items and save again` : r.refusal ?? 'refused';
@@ -597,7 +601,10 @@ function ImprovementsEditor({
             </button>
             <button
               type="button"
-              onClick={() => setEdit(null)}
+              onClick={() => {
+                setEdit(null);
+                onCarry(null);
+              }}
               disabled={save.isPending}
               data-testid="coach-improvements-cancel"
               style={linkBtn}
