@@ -527,7 +527,7 @@ function DimensionCorrections({
           const emoji = rubric?.statusBands.find((b) => b.label === r.status)?.emoji;
           setOutcome({
             tone: 'ok',
-            text: `${dimName(n)} corrected to ${score}, recorded as corrected by hand. Base (clusters) now ${r.base.toFixed(1)} / 100, band ${emoji ? `${emoji} ` : ''}${r.status}.`,
+            text: `${dimName(n)} corrected to ${score}, recorded as corrected by hand. Base (clusters) now ${r.base.toFixed(1)} / 100, score ${r.score.toFixed(1)} with bonuses, band ${emoji ? `${emoji} ` : ''}${r.status}.`,
           });
           setEditing(null);
           onCarry(null);
