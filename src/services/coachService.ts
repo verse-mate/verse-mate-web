@@ -254,6 +254,15 @@ export class CoachApiError extends Error {
   }
 }
 
+export function refusalText(err: unknown): string {
+  if (err instanceof CoachAuthError) return 'Refused: this account does not have admin access.';
+  if (err instanceof CoachApiError) {
+    const kind = err.status >= 500 ? 'Server error' : 'Refused';
+    return `${kind} (${err.status})${err.serverMessage ? `: ${err.serverMessage}` : ''}`;
+  }
+  return 'The request failed.';
+}
+
 // ─── Requests ──────────────────────────────────────────────────────────────
 
 async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T> {
@@ -447,6 +456,100 @@ export function releaseHeldReport(reportId: string): Promise<ReleaseOutcome> {
   return coachRequest<ReleaseOutcome>(`admin/reports/${encodeURIComponent(reportId)}/release`, {
     method: 'POST',
   });
+}
+
+export interface ReportReviewState {
+  reportId: string;
+  delivered: boolean;
+  base: number;
+  humanCorrected: boolean;
+  firstLesson: boolean;
+  firstLessonSource: string | null;
+  passageBook: string | null;
+  dimensions: { n: number; score: number | null; rationale: string; provenance: string; modelVersion: string | null }[];
+}
+
+export const AMENDABLE_BODY_FIELDS = ['headline', 'overview', 'strengths', 'improvements', 'recommendations'] as const;
+export type AmendableBodyField = (typeof AMENDABLE_BODY_FIELDS)[number];
+
+export interface ReportAmendment {
+  dimensions?: { n: number; score: number | null; rationale: string }[];
+  firstLesson?: boolean;
+  body?: Partial<Record<AmendableBodyField, string | string[]>>;
+}
+
+export interface RevisionSends {
+  sends?: { email: string; delivered: boolean; error?: string }[];
+  skipped?: string[];
+}
+
+export interface RevisionResult extends RevisionSends {
+  applied: boolean;
+  refusal?: string;
+  violations?: string[];
+  coldRecall?: string[];
+  revision?: number;
+  firstLesson?: boolean;
+  base?: number;
+  score?: number;
+  status?: string;
+  sent?: boolean;
+  pending?: string;
+}
+
+export interface RevisionSendResult extends RevisionSends {
+  sent: boolean;
+  refusal?: string;
+  revision?: number;
+}
+
+type ScoreAndRationale = { score: number | null; rationale: string };
+
+export interface ReportRevisionChanges {
+  dimensions?: { n: number; from: ScoreAndRationale; to: ScoreAndRationale }[];
+  firstLesson?: { from: boolean; to: boolean };
+  body?: Partial<Record<AmendableBodyField, { from: unknown; to: unknown }>>;
+}
+
+export interface ReportRevision {
+  revision: number;
+  previous: Record<string, unknown>;
+  changes: ReportRevisionChanges;
+  amendedBy: string | null;
+  amendedAt: string;
+  sentTo: string[];
+  skipped: string[];
+  sentAt: string | null;
+}
+
+function adminReportPath(reportId: string, rest: string): string {
+  return `admin/reports/${encodeURIComponent(reportId)}/${rest}`;
+}
+
+export async function fetchReportReview(reportId: string): Promise<ReportReviewState | null> {
+  try {
+    return await coachRequest<ReportReviewState>(adminReportPath(reportId, 'review'));
+  } catch (err) {
+    if (err instanceof CoachApiError && err.status === 404) return null;
+    throw err;
+  }
+}
+
+export function amendReport(reportId: string, amendment: ReportAmendment): Promise<RevisionResult> {
+  return coachRequest<RevisionResult>(adminReportPath(reportId, 'amend'), {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(amendment),
+  });
+}
+
+export async function fetchReportRevisions(reportId: string): Promise<ReportRevision[]> {
+  const data = await coachRequest<{ revisions: ReportRevision[] }>(adminReportPath(reportId, 'revisions'));
+  return data.revisions || [];
+}
+
+export function sendRevision(reportId: string): Promise<RevisionSendResult> {
+  return coachRequest<RevisionSendResult>(adminReportPath(reportId, 'revision/send'), { method: 'POST' });
 }
 
 export interface CoverageLeader {

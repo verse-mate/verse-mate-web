@@ -47,6 +47,7 @@ import { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import PendingReshares from '@/components/coach/PendingReshares';
 import PipelineHealth from '@/components/coach/PipelineHealth';
+import ReportReview from '@/components/coach/ReportReview';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
 import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
@@ -669,6 +670,7 @@ function ClassCardBody({
       {open && (
         <div style={{ padding: '16px 20px', borderBottom: `1px solid ${dt.rowDivider}` }}>
           <CoachSessionDetail report={report} delta={null} label="FULL SESSION REPORT" coachId={leaderId} />
+          <ReportReview report={report} coachId={leaderId} />
         </div>
       )}
 

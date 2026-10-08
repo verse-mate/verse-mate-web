@@ -86,7 +86,7 @@ function report(over: Record<string, unknown>) {
     feedback: {
       headline: 'A strong session',
       strengths: [],
-      improvements: [],
+      improvements: ['Recall last week\'s big idea before the new passage'],
       recommendations: [],
     },
     ...over,
@@ -274,6 +274,144 @@ export interface CoachApiOptions {
   onPipelineRequest?: (url: string) => void;
   leaderAdmin?: boolean;
   onAdminWrite?: (method: string, path: string, body: unknown) => void;
+  reviews?: Record<string, 'delivered' | 'undelivered' | 'legacy'>;
+  pipelineLive?: boolean;
+}
+
+function reviewOf(reportId: string, delivered: boolean) {
+  return {
+    reportId,
+    delivered,
+    base: 80,
+    humanCorrected: false,
+    firstLesson: false,
+    firstLessonSource: null as string | null,
+    passageBook: 'Obadiah' as string | null,
+    dimensions: RUBRIC.dimensions.map((d) => ({
+      n: d.n,
+      score: 4 as number | null,
+      rationale: `The model's reason for dimension ${d.n}`,
+      provenance: 'machine',
+      modelVersion: RUBRIC.model,
+    })),
+  };
+}
+
+async function revisionRoutes(page: Page, opts: CoachApiOptions) {
+  const kinds = opts.reviews ?? { [NEWEST_ID]: 'delivered', [OLDER_ID]: 'undelivered' };
+  const reviews = new Map(
+    Object.entries(kinds)
+      .filter(([, k]) => k !== 'legacy')
+      .map(([id, k]) => [id, reviewOf(id, k === 'delivered')]),
+  );
+  const revisions = new Map<string, Array<Record<string, unknown>>>();
+  const recipients = { sentTo: ['leader@example.test'], skipped: [PLACEHOLDER_LEADER.email] };
+  const legacy = {
+    error: 'CONFLICT',
+    message: 'Refused: this is a legacy report, which is read-only. Change it at its source and it arrives through the backfill.',
+  };
+
+  await page.route(/\/coach\/admin\/reports\/[^/]+\/(review|amend|revisions|revision\/send|first-lesson)$/, (route) => {
+    if (!opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Admin access required' } });
+    const req = route.request();
+    const url = new URL(req.url());
+    const [, id, action] = url.pathname.match(/\/admin\/reports\/([^/]+)\/(.+)$/) ?? [];
+    const reportId = decodeURIComponent(id);
+    const body = req.postData() ? JSON.parse(req.postData() as string) : null;
+    if (req.method() !== 'GET') opts.onAdminWrite?.(req.method(), url.pathname, body);
+    const review = reviews.get(reportId);
+    if (action === 'review') {
+      return review
+        ? route.fulfill({ json: review })
+        : route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'No scores for that report' } });
+    }
+    if (action === 'revisions') return route.fulfill({ json: { revisions: revisions.get(reportId) ?? [] } });
+    if (!review) return route.fulfill({ status: 409, json: legacy });
+    if (action === 'revision/send') {
+      const latest = revisions.get(reportId)?.[0];
+      if (!latest) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'That report has no revision' } });
+      if (latest.sentAt) return route.fulfill({ status: 409, json: { error: 'CONFLICT', message: 'The latest revision was already sent' } });
+      if (!opts.pipelineLive) {
+        return route.fulfill({
+          status: 409,
+          json: { error: 'CONFLICT', message: 'The pipeline is in its parallel run: nothing is sent until cutover' },
+        });
+      }
+      Object.assign(latest, recipients, { sentAt: '2026-10-08T15:05:00.000Z' });
+      return route.fulfill({
+        json: { sent: true, revision: latest.revision, sends: [{ email: 'leader@example.test', delivered: true }], skipped: recipients.skipped },
+      });
+    }
+    if (action === 'first-lesson') {
+      if (review.delivered) return route.fallback();
+      if (!body.firstLesson && (body.score == null || !body.rationale?.trim())) {
+        return route.fulfill({
+          status: 400,
+          json: { error: 'VALIDATION', message: 'Clearing the first-lesson flag needs a Memory Reinforcement score and rationale' },
+        });
+      }
+      const nine = review.dimensions[8];
+      Object.assign(nine, body.firstLesson ? { score: null, rationale: 'First lesson of a new book' } : { score: body.score, rationale: body.rationale.trim() });
+      nine.provenance = 'human';
+      Object.assign(review, { firstLesson: body.firstLesson, firstLessonSource: 'admin', humanCorrected: true });
+      return route.fulfill({ json: { applied: true, firstLesson: body.firstLesson, base: 82, score: 84, status: 'Strong' } });
+    }
+    if (!review.delivered) {
+      return route.fulfill({
+        status: 409,
+        json: { error: 'CONFLICT', message: 'Refused: the report is not delivered yet. Correct it through the review instead.' },
+      });
+    }
+    const improvements: string[] = body.body?.improvements ?? REPORTS[0].feedback.improvements;
+    const firstLesson = body.firstLesson ?? review.firstLesson;
+    if (JSON.stringify(body).includes('Avery')) {
+      return route.fulfill({ json: { applied: false, refusal: 'governance-blocked', violations: ['benchmark-name: in the body'] } });
+    }
+    const coldRecall = improvements.filter((i) => /recall/i.test(i));
+    if (firstLesson && coldRecall.length) {
+      return route.fulfill({ json: { applied: false, refusal: 'cold-recall-improvement', coldRecall } });
+    }
+    const kept = revisions.get(reportId) ?? [];
+    const revision = kept.length + 1;
+    const changes = {
+      dimensions: (body.dimensions ?? []).map((d: { n: number; score: number | null; rationale: string }) => {
+        const before = review.dimensions[d.n - 1];
+        const from = { score: before.score, rationale: before.rationale };
+        Object.assign(before, { score: d.score, rationale: d.rationale, provenance: 'human' });
+        return { n: d.n, from, to: { score: d.score, rationale: d.rationale } };
+      }),
+      ...(body.firstLesson !== undefined ? { firstLesson: { from: review.firstLesson, to: body.firstLesson } } : {}),
+      body: Object.fromEntries(
+        Object.entries(body.body ?? {}).map(([field, to]) => [field, { from: (REPORTS[0].feedback as Record<string, unknown>)[field], to }]),
+      ),
+    };
+    if (body.firstLesson !== undefined) Object.assign(review, { firstLesson: body.firstLesson, firstLessonSource: 'admin' });
+    const sent = Boolean(opts.pipelineLive);
+    kept.unshift({
+      revision,
+      previous: {},
+      changes,
+      amendedBy: 'admin@example.test',
+      amendedAt: '2026-10-08T15:00:00.000Z',
+      sentTo: sent ? recipients.sentTo : [],
+      skipped: sent ? recipients.skipped : [],
+      sentAt: sent ? '2026-10-08T15:00:01.000Z' : null,
+    });
+    revisions.set(reportId, kept);
+    return route.fulfill({
+      json: {
+        applied: true,
+        revision,
+        firstLesson,
+        base: 78,
+        score: 82,
+        status: 'Strong',
+        ...(sent
+          ? { sent: true, sends: [{ email: 'leader@example.test', delivered: true }], skipped: recipients.skipped }
+          : { sent: false, pending: 'parallel-run' }),
+      },
+    });
+  });
 }
 
 export const PARKED_SESSION = {
@@ -500,6 +638,8 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     }
     return route.fulfill({ json: { sessions: stuck } });
   });
+
+  await revisionRoutes(page, opts);
 
   await page.route(`${API}/coach/rubric`, async (route) => {
     if (opts.rubricDelayMs) {
