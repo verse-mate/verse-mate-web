@@ -666,6 +666,28 @@ describe('a re-attributed session', () => {
   });
 });
 
+describe('a row awaiting release in a delivery state', () => {
+  it.each(['delivery_pending', 'delivery_failed'])('a %s row awaiting release offers the release, and only that', async (state) => {
+    const AWAITING = {
+      ...HELD,
+      sourceSessionId: 'ff-9',
+      reportId: 'rep-9',
+      state,
+      reason: 're-attributed: held until an admin releases it',
+    };
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([AWAITING]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    const release = vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue({ delivered: true });
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-9');
+    expect(row).toHaveTextContent('Why: re-attributed: held until an admin releases it');
+    expect(within(row).queryByTestId('coach-pipeline-requeue-ff-9')).toBeNull();
+    fireEvent.click(within(row).getByTestId('coach-pipeline-release-ff-9'));
+    await waitFor(() => expect(release).toHaveBeenCalledWith('rep-9'));
+  });
+});
+
 describe('a send skipped for a placeholder address', () => {
   it("names the leader, keeps the address out of replay, and offers to fix it instead of release or requeue", async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([SKIPPED]));

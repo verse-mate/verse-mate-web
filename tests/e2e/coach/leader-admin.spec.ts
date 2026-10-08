@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 
 import {
   API,
+  AWAITING_RELEASE_SESSIONS,
   capture,
   EMAIL_RULE,
   LEADER_ID,
@@ -182,6 +183,26 @@ test.describe('The failures list', () => {
     await expect(page.getByText('Released and delivered. 1 placeholder address was skipped.').first()).toBeVisible();
     expect(writes).toEqual([`POST /coach/admin/sessions/${id}/attribute`]);
     await capture(page, testInfo, 'p2-assign-released');
+  });
+
+  test('a session awaiting release in a delivery state offers only the release, which delivers it', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, pipelineLive: true, awaitingRelease: true });
+    await openPipeline(page);
+
+    for (const session of AWAITING_RELEASE_SESSIONS) {
+      const row = page.getByTestId(`coach-pipeline-${session.sourceSessionId}`);
+      await expect(row).toContainText(`${session.state} ·`);
+      await expect(row).toContainText('Why: re-attributed: held until an admin releases it');
+      await expect(row.getByTestId(`coach-pipeline-requeue-${session.sourceSessionId}`)).toHaveCount(0);
+      await expect(row.getByTestId(`coach-pipeline-release-${session.sourceSessionId}`)).toBeVisible();
+    }
+    await capture(page, testInfo, 'p4-awaiting-release', page.getByTestId(`coach-pipeline-${AWAITING_RELEASE_SESSIONS[1].sourceSessionId}`));
+
+    for (const session of AWAITING_RELEASE_SESSIONS) {
+      await page.getByTestId(`coach-pipeline-release-${session.sourceSessionId}`).click();
+      await expect(page.getByTestId(`coach-pipeline-${session.sourceSessionId}`)).toHaveCount(0);
+    }
+    await expect(page.getByText('Released and delivered to the leader.').first()).toBeVisible();
   });
 
   test('a send skipped for a placeholder names the leader and offers the address fix', async ({ page }, testInfo) => {
