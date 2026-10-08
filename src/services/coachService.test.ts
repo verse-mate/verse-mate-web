@@ -99,6 +99,15 @@ describe('coachService', () => {
     await expect(fetchCoachReportDetail('r1')).rejects.toThrow();
   });
 
+  it('reads a review with no scores as legacy, and any other failure as a failure', async () => {
+    mockFetch(() => jsonResponse({ error: 'NOT_FOUND', message: 'No scores for that report' }, 404));
+    await expect(fetchReportReview('legacy')).resolves.toBeNull();
+    for (const status of [500, 502, 409, 400]) {
+      mockFetch(() => jsonResponse({ error: 'X', message: 'boom' }, status));
+      await expect(fetchReportReview('r1')).rejects.toMatchObject({ status, serverMessage: 'boom' });
+    }
+  });
+
   it('maps 401 to a signed_out auth error', async () => {
     mockFetch(() => jsonResponse({ error: 'unauthorized' }, 401));
     await expect(fetchCoachMe()).rejects.toMatchObject(
