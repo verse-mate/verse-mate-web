@@ -32,6 +32,7 @@ import {
   useAddNote,
   coachState,
 } from '@/hooks/useCoach';
+import { CoachApiError } from '@/services/coachService';
 import type {
   CoachSummary,
   CoachMonthly,
@@ -155,7 +156,15 @@ export default function CoachAdminScreen() {
         </div>
       </div>
 
-      {invite && <InviteModal onClose={() => setInvite(false)} />}
+      {invite && (
+        <InviteModal
+          onClose={() => setInvite(false)}
+          onAdded={(id) => {
+            setInvite(false);
+            openLeader(id);
+          }}
+        />
+      )}
     </div>
   );
 }
@@ -1091,11 +1100,12 @@ function ClassLinksView({ roster, onBack, onInvite }: { roster: CoachSummary[]; 
 
 // ─── Invite modal ───────────────────────────────────────────────────────────
 
-function InviteModal({ onClose }: { onClose: () => void }) {
+function InviteModal({ onClose, onAdded }: { onClose: () => void; onAdded: (id: string) => void }) {
   const addLeader = useAddLeader();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [study, setStudy] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   const submit = () => {
     const e = email.trim();
@@ -1103,11 +1113,12 @@ function InviteModal({ onClose }: { onClose: () => void }) {
       toast.error('Enter a valid email address');
       return;
     }
+    setError(null);
     addLeader.mutate(
       { email: e, name: name.trim() || undefined, group: study.trim() || undefined },
       {
-        onSuccess: (c) => { toast.success(`${c.name} added, invite sent`); onClose(); },
-        onError: (err) => toast.error(/409|already/i.test(String(err?.message)) ? 'That email is already a leader' : 'Could not add the leader'),
+        onSuccess: (c) => { toast.success(`${c.name} added, invite sent`); onAdded(c.id); },
+        onError: (err) => setError(err instanceof CoachApiError && err.serverMessage ? err.serverMessage : 'Could not add the leader'),
       },
     );
   };
@@ -1122,6 +1133,7 @@ function InviteModal({ onClose }: { onClose: () => void }) {
           <ModalField label="Email"><input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@church.org" data-testid="oversight-invite-email" style={modalInput} /></ModalField>
           <ModalField label="Study / group"><input value={study} onChange={(e) => setStudy(e.target.value)} placeholder="e.g. Men's Study" style={modalInput} /></ModalField>
         </div>
+        {error && <div role="alert" data-testid="oversight-invite-error" style={{ marginTop: 14, fontSize: 13.5, color: dt.rust, lineHeight: 1.5 }}>{error}</div>}
         <div style={{ display: 'flex', gap: 10, marginTop: 22 }}>
           <button type="button" onClick={submit} disabled={addLeader.isPending} data-testid="oversight-invite-send" style={{ ...goldPill, opacity: addLeader.isPending ? 0.6 : 1 }}>{addLeader.isPending ? 'Sending…' : 'Send invite'}</button>
           <button type="button" onClick={onClose} style={{ border: `1px solid ${dt.inputBorder}`, color: dt.textMuted, fontWeight: 600, fontSize: 14, padding: '11px 20px', borderRadius: 9, background: 'transparent', cursor: 'pointer' }}>Cancel</button>
