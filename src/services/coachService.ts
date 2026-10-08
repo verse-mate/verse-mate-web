@@ -571,6 +571,19 @@ export function setFirstLesson(
   });
 }
 
+export interface ImprovementsEdit {
+  improvements: string[];
+  improvementsProse?: CoachFeedbackPoint[];
+}
+
+export function editImprovements(reportId: string, edit: ImprovementsEdit): Promise<RevisionResult> {
+  return coachRequest<RevisionResult>(adminReportPath(reportId, 'improvements'), {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(edit),
+  });
+}
+
 export async function fetchReportRevisions(reportId: string): Promise<ReportRevision[]> {
   const data = await coachRequest<{ revisions: ReportRevision[] }>(adminReportPath(reportId, 'revisions'));
   return data.revisions || [];

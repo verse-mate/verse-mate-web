@@ -869,3 +869,123 @@ describe('the first-lesson flag on a delivered report', () => {
     expect(screen.queryByTestId('coach-first-lesson-set')).toBeNull();
   });
 });
+
+describe('editing the Improvements of an undelivered report', () => {
+  const UNDELIVERED: ReportReviewState = { ...REVIEW, delivered: false, firstLesson: true, firstLessonSource: 'detected' };
+  const SAVED = 'Improvements saved. Nothing was sent: the leader gets them when the report is delivered, and a held report goes out once it is released from the Pipeline list.';
+
+  async function openImprovements(report: CoachReport = REPORT) {
+    renderReview(report);
+    fireEvent.click(await screen.findByTestId('coach-improvements-open'));
+    return screen.getByTestId('coach-improvements-editor');
+  }
+
+  beforeEach(() => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+  });
+
+  it('replaces the improvements, one per line, and says nothing was sent', async () => {
+    const edit = vi.spyOn(coachService, 'editImprovements').mockResolvedValue({ applied: true });
+    const editor = await openImprovements();
+    expect(editor.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    const text = screen.getByTestId('coach-improvements-text');
+    expect(text).toHaveValue('Call on quiet members');
+    expect(screen.getByTestId('coach-improvements-save')).toBeDisabled();
+
+    fireEvent.change(text, { target: { value: 'Name the big idea up front\n\n Ask newcomers first ' } });
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    await waitFor(() =>
+      expect(edit).toHaveBeenCalledWith('rep-1', { improvements: ['Name the big idea up front', 'Ask newcomers first'] }),
+    );
+    expect(await screen.findByTestId('coach-improvements-outcome')).toHaveTextContent(SAVED);
+    expect(screen.queryByTestId('coach-improvements-editor')).toBeNull();
+  });
+
+  it('keeps the written-out points unchanged when only the list is edited, unless the admin clears them', async () => {
+    const edit = vi.spyOn(coachService, 'editImprovements').mockResolvedValue({ applied: true });
+    await openImprovements(WITH_PROSE);
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Call on quiet members by name' } });
+    expect(screen.getByTestId('coach-amend-improvements-prose-kept')).toHaveTextContent('The leader still reads these points first, unchanged.');
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    await waitFor(() =>
+      expect(edit).toHaveBeenLastCalledWith('rep-1', { improvements: ['Call on quiet members by name'], improvementsProse: POINTS }),
+    );
+
+    await screen.findByTestId('coach-improvements-outcome');
+    fireEvent.click(screen.getByTestId('coach-improvements-open'));
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Call on quiet members by name' } });
+    fireEvent.click(screen.getByTestId('coach-amend-improvements-prose-clear'));
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    await waitFor(() => expect(edit).toHaveBeenLastCalledWith('rep-1', { improvements: ['Call on quiet members by name'] }));
+  });
+
+  it('sends an edited point with the list as it stands', async () => {
+    const edit = vi.spyOn(coachService, 'editImprovements').mockResolvedValue({ applied: true });
+    await openImprovements(WITH_PROSE);
+    fireEvent.change(screen.getByTestId('coach-amend-improvements-prose-text-0'), { target: { value: 'Ask them by name.' } });
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    await waitFor(() =>
+      expect(edit).toHaveBeenCalledWith('rep-1', {
+        improvements: ['Call on quiet members'],
+        improvementsProse: [{ title: 'Quiet members', paragraphs: ['Ask them by name.'] }],
+      }),
+    );
+  });
+
+  it('a first lesson that still carries a cold-recall item is not saved, and the held items are named', async () => {
+    vi.spyOn(coachService, 'editImprovements').mockResolvedValue({
+      applied: false,
+      refusal: 'cold-recall-improvement',
+      coldRecall: ["Recall last week's big idea"],
+    });
+    await openImprovements();
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: "Recall last week's big idea" } });
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    expect(await screen.findByTestId('coach-improvements-outcome')).toHaveTextContent(
+      'Not saved: a first lesson cannot carry an improvement that asks for recall of earlier lessons. Replace the held items and save again.',
+    );
+    const held = screen.getByTestId('coach-improvements-held');
+    expect(held).toHaveTextContent("Recall last week's big idea");
+    expect(held.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    expect(screen.getByTestId('coach-improvements-text')).toHaveValue("Recall last week's big idea");
+  });
+
+  it('shows a refusal in words and keeps the draft', async () => {
+    vi.spyOn(coachService, 'editImprovements').mockRejectedValue(
+      new CoachApiError(
+        'x',
+        409,
+        'Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.',
+      ),
+    );
+    await openImprovements();
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Ask newcomers first' } });
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    expect(await screen.findByTestId('coach-improvements-outcome')).toHaveTextContent(
+      'already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.',
+    );
+    expect(screen.getByTestId('coach-improvements-text')).toHaveValue('Ask newcomers first');
+  });
+
+  it('a report delivered meanwhile is read again, so the amend action is offered with the refusal', async () => {
+    const delivered = 'Refused: the report was already delivered. Amend it instead, which sends the leader a revised copy.';
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValueOnce(UNDELIVERED).mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'editImprovements').mockRejectedValue(new CoachApiError('x', 409, delivered));
+    await openImprovements();
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Ask newcomers first' } });
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    expect(await screen.findByTestId('coach-amend-open')).toBeInTheDocument();
+    expect(screen.getByTestId('coach-amend-outcome')).toHaveTextContent(delivered);
+  });
+
+  it('a double click saves once', async () => {
+    const edit = vi.spyOn(coachService, 'editImprovements').mockReturnValue(new Promise(() => {}));
+    await openImprovements();
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Ask newcomers first' } });
+    const save = screen.getByTestId('coach-improvements-save');
+    fireEvent.click(save);
+    fireEvent.click(save);
+    await waitFor(() => expect(save).toBeDisabled());
+    expect(edit).toHaveBeenCalledTimes(1);
+  });
+});
