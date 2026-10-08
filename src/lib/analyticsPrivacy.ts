@@ -70,10 +70,17 @@ function scrubValue(value: unknown, key = ''): unknown {
   return value;
 }
 
+function scrubHeatmap(data: Record<string, unknown[]>): Record<string, unknown[]> {
+  const out: Record<string, unknown[]> = {};
+  for (const [url, points] of Object.entries(data)) (out[scrubCoachPath(stripQuery(url))] ??= []).push(...points);
+  return out;
+}
+
 function scrubProperties<T extends Record<string, unknown> | undefined>(props: T): T {
   if (!props) return props;
   const out = scrubValue(props) as Record<string, unknown>;
   for (const key of QUERY_PROPERTIES) delete out[key];
+  if (out.$heatmap_data) out.$heatmap_data = scrubHeatmap(out.$heatmap_data as Record<string, unknown[]>);
   return out as T;
 }
 
