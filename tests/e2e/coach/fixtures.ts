@@ -278,7 +278,7 @@ export interface CoachApiOptions {
   reviews?: Record<string, ReviewKind>;
   pipelineLive?: boolean;
   noMailer?: boolean;
-  revisionSend?: 'ok' | 'fail' | 'in-flight' | 'not-live';
+  revisionSend?: 'ok' | 'fail' | 'in-flight' | 'not-live' | 'unconfirmed';
   heldReports?: string[];
   deliveredBeforeFlag?: string;
   prose?: boolean;
@@ -431,6 +431,15 @@ async function revisionRoutes(
   const edits = new Map<string, Array<Record<string, unknown>>>();
   const recipients = { sentTo: ['leader@example.test'], skipped: [PLACEHOLDER_LEADER.email] };
   const failedSend = [{ email: 'leader@example.test', delivered: false, error: 'mailbox unavailable' }];
+  const unconfirmedSend = [
+    {
+      email: 'leader@example.test',
+      delivered: false,
+      error: 'a send was started but never confirmed, so it is not sent again until the revision is requeued',
+    },
+  ];
+  const unconfirmed = new Set<string>();
+  const requeued = new Set<string>();
   const legacy = 'Refused: this is a legacy report, which is read-only. Change it at its source and it arrives through the backfill.';
 
   const sendLatest = (reportId: string) => {
@@ -443,6 +452,14 @@ async function revisionRoutes(
       return { status: 409, message: 'The revision is being sent by another request', pending: 'in-flight' } as const;
     }
     if (opts.revisionSend === 'not-live') return { status: 409, message: NOT_LIVE_SEND, pending: 'not-live' } as const;
+    if (opts.revisionSend === 'unconfirmed' && !requeued.has(reportId)) {
+      unconfirmed.add(reportId);
+      return {
+        status: 200,
+        json: { sent: false, refusal: 'send-failed', revision: latest.revision, sends: unconfirmedSend, skipped: recipients.skipped },
+        pending: 'send-failed',
+      } as const;
+    }
     if (opts.revisionSend === 'fail') {
       return {
         status: 200,
@@ -571,12 +588,20 @@ async function revisionRoutes(
     return route.fulfill({ json: { applied: true } });
   };
 
-  await page.route(/\/coach\/admin\/reports\/[^/]+\/(review|amend|revisions|revision\/send|first-lesson|improvements)$/, (route) => {
+  await page.route(/\/coach\/admin\/reports\/[^/]+\/(review|amend|revisions|revision\/send|revision\/requeue|first-lesson|improvements)$/, (route) => {
     if (!opts.admin) return forbidden(route);
     const req = route.request();
     const url = new URL(req.url());
     const [, id, action] = url.pathname.match(/\/admin\/reports\/([^/]+)\/(.+)$/) ?? [];
-    const method = { review: 'GET', revisions: 'GET', amend: 'POST', 'revision/send': 'POST', 'first-lesson': 'PUT', improvements: 'PUT' }[action];
+    const method = {
+      review: 'GET',
+      revisions: 'GET',
+      amend: 'POST',
+      'revision/send': 'POST',
+      'revision/requeue': 'POST',
+      'first-lesson': 'PUT',
+      improvements: 'PUT',
+    }[action];
     if (req.method() !== method) return notFound(route);
     const reportId = decodeURIComponent(id);
     const body = req.postData() ? JSON.parse(req.postData() as string) : null;
@@ -589,6 +614,14 @@ async function revisionRoutes(
     }
     if (action === 'revisions') {
       return route.fulfill({ json: { revisions: [...(revisions.get(reportId) ?? []), ...(edits.get(reportId) ?? [])] } });
+    }
+    if (action === 'revision/requeue') {
+      const latest = revisions.get(reportId)?.[0];
+      if (!latest || latest.sentAt || !unconfirmed.delete(reportId)) {
+        return notFound(route, 'That report has no unsent revision with a send left unconfirmed, or its send is still in flight');
+      }
+      requeued.add(reportId);
+      return route.fulfill({ json: { requeued: true } });
     }
     if (action === 'revision/send') {
       const send = sendLatest(reportId);

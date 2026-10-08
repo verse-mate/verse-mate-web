@@ -5,6 +5,7 @@ import {
   useEditImprovements,
   useReportReview,
   useReportRevisions,
+  useRequeueRevision,
   useSendRevision,
   useSetFirstLesson,
 } from '@/hooks/useCoach';
@@ -71,6 +72,8 @@ const CHANGE_LABELS: Record<AmendableBodyField | ProseField, string> = {
 const DELIVERED_MEANWHILE = 'This report was delivered meanwhile, so the flag goes through an amendment.';
 const CLEARED = 'Cleared: the leader reads the list instead';
 const MAX_POINTS = 10;
+const NEVER_CONFIRMED = /never confirmed, so it is not sent again until the revision is requeued/;
+const REQUEUED = 'Requeued. The next send mails the recipients whose send was never confirmed.';
 const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
 const IMPROVEMENTS_SAVED =
   'Improvements saved. Nothing was sent: the leader gets them when the report is delivered, and a held report goes out once it is released from the Pipeline list.';
@@ -948,8 +951,11 @@ function ProsePoints({
 function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachId: string; dimName: (n: number) => string }) {
   const revisions = useReportRevisions(reportId, true);
   const send = useSendRevision(coachId, reportId);
+  const requeue = useRequeueRevision(coachId, reportId);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
+  const [unconfirmed, setUnconfirmed] = useState(false);
   const flying = useRef(false);
+  const busy = send.isPending || requeue.isPending;
   const rows = newestFirst(revisions.data);
   const latest = latestRevision(revisions.data);
   if (revisions.error) {
@@ -966,8 +972,31 @@ function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachI
     flying.current = true;
     setOutcome(null);
     send.mutate(undefined, {
-      onSuccess: (r) => setOutcome(sendOutcome(r)),
+      onSuccess: (r) => {
+        setOutcome(sendOutcome(r));
+        setUnconfirmed((r.sends ?? []).some((s) => !s.delivered && NEVER_CONFIRMED.test(s.error ?? '')));
+      },
       onError: (err) => setOutcome({ tone: 'refused', text: refusalText(err) }),
+      onSettled: () => {
+        flying.current = false;
+      },
+    });
+  };
+
+  const doRequeue = () => {
+    if (flying.current) return;
+    flying.current = true;
+    setOutcome(null);
+    requeue.mutate(undefined, {
+      onSuccess: () => {
+        setOutcome({ tone: 'ok', text: REQUEUED });
+        setUnconfirmed(false);
+      },
+      onError: (err) =>
+        setOutcome({
+          tone: 'refused',
+          text: err instanceof CoachApiError && err.status === 404 ? `Nothing to requeue: ${err.serverMessage}.` : refusalText(err),
+        }),
       onSettled: () => {
         flying.current = false;
       },
@@ -997,9 +1026,16 @@ function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachI
                 <strong>Revision {r.revision}</strong> · {when(r.amendedAt)} · by {r.amendedBy ?? 'an admin'}
               </div>
               {r === latest && !r.sentAt && (
-                <button type="button" onClick={doSend} disabled={send.isPending} data-testid={`coach-revision-send-${r.revision}`} style={btn}>
-                  {send.isPending ? 'Sending…' : 'Send this revision'}
-                </button>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  {unconfirmed && (
+                    <button type="button" onClick={doRequeue} disabled={busy} data-testid={`coach-revision-requeue-${r.revision}`} style={btn}>
+                      {requeue.isPending ? 'Requeuing…' : 'Requeue'}
+                    </button>
+                  )}
+                  <button type="button" onClick={doSend} disabled={busy} data-testid={`coach-revision-send-${r.revision}`} style={btn}>
+                    {send.isPending ? 'Sending…' : 'Send this revision'}
+                  </button>
+                </div>
               )}
             </div>
             <div style={{ fontSize: 12.5, color: r.sentAt ? dt.green : dt.rust, margin: '4px 0 8px' }}>
