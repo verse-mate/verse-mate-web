@@ -10,8 +10,10 @@ import {
   coachState,
   useAdminLeader,
   useAmendReport,
+  useAttributeSession,
   useCoachReportSummaries,
   useLeaderMonthlySummary,
+  useReleaseHeldReport,
   useSendRevision,
 } from './useCoach';
 
@@ -196,5 +198,43 @@ describe('what an amendment or a send refreshes', () => {
     send.mockRejectedValueOnce(new coachService.CoachApiError('x', 500, ''));
     await act(() => result.current.mutateAsync().catch(() => undefined));
     expect(stale(client, REVISIONS)).toBe(true);
+  });
+});
+
+describe('what a release or an assignment refreshes', () => {
+  const FAILURES = [...coachKeys.pipelineFailures, 0];
+  const KEYS = [
+    FAILURES,
+    [...coachKeys.adminReports('leader'), 'summary'],
+    [...coachKeys.adminReports('other'), 'detail', 'rep-1'],
+    coachKeys.adminTrends('other'),
+    coachKeys.reportReview('rep-1'),
+    coachKeys.reportRevisions('rep-1'),
+  ];
+
+  function seeded() {
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    for (const key of KEYS) client.setQueryData(key, { cached: true });
+    return client;
+  }
+  const stale = (client: QueryClient, key: readonly unknown[]) => client.getQueryState(key)?.isInvalidated;
+
+  it.each([
+    ['delivered', { delivered: true }],
+    ['not delivered', { delivered: false, refusal: 'cold-recall-improvement', coldRecall: ['x'] }],
+  ])('a release that was %s marks the list, every leader report, the review and its versions stale', async (_name, outcome) => {
+    vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue(outcome);
+    const client = seeded();
+    const { result } = renderHook(() => useReleaseHeldReport(), { wrapper: wrapper(client) });
+    await act(() => result.current.mutateAsync('rep-1'));
+    for (const key of KEYS) expect(stale(client, key)).toBe(true);
+  });
+
+  it('an assignment marks the list, every leader report, the review and its versions stale', async () => {
+    vi.spyOn(coachService, 'attributeSession').mockResolvedValue({ coachId: 'other', state: 'retained' });
+    const client = seeded();
+    const { result } = renderHook(() => useAttributeSession(), { wrapper: wrapper(client) });
+    await act(() => result.current.mutateAsync({ sourceSessionId: 'ff-1', coachId: 'other', expectedCoachId: 'leader' }));
+    for (const key of KEYS) expect(stale(client, key)).toBe(true);
   });
 });
