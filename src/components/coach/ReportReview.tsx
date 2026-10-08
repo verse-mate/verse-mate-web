@@ -185,7 +185,8 @@ function changesOf(revision: ReportRevision['changes'], dimName: (n: number) => 
   for (const field of Object.keys(CHANGE_LABELS) as Array<AmendableBodyField | ProseField>) {
     const change = revision.body?.[field];
     if (change && JSON.stringify(change.from) !== JSON.stringify(change.to)) {
-      out.push({ label: CHANGE_LABELS[field], from: textOf(change.from), to: textOf(change.to) });
+      const cleared = field.endsWith('Prose') && change.to === null;
+      out.push({ label: CHANGE_LABELS[field], from: textOf(change.from), to: cleared ? CLEARED : textOf(change.to) });
     }
   }
   return out;
@@ -204,7 +205,7 @@ function draftChanges(amendment: ReportAmendment, initial: Draft): ReportRevisio
           { from: field.endsWith('Prose') ? initial.stored[field.slice(0, -5) as ProseList] : initial.body[field as AmendableBodyField], to },
         ]),
       ),
-      ...Object.fromEntries(cleared.map((list) => [proseField(list), { from: initial.stored[list], to: CLEARED }])),
+      ...Object.fromEntries(cleared.map((list) => [proseField(list), { from: initial.stored[list], to: null }])),
     },
   };
 }
