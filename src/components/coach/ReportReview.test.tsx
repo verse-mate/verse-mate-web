@@ -52,6 +52,9 @@ const REVIEW: ReportReviewState = {
   })),
 };
 
+const PARTIALLY_DELIVERED =
+  "Refused: the report was already emailed to some of its recipients, so it can no longer be corrected or edited. Its remaining sends are retried automatically. If one keeps failing, fix that recipient's address and requeue the report from the pipeline failures list. Once every recipient has it, amend it.";
+
 function renderReview(report: CoachReport = REPORT) {
   const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
   return render(
@@ -941,13 +944,13 @@ describe('the first-lesson flag on an undelivered report', () => {
       new CoachApiError(
         'x',
         409,
-        'Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.',
+        PARTIALLY_DELIVERED,
       ),
     );
     renderReview();
     fireEvent.click(await screen.findByTestId('coach-first-lesson-set'));
     expect(await screen.findByTestId('coach-first-lesson-outcome')).toHaveTextContent(
-      'Refused (409): Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.',
+      `Refused (409): ${PARTIALLY_DELIVERED}`,
     );
     expect(screen.getByTestId('coach-first-lesson-state')).toHaveTextContent('First lesson: no.');
   });
@@ -1059,14 +1062,14 @@ describe('editing the Improvements of an undelivered report', () => {
       new CoachApiError(
         'x',
         409,
-        'Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.',
+        PARTIALLY_DELIVERED,
       ),
     );
     await openImprovements();
     fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Ask newcomers first' } });
     fireEvent.click(screen.getByTestId('coach-improvements-save'));
     expect(await screen.findByTestId('coach-improvements-outcome')).toHaveTextContent(
-      'already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.',
+      `Refused (409): ${PARTIALLY_DELIVERED}`,
     );
     expect(screen.getByTestId('coach-improvements-text')).toHaveValue('Ask newcomers first');
   });
