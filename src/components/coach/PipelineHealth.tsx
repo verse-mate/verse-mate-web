@@ -18,6 +18,8 @@ import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import {
   CoachAuthError,
   type CoverageLeader,
+  EMAIL_RULE,
+  badAddressText,
   isPlaceholderAddress,
   needsBenchmarkConfirm,
   PIPELINE_PAGE_SIZE,
@@ -372,9 +374,11 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
   const [error, setError] = useState<string | null>(null);
   const [confirming, setConfirming] = useState(false);
   const placeholder = !email || isPlaceholderAddress(email);
+  const badDraft = draft === null ? null : badAddressText(draft);
+  const shownError = error ?? badDraft;
 
   const save = (confirm: boolean) => {
-    if (draft === null) return;
+    if (draft === null || badDraft) return;
     setError(null);
     setConfirming(false);
     update.mutate(
@@ -421,6 +425,7 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
             onChange={(e) => {
               setDraft(e.target.value);
               setConfirming(false);
+              setError(null);
             }}
             placeholder="name@church.org"
             aria-label="New email address"
@@ -430,7 +435,7 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
           <button
             type="button"
             onClick={() => save(false)}
-            disabled={update.isPending || !draft.trim()}
+            disabled={update.isPending || !draft.trim() || badDraft !== null}
             data-testid={`coach-address-save-${coachId}`}
             style={btn}
           >
@@ -455,9 +460,9 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
           </button>
         </div>
       )}
-      {error && (
+      {shownError && (
         <div role="alert" data-testid={`coach-address-error-${coachId}`} style={{ color: dt.rust, marginTop: 4 }}>
-          {error}
+          {shownError}
         </div>
       )}
     </div>
@@ -484,8 +489,11 @@ function LeaderAttribution({ coachId }: { coachId: string }) {
     emails: (current.data?.altEmails ?? []).join('\n'),
   };
   const short = listLines(shown.keywords).filter((k) => k.length < 3);
-  const shownError =
-    error ?? (short.length ? `Each title keyword needs at least three characters: ${short.join(', ')}` : null);
+  const badAlt = listLines(shown.emails).find((e) => badAddressText(e));
+  const invalid =
+    (short.length ? `Each title keyword needs at least three characters: ${short.join(', ')}` : null) ??
+    (badAlt !== undefined ? `Alternate address "${badAlt}": ${EMAIL_RULE}` : null);
+  const shownError = error ?? invalid;
 
   const submit = () => {
     setError(null);
@@ -548,7 +556,7 @@ function LeaderAttribution({ coachId }: { coachId: string }) {
             <button
               type="button"
               onClick={submit}
-              disabled={save.isPending || short.length > 0}
+              disabled={save.isPending || invalid !== null}
               data-testid={`coach-attribution-save-${coachId}`}
               style={btn}
             >

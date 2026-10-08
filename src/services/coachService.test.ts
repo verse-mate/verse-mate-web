@@ -10,6 +10,9 @@ import {
   fetchLeaderAttribution,
   fetchPendingReshares,
   fetchPipelineFailures,
+  EMAIL_RULE,
+  isEmailAddress,
+  isPlaceholderAddress,
   fetchReportReview,
   fetchReportRevisions,
   mintRecordingUrl,
@@ -305,6 +308,36 @@ describe('coachService', () => {
       return jsonResponse({ coachId: 'amy-lee', state: 'retained' });
     });
     expect(await attributeSession('ff/4', 'amy-lee')).toEqual({ coachId: 'amy-lee', state: 'retained' });
+  });
+
+  it.each([
+    ['a.b+c_d%e-f@example.org', true],
+    ['leader@church.example.org', true],
+    ['a,b@example.org', false],
+    ['a;b@example.org', false],
+    ['<a>@example.org', false],
+    ['"a"@example.org', false],
+    ['a b@example.org', false],
+    ['.a@example.org', false],
+    ['a.@example.org', false],
+    ['a..b@example.org', false],
+    ['a@example.org.', false],
+    ['a@example', false],
+    ['a@-example.org', false],
+    ['a@b@example.org', false],
+    ['@example.org', false],
+    [`${'a'.repeat(250)}@x.org`, false],
+  ])('holds %s to the server\'s address rule: %s', (address, ok) => {
+    expect(isEmailAddress(address)).toBe(ok);
+  });
+
+  it('names the rule the server enforces, and reads a placeholder with a trailing dot as one', () => {
+    expect(EMAIL_RULE).toBe(
+      'Enter one email address: letters, digits and . _ % + - before the @, then a domain such as example.org, with no trailing dot',
+    );
+    expect(isPlaceholderAddress('dana@needs-real-email.invalid.')).toBe(true);
+    expect(isPlaceholderAddress(' Dana@Needs-Real-Email.INVALID ')).toBe(true);
+    expect(isPlaceholderAddress('dana@example.org')).toBe(false);
   });
 
   it('reads one page of stuck sessions with the total the server counted', async () => {

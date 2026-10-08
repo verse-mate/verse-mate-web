@@ -757,7 +757,25 @@ export function saveLeaderAttribution(
 }
 
 export function isPlaceholderAddress(email: string): boolean {
-  return /\.invalid$/i.test(email.trim());
+  return email.trim().toLowerCase().replace(/\.+$/, '').endsWith('.invalid');
+}
+
+export const EMAIL_RULE =
+  'Enter one email address: letters, digits and . _ % + - before the @, then a domain such as example.org, with no trailing dot';
+
+const EMAIL_LOCAL = /^(?!\.)(?!.*\.\.)[A-Za-z0-9._%+-]+(?<!\.)$/;
+const EMAIL_DOMAIN = /^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$/;
+
+export function isEmailAddress(value: string): boolean {
+  if (value.length > 254) return false;
+  const at = value.lastIndexOf('@');
+  if (at <= 0) return false;
+  return EMAIL_LOCAL.test(value.slice(0, at)) && EMAIL_DOMAIN.test(value.slice(at + 1));
+}
+
+export function badAddressText(value: string): string | null {
+  const v = value.trim().toLowerCase();
+  return v && !isEmailAddress(v) ? EMAIL_RULE : null;
 }
 
 /** PUT a session's recording URL. Empty string clears it. */
