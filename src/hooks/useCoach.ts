@@ -51,6 +51,7 @@ import {
   type PipelineFailure,
   type CoverageReport,
   type ReleaseOutcome,
+  updateLeaderEmail,
 } from '@/services/coachService';
 
 export const coachKeys = {
@@ -280,6 +281,17 @@ export function useReleaseHeldReport(): UseMutationResult<ReleaseOutcome, Error,
     mutationFn: releaseHeldReport,
     onSuccess: (outcome) => {
       if (outcome.delivered) qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
+    },
+  });
+}
+
+export function useUpdateLeaderEmail(): UseMutationResult<string, Error, { coachId: string; email: string }> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ coachId, email }) => updateLeaderEmail(coachId, email),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: coachKeys.coverage });
+      qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
     },
   });
 }
