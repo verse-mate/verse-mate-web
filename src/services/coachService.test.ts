@@ -20,6 +20,7 @@ import {
   saveRecordingLink,
   statusColor,
   updateCoachClass,
+  updateLeaderEmail,
 } from './coachService';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -267,6 +268,16 @@ describe('coachService', () => {
     const coach = await addCoachLeader({ email: 'new@leader.com' });
     expect(coach.id).toBe('x');
     expect(coach.sessionCount).toBe(0);
+  });
+
+  it("PUTs a leader's new address to the leader's id and returns the stored one", async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/admin/leaders/wyatt-wellington/email');
+      expect(init?.method).toBe('PUT');
+      expect(JSON.parse(String(init?.body))).toEqual({ email: 'Wyatt@Example.test' });
+      return jsonResponse({ email: 'wyatt@example.test' });
+    });
+    expect(await updateLeaderEmail('wyatt-wellington', 'Wyatt@Example.test')).toBe('wyatt@example.test');
   });
 
   it('PUTs a session recording link', async () => {

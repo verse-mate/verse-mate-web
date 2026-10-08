@@ -2,6 +2,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
+
 import * as coachService from '@/services/coachService';
 import { CoachApiError, CoachAuthError } from '@/services/coachService';
 import PipelineHealth from './PipelineHealth';
@@ -217,5 +219,68 @@ describe('recording-bot coverage', () => {
     renderView();
 
     expect(await screen.findByTestId('coach-coverage-refused')).toBeInTheDocument();
+  });
+});
+
+describe("a leader's address", () => {
+  const PLACEHOLDER = {
+    ...COVERAGE.leaders[1],
+    coachId: 'wyatt-wellington',
+    name: 'Wyatt Wellington',
+    email: 'wyatt-wellington@needs-real-email.invalid',
+  };
+
+  it('shows a placeholder address as no real address yet, and a real one only outside session replay', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [COVERAGE.leaders[0], PLACEHOLDER] });
+    renderView();
+
+    const placeholder = await screen.findByTestId('coach-address-wyatt-wellington');
+    expect(placeholder).toHaveTextContent('No real address yet');
+    expect(placeholder).not.toHaveTextContent('needs-real-email');
+    const real = screen.getByTestId('coach-address-milo-kerr');
+    expect(real).toHaveTextContent('milo@example.test');
+    expect(real.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+  });
+
+  it("replaces a leader's address and reads the roster again", async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    const coverage = vi
+      .spyOn(coachService, 'fetchCoverage')
+      .mockResolvedValueOnce({ ...COVERAGE, leaders: [PLACEHOLDER] })
+      .mockResolvedValue({ ...COVERAGE, leaders: [{ ...PLACEHOLDER, email: 'wyatt@example.test' }] });
+    const update = vi.spyOn(coachService, 'updateLeaderEmail').mockResolvedValue('wyatt@example.test');
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-address-edit-wyatt-wellington'));
+    fireEvent.change(screen.getByTestId('coach-address-input-wyatt-wellington'), {
+      target: { value: 'wyatt@example.test' },
+    });
+    fireEvent.click(screen.getByTestId('coach-address-save-wyatt-wellington'));
+
+    await waitFor(() => expect(update).toHaveBeenCalledWith('wyatt-wellington', 'wyatt@example.test'));
+    await waitFor(() => expect(screen.getByTestId('coach-address-wyatt-wellington')).toHaveTextContent('wyatt@example.test'));
+    expect(coverage).toHaveBeenCalledTimes(2);
+    expect(screen.queryByTestId('coach-address-input-wyatt-wellington')).toBeNull();
+  });
+
+  it('keeps the editor open with the refusal when the address is already taken', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [PLACEHOLDER] });
+    vi.spyOn(coachService, 'updateLeaderEmail').mockRejectedValue(
+      new CoachApiError('admin/leaders/wyatt-wellington/email', 409, 'Another leader already uses that address'),
+    );
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-address-edit-wyatt-wellington'));
+    fireEvent.change(screen.getByTestId('coach-address-input-wyatt-wellington'), {
+      target: { value: 'milo@example.test' },
+    });
+    fireEvent.click(screen.getByTestId('coach-address-save-wyatt-wellington'));
+
+    expect(await screen.findByTestId('coach-address-error-wyatt-wellington')).toHaveTextContent(
+      'Another leader already uses that address',
+    );
+    expect(screen.getByTestId('coach-address-input-wyatt-wellington')).toHaveValue('milo@example.test');
   });
 });

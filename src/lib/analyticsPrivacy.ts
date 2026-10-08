@@ -5,6 +5,7 @@ export const REPLAY_BLOCK_CLASS = 'ph-no-capture';
 const URL_PROPERTIES = ['$current_url', '$referrer', '$initial_current_url', '$initial_referrer'];
 const QUERY_PROPERTIES = ['search', '$search'];
 const MINTED_ADDRESS = /\/(recording|transcript)-url$/;
+const COACH_ADMIN_ROUTE = /\/coach\/admin\//;
 
 export function stripQuery(url: string): string {
   return url.split(/[?#]/)[0];
@@ -36,5 +37,6 @@ export function scrubNetworkRequest(request: CapturedNetworkRequest): CapturedNe
     ...request,
     name,
     ...(MINTED_ADDRESS.test(name) ? { responseBody: null } : {}),
+    ...(COACH_ADMIN_ROUTE.test(name) ? { requestBody: null, responseBody: null } : {}),
   };
 }

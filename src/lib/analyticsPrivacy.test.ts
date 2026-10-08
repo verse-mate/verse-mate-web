@@ -51,4 +51,17 @@ describe('what reaches analytics', () => {
     });
     expect(out?.responseBody).toBeNull();
   });
+
+  it('drops both bodies of every coach admin request from a replay network entry', () => {
+    const out = scrubNetworkRequest({
+      name: 'https://api.test/coach/admin/leaders/wyatt-wellington/email',
+      entryType: 'resource',
+      startTime: 0,
+      duration: 1,
+      requestBody: '{"email":"wyatt@example.test"}',
+      responseBody: '{"email":"wyatt@example.test"}',
+    });
+    expect(out?.requestBody).toBeNull();
+    expect(out?.responseBody).toBeNull();
+  });
 });

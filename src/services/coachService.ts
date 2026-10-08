@@ -571,6 +571,19 @@ export async function addCoachLeader(input: {
   return data.coach;
 }
 
+export async function updateLeaderEmail(coachId: string, email: string): Promise<string> {
+  const data = await coachRequest<{ email: string }>(`admin/leaders/${encodeURIComponent(coachId)}/email`, {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ email }),
+  });
+  return data.email;
+}
+
+export function isPlaceholderAddress(email: string): boolean {
+  return /\.invalid$/i.test(email.trim());
+}
+
 /** PUT a session's recording URL. Empty string clears it. */
 export async function saveRecordingLink(
   coachId: string,

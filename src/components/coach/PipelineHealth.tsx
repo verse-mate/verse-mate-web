@@ -7,10 +7,13 @@ import {
   usePipelineFailures,
   useReleaseHeldReport,
   useRequeuePipelineFailure,
+  useUpdateLeaderEmail,
 } from '@/hooks/useCoach';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import {
   CoachApiError,
   CoachAuthError,
+  isPlaceholderAddress,
   type PipelineFailure,
   type ReleaseOutcome,
 } from '@/services/coachService';
@@ -194,8 +197,9 @@ export default function PipelineHealth() {
                   <div key={l.coachId} data-testid={`coach-coverage-${l.coachId}`} style={row}>
                     <div style={{ minWidth: 0 }}>
                       <div style={{ fontWeight: 600, fontSize: 14 }}>{l.name}</div>
+                      <LeaderAddress coachId={l.coachId} email={l.email} />
                       <div style={{ fontSize: 12.5, color: dt.textLight }}>
-                        {l.email} · account {l.accountStatus} · {l.observedSessions} observed sessions ·{' '}
+                        account {l.accountStatus} · {l.observedSessions} observed sessions ·{' '}
                         {l.linkedClassName ?? 'no linked class'}
                         {l.classAlert ? ' · registered class disagrees with what was observed' : ''}
                       </div>
@@ -219,6 +223,81 @@ export default function PipelineHealth() {
           );
         }}
       </QueryState>
+    </div>
+  );
+}
+
+function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
+  const update = useUpdateLeaderEmail();
+  const [draft, setDraft] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const placeholder = isPlaceholderAddress(email);
+
+  const save = () => {
+    if (draft === null) return;
+    setError(null);
+    update.mutate(
+      { coachId, email: draft.trim() },
+      {
+        onSuccess: () => {
+          setDraft(null);
+          toast.success('Address saved. The next report goes to it.');
+        },
+        onError: (err) => setError(refusalText(err)),
+      },
+    );
+  };
+
+  return (
+    <div style={{ fontSize: 12.5, color: dt.textLight, margin: '2px 0' }}>
+      {placeholder ? (
+        <span data-testid={`coach-address-${coachId}`} style={{ color: dt.rust, fontWeight: 600 }}>
+          No real address yet
+        </span>
+      ) : (
+        <span data-testid={`coach-address-${coachId}`} className={REPLAY_BLOCK_CLASS}>
+          {email}
+        </span>
+      )}{' '}
+      {draft === null ? (
+        <button
+          type="button"
+          onClick={() => setDraft(placeholder ? '' : email)}
+          data-testid={`coach-address-edit-${coachId}`}
+          style={linkBtn}
+        >
+          {placeholder ? 'Set address' : 'Change address'}
+        </button>
+      ) : (
+        <span className={REPLAY_BLOCK_CLASS} style={{ display: 'inline-flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+          <input
+            type="email"
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            placeholder="name@church.org"
+            aria-label="New email address"
+            data-testid={`coach-address-input-${coachId}`}
+            style={input}
+          />
+          <button
+            type="button"
+            onClick={save}
+            disabled={update.isPending || !draft.trim()}
+            data-testid={`coach-address-save-${coachId}`}
+            style={btn}
+          >
+            {update.isPending ? 'Saving…' : 'Save'}
+          </button>
+          <button type="button" onClick={() => { setDraft(null); setError(null); }} disabled={update.isPending} style={linkBtn}>
+            Cancel
+          </button>
+        </span>
+      )}
+      {error && (
+        <div role="alert" data-testid={`coach-address-error-${coachId}`} style={{ color: dt.rust, marginTop: 4 }}>
+          {error}
+        </div>
+      )}
     </div>
   );
 }
@@ -267,4 +346,13 @@ const linkBtn: React.CSSProperties = {
   cursor: 'pointer',
   fontWeight: 700,
   color: dt.gold,
+};
+const input: React.CSSProperties = {
+  fontSize: 13,
+  padding: '6px 9px',
+  border: `1px solid ${dt.inputBorder}`,
+  borderRadius: 8,
+  background: dt.cardBg,
+  color: dt.textPrimary,
+  minWidth: 220,
 };
