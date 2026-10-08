@@ -462,6 +462,7 @@ export interface ReleaseOutcome {
   refusal?: string;
   violations?: string[];
   shortfalls?: string[];
+  coldRecall?: string[];
   skipped?: string[];
 }
 

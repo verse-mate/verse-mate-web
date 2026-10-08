@@ -29,7 +29,25 @@ import {
 } from '@/services/coachService';
 import { dt } from './dashboardTheme';
 
-type Outcome = { tone: 'ok' | 'refused'; text: string };
+type Outcome = { tone: 'ok' | 'refused'; text: string; held?: string[] };
+
+const COLD_RECALL_HOLD = 'held: a first lesson with a cold-recall improvement: ';
+const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
+const COLD_RECALL_FIX =
+  'To clear it, clear the first-lesson flag on the report and release it again, or, once the report is delivered, amend its Improvements.';
+
+function ColdRecallHeld({ items }: { items: string[] }) {
+  return (
+    <>
+      <ul className={REPLAY_BLOCK_CLASS} style={{ margin: '4px 0', paddingLeft: 18 }}>
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+      <div>{COLD_RECALL_FIX}</div>
+    </>
+  );
+}
 
 function releaseText(outcome: ReleaseOutcome): Outcome {
   if (outcome.delivered) {
@@ -40,6 +58,9 @@ function releaseText(outcome: ReleaseOutcome): Outcome {
         ? `Released and delivered. ${skipped} placeholder address${skipped === 1 ? ' was' : 'es were'} skipped.`
         : 'Released and delivered to the leader.',
     };
+  }
+  if (outcome.refusal === 'cold-recall-improvement') {
+    return { tone: 'refused', text: `Not delivered: ${COLD_RECALL_WHY}.`, held: outcome.coldRecall ?? [] };
   }
   const reasons = [...(outcome.violations ?? []), ...(outcome.shortfalls ?? [])];
   return {
@@ -197,7 +218,16 @@ export default function PipelineHealth() {
                         {s.coachId ? nameOf(s.coachId) : 'unattributed'} · {s.sessionDate} · {s.state} · {s.attempts} attempts
                       </div>
                       <div className={REPLAY_BLOCK_CLASS} style={{ fontSize: 13, color: dt.body, marginTop: 4 }}>
-                        {s.reason ? `Why: ${s.reason}` : 'No reason recorded'}
+                        {s.reason?.startsWith(COLD_RECALL_HOLD) ? (
+                          <>
+                            Why: held, because {COLD_RECALL_WHY}.
+                            <ColdRecallHeld items={s.reason.slice(COLD_RECALL_HOLD.length).split('; ')} />
+                          </>
+                        ) : s.reason ? (
+                          `Why: ${s.reason}`
+                        ) : (
+                          'No reason recorded'
+                        )}
                       </div>
                       {s.state === 'delivered' && s.coachId && <LeaderAddress coachId={s.coachId} email={emailOf(s.coachId)} />}
                       {outcome && (
@@ -206,6 +236,7 @@ export default function PipelineHealth() {
                           style={{ fontSize: 13, marginTop: 4, color: outcome.tone === 'ok' ? dt.green : dt.rust }}
                         >
                           {outcome.text}
+                          {outcome.held && <ColdRecallHeld items={outcome.held} />}
                         </div>
                       )}
                     </div>

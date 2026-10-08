@@ -575,6 +575,54 @@ describe('an unresolved session', () => {
   });
 });
 
+describe('a first lesson held for a cold-recall improvement', () => {
+  const HELD_ITEMS = ["Recall last week's big idea", 'Review the previous lesson'];
+  const COLD = {
+    ...HELD,
+    sourceSessionId: 'ff-7',
+    reportId: 'rep-7',
+    reason: `held: a first lesson with a cold-recall improvement: ${HELD_ITEMS.join('; ')}`,
+  };
+  const WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
+  const FIX =
+    'To clear it, clear the first-lesson flag on the report and release it again, or, once the report is delivered, amend its Improvements.';
+
+  it('says why in words, names the held items out of session replay, and how to clear it', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([COLD]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-7');
+    expect(row).toHaveTextContent(`Why: held, because ${WHY}.`);
+    expect(row).not.toHaveTextContent('held: a first lesson');
+    for (const item of HELD_ITEMS) {
+      expect(within(row).getByText(item).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    }
+    expect(row).toHaveTextContent(FIX);
+    expect(within(row).getByTestId('coach-pipeline-release-ff-7')).toBeInTheDocument();
+  });
+
+  it('a release refused for it says so in words, with the held items and how to clear it', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([HELD]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue({
+      delivered: false,
+      refusal: 'cold-recall-improvement',
+      coldRecall: HELD_ITEMS,
+    });
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-pipeline-release-ff-2'));
+    const outcome = await screen.findByTestId('coach-pipeline-outcome-ff-2');
+    expect(outcome).toHaveTextContent(`Not delivered: ${WHY}.`);
+    expect(outcome).not.toHaveTextContent('cold-recall-improvement');
+    for (const item of HELD_ITEMS) {
+      expect(within(outcome).getByText(item).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    }
+    expect(outcome).toHaveTextContent(FIX);
+  });
+});
+
 describe('a re-attributed session', () => {
   const REATTRIBUTED = {
     ...HELD,
