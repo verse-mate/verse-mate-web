@@ -704,6 +704,7 @@ export const PARKED_SESSION = {
   coachId: LEADER_ID,
   title: 'Obadiah, Lesson 2',
   sessionDate: '2026-08-15',
+  sessionStartedAt: '2026-08-16T00:30:00.000Z',
   state: 'scoring_failed',
   attempts: 3,
   reportId: null,
@@ -807,6 +808,7 @@ export const PARALLEL_RUN_RESHARE = {
   coachId: LEADER_ID,
   title: 'Obadiah, Lesson 2',
   sessionDate: '2026-08-15',
+  sessionStartedAt: '2026-08-15T14:00:00.000Z',
   requestedAt: '2026-08-16T00:00:00.000Z',
   attempts: 5,
   asked: false,
@@ -1143,7 +1145,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     const offset = Number(url.searchParams.get('offset') ?? 0);
     const sessions = stuck.slice(offset, offset + limit).map((x) => {
       const feedback = store.get(String(x.reportId))?.feedback as Record<string, unknown> | undefined;
-      const row = { parallelRun: false, ...x };
+      const row = { parallelRun: false, sessionStartedAt: null, ...x };
       return x.holdKind === 'cold-recall' ? { ...row, coldRecall: feedback ? coldRecallIn(feedback) : [] } : row;
     });
     return route.fulfill({ json: { sessions, total: stuck.length, limit, offset } });
