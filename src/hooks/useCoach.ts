@@ -304,14 +304,25 @@ export function useRequeuePipelineFailure(): UseMutationResult<{ requeued: boole
   });
 }
 
-export function useReleaseHeldReport(): UseMutationResult<ReleaseOutcome, Error, string> {
+function useRefreshPipelineWrite() {
   const qc = useQueryClient();
-  return useMutation({
-    mutationFn: releaseHeldReport,
-    onSuccess: (outcome) => {
-      if (outcome.delivered) qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
-    },
-  });
+  return () => {
+    for (const queryKey of [
+      coachKeys.pipelineFailures,
+      ['coach', 'admin', 'reports'],
+      ['coach', 'admin', 'review'],
+      ['coach', 'admin', 'revisions'],
+      ['coach', 'admin', 'trends'],
+      coachKeys.reports,
+    ]) {
+      qc.invalidateQueries({ queryKey });
+    }
+  };
+}
+
+export function useReleaseHeldReport(): UseMutationResult<ReleaseOutcome, Error, string> {
+  const refresh = useRefreshPipelineWrite();
+  return useMutation({ mutationFn: releaseHeldReport, onSuccess: refresh });
 }
 
 export function useUpdateLeaderEmail(): UseMutationResult<
@@ -335,10 +346,11 @@ export function useAttributeSession(): UseMutationResult<
   { sourceSessionId: string; coachId: string; expectedCoachId: string | null }
 > {
   const qc = useQueryClient();
+  const refresh = useRefreshPipelineWrite();
   return useMutation({
     mutationFn: ({ sourceSessionId, coachId, expectedCoachId }) => attributeSession(sourceSessionId, coachId, expectedCoachId),
     onSettled: () => {
-      qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
+      refresh();
       qc.invalidateQueries({ queryKey: coachKeys.coverage });
     },
   });
