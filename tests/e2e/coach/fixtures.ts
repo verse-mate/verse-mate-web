@@ -588,6 +588,39 @@ async function revisionRoutes(
     return route.fulfill({ json: { applied: true } });
   };
 
+  const correctDimension = (route: Route, reportId: string, review: Review | undefined, n: number, body: { score?: unknown; rationale?: unknown }) => {
+    const { score, rationale } = body;
+    if (!Number.isInteger(score) || (score as number) < 1 || (score as number) > 5) return invalid(route, 'Expected an integer score from 1 to 5');
+    if (typeof rationale !== 'string' || rationale.length > 4000) return invalid(route, 'Expected a rationale of at most 4000 characters');
+    if (!review) {
+      return conflict(route, 'Correction refused: this is a legacy report, which is read-only. Change it at its source and it arrives through the backfill.');
+    }
+    if (opts.deliveredBeforeFlag === reportId) review.delivered = true;
+    if (review.delivered) return invalid(route, 'Correction refused: already-delivered');
+    if (review.partial) return conflict(route, PARTIALLY_DELIVERED);
+    if (review.inFlight) return conflict(route, IN_FLIGHT_CORRECTION);
+    const dim = review.dimensions[n - 1];
+    if (!dim) return invalid(route, 'Correction refused: unknown-dimension');
+    Object.assign(dim, { score, rationale, provenance: 'human' });
+    const scores = review.dimensions.map((d) => d.score).filter((v): v is number => v !== null);
+    const base = Math.round((scores.reduce((a, b) => a + b, 0) / scores.length / 5) * 10000) / 100;
+    Object.assign(review, { base, humanCorrected: true });
+    const status = RUBRIC.statusBands.find((b) => base >= b.min)?.label ?? '';
+    return route.fulfill({ json: { base, status } });
+  };
+
+  await page.route(/\/coach\/admin\/reports\/[^/]+\/dimensions\/[^/]+$/, (route) => {
+    if (!opts.admin) return forbidden(route);
+    const req = route.request();
+    const url = new URL(req.url());
+    const [, id, n] = url.pathname.match(/\/admin\/reports\/([^/]+)\/dimensions\/([^/]+)$/) ?? [];
+    if (req.method() !== 'POST') return notFound(route);
+    const reportId = decodeURIComponent(id);
+    const body = req.postData() ? JSON.parse(req.postData() as string) : {};
+    opts.onAdminWrite?.(req.method(), url.pathname, body);
+    return correctDimension(route, reportId, reviews.get(reportId), Number(n), body);
+  });
+
   await page.route(/\/coach\/admin\/reports\/[^/]+\/(review|amend|revisions|revision\/send|revision\/requeue|first-lesson|improvements)$/, (route) => {
     if (!opts.admin) return forbidden(route);
     const req = route.request();

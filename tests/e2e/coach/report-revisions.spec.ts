@@ -11,6 +11,7 @@ import {
   OLDER_ID,
   PARTIALLY_DELIVERED,
   PROSE,
+  RUBRIC,
   useCoachApi,
 } from './fixtures';
 
@@ -297,6 +298,78 @@ test.describe('The first-lesson flag on an undelivered report', () => {
       `POST /coach/admin/reports/${OLDER_ID}/amend`,
     ]);
     await capture(page, testInfo, 'p3-first-lesson-delivered-meanwhile-amended', panel);
+  });
+});
+
+test.describe('Correcting a dimension of an undelivered report', () => {
+  test('each dimension says who scored it, and a correction is recorded by hand with the recomputed score and band', async ({ page }, testInfo) => {
+    const writes: Array<[string, unknown]> = [];
+    await useCoachApi(page, { admin: true, onAdminWrite: (_m, p, b) => writes.push([p, b]) });
+    await openSession(page, OLDER_ID);
+    const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await expect(panel).toHaveClass(/ph-no-capture/);
+    await expect(panel.getByTestId(/^coach-review-dim-provenance-/)).toHaveCount(12);
+    await expect(panel.getByTestId('coach-review-dim-provenance-3')).toHaveText(`Scored by the model (${RUBRIC.model})`);
+
+    await panel.getByTestId('coach-review-dim-correct-3').click();
+    await expect(panel.getByTestId('coach-review-dim-save-3')).toBeDisabled();
+    await panel.getByTestId('coach-review-dim-score-3').selectOption('2');
+    await panel.getByTestId('coach-review-dim-rationale-3').fill('x'.repeat(4001));
+    await expect(panel.getByTestId('coach-review-dim-too-long-3')).toHaveText('A rationale is at most 4000 characters. This one has 4001.');
+    await expect(panel.getByTestId('coach-review-dim-save-3')).toBeDisabled();
+    await panel.getByTestId('coach-review-dim-rationale-3').fill('The passage was read but never opened up.');
+    await capture(page, testInfo, 'pa-dim-correcting', panel.getByTestId('coach-review-dim-3'));
+    await panel.getByTestId('coach-review-dim-save-3').click();
+
+    await expect(panel.getByTestId('coach-review-dim-outcome')).toHaveText(
+      'Dimension 3 corrected to 2, recorded as corrected by hand. Base (clusters) now 76.7 / 100, band 🟢 Strong.',
+    );
+    await expect(panel.getByTestId('coach-review-dim-provenance-3')).toHaveText('Corrected by hand');
+    await expect(panel.getByTestId('coach-review-dim-3')).toContainText('The passage was read but never opened up.');
+    await expect(panel.getByTestId('coach-review-dim-provenance-4')).toHaveText(`Scored by the model (${RUBRIC.model})`);
+    expect(writes).toEqual([
+      [`/coach/admin/reports/${OLDER_ID}/dimensions/3`, { score: 2, rationale: 'The passage was read but never opened up.' }],
+    ]);
+    await capture(page, testInfo, 'pa-dim-corrected', panel.getByTestId('coach-review-dim-3'));
+  });
+
+  for (const [kind, text] of [
+    ['in-flight', 'Refused (409): Refused: the report is being delivered or re-scored. Correct it once that finishes, or amend it after delivery.'],
+    ['partial', `Refused (409): ${PARTIALLY_DELIVERED}`],
+  ] as const) {
+    test(`a correction refused for a report ${kind} is said in words and the draft is kept`, async ({ page }, testInfo) => {
+      await useCoachApi(page, { admin: true, reviews: { [NEWEST_ID]: 'delivered', [OLDER_ID]: kind } });
+      await openSession(page, OLDER_ID);
+      const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+      await panel.getByTestId('coach-review-dim-correct-5').click();
+      await panel.getByTestId('coach-review-dim-score-5').selectOption('2');
+      await panel.getByTestId('coach-review-dim-save-5').click();
+      await expect(panel.getByTestId('coach-review-dim-outcome')).toHaveText(text);
+      await expect(panel.getByTestId('coach-review-dim-score-5')).toHaveValue('2');
+      await expect(panel.getByTestId('coach-review-dim-provenance-5')).toHaveText(`Scored by the model (${RUBRIC.model})`);
+      await capture(page, testInfo, `pa-dim-refused-${kind}`, panel.getByTestId('coach-review-dim-5'));
+    });
+  }
+
+  test('a report delivered meanwhile opens the amend editor with the correction, said in words', async ({ page }, testInfo) => {
+    const writes: string[] = [];
+    await useCoachApi(page, { admin: true, deliveredBeforeFlag: OLDER_ID, onAdminWrite: (m, p) => writes.push(`${m} ${p}`) });
+    await openSession(page, OLDER_ID);
+    const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await panel.getByTestId('coach-review-dim-correct-5').click();
+    await panel.getByTestId('coach-review-dim-score-5').selectOption('2');
+    await panel.getByTestId('coach-review-dim-rationale-5').fill('Fewer open questions than the passage invited.');
+    await panel.getByTestId('coach-review-dim-save-5').click();
+
+    await expect(panel.getByTestId('coach-amend-outcome')).toHaveText(
+      'This report was delivered meanwhile, so the correction goes through an amendment, which sends the leader a revised copy. Check it and confirm.',
+    );
+    await expect(panel.getByTestId('coach-amend-dim-score-5')).toHaveValue('2');
+    await expect(panel.getByTestId('coach-amend-dim-rationale-5')).toHaveValue('Fewer open questions than the passage invited.');
+    await capture(page, testInfo, 'pa-dim-delivered-meanwhile', panel);
+    await panel.getByTestId('coach-amend-review').click();
+    await expect(panel.getByTestId('coach-amend-diff')).toContainText('2 · Fewer open questions than the passage invited.');
+    expect(writes).toEqual([`POST /coach/admin/reports/${OLDER_ID}/dimensions/5`]);
   });
 });
 

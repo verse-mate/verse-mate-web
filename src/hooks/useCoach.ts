@@ -60,6 +60,8 @@ import {
   sendRevision,
   requeueRevision,
   setFirstLesson,
+  correctDimension,
+  type DimensionCorrection,
   editImprovements,
   type ImprovementsEdit,
   fetchLeaderAttribution,
@@ -419,6 +421,17 @@ export function useSetFirstLesson(
     onSuccess: (result) => {
       if (result.applied) refresh();
     },
+  });
+}
+
+export function useCorrectDimension(
+  coachId: string,
+  reportId: string,
+): UseMutationResult<{ base: number; status: string }, Error, { n: number } & DimensionCorrection> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({
+    mutationFn: ({ n, ...correction }) => correctDimension(reportId, n, correction),
+    onSuccess: refresh,
   });
 }
 

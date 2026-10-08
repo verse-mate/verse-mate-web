@@ -561,6 +561,25 @@ export async function fetchReportReview(reportId: string): Promise<ReportReviewS
   }
 }
 
+export const RATIONALE_MAX = 4000;
+
+export interface DimensionCorrection {
+  score: number;
+  rationale: string;
+}
+
+export function correctDimension(
+  reportId: string,
+  dimensionN: number,
+  correction: DimensionCorrection,
+): Promise<{ base: number; status: string }> {
+  return coachRequest<{ base: number; status: string }>(adminReportPath(reportId, `dimensions/${dimensionN}`), {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(correction),
+  });
+}
+
 export function amendReport(reportId: string, amendment: ReportAmendment): Promise<RevisionResult> {
   return coachRequest<RevisionResult>(adminReportPath(reportId, 'amend'), {
     method: 'POST',
