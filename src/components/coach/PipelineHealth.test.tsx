@@ -585,7 +585,7 @@ describe('a first lesson held for a cold-recall improvement', () => {
   };
   const WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
   const FIX =
-    'To clear it, clear the first-lesson flag on the report and release it again, or, once the report is delivered, amend its Improvements.';
+    "To clear it, open the report's review (the leader, then this session), replace the held items under Improvements, and release it again from this list. If it is not a first lesson, clear the first-lesson flag there instead and release it again.";
 
   it('says why in words, names the held items out of session replay, and how to clear it', async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([COLD]));
@@ -599,6 +599,7 @@ describe('a first lesson held for a cold-recall improvement', () => {
       expect(within(row).getByText(item).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
     }
     expect(row).toHaveTextContent(FIX);
+    expect(row).not.toHaveTextContent('once the report is delivered');
     expect(within(row).getByTestId('coach-pipeline-release-ff-7')).toBeInTheDocument();
   });
 
