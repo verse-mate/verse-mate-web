@@ -32,7 +32,6 @@ import { dt } from './dashboardTheme';
 type Outcome = { tone: 'ok' | 'refused'; text: string; held?: string[] };
 
 const COLD_RECALL_HOLD = 'held: a first lesson with a cold-recall improvement: ';
-const FAILED_SEND = /^(send failed to |no recipient has a deliverable address)/;
 const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
 const COLD_RECALL_FIX =
   "To clear it, open the report's review (the leader, then this session), replace the held items under Improvements, and release it again from this list. If it is not a first lesson, clear the first-lesson flag there instead and release it again.";
@@ -230,7 +229,7 @@ export default function PipelineHealth() {
                           'No reason recorded'
                         )}
                       </div>
-                      {s.coachId && (s.state === 'delivered' || FAILED_SEND.test(s.reason ?? '')) && (
+                      {s.coachId && (s.state === 'delivered' || s.holdKind === 'send-failed') && (
                         <LeaderAddress coachId={s.coachId} email={emailOf(s.coachId)} />
                       )}
                       {outcome && (

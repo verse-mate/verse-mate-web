@@ -407,6 +407,8 @@ export function resolveReshareRequest(
   );
 }
 
+export type HoldKind = 'review' | 'reattributed' | 'calibration' | 'governance' | 'cold-recall' | 'no-mailer' | 'send-failed';
+
 export interface PipelineFailure {
   sourceSessionId: string;
   coachId: string | null;
@@ -416,6 +418,7 @@ export interface PipelineFailure {
   attempts: number;
   reportId: string | null;
   reason: string | null;
+  holdKind: HoldKind | null;
   action: 'release' | 'requeue' | 'attribute' | null;
   updatedAt: string;
 }

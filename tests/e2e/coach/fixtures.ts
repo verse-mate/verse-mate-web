@@ -405,6 +405,7 @@ export const FIRST_LESSON_HELD_SESSION = {
   attempts: 0,
   reportId: OLDER_ID,
   reason: "held: a first lesson with a cold-recall improvement: Recall last week's big idea before the new passage",
+  holdKind: 'cold-recall',
   action: 'release',
   updatedAt: '2026-08-23T00:00:00Z',
 };
@@ -694,6 +695,7 @@ export const PARKED_SESSION = {
   attempts: 3,
   reportId: null,
   reason: 'the model answer failed validation three times',
+  holdKind: null,
   action: 'requeue',
   updatedAt: '2026-08-16T00:00:00Z',
 };
@@ -707,6 +709,7 @@ export const HELD_SESSION = {
   attempts: 0,
   reportId: 'held-report',
   reason: 'held for review: injection tripwire',
+  holdKind: 'review',
   action: 'release',
   updatedAt: '2026-09-06T00:00:00Z',
 };
@@ -720,6 +723,7 @@ export const AWAITING_RELEASE_SESSIONS = (['delivery_pending', 'delivery_failed'
   attempts: state === 'delivery_failed' ? 3 : 0,
   reportId: `awaiting-${state}`,
   reason: 're-attributed: held until an admin releases it',
+  holdKind: 'reattributed',
   action: 'release',
   updatedAt: `2026-09-1${3 + i}T00:00:00Z`,
 }));
@@ -737,6 +741,7 @@ export const FAILED_SEND_SESSIONS = [
     attempts: 2,
     reportId: 'send-retrying',
     reason: `${SEND_FAILED}; retried automatically (attempt 2 of 5), fix the failing address if it is wrong`,
+    holdKind: 'send-failed',
     action: null,
     updatedAt: '2026-09-20T00:00:00Z',
   },
@@ -749,10 +754,25 @@ export const FAILED_SEND_SESSIONS = [
     attempts: 5,
     reportId: 'send-exhausted',
     reason: `${SEND_FAILED}; retries exhausted: fix the failing address, then requeue it`,
+    holdKind: 'send-failed',
     action: 'requeue',
     updatedAt: '2026-09-27T00:00:00Z',
   },
 ];
+
+export const UNCONFIRMED_SEND_SESSION = {
+  sourceSessionId: 'ff-send-unconfirmed',
+  coachId: FAILED_SEND_LEADER.id,
+  title: 'Ruth, Lesson 4',
+  sessionDate: '2026-10-03',
+  state: 'delivery_pending',
+  attempts: 1,
+  reportId: 'send-unconfirmed',
+  reason: `a send to ${FAILED_SEND_LEADER.email} was started but never confirmed, so it is not sent again until the report is requeued; retried automatically (attempt 1 of 5), fix the failing address if it is wrong`,
+  holdKind: 'send-failed',
+  action: null,
+  updatedAt: '2026-10-04T00:00:00Z',
+};
 
 export const PLACEHOLDER_LEADER = { id: 'dana-diaz', name: 'Dana Diaz', email: 'dana-diaz@needs-real-email.invalid' };
 
@@ -765,6 +785,7 @@ export const UNRESOLVED_SESSION = {
   attempts: 0,
   reportId: null,
   reason: 'unattributed: no leader matched the session title',
+  holdKind: null,
   action: 'attribute',
   updatedAt: '2026-09-30T00:00:00Z',
 };
@@ -778,6 +799,7 @@ export const SKIPPED_SESSION = {
   attempts: 0,
   reportId: 'skipped-report',
   reason: `delivered, but not emailed to ${PLACEHOLDER_LEADER.email}: placeholder address`,
+  holdKind: null,
   action: null,
   updatedAt: '2026-09-28T00:00:00Z',
 };
@@ -881,7 +903,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     { ...HELD_SESSION },
     ...(opts.firstLessonHeld ? [{ ...FIRST_LESSON_HELD_SESSION }] : []),
     ...(opts.awaitingRelease ? AWAITING_RELEASE_SESSIONS.map((x) => ({ ...x })) : []),
-    ...(opts.failedSends ? FAILED_SEND_SESSIONS.map((x) => ({ ...x })) : []),
+    ...(opts.failedSends ? [...FAILED_SEND_SESSIONS, UNCONFIRMED_SEND_SESSION].map((x) => ({ ...x })) : []),
   ];
   const coverage = { ...COVERAGE, leaders: COVERAGE.leaders.map((l) => ({ ...l })) };
   const roster = [{ id: LEADER_ID, name: ME.profile.name }];
@@ -900,7 +922,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       stuck.splice(i, 1);
       return;
     }
-    stuck[i] = { ...session, coachId, state, reason: 're-attributed: held until an admin releases it', action: 'release' };
+    stuck[i] = { ...session, coachId, state, reason: 're-attributed: held until an admin releases it', holdKind: 'reattributed', action: 'release' };
   };
   const write = async (route: Route) => {
     const req = route.request();
