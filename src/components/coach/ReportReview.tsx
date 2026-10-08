@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useRef, useState } from 'react';
 
 import { useAmendReport, useReportReview, useReportRevisions, useSendRevision, useSetFirstLesson } from '@/hooks/useCoach';
 import { useRubric } from '@/hooks/useRubric';
@@ -170,6 +170,10 @@ function sendOutcome(r: RevisionSendResult): Outcome {
   };
 }
 
+function newestFirst(rows: ReportRevision[] | undefined): ReportRevision[] {
+  return [...(rows ?? [])].sort((a, b) => b.revision - a.revision);
+}
+
 function when(iso: string): string {
   return new Date(iso).toLocaleString('en-US', {
     month: 'short',
@@ -229,8 +233,11 @@ function FirstLessonPanel({ review, reportId, coachId }: { review: ReportReviewS
   const set = useSetFirstLesson(coachId, reportId);
   const [clearing, setClearing] = useState<{ score: number | null; rationale: string } | null>(null);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
+  const flying = useRef(false);
 
   const submit = (input: { firstLesson: boolean; score?: number; rationale?: string }) => {
+    if (flying.current) return;
+    flying.current = true;
     setOutcome(null);
     set.mutate(input, {
       onSuccess: (r) => {
@@ -238,6 +245,9 @@ function FirstLessonPanel({ review, reportId, coachId }: { review: ReportReviewS
         if (r.applied) setClearing(null);
       },
       onError: (err) => setOutcome({ tone: 'refused', text: refusalText(err) }),
+      onSettled: () => {
+        flying.current = false;
+      },
     });
   };
 
@@ -328,6 +338,9 @@ function AmendPanel({ review, report, coachId }: { review: ReportReviewState; re
   const { rubric } = useRubric();
   const dimName = (n: number) => rubric?.dimensions.find((d) => d.n === n)?.name ?? `Dimension ${n}`;
   const amend = useAmendReport(coachId, report.id);
+  const [latest] = newestFirst(useReportRevisions(report.id, true).data);
+  const latestUnsent = latest !== undefined && !latest.sentAt;
+  const flying = useRef(false);
   const [edit, setEdit] = useState<{ initial: Draft; draft: Draft; confirming: boolean } | null>(null);
   const [last, setLast] = useState<{ outcome: Outcome; held?: string[]; violations?: string[] } | null>(null);
 
@@ -340,7 +353,9 @@ function AmendPanel({ review, report, coachId }: { review: ReportReviewState; re
   const amendment = edit ? amendmentOf(edit.initial, edit.draft) : {};
   const changed = Object.keys(amendment).length > 0;
 
-  const confirm = () =>
+  const confirm = () => {
+    if (flying.current) return;
+    flying.current = true;
     amend.mutate(amendment, {
       onSuccess: (result) => {
         setLast({ outcome: amendOutcome(result), held: result.coldRecall, violations: result.violations });
@@ -350,7 +365,11 @@ function AmendPanel({ review, report, coachId }: { review: ReportReviewState; re
         setLast({ outcome: { tone: 'refused', text: refusalText(err) } });
         setEdit((e) => (e ? { ...e, confirming: false } : e));
       },
+      onSettled: () => {
+        flying.current = false;
+      },
     });
+  };
 
   return (
     <div data-testid={`coach-review-${report.id}`} className={REPLAY_BLOCK_CLASS} style={panel}>
@@ -383,11 +402,14 @@ function AmendPanel({ review, report, coachId }: { review: ReportReviewState; re
       {edit && edit.confirming && (
         <div>
           <p style={muted}>
-            Check the delivered version against the amended one. Confirming saves the revision and re-sends the report.
+            {latestUnsent
+              ? 'Check the latest version, which was not sent, against the amended one.'
+              : 'Check the delivered version against the amended one.'}{' '}
+            Confirming saves the revision and re-sends the report.
           </p>
           <ChangeTable
             testId="coach-amend-diff"
-            columns={['Delivered', 'Amended']}
+            columns={[latestUnsent ? 'Latest, not sent' : 'Delivered', 'Amended']}
             changes={changesOf(draftChanges(amendment, edit.initial), dimName)}
           />
           <div style={actions}>
@@ -535,7 +557,8 @@ function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachI
   const revisions = useReportRevisions(reportId, true);
   const send = useSendRevision(coachId, reportId);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
-  const rows = revisions.data ?? [];
+  const flying = useRef(false);
+  const rows = newestFirst(revisions.data);
   if (revisions.error) {
     return (
       <div style={{ ...note, color: dt.rust, marginTop: 16 }}>
@@ -546,10 +569,15 @@ function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachI
   if (!rows.length) return null;
 
   const doSend = () => {
+    if (flying.current) return;
+    flying.current = true;
     setOutcome(null);
     send.mutate(undefined, {
       onSuccess: (r) => setOutcome(sendOutcome(r)),
       onError: (err) => setOutcome({ tone: 'refused', text: refusalText(err) }),
+      onSettled: () => {
+        flying.current = false;
+      },
     });
   };
 
