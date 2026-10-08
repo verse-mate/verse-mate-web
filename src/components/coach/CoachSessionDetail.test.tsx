@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { primeRubricCache } from '@/hooks/useRubric';
@@ -110,5 +110,46 @@ describe('a leader who saved a meeting link', () => {
       'href',
       'https://drive.example.test/rec.mp4',
     );
+  });
+});
+
+describe('the full session metrics', () => {
+  beforeEach(() => primeRubricCache(null));
+  afterEach(() => vi.restoreAllMocks());
+
+  const SCORED = {
+    ...REPORT,
+    score: 81.1,
+    base: 78.1,
+    newcomerBonus: 2,
+    sizeBonus: 1,
+    clusters: [{ name: 'Teaching Craft', weight: 33, scorePct: 80, contribution: 26.4 }],
+    dimensions: [{ n: 1, name: 'Scripture Anchoring', score: 4, note: 'Stayed in the text.' }],
+  } as unknown as CoachReport;
+
+  it('are linked from the report rather than inlined, and lead with the score composition before the detailed sections', async () => {
+    vi.spyOn(coachService, 'fetchCoachReportDetail').mockResolvedValue(null);
+    renderDetail(SCORED, 'leader');
+
+    expect(screen.queryByTestId('coach-score-composition')).toBeNull();
+    expect(screen.queryByText('Teaching Craft')).toBeNull();
+    const pointer = screen.getByTestId('coach-metrics-link');
+    expect(pointer).not.toHaveTextContent('Nothing is held back');
+    expect(pointer).not.toHaveTextContent('sections above');
+
+    fireEvent.click(within(pointer).getByRole('button', { name: 'Open the full metrics' }));
+    const composition = screen.getByTestId('coach-score-composition');
+    expect(composition).toHaveTextContent('Teaching Craft');
+    expect(composition).toHaveTextContent('Base 78.1 + newcomer growth 2 + group size 1 = 81.1 / 100');
+    const firstDimension = screen.getByTestId('coach-dim-1');
+    expect(composition.compareDocumentPosition(firstDimension) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it('still lead with the score composition when no dimension scorecard is available yet', async () => {
+    vi.spyOn(coachService, 'fetchCoachReportDetail').mockResolvedValue(null);
+    renderDetail({ ...SCORED, dimensions: [], newcomerBonus: 0, sizeBonus: 0, score: 78.1 } as CoachReport, 'leader');
+    fireEvent.click(screen.getByTestId('coach-tab-scorecard'));
+    expect(screen.getByTestId('coach-score-composition')).toHaveTextContent('Base 78.1 = 78.1 / 100');
+    expect(screen.getByText('No dimension scorecard is available for this session yet.')).toBeInTheDocument();
   });
 });

@@ -30,6 +30,25 @@ test.describe('Coaching dashboard, as the leader', () => {
     await expect(page.getByTestId('coach-tab-scorecard')).toBeVisible();
   });
 
+  test('the report links to the full metrics, which lead with the score composition', async ({ page }, testInfo) => {
+    await useCoachApi(page);
+    await page.goto('/coach');
+    const pointer = page.getByTestId('coach-metrics-link');
+    await expect(pointer).toContainText('The full session metrics are kept apart from this report');
+    await expect(page.getByTestId('coach-score-composition')).toHaveCount(0);
+    await capture(page, testInfo, 'pa-metrics-link', pointer);
+
+    await pointer.getByRole('button', { name: 'Open the full metrics' }).click();
+    const composition = page.getByTestId('coach-score-composition');
+    await expect(composition).toContainText(/Base \d+\.\d/);
+    const leads = await composition.evaluate((el) => {
+      const first = document.querySelector('[data-testid^="coach-dim-"]');
+      return !!first && !!(el.compareDocumentPosition(first) & Node.DOCUMENT_POSITION_FOLLOWING);
+    });
+    expect(leads).toBe(true);
+    await capture(page, testInfo, 'pa-metrics-composition', composition);
+  });
+
   test('no report text renders outside the session-replay block', async ({ page }, testInfo) => {
     await useCoachApi(page);
     await page.goto('/coach');
