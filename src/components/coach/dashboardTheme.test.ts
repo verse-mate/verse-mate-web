@@ -37,8 +37,17 @@ describe('a status band is coloured by its POSITION in the served order', () => 
     expect(statusBand('', BANDS).c).toBe(NEUTRAL);
   });
 
-  it('a sixth band past the styled five is neutral', () => {
-    expect(statusBand('Sixth', [...BANDS, 'Sixth']).c).toBe(NEUTRAL);
+  it('six served bands each get a colour, the first the best and the last the worst', () => {
+    const six = [...BANDS, 'Sixth'];
+    const colours = six.map((b) => statusBand(b, six).c);
+    expect(colours[0]).toBe(GREEN);
+    expect(colours[5]).toBe(RUST);
+    expect(colours).not.toContain(NEUTRAL);
+  });
+
+  it('three served bands take the best, the middle and the worst colour', () => {
+    const three = ['Top', 'Middle', 'Bottom'];
+    expect(three.map((b) => statusBand(b, three).c)).toEqual([GREEN, GOLD, RUST]);
   });
 });
 
@@ -59,6 +68,14 @@ describe('a dimension rating reads the SERVED dimension bands', () => {
       { label: 'Developing', c: RUST, bg: RUST_BG },
       { label: 'Early stage', c: RUST, bg: RUST_BG },
     ]);
+  });
+
+  it('six served bands each get a colour, the best band the best and the lowest the worst', () => {
+    const six = [{ min: 6, label: 'Model' }, ...DIMENSION_BANDS];
+    const colours = [6, 5, 4, 3, 2, 1].map((s) => ratingForScore(s, six).c);
+    expect(colours[0]).toBe(GREEN);
+    expect(colours[5]).toBe(RUST);
+    expect(colours).not.toContain(NEUTRAL);
   });
 
   it('a 4 is the band the explainer calls it, not a hardcoded ON TARGET', () => {

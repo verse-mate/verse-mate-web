@@ -140,6 +140,13 @@ describe('coachService', () => {
     );
   });
 
+  it('a sixth served band takes the bottom colour, not the unknown grey', () => {
+    const six = [...BANDS, 'Sixth'];
+    expect(statusColor('Exceptional', six)).toBe('var(--vm-dust)');
+    expect(statusColor('Sixth', six)).toBe('#B91C1C');
+    expect(six.map((b) => statusColor(b, six))).not.toContain('#8A8272');
+  });
+
   it('an unknown label falls back rather than throwing', () => {
     expect(statusColor('Nonsense', BANDS)).toBe('#8A8272');
   });

@@ -14,6 +14,8 @@
  * weighted composite + status label instead.
  */
 
+import { spreadOver } from '@/services/rubric';
+
 /** Fixed design palette (handoff "Design Tokens"). */
 export const dt = {
   // Backgrounds (shades of white)
@@ -97,8 +99,7 @@ const BAND_STYLES: Band[] = [
 const BAND_UNPLACED = { c: dt.textLight, bg: dt.fill1 };
 
 export function statusBand(status: string, bandLabels: string[] = []): Band {
-  const i = bandLabels.indexOf(status);
-  const style = i < 0 ? BAND_UNPLACED : (BAND_STYLES[i] ?? BAND_UNPLACED);
+  const style = spreadOver(bandLabels.indexOf(status), bandLabels.length, BAND_STYLES) ?? BAND_UNPLACED;
   return { label: status, c: style.c, bg: style.bg };
 }
 
@@ -114,16 +115,13 @@ export function dimensionBandIndex(score: number, bands: DimensionBand[]): numbe
 }
 
 export function bandHeat(score: number, bands: DimensionBand[], palette: readonly string[]): string | undefined {
-  const i = dimensionBandIndex(score, bands);
-  if (i < 0) return undefined;
-  const last = bands.length - 1;
-  return palette[last === 0 ? 0 : Math.round((i * (palette.length - 1)) / last)];
+  return spreadOver(dimensionBandIndex(score, bands), bands.length, palette);
 }
 
 export function ratingForScore(score: number | null, bands: DimensionBand[] = []): Band {
   if (score == null) return { label: 'N/A', ...BAND_UNPLACED };
   const i = dimensionBandIndex(score, bands);
-  const style = BAND_STYLES[i] ?? BAND_UNPLACED;
+  const style = spreadOver(i, bands.length, BAND_STYLES) ?? BAND_UNPLACED;
   return { label: bands[i]?.label ?? '', c: style.c, bg: style.bg };
 }
 

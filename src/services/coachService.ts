@@ -16,6 +16,7 @@
  */
 
 import { API_BASE_URL, fetchWithAuth } from './api';
+import { spreadOver } from './rubric';
 
 // ─── Domain types ──────────────────────────────────────────────────────────
 
@@ -975,8 +976,6 @@ export function statusColor(
   status: string,
   bandLabels: string[] = [],
 ): string {
-  const i = bandLabels.indexOf(status);
-  if (i < 0) return STATUS_UNKNOWN;
-  return STATUS_PALETTE[i] ?? STATUS_UNKNOWN;
+  return spreadOver(bandLabels.indexOf(status), bandLabels.length, STATUS_PALETTE) ?? STATUS_UNKNOWN;
 }
 
