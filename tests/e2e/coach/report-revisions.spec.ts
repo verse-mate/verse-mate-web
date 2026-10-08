@@ -3,11 +3,13 @@ import { expect, type Page, test } from '@playwright/test';
 import {
   capture,
   type CoachApiOptions,
+  EMPTY_EDIT,
   FIRST_LESSON_HELD_SESSION,
   FIRST_LESSON_RATIONALE,
   LEADER_ID,
   NEWEST_ID,
   OLDER_ID,
+  PARTIALLY_DELIVERED,
   PROSE,
   useCoachApi,
 } from './fixtures';
@@ -411,8 +413,7 @@ test.describe("Replacing an undelivered report's Improvements", () => {
   const HELD_ITEM = "Recall last week's big idea before the new passage";
   const COLD = 'Not saved: a first lesson cannot carry an improvement that asks for recall of earlier lessons. Replace the held items and save again.';
   const SAVED = 'Improvements saved. Nothing was sent';
-  const PARTIAL =
-    'Refused (409): Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.';
+  const PARTIAL = `Refused (409): ${PARTIALLY_DELIVERED}`;
   const edits = (writes: Array<[string, unknown]>) =>
     writes.filter(([p]) => p === `PUT /coach/admin/reports/${OLDER_ID}/improvements`).map(([, b]) => b);
 
@@ -494,6 +495,58 @@ test.describe("Replacing an undelivered report's Improvements", () => {
     ]);
   });
 
+  test('Save stays off while the draft equals the current Improvements, and an empty list is refused in the server\'s words with the draft kept', async ({ page }, testInfo) => {
+    const writes: Array<[string, unknown]> = [];
+    await useCoachApi(page, { admin: true, prose: true, onAdminWrite: (m, p, b) => writes.push([`${m} ${p}`, b]) });
+    await openSession(page, OLDER_ID);
+    const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await panel.getByTestId('coach-improvements-open').click();
+    const save = panel.getByTestId('coach-improvements-save');
+    const text = panel.getByTestId('coach-improvements-text');
+    const current = await text.inputValue();
+    await expect(save).toBeDisabled();
+    await text.fill(`  ${current}\n\n`);
+    await expect(save).toBeDisabled();
+    await panel.getByTestId('coach-amend-improvements-prose-text-0').fill('Something else.');
+    await expect(save).toBeEnabled();
+    await panel.getByTestId('coach-amend-improvements-prose-text-0').fill(PROSE.improvementsProse[0].paragraphs.join('\n\n'));
+    await expect(save).toBeDisabled();
+
+    await text.fill('');
+    await save.click();
+    await expect(panel.getByTestId('coach-improvements-outcome')).toHaveText(`Refused (400): ${EMPTY_EDIT}`);
+    await expect(text).toHaveValue('');
+    await expect(panel.getByTestId('coach-improvements-editor')).toBeVisible();
+    await capture(page, testInfo, 'p5-improvements-empty-edit', panel);
+    expect(edits(writes)).toEqual([{ improvements: [], improvementsProse: PROSE.improvementsProse }]);
+  });
+
+  test('an edit made before delivery shows in the kept versions once the report goes out, by whom and what changed, with no send', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, pipelineLive: true, firstLessonHeld: true });
+    const id = FIRST_LESSON_HELD_SESSION.sourceSessionId;
+    await openSession(page, OLDER_ID);
+    let panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await panel.getByTestId('coach-improvements-open').click();
+    await panel.getByTestId('coach-improvements-text').fill('Name the big idea in the first five minutes');
+    await panel.getByTestId('coach-improvements-save').click();
+    await expect(panel.getByTestId('coach-improvements-outcome')).toContainText(SAVED);
+
+    await openPipeline(page);
+    await page.getByTestId(`coach-pipeline-release-${id}`).click();
+    await expect(page.getByTestId(`coach-pipeline-${id}`)).toHaveCount(0);
+
+    await openSession(page, OLDER_ID);
+    panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    const edit = panel.getByTestId('coach-edit-1');
+    await expect(edit).toContainText('Edited before delivery by admin@example.test, Oct 7, 2026');
+    await expect(edit).toContainText('Improvements');
+    await expect(edit).toContainText("Recall last week's big idea before the new passage");
+    await expect(edit).toContainText('Name the big idea in the first five minutes');
+    await expect(edit.getByRole('button')).toHaveCount(0);
+    await expect(panel).toHaveClass(/ph-no-capture/);
+    await capture(page, testInfo, 'p5-edit-in-kept-versions', edit);
+  });
+
   test('a report already emailed to some recipients refuses the edit and the flag in words', async ({ page }, testInfo) => {
     await useCoachApi(page, { admin: true, reviews: { [NEWEST_ID]: 'delivered', [OLDER_ID]: 'partial' } });
     await openSession(page, OLDER_ID);
@@ -505,7 +558,7 @@ test.describe("Replacing an undelivered report's Improvements", () => {
     await expect(panel.getByTestId('coach-improvements-text')).toHaveValue('Ask a quiet member first');
     await panel.getByTestId('coach-first-lesson-set').click();
     await expect(panel.getByTestId('coach-first-lesson-outcome')).toHaveText(PARTIAL);
-    await capture(page, testInfo, 'p4-partially-delivered', panel);
+    await capture(page, testInfo, 'p5-partially-delivered', panel);
   });
 
   test('a report delivered meanwhile is refused with "amend it instead", and the amend action is offered', async ({ page }, testInfo) => {
@@ -524,6 +577,24 @@ test.describe("Replacing an undelivered report's Improvements", () => {
 });
 
 test.describe('The fake API holds the portal to the real methods', () => {
+  test('an Improvements edit equal to the current ones is refused as changing nothing', async ({ page }) => {
+    await useCoachApi(page, { admin: true });
+    await page.goto('/coach');
+    const res = await page.evaluate(
+      async ({ api, id }) => {
+        const r = await fetch(`${api}/coach/admin/reports/${id}/improvements`, {
+          method: 'PUT',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ improvements: ["Recall last week's big idea before the new passage"] }),
+        });
+        return { status: r.status, body: await r.json() };
+      },
+      { api: process.env.VITE_API_URL ?? 'https://api.versemate.org', id: OLDER_ID },
+    );
+    expect(res).toEqual({ status: 400, body: { error: 'VALIDATION', message: EMPTY_EDIT } });
+  });
+
+
   test('a write sent with the wrong method is not found', async ({ page }) => {
     await useCoachApi(page, { admin: true, leaderAdmin: true });
     await page.goto('/coach');
