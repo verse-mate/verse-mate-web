@@ -19,6 +19,7 @@ import {
   CoachAuthError,
   type CoverageLeader,
   isPlaceholderAddress,
+  needsBenchmarkConfirm,
   PIPELINE_PAGE_SIZE,
   type PipelineFailure,
   refusalText,
@@ -369,19 +370,25 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
   const update = useUpdateLeaderEmail();
   const [draft, setDraft] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [confirming, setConfirming] = useState(false);
   const placeholder = !email || isPlaceholderAddress(email);
 
-  const save = () => {
+  const save = (confirm: boolean) => {
     if (draft === null) return;
     setError(null);
+    setConfirming(false);
     update.mutate(
-      { coachId, email: draft.trim() },
+      { coachId, email: draft.trim(), confirm },
       {
-        onSuccess: () => {
+        onSuccess: (saved) => {
           setDraft(null);
-          toast.success('Address saved. The next report goes to it.');
+          toast.success(
+            saved.noticeSent
+              ? 'Address saved. The next report goes to it, and a notice went to the old address.'
+              : 'Address saved. The next report goes to it.',
+          );
         },
-        onError: (err) => setError(refusalText(err)),
+        onError: (err) => (needsBenchmarkConfirm(err) ? setConfirming(true) : setError(refusalText(err))),
       },
     );
   };
@@ -411,7 +418,10 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
           <input
             type="email"
             value={draft}
-            onChange={(e) => setDraft(e.target.value)}
+            onChange={(e) => {
+              setDraft(e.target.value);
+              setConfirming(false);
+            }}
             placeholder="name@church.org"
             aria-label="New email address"
             data-testid={`coach-address-input-${coachId}`}
@@ -419,17 +429,31 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
           />
           <button
             type="button"
-            onClick={save}
+            onClick={() => save(false)}
             disabled={update.isPending || !draft.trim()}
             data-testid={`coach-address-save-${coachId}`}
             style={btn}
           >
             {update.isPending ? 'Saving…' : 'Save'}
           </button>
-          <button type="button" onClick={() => { setDraft(null); setError(null); }} disabled={update.isPending} style={linkBtn}>
+          <button type="button" onClick={() => { setDraft(null); setError(null); setConfirming(false); }} disabled={update.isPending} style={linkBtn}>
             Cancel
           </button>
         </span>
+      )}
+      {confirming && draft !== null && (
+        <div role="alert" data-testid={`coach-address-confirm-${coachId}`} className={REPLAY_BLOCK_CLASS} style={{ color: dt.rust, marginTop: 4 }}>
+          This is the benchmark leader, whose address receives every leader's reports. Change it to {draft.trim()}?{' '}
+          <button
+            type="button"
+            onClick={() => save(true)}
+            disabled={update.isPending}
+            data-testid={`coach-address-confirm-save-${coachId}`}
+            style={btn}
+          >
+            Yes, change it
+          </button>
+        </div>
       )}
       {error && (
         <div role="alert" data-testid={`coach-address-error-${coachId}`} style={{ color: dt.rust, marginTop: 4 }}>

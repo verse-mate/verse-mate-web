@@ -292,9 +292,9 @@ describe('coachService', () => {
       expect(url).toContain('/coach/admin/leaders/wyatt-wellington/email');
       expect(init?.method).toBe('PUT');
       expect(JSON.parse(String(init?.body))).toEqual({ email: 'Wyatt@Example.test' });
-      return jsonResponse({ email: 'wyatt@example.test' });
+      return jsonResponse({ email: 'wyatt@example.test', noticeSent: true });
     });
-    expect(await updateLeaderEmail('wyatt-wellington', 'Wyatt@Example.test')).toBe('wyatt@example.test');
+    expect(await updateLeaderEmail('wyatt-wellington', 'Wyatt@Example.test')).toEqual({ email: 'wyatt@example.test', noticeSent: true });
   });
 
   it('POSTs the leader a session is assigned to', async () => {
@@ -428,6 +428,13 @@ describe('coachService', () => {
     ['attest not teaching', () => setNotTeaching('amy/lee', true), 'POST', '/coach/admin/leaders/amy%2Flee/not-teaching', undefined],
     ['clear the attestation', () => setNotTeaching('amy/lee', false), 'DELETE', '/coach/admin/leaders/amy%2Flee/not-teaching', undefined],
     ['change a leader address', () => updateLeaderEmail('amy/lee', 'a@example.test'), 'PUT', '/coach/admin/leaders/amy%2Flee/email', { email: 'a@example.test' }],
+    [
+      "confirm a change to the benchmark leader's address",
+      () => updateLeaderEmail('amy/lee', 'a@example.test', true),
+      'PUT',
+      '/coach/admin/leaders/amy%2Flee/email',
+      { email: 'a@example.test', confirm: true },
+    ],
     ['read keywords and addresses', () => fetchLeaderAttribution('amy/lee'), 'GET', '/coach/admin/leaders/amy%2Flee/attribution', undefined],
     [
       'save keywords and addresses',

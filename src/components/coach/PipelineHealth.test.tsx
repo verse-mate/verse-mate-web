@@ -360,7 +360,7 @@ describe("a leader's address", () => {
       .spyOn(coachService, 'fetchCoverage')
       .mockResolvedValueOnce({ ...COVERAGE, leaders: [PLACEHOLDER] })
       .mockResolvedValue({ ...COVERAGE, leaders: [{ ...PLACEHOLDER, email: 'wyatt@example.test' }] });
-    const update = vi.spyOn(coachService, 'updateLeaderEmail').mockResolvedValue('wyatt@example.test');
+    const update = vi.spyOn(coachService, 'updateLeaderEmail').mockResolvedValue({ email: 'wyatt@example.test', noticeSent: false });
     renderView();
 
     fireEvent.click(await screen.findByTestId('coach-address-edit-wyatt-wellington'));
@@ -369,10 +369,57 @@ describe("a leader's address", () => {
     });
     fireEvent.click(screen.getByTestId('coach-address-save-wyatt-wellington'));
 
-    await waitFor(() => expect(update).toHaveBeenCalledWith('wyatt-wellington', 'wyatt@example.test'));
+    await waitFor(() => expect(update).toHaveBeenCalledWith('wyatt-wellington', 'wyatt@example.test', false));
     await waitFor(() => expect(screen.getByTestId('coach-address-wyatt-wellington')).toHaveTextContent('wyatt@example.test'));
     expect(coverage).toHaveBeenCalledTimes(2);
     expect(screen.queryByTestId('coach-address-input-wyatt-wellington')).toBeNull();
+  });
+
+  it("asks the admin to confirm a change to the benchmark leader's address, then sends it confirmed", async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    const update = vi
+      .spyOn(coachService, 'updateLeaderEmail')
+      .mockRejectedValueOnce(
+        new CoachApiError(
+          'admin/leaders/milo-kerr/email',
+          409,
+          "This is the benchmark leader, whose address receives every leader's reports: send confirm: true to change it",
+        ),
+      )
+      .mockResolvedValueOnce({ email: 'milo.new@example.test', noticeSent: true });
+    const success = vi.spyOn(toast, 'success');
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-address-edit-milo-kerr'));
+    fireEvent.change(screen.getByTestId('coach-address-input-milo-kerr'), { target: { value: 'milo.new@example.test' } });
+    fireEvent.click(screen.getByTestId('coach-address-save-milo-kerr'));
+
+    const ask = await screen.findByTestId('coach-address-confirm-milo-kerr');
+    expect(ask).toHaveTextContent("benchmark leader, whose address receives every leader's reports");
+    expect(update).toHaveBeenCalledTimes(1);
+    expect(update).toHaveBeenLastCalledWith('milo-kerr', 'milo.new@example.test', false);
+    fireEvent.click(screen.getByTestId('coach-address-confirm-save-milo-kerr'));
+
+    await waitFor(() => expect(update).toHaveBeenLastCalledWith('milo-kerr', 'milo.new@example.test', true));
+    await waitFor(() => expect(screen.queryByTestId('coach-address-input-milo-kerr')).toBeNull());
+    expect(success).toHaveBeenCalledWith('Address saved. The next report goes to it, and a notice went to the old address.');
+  });
+
+  it('drops the confirmation when the admin edits the address again', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'updateLeaderEmail').mockRejectedValue(
+      new CoachApiError('admin/leaders/milo-kerr/email', 409, 'This is the benchmark leader, whose address receives every leader\'s reports: send confirm: true to change it'),
+    );
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-address-edit-milo-kerr'));
+    fireEvent.change(screen.getByTestId('coach-address-input-milo-kerr'), { target: { value: 'milo.new@example.test' } });
+    fireEvent.click(screen.getByTestId('coach-address-save-milo-kerr'));
+    await screen.findByTestId('coach-address-confirm-milo-kerr');
+    fireEvent.change(screen.getByTestId('coach-address-input-milo-kerr'), { target: { value: 'other@example.test' } });
+    expect(screen.queryByTestId('coach-address-confirm-milo-kerr')).toBeNull();
   });
 
   it('keeps the editor open with the refusal when the address is already taken', async () => {

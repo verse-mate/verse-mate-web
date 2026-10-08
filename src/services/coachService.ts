@@ -720,13 +720,20 @@ export async function addCoachLeader(input: {
   return data.coach;
 }
 
-export async function updateLeaderEmail(coachId: string, email: string): Promise<string> {
-  const data = await coachRequest<{ email: string }>(`admin/leaders/${encodeURIComponent(coachId)}/email`, {
+export function updateLeaderEmail(
+  coachId: string,
+  email: string,
+  confirm = false,
+): Promise<{ email: string; noticeSent: boolean }> {
+  return coachRequest<{ email: string; noticeSent: boolean }>(`admin/leaders/${encodeURIComponent(coachId)}/email`, {
     method: 'PUT',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ email }),
+    body: JSON.stringify(confirm ? { email, confirm: true } : { email }),
   });
-  return data.email;
+}
+
+export function needsBenchmarkConfirm(err: unknown): boolean {
+  return err instanceof CoachApiError && err.status === 409 && err.serverMessage.includes('confirm: true');
 }
 
 export interface LeaderAttribution {
