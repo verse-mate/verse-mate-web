@@ -109,4 +109,48 @@ describe('what reaches analytics', () => {
     expect(out?.requestBody).toBeNull();
     expect(out?.responseBody).toBeNull();
   });
+
+  it('replaces the leader and report ids after /coach/ in a replay network entry', () => {
+    const out = scrubNetworkRequest({
+      name: 'https://api.test/coach/admin/coaches/avery-hollis/reports/avery-hollis-2026-07-16-ff123/notes?x=1',
+      entryType: 'resource',
+      startTime: 0,
+      duration: 1,
+    });
+    expect(out?.name).toBe('https://api.test/coach/admin/coaches/:id/reports/:id/notes');
+    expect(
+      scrubNetworkRequest({ name: 'https://api.test/coach/reports/summary', entryType: 'resource', startTime: 0, duration: 1 })?.name,
+    ).toBe('https://api.test/coach/reports/summary');
+  });
+
+  it('replaces the ids after /coach/ in every URL, pathname and link an event carries', () => {
+    const out = scrubEvent({
+      uuid: 'u',
+      event: '$pageview',
+      properties: {
+        $current_url: 'https://app.test/coach/leader/avery-hollis/manage?s=avery-hollis-2026-07-16-ff1',
+        pathname: '/coach/leader/avery-hollis/manage',
+        $pathname: '/coach/leader/avery-hollis',
+        $prev_pageview_pathname: '/coach/leader/amy-lee/trends',
+        $session_entry_url: 'https://app.test/coach/leader/amy-lee?s=r',
+        referrer: 'https://app.test/coach/leader/amy-lee/sessions',
+        $elements_chain: 'a:attr__href="/coach/leader/amy-lee/monthly"nth-child="1"',
+        $snapshot_data: [{ type: 4, data: { href: 'https://app.test/coach/leader/amy-lee/manage' } }],
+        other: 'kept',
+      },
+      $set_once: { $initial_pathname: '/coach/leader/amy-lee', $initial_current_url: 'https://app.test/coach/leader/amy-lee?s=1' },
+    });
+    expect(out?.properties).toEqual({
+      $current_url: 'https://app.test/coach/leader/:id/manage',
+      pathname: '/coach/leader/:id/manage',
+      $pathname: '/coach/leader/:id',
+      $prev_pageview_pathname: '/coach/leader/:id/trends',
+      $session_entry_url: 'https://app.test/coach/leader/:id',
+      referrer: 'https://app.test/coach/leader/:id/sessions',
+      $elements_chain: 'a:attr__href="/coach/leader/:id/monthly"nth-child="1"',
+      $snapshot_data: [{ type: 4, data: { href: 'https://app.test/coach/leader/:id/manage' } }],
+      other: 'kept',
+    });
+    expect(out?.$set_once).toEqual({ $initial_pathname: '/coach/leader/:id', $initial_current_url: 'https://app.test/coach/leader/:id' });
+  });
 });
