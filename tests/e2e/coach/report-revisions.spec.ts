@@ -1,6 +1,6 @@
 import { expect, type Page, test } from '@playwright/test';
 
-import { capture, LEADER_ID, NEWEST_ID, useCoachApi } from './fixtures';
+import { capture, LEADER_ID, NEWEST_ID, OLDER_ID, useCoachApi } from './fixtures';
 
 async function openSession(page: Page, reportId: string) {
   await page.goto('/coach');
@@ -97,5 +97,37 @@ test.describe('Amending a delivered report', () => {
     await expect(page.getByTestId('coach-review-readonly')).toContainText('This is a legacy report, which is read-only.');
     await expect(page.getByTestId('coach-amend-open')).toHaveCount(0);
     await capture(page, testInfo, 'w2b-legacy-readonly', page.getByTestId('coach-review-readonly'));
+  });
+});
+
+test.describe('The first-lesson flag on an undelivered report', () => {
+  test('an admin sets it, and clearing it asks for the Memory Reinforcement score and rationale', async ({ page }, testInfo) => {
+    const writes: Array<[string, unknown]> = [];
+    await useCoachApi(page, { admin: true, onAdminWrite: (_m, p, b) => writes.push([p, b]) });
+    await openSession(page, OLDER_ID);
+    const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await expect(panel.getByTestId('coach-first-lesson-state')).toHaveText('First lesson: no. Passage book: Obadiah.');
+    await expect(panel.getByTestId('coach-amend-open')).toHaveCount(0);
+
+    await panel.getByTestId('coach-first-lesson-set').click();
+    await expect(panel.getByTestId('coach-first-lesson-outcome')).toContainText('Marked a first lesson. Dimension 9 is not applicable.');
+    await expect(panel.getByTestId('coach-first-lesson-state')).toHaveText('First lesson: yes, set by hand. Passage book: Obadiah.');
+    await capture(page, testInfo, 'w2b-first-lesson-set', panel);
+
+    await panel.getByTestId('coach-first-lesson-clear').click();
+    await expect(panel.getByTestId('coach-first-lesson-save')).toBeDisabled();
+    await panel.getByTestId('coach-first-lesson-score').selectOption('3');
+    await panel.getByTestId('coach-first-lesson-rationale').fill('They reviewed last week before the new passage.');
+    await capture(page, testInfo, 'w2b-first-lesson-clearing', panel);
+    await panel.getByTestId('coach-first-lesson-save').click();
+    await expect(panel.getByTestId('coach-first-lesson-outcome')).toContainText(
+      'First-lesson flag cleared. Dimension 9 is scored 3, recorded as corrected by hand.',
+    );
+    await expect(panel.getByTestId('coach-first-lesson-state')).toHaveText('First lesson: no. Passage book: Obadiah.');
+    expect(writes).toEqual([
+      [`/coach/admin/reports/${OLDER_ID}/first-lesson`, { firstLesson: true }],
+      [`/coach/admin/reports/${OLDER_ID}/first-lesson`, { firstLesson: false, score: 3, rationale: 'They reviewed last week before the new passage.' }],
+    ]);
+    await capture(page, testInfo, 'w2b-first-lesson-cleared', panel);
   });
 });

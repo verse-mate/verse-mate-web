@@ -543,6 +543,17 @@ export function amendReport(reportId: string, amendment: ReportAmendment): Promi
   });
 }
 
+export function setFirstLesson(
+  reportId: string,
+  input: { firstLesson: boolean; score?: number; rationale?: string },
+): Promise<RevisionResult> {
+  return coachRequest<RevisionResult>(adminReportPath(reportId, 'first-lesson'), {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(input),
+  });
+}
+
 export async function fetchReportRevisions(reportId: string): Promise<ReportRevision[]> {
   const data = await coachRequest<{ revisions: ReportRevision[] }>(adminReportPath(reportId, 'revisions'));
   return data.revisions || [];

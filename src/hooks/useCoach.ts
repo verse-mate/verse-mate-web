@@ -58,6 +58,7 @@ import {
   fetchReportReview,
   fetchReportRevisions,
   sendRevision,
+  setFirstLesson,
   type ReportAmendment,
   type ReportReviewState,
   type ReportRevision,
@@ -373,4 +374,17 @@ export function useAmendReport(coachId: string, reportId: string): UseMutationRe
 export function useSendRevision(coachId: string, reportId: string): UseMutationResult<RevisionSendResult, Error, void> {
   const refresh = useRefreshReport(coachId, reportId);
   return useMutation({ mutationFn: () => sendRevision(reportId), onSettled: refresh });
+}
+
+export function useSetFirstLesson(
+  coachId: string,
+  reportId: string,
+): UseMutationResult<RevisionResult, Error, { firstLesson: boolean; score?: number; rationale?: string }> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({
+    mutationFn: (input) => setFirstLesson(reportId, input),
+    onSuccess: (result) => {
+      if (result.applied) refresh();
+    },
+  });
 }
