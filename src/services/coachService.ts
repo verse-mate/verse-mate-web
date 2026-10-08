@@ -445,13 +445,14 @@ export function requeuePipelineFailure(sourceSessionId: string): Promise<{ reque
 export function attributeSession(
   sourceSessionId: string,
   coachId: string,
+  expectedCoachId: string | null,
 ): Promise<{ coachId: string; state: string }> {
   return coachRequest<{ coachId: string; state: string }>(
     `admin/sessions/${encodeURIComponent(sourceSessionId)}/attribute`,
     {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ coachId }),
+      body: JSON.stringify({ coachId, expectedCoachId }),
     },
   );
 }

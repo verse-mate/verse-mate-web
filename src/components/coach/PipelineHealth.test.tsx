@@ -490,9 +490,44 @@ describe('an unresolved session', () => {
     fireEvent.change(picker, { target: { value: 'amy-lee' } });
     fireEvent.click(screen.getByTestId('coach-pipeline-assign-ff-4'));
 
-    await waitFor(() => expect(attribute).toHaveBeenCalledWith('ff-4', 'amy-lee'));
+    await waitFor(() => expect(attribute).toHaveBeenCalledWith('ff-4', 'amy-lee', null));
     await waitFor(() => expect(screen.queryByTestId('coach-pipeline-ff-4')).toBeNull());
     expect(list).toHaveBeenCalledTimes(2);
+  });
+
+  it('says the assigned session is held until an admin releases it, whether or not it has a report yet', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([UNRESOLVED]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'attributeSession').mockResolvedValue({ coachId: 'amy-lee', state: 'retained' });
+    renderView();
+
+    const picker = await screen.findByTestId('coach-pipeline-assign-to-ff-4');
+    await waitFor(() => expect(within(picker).getByRole('option', { name: 'Amy Lee' })).toBeInTheDocument());
+    fireEvent.change(picker, { target: { value: 'amy-lee' } });
+    fireEvent.click(screen.getByTestId('coach-pipeline-assign-ff-4'));
+
+    expect(await screen.findByTestId('coach-pipeline-outcome-ff-4')).toHaveTextContent(
+      'Assigned to Amy Lee. It is scored for them and held: nothing reaches them until an admin releases it from this list.',
+    );
+  });
+
+  it('shows the refusal when the session moved since the list loaded, and reads the list again', async () => {
+    const list = vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([UNRESOLVED]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'attributeSession').mockRejectedValue(
+      new CoachApiError('x', 409, "The session's leader changed since this list was loaded; reload it and assign again"),
+    );
+    renderView();
+
+    const picker = await screen.findByTestId('coach-pipeline-assign-to-ff-4');
+    await waitFor(() => expect(within(picker).getByRole('option', { name: 'Amy Lee' })).toBeInTheDocument());
+    fireEvent.change(picker, { target: { value: 'amy-lee' } });
+    fireEvent.click(screen.getByTestId('coach-pipeline-assign-ff-4'));
+
+    expect(await screen.findByTestId('coach-pipeline-outcome-ff-4')).toHaveTextContent(
+      "Refused (409): The session's leader changed since this list was loaded; reload it and assign again",
+    );
+    await waitFor(() => expect(list).toHaveBeenCalledTimes(2));
   });
 
   it('offers no assignment until a leader is picked, and no release or requeue at all', async () => {
@@ -524,6 +559,28 @@ describe('an unresolved session', () => {
     refuse(new CoachApiError('admin/sessions/ff-4/attribute', 409, "The session's report is being delivered right now; try again shortly"));
     expect(await screen.findByTestId('coach-pipeline-outcome-ff-4')).toHaveTextContent('being delivered right now');
     await waitFor(() => expect(assign).not.toBeDisabled());
+  });
+});
+
+describe('a re-attributed session', () => {
+  const REATTRIBUTED = {
+    ...HELD,
+    sourceSessionId: 'ff-6',
+    reportId: 'rep-6',
+    reason: 're-attributed: held until an admin releases it',
+  };
+
+  it('is held with its reason and offers the release that delivers it', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([REATTRIBUTED]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    const release = vi.spyOn(coachService, 'releaseHeldReport').mockResolvedValue({ delivered: true });
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-6');
+    expect(row).toHaveTextContent('Why: re-attributed: held until an admin releases it');
+    fireEvent.click(within(row).getByTestId('coach-pipeline-release-ff-6'));
+    await waitFor(() => expect(release).toHaveBeenCalledWith('rep-6'));
+    expect(await screen.findByTestId('coach-pipeline-outcome-ff-6')).toHaveTextContent('Released and delivered to the leader.');
   });
 });
 

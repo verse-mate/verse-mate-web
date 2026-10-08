@@ -135,10 +135,10 @@ export default function PipelineHealth() {
 
   const doAttribute = (s: PipelineFailure, coachId: string) =>
     run(s, async () => {
-      await attribute.mutateAsync({ sourceSessionId: s.sourceSessionId, coachId });
+      await attribute.mutateAsync({ sourceSessionId: s.sourceSessionId, coachId, expectedCoachId: s.coachId });
       return {
         tone: 'ok',
-        text: `Assigned to ${nameOf(coachId)}.${s.reportId ? ' Its report moves to them and stays held until it is released.' : ''}`,
+        text: `Assigned to ${nameOf(coachId)}. It is scored for them and held: nothing reaches them until an admin releases it from this list.`,
       };
     });
 
