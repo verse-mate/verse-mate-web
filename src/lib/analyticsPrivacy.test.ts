@@ -93,4 +93,20 @@ describe('what reaches analytics', () => {
     });
     expect(out?.responseBody).toBe('{"books":[]}');
   });
+
+  it.each([
+    ['amend', 'https://api.test/coach/admin/reports/r1/amend', '{"dimensions":[{"n":5,"rationale":"private"}]}', '{"applied":true}'],
+    ['first lesson', 'https://api.test/coach/admin/reports/r1/first-lesson', '{"rationale":"private"}', '{"applied":true}'],
+    ['review', 'https://api.test/coach/admin/reports/r1/review', '', '{"dimensions":[{"rationale":"private"}]}'],
+    ['kept versions', 'https://api.test/coach/admin/reports/r1/revisions', '', '{"revisions":[{"amendedBy":"admin@example.test"}]}'],
+    ['revision send', 'https://api.test/coach/admin/reports/r1/revision/send', '', '{"sends":[{"email":"leader@example.test"}]}'],
+    ['assignment', 'https://api.test/coach/admin/sessions/ff-4/attribute', '{"coachId":"amy-lee"}', '{"coachId":"amy-lee"}'],
+    ['keywords and addresses', 'https://api.test/coach/admin/leaders/amy-lee/attribution', '{"altEmails":["amy@example.test"]}', '{"altEmails":["amy@example.test"]}'],
+    ['leader address', 'https://api.test/coach/admin/leaders/amy-lee/email', '{"email":"amy@example.test"}', '{"email":"amy@example.test"}'],
+    ['note', 'https://api.test/coach/admin/coaches/amy-lee/reports/r1/notes', '{"body":"private"}', '{"note":{"body":"private"}}'],
+  ])('drops both bodies of the %s request from a replay network entry', (_name, name, requestBody, responseBody) => {
+    const out = scrubNetworkRequest({ name, entryType: 'resource', startTime: 0, duration: 1, requestBody, responseBody });
+    expect(out?.requestBody).toBeNull();
+    expect(out?.responseBody).toBeNull();
+  });
 });
