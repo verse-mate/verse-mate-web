@@ -492,6 +492,26 @@ describe('amending the written-out points the leader reads first', () => {
     expect(row).toHaveTextContent('Ask them first.');
     expect(row).not.toHaveTextContent('[object Object]');
   });
+
+  it('the kept versions say a list whose points were cleared is read as the list instead', async () => {
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
+      {
+        ...revision(1, null),
+        changes: {
+          dimensions: [],
+          body: {
+            improvements: { from: ['Call on quiet members'], to: ['Call on quiet members by name'] },
+            improvementsProse: { from: POINTS, to: null },
+          },
+        },
+      },
+    ]);
+    renderReview(WITH_PROSE);
+    const row = await screen.findByTestId('coach-revision-1');
+    expect(within(row).getByText('Improvements, written out')).toBeInTheDocument();
+    expect(row).toHaveTextContent('Call on them by name.');
+    expect(within(row).getByText('Cleared: the leader reads the list instead')).toBeInTheDocument();
+  });
 });
 
 function revision(n: number, sentAt: string | null): coachService.ReportRevision {
