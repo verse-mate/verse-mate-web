@@ -23,6 +23,7 @@ import {
   type ReportAmendment,
   type ReportReviewState,
   type ReportRevision,
+  type ReportVersion,
   type RevisionResult,
   type RevisionSendResult,
   type RevisionSends,
@@ -266,8 +267,20 @@ function sendOutcome(r: RevisionSendResult): Outcome {
   };
 }
 
-function newestFirst(rows: ReportRevision[] | undefined): ReportRevision[] {
-  return [...(rows ?? [])].sort((a, b) => b.revision - a.revision);
+function versionAt(v: ReportVersion): number {
+  return Date.parse(v.kind === 'edit' ? v.editedAt : v.amendedAt);
+}
+
+function versionNumber(v: ReportVersion): number {
+  return v.kind === 'edit' ? v.edit : v.revision;
+}
+
+function newestFirst(rows: ReportVersion[] | undefined): ReportVersion[] {
+  return [...(rows ?? [])].sort((a, b) => versionAt(b) - versionAt(a) || versionNumber(b) - versionNumber(a));
+}
+
+function latestRevision(rows: ReportVersion[] | undefined): ReportRevision | undefined {
+  return newestFirst(rows).find((v): v is ReportRevision => v.kind !== 'edit');
 }
 
 function when(iso: string): string {
@@ -598,7 +611,7 @@ function AmendPanel({
   const { rubric } = useRubric();
   const dimName = (n: number) => rubric?.dimensions.find((d) => d.n === n)?.name ?? `Dimension ${n}`;
   const amend = useAmendReport(coachId, report.id);
-  const [latest] = newestFirst(useReportRevisions(report.id, true).data);
+  const latest = latestRevision(useReportRevisions(report.id, true).data);
   const latestUnsent = latest !== undefined && !latest.sentAt;
   const flying = useRef(false);
   const [edit, setEdit] = useState<{ initial: Draft; draft: Draft; confirming: boolean } | null>(() => {
@@ -916,6 +929,7 @@ function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachI
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const flying = useRef(false);
   const rows = newestFirst(revisions.data);
+  const latest = latestRevision(revisions.data);
   if (revisions.error) {
     return (
       <div style={{ ...note, color: dt.rust, marginTop: 16 }}>
@@ -946,25 +960,34 @@ function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachI
           {outcome.text}
         </div>
       )}
-      {rows.map((r, i) => (
-        <div key={r.revision} data-testid={`coach-revision-${r.revision}`} style={revisionRow}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-            <div style={{ fontSize: 13.5 }}>
-              <strong>Revision {r.revision}</strong> · {when(r.amendedAt)} · by {r.amendedBy ?? 'an admin'}
+      {rows.map((r) =>
+        r.kind === 'edit' ? (
+          <div key={`edit-${r.edit}`} data-testid={`coach-edit-${r.edit}`} style={revisionRow}>
+            <div style={{ fontSize: 13.5, marginBottom: 8 }}>
+              <strong>Edited before delivery</strong> by {r.editedBy ?? 'an admin'}, {when(r.editedAt)}
             </div>
-            {i === 0 && !r.sentAt && (
-              <button type="button" onClick={doSend} disabled={send.isPending} data-testid={`coach-revision-send-${r.revision}`} style={btn}>
-                {send.isPending ? 'Sending…' : 'Send this revision'}
-              </button>
-            )}
+            <ChangeTable columns={['Before', 'This version']} changes={changesOf({ body: r.changes }, dimName)} />
           </div>
-          <div style={{ fontSize: 12.5, color: r.sentAt ? dt.green : dt.rust, margin: '4px 0 8px' }}>
-            {r.sentAt ? `Sent ${when(r.sentAt)} to ${r.sentTo.join(', ') || 'no one'}` : 'Not sent'}
-            {r.skipped.length ? ` · Skipped placeholder: ${r.skipped.join(', ')}` : ''}
+        ) : (
+          <div key={`revision-${r.revision}`} data-testid={`coach-revision-${r.revision}`} style={revisionRow}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+              <div style={{ fontSize: 13.5 }}>
+                <strong>Revision {r.revision}</strong> · {when(r.amendedAt)} · by {r.amendedBy ?? 'an admin'}
+              </div>
+              {r === latest && !r.sentAt && (
+                <button type="button" onClick={doSend} disabled={send.isPending} data-testid={`coach-revision-send-${r.revision}`} style={btn}>
+                  {send.isPending ? 'Sending…' : 'Send this revision'}
+                </button>
+              )}
+            </div>
+            <div style={{ fontSize: 12.5, color: r.sentAt ? dt.green : dt.rust, margin: '4px 0 8px' }}>
+              {r.sentAt ? `Sent ${when(r.sentAt)} to ${r.sentTo.join(', ') || 'no one'}` : 'Not sent'}
+              {r.skipped.length ? ` · Skipped placeholder: ${r.skipped.join(', ')}` : ''}
+            </div>
+            <ChangeTable columns={['Before', 'This version']} changes={changesOf(r.changes, dimName)} />
           </div>
-          <ChangeTable columns={['Before', 'This version']} changes={changesOf(r.changes, dimName)} />
-        </div>
-      ))}
+        ),
+      )}
     </div>
   );
 }
