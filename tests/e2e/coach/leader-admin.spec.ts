@@ -271,6 +271,30 @@ test.describe('Adding a leader', () => {
   });
 });
 
+test.describe('A new leader whose name contains a keyword', () => {
+  test("is refused in the form in words, naming the keyword and its leader, and the form keeps the name", async ({ page }, testInfo) => {
+    const writes: string[] = [];
+    await useCoachApi(page, { admin: true, leaderAdmin: true, onAdminWrite: (m, p) => writes.push(`${m} ${p}`) });
+    await page.goto('/coach');
+    await page.getByTestId('oversight-add-leader').click();
+    await page.getByTestId('oversight-invite-name').fill('Tuesday Night Smith');
+    await page.getByTestId('oversight-invite-email').fill('tn.smith@example.test');
+    await page.getByTestId('oversight-invite-send').click();
+
+    await expect(page.getByTestId('oversight-invite-error')).toHaveText(
+      'Name refused: it contains "tuesday night", a keyword of evan-ellis. Their sessions would be routed to that leader. Enter a different name or change that leader\'s keywords first.',
+    );
+    await expect(page.getByTestId('oversight-invite-modal')).toBeVisible();
+    await expect(page.getByTestId('oversight-invite-name')).toHaveValue('Tuesday Night Smith');
+    await capture(page, testInfo, 'p4-add-leader-keyword', page.getByTestId('oversight-invite-modal'));
+
+    await page.getByTestId('oversight-invite-name').fill('Faith Ford');
+    await page.getByTestId('oversight-invite-send').click();
+    await expect(page.getByTestId('oversight-invite-modal')).toHaveCount(0);
+    expect(writes).toEqual(['POST /coach/admin/leaders', 'POST /coach/admin/leaders']);
+  });
+});
+
 test.describe("A leader's history on the admin screens", () => {
   test('a failed next page on the drill-in keeps the page and retries', async ({ page }, testInfo) => {
     await useCoachApi(page, { admin: true, historyLength: 60 });

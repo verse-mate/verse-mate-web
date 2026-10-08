@@ -286,7 +286,7 @@ export interface CoachApiOptions {
   awaitingRelease?: boolean;
 }
 
-type ReviewKind = 'delivered' | 'undelivered' | 'in-flight' | 'legacy';
+type ReviewKind = 'delivered' | 'undelivered' | 'in-flight' | 'partial' | 'legacy';
 
 export const EMAIL_RULE =
   'Enter one email address: letters, digits and . _ % + - before the @, then a domain such as example.org, with no trailing dot';
@@ -339,6 +339,9 @@ export const IN_FLIGHT_CORRECTION =
 export const NOT_LIVE_SEND =
   'The report is not live for the leader this revision was made for: it is held, not delivered, or re-attributed';
 const PARALLEL_RUN = 'The pipeline is in its parallel run: nothing is sent until cutover';
+const PARTIALLY_DELIVERED =
+  'Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.';
+const ALREADY_DELIVERED = 'Refused: the report was already delivered. Amend it instead, which sends the leader a revised copy.';
 const PROSE_OF: Record<string, string> = {
   strengths: 'strengthsProse',
   improvements: 'improvementsProse',
@@ -369,6 +372,7 @@ function reviewOf(reportId: string, kind: ReviewKind) {
       modelVersion: RUBRIC.model,
     })),
     inFlight: kind === 'in-flight',
+    partial: kind === 'partial',
   };
 }
 
@@ -462,10 +466,12 @@ async function revisionRoutes(
       return invalid(route, MR_REQUIRED);
     }
     const stored = store.get(reportId) as StoredReport;
-    const feedback: Record<string, unknown> = { ...stored.feedback, ...Object.fromEntries(changed) };
-    for (const [list, prose] of Object.entries(PROSE_OF)) {
-      if (body.body?.[list] !== undefined && body.body?.[prose] === undefined) delete feedback[prose];
-    }
+    const before = stored.feedback as Record<string, unknown>;
+    const feedback: Record<string, unknown> = { ...before, ...Object.fromEntries(changed) };
+    const cleared = Object.entries(PROSE_OF)
+      .filter(([list, prose]) => body.body?.[list] !== undefined && body.body?.[prose] === undefined)
+      .map(([, prose]) => prose);
+    for (const prose of cleared) delete feedback[prose];
     const firstLesson = body.firstLesson ?? review.firstLesson;
     const coldRecall = firstLesson ? coldRecallIn(feedback) : [];
     if (coldRecall.length) return route.fulfill({ json: { applied: false, refusal: 'cold-recall-improvement', coldRecall } });
@@ -485,7 +491,10 @@ async function revisionRoutes(
         return { n, from, to };
       }),
       ...(body.firstLesson !== undefined ? { firstLesson: { from: review.firstLesson, to: body.firstLesson } } : {}),
-      body: Object.fromEntries(changed.map(([field, to]) => [field, { from: (stored.feedback as Record<string, unknown>)[field], to }])),
+      body: Object.fromEntries([
+        ...changed.map(([field, to]) => [field, { from: before[field], to }]),
+        ...cleared.filter((prose) => before[prose] !== undefined).map((prose) => [prose, { from: before[prose], to: null }]),
+      ]),
     };
     stored.feedback = feedback as StoredReport['feedback'];
     Object.assign(stored, { base: 78, score: 82, status: 'Strong', statusEmoji: '🟢' });
@@ -512,12 +521,39 @@ async function revisionRoutes(
     return route.fulfill({ json: { ...saved, sent: false, pending: 'pending' in send ? send.pending : 'send-failed', ...failed } });
   };
 
-  await page.route(/\/coach\/admin\/reports\/[^/]+\/(review|amend|revisions|revision\/send|first-lesson)$/, (route) => {
+  const editImprovements = (route: Route, reportId: string, review: Review | undefined, body: { improvements?: unknown; improvementsProse?: unknown }) => {
+    const text = (v: unknown, max: number) => typeof v === 'string' && v.length <= max;
+    const prose = body?.improvementsProse;
+    const validProse =
+      prose === undefined ||
+      (Array.isArray(prose) &&
+        prose.length <= 10 &&
+        prose.every(
+          (p) => text(p?.title, 500) && Array.isArray(p?.paragraphs) && p.paragraphs.length <= 10 && p.paragraphs.every((x: unknown) => text(x, 4000)),
+        ));
+    if (!Array.isArray(body?.improvements) || body.improvements.length > 10 || !body.improvements.every((x) => text(x, 4000)) || !validProse) {
+      return json(route, 422, 'VALIDATION', 'Expected improvements: at most 10 items of at most 4000 characters, and at most 10 written-out points');
+    }
+    if (!review) return conflict(route, legacy);
+    if (opts.deliveredBeforeFlag === reportId) review.delivered = true;
+    if (review.delivered) return conflict(route, ALREADY_DELIVERED);
+    if (review.partial) return conflict(route, PARTIALLY_DELIVERED);
+    if (review.inFlight) return conflict(route, IN_FLIGHT_CORRECTION);
+    const stored = store.get(reportId) as StoredReport;
+    const { improvementsProse: _cleared, ...kept } = stored.feedback as Record<string, unknown>;
+    const feedback = { ...kept, improvements: body.improvements, ...(prose ? { improvementsProse: prose } : {}) };
+    const coldRecall = review.firstLesson ? coldRecallIn(feedback) : [];
+    if (coldRecall.length) return route.fulfill({ json: { applied: false, refusal: 'cold-recall-improvement', coldRecall } });
+    stored.feedback = feedback as StoredReport['feedback'];
+    return route.fulfill({ json: { applied: true } });
+  };
+
+  await page.route(/\/coach\/admin\/reports\/[^/]+\/(review|amend|revisions|revision\/send|first-lesson|improvements)$/, (route) => {
     if (!opts.admin) return forbidden(route);
     const req = route.request();
     const url = new URL(req.url());
     const [, id, action] = url.pathname.match(/\/admin\/reports\/([^/]+)\/(.+)$/) ?? [];
-    const method = { review: 'GET', revisions: 'GET', amend: 'POST', 'revision/send': 'POST', 'first-lesson': 'PUT' }[action];
+    const method = { review: 'GET', revisions: 'GET', amend: 'POST', 'revision/send': 'POST', 'first-lesson': 'PUT', improvements: 'PUT' }[action];
     if (req.method() !== method) return notFound(route);
     const reportId = decodeURIComponent(id);
     const body = req.postData() ? JSON.parse(req.postData() as string) : null;
@@ -525,7 +561,7 @@ async function revisionRoutes(
     const review = reviews.get(reportId);
     if (action === 'review') {
       if (!review) return notFound(route, 'No scores for that report');
-      const { inFlight: _inFlight, ...state } = review;
+      const { inFlight: _inFlight, partial: _partial, ...state } = review;
       return route.fulfill({ json: state });
     }
     if (action === 'revisions') return route.fulfill({ json: { revisions: revisions.get(reportId) ?? [] } });
@@ -534,10 +570,12 @@ async function revisionRoutes(
       const send = sendLatest(reportId);
       return send.status === 200 ? route.fulfill({ json: send.json }) : json(route, send.status, send.status === 404 ? 'NOT_FOUND' : 'CONFLICT', send.message);
     }
+    if (action === 'improvements') return editImprovements(route, reportId, review, body);
     if (action === 'first-lesson') {
       if (!body.firstLesson && (body.score == null || !String(body.rationale ?? '').trim())) return invalid(route, MR_REQUIRED);
       if (!review) return conflict(route, legacy);
       if (opts.deliveredBeforeFlag === reportId) review.delivered = true;
+      if (review.partial) return conflict(route, PARTIALLY_DELIVERED);
       if (review.inFlight) return conflict(route, IN_FLIGHT_CORRECTION);
       if (review.delivered) {
         return amend(route, reportId, review, {
@@ -840,6 +878,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       if (stuck[i].coachId !== body.expectedCoachId) {
         return conflict(route, "The session's leader changed since this list was loaded; reload it and assign again");
       }
+      if (stuck[i].coachId === body.coachId) return conflict(route, 'The session is already assigned to that leader');
       const state = stuck[i].state === 'observed' ? 'observed' : 'retained';
       holdForRelease(i, body.coachId);
       return route.fulfill({ json: { coachId: body.coachId, state } });
@@ -851,6 +890,18 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       if (coverage.leaders.some((l) => l.email === address)) return conflict(route, 'That email is already a leader');
       if (body.name?.trim().toLowerCase() === 'avery hollis') {
         return conflict(route, 'Another leader already uses the id "avery-hollis". Enter a different name.');
+      }
+      const name = titleWords(String(body.name ?? ''));
+      const inName = roster.flatMap((leader) =>
+        (attributions[leader.id]?.titleMatch ?? [])
+          .filter((keyword) => containsWords(name, titleWords(keyword)))
+          .map((keyword) => `it contains "${keyword}", a keyword of ${leader.id}`),
+      );
+      if (inName.length) {
+        return conflict(
+          route,
+          `Name refused: ${inName.join('; ')}. Their sessions would be routed to that leader. Enter a different name or change that leader's keywords first.`,
+        );
       }
       const id = String(body.name).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
       roster.push({ id, name: body.name });
