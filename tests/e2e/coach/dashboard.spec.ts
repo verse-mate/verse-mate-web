@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 import {
+  capture,
   NEWEST_ID,
   OLDER_ID,
   useCoachApi,
@@ -27,6 +28,29 @@ test.describe('Coaching dashboard, as the leader', () => {
 
     await expect(page.getByText('August 29, 2026').first()).toBeVisible();
     await expect(page.getByTestId('coach-tab-scorecard')).toBeVisible();
+  });
+
+  test('no report text renders outside the session-replay block', async ({ page }, testInfo) => {
+    await useCoachApi(page);
+    await page.goto('/coach');
+    await expect(page.getByText('A strong session').first()).toBeVisible();
+
+    const reportText = ['A strong session', 'Pride goes before a fall', "Recall last week's big idea", 'a real reason'];
+    for (const tab of ['report', 'scorecard', 'questions', 'nextsteps']) {
+      await page.getByTestId(`coach-tab-${tab}`).click();
+      for (const row of await page.getByTestId(/^coach-dim-\d+$/).all()) await row.click();
+      const exposed = await page.evaluate((needles) => {
+        const out: string[] = [];
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+          const text = node.textContent ?? '';
+          if (needles.some((n) => text.includes(n)) && !node.parentElement?.closest('.ph-no-capture')) out.push(text);
+        }
+        return out;
+      }, reportText);
+      expect(exposed, `tab ${tab}`).toEqual([]);
+    }
+    await capture(page, testInfo, 'v27-leader-dashboard-report-text-blocked');
   });
 
   test('a deep link opens the session it NAMES, not the newest', async ({ page }) => {

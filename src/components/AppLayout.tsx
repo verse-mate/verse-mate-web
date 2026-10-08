@@ -4,6 +4,7 @@ import DesktopLayout from '@/components/DesktopLayout';
 import { AudioPlayerRoot } from '@/audio';
 import { JesusViewProvider } from '@/contexts/JesusViewContext';
 import { TopicViewProvider } from '@/contexts/TopicViewContext';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import { vmTokens } from '@/styles/themeStyles';
 
 /**
@@ -43,6 +44,8 @@ export default function AppLayout() {
     // layout was what made the tab look like a phone screen on a desktop.
     location.pathname.startsWith('/jesus');
 
+  const isCoachPath = location.pathname === '/coach' || location.pathname.startsWith('/coach/');
+
   if (isDesktop && isReadingPath) {
     return (
       <AudioPlayerRoot>
@@ -72,7 +75,7 @@ export default function AppLayout() {
       <TopicViewProvider>
         <JesusViewProvider>
           <div
-            className="relative flex flex-col w-full overflow-hidden"
+            className={`relative flex flex-col w-full overflow-hidden${isCoachPath ? ` ${REPLAY_BLOCK_CLASS}` : ''}`}
             style={{ backgroundColor: vmTokens.chromeBg, height: '100dvh' }}
           >
             <Outlet />
