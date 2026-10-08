@@ -382,7 +382,7 @@ test.describe('A first lesson held for a cold-recall improvement', () => {
     await expect(outcome).toContainText('Not delivered: a first lesson cannot carry an improvement that asks for recall of earlier lessons.');
     await expect(outcome).toContainText("Recall last week's big idea before the new passage");
     await expect(outcome).toContainText(
-      'To clear it, clear the first-lesson flag on the report and release it again, or, once the report is delivered, amend its Improvements.',
+      "To clear it, open the report's review (the leader, then this session), replace the held items under Improvements, and release it again from this list. If it is not a first lesson, clear the first-lesson flag there instead and release it again.",
     );
     await expect(outcome).not.toContainText('cold-recall-improvement');
     await capture(page, testInfo, 'p3-release-cold-recall', row);

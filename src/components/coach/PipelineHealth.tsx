@@ -34,7 +34,7 @@ type Outcome = { tone: 'ok' | 'refused'; text: string; held?: string[] };
 const COLD_RECALL_HOLD = 'held: a first lesson with a cold-recall improvement: ';
 const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
 const COLD_RECALL_FIX =
-  'To clear it, clear the first-lesson flag on the report and release it again, or, once the report is delivered, amend its Improvements.';
+  "To clear it, open the report's review (the leader, then this session), replace the held items under Improvements, and release it again from this list. If it is not a first lesson, clear the first-lesson flag there instead and release it again.";
 
 function ColdRecallHeld({ items }: { items: string[] }) {
   return (
