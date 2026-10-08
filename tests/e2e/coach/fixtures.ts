@@ -1080,7 +1080,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       const stored = store.get(reportId);
       const coldRecall = review?.firstLesson && stored ? coldRecallIn(stored.feedback as Record<string, unknown>) : [];
       if (coldRecall.length) {
-        stuck[i].reason = `held: a first lesson with a cold-recall improvement: ${coldRecall.join('; ')}`;
+        Object.assign(stuck[i], { reason: `held: a first lesson with a cold-recall improvement: ${coldRecall.join('; ')}`, holdKind: 'cold-recall' });
         return route.fulfill({ json: { delivered: false, refusal: 'cold-recall-improvement', coldRecall } });
       }
       const leader = coverage.leaders.find((l) => l.coachId === stuck[i].coachId);
@@ -1094,7 +1094,11 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     if (method !== 'GET') return notFound(route);
     const limit = Number(url.searchParams.get('limit') ?? 50);
     const offset = Number(url.searchParams.get('offset') ?? 0);
-    return route.fulfill({ json: { sessions: stuck.slice(offset, offset + limit), total: stuck.length, limit, offset } });
+    const sessions = stuck.slice(offset, offset + limit).map((x) => {
+      const feedback = store.get(String(x.reportId))?.feedback as Record<string, unknown> | undefined;
+      return x.holdKind === 'cold-recall' ? { ...x, coldRecall: feedback ? coldRecallIn(feedback) : [] } : x;
+    });
+    return route.fulfill({ json: { sessions, total: stuck.length, limit, offset } });
   });
 
   await revisionRoutes(page, opts, store, reviews);
