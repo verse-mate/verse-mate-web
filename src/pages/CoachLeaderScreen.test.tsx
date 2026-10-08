@@ -113,7 +113,8 @@ describe('a trend point whose session is on a page that fails to load', () => {
     const pages = vi
       .spyOn(coachService, 'fetchCoachReportSummaries')
       .mockResolvedValueOnce({ items: [summary('r1', '2026-03-01')], total: 3, streakWeeks: 0, quarterSessions: 0 })
-      .mockRejectedValue(new coachService.CoachApiError('admin/coaches/avery/reports/summary', 500, ''));
+      .mockRejectedValueOnce(new coachService.CoachApiError('admin/coaches/avery/reports/summary', 500, ''))
+      .mockReturnValue(new Promise(() => {}));
     renderScreen();
 
     expect(await screen.findByTestId('selected-report')).toHaveTextContent('r1');
