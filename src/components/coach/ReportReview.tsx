@@ -22,6 +22,8 @@ import {
 import { dt } from './dashboardTheme';
 
 type Outcome = { tone: 'ok' | 'pending' | 'refused'; text: string };
+type Last = { outcome: Outcome; held?: string[]; violations?: string[] };
+type Carry = Last & { firstLesson: boolean; applied: boolean };
 type Change = { label: string; from: string; to: string };
 type ProseDraft = { title: string; text: string };
 type Draft = {
@@ -57,6 +59,7 @@ const CHANGE_LABELS: Record<AmendableBodyField | ProseField, string> = {
   recommendationsProse: 'Recommendations, written out',
 };
 
+const DELIVERED_MEANWHILE = 'This report was delivered meanwhile, so the flag goes through an amendment.';
 const CLEARED = 'Cleared: the leader reads the list instead';
 const MAX_POINTS = 10;
 
@@ -267,6 +270,7 @@ function when(iso: string): string {
 
 export default function ReportReview({ report, coachId }: { report: CoachReport; coachId: string }) {
   const review = useReportReview(report.id);
+  const [carry, setCarry] = useState<Carry | null>(null);
   if (review.isLoading) return <div style={note}>Loading the review…</div>;
   if (review.error) {
     return (
@@ -285,8 +289,14 @@ export default function ReportReview({ report, coachId }: { report: CoachReport;
       </div>
     );
   }
-  if (!review.data.delivered) return <FirstLessonPanel review={review.data} reportId={report.id} coachId={coachId} />;
-  return <AmendPanel review={review.data} report={report} coachId={coachId} />;
+  if (!review.data.delivered) {
+    const delivered = (c: Carry) => {
+      setCarry(c);
+      review.refetch();
+    };
+    return <FirstLessonPanel review={review.data} reportId={report.id} coachId={coachId} onDelivered={delivered} />;
+  }
+  return <AmendPanel review={review.data} report={report} coachId={coachId} carry={carry} />;
 }
 
 function FirstLessonState({ review }: { review: ReportReviewState }) {
@@ -308,7 +318,17 @@ function firstLessonOutcome(r: RevisionResult, mr: string, clearedScore?: number
     : { tone: 'ok', text: `First-lesson flag cleared. ${mr} is scored ${clearedScore}, recorded as corrected by hand.${score}` };
 }
 
-function FirstLessonPanel({ review, reportId, coachId }: { review: ReportReviewState; reportId: string; coachId: string }) {
+function FirstLessonPanel({
+  review,
+  reportId,
+  coachId,
+  onDelivered,
+}: {
+  review: ReportReviewState;
+  reportId: string;
+  coachId: string;
+  onDelivered: (carry: Carry) => void;
+}) {
   const { rubric } = useRubric();
   const mr = rubric?.dimensions.find((d) => d.n === MEMORY_REINFORCEMENT)?.name ?? `Dimension ${MEMORY_REINFORCEMENT}`;
   const set = useSetFirstLesson(coachId, reportId);
@@ -324,6 +344,16 @@ function FirstLessonPanel({ review, reportId, coachId }: { review: ReportReviewS
       onSuccess: (r) => {
         setOutcome(firstLessonOutcome(r, mr, input.score));
         if (r.applied) setClearing(null);
+        if (!r.applied || r.revision !== undefined) {
+          const outcome = amendOutcome(r);
+          onDelivered({
+            firstLesson: input.firstLesson,
+            applied: r.applied,
+            outcome: { ...outcome, text: `${DELIVERED_MEANWHILE} ${outcome.text}` },
+            held: r.coldRecall,
+            violations: r.violations,
+          });
+        }
       },
       onError: (err) => setOutcome({ tone: 'refused', text: refusalText(err) }),
       onSettled: () => {
@@ -415,15 +445,29 @@ function FirstLessonPanel({ review, reportId, coachId }: { review: ReportReviewS
   );
 }
 
-function AmendPanel({ review, report, coachId }: { review: ReportReviewState; report: CoachReport; coachId: string }) {
+function AmendPanel({
+  review,
+  report,
+  coachId,
+  carry,
+}: {
+  review: ReportReviewState;
+  report: CoachReport;
+  coachId: string;
+  carry: Carry | null;
+}) {
   const { rubric } = useRubric();
   const dimName = (n: number) => rubric?.dimensions.find((d) => d.n === n)?.name ?? `Dimension ${n}`;
   const amend = useAmendReport(coachId, report.id);
   const [latest] = newestFirst(useReportRevisions(report.id, true).data);
   const latestUnsent = latest !== undefined && !latest.sentAt;
   const flying = useRef(false);
-  const [edit, setEdit] = useState<{ initial: Draft; draft: Draft; confirming: boolean } | null>(null);
-  const [last, setLast] = useState<{ outcome: Outcome; held?: string[]; violations?: string[] } | null>(null);
+  const [edit, setEdit] = useState<{ initial: Draft; draft: Draft; confirming: boolean } | null>(() => {
+    if (!carry || carry.applied) return null;
+    const initial = initialDraft(review, report);
+    return { initial, draft: { ...initial, firstLesson: carry.firstLesson }, confirming: false };
+  });
+  const [last, setLast] = useState<Last | null>(carry);
 
   const open = () => {
     const initial = initialDraft(review, report);
