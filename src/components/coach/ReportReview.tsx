@@ -76,7 +76,6 @@ const CORRECTED_MEANWHILE =
   'This report was delivered meanwhile, so the correction goes through an amendment, which sends the leader a revised copy. Check it and confirm.';
 const CLEARED = 'Cleared: the leader reads the list instead';
 const MAX_POINTS = 10;
-const NEVER_CONFIRMED = /never confirmed, so it is not sent again until the revision is requeued/;
 const REQUEUED = 'Requeued. The next send mails the recipients whose send was never confirmed.';
 const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
 const IMPROVEMENTS_SAVED =
@@ -1137,7 +1136,7 @@ function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachI
     send.mutate(undefined, {
       onSuccess: (r) => {
         setOutcome(sendOutcome(r));
-        setUnconfirmed((r.sends ?? []).some((s) => !s.delivered && NEVER_CONFIRMED.test(s.error ?? '')));
+        setUnconfirmed((r.sends ?? []).some((s) => s.neverConfirmed));
       },
       onError: (err) => setOutcome({ tone: 'refused', text: refusalText(err) }),
       onSettled: () => {
@@ -1190,7 +1189,7 @@ function KeptVersions({ reportId, coachId, dimName }: { reportId: string; coachI
               </div>
               {r === latest && !r.sentAt && (
                 <div style={{ display: 'flex', gap: 8 }}>
-                  {unconfirmed && (
+                  {(unconfirmed || r.attemptedTo.length > 0) && (
                     <button type="button" onClick={doRequeue} disabled={busy} data-testid={`coach-revision-requeue-${r.revision}`} style={btn}>
                       {requeue.isPending ? 'Requeuing…' : 'Requeue'}
                     </button>

@@ -499,7 +499,7 @@ export interface ReportAmendment {
 }
 
 export interface RevisionSends {
-  sends?: { email: string; delivered: boolean; error?: string }[];
+  sends?: { email: string; delivered: boolean; error?: string; neverConfirmed?: true }[];
   skipped?: string[];
 }
 
@@ -541,6 +541,7 @@ export interface ReportRevision {
   sentTo: string[];
   skipped: string[];
   sentAt: string | null;
+  attemptedTo: string[];
 }
 
 export interface ReportEdit {
