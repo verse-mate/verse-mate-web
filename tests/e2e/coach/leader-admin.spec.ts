@@ -153,9 +153,9 @@ test.describe('The failures list', () => {
     await capture(page, testInfo, 'w2a-assign-picked', row);
 
     await row.getByTestId(`coach-pipeline-assign-${UNRESOLVED_SESSION.sourceSessionId}`).click();
-    await expect(page.getByText(
+    await expect(page.locator(`${REPLAY_BLOCKED} [data-sonner-toast]`)).toHaveText(
       'Assigned to Evan Ellis. It is observed now: a later pipeline run scores it for them, and it is then held until an admin releases it from this list.',
-    )).toBeVisible();
+    );
     await expect(row).toHaveCount(0);
     expect(writes).toContainEqual([
       `/coach/admin/sessions/${UNRESOLVED_SESSION.sourceSessionId}/attribute`,
