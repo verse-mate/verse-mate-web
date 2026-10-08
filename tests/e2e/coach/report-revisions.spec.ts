@@ -105,6 +105,28 @@ test.describe('Amending a delivered report', () => {
     });
   }
 
+  test('an amendment made while a revised copy is being sent is refused in words, and the draft is kept', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, pipelineLive: true, revisionSend: 'in-flight' });
+    await openSession(page, NEWEST_ID);
+    const panel = page.getByTestId(`coach-review-${NEWEST_ID}`);
+    await panel.getByTestId('coach-amend-open').click();
+    await panel.getByTestId('coach-amend-headline').fill('A strong session, revised');
+    await panel.getByTestId('coach-amend-review').click();
+    await panel.getByTestId('coach-amend-confirm').click();
+    await expect(panel.getByTestId('coach-amend-outcome')).toContainText('Revision 1 is stored, and another request is sending it right now.');
+
+    await panel.getByTestId('coach-amend-open').click();
+    await panel.getByTestId('coach-amend-headline').fill('A strong session, revised again');
+    await panel.getByTestId('coach-amend-review').click();
+    await panel.getByTestId('coach-amend-confirm').click();
+    await expect(panel.getByTestId('coach-amend-outcome')).toHaveText(
+      'Refused (409): Refused: a revised copy of this report is being sent right now. Amend it again once that send finishes.',
+    );
+    await expect(panel.getByTestId('coach-amend-headline')).toHaveValue('A strong session, revised again');
+    await expect(panel.getByTestId('coach-revision-2')).toHaveCount(0);
+    await capture(page, testInfo, 'pb1-amend-revision-sending', panel);
+  });
+
   test('a revision whose send was never confirmed is requeued from the kept versions, then sent', async ({ page }, testInfo) => {
     const writes: string[] = [];
     await useCoachApi(page, { admin: true, pipelineLive: true, revisionSend: 'unconfirmed', onAdminWrite: (m, p) => writes.push(`${m} ${p}`) });

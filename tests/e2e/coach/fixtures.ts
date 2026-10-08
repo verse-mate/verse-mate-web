@@ -341,6 +341,7 @@ export const IN_FLIGHT_CORRECTION =
 export const NOT_LIVE_SEND =
   'The report is not live for the leader this revision was made for: it is held, not delivered, or re-attributed';
 const PARALLEL_RUN = 'The pipeline is in its parallel run: nothing is sent until cutover';
+const REVISION_SENDING = 'Refused: a revised copy of this report is being sent right now. Amend it again once that send finishes.';
 export const PARALLEL_RUN_SESSION_REFUSAL =
   'This session was observed during the parallel run: it is kept for admin comparison and never sent';
 export const PARTIALLY_DELIVERED =
@@ -490,6 +491,8 @@ async function revisionRoutes(
       return invalid(route, 'The amendment changes nothing');
     }
     if (!review.delivered) return conflict(route, 'Refused: the report is not delivered yet. Correct it through the review instead.');
+    const latest = revisions.get(reportId)?.[0];
+    if (opts.revisionSend === 'in-flight' && latest && !latest.sentAt) return conflict(route, REVISION_SENDING);
     const given = dims.find((d) => d.n === MEMORY_REINFORCEMENT);
     if (body.firstLesson === false && review.firstLesson && (!given || given.score === null || !given.rationale.trim())) {
       return invalid(route, MR_REQUIRED);
