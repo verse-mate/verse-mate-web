@@ -434,11 +434,11 @@ async function revisionRoutes(
   const legacy = 'Refused: this is a legacy report, which is read-only. Change it at its source and it arrives through the backfill.';
 
   const sendLatest = (reportId: string) => {
+    if (opts.noMailer) return { status: 409, message: 'No mailer is configured', pending: 'no-mailer' } as const;
+    if (!opts.pipelineLive) return { status: 409, message: PARALLEL_RUN, pending: 'parallel-run' } as const;
     const latest = revisions.get(reportId)?.[0];
     if (!latest) return { status: 404, message: 'That report has no revision' } as const;
     if (latest.sentAt) return { status: 409, message: 'The latest revision was already sent' } as const;
-    if (!opts.pipelineLive) return { status: 409, message: PARALLEL_RUN, pending: 'parallel-run' } as const;
-    if (opts.noMailer) return { status: 409, message: 'No mailer is configured', pending: 'no-mailer' } as const;
     if (opts.revisionSend === 'in-flight') {
       return { status: 409, message: 'The revision is being sent by another request', pending: 'in-flight' } as const;
     }
@@ -517,6 +517,7 @@ async function revisionRoutes(
     });
     revisions.set(reportId, kept);
     const saved = { applied: true, revision, firstLesson, base: 78, score: 82, status: 'Strong' };
+    if (!opts.pipelineLive) return route.fulfill({ json: { ...saved, sent: false, pending: 'parallel-run' } });
     const send = sendLatest(reportId);
     if (send.status === 200 && send.json.sent) {
       return route.fulfill({ json: { ...saved, sent: true, sends: send.json.sends, skipped: send.json.skipped } });
@@ -590,7 +591,6 @@ async function revisionRoutes(
       return route.fulfill({ json: { revisions: [...(revisions.get(reportId) ?? []), ...(edits.get(reportId) ?? [])] } });
     }
     if (action === 'revision/send') {
-      if (!review) return conflict(route, legacy);
       const send = sendLatest(reportId);
       return send.status === 200 ? route.fulfill({ json: send.json }) : json(route, send.status, send.status === 404 ? 'NOT_FOUND' : 'CONFLICT', send.message);
     }
@@ -741,7 +741,7 @@ export const COVERAGE = {
       basis: 'no-observation',
       observedSessions: 0,
       accountStatus: 'has-account',
-      linkedClassName: null,
+      linkedClassName: 'Tuesday Evening Study',
       classAlert: true,
       attestedAt: null,
       attestedBy: null,
@@ -912,6 +912,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       leader.attestedBy = attested ? 'admin@example.test' : null;
       leader.basis = leader.observedSessions > 0 ? 'observed' : attested ? 'attested-not-teaching' : 'no-observation';
       leader.covered = leader.observedSessions > 0 || attested;
+      leader.classAlert = leader.linkedClassName !== null && leader.observedSessions === 0 && !attested;
       coverage.allCovered = coverage.leaders.every((l) => l.covered);
       return route.fulfill({ json: { attested } });
     }

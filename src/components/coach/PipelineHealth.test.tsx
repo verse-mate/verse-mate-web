@@ -92,7 +92,7 @@ const COVERAGE = {
       basis: 'no-observation',
       observedSessions: 0,
       accountStatus: 'has-account',
-      linkedClassName: null,
+      linkedClassName: 'Tuesday Evening',
       classAlert: true,
       attestedAt: null,
       attestedBy: null,
