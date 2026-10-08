@@ -437,6 +437,7 @@ async function revisionRoutes(
       email: 'leader@example.test',
       delivered: false,
       error: 'a send was started but never confirmed, so it is not sent again until the revision is requeued',
+      neverConfirmed: true,
     },
   ];
   const unconfirmed = new Set<string>();
@@ -455,6 +456,7 @@ async function revisionRoutes(
     if (opts.revisionSend === 'not-live') return { status: 409, message: NOT_LIVE_SEND, pending: 'not-live' } as const;
     if (opts.revisionSend === 'unconfirmed' && !requeued.has(reportId)) {
       unconfirmed.add(reportId);
+      latest.attemptedTo = unconfirmedSend.map((x) => x.email);
       return {
         status: 200,
         json: { sent: false, refusal: 'send-failed', revision: latest.revision, sends: unconfirmedSend, skipped: recipients.skipped },
@@ -468,7 +470,7 @@ async function revisionRoutes(
         pending: 'send-failed',
       } as const;
     }
-    Object.assign(latest, recipients, { sentAt: '2026-10-08T15:05:00.000Z' });
+    Object.assign(latest, recipients, { sentAt: '2026-10-08T15:05:00.000Z', attemptedTo: [] });
     return {
       status: 200,
       json: { sent: true, revision: latest.revision, sends: [{ email: 'leader@example.test', delivered: true }], skipped: recipients.skipped },
@@ -532,6 +534,7 @@ async function revisionRoutes(
       sentTo: [],
       skipped: [],
       sentAt: null,
+      attemptedTo: [],
     });
     revisions.set(reportId, kept);
     const saved = { applied: true, revision, firstLesson, base: 78, score: 82, status: 'Strong' };
@@ -655,6 +658,7 @@ async function revisionRoutes(
         return notFound(route, 'That report has no unsent revision with a send left unconfirmed, or its send is still in flight');
       }
       requeued.add(reportId);
+      latest.attemptedTo = [];
       return route.fulfill({ json: { requeued: true } });
     }
     if (action === 'revision/send') {

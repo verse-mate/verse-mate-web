@@ -117,10 +117,11 @@ test.describe('Amending a delivered report', () => {
     await expect(panel.getByTestId('coach-amend-outcome')).toContainText('Revision 1 is stored');
 
     const kept = panel.getByTestId('coach-revision-1');
-    await expect(kept.getByTestId('coach-revision-requeue-1')).toHaveCount(0);
-    await kept.getByTestId('coach-revision-send-1').click();
     await expect(kept.getByTestId('coach-revision-requeue-1')).toBeVisible();
     await capture(page, testInfo, 'p6-revision-requeue-offered', panel.getByTestId('coach-revisions'));
+    await kept.getByTestId('coach-revision-send-1').click();
+    await expect(panel.getByTestId('coach-revision-outcome')).toContainText('Not sent: send-failed.');
+    await expect(kept.getByTestId('coach-revision-requeue-1')).toBeVisible();
 
     await kept.getByTestId('coach-revision-requeue-1').click();
     await expect(panel.getByTestId('coach-revision-outcome')).toHaveText(

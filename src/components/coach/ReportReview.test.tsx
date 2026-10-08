@@ -156,6 +156,7 @@ describe('amending a delivered report', () => {
         sentTo: [],
         skipped: [],
         sentAt: null,
+        attemptedTo: [],
       },
     ]);
     fireEvent.click(screen.getByTestId('coach-amend-confirm'));
@@ -531,6 +532,7 @@ function revision(n: number, sentAt: string | null): coachService.ReportRevision
     sentTo: sentAt ? ['leader@example.test'] : [],
     skipped: [],
     sentAt,
+    attemptedTo: [],
   };
 }
 
@@ -668,13 +670,45 @@ describe('the kept versions', () => {
     );
   });
 
-  const UNCONFIRMED = 'a send was started but never confirmed, so it is not sent again until the revision is requeued';
   const unconfirmedSend = {
     sent: false,
     refusal: 'send-failed',
     revision: 1,
-    sends: [{ email: 'leader@example.test', delivered: false, error: UNCONFIRMED }],
+    sends: [{ email: 'leader@example.test', delivered: false, error: 'not confirmed by the mailer', neverConfirmed: true as const }],
   };
+
+  it('offers the requeue as soon as the kept versions say a recipient of the latest unsent revision was never confirmed', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
+      revision(1, '2026-10-07T14:00:05.000Z'),
+      { ...revision(2, null), attemptedTo: ['leader@example.test'] },
+    ]);
+    renderReview();
+    const row = await screen.findByTestId('coach-revision-2');
+    expect(await within(row).findByTestId('coach-revision-requeue-2')).toBeInTheDocument();
+    expect(within(row).getByTestId('coach-revision-send-2')).toBeInTheDocument();
+  });
+
+  it('offers no requeue for a failed send that only reads like a never-confirmed one', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null)]);
+    vi.spyOn(coachService, 'sendRevision').mockResolvedValue({
+      sent: false,
+      refusal: 'send-failed',
+      revision: 1,
+      sends: [
+        {
+          email: 'leader@example.test',
+          delivered: false,
+          error: 'a send was started but never confirmed, so it is not sent again until the revision is requeued',
+        },
+      ],
+    });
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-revision-send-1'));
+    await screen.findByTestId('coach-revision-outcome');
+    expect(screen.queryByTestId('coach-revision-requeue-1')).toBeNull();
+  });
 
   it('offers a requeue beside the send when a recipient was never confirmed, then reads the kept versions again', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
@@ -728,6 +762,7 @@ describe('the kept versions', () => {
         sentTo: [],
         skipped: [],
         sentAt: null,
+        attemptedTo: [],
       },
       {
         kind: 'revision',
@@ -742,6 +777,7 @@ describe('the kept versions', () => {
         sentTo: ['leader@example.test'],
         skipped: ['dana@needs-real-email.invalid'],
         sentAt: '2026-10-07T14:00:05.000Z',
+        attemptedTo: [],
       },
     ]);
     renderReview();
@@ -776,6 +812,7 @@ describe('the kept versions', () => {
         sentTo: [],
         skipped: [],
         sentAt: null,
+        attemptedTo: [],
       },
     ]);
     vi.spyOn(coachService, 'sendRevision').mockRejectedValue(
@@ -805,6 +842,7 @@ describe('the kept versions', () => {
         sentTo: [],
         skipped: [],
         sentAt: null,
+        attemptedTo: [],
       },
     ]);
     vi.spyOn(coachService, 'sendRevision').mockRejectedValue(
