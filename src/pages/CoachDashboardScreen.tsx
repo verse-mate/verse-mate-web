@@ -30,6 +30,7 @@ import {
 import type { CoachClass, CoachReport, CoachReportSummary, CoachTrends } from '@/services/coachService';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
+import { PipelineCopyTag } from '@/components/coach/CoachUi';
 import CoachLineChart from '@/components/coach/CoachLineChart';
 import {
   dimensionBandIndex,
@@ -123,6 +124,7 @@ export default function CoachDashboardScreen() {
               onManage={() => navigate(`${base}/sessions`)}
             />
             <Trajectory trends={trends} selected={selected} prev={prev} onViewTrends={() => navigate(`${base}/trends`)} />
+            <PipelineCopyTag reportId={selected.id} held={list.find((r) => r.id === selected.id)?.held} />
             <CoachSessionDetail
               report={selected}
               delta={delta}

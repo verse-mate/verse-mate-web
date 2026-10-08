@@ -35,7 +35,7 @@ function makeReport(overrides: Partial<CoachReport> = {}): CoachReport {
 
 describe('ReportCard', () => {
   it('keeps the feedback collapsed until the chevron is tapped', () => {
-    render(<ReportCard report={makeReport()} leaderName="Bryan Bailey" />);
+    render(<ReportCard report={makeReport()} leaderName="Avery Hollis" />);
     // Collapsed: header identity is visible…
     expect(screen.getByText('July 16, 2026')).toBeInTheDocument();
     // …but no feedback prose yet.
@@ -63,7 +63,7 @@ describe('ReportCard', () => {
             ],
           },
         })}
-        leaderName="Bryan Bailey"
+        leaderName="Avery Hollis"
       />,
     );
 
@@ -91,7 +91,7 @@ describe('ReportCard', () => {
             },
           ],
         })}
-        leaderName="Bryan Bailey"
+        leaderName="Avery Hollis"
       />,
     );
 
@@ -100,5 +100,15 @@ describe('ReportCard', () => {
     expect(screen.getByText('Key moments')).toBeInTheDocument();
     expect(screen.getByText('[50:03]')).toBeInTheDocument();
     expect(screen.getByText(/personal coping mechanism/)).toBeInTheDocument();
+  });
+
+  it("marks a held pipeline copy in an admin's drill-in as not visible to the leader", () => {
+    render(<ReportCard report={{ ...makeReport(), held: true }} admin coachId="avery" />);
+    expect(screen.getByTestId('coach-pipeline-copy-r1')).toHaveTextContent('Pipeline copy, not visible to the leader');
+  });
+
+  it('carries no such mark on a report the leader can see', () => {
+    render(<ReportCard report={{ ...makeReport(), held: false }} admin coachId="avery" />);
+    expect(screen.queryByTestId('coach-pipeline-copy-r1')).toBeNull();
   });
 });

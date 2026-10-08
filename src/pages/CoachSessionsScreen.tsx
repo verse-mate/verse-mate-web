@@ -33,6 +33,7 @@ import {
 } from '@/services/coachService';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import { dt, letterGrade, statusBand } from '@/components/coach/dashboardTheme';
+import { PipelineCopyTag } from '@/components/coach/CoachUi';
 import { useRubric } from '@/hooks/useRubric';
 
 const RECURRENCE_OPTIONS: { value: CoachClassRecurrence; label: string }[] = [
@@ -300,6 +301,9 @@ function PastSessionRow({ report, onView }: { report: CoachReportSummary; onView
       <div style={{ minWidth: 0 }}>
         <span style={{ fontWeight: 600, fontSize: 15 }}>{report.session}</span>
         {report.topic && <span style={{ fontSize: 13, color: dt.textLighter }}> · {report.topic}</span>}
+        <div>
+          <PipelineCopyTag reportId={report.id} held={report.held} />
+        </div>
       </div>
       <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.04em', padding: '5px 9px', borderRadius: 6, textAlign: 'center', color: band.c, background: band.bg }}>
         {band.label}
