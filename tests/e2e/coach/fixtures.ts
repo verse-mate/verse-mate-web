@@ -283,6 +283,7 @@ export interface CoachApiOptions {
   deliveredBeforeFlag?: string;
   prose?: boolean;
   firstLessonHeld?: boolean;
+  awaitingRelease?: boolean;
 }
 
 type ReviewKind = 'delivered' | 'undelivered' | 'in-flight' | 'legacy';
@@ -582,6 +583,19 @@ export const HELD_SESSION = {
   updatedAt: '2026-09-06T00:00:00Z',
 };
 
+export const AWAITING_RELEASE_SESSIONS = (['delivery_pending', 'delivery_failed'] as const).map((state, i) => ({
+  sourceSessionId: `ff-awaiting-${state}`,
+  coachId: LEADER_ID,
+  title: `Obadiah, Lesson ${6 + i}`,
+  sessionDate: `2026-09-1${2 + i}`,
+  state,
+  attempts: state === 'delivery_failed' ? 3 : 0,
+  reportId: `awaiting-${state}`,
+  reason: 're-attributed: held until an admin releases it',
+  action: 'release',
+  updatedAt: `2026-09-1${3 + i}T00:00:00Z`,
+}));
+
 export const PLACEHOLDER_LEADER = { id: 'dana-diaz', name: 'Dana Diaz', email: 'dana-diaz@needs-real-email.invalid' };
 
 export const UNRESOLVED_SESSION = {
@@ -708,6 +722,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     { ...PARKED_SESSION },
     { ...HELD_SESSION },
     ...(opts.firstLessonHeld ? [{ ...FIRST_LESSON_HELD_SESSION }] : []),
+    ...(opts.awaitingRelease ? AWAITING_RELEASE_SESSIONS.map((x) => ({ ...x })) : []),
   ];
   const coverage = { ...COVERAGE, leaders: COVERAGE.leaders.map((l) => ({ ...l })) };
   const roster = [{ id: LEADER_ID, name: ME.profile.name }];
@@ -866,7 +881,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     const release = url.pathname.match(/reports\/([^/]+)\/release$/);
     if (release) {
       if (method !== 'POST') return notFound(route);
-      const i = stuck.findIndex((x) => x.reportId === decodeURIComponent(release[1]) && x.state === 'scored');
+      const i = stuck.findIndex((x) => x.reportId === decodeURIComponent(release[1]) && x.action === 'release');
       if (i < 0) return notFound(route, 'No report held for review');
       if (opts.noMailer) return conflict(route, 'No mailer is configured');
       if (!opts.pipelineLive) return conflict(route, PARALLEL_RUN);
