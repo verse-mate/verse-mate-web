@@ -213,6 +213,7 @@ export interface ScorePoint {
   session: string;
   score: number;
   status: string;
+  reportId?: string;
 }
 
 /** Row shape for the cluster + dimension trend charts: a date plus one

@@ -57,15 +57,22 @@ export default function CoachLeaderScreen() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [minimized, setMinimized] = useState(false);
   const detailRef = useRef<HTMLDivElement>(null);
-  const selectedSummary = (selectedId && reports.find((r) => r.id === selectedId)) || latest;
+  const selectedSummary = selectedId ? reports.find((r) => r.id === selectedId) : latest;
   const selIdx = selectedSummary ? reports.findIndex((r) => r.id === selectedSummary.id) : -1;
   const selPrev = selIdx >= 0 ? reports[selIdx + 1] : undefined;
   const delta =
     selectedSummary && selPrev ? Math.round((selectedSummary.score - selPrev.score) * 100) / 100 : null;
-  const selectedDetail = useCoachReportDetail(selectedSummary?.id, coachId);
+  const selectedDetail = useCoachReportDetail(selectedId ?? latest?.id, coachId);
   const selected = selectedDetail.data ?? null;
 
-  const openByDate = async (isoDate: string) => {
+  const openReport = (id: string) => {
+    setSelectedId(id);
+    requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  };
+
+  const openByDate = async (isoDate: string, reportId?: string) => {
+    const id = reportId ?? trendsQuery.data?.scoreSeries.find((p) => p.date === isoDate)?.reportId;
+    if (id) return openReport(id);
     let match = reports.find((r) => r.date === isoDate);
     let more = summaries.hasNextPage;
     while (!match && more) {
@@ -74,9 +81,7 @@ export default function CoachLeaderScreen() {
       match = next.data?.pages.flatMap((p) => p.items).find((r) => r.date === isoDate);
       more = next.hasNextPage;
     }
-    if (!match) return;
-    setSelectedId(match.id);
-    requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+    if (match) openReport(match.id);
   };
 
   const header = profile && (

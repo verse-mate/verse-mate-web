@@ -45,11 +45,12 @@ const FALLBACK_CLUSTER_COLOR = '#9a9a9a';
 const AXIS = '#9a9a9a';
 const GRID = 'rgba(150,150,150,0.2)';
 
-/** recharts click state carries the clicked row under activePayload[0].payload;
- *  pull the ISO date so the parent can open that session's report. */
-function pickDate(state: { activePayload?: { payload?: { date?: string | number } }[] } | null): string | null {
-  const d = state?.activePayload?.[0]?.payload?.date;
-  return d != null ? String(d) : null;
+function pickPoint(
+  state: { activePayload?: { payload?: { date?: string | number; reportId?: unknown } }[] } | null,
+): { date: string; reportId?: string } | null {
+  const p = state?.activePayload?.[0]?.payload;
+  if (p?.date == null) return null;
+  return { date: String(p.date), reportId: typeof p.reportId === 'string' ? p.reportId : undefined };
 }
 
 export function ScoreTrendCard({
@@ -57,7 +58,7 @@ export function ScoreTrendCard({
   onSelectDate,
 }: {
   trends: CoachTrends | undefined;
-  onSelectDate?: (isoDate: string) => void;
+  onSelectDate?: (isoDate: string, reportId?: string) => void;
 }) {
   const scoreData = useMemo(
     () => (trends?.scoreSeries || []).map((p) => ({ ...p, label: shortDate(p.date) })),
@@ -66,8 +67,8 @@ export function ScoreTrendCard({
   const clickable = !!onSelectDate;
   const handleClick = clickable
     ? (state: Parameters<NonNullable<React.ComponentProps<typeof LineChart>['onClick']>>[0]) => {
-        const d = pickDate(state);
-        if (d) onSelectDate?.(d);
+        const p = pickPoint(state);
+        if (p) onSelectDate?.(p.date, p.reportId);
       }
     : undefined;
 
@@ -108,7 +109,7 @@ export function ClusterTrendCard({
   onSelectDate,
 }: {
   trends: CoachTrends | undefined;
-  onSelectDate?: (isoDate: string) => void;
+  onSelectDate?: (isoDate: string, reportId?: string) => void;
 }) {
   const clusterData = useMemo(
     () => (trends?.clusterSeries || []).map((r) => ({ ...r, label: shortDate(String(r.date)) })),
@@ -129,8 +130,8 @@ export function ClusterTrendCard({
   const clickable = !!onSelectDate;
   const handleClick = clickable
     ? (state: Parameters<NonNullable<React.ComponentProps<typeof BarChart>['onClick']>>[0]) => {
-        const d = pickDate(state);
-        if (d) onSelectDate?.(d);
+        const p = pickPoint(state);
+        if (p) onSelectDate?.(p.date, p.reportId);
       }
     : undefined;
 

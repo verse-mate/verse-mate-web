@@ -181,4 +181,43 @@ test.describe("A leader's history on the admin screens", () => {
     await expect.poll(() => details).toContain(`/coach/admin/coaches/${LEADER_ID}/reports/${olderId(59)}`);
     await capture(page, testInfo, 'w2a-trend-point-older-session');
   });
+
+  test('a trend point carrying its report id opens that report without paging the summaries', async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== 'chromium-desktop', 'the trend charts render on the desktop layout');
+    await useCoachApi(page, { admin: true, historyLength: 60 });
+    const oldest = { date: '2025-06-28', dateLabel: '2025-06-28', session: 'Older session 59', score: 70, status: 'On Target' };
+    await page.route(`${API}/coach/admin/coaches/*/trends`, (route) =>
+      route.fulfill({
+        json: {
+          scoreSeries: [
+            { ...oldest, reportId: olderId(59) },
+            { ...oldest, date: '2026-08-29', dateLabel: 'August 29, 2026', session: 'Obadiah, Lesson 4', reportId: 'leader-2026-08-29-saturday-morning' },
+          ],
+          clusterSeries: [],
+          dimensionSeries: [],
+          delta: null,
+        },
+      }),
+    );
+    const summaries: string[] = [];
+    const details: string[] = [];
+    page.on('request', (r) => {
+      const url = new URL(r.url());
+      if (url.pathname.endsWith('/reports/summary')) summaries.push(url.search);
+      else if (/\/admin\/coaches\/[^/]+\/reports\/[^/]+$/.test(url.pathname)) details.push(url.pathname);
+    });
+    await page.goto(`/coach/leader/${LEADER_ID}/manage`);
+
+    const chart = page.getByTestId('coach-trend-score').locator('.recharts-surface');
+    await expect(chart).toBeVisible();
+    const box = await chart.boundingBox();
+    if (!box) throw new Error('no chart');
+    await page.mouse.move(box.x + 70, box.y + box.height / 2);
+    await page.mouse.click(box.x + 70, box.y + box.height / 2);
+
+    await expect(page.getByText('Selected session — full report')).toBeVisible();
+    await expect.poll(() => details).toContain(`/coach/admin/coaches/${LEADER_ID}/reports/${olderId(59)}`);
+    expect(summaries).toHaveLength(1);
+    await capture(page, testInfo, 'w2b-trend-point-by-id');
+  });
 });
