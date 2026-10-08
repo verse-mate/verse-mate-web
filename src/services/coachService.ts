@@ -484,11 +484,14 @@ export interface ReportReviewState {
 
 export const AMENDABLE_BODY_FIELDS = ['headline', 'overview', 'strengths', 'improvements', 'recommendations'] as const;
 export type AmendableBodyField = (typeof AMENDABLE_BODY_FIELDS)[number];
+export const PROSE_LISTS = ['strengths', 'improvements', 'recommendations'] as const;
+export type ProseList = (typeof PROSE_LISTS)[number];
+export type ProseField = `${ProseList}Prose`;
 
 export interface ReportAmendment {
   dimensions?: { n: number; score: number | null; rationale: string }[];
   firstLesson?: boolean;
-  body?: Partial<Record<AmendableBodyField, string | string[]>>;
+  body?: Partial<Record<AmendableBodyField, string | string[]>> & Partial<Record<ProseField, CoachFeedbackPoint[]>>;
 }
 
 export interface RevisionSends {
@@ -521,7 +524,7 @@ type ScoreAndRationale = { score: number | null; rationale: string };
 export interface ReportRevisionChanges {
   dimensions?: { n: number; from: ScoreAndRationale; to: ScoreAndRationale }[];
   firstLesson?: { from: boolean; to: boolean };
-  body?: Partial<Record<AmendableBodyField, { from: unknown; to: unknown }>>;
+  body?: Partial<Record<AmendableBodyField | ProseField, { from: unknown; to: unknown }>>;
 }
 
 export interface ReportRevision {
