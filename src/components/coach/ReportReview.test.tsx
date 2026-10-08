@@ -1111,15 +1111,30 @@ describe('editing the Improvements of an undelivered report', () => {
     expect(save).toBeDisabled();
   });
 
-  it('a report delivered meanwhile is read again, so the amend action is offered with the refusal', async () => {
+  it('a report delivered meanwhile is read again, and the amend editor opens with the Improvements draft and the refusal', async () => {
     const delivered = 'Refused: the report was already delivered. Amend it instead, which sends the leader a revised copy.';
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValueOnce(UNDELIVERED).mockResolvedValue(REVIEW);
     vi.spyOn(coachService, 'editImprovements').mockRejectedValue(new CoachApiError('x', 409, delivered));
-    await openImprovements();
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, firstLesson: false, sent: true });
+    await openImprovements(WITH_PROSE);
     fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Ask newcomers first' } });
+    fireEvent.change(screen.getByTestId('coach-amend-improvements-prose-text-0'), { target: { value: 'Ask them by name.' } });
     fireEvent.click(screen.getByTestId('coach-improvements-save'));
-    expect(await screen.findByTestId('coach-amend-open')).toBeInTheDocument();
+
+    const editor = await screen.findByTestId('coach-amend-editor');
     expect(screen.getByTestId('coach-amend-outcome')).toHaveTextContent(delivered);
+    expect(within(editor).getByTestId('coach-amend-improvements')).toHaveValue('Ask newcomers first');
+    expect(within(editor).getByTestId('coach-amend-improvements-prose-text-0')).toHaveValue('Ask them by name.');
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    await waitFor(() =>
+      expect(amend).toHaveBeenCalledWith('rep-1', {
+        body: {
+          improvements: ['Ask newcomers first'],
+          improvementsProse: [{ title: 'Quiet members', paragraphs: ['Ask them by name.'] }],
+        },
+      }),
+    );
   });
 
   it('a double click saves once', async () => {

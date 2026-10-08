@@ -32,7 +32,6 @@ import { dt } from './dashboardTheme';
 
 type Outcome = { tone: 'ok' | 'pending' | 'refused'; text: string };
 type Last = { outcome: Outcome; held?: string[]; violations?: string[] };
-type Carry = Last & { firstLesson: boolean; applied: boolean };
 type Change = { label: string; from: string; to: string };
 type ProseDraft = { title: string; text: string };
 type Draft = {
@@ -43,6 +42,7 @@ type Draft = {
   prose: Partial<Record<ProseList, ProseDraft[]>>;
   clearProse: Partial<Record<ProseList, boolean>>;
 };
+type Carry = { last: Last | null; draft?: (d: Draft) => Draft };
 
 const MEMORY_REINFORCEMENT = 9;
 
@@ -315,11 +315,11 @@ export default function ReportReview({ report, coachId }: { report: CoachReport;
     );
   }
   if (!review.data.delivered) {
-    const delivered = (c: Carry) => {
+    const carryOver = (c: Carry) => {
       setCarry(c);
       review.refetch();
     };
-    return <FirstLessonPanel review={review.data} report={report} coachId={coachId} onDelivered={delivered} />;
+    return <FirstLessonPanel review={review.data} report={report} coachId={coachId} onCarry={carryOver} />;
   }
   return <AmendPanel review={review.data} report={report} coachId={coachId} carry={carry} />;
 }
@@ -347,12 +347,12 @@ function FirstLessonPanel({
   review,
   report,
   coachId,
-  onDelivered,
+  onCarry,
 }: {
   review: ReportReviewState;
   report: CoachReport;
   coachId: string;
-  onDelivered: (carry: Carry) => void;
+  onCarry: (carry: Carry) => void;
 }) {
   const reportId = report.id;
   const { rubric } = useRubric();
@@ -372,12 +372,9 @@ function FirstLessonPanel({
         if (r.applied) setClearing(null);
         if (!r.applied || r.revision !== undefined) {
           const outcome = amendOutcome(r);
-          onDelivered({
-            firstLesson: input.firstLesson,
-            applied: r.applied,
-            outcome: { ...outcome, text: `${DELIVERED_MEANWHILE} ${outcome.text}` },
-            held: r.coldRecall,
-            violations: r.violations,
+          onCarry({
+            last: { outcome: { ...outcome, text: `${DELIVERED_MEANWHILE} ${outcome.text}` }, held: r.coldRecall, violations: r.violations },
+            draft: r.applied ? undefined : (d) => ({ ...d, firstLesson: input.firstLesson }),
           });
         }
       },
@@ -471,7 +468,7 @@ function FirstLessonPanel({
         review={review}
         report={report}
         coachId={coachId}
-        onConflict={(outcome) => onDelivered({ firstLesson: review.firstLesson, applied: true, outcome })}
+        onCarry={onCarry}
       />
     </div>
   );
@@ -481,12 +478,12 @@ function ImprovementsEditor({
   review,
   report,
   coachId,
-  onConflict,
+  onCarry,
 }: {
   review: ReportReviewState;
   report: CoachReport;
   coachId: string;
-  onConflict: (outcome: Outcome) => void;
+  onCarry: (carry: Carry) => void;
 }) {
   const save = useEditImprovements(coachId, report.id);
   const [edit, setEdit] = useState<{ initial: Draft; draft: Draft } | null>(null);
@@ -521,7 +518,18 @@ function ImprovementsEditor({
       onError: (err) => {
         const outcome: Outcome = { tone: 'refused', text: refusalText(err) };
         setLast({ outcome });
-        if (err instanceof CoachApiError && err.status === 409) onConflict(outcome);
+        if (err instanceof CoachApiError && err.status === 409) {
+          const { body: text, prose, clearProse } = edit.draft;
+          onCarry({
+            last: { outcome },
+            draft: (d) => ({
+              ...d,
+              body: { ...d.body, improvements: text.improvements },
+              prose: prose.improvements ? { ...d.prose, improvements: prose.improvements } : d.prose,
+              clearProse: { ...d.clearProse, improvements: clearProse.improvements },
+            }),
+          });
+        }
       },
       onSettled: () => {
         flying.current = false;
@@ -587,7 +595,13 @@ function ImprovementsEditor({
             >
               {save.isPending ? 'Saving…' : 'Save the Improvements'}
             </button>
-            <button type="button" onClick={() => setEdit(null)} disabled={save.isPending} data-testid="coach-improvements-cancel" style={linkBtn}>
+            <button
+              type="button"
+              onClick={() => setEdit(null)}
+              disabled={save.isPending}
+              data-testid="coach-improvements-cancel"
+              style={linkBtn}
+            >
               Cancel
             </button>
           </div>
@@ -615,11 +629,11 @@ function AmendPanel({
   const latestUnsent = latest !== undefined && !latest.sentAt;
   const flying = useRef(false);
   const [edit, setEdit] = useState<{ initial: Draft; draft: Draft; confirming: boolean } | null>(() => {
-    if (!carry || carry.applied) return null;
+    if (!carry?.draft) return null;
     const initial = initialDraft(review, report);
-    return { initial, draft: { ...initial, firstLesson: carry.firstLesson }, confirming: false };
+    return { initial, draft: carry.draft(initial), confirming: false };
   });
-  const [last, setLast] = useState<Last | null>(carry);
+  const [last, setLast] = useState<Last | null>(carry?.last ?? null);
 
   const open = () => {
     const initial = initialDraft(review, report);

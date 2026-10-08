@@ -561,7 +561,7 @@ test.describe("Replacing an undelivered report's Improvements", () => {
     await capture(page, testInfo, 'p5-partially-delivered', panel);
   });
 
-  test('a report delivered meanwhile is refused with "amend it instead", and the amend action is offered', async ({ page }, testInfo) => {
+  test('a report delivered meanwhile is refused with "amend it instead", and the amend editor opens with the draft', async ({ page }, testInfo) => {
     await useCoachApi(page, { admin: true, deliveredBeforeFlag: OLDER_ID });
     await openSession(page, OLDER_ID);
     const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
@@ -571,8 +571,8 @@ test.describe("Replacing an undelivered report's Improvements", () => {
     await expect(panel.getByTestId('coach-amend-outcome')).toHaveText(
       'Refused (409): Refused: the report was already delivered. Amend it instead, which sends the leader a revised copy.',
     );
-    await expect(panel.getByTestId('coach-amend-open')).toBeVisible();
-    await capture(page, testInfo, 'p4-improvements-delivered-meanwhile', panel);
+    await expect(panel.getByTestId('coach-amend-improvements')).toHaveValue('Ask a quiet member first');
+    await capture(page, testInfo, 'p6-improvements-delivered-meanwhile', panel);
   });
 });
 
