@@ -602,6 +602,10 @@ export function sendRevision(reportId: string): Promise<RevisionSendResult> {
   return coachRequest<RevisionSendResult>(adminReportPath(reportId, 'revision/send'), { method: 'POST' });
 }
 
+export function requeueRevision(reportId: string): Promise<{ requeued: boolean }> {
+  return coachRequest<{ requeued: boolean }>(adminReportPath(reportId, 'revision/requeue'), { method: 'POST' });
+}
+
 export interface CoverageLeader {
   coachId: string;
   name: string;

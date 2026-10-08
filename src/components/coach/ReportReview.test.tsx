@@ -668,6 +668,53 @@ describe('the kept versions', () => {
     );
   });
 
+  const UNCONFIRMED = 'a send was started but never confirmed, so it is not sent again until the revision is requeued';
+  const unconfirmedSend = {
+    sent: false,
+    refusal: 'send-failed',
+    revision: 1,
+    sends: [{ email: 'leader@example.test', delivered: false, error: UNCONFIRMED }],
+  };
+
+  it('offers a requeue beside the send when a recipient was never confirmed, then reads the kept versions again', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    const revisions = vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null)]);
+    vi.spyOn(coachService, 'sendRevision').mockResolvedValue(unconfirmedSend);
+    const requeue = vi.spyOn(coachService, 'requeueRevision').mockResolvedValue({ requeued: true });
+    renderReview();
+    const row = await screen.findByTestId('coach-revision-1');
+    expect(within(row).queryByTestId('coach-revision-requeue-1')).toBeNull();
+    fireEvent.click(within(row).getByTestId('coach-revision-send-1'));
+
+    const button = await within(row).findByTestId('coach-revision-requeue-1');
+    const reads = revisions.mock.calls.length;
+    fireEvent.click(button);
+    fireEvent.click(button);
+    await waitFor(() => expect(requeue).toHaveBeenCalledWith('rep-1'));
+    expect(requeue).toHaveBeenCalledTimes(1);
+    expect(await screen.findByTestId('coach-revision-outcome')).toHaveTextContent(
+      'Requeued. The next send mails the recipients whose send was never confirmed.',
+    );
+    await waitFor(() => expect(revisions.mock.calls.length).toBeGreaterThan(reads));
+    expect(within(row).queryByTestId('coach-revision-requeue-1')).toBeNull();
+    expect(within(row).getByTestId('coach-revision-send-1')).toBeInTheDocument();
+  });
+
+  it('says there is nothing to requeue when the server finds nothing', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([revision(1, null)]);
+    vi.spyOn(coachService, 'sendRevision').mockResolvedValue(unconfirmedSend);
+    vi.spyOn(coachService, 'requeueRevision').mockRejectedValue(
+      new CoachApiError('x', 404, 'That report has no unsent revision with a send left unconfirmed, or its send is still in flight'),
+    );
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-revision-send-1'));
+    fireEvent.click(await screen.findByTestId('coach-revision-requeue-1'));
+    expect(await screen.findByTestId('coach-revision-outcome')).toHaveTextContent(
+      'Nothing to requeue: That report has no unsent revision with a send left unconfirmed, or its send is still in flight.',
+    );
+  });
+
   it('lists who amended, when, what changed, and whether it was sent', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
     vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([

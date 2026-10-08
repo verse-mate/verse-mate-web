@@ -58,6 +58,7 @@ import {
   fetchReportReview,
   fetchReportRevisions,
   sendRevision,
+  requeueRevision,
   setFirstLesson,
   editImprovements,
   type ImprovementsEdit,
@@ -401,6 +402,11 @@ export function useAmendReport(coachId: string, reportId: string): UseMutationRe
 export function useSendRevision(coachId: string, reportId: string): UseMutationResult<RevisionSendResult, Error, void> {
   const refresh = useRefreshReport(coachId, reportId);
   return useMutation({ mutationFn: () => sendRevision(reportId), onSettled: refresh });
+}
+
+export function useRequeueRevision(coachId: string, reportId: string): UseMutationResult<{ requeued: boolean }, Error, void> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({ mutationFn: () => requeueRevision(reportId), onSuccess: refresh });
 }
 
 export function useSetFirstLesson(

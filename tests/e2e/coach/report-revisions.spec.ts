@@ -104,6 +104,34 @@ test.describe('Amending a delivered report', () => {
     });
   }
 
+  test('a revision whose send was never confirmed is requeued from the kept versions, then sent', async ({ page }, testInfo) => {
+    const writes: string[] = [];
+    await useCoachApi(page, { admin: true, pipelineLive: true, revisionSend: 'unconfirmed', onAdminWrite: (m, p) => writes.push(`${m} ${p}`) });
+    await openSession(page, NEWEST_ID);
+    const panel = page.getByTestId(`coach-review-${NEWEST_ID}`);
+    await panel.getByTestId('coach-amend-open').click();
+    await panel.getByTestId('coach-amend-headline').fill('A strong session, revised');
+    await panel.getByTestId('coach-amend-review').click();
+    await panel.getByTestId('coach-amend-confirm').click();
+    await expect(panel.getByTestId('coach-amend-outcome')).toContainText('Revision 1 is stored');
+
+    const kept = panel.getByTestId('coach-revision-1');
+    await expect(kept.getByTestId('coach-revision-requeue-1')).toHaveCount(0);
+    await kept.getByTestId('coach-revision-send-1').click();
+    await expect(kept.getByTestId('coach-revision-requeue-1')).toBeVisible();
+    await capture(page, testInfo, 'p6-revision-requeue-offered', panel.getByTestId('coach-revisions'));
+
+    await kept.getByTestId('coach-revision-requeue-1').click();
+    await expect(panel.getByTestId('coach-revision-outcome')).toHaveText(
+      'Requeued. The next send mails the recipients whose send was never confirmed.',
+    );
+    await expect(kept.getByTestId('coach-revision-requeue-1')).toHaveCount(0);
+    await kept.getByTestId('coach-revision-send-1').click();
+    await expect(panel.getByTestId('coach-revision-outcome')).toContainText('Revision 1 sent to 1 recipient.');
+    expect(writes.filter((w) => w.endsWith('/revision/requeue'))).toEqual([`POST /coach/admin/reports/${NEWEST_ID}/revision/requeue`]);
+    await capture(page, testInfo, 'p6-revision-requeued-sent', panel.getByTestId('coach-revisions'));
+  });
+
   test('marking a delivered report a first lesson scores Memory Reinforcement not applicable, and clearing it needs a score', async ({ page }, testInfo) => {
     await useCoachApi(page, { admin: true, pipelineLive: true });
     await openSession(page, NEWEST_ID);
