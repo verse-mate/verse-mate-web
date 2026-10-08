@@ -18,6 +18,7 @@ const PARKED = {
   attempts: 3,
   reportId: null,
   reason: 'the model answer failed validation',
+  holdKind: null,
   action: 'requeue' as const,
   updatedAt: '2026-08-23T00:00:00Z',
 };
@@ -31,6 +32,7 @@ const HELD = {
   attempts: 0,
   reportId: 'rep-2',
   reason: 'injection tripwire',
+  holdKind: 'review' as const,
   action: 'release' as const,
   updatedAt: '2026-08-30T00:00:00Z',
 };
@@ -44,6 +46,7 @@ const UNRESOLVED = {
   attempts: 0,
   reportId: null,
   reason: 'unattributed: no leader matched the session title',
+  holdKind: null,
   action: 'attribute' as const,
   updatedAt: '2026-09-30T00:00:00Z',
 };
@@ -57,6 +60,7 @@ const SKIPPED = {
   attempts: 0,
   reportId: 'rep-5',
   reason: 'delivered, but not emailed to wyatt-wellington@needs-real-email.invalid: placeholder address',
+  holdKind: null,
   action: null,
   updatedAt: '2026-09-28T00:00:00Z',
 };
@@ -714,6 +718,7 @@ describe('a failed send', () => {
     state: 'delivery_pending',
     attempts: 2,
     reason: `${SENT_FAILED}; retried automatically (attempt 2 of 5), fix the failing address if it is wrong`,
+    holdKind: 'send-failed' as const,
     action: null,
   };
   const EXHAUSTED = {
@@ -768,6 +773,32 @@ describe('a failed send', () => {
 
     const row = await screen.findByTestId('coach-pipeline-ff-7');
     expect(await within(row).findByTestId('coach-address-edit-milo-kerr')).toBeInTheDocument();
+  });
+
+  it('a send that was started but never confirmed offers the address fix, from its hold kind', async () => {
+    const UNCONFIRMED = {
+      ...RETRYING,
+      reason:
+        'a send to milo@example.test was started but never confirmed, so it is not sent again until the report is requeued; retried automatically (attempt 1 of 5), fix the failing address if it is wrong',
+    };
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([UNCONFIRMED]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-7');
+    expect(await within(row).findByTestId('coach-address-edit-milo-kerr')).toBeInTheDocument();
+  });
+
+  it('reads a failed send from its hold kind, never from the words of its reason', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(
+      page([{ ...PARKED, reason: 'send failed to milo@example.test, quoted in a model note', holdKind: null }]),
+    );
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-1');
+    await waitFor(() => expect(row).toHaveTextContent('Milo Kerr'));
+    expect(within(row).queryByTestId('coach-address-edit-milo-kerr')).toBeNull();
   });
 
   it('offers no address fix on a row that is not a failed send', async () => {

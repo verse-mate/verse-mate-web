@@ -13,6 +13,7 @@ import {
   olderId,
   PLACEHOLDER_LEADER,
   SKIPPED_SESSION,
+  UNCONFIRMED_SEND_SESSION,
   UNRESOLVED_SESSION,
   useCoachApi,
 } from './fixtures';
@@ -219,6 +220,10 @@ test.describe('A failed send in the pipeline list', () => {
       await expect(row.getByTestId(`coach-address-edit-${FAILED_SEND_LEADER.id}`)).toBeVisible();
       await expect(row.getByTestId(`coach-pipeline-release-${session.sourceSessionId}`)).toHaveCount(0);
     }
+    const unconfirmedRow = page.getByTestId(`coach-pipeline-${UNCONFIRMED_SEND_SESSION.sourceSessionId}`);
+    await expect(unconfirmedRow).toContainText(`Why: ${UNCONFIRMED_SEND_SESSION.reason}`);
+    await expect(unconfirmedRow.getByTestId(`coach-address-edit-${FAILED_SEND_LEADER.id}`)).toBeVisible();
+    await capture(page, testInfo, 'pb1-unconfirmed-send-address-fix', unconfirmedRow);
     const retryRow = page.getByTestId(`coach-pipeline-${retrying.sourceSessionId}`);
     await expect(retryRow.getByTestId(`coach-pipeline-requeue-${retrying.sourceSessionId}`)).toHaveCount(0);
     await capture(page, testInfo, 'p5-failed-send-retrying', retryRow);
