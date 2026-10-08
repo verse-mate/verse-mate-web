@@ -250,7 +250,7 @@ export function useAddLeader(): UseMutationResult<
 > {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: addCoachLeader,
+    mutationFn: (input) => addCoachLeader(input),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: coachKeys.adminCoaches });
     },
@@ -302,7 +302,7 @@ export function useCoverage(): UseQueryResult<CoverageReport> {
 export function useRequeuePipelineFailure(): UseMutationResult<{ requeued: boolean }, Error, string> {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: requeuePipelineFailure,
+    mutationFn: (sourceSessionId) => requeuePipelineFailure(sourceSessionId),
     onSuccess: () => qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures }),
   });
 }
@@ -325,7 +325,7 @@ function useRefreshPipelineWrite() {
 
 export function useReleaseHeldReport(): UseMutationResult<ReleaseOutcome, Error, string> {
   const refresh = useRefreshPipelineWrite();
-  return useMutation({ mutationFn: releaseHeldReport, onSuccess: refresh });
+  return useMutation({ mutationFn: (reportId) => releaseHeldReport(reportId), onSuccess: refresh });
 }
 
 export function useUpdateLeaderEmail(): UseMutationResult<
