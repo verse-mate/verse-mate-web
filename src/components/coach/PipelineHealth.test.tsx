@@ -553,6 +553,26 @@ describe('an unresolved session', () => {
     expect(screen.queryByTestId('coach-pipeline-requeue-ff-4')).toBeNull();
   });
 
+  it("does not offer the session's current leader, and shows an assignment to them refused in words", async () => {
+    const ATTRIBUTED = { ...UNRESOLVED, sourceSessionId: 'ff-8', coachId: 'amy-lee', reason: 'moved by hand' };
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([ATTRIBUTED]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'attributeSession').mockRejectedValue(
+      new CoachApiError('x', 409, 'The session is already assigned to that leader'),
+    );
+    renderView();
+
+    const picker = await screen.findByTestId('coach-pipeline-assign-to-ff-8');
+    await waitFor(() => expect(within(picker).getByRole('option', { name: 'Milo Kerr' })).toBeInTheDocument());
+    expect(within(picker).queryByRole('option', { name: 'Amy Lee' })).toBeNull();
+
+    fireEvent.change(picker, { target: { value: 'milo-kerr' } });
+    fireEvent.click(screen.getByTestId('coach-pipeline-assign-ff-8'));
+    expect(await screen.findByTestId('coach-pipeline-outcome-ff-8')).toHaveTextContent(
+      'Refused (409): The session is already assigned to that leader',
+    );
+  });
+
   it('keeps the assignment disabled while it is in flight, and shows a refusal', async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([UNRESOLVED]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
