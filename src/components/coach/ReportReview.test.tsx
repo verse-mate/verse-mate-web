@@ -847,6 +847,13 @@ describe('a legacy report', () => {
 describe('the first-lesson flag on an undelivered report', () => {
   const UNDELIVERED: ReportReviewState = { ...REVIEW, delivered: false };
 
+  it('heads the panel with what it covers, and gives the first lesson, the dimensions and the improvements a section each', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    renderReview();
+    expect(await screen.findByRole('heading', { level: 3 })).toHaveTextContent('Review before delivery');
+    expect(screen.getAllByRole('heading', { level: 4 }).map((h) => h.textContent)).toEqual(['First lesson', 'Dimensions', 'Improvements']);
+  });
+
   it('says whether the flag was detected or set by hand, and names the passage book', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...UNDELIVERED, firstLesson: true, firstLessonSource: 'detected' });
     renderReview();
