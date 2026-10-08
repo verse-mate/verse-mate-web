@@ -688,6 +688,84 @@ describe('a row awaiting release in a delivery state', () => {
   });
 });
 
+describe('a failed send', () => {
+  const SENT_FAILED = 'send failed to milo@example.test (mailbox unavailable); already emailed to bench@example.test';
+  const RETRYING = {
+    ...PARKED,
+    sourceSessionId: 'ff-7',
+    reportId: 'rep-7',
+    state: 'delivery_pending',
+    attempts: 2,
+    reason: `${SENT_FAILED}; retried automatically (attempt 2 of 5), fix the failing address if it is wrong`,
+    action: null,
+  };
+  const EXHAUSTED = {
+    ...RETRYING,
+    sourceSessionId: 'ff-8',
+    state: 'delivery_failed',
+    attempts: 5,
+    reason: `${SENT_FAILED}; retries exhausted: fix the failing address, then requeue it`,
+    action: 'requeue' as const,
+  };
+
+  it('a send still being retried shows why out of session replay, offers the address fix, and no requeue or release', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([RETRYING]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-7');
+    expect(row).toHaveTextContent(`Why: ${RETRYING.reason}`);
+    expect(within(row).getByText(/send failed to/).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    expect(await within(row).findByTestId('coach-address-edit-milo-kerr')).toBeInTheDocument();
+    expect(within(row).getByTestId('coach-address-milo-kerr')).toHaveTextContent('milo@example.test');
+    expect(within(row).queryByTestId('coach-pipeline-requeue-ff-7')).toBeNull();
+    expect(within(row).queryByTestId('coach-pipeline-release-ff-7')).toBeNull();
+  });
+
+  it('a send whose retries ran out offers the address fix and the requeue', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([EXHAUSTED]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    const update = vi.spyOn(coachService, 'updateLeaderEmail').mockResolvedValue({ email: 'milo@church.test', noticeSent: false });
+    const requeue = vi.spyOn(coachService, 'requeuePipelineFailure').mockResolvedValue({ requeued: true });
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-8');
+    expect(row).toHaveTextContent('retries exhausted: fix the failing address, then requeue it');
+    fireEvent.click(await within(row).findByTestId('coach-address-edit-milo-kerr'));
+    fireEvent.change(within(row).getByTestId('coach-address-input-milo-kerr'), { target: { value: 'milo@church.test' } });
+    fireEvent.click(within(row).getByTestId('coach-address-save-milo-kerr'));
+    await waitFor(() => expect(update).toHaveBeenCalledWith('milo-kerr', 'milo@church.test', false));
+
+    fireEvent.click(within(row).getByTestId('coach-pipeline-requeue-ff-8'));
+    await waitFor(() => expect(requeue).toHaveBeenCalledWith('ff-8'));
+  });
+
+  it('a delivery with no deliverable address at all offers the address fix', async () => {
+    const NONE = {
+      ...RETRYING,
+      reason: 'no recipient has a deliverable address; retried automatically (attempt 1 of 5), fix the failing address if it is wrong',
+    };
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([NONE]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-7');
+    expect(await within(row).findByTestId('coach-address-edit-milo-kerr')).toBeInTheDocument();
+  });
+
+  it('offers no address fix on a row that is not a failed send', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(
+      page([PARKED, { ...HELD, sourceSessionId: 'ff-9', state: 'delivery_pending', reason: 're-attributed: held until an admin releases it' }]),
+    );
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    await screen.findByTestId('coach-pipeline-ff-9');
+    expect(within(screen.getByTestId('coach-pipeline-ff-1')).queryByTestId('coach-address-edit-milo-kerr')).toBeNull();
+    expect(within(screen.getByTestId('coach-pipeline-ff-9')).queryByTestId('coach-address-edit-amy-lee')).toBeNull();
+  });
+});
+
 describe('a send skipped for a placeholder address', () => {
   it("names the leader, keeps the address out of replay, and offers to fix it instead of release or requeue", async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([SKIPPED]));
