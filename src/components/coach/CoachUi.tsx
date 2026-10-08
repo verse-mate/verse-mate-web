@@ -13,6 +13,7 @@ import { GraduationCap, LogIn } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { useRubric } from '@/hooks/useRubric';
 import { statusColor } from '@/services/coachService';
+import { dt } from './dashboardTheme';
 import type { CoachAuthReason, CoachReportSummary } from '@/services/coachService';
 
 // ─── Card ──────────────────────────────────────────────────────────────────
@@ -56,6 +57,27 @@ export function SectionLabel({ children }: { children: ReactNode }) {
     >
       {children}
     </p>
+  );
+}
+
+export function PipelineCopyTag({ reportId, held }: { reportId: string; held?: boolean }) {
+  if (!held) return null;
+  return (
+    <span
+      data-testid={`coach-pipeline-copy-${reportId}`}
+      style={{
+        display: 'inline-block',
+        fontSize: 11,
+        fontWeight: 700,
+        letterSpacing: '.03em',
+        color: dt.rust,
+        background: dt.rustBg,
+        padding: '3px 8px',
+        borderRadius: 5,
+      }}
+    >
+      Pipeline copy, not visible to the leader
+    </span>
   );
 }
 

@@ -125,6 +125,22 @@ describe('Coach Oversight', () => {
     expect(await screen.findByTestId('oversight-comment-s6')).toBeInTheDocument();
   });
 
+  it("marks a held pipeline copy among a leader's classes as admin-only", async () => {
+    const held = { ...report, id: 's7', date: '2026-07-17' };
+    vi.mocked(coachService.fetchCoachReportSummaries).mockResolvedValue({
+      items: [{ ...report, held: false }, { ...held, held: true }],
+      total: 2,
+      streakWeeks: 1,
+      quarterSessions: 1,
+    });
+    vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(async (id) => (id === held.id ? held : report));
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
+
+    expect(await screen.findByTestId('coach-pipeline-copy-s7')).toHaveTextContent('Pipeline copy, not visible to the leader');
+    expect(screen.queryByTestId('coach-pipeline-copy-s6')).toBeNull();
+  });
+
   it('falls back to available sessions for cluster mix when no monthly summary yet', async () => {
     vi.mocked(coachService.fetchLeaderMonthlySummary).mockResolvedValueOnce({ ...leaderMonthly, summary: null });
     renderScreen();

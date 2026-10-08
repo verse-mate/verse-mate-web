@@ -75,6 +75,7 @@ export interface CoachReport {
   /** Coaching notes on this session, newest first. Shown editable to admins
    *  (composer + history) and read-only to the leader on their dashboard. */
   notes?: CoachNote[];
+  held?: boolean;
 }
 
 /** A coaching note on a session, written by an admin, emailed to the leader. */
@@ -297,6 +298,7 @@ export type CoachReportSummary = Pick<
   | 'statusEmoji'
   | 'hasRetainedRecording'
   | 'attachedRecordingUrl'
+  | 'held'
 >;
 
 export interface CoachReportSummaryPage {

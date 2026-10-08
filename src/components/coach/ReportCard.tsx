@@ -4,7 +4,7 @@ import { vmTokens } from '@/styles/themeStyles';
 import { useRubric } from '@/hooks/useRubric';
 import { useCoachReportDetail } from '@/hooks/useCoach';
 import { statusColor, type CoachReport, type CoachReportSummary } from '@/services/coachService';
-import { CoachCard, StatusPill } from './CoachUi';
+import { CoachCard, PipelineCopyTag, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import SessionNotes from './SessionNotes';
 
@@ -64,6 +64,7 @@ export default function ReportCard({
           <p style={{ margin: '2px 0 0', fontSize: 12, color: vmTokens.textSecondary, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             {report.session}
           </p>
+          <PipelineCopyTag reportId={report.id} held={report.held} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4, flexShrink: 0 }}>
           <span style={{ fontSize: 18, fontWeight: 700, color: vmTokens.textPrimary, lineHeight: 1 }}>

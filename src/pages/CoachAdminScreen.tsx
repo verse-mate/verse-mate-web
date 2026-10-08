@@ -50,6 +50,7 @@ import PipelineHealth from '@/components/coach/PipelineHealth';
 import ReportReview from '@/components/coach/ReportReview';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
+import { PipelineCopyTag } from '@/components/coach/CoachUi';
 import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
 import { type RubricContract, bandFloor, statusForScore } from '@/services/rubric';
 
@@ -608,7 +609,7 @@ function ClassCard({ report: row, ...props }: ClassCardProps & { report: CoachRe
       </div>
     );
   }
-  return <ClassCardBody report={detail.data} {...props} />;
+  return <ClassCardBody report={detail.data} held={row.held} {...props} />;
 }
 
 function ClassCardBody({
@@ -617,7 +618,8 @@ function ClassCardBody({
   leaderId,
   open,
   onToggle,
-}: ClassCardProps & { report: CoachReport }) {
+  held,
+}: ClassCardProps & { report: CoachReport; held?: boolean }) {
   const cb = compBand(report.score, useRubric().rubric);
   const scored = report.dimensions.filter((d) => d.score != null) as { n: number; name: string; score: number; note?: string }[];
   const sortedDesc = [...scored].sort((a, b) => b.score - a.score);
@@ -638,6 +640,7 @@ function ClassCardBody({
             <div style={{ minWidth: 0 }}>
               <div style={{ fontWeight: 600, fontSize: 15 }}>{report.dateLabel}</div>
               <div style={{ fontSize: 12.5, color: dt.textLight }}>{report.session}{report.topic ? ` · ${report.topic}` : ''}{study ? ` · ${study}` : ''}</div>
+              <PipelineCopyTag reportId={report.id} held={held} />
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14, flex: 'none' }}>
