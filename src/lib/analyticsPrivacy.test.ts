@@ -153,4 +153,25 @@ describe('what reaches analytics', () => {
     });
     expect(out?.$set_once).toEqual({ $initial_pathname: '/coach/leader/:id', $initial_current_url: 'https://app.test/coach/leader/:id' });
   });
+
+  it('keys heatmap clicks by the scrubbed address, so no leader or report id and no query reaches analytics', () => {
+    const out = scrubEvent({
+      uuid: 'u',
+      event: '$$heatmap',
+      properties: {
+        $heatmap_data: {
+          'https://app.test/coach/leader/nora-quill/manage?s=nora-quill-2026-09-01-ff7': [{ x: 1, y: 2 }],
+          'https://app.test/coach/leader/otto-vance/manage#notes': [{ x: 3, y: 4 }],
+          'https://app.test/bible/john/3': [{ x: 5, y: 6 }],
+        },
+      },
+    });
+    expect(out?.properties.$heatmap_data).toEqual({
+      'https://app.test/coach/leader/:id/manage': [
+        { x: 1, y: 2 },
+        { x: 3, y: 4 },
+      ],
+      'https://app.test/bible/john/3': [{ x: 5, y: 6 }],
+    });
+  });
 });
