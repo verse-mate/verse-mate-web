@@ -17,6 +17,7 @@ import {
 } from '@/services/coachService';
 import { useCoachReportDetail } from '@/hooks/useCoach';
 import { useRubric } from '@/hooks/useRubric';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import RetainedRecording from './RetainedRecording';
 import { dt, letterGrade, ratingForScore, statusBand } from './dashboardTheme';
 
@@ -55,7 +56,7 @@ export default function CoachSessionDetail({
   ];
 
   return (
-    <div style={{ marginTop: 34, borderTop: `1px solid ${dt.border2}`, paddingTop: 30 }}>
+    <div className={REPLAY_BLOCK_CLASS} style={{ marginTop: 34, borderTop: `1px solid ${dt.border2}`, paddingTop: 30 }}>
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 20, flexWrap: 'wrap' }}>
         <div>
