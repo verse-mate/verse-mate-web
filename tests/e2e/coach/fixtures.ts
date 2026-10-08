@@ -159,7 +159,7 @@ export const ME = {
   isAdmin: false,
   profile: {
     id: 'leader',
-    name: 'Bryan Bailey',
+    name: 'Avery Hollis',
     email: 'leader@example.test',
     group: 'Saturday Morning Study',
     coachName: '',
@@ -180,6 +180,8 @@ export const ADMIN_ME = {
 };
 
 export const LEADER_ID = 'leader';
+
+export const AGGREGATES = { streakWeeks: 3, quarterSessions: 9 };
 
 export const TRENDS = {
   scoreSeries: REPORTS.map((r) => ({
@@ -302,7 +304,7 @@ export const COVERAGE = {
   leaders: [
     {
       coachId: LEADER_ID,
-      name: 'Bryan Bailey',
+      name: 'Avery Hollis',
       email: 'leader@example.test',
       covered: true,
       basis: 'observed',
@@ -387,16 +389,6 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   );
 
   await page.route(`${API}/coach/trends`, (route) => route.fulfill({ json: TRENDS }));
-
-  await page.route(`${API}/coach/admin/coaches/*/reports`, (route) => {
-    if (!opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } });
-    return route.fulfill({
-      json: {
-        profile: { ...ME.profile, id: LEADER_ID },
-        reports: REPORTS.map((r) => ({ ...withAttached(r), hasRetainedRecording: retained.has(r.id) })),
-      },
-    });
-  });
 
   await page.route(/\/coach\/admin\/coaches\/[^/]+\/monthly-summary/, async (route) => {
     if (!opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } });
@@ -508,7 +500,33 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     const limit = Number(url.searchParams.get('limit') ?? 25);
     const offset = Number(url.searchParams.get('offset') ?? 0);
     return route.fulfill({
-      json: { items: all.slice(offset, offset + limit).map(summaryOf), total: all.length },
+      json: { items: all.slice(offset, offset + limit).map(summaryOf), total: all.length, ...AGGREGATES },
+    });
+  });
+
+  await page.route(/\/coach\/admin\/coaches\/[^/]+\/reports\/(?!summary(?:\?|$))[^/?]+$/, (route) => {
+    if (!opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Admin access required' } });
+    const id = decodeURIComponent(new URL(route.request().url()).pathname.split('/').at(-1) ?? '');
+    const found = all.find((r) => r.id === id);
+    if (!found) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'Session not found' } });
+    return route.fulfill({ json: { report: { ...withAttached(found), hasRetainedRecording: retained.has(id) } } });
+  });
+
+  await page.route(/\/coach\/admin\/coaches\/[^/]+\/reports\/summary(\?|$)/, (route) => {
+    if (!opts.admin) return route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Admin access required' } });
+    const url = new URL(route.request().url());
+    const limit = Number(url.searchParams.get('limit') ?? 25);
+    const offset = Number(url.searchParams.get('offset') ?? 0);
+    return route.fulfill({
+      json: {
+        items: all.slice(offset, offset + limit).map((r) => ({
+          ...summaryOf(r),
+          hasRetainedRecording: retained.has(r.id),
+          attachedRecordingUrl: attached[r.id] ?? null,
+        })),
+        total: all.length,
+        ...AGGREGATES,
+      },
     });
   });
 

@@ -30,7 +30,7 @@ vi.mock('@/services/coachService', async (importOriginal) => {
     fetchCoachTrends: vi.fn(),
     fetchCoachClasses: vi.fn(),
     fetchMyMonthlySummary: vi.fn(),
-    fetchCoachReportsFor: vi.fn(),
+    fetchAdminCoaches: vi.fn(),
     fetchCoachTrendsFor: vi.fn(),
     fetchAllCoachClasses: vi.fn(),
     fetchCoachReportDetail: vi.fn(),
@@ -195,19 +195,23 @@ function renderAt(path: string, element: React.ReactNode) {
 }
 
 beforeEach(() => {
+  vi.clearAllMocks();
   vi.mocked(coachService.fetchCoachMe).mockResolvedValue(me);
-  vi.mocked(coachService.fetchCoachReportSummaries).mockResolvedValue({ items: reports, total: reports.length });
+  vi.mocked(coachService.fetchCoachReportSummaries).mockResolvedValue({
+    items: reports,
+    total: reports.length,
+    streakWeeks: 14,
+    quarterSessions: 13,
+  });
   vi.mocked(coachService.fetchCoachTrends).mockResolvedValue(trends);
   vi.mocked(coachService.fetchCoachClasses).mockResolvedValue(classes);
   vi.mocked(coachService.fetchMyMonthlySummary).mockResolvedValue(monthly);
   vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(
     async (id) => reports.find((r) => r.id === id) ?? null,
   );
-  // Admin drill-in ("For") endpoints, same shapes, per-leader.
-  vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
-    profile: { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning', coachName: '' },
-    reports,
-  });
+  vi.mocked(coachService.fetchAdminCoaches).mockResolvedValue([
+    { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning', coachName: '', sessionCount: 2, latest: null },
+  ]);
   vi.mocked(coachService.fetchCoachTrendsFor).mockResolvedValue(trends);
   vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue(
     classes.map((c) => ({ ...c, leader: { id: 'avery', name: 'Avery Hollis', email: 'b@x.com' } })),
@@ -225,6 +229,11 @@ describe('Coaching dashboard, Home', () => {
     expect(screen.getByText('James — Riverbend Sunday Group')).toBeInTheDocument();
     // Session detail header + tabs.
     expect(screen.getByTestId('coach-tab-scorecard')).toBeInTheDocument();
+  });
+
+  it('takes the streak and the quarter count from the server, not from the page it holds', async () => {
+    renderAt('/coach', <CoachDashboardScreen />);
+    expect(await screen.findByText(/14-week streak · 13 sessions this quarter/)).toBeInTheDocument();
   });
 
   it('clears a failed session detail when Retry is pressed', async () => {
@@ -312,11 +321,15 @@ describe('Coaching dashboard, admin drill-in', () => {
         </MemoryRouter>
       </QueryClientProvider>,
     );
-    // Data-dependent element first (waits for the "For" endpoint to resolve).
     expect((await screen.findAllByText('James — Lesson 9: Wealth & Patience')).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/87\/100/).length).toBeGreaterThan(0);
-    // Admin context bar + a way back to the roster.
     expect(screen.getByTestId('coach-admin-tools')).toBeInTheDocument();
     expect(screen.getByText(/All leaders/)).toBeInTheDocument();
+    expect(await screen.findByText(/Admin view · Avery Hollis/)).toBeInTheDocument();
+    expect(screen.getByText(/14-week streak · 13 sessions this quarter/)).toBeInTheDocument();
+    expect(vi.mocked(coachService.fetchCoachReportSummaries).mock.calls).toEqual([[0, 50, 'avery']]);
+    const details = vi.mocked(coachService.fetchCoachReportDetail).mock.calls;
+    expect(details.length).toBeGreaterThan(0);
+    expect(details.every(([, coachId]) => coachId === 'avery')).toBe(true);
   });
 });

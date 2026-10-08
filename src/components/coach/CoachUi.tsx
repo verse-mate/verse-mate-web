@@ -13,7 +13,7 @@ import { GraduationCap, LogIn } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { useRubric } from '@/hooks/useRubric';
 import { statusColor } from '@/services/coachService';
-import type { CoachAuthReason, CoachReport } from '@/services/coachService';
+import type { CoachAuthReason, CoachReportSummary } from '@/services/coachService';
 
 // ─── Card ──────────────────────────────────────────────────────────────────
 
@@ -157,7 +157,7 @@ export function LatestSessionHero({
   delta,
   testId = 'coach-latest-card',
 }: {
-  latest: CoachReport;
+  latest: CoachReportSummary;
   delta: number | null;
   testId?: string;
 }) {

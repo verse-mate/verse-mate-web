@@ -20,7 +20,14 @@ import ScreenHeader from '@/components/ScreenHeader';
 import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
-import { useAdminClasses, useCoachReportsFor, useCoachTrendsFor, coachState } from '@/hooks/useCoach';
+import {
+  useAdminClasses,
+  useAdminLeader,
+  useCoachReportDetail,
+  useCoachReportSummaries,
+  useCoachTrendsFor,
+  coachState,
+} from '@/hooks/useCoach';
 import {
   CoachCard,
   CoachStateBoundary,
@@ -36,33 +43,27 @@ export default function CoachLeaderScreen() {
   const navigate = useNavigate();
   const { coachId = '' } = useParams();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
-  const query = useCoachReportsFor(coachId);
+  const summaries = useCoachReportSummaries({ coachId });
+  const profile = useAdminLeader(coachId);
   const trendsQuery = useCoachTrendsFor(coachId);
-  const state = coachState(query);
+  const state = coachState(summaries);
 
-  // This leader's registered classes + meeting links, filtered from the admin
-  // export (shared cache with the all-leaders Class links screen).
   const classesQuery = useAdminClasses();
   const leaderClasses = (classesQuery.data || []).filter((c) => c.leader.id === coachId);
 
-  const profile = state.data?.profile;
-  // Newest first by session date — primary sort for the latest-session detail
-  // and the earlier-documents list alike.
-  const reports = [...(state.data?.reports || [])].sort(byDateDesc);
+  const reports = [...(summaries.data?.pages.flatMap((p) => p.items) ?? [])].sort(byDateDesc);
   const latest = reports[0] || null;
 
-  // Which session the full report shows — defaults to the latest; tapping a
-  // trend point opens that session here.
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  // When minimized, the selected session collapses from the full prose report
-  // to a compact card — so every session on the page reads as a minimized card.
   const [minimized, setMinimized] = useState(false);
   const detailRef = useRef<HTMLDivElement>(null);
-  const selected = (selectedId && reports.find((r) => r.id === selectedId)) || latest;
-  const selIdx = selected ? reports.findIndex((r) => r.id === selected.id) : -1;
+  const selectedSummary = (selectedId && reports.find((r) => r.id === selectedId)) || latest;
+  const selIdx = selectedSummary ? reports.findIndex((r) => r.id === selectedSummary.id) : -1;
   const selPrev = selIdx >= 0 ? reports[selIdx + 1] : undefined;
   const delta =
-    selected && selPrev ? Math.round((selected.score - selPrev.score) * 100) / 100 : null;
+    selectedSummary && selPrev ? Math.round((selectedSummary.score - selPrev.score) * 100) / 100 : null;
+  const selectedDetail = useCoachReportDetail(selectedSummary?.id, coachId);
+  const selected = selectedDetail.data ?? null;
 
   const openByDate = (isoDate: string) => {
     const match = reports.find((r) => r.date === isoDate);
@@ -81,6 +82,18 @@ export default function CoachLeaderScreen() {
         </p>
       ) : null}
     </div>
+  );
+
+  const moreButton = summaries.hasNextPage && (
+    <button
+      type="button"
+      onClick={() => summaries.fetchNextPage()}
+      disabled={summaries.isFetchingNextPage}
+      data-testid="coach-leader-more"
+      style={{ ...leaderLinkBtn, alignSelf: 'center', padding: 8 }}
+    >
+      {summaries.isFetchingNextPage ? 'Loading…' : 'Show more sessions'}
+    </button>
   );
 
   // Admin entry into this leader's rich monthly summary (PDF parity).
@@ -138,10 +151,13 @@ export default function CoachLeaderScreen() {
         style={{ flex: 1, overflowY: 'auto', borderTop: `1px solid ${vmTokens.divider}` }}
       >
         <CoachStateBoundary
-          loading={state.loading}
+          loading={state.loading || selectedDetail.isLoading}
           authError={state.authError}
-          error={state.error}
-          onRetry={() => query.refetch()}
+          error={state.error || !!selectedDetail.error}
+          onRetry={() => {
+            summaries.refetch();
+            selectedDetail.refetch();
+          }}
         >
           {isDesktop ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 24, maxWidth: 1180, margin: '0 auto' }}>
@@ -213,6 +229,7 @@ export default function CoachLeaderScreen() {
                     {reports.slice(1).map((r) => (
                       <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} admin coachId={coachId} />
                     ))}
+                    {moreButton}
                   </div>
                 </div>
               )}
@@ -255,6 +272,7 @@ export default function CoachLeaderScreen() {
                     {reports.map((r) => (
                       <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} admin coachId={coachId} />
                     ))}
+                    {moreButton}
                   </div>
                 </div>
               )}

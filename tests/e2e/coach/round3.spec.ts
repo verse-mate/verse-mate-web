@@ -278,3 +278,74 @@ test.describe("A leader's history loads as a paginated summary", () => {
     await expect(page.getByText(/couldn't find that session/i)).toHaveCount(0);
   });
 });
+
+test.describe("An admin's drill-in into one leader loads a page at a time", () => {
+  const FULL_CORPUS = /^\/coach\/(admin\/coaches\/[^/]+\/)?reports$/;
+
+  test("no drill-in screen fetches the leader's whole corpus", async ({ page }) => {
+    const paths: string[] = [];
+    page.on('request', (req) => {
+      const url = new URL(req.url());
+      if (url.origin === new URL(API).origin && url.pathname.startsWith('/coach/')) paths.push(url.pathname);
+    });
+    await useCoachApi(page, { admin: true, historyLength: 60, retained: [NEWEST_ID] });
+
+    const leader = `/coach/leader/${LEADER_ID}`;
+    for (const route of [leader, `${leader}?s=${olderId(59)}`, `${leader}/sessions`, `${leader}/manage`, `${leader}/trends`, `${leader}/monthly`]) {
+      await page.goto(route);
+      await page.waitForLoadState('networkidle');
+    }
+    await page.goto('/coach');
+    await page.getByTestId(`oversight-roster-${LEADER_ID}`).click();
+    await expect(page.getByTestId(`oversight-class-${NEWEST_ID}`)).toBeVisible();
+    await page.waitForLoadState('networkidle');
+
+    expect(paths.filter((p) => FULL_CORPUS.test(p))).toEqual([]);
+    expect(paths).toContain(`/coach/admin/coaches/${LEADER_ID}/reports/summary`);
+  });
+
+  test('the sessions list pages through a long history', async ({ page }) => {
+    await useCoachApi(page, { admin: true, historyLength: 60 });
+    await page.goto(`/coach/leader/${LEADER_ID}/sessions`);
+
+    const rows = page.getByTestId('coach-view-report');
+    await expect(rows).toHaveCount(50);
+    await page.getByTestId('coach-sessions-more').click();
+    await expect(rows).toHaveCount(62);
+  });
+
+  test('the management screen pages through a long history and opens an older report on demand', async ({ page }) => {
+    await useCoachApi(page, { admin: true, historyLength: 60 });
+    await page.goto(`/coach/leader/${LEADER_ID}/manage`);
+
+    const cards = page.locator('[data-testid^="coach-report-"]');
+    await expect(page.getByTestId('coach-leader-more')).toBeVisible();
+    const firstPage = await cards.count();
+    await page.getByTestId('coach-leader-more').click();
+    await expect(page.getByTestId('coach-leader-more')).toHaveCount(0);
+    await expect(cards).toHaveCount(firstPage + 12);
+
+    const older = page.getByTestId(`coach-report-${olderId(59)}`);
+    await older.getByRole('button').first().click();
+    await expect(older.getByText('Cluster breakdown')).toBeVisible();
+  });
+
+  test('a deep link to a session past the first page opens that session', async ({ page }) => {
+    await useCoachApi(page, { admin: true, historyLength: 60 });
+    await page.goto(`/coach/leader/${LEADER_ID}?s=${olderId(59)}`);
+
+    await expect(page.getByText('Older session 59').first()).toBeVisible();
+    await expect(page.getByText(/couldn't find that session/i)).toHaveCount(0);
+  });
+
+  test('the oversight drill-in pages its classes from the server', async ({ page }) => {
+    await useCoachApi(page, { admin: true, historyLength: 60 });
+    await page.goto('/coach');
+    await page.getByTestId(`oversight-roster-${LEADER_ID}`).click();
+
+    await expect(page.getByText(/Page 1 of 13 · 62 classes/)).toBeVisible();
+    for (let i = 0; i < 12; i++) await page.getByRole('button', { name: 'Older →' }).click();
+    await expect(page.getByText(/Page 13 of 13/)).toBeVisible();
+    await expect(page.getByTestId(`oversight-class-${olderId(59)}`)).toBeVisible();
+  });
+});

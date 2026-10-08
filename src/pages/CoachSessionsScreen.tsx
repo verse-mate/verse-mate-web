@@ -16,8 +16,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import {
+  useAdminLeader,
   useCoachReportSummaries,
-  useCoachReportsFor,
   useCoachClasses,
   useAdminClasses,
   coachKeys,
@@ -52,20 +52,18 @@ export default function CoachSessionsScreen() {
   const admin = !!coachId;
   const base = admin ? `/coach/leader/${coachId}` : '/coach';
 
-  const selfReports = useCoachReportSummaries({ enabled: !admin });
-  const forReports = useCoachReportsFor(coachId ?? '');
+  const summaries = useCoachReportSummaries({ coachId });
+  const adminLeader = useAdminLeader(coachId);
   const selfClasses = useCoachClasses({ enabled: !admin });
   const adminClasses = useAdminClasses({ enabled: admin });
 
-  const reports = admin ? coachState(forReports) : coachState(selfReports);
-  const reportList: CoachReportSummary[] | undefined = admin
-    ? forReports.data?.reports
-    : selfReports.data?.pages.flatMap((p) => p.items);
+  const reports = coachState(summaries);
+  const reportList: CoachReportSummary[] | undefined = summaries.data?.pages.flatMap((p) => p.items);
   const classesState = admin ? coachState(adminClasses) : coachState(selfClasses);
   const classList: CoachClass[] = admin
     ? (adminClasses.data || []).filter((c) => c.leader.id === coachId)
     : selfClasses.data || [];
-  const leaderName = admin ? forReports.data?.profile?.name || '' : '';
+  const leaderName = adminLeader?.name || '';
 
   const [showAdd, setShowAdd] = useState(false);
 
@@ -97,7 +95,7 @@ export default function CoachSessionsScreen() {
         authError={reports.authError || classesState.authError}
         error={reports.error || classesState.error}
         onRetry={() => {
-          (admin ? forReports : selfReports).refetch();
+          summaries.refetch();
           (admin ? adminClasses : selfClasses).refetch();
         }}
       >
@@ -167,18 +165,18 @@ export default function CoachSessionsScreen() {
               {sessionList.map((s) => (
                 <PastSessionRow key={s.id} report={s} onView={() => navigate(`${base}?s=${encodeURIComponent(s.id)}`)} />
               ))}
-              {!admin && selfReports.hasNextPage && (
+              {summaries.hasNextPage && (
                 <button
                   type="button"
-                  onClick={() => selfReports.fetchNextPage()}
-                  disabled={selfReports.isFetchingNextPage}
+                  onClick={() => summaries.fetchNextPage()}
+                  disabled={summaries.isFetchingNextPage}
                   data-testid="coach-sessions-more"
                   style={{ alignSelf: 'center', marginTop: 8, cursor: 'pointer', fontSize: 13.5, fontWeight: 700, color: dt.gold2, background: dt.goldChip, border: `1px solid ${dt.goldChipBorder}`, padding: '9px 16px', borderRadius: 8 }}
                 >
-                  {selfReports.isFetchingNextPage ? 'Loading…' : 'Show more sessions'}
+                  {summaries.isFetchingNextPage ? 'Loading…' : 'Show more sessions'}
                 </button>
               )}
-              {!admin && selfReports.isFetchNextPageError && (
+              {summaries.isFetchNextPageError && (
                 <div style={{ fontSize: 13, color: dt.rust, textAlign: 'center' }}>Could not load more sessions. Try again.</div>
               )}
             </div>

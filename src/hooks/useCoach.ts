@@ -26,7 +26,6 @@ import {
   type CoachMe,
   type CoachMonthly,
   type CoachNote,
-  type CoachProfileHeader,
   type CoachReport,
   type CoachSummary,
   type CoachTrends,
@@ -40,8 +39,8 @@ import {
   fetchCoachMe,
   fetchCoachReportDetail,
   fetchCoachReportSummaries,
-  type CoachReportSummary,
-  fetchCoachReportsFor,
+  type CoachReportSummaryPage,
+  REPORT_PAGE_SIZE,
   fetchCoachTrends,
   fetchCoachTrendsFor,
   saveRecordingLink,
@@ -91,14 +90,16 @@ export function useCoachMe(): UseQueryResult<CoachMe> {
   return useQuery({ queryKey: coachKeys.me, queryFn: fetchCoachMe, retry: false });
 }
 
-type SummaryPage = { items: CoachReportSummary[]; total: number };
+function reportsKey(coachId?: string) {
+  return coachId ? coachKeys.adminReports(coachId) : coachKeys.reports;
+}
 
 export function useCoachReportSummaries(
-  opts: { enabled?: boolean } = {},
-): UseInfiniteQueryResult<InfiniteData<SummaryPage, number>> {
+  opts: { enabled?: boolean; coachId?: string } = {},
+): UseInfiniteQueryResult<InfiniteData<CoachReportSummaryPage, number>> {
   return useInfiniteQuery({
-    queryKey: [...coachKeys.reports, 'summary'],
-    queryFn: ({ pageParam }) => fetchCoachReportSummaries(pageParam),
+    queryKey: [...reportsKey(opts.coachId), 'summary'],
+    queryFn: ({ pageParam }) => fetchCoachReportSummaries(pageParam, REPORT_PAGE_SIZE, opts.coachId),
     initialPageParam: 0,
     getNextPageParam: (last, pages) => {
       const loaded = pages.reduce((n, p) => n + p.items.length, 0);
@@ -109,18 +110,13 @@ export function useCoachReportSummaries(
   });
 }
 
-/**
- * One session in full, fetched only when a single session is open.
- *
- * Separate from the reports list on purpose: the list must not learn anything
- * that would make it mint a recording address per row.
- */
 export function useCoachReportDetail(
   reportId: string | undefined,
+  coachId?: string,
 ): UseQueryResult<CoachReport | null> {
   return useQuery({
-    queryKey: [...coachKeys.reports, 'detail', reportId ?? ''],
-    queryFn: () => fetchCoachReportDetail(reportId as string),
+    queryKey: [...reportsKey(coachId), 'detail', reportId ?? ''],
+    queryFn: () => fetchCoachReportDetail(reportId as string, coachId),
     enabled: Boolean(reportId),
     retry: false,
   });
@@ -159,15 +155,14 @@ export function useAdminCoaches(): UseQueryResult<CoachSummary[]> {
   return useQuery({ queryKey: coachKeys.adminCoaches, queryFn: fetchAdminCoaches, retry: false });
 }
 
-export function useCoachReportsFor(
-  coachId: string,
-): UseQueryResult<{ profile: CoachProfileHeader; reports: CoachReport[] }> {
-  return useQuery({
-    queryKey: coachKeys.adminReports(coachId),
-    queryFn: () => fetchCoachReportsFor(coachId),
+export function useAdminLeader(coachId: string | undefined): CoachSummary | undefined {
+  const roster = useQuery({
+    queryKey: coachKeys.adminCoaches,
+    queryFn: fetchAdminCoaches,
     retry: false,
     enabled: !!coachId,
   });
+  return roster.data?.find((c) => c.id === coachId);
 }
 
 export function useCoachTrendsFor(coachId: string): UseQueryResult<CoachTrends> {
