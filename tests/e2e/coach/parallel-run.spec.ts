@@ -43,6 +43,8 @@ test.describe('A session observed during the parallel run', () => {
 
     const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
     await expect(panel.getByTestId('coach-review-parallel-run')).toHaveText(LABEL);
+    await expect(panel.getByRole('heading', { level: 3 })).toHaveText('Review before delivery');
+    await capture(page, testInfo, 'pb1-parallel-run-review-heading', panel.getByTestId('coach-review-parallel-run'));
     await panel.getByTestId('coach-improvements-open').click();
     await panel.getByTestId('coach-improvements-text').fill('Name the big idea up front');
     await panel.getByTestId('coach-improvements-save').click();
