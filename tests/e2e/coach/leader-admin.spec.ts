@@ -118,9 +118,7 @@ test.describe("A leader's title keywords and alternate addresses", () => {
     await keywords.fill('tuesday night\nHabakkuk study');
     await row.getByTestId('coach-attribution-save-evan-ellis').click();
     await expect(row.getByTestId('coach-attribution-saved-evan-ellis')).toHaveText('Saved. 1 unattributed session now matches a leader.');
-    const swept = page.getByTestId(`coach-pipeline-${UNRESOLVED_SESSION.sourceSessionId}`);
-    await expect(swept).toContainText('Why: re-attributed: held until an admin releases it');
-    await expect(swept.getByTestId(`coach-pipeline-release-${UNRESOLVED_SESSION.sourceSessionId}`)).toBeVisible();
+    await expect(page.getByTestId(`coach-pipeline-${UNRESOLVED_SESSION.sourceSessionId}`)).toHaveCount(0);
     expect(writes.at(-1)).toEqual([
       '/coach/admin/leaders/evan-ellis/attribution',
       { titleMatch: ['tuesday night', 'Habakkuk study'], altEmails: ['evan.personal@example.test'] },
@@ -155,36 +153,15 @@ test.describe('The failures list', () => {
     await capture(page, testInfo, 'w2a-assign-picked', row);
 
     await row.getByTestId(`coach-pipeline-assign-${UNRESOLVED_SESSION.sourceSessionId}`).click();
-    await expect(row.getByTestId(`coach-pipeline-outcome-${UNRESOLVED_SESSION.sourceSessionId}`)).toHaveText(
-      'Assigned to Evan Ellis. It is scored for them and held: nothing reaches them until an admin releases it from this list.',
-    );
-    await expect(row).toContainText('Why: re-attributed: held until an admin releases it');
+    await expect(page.getByText(
+      'Assigned to Evan Ellis. It is observed now: a later pipeline run scores it for them, and it is then held until an admin releases it from this list.',
+    )).toBeVisible();
+    await expect(row).toHaveCount(0);
     expect(writes).toContainEqual([
       `/coach/admin/sessions/${UNRESOLVED_SESSION.sourceSessionId}/attribute`,
       { coachId: 'evan-ellis', expectedCoachId: null },
     ]);
-    await capture(page, testInfo, 'p2-assign-held', row);
-
-    await row.getByTestId(`coach-pipeline-release-${UNRESOLVED_SESSION.sourceSessionId}`).click();
-    await expect(row.getByTestId(`coach-pipeline-outcome-${UNRESOLVED_SESSION.sourceSessionId}`)).toContainText(
-      'Refused (409): The pipeline is in its parallel run: nothing is sent until cutover',
-    );
-  });
-
-  test('a session assigned once the pipeline is live is released to its leader from the list', async ({ page }, testInfo) => {
-    const writes: string[] = [];
-    await useCoachApi(page, { admin: true, leaderAdmin: true, pipelineLive: true, onAdminWrite: (m, p) => writes.push(`${m} ${p}`) });
-    await openPipeline(page);
-
-    const id = UNRESOLVED_SESSION.sourceSessionId;
-    const row = page.getByTestId(`coach-pipeline-${id}`);
-    await row.getByTestId(`coach-pipeline-assign-to-${id}`).selectOption(PLACEHOLDER_LEADER.id);
-    await row.getByTestId(`coach-pipeline-assign-${id}`).click();
-    await row.getByTestId(`coach-pipeline-release-${id}`).click();
-    await expect(row).toHaveCount(0);
-    await expect(page.getByText('Released and delivered. 1 placeholder address was skipped.').first()).toBeVisible();
-    expect(writes).toEqual([`POST /coach/admin/sessions/${id}/attribute`]);
-    await capture(page, testInfo, 'p2-assign-released');
+    await capture(page, testInfo, 'p6-assign-scored-later');
   });
 
   test('a session awaiting release in a delivery state offers only the release, which delivers it', async ({ page }, testInfo) => {
