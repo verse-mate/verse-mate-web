@@ -330,12 +330,12 @@ export function useUpdateLeaderEmail(): UseMutationResult<
 export function useAttributeSession(): UseMutationResult<
   { coachId: string; state: string },
   Error,
-  { sourceSessionId: string; coachId: string }
+  { sourceSessionId: string; coachId: string; expectedCoachId: string | null }
 > {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: ({ sourceSessionId, coachId }) => attributeSession(sourceSessionId, coachId),
-    onSuccess: () => {
+    mutationFn: ({ sourceSessionId, coachId, expectedCoachId }) => attributeSession(sourceSessionId, coachId, expectedCoachId),
+    onSettled: () => {
       qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
       qc.invalidateQueries({ queryKey: coachKeys.coverage });
     },

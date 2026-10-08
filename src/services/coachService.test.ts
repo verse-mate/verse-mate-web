@@ -311,10 +311,10 @@ describe('coachService', () => {
     mockFetch((url, init) => {
       expect(url).toContain('/coach/admin/sessions/ff%2F4/attribute');
       expect(init?.method).toBe('POST');
-      expect(JSON.parse(String(init?.body))).toEqual({ coachId: 'amy-lee' });
+      expect(JSON.parse(String(init?.body))).toEqual({ coachId: 'amy-lee', expectedCoachId: null });
       return jsonResponse({ coachId: 'amy-lee', state: 'retained' });
     });
-    expect(await attributeSession('ff/4', 'amy-lee')).toEqual({ coachId: 'amy-lee', state: 'retained' });
+    expect(await attributeSession('ff/4', 'amy-lee', null)).toEqual({ coachId: 'amy-lee', state: 'retained' });
   });
 
   it.each([
@@ -445,7 +445,20 @@ describe('coachService', () => {
     ['list pipeline failures', () => fetchPipelineFailures(), 'GET', '/coach/admin/pipeline-failures?limit=50&offset=0', undefined],
     ['list a later page of pipeline failures', () => fetchPipelineFailures(100, 25), 'GET', '/coach/admin/pipeline-failures?limit=25&offset=100', undefined],
     ['requeue a failure', () => requeuePipelineFailure('ff/1'), 'POST', '/coach/admin/pipeline-failures/ff%2F1/requeue', undefined],
-    ['assign a session', () => attributeSession('ff/4', 'amy-lee'), 'POST', '/coach/admin/sessions/ff%2F4/attribute', { coachId: 'amy-lee' }],
+    [
+      'assign an unattributed session',
+      () => attributeSession('ff/4', 'amy-lee', null),
+      'POST',
+      '/coach/admin/sessions/ff%2F4/attribute',
+      { coachId: 'amy-lee', expectedCoachId: null },
+    ],
+    [
+      'move a session from the leader it was attributed to',
+      () => attributeSession('ff/4', 'amy-lee', 'milo-kerr'),
+      'POST',
+      '/coach/admin/sessions/ff%2F4/attribute',
+      { coachId: 'amy-lee', expectedCoachId: 'milo-kerr' },
+    ],
     ['release a held report', () => releaseHeldReport('rep/2'), 'POST', '/coach/admin/reports/rep%2F2/release', undefined],
     ['read a report review', () => fetchReportReview('rep/1'), 'GET', '/coach/admin/reports/rep%2F1/review', undefined],
     [
