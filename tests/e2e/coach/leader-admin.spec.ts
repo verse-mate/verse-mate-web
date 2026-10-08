@@ -437,6 +437,17 @@ test.describe('A pipeline copy held from its leader', () => {
     await capture(page, testInfo, 'p2-held-note-refused', page.getByTestId(`oversight-comment-error-${OLDER_ID}`));
   });
 
+  test('is marked in the full report on the manage screen, though the report detail does not carry held', async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== 'chromium-desktop', 'the full report renders on the desktop layout');
+    await useCoachApi(page, { admin: true, heldReports: [NEWEST_ID] });
+    await page.goto(`/coach/leader/${LEADER_ID}/manage`);
+    const detail = page.getByTestId(`coach-report-detail-${NEWEST_ID}`);
+    await expect(detail.getByTestId(`coach-pipeline-copy-${NEWEST_ID}`)).toHaveText('Pipeline copy, not visible to the leader');
+    await capture(page, testInfo, 'p6-held-manage-detail', detail);
+    await page.getByTestId('coach-leader-minimize').click();
+    await expect(page.getByTestId(`coach-report-${NEWEST_ID}`).getByTestId(`coach-pipeline-copy-${NEWEST_ID}`)).toBeVisible();
+  });
+
   test("never reaches the leader's own list", async ({ page }) => {
     await useCoachApi(page, { heldReports: [OLDER_ID] });
     await page.goto('/coach/sessions');

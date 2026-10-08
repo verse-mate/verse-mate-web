@@ -103,12 +103,12 @@ describe('ReportCard', () => {
   });
 
   it("marks a held pipeline copy in an admin's drill-in as not visible to the leader", () => {
-    render(<ReportCard report={{ ...makeReport(), held: true }} admin coachId="avery" />);
+    render(<ReportCard report={makeReport()} held admin coachId="avery" />);
     expect(screen.getByTestId('coach-pipeline-copy-r1')).toHaveTextContent('Pipeline copy, not visible to the leader');
   });
 
   it('carries no such mark on a report the leader can see', () => {
-    render(<ReportCard report={{ ...makeReport(), held: false }} admin coachId="avery" />);
+    render(<ReportCard report={makeReport()} held={false} admin coachId="avery" />);
     expect(screen.queryByTestId('coach-pipeline-copy-r1')).toBeNull();
   });
 });

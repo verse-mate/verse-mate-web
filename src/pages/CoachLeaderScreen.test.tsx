@@ -9,14 +9,18 @@ import CoachLeaderScreen from './CoachLeaderScreen';
 
 vi.mock('@/hooks/useMediaQuery', () => ({ useMediaQuery: () => true }));
 vi.mock('@/components/coach/ReportDetail', () => ({
-  default: ({ report }: { report: CoachReport }) => <div data-testid="selected-report">{report.id}</div>,
+  default: ({ report, held }: { report: CoachReport; held?: boolean }) => (
+    <div data-testid="selected-report" data-held={String(!!held)}>
+      {report.id}
+    </div>
+  ),
 }));
 vi.mock('@/components/coach/ReportCard', async () => {
   const { useState } = await import('react');
   return {
-    default: function Card({ report }: { report: CoachReport }) {
+    default: function Card({ report, held }: { report: CoachReport; held?: boolean }) {
       const [first] = useState(report.id);
-      return <div data-testid={`card-${report.id}`} data-first={first} />;
+      return <div data-testid={`card-${report.id}`} data-first={first} data-held={String(!!held)} />;
     },
   };
 });
@@ -184,5 +188,21 @@ describe('the minimized selected report', () => {
 
     fireEvent.click(screen.getByTestId('coach-leader-view-latest'));
     expect(screen.getByTestId('card-r1')).toHaveAttribute('data-first', 'r1');
+  });
+});
+
+describe('a pipeline copy held from its leader', () => {
+  it('is marked from the summary, which carries held, in the full report and the minimized card', async () => {
+    vi.spyOn(coachService, 'fetchCoachReportSummaries').mockResolvedValue({
+      items: [{ ...summary('r1', '2026-03-01'), held: true }, summary('r2', '2026-02-01')],
+      total: 2,
+      streakWeeks: 0,
+      quarterSessions: 0,
+    });
+    renderScreen();
+    await waitFor(() => expect(screen.getByTestId('selected-report')).toHaveAttribute('data-held', 'true'));
+    expect(screen.getByTestId('card-r2')).toHaveAttribute('data-held', 'false');
+    fireEvent.click(screen.getByTestId('coach-leader-minimize'));
+    expect(screen.getByTestId('card-r1')).toHaveAttribute('data-held', 'true');
   });
 });
