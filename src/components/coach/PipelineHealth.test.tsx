@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { toast } from 'sonner';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
@@ -139,6 +140,18 @@ describe('what is stuck in the pipeline', () => {
     await waitFor(() => expect(requeue).toHaveBeenCalledWith('ff-1'));
     await waitFor(() => expect(screen.queryByTestId('coach-pipeline-ff-1')).toBeNull());
     expect(list).toHaveBeenCalledTimes(2);
+  });
+
+  it('keeps the session title out of the confirmation toast, which sits outside the replay block', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue([PARKED]);
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'requeuePipelineFailure').mockResolvedValue({ requeued: true });
+    const success = vi.spyOn(toast, 'success');
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-pipeline-requeue-ff-1'));
+    await waitFor(() => expect(success).toHaveBeenCalledWith('Back in the queue.'));
+    expect(JSON.stringify(success.mock.calls)).not.toContain(PARKED.title);
   });
 
   it('releases a report held for review, by its report id', async () => {
