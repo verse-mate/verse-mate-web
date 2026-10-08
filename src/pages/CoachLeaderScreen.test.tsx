@@ -96,6 +96,26 @@ describe('a trend point on the management screen', () => {
   });
 });
 
+describe('a trend point whose session is on a page that fails to load', () => {
+  it('stops paging and says the session could not be opened', async () => {
+    const pages = vi
+      .spyOn(coachService, 'fetchCoachReportSummaries')
+      .mockResolvedValueOnce({ items: [summary('r1', '2026-03-01')], total: 3, streakWeeks: 0, quarterSessions: 0 })
+      .mockRejectedValue(new coachService.CoachApiError('admin/coaches/avery/reports/summary', 500, ''));
+    renderScreen();
+
+    expect(await screen.findByTestId('selected-report')).toHaveTextContent('r1');
+    fireEvent.click(screen.getByTestId('trend-point-2026-01-05'));
+
+    expect(await screen.findByTestId('coach-trend-open-failed')).toHaveTextContent(
+      'Could not open that session: loading more sessions failed. Try again.',
+    );
+    await new Promise((r) => setTimeout(r, 50));
+    expect(pages).toHaveBeenCalledTimes(2);
+    expect(screen.getByTestId('selected-report')).toHaveTextContent('r1');
+  });
+});
+
 describe('a trend point that carries its report id', () => {
   it('opens that report directly, without paging the summaries', async () => {
     const pages = vi.spyOn(coachService, 'fetchCoachReportSummaries').mockResolvedValue({

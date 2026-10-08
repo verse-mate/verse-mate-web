@@ -56,6 +56,7 @@ export default function CoachLeaderScreen() {
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [minimized, setMinimized] = useState(false);
+  const [trendOpenFailed, setTrendOpenFailed] = useState(false);
   const detailRef = useRef<HTMLDivElement>(null);
   const selectedSummary = selectedId ? reports.find((r) => r.id === selectedId) : latest;
   const selIdx = selectedSummary ? reports.findIndex((r) => r.id === selectedSummary.id) : -1;
@@ -72,17 +73,24 @@ export default function CoachLeaderScreen() {
 
   const openByDate = async (isoDate: string, reportId?: string) => {
     const id = reportId ?? trendsQuery.data?.scoreSeries.find((p) => p.date === isoDate)?.reportId;
+    setTrendOpenFailed(false);
     if (id) return openReport(id);
     let match = reports.find((r) => r.date === isoDate);
     let more = summaries.hasNextPage;
     while (!match && more) {
       const next = await summaries.fetchNextPage();
-      if (next.isError) return;
+      if (next.isError) return setTrendOpenFailed(true);
       match = next.data?.pages.flatMap((p) => p.items).find((r) => r.date === isoDate);
       more = next.hasNextPage;
     }
     if (match) openReport(match.id);
   };
+
+  const trendOpenFailure = trendOpenFailed && (
+    <p role="alert" data-testid="coach-trend-open-failed" style={{ margin: '8px 0 0', fontSize: 13, color: vmTokens.textSecondary }}>
+      Could not open that session: loading more sessions failed. Try again.
+    </p>
+  );
 
   const header = profile && (
     <div>
@@ -193,6 +201,7 @@ export default function CoachLeaderScreen() {
                     <ScoreTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
                     <ClusterTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
                   </div>
+                  {trendOpenFailure}
                 </div>
               )}
 
