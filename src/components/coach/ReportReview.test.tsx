@@ -774,6 +774,60 @@ describe('the first-lesson flag on an undelivered report', () => {
     await waitFor(() => expect(screen.getByTestId('coach-first-lesson-set')).not.toBeDisabled());
   });
 
+  it('a flag held for cold recall on a report delivered meanwhile opens the amend editor with the flag as the starting draft', async () => {
+    const load = vi
+      .spyOn(coachService, 'fetchReportReview')
+      .mockResolvedValueOnce(UNDELIVERED)
+      .mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'setFirstLesson').mockResolvedValue({
+      applied: false,
+      refusal: 'cold-recall-improvement',
+      coldRecall: ['Call on quiet members'],
+    });
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, firstLesson: true, sent: true });
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-first-lesson-set'));
+
+    const editor = await screen.findByTestId('coach-amend-editor');
+    expect(load).toHaveBeenCalledTimes(2);
+    expect(within(editor).getByTestId('coach-amend-first-lesson')).toBeChecked();
+    expect(within(editor).getByTestId('coach-amend-held')).toHaveTextContent('Call on quiet members');
+    expect(screen.getByTestId('coach-amend-outcome')).toHaveTextContent(
+      'This report was delivered meanwhile, so the flag goes through an amendment. Not saved and not sent: a first lesson cannot carry an improvement that asks for recall of earlier lessons. Replace the held items under Improvements and submit again.',
+    );
+    expect(screen.queryByTestId('coach-first-lesson-set')).toBeNull();
+
+    fireEvent.change(screen.getByTestId('coach-amend-improvements'), { target: { value: 'Name the big idea up front' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    await waitFor(() =>
+      expect(amend).toHaveBeenCalledWith('rep-1', { firstLesson: true, body: { improvements: ['Name the big idea up front'] } }),
+    );
+  });
+
+  it('a flag saved as a revision because the report was delivered meanwhile shows the amend panel and what was saved', async () => {
+    vi.spyOn(coachService, 'fetchReportReview')
+      .mockResolvedValueOnce(UNDELIVERED)
+      .mockResolvedValue({ ...REVIEW, firstLesson: true, firstLessonSource: 'admin' });
+    vi.spyOn(coachService, 'setFirstLesson').mockResolvedValue({
+      applied: true,
+      revision: 1,
+      firstLesson: true,
+      score: 84,
+      status: 'Strong',
+      sent: true,
+      sends: [{ email: 'leader@example.test', delivered: true }],
+    });
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-first-lesson-set'));
+
+    expect(await screen.findByTestId('coach-amend-outcome')).toHaveTextContent(
+      'This report was delivered meanwhile, so the flag goes through an amendment. Revision 1 saved and re-sent, marked revised. Score 84 (Strong).',
+    );
+    expect(screen.getByTestId('coach-amend-open')).toBeInTheDocument();
+    expect(screen.queryByTestId('coach-amend-editor')).toBeNull();
+  });
+
   it('shows the refusal when the server will not change the flag', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
     vi.spyOn(coachService, 'setFirstLesson').mockRejectedValue(

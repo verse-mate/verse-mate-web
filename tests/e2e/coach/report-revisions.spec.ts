@@ -226,19 +226,37 @@ test.describe('The first-lesson flag on an undelivered report', () => {
     await capture(page, testInfo, 'p2-first-lesson-in-flight', panel);
   });
 
-  test('set on a report delivered meanwhile goes through the amend rules, so a cold-recall improvement holds it', async ({ page }, testInfo) => {
+  test('set on a report delivered meanwhile goes through the amend rules, and the amend editor opens with the flag kept', async ({ page }, testInfo) => {
     const writes: string[] = [];
-    await useCoachApi(page, { admin: true, deliveredBeforeFlag: OLDER_ID, onAdminWrite: (m, p) => writes.push(`${m} ${p}`) });
+    await useCoachApi(page, {
+      admin: true,
+      pipelineLive: true,
+      deliveredBeforeFlag: OLDER_ID,
+      onAdminWrite: (m, p) => writes.push(`${m} ${p}`),
+    });
     await openSession(page, OLDER_ID);
     const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
     await panel.getByTestId('coach-first-lesson-set').click();
 
-    await expect(panel.getByTestId('coach-first-lesson-outcome')).toHaveText(
-      'Not saved and not sent: a first lesson cannot carry an improvement that asks for recall of earlier lessons. Replace the held items under Improvements and submit again.',
+    await expect(panel.getByTestId('coach-amend-outcome')).toHaveText(
+      'This report was delivered meanwhile, so the flag goes through an amendment. Not saved and not sent: a first lesson cannot carry an improvement that asks for recall of earlier lessons. Replace the held items under Improvements and submit again.',
     );
+    await expect(panel.getByTestId('coach-first-lesson-set')).toHaveCount(0);
+    await expect(panel.getByTestId('coach-amend-first-lesson')).toBeChecked();
+    await expect(panel.getByTestId('coach-amend-held')).toContainText("Recall last week's big idea before the new passage");
     await expect(panel.getByTestId('coach-revisions')).toHaveCount(0);
-    expect(writes).toEqual([`PUT /coach/admin/reports/${OLDER_ID}/first-lesson`]);
-    await capture(page, testInfo, 'p2-first-lesson-delivered-meanwhile', panel);
+    await capture(page, testInfo, 'p3-first-lesson-delivered-meanwhile', panel);
+
+    await panel.getByTestId('coach-amend-improvements').fill("Name the book's big idea in the first five minutes");
+    await panel.getByTestId('coach-amend-review').click();
+    await panel.getByTestId('coach-amend-confirm').click();
+    await expect(panel.getByTestId('coach-amend-outcome')).toContainText('Revision 1 saved and re-sent');
+    await expect(panel.getByTestId('coach-first-lesson-state')).toContainText('First lesson: yes, set by hand.');
+    expect(writes).toEqual([
+      `PUT /coach/admin/reports/${OLDER_ID}/first-lesson`,
+      `POST /coach/admin/reports/${OLDER_ID}/amend`,
+    ]);
+    await capture(page, testInfo, 'p3-first-lesson-delivered-meanwhile-amended', panel);
   });
 });
 
