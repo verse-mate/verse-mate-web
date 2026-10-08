@@ -529,6 +529,7 @@ export interface ReportRevisionChanges {
 }
 
 export interface ReportRevision {
+  kind: 'revision';
   revision: number;
   previous: Record<string, unknown>;
   changes: ReportRevisionChanges;
@@ -538,6 +539,16 @@ export interface ReportRevision {
   skipped: string[];
   sentAt: string | null;
 }
+
+export interface ReportEdit {
+  kind: 'edit';
+  edit: number;
+  changes: Partial<Record<'improvements' | 'improvementsProse', { from: unknown; to: unknown }>>;
+  editedBy: string | null;
+  editedAt: string;
+}
+
+export type ReportVersion = ReportRevision | ReportEdit;
 
 function adminReportPath(reportId: string, rest: string): string {
   return `admin/reports/${encodeURIComponent(reportId)}/${rest}`;
@@ -584,8 +595,8 @@ export function editImprovements(reportId: string, edit: ImprovementsEdit): Prom
   });
 }
 
-export async function fetchReportRevisions(reportId: string): Promise<ReportRevision[]> {
-  const data = await coachRequest<{ revisions: ReportRevision[] }>(adminReportPath(reportId, 'revisions'));
+export async function fetchReportRevisions(reportId: string): Promise<ReportVersion[]> {
+  const data = await coachRequest<{ revisions: ReportVersion[] }>(adminReportPath(reportId, 'revisions'));
   return data.revisions || [];
 }
 

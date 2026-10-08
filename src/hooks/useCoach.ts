@@ -66,7 +66,7 @@ import {
   type LeaderAttribution,
   type ReportAmendment,
   type ReportReviewState,
-  type ReportRevision,
+  type ReportVersion,
   type RevisionResult,
   type RevisionSendResult,
 } from '@/services/coachService';
@@ -356,7 +356,7 @@ export function useReportReview(reportId: string): UseQueryResult<ReportReviewSt
   return useQuery({ queryKey: coachKeys.reportReview(reportId), queryFn: () => fetchReportReview(reportId), retry: false });
 }
 
-export function useReportRevisions(reportId: string, enabled: boolean): UseQueryResult<ReportRevision[]> {
+export function useReportRevisions(reportId: string, enabled: boolean): UseQueryResult<ReportVersion[]> {
   return useQuery({
     queryKey: coachKeys.reportRevisions(reportId),
     queryFn: () => fetchReportRevisions(reportId),

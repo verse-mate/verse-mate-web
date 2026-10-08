@@ -142,6 +142,7 @@ describe('amending a delivered report', () => {
     fireEvent.click(screen.getByTestId('coach-amend-review'));
     revisions.mockResolvedValue([
       {
+        kind: 'revision',
         revision: 2,
         previous: {},
         changes: { dimensions: [], body: { headline: { from: 'A steady session', to: 'New' } } },
@@ -516,6 +517,7 @@ describe('amending the written-out points the leader reads first', () => {
 
 function revision(n: number, sentAt: string | null): coachService.ReportRevision {
   return {
+    kind: 'revision',
     revision: n,
     previous: {},
     changes: { dimensions: [], body: { headline: { from: `h${n - 1}`, to: `h${n}` } } },
@@ -526,6 +528,87 @@ function revision(n: number, sentAt: string | null): coachService.ReportRevision
     sentAt,
   };
 }
+
+function preDeliveryEdit(n: number, editedAt: string): coachService.ReportEdit {
+  return {
+    kind: 'edit',
+    edit: n,
+    changes: {
+      improvements: { from: ['Recall last week'], to: ['Call on quiet members'] },
+      improvementsProse: { from: POINTS, to: null },
+    },
+    editedBy: 'editor@example.test',
+    editedAt,
+  };
+}
+
+describe('pre-delivery edits in the kept versions', () => {
+  beforeEach(() => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+  });
+
+  it('shows who edited before delivery, when, and what changed, including cleared points, and never offers a send', async () => {
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([preDeliveryEdit(7, '2026-10-07T12:00:00.000Z')]);
+    renderReview();
+    const row = await screen.findByTestId('coach-edit-7');
+    expect(row).toHaveTextContent('Edited before delivery by editor@example.test, Oct 7, 2026');
+    expect(within(row).getByText('Improvements')).toBeInTheDocument();
+    expect(within(row).getByText('Recall last week')).toBeInTheDocument();
+    expect(within(row).getByText('Call on quiet members')).toBeInTheDocument();
+    expect(within(row).getByText('Cleared: the leader reads the list instead')).toBeInTheDocument();
+    expect(within(row).queryByRole('button')).toBeNull();
+    expect(row).not.toHaveTextContent('Not sent');
+    expect(row.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+  });
+
+  it('keeps the send on the latest unsent revision when an edit is newer', async () => {
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
+      preDeliveryEdit(7, '2026-10-09T12:00:00.000Z'),
+      revision(1, null),
+    ]);
+    renderReview();
+    expect(within(await screen.findByTestId('coach-revision-1')).getByTestId('coach-revision-send-1')).toBeInTheDocument();
+    expect(screen.getAllByRole('button', { name: 'Send this revision' })).toHaveLength(1);
+  });
+
+  it('lists revisions and edits newest first, whatever order they arrive in', async () => {
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
+      revision(1, '2026-10-08T14:00:05.000Z'),
+      preDeliveryEdit(7, '2026-10-07T12:00:00.000Z'),
+      preDeliveryEdit(8, '2026-10-07T13:00:00.000Z'),
+    ]);
+    renderReview();
+    await screen.findByTestId('coach-edit-8');
+    const order = screen.getAllByTestId(/^coach-(revision|edit)-\d+$/).map((el) => el.dataset.testid);
+    expect(order).toEqual(['coach-revision-1', 'coach-edit-8', 'coach-edit-7']);
+  });
+
+  it('a mixed history with edits older and newer than the revisions renders in time order, with the send only on the latest unsent revision', async () => {
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
+      preDeliveryEdit(9, '2026-10-09T12:00:00.000Z'),
+      { ...revision(1, '2026-10-08T10:00:05.000Z'), amendedAt: '2026-10-08T10:00:00.000Z' },
+      preDeliveryEdit(7, '2026-10-07T12:00:00.000Z'),
+      { ...revision(2, null), amendedAt: '2026-10-08T14:00:00.000Z' },
+    ]);
+    renderReview();
+    await screen.findByTestId('coach-edit-9');
+    const order = screen.getAllByTestId(/^coach-(revision|edit)-\d+$/).map((el) => el.dataset.testid);
+    expect(order).toEqual(['coach-edit-9', 'coach-revision-2', 'coach-revision-1', 'coach-edit-7']);
+    expect(screen.getAllByRole('button', { name: 'Send this revision' })).toHaveLength(1);
+    expect(within(screen.getByTestId('coach-revision-2')).getByTestId('coach-revision-send-2')).toBeInTheDocument();
+  });
+
+  it('an edit made before delivery does not make the delivered version read as unsent', async () => {
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([preDeliveryEdit(7, '2026-10-09T12:00:00.000Z')]);
+    renderReview();
+    await screen.findByTestId('coach-edit-7');
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'A sharper headline' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    expect(screen.getByTestId('coach-amend-diff')).toHaveTextContent('Delivered');
+    expect(screen.getByTestId('coach-amend-diff')).not.toHaveTextContent('Latest, not sent');
+  });
+});
 
 describe('the kept versions', () => {
   it('offers the send only on the latest unsent version, whatever order the list arrives in', async () => {
@@ -584,6 +667,7 @@ describe('the kept versions', () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
     vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
       {
+        kind: 'revision',
         revision: 2,
         previous: {},
         changes: { dimensions: [], firstLesson: { from: false, to: true }, body: {} },
@@ -594,6 +678,7 @@ describe('the kept versions', () => {
         sentAt: null,
       },
       {
+        kind: 'revision',
         revision: 1,
         previous: {},
         changes: {
@@ -630,6 +715,7 @@ describe('the kept versions', () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
     vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
       {
+        kind: 'revision',
         revision: 1,
         previous: {},
         changes: { dimensions: [], body: { headline: { from: 'a', to: 'b' } } },
@@ -658,6 +744,7 @@ describe('the kept versions', () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
     vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
       {
+        kind: 'revision',
         revision: 1,
         previous: {},
         changes: { dimensions: [], body: { headline: { from: 'a', to: 'b' } } },
