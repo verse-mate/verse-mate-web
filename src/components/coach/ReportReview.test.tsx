@@ -45,6 +45,7 @@ const REVIEW: ReportReviewState = {
   firstLesson: false,
   firstLessonSource: null,
   passageBook: 'Jonah',
+  parallelRun: false,
   dimensions: Array.from({ length: 12 }, (_, i) => ({
     n: i + 1,
     score: 4,
@@ -885,6 +886,19 @@ describe('a legacy report', () => {
 describe('the first-lesson flag on an undelivered report', () => {
   const UNDELIVERED: ReportReviewState = { ...REVIEW, delivered: false };
 
+  it('labels a parallel-run copy, kept for comparison and never sent', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...UNDELIVERED, parallelRun: true });
+    renderReview();
+    expect(await screen.findByTestId('coach-review-parallel-run')).toHaveTextContent('Parallel-run copy: kept for comparison, never sent.');
+  });
+
+  it('does not label a review that is not a parallel-run copy', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    renderReview();
+    await screen.findByTestId('coach-first-lesson-state');
+    expect(screen.queryByTestId('coach-review-parallel-run')).toBeNull();
+  });
+
   it('heads the panel with what it covers, and gives the first lesson, the dimensions and the improvements a section each', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
     renderReview();
@@ -1249,6 +1263,17 @@ describe('editing the Improvements of an undelivered report', () => {
 
   beforeEach(() => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+  });
+
+  it('on a parallel-run copy, says the saved improvements are never sent, not that they go out on delivery', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...UNDELIVERED, parallelRun: true });
+    vi.spyOn(coachService, 'editImprovements').mockResolvedValue({ applied: true });
+    await openImprovements();
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Name the big idea up front' } });
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    const outcome = await screen.findByTestId('coach-improvements-outcome');
+    expect(outcome).toHaveTextContent('Improvements saved. Nothing was sent: this is a parallel-run copy, kept for comparison and never sent.');
+    expect(outcome).not.toHaveTextContent('when the report is delivered');
   });
 
   it('replaces the improvements, one per line, and says nothing was sent', async () => {

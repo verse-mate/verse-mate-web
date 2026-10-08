@@ -7,12 +7,13 @@ import PendingReshares from './PendingReshares';
 const ONE = [
   {
     sourceSessionId: 'ff-1',
-    coachId: 'jeff-ward',
+    coachId: 'milo-kerr',
     title: 'Obadiah, Lesson 4',
     sessionDate: '2026-08-22',
     requestedAt: '2026-08-25T00:00:00Z',
     attempts: 5,
     asked: false,
+    parallelRun: false,
   },
 ];
 
@@ -60,6 +61,32 @@ describe('the re-share queue is visible', () => {
     );
     const { container } = render(<PendingReshares />);
     await waitFor(() => expect(container).toBeEmptyDOMElement());
+  });
+});
+
+describe('a session observed during the parallel run', () => {
+  const COPY = [{ ...ONE[0], parallelRun: true }];
+
+  it('is labelled a parallel-run copy and offers no ask, which the server refuses for it, only the re-share', async () => {
+    vi.spyOn(coachService, 'fetchPendingReshares').mockResolvedValue(COPY);
+    render(<PendingReshares />);
+
+    const row = await screen.findByTestId('coach-reshare-ff-1');
+    expect(row).toHaveTextContent('Parallel-run copy: kept for comparison, never sent.');
+    expect(screen.queryByTestId('coach-reshare-send-ff-1')).toBeNull();
+    expect(screen.getByTestId('coach-reshare-resolve-ff-1')).not.toBeDisabled();
+  });
+
+  it('a send refused because the list predates the mark says why in words', async () => {
+    vi.spyOn(coachService, 'fetchPendingReshares').mockResolvedValue(ONE);
+    vi.spyOn(coachService, 'sendReshareRequest').mockRejectedValue(
+      new coachService.CoachApiError('x', 400, 'Re-share not sent: parallel-run-session'),
+    );
+    render(<PendingReshares />);
+    fireEvent.click(await screen.findByTestId('coach-reshare-send-ff-1'));
+    const error = await screen.findByTestId('coach-reshare-error');
+    expect(error).toHaveTextContent('Not sent: this session was observed during the parallel run, so it is kept for comparison and never sent.');
+    expect(error).not.toHaveTextContent('parallel-run-session');
   });
 });
 

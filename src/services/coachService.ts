@@ -376,6 +376,7 @@ export interface PendingReshare {
   attempts: number;
   /** True once the leader has actually been emailed about this session. */
   asked: boolean;
+  parallelRun: boolean;
 }
 
 /** GET /api/coach/admin/reshares, admin only. */
@@ -408,6 +409,8 @@ export function resolveReshareRequest(
   );
 }
 
+export const PARALLEL_RUN_COPY = 'Parallel-run copy: kept for comparison, never sent.';
+
 export type HoldKind = 'review' | 'reattributed' | 'calibration' | 'governance' | 'cold-recall' | 'no-mailer' | 'send-failed';
 
 export interface PipelineFailure {
@@ -421,6 +424,7 @@ export interface PipelineFailure {
   reason: string | null;
   holdKind: HoldKind | null;
   coldRecall?: string[];
+  parallelRun: boolean;
   action: 'release' | 'requeue' | 'attribute' | null;
   updatedAt: string;
 }
@@ -483,6 +487,7 @@ export interface ReportReviewState {
   firstLesson: boolean;
   firstLessonSource: string | null;
   passageBook: string | null;
+  parallelRun: boolean;
   dimensions: { n: number; score: number | null; rationale: string; provenance: string; modelVersion: string | null }[];
 }
 
