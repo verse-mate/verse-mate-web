@@ -1,8 +1,9 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { Toaster, toast } from '@/components/ui/sonner';
 import { primeRubricCache } from '@/hooks/useRubric';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import * as coachService from '@/services/coachService';
@@ -103,5 +104,16 @@ describe('report text stays out of session replay', () => {
     fireEvent.click(screen.getByTestId(`coach-tab-${tab}`));
     openEveryDimension();
     expect(exposedReportText()).toEqual([]);
+  });
+});
+
+describe('toasts stay out of session replay', () => {
+  it('a toast naming a leader renders inside a replay block', async () => {
+    render(<Toaster />);
+    act(() => {
+      toast.success(`Note sent to ${MARK} Avery Hollis`);
+    });
+    const shown = await screen.findByText(`Note sent to ${MARK} Avery Hollis`);
+    expect(shown.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
   });
 });
