@@ -190,6 +190,7 @@ export const TRENDS = {
     score: r.score,
     session: r.session,
     status: r.status,
+    reportId: r.id,
   })).reverse(),
   clusterSeries: REPORTS.map((r) => ({
     date: r.date,
