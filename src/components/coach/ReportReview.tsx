@@ -44,6 +44,8 @@ const PENDING_TEXT: Record<string, string> = {
   'no-mailer': 'is stored but not sent: no mailer is configured. Send it from the kept versions once one is.',
   'send-failed': 'is stored, but the send failed. Send it again from the kept versions.',
   'in-flight': 'is stored, and another request is sending it right now.',
+  'not-live':
+    'is stored but not sent: the report is not live for the leader it was made for (it is held, not delivered, or was re-attributed). Release it, or amend it again once it is live.',
 };
 
 function lines(text: string): string[] {

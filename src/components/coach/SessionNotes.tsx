@@ -14,7 +14,7 @@ import { Send, Video } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import RetainedRecording from './RetainedRecording';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
-import type { CoachNote, CoachReport } from '@/services/coachService';
+import { refusalText, type CoachNote, type CoachReport } from '@/services/coachService';
 import { useAddNote, useSetRecordingLink } from '@/hooks/useCoach';
 
 const BLUE = '#2563A6';
@@ -191,10 +191,12 @@ function NotesPanel({
 }) {
   const addNote = useAddNote(coachId ?? '');
   const [body, setBody] = useState('');
+  const [refusal, setRefusal] = useState<string | null>(null);
 
   const send = () => {
     const text = body.trim();
     if (!text) return;
+    setRefusal(null);
     addNote.mutate(
       { reportId: report.id, body: text },
       {
@@ -202,7 +204,7 @@ function NotesPanel({
           setBody('');
           toast.success(`Note sent to ${leaderName || 'the leader'}`);
         },
-        onError: () => toast.error('Could not send the note'),
+        onError: (err) => setRefusal(refusalText(err)),
       },
     );
   };
@@ -249,6 +251,11 @@ function NotesPanel({
               <Send size={15} strokeWidth={2} /> {addNote.isPending ? 'Sending…' : 'Send to leader'}
             </button>
           </div>
+          {refusal && (
+            <p role="alert" data-testid={`coach-note-error-${report.id}`} style={{ margin: '8px 0 0', fontSize: 13, color: 'var(--vm-status-error)' }}>
+              {refusal}
+            </p>
+          )}
         </div>
       )}
     </div>

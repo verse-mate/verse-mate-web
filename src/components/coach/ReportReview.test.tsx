@@ -164,6 +164,45 @@ describe('amending a delivered report', () => {
     expect(await screen.findByTestId('coach-revision-outcome')).toHaveTextContent('Revision 2 sent to 1 recipient.');
   });
 
+  it('says plainly that a revision kept for a report that is no longer live for its leader was not sent', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'amendReport').mockResolvedValue({
+      applied: true,
+      revision: 3,
+      firstLesson: false,
+      base: 80,
+      score: 82,
+      status: 'Strong',
+      sent: false,
+      pending: 'not-live',
+    });
+    renderReview();
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'New' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+
+    expect(await screen.findByTestId('coach-amend-outcome')).toHaveTextContent(
+      'Revision 3 is stored but not sent: the report is not live for the leader it was made for (it is held, not delivered, or was re-attributed). Release it, or amend it again once it is live.',
+    );
+  });
+
+  it('shows an amendment refused while the report is being delivered or re-scored', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'amendReport').mockRejectedValue(
+      new CoachApiError('x', 409, 'Refused: the report is being delivered or re-scored. Correct it once that finishes, or amend it after delivery.'),
+    );
+    renderReview();
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-headline'), { target: { value: 'New' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+
+    expect(await screen.findByTestId('coach-amend-outcome')).toHaveTextContent(
+      'Refused (409): Refused: the report is being delivered or re-scored.',
+    );
+  });
+
   it('a governance block is not saved, nothing is sent, and the editor keeps the draft', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
     vi.spyOn(coachService, 'amendReport').mockResolvedValue({
@@ -446,6 +485,34 @@ describe('the kept versions', () => {
     expect(first.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
   });
 
+  it('shows a send refused because the report is not live for its leader', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
+    vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
+      {
+        revision: 1,
+        previous: {},
+        changes: { dimensions: [], body: { headline: { from: 'a', to: 'b' } } },
+        amendedBy: null,
+        amendedAt: '2026-10-08T14:00:00.000Z',
+        sentTo: [],
+        skipped: [],
+        sentAt: null,
+      },
+    ]);
+    vi.spyOn(coachService, 'sendRevision').mockRejectedValue(
+      new CoachApiError(
+        'x',
+        409,
+        'The report is not live for the leader this revision was made for: it is held, not delivered, or re-attributed',
+      ),
+    );
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-revision-send-1'));
+    expect(await screen.findByTestId('coach-revision-outcome')).toHaveTextContent(
+      'Refused (409): The report is not live for the leader this revision was made for: it is held, not delivered, or re-attributed',
+    );
+  });
+
   it('shows why a send was refused', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(REVIEW);
     vi.spyOn(coachService, 'fetchReportRevisions').mockResolvedValue([
@@ -571,6 +638,19 @@ describe('the first-lesson flag on an undelivered report', () => {
     expect(await screen.findByTestId('coach-first-lesson-outcome')).toHaveTextContent(
       'First-lesson flag cleared. Memory Reinforcement is scored 3, recorded as corrected by hand. Score 81 (Strong).',
     );
+  });
+
+  it('shows the flag refused while the report is being delivered or re-scored, and keeps the action', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    vi.spyOn(coachService, 'setFirstLesson').mockRejectedValue(
+      new CoachApiError('x', 409, 'Refused: the report is being delivered or re-scored. Correct it once that finishes, or amend it after delivery.'),
+    );
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-first-lesson-set'));
+    expect(await screen.findByTestId('coach-first-lesson-outcome')).toHaveTextContent(
+      'Refused (409): Refused: the report is being delivered or re-scored. Correct it once that finishes, or amend it after delivery.',
+    );
+    await waitFor(() => expect(screen.getByTestId('coach-first-lesson-set')).not.toBeDisabled());
   });
 
   it('shows the refusal when the server will not change the flag', async () => {
