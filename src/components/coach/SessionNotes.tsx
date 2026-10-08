@@ -13,6 +13,7 @@ import { toast } from 'sonner';
 import { Send, Video } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import RetainedRecording from './RetainedRecording';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import type { CoachNote, CoachReport } from '@/services/coachService';
 import { useAddNote, useSetRecordingLink } from '@/hooks/useCoach';
 
@@ -56,7 +57,9 @@ export default function SessionNotes({
       }}
     >
       <p style={{ margin: '0 0 10px', ...labelStyle(compact) }}>Recording &amp; coaching notes</p>
-      <RecordingRow report={report} editable={editable} coachId={coachId} recording={recording} />
+      <div className={REPLAY_BLOCK_CLASS}>
+        <RecordingRow report={report} editable={editable} coachId={coachId} recording={recording} />
+      </div>
       {retained && !recording && (
         <div style={{ margin: '8px 0 4px' }}>
           <RetainedRecording
