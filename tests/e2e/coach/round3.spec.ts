@@ -73,9 +73,22 @@ test.describe('The admin pipeline surface', () => {
     await expect(parked).toHaveCount(0);
   });
 
+  test('in the parallel run, a release is refused and the report stays held', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true });
+    await page.goto('/coach');
+    await page.getByTestId('oversight-nav-pipeline').click();
+
+    await page.getByTestId(`coach-pipeline-release-${HELD_SESSION.sourceSessionId}`).click();
+    await expect(page.getByTestId(`coach-pipeline-outcome-${HELD_SESSION.sourceSessionId}`)).toHaveText(
+      'Refused (409): The pipeline is in its parallel run: nothing is sent until cutover',
+    );
+    await expect(page.getByTestId(`coach-pipeline-${HELD_SESSION.sourceSessionId}`)).toBeVisible();
+    await capture(page, testInfo, 'p2-release-parallel-run');
+  });
+
   test('releases a report held for review', async ({ page }, testInfo) => {
     const calls: string[] = [];
-    await useCoachApi(page, { admin: true, onPipelineRequest: (u) => calls.push(u) });
+    await useCoachApi(page, { admin: true, pipelineLive: true, onPipelineRequest: (u) => calls.push(u) });
     await page.goto('/coach');
     await page.getByTestId('oversight-nav-pipeline').click();
 

@@ -3,7 +3,10 @@ import { expect, test } from '@playwright/test';
 import {
   API,
   capture,
+  EMAIL_RULE,
   LEADER_ID,
+  NEWEST_ID,
+  OLDER_ID,
   olderId,
   PLACEHOLDER_LEADER,
   SKIPPED_SESSION,
@@ -39,12 +42,41 @@ test.describe("A leader's address", () => {
     );
     await capture(page, testInfo, 'w2a-address-taken', row);
 
-    await row.getByTestId(`coach-address-input-${PLACEHOLDER_LEADER.id}`).fill('dana@example.test');
+    await row.getByTestId(`coach-address-input-${PLACEHOLDER_LEADER.id}`).fill('dana,diaz@example.test');
+    await expect(row.getByTestId(`coach-address-error-${PLACEHOLDER_LEADER.id}`)).toHaveText(EMAIL_RULE);
+    await expect(row.getByTestId(`coach-address-save-${PLACEHOLDER_LEADER.id}`)).toBeDisabled();
+    await capture(page, testInfo, 'p2-address-rule', row);
+
+    await row.getByTestId(`coach-address-input-${PLACEHOLDER_LEADER.id}`).fill('  Dana@Example.test ');
     await row.getByTestId(`coach-address-save-${PLACEHOLDER_LEADER.id}`).click();
     await expect(row.getByTestId(`coach-address-${PLACEHOLDER_LEADER.id}`)).toHaveText('dana@example.test');
     await expect(page.getByTestId(`coach-pipeline-${SKIPPED_SESSION.sourceSessionId}`)).toHaveCount(0);
     expect(writes).toContain(`PUT /coach/admin/leaders/${PLACEHOLDER_LEADER.id}/email`);
     await capture(page, testInfo, 'w2a-address-saved', row);
+  });
+
+  test("the benchmark leader's address changes only after the admin confirms it", async ({ page }, testInfo) => {
+    const writes: Array<[string, unknown]> = [];
+    await useCoachApi(page, { admin: true, leaderAdmin: true, onAdminWrite: (_m, p, b) => writes.push([p, b]) });
+    await openPipeline(page);
+
+    const row = page.getByTestId(`coach-coverage-${LEADER_ID}`);
+    await row.getByTestId(`coach-address-edit-${LEADER_ID}`).click();
+    await row.getByTestId(`coach-address-input-${LEADER_ID}`).fill('avery.new@example.test');
+    await row.getByTestId(`coach-address-save-${LEADER_ID}`).click();
+    const ask = row.getByTestId(`coach-address-confirm-${LEADER_ID}`);
+    await expect(ask).toContainText("This is the benchmark leader, whose address receives every leader's reports.");
+    await expect(row.getByTestId(`coach-address-${LEADER_ID}`)).toHaveText('leader@example.test');
+    await capture(page, testInfo, 'p2-benchmark-confirm', row);
+
+    await ask.getByTestId(`coach-address-confirm-save-${LEADER_ID}`).click();
+    await expect(row.getByTestId(`coach-address-${LEADER_ID}`)).toHaveText('avery.new@example.test');
+    await expect(page.getByText('Address saved. The next report goes to it, and a notice went to the old address.')).toBeVisible();
+    expect(writes).toEqual([
+      [`/coach/admin/leaders/${LEADER_ID}/email`, { email: 'avery.new@example.test' }],
+      [`/coach/admin/leaders/${LEADER_ID}/email`, { email: 'avery.new@example.test', confirm: true }],
+    ]);
+    await capture(page, testInfo, 'p2-benchmark-changed', row);
   });
 });
 
@@ -68,20 +100,41 @@ test.describe("A leader's title keywords and alternate addresses", () => {
 
     await row.getByTestId('coach-attribution-emails-evan-ellis').fill('evan.personal@example.test\nnot-an-address');
     await keywords.fill('tuesday night\nHabakkuk study');
-    await row.getByTestId('coach-attribution-save-evan-ellis').click();
-    await expect(row.getByTestId('coach-attribution-error-evan-ellis')).toContainText(
-      'Refused (400): Each alternate address must be a valid email address',
-    );
+    await expect(row.getByTestId('coach-attribution-error-evan-ellis')).toHaveText(`Alternate address "not-an-address": ${EMAIL_RULE}`);
+    await expect(row.getByTestId('coach-attribution-save-evan-ellis')).toBeDisabled();
+    await capture(page, testInfo, 'p2-attribution-address-rule', row);
 
     await row.getByTestId('coach-attribution-emails-evan-ellis').fill('evan.personal@example.test');
+    await keywords.fill('tuesday night\nAvery');
+    await row.getByTestId('coach-attribution-save-evan-ellis').click();
+    await expect(row.getByTestId('coach-attribution-error-evan-ellis')).toHaveText(
+      `Refused (409): Keywords refused: "avery" is inside the name of ${LEADER_ID}`,
+    );
+    await capture(page, testInfo, 'p2-attribution-keyword-refused', row);
+
+    await keywords.fill('tuesday night\nHabakkuk study');
     await row.getByTestId('coach-attribution-save-evan-ellis').click();
     await expect(row.getByTestId('coach-attribution-saved-evan-ellis')).toHaveText('Saved. 1 unattributed session now matches a leader.');
-    await expect(page.getByTestId(`coach-pipeline-${UNRESOLVED_SESSION.sourceSessionId}`)).toHaveCount(0);
+    const swept = page.getByTestId(`coach-pipeline-${UNRESOLVED_SESSION.sourceSessionId}`);
+    await expect(swept).toContainText('Why: re-attributed: held until an admin releases it');
+    await expect(swept.getByTestId(`coach-pipeline-release-${UNRESOLVED_SESSION.sourceSessionId}`)).toBeVisible();
     expect(writes.at(-1)).toEqual([
       '/coach/admin/leaders/evan-ellis/attribution',
       { titleMatch: ['tuesday night', 'Habakkuk study'], altEmails: ['evan.personal@example.test'] },
     ]);
     await capture(page, testInfo, 'w2b-attribution-saved', row);
+  });
+
+  test('a keyword matches whole words of a title only', async ({ page }) => {
+    await useCoachApi(page, { admin: true, leaderAdmin: true });
+    await openPipeline(page);
+
+    const row = page.getByTestId('coach-coverage-evan-ellis');
+    await row.getByTestId('coach-attribution-edit-evan-ellis').click();
+    await row.getByTestId('coach-attribution-keywords-evan-ellis').fill('tuesday night\nhabak');
+    await row.getByTestId('coach-attribution-save-evan-ellis').click();
+    await expect(row.getByTestId('coach-attribution-saved-evan-ellis')).toHaveText('Saved. 0 unattributed sessions now match a leader.');
+    await expect(page.getByTestId(`coach-pipeline-${UNRESOLVED_SESSION.sourceSessionId}`)).toContainText('unattributed');
   });
 });
 
@@ -99,11 +152,36 @@ test.describe('The failures list', () => {
     await capture(page, testInfo, 'w2a-assign-picked', row);
 
     await row.getByTestId(`coach-pipeline-assign-${UNRESOLVED_SESSION.sourceSessionId}`).click();
-    await expect(row).toHaveCount(0);
+    await expect(row.getByTestId(`coach-pipeline-outcome-${UNRESOLVED_SESSION.sourceSessionId}`)).toHaveText(
+      'Assigned to Evan Ellis. It is scored for them and held: nothing reaches them until an admin releases it from this list.',
+    );
+    await expect(row).toContainText('Why: re-attributed: held until an admin releases it');
     expect(writes).toContainEqual([
       `/coach/admin/sessions/${UNRESOLVED_SESSION.sourceSessionId}/attribute`,
-      { coachId: 'evan-ellis' },
+      { coachId: 'evan-ellis', expectedCoachId: null },
     ]);
+    await capture(page, testInfo, 'p2-assign-held', row);
+
+    await row.getByTestId(`coach-pipeline-release-${UNRESOLVED_SESSION.sourceSessionId}`).click();
+    await expect(row.getByTestId(`coach-pipeline-outcome-${UNRESOLVED_SESSION.sourceSessionId}`)).toContainText(
+      'Refused (409): The pipeline is in its parallel run: nothing is sent until cutover',
+    );
+  });
+
+  test('a session assigned once the pipeline is live is released to its leader from the list', async ({ page }, testInfo) => {
+    const writes: string[] = [];
+    await useCoachApi(page, { admin: true, leaderAdmin: true, pipelineLive: true, onAdminWrite: (m, p) => writes.push(`${m} ${p}`) });
+    await openPipeline(page);
+
+    const id = UNRESOLVED_SESSION.sourceSessionId;
+    const row = page.getByTestId(`coach-pipeline-${id}`);
+    await row.getByTestId(`coach-pipeline-assign-to-${id}`).selectOption(PLACEHOLDER_LEADER.id);
+    await row.getByTestId(`coach-pipeline-assign-${id}`).click();
+    await row.getByTestId(`coach-pipeline-release-${id}`).click();
+    await expect(row).toHaveCount(0);
+    await expect(page.getByText('Released and delivered. 1 placeholder address was skipped.').first()).toBeVisible();
+    expect(writes).toEqual([`POST /coach/admin/sessions/${id}/attribute`]);
+    await capture(page, testInfo, 'p2-assign-released');
   });
 
   test('a send skipped for a placeholder names the leader and offers the address fix', async ({ page }, testInfo) => {
@@ -127,6 +205,8 @@ test.describe('Coverage', () => {
     await expect(page.getByTestId('coach-coverage-basis-evan-ellis')).toHaveText('Not teaching (attested)');
     await expect(page.getByTestId('coach-coverage-attested-evan-ellis')).toContainText('admin@example.test');
     await expect(page.getByTestId('coach-coverage-basis-uncovered')).toHaveText('Not covered · Not observed');
+    await expect(page.getByTestId('coach-coverage-evan-ellis')).toContainText('has a VerseMate account');
+    await expect(page.getByTestId(`coach-coverage-${PLACEHOLDER_LEADER.id}`)).toContainText('no VerseMate account');
     await capture(page, testInfo, 'w2a-coverage-states', page.getByTestId('coach-coverage-evan-ellis'));
 
     await page.getByTestId('coach-coverage-not-teaching-uncovered').click();
@@ -151,11 +231,17 @@ test.describe('Adding a leader', () => {
     await expect(page.getByTestId('oversight-invite-error')).toContainText('Another leader already uses the id "avery-hollis"');
     await capture(page, testInfo, 'w2a-add-leader-taken', page.getByTestId('oversight-invite-modal'));
 
+    await page.getByTestId('oversight-invite-name').fill('Faith Ford');
+    await page.getByTestId('oversight-invite-email').fill('faith@example.test.');
+    await page.getByTestId('oversight-invite-send').click();
+    await expect(page.getByTestId('oversight-invite-error')).toHaveText(EMAIL_RULE);
+    await capture(page, testInfo, 'p2-add-leader-rule', page.getByTestId('oversight-invite-modal'));
+    await page.getByTestId('oversight-invite-email').fill('Faith@Example.test');
+
     const summaries: string[] = [];
     page.on('request', (r) => {
       if (r.url().includes('/reports/summary')) summaries.push(new URL(r.url()).pathname);
     });
-    await page.getByTestId('oversight-invite-name').fill('Faith Ford');
     await page.getByTestId('oversight-invite-send').click();
     await expect(page.getByTestId('oversight-invite-modal')).toHaveCount(0);
     await expect(page.getByTestId('oversight-back')).toBeVisible();
@@ -256,5 +342,39 @@ test.describe("A leader's history on the admin screens", () => {
     await expect.poll(() => details).toContain(`/coach/admin/coaches/${LEADER_ID}/reports/${olderId(59)}`);
     expect(summaries).toHaveLength(1);
     await capture(page, testInfo, 'w2b-trend-point-by-id');
+  });
+});
+
+test.describe('A pipeline copy held from its leader', () => {
+  test("is marked as admin-only on every admin view of the leader's sessions, and a note on it is refused", async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, heldReports: [OLDER_ID] });
+
+    await page.goto(`/coach/leader/${LEADER_ID}/sessions`);
+    await expect(page.getByTestId(`coach-pipeline-copy-${OLDER_ID}`)).toHaveText('Pipeline copy, not visible to the leader');
+    await expect(page.getByTestId(`coach-pipeline-copy-${NEWEST_ID}`)).toHaveCount(0);
+    await capture(page, testInfo, 'p2-held-sessions', page.getByTestId(`coach-pipeline-copy-${OLDER_ID}`));
+
+    await page.goto(`/coach/leader/${LEADER_ID}?s=${OLDER_ID}`);
+    await expect(page.getByTestId(`coach-pipeline-copy-${OLDER_ID}`)).toBeVisible();
+    await capture(page, testInfo, 'p2-held-dashboard', page.getByTestId(`coach-pipeline-copy-${OLDER_ID}`));
+
+    await page.goto(`/coach/leader/${LEADER_ID}/manage`);
+    await expect(page.getByTestId(`coach-pipeline-copy-${OLDER_ID}`)).toBeVisible();
+
+    await page.goto('/coach');
+    await page.getByTestId(`oversight-roster-${LEADER_ID}`).click();
+    await expect(page.getByTestId(`coach-pipeline-copy-${OLDER_ID}`)).toBeVisible();
+    await page.getByTestId(`oversight-comment-${OLDER_ID}`).fill('Strong close.');
+    await page.getByTestId(`oversight-comment-send-${OLDER_ID}`).click();
+    await expect(page.getByTestId(`oversight-comment-error-${OLDER_ID}`)).toContainText('Release it first.');
+    await capture(page, testInfo, 'p2-held-note-refused', page.getByTestId(`oversight-comment-error-${OLDER_ID}`));
+  });
+
+  test("never reaches the leader's own list", async ({ page }) => {
+    await useCoachApi(page, { heldReports: [OLDER_ID] });
+    await page.goto('/coach/sessions');
+    await expect(page.getByText('Obadiah, Lesson 4').first()).toBeVisible();
+    await expect(page.getByText('Obadiah, Lesson 3')).toHaveCount(0);
+    await expect(page.getByTestId(`coach-pipeline-copy-${OLDER_ID}`)).toHaveCount(0);
   });
 });
