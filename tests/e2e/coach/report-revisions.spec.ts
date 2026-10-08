@@ -715,7 +715,7 @@ test.describe('The fake API holds the portal to the real methods', () => {
       },
       { api: process.env.VITE_API_URL ?? 'https://api.versemate.org', id: OLDER_ID },
     );
-    expect(res).toEqual({ status: 400, body: { error: 'VALIDATION', message: EMPTY_EDIT } });
+    expect(res).toEqual({ status: 400, body: { error: 'VALIDATION_ERROR', message: EMPTY_EDIT, details: { refusal: 'empty-edit' } } });
   });
 
 
@@ -738,7 +738,7 @@ test.describe('The fake API holds the portal to the real methods', () => {
     await page.goto('/coach');
     expect(await call(page, `admin/reports/${NEWEST_ID}/revision/send`, 'POST')).toEqual({
       status: 409,
-      body: { error: 'CONFLICT', message: 'No mailer is configured' },
+      body: { error: 'CONFLICT', message: 'No mailer is configured', details: { refusal: 'no-mailer' } },
     });
     const amended = await call(page, `admin/reports/${NEWEST_ID}/amend`, 'POST', { body: { headline: 'Revised' } });
     expect(amended.body).toMatchObject({ applied: true, sent: false, pending: 'parallel-run' });
@@ -749,7 +749,7 @@ test.describe('The fake API holds the portal to the real methods', () => {
     await page.goto('/coach');
     expect(await call(page, `admin/reports/${NEWEST_ID}/revision/send`, 'POST')).toEqual({
       status: 404,
-      body: { error: 'NOT_FOUND', message: 'That report has no revision' },
+      body: { error: 'NOT_FOUND', message: 'That report has no revision', details: { refusal: 'no-revision' } },
     });
   });
 
