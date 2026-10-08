@@ -78,7 +78,7 @@ const COVERAGE = {
       covered: true,
       basis: 'observed',
       observedSessions: 4,
-      accountStatus: 'active',
+      accountStatus: 'has-account',
       linkedClassName: 'Saturday Morning',
       classAlert: false,
       attestedAt: null,
@@ -89,9 +89,9 @@ const COVERAGE = {
       name: 'Amy Lee',
       email: 'amy@example.test',
       covered: false,
-      basis: 'none',
+      basis: 'no-observation',
       observedSessions: 0,
-      accountStatus: 'active',
+      accountStatus: 'has-account',
       linkedClassName: null,
       classAlert: true,
       attestedAt: null,
@@ -322,6 +322,19 @@ describe('recording-bot coverage', () => {
     expect(await screen.findByTestId('coach-coverage-summary')).toHaveTextContent(/1 of 2/);
     expect(screen.getByTestId('coach-coverage-milo-kerr')).toHaveTextContent(/covered/i);
     expect(screen.getByTestId('coach-coverage-amy-lee')).toHaveTextContent(/not covered/i);
+  });
+
+  it('says in words whether a leader has a VerseMate account', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({
+      ...COVERAGE,
+      leaders: [COVERAGE.leaders[0], { ...COVERAGE.leaders[1], accountStatus: 'no-account' }],
+    });
+    renderView();
+
+    expect(await screen.findByTestId('coach-coverage-milo-kerr')).toHaveTextContent('has a VerseMate account · 4 observed sessions');
+    expect(screen.getByTestId('coach-coverage-amy-lee')).toHaveTextContent('no VerseMate account · 0 observed sessions');
+    expect(screen.getByTestId('coach-coverage-milo-kerr')).not.toHaveTextContent('has-account');
   });
 
   it('shows a coverage refusal as a refusal', async () => {

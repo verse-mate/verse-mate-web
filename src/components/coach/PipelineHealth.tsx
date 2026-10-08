@@ -291,7 +291,7 @@ export default function PipelineHealth() {
                       <LeaderAddress coachId={l.coachId} email={l.email} />
                       <LeaderAttribution coachId={l.coachId} />
                       <div style={{ fontSize: 12.5, color: dt.textLight }}>
-                        account {l.accountStatus} · {l.observedSessions} observed sessions ·{' '}
+                        {ACCOUNT_TEXT[l.accountStatus] ?? `account ${l.accountStatus}`} · {l.observedSessions} observed sessions ·{' '}
                         {l.linkedClassName ?? 'no linked class'}
                         {l.classAlert ? ' · registered class disagrees with what was observed' : ''}
                       </div>
@@ -314,6 +314,11 @@ export default function PipelineHealth() {
     </div>
   );
 }
+
+const ACCOUNT_TEXT: Record<string, string> = {
+  'has-account': 'has a VerseMate account',
+  'no-account': 'no VerseMate account',
+};
 
 function coverageBadge(l: CoverageLeader): { text: string; ok: boolean } {
   if (l.basis === 'attested-not-teaching') return { text: 'Not teaching (attested)', ok: true };
