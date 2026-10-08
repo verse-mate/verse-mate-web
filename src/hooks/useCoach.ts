@@ -52,6 +52,7 @@ import {
   type CoverageReport,
   type ReleaseOutcome,
   updateLeaderEmail,
+  attributeSession,
 } from '@/services/coachService';
 
 export const coachKeys = {
@@ -292,6 +293,21 @@ export function useUpdateLeaderEmail(): UseMutationResult<string, Error, { coach
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: coachKeys.coverage });
       qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
+    },
+  });
+}
+
+export function useAttributeSession(): UseMutationResult<
+  { coachId: string; state: string },
+  Error,
+  { sourceSessionId: string; coachId: string }
+> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ sourceSessionId, coachId }) => attributeSession(sourceSessionId, coachId),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
+      qc.invalidateQueries({ queryKey: coachKeys.coverage });
     },
   });
 }

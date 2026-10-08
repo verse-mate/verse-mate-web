@@ -6,6 +6,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   addCoachLeader,
   addCoachNote,
+  attributeSession,
   CoachAuthError,
   createCoachClass,
   deleteCoachClass,
@@ -278,6 +279,16 @@ describe('coachService', () => {
       return jsonResponse({ email: 'wyatt@example.test' });
     });
     expect(await updateLeaderEmail('wyatt-wellington', 'Wyatt@Example.test')).toBe('wyatt@example.test');
+  });
+
+  it('POSTs the leader a session is assigned to', async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/admin/sessions/ff%2F4/attribute');
+      expect(init?.method).toBe('POST');
+      expect(JSON.parse(String(init?.body))).toEqual({ coachId: 'amy-lee' });
+      return jsonResponse({ coachId: 'amy-lee', state: 'retained' });
+    });
+    expect(await attributeSession('ff/4', 'amy-lee')).toEqual({ coachId: 'amy-lee', state: 'retained' });
   });
 
   it('PUTs a session recording link', async () => {

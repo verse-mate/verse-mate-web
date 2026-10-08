@@ -3,6 +3,8 @@ import type { UseQueryResult } from '@tanstack/react-query';
 import { toast } from 'sonner';
 
 import {
+  useAdminCoaches,
+  useAttributeSession,
   useCoverage,
   usePipelineFailures,
   useReleaseHeldReport,
@@ -31,7 +33,15 @@ function refusalText(err: unknown): string {
 }
 
 function releaseText(outcome: ReleaseOutcome): Outcome {
-  if (outcome.delivered) return { tone: 'ok', text: 'Released and delivered to the leader.' };
+  if (outcome.delivered) {
+    const skipped = outcome.skipped?.length ?? 0;
+    return {
+      tone: 'ok',
+      text: skipped
+        ? `Released and delivered. ${skipped} placeholder address${skipped === 1 ? ' was' : 'es were'} skipped.`
+        : 'Released and delivered to the leader.',
+    };
+  }
   const reasons = [...(outcome.violations ?? []), ...(outcome.shortfalls ?? [])];
   return {
     tone: 'refused',
@@ -78,6 +88,12 @@ export default function PipelineHealth() {
   const coverage = useCoverage();
   const requeue = useRequeuePipelineFailure();
   const release = useReleaseHeldReport();
+  const attribute = useAttributeSession();
+  const roster = useAdminCoaches();
+  const leaders = [...(roster.data ?? [])].sort((a, b) => a.name.localeCompare(b.name));
+  const nameOf = (coachId: string) => leaders.find((l) => l.id === coachId)?.name ?? coachId;
+  const emailOf = (coachId: string) => coverage.data?.leaders.find((l) => l.coachId === coachId)?.email ?? '';
+  const [assignTo, setAssignTo] = useState<Record<string, string>>({});
   const [outcomes, setOutcomes] = useState<Record<string, Outcome>>({});
   const [busy, setBusy] = useState<ReadonlySet<string>>(() => new Set());
 
@@ -111,6 +127,15 @@ export default function PipelineHealth() {
   const doRelease = (s: PipelineFailure, reportId: string) =>
     run(s, async () => releaseText(await release.mutateAsync(reportId)));
 
+  const doAttribute = (s: PipelineFailure, coachId: string) =>
+    run(s, async () => {
+      await attribute.mutateAsync({ sourceSessionId: s.sourceSessionId, coachId });
+      return {
+        tone: 'ok',
+        text: `Assigned to ${nameOf(coachId)}.${s.reportId ? ' Its report moves to them and stays held until it is released.' : ''}`,
+      };
+    });
+
   return (
     <div style={{ paddingTop: 22 }} data-testid="coach-pipeline">
       <h2 style={h2}>Pipeline</h2>
@@ -130,16 +155,19 @@ export default function PipelineHealth() {
               {sessions.map((s) => {
                 const outcome = outcomes[s.sourceSessionId];
                 const reportId = s.reportId;
+                const busyRow = busy.has(s.sourceSessionId);
+                const picked = assignTo[s.sourceSessionId] ?? '';
                 return (
                   <div key={s.sourceSessionId} data-testid={`coach-pipeline-${s.sourceSessionId}`} style={row}>
                     <div style={{ minWidth: 0 }}>
                       <div style={{ fontWeight: 600, fontSize: 14 }}>{s.title || 'Untitled session'}</div>
                       <div style={{ fontSize: 12.5, color: dt.textLight }}>
-                        {s.coachId ?? 'unattributed'} · {s.sessionDate} · {s.state} · {s.attempts} attempts
+                        {s.coachId ? nameOf(s.coachId) : 'unattributed'} · {s.sessionDate} · {s.state} · {s.attempts} attempts
                       </div>
-                      <div style={{ fontSize: 13, color: dt.body, marginTop: 4 }}>
+                      <div className={REPLAY_BLOCK_CLASS} style={{ fontSize: 13, color: dt.body, marginTop: 4 }}>
                         {s.reason ? `Why: ${s.reason}` : 'No reason recorded'}
                       </div>
+                      {s.state === 'delivered' && s.coachId && <LeaderAddress coachId={s.coachId} email={emailOf(s.coachId)} />}
                       {outcome && (
                         <div
                           data-testid={`coach-pipeline-outcome-${s.sourceSessionId}`}
@@ -150,26 +178,56 @@ export default function PipelineHealth() {
                       )}
                     </div>
                     <div style={{ display: 'flex', gap: 8, flexShrink: 0, flexWrap: 'wrap' }}>
-                      {reportId && (
+                      {s.action === 'attribute' && (
+                        <>
+                          <select
+                            value={picked}
+                            onChange={(e) => setAssignTo((a) => ({ ...a, [s.sourceSessionId]: e.target.value }))}
+                            disabled={busyRow}
+                            aria-label="Leader to assign this session to"
+                            data-testid={`coach-pipeline-assign-to-${s.sourceSessionId}`}
+                            style={input}
+                          >
+                            <option value="">Pick a leader…</option>
+                            {leaders.map((l) => (
+                              <option key={l.id} value={l.id}>
+                                {l.name}
+                              </option>
+                            ))}
+                          </select>
+                          <button
+                            type="button"
+                            onClick={() => doAttribute(s, picked)}
+                            disabled={busyRow || !picked}
+                            data-testid={`coach-pipeline-assign-${s.sourceSessionId}`}
+                            style={btn}
+                          >
+                            Assign
+                          </button>
+                        </>
+                      )}
+                      {s.action === 'release' && reportId && (
                         <button
                           type="button"
                           onClick={() => doRelease(s, reportId)}
-                          disabled={busy.has(s.sourceSessionId)}
+                          disabled={busyRow}
                           data-testid={`coach-pipeline-release-${s.sourceSessionId}`}
                           style={btn}
                         >
                           Release report
                         </button>
                       )}
-                      <button
-                        type="button"
-                        onClick={() => doRequeue(s)}
-                        disabled={busy.has(s.sourceSessionId)}
-                        data-testid={`coach-pipeline-requeue-${s.sourceSessionId}`}
-                        style={btn}
-                      >
-                        Put back in the queue
-                      </button>
+                      {s.action === 'requeue' && (
+                        <button
+                          type="button"
+                          onClick={() => doRequeue(s)}
+                          disabled={busyRow}
+                          data-testid={`coach-pipeline-requeue-${s.sourceSessionId}`}
+                          style={btn}
+                        >
+                          Put back in the queue
+                        </button>
+                      )}
                     </div>
                   </div>
                 );
@@ -231,7 +289,7 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
   const update = useUpdateLeaderEmail();
   const [draft, setDraft] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const placeholder = isPlaceholderAddress(email);
+  const placeholder = !email || isPlaceholderAddress(email);
 
   const save = () => {
     if (draft === null) return;
