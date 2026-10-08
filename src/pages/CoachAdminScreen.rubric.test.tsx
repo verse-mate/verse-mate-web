@@ -13,7 +13,8 @@ vi.mock('@/services/coachService', async (io) => {
     ...actual,
     fetchAdminCoaches: vi.fn(),
     fetchAdminMonthly: vi.fn(),
-    fetchCoachReportsFor: vi.fn(),
+    fetchCoachReportSummaries: vi.fn(),
+    fetchCoachReportDetail: vi.fn(),
     fetchCoachTrendsFor: vi.fn(),
     fetchLeaderMonthlySummary: vi.fn(),
     fetchAllCoachClasses: vi.fn(),
@@ -84,11 +85,16 @@ const trends: CoachTrends = {
   delta: null,
 };
 
+function serveReports(reports: CoachReport[]) {
+  vi.mocked(coachService.fetchCoachReportSummaries).mockResolvedValue({ items: reports, total: reports.length, streakWeeks: 0, quarterSessions: 0 });
+  vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(async (id) => reports.find((r) => r.id === id) ?? null);
+}
+
 beforeEach(() => {
   primeRubricCache(SERVED);
   vi.mocked(coachService.fetchAdminCoaches).mockResolvedValue(roster);
   vi.mocked(coachService.fetchAdminMonthly).mockResolvedValue(monthly);
-  vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({ profile: { id: 'cal', name: 'Cal Start', group: 'G', coachName: '' }, reports: [report] });
+  serveReports([report]);
   vi.mocked(coachService.fetchCoachTrendsFor).mockResolvedValue(trends);
   vi.mocked(coachService.fetchLeaderMonthlySummary).mockResolvedValue({ profile: { id: 'cal', name: 'Cal Start', group: 'G' }, availableMonths: [], summary: null });
   vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue([]);
@@ -207,10 +213,7 @@ describe('the admin screen renders the served rubric, never a copy of it', () =>
         ...monthly,
         leaders: [{ ...monthly.leaders[0], dimensions: TEN_DIMS.map((name, i) => ({ n: i + 1, name, avg: 3 })) }],
       });
-      vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
-        profile: { id: 'cal', name: 'Cal Start', group: 'G', coachName: '' },
-        reports: [{ ...report, dimensions: TEN_DIMS.map((name, i) => ({ n: i + 1, name, score: 3 })) }],
-      });
+      serveReports([{ ...report, dimensions: TEN_DIMS.map((name, i) => ({ n: i + 1, name, score: 3 })) }]);
     });
 
     it('heads the heat map with one column per served dimension', async () => {

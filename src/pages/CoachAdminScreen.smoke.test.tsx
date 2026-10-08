@@ -20,7 +20,8 @@ vi.mock('@/services/coachService', async (io) => {
     ...actual,
     fetchAdminCoaches: vi.fn(),
     fetchAdminMonthly: vi.fn(),
-    fetchCoachReportsFor: vi.fn(),
+    fetchCoachReportSummaries: vi.fn(),
+    fetchCoachReportDetail: vi.fn(),
     fetchCoachTrendsFor: vi.fn(),
     fetchLeaderMonthlySummary: vi.fn(),
     fetchAllCoachClasses: vi.fn(),
@@ -32,16 +33,16 @@ vi.mock('@/contexts/AppContext', () => ({
 
 const DIM = ['Structure & Flow', 'Newcomer Welcome', 'Scripture', 'Facilitation', 'Application', 'Participation', 'Visual Aids', 'Vulnerability', 'Memory', 'Homework', 'Prayer', 'Leader Dev'];
 const roster: CoachSummary[] = [
-  { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning Study', coachName: '', sessionCount: 12, latest: { date: '2026-07-18', dateLabel: 'Jul 18, 2026', score: 92, status: 'Exceptional', statusEmoji: '🔷' } },
-  { id: 'joel', name: 'Joel Hurt', group: "Thursday Men's Study", coachName: '', sessionCount: 7, latest: { date: '2026-07-16', dateLabel: 'Jul 16, 2026', score: 84, status: 'Strong', statusEmoji: '🟢' } },
+  { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning Study', coachName: '', sessionCount: 12, latest: { date: '2026-07-18', dateLabel: 'Jul 18, 2026', score: 92, status: 'Exceptional', statusEmoji: '🔷' } },
+  { id: 'ezra', name: 'Ezra Holt', group: "Thursday Men's Study", coachName: '', sessionCount: 7, latest: { date: '2026-07-16', dateLabel: 'Jul 16, 2026', score: 84, status: 'Strong', statusEmoji: '🟢' } },
 ];
 const monthly: CoachMonthly = {
   month: '2026-07', monthLabel: 'July 2026',
   program: { sessions: 37, activeLeaders: 15, newcomers: 12, avgScore: 73.7, clusters: [], delta: 4.2 },
   availableMonths: ['2026-07', '2026-06'],
   leaders: [
-    { id: 'bryan', name: 'Bryan Bailey', group: '', sessions: 6, avgScore: 82.4, status: 'Strong', statusEmoji: '', delta: 2, dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, avg: [4.2, 4.4, 5, 3.7, 4.5, 4, 3, 4.2, 3.5, 4, 4.1, 3.3][i] })) },
-    { id: 'joel', name: 'Joel Hurt', group: '', sessions: 5, avgScore: 82.6, status: 'Strong', statusEmoji: '', delta: 2, dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, avg: 4 })) },
+    { id: 'avery', name: 'Avery Hollis', group: '', sessions: 6, avgScore: 82.4, status: 'Strong', statusEmoji: '', delta: 2, dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, avg: [4.2, 4.4, 5, 3.7, 4.5, 4, 3, 4.2, 3.5, 4, 4.1, 3.3][i] })) },
+    { id: 'ezra', name: 'Ezra Holt', group: '', sessions: 5, avgScore: 82.6, status: 'Strong', statusEmoji: '', delta: 2, dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, avg: 4 })) },
   ],
   narrative: { executiveSummary: ['Program composite reached 73.7 / 100 — Strong.', 'Visual Aids is the single largest training leverage.'], trends: ['Scripture Engagement is the strongest dimension.'] },
 };
@@ -53,17 +54,16 @@ const report: CoachReport = {
   feedback: { headline: 'Scripture carried the hour.', strengths: [], improvements: [], recommendations: [], overview: [], strengthsProse: [], improvementsProse: [], recommendationsProse: [] },
   sections: [], notes: [{ id: 'n1', body: 'Great job on the pairings.', createdAt: '2026-07-19', emailed: true }],
 };
-const reportsFor = { profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning Study', coachName: '' }, reports: [report] };
 const trendsFor: CoachTrends = {
   scoreSeries: [{ date: '2026-07-11', dateLabel: 'Jul 11', session: 'L8', score: 87, status: 'Exceptional' }, { date: '2026-07-18', dateLabel: 'Jul 18', session: 'L9', score: 92, status: 'Exceptional' }],
   clusterSeries: [], dimensionSeries: [{ date: '2026-07-18', dateLabel: 'Jul 18', ...Object.fromEntries(DIM.map((n, i) => [n, [4, 4, 5, 4, 4, 4, 2, 4, 3, 4, 4, 3][i]])) }] as never, delta: null,
 };
 const leaderMonthly: LeaderMonthlyResponse = {
-  profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning Study' }, availableMonths: ['2026-07'],
-  summary: { month: '2026-07', monthLabel: 'July 2026', priorMonthLabel: 'June 2026', leaderId: 'bryan', leaderName: 'Bryan Bailey', group: '', sessionsCount: 4, composite: 88, status: { label: 'Exceptional', emoji: '🔷' }, priorComposite: 82, delta: 6, clusterAvg: { tc: 88, bm: 76, ep: 77, br: 84 }, glance: { rows: [], avg: { bm: 76, tc: 88, ep: 77, br: 84, composite: 88, status: 'Exceptional' } }, trajectory: [], clusters: [], strengths: [{ text: 'Cross-references built a framework.', session: '07-18' }], growth: [{ text: 'Visual Aids at 2/5.', session: '07-18' }], trends: [], conversationGuide: [], focus: { clusterName: 'Building Ministry', clusterPct: 76, goals: [] }, sessions: [] },
+  profile: { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning Study' }, availableMonths: ['2026-07'],
+  summary: { month: '2026-07', monthLabel: 'July 2026', priorMonthLabel: 'June 2026', leaderId: 'avery', leaderName: 'Avery Hollis', group: '', sessionsCount: 4, composite: 88, status: { label: 'Exceptional', emoji: '🔷' }, priorComposite: 82, delta: 6, clusterAvg: { tc: 88, bm: 76, ep: 77, br: 84 }, glance: { rows: [], avg: { bm: 76, tc: 88, ep: 77, br: 84, composite: 88, status: 'Exceptional' } }, trajectory: [], clusters: [], strengths: [{ text: 'Cross-references built a framework.', session: '07-18' }], growth: [{ text: 'Visual Aids at 2/5.', session: '07-18' }], trends: [], conversationGuide: [], focus: { clusterName: 'Building Ministry', clusterPct: 76, goals: [] }, sessions: [] },
 };
 const classes: AdminCoachClass[] = [
-  { id: 'c1', name: 'Saturday Morning Study', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', leader: { id: 'bryan', name: 'Bryan Bailey', email: 'b@x.com' } },
+  { id: 'c1', name: 'Saturday Morning Study', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', leader: { id: 'avery', name: 'Avery Hollis', email: 'b@x.com' } },
 ];
 
 beforeEach(() => {
@@ -89,7 +89,8 @@ beforeEach(() => {
   });
   vi.mocked(coachService.fetchAdminCoaches).mockResolvedValue(roster);
   vi.mocked(coachService.fetchAdminMonthly).mockResolvedValue(monthly);
-  vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue(reportsFor);
+  vi.mocked(coachService.fetchCoachReportSummaries).mockResolvedValue({ items: [report], total: 1, streakWeeks: 1, quarterSessions: 1 });
+  vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(async (id) => (id === report.id ? report : null));
   vi.mocked(coachService.fetchCoachTrendsFor).mockResolvedValue(trendsFor);
   vi.mocked(coachService.fetchLeaderMonthlySummary).mockResolvedValue(leaderMonthly);
   vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue(classes);
@@ -110,13 +111,13 @@ describe('Coach Oversight', () => {
   it('renders the roster with program health and every leader', async () => {
     renderScreen();
     expect(await screen.findByText('Bible Leader Coach')).toBeInTheDocument();
-    expect(await screen.findByTestId('oversight-roster-bryan')).toBeInTheDocument();
-    expect(screen.getByText('Joel Hurt')).toBeInTheDocument();
+    expect(await screen.findByTestId('oversight-roster-avery')).toBeInTheDocument();
+    expect(screen.getByText('Ezra Holt')).toBeInTheDocument();
   });
 
   it('opens a leader detail with development + classes', async () => {
     renderScreen();
-    fireEvent.click(await screen.findByTestId('oversight-roster-bryan'));
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
     expect(await screen.findByText('Development · the coaching conversation')).toBeInTheDocument();
     expect(screen.getByText('Classes')).toBeInTheDocument();
     // Comment composer for the session is present.
@@ -126,7 +127,7 @@ describe('Coach Oversight', () => {
   it('falls back to available sessions for cluster mix when no monthly summary yet', async () => {
     vi.mocked(coachService.fetchLeaderMonthlySummary).mockResolvedValueOnce({ ...leaderMonthly, summary: null });
     renderScreen();
-    fireEvent.click(await screen.findByTestId('oversight-roster-bryan'));
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
     // Cluster mix still renders (never blank) using the sessions we have.
     expect(await screen.findByText(/Sessions so far/)).toBeInTheDocument();
     expect(screen.getByText('Building Ministry')).toBeInTheDocument();
@@ -151,7 +152,7 @@ describe('Coach Oversight', () => {
     await screen.findByText('Dimension heat map');
     // Every leader name across the trends tables is a button that opens that
     // leader's dedicated page. Clicking one drills into the leader detail view.
-    const nameButtons = screen.getAllByTitle("Open Joel Hurt's page");
+    const nameButtons = screen.getAllByTitle("Open Ezra Holt's page");
     expect(nameButtons.length).toBeGreaterThan(0);
     fireEvent.click(nameButtons[0]);
     expect(await screen.findByText('Development · the coaching conversation')).toBeInTheDocument();

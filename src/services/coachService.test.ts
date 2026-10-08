@@ -15,7 +15,6 @@ import {
   fetchCoachClasses,
   fetchCoachReportDetail,
   fetchCoachReportSummaries,
-  fetchCoachReportsFor,
   fetchCoachMe,
   saveCoachZoomLink,
   saveRecordingLink,
@@ -136,21 +135,30 @@ describe('coachService', () => {
   it('fetches the admin roster', async () => {
     mockFetch((url) => {
       expect(url).toContain('/coach/admin/coaches');
-      return jsonResponse({ coaches: [{ id: 'jeff-ward', name: 'Jeff Ward', sessionCount: 3 }] });
+      return jsonResponse({ coaches: [{ id: 'milo-kerr', name: 'Milo Kerr', sessionCount: 3 }] });
     });
     const coaches = await fetchAdminCoaches();
     expect(coaches).toHaveLength(1);
-    expect(coaches[0].id).toBe('jeff-ward');
+    expect(coaches[0].id).toBe('milo-kerr');
   });
 
-  it('fetches a specific leader (admin drill-in) with profile + reports', async () => {
+  it("reads one leader's summaries a page at a time and one report at a time through the admin routes", async () => {
     mockFetch((url) => {
-      expect(url).toContain('/coach/admin/coaches/jeff-ward/reports');
-      return jsonResponse({ profile: { id: 'jeff-ward', name: 'Jeff Ward' }, reports: [{ id: 'r1' }] });
+      if (url.endsWith('/coach/admin/coaches/milo-kerr/reports/summary?limit=5&offset=10')) {
+        return jsonResponse({ items: [{ id: 'r1' }], total: 11, streakWeeks: 4, quarterSessions: 6 });
+      }
+      if (url.endsWith('/coach/admin/coaches/milo-kerr/reports/r1')) return jsonResponse({ report: { id: 'r1' } });
+      return jsonResponse({ error: 'NOT_FOUND', message: 'Session not found' }, 404);
     });
-    const data = await fetchCoachReportsFor('jeff-ward');
-    expect(data.profile.id).toBe('jeff-ward');
-    expect(data.reports).toHaveLength(1);
+    await expect(fetchCoachReportSummaries(10, 5, 'milo-kerr')).resolves.toEqual({
+      items: [{ id: 'r1' }],
+      total: 11,
+      streakWeeks: 4,
+      quarterSessions: 6,
+    });
+    await expect(fetchCoachReportDetail('r1', 'milo-kerr')).resolves.toMatchObject({ id: 'r1' });
+    await expect(fetchCoachReportDetail('gone', 'milo-kerr')).resolves.toBeNull();
+    expect(calls.map((c) => c.url).some((u) => /\/reports$/.test(u))).toBe(false);
   });
 
   it('maps admin 403 (non-admin coach) to a not_a_coach error', async () => {
@@ -169,14 +177,14 @@ describe('coachService', () => {
             classDate: '2026-07-23',
             recurrence: 'weekly',
             zoomLink: 'https://zoom.us/j/1',
-            leader: { id: 'jeff-ward', name: 'Jeff Ward', email: 'jeff@example.com' },
+            leader: { id: 'milo-kerr', name: 'Milo Kerr', email: 'milo@example.com' },
           },
         ],
       });
     });
     const classes = await fetchAllCoachClasses();
     expect(classes).toHaveLength(1);
-    expect(classes[0].leader.name).toBe('Jeff Ward');
+    expect(classes[0].leader.name).toBe('Milo Kerr');
     expect(classes[0].zoomLink).toBe('https://zoom.us/j/1');
   });
 
@@ -263,24 +271,24 @@ describe('coachService', () => {
 
   it('PUTs a session recording link', async () => {
     mockFetch((url, init) => {
-      expect(url).toContain('/coach/admin/coaches/jeff-ward/reports/r1/recording');
+      expect(url).toContain('/coach/admin/coaches/milo-kerr/reports/r1/recording');
       expect(init?.method).toBe('PUT');
       const body = JSON.parse(String(init?.body));
       return jsonResponse({ recordingUrl: body.recordingUrl });
     });
-    const saved = await saveRecordingLink('jeff-ward', 'r1', 'https://zoom.us/rec/abc');
+    const saved = await saveRecordingLink('milo-kerr', 'r1', 'https://zoom.us/rec/abc');
     expect(saved).toBe('https://zoom.us/rec/abc');
   });
 
   it('POSTs a coaching note and returns it', async () => {
     mockFetch((url, init) => {
-      expect(url).toContain('/coach/admin/coaches/jeff-ward/reports/r1/notes');
+      expect(url).toContain('/coach/admin/coaches/milo-kerr/reports/r1/notes');
       expect(init?.method).toBe('POST');
       return jsonResponse({
         note: { id: 'n1', body: 'Great job.', createdAt: '2026-07-21T00:00:00.000Z', emailed: true },
       });
     });
-    const note = await addCoachNote('jeff-ward', 'r1', 'Great job.');
+    const note = await addCoachNote('milo-kerr', 'r1', 'Great job.');
     expect(note.id).toBe('n1');
     expect(note.emailed).toBe(true);
   });
@@ -308,7 +316,7 @@ describe('coachService', () => {
     mockFetch((url) => {
       expect(url).toContain('/coach/monthly-summary?month=2026-06');
       return jsonResponse({
-        profile: { id: 'bryan-bailey', name: 'Bryan Bailey', group: 'James' },
+        profile: { id: 'avery-hollis', name: 'Avery Hollis', group: 'James' },
         summary: { month: '2026-06', monthLabel: 'June 2026', composite: 79, clusters: [], sessions: [] },
         availableMonths: ['2026-06', '2026-05'],
       });
@@ -321,16 +329,16 @@ describe('coachService', () => {
 
   it("fetches a leader's monthly summary for admin drill-in", async () => {
     mockFetch((url) => {
-      expect(url).toContain('/coach/admin/coaches/jeff-ward/monthly-summary?month=2026-05');
+      expect(url).toContain('/coach/admin/coaches/milo-kerr/monthly-summary?month=2026-05');
       return jsonResponse({
-        profile: { id: 'jeff-ward', name: 'Jeff Ward', group: 'Colossians' },
+        profile: { id: 'milo-kerr', name: 'Milo Kerr', group: 'Colossians' },
         summary: null,
         availableMonths: ['2026-05'],
       });
     });
     const { fetchLeaderMonthlySummary } = await import('./coachService');
-    const data = await fetchLeaderMonthlySummary('jeff-ward', '2026-05');
-    expect(data.profile.id).toBe('jeff-ward');
+    const data = await fetchLeaderMonthlySummary('milo-kerr', '2026-05');
+    expect(data.profile.id).toBe('milo-kerr');
     expect(data.summary).toBeNull();
   });
 });

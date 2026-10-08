@@ -17,10 +17,10 @@ import { useQueryClient } from '@tanstack/react-query';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
   coachKeys,
+  useAdminLeader,
   useCoachMe,
   useCoachReportSummaries,
   useCoachReportDetail,
-  useCoachReportsFor,
   useCoachTrends,
   useCoachTrendsFor,
   useCoachClasses,
@@ -51,21 +51,19 @@ export default function CoachDashboardScreen() {
   const admin = !!coachId;
   const base = admin ? `/coach/leader/${coachId}` : '/coach';
 
-  // Only the active branch's queries are enabled.
   const queryClient = useQueryClient();
   const meQuery = useCoachMe();
-  const selfReports = useCoachReportSummaries({ enabled: !admin });
-  const forReports = useCoachReportsFor(coachId ?? '');
+  const summaries = useCoachReportSummaries({ coachId });
+  const adminLeader = useAdminLeader(coachId);
   const selfTrends = useCoachTrends({ enabled: !admin });
   const forTrends = useCoachTrendsFor(coachId ?? '');
   const selfClasses = useCoachClasses({ enabled: !admin });
   const adminClasses = useAdminClasses({ enabled: admin });
 
   const me = coachState(meQuery);
-  const reports = admin ? coachState(forReports) : coachState(selfReports);
-  const reportList: CoachReportSummary[] | undefined = admin
-    ? forReports.data?.reports
-    : selfReports.data?.pages[0]?.items;
+  const reports = coachState(summaries);
+  const firstPage = summaries.data?.pages[0];
+  const reportList: CoachReportSummary[] | undefined = firstPage?.items;
   const trends: CoachTrends | undefined = admin ? forTrends.data : selfTrends.data;
   const classes: CoachClass[] = admin
     ? (adminClasses.data || []).filter((c) => c.leader.id === coachId)
@@ -74,17 +72,16 @@ export default function CoachDashboardScreen() {
   const list = useMemo(() => [...(reportList || [])].sort(byDateDesc), [reportList]);
   const selId = params.get('s');
   const resolved = resolveDeepLink<CoachReportSummary>(list, selId);
-  const offPage = !admin && resolved.missing;
+  const offPage = resolved.missing;
   const selectedId = offPage ? selId : resolved.selected?.id;
   const prevSummary = offPage ? undefined : list[resolved.index + 1];
   const latestSummary = list[0];
 
-  const adminReports = forReports.data?.reports;
-  const selectedFull = useFullReport(admin, adminReports, selectedId ?? undefined);
-  const latestFull = useFullReport(admin, adminReports, latestSummary?.id);
-  const prevFull = useFullReport(admin, adminReports, prevSummary?.id);
+  const selectedFull = useFullReport(selectedId ?? undefined, coachId);
+  const latestFull = useFullReport(latestSummary?.id, coachId);
+  const prevFull = useFullReport(prevSummary?.id, coachId);
 
-  const deepLinkMissing = offPage ? selectedFull.settled && !selectedFull.report : resolved.missing;
+  const deepLinkMissing = offPage && selectedFull.settled && !selectedFull.report;
   const selected = selectedFull.report;
   const latest = latestFull.report;
   const prev = prevFull.report ?? undefined;
@@ -92,18 +89,17 @@ export default function CoachDashboardScreen() {
   const detailLoading = selectedFull.loading || latestFull.loading || prevFull.loading;
   const detailError = selectedFull.error || latestFull.error || prevFull.error;
 
-  const leaderName = admin ? forReports.data?.profile?.name || '' : me.data?.profile?.name || '';
+  const leaderName = admin ? adminLeader?.name || '' : me.data?.profile?.name || '';
 
   return (
     <CoachDashboardShell active="home" coachId={coachId} leaderName={leaderName}>
       <CoachGate
-        loading={admin ? reports.loading : me.loading || reports.loading || detailLoading}
+        loading={(!admin && me.loading) || reports.loading || detailLoading}
         authError={me.authError || reports.authError}
         error={me.error || reports.error || detailError}
         onRetry={() => {
           meQuery.refetch();
-          if (admin) forReports.refetch();
-          else queryClient.invalidateQueries({ queryKey: coachKeys.reports });
+          queryClient.invalidateQueries({ queryKey: coachId ? coachKeys.adminReports(coachId) : coachKeys.reports });
         }}
       >
         {deepLinkMissing ? (
@@ -115,8 +111,8 @@ export default function CoachDashboardScreen() {
             <Hero
               leaderName={leaderName}
               admin={admin}
-              streakWeeks={weeklyStreak(list)}
-              quarterSessions={quarterCount(list)}
+              streakWeeks={firstPage?.streakWeeks ?? 0}
+              quarterSessions={firstPage?.quarterSessions ?? 0}
               latest={latest}
               delta={list.length > 1 ? Math.round((latestSummary.score - list[1].score) * 100) / 100 : null}
             />
@@ -149,13 +145,11 @@ export default function CoachDashboardScreen() {
 }
 
 function useFullReport(
-  admin: boolean,
-  adminReports: CoachReport[] | undefined,
   id: string | undefined,
+  coachId: string | undefined,
 ): { report: CoachReport | null; loading: boolean; error: boolean; settled: boolean } {
-  const detail = useCoachReportDetail(admin ? undefined : id);
+  const detail = useCoachReportDetail(id, coachId);
   if (!id) return { report: null, loading: false, error: false, settled: true };
-  if (admin) return { report: adminReports?.find((r) => r.id === id) ?? null, loading: false, error: false, settled: true };
   return {
     report: detail.data ?? null,
     loading: detail.isLoading,
@@ -595,44 +589,6 @@ function subgreeting(latest: CoachReport, delta: number | null, streakWeeks: num
 function lessonLabel(session: string): string {
   const m = session.match(/Lesson\s+\d+/i);
   return m ? m[0] : session;
-}
-
-/** Weeks-in-a-row (ending at the most recent session) that had a session. */
-function weeklyStreak(list: { date: string }[]): number {
-  if (list.length === 0) return 0;
-  const weeks = new Set(list.map((r) => isoWeekKey(r.date)));
-  const cursor = weekStart(list[0].date); // list is newest-first
-  let streak = 0;
-  while (weeks.has(isoWeekKeyFromDate(cursor))) {
-    streak += 1;
-    cursor.setDate(cursor.getDate() - 7);
-  }
-  return streak;
-}
-
-/** Sessions within ~13 weeks (a quarter) of the most recent session. */
-function quarterCount(list: { date: string }[]): number {
-  if (list.length === 0) return 0;
-  const latest = dateValue(list[0].date);
-  const cutoff = latest - 91 * 24 * 3600 * 1000;
-  return list.filter((r) => dateValue(r.date) >= cutoff).length;
-}
-
-function weekStart(iso: string): Date {
-  const [y, m, d] = iso.split('-').map(Number);
-  const dt2 = new Date(y, (m || 1) - 1, d || 1);
-  const day = (dt2.getDay() + 6) % 7; // Monday = 0
-  dt2.setDate(dt2.getDate() - day);
-  dt2.setHours(0, 0, 0, 0);
-  return dt2;
-}
-
-function isoWeekKey(iso: string): string {
-  return isoWeekKeyFromDate(weekStart(iso));
-}
-
-function isoWeekKeyFromDate(d: Date): string {
-  return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
 }
 
 /** Average the per-session score series into a monthly composite series. */

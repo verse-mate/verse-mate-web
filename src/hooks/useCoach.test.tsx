@@ -62,7 +62,12 @@ describe("a leader's paginated history", () => {
   it('stops paging when the server returns an empty page short of its own total', async () => {
     const item = (id: string) => ({ id }) as CoachReportSummary;
     const fetch = vi.spyOn(coachService, 'fetchCoachReportSummaries').mockImplementation((offset = 0) =>
-      Promise.resolve(offset === 0 ? { items: [item('a'), item('b')], total: 3 } : { items: [], total: 3 }),
+      Promise.resolve({
+        items: offset === 0 ? [item('a'), item('b')] : [],
+        total: 3,
+        streakWeeks: 0,
+        quarterSessions: 0,
+      }),
     );
 
     const { result } = renderHook(() => useCoachReportSummaries(), { wrapper: wrapper() });

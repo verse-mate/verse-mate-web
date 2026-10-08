@@ -12,7 +12,7 @@
  *   Class links         , the meeting links the notetaker joins, per leader
  *
  * Wired to the real admin API (useAdminCoaches / useAdminMonthly /
- * useCoachReportsFor / useCoachTrendsFor / useLeaderMonthlySummary /
+ * useCoachReportSummaries / useCoachTrendsFor / useLeaderMonthlySummary /
  * useAdminClasses / useAddLeader / useAddNote).
  */
 
@@ -23,7 +23,8 @@ import { useApp } from '@/contexts/AppContext';
 import {
   useAdminCoaches,
   useAdminMonthly,
-  useCoachReportsFor,
+  useCoachReportDetail,
+  useCoachReportSummaries,
   useCoachTrendsFor,
   useLeaderMonthlySummary,
   useAdminClasses,
@@ -35,6 +36,7 @@ import type {
   CoachSummary,
   CoachMonthly,
   CoachReport,
+  CoachReportSummary,
   CoachTrends,
   LeaderMonthlySummary,
   AdminCoachClass,
@@ -338,18 +340,22 @@ function LeaderDetailView({
   onBack: () => void;
 }) {
   const month = currentMonth();
-  const reportsQuery = useCoachReportsFor(leaderId);
+  const summaries = useCoachReportSummaries({ coachId: leaderId });
   const trendsQuery = useCoachTrendsFor(leaderId);
   const monthlyQuery = useLeaderMonthlySummary(leaderId, month);
 
-  const state = coachState(reportsQuery);
-  const profile = reportsQuery.data?.profile;
-  const reports = useMemo(() => [...(reportsQuery.data?.reports || [])].sort(byDateDesc), [reportsQuery.data]);
+  const state = coachState(summaries);
+  const reports = useMemo(
+    () => [...(summaries.data?.pages.flatMap((p) => p.items) ?? [])].sort(byDateDesc),
+    [summaries.data],
+  );
+  const sessionCount = summaries.data?.pages.at(-1)?.total ?? 0;
+  const latest = useCoachReportDetail(reports[0]?.id, leaderId);
   const trends = trendsQuery.data;
   const monthly = monthlyQuery.data?.summary ?? null;
 
-  const name = profile?.name || summary?.name || 'Leader';
-  const study = profile?.group || summary?.group || '';
+  const name = summary?.name || 'Leader';
+  const study = summary?.group || '';
   const { rubric } = useRubric();
   const status = summary?.latest?.status || (reports[0] ? compositeStatus(reports[0].score, rubric) : '');
   const st = statusBand(status, bandLabelsOf(rubric));
@@ -357,8 +363,16 @@ function LeaderDetailView({
   const [page, setPage] = useState(0);
   const [openClass, setOpenClass] = useState<string | null>(null);
   const CPP = 5;
-  const totalPages = Math.max(1, Math.ceil(reports.length / CPP));
+  const totalPages = Math.max(1, Math.ceil(sessionCount / CPP));
   const pageReports = reports.slice(page * CPP, page * CPP + CPP);
+  const turnTo = (next: number) => {
+    if (next < 0 || next >= totalPages) return;
+    if ((next + 1) * CPP > reports.length && summaries.hasNextPage && !summaries.isFetchingNextPage) {
+      summaries.fetchNextPage();
+    }
+    setPage(next);
+    setOpenClass(null);
+  };
 
   return (
     <div style={{ paddingTop: 22 }}>
@@ -369,20 +383,28 @@ function LeaderDetailView({
           <div style={{ width: 60, height: 60, borderRadius: 14, background: st.bg, color: st.c, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 18 }}>{initialsOf(name)}</div>
           <div>
             <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 28, margin: '0 0 4px', letterSpacing: '-.01em' }}>{name}</h2>
-            <div style={{ fontSize: 14, color: dt.textMuted }}>{study}{study ? ' · ' : ''}{reports.length} session{reports.length === 1 ? '' : 's'}</div>
+            <div style={{ fontSize: 14, color: dt.textMuted }}>{study}{study ? ' · ' : ''}{sessionCount} session{sessionCount === 1 ? '' : 's'}</div>
           </div>
         </div>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11.5, fontWeight: 700, color: st.c, background: st.bg, padding: '5px 12px', borderRadius: 99 }}>{status}</div>
       </div>
 
-      <CoachGate loading={state.loading} authError={state.authError} error={state.error} onRetry={() => reportsQuery.refetch()}>
-        {reports.length === 0 ? (
+      <CoachGate
+        loading={state.loading || latest.isLoading}
+        authError={state.authError}
+        error={state.error || !!latest.error}
+        onRetry={() => {
+          summaries.refetch();
+          latest.refetch();
+        }}
+      >
+        {reports.length === 0 || !latest.data ? (
           <div style={dashedNote}>No sessions scored for {firstName(name)} yet. Once a session is recorded and coached, it appears here.</div>
         ) : (
           <>
             {monthly && <StrengthsGrowth summary={monthly} />}
 
-            <Development trends={trends} latest={reports[0]} monthly={monthly} />
+            <Development trends={trends} latest={latest.data} monthly={monthly} />
 
             {/* Classes + comments */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 11, margin: '6px 0 6px' }}>
@@ -404,11 +426,15 @@ function LeaderDetailView({
               ))}
             </div>
 
+            {pageReports.length === 0 && (
+              <div style={dashedNote}>{summaries.isFetchNextPageError ? 'Could not load these classes.' : 'Loading…'}</div>
+            )}
+
             {totalPages > 1 && (
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 14 }}>
-                <button type="button" onClick={() => { if (page > 0) { setPage(page - 1); setOpenClass(null); } }} style={{ background: 'none', border: 'none', cursor: page > 0 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page > 0 ? dt.textPrimary : '#C4BDAE' }}>← Newer</button>
-                <span style={{ fontSize: 12.5, color: dt.textLight }}>Page {page + 1} of {totalPages} · {reports.length} classes</span>
-                <button type="button" onClick={() => { if (page < totalPages - 1) { setPage(page + 1); setOpenClass(null); } }} style={{ background: 'none', border: 'none', cursor: page < totalPages - 1 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page < totalPages - 1 ? dt.textPrimary : '#C4BDAE' }}>Older →</button>
+                <button type="button" onClick={() => turnTo(page - 1)} style={{ background: 'none', border: 'none', cursor: page > 0 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page > 0 ? dt.textPrimary : '#C4BDAE' }}>← Newer</button>
+                <span style={{ fontSize: 12.5, color: dt.textLight }}>Page {page + 1} of {totalPages} · {sessionCount} classes</span>
+                <button type="button" onClick={() => turnTo(page + 1)} style={{ background: 'none', border: 'none', cursor: page < totalPages - 1 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page < totalPages - 1 ? dt.textPrimary : '#C4BDAE' }}>Older →</button>
               </div>
             )}
           </>
@@ -545,19 +571,32 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
   );
 }
 
-function ClassCard({
+type ClassCardProps = {
+  study: string;
+  leaderId: string;
+  open: boolean;
+  onToggle: () => void;
+};
+
+function ClassCard({ report: row, ...props }: ClassCardProps & { report: CoachReportSummary }) {
+  const detail = useCoachReportDetail(row.id, props.leaderId);
+  if (!detail.data) {
+    return (
+      <div data-testid={`oversight-class-pending-${row.id}`} style={dashedNote}>
+        {row.dateLabel} · {detail.error ? 'Could not load this session.' : 'Loading…'}
+      </div>
+    );
+  }
+  return <ClassCardBody report={detail.data} {...props} />;
+}
+
+function ClassCardBody({
   report,
   study,
   leaderId,
   open,
   onToggle,
-}: {
-  report: CoachReport;
-  study: string;
-  leaderId: string;
-  open: boolean;
-  onToggle: () => void;
-}) {
+}: ClassCardProps & { report: CoachReport }) {
   const cb = compBand(report.score, useRubric().rubric);
   const scored = report.dimensions.filter((d) => d.score != null) as { n: number; name: string; score: number; note?: string }[];
   const sortedDesc = [...scored].sort((a, b) => b.score - a.score);

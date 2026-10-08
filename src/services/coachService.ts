@@ -207,14 +207,6 @@ export interface CoachSummary {
   } | null;
 }
 
-/** Header identifying which leader an admin is viewing. */
-export interface CoachProfileHeader {
-  id: string;
-  name: string;
-  group: string;
-  coachName: string;
-}
-
 export interface ScorePoint {
   date: string;
   dateLabel: string;
@@ -285,34 +277,54 @@ export function fetchCoachMe(): Promise<CoachMe> {
 
 export type CoachReportSummary = Pick<
   CoachReport,
-  'id' | 'date' | 'dateLabel' | 'session' | 'topic' | 'score' | 'status' | 'statusEmoji'
+  | 'id'
+  | 'date'
+  | 'dateLabel'
+  | 'session'
+  | 'topic'
+  | 'score'
+  | 'status'
+  | 'statusEmoji'
+  | 'hasRetainedRecording'
+  | 'attachedRecordingUrl'
 >;
 
+export interface CoachReportSummaryPage {
+  items: CoachReportSummary[];
+  total: number;
+  streakWeeks: number;
+  quarterSessions: number;
+}
+
 export const REPORT_PAGE_SIZE = 50;
+
+function reportsPath(coachId?: string): string {
+  return coachId ? `admin/coaches/${encodeURIComponent(coachId)}/reports` : 'reports';
+}
 
 export async function fetchCoachReportSummaries(
   offset = 0,
   limit = REPORT_PAGE_SIZE,
-): Promise<{ items: CoachReportSummary[]; total: number }> {
-  const data = await coachRequest<{ items: CoachReportSummary[]; total: number }>(
-    `reports/summary?limit=${limit}&offset=${offset}`,
+  coachId?: string,
+): Promise<CoachReportSummaryPage> {
+  const data = await coachRequest<Partial<CoachReportSummaryPage>>(
+    `${reportsPath(coachId)}/summary?limit=${limit}&offset=${offset}`,
   );
-  return { items: data.items || [], total: data.total ?? 0 };
+  return {
+    items: data.items || [],
+    total: data.total ?? 0,
+    streakWeeks: data.streakWeeks ?? 0,
+    quarterSessions: data.quarterSessions ?? 0,
+  };
 }
 
-/**
- * GET /api/coach/reports/:id, one session in full.
- *
- * The `hasRetainedRecording` flag is detail-only by design (a list must not
- * mint, and it does not carry the field), so opening a single session is the
- * only way to learn that VerseMate holds its recording.
- */
 export async function fetchCoachReportDetail(
   reportId: string,
+  coachId?: string,
 ): Promise<CoachReport | null> {
   try {
     const data = await coachRequest<{ report: CoachReport }>(
-      `reports/${encodeURIComponent(reportId)}`,
+      `${reportsPath(coachId)}/${encodeURIComponent(reportId)}`,
     );
     return data.report ?? null;
   } catch (err) {
@@ -455,15 +467,6 @@ export function fetchCoachTrends(): Promise<CoachTrends> {
 export async function fetchAdminCoaches(): Promise<CoachSummary[]> {
   const data = await coachRequest<{ coaches: CoachSummary[] }>('admin/coaches');
   return data.coaches || [];
-}
-
-/** GET /coach/admin/coaches/:id/reports, a specific leader's documents. */
-export function fetchCoachReportsFor(
-  coachId: string,
-): Promise<{ profile: CoachProfileHeader; reports: CoachReport[] }> {
-  return coachRequest<{ profile: CoachProfileHeader; reports: CoachReport[] }>(
-    `admin/coaches/${encodeURIComponent(coachId)}/reports`,
-  );
 }
 
 /** GET /coach/admin/coaches/:id/trends, a specific leader's trends. */

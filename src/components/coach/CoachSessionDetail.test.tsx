@@ -64,7 +64,7 @@ describe('a leader opening their own session', () => {
     renderDetail(REPORT);
 
     expect(await screen.findByTestId('coach-recording-play-r1')).toBeInTheDocument();
-    expect(detail).toHaveBeenCalledWith('r1');
+    expect(detail).toHaveBeenCalledWith('r1', undefined);
   });
 });
 
