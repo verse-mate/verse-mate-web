@@ -402,6 +402,7 @@ describe("a leader's address", () => {
           'admin/leaders/milo-kerr/email',
           409,
           "This is the benchmark leader, whose address receives every leader's reports: send confirm: true to change it",
+          { refusal: 'confirm-required' },
         ),
       )
       .mockResolvedValueOnce({ email: 'milo.new@example.test', noticeSent: true });
@@ -427,7 +428,9 @@ describe("a leader's address", () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     vi.spyOn(coachService, 'updateLeaderEmail').mockRejectedValue(
-      new CoachApiError('admin/leaders/milo-kerr/email', 409, 'This is the benchmark leader, whose address receives every leader\'s reports: send confirm: true to change it'),
+      new CoachApiError('admin/leaders/milo-kerr/email', 409, 'This is the benchmark leader, whose address receives every leader\'s reports: send confirm: true to change it', {
+        refusal: 'confirm-required',
+      }),
     );
     renderView();
 

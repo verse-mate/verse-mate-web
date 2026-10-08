@@ -979,10 +979,14 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
         return conflict(route, 'Another leader already uses that address');
       }
       if (leader.coachId === LEADER_ID && body.confirm !== true) {
-        return conflict(
-          route,
-          "This is the benchmark leader, whose address receives every leader's reports: send confirm: true to change it",
-        );
+        return route.fulfill({
+          status: 409,
+          json: {
+            error: 'CONFLICT',
+            message: "This is the benchmark leader, whose address receives every leader's reports: send confirm: true to change it",
+            details: { refusal: 'confirm-required' },
+          },
+        });
       }
       const noticeSent = !isPlaceholder(leader.email);
       leader.email = address;

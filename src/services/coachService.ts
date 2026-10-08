@@ -250,6 +250,7 @@ export class CoachApiError extends Error {
     path: string,
     public status: number,
     public serverMessage: string,
+    public details: Record<string, unknown> = {},
   ) {
     super(`coach api ${path} failed: ${status}`);
     this.name = 'CoachApiError';
@@ -275,8 +276,8 @@ async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T>
   if (res.status === 401) throw new CoachAuthError('signed_out');
   if (res.status === 403) throw new CoachAuthError('not_a_coach');
   if (!res.ok) {
-    const body = (await res.json().catch(() => null)) as { message?: string } | null;
-    throw new CoachApiError(path, res.status, body?.message ?? '');
+    const body = (await res.json().catch(() => null)) as { message?: string; details?: Record<string, unknown> } | null;
+    throw new CoachApiError(path, res.status, body?.message ?? '', body?.details ?? {});
   }
   return (await res.json()) as T;
 }
@@ -788,7 +789,7 @@ export function updateLeaderEmail(
 }
 
 export function needsBenchmarkConfirm(err: unknown): boolean {
-  return err instanceof CoachApiError && err.status === 409 && err.serverMessage.includes('confirm: true');
+  return err instanceof CoachApiError && err.status === 409 && err.details.refusal === 'confirm-required';
 }
 
 export interface LeaderAttribution {
