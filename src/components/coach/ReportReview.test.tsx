@@ -848,6 +848,23 @@ describe('the first-lesson flag on an undelivered report', () => {
     expect(screen.queryByTestId('coach-amend-editor')).toBeNull();
   });
 
+  it('shows the flag refused on a report already emailed to some of its recipients', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    vi.spyOn(coachService, 'setFirstLesson').mockRejectedValue(
+      new CoachApiError(
+        'x',
+        409,
+        'Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.',
+      ),
+    );
+    renderReview();
+    fireEvent.click(await screen.findByTestId('coach-first-lesson-set'));
+    expect(await screen.findByTestId('coach-first-lesson-outcome')).toHaveTextContent(
+      'Refused (409): Refused: the report was already emailed to some of its recipients and its delivery is still finishing. Amend it once delivery completes.',
+    );
+    expect(screen.getByTestId('coach-first-lesson-state')).toHaveTextContent('First lesson: no.');
+  });
+
   it('shows the refusal when the server will not change the flag', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
     vi.spyOn(coachService, 'setFirstLesson').mockRejectedValue(

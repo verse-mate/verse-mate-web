@@ -222,6 +222,18 @@ describe('adding a leader', () => {
     expect(screen.getByTestId('oversight-invite-name')).toHaveValue('Ezra Holt');
   });
 
+  it("shows the server's refusal of a name that contains another leader's keyword, and keeps the form open", async () => {
+    const refusal =
+      'Name refused: it contains "tuesday night", a keyword of evan-ellis. Their sessions would be routed to that leader. Enter a different name or change that leader\'s keywords first.';
+    vi.mocked(coachService.addCoachLeader).mockRejectedValue(new coachService.CoachApiError('admin/leaders', 409, refusal));
+    renderScreen();
+    await fillInvite();
+
+    expect(await screen.findByTestId('oversight-invite-error')).toHaveTextContent(refusal);
+    expect(screen.getByTestId('oversight-invite-modal')).toBeInTheDocument();
+    expect(screen.getByTestId('oversight-invite-name')).toHaveValue('Ezra Holt');
+  });
+
   it('holds an address that breaks the rule before it reaches the server, naming the rule', async () => {
     vi.mocked(coachService.addCoachLeader).mockClear();
     renderScreen();

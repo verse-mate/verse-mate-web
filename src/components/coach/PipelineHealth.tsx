@@ -252,7 +252,7 @@ export default function PipelineHealth() {
                             style={input}
                           >
                             <option value="">Pick a leader…</option>
-                            {leaders.map((l) => (
+                            {leaders.filter((l) => l.id !== s.coachId).map((l) => (
                               <option key={l.id} value={l.id}>
                                 {l.name}
                               </option>
