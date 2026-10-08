@@ -534,6 +534,30 @@ describe("a leader's title keywords and alternate addresses", () => {
     );
   });
 
+  it('a second save starts from what the first one saved, so the new keyword is not dropped', async () => {
+    vi.spyOn(coachService, 'fetchLeaderAttribution').mockResolvedValue({ titleMatch: ['saturday morning'], altEmails: [] });
+    const save = vi
+      .spyOn(coachService, 'saveLeaderAttribution')
+      .mockImplementation(async (_coachId, attribution) => ({ ...attribution, resolved: 0 }));
+    renderView();
+    fireEvent.click(await screen.findByTestId('coach-attribution-edit-milo-kerr'));
+    fireEvent.change(await screen.findByTestId('coach-attribution-keywords-milo-kerr'), {
+      target: { value: 'saturday morning\nobadiah' },
+    });
+    fireEvent.click(screen.getByTestId('coach-attribution-save-milo-kerr'));
+    await screen.findByTestId('coach-attribution-saved-milo-kerr');
+
+    expect(screen.getByTestId('coach-attribution-keywords-milo-kerr')).toHaveValue('saturday morning\nobadiah');
+    fireEvent.change(screen.getByTestId('coach-attribution-emails-milo-kerr'), { target: { value: 'milo.w@example.test' } });
+    fireEvent.click(screen.getByTestId('coach-attribution-save-milo-kerr'));
+
+    await waitFor(() => expect(save).toHaveBeenCalledTimes(2));
+    expect(save).toHaveBeenLastCalledWith('milo-kerr', {
+      titleMatch: ['saturday morning', 'obadiah'],
+      altEmails: ['milo.w@example.test'],
+    });
+  });
+
   it('holds a keyword shorter than three characters before it reaches the server', async () => {
     vi.spyOn(coachService, 'fetchLeaderAttribution').mockResolvedValue({ titleMatch: [], altEmails: [] });
     const save = vi.spyOn(coachService, 'saveLeaderAttribution');
