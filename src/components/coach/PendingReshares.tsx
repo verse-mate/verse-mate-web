@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { vmTokens } from '@/styles/themeStyles';
 import {
+  CoachApiError,
+  PARALLEL_RUN_COPY,
   type PendingReshare,
   fetchPendingReshares,
   resolveReshareRequest,
@@ -20,6 +22,11 @@ import {
  * Two actions, matching the two ways back in (task 4.9a): ask the leader, or
  * mark it resolved and let retrieval try again.
  */
+const SEND_REFUSALS: Record<string, string> = {
+  'Re-share not sent: parallel-run-session':
+    'Not sent: this session was observed during the parallel run, so it is kept for comparison and never sent.',
+};
+
 export default function PendingReshares() {
   const [requests, setRequests] = useState<PendingReshare[] | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
@@ -47,10 +54,11 @@ export default function PendingReshares() {
         if (action === 'send') await sendReshareRequest(id);
         else await resolveReshareRequest(id);
         await load();
-      } catch {
+      } catch (err) {
+        const refusal = err instanceof CoachApiError ? SEND_REFUSALS[err.serverMessage] : undefined;
         setError(
           action === 'send'
-            ? 'The request could not be sent. Nothing was recorded as asked.'
+            ? refusal ?? 'The request could not be sent. Nothing was recorded as asked.'
             : 'The request could not be resolved.',
         );
       } finally {
@@ -109,20 +117,24 @@ export default function PendingReshares() {
               {r.coachId ?? 'unattributed'} · {r.sessionDate} · {r.attempts}{' '}
               attempts
             </div>
+            {r.parallelRun && (
+              <div style={{ fontSize: 12.5, fontWeight: 600, color: vmTokens.gold }}>
+                {PARALLEL_RUN_COPY}
+              </div>
+            )}
           </div>
           <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
-            {/* Asked already? The backend refuses a second send, so an
-                enabled button here would just produce an error the admin
-                cannot act on. */}
-            <button
-              type="button"
-              onClick={() => act(r.sourceSessionId, 'send')}
-              disabled={busy === r.sourceSessionId || r.asked}
-              data-testid={`coach-reshare-send-${r.sourceSessionId}`}
-              style={r.asked ? { ...btn, color: vmTokens.textTertiary, cursor: 'default' } : btn}
-            >
-              {r.asked ? 'Asked' : 'Ask the leader'}
-            </button>
+            {!r.parallelRun && (
+              <button
+                type="button"
+                onClick={() => act(r.sourceSessionId, 'send')}
+                disabled={busy === r.sourceSessionId || r.asked}
+                data-testid={`coach-reshare-send-${r.sourceSessionId}`}
+                style={r.asked ? { ...btn, color: vmTokens.textTertiary, cursor: 'default' } : btn}
+              >
+                {r.asked ? 'Asked' : 'Ask the leader'}
+              </button>
+            )}
             <button
               type="button"
               onClick={() => act(r.sourceSessionId, 'resolve')}

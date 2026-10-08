@@ -22,6 +22,7 @@ import {
   badAddressText,
   isPlaceholderAddress,
   needsBenchmarkConfirm,
+  PARALLEL_RUN_COPY,
   PIPELINE_PAGE_SIZE,
   type PipelineFailure,
   refusalText,
@@ -216,6 +217,11 @@ export default function PipelineHealth() {
                       <div style={{ fontSize: 12.5, color: dt.textLight }}>
                         {s.coachId ? nameOf(s.coachId) : 'unattributed'} · {s.sessionDate} · {s.state} · {s.attempts} attempts
                       </div>
+                      {s.parallelRun && (
+                        <div data-testid={`coach-pipeline-parallel-run-${s.sourceSessionId}`} style={{ fontSize: 12.5, fontWeight: 600, color: dt.gold }}>
+                          {PARALLEL_RUN_COPY}
+                        </div>
+                      )}
                       <div className={REPLAY_BLOCK_CLASS} style={{ fontSize: 13, color: dt.body, marginTop: 4 }}>
                         {s.holdKind === 'cold-recall' ? (
                           <>

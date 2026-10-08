@@ -285,6 +285,7 @@ export interface CoachApiOptions {
   firstLessonHeld?: boolean;
   awaitingRelease?: boolean;
   failedSends?: boolean;
+  parallelRunCopies?: boolean;
 }
 
 type ReviewKind = 'delivered' | 'undelivered' | 'in-flight' | 'partial' | 'legacy';
@@ -340,6 +341,8 @@ export const IN_FLIGHT_CORRECTION =
 export const NOT_LIVE_SEND =
   'The report is not live for the leader this revision was made for: it is held, not delivered, or re-attributed';
 const PARALLEL_RUN = 'The pipeline is in its parallel run: nothing is sent until cutover';
+export const PARALLEL_RUN_SESSION_REFUSAL =
+  'This session was observed during the parallel run: it is kept for admin comparison and never sent';
 export const PARTIALLY_DELIVERED =
   "Refused: the report was already emailed to some of its recipients, so it can no longer be corrected or edited. Its remaining sends are retried automatically. If one keeps failing, fix that recipient's address and requeue the report from the pipeline failures list. Once every recipient has it, amend it.";
 export const EMPTY_EDIT = 'The edit changes nothing: give at least one improvement, different from the current ones';
@@ -366,6 +369,7 @@ function reviewOf(reportId: string, kind: ReviewKind) {
     firstLesson: false,
     firstLessonSource: null as string | null,
     passageBook: 'Obadiah' as string | null,
+    parallelRun: false,
     dimensions: RUBRIC.dimensions.map((d) => ({
       n: d.n,
       score: 4 as number | null,
@@ -419,6 +423,8 @@ function reviewsFor(opts: CoachApiOptions) {
   );
   const held = opts.firstLessonHeld ? reviews.get(OLDER_ID) : undefined;
   if (held) Object.assign(held, { firstLesson: true, firstLessonSource: 'detected' });
+  const copy = opts.parallelRunCopies ? reviews.get(OLDER_ID) : undefined;
+  if (copy) copy.parallelRun = true;
   return reviews;
 }
 
@@ -778,6 +784,32 @@ export const UNCONFIRMED_SEND_SESSION = {
   updatedAt: '2026-10-04T00:00:00Z',
 };
 
+export const PARALLEL_RUN_SESSION = {
+  sourceSessionId: 'ff-parallel-run',
+  coachId: LEADER_ID,
+  title: 'Obadiah, Lesson 3',
+  sessionDate: '2026-08-22',
+  state: 'scored',
+  attempts: 0,
+  reportId: OLDER_ID,
+  reason: 'held for review: calibration sample',
+  holdKind: 'review',
+  parallelRun: true,
+  action: null,
+  updatedAt: '2026-08-23T00:00:00Z',
+};
+
+export const PARALLEL_RUN_RESHARE = {
+  sourceSessionId: 'ff-parallel-run-reshare',
+  coachId: LEADER_ID,
+  title: 'Obadiah, Lesson 2',
+  sessionDate: '2026-08-15',
+  requestedAt: '2026-08-16T00:00:00.000Z',
+  attempts: 5,
+  asked: false,
+  parallelRun: true,
+};
+
 export const PLACEHOLDER_LEADER = { id: 'dana-diaz', name: 'Dana Diaz', email: 'dana-diaz@needs-real-email.invalid' };
 
 export const UNRESOLVED_SESSION = {
@@ -908,7 +940,9 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     ...(opts.firstLessonHeld ? [{ ...FIRST_LESSON_HELD_SESSION }] : []),
     ...(opts.awaitingRelease ? AWAITING_RELEASE_SESSIONS.map((x) => ({ ...x })) : []),
     ...(opts.failedSends ? [...FAILED_SEND_SESSIONS, UNCONFIRMED_SEND_SESSION].map((x) => ({ ...x })) : []),
+    ...(opts.parallelRunCopies ? [{ ...PARALLEL_RUN_SESSION }] : []),
   ];
+  const reshares: Array<Record<string, unknown>> = opts.parallelRunCopies ? [{ ...PARALLEL_RUN_RESHARE }] : [];
   const coverage = { ...COVERAGE, leaders: COVERAGE.leaders.map((l) => ({ ...l })) };
   const roster = [{ id: LEADER_ID, name: ME.profile.name }];
   if (opts.failedSends) roster.push({ id: FAILED_SEND_LEADER.id, name: FAILED_SEND_LEADER.name });
@@ -1073,14 +1107,16 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
         (x) => x.sourceSessionId === decodeURIComponent(requeue[1]) && ['scoring_failed', 'delivery_failed'].includes(String(x.state)),
       );
       if (i < 0) return notFound(route, 'No parked session');
+      if (stuck[i].parallelRun && stuck[i].state === 'delivery_failed') return conflict(route, PARALLEL_RUN_SESSION_REFUSAL);
       stuck.splice(i, 1);
       return route.fulfill({ json: { requeued: true } });
     }
     const release = url.pathname.match(/reports\/([^/]+)\/release$/);
     if (release) {
       if (method !== 'POST') return notFound(route);
-      const i = stuck.findIndex((x) => x.reportId === decodeURIComponent(release[1]) && x.action === 'release');
+      const i = stuck.findIndex((x) => x.reportId === decodeURIComponent(release[1]) && (x.action === 'release' || x.parallelRun));
       if (i < 0) return notFound(route, 'No report held for review');
+      if (stuck[i].parallelRun) return conflict(route, PARALLEL_RUN_SESSION_REFUSAL);
       if (opts.noMailer) return conflict(route, 'No mailer is configured');
       if (!opts.pipelineLive) return conflict(route, PARALLEL_RUN);
       const reportId = String(stuck[i].reportId);
@@ -1104,9 +1140,30 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     const offset = Number(url.searchParams.get('offset') ?? 0);
     const sessions = stuck.slice(offset, offset + limit).map((x) => {
       const feedback = store.get(String(x.reportId))?.feedback as Record<string, unknown> | undefined;
-      return x.holdKind === 'cold-recall' ? { ...x, coldRecall: feedback ? coldRecallIn(feedback) : [] } : x;
+      const row = { parallelRun: false, ...x };
+      return x.holdKind === 'cold-recall' ? { ...row, coldRecall: feedback ? coldRecallIn(feedback) : [] } : row;
     });
     return route.fulfill({ json: { sessions, total: stuck.length, limit, offset } });
+  });
+
+  await page.route(/\/coach\/admin\/reshares(\/[^/]+\/(send|resolve))?$/, (route) => {
+    if (!opts.admin) return forbidden(route);
+    const req = route.request();
+    const url = new URL(req.url());
+    const [, id, action] = url.pathname.match(/\/admin\/reshares\/([^/]+)\/(send|resolve)$/) ?? [];
+    if (!action) return req.method() === 'GET' ? route.fulfill({ json: { requests: reshares } }) : notFound(route);
+    if (req.method() !== 'POST') return notFound(route);
+    opts.onAdminWrite?.(req.method(), url.pathname, null);
+    const i = reshares.findIndex((r) => r.sourceSessionId === decodeURIComponent(id));
+    if (i < 0) return action === 'send' ? invalid(route, 'Re-share not sent: unknown-session') : notFound(route, 'No pending re-share');
+    if (action === 'resolve') {
+      reshares.splice(i, 1);
+      return route.fulfill({ json: { resolved: true } });
+    }
+    if (reshares[i].parallelRun) return invalid(route, 'Re-share not sent: parallel-run-session');
+    if (!opts.pipelineLive) return invalid(route, 'Re-share not sent: parallel-run');
+    reshares[i].asked = true;
+    return route.fulfill({ json: { sent: true } });
   });
 
   await revisionRoutes(page, opts, store, reviews);

@@ -19,6 +19,7 @@ const PARKED = {
   reportId: null,
   reason: 'the model answer failed validation',
   holdKind: null,
+  parallelRun: false,
   action: 'requeue' as const,
   updatedAt: '2026-08-23T00:00:00Z',
 };
@@ -33,6 +34,7 @@ const HELD = {
   reportId: 'rep-2',
   reason: 'injection tripwire',
   holdKind: 'review' as const,
+  parallelRun: false,
   action: 'release' as const,
   updatedAt: '2026-08-30T00:00:00Z',
 };
@@ -47,6 +49,7 @@ const UNRESOLVED = {
   reportId: null,
   reason: 'unattributed: no leader matched the session title',
   holdKind: null,
+  parallelRun: false,
   action: 'attribute' as const,
   updatedAt: '2026-09-30T00:00:00Z',
 };
@@ -61,6 +64,7 @@ const SKIPPED = {
   reportId: 'rep-5',
   reason: 'delivered, but not emailed to wyatt-wellington@needs-real-email.invalid: placeholder address',
   holdKind: null,
+  parallelRun: false,
   action: null,
   updatedAt: '2026-09-28T00:00:00Z',
 };
@@ -680,6 +684,46 @@ describe('a first lesson held for a cold-recall improvement', () => {
       expect(within(outcome).getByText(item).closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
     }
     expect(outcome).toHaveTextContent(FIX);
+  });
+});
+
+describe('a session observed during the parallel run', () => {
+  const COPY = { ...HELD, sourceSessionId: 'ff-10', reportId: 'rep-10', parallelRun: true, action: null };
+  const PARKED_COPY = { ...PARKED, sourceSessionId: 'ff-11', parallelRun: true };
+
+  it('is labelled a parallel-run copy and offers no release, the action the server refuses for it', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([COPY, HELD]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-10');
+    expect(within(row).getByTestId('coach-pipeline-parallel-run-ff-10')).toHaveTextContent('Parallel-run copy: kept for comparison, never sent.');
+    expect(within(row).queryByTestId('coach-pipeline-release-ff-10')).toBeNull();
+    expect(within(screen.getByTestId('coach-pipeline-ff-2')).queryByTestId('coach-pipeline-parallel-run-ff-2')).toBeNull();
+  });
+
+  it('still offers the requeue of a scoring failure, which only scores it again', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([PARKED_COPY]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-11');
+    expect(row).toHaveTextContent('Parallel-run copy: kept for comparison, never sent.');
+    expect(within(row).getByTestId('coach-pipeline-requeue-ff-11')).toBeInTheDocument();
+  });
+
+  it('shows the refusal of a release on a list loaded before the session was marked, in the server\'s words', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([HELD]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'releaseHeldReport').mockRejectedValue(
+      new CoachApiError('x', 409, 'This session was observed during the parallel run: it is kept for admin comparison and never sent'),
+    );
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-pipeline-release-ff-2'));
+    expect(await screen.findByTestId('coach-pipeline-outcome-ff-2')).toHaveTextContent(
+      'Refused (409): This session was observed during the parallel run: it is kept for admin comparison and never sent',
+    );
   });
 });
 

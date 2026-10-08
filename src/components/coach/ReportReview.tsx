@@ -17,6 +17,7 @@ import {
   type AmendableBodyField,
   CoachApiError,
   type CoachFeedbackPoint,
+  PARALLEL_RUN_COPY,
   type CoachReport,
   PROSE_LISTS,
   type ProseField,
@@ -80,6 +81,7 @@ const REQUEUED = 'Requeued. The next send mails the recipients whose send was ne
 const COLD_RECALL_WHY = 'a first lesson cannot carry an improvement that asks for recall of earlier lessons';
 const IMPROVEMENTS_SAVED =
   'Improvements saved. Nothing was sent: the leader gets them when the report is delivered, and a held report goes out once it is released from the Pipeline list.';
+const IMPROVEMENTS_SAVED_PARALLEL_RUN = 'Improvements saved. Nothing was sent: this is a parallel-run copy, kept for comparison and never sent.';
 
 const PENDING_TEXT: Record<string, string> = {
   'parallel-run':
@@ -398,6 +400,11 @@ function FirstLessonPanel({
   return (
     <div data-testid={`coach-review-${reportId}`} className={REPLAY_BLOCK_CLASS} style={panel}>
       <h3 style={h3}>Review before delivery</h3>
+      {review.parallelRun && (
+        <p data-testid="coach-review-parallel-run" style={{ ...muted, fontWeight: 600, color: dt.gold }}>
+          {PARALLEL_RUN_COPY}
+        </p>
+      )}
       <h4 style={h4}>First lesson</h4>
       <FirstLessonState review={review} />
       {outcome && (
@@ -677,7 +684,7 @@ function ImprovementsEditor({
     save.mutate(input, {
       onSuccess: (r) => {
         if (r.applied) {
-          setLast({ outcome: { tone: 'ok', text: IMPROVEMENTS_SAVED } });
+          setLast({ outcome: { tone: 'ok', text: review.parallelRun ? IMPROVEMENTS_SAVED_PARALLEL_RUN : IMPROVEMENTS_SAVED } });
           setEdit(null);
           onCarry(null);
           return;
