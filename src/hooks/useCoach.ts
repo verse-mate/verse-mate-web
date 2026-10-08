@@ -312,10 +312,14 @@ export function useReleaseHeldReport(): UseMutationResult<ReleaseOutcome, Error,
   });
 }
 
-export function useUpdateLeaderEmail(): UseMutationResult<string, Error, { coachId: string; email: string }> {
+export function useUpdateLeaderEmail(): UseMutationResult<
+  { email: string; noticeSent: boolean },
+  Error,
+  { coachId: string; email: string; confirm: boolean }
+> {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: ({ coachId, email }) => updateLeaderEmail(coachId, email),
+    mutationFn: ({ coachId, email, confirm }) => updateLeaderEmail(coachId, email, confirm),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: coachKeys.coverage });
       qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
