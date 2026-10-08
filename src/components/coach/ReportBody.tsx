@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import { vmTokens } from '@/styles/themeStyles';
 import {
   type CoachFeedbackPoint,
@@ -23,7 +24,7 @@ export default function ReportBody({ report }: { report: CoachReport }) {
   );
 
   return (
-    <>
+    <div className={REPLAY_BLOCK_CLASS}>
       {/* Summary + Big Ideas — one collapse for both, side by side on wide screens. */}
       {(report.feedback?.headline || report.feedback?.overview?.length || report.bigIdeas.length > 0) && (
         <CollapsibleSection title="Summary & Big Ideas" accent={vmTokens.gold}>
@@ -93,7 +94,7 @@ export default function ReportBody({ report }: { report: CoachReport }) {
           </div>
         </CollapsibleSection>
       )}
-    </>
+    </div>
   );
 }
 

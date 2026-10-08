@@ -64,4 +64,33 @@ describe('what reaches analytics', () => {
     expect(out?.requestBody).toBeNull();
     expect(out?.responseBody).toBeNull();
   });
+
+  it.each([
+    'https://api.test/coach/reports/r1',
+    'https://api.test/coach/reports/summary?limit=50&offset=0',
+    'https://api.test/coach/trends',
+    'https://api.test/coach/monthly-summary?month=2026-08',
+  ])('drops both bodies of a leader-facing coach request (%s) from a replay network entry', (name) => {
+    const out = scrubNetworkRequest({
+      name,
+      entryType: 'resource',
+      startTime: 0,
+      duration: 1,
+      requestBody: '{"note":"x"}',
+      responseBody: '{"report":{"feedback":{"headline":"private"}}}',
+    });
+    expect(out?.requestBody).toBeNull();
+    expect(out?.responseBody).toBeNull();
+  });
+
+  it('keeps the bodies of a request outside the coach API', () => {
+    const out = scrubNetworkRequest({
+      name: 'https://api.test/bible/books',
+      entryType: 'resource',
+      startTime: 0,
+      duration: 1,
+      responseBody: '{"books":[]}',
+    });
+    expect(out?.responseBody).toBe('{"books":[]}');
+  });
 });
