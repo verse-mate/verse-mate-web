@@ -235,7 +235,7 @@ export default function CoachLeaderScreen() {
                     </div>
                   </div>
                   {minimized ? (
-                    <ReportCard key={selected.id} report={selected} leaderName={profile?.name || ''} admin coachId={coachId} />
+                    <ReportCard key={selected.id} report={selected} held={selectedSummary?.held} leaderName={profile?.name || ''} admin coachId={coachId} />
                   ) : (
                     <ReportDetail
                       report={selected}
@@ -243,6 +243,7 @@ export default function CoachLeaderScreen() {
                       delta={delta}
                       admin
                       coachId={coachId}
+                      held={selectedSummary?.held}
                     />
                   )}
                 </div>
@@ -254,7 +255,7 @@ export default function CoachLeaderScreen() {
                   <SectionLabel>Earlier feedback documents</SectionLabel>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                     {reports.slice(1).map((r) => (
-                      <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} admin coachId={coachId} />
+                      <ReportCard key={r.id} report={r} held={r.held} leaderName={profile?.name || ''} admin coachId={coachId} />
                     ))}
                     {moreButton}
                   </div>
@@ -297,7 +298,7 @@ export default function CoachLeaderScreen() {
                   <SectionLabel>Feedback documents</SectionLabel>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     {reports.map((r) => (
-                      <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} admin coachId={coachId} />
+                      <ReportCard key={r.id} report={r} held={r.held} leaderName={profile?.name || ''} admin coachId={coachId} />
                     ))}
                     {moreButton}
                   </div>

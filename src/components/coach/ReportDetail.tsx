@@ -12,7 +12,7 @@
 import { useState } from 'react';
 import { vmTokens } from '@/styles/themeStyles';
 import { type CoachReport } from '@/services/coachService';
-import { CoachCard, ScoreRing, StatusPill } from './CoachUi';
+import { CoachCard, PipelineCopyTag, ScoreRing, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import ReportReview from './ReportReview';
 import SessionNotes from './SessionNotes';
@@ -26,6 +26,7 @@ export default function ReportDetail({
   delta = null,
   admin = false,
   coachId,
+  held,
 }: {
   report: CoachReport;
   leaderName?: string;
@@ -34,6 +35,7 @@ export default function ReportDetail({
   admin?: boolean;
   /** The leader whose report this is, required for admin edits. */
   coachId?: string;
+  held?: boolean;
 }) {
   const [showBreakdown, setShowBreakdown] = useState(false);
   // A link that downloads the coach-produced PDF; null hides the button when
@@ -74,6 +76,7 @@ export default function ReportDetail({
           </p>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
             <StatusPill status={report.status} emoji={report.statusEmoji} />
+            <PipelineCopyTag reportId={report.id} held={held} />
             {delta !== null && (
               <span
                 style={{
