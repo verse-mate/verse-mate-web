@@ -281,6 +281,8 @@ export interface CoachApiOptions {
   revisionSend?: 'ok' | 'fail' | 'in-flight' | 'not-live';
   heldReports?: string[];
   deliveredBeforeFlag?: string;
+  prose?: boolean;
+  firstLessonHeld?: boolean;
 }
 
 type ReviewKind = 'delivered' | 'undelivered' | 'in-flight' | 'legacy';
@@ -377,13 +379,47 @@ type Amendment = {
   body?: Record<string, unknown>;
 };
 
-async function revisionRoutes(page: Page, opts: CoachApiOptions, store: Map<string, StoredReport>) {
+export const PROSE = {
+  strengthsProse: [{ title: 'Scripture first', paragraphs: ['You opened with the passage and stayed in it.'] }],
+  improvementsProse: [
+    {
+      title: 'Tie it to last week',
+      paragraphs: ["Recall last week's big idea before the new passage.", 'Give the group a full minute to answer.'],
+    },
+  ],
+};
+
+export const FIRST_LESSON_HELD_SESSION = {
+  sourceSessionId: 'ff-first-lesson',
+  coachId: LEADER_ID,
+  title: 'Obadiah, Lesson 3',
+  sessionDate: '2026-08-22',
+  state: 'scored',
+  attempts: 0,
+  reportId: OLDER_ID,
+  reason: "held: a first lesson with a cold-recall improvement: Recall last week's big idea before the new passage",
+  action: 'release',
+  updatedAt: '2026-08-23T00:00:00Z',
+};
+
+function reviewsFor(opts: CoachApiOptions) {
   const kinds = opts.reviews ?? { [NEWEST_ID]: 'delivered', [OLDER_ID]: 'undelivered' };
   const reviews = new Map(
     Object.entries(kinds)
       .filter(([, k]) => k !== 'legacy')
       .map(([id, k]) => [id, reviewOf(id, k)]),
   );
+  const held = opts.firstLessonHeld ? reviews.get(OLDER_ID) : undefined;
+  if (held) Object.assign(held, { firstLesson: true, firstLessonSource: 'detected' });
+  return reviews;
+}
+
+async function revisionRoutes(
+  page: Page,
+  opts: CoachApiOptions,
+  store: Map<string, StoredReport>,
+  reviews: Map<string, Review>,
+) {
   const revisions = new Map<string, Array<Record<string, unknown>>>();
   const recipients = { sentTo: ['leader@example.test'], skipped: [PLACEHOLDER_LEADER.email] };
   const failedSend = [{ email: 'leader@example.test', delivered: false, error: 'mailbox unavailable' }];
@@ -642,10 +678,14 @@ const LEADER_ADMIN_COVERAGE = [
  */
 export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   const retained = new Set(opts.retained ?? []);
-  const held = new Set(opts.heldReports ?? []);
+  const held = new Set([...(opts.heldReports ?? []), ...(opts.firstLessonHeld ? [OLDER_ID] : [])]);
   const store = new Map<string, StoredReport>(
-    [...REPORTS, ...history(opts.historyLength ?? 0)].map((r) => [r.id, structuredClone(r)]),
+    [...REPORTS, ...history(opts.historyLength ?? 0)].map((r) => [
+      r.id,
+      structuredClone(opts.prose ? { ...r, feedback: { ...r.feedback, ...PROSE } } : r),
+    ]),
   );
+  const reviews = reviewsFor(opts);
   const all = () => [...store.values()];
   const attached = opts.attached ?? {};
   const withAttached = <T extends { id: string }>(r: T) =>
@@ -664,7 +704,11 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     route.fulfill({ json: { reports: [], classes: [], months: [], summary: null } }),
   );
 
-  const stuck: Array<Record<string, unknown>> = [{ ...PARKED_SESSION }, { ...HELD_SESSION }];
+  const stuck: Array<Record<string, unknown>> = [
+    { ...PARKED_SESSION },
+    { ...HELD_SESSION },
+    ...(opts.firstLessonHeld ? [{ ...FIRST_LESSON_HELD_SESSION }] : []),
+  ];
   const coverage = { ...COVERAGE, leaders: COVERAGE.leaders.map((l) => ({ ...l })) };
   const roster = [{ id: LEADER_ID, name: ME.profile.name }];
   if (opts.leaderAdmin) {
@@ -826,8 +870,18 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       if (i < 0) return notFound(route, 'No report held for review');
       if (opts.noMailer) return conflict(route, 'No mailer is configured');
       if (!opts.pipelineLive) return conflict(route, PARALLEL_RUN);
+      const reportId = String(stuck[i].reportId);
+      const review = reviews.get(reportId);
+      const stored = store.get(reportId);
+      const coldRecall = review?.firstLesson && stored ? coldRecallIn(stored.feedback as Record<string, unknown>) : [];
+      if (coldRecall.length) {
+        stuck[i].reason = `held: a first lesson with a cold-recall improvement: ${coldRecall.join('; ')}`;
+        return route.fulfill({ json: { delivered: false, refusal: 'cold-recall-improvement', coldRecall } });
+      }
       const leader = coverage.leaders.find((l) => l.coachId === stuck[i].coachId);
       stuck.splice(i, 1);
+      held.delete(reportId);
+      if (review) review.delivered = true;
       return route.fulfill({
         json: { delivered: true, ...(leader && isPlaceholder(leader.email) ? { skipped: [leader.email] } : {}) },
       });
@@ -838,7 +892,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return route.fulfill({ json: { sessions: stuck.slice(offset, offset + limit), total: stuck.length, limit, offset } });
   });
 
-  await revisionRoutes(page, opts, store);
+  await revisionRoutes(page, opts, store, reviews);
 
   await page.route(`${API}/coach/rubric`, async (route) => {
     if (opts.rubricDelayMs) {

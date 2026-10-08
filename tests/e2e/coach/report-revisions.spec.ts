@@ -1,6 +1,16 @@
 import { expect, type Page, test } from '@playwright/test';
 
-import { capture, type CoachApiOptions, FIRST_LESSON_RATIONALE, LEADER_ID, NEWEST_ID, OLDER_ID, useCoachApi } from './fixtures';
+import {
+  capture,
+  type CoachApiOptions,
+  FIRST_LESSON_HELD_SESSION,
+  FIRST_LESSON_RATIONALE,
+  LEADER_ID,
+  NEWEST_ID,
+  OLDER_ID,
+  PROSE,
+  useCoachApi,
+} from './fixtures';
 
 async function openSession(page: Page, reportId: string) {
   await page.goto('/coach');
@@ -257,6 +267,140 @@ test.describe('The first-lesson flag on an undelivered report', () => {
       `POST /coach/admin/reports/${OLDER_ID}/amend`,
     ]);
     await capture(page, testInfo, 'p3-first-lesson-delivered-meanwhile-amended', panel);
+  });
+});
+
+test.describe('Amending the written-out points the leader reads first', () => {
+  const POINT = PROSE.improvementsProse[0];
+  const amendBodies = (writes: Array<[string, unknown]>) =>
+    writes.filter(([p]) => p.endsWith('/amend')).map(([, b]) => (b as { body?: unknown }).body);
+
+  test('an edited point is sent with its list, shown beside the delivered one, and reaches the report', async ({ page }, testInfo) => {
+    const writes: Array<[string, unknown]> = [];
+    await useCoachApi(page, { admin: true, pipelineLive: true, prose: true, onAdminWrite: (_m, p, b) => writes.push([p, b]) });
+    await openSession(page, NEWEST_ID);
+    const panel = page.getByTestId(`coach-review-${NEWEST_ID}`);
+    await panel.getByTestId('coach-amend-open').click();
+    await expect(panel.getByTestId('coach-amend-improvements-prose-title-0')).toHaveValue(POINT.title);
+    await expect(panel.getByTestId('coach-amend-improvements-prose-text-0')).toHaveValue(POINT.paragraphs.join('\n\n'));
+    await expect(panel.getByTestId('coach-amend-recommendations-prose')).toHaveCount(0);
+
+    await panel.getByTestId('coach-amend-improvements-prose-title-0').fill('Name the big idea');
+    await panel.getByTestId('coach-amend-improvements-prose-text-0').fill('Say the big idea of the passage in one sentence.\n\nThen ask who can say it back.');
+    await capture(page, testInfo, 'p3-prose-editor', panel.getByTestId('coach-amend-improvements-prose'));
+    await panel.getByTestId('coach-amend-review').click();
+    const diff = panel.getByTestId('coach-amend-diff');
+    await expect(diff).toContainText('Improvements, written out');
+    await expect(diff).toContainText(POINT.paragraphs[1]);
+    await expect(diff).toContainText('Then ask who can say it back.');
+    await capture(page, testInfo, 'p3-prose-confirm', diff);
+    await panel.getByTestId('coach-amend-confirm').click();
+    await expect(panel.getByTestId('coach-amend-outcome')).toContainText('Revision 1 saved and re-sent');
+    await expect(panel.getByTestId('coach-revision-1')).toContainText('Improvements, written out');
+    expect(amendBodies(writes)).toEqual([
+      {
+        improvementsProse: [
+          { title: 'Name the big idea', paragraphs: ['Say the big idea of the passage in one sentence.', 'Then ask who can say it back.'] },
+        ],
+      },
+    ]);
+
+    await page.goto(`/coach/leader/${LEADER_ID}?s=${NEWEST_ID}`);
+    await expect(page.getByText('Then ask who can say it back.').first()).toBeVisible();
+    await expect(page.getByText(POINT.paragraphs[1])).toHaveCount(0);
+  });
+
+  test('a list edited without its points keeps them unless the admin clears them, and cleared the report reads the list', async ({ page }, testInfo) => {
+    const writes: Array<[string, unknown]> = [];
+    await useCoachApi(page, { admin: true, pipelineLive: true, prose: true, onAdminWrite: (_m, p, b) => writes.push([p, b]) });
+    await openSession(page, NEWEST_ID);
+    const panel = page.getByTestId(`coach-review-${NEWEST_ID}`);
+
+    await panel.getByTestId('coach-amend-open').click();
+    await panel.getByTestId('coach-amend-improvements').fill('Ask a quiet member first');
+    await expect(panel.getByTestId('coach-amend-improvements-prose-kept')).toHaveText('The leader still reads these points first, unchanged.');
+    await capture(page, testInfo, 'p3-prose-kept', panel.getByTestId('coach-amend-improvements-prose'));
+    await panel.getByTestId('coach-amend-review').click();
+    await expect(panel.getByTestId('coach-amend-diff')).not.toContainText('Improvements, written out');
+    await panel.getByTestId('coach-amend-confirm').click();
+    await expect(panel.getByTestId('coach-amend-outcome')).toContainText('Revision 1 saved and re-sent');
+
+    await panel.getByTestId('coach-amend-open').click();
+    await panel.getByTestId('coach-amend-improvements').fill('Ask a quiet member first\nName the big idea early');
+    await panel.getByTestId('coach-amend-improvements-prose-clear').check();
+    await panel.getByTestId('coach-amend-review').click();
+    await expect(panel.getByTestId('coach-amend-diff')).toContainText('Cleared: the leader reads the list instead');
+    await capture(page, testInfo, 'p3-prose-cleared-confirm', panel.getByTestId('coach-amend-diff'));
+    await panel.getByTestId('coach-amend-confirm').click();
+    await expect(panel.getByTestId('coach-amend-outcome')).toContainText('Revision 2 saved and re-sent');
+    await panel.getByTestId('coach-amend-open').click();
+    await expect(panel.getByTestId('coach-amend-improvements-prose')).toHaveCount(0);
+    await expect(panel.getByTestId('coach-amend-strengths-prose')).toBeVisible();
+
+    expect(amendBodies(writes)).toEqual([
+      { improvements: ['Ask a quiet member first'], improvementsProse: PROSE.improvementsProse },
+      { improvements: ['Ask a quiet member first', 'Name the big idea early'] },
+    ]);
+    await page.goto(`/coach/leader/${LEADER_ID}?s=${NEWEST_ID}`);
+    await expect(page.getByText('Name the big idea early').first()).toBeVisible();
+    await expect(page.getByText(POINT.title)).toHaveCount(0);
+  });
+
+  test('on a first lesson, a point that asks for cold recall is held even when only the list changed', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, pipelineLive: true, prose: true });
+    await openSession(page, NEWEST_ID);
+    const panel = page.getByTestId(`coach-review-${NEWEST_ID}`);
+    await panel.getByTestId('coach-amend-open').click();
+    await panel.getByTestId('coach-amend-first-lesson').check();
+    await panel.getByTestId('coach-amend-improvements').fill("Name the book's big idea in the first five minutes");
+    await panel.getByTestId('coach-amend-review').click();
+    await panel.getByTestId('coach-amend-confirm').click();
+    await expect(panel.getByTestId('coach-amend-held')).toContainText(`${POINT.title} ${POINT.paragraphs.join(' ')}`);
+    await capture(page, testInfo, 'p3-prose-cold-recall-held', panel.getByTestId('coach-amend-editor'));
+
+    await panel.getByTestId('coach-amend-improvements-prose-remove-0').click();
+    await panel.getByTestId('coach-amend-review').click();
+    await panel.getByTestId('coach-amend-confirm').click();
+    await expect(panel.getByTestId('coach-amend-outcome')).toContainText('Revision 1 saved and re-sent');
+  });
+});
+
+test.describe('A first lesson held for a cold-recall improvement', () => {
+  test('a release is refused in plain words with the held item, and clearing the flag lets it go out', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true, pipelineLive: true, firstLessonHeld: true });
+    await page.goto('/coach');
+    await page.getByTestId('oversight-nav-pipeline').click();
+    const id = FIRST_LESSON_HELD_SESSION.sourceSessionId;
+    const row = page.getByTestId(`coach-pipeline-${id}`);
+    await expect(row).toContainText(
+      'Why: held, because a first lesson cannot carry an improvement that asks for recall of earlier lessons.',
+    );
+    await expect(row).toContainText("Recall last week's big idea before the new passage");
+
+    await row.getByTestId(`coach-pipeline-release-${id}`).click();
+    const outcome = page.getByTestId(`coach-pipeline-outcome-${id}`);
+    await expect(outcome).toContainText('Not delivered: a first lesson cannot carry an improvement that asks for recall of earlier lessons.');
+    await expect(outcome).toContainText("Recall last week's big idea before the new passage");
+    await expect(outcome).toContainText(
+      'To clear it, clear the first-lesson flag on the report and release it again, or, once the report is delivered, amend its Improvements.',
+    );
+    await expect(outcome).not.toContainText('cold-recall-improvement');
+    await capture(page, testInfo, 'p3-release-cold-recall', row);
+
+    await openSession(page, OLDER_ID);
+    const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
+    await expect(panel.getByTestId('coach-first-lesson-state')).toContainText('First lesson: yes, detected by the pipeline.');
+    await panel.getByTestId('coach-first-lesson-clear').click();
+    await panel.getByTestId('coach-first-lesson-score').selectOption('3');
+    await panel.getByTestId('coach-first-lesson-rationale').fill('They reviewed last week before the new passage.');
+    await panel.getByTestId('coach-first-lesson-save').click();
+    await expect(panel.getByTestId('coach-first-lesson-state')).toContainText('First lesson: no.');
+
+    await page.goto('/coach');
+    await page.getByTestId('oversight-nav-pipeline').click();
+    await page.getByTestId(`coach-pipeline-release-${id}`).click();
+    await expect(page.getByTestId(`coach-pipeline-${id}`)).toHaveCount(0);
+    await capture(page, testInfo, 'p3-release-after-clearing');
   });
 });
 
