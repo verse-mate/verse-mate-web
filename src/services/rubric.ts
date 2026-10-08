@@ -52,6 +52,11 @@ export interface RubricContract {
  * carries no leader data, and the explainer has to render for anyone who can
  * already see a score.
  */
+export function spreadOver<T>(position: number, count: number, palette: readonly T[]): T | undefined {
+  if (position < 0 || position >= count || palette.length === 0) return undefined;
+  return palette[count === 1 ? 0 : Math.round((position * (palette.length - 1)) / (count - 1))];
+}
+
 export async function fetchRubric(): Promise<RubricContract> {
   const res = await fetch(`${API_BASE_URL}/coach/rubric`, {
     headers: { accept: 'application/json' },
