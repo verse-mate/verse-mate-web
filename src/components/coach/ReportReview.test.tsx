@@ -1137,6 +1137,52 @@ describe('editing the Improvements of an undelivered report', () => {
     );
   });
 
+  it('a refusal while the report is in flight is not shown again once it is delivered, but the draft is carried', async () => {
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    const load = vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    vi.spyOn(coachService, 'editImprovements').mockRejectedValue(
+      new CoachApiError('x', 409, 'Refused: the report is being delivered or re-scored. Correct it once that finishes, or amend it after delivery.'),
+    );
+    render(
+      <QueryClientProvider client={client}>
+        <ReportReview report={REPORT} coachId="leader" />
+      </QueryClientProvider>,
+    );
+    fireEvent.click(await screen.findByTestId('coach-improvements-open'));
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Ask newcomers first' } });
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    expect(await screen.findByTestId('coach-improvements-outcome')).toHaveTextContent('being delivered or re-scored');
+    await waitFor(() => expect(load).toHaveBeenCalledTimes(2));
+
+    load.mockResolvedValue(REVIEW);
+    await client.invalidateQueries();
+    const editor = await screen.findByTestId('coach-amend-editor');
+    expect(within(editor).getByTestId('coach-amend-improvements')).toHaveValue('Ask newcomers first');
+    expect(screen.queryByTestId('coach-amend-outcome')).toBeNull();
+  });
+
+  it('a draft cancelled after an in-flight refusal is not carried into the amend editor', async () => {
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    const load = vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
+    vi.spyOn(coachService, 'editImprovements').mockRejectedValue(new CoachApiError('x', 409, 'Refused: in flight'));
+    render(
+      <QueryClientProvider client={client}>
+        <ReportReview report={REPORT} coachId="leader" />
+      </QueryClientProvider>,
+    );
+    fireEvent.click(await screen.findByTestId('coach-improvements-open'));
+    fireEvent.change(screen.getByTestId('coach-improvements-text'), { target: { value: 'Ask newcomers first' } });
+    fireEvent.click(screen.getByTestId('coach-improvements-save'));
+    await screen.findByTestId('coach-improvements-outcome');
+    await waitFor(() => expect(load).toHaveBeenCalledTimes(2));
+    fireEvent.click(screen.getByTestId('coach-improvements-cancel'));
+
+    load.mockResolvedValue(REVIEW);
+    await client.invalidateQueries();
+    expect(await screen.findByTestId('coach-amend-open')).toBeInTheDocument();
+    expect(screen.queryByTestId('coach-amend-editor')).toBeNull();
+  });
+
   it('a double click saves once', async () => {
     const edit = vi.spyOn(coachService, 'editImprovements').mockReturnValue(new Promise(() => {}));
     await openImprovements();
