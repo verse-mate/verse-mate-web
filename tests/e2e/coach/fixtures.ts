@@ -11,7 +11,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import type { Locator, Page, TestInfo } from '@playwright/test';
+import type { Locator, Page, Route, TestInfo } from '@playwright/test';
 
 export const API = process.env.VITE_API_URL ?? 'https://api.versemate.org';
 
@@ -272,6 +272,8 @@ export interface CoachApiOptions {
   historyLength?: number;
   onReportsRequest?: (url: string) => void;
   onPipelineRequest?: (url: string) => void;
+  leaderAdmin?: boolean;
+  onAdminWrite?: (method: string, path: string, body: unknown) => void;
 }
 
 export const PARKED_SESSION = {
@@ -283,6 +285,7 @@ export const PARKED_SESSION = {
   attempts: 3,
   reportId: null,
   reason: 'the model answer failed validation three times',
+  action: 'requeue',
   updatedAt: '2026-08-16T00:00:00Z',
 };
 
@@ -295,7 +298,36 @@ export const HELD_SESSION = {
   attempts: 0,
   reportId: 'held-report',
   reason: 'held for review: injection tripwire',
+  action: 'release',
   updatedAt: '2026-09-06T00:00:00Z',
+};
+
+export const PLACEHOLDER_LEADER = { id: 'dana-diaz', name: 'Dana Diaz', email: 'dana-diaz@needs-real-email.invalid' };
+
+export const UNRESOLVED_SESSION = {
+  sourceSessionId: 'ff-unresolved',
+  coachId: null,
+  title: 'Habakkuk study, week 3',
+  sessionDate: '2026-09-29',
+  state: 'observed',
+  attempts: 0,
+  reportId: null,
+  reason: 'unattributed: no leader matched the session title',
+  action: 'attribute',
+  updatedAt: '2026-09-30T00:00:00Z',
+};
+
+export const SKIPPED_SESSION = {
+  sourceSessionId: 'ff-skipped',
+  coachId: PLACEHOLDER_LEADER.id,
+  title: 'Micah, Lesson 2',
+  sessionDate: '2026-09-27',
+  state: 'delivered',
+  attempts: 0,
+  reportId: 'skipped-report',
+  reason: `delivered, but not emailed to ${PLACEHOLDER_LEADER.email}: placeholder address`,
+  action: null,
+  updatedAt: '2026-09-28T00:00:00Z',
 };
 
 export const COVERAGE = {
@@ -312,6 +344,8 @@ export const COVERAGE = {
       accountStatus: 'active',
       linkedClassName: 'Saturday Morning Study',
       classAlert: false,
+      attestedAt: null,
+      attestedBy: null,
     },
     {
       coachId: 'uncovered',
@@ -323,9 +357,40 @@ export const COVERAGE = {
       accountStatus: 'active',
       linkedClassName: null,
       classAlert: true,
+      attestedAt: null,
+      attestedBy: null,
     },
   ],
 };
+
+const LEADER_ADMIN_COVERAGE = [
+  {
+    coachId: PLACEHOLDER_LEADER.id,
+    name: PLACEHOLDER_LEADER.name,
+    email: PLACEHOLDER_LEADER.email,
+    covered: false,
+    basis: 'no-observation',
+    observedSessions: 0,
+    accountStatus: 'no-account',
+    linkedClassName: null,
+    classAlert: false,
+    attestedAt: null,
+    attestedBy: null,
+  },
+  {
+    coachId: 'evan-ellis',
+    name: 'Evan Ellis',
+    email: 'evan@example.test',
+    covered: true,
+    basis: 'attested-not-teaching',
+    observedSessions: 0,
+    accountStatus: 'has-account',
+    linkedClassName: null,
+    classAlert: false,
+    attestedAt: '2026-10-01T15:00:00.000Z',
+    attestedBy: 'admin@example.test',
+  },
+];
 
 /**
  * Sign the browser in as a leader and answer every coach call from the
@@ -351,7 +416,66 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     route.fulfill({ json: { reports: [], classes: [], months: [], summary: null } }),
   );
 
-  const stuck = [PARKED_SESSION, HELD_SESSION];
+  const stuck: Array<Record<string, unknown>> = [PARKED_SESSION, HELD_SESSION];
+  const coverage = { ...COVERAGE, leaders: COVERAGE.leaders.map((l) => ({ ...l })) };
+  const roster = [{ id: LEADER_ID, name: ME.profile.name }];
+  if (opts.leaderAdmin) {
+    stuck.push(UNRESOLVED_SESSION, SKIPPED_SESSION);
+    coverage.leaders.push(...LEADER_ADMIN_COVERAGE.map((l) => ({ ...l })));
+    roster.push({ id: PLACEHOLDER_LEADER.id, name: PLACEHOLDER_LEADER.name }, { id: 'evan-ellis', name: 'Evan Ellis' });
+  }
+  const write = async (route: Route) => {
+    const req = route.request();
+    const url = new URL(req.url());
+    const body = req.postData() ? JSON.parse(req.postData() as string) : null;
+    opts.onAdminWrite?.(req.method(), url.pathname, body);
+    const leaderOf = (id: string) => coverage.leaders.find((l) => l.coachId === id);
+    const email = url.pathname.match(/admin\/leaders\/([^/]+)\/email$/);
+    if (email) {
+      const taken = coverage.leaders.find((l) => l.email === body.email && l.coachId !== email[1]);
+      if (taken) return route.fulfill({ status: 409, json: { error: 'CONFLICT', message: 'Another leader already uses that address' } });
+      const leader = leaderOf(decodeURIComponent(email[1]));
+      if (!leader) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'Leader not found' } });
+      leader.email = body.email;
+      const i = stuck.findIndex((x) => x.coachId === leader.coachId && x.state === 'delivered');
+      if (i >= 0) stuck.splice(i, 1);
+      return route.fulfill({ json: { email: body.email } });
+    }
+    const notTeaching = url.pathname.match(/admin\/leaders\/([^/]+)\/not-teaching$/);
+    if (notTeaching) {
+      const leader = leaderOf(decodeURIComponent(notTeaching[1]));
+      if (!leader) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'Leader not found' } });
+      const attested = req.method() === 'POST';
+      leader.attestedAt = attested ? '2026-10-08T13:00:00.000Z' : null;
+      leader.attestedBy = attested ? 'admin@example.test' : null;
+      leader.basis = leader.observedSessions > 0 ? 'observed' : attested ? 'attested-not-teaching' : 'no-observation';
+      leader.covered = leader.observedSessions > 0 || attested;
+      coverage.allCovered = coverage.leaders.every((l) => l.covered);
+      return route.fulfill({ json: { attested } });
+    }
+    const attribute = url.pathname.match(/admin\/sessions\/([^/]+)\/attribute$/);
+    if (attribute) {
+      const i = stuck.findIndex((x) => x.sourceSessionId === decodeURIComponent(attribute[1]));
+      if (i < 0) return route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message: 'Session not found' } });
+      stuck.splice(i, 1);
+      return route.fulfill({ json: { coachId: body.coachId, state: 'observed' } });
+    }
+    if (url.pathname.endsWith('/admin/leaders') && req.method() === 'POST') {
+      if (body.name?.trim().toLowerCase() === 'avery hollis') {
+        return route.fulfill({
+          status: 409,
+          json: { error: 'CONFLICT', message: 'Another leader already uses the id "avery-hollis". Enter a different name.' },
+        });
+      }
+      const id = String(body.name).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      roster.push({ id, name: body.name });
+      return route.fulfill({ json: { coach: { id, name: body.name, group: body.group ?? '', coachName: '', sessionCount: 0, latest: null } } });
+    }
+    return route.fallback();
+  };
+  await page.route(/\/coach\/admin\/(leaders|sessions)(\/|$)/, (route) =>
+    opts.admin ? write(route) : route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Admin access required' } }),
+  );
   await page.route(/\/coach\/admin\/(pipeline-failures|coverage|reports\/[^/]+\/release)/, (route) => {
     const url = new URL(route.request().url());
     opts.onPipelineRequest?.(url.pathname);
@@ -359,7 +483,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     if (opts.pipelineStatus) {
       return route.fulfill({ status: opts.pipelineStatus, json: { error: 'INTERNAL', message: 'database unavailable' } });
     }
-    if (url.pathname.endsWith('/coverage')) return route.fulfill({ json: COVERAGE });
+    if (url.pathname.endsWith('/coverage')) return route.fulfill({ json: coverage });
     const requeue = url.pathname.match(/pipeline-failures\/([^/]+)\/requeue$/);
     if (requeue) {
       const i = stuck.findIndex((x) => x.sourceSessionId === decodeURIComponent(requeue[1]));
@@ -418,22 +542,24 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     opts.admin
       ? route.fulfill({
           json: {
-            coaches: [
-              {
-                id: LEADER_ID,
-                name: ME.profile.name,
-                group: ME.profile.group,
-                coachName: '',
-                sessionCount: REPORTS.length,
-                latest: {
-                  date: REPORTS[0].date,
-                  dateLabel: REPORTS[0].dateLabel,
-                  score: REPORTS[0].score,
-                  status: REPORTS[0].status,
-                  statusEmoji: REPORTS[0].statusEmoji,
-                },
-              },
-            ],
+            coaches: roster.map((r) =>
+              r.id === LEADER_ID
+                ? {
+                    id: LEADER_ID,
+                    name: ME.profile.name,
+                    group: ME.profile.group,
+                    coachName: '',
+                    sessionCount: REPORTS.length,
+                    latest: {
+                      date: REPORTS[0].date,
+                      dateLabel: REPORTS[0].dateLabel,
+                      score: REPORTS[0].score,
+                      status: REPORTS[0].status,
+                      statusEmoji: REPORTS[0].statusEmoji,
+                    },
+                  }
+                : { id: r.id, name: r.name, group: '', coachName: '', sessionCount: 0, latest: null },
+            ),
           },
         })
       : route.fulfill({ status: 403, json: { error: 'FORBIDDEN' } }),
