@@ -97,14 +97,12 @@ export default function ReportDetail({
         {report.newcomers === 1 ? '' : 's'}
       </p>
 
-      {/* Recording link + coaching notes, editable for admins, read-only for
-          the leader. */}
-      <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} />
+      <SessionNotes key={report.id} report={report} admin={admin} coachId={coachId} leaderName={leaderName} />
 
       {/* The coaching narrative, shared with the expanded <ReportCard>. */}
       <ReportBody report={report} />
 
-      {admin && coachId && <ReportReview report={report} coachId={coachId} />}
+      {admin && coachId && <ReportReview key={report.id} report={report} coachId={coachId} />}
     </CoachCard>
   );
 }
