@@ -307,6 +307,7 @@ export interface CoachApiOptions {
   addressRequests?: AddressRequest[];
   onAddressRequest?: (token: string) => void;
   onConfirmAddress?: (method: string) => void;
+  parallelRun?: Record<string, unknown>;
   signedOut?: boolean;
 }
 
@@ -743,6 +744,14 @@ async function revisionRoutes(
     return amend(route, reportId, review, body);
   });
 }
+
+export const EMPTY_COMPARISON = {
+  sessions: [],
+  needsPairing: [],
+  unmatched: { backend: [], host: [] },
+  share: { withinOne: 0, comparable: 0, ratio: null },
+  counts: { compared: 0, flagged: 0, needsPairing: 0, unmatchedBackend: 0, unmatchedHost: 0 },
+};
 
 export const PARKED_SESSION = {
   sourceSessionId: 'ff-parked',
@@ -1243,6 +1252,12 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       return x.holdKind === 'cold-recall' ? { ...row, coldRecall: feedback ? coldRecallIn(feedback) : [] } : row;
     });
     return route.fulfill({ json: { sessions, total: stuck.length, limit, offset } });
+  });
+
+  await serve(page, `${API}/coach/admin/parallel-run/comparison`, (route) => {
+    if (!opts.admin) return forbidden(route);
+    if (route.request().method() !== 'GET') return unmatched(route);
+    return route.fulfill({ json: opts.parallelRun ?? EMPTY_COMPARISON });
   });
 
   await serve(page, /\/coach\/admin\/reshares(\/[^/]+\/(send|resolve))?$/, (route) => {

@@ -34,6 +34,7 @@ import {
   sessionDateText,
   shortDate,
 } from '@/services/coachService';
+import { h2, h3, note, row, table } from './adminStyles';
 import { dt } from './dashboardTheme';
 
 type Outcome = { tone: 'ok' | 'refused'; text: string; held?: string[] };
@@ -74,7 +75,7 @@ function releaseText(outcome: ReleaseOutcome): Outcome {
   };
 }
 
-function QueryState<T>({
+export function QueryState<T>({
   query,
   name,
   label,
@@ -674,33 +675,6 @@ function LeaderAttribution({ coachId }: { coachId: string }) {
   );
 }
 
-const h2: React.CSSProperties = {
-  fontFamily: dt.serif,
-  fontWeight: 500,
-  fontSize: 30,
-  margin: '14px 0 6px',
-  letterSpacing: '-.01em',
-};
-const h3: React.CSSProperties = { fontFamily: dt.serif, fontWeight: 500, fontSize: 21, margin: '0 0 12px' };
-const note: React.CSSProperties = {
-  background: dt.innerBg,
-  border: `1px dashed ${dt.dashed}`,
-  borderRadius: 12,
-  padding: 18,
-  fontSize: 14,
-  color: dt.textMuted,
-  lineHeight: 1.6,
-};
-const table: React.CSSProperties = { border: `1px solid ${dt.cardBorder}`, borderRadius: 12, overflow: 'hidden' };
-const row: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 12,
-  flexWrap: 'wrap',
-  padding: '12px 16px',
-  borderTop: `1px solid ${dt.rowDivider}`,
-};
 const btn: React.CSSProperties = {
   fontSize: 13,
   fontWeight: 600,

@@ -694,6 +694,38 @@ export function requeueRevision(reportId: string): Promise<{ requeued: boolean }
   return coachRequest<{ requeued: boolean }>(adminReportPath(reportId, 'revision/requeue'), { method: 'POST' });
 }
 
+export interface ComparedSession {
+  coachId: string;
+  date: string;
+  backend: { sourceSessionId: string; reportId: string; composite: number };
+  host: { reportId: string; composite: number };
+  compositeDifference: number;
+  dimensions: { n: number; host: number | null; backend: number | null; difference: number | null }[];
+  withinOne: number;
+  comparable: number;
+  flagged: boolean;
+}
+
+export interface ParallelRunComparison {
+  sessions: ComparedSession[];
+  needsPairing: {
+    coachId: string;
+    date: string;
+    backend: { sourceSessionId: string; reportId: string }[];
+    host: { reportId: string }[];
+  }[];
+  unmatched: {
+    backend: { coachId: string; date: string; sourceSessionId: string; reportId: string }[];
+    host: { coachId: string; date: string; reportId: string }[];
+  };
+  share: { withinOne: number; comparable: number; ratio: number | null };
+  counts: { compared: number; flagged: number; needsPairing: number; unmatchedBackend: number; unmatchedHost: number };
+}
+
+export function fetchParallelRunComparison(): Promise<ParallelRunComparison> {
+  return coachRequest<ParallelRunComparison>('admin/parallel-run/comparison');
+}
+
 export interface CoverageLeader {
   coachId: string;
   name: string;
