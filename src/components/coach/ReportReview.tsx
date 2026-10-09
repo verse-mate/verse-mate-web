@@ -526,7 +526,7 @@ function ProducedBy({ review, dimName }: { review: ReportReviewState; dimName: (
       {machine.map((d) => (
         <div key={d.n} style={{ fontSize: 12.5, color: dt.textLight, marginBottom: 4 }}>
           <span style={{ fontWeight: 600, color: dt.body }}>{dimName(d.n)}: </span>
-          <span data-testid={`coach-review-dim-produced-${d.n}`}>{producedText(d)}</span>
+          <span data-testid={`coach-review-summary-produced-${d.n}`}>{producedText(d)}</span>
         </div>
       ))}
     </div>
