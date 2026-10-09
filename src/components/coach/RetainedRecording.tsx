@@ -4,6 +4,8 @@ import { vmTokens } from '@/styles/themeStyles';
 import { mintRecordingUrl } from '@/services/coachService';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 
+const SPENT_REMINTS_WITHOUT_PROGRESS = 3;
+
 /**
  * A session's retained recording (change: port-coach-pipeline, task 8.5).
  *
@@ -12,12 +14,6 @@ import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
  * when the component renders: minting on render would sign a URL for every
  * session a list shows, and an address minted when a detail view opened is
  * already spent by the time someone comes back to the tab.
- *
- * An address lives for an hour and a recording runs about two (task 8.8). A
- * failure after the address's expiry asks for a new one and resumes at the same
- * position and play state, as often as the recording needs. A failure before
- * the expiry is the recording itself, so it re-mints once and then shows the
- * error rather than hammering the endpoint.
  */
 export default function RetainedRecording({
   reportId,
@@ -32,6 +28,7 @@ export default function RetainedRecording({
   const [src, setSrc] = useState<{ url: string; load: number } | null>(null);
   const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
   const remintedRef = useRef(false);
+  const spentRemintsRef = useRef(0);
   const expiresAtRef = useRef(0);
   const [resumeAt, setResumeAt] = useState<{ time: number; playing: boolean } | null>(null);
   const [renderedFor, setRenderedFor] = useState(reportId);
@@ -49,6 +46,7 @@ export default function RetainedRecording({
     setResumeAt(null);
     setState('idle');
     remintedRef.current = false;
+    spentRemintsRef.current = 0;
   }
 
   const attached = attachedUrl?.trim();
@@ -66,8 +64,8 @@ export default function RetainedRecording({
 
   const start = useCallback(async () => {
     setState('loading');
-    // A fresh press is a fresh attempt, so it gets its own re-mint budget.
     remintedRef.current = false;
+    spentRemintsRef.current = 0;
     const minted = await mint();
     if (minted === undefined) return;
     if (!minted) {
@@ -79,32 +77,37 @@ export default function RetainedRecording({
     setState('idle');
   }, [mint]);
 
-  const handleError = useCallback(async (event: SyntheticEvent<HTMLVideoElement>) => {
-    const video = event.currentTarget;
-    const position = { time: video.currentTime, playing: !video.paused };
-    const expired = Date.now() >= expiresAtRef.current;
-    // Re-mint ONCE for a failure the address did not cause. Looping would
-    // hammer the endpoint when the failure is the recording itself.
-    if (!expired && remintedRef.current) {
-      // Drop the src with it. Left in place, the `if (src)` branch below kept
-      // rendering the broken <video> and the failure message never reached the
-      // screen, which is exactly the dead player this component exists to
-      // avoid.
-      setSrc(null);
-      setState('error');
-      return;
-    }
-    if (!expired) remintedRef.current = true;
-    const minted = await mint();
-    if (minted === undefined) return;
-    if (!minted) {
-      setSrc(null);
-      setState('error');
-      return;
-    }
-    setResumeAt(position);
-    setSrc((prev) => ({ url: minted.url, load: (prev?.load ?? 0) + 1 }));
-  }, [mint]);
+  const handleError = useCallback(
+    async (event: SyntheticEvent<HTMLVideoElement>) => {
+      const video = event.currentTarget;
+      const position =
+        video.readyState === HTMLMediaElement.HAVE_NOTHING && resumeAt
+          ? resumeAt
+          : { time: video.currentTime, playing: !video.paused };
+      const expired = Date.now() >= expiresAtRef.current;
+      if (position.time > (resumeAt?.time ?? 0)) spentRemintsRef.current = 0;
+      const outOfBudget = expired
+        ? spentRemintsRef.current >= SPENT_REMINTS_WITHOUT_PROGRESS
+        : remintedRef.current;
+      if (outOfBudget) {
+        setSrc(null);
+        setState('error');
+        return;
+      }
+      if (expired) spentRemintsRef.current += 1;
+      else remintedRef.current = true;
+      const minted = await mint();
+      if (minted === undefined) return;
+      if (!minted) {
+        setSrc(null);
+        setState('error');
+        return;
+      }
+      setResumeAt(position);
+      setSrc((prev) => ({ url: minted.url, load: (prev?.load ?? 0) + 1 }));
+    },
+    [mint, resumeAt],
+  );
 
   const handleLoadedMetadata = useCallback(
     (event: SyntheticEvent<HTMLVideoElement>) => {

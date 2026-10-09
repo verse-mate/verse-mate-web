@@ -205,6 +205,13 @@ describe('a recording longer than the address lifetime', () => {
     const player = screen.getByTestId('coach-recording-player-r1') as HTMLVideoElement;
     Object.defineProperty(player, 'currentTime', { value: position, writable: true, configurable: true });
     Object.defineProperty(player, 'paused', { value: paused, configurable: true });
+    Object.defineProperty(player, 'readyState', { value: HTMLMediaElement.HAVE_METADATA, configurable: true });
+    return player;
+  }
+
+  function unloadedPlayer() {
+    const player = screen.getByTestId('coach-recording-player-r1') as HTMLVideoElement;
+    Object.defineProperty(player, 'readyState', { value: HTMLMediaElement.HAVE_NOTHING, configurable: true });
     return player;
   }
 
@@ -273,6 +280,65 @@ describe('a recording longer than the address lifetime', () => {
     expect(await screen.findByText(/Recording unavailable/)).toBeInTheDocument();
     expect(mint).toHaveBeenCalledTimes(3);
     expect(screen.queryByTestId('coach-recording-player-r1')).toBeNull();
+  });
+
+  async function failAndReload() {
+    const before = playerAt(0, false);
+    fireEvent.error(before);
+    await waitFor(() => expect(screen.getByTestId('coach-recording-player-r1')).not.toBe(before));
+  }
+
+  it('an address that is spent before it loads stops after three new ones, and says so', async () => {
+    const mint = vi
+      .spyOn(coachService, 'mintRecordingUrl')
+      .mockResolvedValue({ url: 'https://storage.test/spent.mp4', expiresInSeconds: 0 });
+
+    render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    await screen.findByTestId('coach-recording-player-r1');
+
+    for (let n = 0; n < 3; n++) await failAndReload();
+    fireEvent.error(playerAt(0, false));
+
+    expect(await screen.findByText(/Recording unavailable/)).toBeInTheDocument();
+    expect(screen.queryByTestId('coach-recording-player-r1')).toBeNull();
+    expect(mint).toHaveBeenCalledTimes(4);
+  });
+
+  it('keeps the position it was resuming to when the new address is spent before the player loads', async () => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(T0);
+    vi.spyOn(coachService, 'mintRecordingUrl')
+      .mockResolvedValueOnce({ url: 'https://storage.test/rec-1.mp4', expiresInSeconds: HOUR })
+      .mockResolvedValueOnce({ url: 'https://storage.test/spent.mp4', expiresInSeconds: 0 })
+      .mockResolvedValueOnce({ url: 'https://storage.test/rec-3.mp4', expiresInSeconds: HOUR });
+
+    render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    await screen.findByTestId('coach-recording-player-r1');
+
+    vi.setSystemTime(T0 + (HOUR + 5) * 1000);
+    fireEvent.error(playerAt(HOUR, true));
+    await waitFor(() => expect(screen.getByTestId('coach-recording-player-r1')).toHaveAttribute('src', 'https://storage.test/spent.mp4'));
+    fireEvent.error(unloadedPlayer());
+    const resumed = await expectResumedAt('https://storage.test/rec-3.mp4', HOUR);
+    expect(resumed).not.toHaveAttribute('autoplay');
+  });
+
+  it('a press after the cap ran out starts a fresh budget', async () => {
+    const mint = vi
+      .spyOn(coachService, 'mintRecordingUrl')
+      .mockResolvedValue({ url: 'https://storage.test/spent.mp4', expiresInSeconds: 0 });
+
+    render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    await screen.findByTestId('coach-recording-player-r1');
+    for (let n = 0; n < 3; n++) await failAndReload();
+    fireEvent.error(playerAt(0, false));
+    fireEvent.click(await screen.findByText(/Recording unavailable/));
+    await screen.findByTestId('coach-recording-player-r1');
+    await failAndReload();
+    expect(mint).toHaveBeenCalledTimes(6);
   });
 
   it('a tab left open past the lifetime plays from where it stood when pressed', async () => {
