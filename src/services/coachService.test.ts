@@ -45,6 +45,9 @@ import {
   updateCoachClass,
   updateLeaderEmail,
   needsBenchmarkConfirm,
+  fetchAddressChange,
+  confirmAddressChange,
+  refusalCode,
 } from './coachService';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -553,5 +556,30 @@ describe('coachService', () => {
     expect(init?.method ?? 'GET').toBe(method);
     expect(url.slice(-path.length)).toBe(path);
     expect(init?.body === undefined ? undefined : JSON.parse(String(init.body))).toEqual(body);
+  });
+});
+
+describe('the address confirmation link', () => {
+  it('reads the change by its token, encoded, and changes nothing by reading', async () => {
+    mockFetch(() =>
+      jsonResponse({ leaderName: 'Leader A', currentEmail: 'le***@example.test', newEmail: 'ne***@example.test', state: 'pending', expiresAt: '2026-10-16T15:00:00.000Z' }),
+    );
+    const change = await fetchAddressChange('a+b/c');
+    expect(calls[0].url).toMatch(/\/coach\/confirm-address\?token=a%2Bb%2Fc$/);
+    expect(calls[0].init?.method ?? 'GET').toBe('GET');
+    expect(change.state).toBe('pending');
+  });
+
+  it('confirms with a POST carrying the token in the body', async () => {
+    mockFetch(() => jsonResponse({ email: 'new@example.test', noticeSent: false }));
+    expect(await confirmAddressChange('tok-1')).toEqual({ email: 'new@example.test', noticeSent: false });
+    expect(calls[0].url).toMatch(/\/coach\/confirm-address$/);
+    expect(calls[0].init?.method).toBe('POST');
+    expect(JSON.parse(String(calls[0].init?.body))).toEqual({ token: 'tok-1' });
+  });
+
+  it('carries the refusal code of a refused confirm', async () => {
+    mockFetch(() => jsonResponse({ error: 'CONFLICT', message: 'Reworded', details: { refusal: 'superseded' } }, 409));
+    expect(refusalCode(await confirmAddressChange('tok-1').catch((e) => e))).toBe('superseded');
   });
 });

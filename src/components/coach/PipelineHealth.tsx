@@ -16,6 +16,7 @@ import {
 } from '@/hooks/useCoach';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import {
+  type AddressChange,
   CoachAuthError,
   type CoverageLeader,
   EMAIL_RULE,
@@ -124,6 +125,7 @@ export default function PipelineHealth() {
   const leaders = [...(roster.data ?? [])].sort((a, b) => a.name.localeCompare(b.name));
   const nameOf = (coachId: string) => leaders.find((l) => l.id === coachId)?.name ?? coachId;
   const emailOf = (coachId: string) => coverage.data?.leaders.find((l) => l.coachId === coachId)?.email ?? '';
+  const changeOf = (coachId: string) => leaders.find((l) => l.id === coachId)?.addressChange ?? null;
   const [assignTo, setAssignTo] = useState<Record<string, string>>({});
   const [outcomes, setOutcomes] = useState<Record<string, Outcome>>({});
   const [busy, setBusy] = useState<ReadonlySet<string>>(() => new Set());
@@ -239,7 +241,7 @@ export default function PipelineHealth() {
                         )}
                       </div>
                       {s.coachId && (s.state === 'delivered' || s.holdKind === 'send-failed') && (
-                        <LeaderAddress coachId={s.coachId} email={emailOf(s.coachId)} />
+                        <LeaderAddress coachId={s.coachId} email={emailOf(s.coachId)} change={changeOf(s.coachId)} />
                       )}
                       {outcome && (
                         <div
@@ -330,7 +332,7 @@ export default function PipelineHealth() {
                   <div key={l.coachId} data-testid={`coach-coverage-${l.coachId}`} style={row}>
                     <div style={{ minWidth: 0 }}>
                       <div style={{ fontWeight: 600, fontSize: 14 }}>{l.name}</div>
-                      <LeaderAddress coachId={l.coachId} email={l.email} />
+                      <LeaderAddress coachId={l.coachId} email={l.email} change={changeOf(l.coachId)} />
                       <LeaderAttribution coachId={l.coachId} />
                       <div style={{ fontSize: 12.5, color: dt.textLight }}>
                         {ACCOUNT_TEXT[l.accountStatus] ?? `account ${l.accountStatus}`} · {l.observedSessions} observed sessions ·{' '}
@@ -432,7 +434,19 @@ function announceAddressRequest(saved: LeaderEmailRequest) {
   }
 }
 
-function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
+function addressChangeText(change: AddressChange): string {
+  const requested = `requested ${shortDate(change.requestedAt)}`;
+  if (change.state === 'pending') {
+    return `Awaiting confirmation: ${change.newEmail}, ${requested}, link expires ${shortDate(change.expiresAt)}`;
+  }
+  if (change.state === 'expired') {
+    return `Not confirmed: the link to ${change.newEmail}, ${requested}, expired ${shortDate(change.expiresAt)}. Change the address again to send a new one.`;
+  }
+  const why = change.reason === 'taken' ? 'another leader already uses it' : `of ${change.reason ?? 'a reason not recorded'}`;
+  return `Not changed: ${change.newEmail}, ${requested}, was refused when it confirmed, because ${why}.`;
+}
+
+function LeaderAddress({ coachId, email, change }: { coachId: string; email: string; change: AddressChange | null }) {
   const update = useUpdateLeaderEmail();
   const [draft, setDraft] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -505,6 +519,15 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
             Cancel
           </button>
         </span>
+      )}
+      {change && (
+        <div
+          data-testid={`coach-address-change-${coachId}`}
+          className={REPLAY_BLOCK_CLASS}
+          style={{ marginTop: 2, color: change.state === 'pending' ? dt.gold : dt.rust }}
+        >
+          {addressChangeText(change)}
+        </div>
       )}
       {confirming && draft !== null && (
         <div role="alert" data-testid={`coach-address-confirm-${coachId}`} className={REPLAY_BLOCK_CLASS} style={{ color: dt.rust, marginTop: 4 }}>
