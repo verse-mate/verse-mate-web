@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useRef, useState, type SyntheticEvent } from 'react';
 
 import { vmTokens } from '@/styles/themeStyles';
 import { mintRecordingUrl } from '@/services/coachService';
@@ -10,11 +10,14 @@ import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
  * VerseMate holds the recording for sessions it ingested, so there is no admin
  * attachment step any more. The address is MINTED when playback starts, never
  * when the component renders: minting on render would sign a URL for every
- * session a list shows, each live for a day, and an address minted when a
- * detail view opened is already spent by the time someone comes back to the tab.
+ * session a list shows, and an address minted when a detail view opened is
+ * already spent by the time someone comes back to the tab.
  *
- * A failed load re-mints once, which is what makes a long-open detail view
- * still play rather than showing a dead video element.
+ * An address lives for an hour and a recording runs about two (task 8.8). A
+ * failure after the address's expiry asks for a new one and resumes at the same
+ * position and play state, as often as the recording needs. A failure before
+ * the expiry is the recording itself, so it re-mints once and then shows the
+ * error rather than hammering the endpoint.
  */
 export default function RetainedRecording({
   reportId,
@@ -29,6 +32,8 @@ export default function RetainedRecording({
   const [src, setSrc] = useState<string | null>(null);
   const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
   const remintedRef = useRef(false);
+  const expiresAtRef = useRef(0);
+  const [resumeAt, setResumeAt] = useState<{ time: number; playing: boolean } | null>(null);
   const [renderedFor, setRenderedFor] = useState(reportId);
   const openReportRef = useRef(reportId);
   openReportRef.current = reportId;
@@ -41,30 +46,46 @@ export default function RetainedRecording({
   if (renderedFor !== reportId) {
     setRenderedFor(reportId);
     setSrc(null);
+    setResumeAt(null);
     setState('idle');
     remintedRef.current = false;
   }
 
   const attached = attachedUrl?.trim();
 
+  // The expiry is counted from when the request left, which is never later than
+  // when the server issued the address, so an error past it is always a spent
+  // address and never a recording that is broken.
+  const mint = useCallback(async () => {
+    const requestedAt = Date.now();
+    const minted = await mintRecordingUrl(reportId);
+    if (openReportRef.current !== reportId) return undefined;
+    if (minted) expiresAtRef.current = requestedAt + minted.expiresInSeconds * 1000;
+    return minted;
+  }, [reportId]);
+
   const start = useCallback(async () => {
     setState('loading');
     // A fresh press is a fresh attempt, so it gets its own re-mint budget.
     remintedRef.current = false;
-    const minted = await mintRecordingUrl(reportId);
-    if (openReportRef.current !== reportId) return;
+    const minted = await mint();
+    if (minted === undefined) return;
     if (!minted) {
       setState('error');
       return;
     }
+    setResumeAt(null);
     setSrc(minted.url);
     setState('idle');
-  }, [reportId]);
+  }, [mint]);
 
-  const handleError = useCallback(async () => {
-    // Re-mint ONCE. Looping would hammer the endpoint when the failure is the
-    // recording itself rather than an expired address.
-    if (remintedRef.current) {
+  const handleError = useCallback(async (event: SyntheticEvent<HTMLVideoElement>) => {
+    const video = event.currentTarget;
+    const position = { time: video.currentTime, playing: !video.paused };
+    const expired = Date.now() >= expiresAtRef.current;
+    // Re-mint ONCE for a failure the address did not cause. Looping would
+    // hammer the endpoint when the failure is the recording itself.
+    if (!expired && remintedRef.current) {
       // Drop the src with it. Left in place, the `if (src)` branch below kept
       // rendering the broken <video> and the failure message never reached the
       // screen, which is exactly the dead player this component exists to
@@ -73,16 +94,24 @@ export default function RetainedRecording({
       setState('error');
       return;
     }
-    remintedRef.current = true;
-    const minted = await mintRecordingUrl(reportId);
-    if (openReportRef.current !== reportId) return;
+    if (!expired) remintedRef.current = true;
+    const minted = await mint();
+    if (minted === undefined) return;
     if (!minted) {
       setSrc(null);
       setState('error');
       return;
     }
+    setResumeAt(position);
     setSrc(minted.url);
-  }, [reportId]);
+  }, [mint]);
+
+  const handleLoadedMetadata = useCallback(
+    (event: SyntheticEvent<HTMLVideoElement>) => {
+      if (resumeAt) event.currentTarget.currentTime = resumeAt.time;
+    },
+    [resumeAt],
+  );
 
   // An admin attached a link deliberately, usually because it is the better
   // copy, so it wins over anything retained.
@@ -111,8 +140,9 @@ export default function RetainedRecording({
       <video
         src={src}
         controls
-        autoPlay
+        autoPlay={resumeAt ? resumeAt.playing : true}
         onError={handleError}
+        onLoadedMetadata={handleLoadedMetadata}
         className={REPLAY_BLOCK_CLASS}
         data-testid={`coach-recording-player-${reportId}`}
         style={{ width: '100%', borderRadius: 10, background: '#000' }}

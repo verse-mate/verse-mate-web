@@ -4,12 +4,14 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import * as coachService from '@/services/coachService';
 import RetainedRecording from './RetainedRecording';
 
-afterEach(() => vi.restoreAllMocks());
+afterEach(() => {
+  vi.useRealTimers();
+  vi.restoreAllMocks();
+});
 
 describe('a session VerseMate holds the recording for', () => {
   it('mints NOTHING until playback starts', async () => {
-    // Minting on render would sign one URL per session on every page load,
-    // each live for a day.
+    // Minting on render would sign one URL per session on every page load.
     const mint = vi.spyOn(coachService, 'mintRecordingUrl');
     render(<RetainedRecording reportId="r1" hasRetained />);
     expect(screen.getByTestId('coach-recording-play-r1')).toBeInTheDocument();
@@ -26,26 +28,6 @@ describe('a session VerseMate holds the recording for', () => {
 
     const player = await screen.findByTestId('coach-recording-player-r1');
     expect(player).toHaveAttribute('src', 'https://storage.test/rec.mp4');
-  });
-
-  it('a FAILED load re-mints once, a tab left open past the lifetime still plays', async () => {
-    const mint = vi
-      .spyOn(coachService, 'mintRecordingUrl')
-      .mockResolvedValueOnce({ url: 'https://storage.test/stale.mp4', expiresInSeconds: 86400 })
-      .mockResolvedValueOnce({ url: 'https://storage.test/fresh.mp4', expiresInSeconds: 86400 });
-
-    render(<RetainedRecording reportId="r1" hasRetained />);
-    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
-    const player = await screen.findByTestId('coach-recording-player-r1');
-
-    fireEvent.error(player);
-    await waitFor(() =>
-      expect(screen.getByTestId('coach-recording-player-r1')).toHaveAttribute(
-        'src',
-        'https://storage.test/fresh.mp4',
-      ),
-    );
-    expect(mint).toHaveBeenCalledTimes(2);
   });
 
   it('does NOT re-mint forever when the recording itself is broken', async () => {
@@ -194,5 +176,102 @@ describe('a playing recording in a session replay', () => {
   it('blocks an attached link from the replay too', () => {
     render(<RetainedRecording reportId="r1" hasRetained attachedUrl="https://drive.test/rec?token=1" />);
     expect(screen.getByTestId('coach-recording-attached-r1')).toHaveClass('ph-no-capture');
+  });
+});
+
+describe('a recording longer than the address lifetime', () => {
+  const HOUR = 3600;
+  const T0 = new Date('2026-01-01T10:00:00Z').getTime();
+
+  function playerAt(position: number, paused: boolean) {
+    const player = screen.getByTestId('coach-recording-player-r1') as HTMLVideoElement;
+    Object.defineProperty(player, 'currentTime', { value: position, writable: true, configurable: true });
+    Object.defineProperty(player, 'paused', { value: paused, configurable: true });
+    return player;
+  }
+
+  async function expectResumedAt(url: string, position: number) {
+    await waitFor(() =>
+      expect(screen.getByTestId('coach-recording-player-r1')).toHaveAttribute('src', url),
+    );
+    const player = playerAt(0, true);
+    fireEvent.loadedMetadata(player);
+    expect(player.currentTime).toBe(position);
+    return player;
+  }
+
+  it('is watched through three expiries, resuming each time where it stopped', async () => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(T0);
+    const mint = vi.spyOn(coachService, 'mintRecordingUrl');
+    for (const n of [1, 2, 3, 4]) {
+      mint.mockResolvedValueOnce({ url: `https://storage.test/rec-${n}.mp4`, expiresInSeconds: HOUR });
+    }
+
+    render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    await screen.findByTestId('coach-recording-player-r1');
+
+    vi.setSystemTime(T0 + (HOUR + 5) * 1000);
+    fireEvent.error(playerAt(HOUR, false));
+    const second = await expectResumedAt('https://storage.test/rec-2.mp4', HOUR);
+    expect(second).toHaveAttribute('autoplay');
+
+    vi.setSystemTime(T0 + (2 * HOUR + 10) * 1000);
+    fireEvent.error(playerAt(2 * HOUR, true));
+    const third = await expectResumedAt('https://storage.test/rec-3.mp4', 2 * HOUR);
+    expect(third).not.toHaveAttribute('autoplay');
+
+    vi.setSystemTime(T0 + (3 * HOUR + 15) * 1000);
+    fireEvent.error(playerAt(2 * HOUR + 100, false));
+    const fourth = await expectResumedAt('https://storage.test/rec-4.mp4', 2 * HOUR + 100);
+    expect(fourth).toHaveAttribute('autoplay');
+
+    expect(mint).toHaveBeenCalledTimes(4);
+    expect(screen.queryByText(/Recording unavailable/)).toBeNull();
+  });
+
+  it('a failure before the address expired still stops after one retry, even after expiries', async () => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(T0);
+    const mint = vi
+      .spyOn(coachService, 'mintRecordingUrl')
+      .mockResolvedValue({ url: 'https://storage.test/rec.mp4', expiresInSeconds: HOUR });
+
+    render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    await screen.findByTestId('coach-recording-player-r1');
+
+    vi.setSystemTime(T0 + (HOUR + 5) * 1000);
+    fireEvent.error(playerAt(HOUR, false));
+    await waitFor(() => expect(mint).toHaveBeenCalledTimes(2));
+
+    vi.setSystemTime(T0 + (HOUR + 60) * 1000);
+    fireEvent.error(playerAt(HOUR + 50, false));
+    await waitFor(() => expect(mint).toHaveBeenCalledTimes(3));
+    await expectResumedAt('https://storage.test/rec.mp4', HOUR + 50);
+
+    fireEvent.error(playerAt(HOUR + 50, false));
+    expect(await screen.findByText(/Recording unavailable/)).toBeInTheDocument();
+    expect(mint).toHaveBeenCalledTimes(3);
+    expect(screen.queryByTestId('coach-recording-player-r1')).toBeNull();
+  });
+
+  it('a tab left open past the lifetime plays from where it stood when pressed', async () => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(T0);
+    const mint = vi
+      .spyOn(coachService, 'mintRecordingUrl')
+      .mockResolvedValueOnce({ url: 'https://storage.test/stale.mp4', expiresInSeconds: HOUR })
+      .mockResolvedValueOnce({ url: 'https://storage.test/fresh.mp4', expiresInSeconds: HOUR });
+
+    render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    await screen.findByTestId('coach-recording-player-r1');
+
+    vi.setSystemTime(T0 + 5 * HOUR * 1000);
+    fireEvent.error(playerAt(42, false));
+    await expectResumedAt('https://storage.test/fresh.mp4', 42);
+    expect(mint).toHaveBeenCalledTimes(2);
   });
 });
