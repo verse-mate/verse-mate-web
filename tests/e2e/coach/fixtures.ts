@@ -272,6 +272,7 @@ function monthlyFor(id: string, month: string) {
  * re-minted", which are different code paths and were a bug apiece.
  */
 const TINY_MP4 = readFileSync(join(import.meta.dirname, 'tiny.mp4'));
+const EIGHTY_SECONDS_MP4 = readFileSync(join(import.meta.dirname, 'eighty-seconds.mp4'));
 
 export interface CoachApiOptions {
   retained?: string[];
@@ -281,6 +282,8 @@ export interface CoachApiOptions {
   onMint?: (reportId: string) => void;
   /** Make the minted address unreachable, the failed-playback path. */
   breakPlayback?: boolean;
+  slowStore?: { promptBytes: number; chunkBytes: number; chunkDelayMs: number };
+  onStoreRequest?: (answer: { sig: string; range: string | null; status: number }) => void;
   mintDelayMs?: number;
   monthlyDelayMs?: Record<string, number>;
   admin?: boolean;
@@ -308,7 +311,7 @@ export interface CoachApiOptions {
   onAddressRequest?: (token: string) => void;
   onConfirmAddress?: (call: 'describe' | 'confirm') => void;
   parallelRun?: Record<string, unknown>;
-  mintExpiresInSeconds?: number;
+  mintExpiresInSeconds?: number | number[];
   signedOut?: boolean;
 }
 
@@ -989,6 +992,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   const withAttached = <T extends { id: string }>(r: T) =>
     attached[r.id] ? { ...r, attachedRecordingUrl: attached[r.id], recordingUrl: attached[r.id] } : r;
   let minted = 0;
+  const addressExpiry = new Map<string, number>();
 
   if (!opts.signedOut) {
     await page.context().addCookies([
@@ -1360,17 +1364,36 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return route.fulfill({ json: { reports: all().filter((r) => !held.has(r.id)).map(withAttached) } });
   });
 
-  await page.route(`${API}/fake-object-store/**`, (route) => {
-    if (opts.breakPlayback) return route.fulfill({ status: 404, body: 'gone' });
-    const range = /bytes=(\d+)-(\d*)/.exec(route.request().headers().range ?? '');
-    if (!range) return route.fulfill({ contentType: 'video/mp4', headers: { 'accept-ranges': 'bytes' }, body: TINY_MP4 });
+  await page.route(`${API}/fake-object-store/**`, async (route) => {
+    const sig = new URL(route.request().url()).searchParams.get('sig') ?? '';
+    const rangeHeader = route.request().headers().range ?? null;
+    const answer = (status: number) => opts.onStoreRequest?.({ sig, range: rangeHeader, status });
+    if (opts.breakPlayback) {
+      answer(404);
+      return route.fulfill({ status: 404, body: 'gone' });
+    }
+    if (!(Date.now() < (addressExpiry.get(sig) ?? 0))) {
+      answer(403);
+      return route.fulfill({ status: 403, contentType: 'application/xml', body: '<Error><Code>AccessDenied</Code><Message>Request has expired</Message></Error>' });
+    }
+    const clip = opts.slowStore ? EIGHTY_SECONDS_MP4 : TINY_MP4;
+    const range = /bytes=(\d+)-(\d*)/.exec(rangeHeader ?? '');
+    if (!range) {
+      answer(200);
+      return route.fulfill({ contentType: 'video/mp4', headers: { 'accept-ranges': 'bytes' }, body: clip });
+    }
     const start = Number(range[1]);
-    const end = range[2] ? Math.min(Number(range[2]), TINY_MP4.length - 1) : TINY_MP4.length - 1;
+    const asked = range[2] ? Math.min(Number(range[2]), clip.length - 1) : clip.length - 1;
+    const slow = opts.slowStore;
+    const paced = !!slow && start >= slow.promptBytes;
+    const end = !slow ? asked : paced ? Math.min(asked, start + slow.chunkBytes - 1) : Math.min(asked, slow.promptBytes - 1);
+    if (paced) await new Promise((r) => setTimeout(r, slow.chunkDelayMs));
+    answer(206);
     return route.fulfill({
       status: 206,
       contentType: 'video/mp4',
-      headers: { 'accept-ranges': 'bytes', 'content-range': `bytes ${start}-${end}/${TINY_MP4.length}` },
-      body: TINY_MP4.subarray(start, end + 1),
+      headers: { 'accept-ranges': 'bytes', 'content-range': `bytes ${start}-${end}/${clip.length}` },
+      body: clip.subarray(start, end + 1),
     });
   });
 
@@ -1388,10 +1411,13 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     // returned a byte-identical src would not make the media element load
     // again, and the failed-playback path would never advance.
     minted += 1;
+    const lifetimes = [opts.mintExpiresInSeconds ?? 86400].flat();
+    const expiresInSeconds = lifetimes[Math.min(minted, lifetimes.length) - 1];
+    addressExpiry.set(String(minted), Date.now() + expiresInSeconds * 1000);
     return route.fulfill({
       json: {
         url: `${API}/fake-object-store/${id}.mp4?sig=${minted}`,
-        expiresInSeconds: opts.mintExpiresInSeconds ?? 86400,
+        expiresInSeconds,
       },
     });
   });
