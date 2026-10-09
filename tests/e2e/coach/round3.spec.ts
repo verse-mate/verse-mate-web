@@ -364,3 +364,28 @@ test.describe("An admin's drill-in into one leader loads a page at a time", () =
     await expect(page.getByTestId(`oversight-class-${olderId(59)}`)).toBeVisible();
   });
 });
+
+test.describe('A retained recording whose address expired mid-session', () => {
+  test('asks for a new address and resumes at the same position and play state', async ({ page }, testInfo) => {
+    const mints: string[] = [];
+    await useCoachApi(page, { retained: [NEWEST_ID], mintExpiresInSeconds: 1, onMint: (id) => mints.push(id) });
+    await page.goto('/coach');
+
+    await page.getByTestId(`coach-recording-play-${NEWEST_ID}`).click();
+    const player = page.getByTestId(`coach-recording-player-${NEWEST_ID}`);
+    await expect(player).toHaveAttribute('src', /sig=1$/);
+    await player.evaluate(async (video: HTMLVideoElement) => {
+      await new Promise((resolve) => (video.readyState >= 1 ? resolve(null) : video.addEventListener('loadedmetadata', resolve, { once: true })));
+      video.pause();
+      video.currentTime = 0.5;
+    });
+    await page.waitForTimeout(1100);
+    await player.evaluate((video: HTMLVideoElement) => video.dispatchEvent(new Event('error')));
+
+    await expect(player).toHaveAttribute('src', /sig=2$/);
+    await expect.poll(() => player.evaluate((video: HTMLVideoElement) => video.currentTime)).toBeCloseTo(0.5, 1);
+    expect(await player.evaluate((video: HTMLVideoElement) => video.paused)).toBe(true);
+    expect(mints).toEqual([NEWEST_ID, NEWEST_ID]);
+    await capture(page, testInfo, 'recording-resumed-after-expiry', player);
+  });
+});

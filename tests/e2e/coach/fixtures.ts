@@ -308,6 +308,7 @@ export interface CoachApiOptions {
   onAddressRequest?: (token: string) => void;
   onConfirmAddress?: (method: string) => void;
   parallelRun?: Record<string, unknown>;
+  mintExpiresInSeconds?: number;
   signedOut?: boolean;
 }
 
@@ -1365,11 +1366,19 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return route.fulfill({ json: { reports: all().filter((r) => !held.has(r.id)).map(withAttached) } });
   });
 
-  await page.route(`${API}/fake-object-store/**`, (route) =>
-    opts.breakPlayback
-      ? route.fulfill({ status: 404, body: 'gone' })
-      : route.fulfill({ contentType: 'video/mp4', body: TINY_MP4 }),
-  );
+  await page.route(`${API}/fake-object-store/**`, (route) => {
+    if (opts.breakPlayback) return route.fulfill({ status: 404, body: 'gone' });
+    const range = /bytes=(\d+)-(\d*)/.exec(route.request().headers().range ?? '');
+    if (!range) return route.fulfill({ contentType: 'video/mp4', headers: { 'accept-ranges': 'bytes' }, body: TINY_MP4 });
+    const start = Number(range[1]);
+    const end = range[2] ? Math.min(Number(range[2]), TINY_MP4.length - 1) : TINY_MP4.length - 1;
+    return route.fulfill({
+      status: 206,
+      contentType: 'video/mp4',
+      headers: { 'accept-ranges': 'bytes', 'content-range': `bytes ${start}-${end}/${TINY_MP4.length}` },
+      body: TINY_MP4.subarray(start, end + 1),
+    });
+  });
 
   await serve(page, `${API}/coach/reports/*/recording-url`, async (route) => {
     const id = decodeURIComponent(
@@ -1388,7 +1397,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return route.fulfill({
       json: {
         url: `${API}/fake-object-store/${id}.mp4?sig=${minted}`,
-        expiresInSeconds: 86400,
+        expiresInSeconds: opts.mintExpiresInSeconds ?? 86400,
       },
     });
   });

@@ -60,7 +60,7 @@ test.describe('The address confirmation page', () => {
       await expect(page.getByTestId(`coach-confirm-address-${state}`)).toContainText(words);
       await expect(page.getByTestId('coach-confirm-address-submit')).toHaveCount(0);
       expect(calls).toEqual(['GET']);
-      await capture(page, testInfo, `confirm-address-${state}`);
+      await capture(page, testInfo, `confirm-address-opened-${state}`);
     });
   }
 
