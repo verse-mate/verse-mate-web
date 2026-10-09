@@ -776,17 +776,33 @@ describe('a first lesson held for a cold-recall improvement', () => {
 });
 
 describe('a first report held under a new scoring version', () => {
-  it('says in words that it waits for a review, and that releasing it also lets the leader\'s other reports for that version go', async () => {
+  const REASON = 'held for review: the first report to this leader under scoring version model-a / prompt 7 / settings {"temperature":0}';
+  const RELEASE = "Once this report is delivered, this leader's other reports held for the same scoring version go out with the next pipeline run.";
+
+  it('says once why it waits for a review, and what delivering it lets go, without promising a delivery the release cannot make', async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(
-      page([{ ...HELD, sourceSessionId: 'ff-9', reason: 'scored under prompt version 7', holdKind: 'scoring-version' as const }]),
+      page([{ ...HELD, sourceSessionId: 'ff-9', reason: REASON, holdKind: 'scoring-version' as const }]),
     );
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
     renderView();
 
     const row = await screen.findByTestId('coach-pipeline-ff-9');
-    expect(row).toHaveTextContent('Why: first report under a new scoring version: release after review (scored under prompt version 7).');
-    expect(row).toHaveTextContent("Releasing it also delivers this leader's other reports held for that version.");
+    expect(row).toHaveTextContent(`Why: ${REASON}. ${RELEASE}`);
+    expect(row.textContent?.match(/held for review/g)).toHaveLength(1);
+    expect(row).not.toHaveTextContent('also delivers');
     expect(within(row).getByTestId('coach-pipeline-release-ff-9')).toBeInTheDocument();
+  });
+
+  it('says why in its own words when the hold carries no reason', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(
+      page([{ ...HELD, sourceSessionId: 'ff-9', reason: null, holdKind: 'scoring-version' as const }]),
+    );
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    expect(await screen.findByTestId('coach-pipeline-ff-9')).toHaveTextContent(
+      `Why: held for review: the first report to this leader under a new scoring version. ${RELEASE}`,
+    );
   });
 });
 
