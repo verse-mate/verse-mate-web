@@ -24,10 +24,10 @@ function refused(code: keyof typeof POST_REFUSALS) {
 
 function AddressBar() {
   const location = useLocation();
-  return <output data-testid="address-bar">{`${location.pathname}${location.search}`}</output>;
+  return <output data-testid="address-bar">{`${location.pathname}${location.search}${location.hash}`}</output>;
 }
 
-function renderPage(path = '/coach/confirm-address?token=tok-1') {
+function renderPage(path: string | { pathname: string; state: unknown } = '/coach/confirm-address?token=tok-1') {
   const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
   return render(
     <QueryClientProvider client={client}>
@@ -72,6 +72,36 @@ describe('the address confirmation page', () => {
     await screen.findByTestId('coach-confirm-address-pending');
     expect(screen.getByTestId('address-bar')).toHaveTextContent(/^\/coach\/confirm-address$/);
     expect(read).toHaveBeenCalledWith('tok-1');
+    fireEvent.click(screen.getByTestId('coach-confirm-address-submit'));
+    await waitFor(() => expect(confirm).toHaveBeenCalledWith('tok-1'));
+  });
+
+  it.each([
+    ['a fragment link', '/coach/confirm-address#token=tok-1'],
+    ['a query link already sent', '/coach/confirm-address?token=tok-1'],
+    ['a fragment link with another query kept', '/coach/confirm-address?from=mail#token=tok-1'],
+  ])('opens %s, strips the token from the address bar, and confirms nothing until asked', async (_, path) => {
+    const read = vi.spyOn(coachService, 'describeAddressChange').mockResolvedValue(CHANGE);
+    const confirm = vi.spyOn(coachService, 'confirmAddressChange').mockResolvedValue({ email: 'leader.new@example.test', noticeSent: false });
+    renderPage(path);
+
+    await screen.findByTestId('coach-confirm-address-pending');
+    expect(screen.getByTestId('address-bar').textContent).toBe(path.includes('from=mail') ? '/coach/confirm-address?from=mail' : '/coach/confirm-address');
+    expect(read).toHaveBeenCalledWith('tok-1');
+    expect(read.mock.calls.every(([t]) => t === 'tok-1')).toBe(true);
+    expect(confirm).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByTestId('coach-confirm-address-submit'));
+    await waitFor(() => expect(confirm).toHaveBeenCalledWith('tok-1'));
+  });
+
+  it('keeps describing and confirming after a reload, when the token lives only in history state', async () => {
+    const read = vi.spyOn(coachService, 'describeAddressChange').mockResolvedValue(CHANGE);
+    const confirm = vi.spyOn(coachService, 'confirmAddressChange').mockResolvedValue({ email: 'leader.new@example.test', noticeSent: false });
+    renderPage({ pathname: '/coach/confirm-address', state: { token: 'tok-1' } });
+
+    await screen.findByTestId('coach-confirm-address-pending');
+    expect(read).toHaveBeenCalledWith('tok-1');
+    expect(confirm).not.toHaveBeenCalled();
     fireEvent.click(screen.getByTestId('coach-confirm-address-submit'));
     await waitFor(() => expect(confirm).toHaveBeenCalledWith('tok-1'));
   });

@@ -24,11 +24,50 @@ async function openPipeline(page: Page) {
 }
 
 test.describe('The address confirmation page', () => {
-  test('opening the link sends no confirmation and takes the token out of the address bar; the Confirm button confirms, once', async ({ page }, testInfo) => {
+  test('a reload, and a trip away and back, keep the token the address bar no longer shows', async ({ page }) => {
+    const calls: string[] = [];
+    await useCoachApi(page, { signedOut: true, addressRequests: [request({})], onConfirmAddress: (m) => calls.push(m) });
+
+    await page.goto('/coach/confirm-address#token=token-pending');
+    await expect(page.getByTestId('coach-confirm-address-pending')).toContainText('Carol Chen');
+    await expect(page).toHaveURL(/\/coach\/confirm-address$/);
+
+    await page.reload();
+    await expect(page.getByTestId('coach-confirm-address-pending')).toContainText('Carol Chen');
+    await expect(page).toHaveURL(/\/coach\/confirm-address$/);
+
+    await page.goto('about:blank');
+    await page.goBack();
+    await expect(page.getByTestId('coach-confirm-address-pending')).toContainText('Carol Chen');
+    await page.goForward();
+    await expect(page).toHaveURL('about:blank');
+    await page.goBack();
+    await expect(page.getByTestId('coach-confirm-address-pending')).toContainText('Carol Chen');
+    await page.waitForLoadState('networkidle');
+    expect(calls.filter((c) => c === 'confirm')).toEqual([]);
+
+    await page.getByTestId('coach-confirm-address-submit').click();
+    await expect(page.getByTestId('coach-confirm-address-confirmed')).toContainText("Carol Chen's coaching reports now go to c***@example.test.");
+    expect(calls.filter((c) => c === 'confirm')).toEqual(['confirm']);
+  });
+
+  test('a link already sent with the token in its query still opens, and loses the token from the address bar', async ({ page }) => {
     const calls: string[] = [];
     await useCoachApi(page, { signedOut: true, addressRequests: [request({})], onConfirmAddress: (m) => calls.push(m) });
 
     await page.goto('/coach/confirm-address?token=token-pending');
+    await expect(page.getByTestId('coach-confirm-address-pending')).toContainText('Carol Chen');
+    await expect(page).toHaveURL(/\/coach\/confirm-address$/);
+    await page.reload();
+    await expect(page.getByTestId('coach-confirm-address-pending')).toContainText('Carol Chen');
+    expect(calls).not.toContain('confirm');
+  });
+
+  test('opening the link sends no confirmation and takes the token out of the address bar; the Confirm button confirms, once', async ({ page }, testInfo) => {
+    const calls: string[] = [];
+    await useCoachApi(page, { signedOut: true, addressRequests: [request({})], onConfirmAddress: (m) => calls.push(m) });
+
+    await page.goto('/coach/confirm-address#token=token-pending');
     const pending = page.getByTestId('coach-confirm-address-pending');
     await expect(pending).toContainText('Carol Chen');
     await expect(pending).toContainText('to go to c***@example.test.');
@@ -103,7 +142,7 @@ test.describe("An admin's change to a leader's address", () => {
     );
     await capture(page, testInfo, 'admin-address-pending', row);
 
-    await page.goto(`/coach/confirm-address?token=${tokens[0]}`);
+    await page.goto(`/coach/confirm-address#token=${tokens[0]}`);
     await page.getByTestId('coach-confirm-address-submit').click();
     await expect(page.getByTestId('coach-confirm-address-confirmed')).toBeVisible();
 
