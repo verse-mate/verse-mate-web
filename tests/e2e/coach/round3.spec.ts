@@ -366,26 +366,41 @@ test.describe("An admin's drill-in into one leader loads a page at a time", () =
 });
 
 test.describe('A retained recording whose address expired mid-session', () => {
-  test('asks for a new address and resumes at the same position and play state', async ({ page }, testInfo) => {
+  test('is refused by the store past its lifetime, and a new address resumes it at the same position and play state', async ({ page }, testInfo) => {
+    test.setTimeout(60_000);
     const mints: string[] = [];
-    await useCoachApi(page, { retained: [NEWEST_ID], mintExpiresInSeconds: 1, onMint: (id) => mints.push(id) });
+    const refused: string[] = [];
+    await page.addInitScript(() => {
+      const seen: number[] = [];
+      Object.assign(window, { mediaErrors: seen });
+      document.addEventListener('error', (e) => e.target instanceof HTMLVideoElement && seen.push(e.target.error?.code ?? 0), true);
+    });
+    await useCoachApi(page, {
+      retained: [NEWEST_ID],
+      mintExpiresInSeconds: [4, 600],
+      slowStore: { promptBytes: 32_000, chunkBytes: 1024, chunkDelayMs: 700 },
+      onMint: (id) => mints.push(id),
+      onStoreRequest: ({ sig, status }) => status === 403 && refused.push(sig),
+    });
     await page.goto('/coach');
 
     await page.getByTestId(`coach-recording-play-${NEWEST_ID}`).click();
     const player = page.getByTestId(`coach-recording-player-${NEWEST_ID}`);
     await expect(player).toHaveAttribute('src', /sig=1$/);
-    await player.evaluate(async (video: HTMLVideoElement) => {
-      await new Promise((resolve) => (video.readyState >= 1 ? resolve(null) : video.addEventListener('loadedmetadata', resolve, { once: true })));
-      video.pause();
-      video.currentTime = 0.5;
+    await expect.poll(() => player.evaluate((video: HTMLVideoElement) => !video.paused && video.currentTime > 0)).toBe(true);
+    await expect.poll(() => refused, { timeout: 15_000 }).toContain('1');
+
+    await player.evaluate((video: HTMLVideoElement) => {
+      video.currentTime = 76;
     });
-    await page.waitForTimeout(1100);
-    await player.evaluate((video: HTMLVideoElement) => video.dispatchEvent(new Event('error')));
 
     await expect(player).toHaveAttribute('src', /sig=2$/);
-    await expect.poll(() => player.evaluate((video: HTMLVideoElement) => video.currentTime)).toBeCloseTo(0.5, 1);
-    expect(await player.evaluate((video: HTMLVideoElement) => video.paused)).toBe(true);
-    expect(mints).toEqual([NEWEST_ID, NEWEST_ID]);
+    expect(await page.evaluate(() => (window as unknown as { mediaErrors: number[] }).mediaErrors)).toEqual([2]);
+    await expect.poll(() => player.evaluate((video: HTMLVideoElement) => video.currentTime), { timeout: 15_000 }).toBeGreaterThan(76.5);
+    expect(await player.evaluate((video: HTMLVideoElement) => video.paused)).toBe(false);
     await capture(page, testInfo, 'recording-resumed-after-expiry', player);
+    await expect.poll(() => player.evaluate((video: HTMLVideoElement) => video.ended), { timeout: 20_000 }).toBe(true);
+    expect(mints).toEqual([NEWEST_ID, NEWEST_ID]);
+    expect(refused).not.toContain('2');
   });
 });
