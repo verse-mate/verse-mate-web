@@ -533,7 +533,20 @@ export interface ReportReviewState {
   firstLessonSource: string | null;
   passageBook: string | null;
   parallelRun: boolean;
-  dimensions: { n: number; score: number | null; rationale: string; provenance: string; modelVersion: string | null }[];
+  dimensions: ReviewDimension[];
+}
+
+/** One dimension under review. Each of what produced it is null when it was not recorded. */
+export interface ReviewDimension {
+  n: number;
+  score: number | null;
+  rationale: string;
+  provenance: string;
+  /** The rubric version. */
+  modelVersion: string | null;
+  languageModel: string | null;
+  promptVersion: string | null;
+  settings: { temperature: number | null; reasoningEffort: string | null } | null;
 }
 
 export const AMENDABLE_BODY_FIELDS = ['headline', 'overview', 'strengths', 'improvements', 'recommendations'] as const;

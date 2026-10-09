@@ -400,7 +400,14 @@ function refuse(route: Route, code: string, words?: { message?: string; details?
   });
 }
 
+export const SCORED_BY = {
+  languageModel: 'model-alpha-2026-08',
+  promptVersion: 'prompt-3c9e1b',
+  settings: { temperature: 0, reasoningEffort: 'medium' },
+};
+
 function reviewOf(reportId: string, kind: ReviewKind) {
+  const recorded = reportId === NEWEST_ID;
   return {
     reportId,
     delivered: kind === 'delivered',
@@ -416,9 +423,9 @@ function reviewOf(reportId: string, kind: ReviewKind) {
       rationale: `The model's reason for dimension ${d.n}`,
       provenance: 'machine',
       modelVersion: RUBRIC.model,
-      languageModel: null as string | null,
-      promptVersion: null as string | null,
-      settings: null as { temperature: number | null; reasoningEffort: string | null } | null,
+      languageModel: (recorded ? SCORED_BY.languageModel : null) as string | null,
+      promptVersion: (recorded ? SCORED_BY.promptVersion : null) as string | null,
+      settings: (recorded ? { ...SCORED_BY.settings } : null) as { temperature: number | null; reasoningEffort: string | null } | null,
     })),
     inFlight: kind === 'in-flight',
     partial: kind === 'partial',
