@@ -52,6 +52,7 @@ import {
   type CoverageReport,
   type ReleaseOutcome,
   updateLeaderEmail,
+  type LeaderEmailRequest,
   attributeSession,
   setNotTeaching,
   amendReport,
@@ -329,7 +330,7 @@ export function useReleaseHeldReport(): UseMutationResult<ReleaseOutcome, Error,
 }
 
 export function useUpdateLeaderEmail(): UseMutationResult<
-  { email: string; noticeSent: boolean },
+  LeaderEmailRequest,
   Error,
   { coachId: string; email: string; confirm: boolean }
 > {
@@ -339,6 +340,7 @@ export function useUpdateLeaderEmail(): UseMutationResult<
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: coachKeys.coverage });
       qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
+      qc.invalidateQueries({ queryKey: coachKeys.adminCoaches });
     },
   });
 }
