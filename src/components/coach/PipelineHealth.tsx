@@ -55,8 +55,9 @@ function ColdRecallHeld({ items }: { items: string[] }) {
   );
 }
 
-const SCORING_VERSION_HOLD = 'first report under a new scoring version: release after review';
-const SCORING_VERSION_RELEASE = "Releasing it also delivers this leader's other reports held for that version.";
+const SCORING_VERSION_HOLD = 'held for review: the first report to this leader under a new scoring version';
+const SCORING_VERSION_RELEASE =
+  "Once this report is delivered, this leader's other reports held for the same scoring version go out with the next pipeline run.";
 
 function releaseText(outcome: ReleaseOutcome): Outcome {
   if (outcome.delivered) {
@@ -239,7 +240,7 @@ export default function PipelineHealth() {
                             <ColdRecallHeld items={s.coldRecall ?? []} />
                           </>
                         ) : s.holdKind === 'scoring-version' ? (
-                          `Why: ${SCORING_VERSION_HOLD}${s.reason ? ` (${s.reason})` : ''}. ${SCORING_VERSION_RELEASE}`
+                          `Why: ${s.reason || SCORING_VERSION_HOLD}. ${SCORING_VERSION_RELEASE}`
                         ) : s.reason ? (
                           `Why: ${s.reason}`
                         ) : (
