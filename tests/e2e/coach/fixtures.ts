@@ -17,7 +17,7 @@ import { ERROR_CODES, INVALID_REQUEST, UNMATCHED_ROUTE, contractErrors, contract
 
 export const API = process.env.VITE_API_URL ?? 'https://api.versemate.org';
 
-function serve(page: Page, url: string | RegExp, handler: (route: Route) => unknown) {
+function serve(page: Page, url: Parameters<Page['route']>[0], handler: (route: Route) => unknown) {
   return page.route(url, (route) => {
     const fulfill = route.fulfill.bind(route);
     route.fulfill = (answer = {}) => {
@@ -306,6 +306,8 @@ export interface CoachApiOptions {
   pendingReshare?: boolean;
   addressRequests?: AddressRequest[];
   onAddressRequest?: (token: string) => void;
+  onConfirmAddress?: (method: string) => void;
+  signedOut?: boolean;
 }
 
 export interface AddressRequest {
@@ -328,6 +330,11 @@ const EMAIL_DOMAIN = /^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](
 function isEmailAddress(value: string): boolean {
   const at = value.lastIndexOf('@');
   return value.length <= 254 && at > 0 && EMAIL_LOCAL.test(value.slice(0, at)) && EMAIL_DOMAIN.test(value.slice(at + 1));
+}
+
+function maskAddress(email: string): string {
+  const [local, domain = ''] = email.split('@');
+  return `${local.slice(0, 2)}${'*'.repeat(Math.max(local.length - 2, 1))}@${domain}`;
 }
 
 function isPlaceholder(email: string): boolean {
@@ -967,9 +974,11 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     attached[r.id] ? { ...r, attachedRecordingUrl: attached[r.id], recordingUrl: attached[r.id] } : r;
   let minted = 0;
 
-  await page.context().addCookies([
-    { name: 'accessToken', value: 'e2e-token', domain: 'localhost', path: '/' },
-  ]);
+  if (!opts.signedOut) {
+    await page.context().addCookies([
+      { name: 'accessToken', value: 'e2e-token', domain: 'localhost', path: '/' },
+    ]);
+  }
 
   await serve(page, `${API}/**`, unmatched);
   const notACoach = (route: Route) => route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Not a coaching account' } });
@@ -1138,6 +1147,42 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return unmatched(route);
   };
   await serve(page, /\/coach\/admin\/(leaders|sessions)(\/|$)/, (route) => (opts.admin ? write(route) : forbidden(route)));
+  await serve(page, (url) => url.href.startsWith(`${API}/`) && url.pathname.endsWith('/coach/confirm-address'), (route) => {
+    const req = route.request();
+    const method = req.method();
+    if (method !== 'GET' && method !== 'POST') return unmatched(route);
+    opts.onConfirmAddress?.(method);
+    const token = method === 'GET' ? new URL(req.url()).searchParams.get('token') : JSON.parse(req.postData() ?? '{}').token;
+    if (typeof token !== 'string') return invalidRequest(route);
+    const request = addressRequests.find((r) => r.token === token);
+    if (!request) return refuse(route, 'invalid-link');
+    const leader = coverage.leaders.find((l) => l.coachId === request.coachId);
+    if (!leader) return refuse(route, 'invalid-link');
+    if (method === 'GET') {
+      return route.fulfill({
+        json: {
+          leaderName: leader.name,
+          currentEmail: maskAddress(leader.email),
+          newEmail: maskAddress(request.newEmail),
+          state: request.state,
+          expiresAt: request.expiresAt,
+        },
+      });
+    }
+    const refused: Record<string, string> = { expired: 'expired', superseded: 'superseded', confirmed: 'already-confirmed', refused: 'taken' };
+    if (request.state !== 'pending') return refuse(route, refused[request.state]);
+    if (coverage.leaders.some((l) => l.email === request.newEmail && l.coachId !== leader.coachId)) {
+      Object.assign(request, { state: 'refused', reason: 'taken' });
+      return refuse(route, 'taken');
+    }
+    const previous = leader.email;
+    leader.email = request.newEmail;
+    request.state = 'confirmed';
+    const i = stuck.findIndex((x) => x.coachId === leader.coachId && x.state === 'delivered');
+    if (i >= 0) stuck.splice(i, 1);
+    const noticeSent = !isPlaceholder(previous) && !!opts.pipelineLive && !opts.noMailer;
+    return route.fulfill({ json: { email: request.newEmail, noticeSent } });
+  });
   await serve(page, /\/coach\/admin\/(pipeline-failures|coverage|reports\/[^/]+\/release)/, (route) => {
     const url = new URL(route.request().url());
     const method = route.request().method();
@@ -1253,12 +1298,18 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     });
   });
 
+  const addressChangeOf = (coachId: string) => {
+    const latest = addressRequests.filter((r) => r.coachId === coachId).at(-1);
+    if (!latest || latest.state === 'confirmed' || latest.state === 'superseded') return {};
+    const { newEmail, state, reason, requestedAt, expiresAt } = latest;
+    return { addressChange: { newEmail, state, reason, requestedAt, expiresAt } };
+  };
   await serve(page, `${API}/coach/admin/coaches`, (route) =>
     opts.admin
       ? route.fulfill({
           json: {
-            coaches: roster.map((r) =>
-              r.id === LEADER_ID
+            coaches: roster.map((r) => ({
+              ...(r.id === LEADER_ID
                 ? {
                     id: LEADER_ID,
                     name: ME.profile.name,
@@ -1273,8 +1324,9 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
                       statusEmoji: REPORTS[0].statusEmoji,
                     },
                   }
-                : { id: r.id, name: r.name, group: '', coachName: '', sessionCount: 0, latest: null },
-            ),
+                : { id: r.id, name: r.name, group: '', coachName: '', sessionCount: 0, latest: null }),
+              ...addressChangeOf(r.id),
+            })),
           },
         })
       : forbidden(route),

@@ -43,6 +43,7 @@ import CoachLeaderMonthlyScreen from "@/pages/CoachLeaderMonthlyScreen";
 import CoachTrendsScreen from "@/pages/CoachTrendsScreen";
 import CoachFeedbackScreen from "@/pages/CoachFeedbackScreen";
 import CoachLeaderScreen from "@/pages/CoachLeaderScreen";
+import CoachConfirmAddressScreen from "@/pages/CoachConfirmAddressScreen";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -125,6 +126,9 @@ const App = () => (
               <Route path="/coach/monthly-summary" element={<CoachLeaderMonthlyScreen />} />
               <Route path="/coach/trends" element={<CoachTrendsScreen />} />
               <Route path="/coach/feedback" element={<CoachFeedbackScreen />} />
+              {/* Public: the link in an address-confirmation email. No sign-in;
+                  opening it only reads the change, the button confirms it. */}
+              <Route path="/coach/confirm-address" element={<CoachConfirmAddressScreen />} />
               {/* Admin drill-in: a leader's dashboard in the coaching-dashboard
                   design (Home / Sessions / Trends), wired to that leader's data.
                   The classic management screen (coaching notes + recording

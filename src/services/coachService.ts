@@ -192,6 +192,15 @@ export interface CoachMe {
   statusBands: StatusBand[];
 }
 
+/** An address change an admin asked for that has not taken effect. */
+export interface AddressChange {
+  newEmail: string;
+  state: string;
+  reason: string | null;
+  requestedAt: string;
+  expiresAt: string;
+}
+
 /** One row in the admin oversight roster. */
 export interface CoachSummary {
   id: string;
@@ -199,6 +208,7 @@ export interface CoachSummary {
   group: string;
   coachName: string;
   sessionCount: number;
+  addressChange?: AddressChange | null;
   latest: {
     date: string;
     dateLabel: string;
@@ -829,6 +839,26 @@ export function updateLeaderEmail(coachId: string, email: string, confirm = fals
     method: 'PUT',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(confirm ? { email, confirm: true } : { email }),
+  });
+}
+
+export interface AddressChangeDescription {
+  leaderName: string;
+  currentEmail: string;
+  newEmail: string;
+  state: string;
+  expiresAt: string;
+}
+
+export function fetchAddressChange(token: string): Promise<AddressChangeDescription> {
+  return coachRequest<AddressChangeDescription>(`confirm-address?token=${encodeURIComponent(token)}`);
+}
+
+export function confirmAddressChange(token: string): Promise<{ email: string; noticeSent: boolean }> {
+  return coachRequest<{ email: string; noticeSent: boolean }>('confirm-address', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ token }),
   });
 }
 

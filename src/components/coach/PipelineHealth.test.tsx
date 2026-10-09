@@ -416,6 +416,47 @@ describe("a leader's address", () => {
     await waitFor(() => expect(coverage).toHaveBeenCalledTimes(2));
   });
 
+  it('shows a pending, expired or refused address change beside the address, from the roster', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({
+      ...COVERAGE,
+      leaders: [COVERAGE.leaders[0], COVERAGE.leaders[1], { ...COVERAGE.leaders[1], coachId: 'wyatt-wellington', name: 'Wyatt Wellington', email: 'wyatt@example.test' }],
+    });
+    const change = (state: string, newEmail: string, reason: string | null = null) => ({
+      newEmail,
+      state,
+      reason,
+      requestedAt: '2026-10-09T14:00:00.000Z',
+      expiresAt: '2026-10-16T14:00:00.000Z',
+    });
+    vi.spyOn(coachService, 'fetchAdminCoaches').mockResolvedValue([
+      { ...ROSTER[0], addressChange: change('pending', 'milo.new@example.test') },
+      { ...ROSTER[1], addressChange: change('expired', 'amy.new@example.test') },
+      { ...ROSTER[2], addressChange: change('refused', 'taken@example.test', 'taken') },
+    ]);
+    renderView();
+
+    const pending = await screen.findByTestId('coach-address-change-milo-kerr');
+    expect(pending).toHaveTextContent('Awaiting confirmation: milo.new@example.test, requested Oct 9, 2026, link expires Oct 16, 2026');
+    expect(pending.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    expect(screen.getByTestId('coach-address-milo-kerr')).toHaveTextContent('milo@example.test');
+    expect(screen.getByTestId('coach-address-change-amy-lee')).toHaveTextContent(
+      'Not confirmed: the link to amy.new@example.test, requested Oct 9, 2026, expired Oct 16, 2026. Change the address again to send a new one.',
+    );
+    expect(screen.getByTestId('coach-address-change-wyatt-wellington')).toHaveTextContent(
+      'Not changed: taken@example.test, requested Oct 9, 2026, was refused when it confirmed, because another leader already uses it.',
+    );
+  });
+
+  it('shows no address change when the roster carries none', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    await screen.findByTestId('coach-address-milo-kerr');
+    expect(screen.queryByTestId('coach-address-change-milo-kerr')).toBeNull();
+  });
+
   it('says plainly when the confirmation email could not be sent, and when the address was already the leader\'s', async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
