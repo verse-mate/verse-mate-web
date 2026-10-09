@@ -48,6 +48,8 @@ import {
   requeuePipelineFailure,
   releaseHeldReport,
   fetchCoverage,
+  fetchParallelRunComparison,
+  type ParallelRunComparison,
   type PipelineFailurePage,
   type CoverageReport,
   type ReleaseOutcome,
@@ -84,6 +86,7 @@ export const coachKeys = {
   adminClasses: ['coach', 'admin', 'classes'] as const,
   pipelineFailures: ['coach', 'admin', 'pipeline-failures'] as const,
   coverage: ['coach', 'admin', 'coverage'] as const,
+  parallelRun: ['coach', 'admin', 'parallel-run'] as const,
   attribution: (coachId: string) => ['coach', 'admin', 'attribution', coachId] as const,
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
   reportReview: (reportId: string) => ['coach', 'admin', 'review', reportId] as const,
@@ -298,6 +301,10 @@ export function usePipelineFailures(offset = 0): UseQueryResult<PipelineFailureP
 
 export function useCoverage(): UseQueryResult<CoverageReport> {
   return useQuery({ queryKey: coachKeys.coverage, queryFn: () => fetchCoverage(), retry: false });
+}
+
+export function useParallelRunComparison(): UseQueryResult<ParallelRunComparison> {
+  return useQuery({ queryKey: coachKeys.parallelRun, queryFn: fetchParallelRunComparison, retry: false });
 }
 
 export function useRequeuePipelineFailure(): UseMutationResult<{ requeued: boolean }, Error, string> {

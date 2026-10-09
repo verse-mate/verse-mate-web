@@ -47,6 +47,7 @@ import {
   needsBenchmarkConfirm,
   fetchAddressChange,
   confirmAddressChange,
+  fetchParallelRunComparison,
   refusalCode,
 } from './coachService';
 
@@ -581,5 +582,20 @@ describe('the address confirmation link', () => {
   it('carries the refusal code of a refused confirm', async () => {
     mockFetch(() => jsonResponse({ error: 'CONFLICT', message: 'Reworded', details: { refusal: 'superseded' } }, 409));
     expect(refusalCode(await confirmAddressChange('tok-1').catch((e) => e))).toBe('superseded');
+  });
+});
+
+describe('the parallel-run comparison', () => {
+  it('is read from the admin route as the server computes it', async () => {
+    const body = {
+      sessions: [],
+      needsPairing: [],
+      unmatched: { backend: [], host: [] },
+      share: { withinOne: 0, comparable: 0, ratio: null },
+      counts: { compared: 0, flagged: 0, needsPairing: 0, unmatchedBackend: 0, unmatchedHost: 0 },
+    };
+    mockFetch(() => jsonResponse(body));
+    expect(await fetchParallelRunComparison()).toEqual(body);
+    expect(calls[0].url).toMatch(/\/coach\/admin\/parallel-run\/comparison$/);
   });
 });
