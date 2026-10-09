@@ -29,7 +29,7 @@ export default function RetainedRecording({
   /** An admin's pasted external link. Takes precedence when present. */
   attachedUrl?: string;
 }) {
-  const [src, setSrc] = useState<string | null>(null);
+  const [src, setSrc] = useState<{ url: string; load: number } | null>(null);
   const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
   const remintedRef = useRef(false);
   const expiresAtRef = useRef(0);
@@ -75,7 +75,7 @@ export default function RetainedRecording({
       return;
     }
     setResumeAt(null);
-    setSrc(minted.url);
+    setSrc((prev) => ({ url: minted.url, load: (prev?.load ?? 0) + 1 }));
     setState('idle');
   }, [mint]);
 
@@ -103,7 +103,7 @@ export default function RetainedRecording({
       return;
     }
     setResumeAt(position);
-    setSrc(minted.url);
+    setSrc((prev) => ({ url: minted.url, load: (prev?.load ?? 0) + 1 }));
   }, [mint]);
 
   const handleLoadedMetadata = useCallback(
@@ -138,7 +138,8 @@ export default function RetainedRecording({
     return (
       // biome-ignore lint/a11y/useMediaCaption: the transcript is the caption track we do not yet publish
       <video
-        src={src}
+        key={src.load}
+        src={src.url}
         controls
         autoPlay={resumeAt ? resumeAt.playing : true}
         onError={handleError}

@@ -51,6 +51,24 @@ describe('a session VerseMate holds the recording for', () => {
     expect(screen.queryByTestId('coach-recording-player-r1')).toBeNull();
   });
 
+  it('loads a new player for every mint, even when the new address reads the same as the last', async () => {
+    const mint = vi
+      .spyOn(coachService, 'mintRecordingUrl')
+      .mockResolvedValue({ url: 'https://storage.test/same.mp4', expiresInSeconds: 86400 });
+    render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    const first = await screen.findByTestId('coach-recording-player-r1');
+
+    fireEvent.error(first);
+    await waitFor(() => expect(mint).toHaveBeenCalledTimes(2));
+    await waitFor(() => expect(screen.getByTestId('coach-recording-player-r1')).not.toBe(first));
+    expect(first.isConnected).toBe(false);
+
+    fireEvent.error(screen.getByTestId('coach-recording-player-r1'));
+    expect(await screen.findByText(/Recording unavailable/)).toBeInTheDocument();
+    expect(mint).toHaveBeenCalledTimes(2);
+  });
+
   it('a DIFFERENT session does not inherit the previous one\'s recording', async () => {
     // The detail view keeps this component mounted in the same position when
     // the leader moves between sessions, so React reuses the instance. With no
