@@ -27,8 +27,9 @@ test.describe('What produced a machine score', () => {
     await useCoachApi(page, { admin: true });
     await openSession(page, NEWEST_ID);
     const produced = page.getByTestId(`coach-review-${NEWEST_ID}`).getByTestId('coach-review-produced');
-    await expect(produced.getByTestId(/^coach-review-dim-produced-/)).toHaveCount(12);
-    await expect(produced.getByTestId('coach-review-dim-produced-1')).toHaveText(
+    await expect(produced.getByTestId(/^coach-review-summary-produced-/)).toHaveCount(12);
+    await expect(produced.getByTestId(/^coach-review-dim-produced-/)).toHaveCount(0);
+    await expect(produced.getByTestId('coach-review-summary-produced-1')).toHaveText(
       `Rubric ${RUBRIC.model} · Language model ${SCORED_BY.languageModel} · Prompt version ${SCORED_BY.promptVersion} · Settings: temperature 0, reasoning effort medium`,
     );
     await capture(page, testInfo, 'review-dim-provenance-recorded', produced);

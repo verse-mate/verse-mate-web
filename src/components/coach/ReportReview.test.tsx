@@ -1647,10 +1647,11 @@ describe('what produced a machine score', () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(RECORDED);
     renderReview();
 
-    expect(await screen.findByTestId('coach-review-dim-produced-1')).toHaveTextContent(
+    expect(await screen.findByTestId('coach-review-summary-produced-1')).toHaveTextContent(
       'Rubric v3 · Language model model-alpha-2026 · Prompt version prompt-7f3a · Settings: temperature 0.2, reasoning effort high',
     );
-    expect(screen.getByTestId('coach-review-dim-produced-2')).toHaveTextContent('Settings: temperature 0, no reasoning-effort setting');
+    expect(screen.getByTestId('coach-review-summary-produced-2')).toHaveTextContent('Settings: temperature 0, no reasoning-effort setting');
+    expect(within(screen.getByTestId('coach-review-produced')).queryAllByTestId(/^coach-review-dim-produced-/)).toHaveLength(0);
   });
 
   it('says "not recorded" for a score made before these were recorded', async () => {
@@ -1660,10 +1661,10 @@ describe('what produced a machine score', () => {
     });
     renderReview();
 
-    expect(await screen.findByTestId('coach-review-dim-produced-5')).toHaveTextContent(
+    expect(await screen.findByTestId('coach-review-summary-produced-5')).toHaveTextContent(
       'Rubric v3 · Language model not recorded · Prompt version not recorded · Settings not recorded',
     );
-    expect(screen.getByTestId('coach-review-dim-produced-4')).toHaveTextContent('Rubric not recorded');
+    expect(screen.getByTestId('coach-review-summary-produced-4')).toHaveTextContent('Rubric not recorded');
   });
 
   it('shows them beside each machine score of an undelivered report too', async () => {
@@ -1679,8 +1680,8 @@ describe('what produced a machine score', () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(RECORDED);
     renderReview();
 
-    await screen.findByTestId('coach-review-dim-produced-1');
-    expect(screen.queryByTestId('coach-review-dim-produced-3')).toBeNull();
-    expect(screen.getAllByTestId(/^coach-review-dim-produced-/)).toHaveLength(11);
+    await screen.findByTestId('coach-review-summary-produced-1');
+    expect(screen.queryByTestId('coach-review-summary-produced-3')).toBeNull();
+    expect(screen.getAllByTestId(/^coach-review-summary-produced-/)).toHaveLength(11);
   });
 });
