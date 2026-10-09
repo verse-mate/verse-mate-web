@@ -195,7 +195,7 @@ export interface CoachMe {
 /** An address change an admin asked for that has not taken effect. */
 export interface AddressChange {
   newEmail: string;
-  state: string;
+  state: 'pending' | 'expired' | 'refused';
   reason: string | null;
   requestedAt: string;
   expiresAt: string;
@@ -456,7 +456,7 @@ export function sessionDateText(session: { sessionDate: string; sessionStartedAt
 
 export const PARALLEL_RUN_COPY = 'Parallel-run copy: kept for comparison, never sent.';
 
-export type HoldKind = 'review' | 'reattributed' | 'governance' | 'cold-recall' | 'no-mailer' | 'send-failed';
+export type HoldKind = 'review' | 'reattributed' | 'governance' | 'cold-recall' | 'no-mailer' | 'send-failed' | 'scoring-version';
 
 export interface PipelineFailure {
   sourceSessionId: string;
@@ -698,8 +698,8 @@ export interface ComparedSession {
   coachId: string;
   date: string;
   backend: { sourceSessionId: string; reportId: string; composite: number };
-  host: { reportId: string; composite: number };
-  compositeDifference: number;
+  host: { reportId: string; composite: number | null };
+  compositeDifference: number | null;
   dimensions: { n: number; host: number | null; backend: number | null; difference: number | null }[];
   withinOne: number;
   comparable: number;
@@ -731,7 +731,7 @@ export interface CoverageLeader {
   name: string;
   email: string;
   covered: boolean;
-  basis: string;
+  basis: 'observed' | 'attested-not-teaching' | 'attestation-lapsed' | 'no-observation';
   observedSessions: number;
   accountStatus: string;
   linkedClassName: string | null;
@@ -887,16 +887,16 @@ export function updateLeaderEmail(coachId: string, email: string, confirm = fals
   });
 }
 
-export interface AddressChangeDescription {
-  leaderName: string;
-  currentEmail: string;
-  newEmail: string;
-  state: string;
-  expiresAt: string;
-}
+export type AddressChangeDescription =
+  | { leaderName: string; newEmail: string; state: 'pending'; expiresAt: string }
+  | { state: 'expired' | 'confirmed' | 'superseded' | 'refused'; expiresAt: string };
 
-export function fetchAddressChange(token: string): Promise<AddressChangeDescription> {
-  return coachRequest<AddressChangeDescription>(`confirm-address?token=${encodeURIComponent(token)}`);
+export function describeAddressChange(token: string): Promise<AddressChangeDescription> {
+  return coachRequest<AddressChangeDescription>('confirm-address/describe', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ token }),
+  });
 }
 
 export function confirmAddressChange(token: string): Promise<{ email: string; noticeSent: boolean }> {

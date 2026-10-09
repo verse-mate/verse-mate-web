@@ -1,6 +1,6 @@
 {
   "repo": "verse-mate",
   "path": "packages/backend-base/src/coach/coach-contract.snapshot.json",
-  "commit": "4a089c2853e508f35581e1aec70c0945084db649",
+  "commit": "fbbd4558c22b2e0c9f660a9c0159a902e5446d83",
   "refresh": "In the backend, run `bun run coach:contract` in packages/backend-base, copy the snapshot over coach-contract.snapshot.json here, and set commit to the backend commit that last changed it. Then run the coach browser suite: every fake answer is checked against the copy."
 }

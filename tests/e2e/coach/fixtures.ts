@@ -306,7 +306,7 @@ export interface CoachApiOptions {
   pendingReshare?: boolean;
   addressRequests?: AddressRequest[];
   onAddressRequest?: (token: string) => void;
-  onConfirmAddress?: (method: string) => void;
+  onConfirmAddress?: (call: 'describe' | 'confirm') => void;
   parallelRun?: Record<string, unknown>;
   mintExpiresInSeconds?: number;
   signedOut?: boolean;
@@ -316,7 +316,7 @@ export interface AddressRequest {
   token: string;
   coachId: string;
   newEmail: string;
-  state: string;
+  state: 'pending' | 'expired' | 'confirmed' | 'superseded' | 'refused';
   reason: string | null;
   requestedAt: string;
   expiresAt: string;
@@ -335,8 +335,7 @@ function isEmailAddress(value: string): boolean {
 }
 
 function maskAddress(email: string): string {
-  const [local, domain = ''] = email.split('@');
-  return `${local.slice(0, 2)}${'*'.repeat(Math.max(local.length - 2, 1))}@${domain}`;
+  return `${email.slice(0, 1)}***@${email.slice(email.lastIndexOf('@') + 1)}`;
 }
 
 function isPlaceholder(email: string): boolean {
@@ -1164,26 +1163,21 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return unmatched(route);
   };
   await serve(page, /\/coach\/admin\/(leaders|sessions)(\/|$)/, (route) => (opts.admin ? write(route) : forbidden(route)));
-  await serve(page, (url) => url.href.startsWith(`${API}/`) && url.pathname.endsWith('/coach/confirm-address'), (route) => {
+  await serve(page, (url) => url.href.startsWith(`${API}/`) && /\/coach\/confirm-address(\/describe)?$/.test(url.pathname), (route) => {
     const req = route.request();
-    const method = req.method();
-    if (method !== 'GET' && method !== 'POST') return unmatched(route);
-    opts.onConfirmAddress?.(method);
-    const token = method === 'GET' ? new URL(req.url()).searchParams.get('token') : JSON.parse(req.postData() ?? '{}').token;
+    if (req.method() !== 'POST') return unmatched(route);
+    const call = req.url().endsWith('/describe') ? 'describe' : 'confirm';
+    opts.onConfirmAddress?.(call);
+    const token = JSON.parse(req.postData() ?? '{}').token;
     if (typeof token !== 'string') return invalidRequest(route);
     const request = addressRequests.find((r) => r.token === token);
     if (!request) return refuse(route, 'invalid-link');
     const leader = coverage.leaders.find((l) => l.coachId === request.coachId);
     if (!leader) return refuse(route, 'invalid-link');
-    if (method === 'GET') {
+    if (call === 'describe') {
+      if (request.state !== 'pending') return route.fulfill({ json: { state: request.state, expiresAt: request.expiresAt } });
       return route.fulfill({
-        json: {
-          leaderName: leader.name,
-          currentEmail: maskAddress(leader.email),
-          newEmail: maskAddress(request.newEmail),
-          state: request.state,
-          expiresAt: request.expiresAt,
-        },
+        json: { leaderName: leader.name, newEmail: maskAddress(request.newEmail), state: request.state, expiresAt: request.expiresAt },
       });
     }
     const refused: Record<string, string> = { expired: 'expired', superseded: 'superseded', confirmed: 'already-confirmed', refused: 'taken' };

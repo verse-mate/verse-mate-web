@@ -148,7 +148,11 @@ function SessionRow({ s, leader, dimName }: { s: ComparedSession; leader: string
         )}
       </div>
       <div style={{ fontSize: 13, color: dt.body, margin: '2px 0 6px' }}>
-        Composite: Backend {s.backend.composite.toFixed(1)} · Host {s.host.composite.toFixed(1)} · {s.compositeDifference.toFixed(1)} apart ·{' '}
+        Composite: Backend {s.backend.composite.toFixed(1)} ·{' '}
+        {s.host.composite === null || s.compositeDifference === null
+          ? 'no composite on the host report'
+          : `Host ${s.host.composite.toFixed(1)} · ${s.compositeDifference.toFixed(1)} apart`}{' '}
+        ·{' '}
         {s.withinOne} of {plural(s.comparable, 'dimension')} within one point
       </div>
       <div style={{ overflowX: 'auto' }}>

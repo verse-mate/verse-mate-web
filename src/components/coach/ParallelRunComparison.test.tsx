@@ -145,6 +145,23 @@ describe('the parallel-run comparison', () => {
     expect(within(close).getByTestId('coach-parallel-dim-ff-close-2')).toHaveTextContent('Served dimension 2');
   });
 
+  it('says a host report with no composite has none, and compares its dimensions still', async () => {
+    const noComposite = {
+      ...CLOSE,
+      backend: { ...CLOSE.backend, sourceSessionId: 'ff-none' },
+      host: { reportId: 'host-none', composite: null },
+      compositeDifference: null,
+    };
+    vi.spyOn(coachService, 'fetchParallelRunComparison').mockResolvedValue({ ...FULL, sessions: [noComposite] });
+    renderView();
+
+    const row = await screen.findByTestId('coach-parallel-session-ff-none');
+    expect(row).toHaveTextContent('Composite: Backend 74.5 · no composite on the host report ·');
+    expect(row).not.toHaveTextContent('apart');
+    expect(within(row).queryByTestId('coach-parallel-flagged-ff-none')).toBeNull();
+    expect(row).toHaveTextContent('2 of 2 dimensions within one point');
+  });
+
   it('can show only the flagged sessions', async () => {
     vi.spyOn(coachService, 'fetchParallelRunComparison').mockResolvedValue(FULL);
     renderView();

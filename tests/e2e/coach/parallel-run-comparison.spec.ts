@@ -88,6 +88,17 @@ test.describe('The parallel-run comparison', () => {
     await capture(page, testInfo, 'parallel-run-pairing-unmatched', page.getByTestId('coach-parallel-unmatched-host'));
   });
 
+  test('says a host report with no composite has none, without flagging the session for it', async ({ page }) => {
+    const [close] = COMPARISON.sessions;
+    const noComposite = { ...close, host: { reportId: 'host-close', composite: null }, compositeDifference: null };
+    await useCoachApi(page, { admin: true, parallelRun: { ...COMPARISON, sessions: [noComposite] } });
+    await openComparison(page);
+
+    const row = page.getByTestId('coach-parallel-session-ff-close');
+    await expect(row).toContainText('Composite: Backend 74.5 · no composite on the host report · 2 of 2 dimensions within one point');
+    await expect(row.getByTestId('coach-parallel-flagged-ff-close')).toHaveCount(0);
+  });
+
   test('says nothing has been compared yet before any session is scored', async ({ page }, testInfo) => {
     await useCoachApi(page, { admin: true });
     await openComparison(page);
