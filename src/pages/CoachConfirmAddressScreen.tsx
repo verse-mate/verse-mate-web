@@ -1,15 +1,6 @@
-/**
- * Address confirmation (/coach/confirm-address?token=…), the page the
- * confirmation email links to. Public: no sign-in, the token is the proof.
- *
- * Opening the page only READS the change. A mail scanner or link preview that
- * fetches the URL must never confirm it, so the change is applied only by the
- * explicit Confirm button, which POSTs the token.
- */
-
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import ScreenHeader from '@/components/ScreenHeader';
 import { CoachCard } from '@/components/coach/CoachUi';
@@ -56,14 +47,21 @@ function stateWords(state: Shown, change: AddressChangeDescription | undefined):
 }
 
 export default function CoachConfirmAddressScreen() {
-  const [params, setParams] = useSearchParams();
-  const [token] = useState(() => params.get('token') ?? '');
+  const { pathname, search, hash, state } = useLocation();
+  const navigate = useNavigate();
+  const fromState: unknown = (state as { token?: unknown } | null)?.token;
+  const token =
+    (typeof fromState === 'string' && fromState) ||
+    new URLSearchParams(hash.slice(1)).get('token') ||
+    new URLSearchParams(search).get('token') ||
+    '';
   useEffect(() => {
-    if (!params.has('token')) return;
-    const rest = new URLSearchParams(params);
+    const rest = new URLSearchParams(search);
+    if (hash === '' && !rest.has('token')) return;
     rest.delete('token');
-    setParams(rest, { replace: true });
-  }, [params, setParams]);
+    const kept = rest.toString();
+    navigate({ pathname, search: kept ? `?${kept}` : '' }, { replace: true, state: { token } });
+  }, [pathname, search, hash, token, navigate]);
   const change = useQuery({
     queryKey: ['coach', 'confirm-address', token],
     queryFn: () => describeAddressChange(token),
