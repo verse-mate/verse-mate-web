@@ -53,6 +53,9 @@ const REVIEW: ReportReviewState = {
     rationale: `machine ${i + 1}`,
     provenance: 'machine',
     modelVersion: 'v3',
+    languageModel: null,
+    promptVersion: null,
+    settings: null,
   })),
 };
 
@@ -1172,7 +1175,7 @@ describe('correcting a dimension of an undelivered report', () => {
     expect(corrected).toHaveTextContent('Served dimension 3');
     expect(corrected).toHaveTextContent('set by an admin');
     expect(within(corrected).getByTestId('coach-review-dim-provenance-3')).toHaveTextContent('Corrected by hand');
-    expect(within(screen.getByTestId('coach-review-dim-1')).getByTestId('coach-review-dim-provenance-1')).toHaveTextContent('Scored by the model (v3)');
+    expect(within(screen.getByTestId('coach-review-dim-1')).getByTestId('coach-review-dim-provenance-1')).toHaveTextContent('Scored by the model');
     expect(screen.getAllByTestId(/^coach-review-dim-provenance-/)).toHaveLength(12);
     expect(corrected.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
   });
@@ -1623,5 +1626,61 @@ describe('switching the screen to another report', () => {
     expect(screen.queryByTestId('coach-amend-editor')).toBeNull();
     expect(screen.queryByTestId('coach-amend-outcome')).toBeNull();
     expect(amend).not.toHaveBeenCalled();
+  });
+});
+
+describe('what produced a machine score', () => {
+  const RECORDED: ReportReviewState = {
+    ...REVIEW,
+    dimensions: REVIEW.dimensions.map((d) =>
+      d.n === 1
+        ? { ...d, languageModel: 'model-alpha-2026', promptVersion: 'prompt-7f3a', settings: { temperature: 0.2, reasoningEffort: 'high' } }
+        : d.n === 2
+          ? { ...d, languageModel: 'model-alpha-2026', promptVersion: 'prompt-7f3a', settings: { temperature: 0, reasoningEffort: null } }
+          : d.n === 3
+            ? { ...d, provenance: 'human', rationale: 'set by an admin' }
+            : d,
+    ),
+  };
+
+  it('names the rubric version, language model, prompt version and settings beside each machine score', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(RECORDED);
+    renderReview();
+
+    expect(await screen.findByTestId('coach-review-dim-produced-1')).toHaveTextContent(
+      'Rubric v3 · Language model model-alpha-2026 · Prompt version prompt-7f3a · Settings: temperature 0.2, reasoning effort high',
+    );
+    expect(screen.getByTestId('coach-review-dim-produced-2')).toHaveTextContent('Settings: temperature 0, no reasoning-effort setting');
+  });
+
+  it('says "not recorded" for a score made before these were recorded', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({
+      ...RECORDED,
+      dimensions: RECORDED.dimensions.map((d) => (d.n === 4 ? { ...d, modelVersion: null } : d)),
+    });
+    renderReview();
+
+    expect(await screen.findByTestId('coach-review-dim-produced-5')).toHaveTextContent(
+      'Rubric v3 · Language model not recorded · Prompt version not recorded · Settings not recorded',
+    );
+    expect(screen.getByTestId('coach-review-dim-produced-4')).toHaveTextContent('Rubric not recorded');
+  });
+
+  it('shows them beside each machine score of an undelivered report too', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...RECORDED, delivered: false });
+    renderReview();
+
+    const row = await screen.findByTestId('coach-review-dim-1');
+    expect(within(row).getByTestId('coach-review-dim-produced-1')).toHaveTextContent('Language model model-alpha-2026');
+    expect(within(screen.getByTestId('coach-review-dim-3')).queryByTestId('coach-review-dim-produced-3')).toBeNull();
+  });
+
+  it('shows no machine provenance on a dimension an admin corrected', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(RECORDED);
+    renderReview();
+
+    await screen.findByTestId('coach-review-dim-produced-1');
+    expect(screen.queryByTestId('coach-review-dim-produced-3')).toBeNull();
+    expect(screen.getAllByTestId(/^coach-review-dim-produced-/)).toHaveLength(11);
   });
 });

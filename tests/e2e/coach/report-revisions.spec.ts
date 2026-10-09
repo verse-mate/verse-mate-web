@@ -12,6 +12,7 @@ import {
   PARTIALLY_DELIVERED,
   PROSE,
   RUBRIC,
+  SCORED_BY,
   useCoachApi,
 } from './fixtures';
 
@@ -20,6 +21,19 @@ async function openSession(page: Page, reportId: string) {
   await page.getByTestId(`oversight-roster-${LEADER_ID}`).click();
   await page.getByTestId(`oversight-class-${reportId}`).click();
 }
+
+test.describe('What produced a machine score', () => {
+  test('a delivered report names the rubric, language model, prompt version and settings of each machine score', async ({ page }, testInfo) => {
+    await useCoachApi(page, { admin: true });
+    await openSession(page, NEWEST_ID);
+    const produced = page.getByTestId(`coach-review-${NEWEST_ID}`).getByTestId('coach-review-produced');
+    await expect(produced.getByTestId(/^coach-review-dim-produced-/)).toHaveCount(12);
+    await expect(produced.getByTestId('coach-review-dim-produced-1')).toHaveText(
+      `Rubric ${RUBRIC.model} · Language model ${SCORED_BY.languageModel} · Prompt version ${SCORED_BY.promptVersion} · Settings: temperature 0, reasoning effort medium`,
+    );
+    await capture(page, testInfo, 'review-dim-provenance-recorded', produced);
+  });
+});
 
 test.describe('Amending a delivered report', () => {
   test('shows the delivered version beside the amended one, and a parallel-run revision waits for cutover', async ({ page }, testInfo) => {
@@ -332,7 +346,11 @@ test.describe('Correcting a dimension of an undelivered report', () => {
     const panel = page.getByTestId(`coach-review-${OLDER_ID}`);
     await expect(panel).toHaveClass(/ph-no-capture/);
     await expect(panel.getByTestId(/^coach-review-dim-provenance-/)).toHaveCount(12);
-    await expect(panel.getByTestId('coach-review-dim-provenance-3')).toHaveText(`Scored by the model (${RUBRIC.model})`);
+    await expect(panel.getByTestId('coach-review-dim-provenance-3')).toHaveText('Scored by the model');
+    await expect(panel.getByTestId('coach-review-dim-produced-3')).toHaveText(
+      `Rubric ${RUBRIC.model} · Language model not recorded · Prompt version not recorded · Settings not recorded`,
+    );
+    await capture(page, testInfo, 'review-dim-provenance-not-recorded', panel.getByTestId('coach-review-dim-3'));
 
     await panel.getByTestId('coach-review-dim-correct-3').click();
     await expect(panel.getByTestId('coach-review-dim-save-3')).toBeDisabled();
@@ -348,8 +366,9 @@ test.describe('Correcting a dimension of an undelivered report', () => {
       'Dimension 3 corrected to 2, recorded as corrected by hand. Base (clusters) now 76.7 / 100, score 76.7 with bonuses, band 🟢 Strong.',
     );
     await expect(panel.getByTestId('coach-review-dim-provenance-3')).toHaveText('Corrected by hand');
+    await expect(panel.getByTestId('coach-review-dim-produced-3')).toHaveCount(0);
     await expect(panel.getByTestId('coach-review-dim-3')).toContainText('The passage was read but never opened up.');
-    await expect(panel.getByTestId('coach-review-dim-provenance-4')).toHaveText(`Scored by the model (${RUBRIC.model})`);
+    await expect(panel.getByTestId('coach-review-dim-provenance-4')).toHaveText('Scored by the model');
     expect(writes).toEqual([
       [`/coach/admin/reports/${OLDER_ID}/dimensions/3`, { score: 2, rationale: 'The passage was read but never opened up.' }],
     ]);
@@ -369,7 +388,7 @@ test.describe('Correcting a dimension of an undelivered report', () => {
       await panel.getByTestId('coach-review-dim-save-5').click();
       await expect(panel.getByTestId('coach-review-dim-outcome')).toHaveText(text);
       await expect(panel.getByTestId('coach-review-dim-score-5')).toHaveValue('2');
-      await expect(panel.getByTestId('coach-review-dim-provenance-5')).toHaveText(`Scored by the model (${RUBRIC.model})`);
+      await expect(panel.getByTestId('coach-review-dim-provenance-5')).toHaveText('Scored by the model');
       await capture(page, testInfo, `pa-dim-refused-${kind}`, panel.getByTestId('coach-review-dim-5'));
     });
   }

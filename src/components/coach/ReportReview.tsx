@@ -29,6 +29,7 @@ import {
   refusalWords,
   type ReportAmendment,
   type ReportReviewState,
+  type ReviewDimension,
   type ReportRevision,
   type ReportVersion,
   type RevisionResult,
@@ -496,9 +497,40 @@ function FirstLessonPanel({
   );
 }
 
-function provenanceText(d: ReportReviewState['dimensions'][number]): string {
-  if (d.provenance === 'human') return 'Corrected by hand';
-  return d.modelVersion ? `Scored by the model (${d.modelVersion})` : 'Scored by the model';
+function provenanceText(d: ReviewDimension): string {
+  return d.provenance === 'human' ? 'Corrected by hand' : 'Scored by the model';
+}
+
+const NOT_RECORDED = 'not recorded';
+
+function producedText(d: ReviewDimension): string {
+  const settings = d.settings
+    ? `Settings: temperature ${d.settings.temperature ?? NOT_RECORDED}, ${
+        d.settings.reasoningEffort ? `reasoning effort ${d.settings.reasoningEffort}` : 'no reasoning-effort setting'
+      }`
+    : `Settings ${NOT_RECORDED}`;
+  return [
+    `Rubric ${d.modelVersion ?? NOT_RECORDED}`,
+    `Language model ${d.languageModel ?? NOT_RECORDED}`,
+    `Prompt version ${d.promptVersion ?? NOT_RECORDED}`,
+    settings,
+  ].join(' · ');
+}
+
+function ProducedBy({ review, dimName }: { review: ReportReviewState; dimName: (n: number) => string }) {
+  const machine = review.dimensions.filter((d) => d.provenance !== 'human');
+  if (!machine.length) return null;
+  return (
+    <div data-testid="coach-review-produced">
+      <h4 style={h4}>What produced the machine scores</h4>
+      {machine.map((d) => (
+        <div key={d.n} style={{ fontSize: 12.5, color: dt.textLight, marginBottom: 4 }}>
+          <span style={{ fontWeight: 600, color: dt.body }}>{dimName(d.n)}: </span>
+          <span data-testid={`coach-review-dim-produced-${d.n}`}>{producedText(d)}</span>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 function DimensionCorrections({
@@ -570,6 +602,11 @@ function DimensionCorrections({
                 {provenanceText(d)}
               </span>
             </div>
+            {d.provenance !== 'human' && (
+              <span data-testid={`coach-review-dim-produced-${d.n}`} style={{ fontSize: 12, color: dt.textLight }}>
+                {producedText(d)}
+              </span>
+            )}
             {!open && <p style={{ ...muted, margin: 0, color: dt.body }}>{d.rationale}</p>}
             {notApplicable && <p style={{ ...muted, margin: 0 }}>Not applicable on a first lesson. Clear the first-lesson flag to score it.</p>}
             {!notApplicable && !open && (
@@ -868,9 +905,12 @@ function AmendPanel({
       )}
 
       {!edit && (
-        <button type="button" onClick={open} data-testid="coach-amend-open" style={btn}>
-          Amend this report
-        </button>
+        <>
+          <button type="button" onClick={open} data-testid="coach-amend-open" style={btn}>
+            Amend this report
+          </button>
+          <ProducedBy review={review} dimName={dimName} />
+        </>
       )}
 
       {edit && edit.confirming && (
