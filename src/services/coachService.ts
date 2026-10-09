@@ -263,7 +263,6 @@ const REFUSAL_WORDS: Record<string, string> = {
   'send-failed': 'the mail service did not take it for every recipient',
   'governance-blocked': 'it breaks a governance rule',
   'cold-recall-improvement': COLD_RECALL_WHY,
-  'calibration-blocked': 'the scoring has not passed its calibration check',
   'awaiting-release': 'it is held until an admin releases it',
   'already-delivered': 'it was already delivered',
   'in-flight': 'another request is delivering it right now',
@@ -447,7 +446,7 @@ export function sessionDateText(session: { sessionDate: string; sessionStartedAt
 
 export const PARALLEL_RUN_COPY = 'Parallel-run copy: kept for comparison, never sent.';
 
-export type HoldKind = 'review' | 'reattributed' | 'calibration' | 'governance' | 'cold-recall' | 'no-mailer' | 'send-failed';
+export type HoldKind = 'review' | 'reattributed' | 'governance' | 'cold-recall' | 'no-mailer' | 'send-failed';
 
 export interface PipelineFailure {
   sourceSessionId: string;
@@ -505,7 +504,6 @@ export interface ReleaseOutcome {
   delivered: boolean;
   refusal?: string;
   violations?: string[];
-  shortfalls?: string[];
   coldRecall?: string[];
   skipped?: string[];
 }
@@ -819,12 +817,15 @@ export async function addCoachLeader(input: {
   return data.coach;
 }
 
-export function updateLeaderEmail(
-  coachId: string,
-  email: string,
-  confirm = false,
-): Promise<{ email: string; noticeSent: boolean }> {
-  return coachRequest<{ email: string; noticeSent: boolean }>(`admin/leaders/${encodeURIComponent(coachId)}/email`, {
+export interface LeaderEmailRequest {
+  email: string;
+  status: 'pending' | 'unchanged';
+  expiresAt: string | null;
+  confirmationSent: boolean;
+}
+
+export function updateLeaderEmail(coachId: string, email: string, confirm = false): Promise<LeaderEmailRequest> {
+  return coachRequest<LeaderEmailRequest>(`admin/leaders/${encodeURIComponent(coachId)}/email`, {
     method: 'PUT',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(confirm ? { email, confirm: true } : { email }),
@@ -1042,6 +1043,10 @@ export function fetchLeaderMonthlySummary(
 }
 
 // ─── Small view helpers (shared across the coach screens) ──────────────────
+
+export function shortDate(iso: string): string {
+  return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
 
 /**
  * Brand-aligned colour for a status label, highest band first.

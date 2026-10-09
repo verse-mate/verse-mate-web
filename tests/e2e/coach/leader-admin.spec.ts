@@ -27,7 +27,7 @@ async function openPipeline(page: import('@playwright/test').Page) {
 }
 
 test.describe("A leader's address", () => {
-  test('a placeholder reads as no real address yet, and an admin sets the real one', async ({ page }, testInfo) => {
+  test('a placeholder reads as no real address yet, and an admin asks for the real one to be confirmed', async ({ page }, testInfo) => {
     const writes: string[] = [];
     await useCoachApi(page, { admin: true, leaderAdmin: true, onAdminWrite: (m, p) => writes.push(`${m} ${p}`) });
     await openPipeline(page);
@@ -53,13 +53,14 @@ test.describe("A leader's address", () => {
 
     await row.getByTestId(`coach-address-input-${PLACEHOLDER_LEADER.id}`).fill('  Dana@Example.test ');
     await row.getByTestId(`coach-address-save-${PLACEHOLDER_LEADER.id}`).click();
-    await expect(row.getByTestId(`coach-address-${PLACEHOLDER_LEADER.id}`)).toHaveText('dana@example.test');
-    await expect(page.getByTestId(`coach-pipeline-${SKIPPED_SESSION.sourceSessionId}`)).toHaveCount(0);
+    await expect(page.getByText('A confirmation link went to the new address. The address changes only once it is confirmed there, by Oct 16, 2026; reports keep going to the current address until then.')).toBeVisible();
+    await expect(row.getByTestId(`coach-address-${PLACEHOLDER_LEADER.id}`)).toHaveText('No real address yet');
+    await expect(page.getByTestId(`coach-pipeline-${SKIPPED_SESSION.sourceSessionId}`)).toHaveCount(1);
     expect(writes).toContain(`PUT /coach/admin/leaders/${PLACEHOLDER_LEADER.id}/email`);
     await capture(page, testInfo, 'w2a-address-saved', row);
   });
 
-  test("the benchmark leader's address changes only after the admin confirms it", async ({ page }, testInfo) => {
+  test("the benchmark leader's address change is sent for confirmation only after the admin confirms it", async ({ page }, testInfo) => {
     const writes: Array<[string, unknown]> = [];
     await useCoachApi(page, { admin: true, leaderAdmin: true, pipelineLive: true, onAdminWrite: (_m, p, b) => writes.push([p, b]) });
     await openPipeline(page);
@@ -74,8 +75,8 @@ test.describe("A leader's address", () => {
     await capture(page, testInfo, 'p2-benchmark-confirm', row);
 
     await ask.getByTestId(`coach-address-confirm-save-${LEADER_ID}`).click();
-    await expect(row.getByTestId(`coach-address-${LEADER_ID}`)).toHaveText('avery.new@example.test');
-    await expect(page.getByText('Address saved. The next report goes to it, and a notice went to the old address.')).toBeVisible();
+    await expect(page.getByText('A confirmation link went to the new address. The address changes only once it is confirmed there, by Oct 16, 2026; reports keep going to the current address until then.')).toBeVisible();
+    await expect(row.getByTestId(`coach-address-${LEADER_ID}`)).toHaveText('leader@example.test');
     expect(writes).toEqual([
       [`/coach/admin/leaders/${LEADER_ID}/email`, { email: 'avery.new@example.test' }],
       [`/coach/admin/leaders/${LEADER_ID}/email`, { email: 'avery.new@example.test', confirm: true }],
@@ -234,7 +235,8 @@ test.describe('A failed send in the pipeline list', () => {
     await row.getByTestId(`coach-address-input-${FAILED_SEND_LEADER.id}`).fill('carol@church.test');
     await capture(page, testInfo, 'p5-failed-send-address-fix', row);
     await row.getByTestId(`coach-address-save-${FAILED_SEND_LEADER.id}`).click();
-    await expect(row.getByTestId(`coach-address-${FAILED_SEND_LEADER.id}`)).toHaveText('carol@church.test');
+    await expect(page.getByText('A confirmation link went to the new address. The address changes only once it is confirmed there, by Oct 16, 2026; reports keep going to the current address until then.')).toBeVisible();
+    await expect(row.getByTestId(`coach-address-${FAILED_SEND_LEADER.id}`)).toHaveText('carol@example.test');
 
     await row.getByTestId(`coach-pipeline-requeue-${exhausted.sourceSessionId}`).click();
     await expect(page.getByTestId(`coach-pipeline-${exhausted.sourceSessionId}`)).toHaveCount(0);

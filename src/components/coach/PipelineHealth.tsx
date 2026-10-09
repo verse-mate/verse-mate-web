@@ -28,8 +28,10 @@ import {
   COLD_RECALL_WHY,
   refusalText,
   refusalWords,
+  type LeaderEmailRequest,
   type ReleaseOutcome,
   sessionDateText,
+  shortDate,
 } from '@/services/coachService';
 import { dt } from './dashboardTheme';
 
@@ -64,7 +66,7 @@ function releaseText(outcome: ReleaseOutcome): Outcome {
   if (outcome.refusal === 'cold-recall-improvement') {
     return { tone: 'refused', text: `Not delivered: ${COLD_RECALL_WHY}.`, held: outcome.coldRecall ?? [] };
   }
-  const reasons = [...(outcome.violations ?? []), ...(outcome.shortfalls ?? [])];
+  const reasons = outcome.violations ?? [];
   return {
     tone: 'refused',
     text: `Not delivered: ${refusalWords(outcome.refusal)}${reasons.length ? ` (${reasons.join(', ')})` : ''}`,
@@ -339,7 +341,7 @@ export default function PipelineHealth() {
                         <div data-testid={`coach-coverage-attested-${l.coachId}`} style={{ fontSize: 12.5, color: dt.textLight }}>
                           Marked not teaching by{' '}
                           <span className={REPLAY_BLOCK_CLASS}>{l.attestedBy ?? 'an admin'}</span> on{' '}
-                          {new Date(l.attestedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                          {shortDate(l.attestedAt)}
                         </div>
                       )}
                     </div>
@@ -362,6 +364,9 @@ const ACCOUNT_TEXT: Record<string, string> = {
 
 function coverageBadge(l: CoverageLeader): { text: string; ok: boolean } {
   if (l.basis === 'attested-not-teaching') return { text: 'Not teaching (attested)', ok: true };
+  if (l.basis === 'attestation-lapsed') {
+    return { text: `Not covered · Not-teaching attestation lapsed (${l.attestedAt ? shortDate(l.attestedAt) : 'date not recorded'})`, ok: false };
+  }
   if (l.covered) return { text: `Covered · ${l.observedSessions} observed`, ok: true };
   return { text: 'Not covered · Not observed', ok: false };
 }
@@ -369,7 +374,7 @@ function coverageBadge(l: CoverageLeader): { text: string; ok: boolean } {
 function NotTeaching({ leader }: { leader: CoverageLeader }) {
   const set = useSetNotTeaching();
   const [error, setError] = useState<string | null>(null);
-  const attested = Boolean(leader.attestedAt);
+  const attested = Boolean(leader.attestedAt) && leader.basis !== 'attestation-lapsed';
   const badge = coverageBadge(leader);
 
   const toggle = () => {
@@ -413,6 +418,20 @@ function NotTeaching({ leader }: { leader: CoverageLeader }) {
   );
 }
 
+function announceAddressRequest(saved: LeaderEmailRequest) {
+  if (saved.status === 'unchanged') {
+    toast.success("That is already the leader's address. Nothing changed.");
+  } else if (saved.confirmationSent) {
+    toast.success(
+      `A confirmation link went to the new address. The address changes only once it is confirmed there${saved.expiresAt ? `, by ${shortDate(saved.expiresAt)}` : ''}; reports keep going to the current address until then.`,
+    );
+  } else {
+    toast.warning(
+      'The address change is waiting for confirmation, but the confirmation email was not sent. Nothing changes until it is confirmed; save the address again to send a new link.',
+    );
+  }
+}
+
 function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
   const update = useUpdateLeaderEmail();
   const [draft, setDraft] = useState<string | null>(null);
@@ -431,11 +450,7 @@ function LeaderAddress({ coachId, email }: { coachId: string; email: string }) {
       {
         onSuccess: (saved) => {
           setDraft(null);
-          toast.success(
-            saved.noticeSent
-              ? 'Address saved. The next report goes to it, and a notice went to the old address.'
-              : 'Address saved. The next report goes to it.',
-          );
+          announceAddressRequest(saved);
         },
         onError: (err) => (needsBenchmarkConfirm(err) ? setConfirming(true) : setError(refusalText(err))),
       },

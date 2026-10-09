@@ -232,7 +232,7 @@ describe('what is stuck in the pipeline', () => {
     expect(outcome).not.toHaveTextContent('governance-blocked');
   });
 
-  it.each(['send-failed', 'calibration-blocked', 'awaiting-release', 'already-delivered', 'in-flight', 'unknown-report'])(
+  it.each(['send-failed', 'awaiting-release', 'already-delivered', 'in-flight', 'unknown-report'])(
     'shows a release declined as %s in words, never as its code',
     async (refusal) => {
       vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([HELD]));
@@ -394,13 +394,11 @@ describe("a leader's address", () => {
     expect(real.closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
   });
 
-  it("replaces a leader's address and reads the roster again", async () => {
+  it("sends a confirmation link for a leader's new address, keeps the shown address, and reads coverage again", async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
-    const coverage = vi
-      .spyOn(coachService, 'fetchCoverage')
-      .mockResolvedValueOnce({ ...COVERAGE, leaders: [PLACEHOLDER] })
-      .mockResolvedValue({ ...COVERAGE, leaders: [{ ...PLACEHOLDER, email: 'wyatt@example.test' }] });
-    const update = vi.spyOn(coachService, 'updateLeaderEmail').mockResolvedValue({ email: 'wyatt@example.test', noticeSent: false });
+    const coverage = vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [PLACEHOLDER] });
+    const update = vi.spyOn(coachService, 'updateLeaderEmail').mockResolvedValue({ email: 'wyatt@example.test', status: 'pending', expiresAt: '2026-10-16T15:00:00.000Z', confirmationSent: true });
+    const success = vi.spyOn(toast, 'success');
     renderView();
 
     fireEvent.click(await screen.findByTestId('coach-address-edit-wyatt-wellington'));
@@ -410,9 +408,37 @@ describe("a leader's address", () => {
     fireEvent.click(screen.getByTestId('coach-address-save-wyatt-wellington'));
 
     await waitFor(() => expect(update).toHaveBeenCalledWith('wyatt-wellington', 'wyatt@example.test', false));
-    await waitFor(() => expect(screen.getByTestId('coach-address-wyatt-wellington')).toHaveTextContent('wyatt@example.test'));
-    expect(coverage).toHaveBeenCalledTimes(2);
-    expect(screen.queryByTestId('coach-address-input-wyatt-wellington')).toBeNull();
+    await waitFor(() => expect(screen.queryByTestId('coach-address-input-wyatt-wellington')).toBeNull());
+    expect(success).toHaveBeenCalledWith(
+      'A confirmation link went to the new address. The address changes only once it is confirmed there, by Oct 16, 2026; reports keep going to the current address until then.',
+    );
+    expect(screen.getByTestId('coach-address-wyatt-wellington')).toHaveTextContent('No real address yet');
+    await waitFor(() => expect(coverage).toHaveBeenCalledTimes(2));
+  });
+
+  it('says plainly when the confirmation email could not be sent, and when the address was already the leader\'s', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    vi.spyOn(coachService, 'updateLeaderEmail')
+      .mockResolvedValueOnce({ email: 'amy.new@example.test', status: 'pending', expiresAt: '2026-10-16T15:00:00.000Z', confirmationSent: false })
+      .mockResolvedValueOnce({ email: 'amy@example.test', status: 'unchanged', expiresAt: null, confirmationSent: false });
+    const success = vi.spyOn(toast, 'success');
+    const warning = vi.spyOn(toast, 'warning');
+    renderView();
+
+    fireEvent.click(await screen.findByTestId('coach-address-edit-amy-lee'));
+    fireEvent.change(screen.getByTestId('coach-address-input-amy-lee'), { target: { value: 'amy.new@example.test' } });
+    fireEvent.click(screen.getByTestId('coach-address-save-amy-lee'));
+    await waitFor(() =>
+      expect(warning).toHaveBeenCalledWith(
+        'The address change is waiting for confirmation, but the confirmation email was not sent. Nothing changes until it is confirmed; save the address again to send a new link.',
+      ),
+    );
+
+    fireEvent.click(await screen.findByTestId('coach-address-edit-amy-lee'));
+    fireEvent.change(screen.getByTestId('coach-address-input-amy-lee'), { target: { value: 'amy@example.test' } });
+    fireEvent.click(screen.getByTestId('coach-address-save-amy-lee'));
+    await waitFor(() => expect(success).toHaveBeenCalledWith('That is already the leader\'s address. Nothing changed.'));
   });
 
   it("asks the admin to confirm a change to the benchmark leader's address, then sends it confirmed", async () => {
@@ -428,7 +454,7 @@ describe("a leader's address", () => {
           { refusal: 'confirm-required' },
         ),
       )
-      .mockResolvedValueOnce({ email: 'milo.new@example.test', noticeSent: true });
+      .mockResolvedValueOnce({ email: 'milo.new@example.test', status: 'pending', expiresAt: '2026-10-16T15:00:00.000Z', confirmationSent: true });
     const success = vi.spyOn(toast, 'success');
     renderView();
 
@@ -444,7 +470,9 @@ describe("a leader's address", () => {
 
     await waitFor(() => expect(update).toHaveBeenLastCalledWith('milo-kerr', 'milo.new@example.test', true));
     await waitFor(() => expect(screen.queryByTestId('coach-address-input-milo-kerr')).toBeNull());
-    expect(success).toHaveBeenCalledWith('Address saved. The next report goes to it, and a notice went to the old address.');
+    expect(success).toHaveBeenCalledWith(
+      'A confirmation link went to the new address. The address changes only once it is confirmed there, by Oct 16, 2026; reports keep going to the current address until then.',
+    );
   });
 
   it('drops the confirmation when the admin edits the address again', async () => {
@@ -841,7 +869,7 @@ describe('a failed send', () => {
   it('a send whose retries ran out offers the address fix and the requeue', async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([EXHAUSTED]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
-    const update = vi.spyOn(coachService, 'updateLeaderEmail').mockResolvedValue({ email: 'milo@church.test', noticeSent: false });
+    const update = vi.spyOn(coachService, 'updateLeaderEmail').mockResolvedValue({ email: 'milo@church.test', status: 'pending', expiresAt: '2026-10-16T15:00:00.000Z', confirmationSent: true });
     const requeue = vi.spyOn(coachService, 'requeuePipelineFailure').mockResolvedValue({ requeued: true });
     renderView();
 
@@ -964,6 +992,22 @@ describe('a leader who is not teaching', () => {
     expect(within(by).getByText('admin@example.test').closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
     expect(screen.getByTestId('coach-coverage-basis-amy-lee')).toHaveTextContent('Not observed');
     expect(screen.queryByTestId('coach-coverage-attested-amy-lee')).toBeNull();
+  });
+
+  it('reads as not covered once the attestation lapsed, naming when it was made, and offers marking it again', async () => {
+    const LAPSED = { ...ATTESTED, covered: false, basis: 'attestation-lapsed', attestedAt: '2026-08-01T15:00:00.000Z' };
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [LAPSED] });
+    const set = vi.spyOn(coachService, 'setNotTeaching').mockResolvedValue({ attested: true });
+    renderView();
+
+    const badge = await screen.findByTestId('coach-coverage-basis-desmond-vane');
+    expect(badge).toHaveTextContent('Not covered · Not-teaching attestation lapsed (Aug 1, 2026)');
+    expect(badge).not.toHaveTextContent('attested)');
+    const button = screen.getByTestId('coach-coverage-not-teaching-desmond-vane');
+    expect(button).toHaveTextContent('Mark not teaching');
+    fireEvent.click(button);
+    await waitFor(() => expect(set).toHaveBeenCalledWith('desmond-vane', true));
   });
 
   it('is attested from the coverage list, and coverage is read again', async () => {

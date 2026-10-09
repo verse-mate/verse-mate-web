@@ -304,6 +304,18 @@ export interface CoachApiOptions {
   failedSends?: boolean;
   parallelRunCopies?: boolean;
   pendingReshare?: boolean;
+  addressRequests?: AddressRequest[];
+  onAddressRequest?: (token: string) => void;
+}
+
+export interface AddressRequest {
+  token: string;
+  coachId: string;
+  newEmail: string;
+  state: string;
+  reason: string | null;
+  requestedAt: string;
+  expiresAt: string;
 }
 
 type ReviewKind = 'delivered' | 'undelivered' | 'in-flight' | 'partial' | 'legacy';
@@ -397,6 +409,9 @@ function reviewOf(reportId: string, kind: ReviewKind) {
       rationale: `The model's reason for dimension ${d.n}`,
       provenance: 'machine',
       modelVersion: RUBRIC.model,
+      languageModel: null as string | null,
+      promptVersion: null as string | null,
+      settings: null as { temperature: number | null; reasoningEffort: string | null } | null,
     })),
     inFlight: kind === 'in-flight',
     partial: kind === 'partial',
@@ -979,6 +994,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     ...(opts.pendingReshare ? [{ ...PENDING_RESHARE }] : []),
   ];
   const coverage = { ...COVERAGE, leaders: COVERAGE.leaders.map((l) => ({ ...l })) };
+  const addressRequests: AddressRequest[] = (opts.addressRequests ?? []).map((r) => ({ ...r }));
   const roster = [{ id: LEADER_ID, name: ME.profile.name }];
   if (opts.failedSends) roster.push({ id: FAILED_SEND_LEADER.id, name: FAILED_SEND_LEADER.name });
   if (opts.leaderAdmin) {
@@ -1052,11 +1068,21 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
       if (!leader) return refuse(route, 'unknown-leader');
       if (coverage.leaders.some((l) => l.email === address && l.coachId !== leader.coachId)) return refuse(route, 'taken');
       if (leader.coachId === LEADER_ID && body.confirm !== true) return refuse(route, 'confirm-required');
-      const noticeSent = leader.email !== address && !isPlaceholder(leader.email) && !!opts.pipelineLive && !opts.noMailer;
-      leader.email = address;
-      const i = stuck.findIndex((x) => x.coachId === leader.coachId && x.state === 'delivered');
-      if (i >= 0) stuck.splice(i, 1);
-      return route.fulfill({ json: { email: address, noticeSent } });
+      if (leader.email === address) return route.fulfill({ json: { email: address, status: 'unchanged', expiresAt: null, confirmationSent: false } });
+      for (const r of addressRequests) if (r.coachId === leader.coachId && r.state === 'pending') r.state = 'superseded';
+      const request = {
+        token: `token-${leader.coachId}-${addressRequests.length + 1}`,
+        coachId: leader.coachId,
+        newEmail: address,
+        state: 'pending',
+        reason: null as string | null,
+        requestedAt: '2026-10-09T14:00:00.000Z',
+        expiresAt: '2026-10-16T14:00:00.000Z',
+      };
+      addressRequests.push(request);
+      opts.onAddressRequest?.(request.token);
+      const confirmationSent = !isPlaceholder(address) && !opts.noMailer;
+      return route.fulfill({ json: { email: address, status: 'pending', expiresAt: request.expiresAt, confirmationSent } });
     }
     const notTeaching = url.pathname.match(/admin\/leaders\/([^/]+)\/not-teaching$/);
     if (notTeaching) {

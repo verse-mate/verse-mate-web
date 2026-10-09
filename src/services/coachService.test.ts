@@ -317,9 +317,14 @@ describe('coachService', () => {
       expect(url).toContain('/coach/admin/leaders/wyatt-wellington/email');
       expect(init?.method).toBe('PUT');
       expect(JSON.parse(String(init?.body))).toEqual({ email: 'Wyatt@Example.test' });
-      return jsonResponse({ email: 'wyatt@example.test', noticeSent: true });
+      return jsonResponse({ email: 'wyatt@example.test', status: 'pending', expiresAt: '2026-10-16T15:00:00.000Z', confirmationSent: true });
     });
-    expect(await updateLeaderEmail('wyatt-wellington', 'Wyatt@Example.test')).toEqual({ email: 'wyatt@example.test', noticeSent: true });
+    expect(await updateLeaderEmail('wyatt-wellington', 'Wyatt@Example.test')).toEqual({
+      email: 'wyatt@example.test',
+      status: 'pending',
+      expiresAt: '2026-10-16T15:00:00.000Z',
+      confirmationSent: true,
+    });
   });
 
   it("asks for the benchmark confirm on the server's confirm-required refusal code, never on the wording of its message", async () => {
