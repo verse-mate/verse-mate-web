@@ -24,42 +24,48 @@ async function openPipeline(page: Page) {
 }
 
 test.describe('The address confirmation page', () => {
-  test('opening the link sends no confirmation; the Confirm button does, once', async ({ page }, testInfo) => {
+  test('opening the link sends no confirmation and takes the token out of the address bar; the Confirm button confirms, once', async ({ page }, testInfo) => {
     const calls: string[] = [];
     await useCoachApi(page, { signedOut: true, addressRequests: [request({})], onConfirmAddress: (m) => calls.push(m) });
 
     await page.goto('/coach/confirm-address?token=token-pending');
     const pending = page.getByTestId('coach-confirm-address-pending');
     await expect(pending).toContainText('Carol Chen');
-    await expect(pending).toContainText('to ca*******@example.test instead of ca***@example.test');
+    await expect(pending).toContainText('to go to c***@example.test.');
+    await expect(pending).not.toContainText('instead of');
     await expect(pending).toContainText('Nothing changes until you confirm');
     await expect(pending).toContainText('Oct 16, 2026');
+    await expect(page).toHaveURL(/\/coach\/confirm-address$/);
     await page.waitForLoadState('networkidle');
-    expect(calls).toEqual(['GET']);
+    expect(calls).toEqual(['describe']);
     await capture(page, testInfo, 'confirm-address-pending');
 
     await page.getByTestId('coach-confirm-address-submit').click();
     await expect(page.getByTestId('coach-confirm-address-confirmed')).toContainText(
-      "Confirmed. Carol Chen's coaching reports now go to ca*******@example.test.",
+      "Confirmed. Carol Chen's coaching reports now go to c***@example.test.",
     );
-    expect(calls).toEqual(['GET', 'POST']);
+    expect(calls).toEqual(['describe', 'confirm']);
     await capture(page, testInfo, 'confirm-address-confirmed');
   });
 
   for (const [state, words] of [
     ['expired', 'This link expired on Oct 16, 2026, so the address was not changed.'],
     ['superseded', 'A newer address change replaced this one'],
-    ['confirmed', 'This change is already confirmed.'],
+    ['confirmed', 'This change is already confirmed, so this link no longer works.'],
     ['refused', 'another leader already uses that address'],
   ] as const) {
-    test(`a ${state} change says so in words and offers no confirm`, async ({ page }, testInfo) => {
+    test(`a ${state} change says so in words, names no one and offers no confirm`, async ({ page }, testInfo) => {
       const calls: string[] = [];
       await useCoachApi(page, { signedOut: true, addressRequests: [request({ state })], onConfirmAddress: (m) => calls.push(m) });
 
       await page.goto('/coach/confirm-address?token=token-pending');
-      await expect(page.getByTestId(`coach-confirm-address-${state}`)).toContainText(words);
+      const shown = page.getByTestId(`coach-confirm-address-${state}`);
+      await expect(shown).toContainText(words);
+      await expect(page.getByTestId('coach-confirm-address')).not.toContainText('Carol');
+      await expect(page.getByTestId('coach-confirm-address')).not.toContainText('@');
       await expect(page.getByTestId('coach-confirm-address-submit')).toHaveCount(0);
-      expect(calls).toEqual(['GET']);
+      await expect(page).toHaveURL(/\/coach\/confirm-address$/);
+      expect(calls).toEqual(['describe']);
       await capture(page, testInfo, `confirm-address-opened-${state}`);
     });
   }

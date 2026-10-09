@@ -45,7 +45,7 @@ import {
   updateCoachClass,
   updateLeaderEmail,
   needsBenchmarkConfirm,
-  fetchAddressChange,
+  describeAddressChange,
   confirmAddressChange,
   fetchParallelRunComparison,
   refusalCode,
@@ -561,13 +561,12 @@ describe('coachService', () => {
 });
 
 describe('the address confirmation link', () => {
-  it('reads the change by its token, encoded, and changes nothing by reading', async () => {
-    mockFetch(() =>
-      jsonResponse({ leaderName: 'Leader A', currentEmail: 'le***@example.test', newEmail: 'ne***@example.test', state: 'pending', expiresAt: '2026-10-16T15:00:00.000Z' }),
-    );
-    const change = await fetchAddressChange('a+b/c');
-    expect(calls[0].url).toMatch(/\/coach\/confirm-address\?token=a%2Bb%2Fc$/);
-    expect(calls[0].init?.method ?? 'GET').toBe('GET');
+  it('describes a change with a POST carrying the token in the body, never in the address', async () => {
+    mockFetch(() => jsonResponse({ leaderName: 'Leader A', newEmail: 'n***@example.test', state: 'pending', expiresAt: '2026-10-16T15:00:00.000Z' }));
+    const change = await describeAddressChange('a+b/c');
+    expect(calls[0].url).toMatch(/\/coach\/confirm-address\/describe$/);
+    expect(calls[0].init?.method).toBe('POST');
+    expect(JSON.parse(String(calls[0].init?.body))).toEqual({ token: 'a+b/c' });
     expect(change.state).toBe('pending');
   });
 

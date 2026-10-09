@@ -8,6 +8,7 @@
  */
 
 import { useMutation, useQuery } from '@tanstack/react-query';
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import ScreenHeader from '@/components/ScreenHeader';
@@ -15,7 +16,7 @@ import { CoachCard } from '@/components/coach/CoachUi';
 import {
   type AddressChangeDescription,
   confirmAddressChange,
-  fetchAddressChange,
+  describeAddressChange,
   refusalCode,
   refusalText,
   shortDate,
@@ -46,9 +47,7 @@ function stateWords(state: Shown, change: AddressChangeDescription | undefined):
     case 'superseded':
       return 'A newer address change replaced this one, so this link no longer works. Use the most recent confirmation email.';
     case 'confirmed':
-      return change
-        ? `This change is already confirmed. ${change.leaderName}'s coaching reports go to ${change.newEmail}.`
-        : 'This change is already confirmed.';
+      return 'This change is already confirmed, so this link no longer works.';
     case 'refused':
       return 'This change was not made: another leader already uses that address. Your program admin has been shown why.';
     default:
@@ -57,11 +56,17 @@ function stateWords(state: Shown, change: AddressChangeDescription | undefined):
 }
 
 export default function CoachConfirmAddressScreen() {
-  const [params] = useSearchParams();
-  const token = params.get('token') ?? '';
+  const [params, setParams] = useSearchParams();
+  const [token] = useState(() => params.get('token') ?? '');
+  useEffect(() => {
+    if (!params.has('token')) return;
+    const rest = new URLSearchParams(params);
+    rest.delete('token');
+    setParams(rest, { replace: true });
+  }, [params, setParams]);
   const change = useQuery({
     queryKey: ['coach', 'confirm-address', token],
-    queryFn: () => fetchAddressChange(token),
+    queryFn: () => describeAddressChange(token),
     enabled: token !== '',
     retry: false,
   });
@@ -74,7 +79,7 @@ export default function CoachConfirmAddressScreen() {
   const data = change.data;
 
   let body: React.ReactNode;
-  if (confirm.isSuccess && data) {
+  if (confirm.isSuccess && data?.state === 'pending') {
     body = (
       <div data-testid="coach-confirm-address-confirmed" role="status">
         <h2 style={h2}>Address confirmed</h2>
@@ -99,13 +104,12 @@ export default function CoachConfirmAddressScreen() {
         </button>
       </div>
     );
-  } else if (shown === 'pending' && data) {
+  } else if (shown === 'pending' && data?.state === 'pending') {
     body = (
       <div data-testid="coach-confirm-address-pending">
         <h2 style={h2}>Confirm your coaching address</h2>
         <p style={p}>
-          A program admin asked for {data.leaderName}'s VerseMate coaching reports to go to <strong>{data.newEmail}</strong> instead of{' '}
-          {data.currentEmail}.
+          A program admin asked for {data.leaderName}'s VerseMate coaching reports to go to <strong>{data.newEmail}</strong>.
         </p>
         <p style={p}>
           Nothing changes until you confirm. Reports keep going to the current address until then. This link works once and expires on{' '}

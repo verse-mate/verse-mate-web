@@ -79,7 +79,7 @@ const ROSTER = [
   { id: 'wyatt-wellington', name: 'Wyatt Wellington', group: '', coachName: '', sessionCount: 2, latest: null },
 ];
 
-const COVERAGE = {
+const COVERAGE: coachService.CoverageReport = {
   windowDays: 30,
   allCovered: false,
   leaders: [
@@ -422,7 +422,7 @@ describe("a leader's address", () => {
       ...COVERAGE,
       leaders: [COVERAGE.leaders[0], COVERAGE.leaders[1], { ...COVERAGE.leaders[1], coachId: 'wyatt-wellington', name: 'Wyatt Wellington', email: 'wyatt@example.test' }],
     });
-    const change = (state: string, newEmail: string, reason: string | null = null) => ({
+    const change = (state: coachService.AddressChange['state'], newEmail: string, reason: string | null = null) => ({
       newEmail,
       state,
       reason,
@@ -775,6 +775,21 @@ describe('a first lesson held for a cold-recall improvement', () => {
   });
 });
 
+describe('a first report held under a new scoring version', () => {
+  it('says in words that it waits for a review, and that releasing it also lets the leader\'s other reports for that version go', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(
+      page([{ ...HELD, sourceSessionId: 'ff-9', reason: 'scored under prompt version 7', holdKind: 'scoring-version' as const }]),
+    );
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue(COVERAGE);
+    renderView();
+
+    const row = await screen.findByTestId('coach-pipeline-ff-9');
+    expect(row).toHaveTextContent('Why: first report under a new scoring version: release after review (scored under prompt version 7).');
+    expect(row).toHaveTextContent("Releasing it also delivers this leader's other reports held for that version.");
+    expect(within(row).getByTestId('coach-pipeline-release-ff-9')).toBeInTheDocument();
+  });
+});
+
 describe('when a session started', () => {
   it('shows the start time beside the date, in the time zone the date is counted in', async () => {
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(
@@ -1008,7 +1023,7 @@ describe('a send skipped for a placeholder address', () => {
 });
 
 describe('a leader who is not teaching', () => {
-  const ATTESTED = {
+  const ATTESTED: coachService.CoverageLeader = {
     ...COVERAGE.leaders[1],
     coachId: 'desmond-vane',
     name: 'Desmond Vane',
@@ -1036,7 +1051,7 @@ describe('a leader who is not teaching', () => {
   });
 
   it('reads as not covered once the attestation lapsed, naming when it was made, and offers marking it again', async () => {
-    const LAPSED = { ...ATTESTED, covered: false, basis: 'attestation-lapsed', attestedAt: '2026-08-01T15:00:00.000Z' };
+    const LAPSED: coachService.CoverageLeader = { ...ATTESTED, covered: false, basis: 'attestation-lapsed', attestedAt: '2026-08-01T15:00:00.000Z' };
     vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
     vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({ ...COVERAGE, leaders: [LAPSED] });
     const set = vi.spyOn(coachService, 'setNotTeaching').mockResolvedValue({ attested: true });
