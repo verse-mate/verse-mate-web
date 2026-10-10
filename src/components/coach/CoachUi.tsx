@@ -14,7 +14,8 @@ import { vmTokens } from '@/styles/themeStyles';
 import { useRubric } from '@/hooks/useRubric';
 import { statusColor } from '@/services/coachService';
 import { dt } from './dashboardTheme';
-import ConfirmEmailGate, { useEmailCheck } from './ConfirmEmailGate';
+import ConfirmEmailGate from './ConfirmEmailGate';
+import { useEmailCheck } from '@/hooks/useCoach';
 import type { CoachAuthReason, CoachReportSummary } from '@/services/coachService';
 
 // ─── Card ──────────────────────────────────────────────────────────────────

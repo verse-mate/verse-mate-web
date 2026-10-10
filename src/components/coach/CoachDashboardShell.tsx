@@ -16,7 +16,8 @@ import { GraduationCap } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import type { CoachAuthReason } from '@/services/coachService';
 import { dt } from './dashboardTheme';
-import ConfirmEmailGate, { useEmailCheck } from './ConfirmEmailGate';
+import ConfirmEmailGate from './ConfirmEmailGate';
+import { useEmailCheck } from '@/hooks/useCoach';
 
 type Page = 'home' | 'sessions' | 'trends';
 

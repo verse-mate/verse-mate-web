@@ -77,6 +77,7 @@ import {
   type BigIdeasReviewRow,
   type RevisionSendResult,
 } from '@/services/coachService';
+import { fetchEmailVerified } from '@/services/emailVerification';
 
 export const coachKeys = {
   me: ['coach', 'me'] as const,
@@ -485,4 +486,9 @@ export function useSaveLeaderAttribution(
       qc.invalidateQueries({ queryKey: coachKeys.coverage });
     },
   });
+}
+
+export function useEmailCheck(enabled: boolean): { pending: boolean; unverified: boolean } {
+  const q = useQuery({ queryKey: ['account', 'email-verified'], queryFn: fetchEmailVerified, enabled, retry: false });
+  return { pending: enabled && q.isLoading, unverified: q.data === false };
 }
