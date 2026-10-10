@@ -19,12 +19,14 @@ const BODY = 'color-mix(in srgb, var(--fg-secondary) 42%, var(--fg-primary))';
 export default function ReportBody({ report }: { report: CoachReport }) {
   // Drop the pipeline's "Score composition" section — that content is the ring
   // breakdown / cluster bars now, so it must not render inline as well.
+  const details = (report.sections ?? []).find((s) => (s.title ?? '').trim() === SESSION_DETAILS);
   const sections = (report.sections ?? []).filter(
-    (s) => !/^score composition$/i.test((s.title ?? '').trim()),
+    (s) => !/^score composition$/i.test((s.title ?? '').trim()) && s !== details,
   );
 
   return (
     <div className={REPLAY_BLOCK_CLASS}>
+      {details?.bullets?.length ? <TitlePage section={details} /> : null}
       {/* Summary + Big Ideas — one collapse for both, side by side on wide screens. */}
       {(report.feedback?.headline || report.feedback?.overview?.length || report.bigIdeas.length > 0) && (
         <CollapsibleSection title="Summary & Big Ideas" accent={vmTokens.gold}>
@@ -95,6 +97,35 @@ export default function ReportBody({ report }: { report: CoachReport }) {
         </CollapsibleSection>
       )}
     </div>
+  );
+}
+
+const SESSION_DETAILS = 'Session Details';
+
+function TitlePage({ section }: { section: CoachReportSection }) {
+  return (
+    <CollapsibleSection title="Session" accent={BLUE}>
+      <div data-testid="coach-report-title-page">
+        <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 6 }}>
+          {(section.bullets ?? []).map((row) => {
+            const at = row.indexOf(': ');
+            const label = at >= 0 ? row.slice(0, at) : row;
+            const value = at >= 0 ? row.slice(at + 2) : '';
+            return (
+              <li key={row} style={{ display: 'flex', gap: 10, fontSize: 15, color: BODY, lineHeight: 1.5 }}>
+                <span style={{ fontWeight: 700, color: vmTokens.textPrimary, minWidth: 130 }}>{label}</span>
+                <span>{value}</span>
+              </li>
+            );
+          })}
+        </ul>
+        {section.paragraphs?.map((para, i) => (
+          <p key={i} style={{ ...proseParagraph, fontStyle: 'italic', marginTop: 12 }}>
+            {para}
+          </p>
+        ))}
+      </div>
+    </CollapsibleSection>
   );
 }
 
