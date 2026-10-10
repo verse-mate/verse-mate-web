@@ -14,6 +14,7 @@ import { vmTokens } from '@/styles/themeStyles';
 import { useRubric } from '@/hooks/useRubric';
 import { statusColor } from '@/services/coachService';
 import { dt } from './dashboardTheme';
+import ConfirmEmailGate, { useEmailCheck } from './ConfirmEmailGate';
 import type { CoachAuthReason, CoachReportSummary } from '@/services/coachService';
 
 // ─── Card ──────────────────────────────────────────────────────────────────
@@ -221,6 +222,7 @@ interface CoachStateProps {
 
 export function CoachStateBoundary({ loading, authError, error, onRetry, children }: CoachStateProps) {
   const navigate = useNavigate();
+  const emailCheck = useEmailCheck(authError === 'not_a_coach');
 
   if (loading) {
     return (
@@ -251,6 +253,14 @@ export function CoachStateBoundary({ loading, authError, error, onRetry, childre
           <LogIn size={16} strokeWidth={2} /> Sign in
         </button>
       </div>
+    );
+  }
+
+  if (authError === 'not_a_coach' && emailCheck.pending) return null;
+
+  if (authError === 'not_a_coach' && emailCheck.unverified) {
+    return (
+      <ConfirmEmailGate container={centeredStyle} title={gateTitle} body={gateBody} button={primaryBtn} iconColor={vmTokens.gold} />
     );
   }
 
