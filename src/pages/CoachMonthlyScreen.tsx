@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { BarChart3, ChevronLeft, ChevronRight } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -9,11 +9,14 @@ import { CoachCard, CoachStateBoundary, SectionLabel, StatusPill } from '@/compo
 import { statusColor, type MonthlyLeader } from '@/services/coachService';
 import { bandHeat, type DimensionBand } from '@/components/coach/dashboardTheme';
 import { useRubric } from '@/hooks/useRubric';
+import ProgramReportView from '@/components/coach/ProgramReportView';
+import MonthlyReportsAdmin from '@/components/coach/MonthlyReportsAdmin';
 
 export default function CoachMonthlyScreen() {
   const navigate = useNavigate();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
-  const [month, setMonth] = useState(currentMonth());
+  const asked = useSearchParams()[0].get('month');
+  const [month, setMonth] = useState(asked && /^\d{4}-\d{2}$/.test(asked) ? asked : currentMonth());
   const query = useAdminMonthly(month);
   const state = coachState(query);
   const data = state.data;
@@ -130,8 +133,9 @@ export default function CoachMonthlyScreen() {
               </CoachCard>
             ) : data ? (
               <>
-                {/* Program narrative (same prose as the monthly PDF) */}
-                {data.narrative &&
+                {data.programReport ? (
+                  <ProgramReportView report={data.programReport} padding={isDesktop ? 22 : 16} />
+                ) : data.narrative &&
                 (data.narrative.executiveSummary.length > 0 || data.narrative.trends.length > 0) ? (
                   <div data-testid="coach-monthly-narrative">
                     <SectionLabel>Executive summary</SectionLabel>
@@ -236,6 +240,9 @@ export default function CoachMonthlyScreen() {
                 </div>
               </>
             ) : null}
+            {data && (
+              <MonthlyReportsAdmin month={month} leaderNames={Object.fromEntries(data.leaders.map((l) => [l.id, l.name]))} />
+            )}
           </CoachStateBoundary>
         </div>
       </div>

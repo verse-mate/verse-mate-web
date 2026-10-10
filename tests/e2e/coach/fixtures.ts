@@ -233,7 +233,7 @@ export const MONTHLY_LEADERS: Record<string, { name: string; strength: string; m
   carol: { name: 'Carol Chen', strength: '', months: [] },
 };
 
-function monthlyFor(id: string, month: string) {
+export function monthlyFor(id: string, month: string) {
   const leader = MONTHLY_LEADERS[id];
   const avg = { tc: 80, bm: 80, ep: 80, br: 80 };
   const months = leader.months ?? [month];
@@ -1011,7 +1011,7 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
   const notACoach = (route: Route) => route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Not a coaching account' } });
   await serve(page, `${API}/coach/classes`, (route) => (opts.admin ? notACoach(route) : route.fulfill({ json: { classes: [] } })));
   await serve(page, `${API}/coach/admin/classes`, (route) => (opts.admin ? route.fulfill({ json: { classes: [] } }) : forbidden(route)));
-  await serve(page, /\/coach\/monthly-summary(\?|$)/, (route) =>
+  await serve(page, (url) => url.href.startsWith(`${API}/coach/monthly-summary`), (route) =>
     opts.admin
       ? notACoach(route)
       : route.fulfill({ json: { profile: { id: LEADER_ID, name: ME.profile.name, group: ME.profile.group }, availableMonths: [], summary: null } }),
@@ -1311,6 +1311,8 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     if (delay) await new Promise((r) => setTimeout(r, delay));
     return route.fulfill({ json: monthlyFor(id, url.searchParams.get('month') ?? '') });
   });
+
+  await serve(page, /\/coach\/admin\/monthly-reports(\?|$)/, (route) => (opts.admin ? route.fulfill({ json: { reports: [] } }) : forbidden(route)));
 
   await serve(page, /\/coach\/admin\/monthly\?/, (route) => {
     const month = new URL(route.request().url()).searchParams.get('month') ?? '';
