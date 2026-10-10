@@ -108,7 +108,7 @@ function ExpandedReport({ report, admin, coachId, leaderName }: BodyProps & { re
   return (
     <div style={{ padding: '0 14px 16px', borderTop: `1px solid ${vmTokens.divider}` }}>
       <p style={metaLine}>
-        {report.duration} · {report.attendees} attending · {report.newcomers} newcomer
+        {report.duration} · {report.attendees === null ? 'attendance not recorded' : `${report.attendees} attending`} · {report.newcomers} newcomer
         {report.newcomers === 1 ? '' : 's'}
       </p>
 
