@@ -419,7 +419,7 @@ function reviewOf(reportId: string, kind: ReviewKind) {
     humanCorrected: false,
     firstLesson: false,
     firstLessonSource: null as string | null,
-    passageBook: 'Obadiah' as string | null,
+    firstLessonLine: null as string | null,
     parallelRun: false,
     dimensions: RUBRIC.dimensions.map((d) => ({
       n: d.n,
@@ -726,6 +726,8 @@ async function revisionRoutes(
     if (action === 'improvements') return editImprovements(route, reportId, review, body);
     if (action === 'first-lesson') {
       if (!body.firstLesson && (body.score == null || !String(body.rationale ?? '').trim())) return refuse(route, 'memory-reinforcement-required');
+      if (!body.firstLesson && (!String(body.bigIdeasReview?.value ?? '').trim() || !body.bigIdeasReview?.rating))
+        return refuse(route, 'big-ideas-review-required');
       if (!review) return refuse(route, 'legacy-report');
       if (opts.deliveredBeforeFlag === reportId) review.delivered = true;
       if (review.partial) return refuse(route, 'partially-delivered');
@@ -733,7 +735,12 @@ async function revisionRoutes(
       if (review.delivered) {
         return amend(route, reportId, review, {
           firstLesson: body.firstLesson,
-          ...(body.firstLesson ? {} : { dimensions: [{ n: MEMORY_REINFORCEMENT, score: body.score, rationale: body.rationale }] }),
+          ...(body.firstLesson
+            ? {}
+            : {
+                bigIdeasReview: body.bigIdeasReview,
+                dimensions: [{ n: MEMORY_REINFORCEMENT, score: body.score, rationale: body.rationale }],
+              }),
         });
       }
       const rationale = String(body.rationale ?? '').trim();
