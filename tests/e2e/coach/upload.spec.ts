@@ -44,7 +44,7 @@ interface UploadApi {
 
 async function useUploadApi(
   page: Page,
-  opts: { admin?: boolean; uploads?: ReturnType<typeof view>[]; refusal?: string; partDelayMs?: number } = {},
+  opts: { admin?: boolean; uploads?: ReturnType<typeof view>[]; refusal?: string; partDelayMs?: number; partStatus?: number } = {},
 ): Promise<UploadApi> {
   const api: UploadApi = { requests: [], puts: [], completes: [] };
   const uploads = [...(opts.uploads ?? [])];
@@ -82,7 +82,7 @@ async function useUploadApi(
     if (route.request().method() === 'OPTIONS') return route.fulfill({ status: 204, headers: cors });
     api.puts.push(new URL(route.request().url()).pathname);
     if (opts.partDelayMs) await new Promise((r) => setTimeout(r, opts.partDelayMs));
-    return route.fulfill({ status: 200, headers: cors, body: '' });
+    return route.fulfill({ status: opts.partStatus ?? 200, headers: cors, body: '' });
   });
   return api;
 }
@@ -165,6 +165,23 @@ test.describe('The upload page (8.9)', () => {
     await expect(page.getByTestId('coach-upload-class')).toHaveValue('class:saturday');
     await expect(page.getByTestId('coach-upload-date')).toHaveValue(daysAgo(3));
     await expect(page.getByTestId('coach-upload-title')).toHaveValue('Week 2');
+  });
+
+  test('A part the storage refuses stops the upload and says so, and the unfinished upload can be tried again', async ({ page }) => {
+    await useCoachApi(page, { pipelineLive: true });
+    const api = await useUploadApi(page, {
+      partStatus: 403,
+      uploads: [view({ id: 'u-unfinished', status: 'uploading', title: 'Week 5' })],
+    });
+    await page.goto('/coach/upload');
+    await fillForm(page, daysAgo(2), VIDEO);
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-problem')).toHaveText('The upload failed: the storage refused the file (403). Try again.');
+    expect(api.completes).toEqual([]);
+    const row = page.getByTestId('coach-upload-row').filter({ hasText: 'Week 5' });
+    await expect(row.getByTestId('coach-upload-status')).toHaveText('Upload not finished: try again to send the file');
+    await row.getByTestId('coach-upload-retry').click();
+    await expect(page.getByTestId('coach-upload-title')).toHaveValue('Week 5');
   });
 
   test('A file or date outside the limits is refused before sending', async ({ page }, testInfo) => {
