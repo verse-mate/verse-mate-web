@@ -27,8 +27,11 @@ import {
   refusalCode,
   refusalText,
   refusalWords,
+  type BigIdeasReviewRow,
   type ReportAmendment,
   type ReportReviewState,
+  SCORECARD_RATINGS,
+  type ScorecardRating,
   type ReviewDimension,
   type ReportRevision,
   type ReportVersion,
@@ -45,6 +48,7 @@ type ProseDraft = { title: string; text: string };
 type Draft = {
   dims: Record<number, { score: number | null; rationale: string }>;
   firstLesson: boolean;
+  reviewRow: { value: string; rating: ScorecardRating | '' };
   body: Record<AmendableBodyField, string>;
   stored: Partial<Record<ProseList, CoachFeedbackPoint[]>>;
   prose: Partial<Record<ProseList, ProseDraft[]>>;
@@ -149,6 +153,7 @@ function initialDraft(review: ReportReviewState, report: CoachReport): Draft {
   return {
     dims: Object.fromEntries(review.dimensions.map((d) => [d.n, { score: d.score, rationale: d.rationale }])),
     firstLesson: review.firstLesson,
+    reviewRow: { value: '', rating: '' },
     body: Object.fromEntries(AMENDABLE_BODY_FIELDS.map((f) => [f, textOf(feedback[f])])) as Record<AmendableBodyField, string>,
     stored,
     prose: Object.fromEntries(
@@ -173,6 +178,8 @@ function amendmentOf(initial: Draft, draft: Draft): ReportAmendment {
     .map((n) => ({ n, score: draft.dims[n].score, rationale: draft.dims[n].rationale.trim() }));
   if (dimensions.length) amendment.dimensions = dimensions;
   if (draft.firstLesson !== initial.firstLesson) amendment.firstLesson = draft.firstLesson;
+  if (initial.firstLesson && !draft.firstLesson && draft.reviewRow.rating !== '' && draft.reviewRow.value.trim())
+    amendment.bigIdeasReview = { value: draft.reviewRow.value.trim(), rating: draft.reviewRow.rating };
   const body: ReportAmendment['body'] = {};
   for (const field of AMENDABLE_BODY_FIELDS) {
     if (field === 'headline') {
@@ -342,11 +349,49 @@ export default function ReportReview({ report, coachId }: { report: CoachReport;
 function FirstLessonState({ review }: { review: ReportReviewState }) {
   const source =
     review.firstLessonSource === 'admin' ? ', set by hand' : review.firstLessonSource === 'detected' ? ', detected by the pipeline' : '';
-  const book = review.passageBook ? `Passage book: ${review.passageBook}.` : 'Passage book not known.';
+  const shown = review.firstLesson && review.firstLessonLine ? ` Shown by: “${review.firstLessonLine}”.` : '';
   return (
     <p data-testid="coach-first-lesson-state" style={muted}>
-      First lesson: {review.firstLesson ? `yes${source}` : 'no'}. {book}
+      First lesson: {review.firstLesson ? `yes${source}` : 'no'}.{shown}
     </p>
+  );
+}
+
+function BigIdeasReviewFields({
+  row,
+  onChange,
+  testIdPrefix,
+}: {
+  row: { value: string; rating: ScorecardRating | '' };
+  onChange: (row: { value: string; rating: ScorecardRating | '' }) => void;
+  testIdPrefix: string;
+}) {
+  return (
+    <div data-testid={`${testIdPrefix}-row`} style={{ marginTop: 8 }}>
+      <p style={muted}>The scorecard's Big Ideas review at open row comes back: give its value and rating.</p>
+      <input
+        value={row.value}
+        onChange={(e) => onChange({ ...row, value: e.target.value })}
+        aria-label="Big Ideas review at open value"
+        placeholder="e.g. 6 min (7%)"
+        data-testid={`${testIdPrefix}-value`}
+        style={input}
+      />
+      <select
+        value={row.rating}
+        onChange={(e) => onChange({ ...row, rating: e.target.value as ScorecardRating | '' })}
+        aria-label="Big Ideas review at open rating"
+        data-testid={`${testIdPrefix}-rating`}
+        style={{ ...input, marginLeft: 8 }}
+      >
+        <option value="">Rating…</option>
+        {SCORECARD_RATINGS.map((r) => (
+          <option key={r} value={r}>
+            {r}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 }
 
@@ -373,11 +418,15 @@ function FirstLessonPanel({
   const { rubric } = useRubric();
   const mr = rubric?.dimensions.find((d) => d.n === MEMORY_REINFORCEMENT)?.name ?? `Dimension ${MEMORY_REINFORCEMENT}`;
   const set = useSetFirstLesson(coachId, reportId);
-  const [clearing, setClearing] = useState<{ score: number | null; rationale: string } | null>(null);
+  const [clearing, setClearing] = useState<{
+    score: number | null;
+    rationale: string;
+    row: { value: string; rating: ScorecardRating | '' };
+  } | null>(null);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const flying = useRef(false);
 
-  const submit = (input: { firstLesson: boolean; score?: number; rationale?: string }) => {
+  const submit = (input: { firstLesson: boolean; score?: number; rationale?: string; bigIdeasReview?: BigIdeasReviewRow }) => {
     if (flying.current) return;
     flying.current = true;
     setOutcome(null);
@@ -390,7 +439,14 @@ function FirstLessonPanel({
           const mrDim = input.score === undefined ? {} : { [MEMORY_REINFORCEMENT]: { score: input.score, rationale: input.rationale ?? '' } };
           onCarry({
             last: { outcome: { ...outcome, text: `${DELIVERED_MEANWHILE} ${outcome.text}` }, held: r.coldRecall, violations: r.violations },
-            draft: r.applied ? undefined : (d) => ({ ...d, firstLesson: input.firstLesson, dims: { ...d.dims, ...mrDim } }),
+            draft: r.applied
+              ? undefined
+              : (d) => ({
+                  ...d,
+                  firstLesson: input.firstLesson,
+                  dims: { ...d.dims, ...mrDim },
+                  ...(input.bigIdeasReview ? { reviewRow: input.bigIdeasReview } : {}),
+                }),
           });
         }
       },
@@ -430,7 +486,7 @@ function FirstLessonPanel({
       {review.firstLesson && !clearing && (
         <button
           type="button"
-          onClick={() => setClearing({ score: null, rationale: '' })}
+          onClick={() => setClearing({ score: null, rationale: '', row: { value: '', rating: '' } })}
           data-testid="coach-first-lesson-clear"
           style={btn}
         >
@@ -468,13 +524,31 @@ function FirstLessonPanel({
             data-testid="coach-first-lesson-rationale"
             style={{ ...textarea, marginTop: 8 }}
           />
+          <BigIdeasReviewFields
+            row={clearing.row}
+            onChange={(row) => setClearing((c) => (c ? { ...c, row } : c))}
+            testIdPrefix="coach-first-lesson-review"
+          />
           <div style={actions}>
             <button
               type="button"
               onClick={() =>
-                clearing.score !== null && submit({ firstLesson: false, score: clearing.score, rationale: clearing.rationale.trim() })
+                clearing.score !== null &&
+                clearing.row.rating !== '' &&
+                submit({
+                  firstLesson: false,
+                  score: clearing.score,
+                  rationale: clearing.rationale.trim(),
+                  bigIdeasReview: { value: clearing.row.value.trim(), rating: clearing.row.rating },
+                })
               }
-              disabled={set.isPending || clearing.score === null || !clearing.rationale.trim()}
+              disabled={
+                set.isPending ||
+                clearing.score === null ||
+                !clearing.rationale.trim() ||
+                !clearing.row.value.trim() ||
+                clearing.row.rating === ''
+              }
               data-testid="coach-first-lesson-save"
               style={primaryBtn}
             >
@@ -955,10 +1029,17 @@ function AmendPanel({
               }}
               data-testid="coach-amend-first-lesson"
             />
-            First lesson of a new book ({dimName(MEMORY_REINFORCEMENT)} is not applicable)
+            First lesson of a new study or book ({dimName(MEMORY_REINFORCEMENT)} is not applicable)
           </label>
           {edit.initial.firstLesson && !edit.draft.firstLesson && (
-            <p style={muted}>Clearing the flag needs a {dimName(MEMORY_REINFORCEMENT)} score and rationale below.</p>
+            <>
+              <p style={muted}>Clearing the flag needs a {dimName(MEMORY_REINFORCEMENT)} score and rationale below.</p>
+              <BigIdeasReviewFields
+                row={edit.draft.reviewRow}
+                onChange={(reviewRow) => update((d) => ({ ...d, reviewRow }))}
+                testIdPrefix="coach-amend-review"
+              />
+            </>
           )}
 
           <h4 style={h4}>Dimensions</h4>
