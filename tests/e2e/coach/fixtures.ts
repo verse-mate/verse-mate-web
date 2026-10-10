@@ -441,6 +441,7 @@ type StoredReport = ReturnType<typeof report> & { notes?: Array<Record<string, u
 type Amendment = {
   dimensions?: Array<{ n: number; score: number | null; rationale: string }>;
   firstLesson?: boolean;
+  bigIdeasReview?: { value?: string; rating?: string };
   body?: Record<string, unknown>;
 };
 
@@ -545,6 +546,9 @@ async function revisionRoutes(
     const given = dims.find((d) => d.n === MEMORY_REINFORCEMENT);
     if (body.firstLesson === false && review.firstLesson && (!given || given.score === null || !given.rationale.trim())) {
       return refuse(route, 'memory-reinforcement-required');
+    }
+    if (body.firstLesson === false && review.firstLesson && (!String(body.bigIdeasReview?.value ?? '').trim() || !body.bigIdeasReview?.rating)) {
+      return refuse(route, 'big-ideas-review-required');
     }
     const stored = store.get(reportId) as StoredReport;
     const before = stored.feedback as Record<string, unknown>;

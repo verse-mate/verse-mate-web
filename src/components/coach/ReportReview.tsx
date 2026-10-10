@@ -937,6 +937,11 @@ function AmendPanel({
   const update = (next: (d: Draft) => Draft) => setEdit((e) => (e ? { ...e, draft: next(e.draft) } : e));
   const amendment = edit ? amendmentOf(edit.initial, edit.draft) : {};
   const changed = Object.keys(amendment).length > 0;
+  const reviewRowMissing =
+    !!edit &&
+    edit.initial.firstLesson &&
+    !edit.draft.firstLesson &&
+    !(edit.draft.reviewRow.value.trim() && edit.draft.reviewRow.rating !== '');
 
   const confirm = () => {
     if (flying.current) return;
@@ -1039,6 +1044,11 @@ function AmendPanel({
                 onChange={(reviewRow) => update((d) => ({ ...d, reviewRow }))}
                 testIdPrefix="coach-amend-review"
               />
+              {reviewRowMissing && (
+                <p style={muted} role="alert" data-testid="coach-amend-review-row-missing">
+                  Fill in the Big Ideas review row, its value and its rating, to clear the flag.
+                </p>
+              )}
             </>
           )}
 
@@ -1141,7 +1151,7 @@ function AmendPanel({
             <button
               type="button"
               onClick={() => setEdit((e) => (e ? { ...e, confirming: true } : e))}
-              disabled={!changed}
+              disabled={!changed || reviewRowMissing}
               data-testid="coach-amend-review"
               style={primaryBtn}
             >
