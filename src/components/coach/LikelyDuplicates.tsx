@@ -20,8 +20,8 @@ export default function LikelyDuplicates() {
     <div style={{ paddingTop: 22 }} data-testid="coach-duplicates">
       <h2 style={h2}>Likely duplicates</h2>
       <p style={{ fontSize: 15, color: dt.textMuted, margin: '0 0 20px' }}>
-        Sessions held because another recording covers the same class and date. Dismiss one that is a different session, or
-        score the recording bot's session instead of the upload while the upload's report is not delivered yet.
+        Sessions held because another recording covers the same class and date. Drop one as a repeat of the session already
+        recorded, or score the recording bot's session instead of the upload while the upload's report is not delivered yet.
       </p>
       <QueryState query={duplicates} name="duplicates" label="the likely duplicates">
         {(list) =>
@@ -71,7 +71,7 @@ function DuplicateRow({ d, leader }: { d: LikelyDuplicate; leader: string }) {
       </div>
       <div style={{ display: 'flex', gap: 8 }}>
         <button type="button" data-testid={`coach-duplicate-dismiss-${d.sourceSessionId}`} onClick={() => dismiss.mutate()} disabled={busy} style={btn}>
-          Not a duplicate
+          Drop as a repeat
         </button>
         {d.canScoreInstead && (
           <button type="button" data-testid={`coach-duplicate-score-${d.sourceSessionId}`} onClick={() => score.mutate()} disabled={busy} style={btn}>

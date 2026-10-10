@@ -132,6 +132,7 @@ test.describe('Admin surfaces for rotating classes and likely duplicates (8.11)'
     await expect(host.getByTestId(`coach-duplicate-score-${HOST_DUP.sourceSessionId}`)).toHaveCount(0);
     await capture(page, testInfo, 'r3-duplicates', page.getByTestId('coach-duplicates'));
 
+    await expect(host.getByTestId(`coach-duplicate-dismiss-${HOST_DUP.sourceSessionId}`)).toHaveText('Drop as a repeat');
     await host.getByTestId(`coach-duplicate-dismiss-${HOST_DUP.sourceSessionId}`).click();
     await expect(host).toHaveCount(0);
     await bot.getByTestId(`coach-duplicate-score-${BOT_DUP.sourceSessionId}`).click();
