@@ -531,7 +531,7 @@ export interface ReportReviewState {
   humanCorrected: boolean;
   firstLesson: boolean;
   firstLessonSource: string | null;
-  passageBook: string | null;
+  firstLessonLine: string | null;
   parallelRun: boolean;
   dimensions: ReviewDimension[];
 }
@@ -555,9 +555,19 @@ export const PROSE_LISTS = ['strengths', 'improvements', 'recommendations'] as c
 export type ProseList = (typeof PROSE_LISTS)[number];
 export type ProseField = `${ProseList}Prose`;
 
+export type ScorecardRating = 'STRONG' | 'ON TARGET' | 'NEEDS WORK' | 'N/A';
+
+export const SCORECARD_RATINGS: ScorecardRating[] = ['STRONG', 'ON TARGET', 'NEEDS WORK', 'N/A'];
+
+export interface BigIdeasReviewRow {
+  value: string;
+  rating: ScorecardRating;
+}
+
 export interface ReportAmendment {
   dimensions?: { n: number; score: number | null; rationale: string }[];
   firstLesson?: boolean;
+  bigIdeasReview?: BigIdeasReviewRow;
   body?: Partial<Record<AmendableBodyField, string | string[]>> & Partial<Record<ProseField, CoachFeedbackPoint[]>>;
 }
 
@@ -659,7 +669,7 @@ export function amendReport(reportId: string, amendment: ReportAmendment): Promi
 
 export function setFirstLesson(
   reportId: string,
-  input: { firstLesson: boolean; score?: number; rationale?: string },
+  input: { firstLesson: boolean; score?: number; rationale?: string; bigIdeasReview?: BigIdeasReviewRow },
 ): Promise<RevisionResult> {
   return coachRequest<RevisionResult>(adminReportPath(reportId, 'first-lesson'), {
     method: 'PUT',

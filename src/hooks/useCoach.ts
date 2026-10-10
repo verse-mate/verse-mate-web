@@ -74,6 +74,7 @@ import {
   type ReportReviewState,
   type ReportVersion,
   type RevisionResult,
+  type BigIdeasReviewRow,
   type RevisionSendResult,
 } from '@/services/coachService';
 
@@ -423,7 +424,11 @@ export function useRequeueRevision(coachId: string, reportId: string): UseMutati
 export function useSetFirstLesson(
   coachId: string,
   reportId: string,
-): UseMutationResult<RevisionResult, Error, { firstLesson: boolean; score?: number; rationale?: string }> {
+): UseMutationResult<
+  RevisionResult,
+  Error,
+  { firstLesson: boolean; score?: number; rationale?: string; bigIdeasReview?: BigIdeasReviewRow }
+> {
   const refresh = useRefreshReport(coachId, reportId);
   return useMutation({
     mutationFn: (input) => setFirstLesson(reportId, input),

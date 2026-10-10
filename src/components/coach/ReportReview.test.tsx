@@ -45,7 +45,7 @@ const REVIEW: ReportReviewState = {
   humanCorrected: false,
   firstLesson: false,
   firstLessonSource: null,
-  passageBook: 'Jonah',
+  firstLessonLine: null,
   parallelRun: false,
   dimensions: Array.from({ length: 12 }, (_, i) => ({
     n: i + 1,
@@ -946,25 +946,29 @@ describe('the first-lesson flag on an undelivered report', () => {
     expect(screen.getAllByRole('heading', { level: 4 }).map((h) => h.textContent)).toEqual(['First lesson', 'Dimensions', 'Improvements']);
   });
 
-  it('says whether the flag was detected or set by hand, and names the passage book', async () => {
-    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...UNDELIVERED, firstLesson: true, firstLessonSource: 'detected' });
+  it('says whether the flag was detected or set by hand, and quotes the line that showed it', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({
+      ...UNDELIVERED,
+      firstLesson: true,
+      firstLessonSource: 'detected',
+      firstLessonLine: "We're starting Amos this week",
+    });
     renderReview();
     const state = await screen.findByTestId('coach-first-lesson-state');
-    expect(state).toHaveTextContent('First lesson: yes, detected by the pipeline. Passage book: Jonah.');
+    expect(state).toHaveTextContent("First lesson: yes, detected by the pipeline. Shown by: “We're starting Amos this week”.");
     expect(screen.queryByTestId('coach-amend-open')).toBeNull();
   });
 
-  it('says when the book is not known and the flag was set by hand', async () => {
+  it('a flag set by hand quotes no line', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({
       ...UNDELIVERED,
       firstLesson: true,
       firstLessonSource: 'admin',
-      passageBook: null,
+      firstLessonLine: null,
     });
     renderReview();
-    expect(await screen.findByTestId('coach-first-lesson-state')).toHaveTextContent(
-      'First lesson: yes, set by hand. Passage book not known.',
-    );
+    expect(await screen.findByTestId('coach-first-lesson-state')).toHaveTextContent('First lesson: yes, set by hand.');
+    expect(screen.getByTestId('coach-first-lesson-state')).not.toHaveTextContent('Shown by');
   });
 
   it('sets the flag', async () => {
@@ -992,7 +996,7 @@ describe('the first-lesson flag on an undelivered report', () => {
     expect(set).toHaveBeenCalledTimes(1);
   });
 
-  it('clearing asks for the Memory Reinforcement score and rationale', async () => {
+  it('clearing asks for the Memory Reinforcement score and rationale, and the Big Ideas review row the flag removed', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...UNDELIVERED, firstLesson: true, firstLessonSource: 'detected' });
     const set = vi
       .spyOn(coachService, 'setFirstLesson')
@@ -1006,16 +1010,45 @@ describe('the first-lesson flag on an undelivered report', () => {
     expect(save).toBeDisabled();
     fireEvent.change(screen.getByTestId('coach-first-lesson-rationale'), { target: { value: ' Reviewed last week before the new text ' } });
     expect(screen.getByTestId('coach-first-lesson-rationale').closest(`.${REPLAY_BLOCK_CLASS}`)).not.toBeNull();
+    expect(save).toBeDisabled();
+    fireEvent.change(screen.getByTestId('coach-first-lesson-review-value'), { target: { value: ' 6 min (7%) ' } });
+    expect(save).toBeDisabled();
+    fireEvent.change(screen.getByTestId('coach-first-lesson-review-rating'), { target: { value: 'ON TARGET' } });
     fireEvent.click(save);
     await waitFor(() =>
       expect(set).toHaveBeenCalledWith('rep-1', {
         firstLesson: false,
         score: 3,
         rationale: 'Reviewed last week before the new text',
+        bigIdeasReview: { value: '6 min (7%)', rating: 'ON TARGET' },
       }),
     );
     expect(await screen.findByTestId('coach-first-lesson-outcome')).toHaveTextContent(
       'First-lesson flag cleared. Memory Reinforcement is scored 3, recorded as corrected by hand. Score 81 (Strong).',
+    );
+  });
+
+  it('clearing the flag on a delivered report in the amend editor sends the Big Ideas review row with the score', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...REVIEW, firstLesson: true, firstLessonSource: 'detected' });
+    const amend = vi
+      .spyOn(coachService, 'amendReport')
+      .mockResolvedValue({ applied: true, revision: 1, firstLesson: false, base: 80, score: 80, status: 'Strong', sent: true, sends: [], skipped: [] });
+    renderReview();
+    await openEditor();
+    fireEvent.click(screen.getByTestId('coach-amend-first-lesson'));
+    expect(screen.getByTestId('coach-amend-review-row')).toBeInTheDocument();
+    fireEvent.change(screen.getByTestId('coach-amend-dim-score-9'), { target: { value: '2' } });
+    fireEvent.change(screen.getByTestId('coach-amend-dim-rationale-9'), { target: { value: 'Opened with a recall drill' } });
+    fireEvent.change(screen.getByTestId('coach-amend-review-value'), { target: { value: '5 min (6%)' } });
+    fireEvent.change(screen.getByTestId('coach-amend-review-rating'), { target: { value: 'STRONG' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    await waitFor(() =>
+      expect(amend).toHaveBeenLastCalledWith('rep-1', {
+        dimensions: [{ n: 9, score: 2, rationale: 'Opened with a recall drill' }],
+        firstLesson: false,
+        bigIdeasReview: { value: '5 min (6%)', rating: 'STRONG' },
+      }),
     );
   });
 
@@ -1073,18 +1106,22 @@ describe('the first-lesson flag on an undelivered report', () => {
     fireEvent.click(await screen.findByTestId('coach-first-lesson-clear'));
     fireEvent.change(screen.getByTestId('coach-first-lesson-score'), { target: { value: '3' } });
     fireEvent.change(screen.getByTestId('coach-first-lesson-rationale'), { target: { value: 'Reviewed last week' } });
+    fireEvent.change(screen.getByTestId('coach-first-lesson-review-value'), { target: { value: '6 min' } });
+    fireEvent.change(screen.getByTestId('coach-first-lesson-review-rating'), { target: { value: 'ON TARGET' } });
     fireEvent.click(screen.getByTestId('coach-first-lesson-save'));
 
     const editor = await screen.findByTestId('coach-amend-editor');
     expect(within(editor).getByTestId('coach-amend-first-lesson')).not.toBeChecked();
     expect(within(editor).getByTestId('coach-amend-dim-score-9')).toHaveValue('3');
     expect(within(editor).getByTestId('coach-amend-dim-rationale-9')).toHaveValue('Reviewed last week');
+    expect(within(editor).getByTestId('coach-amend-review-value')).toHaveValue('6 min');
     fireEvent.click(screen.getByTestId('coach-amend-review'));
     fireEvent.click(screen.getByTestId('coach-amend-confirm'));
     await waitFor(() =>
       expect(amend).toHaveBeenCalledWith('rep-1', {
         dimensions: [{ n: 9, score: 3, rationale: 'Reviewed last week' }],
         firstLesson: false,
+        bigIdeasReview: { value: '6 min', rating: 'ON TARGET' },
       }),
     );
   });
