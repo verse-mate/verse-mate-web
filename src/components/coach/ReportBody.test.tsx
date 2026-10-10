@@ -58,3 +58,21 @@ describe('Report identifies its session', () => {
     expect(screen.queryByTestId('coach-report-title-page')).toBeNull();
   });
 });
+
+describe('A strength or improvement shows its evidence', () => {
+  it('the quote and the time it was said follow the point', () => {
+    const r = report([]);
+    r.feedback = {
+      ...r.feedback,
+      strengthsProse: [
+        {
+          title: 'Scripture first',
+          paragraphs: ['You opened with the passage.'],
+          evidence: { quote: "Let's read it before we talk", timestamp: '00:03:12' },
+        },
+      ],
+    };
+    render(<ReportBody report={r} />);
+    expect(screen.getByTestId('coach-point-evidence')).toHaveTextContent("“Let's read it before we talk” at 00:03:12");
+  });
+});

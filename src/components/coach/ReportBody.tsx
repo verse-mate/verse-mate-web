@@ -439,6 +439,11 @@ function ProseSection({
               {pt.paragraphs.map((para, j) => (
                 <p key={j} style={proseParagraph}>{para}</p>
               ))}
+              {pt.evidence && (
+                <p data-testid="coach-point-evidence" style={{ ...proseParagraph, fontStyle: 'italic', color: vmTokens.textSecondary }}>
+                  “{pt.evidence.quote}” at {pt.evidence.timestamp}
+                </p>
+              )}
             </div>
           ))}
         </div>
