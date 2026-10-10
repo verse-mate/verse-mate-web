@@ -36,6 +36,7 @@ import CoachHome from "@/pages/CoachHome";
 import CoachDashboardScreen from "@/pages/CoachDashboardScreen";
 import CoachSessionsScreen from "@/pages/CoachSessionsScreen";
 import CoachClassesScreen from "@/pages/CoachClassesScreen";
+import CoachUploadScreen from "@/pages/CoachUploadScreen";
 import CoachAdminClassesScreen from "@/pages/CoachAdminClassesScreen";
 import CoachSettingsScreen from "@/pages/CoachSettingsScreen";
 import CoachMonthlyScreen from "@/pages/CoachMonthlyScreen";
@@ -117,6 +118,7 @@ const App = () => (
               {/* Class Setup — register the classes/meeting links the coaching
                   Notetaker bot joins. */}
               <Route path="/coach/classes" element={<CoachClassesScreen />} />
+              <Route path="/coach/upload" element={<CoachUploadScreen />} />
               {/* Admin oversight of every leader's class links (admin only;
                   gated in-screen). */}
               <Route path="/coach/admin/classes" element={<CoachAdminClassesScreen />} />
