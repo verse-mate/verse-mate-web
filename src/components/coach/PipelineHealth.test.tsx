@@ -1038,6 +1038,18 @@ describe('a send skipped for a placeholder address', () => {
   });
 });
 
+describe('a leader covered through a rotating class', () => {
+  it('says the coverage came from the class, not from a session of their own', async () => {
+    vi.spyOn(coachService, 'fetchPipelineFailures').mockResolvedValue(page([]));
+    vi.spyOn(coachService, 'fetchCoverage').mockResolvedValue({
+      ...COVERAGE,
+      leaders: [{ ...COVERAGE.leaders[1], coachId: 'rota-lee', name: 'Rota Lee', covered: true, basis: 'rotating-class', observedSessions: 0 }],
+    });
+    renderView();
+    expect(await screen.findByTestId('coach-coverage-basis-rota-lee')).toHaveTextContent('Covered · through their rotating class');
+  });
+});
+
 describe('a leader who is not teaching', () => {
   const ATTESTED: coachService.CoverageLeader = {
     ...COVERAGE.leaders[1],

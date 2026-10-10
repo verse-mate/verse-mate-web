@@ -742,7 +742,7 @@ export interface CoverageLeader {
   name: string;
   email: string;
   covered: boolean;
-  basis: 'observed' | 'attested-not-teaching' | 'attestation-lapsed' | 'no-observation';
+  basis: 'observed' | 'rotating-class' | 'attested-not-teaching' | 'attestation-lapsed' | 'no-observation';
   observedSessions: number;
   accountStatus: string;
   linkedClassName: string | null;
@@ -1279,4 +1279,63 @@ export function editMonthlyReport(id: number, body: Record<string, unknown>): Pr
 
 export function releaseMonthlyReport(id: number): Promise<{ released: boolean; sent: boolean }> {
   return coachRequest<{ released: boolean; sent: boolean }>(`admin/monthly-reports/${id}/release`, { method: 'POST' });
+}
+
+export interface RotatingClass {
+  id: number;
+  name: string;
+  groupEmail: string;
+  titleMatch: string[];
+  leaders: { id: string; name: string; rotatingOnly: boolean }[];
+}
+
+export interface RotatingClassBody {
+  name: string;
+  groupEmail: string;
+  titleMatch: string[];
+  leaders: string[];
+}
+
+export async function fetchRotatingClasses(): Promise<RotatingClass[]> {
+  return (await coachRequest<{ classes: RotatingClass[] }>('admin/rotating-classes')).classes;
+}
+
+export function saveRotatingClass(body: RotatingClassBody, id?: number): Promise<{ id: number }> {
+  return coachRequest<{ id: number }>(id === undefined ? 'admin/rotating-classes' : `admin/rotating-classes/${id}`, {
+    method: id === undefined ? 'POST' : 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+}
+
+export function setRotatingOnly(coachId: string, rotatingOnly: boolean): Promise<{ rotatingOnly: boolean }> {
+  return coachRequest<{ rotatingOnly: boolean }>(`admin/leaders/${encodeURIComponent(coachId)}/rotating-only`, {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ rotatingOnly }),
+  });
+}
+
+export interface LikelyDuplicate {
+  sourceSessionId: string;
+  source: 'bot' | 'upload';
+  coachId: string | null;
+  classKey: string | null;
+  title: string;
+  sessionDate: string;
+  duplicateOf: string | null;
+  against: 'upload' | 'host-report';
+  canScoreInstead: boolean;
+}
+
+export async function fetchLikelyDuplicates(): Promise<LikelyDuplicate[]> {
+  return (await coachRequest<{ duplicates: LikelyDuplicate[] }>('admin/duplicates')).duplicates;
+}
+
+export function dismissDuplicate(sourceSessionId: string): Promise<{ dismissed: boolean }> {
+  return coachRequest<{ dismissed: boolean }>(`admin/duplicates/${encodeURIComponent(sourceSessionId)}/dismiss`, { method: 'POST' });
+}
+
+export function scoreDuplicateInstead(sourceSessionId: string): Promise<{ queued: boolean }> {
+  return coachRequest<{ queued: boolean }>(`admin/duplicates/${encodeURIComponent(sourceSessionId)}/score`, { method: 'POST' });
 }

@@ -29,3 +29,14 @@ export const row: CSSProperties = {
   padding: '12px 16px',
   borderTop: `1px solid ${dt.rowDivider}`,
 };
+export const actionBtn: CSSProperties = {
+  fontSize: 13,
+  fontWeight: 600,
+  padding: '7px 11px',
+  borderRadius: 8,
+  border: `1px solid ${dt.cardBorder}`,
+  background: dt.cardBg,
+  color: dt.gold,
+  cursor: 'pointer',
+  alignSelf: 'flex-start',
+};

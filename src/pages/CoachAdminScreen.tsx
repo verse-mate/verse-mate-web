@@ -48,6 +48,8 @@ import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import PendingReshares from '@/components/coach/PendingReshares';
 import PipelineHealth from '@/components/coach/PipelineHealth';
 import ParallelRunComparison from '@/components/coach/ParallelRunComparison';
+import RotatingClassesAdmin from '@/components/coach/RotatingClassesAdmin';
+import LikelyDuplicates from '@/components/coach/LikelyDuplicates';
 import ReportReview from '@/components/coach/ReportReview';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
@@ -55,7 +57,7 @@ import { PipelineCopyTag } from '@/components/coach/CoachUi';
 import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
 import { type RubricContract, bandFloor, statusForScore } from '@/services/rubric';
 
-type View = 'leaders' | 'leader' | 'trends' | 'links' | 'pipeline' | 'parallel-run';
+type View = 'leaders' | 'leader' | 'trends' | 'links' | 'pipeline' | 'parallel-run' | 'rotating' | 'duplicates';
 
 // ─── Shared color helpers (handoff scoring model) ───────────────────────────
 
@@ -145,6 +147,9 @@ export default function CoachAdminScreen() {
               <NavItem label="Class links" active={view === 'links'} onClick={() => setView('links')} testId="oversight-nav-links" />
               <NavItem label="Pipeline" active={view === 'pipeline'} onClick={() => setView('pipeline')} testId="oversight-nav-pipeline" />
               <NavItem label="Parallel run" active={view === 'parallel-run'} onClick={() => setView('parallel-run')} testId="oversight-nav-parallel-run" />
+              <NavItem label="Rotating classes" active={view === 'rotating'} onClick={() => setView('rotating')} testId="oversight-nav-rotating" />
+              <NavItem label="Duplicates" active={view === 'duplicates'} onClick={() => setView('duplicates')} testId="oversight-nav-duplicates" />
+              <NavItem label="Upload" active={false} onClick={() => navigate('/coach/upload')} testId="oversight-nav-upload" />
               <button type="button" onClick={() => navigate('/coach/settings')} aria-label="Coach settings" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#9A9484', fontSize: 16 }}>⚙</button>
               <div style={avatarChip}>{state.userAvatarUrl ? <img src={state.userAvatarUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} /> : initials}</div>
             </div>
@@ -157,6 +162,8 @@ export default function CoachAdminScreen() {
             {view === 'links' && <ClassLinksView roster={roster} onBack={() => setView('leaders')} onInvite={() => setInvite(true)} />}
             {view === 'pipeline' && <PipelineHealth />}
             {view === 'parallel-run' && <ParallelRunComparison />}
+            {view === 'rotating' && <RotatingClassesAdmin />}
+            {view === 'duplicates' && <LikelyDuplicates />}
           </CoachGate>
         </div>
       </div>

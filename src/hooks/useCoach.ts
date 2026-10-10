@@ -94,6 +94,8 @@ export const coachKeys = {
   reportRevisions: (reportId: string) => ['coach', 'admin', 'revisions', reportId] as const,
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
   adminMonthly: (month: string) => ['coach', 'admin', 'monthly', month] as const,
+  rotatingClasses: ['coach', 'admin', 'rotating-classes'] as const,
+  duplicates: ['coach', 'admin', 'duplicates'] as const,
   monthlyReports: (month: string) => ['coach', 'admin', 'monthly-reports', month] as const,
   monthlySummary: (month: string) => ['coach', 'monthly-summary', month] as const,
   uploads: (admin: boolean, coachId: string | null) => ['coach', 'uploads', admin ? 'admin' : 'own', coachId ?? 'all'] as const,
