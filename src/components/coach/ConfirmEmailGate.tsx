@@ -1,12 +1,6 @@
 import { useState, type CSSProperties } from 'react';
-import { useQuery } from '@tanstack/react-query';
 import { MailCheck } from 'lucide-react';
-import { fetchEmailVerified, sendVerificationEmail } from '@/services/emailVerification';
-
-export function useEmailCheck(enabled: boolean): { pending: boolean; unverified: boolean } {
-  const q = useQuery({ queryKey: ['account', 'email-verified'], queryFn: fetchEmailVerified, enabled, retry: false });
-  return { pending: enabled && q.isLoading, unverified: q.data === false };
-}
+import { sendVerificationEmail } from '@/services/emailVerification';
 
 export default function ConfirmEmailGate({
   container,
