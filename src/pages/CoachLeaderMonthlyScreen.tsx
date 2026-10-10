@@ -12,7 +12,7 @@
  */
 
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { BarChart3, ChevronLeft, ChevronRight } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -31,7 +31,8 @@ export default function CoachLeaderMonthlyScreen() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   const { coachId } = useParams();
   const admin = !!coachId;
-  const [month, setMonth] = useState(currentMonth());
+  const asked = useSearchParams()[0].get('month');
+  const [month, setMonth] = useState(asked && /^\d{4}-\d{2}$/.test(asked) ? asked : currentMonth());
 
   const selfQuery = useMyMonthlySummary(admin ? '' : month);
   const adminQuery = useLeaderMonthlySummary(coachId ?? '', admin ? month : '');
@@ -173,6 +174,11 @@ function Summary({ summary: s, isDesktop }: { summary: LeaderMonthlySummary; isD
             </>
           ) : null}
         </p>
+        {profileLine(s.profile) && (
+          <p data-testid="coach-leader-monthly-profile" style={{ margin: '6px 0 0', fontSize: 13.5, color: vmTokens.textSecondary }}>
+            {profileLine(s.profile)}
+          </p>
+        )}
         <div style={{ display: 'flex', gap: 8, marginTop: 14, flexWrap: 'wrap' }}>
           {clusters.map((c) => (
             <ClusterChip key={c.key} id={c.key} label={c.name} pct={s.clusterAvg[c.key] ?? null} color={heatText(s.clusterAvg[c.key] ?? null)} />
@@ -458,6 +464,13 @@ const HEAT_BY_BAND = ['#15803D', '#4D7C0F', '#B08900', '#C2620F', '#B91C1C'];
 function heatFor(pct: number | null, bands: StatusBand[]): string {
   if (pct == null) return vmTokens.textTertiary;
   return bandHeat(pct, bands, HEAT_BY_BAND) ?? vmTokens.textTertiary;
+}
+
+function profileLine(p: LeaderMonthlySummary['profile']): string {
+  if (!p) return '';
+  return [p.study, p.format, p.groupSize !== undefined && p.groupSize !== '' ? `group of ${p.groupSize}` : undefined]
+    .filter((x): x is string => typeof x === 'string' && x.trim() !== '')
+    .join(' · ');
 }
 
 function currentMonth(): string {

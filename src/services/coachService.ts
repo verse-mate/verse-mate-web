@@ -17,6 +17,7 @@
 
 import { API_BASE_URL, fetchWithAuth } from './api';
 import { spreadOver } from './rubric';
+import type { MonthlyReportRow } from './coachMonthlyEdit';
 
 // ─── Domain types ──────────────────────────────────────────────────────────
 
@@ -1030,6 +1031,31 @@ export interface CoachMonthly {
    *  or null. Comes straight from the coaching pipeline's shared generator, so
    *  this reads identically to the monthly PDF. */
   narrative: MonthlyNarrative | null;
+  programReport?: ProgramReport;
+}
+
+export interface ProgramReport {
+  month: string;
+  monthLabel: string;
+  overview: { sessions: number; leaders: number; from: string; to: string };
+  leaderboard: { id: string; name: string; composite: number; status: string }[];
+  bands: { label: string; count: number }[];
+  heatMap: {
+    dimensions: { n: number; name: string }[];
+    rows: { id: string; name: string; cells: { n: number; avg: number | null; mark: 'strong' | 'middle' | 'weak' | null }[] }[];
+  };
+  trends: {
+    priorAvg: number | null;
+    allTimeAvg: number | null;
+    bestImproving: { id: string; name: string; delta: number } | null;
+    mostImprovedDimension: { name: string; delta: number } | null;
+    needsAttention: { name: string; avg: number } | null;
+    text: string[];
+  };
+  snapshots: { id: string; name: string; text: string }[];
+  priorityMatrix: { lowest: string[]; declining: string[]; plateau: string[] };
+  initiatives: string[];
+  executiveSummary: string[];
 }
 
 /** Program-wide monthly narrative, the same prose the monthly PDF carries. */
@@ -1103,6 +1129,7 @@ export interface LeaderMonthlySummary {
   conversationGuide: { label: string; q: string }[];
   focus: { clusterName: string; clusterPct: number | null; goals: string[] };
   sessions: LeaderMonthlySessionDetail[];
+  profile?: { study?: string; format?: string; groupSize?: string | number };
 }
 
 export interface LeaderMonthlyResponse {
@@ -1236,4 +1263,20 @@ export function refreshUploadParts(uploadId: string, admin: boolean): Promise<Up
 
 export function completeUpload(uploadId: string, admin: boolean): Promise<{ status: UploadStatus }> {
   return coachRequest<{ status: UploadStatus }>(`${uploadBase(admin)}/${encodeURIComponent(uploadId)}/complete`, { method: 'POST' });
+}
+
+export async function fetchMonthlyReports(month: string): Promise<MonthlyReportRow[]> {
+  return (await coachRequest<{ reports: MonthlyReportRow[] }>(`admin/monthly-reports?month=${encodeURIComponent(month)}`)).reports;
+}
+
+export function editMonthlyReport(id: number, body: Record<string, unknown>): Promise<{ edited: boolean }> {
+  return coachRequest<{ edited: boolean }>(`admin/monthly-reports/${id}`, {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+}
+
+export function releaseMonthlyReport(id: number): Promise<{ released: boolean; sent: boolean }> {
+  return coachRequest<{ released: boolean; sent: boolean }>(`admin/monthly-reports/${id}/release`, { method: 'POST' });
 }
