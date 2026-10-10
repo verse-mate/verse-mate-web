@@ -373,6 +373,7 @@ const ACCOUNT_TEXT: Record<string, string> = {
 
 function coverageBadge(l: CoverageLeader): { text: string; ok: boolean } {
   if (l.basis === 'attested-not-teaching') return { text: 'Not teaching (attested)', ok: true };
+  if (l.basis === 'rotating-class') return { text: 'Covered · through their rotating class', ok: true };
   if (l.basis === 'attestation-lapsed') {
     return { text: `Not covered · Not-teaching attestation lapsed (${l.attestedAt ? shortDate(l.attestedAt) : 'date not recorded'})`, ok: false };
   }

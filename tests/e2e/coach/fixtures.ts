@@ -1312,6 +1312,9 @@ export async function useCoachApi(page: Page, opts: CoachApiOptions = {}) {
     return route.fulfill({ json: monthlyFor(id, url.searchParams.get('month') ?? '') });
   });
 
+  await serve(page, (url) => url.href.startsWith(`${API}/coach/admin/uploads`) && url.pathname.endsWith('/uploads'), (route) =>
+    opts.admin ? route.fulfill({ json: { uploads: [] } }) : forbidden(route),
+  );
   await serve(page, /\/coach\/admin\/monthly-reports(\?|$)/, (route) => (opts.admin ? route.fulfill({ json: { reports: [] } }) : forbidden(route)));
 
   await serve(page, /\/coach\/admin\/monthly\?/, (route) => {
