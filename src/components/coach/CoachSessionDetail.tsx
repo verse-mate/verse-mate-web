@@ -616,7 +616,7 @@ function buildSnapshot(report: CoachReport): { k: string; v: string }[] {
   if (report.dateLabel) rows.push({ k: 'DATE', v: report.dateLabel });
   if (report.topic) rows.push({ k: 'TOPIC', v: report.topic });
   if (report.duration) rows.push({ k: 'DURATION', v: report.duration });
-  rows.push({ k: 'ATTENDEES', v: `${report.attendees}` });
+  rows.push({ k: 'ATTENDEES', v: report.attendees === null ? 'Not recorded' : `${report.attendees}` });
   rows.push({
     k: 'NEWCOMERS',
     v: report.newcomers ? `${report.newcomers} first-timer${report.newcomers === 1 ? '' : 's'}` : 'None this week',
