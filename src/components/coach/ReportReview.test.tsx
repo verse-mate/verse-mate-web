@@ -1052,6 +1052,20 @@ describe('the first-lesson flag on an undelivered report', () => {
     );
   });
 
+  it('clearing the flag in the amend editor waits for a whole Big Ideas review row before the changes can be reviewed', async () => {
+    vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue({ ...REVIEW, firstLesson: true, firstLessonSource: 'detected' });
+    renderReview();
+    await openEditor();
+    fireEvent.click(screen.getByTestId('coach-amend-first-lesson'));
+    fireEvent.change(screen.getByTestId('coach-amend-dim-score-9'), { target: { value: '2' } });
+    fireEvent.change(screen.getByTestId('coach-amend-dim-rationale-9'), { target: { value: 'Opened with a recall drill' } });
+    fireEvent.change(screen.getByTestId('coach-amend-review-value'), { target: { value: '5 min (6%)' } });
+    expect(screen.getByTestId('coach-amend-review')).toBeDisabled();
+    expect(screen.getByTestId('coach-amend-review-row-missing')).toBeInTheDocument();
+    fireEvent.change(screen.getByTestId('coach-amend-review-rating'), { target: { value: 'STRONG' } });
+    expect(screen.getByTestId('coach-amend-review')).not.toBeDisabled();
+  });
+
   it('shows the flag refused while the report is being delivered or re-scored, and keeps the action', async () => {
     vi.spyOn(coachService, 'fetchReportReview').mockResolvedValue(UNDELIVERED);
     vi.spyOn(coachService, 'setFirstLesson').mockRejectedValue(

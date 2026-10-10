@@ -188,6 +188,10 @@ test.describe('Amending a delivered report', () => {
     await panel.getByTestId('coach-amend-open').click();
     await expect(panel.getByTestId('coach-amend-dim-score-9')).toHaveValue('');
     await panel.getByTestId('coach-amend-first-lesson').uncheck();
+    await expect(panel.getByTestId('coach-amend-review')).toBeDisabled();
+    await expect(panel.getByTestId('coach-amend-review-row-missing')).toBeVisible();
+    await panel.getByTestId('coach-amend-review-value').fill('5 min (6%)');
+    await panel.getByTestId('coach-amend-review-rating').selectOption('STRONG');
     await panel.getByTestId('coach-amend-review').click();
     await panel.getByTestId('coach-amend-confirm').click();
     await expect(panel.getByTestId('coach-amend-outcome')).toHaveText(
