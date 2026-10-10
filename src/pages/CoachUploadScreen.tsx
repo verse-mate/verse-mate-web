@@ -18,7 +18,7 @@ import {
 import { LIMITS_TEXT, UPLOAD_LIMITS, chicagoToday, sendParts, uploadContentType, uploadProblem } from '@/services/coachUpload';
 
 const STATUS_WORDS: Record<UploadStatus, string> = {
-  uploading: 'Upload not finished',
+  uploading: 'Upload not finished: try again to send the file',
   processing: 'Processing: the report is being prepared, no score yet',
   held: 'Held for review before it is sent',
   'waiting-for-admin': 'Waiting for an admin to say who led this session',
@@ -307,7 +307,7 @@ function UploadRow({ upload, admin, onRetry }: { upload: UploadView; admin: bool
             Open the report
           </Link>
         )}
-        {upload.status === 'failed' && (
+        {(upload.status === 'failed' || upload.status === 'uploading') && (
           <button type="button" data-testid="coach-upload-retry" onClick={onRetry} style={retryStyle}>
             Try again
           </button>
