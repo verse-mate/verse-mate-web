@@ -288,7 +288,7 @@ export function CoachGate({
 
   if (authError === 'not_a_coach' && emailCheck.pending) return null;
 
-  if (authError === 'not_a_coach' && emailCheck.unverified) {
+  if (authError === 'confirm_email' || (authError === 'not_a_coach' && emailCheck.unverified)) {
     return (
       <ConfirmEmailGate container={centered} title={gateTitle} body={gateBody} button={primaryBtn} iconColor={dt.gold} />
     );

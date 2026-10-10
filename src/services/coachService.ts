@@ -247,7 +247,7 @@ export interface CoachTrends {
 
 // ─── Errors ────────────────────────────────────────────────────────────────
 
-export type CoachAuthReason = 'signed_out' | 'not_a_coach';
+export type CoachAuthReason = 'signed_out' | 'not_a_coach' | 'confirm_email';
 
 export class CoachAuthError extends Error {
   constructor(public reason: CoachAuthReason) {
@@ -308,7 +308,10 @@ async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T>
     headers: { accept: 'application/json', ...(init.headers || {}) },
   });
   if (res.status === 401) throw new CoachAuthError('signed_out');
-  if (res.status === 403) throw new CoachAuthError('not_a_coach');
+  if (res.status === 403) {
+    const body = (await res.json().catch(() => null)) as { details?: { refusal?: string } } | null;
+    throw new CoachAuthError(body?.details?.refusal === 'confirm-email' ? 'confirm_email' : 'not_a_coach');
+  }
   if (!res.ok) {
     const body = (await res.json().catch(() => null)) as { message?: string; details?: Record<string, unknown> } | null;
     throw new CoachApiError(path, res.status, body?.message ?? '', body?.details ?? {});

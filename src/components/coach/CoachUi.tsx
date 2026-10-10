@@ -259,7 +259,7 @@ export function CoachStateBoundary({ loading, authError, error, onRetry, childre
 
   if (authError === 'not_a_coach' && emailCheck.pending) return null;
 
-  if (authError === 'not_a_coach' && emailCheck.unverified) {
+  if (authError === 'confirm_email' || (authError === 'not_a_coach' && emailCheck.unverified)) {
     return (
       <ConfirmEmailGate container={centeredStyle} title={gateTitle} body={gateBody} button={primaryBtn} iconColor={vmTokens.gold} />
     );
