@@ -592,13 +592,13 @@ interface Point {
 
 /** Normalize either the pipeline's titled prose or terse bullets to cards. */
 function feedbackPoints(
-  prose: { title: string; paragraphs: string[] }[] | undefined,
+  prose: { title: string; paragraphs: string[]; evidence?: { quote: string; timestamp: string } }[] | undefined,
   bullets: string[] | undefined,
 ): Point[] {
   if (prose?.length) {
     return prose.map((p) => ({
       title: p.title,
-      body: (p.paragraphs || []).join('\n\n'),
+      body: [...(p.paragraphs || []), ...(p.evidence ? [`“${p.evidence.quote}” at ${p.evidence.timestamp}`] : [])].join('\n\n'),
     }));
   }
   if (bullets?.length) {

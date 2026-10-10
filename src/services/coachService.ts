@@ -115,6 +115,7 @@ export interface CoachFeedbackPoint {
   title: string;
   /** The full write-up, one string per paragraph. */
   paragraphs: string[];
+  evidence?: { quote: string; timestamp: string };
 }
 
 export interface CoachFeedback {
