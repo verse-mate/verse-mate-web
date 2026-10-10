@@ -47,7 +47,7 @@ export interface CoachReport {
   session: string;
   topic: string;
   duration: string;
-  attendees: number;
+  attendees: number | null;
   newcomers: number;
   score: number; // 0–100 weighted composite + bonuses
   base: number;

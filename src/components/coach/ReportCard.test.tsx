@@ -34,6 +34,13 @@ function makeReport(overrides: Partial<CoachReport> = {}): CoachReport {
 }
 
 describe('ReportCard', () => {
+  it('an uploaded session with no head count says attendance was not recorded, not zero', () => {
+    render(<ReportCard report={makeReport({ attendees: null })} leaderName="Avery Hollis" />);
+    fireEvent.click(screen.getByRole('button', { expanded: false }));
+    expect(screen.getByText(/attendance not recorded/)).toBeInTheDocument();
+    expect(screen.queryByText(/0 attending/)).not.toBeInTheDocument();
+  });
+
   it('keeps the feedback collapsed until the chevron is tapped', () => {
     render(<ReportCard report={makeReport()} leaderName="Avery Hollis" />);
     // Collapsed: header identity is visible…

@@ -96,7 +96,7 @@ export default function ReportDetail({
       {showBreakdown && <ScoreBreakdown report={report} />}
 
       <p style={metaLine}>
-        {report.duration} · {report.attendees} attending · {report.newcomers} newcomer
+        {report.duration} · {report.attendees === null ? 'attendance not recorded' : `${report.attendees} attending`} · {report.newcomers} newcomer
         {report.newcomers === 1 ? '' : 's'}
       </p>
 
