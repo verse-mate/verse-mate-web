@@ -1,6 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 
-import { API, capture, serve, useCoachApi } from './fixtures';
+import { API, capture, refuse, serve, useCoachApi } from './fixtures';
 
 async function account(page: Page, opts: { emailVerified: boolean; verify?: { status: number; json: unknown } }) {
   const calls: Array<{ path: string; body: unknown }> = [];
@@ -31,6 +31,15 @@ test.describe('Leader-facing email verification (10.3)', () => {
     await page.getByTestId('coach-confirm-email-send').click();
     await expect(page.getByTestId('coach-confirm-email-sent')).toContainText('Check your inbox');
     expect(calls).toEqual([{ path: '/auth/send-email-verification', body: null }]);
+  });
+
+  test('An account confirmed before the identity change is asked to confirm again, as the server says', async ({ page }) => {
+    await useCoachApi(page);
+    await account(page, { emailVerified: true });
+    await serve(page, `${API}/coach/me`, (route) => refuse(route, 'confirm-email'));
+    await page.goto('/coach/upload');
+    await expect(page.getByTestId('coach-confirm-email')).toBeVisible();
+    await expect(page.getByTestId('coach-not-a-coach')).toHaveCount(0);
   });
 
   test('The dashboard gate asks too', async ({ page }) => {
