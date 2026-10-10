@@ -17,7 +17,7 @@ import { ERROR_CODES, INVALID_REQUEST, UNMATCHED_ROUTE, contractErrors, contract
 
 export const API = process.env.VITE_API_URL ?? 'https://api.versemate.org';
 
-function serve(page: Page, url: Parameters<Page['route']>[0], handler: (route: Route) => unknown) {
+export function serve(page: Page, url: Parameters<Page['route']>[0], handler: (route: Route) => unknown) {
   return page.route(url, (route) => {
     const fulfill = route.fulfill.bind(route);
     route.fulfill = (answer = {}) => {
@@ -393,7 +393,7 @@ const invalidRequest = (route: Route) => route.fulfill({ status: 422, json: INVA
 const forbidden = (route: Route) => route.fulfill({ status: 403, json: { error: 'FORBIDDEN', message: 'Admin access required' } });
 const notFound = (route: Route, message = 'Report not found') => route.fulfill({ status: 404, json: { error: 'NOT_FOUND', message } });
 
-function refuse(route: Route, code: string, words?: { message?: string; details?: Record<string, unknown> }) {
+export function refuse(route: Route, code: string, words?: { message?: string; details?: Record<string, unknown> }) {
   const req = route.request();
   const served = contractRoute(req.method(), new URL(req.url()).pathname);
   if (!served) throw new Error(`${req.method()} ${req.url()} is no route in the contract`);

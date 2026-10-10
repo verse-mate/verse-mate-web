@@ -1167,3 +1167,73 @@ export function statusColor(
   return spreadOver(bandLabels.indexOf(status), bandLabels.length, STATUS_PALETTE) ?? STATUS_UNKNOWN;
 }
 
+
+export interface UploadClass {
+  key: string;
+  name: string;
+  kind: 'registered' | 'rotating' | 'group';
+}
+
+export interface UploadParts {
+  uploadId: string;
+  partBytes: number;
+  parts: { partNumber: number; url: string }[];
+  expiresAt: string;
+}
+
+export type UploadStatus = 'uploading' | 'processing' | 'held' | 'waiting-for-admin' | 'attributed-elsewhere' | 'ready' | 'failed';
+
+export interface UploadView {
+  id: string;
+  coachId: string;
+  classKey: string;
+  className: string;
+  sessionDate: string;
+  title: string | null;
+  status: UploadStatus;
+  reason: string | null;
+  reportId: string | null;
+  createdAt: string;
+}
+
+export interface UploadRequest {
+  classKey: string;
+  sessionDate: string;
+  title?: string | null;
+  fileName: string;
+  fileBytes: number;
+  contentType: string;
+}
+
+export interface AdminUploadRequest extends UploadRequest {
+  coachId: string;
+  replace?: boolean;
+}
+
+const uploadBase = (admin: boolean) => (admin ? 'admin/uploads' : 'uploads');
+
+function postJson(body: unknown): RequestInit {
+  return { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) };
+}
+
+export async function fetchUploadClasses(coachId: string | null): Promise<UploadClass[]> {
+  const path = coachId === null ? 'uploads/classes' : `admin/uploads/classes?coachId=${encodeURIComponent(coachId)}`;
+  return (await coachRequest<{ classes: UploadClass[] }>(path)).classes;
+}
+
+export async function fetchUploads(admin: boolean, coachId: string | null = null): Promise<UploadView[]> {
+  const path = !admin ? 'uploads' : coachId ? `admin/uploads?coachId=${encodeURIComponent(coachId)}` : 'admin/uploads';
+  return (await coachRequest<{ uploads: UploadView[] }>(path)).uploads;
+}
+
+export function requestUpload(input: UploadRequest | AdminUploadRequest): Promise<UploadParts> {
+  return coachRequest<UploadParts>('coachId' in input ? 'admin/uploads' : 'uploads', postJson(input));
+}
+
+export function refreshUploadParts(uploadId: string, admin: boolean): Promise<UploadParts> {
+  return coachRequest<UploadParts>(`${uploadBase(admin)}/${encodeURIComponent(uploadId)}/parts`, { method: 'POST' });
+}
+
+export function completeUpload(uploadId: string, admin: boolean): Promise<{ status: UploadStatus }> {
+  return coachRequest<{ status: UploadStatus }>(`${uploadBase(admin)}/${encodeURIComponent(uploadId)}/complete`, { method: 'POST' });
+}

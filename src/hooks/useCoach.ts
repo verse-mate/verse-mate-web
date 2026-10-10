@@ -95,6 +95,8 @@ export const coachKeys = {
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
   adminMonthly: (month: string) => ['coach', 'admin', 'monthly', month] as const,
   monthlySummary: (month: string) => ['coach', 'monthly-summary', month] as const,
+  uploads: (admin: boolean, coachId: string | null) => ['coach', 'uploads', admin ? 'admin' : 'own', coachId ?? 'all'] as const,
+  uploadClasses: (coachId: string | null) => ['coach', 'uploads', 'classes', coachId ?? 'own'] as const,
   adminMonthlySummary: (id: string, month: string) =>
     ['coach', 'admin', 'monthly-summary', id, month] as const,
 };
@@ -184,8 +186,8 @@ export function useAdminClasses(opts: { enabled?: boolean } = {}): UseQueryResul
   });
 }
 
-export function useAdminCoaches(): UseQueryResult<CoachSummary[]> {
-  return useQuery({ queryKey: coachKeys.adminCoaches, queryFn: fetchAdminCoaches, retry: false });
+export function useAdminCoaches(opts: { enabled?: boolean } = {}): UseQueryResult<CoachSummary[]> {
+  return useQuery({ queryKey: coachKeys.adminCoaches, queryFn: fetchAdminCoaches, retry: false, enabled: opts.enabled ?? true });
 }
 
 export function useAdminLeader(coachId: string | undefined): CoachSummary | undefined {
