@@ -34,8 +34,8 @@ const PROGRAM_REPORT = {
     needsAttention: { name: 'Scripture Focus', avg: 3.2 },
     text: ['Open questions rose across the program.'],
   },
-  snapshots: [{ id: 'alice', name: 'Alice Adams', text: 'A month of steady framing.' }],
-  priorityMatrix: { lowest: ['Scripture Focus'], declining: [], plateau: ['Open Questions'] },
+  snapshots: [{ id: 'alice', name: 'Alice Adams', text: 'Alice Adams: 84 (Strong). A month of steady framing.' }],
+  priorityMatrix: { lowest: ['bob'], declining: [], plateau: ['alice'] },
   initiatives: ['Open each session with the passage read aloud.'],
   executiveSummary: ['Nine sessions ran this month.'],
 };
@@ -96,8 +96,9 @@ test.describe('Written monthly summaries in the portal (8.10)', () => {
     await expect(report.getByTestId('coach-program-bands')).toHaveText('Strong: 1 · Developing: 1');
     await expect(report.getByTestId('coach-program-heatmap').locator('td[data-mark="weak"]')).toHaveText('2');
     await expect(report.getByTestId('coach-program-trends')).toContainText('Most improved leader: Bob Brown (+4)');
-    await expect(report.getByTestId('coach-program-snapshots')).toContainText('A month of steady framing.');
-    await expect(report.getByTestId('coach-program-priorities')).toContainText('Scripture Focus');
+    await expect(report.getByTestId('coach-program-snapshots')).toHaveText(/^Leader snapshotsAlice Adams: 84 \(Strong\)\. A month of steady framing\.$/);
+    await expect(report.getByTestId('coach-program-priorities')).toContainText('LowestBob Brown');
+    await expect(report.getByTestId('coach-program-priorities')).toContainText('PlateauAlice Adams');
     await expect(report.getByTestId('coach-program-initiatives').locator('li')).toHaveText(['Open each session with the passage read aloud.']);
     await expect(page.getByTestId('coach-monthly-narrative')).toHaveCount(0);
     expect(asked[0]).toBe(MONTH);

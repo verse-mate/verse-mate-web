@@ -17,6 +17,8 @@ function signed(n: number): string {
 
 export default function ProgramReportView({ report, padding }: { report: ProgramReport; padding: number }) {
   const t = report.trends;
+  const names = new Map([...report.leaderboard, ...report.heatMap.rows].map((l) => [l.id, l.name]));
+  const named = (ids: string[]) => ids.map((id) => names.get(id) ?? id);
   const facts = [
     t.priorAvg !== null ? `Last month's average: ${t.priorAvg}` : null,
     t.allTimeAvg !== null ? `All-time average: ${t.allTimeAvg}` : null,
@@ -108,7 +110,7 @@ export default function ProgramReportView({ report, padding }: { report: Program
       <Block title="Leader snapshots" padding={padding} testId="coach-program-snapshots">
         {report.snapshots.map((s) => (
           <p key={s.id} style={para}>
-            <strong style={{ color: vmTokens.textPrimary }}>{s.name}.</strong> {s.text}
+            {s.text}
           </p>
         ))}
       </Block>
@@ -117,9 +119,9 @@ export default function ProgramReportView({ report, padding }: { report: Program
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
           {(
             [
-              ['Lowest', report.priorityMatrix.lowest],
-              ['Declining', report.priorityMatrix.declining],
-              ['Plateau', report.priorityMatrix.plateau],
+              ['Lowest', named(report.priorityMatrix.lowest)],
+              ['Declining', named(report.priorityMatrix.declining)],
+              ['Plateau', named(report.priorityMatrix.plateau)],
             ] as const
           ).map(([label, items]) => (
             <div key={label}>
