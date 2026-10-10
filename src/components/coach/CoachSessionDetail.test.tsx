@@ -153,3 +153,15 @@ describe('the full session metrics', () => {
     expect(screen.getByText('No dimension scorecard is available for this session yet.')).toBeInTheDocument();
   });
 });
+
+describe('an uploaded session with no head count', () => {
+  beforeEach(() => primeRubricCache(null));
+  afterEach(() => vi.restoreAllMocks());
+
+  it('reads attendance not recorded in the session snapshot, never null', async () => {
+    vi.spyOn(coachService, 'fetchCoachReportDetail').mockResolvedValue(null);
+    const { container } = renderDetail({ ...REPORT, attendees: null, duration: '62 min' });
+    expect(container.textContent).not.toContain('null');
+    expect(container.textContent).toContain('Not recorded');
+  });
+});
