@@ -1,38 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { analytics } from '@/lib/analytics';
 import { handleSSOCallback } from '@/lib/ssoCallback';
-import { fetchCurrentUser } from '@/services/bibleService';
+import { exchangeSSOCode, fetchCurrentUser } from '@/services/bibleService';
 
-/**
- * `/auth/callback/{google,apple}` — handles the redirect back from the
- * backend's SSO endpoint. Backend signs the user in, sets accessToken
- * + refreshToken in the URL search params, and redirects here. We:
- *   1. Parse the params, store the tokens (in cookies — see Phase 4)
- *   2. Fire analytics.identify so PostHog ties the SSO flow to a user
- *   3. Dispatch SET_SIGNED_IN so the app's React state reflects the
- *      new auth state without a page reload
- *   4. Navigate to whichever URL was saved as `redirectTo` (or `/`)
- *
- * Failure case shows the same kind of error UI frontend-next does.
- *
- * URL contract (set by backend's /auth/sso/{provider}/redirect):
- *   Success: ?accessToken=…&refreshToken=…&verified=…
- *   Failure: ?error=…&error_description=…
- */
 export default function AuthCallback() {
   const navigate = useNavigate();
   const { dispatch } = useApp();
   const { provider } = useParams<{ provider: 'google' | 'apple' }>();
   const [searchParams] = useSearchParams();
   const [error, setError] = useState<string | null>(null);
+  const outcome = useRef<ReturnType<typeof handleSSOCallback>>();
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const result = handleSSOCallback(searchParams);
-      window.history.replaceState(window.history.state, '', window.location.pathname);
+      if (!outcome.current) {
+        const params = new URLSearchParams(searchParams);
+        window.history.replaceState(window.history.state, '', window.location.pathname);
+        outcome.current = handleSSOCallback(params, exchangeSSOCode);
+      }
+      const result = await outcome.current;
 
       if (!result.success) {
         if (!cancelled) setError(result.errorMessage || 'Sign-in failed');
