@@ -18,6 +18,7 @@
 import { API_BASE_URL, fetchWithAuth } from './api';
 import { spreadOver } from './rubric';
 import type { MonthlyReportRow } from './coachMonthlyEdit';
+import { scrubCoachPath, stripQuery } from '@/lib/analyticsPrivacy';
 
 // ─── Domain types ──────────────────────────────────────────────────────────
 
@@ -264,7 +265,7 @@ export class CoachApiError extends Error {
     public serverMessage: string,
     public details: Record<string, unknown> = {},
   ) {
-    super(`coach api ${path} failed: ${status}`);
+    super(`coach api ${scrubCoachPath(`/coach/${stripQuery(path)}`)} failed: ${status}`);
     this.name = 'CoachApiError';
   }
 }

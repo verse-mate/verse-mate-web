@@ -2,10 +2,11 @@ import type { CapturedNetworkRequest, CaptureResult } from 'posthog-js';
 
 export const REPLAY_BLOCK_CLASS = 'ph-no-capture';
 
-const URL_KEY = /(^\$?|_)(url|referrer)$/i;
+const URL_KEY = /(^\$?|_)(url|referrer|href)$/i;
 const QUERY_PROPERTIES = ['search', '$search'];
-const COACH_API = /\/coach\//;
-const COACH_PATH = /\/coach((?:\/[^/?#\s"'<>\\]+)+)/g;
+const EMBEDDED_QUERY = /((?:https?:\/\/|href=")[^\s"'?#\\()<>[\]]*)(?:[?#][^\s"'\\()<>[\]]*)?/g;
+const GOOGLE_FILE_LINK = /(https?:\/\/(?:docs|drive|drive\.usercontent)\.google\.com)(?=[/?#\s"'\\()<>[\]]|$)[^\s"'\\()<>[\]]*/gi;
+const COACH_PATH = /\/coach((?:\/[^/?#\s"'<>\\]+)+)/gi;
 const COACH_WORDS = new Set([
   'admin',
   'affiliated-church',
@@ -54,6 +55,14 @@ export function stripQuery(url: string): string {
   return url.split(/[?#]/)[0];
 }
 
+function stripEmbeddedQueries(text: string): string {
+  return text.replace(EMBEDDED_QUERY, '$1');
+}
+
+function scrubText(text: string, isUrl = false): string {
+  return scrubCoachPath((isUrl ? stripQuery(text) : stripEmbeddedQueries(text)).replace(GOOGLE_FILE_LINK, '$1'));
+}
+
 export function scrubCoachPath(text: string): string {
   return text.replace(
     COACH_PATH,
@@ -62,9 +71,9 @@ export function scrubCoachPath(text: string): string {
 }
 
 function scrubValue(value: unknown, key = ''): unknown {
-  if (typeof value === 'string') return scrubCoachPath(URL_KEY.test(key) ? stripQuery(value) : value);
-  if (Array.isArray(value)) return value.map((v) => scrubValue(v));
-  if (value && Object.getPrototypeOf(value) === Object.prototype) {
+  if (typeof value === 'string') return scrubText(value, URL_KEY.test(key));
+  if (Array.isArray(value)) return value.map((v) => scrubValue(v, key));
+  if (value && typeof value === 'object' && [Object.prototype, null].includes(Object.getPrototypeOf(value))) {
     return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, scrubValue(v, k)]));
   }
   return value;
@@ -72,7 +81,9 @@ function scrubValue(value: unknown, key = ''): unknown {
 
 function scrubHeatmap(data: Record<string, unknown[]>): Record<string, unknown[]> {
   const out: Record<string, unknown[]> = {};
-  for (const [url, points] of Object.entries(data)) (out[scrubCoachPath(stripQuery(url))] ??= []).push(...points);
+  for (const [url, points] of Object.entries(data)) {
+    if (Array.isArray(points)) (out[scrubText(url, true)] ??= []).push(...points);
+  }
   return out;
 }
 
@@ -86,19 +97,18 @@ function scrubProperties<T extends Record<string, unknown> | undefined>(props: T
 
 export function scrubEvent(event: CaptureResult | null): CaptureResult | null {
   if (!event) return event;
-  return {
-    ...event,
-    properties: scrubProperties(event.properties),
-    ...(event.$set ? { $set: scrubProperties(event.$set) } : {}),
-    ...(event.$set_once ? { $set_once: scrubProperties(event.$set_once) } : {}),
-  };
+  try {
+    return {
+      ...event,
+      properties: scrubProperties(event.properties),
+      ...(event.$set ? { $set: scrubProperties(event.$set) } : {}),
+      ...(event.$set_once ? { $set_once: scrubProperties(event.$set_once) } : {}),
+    };
+  } catch {
+    return null;
+  }
 }
 
 export function scrubNetworkRequest(request: CapturedNetworkRequest): CapturedNetworkRequest {
-  const name = scrubCoachPath(stripQuery(request.name ?? ''));
-  return {
-    ...request,
-    name,
-    ...(COACH_API.test(name) ? { requestBody: null, responseBody: null } : {}),
-  };
+  return { ...request, name: scrubText(request.name ?? '', true), requestBody: null, responseBody: null };
 }
