@@ -100,6 +100,8 @@ async function ensureSignedIn(page: Parameters<typeof LoginPage>[0]['page'], ema
       timeout: 15_000,
     })
     .toBe(true);
+  await page.goto('/');
+  await page.waitForLoadState('networkidle', { timeout: 12_000 }).catch(() => {});
 }
 
 async function selectFirstTopic(page: Parameters<typeof LoginPage>[0]['page']) {

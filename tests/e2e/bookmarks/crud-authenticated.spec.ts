@@ -27,46 +27,19 @@ test.describe('Bookmarks — authenticated CRUD', () => {
     const reader = new ReaderPage(page);
     const bookmarks = new BookmarksPage(page);
 
-    // Use a fixed bookId+chapter for the toggle (Genesis = bookId 1, ch 1).
     const toggle = reader.chapterBookmarkToggle(1, 1);
 
     await reader.goto('genesis', 1);
     await expect(toggle).toBeVisible();
+    await page.waitForLoadState('networkidle');
 
-    // Capture pre-state — if this test ran before, may already be bookmarked.
-    // Tap once: toggles. Tap again only if the post-state isn't what we want.
-    await toggle.click();
-    await page.waitForTimeout(500); // let the API call complete
+    if ((await toggle.getAttribute('aria-label')) === 'Bookmark chapter') await toggle.click();
+    await expect(toggle).toHaveAttribute('aria-label', 'Remove bookmark');
 
-    // Navigate to /bookmarks via the menu (route directly to keep test focused).
-    await bookmarks.goto();
-
-    // Either the chapter is in the list now, or it was just removed.
-    // Re-toggle once more: end at "bookmarked" to be deterministic.
-    await reader.goto('genesis', 1);
-    const isBookmarkedNow = await page.evaluate(() => {
-      // Read AppContext bookmarks via localStorage (where it persists).
-      const raw = localStorage.getItem('versemate.bookmarks');
-      if (!raw) return false;
-      try {
-        const list = JSON.parse(raw) as Array<{ bookId: number; chapter: number; verse?: number }>;
-        return list.some((b) => b.bookId === 1 && b.chapter === 1 && !b.verse);
-      } catch {
-        return false;
-      }
-    });
-    if (!isBookmarkedNow) await toggle.click();
-    await page.waitForTimeout(500);
-
-    // Verify in /bookmarks list
     await bookmarks.goto();
     await expect(bookmarks.list).toContainText(/Genesis\s*1/i, { timeout: 10_000 });
 
-    // Cleanup: delete via list — find the first bookmark item delete button
-    const firstDelete = page.locator('[data-testid^="bookmark-delete-"]').first();
-    if (await firstDelete.isVisible().catch(() => false)) {
-      await firstDelete.click();
-      await page.waitForTimeout(500);
-    }
+    await page.locator('[data-testid^="bookmark-delete-"]').first().click();
+    await expect(bookmarks.list).not.toContainText(/Genesis\s*1/i);
   });
 });

@@ -8,8 +8,8 @@ import { HAS_AUTH_CREDENTIALS, TEST_EMAIL, TEST_PASSWORD, skipReasonNoAuth } fro
  *
  * Maps to FEATURES.md §3.1 (Logout) and §3.7 (Menu → Logout when signed in).
  *
- * Uses storageState from `fixtures/auth.setup.ts`. Skipped cleanly without
- * `E2E_TEST_PASSWORD`.
+ * Signs in on its own session, because signing out revokes the token in use.
+ * Skipped cleanly without `E2E_TEST_PASSWORD`.
  */
 
 test.skip(({ viewport }) => !!viewport && viewport.width >= 1024, 'Mobile menu only');
@@ -22,7 +22,7 @@ test.describe('Auth — logout', () => {
     const menu = new MenuPage(page);
     await login.goto('/login');
     await login.signIn(TEST_EMAIL, TEST_PASSWORD);
-    await menu.goto();
+    await expect(page).toHaveURL(/\/menu(?:\/|$)/, { timeout: 15_000 });
 
     // While signed in, the bottom button shows "Logout" (red text)
     await expect(menu.logout).toBeVisible({ timeout: 10_000 });
