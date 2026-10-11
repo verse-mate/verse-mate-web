@@ -99,6 +99,35 @@ function checkLegacyRedirects(url) {
 // changed later without poisoning browser caches.
 const VISUALS_CDN_ORIGIN = "https://versemate.nyc3.cdn.digitaloceanspaces.com";
 
+const SSO_CALLBACK_PATH = /^\/auth\/callback(\/|$)/;
+
+function withoutReferrer(response) {
+  const headers = new Headers(response.headers);
+  headers.set("Referrer-Policy", "no-referrer");
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
+async function serveApp(request, env, url) {
+  const response = await env.ASSETS.fetch(request);
+  if (response.status !== 404) {
+    return response;
+  }
+
+  if (!url.pathname.includes(".")) {
+    const indexRequest = new Request(
+      new URL("/index.html", request.url).toString(),
+      request,
+    );
+    return env.ASSETS.fetch(indexRequest);
+  }
+
+  return response;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -112,21 +141,9 @@ export default {
     const redirect = checkLegacyRedirects(url);
     if (redirect) return redirect;
 
-    // 2. Try to serve a static asset
-    const response = await env.ASSETS.fetch(request);
-    if (response.status !== 404) {
-      return response;
-    }
-
-    // 3. SPA fallback for non-asset paths
-    if (!url.pathname.includes(".")) {
-      const indexRequest = new Request(
-        new URL("/index.html", request.url).toString(),
-        request,
-      );
-      return env.ASSETS.fetch(indexRequest);
-    }
-
-    return response;
+    const response = await serveApp(request, env, url);
+    return SSO_CALLBACK_PATH.test(url.pathname)
+      ? withoutReferrer(response)
+      : response;
   },
 };
