@@ -10,7 +10,7 @@
 export const TEST_EMAIL =
   process.env.E2E_TEST_EMAIL ||
   process.env.VM_TEST_EMAIL ||
-  'person7@example.org';
+  'e2e-reader@example.test';
 
 export const TEST_PASSWORD =
   process.env.E2E_TEST_PASSWORD ||
@@ -27,6 +27,8 @@ export const skipReasonNoAuth =
 export const E2E_PORT = Number(process.env.E2E_PORT || 5173);
 
 export const BASE_URL = process.env.E2E_BASE_URL || `http://localhost:${E2E_PORT}`;
+
+export const API_URL = (process.env.VITE_API_URL || 'http://127.0.0.1:4000').replace(/\/+$/, '');
 
 /**
  * localStorage key the web app writes once a visitor dismisses the first-run
