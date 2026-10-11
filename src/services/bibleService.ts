@@ -1157,10 +1157,10 @@ export async function signInWithSSO(
   return user;
 }
 
-export function exchangeSSOCode(code: string) {
+export function exchangeSSOCode(code: string, verifier: string) {
   return api.post<{ accessToken: string; verified: boolean }>(
     '/auth/sso/exchange',
-    { code },
+    { code, verifier },
     { auth: false }
   );
 }

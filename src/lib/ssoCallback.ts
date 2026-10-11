@@ -74,15 +74,50 @@ export function parseSSOCallbackParams(
   };
 }
 
-export type SSOCodeExchange = (code: string) => Promise<{ accessToken: string }>;
+export const SSO_VERIFIER_KEY = 'ssoVerifier';
+
+function base64url(bytes: Uint8Array): string {
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+export async function ssoChallengeFor(verifier: string): Promise<string> {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(verifier));
+  return base64url(new Uint8Array(digest));
+}
+
+export async function startSSOSignIn(redirectUrl: string): Promise<void> {
+  const verifier = base64url(crypto.getRandomValues(new Uint8Array(32)));
+  sessionStorage.setItem(SSO_VERIFIER_KEY, verifier);
+  const challenge = await ssoChallengeFor(verifier);
+  window.location.href = `${redirectUrl}?challenge=${challenge}`;
+}
+
+function takePendingVerifier(): string | null {
+  try {
+    const verifier = sessionStorage.getItem(SSO_VERIFIER_KEY);
+    sessionStorage.removeItem(SSO_VERIFIER_KEY);
+    return verifier;
+  } catch {
+    return null;
+  }
+}
+
+export type SSOCodeExchange = (
+  code: string,
+  verifier: string,
+) => Promise<{ accessToken: string }>;
 
 async function sessionTokenFrom(
   result: SSOCallbackResult,
+  verifier: string | null,
   exchangeCode: SSOCodeExchange,
 ): Promise<string | undefined> {
+  if (!verifier) return undefined;
   if (!result.code) return result.accessToken;
   try {
-    return (await exchangeCode(result.code)).accessToken;
+    return (await exchangeCode(result.code, verifier)).accessToken;
   } catch {
     return undefined;
   }
@@ -98,9 +133,10 @@ export async function handleSSOCallback(
   errorMessage?: string;
 }> {
   const parsed = parseSSOCallbackParams(searchParams);
+  const verifier = takePendingVerifier();
 
   if (parsed.success) {
-    const accessToken = await sessionTokenFrom(parsed, exchangeCode);
+    const accessToken = await sessionTokenFrom(parsed, verifier, exchangeCode);
     if (accessToken) {
       setAccessToken(accessToken);
       if (parsed.refreshToken) setRefreshToken(parsed.refreshToken);
