@@ -16,6 +16,7 @@
  */
 
 import { API_BASE_URL, fetchWithAuth } from './api';
+import { scrubCoachPath, stripQuery } from '@/lib/analyticsPrivacy';
 
 // ─── Domain types ──────────────────────────────────────────────────────────
 
@@ -257,7 +258,7 @@ async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T>
   });
   if (res.status === 401) throw new CoachAuthError('signed_out');
   if (res.status === 403) throw new CoachAuthError('not_a_coach');
-  if (!res.ok) throw new Error(`coach api ${path} failed: ${res.status}`);
+  if (!res.ok) throw new Error(`coach api ${scrubCoachPath(`/coach/${stripQuery(path)}`)} failed: ${res.status}`);
   return (await res.json()) as T;
 }
 

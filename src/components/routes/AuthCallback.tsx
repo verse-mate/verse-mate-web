@@ -32,6 +32,7 @@ export default function AuthCallback() {
     let cancelled = false;
     (async () => {
       const result = handleSSOCallback(searchParams);
+      window.history.replaceState(window.history.state, '', window.location.pathname);
 
       if (!result.success) {
         if (!cancelled) setError(result.errorMessage || 'Sign-in failed');
