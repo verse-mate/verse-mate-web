@@ -87,11 +87,11 @@ setup('authenticate', async ({ page, context }) => {
     .or(page.getByRole('button', { name: /^sign in$/i }))
     .click();
 
-  // Successful login: hamburger menu button reappears (or Sign Out in menu)
-  await page.getByTestId('hamburger-menu-button')
-    .or(page.getByRole('button', { name: /open menu/i }))
-    .first()
-    .waitFor({ state: 'visible', timeout: 15_000 });
+  await expect
+    .poll(async () => (await context.cookies()).some((cookie) => cookie.name === 'accessToken'), {
+      timeout: 15_000,
+    })
+    .toBe(true);
 
   await context.storageState({ path: AUTH_FILE });
 });

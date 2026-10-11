@@ -854,7 +854,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 the user just asked for from the side menu. */}
             {isSubPage ? (
               <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
-                <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                <div className="right-panel-subpage" style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                   {(() => {
                     const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
                     if (!entry) return null;

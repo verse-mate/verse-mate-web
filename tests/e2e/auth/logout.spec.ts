@@ -1,25 +1,28 @@
 import { test, expect } from '@playwright/test';
+import { LoginPage } from '../pages/login.page';
 import { MenuPage } from '../pages/menu.page';
-import { HAS_AUTH_CREDENTIALS, skipReasonNoAuth } from '../fixtures/env';
+import { HAS_AUTH_CREDENTIALS, TEST_EMAIL, TEST_PASSWORD, skipReasonNoAuth } from '../fixtures/env';
 
 /**
  * Auth — logout flow.
  *
  * Maps to FEATURES.md §3.1 (Logout) and §3.7 (Menu → Logout when signed in).
  *
- * Uses storageState from `fixtures/auth.setup.ts`. Skipped cleanly without
- * `E2E_TEST_PASSWORD`.
+ * Signs in on its own session, because signing out revokes the token in use.
+ * Skipped cleanly without `E2E_TEST_PASSWORD`.
  */
 
-test.use({ storageState: 'tests/e2e/.auth/user.json' });
 test.skip(({ viewport }) => !!viewport && viewport.width >= 1024, 'Mobile menu only');
 
 test.describe('Auth — logout', () => {
   test.skip(!HAS_AUTH_CREDENTIALS, skipReasonNoAuth);
 
   test('signed-in user sees Logout in menu, signing out clears auth state', async ({ page }) => {
+    const login = new LoginPage(page);
     const menu = new MenuPage(page);
-    await menu.goto();
+    await login.goto('/login');
+    await login.signIn(TEST_EMAIL, TEST_PASSWORD);
+    await expect(page).toHaveURL(/\/menu(?:\/|$)/, { timeout: 15_000 });
 
     // While signed in, the bottom button shows "Logout" (red text)
     await expect(menu.logout).toBeVisible({ timeout: 10_000 });
