@@ -541,8 +541,9 @@ button { font-family: inherit; }
 .chapter-nav-next { right: max(4px, calc(50% - 330px - 8px - 40px)); }
 
 /* Progress bar */
+:root { --progress-bar-height: 32px; }
 .progress-bar {
-  height: 32px;
+  height: var(--progress-bar-height);
   display: flex;
   align-items: center;
   gap: 16px;
@@ -552,6 +553,9 @@ button { font-family: inherit; }
   position: absolute;
   bottom: 0; left: 0; right: 0;
   flex-shrink: 0;
+}
+.split-body:has(.progress-bar) .right-panel-subpage {
+  padding-bottom: var(--progress-bar-height);
 }
 .progress-track {
   flex: 1;
