@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate, Outlet } from "react-router-dom";
 import { useTrackPreAuthLocation } from "@/hooks/useTrackPreAuthLocation";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
@@ -44,8 +44,17 @@ import CoachTrendsScreen from "@/pages/CoachTrendsScreen";
 import CoachFeedbackScreen from "@/pages/CoachFeedbackScreen";
 import CoachLeaderScreen from "@/pages/CoachLeaderScreen";
 import NotFound from "@/pages/NotFound";
+import { REPLAY_BLOCK_CLASS } from "@/lib/analyticsPrivacy";
 
 const queryClient = new QueryClient();
+
+function ReplayBlocked() {
+  return (
+    <div className={`contents ${REPLAY_BLOCK_CLASS}`} data-testid="coach-replay-blocked">
+      <Outlet />
+    </div>
+  );
+}
 
 function PreAuthLocationTracker() {
   useTrackPreAuthLocation();
@@ -106,6 +115,7 @@ const App = () => (
               {/* Bible-Coach portal — gated in-screen (any signed-in user;
                   non-coaches see a friendly gate). /coach branches to the
                   admin roster or the coachee's own dashboard. */}
+              <Route element={<ReplayBlocked />}>
               <Route path="/coach" element={<CoachHome />} />
               {/* Sessions — manage recurring classes + revisit past reports
                   (coaching-dashboard design). */}
@@ -134,6 +144,7 @@ const App = () => (
               <Route path="/coach/leader/:coachId/trends" element={<CoachTrendsScreen />} />
               <Route path="/coach/leader/:coachId/manage" element={<CoachLeaderScreen />} />
               <Route path="/coach/leader/:coachId/monthly" element={<CoachLeaderMonthlyScreen />} />
+              </Route>
               <Route path="/menu" element={<MenuScreen />} />
               <Route path="/menu/settings" element={<SettingsScreen />} />
               <Route path="/menu/about" element={<AboutScreen />} />
