@@ -1,13 +1,3 @@
-/**
- * SSO callback utilities. Ported from
- * verse-mate/packages/frontend-base/src/auth/lib.ts so the same callback
- * URL contract works in this repo.
- *
- * Callback URL contract (set by the backend's /auth/sso/{provider}/redirect):
- *   Success: /auth/callback/{provider}?accessToken=…&refreshToken=…&verified=…
- *   Failure: /auth/callback/{provider}?error=…&error_description=…
- */
-
 import { setAccessToken, setRefreshToken } from '@/services/api';
 
 export type SSOErrorCode =
@@ -22,6 +12,7 @@ export type SSOErrorCode =
 
 export interface SSOCallbackResult {
   success: boolean;
+  code?: string;
   accessToken?: string;
   refreshToken?: string;
   verified?: boolean;
@@ -56,11 +47,16 @@ export function parseSSOCallbackParams(
   const params =
     typeof searchParams === 'string' ? new URLSearchParams(searchParams) : searchParams;
 
+  const code = params.get('code');
   const accessToken = params.get('accessToken');
   const refreshToken = params.get('refreshToken');
   const verified = params.get('verified');
   const error = params.get('error');
   const errorDescription = params.get('error_description');
+
+  if (code) {
+    return { success: true, code };
+  }
 
   if (accessToken) {
     return {
@@ -78,36 +74,53 @@ export function parseSSOCallbackParams(
   };
 }
 
-/**
- * Top-level orchestrator: parse the URL params, store tokens, return
- * the redirect destination. Mirrors handleSSOCallback in frontend-base.
- */
-export function handleSSOCallback(searchParams: string | URLSearchParams): {
+export type SSOCodeExchange = (code: string) => Promise<{ accessToken: string }>;
+
+async function sessionTokenFrom(
+  result: SSOCallbackResult,
+  exchangeCode: SSOCodeExchange,
+): Promise<string | undefined> {
+  if (!result.code) return result.accessToken;
+  try {
+    return (await exchangeCode(result.code)).accessToken;
+  } catch {
+    return undefined;
+  }
+}
+
+export async function handleSSOCallback(
+  searchParams: string | URLSearchParams,
+  exchangeCode: SSOCodeExchange,
+): Promise<{
   success: boolean;
   redirectUrl?: string;
   error?: SSOErrorCode;
   errorMessage?: string;
-} {
-  const result = parseSSOCallbackParams(searchParams);
+}> {
+  const parsed = parseSSOCallbackParams(searchParams);
 
-  if (result.success && result.accessToken) {
-    setAccessToken(result.accessToken);
-    if (result.refreshToken) setRefreshToken(result.refreshToken);
+  if (parsed.success) {
+    const accessToken = await sessionTokenFrom(parsed, exchangeCode);
+    if (accessToken) {
+      setAccessToken(accessToken);
+      if (parsed.refreshToken) setRefreshToken(parsed.refreshToken);
 
-    let redirectTo = '/';
-    try {
-      redirectTo = localStorage.getItem('redirectTo') || '/';
-      localStorage.removeItem('redirectTo');
-    } catch {
-      /* ignore */
+      let redirectTo = '/';
+      try {
+        redirectTo = localStorage.getItem('redirectTo') || '/';
+        localStorage.removeItem('redirectTo');
+      } catch {
+        /* ignore */
+      }
+
+      return { success: true, redirectUrl: redirectTo };
     }
-
-    return { success: true, redirectUrl: redirectTo };
   }
 
+  const error = parsed.success ? 'auth_failed' : parsed.error;
   return {
     success: false,
-    error: result.error,
-    errorMessage: getSSOErrorMessage(result.error || 'unknown_error', result.errorDescription),
+    error,
+    errorMessage: getSSOErrorMessage(error || 'unknown_error', parsed.errorDescription),
   };
 }

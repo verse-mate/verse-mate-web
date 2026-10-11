@@ -1157,6 +1157,14 @@ export async function signInWithSSO(
   return user;
 }
 
+export function exchangeSSOCode(code: string) {
+  return api.post<{ accessToken: string; verified: boolean }>(
+    '/auth/sso/exchange',
+    { code },
+    { auth: false }
+  );
+}
+
 export async function login(email: string, password: string): Promise<AuthUser> {
   const data = await api.post<{ accessToken: string; refreshToken?: string; verified: boolean }>(
     '/auth/login',
