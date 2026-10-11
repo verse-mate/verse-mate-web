@@ -54,12 +54,12 @@ describe('what reaches analytics', () => {
 
   it('drops both bodies of every coach admin request from a replay network entry', () => {
     const out = scrubNetworkRequest({
-      name: 'https://api.test/coach/admin/leaders/wyatt-wellington/email',
+      name: 'https://api.test/coach/admin/leaders/leader-e/email',
       entryType: 'resource',
       startTime: 0,
       duration: 1,
-      requestBody: '{"email":"wyatt@example.test"}',
-      responseBody: '{"email":"wyatt@example.test"}',
+      requestBody: '{"email":"leader-e@example.test"}',
+      responseBody: '{"email":"leader-e@example.test"}',
     });
     expect(out?.requestBody).toBeNull();
     expect(out?.responseBody).toBeNull();
@@ -83,15 +83,96 @@ describe('what reaches analytics', () => {
     expect(out?.responseBody).toBeNull();
   });
 
-  it('keeps the bodies of a request outside the coach API', () => {
-    const out = scrubNetworkRequest({
-      name: 'https://api.test/bible/books',
-      entryType: 'resource',
-      startTime: 0,
-      duration: 1,
-      responseBody: '{"books":[]}',
+  it.each([
+    ['sign-in', 'https://api.test/auth/login', '{"email":"reader@example.test","password":"pw-secret"}', '{"accessToken":"at-secret"}'],
+    ['token refresh', 'https://api.test/auth/refresh', '{"refreshToken":"rt-secret"}', '{"accessToken":"at-secret"}'],
+    ['bible', 'https://api.test/bible/books', '', '{"books":[]}'],
+  ])('drops both bodies of a %s request outside the coach API from a replay network entry', (_name, name, requestBody, responseBody) => {
+    const out = scrubNetworkRequest({ name, entryType: 'resource', startTime: 0, duration: 1, requestBody, responseBody });
+    expect(out?.requestBody).toBeNull();
+    expect(out?.responseBody).toBeNull();
+  });
+
+  it('strips queries from link addresses and link text an autocaptured click carries', () => {
+    const out = scrubEvent({
+      uuid: 'u',
+      event: '$autocapture',
+      properties: {
+        $elements_chain: 'a:attr__href="/notes?s=n-secret"href="/notes?s=n-secret"text="https://zoom.test/j/1?pwd=p-secret"nth-child="1"',
+        $elements: [{ tag_name: 'a', attr__href: 'https://zoom.test/j/1?pwd=p-secret' }],
+        $el_text: 'Join https://zoom.test/j/1?pwd=p-secret now',
+        $external_click_url: 'https://zoom.test/j/1?pwd=p-secret',
+        page_href: '/notes?s=n-secret',
+      },
     });
-    expect(out?.responseBody).toBe('{"books":[]}');
+    expect(out?.properties).toEqual({
+      $elements_chain: 'a:attr__href="/notes"href="/notes"text="https://zoom.test/j/1"nth-child="1"',
+      $elements: [{ tag_name: 'a', attr__href: 'https://zoom.test/j/1' }],
+      $el_text: 'Join https://zoom.test/j/1 now',
+      $external_click_url: 'https://zoom.test/j/1',
+      page_href: '/notes',
+    });
+  });
+
+  it('keeps the punctuation around a link whose query it strips', () => {
+    const out = scrubEvent({
+      uuid: 'u',
+      event: 'x',
+      properties: { note: 'See https://a.test/x?y=1, then (https://b.test/z?q=2). Frame (https://app.test/a.js?v=1:2:3)' },
+    });
+    expect(out?.properties.note).toBe('See https://a.test/x then (https://b.test/z). Frame (https://app.test/a.js)');
+  });
+
+  it('scrubs a long run of links in linear time', () => {
+    const run = 'url(https://a.test/x.png)'.repeat(40_000) + 'http://'.repeat(40_000);
+    const started = performance.now();
+    scrubEvent({ uuid: 'u', event: 'x', properties: { blob: run } });
+    expect(performance.now() - started).toBeLessThan(1000);
+  });
+
+  it('keeps only the host of a Google Docs or Drive link', () => {
+    const out = scrubEvent({
+      uuid: 'u',
+      event: '$autocapture',
+      properties: {
+        $external_click_url: 'https://docs.google.com/document/d/doc-id-1/export?format=pdf',
+        $elements_chain: 'a:attr__href="https://drive.google.com/uc?export=download&id=file-id-2"',
+      },
+    });
+    expect(out?.properties).toEqual({
+      $external_click_url: 'https://docs.google.com',
+      $elements_chain: 'a:attr__href="https://drive.google.com"',
+    });
+    expect(
+      scrubEvent({ uuid: 'u', event: 'x', properties: { a: 'https://docs.google.com.other.test/p/1', b: '(https://docs.google.com/d/x/edit),next' } })
+        ?.properties,
+    ).toEqual({ a: 'https://docs.google.com.other.test/p/1', b: '(https://docs.google.com),next' });
+    expect(
+      scrubNetworkRequest({ name: 'https://docs.google.com/document/d/doc-id-1/export', entryType: 'resource', startTime: 0, duration: 1 })?.name,
+    ).toBe('https://docs.google.com');
+  });
+
+  it('replaces the ids after /coach/ whatever the case of the address', () => {
+    expect(scrubEvent({ uuid: 'u', event: '$pageview', properties: { pathname: '/Coach/leader/l-9/manage' } })?.properties).toEqual({
+      pathname: '/coach/leader/:id/manage',
+    });
+  });
+
+  it('scrubs objects created without a prototype', () => {
+    const nested = Object.assign(Object.create(null), { $current_url: 'https://app.test/notes?q=n-secret' });
+    expect(scrubEvent({ uuid: 'u', event: 'x', properties: { nested } })?.properties).toEqual({
+      nested: { $current_url: 'https://app.test/notes' },
+    });
+  });
+
+  it('passes through an empty event and ignores a malformed heatmap entry', () => {
+    expect(scrubEvent(null)).toBeNull();
+    const out = scrubEvent({
+      uuid: 'u',
+      event: '$$heatmap',
+      properties: { $heatmap_data: { 'https://app.test/notes?s=1': [{ x: 1 }], 'https://app.test/x': 'bad' } },
+    });
+    expect(out?.properties.$heatmap_data).toEqual({ 'https://app.test/notes': [{ x: 1 }] });
   });
 
   it.each([
@@ -100,10 +181,10 @@ describe('what reaches analytics', () => {
     ['review', 'https://api.test/coach/admin/reports/r1/review', '', '{"dimensions":[{"rationale":"private"}]}'],
     ['kept versions', 'https://api.test/coach/admin/reports/r1/revisions', '', '{"revisions":[{"amendedBy":"admin@example.test"}]}'],
     ['revision send', 'https://api.test/coach/admin/reports/r1/revision/send', '', '{"sends":[{"email":"leader@example.test"}]}'],
-    ['assignment', 'https://api.test/coach/admin/sessions/ff-4/attribute', '{"coachId":"amy-lee"}', '{"coachId":"amy-lee"}'],
-    ['keywords and addresses', 'https://api.test/coach/admin/leaders/amy-lee/attribution', '{"altEmails":["amy@example.test"]}', '{"altEmails":["amy@example.test"]}'],
-    ['leader address', 'https://api.test/coach/admin/leaders/amy-lee/email', '{"email":"amy@example.test"}', '{"email":"amy@example.test"}'],
-    ['note', 'https://api.test/coach/admin/coaches/amy-lee/reports/r1/notes', '{"body":"private"}', '{"note":{"body":"private"}}'],
+    ['assignment', 'https://api.test/coach/admin/sessions/ff-4/attribute', '{"coachId":"leader-a"}', '{"coachId":"leader-a"}'],
+    ['keywords and addresses', 'https://api.test/coach/admin/leaders/leader-a/attribution', '{"altEmails":["leader-a@example.test"]}', '{"altEmails":["leader-a@example.test"]}'],
+    ['leader address', 'https://api.test/coach/admin/leaders/leader-a/email', '{"email":"leader-a@example.test"}', '{"email":"leader-a@example.test"}'],
+    ['note', 'https://api.test/coach/admin/coaches/leader-a/reports/r1/notes', '{"body":"private"}', '{"note":{"body":"private"}}'],
   ])('drops both bodies of the %s request from a replay network entry', (_name, name, requestBody, responseBody) => {
     const out = scrubNetworkRequest({ name, entryType: 'resource', startTime: 0, duration: 1, requestBody, responseBody });
     expect(out?.requestBody).toBeNull();
@@ -112,7 +193,7 @@ describe('what reaches analytics', () => {
 
   it('replaces the leader and report ids after /coach/ in a replay network entry', () => {
     const out = scrubNetworkRequest({
-      name: 'https://api.test/coach/admin/coaches/avery-hollis/reports/avery-hollis-2026-07-16-ff123/notes?x=1',
+      name: 'https://api.test/coach/admin/coaches/leader-b/reports/leader-b-2026-07-16-ff123/notes?x=1',
       entryType: 'resource',
       startTime: 0,
       duration: 1,
@@ -128,17 +209,17 @@ describe('what reaches analytics', () => {
       uuid: 'u',
       event: '$pageview',
       properties: {
-        $current_url: 'https://app.test/coach/leader/avery-hollis/manage?s=avery-hollis-2026-07-16-ff1',
-        pathname: '/coach/leader/avery-hollis/manage',
-        $pathname: '/coach/leader/avery-hollis',
-        $prev_pageview_pathname: '/coach/leader/amy-lee/trends',
-        $session_entry_url: 'https://app.test/coach/leader/amy-lee?s=r',
-        referrer: 'https://app.test/coach/leader/amy-lee/sessions',
-        $elements_chain: 'a:attr__href="/coach/leader/amy-lee/monthly"nth-child="1"',
-        $snapshot_data: [{ type: 4, data: { href: 'https://app.test/coach/leader/amy-lee/manage' } }],
+        $current_url: 'https://app.test/coach/leader/leader-b/manage?s=leader-b-2026-07-16-ff1',
+        pathname: '/coach/leader/leader-b/manage',
+        $pathname: '/coach/leader/leader-b',
+        $prev_pageview_pathname: '/coach/leader/leader-a/trends',
+        $session_entry_url: 'https://app.test/coach/leader/leader-a?s=r',
+        referrer: 'https://app.test/coach/leader/leader-a/sessions',
+        $elements_chain: 'a:attr__href="/coach/leader/leader-a/monthly"nth-child="1"',
+        $snapshot_data: [{ type: 4, data: { href: 'https://app.test/coach/leader/leader-a/manage' } }],
         other: 'kept',
       },
-      $set_once: { $initial_pathname: '/coach/leader/amy-lee', $initial_current_url: 'https://app.test/coach/leader/amy-lee?s=1' },
+      $set_once: { $initial_pathname: '/coach/leader/leader-a', $initial_current_url: 'https://app.test/coach/leader/leader-a?s=1' },
     });
     expect(out?.properties).toEqual({
       $current_url: 'https://app.test/coach/leader/:id/manage',
@@ -160,8 +241,8 @@ describe('what reaches analytics', () => {
       event: '$$heatmap',
       properties: {
         $heatmap_data: {
-          'https://app.test/coach/leader/nora-quill/manage?s=nora-quill-2026-09-01-ff7': [{ x: 1, y: 2 }],
-          'https://app.test/coach/leader/otto-vance/manage#notes': [{ x: 3, y: 4 }],
+          'https://app.test/coach/leader/leader-c/manage?s=leader-c-2026-09-01-ff7': [{ x: 1, y: 2 }],
+          'https://app.test/coach/leader/leader-d/manage#notes': [{ x: 3, y: 4 }],
           'https://app.test/bible/john/3': [{ x: 5, y: 6 }],
         },
       },

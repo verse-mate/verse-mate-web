@@ -41,8 +41,17 @@ export function PostHogProvider({ children }: PostHogProviderProps) {
       capture_pageview: false, // captured manually below on route change
       capture_pageleave: true,
       disable_session_recording: !POSTHOG_SESSION_REPLAY,
-      session_recording: { maskCapturedNetworkRequestFn: scrubNetworkRequest },
+      session_recording: {
+        maskAllInputs: true,
+        recordBody: false,
+        recordHeaders: false,
+        maskCapturedNetworkRequestFn: scrubNetworkRequest,
+      },
+      enable_recording_console_log: false,
+      mask_personal_data_properties: true,
+      custom_personal_data_properties: ['accessToken', 'refreshToken', 'state', 's'],
       before_send: scrubEvent,
+      advanced_disable_feature_flags: true,
       persistence: 'localStorage+cookie',
       loaded: (instance) => {
         if (import.meta.env.DEV) instance.debug();
