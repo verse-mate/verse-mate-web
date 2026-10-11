@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
+import { LoginPage } from '../pages/login.page';
 import { MenuPage } from '../pages/menu.page';
-import { HAS_AUTH_CREDENTIALS, skipReasonNoAuth } from '../fixtures/env';
+import { HAS_AUTH_CREDENTIALS, TEST_EMAIL, TEST_PASSWORD, skipReasonNoAuth } from '../fixtures/env';
 
 /**
  * Auth — logout flow.
@@ -11,14 +12,16 @@ import { HAS_AUTH_CREDENTIALS, skipReasonNoAuth } from '../fixtures/env';
  * `E2E_TEST_PASSWORD`.
  */
 
-test.use({ storageState: 'tests/e2e/.auth/user.json' });
 test.skip(({ viewport }) => !!viewport && viewport.width >= 1024, 'Mobile menu only');
 
 test.describe('Auth — logout', () => {
   test.skip(!HAS_AUTH_CREDENTIALS, skipReasonNoAuth);
 
   test('signed-in user sees Logout in menu, signing out clears auth state', async ({ page }) => {
+    const login = new LoginPage(page);
     const menu = new MenuPage(page);
+    await login.goto('/login');
+    await login.signIn(TEST_EMAIL, TEST_PASSWORD);
     await menu.goto();
 
     // While signed in, the bottom button shows "Logout" (red text)

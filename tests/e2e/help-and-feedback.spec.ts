@@ -95,10 +95,11 @@ async function ensureSignedIn(page: Parameters<typeof LoginPage>[0]['page'], ema
     .or(page.getByRole('button', { name: /^sign in$/i }))
     .click();
 
-  // Wait for sign-in success — app navigates to /menu after login; Sign Out is visible there
-  await page.getByTestId('menu-item-logout')
-    .or(page.getByRole('button', { name: /^logout$|^sign out$/i }))
-    .waitFor({ state: 'visible', timeout: 15_000 });
+  await expect
+    .poll(async () => (await page.context().cookies()).some((cookie) => cookie.name === 'accessToken'), {
+      timeout: 15_000,
+    })
+    .toBe(true);
 }
 
 async function selectFirstTopic(page: Parameters<typeof LoginPage>[0]['page']) {

@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { BASE_URL, E2E_PORT, guestStorageState } from './fixtures/env';
+import { API_URL, BASE_URL, E2E_PORT, guestStorageState } from './fixtures/env';
 
 /**
  * Standalone Playwright config for the E2E parity suite.
@@ -19,8 +19,8 @@ import { BASE_URL, E2E_PORT, guestStorageState } from './fixtures/env';
  *
  * Env vars (see tests/e2e/fixtures/env.ts):
  *   E2E_BASE_URL          override for an already-running app
- *   E2E_TEST_EMAIL        credentials for authed flows (defaults to
- *   E2E_TEST_PASSWORD     the shared mobile test account)
+ *   E2E_TEST_EMAIL        credentials for authed flows (an account
+ *   E2E_TEST_PASSWORD     that exists on the API under test)
  *   VITE_API_URL          forwarded to the spawned dev server
  *   CI                    Playwright treats as production (retries on)
  */
@@ -101,7 +101,7 @@ export default defineConfig({
         timeout: 120_000,
         // Forward env to the dev server so VITE_API_URL etc. are picked up
         env: {
-          VITE_API_URL: process.env.VITE_API_URL || 'https://api.versemate.org',
+          VITE_API_URL: API_URL,
           VITE_POSTHOG_KEY: '', // disable analytics during tests
           VITE_POSTHOG_SESSION_REPLAY: 'false',
         },

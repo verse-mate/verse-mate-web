@@ -17,11 +17,7 @@ test.describe('Topics — browse', () => {
     await page.goto('/topics');
     await expect(page.getByRole('heading', { name: /topics/i })).toBeVisible({ timeout: 15_000 });
 
-    // The prod walkthrough confirms these names are visible. Spot-check
-    // by getting the first match (avoids strict-mode violations on
-    // desktop where DesktopLayout's inner reader may render verse text
-    // containing the same words).
-    await expect(page.getByText('Creation', { exact: false }).first()).toBeVisible({
+    await expect(page.getByText('Forgiveness', { exact: false }).first()).toBeVisible({
       timeout: 15_000,
     });
     await expect(page.getByText('Faith', { exact: true }).first()).toBeVisible();

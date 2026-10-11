@@ -22,8 +22,15 @@ bun run test:e2e:headed -- --grep verse-actions
 bun run test:e2e:report
 ```
 
-By default the suite spawns a Vite dev server on port 5173. To run against
-an already-running app (e.g. a deployed preview):
+By default the suite spawns a Vite dev server on port 5173 and points it at
+the API on `http://127.0.0.1:4000`. Start the API from a `verse-mate`
+checkout with `ENVIRONMENT=test` (its CORS then allows local origins),
+migrate and seed it, and load `fixtures/api-seed.sql` for the commentary
+specs. `.github/workflows/e2e.yml` is the full recipe: it does the same in CI
+with Postgres, Valkey and MinIO service containers, a Slack stub for the
+support specs, and a throwaway account for the signed-in specs. Set
+`VITE_API_URL` to use another API. To run against an already-running app
+(e.g. a deployed preview):
 
 ```bash
 E2E_BASE_URL=https://verse-mate-web-preview.workers.dev bun run test:e2e
@@ -44,7 +51,7 @@ storageState file. Without `E2E_TEST_PASSWORD` set, the setup writes an
 empty storageState and the dependent specs `test.skip()` themselves.
 
 ```bash
-# defaults: chaves.augusto+verse@gmail.com (mobile shared account)
+# create the account on the local API first; the email defaults to e2e-reader@example.test
 E2E_TEST_PASSWORD=•••• bun run test:e2e
 ```
 
