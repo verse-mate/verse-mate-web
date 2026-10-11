@@ -17,7 +17,10 @@ vi.mock('@/services/bibleService', () => ({
 const PENDING_VERIFIER = 'v'.repeat(43);
 
 function startedSignIn() {
-  sessionStorage.setItem(SSO_VERIFIER_KEY, PENDING_VERIFIER);
+  sessionStorage.setItem(
+    SSO_VERIFIER_KEY,
+    JSON.stringify({ verifier: PENDING_VERIFIER, startedAt: Date.now() }),
+  );
 }
 
 function visit(url: string, { strict = false } = {}) {
