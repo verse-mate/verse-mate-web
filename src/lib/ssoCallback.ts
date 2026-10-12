@@ -1,14 +1,4 @@
-/**
- * SSO callback utilities. Ported from
- * verse-mate/packages/frontend-base/src/auth/lib.ts so the same callback
- * URL contract works in this repo.
- *
- * Callback URL contract (set by the backend's /auth/sso/{provider}/redirect):
- *   Success: /auth/callback/{provider}?accessToken=…&refreshToken=…&verified=…
- *   Failure: /auth/callback/{provider}?error=…&error_description=…
- */
-
-import { setAccessToken, setRefreshToken } from '@/services/api';
+import { setAccessToken } from '@/services/api';
 
 export type SSOErrorCode =
   | 'access_denied'
@@ -22,8 +12,8 @@ export type SSOErrorCode =
 
 export interface SSOCallbackResult {
   success: boolean;
+  code?: string;
   accessToken?: string;
-  refreshToken?: string;
   verified?: boolean;
   error?: SSOErrorCode;
   errorDescription?: string;
@@ -56,19 +46,18 @@ export function parseSSOCallbackParams(
   const params =
     typeof searchParams === 'string' ? new URLSearchParams(searchParams) : searchParams;
 
+  const code = params.get('code');
   const accessToken = params.get('accessToken');
-  const refreshToken = params.get('refreshToken');
   const verified = params.get('verified');
   const error = params.get('error');
   const errorDescription = params.get('error_description');
 
+  if (code) {
+    return { success: true, code };
+  }
+
   if (accessToken) {
-    return {
-      success: true,
-      accessToken,
-      refreshToken: refreshToken || undefined,
-      verified: verified === 'true',
-    };
+    return { success: true, accessToken, verified: verified === 'true' };
   }
 
   return {
@@ -78,36 +67,122 @@ export function parseSSOCallbackParams(
   };
 }
 
-/**
- * Top-level orchestrator: parse the URL params, store tokens, return
- * the redirect destination. Mirrors handleSSOCallback in frontend-base.
- */
-export function handleSSOCallback(searchParams: string | URLSearchParams): {
+export const SSO_VERIFIER_KEY = 'ssoVerifier';
+
+function base64url(bytes: Uint8Array): string {
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+export async function ssoChallengeFor(verifier: string): Promise<string> {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(verifier));
+  return base64url(new Uint8Array(digest));
+}
+
+export const SSO_VERIFIER_MAX_AGE_MS = 600_000;
+
+export const SSO_START_FAILED_DESCRIPTION = 'Sign-in could not start, please try again';
+
+interface PendingVerifier {
+  verifier: string;
+  startedAt: number;
+}
+
+function callbackPageFor(redirectUrl: string): string {
+  const provider = /\/sso\/(google|apple)\/redirect/.exec(redirectUrl)?.[1] ?? 'google';
+  const query = new URLSearchParams({
+    error: 'invalid_state',
+    error_description: SSO_START_FAILED_DESCRIPTION,
+  });
+  return `/auth/callback/${provider}?${query}`;
+}
+
+export async function startSSOSignIn(redirectUrl: string): Promise<void> {
+  try {
+    const verifier = base64url(crypto.getRandomValues(new Uint8Array(32)));
+    const challenge = await ssoChallengeFor(verifier);
+    const pending: PendingVerifier = { verifier, startedAt: Date.now() };
+    sessionStorage.setItem(SSO_VERIFIER_KEY, JSON.stringify(pending));
+    window.location.href = `${redirectUrl}?challenge=${challenge}`;
+  } catch {
+    window.location.href = callbackPageFor(redirectUrl);
+  }
+}
+
+function freshVerifier(stored: string | null): string | null {
+  if (!stored) return null;
+  try {
+    const { verifier, startedAt } = JSON.parse(stored) as PendingVerifier;
+    if (typeof verifier !== 'string' || typeof startedAt !== 'number') return null;
+    return Date.now() - startedAt <= SSO_VERIFIER_MAX_AGE_MS ? verifier : null;
+  } catch {
+    return null;
+  }
+}
+
+function takePendingVerifier(): string | null {
+  try {
+    const stored = sessionStorage.getItem(SSO_VERIFIER_KEY);
+    sessionStorage.removeItem(SSO_VERIFIER_KEY);
+    return freshVerifier(stored);
+  } catch {
+    return null;
+  }
+}
+
+export type SSOCodeExchange = (
+  code: string,
+  verifier: string,
+) => Promise<{ accessToken: string }>;
+
+async function sessionTokenFrom(
+  result: SSOCallbackResult,
+  verifier: string | null,
+  exchangeCode: SSOCodeExchange,
+): Promise<string | undefined> {
+  if (!verifier) return undefined;
+  if (!result.code) return result.accessToken;
+  try {
+    return (await exchangeCode(result.code, verifier)).accessToken;
+  } catch {
+    return undefined;
+  }
+}
+
+export async function handleSSOCallback(
+  searchParams: string | URLSearchParams,
+  exchangeCode: SSOCodeExchange,
+): Promise<{
   success: boolean;
   redirectUrl?: string;
   error?: SSOErrorCode;
   errorMessage?: string;
-} {
-  const result = parseSSOCallbackParams(searchParams);
+}> {
+  const parsed = parseSSOCallbackParams(searchParams);
+  const verifier = takePendingVerifier();
 
-  if (result.success && result.accessToken) {
-    setAccessToken(result.accessToken);
-    if (result.refreshToken) setRefreshToken(result.refreshToken);
+  if (parsed.success) {
+    const accessToken = await sessionTokenFrom(parsed, verifier, exchangeCode);
+    if (accessToken) {
+      setAccessToken(accessToken);
 
-    let redirectTo = '/';
-    try {
-      redirectTo = localStorage.getItem('redirectTo') || '/';
-      localStorage.removeItem('redirectTo');
-    } catch {
-      /* ignore */
+      let redirectTo = '/';
+      try {
+        redirectTo = localStorage.getItem('redirectTo') || '/';
+        localStorage.removeItem('redirectTo');
+      } catch {
+        /* ignore */
+      }
+
+      return { success: true, redirectUrl: redirectTo };
     }
-
-    return { success: true, redirectUrl: redirectTo };
   }
 
+  const error = parsed.success ? 'auth_failed' : parsed.error;
   return {
     success: false,
-    error: result.error,
-    errorMessage: getSSOErrorMessage(result.error || 'unknown_error', result.errorDescription),
+    error,
+    errorMessage: getSSOErrorMessage(error || 'unknown_error', parsed.errorDescription),
   };
 }
