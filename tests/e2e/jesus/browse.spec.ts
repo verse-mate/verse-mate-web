@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { API_URL } from '../fixtures/env';
 
 /**
  * Jesus tab — hub, browse, timeline, studies and entry detail.
@@ -15,8 +16,6 @@ import { test, expect } from '@playwright/test';
  * itself on the moment the data appears; nothing needs un-skipping by hand.
  */
 
-const API_BASE = (process.env.VITE_API_URL || 'https://api.versemate.org').replace(/\/+$/, '');
-
 /** null = not probed yet. Cached per worker so we hit the API once. */
 let corpusReady: boolean | null = null;
 /**
@@ -29,18 +28,18 @@ let topicBrowseReady: boolean | null = null;
 test.beforeAll(async () => {
   if (corpusReady !== null) return;
   try {
-    const res = await fetch(`${API_BASE}/jesus/overview`);
+    const res = await fetch(`${API_URL}/jesus/overview`);
     const body = res.ok ? ((await res.json()) as { total_entries?: number }) : null;
     corpusReady = (body?.total_entries ?? 0) > 0;
   } catch {
     corpusReady = false;
   }
   if (!corpusReady) {
-    console.warn(`[jesus] corpus not present at ${API_BASE}/jesus/overview — skipping suite`);
+    console.warn(`[jesus] corpus not present at ${API_URL}/jesus/overview — skipping suite`);
   }
 
   try {
-    const res = await fetch(`${API_BASE}/jesus/events/browse/teachings`);
+    const res = await fetch(`${API_URL}/jesus/events/browse/teachings`);
     const body = res.ok ? ((await res.json()) as { topics?: unknown[] }) : null;
     topicBrowseReady = Array.isArray(body?.topics);
   } catch {
@@ -51,7 +50,7 @@ test.beforeAll(async () => {
 test.beforeEach(() => {
   test.skip(
     !corpusReady,
-    `Jesus corpus not seeded at ${API_BASE} yet — suite enables itself once it is`,
+    `Jesus corpus not seeded at ${API_URL} yet — suite enables itself once it is`,
   );
 });
 
@@ -118,7 +117,7 @@ test.describe('Jesus — a category, grouped by topic', () => {
   test.beforeEach(() => {
     test.skip(
       !topicBrowseReady,
-      `${API_BASE} does not serve /jesus/events/browse yet — the app falls back to the flat list`,
+      `${API_URL} does not serve /jesus/events/browse yet — the app falls back to the flat list`,
     );
   });
 

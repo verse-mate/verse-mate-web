@@ -7,6 +7,7 @@ import { consumeRedirectTo } from '@/hooks/useTrackPreAuthLocation';
 import { Mail, ArrowLeft } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { vmTokens } from '@/styles/themeStyles';
+import { startSSOSignIn } from '@/lib/ssoCallback';
 import {
   login as apiLogin,
   signup as apiSignup,
@@ -115,23 +116,12 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
   // backend regardless of which screen the user came from.
   const isSignup = mode === 'signup';
 
-  // Both Google and Apple use the redirect flow:
-  //   user clicks → browser navigates to backend's /auth/sso/<provider>/redirect
-  //   → backend handles OAuth handshake with provider
-  //   → backend redirects to /auth/callback/<provider>?accessToken=…&refreshToken=…
-  //   → AuthCallback (src/components/routes/AuthCallback.tsx) stores cookies
-  //     + dispatches SET_SIGNED_IN + navigates to "/"
-  //
-  // The earlier Google Identity Services popup approach can't work because
-  // the backend's /auth/sso endpoint expects an authorization code (not an
-  // ID token) when platform=web — the GIS popup returns an ID token, so
-  // backend's exchange with Google fails with 401.
   const handleGoogleSSO = () => {
-    window.location.href = `${API_BASE_URL}/auth/sso/google/redirect`;
+    void startSSOSignIn(`${API_BASE_URL}/auth/sso/google/redirect`);
   };
 
   const handleAppleSSO = () => {
-    window.location.href = `${API_BASE_URL}/auth/sso/apple/redirect`;
+    void startSSOSignIn(`${API_BASE_URL}/auth/sso/apple/redirect`);
   };
 
   const handleEmailSubmit = async () => {

@@ -3,6 +3,7 @@ import { X, FileText, Mail, ArrowLeft, MoreHorizontal, Pencil, Trash2, Check } f
 import { useApp } from '@/contexts/AppContext';
 import { login as apiLogin, API_BASE_URL } from '@/services/bibleService';
 import { toast } from 'sonner';
+import { startSSOSignIn } from '@/lib/ssoCallback';
 
 interface Props {
   book: string;
@@ -130,11 +131,11 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
   // SSO handlers — stash the draft so the OAuth round-trip doesn't lose it.
   const handleGoogleSSO = () => {
     stashDraftForSSO();
-    window.location.href = `${API_BASE_URL}/auth/sso/google/redirect`;
+    void startSSOSignIn(`${API_BASE_URL}/auth/sso/google/redirect`);
   };
   const handleAppleSSO = () => {
     stashDraftForSSO();
-    window.location.href = `${API_BASE_URL}/auth/sso/apple/redirect`;
+    void startSSOSignIn(`${API_BASE_URL}/auth/sso/apple/redirect`);
   };
 
   const handleEmailSubmit = async () => {

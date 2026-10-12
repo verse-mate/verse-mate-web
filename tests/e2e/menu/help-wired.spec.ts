@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { HelpPage } from '../pages/help.page';
 import { LoginPage } from '../pages/login.page';
-import { TEST_EMAIL, TEST_PASSWORD, HAS_AUTH_CREDENTIALS, skipReasonNoAuth } from '../fixtures/env';
+import { API_URL, TEST_EMAIL, TEST_PASSWORD, HAS_AUTH_CREDENTIALS, skipReasonNoAuth } from '../fixtures/env';
 
 /**
  * VER-156: HelpScreen wired to backend.
@@ -14,8 +14,6 @@ import { TEST_EMAIL, TEST_PASSWORD, HAS_AUTH_CREDENTIALS, skipReasonNoAuth } fro
  *      redirected to /login with returnTo query param.
  */
 
-const BASE_API = process.env.VITE_API_URL ?? 'https://api.versemate.org';
-
 // S1 + S2 require auth credentials; S4 and S6 are network-mocked / unauthenticated.
 
 test.describe('S2 — validation gate (no auth needed)', () => {
@@ -27,7 +25,7 @@ test.describe('S2 — validation gate (no auth needed)', () => {
     ]);
 
     // Mock all API calls to prevent background 401→/logout from the fake token.
-    await page.route(`${BASE_API}/**`, route => route.fulfill({
+    await page.route(`${API_URL}/**`, route => route.fulfill({
       status: 200,
       contentType: 'application/json',
       body: JSON.stringify({ success: true, conversationId: 'test-id' }),
@@ -56,7 +54,7 @@ test.describe('S2 — validation gate (no auth needed)', () => {
       { name: 'accessToken', value: 'fake-token', domain: 'localhost', path: '/' },
     ]);
 
-    await page.route(`${BASE_API}/**`, route => route.fulfill({
+    await page.route(`${API_URL}/**`, route => route.fulfill({
       status: 200,
       contentType: 'application/json',
       body: JSON.stringify({ success: true, conversationId: 'test-id' }),
@@ -82,7 +80,7 @@ test.describe('S4 — error retry (no auth needed)', () => {
     // Mock all API calls: support/conversations returns 500; everything else returns 200 so the
     // app's 401→/logout interceptor never fires during the test (background Bible API calls
     // would otherwise trigger a logout with the fake token and redirect mid-test).
-    await page.route(`${BASE_API}/**`, async route => {
+    await page.route(`${API_URL}/**`, async route => {
       if (route.request().url().includes('/support/conversations')) {
         await route.fulfill({ status: 500, contentType: 'application/json', body: JSON.stringify({ error: 'internal server error' }) });
       } else {

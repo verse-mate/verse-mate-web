@@ -19,6 +19,11 @@ on:
         description: 'Filter spec titles (Playwright --grep)'
         type: string
         required: false
+      backend_ref:
+        description: verse-mate branch, tag or commit to run the API from
+        type: string
+        required: false
+        default: main
 
 # Cancel in-flight runs for the same branch — last push wins
 concurrency:
@@ -29,9 +34,83 @@ jobs:
   e2e:
     name: Playwright (web)
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres_user
+          POSTGRES_PASSWORD: postgres_password
+          POSTGRES_DB: postgres_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: valkey/valkey:8-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "valkey-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      minio:
+        image: bitnamilegacy/minio:2025.7.23-debian-12-r5@sha256:6dabb4a2088c9a79908de3bc05f4586c23ad2182c8908e7e3acbf61c1467fb20
+        env:
+          MINIO_ROOT_USER: minioadmin
+          MINIO_ROOT_PASSWORD: minioadmin
+          MINIO_DEFAULT_BUCKETS: saas-starter-dev
+        ports:
+          - 9000:9000
+        options: >-
+          --health-cmd "curl -f http://localhost:9000/minio/health/live"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+
+    env:
+      POSTGRES_URL: postgresql://postgres_user:postgres_password@localhost:5432/postgres_db
+      REDIS_URL: redis://:@localhost:6379/0
+      ENVIRONMENT: test
+      PORT: '4000'
+      AUTH_ACCESS_TOKEN_SECRET: e2e-local-only-secret
+      AUTH_ACCESS_TOKEN_LIFETIME: 1d
+      AUTH_HASH_SALT: '10'
+      EMAIL_FROM: no-reply@example.test
+      MAILGUN_API_KEY: e2e-unused
+      MAILGUN_DOMAIN: example.test
+      OBJECT_STORAGE_ACCESS_KEY_ID: minioadmin
+      OBJECT_STORAGE_SECRET_ACCESS_KEY: minioadmin
+      OBJECT_STORAGE_ENDPOINT: http://localhost:9000
+      OBJECT_STORAGE_BUCKET: saas-starter-dev
+      OBJECT_STORAGE_REGION: us-east-1
+      OBJECT_STORAGE_FORCE_PATH_STYLE: 'true'
+      TTS_PROVIDER: stub
+      SLACK_API_URL: http://127.0.0.1:4010/api/
+      SLACK_SUPPORT_CHANNEL_ID: C0E2E
+      BACKEND_URL: http://127.0.0.1:4000
+      FRONTEND_URL: http://localhost:5173
+      VITE_API_URL: http://127.0.0.1:4000
+      E2E_TEST_EMAIL: e2e-reader@example.test
+      E2E_TEST_PASSWORD: E2e-local-Passw0rd!
+      CI: 'true'
+
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check out the API
+        uses: actions/checkout@v4
+        with:
+          repository: verse-mate/verse-mate
+          ref: ${{ inputs.backend_ref || 'main' }}
+          path: backend
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -41,12 +120,45 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Install API dependencies
+        working-directory: backend
+        run: bun install --ignore-scripts
+
+      - name: Migrate and seed the API database
+        working-directory: backend/packages/database
+        run: bun migrate:deploy && bun db:seed && bun seed:themes
+
+      - name: Load E2E fixtures
+        run: psql "$POSTGRES_URL" -v ON_ERROR_STOP=1 -f tests/e2e/fixtures/api-seed.sql
+
+      - name: Start the Slack stub
+        run: nohup bun tests/e2e/fixtures/slack-stub.ts > "$RUNNER_TEMP/slack-stub.log" 2>&1 &
+
+      - name: Start the API
+        working-directory: backend/apps/backend
+        run: nohup bun src/index.ts > "$RUNNER_TEMP/api.log" 2>&1 &
+
+      - name: Wait for the API
+        run: |
+          for attempt in $(seq 1 60); do
+            if curl -fsS "$VITE_API_URL/health"; then exit 0; fi
+            sleep 2
+          done
+          cat "$RUNNER_TEMP/api.log"
+          exit 1
+
+      - name: Create the test account
+        run: |
+          curl -fsS -o /dev/null -X POST "$VITE_API_URL/auth/signup" \
+            -H 'Content-Type: application/json' \
+            -d "{\"firstName\":\"E2E\",\"lastName\":\"Reader\",\"email\":\"$E2E_TEST_EMAIL\",\"password\":\"$E2E_TEST_PASSWORD\"}"
+
       - name: Cache Playwright browsers
         uses: actions/cache@v4
         id: playwright-cache
         with:
           path: ~/.cache/ms-playwright
-          key: pw-${{ runner.os }}-${{ hashFiles('**/bun.lockb', '**/package.json') }}
+          key: pw-${{ runner.os }}-${{ hashFiles('bun.lockb', 'package.json') }}
           restore-keys: pw-${{ runner.os }}-
 
       - name: Install Playwright browsers
@@ -58,15 +170,6 @@ jobs:
         run: bunx playwright install-deps chromium
 
       - name: Run E2E suite
-        env:
-          # Forward auth credentials from repo secrets when configured;
-          # specs that need them use HAS_AUTH_CREDENTIALS to skip
-          # cleanly when unset.
-          E2E_TEST_EMAIL: ${{ secrets.E2E_TEST_EMAIL }}
-          E2E_TEST_PASSWORD: ${{ secrets.E2E_TEST_PASSWORD }}
-          # Hit the prod API by default; staging override would go here
-          VITE_API_URL: ${{ secrets.E2E_API_URL || 'https://api.versemate.org' }}
-          CI: 'true'
         run: |
           ARGS=""
           if [ "${{ inputs.project }}" != "all" ] && [ -n "${{ inputs.project }}" ]; then
@@ -91,6 +194,17 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-traces
-          path: tests/e2e/test-results/
+          path: test-results/
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Upload API log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-log
+          path: |
+            ${{ runner.temp }}/api.log
+            ${{ runner.temp }}/slack-stub.log
           retention-days: 14
           if-no-files-found: ignore
