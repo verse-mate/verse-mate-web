@@ -502,6 +502,53 @@ describe('amending the written-out points the leader reads first', () => {
     );
   });
 
+  it("keeps each point's quote and time while its title is unchanged, whether the points or only the list were edited", async () => {
+    const evidence = { quote: 'We read it together.', timestamp: '12:30' };
+    const cited = {
+      ...WITH_PROSE,
+      feedback: {
+        ...WITH_PROSE.feedback,
+        improvementsProse: [
+          { title: 'Quiet members', paragraphs: ['Call on them by name.'], evidence },
+          { title: 'Newcomers', paragraphs: ['Ask them first.'], evidence },
+        ],
+      },
+    } as unknown as CoachReport;
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, sent: true });
+    renderReview(cited);
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-improvements-prose-text-0'), { target: { value: 'Ask them by name.' } });
+    fireEvent.change(screen.getByTestId('coach-amend-improvements-prose-title-1'), { target: { value: 'New faces' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    await waitFor(() =>
+      expect(amend).toHaveBeenCalledWith('rep-1', {
+        body: {
+          improvementsProse: [
+            { title: 'Quiet members', paragraphs: ['Ask them by name.'], evidence },
+            { title: 'New faces', paragraphs: ['Ask them first.'] },
+          ],
+        },
+      }),
+    );
+  });
+
+  it('a list edited without its points re-sends the points with their quotes', async () => {
+    const evidence = { quote: 'We read it together.', timestamp: '12:30' };
+    const points = [{ title: 'Quiet members', paragraphs: ['Call on them by name.'], evidence }];
+    const amend = vi.spyOn(coachService, 'amendReport').mockResolvedValue({ applied: true, revision: 1, sent: true });
+    renderReview({ ...WITH_PROSE, feedback: { ...WITH_PROSE.feedback, improvementsProse: points } } as unknown as CoachReport);
+    await openEditor();
+    fireEvent.change(screen.getByTestId('coach-amend-improvements'), { target: { value: 'Call on quiet members by name' } });
+    fireEvent.click(screen.getByTestId('coach-amend-review'));
+    fireEvent.click(screen.getByTestId('coach-amend-confirm'));
+    await waitFor(() =>
+      expect(amend).toHaveBeenCalledWith('rep-1', {
+        body: { improvements: ['Call on quiet members by name'], improvementsProse: points },
+      }),
+    );
+  });
+
   it('a point edited only by spaces or blank lines changes nothing', async () => {
     renderReview(WITH_PROSE);
     await openEditor();

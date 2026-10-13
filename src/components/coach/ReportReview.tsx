@@ -44,7 +44,7 @@ import { dt } from './dashboardTheme';
 type Outcome = { tone: 'ok' | 'pending' | 'refused'; text: string };
 type Last = { outcome: Outcome; held?: string[]; violations?: string[] };
 type Change = { label: string; from: string; to: string };
-type ProseDraft = { title: string; text: string };
+type ProseDraft = { title: string; text: string; cited?: { title: string; evidence: NonNullable<CoachFeedbackPoint['evidence']> } };
 type Draft = {
   dims: Record<number, { score: number | null; rationale: string }>;
   firstLesson: boolean;
@@ -130,6 +130,7 @@ function pointsOf(items: ProseDraft[]): CoachFeedbackPoint[] {
         .split(/\n\s*\n/)
         .map((p) => p.trim())
         .filter(Boolean),
+      ...(i.cited && i.cited.title === i.title.trim() ? { evidence: i.cited.evidence } : {}),
     }))
     .filter((p) => p.title || p.paragraphs.length);
 }
@@ -159,7 +160,11 @@ function initialDraft(review: ReportReviewState, report: CoachReport): Draft {
     prose: Object.fromEntries(
       Object.entries(stored).map(([list, points]) => [
         list,
-        points.map((p) => ({ title: p.title ?? '', text: (p.paragraphs ?? []).join('\n\n') })),
+        points.map((p) => ({
+          title: p.title ?? '',
+          text: (p.paragraphs ?? []).join('\n\n'),
+          ...(p.evidence ? { cited: { title: (p.title ?? '').trim(), evidence: p.evidence } } : {}),
+        })),
       ]),
     ),
     clearProse: {},
@@ -193,7 +198,7 @@ function amendmentOf(initial: Draft, draft: Draft): ReportAmendment {
     if (!stored) continue;
     if (proseEdited(initial, draft, list)) body[proseField(list)] = pointsOf(draft.prose[list] ?? []);
     else if (body[list] && !draft.clearProse[list]) {
-      body[proseField(list)] = stored.map(({ title, paragraphs }) => ({ title, paragraphs }));
+      body[proseField(list)] = stored.map(({ title, paragraphs, evidence }) => ({ title, paragraphs, ...(evidence ? { evidence } : {}) }));
     }
   }
   if (Object.keys(body).length) amendment.body = body;
