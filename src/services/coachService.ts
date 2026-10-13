@@ -360,9 +360,14 @@ export async function fetchCoachReportSummaries(
   limit = REPORT_PAGE_SIZE,
   coachId?: string,
 ): Promise<CoachReportSummaryPage> {
-  const data = await coachRequest<Partial<CoachReportSummaryPage>>(
-    `${reportsPath(coachId)}/summary?limit=${limit}&offset=${offset}`,
-  );
+  let data: Partial<CoachReportSummaryPage>;
+  try {
+    data = await coachRequest<Partial<CoachReportSummaryPage>>(`${reportsPath(coachId)}/summary?limit=${limit}&offset=${offset}`);
+  } catch (err) {
+    if (!(err instanceof CoachApiError && err.status === 404)) throw err;
+    const { reports = [] } = await coachRequest<{ reports?: CoachReport[] }>(reportsPath(coachId));
+    data = { items: reports.slice(offset, offset + limit), total: reports.length };
+  }
   return {
     items: data.items || [],
     total: data.total ?? 0,
