@@ -49,12 +49,13 @@ test.describe('Leader-facing email verification (10.3)', () => {
     await expect(page.getByTestId('coach-confirm-email')).toBeVisible();
   });
 
-  test('A confirmed account that is not on the roster is still told it is not a coaching account', async ({ page }) => {
+  test('A confirmed account that is not on the roster is still told it is not a coaching account', async ({ page }, testInfo) => {
     await useCoachApi(page);
     await account(page, { emailVerified: true });
     await page.goto('/coach/upload');
     await expect(page.getByTestId('coach-not-a-coach')).toBeVisible();
     await expect(page.getByTestId('coach-confirm-email')).toHaveCount(0);
+    await capture(page, testInfo, 'v41-confirmed-non-coach');
   });
 
   test('The link in the email confirms the address and leads to the coaching reports', async ({ page }, testInfo) => {
