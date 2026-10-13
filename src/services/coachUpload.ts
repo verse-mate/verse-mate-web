@@ -54,6 +54,19 @@ export const xhrPut: PutPart = (url, body, onBytes) =>
   });
 
 const ADDRESS_MARGIN_MS = 5 * 60_000;
+const RETRY_WAITS_MS = [1_000, 3_000];
+
+export class PartFailed extends Error {
+  constructor(
+    readonly partsDone: number,
+    readonly partCount: number,
+    cause: unknown,
+  ) {
+    super(cause instanceof Error ? cause.message : String(cause));
+  }
+}
+
+const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
 
 export async function sendParts(
   file: Blob,
@@ -61,16 +74,30 @@ export async function sendParts(
   onProgress: (sent: number) => void,
   put: PutPart = xhrPut,
   refresh?: () => Promise<UploadParts>,
+  partsDone = 0,
+  wait: (ms: number) => Promise<void> = sleep,
 ): Promise<void> {
   let addresses = upload;
-  let done = 0;
-  for (const partNumber of upload.parts.map((p) => p.partNumber).sort((a, b) => a - b)) {
-    if (refresh && Date.parse(addresses.expiresAt) - Date.now() < ADDRESS_MARGIN_MS) addresses = await refresh();
-    const part = addresses.parts.find((p) => p.partNumber === partNumber);
-    if (!part) throw new Error(`the server gave no address for part ${partNumber}`);
+  const order = upload.parts.map((p) => p.partNumber).sort((a, b) => a - b);
+  let done = Math.min(file.size, partsDone * upload.partBytes);
+  onProgress(done);
+  for (const [index, partNumber] of order.entries()) {
+    if (index < partsDone) continue;
     const start = (partNumber - 1) * upload.partBytes;
     const slice = file.slice(start, start + upload.partBytes);
-    await put(part.url, slice, (bytes) => onProgress(done + bytes));
+    for (let attempt = 0; ; attempt++) {
+      try {
+        if (refresh && (attempt > 0 || Date.parse(addresses.expiresAt) - Date.now() < ADDRESS_MARGIN_MS)) addresses = await refresh();
+        const part = addresses.parts.find((p) => p.partNumber === partNumber);
+        if (!part) throw new Error(`the server gave no address for part ${partNumber}`);
+        await put(part.url, slice, (bytes) => onProgress(done + bytes));
+        break;
+      } catch (err) {
+        if (attempt >= RETRY_WAITS_MS.length) throw new PartFailed(index, order.length, err);
+        onProgress(done);
+        await wait(RETRY_WAITS_MS[attempt]);
+      }
+    }
     done += slice.size;
     onProgress(done);
   }

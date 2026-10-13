@@ -40,13 +40,20 @@ interface UploadApi {
   requests: Record<string, unknown>[];
   puts: string[];
   completes: string[];
+  refreshes: string[];
 }
 
 async function useUploadApi(
   page: Page,
-  opts: { admin?: boolean; uploads?: ReturnType<typeof view>[]; refusal?: string; partDelayMs?: number; partStatus?: number } = {},
+  opts: {
+    admin?: boolean;
+    uploads?: ReturnType<typeof view>[];
+    refusal?: string;
+    partDelayMs?: number;
+    partStatus?: number | ((path: string) => number);
+  } = {},
 ): Promise<UploadApi> {
-  const api: UploadApi = { requests: [], puts: [], completes: [] };
+  const api: UploadApi = { requests: [], puts: [], completes: [], refreshes: [] };
   const uploads = [...(opts.uploads ?? [])];
   const base = opts.admin ? 'admin/uploads' : 'uploads';
   const id = '00000000-0000-4000-8000-0000000000aa';
@@ -64,25 +71,31 @@ async function useUploadApi(
       uploads.unshift(sent);
       return route.fulfill({ json: { status: 'processing' } });
     }
-    api.requests.push(req.postDataJSON());
-    if (opts.refusal) return refuse(route, opts.refusal);
-    const bytes = Number(api.requests.at(-1)?.fileBytes);
-    const partBytes = Math.ceil(bytes / 3);
-    return route.fulfill({
-      json: {
+    const addresses = () => {
+      const bytes = Number(api.requests.at(-1)?.fileBytes);
+      return {
         uploadId: id,
-        partBytes,
+        partBytes: Math.ceil(bytes / 3),
         parts: [1, 2, 3].map((n) => ({ partNumber: n, url: `${STORE}/coach-uploads/${id}/part-${n}?sig=e2e` })),
         expiresAt: new Date(Date.now() + 3 * 3_600_000).toISOString(),
-      },
-    });
+      };
+    };
+    if (path.endsWith('/parts')) {
+      api.refreshes.push(path);
+      return route.fulfill({ json: addresses() });
+    }
+    api.requests.push(req.postDataJSON());
+    if (opts.refusal) return refuse(route, opts.refusal);
+    return route.fulfill({ json: addresses() });
   });
   await page.route(`${STORE}/**`, async (route) => {
     const cors = { 'access-control-allow-origin': '*', 'access-control-allow-methods': 'PUT', 'access-control-allow-headers': '*' };
     if (route.request().method() === 'OPTIONS') return route.fulfill({ status: 204, headers: cors });
-    api.puts.push(new URL(route.request().url()).pathname);
+    const path = new URL(route.request().url()).pathname;
+    api.puts.push(path);
     if (opts.partDelayMs) await new Promise((r) => setTimeout(r, opts.partDelayMs));
-    return route.fulfill({ status: opts.partStatus ?? 200, headers: cors, body: '' });
+    const status = typeof opts.partStatus === 'function' ? opts.partStatus(path) : (opts.partStatus ?? 200);
+    return route.fulfill({ status, headers: cors, body: '' });
   });
   return api;
 }
@@ -176,12 +189,53 @@ test.describe('The upload page (8.9)', () => {
     await page.goto('/coach/upload');
     await fillForm(page, daysAgo(2), VIDEO);
     await page.getByTestId('coach-upload-submit').click();
-    await expect(page.getByTestId('coach-upload-problem')).toHaveText('The upload failed: the storage refused the file (403). Try again.');
+    await expect(page.getByTestId('coach-upload-problem')).toHaveText(
+      'The upload stopped at part 1 of 3: the storage refused the file (403). Press Upload to go on from there.',
+      { timeout: 15_000 },
+    );
+    expect(api.puts).toHaveLength(3);
     expect(api.completes).toEqual([]);
     const row = page.getByTestId('coach-upload-row').filter({ hasText: 'Week 5' });
     await expect(row.getByTestId('coach-upload-status')).toHaveText('Upload not finished: try again to send the file');
     await row.getByTestId('coach-upload-retry').click();
     await expect(page.getByTestId('coach-upload-title')).toHaveValue('Week 5');
+  });
+
+  test('A part that keeps failing stops the upload there, and Upload goes on from that part without starting over', async ({ page }, testInfo) => {
+    await useCoachApi(page, { pipelineLive: true });
+    let healed = false;
+    const api = await useUploadApi(page, { partStatus: (path) => (path.endsWith('part-2') && !healed ? 500 : 200) });
+    await page.goto('/coach/upload');
+    await fillForm(page, daysAgo(2), VIDEO);
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-problem')).toHaveText(
+      'The upload stopped at part 2 of 3: the storage refused the file (500). Press Upload to go on from there.',
+      { timeout: 15_000 },
+    );
+    await capture(page, testInfo, 'u9-upload-stopped-at-part');
+    expect(api.requests).toHaveLength(1);
+    expect(api.puts.filter((p) => p.endsWith('part-2'))).toHaveLength(3);
+    healed = true;
+    api.puts.length = 0;
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-sent')).toHaveText('Uploaded. Processing: the report is being prepared, no score yet.');
+    expect(api.requests).toHaveLength(1);
+    expect(api.refreshes.length).toBeGreaterThan(0);
+    expect(api.puts.map((p) => p.split('/').pop())).toEqual(['part-2', 'part-3']);
+    expect(api.completes).toHaveLength(1);
+    await capture(page, testInfo, 'u10-upload-resumed');
+  });
+
+  test('Leaving the page while a file is uploading asks first', async ({ page }) => {
+    await useCoachApi(page, { pipelineLive: true });
+    await useUploadApi(page, { partDelayMs: 5_000 });
+    await page.goto('/coach/upload');
+    await fillForm(page, daysAgo(2), VIDEO);
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-progress')).toBeVisible();
+    const asked = new Promise<string>((resolve) => page.once('dialog', (d) => { resolve(d.type()); void d.dismiss(); }));
+    await page.close({ runBeforeUnload: true });
+    expect(await asked).toBe('beforeunload');
   });
 
   test('A file or date outside the limits is refused before sending', async ({ page }, testInfo) => {
