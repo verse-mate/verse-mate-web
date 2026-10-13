@@ -84,7 +84,7 @@ export default function CoachConfirmAddressScreen() {
       <div data-testid="coach-confirm-address-confirmed" role="status">
         <h2 style={h2}>Address confirmed</h2>
         <p style={p}>
-          Confirmed. {data ? `${data.leaderName}'s coaching reports now go to ${data.newEmail}.` : 'The coaching address is changed.'}
+          Confirmed. {data?.state === 'pending' ? `${data.leaderName}'s coaching reports now go to ${data.newEmail}.` : 'The coaching address is changed.'}
           {confirm.data.noticeSent ? ' A notice went to the previous address.' : ''}
         </p>
       </div>
