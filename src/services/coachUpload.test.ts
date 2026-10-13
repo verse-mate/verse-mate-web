@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { UPLOAD_LIMITS, chicagoToday, sendParts, uploadProblem } from './coachUpload';
+import { PartFailed, UPLOAD_LIMITS, chicagoToday, sendParts, uploadProblem } from './coachUpload';
 
 function file(name: string, type: string, size = 1000): File {
   const f = new File(['x'], name, { type });
@@ -90,16 +90,71 @@ describe('sending the parts', () => {
     expect(urls).toEqual(['https://store.example.test/new1', 'https://store.example.test/new2']);
   });
 
-  it('a part the storage refuses fails the whole send', async () => {
-    await expect(
-      sendParts(
-        new Blob(['abc']),
-        { uploadId: 'u1', partBytes: 4, parts: [{ partNumber: 1, url: 'https://store.example.test/p1' }], expiresAt: '' },
-        () => {},
-        async () => {
-          throw new Error('storage refused part 1 (403)');
-        },
-      ),
-    ).rejects.toThrow(/part 1/);
+  it('a part the storage keeps refusing is tried three times, with fresh addresses before each retry, then the send stops naming the parts done', async () => {
+    const urls: string[] = [];
+    const waits: number[] = [];
+    let refreshed = 0;
+    const addresses = (tag: string) => ({
+      uploadId: 'u1',
+      partBytes: 2,
+      parts: [1, 2].map((n) => ({ partNumber: n, url: `https://store.example.test/${tag}${n}` })),
+      expiresAt: new Date(Date.now() + 3_600_000).toISOString(),
+    });
+    const failed = await sendParts(
+      new Blob(['abcd']),
+      addresses('a'),
+      () => {},
+      async (url) => {
+        urls.push(url);
+        if (url.endsWith('2')) throw new Error('the connection to the storage failed');
+      },
+      async () => addresses(`r${++refreshed}-`),
+      0,
+      async (ms) => {
+        waits.push(ms);
+      },
+    ).catch((e: unknown) => e);
+    expect(failed).toBeInstanceOf(PartFailed);
+    expect(failed).toMatchObject({ partsDone: 1, partCount: 2, message: 'the connection to the storage failed' });
+    expect(urls).toEqual(['https://store.example.test/a1', 'https://store.example.test/a2', 'https://store.example.test/r1-2', 'https://store.example.test/r2-2']);
+    expect(waits).toEqual([1_000, 3_000]);
+  });
+
+  it('a part that fails once is sent again and the upload goes on', async () => {
+    let calls = 0;
+    const progress: number[] = [];
+    await sendParts(
+      new Blob(['abcd']),
+      { uploadId: 'u1', partBytes: 2, parts: [1, 2].map((n) => ({ partNumber: n, url: `https://store.example.test/p${n}` })), expiresAt: '' },
+      (sent) => progress.push(sent),
+      async (_url, body, onBytes) => {
+        calls += 1;
+        if (calls === 2) throw new Error('the connection to the storage failed');
+        onBytes(body.size);
+      },
+      undefined,
+      0,
+      async () => {},
+    );
+    expect(calls).toBe(3);
+    expect(progress.at(-1)).toBe(4);
+  });
+
+  it('a resumed upload sends only the parts after the ones already done', async () => {
+    const urls: string[] = [];
+    const progress: number[] = [];
+    await sendParts(
+      new Blob(['abcdef']),
+      { uploadId: 'u1', partBytes: 2, parts: [1, 2, 3].map((n) => ({ partNumber: n, url: `https://store.example.test/p${n}` })), expiresAt: '' },
+      (sent) => progress.push(sent),
+      async (url) => {
+        urls.push(url);
+      },
+      undefined,
+      2,
+    );
+    expect(urls).toEqual(['https://store.example.test/p3']);
+    expect(progress[0]).toBe(4);
+    expect(progress.at(-1)).toBe(6);
   });
 });

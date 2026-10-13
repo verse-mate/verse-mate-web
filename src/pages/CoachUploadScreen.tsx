@@ -1,4 +1,4 @@
-import { useRef, useState, type CSSProperties, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -15,7 +15,7 @@ import {
   type UploadStatus,
   type UploadView,
 } from '@/services/coachService';
-import { LIMITS_TEXT, UPLOAD_LIMITS, chicagoToday, sendParts, uploadContentType, uploadProblem } from '@/services/coachUpload';
+import { LIMITS_TEXT, PartFailed, UPLOAD_LIMITS, chicagoToday, sendParts, uploadContentType, uploadProblem } from '@/services/coachUpload';
 
 const STATUS_WORDS: Record<UploadStatus, string> = {
   uploading: 'Upload not finished: try again to send the file',
@@ -69,6 +69,7 @@ export default function CoachUploadScreen() {
   const [problem, setProblem] = useState<string | null>(null);
   const [sending, setSending] = useState<Sending>({ phase: 'idle' });
   const [sentStatus, setSentStatus] = useState<UploadStatus | null>(null);
+  const [resume, setResume] = useState<{ key: string; uploadId: string; partsDone: number } | null>(null);
   const fileInput = useRef<HTMLInputElement>(null);
   const formTop = useRef<HTMLDivElement>(null);
 
@@ -94,16 +95,22 @@ export default function CoachUploadScreen() {
     if (found || !file) return;
     const trimmed = title.trim() || null;
     const body = { classKey: chosenClass, sessionDate, title: trimmed, fileName: file.name, fileBytes: file.size, contentType: uploadContentType(file) };
+    const key = [coachId, chosenClass, sessionDate, file.name, file.size, file.lastModified].join('|');
+    let uploadId: string | null = null;
     try {
       setSending({ phase: 'sending', sent: 0, total: file.size });
-      const parts = await requestUpload(coachId ? { ...body, coachId, replace } : body);
+      const resumed = resume?.key === key ? await refreshUploadParts(resume.uploadId, isAdmin).catch(() => null) : null;
+      const parts = resumed ?? (await requestUpload(coachId ? { ...body, coachId, replace } : body));
+      uploadId = parts.uploadId;
       await sendParts(
         file,
         parts,
         (sent) => setSending({ phase: 'sending', sent, total: file.size }),
         undefined,
         () => refreshUploadParts(parts.uploadId, isAdmin),
+        resumed && resume ? resume.partsDone : 0,
       );
+      setResume(null);
       setSending({ phase: 'finishing' });
       const done = await completeUpload(parts.uploadId, isAdmin);
       setSentStatus(done.status);
@@ -112,7 +119,10 @@ export default function CoachUploadScreen() {
       setTitle('');
       setReplace(false);
     } catch (err) {
-      setProblem(err instanceof Error && !('status' in err) ? `The upload failed: ${err.message}. Try again.` : refusalText(err));
+      if (err instanceof PartFailed && uploadId) {
+        setResume({ key, uploadId, partsDone: err.partsDone });
+        setProblem(`The upload stopped at part ${err.partsDone + 1} of ${err.partCount}: ${err.message}. Press Upload to go on from there.`);
+      } else setProblem(err instanceof Error && !('status' in err) ? `The upload failed: ${err.message}. Try again.` : refusalText(err));
     } finally {
       setSending({ phase: 'idle' });
       queryClient.invalidateQueries({ queryKey: coachKeys.uploads(isAdmin, coachId) });
@@ -120,6 +130,15 @@ export default function CoachUploadScreen() {
   };
 
   const busy = sending.phase !== 'idle';
+  useEffect(() => {
+    if (!busy) return;
+    const warn = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = '';
+    };
+    window.addEventListener('beforeunload', warn);
+    return () => window.removeEventListener('beforeunload', warn);
+  }, [busy]);
   const percent = sending.phase === 'sending' && sending.total > 0 ? Math.floor((sending.sent / sending.total) * 100) : 100;
 
   return (
