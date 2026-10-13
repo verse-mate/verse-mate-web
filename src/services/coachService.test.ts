@@ -98,6 +98,17 @@ describe('coachService', () => {
     expect(auth).toBe('Bearer test-token');
   });
 
+  it('reads the session list from the older reports route when the summary route is not there yet', async () => {
+    mockFetch((url) => {
+      if (url.endsWith('/coach/reports')) return jsonResponse({ reports: [{ id: 'r3' }, { id: 'r2' }, { id: 'r1' }] });
+      return jsonResponse({ error: 'NOT_FOUND', message: 'Not found' }, 404);
+    });
+    await expect(fetchCoachReportSummaries(1, 1)).resolves.toEqual({ items: [{ id: 'r2' }], total: 3, streakWeeks: 0, quarterSessions: 0 });
+    mockFetch(() => jsonResponse({ error: 'INTERNAL', message: 'boom' }, 500));
+    await expect(fetchCoachReportSummaries()).rejects.toThrow();
+    expect(calls.map((c) => c.url).some((u) => u.endsWith('/coach/reports'))).toBe(false);
+  });
+
   it('reads an unknown report as not found, and a server failure as a failure', async () => {
     mockFetch(() => jsonResponse({ error: 'NOT_FOUND', message: 'Report not found' }, 404));
     await expect(fetchCoachReportDetail('gone')).resolves.toBeNull();
