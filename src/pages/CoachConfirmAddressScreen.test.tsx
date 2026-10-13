@@ -172,6 +172,23 @@ describe('the address confirmation page', () => {
     expect(screen.getByTestId('coach-confirm-address-submit')).not.toBeDisabled();
   });
 
+  it('keeps saying the address was confirmed when the window regains focus after the confirm', async () => {
+    const read = vi
+      .spyOn(coachService, 'describeAddressChange')
+      .mockResolvedValueOnce(CHANGE)
+      .mockResolvedValue({ ...CHANGE, state: 'confirmed' as never });
+    vi.spyOn(coachService, 'confirmAddressChange').mockResolvedValue({ email: 'leader.new@example.test', noticeSent: false });
+    renderPage();
+
+    fireEvent.click(await screen.findByTestId('coach-confirm-address-submit'));
+    await screen.findByTestId('coach-confirm-address-confirmed');
+    window.dispatchEvent(new Event('visibilitychange'));
+    window.dispatchEvent(new Event('focus'));
+    await new Promise((r) => setTimeout(r, 50));
+    expect(read).toHaveBeenCalledTimes(1);
+    expect(screen.getByTestId('coach-confirm-address-confirmed')).toHaveTextContent("Confirmed. Leader A's coaching reports now go to l***@example.test.");
+  });
+
   it('says the previous address was told once the change is confirmed and a notice went out', async () => {
     vi.spyOn(coachService, 'describeAddressChange').mockResolvedValue(CHANGE);
     vi.spyOn(coachService, 'confirmAddressChange').mockResolvedValue({ email: 'leader.new@example.test', noticeSent: true });
