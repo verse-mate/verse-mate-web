@@ -14,6 +14,12 @@ function isEmpty(c: Comparison): boolean {
   return !c.sessions.length && !c.needsPairing.length && !c.unmatched.backend.length && !c.unmatched.host.length;
 }
 
+const FLAG_WORDS = {
+  composite: 'composite more than 5 points apart',
+  dimension: 'a dimension 2 or more apart',
+  'one-sided-not-applicable': 'not applicable on one side only',
+} as const;
+
 export default function ParallelRunComparison() {
   const comparison = useParallelRunComparison();
   const roster = useAdminCoaches();
@@ -144,6 +150,7 @@ function SessionRow({ s, leader, dimName }: { s: ComparedSession; leader: string
         {s.flagged && (
           <span data-testid={`coach-parallel-flagged-${id}`} style={{ fontSize: 12, fontWeight: 700, color: dt.rust }}>
             Flagged for the cutover read
+            {s.flagReasons?.length ? `: ${s.flagReasons.map((r) => FLAG_WORDS[r]).join(', ')}` : ''}
           </span>
         )}
       </div>

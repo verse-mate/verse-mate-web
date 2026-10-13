@@ -15,11 +15,12 @@ const COMPARISON = {
       dimensions: [
         { n: 1, host: 4, backend: 4, difference: 0 },
         { n: 2, host: 3, backend: 4, difference: 1 },
-        { n: 3, host: 5, backend: null, difference: null },
+        { n: 3, host: null, backend: null, difference: null },
       ],
       withinOne: 2,
       comparable: 2,
       flagged: false,
+      flagReasons: [],
     },
     {
       coachId: CAROL,
@@ -35,6 +36,7 @@ const COMPARISON = {
       withinOne: 2,
       comparable: 3,
       flagged: true,
+      flagReasons: ['composite', 'dimension'],
     },
   ],
   needsPairing: [
@@ -71,7 +73,9 @@ test.describe('The parallel-run comparison', () => {
     const rows = page.getByTestId(/^coach-parallel-session-/);
     await expect(rows).toHaveCount(2);
     await expect(rows.first()).toHaveAttribute('data-testid', 'coach-parallel-session-ff-far');
-    await expect(rows.first().getByTestId('coach-parallel-flagged-ff-far')).toHaveText('Flagged for the cutover read');
+    await expect(rows.first().getByTestId('coach-parallel-flagged-ff-far')).toHaveText(
+      'Flagged for the cutover read: composite more than 5 points apart, a dimension 2 or more apart',
+    );
     await expect(rows.first()).toContainText(`${FAILED_SEND_LEADER.name} · 2026-09-05`);
     await expect(page.getByTestId('coach-parallel-dim-ff-close-3')).toContainText('N/A, left out of the share');
     await capture(page, testInfo, 'parallel-run-compared');

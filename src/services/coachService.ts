@@ -727,6 +727,7 @@ export interface ComparedSession {
   withinOne: number;
   comparable: number;
   flagged: boolean;
+  flagReasons?: ('composite' | 'dimension' | 'one-sided-not-applicable')[];
 }
 
 export interface ParallelRunComparison {
