@@ -18,6 +18,7 @@ import {
 import { useCoachReportDetail } from '@/hooks/useCoach';
 import { useRubric } from '@/hooks/useRubric';
 import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
+import { PdfDownload } from './CoachUi';
 import RetainedRecording from './RetainedRecording';
 import { dt, letterGrade, ratingForScore, statusBand } from './dashboardTheme';
 
@@ -71,6 +72,7 @@ export default function CoachSessionDetail({
           </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <PdfDownload reportId={report.id} pdfUrl={report.pdfUrl} />
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.06em', color: band.c }}>{band.label}</div>
             {deltaText && <div style={{ fontSize: 12.5, color: dt.textLight }}>{deltaText} vs. last</div>}

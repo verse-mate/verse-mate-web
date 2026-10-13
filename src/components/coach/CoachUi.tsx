@@ -9,10 +9,10 @@
 
 import { CSSProperties, ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GraduationCap, LogIn } from 'lucide-react';
+import { Download, GraduationCap, LogIn } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { useRubric } from '@/hooks/useRubric';
-import { statusColor } from '@/services/coachService';
+import { pdfDownloadUrl, statusColor } from '@/services/coachService';
 import { dt } from './dashboardTheme';
 import ConfirmEmailGate from './ConfirmEmailGate';
 import { useEmailCheck } from '@/hooks/useCoach';
@@ -42,6 +42,35 @@ export function CoachCard({
     >
       {children}
     </div>
+  );
+}
+
+export function PdfDownload({ reportId, pdfUrl, style }: { reportId: string; pdfUrl?: string; style?: CSSProperties }) {
+  const href = pdfDownloadUrl(pdfUrl);
+  if (!href) return null;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      download
+      data-testid={`coach-report-pdf-${reportId}`}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 6,
+        padding: '8px 14px',
+        borderRadius: 9,
+        border: `1px solid ${vmTokens.gold}`,
+        color: vmTokens.gold,
+        fontSize: 13,
+        fontWeight: 600,
+        textDecoration: 'none',
+        ...style,
+      }}
+    >
+      <Download size={15} strokeWidth={2} /> Download PDF
+    </a>
   );
 }
 

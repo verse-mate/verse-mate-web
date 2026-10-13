@@ -12,7 +12,7 @@
 import { useState } from 'react';
 import { vmTokens } from '@/styles/themeStyles';
 import { type CoachReport } from '@/services/coachService';
-import { CoachCard, PipelineCopyTag, ScoreRing, StatusPill } from './CoachUi';
+import { CoachCard, PdfDownload, PipelineCopyTag, ScoreRing, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import ReportReview from './ReportReview';
 import SessionNotes from './SessionNotes';
@@ -88,6 +88,7 @@ export default function ReportDetail({
                 {delta >= 0 ? '▲' : '▼'} {Math.abs(delta).toFixed(1)} vs. prior
               </span>
             )}
+            <PdfDownload reportId={report.id} pdfUrl={report.pdfUrl} style={{ padding: '7px 13px' }} />
           </div>
         </div>
       </div>
@@ -186,19 +187,4 @@ const metaLine: React.CSSProperties = {
   fontSize: 13.5,
   color: vmTokens.textTertiary,
   margin: '16px 0 0',
-};
-
-const pdfBtn: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 6,
-  padding: '7px 13px',
-  borderRadius: 9,
-  border: `1px solid ${vmTokens.gold}`,
-  background: 'transparent',
-  color: vmTokens.gold,
-  fontSize: 13,
-  fontWeight: 600,
-  cursor: 'pointer',
-  textDecoration: 'none',
 };
