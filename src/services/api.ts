@@ -28,7 +28,11 @@ export const API_BASE_URL =
 // localStorage (which we used previously).
 const ACCESS_COOKIE = 'accessToken';
 const REFRESH_COOKIE = 'refreshToken';
-const ACCESS_MAX_AGE = 15 * 60; // 15 minutes — matches backend access TTL
+// The backend's session token lives 90 days (SESSION_LIFETIME in auth.service.ts) and sign-in
+// returns no refresh token, so the cookie has to last as long as the token does. A 15-minute
+// cookie dropped the token mid-session, and since verse-mate#339 (user routes require it)
+// the next notes/highlights/bookmarks call got 401 and sent the user to /logout.
+const ACCESS_MAX_AGE = 90 * 24 * 60 * 60; // 90 days — matches the backend session lifetime
 const REFRESH_MAX_AGE = 90 * 24 * 60 * 60; // 90 days — matches backend refresh TTL
 
 // One-time migration from the previous Lovable localStorage keys so users
