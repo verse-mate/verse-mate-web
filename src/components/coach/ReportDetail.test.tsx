@@ -68,6 +68,16 @@ describe('ReportDetail', () => {
     expect(screen.queryByText('Strong cross-referencing anchored the discussion.')).not.toBeInTheDocument();
   });
 
+  it('offers the PDF of a host report that has one, and nothing for a report without', () => {
+    const { unmount } = render(
+      <ReportDetail report={{ ...makeReport(), pdfUrl: 'https://drive.google.com/file/d/abc/view' }} leaderName="Avery Hollis" />,
+    );
+    expect(screen.getByTestId('coach-report-pdf-r1')).toHaveAttribute('href', 'https://drive.google.com/uc?export=download&id=abc');
+    unmount();
+    render(<ReportDetail report={makeReport()} leaderName="Avery Hollis" />);
+    expect(screen.queryByTestId('coach-report-pdf-r1')).toBeNull();
+  });
+
   it('keeps the 12 dimensions collapsed until tapped', () => {
     render(<ReportDetail report={makeReport()} leaderName="Avery Hollis" />);
     // The dimension line is visible…

@@ -115,13 +115,17 @@ test.describe('Coaching dashboard, as the leader', () => {
       .toBe('rgb(154, 110, 31)');
   });
 
-  test('no PDF affordance anywhere on a report', async ({ page }) => {
-    // The Drive PDF path is gone; the portal renders everything it carried.
+  test("a host report that has a PDF offers it for download, and a machine report has no PDF button", async ({ page }, testInfo) => {
     await useCoachApi(page);
     await page.goto('/coach');
-
     await expect(page.getByText('August 29, 2026').first()).toBeVisible();
-    await expect(page.getByText(/download.*pdf/i)).toHaveCount(0);
+    await expect(page.getByTestId(`coach-report-pdf-${NEWEST_ID}`)).toHaveCount(0);
+
+    await page.goto(`/coach?s=${OLDER_ID}`);
+    const pdf = page.getByTestId(`coach-report-pdf-${OLDER_ID}`);
+    await expect(pdf).toHaveText('Download PDF');
+    await expect(pdf).toHaveAttribute('href', 'https://drive.google.com/uc?export=download&id=legacy-pdf-1');
+    await capture(page, testInfo, 'v40-legacy-report-pdf');
   });
 });
 

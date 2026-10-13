@@ -4,7 +4,7 @@ import { vmTokens } from '@/styles/themeStyles';
 import { useRubric } from '@/hooks/useRubric';
 import { useCoachReportDetail } from '@/hooks/useCoach';
 import { statusColor, type CoachReport, type CoachReportSummary } from '@/services/coachService';
-import { CoachCard, PipelineCopyTag, StatusPill } from './CoachUi';
+import { CoachCard, PdfDownload, PipelineCopyTag, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import SessionNotes from './SessionNotes';
 
@@ -133,6 +133,8 @@ function ExpandedReport({ report, admin, coachId, leaderName }: BodyProps & { re
       </div>
 
       <ReportBody report={report} />
+
+      <PdfDownload reportId={report.id} pdfUrl={report.pdfUrl} style={{ marginTop: 16 }} />
 
       <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} compact />
     </div>

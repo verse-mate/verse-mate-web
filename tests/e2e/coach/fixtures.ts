@@ -123,6 +123,7 @@ export const REPORTS = [
   }),
   report({
     id: OLDER_ID,
+    pdfUrl: 'https://drive.google.com/file/d/legacy-pdf-1/view',
     date: '2026-08-22',
     dateLabel: 'August 22, 2026',
     session: 'Obadiah, Lesson 3',
