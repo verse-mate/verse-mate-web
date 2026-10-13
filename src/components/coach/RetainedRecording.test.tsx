@@ -256,6 +256,37 @@ describe('a recording longer than the address lifetime', () => {
     expect(screen.queryByText(/Recording unavailable/)).toBeNull();
   });
 
+  it('a player that waits, stalls or is played past the expiry with no error, as iOS Safari does, gets a new address and resumes', async () => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(T0);
+    const mint = vi.spyOn(coachService, 'mintRecordingUrl');
+    for (const n of [1, 2, 3, 4]) mint.mockResolvedValueOnce({ url: `https://storage.test/rec-${n}.mp4`, expiresInSeconds: HOUR });
+
+    render(<RetainedRecording reportId="r1" hasRetained />);
+    fireEvent.click(screen.getByTestId('coach-recording-play-r1'));
+    await screen.findByTestId('coach-recording-player-r1');
+
+    fireEvent.waiting(playerAt(30, false));
+    fireEvent.stalled(playerAt(30, true));
+    expect(mint).toHaveBeenCalledTimes(1);
+
+    vi.setSystemTime(T0 + (HOUR + 5) * 1000);
+    fireEvent.waiting(playerAt(HOUR, false));
+    fireEvent.waiting(playerAt(HOUR, false));
+    const second = await expectResumedAt('https://storage.test/rec-2.mp4', HOUR);
+    expect(second).toHaveAttribute('autoplay');
+    expect(mint).toHaveBeenCalledTimes(2);
+
+    vi.setSystemTime(T0 + (2 * HOUR + 10) * 1000);
+    fireEvent.stalled(playerAt(HOUR + 20, true));
+    await expectResumedAt('https://storage.test/rec-3.mp4', HOUR + 20);
+
+    vi.setSystemTime(T0 + (3 * HOUR + 15) * 1000);
+    fireEvent.play(playerAt(HOUR + 20, false));
+    await expectResumedAt('https://storage.test/rec-4.mp4', HOUR + 20);
+    expect(mint).toHaveBeenCalledTimes(4);
+  });
+
   it('a failure before the address expired still stops after one retry, even after expiries', async () => {
     vi.useFakeTimers({ toFake: ['Date'] });
     vi.setSystemTime(T0);

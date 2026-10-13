@@ -77,9 +77,10 @@ export default function RetainedRecording({
     setState('idle');
   }, [mint]);
 
-  const handleError = useCallback(
-    async (event: SyntheticEvent<HTMLVideoElement>) => {
-      const video = event.currentTarget;
+  const reminting = useRef(false);
+  const remint = useCallback(
+    async (video: HTMLVideoElement) => {
+      if (reminting.current) return;
       const position =
         video.readyState === HTMLMediaElement.HAVE_NOTHING && resumeAt
           ? resumeAt
@@ -96,7 +97,10 @@ export default function RetainedRecording({
       }
       if (expired) spentRemintsRef.current += 1;
       else remintedRef.current = true;
-      const minted = await mint();
+      reminting.current = true;
+      const minted = await mint().finally(() => {
+        reminting.current = false;
+      });
       if (minted === undefined) return;
       if (!minted) {
         setSrc(null);
@@ -107,6 +111,18 @@ export default function RetainedRecording({
       setSrc((prev) => ({ url: minted.url, load: (prev?.load ?? 0) + 1 }));
     },
     [mint, resumeAt],
+  );
+
+  const handleError = useCallback((event: SyntheticEvent<HTMLVideoElement>) => remint(event.currentTarget), [remint]);
+
+  // iOS Safari never fires `error` on an expired address: it retries the refused
+  // range requests and sits waiting. So a spent address is renewed as soon as the
+  // player starts, waits or stalls past the expiry, whatever the browser reports.
+  const handleSpent = useCallback(
+    (event: SyntheticEvent<HTMLVideoElement>) => {
+      if (Date.now() >= expiresAtRef.current) void remint(event.currentTarget);
+    },
+    [remint],
   );
 
   const handleLoadedMetadata = useCallback(
@@ -146,6 +162,9 @@ export default function RetainedRecording({
         controls
         autoPlay={resumeAt ? resumeAt.playing : true}
         onError={handleError}
+        onPlay={handleSpent}
+        onWaiting={handleSpent}
+        onStalled={handleSpent}
         onLoadedMetadata={handleLoadedMetadata}
         className={REPLAY_BLOCK_CLASS}
         data-testid={`coach-recording-player-${reportId}`}
