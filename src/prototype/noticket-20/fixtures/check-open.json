@@ -1,0 +1,61 @@
+{
+  "GET /coach/program/checks/:moduleId": {
+    "module": {
+      "n": 1,
+      "title": "Teaching craft: shaping the hour"
+    },
+    "passMark": 70,
+    "questions": [
+      {
+        "n": 1,
+        "text": "A group member gives an answer that misreads the passage. What does the rubric reward the leader for doing next?",
+        "options": [
+          "Correcting them at once so nobody is confused",
+          "Asking the group what the verse itself says",
+          "Moving on to keep the session on time",
+          "Explaining the right reading in a short talk"
+        ]
+      },
+      {
+        "n": 2,
+        "text": "What is the clearest sign of Scripture engagement in a session?",
+        "options": [
+          "The leader quotes many verses from memory",
+          "People read the passage aloud and point to it when they answer",
+          "Everyone brings a different translation",
+          "The session covers a whole book"
+        ]
+      },
+      {
+        "n": 3,
+        "text": "Which question is most likely to lead to application?",
+        "options": [
+          "What city was Paul writing to?",
+          "What does this passage say about God?",
+          "Where in your week does this verse ask something of you?",
+          "Who wrote this letter?"
+        ]
+      },
+      {
+        "n": 4,
+        "text": "What does a healthy session structure usually look like?",
+        "options": [
+          "It starts with the hardest question",
+          "It opens, reads, discusses, applies and closes in prayer, with time kept for each",
+          "It leaves prayer out when time runs short",
+          "It lets the discussion run until people leave"
+        ]
+      },
+      {
+        "n": 5,
+        "text": "Why does Coach look at structure and flow at all?",
+        "options": [
+          "To reward leaders who finish exactly on time",
+          "Because a predictable shape frees the group to focus on the text and on each other",
+          "Because longer sessions score higher",
+          "To rank leaders against each other"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "GET /coach/program": {
+    "open": true,
+    "viewer": "learner",
+    "enrolledOn": "2026-10-06",
+    "passed": 3,
+    "total": 12,
+    "hours": 11,
+    "next": {
+      "kind": "lesson",
+      "module": 4,
+      "lesson": 2,
+      "title": "Homework that connects the weeks"
+    },
+    "completedOn": null,
+    "request": null,
+    "modules": [
+      {
+        "id": "m-long-0",
+        "n": 1,
+        "title": "Teaching craft: shaping the hour so the passage stays at the centre from start to finish",
+        "summary": "How a session is put together, from the opening question to the closing prayer, and how the passage stays at its centre.",
+        "passMark": 70,
+        "state": "passed",
+        "best": 92,
+        "lessons": [
+          {
+            "id": "l-1-1",
+            "title": "What a session is for",
+            "minutes": 6,
+            "state": "done"
+          },
+          {
+            "id": "l-1-2",
+            "title": "Shaping the hour: structure and flow",
+            "minutes": 8,
+            "state": "done"
+          },
+          {
+            "id": "l-1-3",
+            "title": "Reading the passage together",
+            "minutes": 9,
+            "state": "done"
+          },
+          {
+            "id": "l-1-4",
+            "title": "Questions that lead somewhere",
+            "minutes": 8,
+            "state": "done"
+          }
+        ],
+        "check": {
+          "state": "done",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-1",
+        "n": 2,
+        "title": "Engaging people around the table when the group is large, shy, or new to reading together",
+        "summary": "Talking less than the group, drawing quiet people in, and what to do when one voice fills the room.",
+        "passMark": 70,
+        "state": "passed",
+        "best": 78,
+        "lessons": [
+          {
+            "id": "l-2-1",
+            "title": "Facilitating instead of lecturing",
+            "minutes": 7,
+            "state": "done"
+          },
+          {
+            "id": "l-2-2",
+            "title": "Drawing everyone in",
+            "minutes": 8,
+            "state": "done"
+          },
+          {
+            "id": "l-2-3",
+            "title": "When one voice fills the room",
+            "minutes": 7,
+            "state": "done"
+          }
+        ],
+        "check": {
+          "state": "done",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-2",
+        "n": 3,
+        "title": "Being real: honesty about your own week, prayer that includes everyone, and keeping trust",
+        "summary": "Going first with your own story, praying with the group rather than for it, and holding what people share.",
+        "passMark": 70,
+        "state": "passed",
+        "best": 85,
+        "lessons": [
+          {
+            "id": "l-3-1",
+            "title": "Going first",
+            "minutes": 7,
+            "state": "done"
+          },
+          {
+            "id": "l-3-2",
+            "title": "Praying together",
+            "minutes": 8,
+            "state": "done"
+          },
+          {
+            "id": "l-3-3",
+            "title": "Holding what people share",
+            "minutes": 6,
+            "state": "done"
+          }
+        ],
+        "check": {
+          "state": "done",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-3",
+        "n": 4,
+        "title": "Building ministry beyond the room by welcoming newcomers and giving others a real part",
+        "summary": "Welcoming someone new, linking the weeks together, and giving others a part so new leaders grow.",
+        "passMark": 70,
+        "state": "current",
+        "best": null,
+        "lessons": [
+          {
+            "id": "l-4-1",
+            "title": "Welcoming someone new",
+            "minutes": 7,
+            "state": "done"
+          },
+          {
+            "id": "l-4-2",
+            "title": "Homework that connects the weeks",
+            "minutes": 6,
+            "state": "next"
+          },
+          {
+            "id": "l-4-3",
+            "title": "Raising the next leader",
+            "minutes": 8,
+            "state": "locked"
+          }
+        ],
+        "check": {
+          "state": "locked",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-4",
+        "n": 5,
+        "title": "Helping it stick through the week with memory work, simple visuals and a five-minute review",
+        "summary": "Memory, visual aids and a short review, so a verse or an idea is still there on Thursday.",
+        "passMark": 70,
+        "state": "locked",
+        "best": null,
+        "lessons": [
+          {
+            "id": "l-5-1",
+            "title": "Memory that lasts the week",
+            "minutes": 6,
+            "state": "locked"
+          },
+          {
+            "id": "l-5-2",
+            "title": "Visual aids that serve the text",
+            "minutes": 7,
+            "state": "locked"
+          },
+          {
+            "id": "l-5-3",
+            "title": "Reviewing last week in five minutes",
+            "minutes": 5,
+            "state": "locked"
+          }
+        ],
+        "check": {
+          "state": "locked",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-5",
+        "n": 6,
+        "title": "Reading difficult passages together when the group disagrees about what the text says",
+        "summary": "One session walked through end to end, how Coach scores fairly, and where you go from here.",
+        "passMark": 70,
+        "state": "locked",
+        "best": null,
+        "lessons": [
+          {
+            "id": "l-6-1",
+            "title": "Watching a whole session",
+            "minutes": 12,
+            "state": "locked"
+          },
+          {
+            "id": "l-6-2",
+            "title": "How Coach scores fairly",
+            "minutes": 8,
+            "state": "locked"
+          },
+          {
+            "id": "l-6-3",
+            "title": "Your next step",
+            "minutes": 5,
+            "state": "locked"
+          }
+        ],
+        "check": {
+          "state": "locked",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-6",
+        "n": 7,
+        "title": "Leading online and hybrid groups without losing the people who join from a small screen",
+        "summary": "How a session is put together, from the opening question to the closing prayer, and how the passage stays at its centre.",
+        "passMark": 70,
+        "state": "locked",
+        "best": null,
+        "lessons": [
+          {
+            "id": "l-1-1",
+            "title": "What a session is for",
+            "minutes": 6,
+            "state": "locked"
+          },
+          {
+            "id": "l-1-2",
+            "title": "Shaping the hour: structure and flow",
+            "minutes": 8,
+            "state": "locked"
+          },
+          {
+            "id": "l-1-3",
+            "title": "Reading the passage together",
+            "minutes": 9,
+            "state": "locked"
+          },
+          {
+            "id": "l-1-4",
+            "title": "Questions that lead somewhere",
+            "minutes": 8,
+            "state": "locked"
+          }
+        ],
+        "check": {
+          "state": "locked",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-7",
+        "n": 8,
+        "title": "Handling grief, conflict and hard questions with care, and knowing when to refer someone",
+        "summary": "Talking less than the group, drawing quiet people in, and what to do when one voice fills the room.",
+        "passMark": 70,
+        "state": "locked",
+        "best": null,
+        "lessons": [
+          {
+            "id": "l-2-1",
+            "title": "Facilitating instead of lecturing",
+            "minutes": 7,
+            "state": "locked"
+          },
+          {
+            "id": "l-2-2",
+            "title": "Drawing everyone in",
+            "minutes": 8,
+            "state": "locked"
+          },
+          {
+            "id": "l-2-3",
+            "title": "When one voice fills the room",
+            "minutes": 7,
+            "state": "locked"
+          }
+        ],
+        "check": {
+          "state": "locked",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-8",
+        "n": 9,
+        "title": "Teaching from the Gospels: narrative, parables and the questions Jesus asked his listeners",
+        "summary": "Going first with your own story, praying with the group rather than for it, and holding what people share.",
+        "passMark": 70,
+        "state": "locked",
+        "best": null,
+        "lessons": [
+          {
+            "id": "l-3-1",
+            "title": "Going first",
+            "minutes": 7,
+            "state": "locked"
+          },
+          {
+            "id": "l-3-2",
+            "title": "Praying together",
+            "minutes": 8,
+            "state": "locked"
+          },
+          {
+            "id": "l-3-3",
+            "title": "Holding what people share",
+            "minutes": 6,
+            "state": "locked"
+          }
+        ],
+        "check": {
+          "state": "locked",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-9",
+        "n": 10,
+        "title": "Teaching from the letters: following an argument and applying it to a different culture",
+        "summary": "Welcoming someone new, linking the weeks together, and giving others a part so new leaders grow.",
+        "passMark": 70,
+        "state": "locked",
+        "best": null,
+        "lessons": [
+          {
+            "id": "l-4-1",
+            "title": "Welcoming someone new",
+            "minutes": 7,
+            "state": "locked"
+          },
+          {
+            "id": "l-4-2",
+            "title": "Homework that connects the weeks",
+            "minutes": 6,
+            "state": "locked"
+          },
+          {
+            "id": "l-4-3",
+            "title": "Raising the next leader",
+            "minutes": 8,
+            "state": "locked"
+          }
+        ],
+        "check": {
+          "state": "locked",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-10",
+        "n": 11,
+        "title": "Teaching from the Old Testament: law, poetry and prophecy without losing the thread",
+        "summary": "Memory, visual aids and a short review, so a verse or an idea is still there on Thursday.",
+        "passMark": 70,
+        "state": "locked",
+        "best": null,
+        "lessons": [
+          {
+            "id": "l-5-1",
+            "title": "Memory that lasts the week",
+            "minutes": 6,
+            "state": "locked"
+          },
+          {
+            "id": "l-5-2",
+            "title": "Visual aids that serve the text",
+            "minutes": 7,
+            "state": "locked"
+          },
+          {
+            "id": "l-5-3",
+            "title": "Reviewing last week in five minutes",
+            "minutes": 5,
+            "state": "locked"
+          }
+        ],
+        "check": {
+          "state": "locked",
+          "questions": 5
+        }
+      },
+      {
+        "id": "m-long-11",
+        "n": 12,
+        "title": "A whole session, start to finish, scored on all twelve dimensions with the reasons given",
+        "summary": "One session walked through end to end, how Coach scores fairly, and where you go from here.",
+        "passMark": 70,
+        "state": "locked",
+        "best": null,
+        "lessons": [
+          {
+            "id": "l-6-1",
+            "title": "Watching a whole session",
+            "minutes": 12,
+            "state": "locked"
+          },
+          {
+            "id": "l-6-2",
+            "title": "How Coach scores fairly",
+            "minutes": 8,
+            "state": "locked"
+          },
+          {
+            "id": "l-6-3",
+            "title": "Your next step",
+            "minutes": 5,
+            "state": "locked"
+          }
+        ],
+        "check": {
+          "state": "locked",
+          "questions": 5
+        }
+      }
+    ]
+  }
+}

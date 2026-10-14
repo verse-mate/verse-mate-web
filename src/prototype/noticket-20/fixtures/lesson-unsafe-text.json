@@ -1,0 +1,26 @@
+{
+  "GET /coach/program/lessons/:id": {
+    "module": {
+      "n": 1,
+      "title": "Teaching craft: shaping the hour"
+    },
+    "n": 4,
+    "of": 4,
+    "title": "Questions that lead somewhere",
+    "minutes": 8,
+    "video": null,
+    "passages": [
+      {
+        "ref": "Mark 8:27–30",
+        "href": "/bible/mark/8"
+      }
+    ],
+    "body": "Good questions open the passage instead of closing it. The program team pasted a few examples from an old handout into this lesson; parts of that handout carried HTML, and none of it does anything here.\n\n<script>alert('this would have run')</script>\n\n<iframe src=\"/embed/sermon-player\" width=\"600\"></iframe>\n\n<img src=\"/uploads/old-diagram.png\" onerror=\"alert('handler')\">\n\n![A question ladder diagram](/uploads/question-ladder.png)\n\n## Three kinds of questions\n\n- **Observation:** what does the passage say?\n- **Interpretation:** what did it mean for the people who first heard it?\n- **Application:** what does it ask of us this week?\n\nRead more in [the old handout](javascript:alert('link')) or the [printable copy](data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==). The safe version is in the [Leader's Guide](/coach/guide).\n",
+    "done": false,
+    "next": {
+      "label": "Module 1 check",
+      "title": "Teaching craft: shaping the hour",
+      "kind": "check"
+    }
+  }
+}

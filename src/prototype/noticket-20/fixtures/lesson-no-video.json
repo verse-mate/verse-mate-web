@@ -1,0 +1,26 @@
+{
+  "GET /coach/program/lessons/:id": {
+    "module": {
+      "n": 1,
+      "title": "Teaching craft: shaping the hour"
+    },
+    "n": 2,
+    "of": 4,
+    "title": "Shaping the hour: structure and flow",
+    "minutes": 8,
+    "video": null,
+    "passages": [
+      {
+        "ref": "1 Corinthians 14:26–33",
+        "href": "/bible/1-corinthians/14"
+      }
+    ],
+    "body": "An hour with a group has a shape, whether the leader plans it or not. When nobody plans it, the shape is set by whoever talks most, and the passage gets whatever time is left. **Session structure and flow** is the first dimension Coach looks at because every other dimension depends on it.\n\n## Five movements\n\n1. **Open** with a question anyone can answer, about the week rather than the text.\n2. **Read** the passage aloud, more than once.\n3. **Discuss** what it says and what it meant for its first readers.\n4. **Apply** it to one concrete moment in the coming week.\n5. **Close** in prayer, with time actually kept for it.\n\n## Keep time without showing it\n\nDecide in advance roughly how long each movement gets, and which question you will drop if the discussion runs long. Then hold the plan loosely. A group that is genuinely discovering something in the text should be allowed to stay there; the shape serves the passage, not the clock.\n\n> A predictable shape is a gift to the group: it frees people to think about the text and about each other, not about what happens next.\n\nNext lesson: reading the passage together, where most of the hour's depth comes from.\n",
+    "done": false,
+    "next": {
+      "label": "Module 1, lesson 3",
+      "title": "Reading the passage together",
+      "kind": "lesson"
+    }
+  }
+}

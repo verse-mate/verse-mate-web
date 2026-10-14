@@ -1,0 +1,191 @@
+{
+  "GET /coach/program/checks/:moduleId": {
+    "module": {
+      "n": 5,
+      "title": "Helping it stick through the week"
+    },
+    "passMark": 80,
+    "questions": [
+      {
+        "n": 1,
+        "text": "In the coaching rubric, what does “Session Structure & Flow” look at?",
+        "options": [
+          "The shape of the hour, from the opening to the closing prayer",
+          "How much the leader talks compared with the group",
+          "How many people speak, and how freely",
+          "The leader being honest about their own life",
+          "Linking the session to what people did between meetings",
+          "Giving others a part, so new leaders grow"
+        ]
+      },
+      {
+        "n": 2,
+        "text": "In the coaching rubric, what does “Newcomer Welcome” look at?",
+        "options": [
+          "Questions that move from the text to this week",
+          "How a first-time guest is greeted, named and included",
+          "Anything shown that helps people follow the passage",
+          "Helping people carry a verse or an idea into the week",
+          "Praying together, beyond an opening formality",
+          "The shape of the hour, from the opening to the closing prayer"
+        ]
+      },
+      {
+        "n": 3,
+        "text": "In the coaching rubric, what does “Scripture Engagement” look at?",
+        "options": [
+          "How many people speak, and how freely",
+          "The leader being honest about their own life",
+          "How much the group works with the text itself",
+          "Linking the session to what people did between meetings",
+          "Giving others a part, so new leaders grow",
+          "How a first-time guest is greeted, named and included"
+        ]
+      },
+      {
+        "n": 4,
+        "text": "In the coaching rubric, what does “Facilitation vs. Lecture” look at?",
+        "options": [
+          "Anything shown that helps people follow the passage",
+          "Helping people carry a verse or an idea into the week",
+          "Praying together, beyond an opening formality",
+          "How much the leader talks compared with the group",
+          "The shape of the hour, from the opening to the closing prayer",
+          "How much the group works with the text itself"
+        ]
+      },
+      {
+        "n": 5,
+        "text": "In the coaching rubric, what does “Application Questions” look at?",
+        "options": [
+          "The leader being honest about their own life",
+          "Linking the session to what people did between meetings",
+          "Giving others a part, so new leaders grow",
+          "How a first-time guest is greeted, named and included",
+          "Questions that move from the text to this week",
+          "How much the leader talks compared with the group"
+        ]
+      },
+      {
+        "n": 6,
+        "text": "In the coaching rubric, what does “Participant Engagement” look at?",
+        "options": [
+          "Helping people carry a verse or an idea into the week",
+          "Praying together, beyond an opening formality",
+          "The shape of the hour, from the opening to the closing prayer",
+          "How much the group works with the text itself",
+          "Questions that move from the text to this week",
+          "How many people speak, and how freely"
+        ]
+      },
+      {
+        "n": 7,
+        "text": "In the coaching rubric, what does “Visual Aids” look at?",
+        "options": [
+          "Anything shown that helps people follow the passage",
+          "Linking the session to what people did between meetings",
+          "Giving others a part, so new leaders grow",
+          "How a first-time guest is greeted, named and included",
+          "How much the leader talks compared with the group",
+          "How many people speak, and how freely"
+        ]
+      },
+      {
+        "n": 8,
+        "text": "In the coaching rubric, what does “Vulnerability / Authenticity” look at?",
+        "options": [
+          "Praying together, beyond an opening formality",
+          "The leader being honest about their own life",
+          "The shape of the hour, from the opening to the closing prayer",
+          "How much the group works with the text itself",
+          "Questions that move from the text to this week",
+          "Anything shown that helps people follow the passage"
+        ]
+      },
+      {
+        "n": 9,
+        "text": "In the coaching rubric, what does “Memory Reinforcement” look at?",
+        "options": [
+          "Giving others a part, so new leaders grow",
+          "How a first-time guest is greeted, named and included",
+          "Helping people carry a verse or an idea into the week",
+          "How much the leader talks compared with the group",
+          "How many people speak, and how freely",
+          "The leader being honest about their own life"
+        ]
+      },
+      {
+        "n": 10,
+        "text": "In the coaching rubric, what does “Homework References” look at?",
+        "options": [
+          "The shape of the hour, from the opening to the closing prayer",
+          "How much the group works with the text itself",
+          "Questions that move from the text to this week",
+          "Linking the session to what people did between meetings",
+          "Anything shown that helps people follow the passage",
+          "Helping people carry a verse or an idea into the week"
+        ]
+      },
+      {
+        "n": 11,
+        "text": "In the coaching rubric, what does “Prayer” look at?",
+        "options": [
+          "How a first-time guest is greeted, named and included",
+          "How much the leader talks compared with the group",
+          "How many people speak, and how freely",
+          "The leader being honest about their own life",
+          "Praying together, beyond an opening formality",
+          "Linking the session to what people did between meetings"
+        ]
+      },
+      {
+        "n": 12,
+        "text": "In the coaching rubric, what does “Leader Development” look at?",
+        "options": [
+          "How much the group works with the text itself",
+          "Questions that move from the text to this week",
+          "Anything shown that helps people follow the passage",
+          "Helping people carry a verse or an idea into the week",
+          "Praying together, beyond an opening formality",
+          "Giving others a part, so new leaders grow"
+        ]
+      },
+      {
+        "n": 13,
+        "text": "A leader asks a quiet member to read the passage aloud this week and to lead the closing prayer next week. Which dimension does that touch most?",
+        "options": [
+          "Newcomer Welcome",
+          "Facilitation vs. Lecture",
+          "Participant Engagement",
+          "Vulnerability / Authenticity",
+          "Homework References",
+          "Leader Development"
+        ]
+      },
+      {
+        "n": 14,
+        "text": "Halfway through, the leader stops to ask how last week's reading plan went. Which dimension is that?",
+        "options": [
+          "Leader Development",
+          "Newcomer Welcome",
+          "Facilitation vs. Lecture",
+          "Homework References",
+          "Participant Engagement",
+          "Vulnerability / Authenticity"
+        ]
+      },
+      {
+        "n": 15,
+        "text": "A visitor is introduced by name and handed a Bible open at the right page. Which dimension is that?",
+        "options": [
+          "Facilitation vs. Lecture",
+          "Newcomer Welcome",
+          "Participant Engagement",
+          "Vulnerability / Authenticity",
+          "Homework References",
+          "Leader Development"
+        ]
+      }
+    ]
+  }
+}

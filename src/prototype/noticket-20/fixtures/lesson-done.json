@@ -1,0 +1,34 @@
+{
+  "GET /coach/program/lessons/:id": {
+    "module": {
+      "n": 1,
+      "title": "Teaching craft: shaping the hour"
+    },
+    "n": 3,
+    "of": 4,
+    "title": "Reading the passage together",
+    "minutes": 9,
+    "video": {
+      "src": "/prototype-media/lesson-placeholder.mp4",
+      "poster": "/prototype-media/lesson-poster.jpg",
+      "duration": "14:32"
+    },
+    "passages": [
+      {
+        "ref": "Nehemiah 8:1–8",
+        "href": "/bible/nehemiah/8"
+      },
+      {
+        "ref": "Luke 24:13–32",
+        "href": "/bible/luke/24"
+      }
+    ],
+    "body": "Most groups read the passage once, quickly, and then talk about something near it. The reading becomes a ticket to the conversation rather than the conversation itself. This lesson is about slowing that moment down, because **Scripture engagement** is the dimension where a small change in the first ten minutes moves the whole hour.\n\n## Read it aloud, and more than once\n\nAsk one person to read the passage aloud, then ask a second person to read it again in a different translation. The second reading always surfaces something the first one hid: a word that changed, a sentence that suddenly sounds strange. In Nehemiah 8 the people stood for hours while the law was read, and the Levites \"gave the sense, so that the people understood the reading.\" Understanding came from staying with the text, not from moving past it.\n\n- Choose readers before the session, so nobody is surprised.\n- Keep Bibles open on the table for the whole hour, not only for the reading.\n- Read the passage again before the application questions.\n\n## Point to the verse\n\nWhen someone answers a question, ask a gentle follow-up: *\"Where do you see that in the passage?\"* It is not a test. It tells the group that every answer is held against the same page, the leader's answers included. Over a few weeks people start doing it unprompted, and that habit is what the rubric is listening for.\n\n> The passage is the teacher in the room. The leader's job is to keep everyone looking at it.\n\n## When someone misreads it\n\nSooner or later someone will say something the text does not say. Resist correcting them yourself. Ask the group instead: *\"Let's look at verse 6 together. What does it actually say?\"* The correction comes from the page and from the group, and the person who misread it is not embarrassed in front of everyone. You keep your role as the one who points, not the one who rules.\n\n## Let the story do its work\n\nOn the road to Emmaus, two disciples walked with Jesus and did not recognise him. He did not give them an answer; he opened the Scriptures with them, \"beginning with Moses and all the Prophets.\" Their hearts burned while he explained. A good reading time works the same way: the group discovers rather than receives.\n\n## A short exercise\n\nBefore your next session, write down three questions that can only be answered by looking at the passage. Avoid questions that anyone could answer without opening a Bible. Then notice, during the session, how often the group's eyes go back to the page.\n\n### What Coach listens for\n\nThe Scripture engagement dimension rises when the passage is read aloud, when answers point back to specific verses, and when the leader sends questions back to the text instead of answering them. It falls when the passage is read once and never returned to. If you want to go further, the [Leader's Guide chapter on reading](/coach/guide) has examples from real sessions with every name removed.\n\nQuestions about this lesson can go to the program team at [program@example.com](mailto:program@example.com).\n",
+    "done": true,
+    "next": {
+      "label": "Module 1, lesson 4",
+      "title": "Questions that lead somewhere",
+      "kind": "lesson"
+    }
+  }
+}

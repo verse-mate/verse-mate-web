@@ -1,0 +1,42 @@
+{
+  "GET /coach/program/completion": {
+    "viewer": "learner",
+    "email": "jordan.reyes@example.com",
+    "addressConfirmed": true,
+    "completedOn": "2026-10-12",
+    "modules": [
+      {
+        "n": 1,
+        "title": "Teaching craft: shaping the hour",
+        "best": 86
+      },
+      {
+        "n": 2,
+        "title": "Engaging people around the table",
+        "best": 100
+      },
+      {
+        "n": 3,
+        "title": "Being real: honesty and prayer",
+        "best": 80
+      },
+      {
+        "n": 4,
+        "title": "Building ministry beyond the room",
+        "best": 92
+      },
+      {
+        "n": 5,
+        "title": "Helping it stick through the week",
+        "best": 74
+      },
+      {
+        "n": 6,
+        "title": "A whole session, start to finish",
+        "best": 88
+      }
+    ],
+    "request": null,
+    "draftNote": "I lead a Thursday evening group of eight at Grace Fellowship and would value feedback on how much I talk."
+  }
+}

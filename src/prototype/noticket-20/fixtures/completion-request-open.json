@@ -1,0 +1,45 @@
+{
+  "GET /coach/program/completion": {
+    "viewer": "learner",
+    "email": "jordan.reyes@example.com",
+    "addressConfirmed": true,
+    "completedOn": "2026-10-12",
+    "modules": [
+      {
+        "n": 1,
+        "title": "Teaching craft: shaping the hour",
+        "best": 86
+      },
+      {
+        "n": 2,
+        "title": "Engaging people around the table",
+        "best": 100
+      },
+      {
+        "n": 3,
+        "title": "Being real: honesty and prayer",
+        "best": 80
+      },
+      {
+        "n": 4,
+        "title": "Building ministry beyond the room",
+        "best": 92
+      },
+      {
+        "n": 5,
+        "title": "Helping it stick through the week",
+        "best": 74
+      },
+      {
+        "n": 6,
+        "title": "A whole session, start to finish",
+        "best": 88
+      }
+    ],
+    "request": {
+      "state": "open",
+      "sentOn": "2026-10-12",
+      "note": "I lead a Thursday evening group of eight at Grace Fellowship, mostly people who are new to reading the Bible together. We have met weekly since January, and two members now take turns leading the opening. I would love feedback on how much I talk; the module on facilitation showed me I probably lecture more than I think. I can record sessions on a laptop in the church library and we meet every week, so coaching would fit our rhythm. Thank you for building this program."
+    }
+  }
+}

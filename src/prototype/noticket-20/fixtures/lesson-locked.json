@@ -1,0 +1,26 @@
+{
+  "GET /coach/program/lessons/:id": {
+    "module": {
+      "n": 1,
+      "title": "Teaching craft: shaping the hour"
+    },
+    "n": 3,
+    "of": 4,
+    "title": "Reading the passage together",
+    "minutes": 9,
+    "video": null,
+    "passages": [],
+    "body": "",
+    "done": false,
+    "next": {
+      "label": "Module 1, lesson 4",
+      "title": "Questions that lead somewhere",
+      "kind": "lesson"
+    },
+    "locked": {
+      "title": "Reading the passage together",
+      "module": 1,
+      "lesson": 3
+    }
+  }
+}

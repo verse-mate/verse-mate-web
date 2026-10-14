@@ -1,0 +1,17 @@
+{
+  "GET /coach/program": {
+    "open": false,
+    "viewer": "learner",
+    "enrolledOn": "2026-10-06",
+    "passed": 0,
+    "total": 6,
+    "hours": 5,
+    "next": null,
+    "completedOn": "2026-10-12",
+    "request": {
+      "state": "open",
+      "sentOn": "2026-10-12"
+    },
+    "modules": []
+  }
+}
