@@ -6,6 +6,7 @@ import { vmTokens } from '@/styles/themeStyles';
 import { coachKeys, coachState, useAdminCoaches, useCoachMe } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel } from '@/components/coach/CoachUi';
 import {
+  CoachApiError,
   completeUpload,
   fetchUploadClasses,
   fetchUploads,
@@ -28,6 +29,11 @@ const STATUS_WORDS: Record<UploadStatus, string> = {
 };
 
 const IN_PROGRESS: UploadStatus[] = ['uploading', 'processing'];
+
+function uploadGone(err: unknown): null {
+  if (err instanceof CoachApiError && err.status === 404) return null;
+  throw err;
+}
 
 function daysBefore(date: string, days: number): string {
   return new Date(Date.parse(`${date}T00:00:00Z`) - days * 86_400_000).toISOString().slice(0, 10);
@@ -99,7 +105,7 @@ export default function CoachUploadScreen() {
     let uploadId: string | null = null;
     try {
       setSending({ phase: 'sending', sent: 0, total: file.size });
-      const resumed = resume?.key === key ? await refreshUploadParts(resume.uploadId, isAdmin).catch(() => null) : null;
+      const resumed = resume?.key === key ? await refreshUploadParts(resume.uploadId, isAdmin).catch(uploadGone) : null;
       const parts = resumed ?? (await requestUpload(coachId ? { ...body, coachId, replace } : body));
       uploadId = parts.uploadId;
       await sendParts(
@@ -110,9 +116,10 @@ export default function CoachUploadScreen() {
         () => refreshUploadParts(parts.uploadId, isAdmin),
         resumed && resume ? resume.partsDone : 0,
       );
-      setResume(null);
+      setResume({ key, uploadId: parts.uploadId, partsDone: parts.parts.length });
       setSending({ phase: 'finishing' });
       const done = await completeUpload(parts.uploadId, isAdmin);
+      setResume(null);
       setSentStatus(done.status);
       setFile(null);
       if (fileInput.current) fileInput.current.value = '';
@@ -122,7 +129,10 @@ export default function CoachUploadScreen() {
       if (err instanceof PartFailed && uploadId) {
         setResume({ key, uploadId, partsDone: err.partsDone });
         setProblem(`The upload stopped at part ${err.partsDone + 1} of ${err.partCount}: ${err.message}. Press Upload to go on from there.`);
-      } else setProblem(err instanceof Error && !('status' in err) ? `The upload failed: ${err.message}. Try again.` : refusalText(err));
+      } else {
+        if (err instanceof CoachApiError && err.details.refusal === 'file-incomplete') setResume(null);
+        setProblem(err instanceof Error && !('status' in err) ? `The upload failed: ${err.message}. Try again.` : refusalText(err));
+      }
     } finally {
       setSending({ phase: 'idle' });
       queryClient.invalidateQueries({ queryKey: coachKeys.uploads(isAdmin, coachId) });

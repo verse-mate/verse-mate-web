@@ -51,6 +51,8 @@ async function useUploadApi(
     refusal?: string;
     partDelayMs?: number;
     partStatus?: number | ((path: string) => number);
+    completeStatus?: () => number | string;
+    refreshStatus?: () => number;
   } = {},
 ): Promise<UploadApi> {
   const api: UploadApi = { requests: [], puts: [], completes: [], refreshes: [] };
@@ -65,8 +67,12 @@ async function useUploadApi(
     const req = route.request();
     const path = new URL(req.url()).pathname;
     if (req.method() === 'GET') return route.fulfill({ json: { uploads } });
+    const serverError = { status: 500, json: { error: 'INTERNAL_SERVER_ERROR', message: 'Internal server error' } };
     if (path.endsWith('/complete')) {
       api.completes.push(path);
+      const completed = opts.completeStatus?.() ?? 200;
+      if (typeof completed === 'string') return refuse(route, completed);
+      if (completed === 500) return route.fulfill(serverError);
       const sent = view({ id, status: 'processing', title: (api.requests.at(-1)?.title as string | null) ?? null });
       uploads.unshift(sent);
       return route.fulfill({ json: { status: 'processing' } });
@@ -82,6 +88,9 @@ async function useUploadApi(
     };
     if (path.endsWith('/parts')) {
       api.refreshes.push(path);
+      const refreshed = opts.refreshStatus?.() ?? 200;
+      if (refreshed === 404) return refuse(route, 'unknown-upload');
+      if (refreshed === 500) return route.fulfill(serverError);
       return route.fulfill({ json: addresses() });
     }
     api.requests.push(req.postDataJSON());
@@ -224,6 +233,84 @@ test.describe('The upload page (8.9)', () => {
     expect(api.puts.map((p) => p.split('/').pop())).toEqual(['part-2', 'part-3']);
     expect(api.completes).toHaveLength(1);
     await capture(page, testInfo, 'u10-upload-resumed');
+  });
+
+  test('A finish that fails after every part is sent is tried again without sending the file again', async ({ page }) => {
+    await useCoachApi(page, { pipelineLive: true });
+    let completeStatus = 500;
+    const api = await useUploadApi(page, { completeStatus: () => completeStatus });
+    await page.goto('/coach/upload');
+    await fillForm(page, daysAgo(2), VIDEO);
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-problem')).toContainText('Server error (500)', { timeout: 15_000 });
+    expect(api.puts).toHaveLength(3);
+    completeStatus = 200;
+    api.puts.length = 0;
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-sent')).toHaveText('Uploaded. Processing: the report is being prepared, no score yet.');
+    expect(api.requests).toHaveLength(1);
+    expect(api.puts).toEqual([]);
+    expect(api.completes).toHaveLength(2);
+  });
+
+  test('A finish refused because a part is missing in storage sends the file again on the next Upload', async ({ page }) => {
+    await useCoachApi(page, { pipelineLive: true });
+    let completeStatus: number | string = 'file-incomplete';
+    const api = await useUploadApi(page, { completeStatus: () => completeStatus });
+    await page.goto('/coach/upload');
+    await fillForm(page, daysAgo(2), VIDEO);
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-problem')).toContainText('Refused (409)', { timeout: 15_000 });
+    completeStatus = 200;
+    api.puts.length = 0;
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-sent')).toHaveText('Uploaded. Processing: the report is being prepared, no score yet.');
+    expect(api.requests).toHaveLength(2);
+    expect(api.puts).toHaveLength(3);
+  });
+
+  test('A resume the server cannot answer says so and keeps the parts already sent', async ({ page }) => {
+    await useCoachApi(page, { pipelineLive: true });
+    let healed = false;
+    let refreshStatus = 500;
+    const api = await useUploadApi(page, {
+      partStatus: (path) => (path.endsWith('part-2') && !healed ? 500 : 200),
+      refreshStatus: () => refreshStatus,
+    });
+    await page.goto('/coach/upload');
+    await fillForm(page, daysAgo(2), VIDEO);
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-problem')).toContainText('stopped at part 2 of 3', { timeout: 15_000 });
+    healed = true;
+    api.puts.length = 0;
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-problem')).toContainText('Server error (500)');
+    expect(api.requests).toHaveLength(1);
+    expect(api.puts).toEqual([]);
+    refreshStatus = 200;
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-sent')).toHaveText('Uploaded. Processing: the report is being prepared, no score yet.');
+    expect(api.requests).toHaveLength(1);
+    expect(api.puts.map((p) => p.split('/').pop())).toEqual(['part-2', 'part-3']);
+  });
+
+  test('A resume of an upload the server no longer has starts the file over', async ({ page }) => {
+    await useCoachApi(page, { pipelineLive: true });
+    let healed = false;
+    const api = await useUploadApi(page, {
+      partStatus: (path) => (path.endsWith('part-2') && !healed ? 500 : 200),
+      refreshStatus: () => (healed ? 404 : 200),
+    });
+    await page.goto('/coach/upload');
+    await fillForm(page, daysAgo(2), VIDEO);
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-problem')).toContainText('stopped at part 2 of 3', { timeout: 15_000 });
+    healed = true;
+    api.puts.length = 0;
+    await page.getByTestId('coach-upload-submit').click();
+    await expect(page.getByTestId('coach-upload-sent')).toHaveText('Uploaded. Processing: the report is being prepared, no score yet.');
+    expect(api.requests).toHaveLength(2);
+    expect(api.puts.map((p) => p.split('/').pop())).toEqual(['part-1', 'part-2', 'part-3']);
   });
 
   test('Leaving the page while a file is uploading asks first', async ({ page }) => {
