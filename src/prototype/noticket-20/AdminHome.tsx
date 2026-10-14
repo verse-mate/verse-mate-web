@@ -17,7 +17,7 @@
  */
 
 import { lazy, type ReactNode, Suspense, useEffect, useMemo, useState } from 'react';
-import { to } from './ui';
+import { TopBar, to } from './ui';
 
 const toast = { success: (message: string) => void import('sonner').then((m) => m.toast.success(message)) };
 import { useNavigate } from 'react-router-dom';
@@ -143,27 +143,7 @@ export default function AdminHomeScreen({ requests }: { requests: ReactNode }) {
     <div style={shellRoot}>
       <div style={{ width: 1240, maxWidth: '100%', padding: '0 clamp(14px, 4vw, 44px)' }}>
         <div style={card}>
-          {/* Top nav */}
-          <div style={topbar}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
-              <div style={logoMark} aria-hidden>V</div>
-              <span style={{ fontFamily: dt.serif, fontSize: 20, fontWeight: 600, letterSpacing: '-.01em' }}>VerseMate</span>
-              <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.14em', color: dt.gold, borderLeft: '1px solid #DEDEDC', paddingLeft: 11 }}>COACHING</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap', fontSize: 14, fontWeight: 500, color: dt.textMuted }}>
-              <NavItem label="Dashboard" active={view === 'leaders' || view === 'leader'} onClick={() => setView('leaders')} testId="oversight-nav-dashboard" />
-              <NavItem label="Program" active={false} onClick={() => navigate(to.program)} testId="oversight-nav-program" />
-              <NavItem label="Trends" active={view === 'trends'} onClick={() => setView('trends')} testId="oversight-nav-trends" />
-              <NavItem label="Class links" active={view === 'links'} onClick={() => setView('links')} testId="oversight-nav-links" />
-              <NavItem label="Pipeline" active={view === 'pipeline'} onClick={() => setView('pipeline')} testId="oversight-nav-pipeline" />
-              <NavItem label="Parallel run" active={view === 'parallel-run'} onClick={() => setView('parallel-run')} testId="oversight-nav-parallel-run" />
-              <NavItem label="Rotating classes" active={view === 'rotating'} onClick={() => setView('rotating')} testId="oversight-nav-rotating" />
-              <NavItem label="Duplicates" active={view === 'duplicates'} onClick={() => setView('duplicates')} testId="oversight-nav-duplicates" />
-              <NavItem label="Upload" active={false} onClick={() => navigate('/coach/upload')} testId="oversight-nav-upload" />
-              <button type="button" onClick={() => navigate('/coach/settings')} aria-label="Coach settings" style={{ background: 'none', border: 'none', cursor: 'pointer', color: dt.textMuted, fontSize: 16, minWidth: 44, minHeight: 44 }}>⚙</button>
-              <div style={avatarChip}>{state.userAvatarUrl ? <img src={state.userAvatarUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} /> : initials}</div>
-            </div>
-          </div>
+          <TopBar nav="admin" active="dashboard" />
 
           <CoachGate loading={coaches.loading} authError={coaches.authError} error={coaches.error} onRetry={() => coachesQuery.refetch()}>
             {view === 'leaders' && requests}

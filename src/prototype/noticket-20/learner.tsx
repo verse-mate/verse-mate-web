@@ -82,7 +82,7 @@ export function GateScreen({ variant }: { variant: 'offer-new' | 'offer-started'
       <h2 style={h2}>{started ? 'Continue the learning program' : 'Learn to lead a Bible study'}</h2>
       {started ? (
         <>
-          <Progress passed={p.passed} total={p.total} />
+          <Progress passed={p.passed} total={p.total} done={p.modules.flatMap((m) => m.lessons).filter((l) => l.state === 'done').length} lessons={p.modules.flatMap((m) => m.lessons).length} />
           {p.next && <p style={{ ...muted, color: dt.body }}>Next: Module {p.next.module}{p.next.lesson ? `, lesson ${p.next.lesson}` : ''}, <em>{p.next.title}</em>.</p>}
         </>
       ) : (
@@ -150,11 +150,12 @@ export function StartScreen() {
   }
   return (
     <Shell nav="learner" active="learning">
-      <div style={{ display: 'grid', gap: 28, paddingTop: 32, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', alignItems: 'start' }}>
-        <div style={{ display: 'grid', gap: 18, gridColumn: 'span 2', minWidth: 0 }} className="nt20-span">
+      <div style={{ display: 'grid', gap: 28, paddingTop: 32, maxWidth: 760 }}>
+        <div style={{ display: 'grid', gap: 18, minWidth: 0 }}>
           <h1 style={h1}>Learning to lead a Bible study</h1>
           <p style={lead}>Six modules drawn from the Leader's Guide and from the twelve things Coach looks for in a session. Each module is a few short lessons and a check of five questions. Lessons open one after another, so there is always one clear next step.</p>
           <Facts program={p} />
+          <p style={{ ...muted, color: dt.body }}>At the end you hold a completion record with the date and your best score in each module. You can then ask to join the coaching program; an admin reads every request.</p>
           <PrivacyNote />
           <div><Btn to={to.lesson}>Start the program</Btn></div>
           <ol style={{ margin: '6px 0 0', padding: 0, listStyle: 'none' }}>
@@ -169,10 +170,6 @@ export function StartScreen() {
             ))}
           </ol>
         </div>
-        <aside style={{ ...panel, display: 'grid', gap: 14 }}>
-          <h2 style={h3}>Before you start</h2>
-          <p style={{ ...muted, color: dt.body }}>At the end you hold a completion record with the date and your best score in each module. You can then ask to join the coaching program; an admin reads every request.</p>
-        </aside>
       </div>
       <style>{'@media (max-width: 760px){.nt20-span{grid-column:auto !important}}'}</style>
     </Shell>
@@ -216,6 +213,8 @@ function ModuleBlock({ m }: { m: ModuleView }) {
         </div>
         {moduleTag(m)}
       </div>
+      {m.state === 'passed' && m.lessons.some((l) => l.isNew) && <p style={{ ...muted, fontSize: 13.5 }}>A lesson was added after you passed. It is there for you to read; your pass stands.</p>}
+      {m.state === 'locked' && expanded && <p style={{ ...muted, fontSize: 13.5 }}>A module was added ahead of this one. What you finished here stays done; the rest opens when Module {m.n - 1} is passed.</p>}
       {expanded ? (
         steps
       ) : m.state === 'passed' ? (
@@ -471,12 +470,7 @@ export function CheckScreen() {
             <p className="nt20-num" style={{ ...muted, color: dt.body }}>
               You answered {graded.right} of {c.questions.length} correctly{graded.passed ? `. Best score ${pct(graded.best)}, attempt ${graded.attempt}.` : '.'}
             </p>
-            {!graded.passed && graded.wrong.length > 0 && (
-              <p style={{ margin: 0, display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap', fontSize: 14.5, color: dt.body }}>
-                Look again at
-                {graded.wrong.map((n) => <a key={n} href={`#nt20-q${n}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, minWidth: 44, padding: '0 12px', borderRadius: 9, border: `1px solid ${dt.inputBorder}`, background: dt.cardBg, color: dt.textPrimary, fontWeight: 700, textDecoration: 'none' }}>Question {n}</a>)}
-              </p>
-            )}
+            {!graded.passed && graded.wrong.length > 0 && <QuestionLinks ns={graded.wrong} label="Look again at" />}
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 4 }}>
               {graded.passed ? (
                 c.next ? <Btn to={to.lesson}>Start Module {c.next.module}</Btn> : <Btn to={to.completion}>See your record</Btn>
@@ -490,12 +484,12 @@ export function CheckScreen() {
         )}
         {c.refusal?.kind === 'changed' && (
           <Notice tone="rust" title="This check changed while you were answering">
-            The program team edited it after you opened it, so nothing was counted. Your answers to the questions that did not change are kept; answer question {changed.join(', ')}, then submit again.
+            The program team edited it after you opened it, so nothing was counted. Your answers to the questions that did not change are kept; answer the new question, then submit again.<QuestionLinks ns={changed} />
           </Notice>
         )}
         {missing.length > 0 && (
           <Notice tone="rust" title="Answer every question before you submit">
-            Question {missing.join(', ')} has no answer yet. Nothing was graded and this attempt does not count.
+            Question {missing.join(', ')} has no answer yet. Nothing was graded and this attempt does not count.<QuestionLinks ns={missing} />
           </Notice>
         )}
         <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 14 }}>
@@ -543,6 +537,15 @@ export function CheckScreen() {
   );
 }
 
+function QuestionLinks({ ns, label = 'Go to' }: { ns: number[]; label?: string }) {
+  return (
+    <span style={{ margin: '8px 0 0', display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap', fontSize: 14.5, color: dt.body }}>
+      {label}
+      {ns.map((n) => <a key={n} href={`#nt20-q${n}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, minWidth: 44, padding: '0 12px', borderRadius: 9, border: `1px solid ${dt.inputBorder}`, background: dt.cardBg, color: dt.textPrimary, fontWeight: 700, textDecoration: 'none' }}>Question {n}</a>)}
+    </span>
+  );
+}
+
 type CompletionView = {
   viewer: Viewer;
   email: string;
@@ -586,7 +589,7 @@ export function CompletionScreen() {
             </Rows>
             <p style={{ ...muted, fontSize: 13, marginTop: 10 }}>Best score in each module's check. A module added later shows as not yet taken and does not change your completion.</p>
           </section>
-          <section style={{ ...panel, display: 'grid', gap: 14 }} aria-label="Join the coaching program">
+          <section className="nt20-request-first" style={{ ...panel, display: 'grid', gap: 14 }} aria-label="Join the coaching program">
             <h2 style={h2}>{c.viewer === 'learner' ? 'Join the coaching program' : 'You are already a coaching leader'}</h2>
             {c.viewer !== 'learner' && <p style={{ ...muted, color: dt.body }}>Your account already belongs to the coaching program, so there is nothing to request. Your dashboard is where it was.</p>}
             {r?.state === 'open' && (
@@ -600,14 +603,14 @@ export function CompletionScreen() {
               <>
                 <p><Tag tone="green">Approved · {formatDate(r.answeredOn ?? r.sentOn)}</Tag></p>
                 <p style={{ ...muted, color: dt.body }}>You are in the coaching program. An invitation went to {c.email}. The next time you open Coach, your leader dashboard is there.</p>
-                <Btn kind="dark" to="/coach">Open Coach</Btn>
+                <div><Btn kind="dark" to="/coach">Open Coach</Btn></div>
               </>
             )}
             {r?.state === 'already' && (
               <>
                 <p><Tag tone="blue">Already in the program</Tag></p>
                 <p style={{ ...muted, color: dt.body }}>This account's address already belongs to a leader in the coaching program, so no new place was needed. Open Coach to reach your leader dashboard.</p>
-                <Btn kind="dark" to="/coach">Open Coach</Btn>
+                <div><Btn kind="dark" to="/coach">Open Coach</Btn></div>
               </>
             )}
             {r?.state === 'declined' && (

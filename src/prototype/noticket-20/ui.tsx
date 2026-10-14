@@ -1,8 +1,8 @@
-import { type CSSProperties, Fragment, type KeyboardEvent, type ReactNode, useEffect, useRef } from 'react';
+import { type CSSProperties, Fragment, type KeyboardEvent, type ReactNode, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, NavLink } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { CheckCircle2, Circle, CircleDot, Lock } from 'lucide-react';
+import { CheckCircle2, Circle, CircleDot, Lock, Settings } from 'lucide-react';
 import { api } from '@/services/api';
 import { dt } from '@/components/coach/dashboardTheme';
 import { useApp } from '@/contexts/AppContext';
@@ -58,8 +58,7 @@ const NAVS: Record<NavKey, { label: string; to: string; key: string }[]> = {
 export function Shell({ nav, active, children, wide }: { nav: NavKey | null; active?: string; children: ReactNode; wide?: boolean }) {
   return (
     <div className="nt20" style={{ minHeight: '100vh', background: dt.pageBg, color: dt.textPrimary, fontFamily: dt.sans, WebkitFontSmoothing: 'antialiased', padding: 'clamp(12px, 4vw, 44px) clamp(10px, 4vw, 44px) 80px', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
-      <style>{GLOBAL_CSS}</style>
-      <div style={{ width: wide ? 1240 : 1080, maxWidth: '100%' }}>
+      <div style={{ width: wide ? 1152 : 1080, maxWidth: '100%' }}>
         <div style={{ background: dt.cardBg, border: `1px solid ${dt.cardBorder}`, borderRadius: 18, padding: '28px clamp(16px, 4vw, 44px) 46px', boxShadow: dt.shadow }}>
           <TopBar nav={nav} active={active} />
           {children}
@@ -75,6 +74,12 @@ html, body, #root { background: ${dt.pageBg} !important; }
 .nt20 a:focus-visible, .nt20 button:focus-visible, .nt20 input:focus-visible, .nt20 textarea:focus-visible, .nt20 select:focus-visible, .nt20 video:focus-visible, .nt20 summary:focus-visible { outline: 2px solid ${dt.gold}; outline-offset: 2px; }
 .nt20 input::placeholder, .nt20 textarea::placeholder { color: ${dt.textMuted}; opacity: 1; }
 @media (max-width: 520px) { .nt20-coaching { display: none; } }
+.nt20-menu-button { display: none; }
+@media (max-width: 900px) {
+  .nt20-menu-button { display: inline-flex; align-items: center; }
+  .nt20-nav-items { display: none !important; }
+  .nt20-nav-items.nt20-nav-open { display: flex !important; flex-direction: column; align-items: flex-start; width: 100%; order: 9; }
+}
 @media (max-width: 640px) {
   .nt20-table table, .nt20-table tbody, .nt20-table tr, .nt20-table td { display: block; min-width: 0 !important; width: auto; }
   .nt20-table thead { display: none; }
@@ -85,6 +90,7 @@ html, body, #root { background: ${dt.pageBg} !important; }
 .nt20 input, .nt20 textarea, .nt20 select { caret-color: ${dt.gold}; }
 .nt20 a { text-underline-offset: 3px; }
 .nt20-num { font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) { .nt20-request-first { order: -1; } }
 .nt20-lesson { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; max-width: 780px; }
 .nt20-lesson > aside { position: static !important; }
 .nt20-radio { position: relative; }
@@ -94,23 +100,38 @@ html, body, #root { background: ${dt.pageBg} !important; }
 .nt20-radio:has(input:focus-visible) { outline: 2px solid ${dt.gold}; outline-offset: 2px; }
 `;
 
-function TopBar({ nav, active }: { nav: NavKey | null; active?: string }) {
+export function TopBar({ nav, active }: { nav: NavKey | null; active?: string }) {
   const { state } = useApp();
+  const [menu, setMenu] = useState(false);
+  const many = nav === 'admin';
   const initials = ((state.userFirstName || '')[0] ?? '') + ((state.userLastName || '')[0] ?? '') || (state.userEmail || '?')[0];
   return (
     <div className="nt20" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap', paddingBottom: 22, borderBottom: `1px solid ${dt.border2}` }}>
+      <style>{GLOBAL_CSS}</style>
       <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
         <div aria-hidden style={{ width: 30, height: 30, borderRadius: 8, background: dt.darkBg, display: 'flex', alignItems: 'center', justifyContent: 'center', color: dt.goldChip, fontFamily: dt.serif, fontWeight: 600, fontSize: 17 }}>V</div>
         <span style={{ fontFamily: dt.serif, fontSize: 20, fontWeight: 600, letterSpacing: '-.01em' }}>VerseMate</span>
         <span className="nt20-coaching" style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.14em', color: dt.gold, borderLeft: '1px solid #DEDEDC', paddingLeft: 11 }}>COACHING</span>
       </div>
       <nav aria-label="Coaching" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginLeft: 'auto', gap: '0 clamp(14px, 2vw, 22px)', fontSize: 14, fontWeight: 500, flexWrap: 'wrap' }}>
+        {many && (
+          <button type="button" className="nt20-menu-button" aria-expanded={menu} aria-controls="nt20-admin-menu" onClick={() => setMenu(!menu)} style={{ minHeight: 44, padding: '0 14px', borderRadius: 10, border: `1px solid ${dt.inputBorder}`, background: dt.cardBg, color: dt.textPrimary, fontWeight: 600, fontSize: 14, fontFamily: dt.sans, cursor: 'pointer' }}>
+            {menu ? 'Close menu' : 'Menu'}
+          </button>
+        )}
+        <span id="nt20-admin-menu" className={many ? `nt20-nav-items${menu ? ' nt20-nav-open' : ''}` : undefined} style={{ display: 'contents' }}>
         {nav &&
           NAVS[nav].map((n) => (
             <NavLink key={n.key} to={n.to} aria-current={active === n.key ? 'page' : undefined} style={{ color: active === n.key ? dt.textPrimary : dt.textMuted, textDecoration: 'none', fontWeight: active === n.key ? 700 : 500, borderBottom: `2px solid ${active === n.key ? dt.brightGold : 'transparent'}`, minHeight: 44, minWidth: 44, justifyContent: 'center', display: 'inline-flex', alignItems: 'center', boxSizing: 'border-box' }}>
               {n.label}
             </NavLink>
           ))}
+        </span>
+        {many && (
+          <NavLink to="/coach/settings" aria-label="Coach settings" style={{ minHeight: 44, minWidth: 44, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: dt.textMuted }}>
+            <Settings size={18} aria-hidden />
+          </NavLink>
+        )}
         {state.isSignedIn && (
           <span aria-label="Your account" role="img" style={{ width: 34, height: 34, borderRadius: '50%', background: '#E8E8E6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: dt.goldHover, fontSize: 13 }}>
             {initials.toUpperCase()}
@@ -212,11 +233,15 @@ export function Field({ label, hint, error, children, count }: { label: string; 
 export const input: CSSProperties = { width: '100%', boxSizing: 'border-box', minHeight: 44, padding: '10px 13px', borderRadius: 9, border: `1px solid ${dt.inputBorder}`, background: dt.inputBg, fontSize: 16, fontFamily: dt.sans, color: dt.textPrimary };
 export const inputError: CSSProperties = { ...input, border: `1px solid ${dt.rust}` };
 
-export function Dialog({ title, children, onClose }: { title: string; children: ReactNode; onClose?: () => void }) {
+export function Dialog({ title, children, onClose, focusTitle }: { title: string; children: ReactNode; onClose?: () => void; focusTitle?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    ref.current?.querySelector<HTMLElement>('input, textarea, button')?.focus();
-  }, []);
+    const opener = document.activeElement as HTMLElement | null;
+    ref.current?.querySelector<HTMLElement>(focusTitle ? 'h2' : 'input, textarea, button')?.focus();
+    return () => {
+      if (opener?.isConnected) opener.focus();
+    };
+  }, [focusTitle]);
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Escape') onClose?.();
     if (e.key !== 'Tab' || !ref.current) return;
@@ -230,7 +255,7 @@ export function Dialog({ title, children, onClose }: { title: string; children: 
     <div style={{ position: 'fixed', inset: 0, zIndex: 60, background: 'rgba(20,18,16,.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }} onClick={onClose}>
       <style>{GLOBAL_CSS}</style>
       <div ref={ref} role="dialog" aria-modal="true" aria-labelledby="nt20-dialog-title" onKeyDown={onKeyDown} onClick={(e) => e.stopPropagation()} className="nt20" style={{ width: 500, maxWidth: '100%', maxHeight: '90vh', overflowY: 'auto', background: dt.cardBg, borderRadius: 16, padding: 'clamp(20px, 4vw, 30px)', boxShadow: '0 30px 70px -20px rgba(20,18,16,.6)', fontFamily: dt.sans, color: dt.textPrimary }}>
-        <h2 id="nt20-dialog-title" style={{ ...h2, marginBottom: 6 }}>{title}</h2>
+        <h2 id="nt20-dialog-title" tabIndex={-1} style={{ ...h2, marginBottom: 6, outline: 'none' }}>{title}</h2>
         {children}
       </div>
     </div>,
@@ -264,7 +289,7 @@ const SAFE_LINK = /^(https?:\/\/|mailto:|\/)/i;
 
 function inline(text: string): Inline[] {
   const out: Inline[] = [];
-  const re = /!\[([^\]]*)\]\([^)]*\)|\*\*(.+?)\*\*|\*(.+?)\*|\[([^\]]+)\]\(([^)\s]+)\)/g;
+  const re = /!\[([^\]]*)\]\([^)]*\)|\*\*(.+?)\*\*|\*(.+?)\*|\[([^\]]+)\]\(((?:[^()\s]|\([^()\s]*\))+)\)/g;
   let last = 0;
   for (const m of text.matchAll(re)) {
     if (m.index! > last) out.push(text.slice(last, m.index));

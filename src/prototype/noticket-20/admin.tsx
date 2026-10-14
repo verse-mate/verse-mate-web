@@ -74,7 +74,7 @@ function ApproveDialog({ r, refusal, onClose }: { r: JoinRequest; refusal?: 'nam
         <Field label="Leader name" error={refusal === 'name-taken' ? `Not added: a leader named ${r.name} is already in the program. Use a name that tells them apart, then approve again.` : undefined}>
           <input value={name} onChange={(e) => setName(e.target.value)} style={refusal === 'name-taken' ? inputError : input} />
         </Field>
-        <Field label="Email" hint="The address the account confirmed. It cannot be changed here.">
+        <Field label="Email" hint={refusal === 'address-changed' ? 'Not confirmed yet. Approving works again once the learner confirms it.' : 'The address the account confirmed. It cannot be changed here.'}>
           <input value={refusal === 'address-changed' ? 'r.mendes.new@example.com' : r.email} readOnly style={{ ...input, background: dt.fill2, color: dt.textMuted }} />
         </Field>
         <Field label="Study / group (optional)">
@@ -82,8 +82,17 @@ function ApproveDialog({ r, refusal, onClose }: { r: JoinRequest; refusal?: 'nam
         </Field>
       </div>
       <div style={{ display: 'flex', gap: 10, marginTop: 22, flexWrap: 'wrap' }}>
-        <Btn>Approve and send invite</Btn>
-        <Btn kind="outline" onClick={onClose}>Cancel</Btn>
+        {refusal === 'address-changed' ? (
+          <>
+            <Btn onClick={onClose}>Close</Btn>
+            <Btn kind="outline" disabled>Approve and send invite</Btn>
+          </>
+        ) : (
+          <>
+            <Btn>Approve and send invite</Btn>
+            <Btn kind="outline" onClick={onClose}>Cancel</Btn>
+          </>
+        )}
       </div>
     </Dialog>
   );
@@ -210,6 +219,7 @@ export function AdminModuleScreen() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
           <h1 style={h1}>Module {m.n}</h1>
           {m.published ? <Tag tone="green">Published</Tag> : <Tag tone="grey">Draft</Tag>}
+          <span style={{ marginLeft: 'auto' }}><Btn>Save changes</Btn></span>
         </div>
         {m.refusal?.kind === 'emptying' && (
           <Notice tone="rust" title="Not unpublished">
@@ -276,7 +286,7 @@ export function AdminModuleScreen() {
         </div>
       </div>
       {m.refusal?.kind === 'delete' && (
-        <Dialog title="This lesson cannot be deleted" onClose={() => navigate(to.module)}>
+        <Dialog title="This lesson cannot be deleted" focusTitle onClose={() => navigate(to.module)}>
           <p style={{ ...muted, color: dt.body, margin: '0 0 18px' }}>
             {m.refusal.doneBy} learners have marked <em>{m.refusal.lesson}</em> done, and their progress points at it. Unpublish it instead: it leaves the path and the totals, and nobody loses what they earned.
           </p>
@@ -381,11 +391,11 @@ export function AdminLessonScreen() {
                   </Field>
                 </div>
                 <div style={{ flex: '1 1 90px' }}><Field label="Chapter"><input type="number" defaultValue={p.chapter} style={input} className="nt20-num" /></Field></div>
-                <div style={{ flex: '1 1 90px' }}><Field label="From verse"><input type="number" defaultValue={p.from} style={p.error ? inputError : input} className="nt20-num" /></Field></div>
-                <div style={{ flex: '1 1 90px' }}><Field label="To verse"><input type="number" defaultValue={p.to} style={p.error ? inputError : input} className="nt20-num" /></Field></div>
+                <div style={{ flex: '1 1 90px' }}><Field label="From verse"><input type="number" defaultValue={p.from} style={input} className="nt20-num" /></Field></div>
+                <div style={{ flex: '1 1 90px' }}><Field label="To verse"><input type="number" defaultValue={p.to} style={p.error ? inputError : input} aria-invalid={p.error ? true : undefined} aria-describedby={p.error ? `nt20-passage-error-${i}` : undefined} className="nt20-num" /></Field></div>
                 <button type="button" aria-label={`Remove ${p.book} ${p.chapter}`} style={{ width: 44, height: 44, border: 'none', background: 'transparent', color: dt.rust, cursor: 'pointer' }}><Trash2 size={17} aria-hidden /></button>
               </div>
-              {p.error && <p role="alert" style={{ margin: 0, fontSize: 13.5, fontWeight: 600, color: dt.rust }}>Not saved: {p.error}</p>}
+              {p.error && <p id={`nt20-passage-error-${i}`} role="alert" style={{ margin: 0, fontSize: 13.5, fontWeight: 600, color: dt.rust }}>Not saved: {p.error}</p>}
             </div>
           ))}
           <div><Btn kind="outline"><Plus size={16} aria-hidden /> Add a passage</Btn></div>
@@ -414,7 +424,7 @@ export function AdminLessonPreview() {
   const data = useData<Parameters<typeof LessonView>[0]['l']>('/coach/admin/program/lessons/l-2-4/preview');
   if (!data.data) return <Shell nav="admin" active="program" wide><Loading /></Shell>;
   return (
-    <Shell nav="admin" active="program">
+    <Shell nav="admin" active="program" wide>
       <div style={{ display: 'grid', gap: 18, paddingTop: 12 }}>
         <BackLink to={to.adminLesson}>Back to the editor</BackLink>
         <Notice tone="gold" title="Preview">This is the lesson as learners will see it once it is published. Until then no learner can open it.</Notice>
@@ -457,7 +467,7 @@ export function AdminLearnersScreen() {
             <input type="search" aria-label="Search by name or email" value={q ?? v.q} onChange={(e) => setQ(e.target.value)} placeholder="Search by name or email" style={{ ...input, paddingLeft: 38 }} />
           </label>
           <span className="nt20-num" role="status" style={muted}>
-            {v.total === 0 ? 'No learners match' : `${from}–${toN} of ${v.total.toLocaleString('en-US')}${v.q ? ` matching “${v.q}”` : ''}`}
+            {v.total === 0 ? 'No learners match' : v.pages === 1 ? `${v.total} learner${v.total === 1 ? '' : 's'}${v.q ? ` matching “${v.q}”` : ''}` : `${from}–${toN} of ${v.total.toLocaleString('en-US')}${v.q ? ` matching “${v.q}”` : ''}`}
           </span>
         </form>
         <div className="nt20-table" style={{ overflowX: 'auto', border: `1px solid ${dt.cardBorder}`, borderRadius: 12 }}>
