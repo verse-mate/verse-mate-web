@@ -266,6 +266,7 @@ test.describe("A leader's history loads as a paginated summary", () => {
   });
 
   test('every leader screen reaches only the leader routes, never an admin one or the full corpus', async ({ page }) => {
+    test.slow(true, 'walks eight screens and waits for the network to settle on each');
     const LEADER_ROUTES =
       /^\/coach\/(me|rubric|trends|monthly-summary|zoom-link|affiliated-church|bible-coach|classes(\/[^/]+)?|reports\/summary|reports\/[^/]+(\/recording-url)?)$/;
     const paths: string[] = [];
@@ -298,6 +299,7 @@ test.describe("An admin's drill-in into one leader loads a page at a time", () =
   const FULL_CORPUS = /^\/coach\/(admin\/coaches\/[^/]+\/)?reports$/;
 
   test("no drill-in screen fetches the leader's whole corpus", async ({ page }) => {
+    test.slow(true, 'walks seven screens and waits for the network to settle on each');
     const paths: string[] = [];
     page.on('request', (req) => {
       const url = new URL(req.url());
