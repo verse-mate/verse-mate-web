@@ -1,4 +1,4 @@
-import { type CSSProperties, Fragment, type ReactNode, useEffect, useRef } from 'react';
+import { type CSSProperties, Fragment, type KeyboardEvent, type ReactNode, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { CheckCircle2, Circle, CircleDot, Lock } from 'lucide-react';
@@ -46,13 +46,17 @@ const NAVS: Record<NavKey, { label: string; to: string; key: string }[]> = {
     { label: 'Program', to: to.program, key: 'program' },
     { label: 'Trends', to: '/coach', key: 'trends' },
     { label: 'Class links', to: '/coach', key: 'links' },
+    { label: 'Pipeline', to: '/coach', key: 'pipeline' },
+    { label: 'Parallel run', to: '/coach', key: 'parallel' },
+    { label: 'Rotating classes', to: '/coach', key: 'rotating' },
+    { label: 'Duplicates', to: '/coach', key: 'duplicates' },
     { label: 'Upload', to: '/coach/upload', key: 'upload' },
   ],
 };
 
 export function Shell({ nav, active, children, wide }: { nav: NavKey | null; active?: string; children: ReactNode; wide?: boolean }) {
   return (
-    <div style={{ minHeight: '100vh', background: dt.pageBg, color: dt.textPrimary, fontFamily: dt.sans, WebkitFontSmoothing: 'antialiased', padding: 'clamp(12px, 4vw, 44px) clamp(10px, 4vw, 44px) 80px', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+    <div className="nt20" style={{ minHeight: '100vh', background: dt.pageBg, color: dt.textPrimary, fontFamily: dt.sans, WebkitFontSmoothing: 'antialiased', padding: 'clamp(12px, 4vw, 44px) clamp(10px, 4vw, 44px) 80px', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
       <style>{GLOBAL_CSS}</style>
       <div style={{ width: wide ? 1240 : 1080, maxWidth: '100%' }}>
         <div style={{ background: dt.cardBg, border: `1px solid ${dt.cardBorder}`, borderRadius: 18, padding: '28px clamp(16px, 4vw, 44px) 46px', boxShadow: dt.shadow }}>
@@ -67,12 +71,22 @@ export function Shell({ nav, active, children, wide }: { nav: NavKey | null; act
 const GLOBAL_CSS = `
 html, body, #root { background: ${dt.pageBg} !important; }
 .nt20 ::selection, .nt20::selection { background: ${dt.goldChip}; color: ${dt.textPrimary}; }
-.nt20 a:focus-visible, .nt20 button:focus-visible, .nt20 input:focus-visible, .nt20 textarea:focus-visible, .nt20 select:focus-visible, .nt20 video:focus-visible, .nt20 label:focus-within { outline: 2px solid ${dt.gold}; outline-offset: 2px; }
+.nt20 a:focus-visible, .nt20 button:focus-visible, .nt20 input:focus-visible, .nt20 textarea:focus-visible, .nt20 select:focus-visible, .nt20 video:focus-visible, .nt20 summary:focus-visible { outline: 2px solid ${dt.gold}; outline-offset: 2px; }
+.nt20 input::placeholder, .nt20 textarea::placeholder { color: ${dt.textMuted}; opacity: 1; }
+@media (max-width: 520px) { .nt20-coaching { display: none; } }
+@media (max-width: 640px) {
+  .nt20-table table, .nt20-table tbody, .nt20-table tr, .nt20-table td { display: block; min-width: 0 !important; width: auto; }
+  .nt20-table thead { display: none; }
+  .nt20-table tr { padding: 12px 14px; border-top: 1px solid ${dt.rowDivider}; }
+  .nt20-table td { border: none !important; padding: 3px 0 !important; }
+  .nt20-table td[data-label]::before { content: attr(data-label) ": "; color: ${dt.textMuted}; font-size: 13px; }
+}
 .nt20 input, .nt20 textarea, .nt20 select { caret-color: ${dt.gold}; }
 .nt20 a { text-underline-offset: 3px; }
 .nt20-num { font-variant-numeric: tabular-nums; }
 .nt20-lesson { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 40px; align-items: start; }
-@media (max-width: 860px) { .nt20-lesson { grid-template-columns: minmax(0, 1fr); gap: 20px; } .nt20-lesson > aside { order: -1; position: static !important; } }
+.nt20-lesson > aside { grid-column: 2; grid-row: 1; }
+@media (max-width: 860px) { .nt20-lesson { grid-template-columns: minmax(0, 1fr); gap: 20px; } .nt20-lesson > aside { grid-column: 1; grid-row: auto; position: static !important; } }
 `;
 
 function TopBar({ nav, active }: { nav: NavKey | null; active?: string }) {
@@ -83,17 +97,17 @@ function TopBar({ nav, active }: { nav: NavKey | null; active?: string }) {
       <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
         <div aria-hidden style={{ width: 30, height: 30, borderRadius: 8, background: dt.darkBg, display: 'flex', alignItems: 'center', justifyContent: 'center', color: dt.goldChip, fontFamily: dt.serif, fontWeight: 600, fontSize: 17 }}>V</div>
         <span style={{ fontFamily: dt.serif, fontSize: 20, fontWeight: 600, letterSpacing: '-.01em' }}>VerseMate</span>
-        <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.14em', color: dt.gold, borderLeft: '1px solid #DEDEDC', paddingLeft: 11 }}>COACHING</span>
+        <span className="nt20-coaching" style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.14em', color: dt.gold, borderLeft: '1px solid #DEDEDC', paddingLeft: 11 }}>COACHING</span>
       </div>
-      <nav aria-label="Coaching" style={{ display: 'flex', alignItems: 'center', gap: 'clamp(14px, 2vw, 22px)', fontSize: 14, fontWeight: 500, flexWrap: 'wrap' }}>
+      <nav aria-label="Coaching" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginLeft: 'auto', gap: '0 clamp(14px, 2vw, 22px)', fontSize: 14, fontWeight: 500, flexWrap: 'wrap' }}>
         {nav &&
           NAVS[nav].map((n) => (
-            <NavLink key={n.key} to={n.to} aria-current={active === n.key ? 'page' : undefined} style={{ color: active === n.key ? dt.textPrimary : dt.textMuted, textDecoration: 'none', fontWeight: active === n.key ? 700 : 500, borderBottom: `2px solid ${active === n.key ? dt.brightGold : 'transparent'}`, padding: '4px 0' }}>
+            <NavLink key={n.key} to={n.to} aria-current={active === n.key ? 'page' : undefined} style={{ color: active === n.key ? dt.textPrimary : dt.textMuted, textDecoration: 'none', fontWeight: active === n.key ? 700 : 500, borderBottom: `2px solid ${active === n.key ? dt.brightGold : 'transparent'}`, minHeight: 44, display: 'inline-flex', alignItems: 'center', boxSizing: 'border-box' }}>
               {n.label}
             </NavLink>
           ))}
         {state.isSignedIn && (
-          <span aria-label="Your account" role="img" style={{ width: 34, height: 34, borderRadius: '50%', background: '#E8E8E6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: dt.gold2, fontSize: 13 }}>
+          <span aria-label="Your account" role="img" style={{ width: 34, height: 34, borderRadius: '50%', background: '#E8E8E6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: dt.goldHover, fontSize: 13 }}>
             {initials.toUpperCase()}
           </span>
         )}
@@ -118,10 +132,10 @@ export const btn = {
   disabled: { opacity: 0.5, cursor: 'not-allowed' } as CSSProperties,
 };
 
-export function Btn({ to: href, kind = 'primary', children, onClick, disabled, type = 'button', style }: { to?: string; kind?: keyof typeof btn; children: ReactNode; onClick?: () => void; disabled?: boolean; type?: 'button' | 'submit'; style?: CSSProperties }) {
+export function Btn({ to: href, kind = 'primary', children, onClick, disabled, type = 'button', style, label }: { to?: string; kind?: keyof typeof btn; children: ReactNode; onClick?: () => void; disabled?: boolean; type?: 'button' | 'submit'; style?: CSSProperties; label?: string }) {
   const s = { ...btn[kind], ...(disabled ? btn.disabled : null), ...style };
-  if (href && !disabled) return <Link to={href} style={s}>{children}</Link>;
-  return <button type={type} onClick={onClick} disabled={disabled} aria-disabled={disabled} style={s}>{children}</button>;
+  if (href && !disabled) return <Link to={href} style={s} aria-label={label}>{children}</Link>;
+  return <button type={type} onClick={onClick} disabled={disabled} aria-disabled={disabled} style={s} aria-label={label}>{children}</button>;
 }
 
 export function BackLink({ to: href, children }: { to: string; children: ReactNode }) {
@@ -133,7 +147,7 @@ const TONES: Record<Tone, [string, string]> = { green: [dt.green, dt.greenBg], r
 
 export function Tag({ tone, children }: { tone: Tone; children: ReactNode }) {
   const [c, bg] = TONES[tone];
-  return <span className="nt20-num" style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, fontWeight: 700, color: c, background: bg, padding: '3px 9px', borderRadius: 999, whiteSpace: 'nowrap' }}>{children}</span>;
+  return <span className="nt20-num" style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, fontWeight: 700, color: `color-mix(in srgb, ${c} 78%, black)`, background: bg, padding: '3px 9px', borderRadius: 999, whiteSpace: 'nowrap' }}>{children}</span>;
 }
 
 export type StepState = 'done' | 'open' | 'next' | 'locked';
@@ -148,14 +162,16 @@ export function StepMark({ state }: { state: StepState }) {
 
 export const STEP_WORD: Record<StepState, string> = { done: 'Done', open: 'Open', next: 'Next', locked: 'Locked' };
 
-export function Progress({ passed, total }: { passed: number; total: number }) {
+export function Progress({ passed, total, done, lessons }: { passed: number; total: number; done?: number; lessons?: number }) {
+  const byLessons = lessons !== undefined && done !== undefined;
+  const [now, max] = byLessons ? [done, lessons] : [passed, total];
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-      <div role="progressbar" aria-label="Modules passed" aria-valuemin={0} aria-valuemax={total} aria-valuenow={passed} style={{ flex: '1 1 160px', maxWidth: 280, height: 7, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}>
-        <div style={{ width: `${total ? (passed / total) * 100 : 0}%`, height: '100%', background: dt.brightGold, borderRadius: 99 }} />
+      <div role="progressbar" aria-label={byLessons ? 'Lessons done' : 'Modules passed'} aria-valuemin={0} aria-valuemax={max} aria-valuenow={now} style={{ flex: '1 1 160px', maxWidth: 280, height: 7, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}>
+        <div style={{ width: `${max ? (now / max) * 100 : 0}%`, height: '100%', background: dt.brightGold, borderRadius: 99 }} />
       </div>
       <span className="nt20-num" style={{ fontSize: 14, fontWeight: 600, color: dt.body }}>
-        {passed} of {total} modules passed
+        {byLessons ? `${done} of ${lessons} lessons done · ` : ''}{passed} of {total} modules passed
       </span>
     </div>
   );
@@ -188,7 +204,7 @@ export function Field({ label, hint, error, children, count }: { label: string; 
   );
 }
 
-export const input: CSSProperties = { width: '100%', boxSizing: 'border-box', minHeight: 44, padding: '10px 13px', borderRadius: 9, border: `1px solid ${dt.inputBorder}`, background: dt.inputBg, fontSize: 15, fontFamily: dt.sans, color: dt.textPrimary };
+export const input: CSSProperties = { width: '100%', boxSizing: 'border-box', minHeight: 44, padding: '10px 13px', borderRadius: 9, border: `1px solid ${dt.inputBorder}`, background: dt.inputBg, fontSize: 16, fontFamily: dt.sans, color: dt.textPrimary };
 export const inputError: CSSProperties = { ...input, border: `1px solid ${dt.rust}` };
 
 export function Dialog({ title, children, onClose }: { title: string; children: ReactNode; onClose?: () => void }) {
@@ -196,11 +212,20 @@ export function Dialog({ title, children, onClose }: { title: string; children: 
   useEffect(() => {
     ref.current?.querySelector<HTMLElement>('input, textarea, button')?.focus();
   }, []);
+  const onKeyDown = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') onClose?.();
+    if (e.key !== 'Tab' || !ref.current) return;
+    const items = [...ref.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input:not([readonly]), textarea, select')];
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last?.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
+  };
   return (
     <div style={{ position: 'fixed', inset: 0, zIndex: 60, background: 'rgba(20,18,16,.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }} onClick={onClose}>
       <style>{GLOBAL_CSS}</style>
-      <div ref={ref} role="dialog" aria-modal="true" aria-label={title} onClick={(e) => e.stopPropagation()} className="nt20" style={{ width: 500, maxWidth: '100%', maxHeight: '90vh', overflowY: 'auto', background: dt.cardBg, borderRadius: 16, padding: 'clamp(20px, 4vw, 30px)', boxShadow: '0 30px 70px -20px rgba(20,18,16,.6)', fontFamily: dt.sans, color: dt.textPrimary }}>
-        <h2 style={{ ...h2, marginBottom: 6 }}>{title}</h2>
+      <div ref={ref} role="dialog" aria-modal="true" aria-labelledby="nt20-dialog-title" onKeyDown={onKeyDown} onClick={(e) => e.stopPropagation()} className="nt20" style={{ width: 500, maxWidth: '100%', maxHeight: '90vh', overflowY: 'auto', background: dt.cardBg, borderRadius: 16, padding: 'clamp(20px, 4vw, 30px)', boxShadow: '0 30px 70px -20px rgba(20,18,16,.6)', fontFamily: dt.sans, color: dt.textPrimary }}>
+        <h2 id="nt20-dialog-title" style={{ ...h2, marginBottom: 6 }}>{title}</h2>
         {children}
       </div>
     </div>
@@ -261,7 +286,7 @@ export function Markdown({ source, size = 18 }: { source: string; size?: number 
   const blocks = source.replace(/\r/g, '').split(/\n{2,}/);
   const body: CSSProperties = { fontFamily: dt.serif, fontSize: size, lineHeight: 1.65, color: dt.textPrimary, margin: '0 0 1em' };
   return (
-    <div style={{ maxWidth: '68ch' }}>
+    <div style={{ maxWidth: '34em' }}>
       {blocks.map((block, i) => {
         const b = block.trim();
         if (!b) return null;

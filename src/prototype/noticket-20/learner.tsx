@@ -1,4 +1,4 @@
-import { useState, type CSSProperties, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BookOpen, Clock, GraduationCap, Lock } from 'lucide-react';
 import { dt } from '@/components/coach/dashboardTheme';
@@ -93,7 +93,7 @@ export function GateScreen({ variant }: { variant: 'offer-new' | 'offer-started'
         </>
       )}
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-        <Btn to={started ? to.path : to.start}>{started ? 'Open the program' : 'Start the learning program'}</Btn>
+        <Btn kind={variant === 'confirm-address' ? 'outline' : 'primary'} to={started ? to.path : to.start}>{started ? 'Open the program' : 'Start the learning program'}</Btn>
         <Btn kind="outline" to="/read">Back to reading</Btn>
       </div>
     </div>
@@ -155,6 +155,8 @@ export function StartScreen() {
           <h1 style={h1}>Learning to lead a Bible study</h1>
           <p style={lead}>Six modules drawn from the Leader's Guide and from the twelve things Coach looks for in a session. Each module is a few short lessons and a check of five questions. Lessons open one after another, so there is always one clear next step.</p>
           <Facts program={p} />
+          <PrivacyNote />
+          <div><Btn to={to.lesson}>Start the program</Btn></div>
           <ol style={{ margin: '6px 0 0', padding: 0, listStyle: 'none' }}>
             {p.modules.map((m, i) => (
               <li key={m.id} style={{ display: 'flex', gap: 14, padding: '12px 0', borderTop: i ? `1px solid ${dt.rowDivider}` : 'none', alignItems: 'baseline' }}>
@@ -170,8 +172,6 @@ export function StartScreen() {
         <aside style={{ ...panel, display: 'grid', gap: 14 }}>
           <h2 style={h3}>Before you start</h2>
           <p style={{ ...muted, color: dt.body }}>At the end you hold a completion record with the date and your best score in each module. You can then ask to join the coaching program; an admin reads every request.</p>
-          <PrivacyNote />
-          <Btn to={to.lesson}>Start the program</Btn>
         </aside>
       </div>
       <style>{'@media (max-width: 760px){.nt20-span{grid-column:auto !important}}'}</style>
@@ -208,7 +208,7 @@ function ModuleBlock({ m }: { m: ModuleView }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
         <div style={{ minWidth: 0, flex: '1 1 260px' }}>
           <h3 style={{ ...h3, overflowWrap: 'anywhere' }}>
-            <span className="nt20-num" style={{ color: dt.gold, marginRight: 10 }}>{m.n}</span>
+            <span className="nt20-num" style={{ color: dt.goldHover, marginRight: 10 }}>{m.n}</span>{' '}
             {m.title}
           </h3>
           <p style={{ ...muted, marginTop: 6 }}>{m.summary}</p>
@@ -219,7 +219,7 @@ function ModuleBlock({ m }: { m: ModuleView }) {
         steps
       ) : m.state === 'passed' ? (
         <details>
-          <summary style={{ fontSize: 13.5, fontWeight: 700, color: dt.gold, cursor: 'pointer', minHeight: 32, display: 'flex', alignItems: 'center' }}>Show its {m.lessons.length} lessons and check</summary>
+          <summary style={{ fontSize: 13.5, fontWeight: 700, color: dt.goldHover, cursor: 'pointer', minHeight: 44, display: 'flex', alignItems: 'center' }}>Show its {m.lessons.length} lessons and check</summary>
           {steps}
         </details>
       ) : (
@@ -239,7 +239,7 @@ function StepRow({ state, href, title, meta, isNew, word }: { state: StepState; 
         <span className="nt20-num" style={{ display: 'block', fontSize: 12.5, color: dt.textMuted }}>{meta}</span>
       </span>
       {isNew && <Tag tone="gold">New</Tag>}
-      <span style={{ fontSize: 12.5, fontWeight: 700, color: state === 'done' ? dt.green : state === 'next' ? dt.gold : dt.textMuted, whiteSpace: 'nowrap' }}>{word ?? STEP_WORD[state]}</span>
+      <span style={{ fontSize: 12.5, fontWeight: 700, color: state === 'done' ? dt.green : state === 'next' ? dt.goldHover : dt.textMuted, whiteSpace: 'nowrap' }}>{word ?? STEP_WORD[state]}</span>
     </Link>
   );
 }
@@ -250,12 +250,15 @@ export function PathScreen() {
   const p = program.data;
   const nextHref = p.next?.kind === 'check' ? to.check : to.lesson;
   const newModules = p.modules.filter((m) => m.isNew);
+  const allLessons = p.modules.flatMap((m) => m.lessons);
+  const doneLessons = allLessons.filter((l) => l.state === 'done').length;
+  const newAhead = !p.completedOn && p.modules.some((m) => m.isNew || m.lessons.some((l) => l.isNew && l.state === 'next'));
   return (
     <Shell nav={navFor(p.viewer)} active={activeFor(p.viewer)}>
       <div style={{ display: 'grid', gap: 26, paddingTop: 30 }}>
         <div style={{ display: 'grid', gap: 12 }}>
           <h1 style={h1}>Learning to lead a Bible study</h1>
-          <Progress passed={p.passed} total={p.total} />
+          <Progress passed={p.passed} total={p.total} done={doneLessons} lessons={allLessons.length} />
         </div>
         {p.completedOn ? (
           <div style={{ ...card, background: dt.darkBg, border: 'none', color: dt.darkText, display: 'flex', gap: 18, alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' }}>
@@ -280,6 +283,7 @@ export function PathScreen() {
                   {p.next.kind === 'check' ? `Module ${p.next.module} check` : `Module ${p.next.module}, lesson ${p.next.lesson}`}
                 </p>
                 <h2 style={{ ...h2, color: dt.darkText, marginTop: 4, overflowWrap: 'anywhere' }}>{p.next.title}</h2>
+                {newAhead && <p style={{ margin: '8px 0 0', fontSize: 14, lineHeight: 1.55, color: dt.darkMuted }}>New: the program team added this step ahead of where you were. The lessons you finished stay done.</p>}
               </div>
               <Btn to={nextHref}>{p.next.kind === 'check' ? 'Take the check' : 'Continue'}</Btn>
             </div>
@@ -329,6 +333,15 @@ export function LessonView({ l }: { l: LessonView }) {
         </p>
       </header>
       <div className="nt20-lesson">
+        <aside style={{ display: 'grid', gap: 10, position: 'sticky', top: 16 }}>
+          <h2 style={{ fontSize: 14, fontWeight: 700, margin: 0 }}>Passages</h2>
+          {l.passages.map((ps) => (
+            <a key={ps.ref} href={ps.href} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, flexWrap: 'wrap', minHeight: 44, padding: '10px 14px', border: `1px solid ${dt.cardBorder}`, borderRadius: 10, textDecoration: 'none', color: dt.textPrimary, background: dt.innerBg }}>
+              <span style={{ fontFamily: dt.serif, fontSize: 17, whiteSpace: 'nowrap' }}>{ps.ref}</span>
+              <span style={{ fontSize: 12.5, fontWeight: 700, color: dt.goldHover, whiteSpace: 'nowrap' }}>Open in the reader</span>
+            </a>
+          ))}
+        </aside>
         <div style={{ minWidth: 0, display: 'grid', gap: 24 }}>
           {l.video && (
             <figure style={{ margin: 0 }}>
@@ -340,22 +353,26 @@ export function LessonView({ l }: { l: LessonView }) {
           )}
           <Markdown source={l.body} />
         </div>
-        <aside style={{ display: 'grid', gap: 10, position: 'sticky', top: 16 }}>
-          <h2 style={{ fontSize: 14, fontWeight: 700, margin: 0 }}>Passages</h2>
-          {l.passages.map((ps) => (
-            <a key={ps.ref} href={ps.href} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, minHeight: 44, padding: '10px 14px', border: `1px solid ${dt.cardBorder}`, borderRadius: 10, textDecoration: 'none', color: dt.textPrimary, background: dt.innerBg }}>
-              <span style={{ fontFamily: dt.serif, fontSize: 17 }}>{ps.ref}</span>
-              <span style={{ fontSize: 12.5, fontWeight: 700, color: dt.gold, whiteSpace: 'nowrap' }}>Open in the reader</span>
-            </a>
-          ))}
-        </aside>
       </div>
     </article>
   );
 }
 
+function DoneNotice({ l }: { l: LessonView }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => ref.current?.focus(), []);
+  return (
+    <div ref={ref} tabIndex={-1} style={{ outline: 'none' }}>
+      <Notice tone="green" title="Lesson done" action={l.next && <Btn to={l.next.kind === 'check' ? to.check : to.lesson}>{l.next.kind === 'check' ? 'Take the check' : 'Next lesson'}</Btn>}>
+        {l.next ? <>Next: {l.next.label}, <em>{l.next.title}</em>.</> : 'This was the last step of the program.'}
+      </Notice>
+    </div>
+  );
+}
+
 export function LessonScreen() {
   const lesson = useData<LessonView>('/coach/program/lessons/l-1-3');
+  const navigate = useNavigate();
   if (!lesson.data) return <Shell nav="learner"><Loading /></Shell>;
   const l = lesson.data;
   if (l.locked) {
@@ -377,16 +394,15 @@ export function LessonScreen() {
     <Shell nav="learner" active="learning">
       <div style={{ display: 'grid', gap: 18, paddingTop: 12 }}>
         <BackLink to={to.path}>Your path</BackLink>
+        {l.done && <DoneNotice l={l} />}
         <LessonView l={l} />
         <div style={{ borderTop: `1px solid ${dt.border2}`, paddingTop: 22 }}>
           {l.done ? (
-            <Notice tone="green" title="Lesson done" action={l.next && <Btn to={l.next.kind === 'check' ? to.check : to.lesson}>{l.next.kind === 'check' ? 'Take the check' : 'Next lesson'}</Btn>}>
-              {l.next ? <>Next: {l.next.label}, <em>{l.next.title}</em>.</> : 'This was the last step of the program.'}
-            </Notice>
+            l.next && <div style={{ display: 'flex', justifyContent: 'flex-end' }}><Btn to={l.next.kind === 'check' ? to.check : to.lesson}>{l.next.kind === 'check' ? 'Take the check' : 'Next lesson'}</Btn></div>
           ) : (
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap', justifyContent: 'space-between' }}>
               <p style={muted}>Read it through{l.video ? ' and watch the video' : ''}, then mark it done to open the next step.</p>
-              <Btn to={to.lessonDone}>Mark as done</Btn>
+              <Btn onClick={() => { navigate(to.lessonDone); window.scrollTo(0, 0); }}>Mark as done</Btn>
             </div>
           )}
         </div>
@@ -401,7 +417,7 @@ type CheckView = {
   questions: { n: number; text: string; options: string[] }[];
   answers?: Record<string, number>;
   attempt?: { score: number; passed: boolean; right: number; wrong: number[]; best: number; attempt: number };
-  refusal?: { kind: 'incomplete'; questions: number[] } | { kind: 'changed' } | { kind: 'locked'; lessons: string[] };
+  refusal?: { kind: 'incomplete'; questions: number[] } | { kind: 'changed'; questions: number[] } | { kind: 'locked'; lessons: string[] };
   next?: { module: number; title: string } | null;
 };
 
@@ -414,6 +430,7 @@ export function CheckScreen() {
   const answers = picked ?? c.answers ?? {};
   const graded = c.attempt;
   const missing = c.refusal?.kind === 'incomplete' ? c.refusal.questions : [];
+  const changed = c.refusal?.kind === 'changed' ? c.refusal.questions : [];
   const header = (
     <header style={{ display: 'grid', gap: 10 }}>
       <h1 style={h1}>Module {c.module.n} check</h1>
@@ -447,11 +464,11 @@ export function CheckScreen() {
         {header}
         {graded && (
           <div style={{ ...card, background: graded.passed ? dt.greenBg : dt.innerBg, border: `1px solid ${graded.passed ? '#CFE0CC' : dt.cardBorder}`, display: 'grid', gap: 10 }} role="status">
-            <p className="nt20-num" style={{ margin: 0, fontFamily: dt.serif, fontSize: 40, lineHeight: 1, color: graded.passed ? dt.green : dt.textPrimary }}>{pct(graded.score)}</p>
-            <h2 style={h3}>{graded.passed ? `Passed. Module ${c.module.n} is done.` : `Not passed yet. The pass mark is ${c.passMark}%.`}</h2>
+            <h2 style={{ ...h2, color: graded.passed ? dt.green : dt.textPrimary }}>{graded.passed ? `Passed. Module ${c.module.n} is done.` : `Not passed yet. You need ${c.passMark}% to pass.`}</h2>
+            <p className="nt20-num" style={{ margin: 0, fontSize: 15, fontWeight: 700, color: dt.body }}>Your score: {pct(graded.score)}</p>
             <p className="nt20-num" style={{ ...muted, color: dt.body }}>
               You answered {graded.right} of {c.questions.length} correctly{graded.passed ? `. Best score ${pct(graded.best)}, attempt ${graded.attempt}.` : '.'}
-              {!graded.passed && graded.wrong.length > 0 && <> Look again at question{graded.wrong.length > 1 ? 's' : ''} {graded.wrong.join(', ')}.</>}
+              {!graded.passed && graded.wrong.length > 0 && <> Look again at {graded.wrong.map((n, i) => <span key={n}>{i ? ', ' : ''}<a href={`#nt20-q${n}`} style={{ color: dt.goldHover, fontWeight: 700 }}>question {n}</a></span>)}.</>}
             </p>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 4 }}>
               {graded.passed ? (
@@ -466,7 +483,7 @@ export function CheckScreen() {
         )}
         {c.refusal?.kind === 'changed' && (
           <Notice tone="rust" title="This check changed while you were answering">
-            The program team edited it after you opened it, so your answers were not counted. Here it is as it stands now.
+            The program team edited it after you opened it, so nothing was counted. Your answers to the questions that did not change are kept; answer question {changed.join(', ')}, then submit again.
           </Notice>
         )}
         {missing.length > 0 && (
@@ -479,7 +496,7 @@ export function CheckScreen() {
             const wrong = graded?.wrong.includes(q.n);
             const unanswered = missing.includes(q.n);
             return (
-              <li key={q.n}>
+              <li key={q.n} id={`nt20-q${q.n}`}>
                 <fieldset style={{ ...card, margin: 0, border: `1px solid ${unanswered || wrong ? dt.rust : dt.cardBorder}`, display: 'grid', gap: 10 }} disabled={!!graded}>
                   <legend style={{ padding: 0, float: 'left', width: '100%', display: 'flex', justifyContent: 'space-between', gap: 10, alignItems: 'flex-start', flexWrap: 'wrap' }}>
                     <span style={{ fontWeight: 600, fontSize: 15.5, lineHeight: 1.45, flex: '1 1 300px' }}>
@@ -489,6 +506,7 @@ export function CheckScreen() {
                     {wrong && <Tag tone="rust">Not right</Tag>}
                     {graded && !wrong && <Tag tone="green">Right</Tag>}
                     {unanswered && <Tag tone="rust">No answer</Tag>}
+                    {changed.includes(q.n) && <Tag tone="gold">New question</Tag>}
                   </legend>
                   <div style={{ display: 'grid', gap: 8, clear: 'both' }}>
                     {q.options.map((o, i) => {
@@ -551,7 +569,7 @@ export function CompletionScreen() {
               {c.modules.map((m, i) => (
                 <Row key={m.n} first={i === 0} style={{ justifyContent: 'space-between' }}>
                   <span style={{ minWidth: 0, flex: '1 1 200px', fontSize: 15 }}>
-                    <span className="nt20-num" style={{ color: dt.gold, marginRight: 10, fontFamily: dt.serif, fontSize: 17 }}>{m.n}</span>
+                    <span className="nt20-num" style={{ color: dt.gold, marginRight: 10, fontFamily: dt.serif, fontSize: 17 }}>{m.n}</span>{' '}
                     {m.title}
                   </span>
                   {m.best === null ? <Tag tone="grey">Not yet taken</Tag> : <span className="nt20-num" style={{ fontWeight: 700, fontSize: 15 }}>{pct(m.best)}</span>}
@@ -580,7 +598,7 @@ export function CompletionScreen() {
             {r?.state === 'already' && (
               <>
                 <p><Tag tone="blue">Already in the program</Tag></p>
-                <p style={{ ...muted, color: dt.body }}>{c.email} already belongs to a leader in the coaching program, so no new place was needed. Sign in with that address to reach your dashboard.</p>
+                <p style={{ ...muted, color: dt.body }}>This account's address already belongs to a leader in the coaching program, so no new place was needed. Open Coach to reach your leader dashboard.</p>
                 <Btn kind="dark" to="/coach">Open Coach</Btn>
               </>
             )}
@@ -592,7 +610,7 @@ export function CompletionScreen() {
               </div>
             )}
             {canRequest && !c.addressConfirmed && (
-              <Notice tone="rust" title="Confirm your email address first" action={<ConfirmButton />}>
+              <Notice tone="gold" title="Confirm your email address first" action={<ConfirmButton />}>
                 A request needs a confirmed address, because an approved request makes {c.email} a leader's sign-in. We send a link to that address; open it in this browser.
               </Notice>
             )}

@@ -40,13 +40,13 @@ export function JoinRequests({ dialog, refusal }: { dialog?: 'approve' | 'declin
               <span style={{ fontWeight: 700, fontSize: 15 }}>{r.name}</span>
               <span style={{ fontSize: 13.5, color: dt.textMuted, overflowWrap: 'anywhere' }}>{r.email}</span>
               <span className="nt20-num" style={{ fontSize: 13, color: dt.body }}>
-                Completed {formatDate(r.completedOn)} · {r.passed} of {r.total} modules · best scores {r.scores.map((s) => pct(s)).join(', ')}
+                Completed {formatDate(r.completedOn)} · {r.passed} of {r.total} modules passed · best by module: {r.scores.map((s, i) => `${i + 1}: ${pct(s)}`).join(', ')}
               </span>
               {r.note && <p style={{ margin: '6px 0 0', fontFamily: dt.serif, fontSize: 15.5, lineHeight: 1.55, color: dt.body, overflowWrap: 'anywhere' }}>“{r.note}”</p>}
             </div>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              <Btn to={to.adminApprove}>Approve</Btn>
-              <Btn kind="outline" to={to.adminDecline}>Decline</Btn>
+              <Btn to={to.adminApprove} label={`Approve ${r.name}`}>Approve</Btn>
+              <Btn kind="outline" to={to.adminDecline} label={`Decline ${r.name}`}>Decline</Btn>
             </div>
           </Row>
         ))}
@@ -123,7 +123,7 @@ type AdminModuleRow = { id: string; n: number; title: string; lessons: number; p
 type ModulesView = { modules: AdminModuleRow[]; refusal?: { module: number; title: string; reason: string } };
 
 function MoveButtons({ label, first, last }: { label: string; first: boolean; last: boolean }) {
-  const s: CSSProperties = { width: 36, height: 36, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', border: `1px solid ${dt.inputBorder}`, borderRadius: 8, background: dt.cardBg, color: dt.textMuted, cursor: 'pointer' };
+  const s: CSSProperties = { width: 44, height: 44, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', border: `1px solid ${dt.inputBorder}`, borderRadius: 8, background: dt.cardBg, color: dt.textMuted, cursor: 'pointer' };
   return (
     <span style={{ display: 'inline-flex', gap: 4 }}>
       <button type="button" aria-label={`Move ${label} up`} disabled={first} style={{ ...s, opacity: first ? 0.35 : 1 }}><ArrowUp size={16} aria-hidden /></button>
@@ -168,7 +168,7 @@ export function AdminProgramScreen() {
                 <MoveButtons label={`module ${m.n}`} first={i === 0} last={i === modules.length - 1} />
                 <Link to={to.module} style={{ flex: '1 1 280px', minWidth: 0, textDecoration: 'none', color: dt.textPrimary }}>
                   <span style={{ display: 'block', fontWeight: 600, fontSize: 15.5, overflowWrap: 'anywhere' }}>
-                    <span className="nt20-num" style={{ color: dt.gold, marginRight: 8, fontFamily: dt.serif }}>{m.n}</span>
+                    <span className="nt20-num" style={{ color: dt.gold, marginRight: 8, fontFamily: dt.serif }}>{m.n}</span>{' '}
                     <span>{m.title}</span>
                   </span>
                   <span className="nt20-num" style={{ display: 'block', fontSize: 13, color: dt.textMuted, marginTop: 2 }}>
@@ -321,41 +321,12 @@ export function AdminLessonScreen() {
             <h1 style={h1}>Lesson {l.n}</h1>
             {l.published ? <Tag tone="green">Published</Tag> : <Tag tone="grey">Draft</Tag>}
           </div>
-          <Btn kind="outline" to={`${P}/admin-lesson/draft-preview`}>Preview as a learner</Btn>
+          <span style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <Btn kind="outline" to={`${P}/admin-lesson/draft-preview`}>Preview as a learner</Btn>
+            <Btn>Save changes</Btn>
+          </span>
         </div>
         <Field label="Title"><input defaultValue={l.title} style={input} /></Field>
-        <section aria-labelledby="nt20-text" style={{ display: 'grid', gap: 10 }}>
-          <h2 id="nt20-text" style={h3}>Text</h2>
-          <p style={muted}>Markdown: headings, lists, emphasis, quotes and links. HTML and images are not shown to learners.</p>
-          <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))' }}>
-            <textarea aria-label="Lesson text in Markdown" value={source} onChange={(e) => setBody(e.target.value)} style={{ ...input, minHeight: 420, fontFamily: "ui-monospace, 'SF Mono', Menlo, monospace", fontSize: 13.5, lineHeight: 1.6, resize: 'vertical' }} />
-            <div aria-label="Preview" role="region" style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 9, padding: '16px 20px', maxHeight: 520, overflowY: 'auto', background: dt.cardBg }}>
-              <p style={{ margin: '0 0 10px', fontSize: 12.5, fontWeight: 700, color: dt.textMuted }}>Live preview</p>
-              <Markdown source={source} size={16} />
-            </div>
-          </div>
-        </section>
-        <section aria-labelledby="nt20-passages" style={{ display: 'grid', gap: 10 }}>
-          <h2 id="nt20-passages" style={h3}>Passages</h2>
-          <p style={muted}>Each opens its chapter in the reader. Verses are optional.</p>
-          {l.passages.map((p, i) => (
-            <div key={i} style={{ display: 'grid', gap: 6 }}>
-              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'flex-end' }}>
-                <div style={{ flex: '2 1 180px' }}>
-                  <Field label="Book">
-                    <select defaultValue={p.book} style={input}>{BOOKS.map((b) => <option key={b}>{b}</option>)}</select>
-                  </Field>
-                </div>
-                <div style={{ flex: '1 1 90px' }}><Field label="Chapter"><input type="number" defaultValue={p.chapter} style={input} className="nt20-num" /></Field></div>
-                <div style={{ flex: '1 1 90px' }}><Field label="From verse"><input type="number" defaultValue={p.from} style={p.error ? inputError : input} className="nt20-num" /></Field></div>
-                <div style={{ flex: '1 1 90px' }}><Field label="To verse"><input type="number" defaultValue={p.to} style={p.error ? inputError : input} className="nt20-num" /></Field></div>
-                <button type="button" aria-label={`Remove ${p.book} ${p.chapter}`} style={{ width: 44, height: 44, border: 'none', background: 'transparent', color: dt.rust, cursor: 'pointer' }}><Trash2 size={17} aria-hidden /></button>
-              </div>
-              {p.error && <p role="alert" style={{ margin: 0, fontSize: 13.5, fontWeight: 600, color: dt.rust }}>Not saved: {p.error}</p>}
-            </div>
-          ))}
-          <div><Btn kind="outline"><Plus size={16} aria-hidden /> Add a passage</Btn></div>
-        </section>
         <section aria-labelledby="nt20-video" style={{ ...panel, display: 'grid', gap: 12 }}>
           <h2 id="nt20-video" style={h3}>Video</h2>
           {l.video ? (
@@ -396,6 +367,38 @@ export function AdminLessonScreen() {
               The connection dropped before it finished. Learners still see {l.video ? 'the previous video' : 'no video'}, never a broken player.
             </Notice>
           )}
+        </section>
+        <section aria-labelledby="nt20-passages" style={{ display: 'grid', gap: 10 }}>
+          <h2 id="nt20-passages" style={h3}>Passages</h2>
+          <p style={muted}>Each opens its chapter in the reader. Verses are optional.</p>
+          {l.passages.map((p, i) => (
+            <div key={i} style={{ display: 'grid', gap: 6 }}>
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'flex-end' }}>
+                <div style={{ flex: '2 1 180px' }}>
+                  <Field label="Book">
+                    <select defaultValue={p.book} style={input}>{BOOKS.map((b) => <option key={b}>{b}</option>)}</select>
+                  </Field>
+                </div>
+                <div style={{ flex: '1 1 90px' }}><Field label="Chapter"><input type="number" defaultValue={p.chapter} style={input} className="nt20-num" /></Field></div>
+                <div style={{ flex: '1 1 90px' }}><Field label="From verse"><input type="number" defaultValue={p.from} style={p.error ? inputError : input} className="nt20-num" /></Field></div>
+                <div style={{ flex: '1 1 90px' }}><Field label="To verse"><input type="number" defaultValue={p.to} style={p.error ? inputError : input} className="nt20-num" /></Field></div>
+                <button type="button" aria-label={`Remove ${p.book} ${p.chapter}`} style={{ width: 44, height: 44, border: 'none', background: 'transparent', color: dt.rust, cursor: 'pointer' }}><Trash2 size={17} aria-hidden /></button>
+              </div>
+              {p.error && <p role="alert" style={{ margin: 0, fontSize: 13.5, fontWeight: 600, color: dt.rust }}>Not saved: {p.error}</p>}
+            </div>
+          ))}
+          <div><Btn kind="outline"><Plus size={16} aria-hidden /> Add a passage</Btn></div>
+        </section>
+        <section aria-labelledby="nt20-text" style={{ display: 'grid', gap: 10 }}>
+          <h2 id="nt20-text" style={h3}>Text</h2>
+          <p style={muted}>Markdown: headings, lists, emphasis, quotes and links. HTML and images are not shown to learners.</p>
+          <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))' }}>
+            <textarea aria-label="Lesson text in Markdown" value={source} onChange={(e) => setBody(e.target.value)} style={{ ...input, minHeight: 420, fontFamily: "ui-monospace, 'SF Mono', Menlo, monospace", fontSize: 16, lineHeight: 1.55, resize: 'vertical' }} />
+            <div aria-label="Preview" role="region" style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 9, padding: '16px 20px', maxHeight: 520, overflowY: 'auto', background: dt.cardBg }}>
+              <p style={{ margin: '0 0 10px', fontSize: 12.5, fontWeight: 700, color: dt.textMuted }}>Live preview</p>
+              <Markdown source={source} size={16} />
+            </div>
+          </div>
         </section>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', borderTop: `1px solid ${dt.border2}`, paddingTop: 20 }}>
           <Btn>Save changes</Btn>
@@ -453,11 +456,11 @@ export function AdminLearnersScreen() {
             <Search size={16} aria-hidden color={dt.textMuted} style={{ position: 'absolute', left: 13, top: 14 }} />
             <input type="search" value={q ?? v.q} onChange={(e) => setQ(e.target.value)} placeholder="Search by name or email" style={{ ...input, paddingLeft: 38 }} />
           </label>
-          <span className="nt20-num" style={muted}>
+          <span className="nt20-num" role="status" style={muted}>
             {v.total === 0 ? 'No learners match' : `${from}–${toN} of ${v.total.toLocaleString('en-US')}${v.q ? ` matching “${v.q}”` : ''}`}
           </span>
         </form>
-        <div style={{ overflowX: 'auto', border: `1px solid ${dt.cardBorder}`, borderRadius: 12 }}>
+        <div className="nt20-table" style={{ overflowX: 'auto', border: `1px solid ${dt.cardBorder}`, borderRadius: 12 }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 720 }}>
             <thead style={{ background: dt.innerBg }}>
               <tr><th style={th}>Learner</th><th style={th}>Started</th><th style={th}>Modules passed</th><th style={th}>Completed</th><th style={th}>Join request</th></tr>
@@ -466,10 +469,10 @@ export function AdminLearnersScreen() {
               {v.items.map((l) => (
                 <tr key={l.email}>
                   <td style={td}><span style={{ display: 'block', fontWeight: 600 }}>{l.name}</span><span style={{ display: 'block', color: dt.textMuted, fontSize: 13 }}>{l.email}</span></td>
-                  <td style={td} className="nt20-num">{formatDate(l.startedOn)}</td>
-                  <td style={td} className="nt20-num">{l.passed} of {l.total}</td>
-                  <td style={td} className="nt20-num">{l.completedOn ? formatDate(l.completedOn) : <span style={{ color: dt.textMuted }}>Not yet</span>}</td>
-                  <td style={td}>{l.request ? REQUEST_TAG[l.request] : <span style={{ color: dt.textMuted }}>None</span>}</td>
+                  <td style={td} className="nt20-num" data-label="Started">{formatDate(l.startedOn)}</td>
+                  <td style={td} className="nt20-num" data-label="Modules passed">{l.passed} of {l.total}</td>
+                  <td style={td} className="nt20-num" data-label="Completed">{l.completedOn ? formatDate(l.completedOn) : <span style={{ color: dt.textMuted }}>Not yet</span>}</td>
+                  <td style={td} data-label="Join request">{l.request ? REQUEST_TAG[l.request] : <span style={{ color: dt.textMuted }}>None</span>}</td>
                 </tr>
               ))}
             </tbody>
