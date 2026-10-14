@@ -1,0 +1,647 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ─── VerseMate production tokens (from packages/frontend-base/styles/vars.css) ─── */
+
+    /* Production colors — gold accent #b09a6d is preserved across both themes */
+    --vm-night: #000;
+    --vm-snow: #fff;
+    --vm-dust: #b09a6d;
+    --vm-rodeo-dust: #c2b291;
+    --vm-fantasy: #f6f3ec;
+    --vm-snow-rock: #eae6de;
+    --vm-charcoal-grey: #3e464d;
+    --vm-oslo-gray: #818990;
+    --vm-venus: #888;
+    --vm-porcelain: #f0f0f0;
+    --vm-geyser: #dce0e3;
+    --vm-geyser-opacity: #dce0e380;
+    --vm-oil: #1B1B1B;
+    --vm-salmon: #f87171;
+
+    /* ─── Theme-aware semantic tokens (LIGHT) ─────────────────────────────
+       These flip in `.dark { ... }` below and are consumed by inline
+       styles across every screen via the helpers in
+       src/styles/themeStyles.ts. Hex values come straight from the
+       design handoff (design_handoff_versemate_light/styles/light.css). */
+
+    /* Page / outer chrome */
+    --vm-page-bg: #FFFFFF;             /* white — main page background */
+    --vm-chrome-bg: #FFFFFF;           /* desktop centering chrome */
+
+    /* Raised surfaces (cards, pickers, modals, inputs) */
+    --vm-surface-raised-bg: #FFFFFF;
+    --vm-surface-raised-border: #E5E5E5;
+    --vm-divider: #E5E5E5;
+
+    /* Text */
+    --vm-text-primary: #1B1B1B;
+    --vm-text-secondary: rgba(27, 27, 27, 0.62);
+    --vm-text-tertiary: rgba(27, 27, 27, 0.5);
+    --vm-text-muted: rgba(27, 27, 27, 0.42);
+
+    /* Inputs */
+    --vm-input-bg: #FFFFFF;
+    --vm-input-border: #E5E5E5;
+
+    /* Rows / hover / selected */
+    --vm-row-selected-bg: rgba(27, 27, 27, 0.05);
+    --vm-hover-bg: #F5F5F5;
+
+    /* Status (slightly different per-theme to maintain WCAG on bg) */
+    --vm-status-error: #B91C1C;
+    --vm-status-success: #15803D;
+
+    /* Very faint divider — used inside cards for sub-dividers */
+    --vm-faint-divider: rgba(27, 27, 27, 0.08);
+
+    /* Desktop books sidebar — white in light per design's --bg-sidebar */
+    --vm-sidebar-bg: #FFFFFF;
+    --vm-sidebar-border: #E5E5E5;
+
+    /* Right-pane commentary surface — white in light per --bg-commentary */
+    --vm-commentary-bg: #FFFFFF;
+
+    /* Sidebar chapter cells — design spec .chapter-cell */
+    --vm-chapter-cell-bg: #F5F5F5;
+    --vm-chapter-cell-border: #E5E5E5;
+
+    /* Header — always dark for brand consistency, per design spec */
+    --header-bg: 0 0% 11%;             /* #1B1B1B */
+    --header-fg: 0 0% 100%;
+
+    /* Reading body — white in light, near-black in dark */
+    --background: 0 0% 100%;          /* #FFFFFF — white */
+    --foreground: 0 0% 11%;            /* #1B1B1B */
+
+    --card: 0 0% 100%;                 /* #FFFFFF */
+    --card-foreground: 0 0% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+
+    --primary: 0 0% 11%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 11%;
+
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 35%;
+
+    /* Gold accent = production --dust (same on both themes) */
+    --accent: 38 29% 56%;              /* #b09a6d */
+    --accent-foreground: 0 0% 11%;
+
+    --destructive: 0 72% 42%;          /* slightly darker for cream bg */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;              /* neutral border */
+    --input: 0 0% 90%;
+    --ring: 38 29% 56%;
+
+    --radius: 0.5rem;
+
+    /* Verse number color = charcoal-grey in production, NOT gold */
+    --verse-number-color: var(--vm-charcoal-grey);
+
+    /* Highlight colors — lightened base + bumped alpha so each color is
+       clearly visible against the black scripture background. Lighter
+       Material 300/200 base shades + 45-60% alpha keeps text readable
+       while the highlight reads as a real marker stroke (not a tint). */
+    --hl-yellow: rgb(255 241 118 / 45%);
+    --hl-green: rgb(129 199 132 / 50%);
+    --hl-blue: rgb(100 181 246 / 50%);
+    --hl-pink: rgb(244 143 177 / 50%);
+    --hl-purple: rgb(186 104 200 / 55%);
+    --hl-orange: rgb(255 183 77 / 50%);
+    --hl-red: rgb(229 115 115 / 50%);
+    --hl-teal: rgb(77 182 172 / 55%);
+    --hl-brown: rgb(161 136 127 / 60%);
+
+    /* Auto-highlight colors — 20% bg + underline */
+    --ahl-yellow-bg: rgb(255 255 0 / 30%);
+    --ahl-yellow-border: rgb(255 255 0 / 50%);
+    --ahl-blue-bg: rgb(173 216 230 / 30%);
+    --ahl-blue-border: rgb(173 216 230 / 50%);
+    --ahl-green-bg: rgb(144 238 144 / 30%);
+    --ahl-green-border: rgb(144 238 144 / 50%);
+    --ahl-orange-bg: rgb(255 165 0 / 30%);
+    --ahl-orange-border: rgb(255 165 0 / 50%);
+    --ahl-pink-bg: rgb(255 192 203 / 30%);
+    --ahl-pink-border: rgb(255 192 203 / 50%);
+    --ahl-purple-bg: rgb(221 160 221 / 30%);
+    --ahl-purple-border: rgb(221 160 221 / 50%);
+    --ahl-red-bg: rgb(244 67 54 / 30%);
+    --ahl-red-border: rgb(244 67 54 / 50%);
+    --ahl-teal-bg: rgb(0 150 136 / 30%);
+    --ahl-teal-border: rgb(0 150 136 / 50%);
+    --ahl-brown-bg: rgb(121 85 72 / 30%);
+    --ahl-brown-border: rgb(121 85 72 / 50%);
+
+    /* Red-letter (words of Jesus) — colors the verse TEXT, not the background.
+       A deep red in light mode; flipped to a lighter red in .dark below. */
+    --red-letter: #c1121f;
+
+    /* Desktop chrome — white in light, near-black in dark */
+    --chrome-bg: 0 0% 100%;           /* #FFFFFF */
+
+    /* Dark surface (sheets, selectors, menu drawer — overlays stay dark on
+       BOTH themes per design spec). These are referenced by .bg-dark-surface
+       / .bg-dark-raised utility classes used in app shell overlays. */
+    --dark-surface: 0 0% 0%;           /* #000 — overlays */
+    --dark-surface-raised: 0 0% 19.6%; /* #323232 — pill containers, card bg */
+    --dark-surface-fg: 0 0% 100%;
+    --dark-surface-muted: 0 0% 60%;
+    --dark-border: 0 0% 19.6%;         /* #323232 */
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 11%;
+    --sidebar-primary: 0 0% 11%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 11%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 38 29% 56%;
+  }
+
+  /* ─── Theme-aware semantic tokens (DARK) ───────────────────────────────
+     Applied when <html class="dark"> is present. The AppContext effect at
+     src/contexts/AppContext.tsx:261 toggles this class based on
+     state.settings.theme ('dark' | 'light' | 'system'). */
+  .dark {
+    /* Page / outer chrome */
+    --vm-page-bg: #000000;
+    --vm-chrome-bg: #1B1B1B;
+
+    /* Raised surfaces */
+    --vm-surface-raised-bg: #323232;
+    --vm-surface-raised-border: #3a3a3a;
+    --vm-divider: #323232;
+
+    /* Text */
+    --vm-text-primary: #E7E7E7;
+    --vm-text-secondary: rgba(231, 231, 231, 0.7);
+    --vm-text-tertiary: rgba(231, 231, 231, 0.6);
+    --vm-text-muted: rgba(231, 231, 231, 0.5);
+
+    /* Inputs */
+    --vm-input-bg: #323232;
+    --vm-input-border: #3a3a3a;
+
+    /* Rows / hover / selected */
+    --vm-row-selected-bg: rgba(255, 255, 255, 0.05);
+    --vm-hover-bg: rgba(255, 255, 255, 0.05);
+
+    /* Status */
+    --vm-status-error: #dc2626;
+    --vm-status-success: #22c55e;
+
+    /* Very faint divider — white-with-opacity in dark */
+    --vm-faint-divider: rgba(255, 255, 255, 0.1);
+
+    /* Red-letter — lighter red so Jesus' words stay legible on black */
+    --red-letter: #ff6b6b;
+
+    /* Desktop books sidebar — near-black in dark */
+    --vm-sidebar-bg: #111111;
+    --vm-sidebar-border: #2a2a2a;
+
+    /* Right-pane commentary surface — black in dark */
+    --vm-commentary-bg: #000000;
+
+    /* Sidebar chapter cells — near-black with subtle border in dark */
+    --vm-chapter-cell-bg: #1e1e1e;
+    --vm-chapter-cell-border: #2a2a2a;
+
+    /* shadcn HSL tokens — dark equivalents */
+    --header-bg: 0 0% 0%;
+    --header-fg: 0 0% 100%;
+
+    --background: 0 0% 0%;             /* #000 — page bg in dark */
+    --foreground: 0 0% 91%;            /* #E7E7E7 */
+
+    --card: 0 0% 19.6%;                /* #323232 */
+    --card-foreground: 0 0% 91%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 91%;
+    --primary-foreground: 0 0% 11%;
+
+    --secondary: 0 0% 19.6%;
+    --secondary-foreground: 0 0% 91%;
+
+    --muted: 0 0% 23%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 38 29% 56%;              /* gold stays gold */
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 22.7%;              /* #3a3a3a */
+    --input: 0 0% 22.7%;
+    --ring: 38 29% 56%;
+
+    /* Desktop chrome — near-black backdrop behind the centered app shell */
+    --chrome-bg: 0 0% 11%;             /* #1B1B1B */
+
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 91%;
+    --sidebar-primary: 0 0% 91%;
+    --sidebar-primary-foreground: 0 0% 11%;
+    --sidebar-accent: 0 0% 19.6%;
+    --sidebar-accent-foreground: 0 0% 91%;
+    --sidebar-border: 0 0% 22.7%;
+    --sidebar-ring: 38 29% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: hsl(var(--chrome-bg));
+  }
+}
+
+@layer utilities {
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .safe-top { padding-top: env(safe-area-inset-top, 0px); }
+
+  /* Verse number — lighter than charcoal-grey for readability on dark bg */
+  .text-verse-number { color: #8a9199; }
+
+  .bg-dark-surface { background-color: hsl(var(--dark-surface)); }
+  .bg-dark-raised { background-color: hsl(var(--dark-surface-raised)); }
+  .text-dark-fg { color: hsl(var(--dark-surface-fg)); }
+  .text-dark-muted { color: hsl(var(--dark-surface-muted)); }
+  .border-dark { border-color: hsl(var(--dark-border)); }
+  .bg-header { background-color: hsl(var(--header-bg)); }
+  .text-header-fg { color: hsl(var(--header-fg)); }
+  .text-gold { color: var(--vm-dust); }
+  .bg-gold { background-color: var(--vm-dust); }
+
+  /* Production scripture fonts */
+  .font-scripture {
+    font-family: 'Roboto Serif', Georgia, serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.9;
+  }
+  /* On touch devices below the desktop breakpoint, suppress every form of
+     iOS native text selection across the scripture body. PR #94 set these on
+     each verse span, but iOS still triggered selection on the second
+     long-press of an already-highlighted verse (the rendered highlight markup
+     pushed the touch target into a state where -webkit-user-select on the span
+     alone wasn't honoured). Anchoring the rule on the parent container with
+     !important closes that hole. Gated on `(pointer: coarse)` so a mouse user
+     who zooms in (dropping the CSS-pixel width below 1024) keeps real text
+     selection + the SelectionToolbar instead of having drag-to-highlight
+     blocked — mirrors the pointer-based `isDesktop` logic in ReadingScreen. */
+  @media (max-width: 1023px) and (pointer: coarse) {
+    .font-scripture,
+    .font-scripture * {
+      -webkit-user-select: none !important;
+      user-select: none !important;
+      -webkit-touch-callout: none !important;
+    }
+  }
+  .font-title {
+    font-family: 'Roboto', system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  /* Tappable lexicon words in scripture. A single uniform tier: a hairline
+     dotted underline on the distinctive words worth surfacing. Common "glue"
+     words (the copula, "all", "said", "God/Lord", …) stay tappable but render
+     with no underline — see shouldUnderlineLexeme in TokenizedVerse — so the
+     underlines focus attention instead of marking every word. Underline uses
+     text-decoration so it wraps cleanly across line breaks. Hover/focus +
+     open-popover states add a soft gold tint so click feedback is never
+     ambiguous. */
+  .lex-word {
+    text-decoration: underline dotted #B09A6D;
+    text-decoration-thickness: 1.25px;
+    text-underline-offset: 3px;
+    border-radius: 3px;
+    padding: 0 1px;
+    transition: background-color 120ms ease, text-decoration-color 120ms ease;
+  }
+  .lex-word:hover,
+  .lex-word:focus-visible {
+    background-color: rgba(199, 176, 116, 0.12);
+    text-decoration-color: #D8C089;
+    outline: none;
+  }
+  .lex-word[data-state='open'] {
+    background-color: rgba(199, 176, 116, 0.18);
+    text-decoration-color: #E2CB94;
+  }
+
+  /* Production highlight classes */
+  .hl-yellow { background-color: var(--hl-yellow); }
+  .hl-green { background-color: var(--hl-green); }
+  .hl-blue { background-color: var(--hl-blue); }
+  .hl-pink { background-color: var(--hl-pink); }
+  .hl-purple { background-color: var(--hl-purple); }
+  .hl-orange { background-color: var(--hl-orange); }
+  .hl-red { background-color: var(--hl-red); }
+  .hl-teal { background-color: var(--hl-teal); }
+  .hl-brown { background-color: var(--hl-brown); }
+
+  /* Auto-highlight = lighter bg + colored underline. No cursor: pointer
+     — these are passive emphasis marks, no click handler is wired. */
+  .ahl-yellow { background-color: var(--ahl-yellow-bg); border-bottom: 2px solid var(--ahl-yellow-border); }
+  .ahl-blue { background-color: var(--ahl-blue-bg); border-bottom: 2px solid var(--ahl-blue-border); }
+  .ahl-green { background-color: var(--ahl-green-bg); border-bottom: 2px solid var(--ahl-green-border); }
+  .ahl-orange { background-color: var(--ahl-orange-bg); border-bottom: 2px solid var(--ahl-orange-border); }
+  .ahl-pink { background-color: var(--ahl-pink-bg); border-bottom: 2px solid var(--ahl-pink-border); }
+  .ahl-purple { background-color: var(--ahl-purple-bg); border-bottom: 2px solid var(--ahl-purple-border); }
+  .ahl-red { background-color: var(--ahl-red-bg); border-bottom: 2px solid var(--ahl-red-border); }
+  .ahl-teal { background-color: var(--ahl-teal-bg); border-bottom: 2px solid var(--ahl-teal-border); }
+  .ahl-brown { background-color: var(--ahl-brown-bg); border-bottom: 2px solid var(--ahl-brown-border); }
+
+  /* Red-letter (words of Jesus) — reddens the verse text. The color cascades
+     into lexicon-tokenized child spans (they set no color of their own). The
+     verse-number <sup> keeps its own muted color, so only the scripture text
+     turns red — matching classic red-letter editions. */
+  .red-letter { color: var(--red-letter); }
+}
+
+/* ─── Tablet+ : hide per-screen headers since DesktopLayout renders a shared one ─── */
+/* AppLayout mounts DesktopLayout at ≥768px (tablet split-view, no sidebar)
+   and ≥1024px (desktop split-view with sidebar). The reading / commentary
+   screens render their own headers for phone (<768px) only — at 768px+
+   DesktopLayout's header replaces them, so hide the per-screen headers
+   here to avoid duplicate book selectors at tablet / phone-landscape. */
+@media (min-width: 768px) {
+  .reading-screen-header {
+    display: none !important;
+  }
+  .commentary-screen-header {
+    display: none !important;
+  }
+}
+
+/* ─── Desktop Menu Sidebar ─── */
+@media (min-width: 1024px) {
+  .menu-container {
+    /* When routed directly on desktop, constrain to a sidebar-like width */
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* ─── Responsive Shell ─── */
+#root {
+  display: flex;
+  min-height: 100dvh;
+}
+
+/* Mobile/Tablet: full viewport, column layout */
+@media (max-width: 1023px) {
+  #root {
+    flex-direction: column;
+  }
+}
+
+/* Desktop: centered content with max-width.
+   The backdrop behind the centered app shell uses the theme-aware chrome
+   token so it flips to white (#FFFFFF) in light mode and near-black
+   (#1B1B1B) in dark mode. */
+@media (min-width: 1024px) {
+  #root {
+    justify-content: center;
+    background-color: hsl(var(--chrome-bg));
+  }
+}
+/* ─── Chapter nav buttons: bottom-anchored on phone, vertically centered on desktop ─── */
+.chapter-nav-btn {
+  bottom: 45px;
+}
+.chapter-nav-prev {
+  left: 12px;
+}
+.chapter-nav-next {
+  right: 12px;
+}
+@media (min-width: 1024px) {
+  .chapter-nav-btn {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+  .chapter-nav-prev {
+    left: 16px;
+  }
+  .chapter-nav-next {
+    right: 16px;
+  }
+}
+
+/* Mobile / zoomed-desktop: cap the sheet width so it doesn't stretch
+   edge-to-edge on wide or zoomed-in viewports. The full-bleed sheet made
+   the Copy/Share/Save/Close buttons span the whole width (reading as
+   oversized) and left almost no room for the summary. Centered + capped
+   keeps it sheet-sized; the ≥768px rule below overrides for the split view. */
+.verse-insight-sheet {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Zoomed-in mobile: centered, size-capped modal (consistent with the Search
+   modal) rather than a bottom sheet. Reset the sheet's auto margins / width
+   cap / min-height so the inline modal sizing wins; the width + max-height are
+   set inline from the shared OVERLAY_MODAL_* constants. */
+.verse-insight-sheet.verse-insight-sheet--modal {
+  max-width: none;
+  min-height: 0 !important;
+  margin: 0;
+}
+
+/* The Copy/Share/Save/Close strip scales with the viewport height so it
+   shrinks on short / zoomed-in viewports (where the chrome otherwise crowds
+   the summary out) and stays a comfortable tap size on tall ones — no
+   breakpoint guessing. `vh` tracks the CSS-pixel viewport, which shrinks under
+   browser zoom, so the buttons get smaller exactly when the user complains
+   they're too large. */
+.verse-insight-sheet .vis-actions button {
+  height: clamp(30px, 5vh, 38px);
+}
+
+/* Verse-actions sheet (long-press / verse-tap menu). Mirrors the insight
+   sheet's centering + cap so it stays sheet-sized instead of full-bleed on
+   wide or zoomed-in viewports, and caps its height with internal scroll so
+   the action grid + colour row can never grow taller than the screen (the
+   bug where the menu became too big to use when zoomed in). */
+.verse-actions-sheet {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 90%;
+}
+
+/* Short viewports (zoomed-in desktop, landscape phones): use more of the
+   screen height so the single Copy/Share/Save/Close strip and the header
+   don't crowd the summary. Button heights are handled by the responsive
+   clamp() above; here we only claw back a little surrounding padding. */
+@media (max-height: 760px) {
+  .verse-insight-sheet {
+    min-height: 92%;
+    max-height: 100%;
+  }
+  .verse-insight-sheet .vis-actions {
+    padding-top: 6px;
+    padding-bottom: 4px;
+  }
+}
+
+/* ─── Tablet+ : VerseInsightSheet emerges over the Bible reading panel ───
+   The sheet is absolutely positioned and its offset parent is `.split-body`
+   (which spans BOTH the reading + commentary panels). Anchoring it to the
+   `[0, --reading-pct]` band — `--reading-pct` is the live reading-panel width
+   set inline by DesktopLayout — keeps the sheet centered over the Bible
+   portion the user tapped instead of floating across the whole split. */
+@media (min-width: 768px) {
+  .verse-insight-sheet {
+    left: 0 !important;
+    right: calc(100% - var(--reading-pct, 65%)) !important;
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 24px 24px 0 0;
+  }
+  .verse-actions-sheet {
+    left: 0 !important;
+    right: calc(100% - var(--reading-pct, 65%)) !important;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+/* ─── Desktop: interactive element hover states ─── */
+@media (min-width: 1024px) {
+  .chapter-nav-btn:hover {
+    background-color: var(--vm-hover-bg) !important;
+    transition: background-color 0.15s ease;
+  }
+}
+
+/* ─── Mini-sidebar thin scrollbar — uses theme-aware divider tokens
+       so the thumb reads as a subtle accent in both themes. */
+.mini-sidebar-scroll::-webkit-scrollbar {
+  width: 3px;
+}
+.mini-sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.mini-sidebar-scroll::-webkit-scrollbar-thumb {
+  background: var(--vm-divider);
+  border-radius: 2px;
+}
+.mini-sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--vm-surface-raised-border);
+}
+
+/* ─── Desktop: visible thin scrollbar on all scrollable panels ─── */
+@media (min-width: 1024px) {
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--vm-surface-raised-border);
+    border-radius: 3px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--vm-text-muted);
+  }
+  /* Keep mini-sidebar narrower */
+  .mini-sidebar-scroll::-webkit-scrollbar {
+    width: 3px;
+  }
+}
+/* prod-mobile-1775850347 */
+
+/* Font Size slider in Settings — gold fill on the left of the thumb,
+   dark unfilled portion on the right. The fill width is driven by a
+   --vm-progress CSS custom property set inline on the input. */
+.vm-font-size-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  /* Gold fill left of thumb; theme-aware track to the right (cream-edge in
+     light, near-black in dark — both readable against page bg). */
+  background: linear-gradient(
+    to right,
+    #b09a6d 0%,
+    #b09a6d var(--vm-progress, 50%),
+    var(--vm-surface-raised-border) var(--vm-progress, 50%),
+    var(--vm-surface-raised-border) 100%
+  );
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.vm-font-size-slider:focus-visible {
+  box-shadow: 0 0 0 3px rgba(176, 154, 109, 0.35);
+}
+
+.vm-font-size-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #b09a6d;
+  border: 2px solid #1b1b1b;
+  cursor: grab;
+  margin-top: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.vm-font-size-slider:active::-webkit-slider-thumb {
+  cursor: grabbing;
+}
+
+.vm-font-size-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #b09a6d;
+  border: 2px solid #1b1b1b;
+  cursor: grab;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.vm-font-size-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: transparent;
+}
+
