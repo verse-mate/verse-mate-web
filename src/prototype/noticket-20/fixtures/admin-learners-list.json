@@ -1,0 +1,245 @@
+{
+  "GET /user/me": {
+    "id": "user-admin",
+    "email": "program.admin@example.com",
+    "firstName": "Morgan",
+    "lastName": "Ellis",
+    "fullName": "Morgan Ellis",
+    "emailVerified": true,
+    "hasPassword": true
+  },
+  "GET /coach/admin/program/learners": {
+    "q": "",
+    "page": 1,
+    "pages": 52,
+    "total": 1284,
+    "pageSize": 25,
+    "items": [
+      {
+        "name": "Jordan Reyes",
+        "email": "jordan.reyes@example.com",
+        "startedOn": "2026-09-01",
+        "passed": 0,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Grace Asante",
+        "email": "grace.asante@example.com",
+        "startedOn": "2026-09-04",
+        "passed": 5,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Ruth Abara",
+        "email": "ruth.abara@example.com",
+        "startedOn": "2026-09-07",
+        "passed": 3,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Elias Bauer",
+        "email": "elias.bauer@example.com",
+        "startedOn": "2026-09-10",
+        "passed": 1,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Ana Laurent",
+        "email": "ana.laurent@example.com",
+        "startedOn": "2026-09-13",
+        "passed": 6,
+        "total": 6,
+        "completedOn": "2026-10-13",
+        "request": "open"
+      },
+      {
+        "name": "Lucia Okafor",
+        "email": "lucia.okafor@example.com",
+        "startedOn": "2026-09-16",
+        "passed": 4,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Isaac Novak",
+        "email": "isaac.novak@example.com",
+        "startedOn": "2026-09-19",
+        "passed": 2,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Mira Achterberg",
+        "email": "mira.achterberg@example.com",
+        "startedOn": "2026-09-22",
+        "passed": 0,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Rafael Varga",
+        "email": "rafael.varga@example.com",
+        "startedOn": "2026-09-25",
+        "passed": 5,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Noah Pires",
+        "email": "noah.pires@example.com",
+        "startedOn": "2026-09-28",
+        "passed": 3,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Naomi Moreau",
+        "email": "naomi.moreau@example.com",
+        "startedOn": "2026-09-03",
+        "passed": 1,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Samuel Quinn",
+        "email": "samuel.quinn@example.com",
+        "startedOn": "2026-09-06",
+        "passed": 6,
+        "total": 6,
+        "completedOn": "2026-10-11",
+        "request": null
+      },
+      {
+        "name": "Daniel Haddad",
+        "email": "daniel.haddad@example.com",
+        "startedOn": "2026-09-09",
+        "passed": 4,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Leah Ibsen",
+        "email": "leah.ibsen@example.com",
+        "startedOn": "2026-09-12",
+        "passed": 2,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Owen Lindqvist",
+        "email": "owen.lindqvist@example.com",
+        "startedOn": "2026-09-15",
+        "passed": 0,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Mei Ferreira",
+        "email": "mei.ferreira@example.com",
+        "startedOn": "2026-09-18",
+        "passed": 5,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Elena Natarajan",
+        "email": "elena.natarajan@example.com",
+        "startedOn": "2026-09-21",
+        "passed": 3,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Caleb Petrova",
+        "email": "caleb.petrova@example.com",
+        "startedOn": "2026-09-24",
+        "passed": 1,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Priya Delacroix",
+        "email": "priya.delacroix@example.com",
+        "startedOn": "2026-09-27",
+        "passed": 6,
+        "total": 6,
+        "completedOn": "2026-10-13",
+        "request": "declined"
+      },
+      {
+        "name": "Hannah Kim",
+        "email": "hannah.kim@example.com",
+        "startedOn": "2026-09-02",
+        "passed": 4,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Mateo Sato",
+        "email": "mateo.sato@example.com",
+        "startedOn": "2026-09-05",
+        "passed": 2,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Joy Mendes",
+        "email": "joy.mendes@example.com",
+        "startedOn": "2026-09-08",
+        "passed": 0,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Tobias Duarte",
+        "email": "tobias.duarte@example.com",
+        "startedOn": "2026-09-11",
+        "passed": 5,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Kwame Ortega",
+        "email": "kwame.ortega@example.com",
+        "startedOn": "2026-09-14",
+        "passed": 3,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      },
+      {
+        "name": "Sofia Castellanos",
+        "email": "sofia.castellanos@example.com",
+        "startedOn": "2026-09-17",
+        "passed": 1,
+        "total": 6,
+        "completedOn": null,
+        "request": null
+      }
+    ]
+  }
+}

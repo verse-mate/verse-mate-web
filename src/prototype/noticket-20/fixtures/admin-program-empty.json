@@ -1,0 +1,14 @@
+{
+  "GET /user/me": {
+    "id": "user-admin",
+    "email": "program.admin@example.com",
+    "firstName": "Morgan",
+    "lastName": "Ellis",
+    "fullName": "Morgan Ellis",
+    "emailVerified": true,
+    "hasPassword": true
+  },
+  "GET /coach/admin/program/modules": {
+    "modules": []
+  }
+}

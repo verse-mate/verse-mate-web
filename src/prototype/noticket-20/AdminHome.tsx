@@ -1,0 +1,1422 @@
+/**
+ * Coach Oversight (/coach for program admins), the Bible Leader Coach's view
+ * across their whole cohort. Recreates the design handoff's four views in the
+ * coaching-dashboard design language (see dashboardTheme):
+ *
+ *   Dashboard (roster)  , program health + every leader, alphabetical
+ *   Leader detail       , one leader: strengths/growth, development charts,
+ *                          and each class (deep dive = the full session report)
+ *                          with a coaching comment thread
+ *   Trends (program)    , cohort composite, leaderboard, dimension heat map,
+ *                          coaching priority matrix, program initiatives
+ *   Class links         , the meeting links the notetaker joins, per leader
+ *
+ * Wired to the real admin API (useAdminCoaches / useAdminMonthly /
+ * useCoachReportSummaries / useCoachTrendsFor / useLeaderMonthlySummary /
+ * useAdminClasses / useAddLeader / useAddNote).
+ */
+
+import { type ReactNode, useEffect, useMemo, useState } from 'react';
+import { to } from './ui';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
+import { useApp } from '@/contexts/AppContext';
+import {
+  useAdminCoaches,
+  useAdminMonthly,
+  useCoachReportDetail,
+  useCoachReportSummaries,
+  useCoachTrendsFor,
+  useLeaderMonthlySummary,
+  useAdminClasses,
+  useAddLeader,
+  useAddNote,
+  coachState,
+} from '@/hooks/useCoach';
+import { CoachApiError, badAddressText, refusalText } from '@/services/coachService';
+import type {
+  CoachSummary,
+  CoachMonthly,
+  CoachReport,
+  CoachReportSummary,
+  CoachTrends,
+  LeaderMonthlySummary,
+  AdminCoachClass,
+  TrendRow,
+} from '@/services/coachService';
+import { CoachGate } from '@/components/coach/CoachDashboardShell';
+import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
+import PendingReshares from '@/components/coach/PendingReshares';
+import PipelineHealth from '@/components/coach/PipelineHealth';
+import ParallelRunComparison from '@/components/coach/ParallelRunComparison';
+import RotatingClassesAdmin from '@/components/coach/RotatingClassesAdmin';
+import LikelyDuplicates from '@/components/coach/LikelyDuplicates';
+import ReportReview from '@/components/coach/ReportReview';
+import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
+import { dt, statusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
+import { PipelineCopyTag } from '@/components/coach/CoachUi';
+import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
+import { type RubricContract, bandFloor, statusForScore } from '@/services/rubric';
+
+type View = 'leaders' | 'leader' | 'trends' | 'links' | 'pipeline' | 'parallel-run' | 'rotating' | 'duplicates';
+
+// ─── Shared color helpers (handoff scoring model) ───────────────────────────
+
+function compBand(v: number, rubric: RubricContract | null): { c: string; bg: string } {
+  return statusBand(compositeStatus(v, rubric), bandLabelsOf(rubric));
+}
+
+function cellColor(v: number | null, rubric: RubricContract | null): { c: string; bg: string } {
+  return ratingForScore(v, rubric?.dimensionBands ?? []);
+}
+
+function initialsOf(name: string): string {
+  const p = (name || '').replace(/&/g, '').trim().split(/\s+/);
+  return (((p[0] || '')[0] || '') + ((p[1] || '')[0] || (p[0] || '')[1] || '')).toUpperCase() || '?';
+}
+
+/** Fetch the three most recent calendar months of the program rollup (bounded,
+ *  cached). Unlocks the roster last-3 chips, the program-composite line, and the
+ *  leader-comparison chart from the single-month admin endpoint. */
+function useThreeMonths(): { month: string; label: string; data: CoachMonthly | undefined }[] {
+  const m0 = monthMinus(0);
+  const m1 = monthMinus(1);
+  const m2 = monthMinus(2);
+  const q0 = useAdminMonthly(m0);
+  const q1 = useAdminMonthly(m1);
+  const q2 = useAdminMonthly(m2);
+  return [
+    { month: m2, label: monthLabel(m2), data: q2.data },
+    { month: m1, label: monthLabel(m1), data: q1.data },
+    { month: m0, label: monthLabel(m0), data: q0.data },
+  ];
+}
+
+/** Per-leader composite across the loaded months (oldest→newest), keyed by id. */
+function leaderMonthlySeries(months: { data: CoachMonthly | undefined }[]): Map<string, number[]> {
+  const out = new Map<string, number[]>();
+  for (const m of months) {
+    for (const l of m.data?.leaders ?? []) {
+      if (l.avgScore == null) continue;
+      const arr = out.get(l.id) ?? [];
+      arr.push(Math.round(l.avgScore * 10) / 10);
+      out.set(l.id, arr);
+    }
+  }
+  return out;
+}
+
+// ─── Screen ─────────────────────────────────────────────────────────────────
+
+export default function AdminHomeScreen({ requests }: { requests: ReactNode }) {
+  const navigate = useNavigate();
+  const { state } = useApp();
+
+  const [view, setView] = useState<View>('leaders');
+  const [selLeader, setSelLeader] = useState<string | null>(null);
+  const [invite, setInvite] = useState(false);
+
+  const coachesQuery = useAdminCoaches();
+  const coaches = coachState(coachesQuery);
+  const roster = useMemo(() => [...(coaches.data || [])], [coaches.data]);
+
+  const initials = (() => {
+    const f = (state.userFirstName || '').trim();
+    const l = (state.userLastName || '').trim();
+    return ((f ? f[0] : '') + (l ? l[0] : '') || (state.userEmail || '?')[0] || '?').toUpperCase();
+  })();
+
+  const openLeader = (id: string) => {
+    setSelLeader(id);
+    setView('leader');
+  };
+
+  return (
+    <div style={shellRoot}>
+      <div style={{ width: 1240, maxWidth: '100%', padding: '0 clamp(14px, 4vw, 44px)' }}>
+        <div style={card}>
+          {/* Top nav */}
+          <div style={topbar}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
+              <div style={logoMark} aria-hidden>V</div>
+              <span style={{ fontFamily: dt.serif, fontSize: 20, fontWeight: 600, letterSpacing: '-.01em' }}>VerseMate</span>
+              <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.14em', color: dt.gold, borderLeft: '1px solid #DEDEDC', paddingLeft: 11 }}>COACHING</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap', fontSize: 14, fontWeight: 500, color: dt.textMuted }}>
+              <NavItem label="Dashboard" active={view === 'leaders' || view === 'leader'} onClick={() => setView('leaders')} testId="oversight-nav-dashboard" />
+              <NavItem label="Program" active={false} onClick={() => navigate(to.program)} testId="oversight-nav-program" />
+              <NavItem label="Trends" active={view === 'trends'} onClick={() => setView('trends')} testId="oversight-nav-trends" />
+              <NavItem label="Class links" active={view === 'links'} onClick={() => setView('links')} testId="oversight-nav-links" />
+              <NavItem label="Pipeline" active={view === 'pipeline'} onClick={() => setView('pipeline')} testId="oversight-nav-pipeline" />
+              <NavItem label="Parallel run" active={view === 'parallel-run'} onClick={() => setView('parallel-run')} testId="oversight-nav-parallel-run" />
+              <NavItem label="Rotating classes" active={view === 'rotating'} onClick={() => setView('rotating')} testId="oversight-nav-rotating" />
+              <NavItem label="Duplicates" active={view === 'duplicates'} onClick={() => setView('duplicates')} testId="oversight-nav-duplicates" />
+              <NavItem label="Upload" active={false} onClick={() => navigate('/coach/upload')} testId="oversight-nav-upload" />
+              <button type="button" onClick={() => navigate('/coach/settings')} aria-label="Coach settings" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#9A9484', fontSize: 16 }}>⚙</button>
+              <div style={avatarChip}>{state.userAvatarUrl ? <img src={state.userAvatarUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} /> : initials}</div>
+            </div>
+          </div>
+
+          <CoachGate loading={coaches.loading} authError={coaches.authError} error={coaches.error} onRetry={() => coachesQuery.refetch()}>
+            {view === 'leaders' && requests}
+            {view === 'leaders' && <RosterView roster={roster} onOpenLeader={openLeader} onInvite={() => setInvite(true)} onViewTrends={() => setView('trends')} />}
+            {view === 'leader' && selLeader && <LeaderDetailView leaderId={selLeader} summary={roster.find((r) => r.id === selLeader)} onBack={() => setView('leaders')} />}
+            {view === 'trends' && <TrendsView onOpenLeader={openLeader} onBack={() => setView('leaders')} />}
+            {view === 'links' && <ClassLinksView roster={roster} onBack={() => setView('leaders')} onInvite={() => setInvite(true)} />}
+            {view === 'pipeline' && <PipelineHealth />}
+            {view === 'parallel-run' && <ParallelRunComparison />}
+            {view === 'rotating' && <RotatingClassesAdmin />}
+            {view === 'duplicates' && <LikelyDuplicates />}
+          </CoachGate>
+        </div>
+      </div>
+
+      {invite && (
+        <InviteModal
+          onClose={() => setInvite(false)}
+          onAdded={(id) => {
+            setInvite(false);
+            openLeader(id);
+          }}
+        />
+      )}
+    </div>
+  );
+}
+
+// ─── View 1 · Roster ────────────────────────────────────────────────────────
+
+function RosterView({
+  roster,
+  onOpenLeader,
+  onInvite,
+  onViewTrends,
+}: {
+  roster: CoachSummary[];
+  onOpenLeader: (id: string) => void;
+  onInvite: () => void;
+  onViewTrends: () => void;
+}) {
+  const month = currentMonth();
+  const monthlyQuery = useAdminMonthly(month);
+  const monthly = monthlyQuery.data;
+  const threeMonths = useThreeMonths();
+  const series = useMemo(() => leaderMonthlySeries(threeMonths), [threeMonths]);
+
+  const alpha = [...roster].sort((a, b) => a.name.localeCompare(b.name));
+  const scored = roster.filter((r) => r.latest);
+  const avg = scored.length ? (scored.reduce((s, r) => s + (r.latest?.score ?? 0), 0) / scored.length).toFixed(1) : '—';
+
+  const { rubric } = useRubric();
+  const bands = rubric?.statusBands ?? [];
+  const bandLabels = bandLabelsOf(rubric);
+  const total = roster.length || 1;
+  const dist = bands.map((b) => {
+    const count = roster.filter((r) => r.latest?.status === b.label).length;
+    return { band: b.label, count, pct: Math.round((count / total) * 100), c: statusBand(b.label, bandLabels).c };
+  });
+  const topTwo = dist.slice(0, 2);
+  const strongPlus = topTwo.reduce((n, d) => n + d.count, 0);
+  const needs = scored.length - strongPlus;
+
+  const composite = monthly?.program.avgScore ?? (scored.length ? Number(avg) : null);
+  const programStatus = compositeStatus(composite, rubric);
+  const delta = monthly?.program.delta ?? null;
+
+  // Real program-composite line from the loaded months.
+  const loaded = threeMonths.filter((m) => m.data?.program.avgScore != null);
+  const programLine = loaded.map((m) => Math.round((m.data!.program.avgScore ?? 0) * 10) / 10);
+  const programLabels = loaded.map((m) => m.label.split(' ')[0]);
+
+  return (
+    <div style={{ paddingTop: 28 }}>
+      {/* Title */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 20, flexWrap: 'wrap', marginBottom: 26 }}>
+        <div>
+          <h1 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 34, lineHeight: 1, letterSpacing: '-.02em', margin: '0 0 6px' }}>Bible Leader Coach</h1>
+          <div style={{ fontSize: 14, color: dt.textMuted }}>{roster.length} leaders · avg {avg}</div>
+        </div>
+        <button type="button" onClick={onInvite} data-testid="oversight-add-leader" style={goldPill}>+ Add leader</button>
+      </div>
+
+      {/* Program summary hero */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 28, flexWrap: 'wrap', marginBottom: 26 }}>
+        <div style={{ maxWidth: 560 }}>
+          <div style={kicker}>PROGRAM HEALTH · {monthLabel(month).toUpperCase()}</div>
+          <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 30, lineHeight: 1.12, letterSpacing: '-.01em', margin: '0 0 8px' }}>
+            Your {roster.length} leaders are averaging {avg}{programStatus ? `, a ${programStatus} program month.` : '.'}
+          </h2>
+          <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>
+            {topTwo.length ? `${strongPlus} ${topTwo[topTwo.length - 1].band} or better · ` : ''}{needs} worth a check-in this week.
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <StatBox label="PROGRAM COMPOSITE" labelC={dt.gold}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+              <span style={{ fontFamily: dt.serif, fontSize: 30, lineHeight: 1, color: dt.gold2 }}>{composite != null ? composite.toFixed(1) : '—'}</span>
+              <span style={{ fontSize: 14, color: dt.textLight, fontWeight: 600 }}>/ 100</span>
+            </div>
+            {delta != null && <div style={{ fontSize: 13, fontWeight: 600, color: delta >= 0 ? dt.green : dt.rust, marginTop: 6 }}>{delta >= 0 ? '▲' : '▼'} {Math.abs(delta).toFixed(1)} vs. prior</div>}
+          </StatBox>
+          <StatBox label="NEEDS ATTENTION" labelC={dt.rust}>
+            <div style={{ fontFamily: dt.serif, fontSize: 30, lineHeight: 1, color: dt.textPrimary }}>{needs}</div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: dt.rust, marginTop: 6 }}>leaders to check in with</div>
+          </StatBox>
+        </div>
+      </div>
+
+      {/* Status mix */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 300px', gap: 20, marginBottom: 34 }}>
+        <div style={{ ...innerCard, padding: '20px 22px 12px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 4 }}>
+            <span style={{ ...kicker, marginBottom: 0 }}>PROGRAM COMPOSITE · LAST {programLine.length || 3} MONTHS</span>
+            <button type="button" onClick={onViewTrends} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12.5, fontWeight: 700, color: dt.gold }}>View full trends →</button>
+          </div>
+          {programLine.length > 1 ? (
+            <AxisLineChart values={programLine} min={bandFloor(bands, programLine)} max={100} color={dt.gold} labels={programLabels} />
+          ) : (
+            <p style={{ fontSize: 14, color: dt.textMuted, lineHeight: 1.6, margin: '10px 0 8px' }}>
+              {scored.length} of {roster.length} leaders have a scored session. The program trend line appears once two or more months are analyzed.
+            </p>
+          )}
+        </div>
+        <div style={innerCard}>
+          <div style={{ ...kicker, marginBottom: 14 }}>STATUS MIX</div>
+          <div data-testid="oversight-status-mix">
+          {dist.map((d) => (
+            <div key={d.band} data-testid={`oversight-status-mix-${d.band}`} style={{ marginBottom: 13 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12.5, marginBottom: 5 }}>
+                <span style={{ color: dt.textMuted }}>{d.band}</span>
+                <span style={{ fontWeight: 700, color: d.c }}>{d.count}</span>
+              </div>
+              <div style={{ height: 7, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}>
+                <div style={{ height: '100%', borderRadius: 99, width: `${d.pct}%`, background: d.c }} />
+              </div>
+            </div>
+          ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Roster */}
+      <div style={{ ...kicker, color: dt.textLighter, marginBottom: 14 }}>ALL LEADERS</div>
+      {alpha.length === 0 ? (
+        <div style={dashedNote}>No leaders yet. Use “+ Add leader” to invite your first leader.</div>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {alpha.map((l) => (
+            <RosterRow key={l.id} leader={l} last3={(series.get(l.id) ?? []).slice(-3)} onOpen={() => onOpenLeader(l.id)} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function RosterRow({ leader, last3, onOpen }: { leader: CoachSummary; last3: number[]; onOpen: () => void }) {
+  const { rubric } = useRubric();
+  const bandLabels = bandLabelsOf(rubric);
+  const st = leader.latest
+    ? statusBand(leader.latest.status, bandLabels)
+    : statusBand('', bandLabels);
+  const score = leader.latest ? Math.round(leader.latest.score) : null;
+  // Prefer the real last-3 monthly composites; fall back to the latest score.
+  const chips = (last3.length > 0 ? last3 : score != null ? [score] : []).map((v) => ({ v: Math.round(v), ...compBand(v, rubric) }));
+  return (
+    <button type="button" onClick={onOpen} data-testid={`oversight-roster-${leader.id}`} style={rosterRow}>
+      <div style={{ width: 52, height: 52, borderRadius: 12, background: st.bg, color: st.c, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 15 }}>{initialsOf(leader.name)}</div>
+      <div style={{ minWidth: 0 }}>
+        <div style={{ fontWeight: 700, fontSize: 17 }}>{leader.name}</div>
+        <div style={{ fontSize: 13.5, color: dt.textLight, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{leader.group} · {leader.sessionCount} session{leader.sessionCount === 1 ? '' : 's'}</div>
+      </div>
+      <div>
+        <div style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: '.08em', color: dt.textLighter, marginBottom: 5 }}>LAST 3 CLASSES</div>
+        {chips.length > 0 ? (
+          <div style={{ display: 'flex', gap: 6 }}>
+            {chips.map((s, i) => (
+              <div key={i} style={{ minWidth: 38, textAlign: 'center', fontSize: 13, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: s.c, background: s.bg, padding: '5px 0', borderRadius: 7 }}>{s.v}</div>
+            ))}
+          </div>
+        ) : (
+          <div style={{ fontSize: 12.5, color: '#B0A992' }}>Awaiting first session</div>
+        )}
+      </div>
+      <div style={{ textAlign: 'right' }}>
+        <div style={{ fontWeight: 700, fontSize: 22, fontVariantNumeric: 'tabular-nums', lineHeight: 1, marginBottom: 6 }}>{score ?? '—'}</div>
+        {leader.latest && (
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11.5, fontWeight: 700, color: st.c, background: st.bg, padding: '4px 10px', borderRadius: 99 }}>{leader.latest.status}</div>
+        )}
+      </div>
+      <div style={{ color: '#C4BDAE', fontSize: 16 }}>›</div>
+    </button>
+  );
+}
+
+// ─── View 2 · Leader detail ─────────────────────────────────────────────────
+
+function LeaderDetailView({
+  leaderId,
+  summary,
+  onBack,
+}: {
+  leaderId: string;
+  summary?: CoachSummary;
+  onBack: () => void;
+}) {
+  const month = currentMonth();
+  const summaries = useCoachReportSummaries({ coachId: leaderId });
+  const trendsQuery = useCoachTrendsFor(leaderId);
+  const monthlyQuery = useLeaderMonthlySummary(leaderId, month);
+
+  const state = coachState(summaries);
+  const reports = useMemo(
+    () => [...(summaries.data?.pages.flatMap((p) => p.items) ?? [])].sort(byDateDesc),
+    [summaries.data],
+  );
+  const sessionCount = summaries.data?.pages.at(-1)?.total ?? 0;
+  const latest = useCoachReportDetail(reports[0]?.id, leaderId);
+  const trends = trendsQuery.data;
+  const monthly = monthlyQuery.data?.summary ?? null;
+
+  const name = summary?.name || 'Leader';
+  const study = summary?.group || '';
+  const { rubric } = useRubric();
+  const status = summary?.latest?.status || (reports[0] ? compositeStatus(reports[0].score, rubric) : '');
+  const st = statusBand(status, bandLabelsOf(rubric));
+
+  const [page, setPage] = useState(0);
+  const [openClass, setOpenClass] = useState<string | null>(null);
+  const CPP = 5;
+  const totalPages = Math.max(1, Math.ceil(sessionCount / CPP));
+  const pageReports = reports.slice(page * CPP, page * CPP + CPP);
+  const turnTo = (next: number) => {
+    if (next < 0 || next >= totalPages) return;
+    if ((next + 1) * CPP > reports.length && summaries.hasNextPage && !summaries.isFetchingNextPage) {
+      summaries.fetchNextPage();
+    }
+    setPage(next);
+    setOpenClass(null);
+  };
+
+  return (
+    <div style={{ paddingTop: 22 }}>
+      <button type="button" onClick={onBack} data-testid="oversight-back" style={backLink}>← All leaders</button>
+
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 20, flexWrap: 'wrap', margin: '16px 0 24px' }}>
+        <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+          <div style={{ width: 60, height: 60, borderRadius: 14, background: st.bg, color: st.c, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 18 }}>{initialsOf(name)}</div>
+          <div>
+            <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 28, margin: '0 0 4px', letterSpacing: '-.01em' }}>{name}</h2>
+            <div style={{ fontSize: 14, color: dt.textMuted }}>{study}{study ? ' · ' : ''}{sessionCount} session{sessionCount === 1 ? '' : 's'}</div>
+          </div>
+        </div>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11.5, fontWeight: 700, color: st.c, background: st.bg, padding: '5px 12px', borderRadius: 99 }}>{status}</div>
+      </div>
+
+      <CoachGate
+        loading={state.loading || latest.isLoading}
+        authError={state.authError}
+        error={state.error || !!latest.error}
+        onRetry={() => {
+          summaries.refetch();
+          latest.refetch();
+        }}
+      >
+        {reports.length === 0 || !latest.data ? (
+          <div style={dashedNote}>No sessions scored for {firstName(name)} yet. Once a session is recorded and coached, it appears here.</div>
+        ) : (
+          <>
+            {monthly && <StrengthsGrowth summary={monthly} />}
+
+            <Development trends={trends} latest={latest.data} monthly={monthly} />
+
+            {/* Classes + comments */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 11, margin: '6px 0 6px' }}>
+              <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: 0 }}>Classes</h3>
+              <span style={{ fontSize: 11.5, fontWeight: 700, color: dt.gold2, background: dt.goldChip, padding: '4px 10px', borderRadius: 99 }}>Comment to coach</span>
+            </div>
+            <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>Leave coaching notes on a session, {firstName(name)} sees them on their session report.</p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              {pageReports.map((r) => (
+                <ClassCard
+                  key={r.id}
+                  report={r}
+                  study={study}
+                  leaderId={leaderId}
+                  open={openClass === r.id}
+                  onToggle={() => setOpenClass((o) => (o === r.id ? null : r.id))}
+                />
+              ))}
+            </div>
+
+            {pageReports.length === 0 && (
+              <div style={dashedNote}>
+                {summaries.isFetchNextPageError ? (
+                  <>
+                    Could not load these classes.{' '}
+                    <button type="button" onClick={() => summaries.fetchNextPage()} data-testid="oversight-classes-retry" style={{ ...backLink, fontSize: 14.5 }}>
+                      Try again
+                    </button>
+                  </>
+                ) : (
+                  'Loading…'
+                )}
+              </div>
+            )}
+
+            {totalPages > 1 && (
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 14 }}>
+                <button type="button" onClick={() => turnTo(page - 1)} style={{ background: 'none', border: 'none', cursor: page > 0 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page > 0 ? dt.textPrimary : '#C4BDAE' }}>← Newer</button>
+                <span style={{ fontSize: 12.5, color: dt.textLight }}>Page {page + 1} of {totalPages} · {sessionCount} classes</span>
+                <button type="button" onClick={() => turnTo(page + 1)} style={{ background: 'none', border: 'none', cursor: page < totalPages - 1 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page < totalPages - 1 ? dt.textPrimary : '#C4BDAE' }}>Older →</button>
+              </div>
+            )}
+          </>
+        )}
+      </CoachGate>
+    </div>
+  );
+}
+
+function StrengthsGrowth({ summary }: { summary: LeaderMonthlySummary }) {
+  const strengths = summary.strengths.slice(0, 3);
+  const growth = summary.growth.slice(0, 3);
+  if (strengths.length === 0 && growth.length === 0) return null;
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 14, marginBottom: 28 }}>
+      <div style={{ background: dt.greenBg, borderRadius: 12, padding: '16px 18px' }}>
+        <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', color: dt.green, marginBottom: 10 }}>STRENGTHS</div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+          {strengths.map((s, i) => (
+            <div key={i} style={{ display: 'flex', gap: 9, fontSize: 13, lineHeight: 1.5, color: dt.darkBorder }}><span style={{ color: dt.green, flex: 'none', fontWeight: 700 }}>↑</span><span>{s.text}</span></div>
+          ))}
+        </div>
+      </div>
+      <div style={{ background: dt.rustBg, borderRadius: 12, padding: '16px 18px' }}>
+        <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', color: dt.rust, marginBottom: 10 }}>GROWTH AREAS</div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+          {growth.map((g, i) => (
+            <div key={i} style={{ display: 'flex', gap: 9, fontSize: 13, lineHeight: 1.5, color: dt.darkBorder }}><span style={{ color: dt.rust, flex: 'none', fontWeight: 700 }}>↓</span><span>{g.text}</span></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Development({ trends, latest, monthly }: { trends: CoachTrends | undefined; latest: CoachReport; monthly: LeaderMonthlySummary | null }) {
+  // Cluster names and order from the served rubric (task 8.2).
+  const { rubric } = useRubric();
+  const scoreSeries = trends?.scoreSeries ?? [];
+  const trendValues = scoreSeries.slice(-7).map((p) => Math.round(p.score));
+  const trendLabels = scoreSeries.slice(-7).map((p) => shortDate(p.date));
+
+  const vals = latest.dimensions.map((d) => d.score ?? 0);
+  const recent = (trends?.dimensionSeries ?? []).slice(-3);
+  const avg = latest.dimensions.map((d) => {
+    const nums = recent.map((r) => Number(r[d.name])).filter((n) => Number.isFinite(n));
+    return nums.length ? Math.round((nums.reduce((a, b) => a + b, 0) / nums.length) * 10) / 10 : (d.score ?? 0);
+  });
+
+  // Cluster mix should never be blank. Prefer the full monthly summary; when it
+  // isn't available yet (mid-month, too few sessions), fall back to whatever
+  // scored sessions we do have, the current month's if any, otherwise the most
+  // recent, so the leader always sees a mix.
+  const monthlyClusters: ClusterPcts | null = monthly ? { ...monthly.clusterAvg } : null;
+  const fallback = monthlyClusters ? null : clusterAvgsFromSessions(trends?.dimensionSeries ?? [], latest, rubric);
+  const clusterAvg = monthlyClusters ?? fallback?.avg ?? null;
+  const clustersArePartial = !monthlyClusters && !!fallback;
+  // Names and order from the SERVED rubric; the bm/tc/ep/br keys the monthly
+  // payload uses are DERIVED from each name's initials rather than written out
+  // again here. Four cluster names in this file was a fifth copy of the rubric.
+  const clusterKeyed = clusterAvg as Record<string, number | null> | null;
+  const clusters = clusterKeyed
+    ? clusterOrder(rubric).map((name) => ({
+        name,
+        pct: clusterKeyed[shortCode(name).toLowerCase()] ?? null,
+      }))
+    : [];
+
+  // Dimensions over time, last 4 dated columns from the dimension series.
+  const dimSeries = (trends?.dimensionSeries ?? []).slice(-4);
+  const matrixDates = dimSeries.map((r) => shortDate(String(r.date)));
+
+  return (
+    <div style={{ borderTop: `1px solid ${dt.rowDivider}`, marginTop: 28, paddingTop: 24, marginBottom: 28 }}>
+      <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: '0 0 4px' }}>Development · the coaching conversation</h3>
+      <p style={{ margin: '0 0 18px', fontSize: 14, color: dt.textLight }}>How this leader is trending, where the shape of their teaching is strong or thin, and what moved session to session.</p>
+
+      <div style={{ ...innerCard, padding: '20px 22px 12px', marginBottom: 16 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, marginBottom: 6 }}>
+          <span style={{ ...kicker, marginBottom: 0 }}>SESSION SCORE OVER TIME</span>
+          <span style={{ fontSize: 11.5, color: dt.textLight }}>Bands · {(rubric?.statusBands ?? []).map((b) => (b.min > 0 ? `${b.emoji}${b.min}+` : b.emoji)).join(' · ')}</span>
+        </div>
+        {trendValues.length > 0 ? <BandedTrend values={trendValues} labels={trendLabels} bands={rubric?.statusBands ?? []} /> : <div style={{ padding: '30px 0', textAlign: 'center', color: dt.textLight, fontSize: 13 }}>Trend appears after a couple of scored sessions.</div>}
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 380px) minmax(0, 1fr)', gap: 16, marginBottom: 16 }}>
+        <div style={innerCard}>
+          <div style={{ ...kicker, marginBottom: 6 }}>{`${vals.length}-DIMENSION SHAPE`}</div>
+          <RadarChart vals={vals} avg={avg} />
+          <div style={{ display: 'flex', gap: 16, justifyContent: 'center', fontSize: 12, color: dt.textMuted, marginTop: 4 }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 14, height: 3, background: dt.gold, display: 'inline-block' }} />This session</span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 14, height: 0, borderTop: '2px dashed #8A8272', display: 'inline-block' }} />3-session avg</span>
+          </div>
+        </div>
+        <div style={innerCard}>
+          <div style={{ ...kicker, marginBottom: clustersArePartial ? 4 : 14 }}>CLUSTER MIX · {monthLabel(currentMonth()).toUpperCase()}</div>
+          {clustersArePartial && <div style={{ fontSize: 11.5, color: dt.textLight, marginBottom: 12 }}>Sessions so far, updates as the month fills in.</div>}
+          {clusters.length > 0 ? clusters.map((c) => (
+            <div key={c.name} data-testid={`oversight-cluster-mix-${c.name}`} style={{ marginBottom: 14 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, marginBottom: 5 }}><span style={{ color: dt.textMuted }}>{c.name}</span><span style={{ fontWeight: 700 }}>{c.pct == null ? 'N/A' : `${c.pct}%`}</span></div>
+              <div style={{ height: 8, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}><div style={{ height: '100%', borderRadius: 99, width: `${c.pct ?? 0}%`, background: dt.brightGold }} /></div>
+            </div>
+          )) : <p style={{ fontSize: 13, color: dt.textLight, margin: 0 }}>Cluster mix appears once this leader has a scored session.</p>}
+        </div>
+      </div>
+
+      {matrixDates.length > 0 && (
+        <>
+          <div style={{ ...kicker, margin: '4px 0 10px' }}>DIMENSIONS OVER TIME</div>
+          <div style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 12, overflow: 'hidden' }}>
+            <div style={{ overflowX: 'auto' }}>
+              <div style={{ minWidth: 520 }}>
+                <div style={{ display: 'grid', gridTemplateColumns: `1fr repeat(${matrixDates.length}, 62px)`, gap: 8, padding: '10px 16px', background: '#F6EFD8', fontSize: 10.5, fontWeight: 700, letterSpacing: '.03em', color: dt.gold }}>
+                  <div>DIMENSION</div>
+                  {matrixDates.map((d, i) => <div key={i} style={{ textAlign: 'center' }}>{d}</div>)}
+                </div>
+                {latest.dimensions.map((dim) => (
+                  <div key={dim.n} style={{ display: 'grid', gridTemplateColumns: `1fr repeat(${matrixDates.length}, 62px)`, gap: 8, padding: '6px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center' }}>
+                    <div style={{ fontWeight: 600 }}>{dim.name}</div>
+                    {dimSeries.map((r, i) => {
+                      const raw = Number(r[dim.name]);
+                      const v = Number.isFinite(raw) ? Math.round(raw) : null;
+                      const cc = cellColor(v, rubric);
+                      return <div key={i} data-testid={`oversight-dim-cell-${dim.name}-${i}`} style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 5 }}>{v ?? 'N/A'}</div>;
+                    })}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+type ClassCardProps = {
+  study: string;
+  leaderId: string;
+  open: boolean;
+  onToggle: () => void;
+};
+
+function ClassCard({ report: row, ...props }: ClassCardProps & { report: CoachReportSummary }) {
+  const detail = useCoachReportDetail(row.id, props.leaderId);
+  if (!detail.data) {
+    return (
+      <div data-testid={`oversight-class-pending-${row.id}`} style={dashedNote}>
+        {row.dateLabel} · {detail.error ? 'Could not load this session.' : 'Loading…'}
+      </div>
+    );
+  }
+  return <ClassCardBody report={detail.data} held={row.held} {...props} />;
+}
+
+function ClassCardBody({
+  report,
+  study,
+  leaderId,
+  open,
+  onToggle,
+  held,
+}: ClassCardProps & { report: CoachReport; held?: boolean }) {
+  const cb = compBand(report.score, useRubric().rubric);
+  const scored = report.dimensions.filter((d) => d.score != null) as { n: number; name: string; score: number; note?: string }[];
+  const sortedDesc = [...scored].sort((a, b) => b.score - a.score);
+  const strong = sortedDesc[0]?.name ?? '—';
+  const weak = sortedDesc[sortedDesc.length - 1]?.name ?? '—';
+  const improveList = sortedDesc.slice(-3).reverse();
+  const micro = report.feedback?.headline ? report.feedback.headline.split('. ')[0] + '.' : '';
+
+  return (
+    <div style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 13, overflow: 'hidden' }}>
+      <button type="button" onClick={onToggle} data-testid={`oversight-class-${report.id}`} style={{ padding: '16px 20px', background: dt.innerBg, borderBottom: `1px solid ${dt.rowDivider}`, cursor: 'pointer', width: '100%', border: 'none', textAlign: 'left' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14, minWidth: 0 }}>
+            <div style={{ flex: 'none', width: 48, height: 48, borderRadius: 11, background: cb.bg, color: cb.c, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontWeight: 700, fontSize: 17, lineHeight: 1 }}>{Math.round(report.score)}</span>
+              <span style={{ fontSize: 8, fontWeight: 700, letterSpacing: '.04em', opacity: 0.7 }}>/100</span>
+            </div>
+            <div style={{ minWidth: 0 }}>
+              <div style={{ fontWeight: 600, fontSize: 15 }}>{report.dateLabel}</div>
+              <div style={{ fontSize: 12.5, color: dt.textLight }}>{report.session}{report.topic ? ` · ${report.topic}` : ''}{study ? ` · ${study}` : ''}</div>
+              <PipelineCopyTag reportId={report.id} held={held} />
+            </div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14, flex: 'none' }}>
+            <span style={{ fontSize: 12.5, color: dt.gold, fontWeight: 600 }}>{report.notes?.length ?? 0} comments</span>
+            <span style={{ fontSize: 12.5, color: dt.textPrimary, fontWeight: 700 }}>Deep dive {open ? '▾' : '▸'}</span>
+          </div>
+        </div>
+        {micro && <div style={{ fontSize: 12.5, color: dt.body, lineHeight: 1.5, marginTop: 11 }}>{micro}</div>}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center', marginTop: 11 }}>
+          <span style={{ fontSize: 11.5, color: dt.body }}><strong style={{ color: dt.textPrimary }}>Strongest</strong></span>
+          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '.03em', color: dt.green, background: dt.greenBg, padding: '3px 8px', borderRadius: 5 }}>↑ {strong}</span>
+          <span style={{ fontSize: 11.5, color: dt.body, marginLeft: 4 }}><strong style={{ color: dt.textPrimary }}>Growth edge</strong></span>
+          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '.03em', color: dt.rust, background: dt.rustBg, padding: '3px 8px', borderRadius: 5 }}>↓ {weak}</span>
+        </div>
+        {improveList.length > 0 && (
+          <div style={{ marginTop: 12, paddingTop: 11, borderTop: `1px solid ${dt.rowDivider}` }}>
+            <div style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: '.05em', color: dt.rust, textTransform: 'uppercase', marginBottom: 8 }}>Key improvement areas</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
+              {improveList.map((d) => (
+                <div key={d.n} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                  <span style={{ flex: 'none', fontSize: 10, fontWeight: 700, color: dt.rust, background: dt.rustBg, padding: '3px 7px', borderRadius: 5 }}>{d.name} · {d.score}/5</span>
+                  {d.note?.trim() && <span style={{ fontSize: 12, color: dt.body, lineHeight: 1.45 }}>{d.note.trim()}</span>}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </button>
+
+      {open && (
+        <div style={{ padding: '16px 20px', borderBottom: `1px solid ${dt.rowDivider}` }}>
+          <CoachSessionDetail report={report} delta={null} label="FULL SESSION REPORT" coachId={leaderId} />
+          <ReportReview key={report.id} report={report} coachId={leaderId} />
+        </div>
+      )}
+
+      <CommentThread report={report} leaderId={leaderId} />
+    </div>
+  );
+}
+
+function CommentThread({ report, leaderId }: { report: CoachReport; leaderId: string }) {
+  const addNote = useAddNote(leaderId);
+  const [draft, setDraft] = useState('');
+  const [refusal, setRefusal] = useState<string | null>(null);
+  const notes = report.notes ?? [];
+
+  const submit = () => {
+    const body = draft.trim();
+    if (!body) return;
+    setRefusal(null);
+    addNote.mutate(
+      { reportId: report.id, body },
+      {
+        onSuccess: () => {
+          setDraft('');
+          toast.success('Comment sent to the leader');
+        },
+        onError: (err) => setRefusal(refusalText(err)),
+      },
+    );
+  };
+
+  return (
+    <div style={{ padding: '14px 20px 18px' }}>
+      {notes.length > 0 && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 14 }}>
+          {notes.map((m) => (
+            <div key={m.id} style={{ display: 'flex', gap: 11 }}>
+              <div style={{ width: 30, height: 30, flex: 'none', borderRadius: '50%', background: dt.goldChip, color: dt.gold2, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 11 }}>YC</div>
+              <div style={{ background: dt.innerBg, border: `1px solid ${dt.cardBorder}`, borderRadius: 10, padding: '10px 13px', flex: 1 }}>
+                <div style={{ fontSize: 12.5, fontWeight: 700, marginBottom: 2 }}>You (Coach)</div>
+                <div style={{ fontSize: 13.5, lineHeight: 1.5, color: dt.darkBorder }}>{m.body}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+      <div style={{ display: 'flex', gap: 10, alignItems: 'flex-end' }}>
+        <textarea
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          placeholder="Add a coaching comment…"
+          rows={2}
+          data-testid={`oversight-comment-${report.id}`}
+          style={{ flex: 1, resize: 'vertical', fontSize: 13.5, padding: '10px 12px', border: `1px solid ${dt.inputBorder}`, borderRadius: 9, background: dt.cardBg, color: dt.textPrimary, lineHeight: 1.5, fontFamily: dt.sans }}
+        />
+        <button type="button" onClick={submit} disabled={addNote.isPending || !draft.trim()} data-testid={`oversight-comment-send-${report.id}`} style={{ flex: 'none', background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13, padding: '11px 16px', borderRadius: 9, border: 'none', cursor: draft.trim() ? 'pointer' : 'default', opacity: addNote.isPending || !draft.trim() ? 0.6 : 1 }}>
+          {addNote.isPending ? 'Sending…' : 'Comment'}
+        </button>
+      </div>
+      {refusal && (
+        <div role="alert" data-testid={`oversight-comment-error-${report.id}`} style={{ marginTop: 8, fontSize: 13, color: dt.rust }}>
+          {refusal}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── View 3 · Program trends ────────────────────────────────────────────────
+
+function TrendsView({ onOpenLeader, onBack }: { onOpenLeader: (id: string) => void; onBack: () => void }) {
+  const [month, setMonth] = useState(currentMonth());
+  const [showKey, setShowKey] = useState(false);
+  const [compareIds, setCompareIds] = useState<string[] | null>(null);
+  const query = useAdminMonthly(month);
+  const state = coachState(query);
+  const data = query.data;
+  const threeMonths = useThreeMonths();
+
+  const [known, setKnown] = useState<string[]>([]);
+  const available = data?.availableMonths;
+  useEffect(() => {
+    if (available && available.length) setKnown(available);
+  }, [available]);
+  const months = known.length ? known : [month];
+
+  return (
+    <div style={{ paddingTop: 22 }}>
+      <button type="button" onClick={onBack} style={backLink}>← All leaders</button>
+      <div style={{ margin: '14px 0 20px' }}>
+        <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 30, margin: '0 0 6px', letterSpacing: '-.01em' }}>Program-wide trends</h2>
+        <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>Group coaching health across all your leaders. Click a month for its full breakdown.</p>
+      </div>
+
+      <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 22 }}>
+        {months.map((m) => {
+          const active = m === month;
+          const loaded = data && data.month === m;
+          return (
+            <button key={m} type="button" onClick={() => setMonth(m)} data-testid={`oversight-month-${m}`} style={{ cursor: 'pointer', textAlign: 'left', background: active ? dt.darkBg : dt.innerBg, color: active ? dt.goldChip : dt.textPrimary, border: `1px solid ${active ? dt.darkBg : dt.cardBorder}`, borderRadius: 12, padding: '12px 18px', minWidth: 140 }}>
+              <div style={{ fontWeight: 700, fontSize: 14 }}>{monthLabel(m)}</div>
+              <div style={{ fontSize: 12.5, opacity: 0.72, marginTop: 2 }}>{loaded && data.program.avgScore != null ? `${data.program.avgScore.toFixed(1)} · ${data.program.sessions} sessions` : 'View summary'}</div>
+            </button>
+          );
+        })}
+      </div>
+
+      <CoachGate loading={state.loading} authError={state.authError} error={state.error} onRetry={() => query.refetch()}>
+        {data ? (
+          <TrendsDetail
+            data={data}
+            threeMonths={threeMonths}
+            compareIds={compareIds}
+            onToggleCompare={(id) =>
+              setCompareIds((cur) => {
+                const base = cur ?? defaultCompareIds(threeMonths);
+                if (base.includes(id)) return base.filter((x) => x !== id);
+                if (base.length >= 8) return base;
+                return [...base, id];
+              })
+            }
+            showKey={showKey}
+            onToggleKey={() => setShowKey((v) => !v)}
+            onOpenLeader={onOpenLeader}
+          />
+        ) : null}
+      </CoachGate>
+    </div>
+  );
+}
+
+/**
+ * Column legends, BUILT from the served rubric rather than written out.
+ *
+ * Both were full copies of the definition, four cluster names in one and all
+ * twelve dimension names in the other, so a rename left the legend describing
+ * columns that no longer existed, which is worse than no legend.
+ */
+function clusterKeyLine(rubric: RubricContract | null): string {
+  const clusters = (rubric?.clusters ?? [])
+    .map((c) => `${shortCode(c.name)} = ${c.name}`)
+    .join(' · ');
+  return [clusters, 'SESS = Sessions', 'COMP = Composite (out of 100)']
+    .filter(Boolean)
+    .join(' · ');
+}
+
+function dimKeyLine(rubric: RubricContract | null): string {
+  return (rubric?.dimensions ?? []).map((d) => `D${d.n} ${d.name}`).join(' · ');
+}
+
+function TrendsDetail({
+  data,
+  threeMonths,
+  compareIds,
+  onToggleCompare,
+  showKey,
+  onToggleKey,
+  onOpenLeader,
+}: {
+  data: CoachMonthly;
+  threeMonths: { month: string; label: string; data: CoachMonthly | undefined }[];
+  compareIds: string[] | null;
+  onToggleCompare: (id: string) => void;
+  showKey: boolean;
+  onToggleKey: () => void;
+  onOpenLeader: (id: string) => void;
+}) {
+  const composite = data.program.avgScore;
+  // Legends are built from the served rubric (task 8.2), and so are the band
+  // colours: they follow a band's POSITION in the served order.
+  const { rubric } = useRubric();
+  const bandLabels = bandLabelsOf(rubric);
+  const programStatus = compositeStatus(composite, rubric);
+  const band = statusBand(programStatus, bandLabels);
+  const leaders = [...data.leaders].sort((a, b) => (b.avgScore ?? 0) - (a.avgScore ?? 0));
+  const clusterCodes = clusterOrder(rubric).map(shortCode);
+  const leaderboardGrid = `34px 1fr 54px ${clusterCodes.map(() => '46px').join(' ')} 64px 96px`;
+  const top = leaders[0];
+
+  // Multi-month program composite + per-leader comparison.
+  const loadedMonths = threeMonths.filter((m) => m.data);
+  const programLine = loadedMonths.map((m) => Math.round((m.data?.program.avgScore ?? 0) * 10) / 10);
+  const programLabels = loadedMonths.map((m) => m.label.split(' ')[0]);
+  const series = leaderMonthlySeries(threeMonths);
+  const nameFor = (id: string) => leaders.find((l) => l.id === id)?.name ?? id;
+  const activeCompare = compareIds ?? defaultCompareIds(threeMonths);
+  const compareSeries = activeCompare
+    .map((id, i) => ({ name: nameFor(id), color: CLUSTER_PALETTE[i % CLUSTER_PALETTE.length], values: series.get(id) ?? [] }))
+    .filter((s) => s.values.length > 1);
+
+  const heatDims = rubric?.dimensions ?? [];
+  const heatColumns = `150px repeat(${heatDims.length}, 1fr)`;
+
+  // Score distribution by status.
+  const distribution = bandLabels.map((label) => {
+    const rows = leaders.filter((l) => l.status === label);
+    const bd = statusBand(label, bandLabels);
+    return { label, count: rows.length, names: rows.map((r) => r.name).join(', ') || '—', c: bd.c, bg: bd.bg };
+  });
+
+  return (
+    <>
+      {/* Month header band */}
+      <div style={{ background: dt.darkBg, color: dt.darkText, borderRadius: 14, padding: '26px 30px', marginBottom: 22 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 20, flexWrap: 'wrap' }}>
+          <div>
+            <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.12em', color: dt.brightGold, marginBottom: 8 }}>PROGRAM-WIDE MONTHLY SUMMARY</div>
+            <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 28, margin: '0 0 6px' }}>{data.monthLabel}</h3>
+            <div style={{ fontSize: 13.5, color: dt.darkMuted }}>{data.program.sessions} sessions · {data.program.activeLeaders} leaders evaluated</div>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ fontFamily: dt.serif, fontSize: 40, lineHeight: 1, color: dt.darkText }}>{composite != null ? composite.toFixed(1) : '—'}<span style={{ fontSize: 18, color: dt.darkMuted2 }}> / 100</span></div>
+            <div style={{ display: 'inline-block', marginTop: 8, fontSize: 11, fontWeight: 700, letterSpacing: '.05em', color: band.c, background: band.bg, padding: '4px 10px', borderRadius: 6 }}>{programStatus}</div>
+            {data.program.delta != null && <div style={{ fontSize: 12.5, color: '#9FCBA8', marginTop: 6 }}>{data.program.delta >= 0 ? '▲ ' : '▼ '}{Math.abs(data.program.delta).toFixed(1)} vs. prior month</div>}
+          </div>
+        </div>
+        {top && <div style={{ fontSize: 13.5, color: '#CFC6B4', marginTop: 14 }}>Top leader this month · <span style={{ color: dt.darkText, fontWeight: 600 }}>{top.name} · {top.avgScore?.toFixed(1)}</span></div>}
+      </div>
+
+      {/* Executive summary prose */}
+      {data.narrative?.executiveSummary?.length ? (
+        <p style={{ fontFamily: dt.serif, fontSize: 18, lineHeight: 1.55, color: dt.darkBorder, margin: '0 0 26px' }}>{data.narrative.executiveSummary[0]}</p>
+      ) : null}
+
+      {/* Leader trajectories */}
+      {compareSeries.length > 0 && (
+        <div style={{ ...innerCard, padding: '20px 22px 14px', marginBottom: 22 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, marginBottom: 6 }}>
+            <span style={{ ...kicker, marginBottom: 0 }}>LEADER TRAJECTORIES · {loadedMonths.map((m) => m.label.split(' ')[0]).join(' → ')}</span>
+            <span style={{ fontSize: 12, color: dt.textLight }}>Tap a leader to add or remove their line</span>
+          </div>
+          <MultiLineChart series={compareSeries} min={bandFloor(rubric?.statusBands ?? [], compareSeries.flatMap((s) => s.values))} max={100} labels={loadedMonths.map((m) => m.label.split(' ')[0])} />
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 12 }}>
+            {leaders.filter((l) => (series.get(l.id) ?? []).length > 1).map((l) => {
+              const idx = activeCompare.indexOf(l.id);
+              const on = idx >= 0;
+              return (
+                <button key={l.id} type="button" onClick={() => onToggleCompare(l.id)} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, cursor: 'pointer', fontSize: 12.5, fontWeight: 600, padding: '6px 11px', borderRadius: 99, background: on ? dt.darkBg : dt.innerBg, color: on ? dt.goldChip : dt.textMuted, border: `1px solid ${on ? dt.darkBg : dt.cardBorder}` }}>
+                  <span style={{ width: 9, height: 9, borderRadius: '50%', background: on ? CLUSTER_PALETTE[idx % CLUSTER_PALETTE.length] : '#C4BDAE' }} />{l.name}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Program composite line */}
+      {programLine.length > 1 && (
+        <div style={{ ...innerCard, padding: '20px 22px 12px', marginBottom: 26 }}>
+          <div style={{ ...kicker, marginBottom: 4 }}>PROGRAM COMPOSITE · LAST {programLine.length} MONTHS</div>
+          <AxisLineChart values={programLine} min={bandFloor(rubric?.statusBands ?? [], programLine)} max={100} color={dt.gold} labels={programLabels} />
+        </div>
+      )}
+
+      {/* Leaderboard */}
+      {/* Sessions waiting on a re-shared recording (task 8.5a). Rendered
+          above the leaderboard because they are the sessions that produce no
+          report at all, the ones a leaderboard cannot show. */}
+      <PendingReshares />
+      <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: '0 0 12px' }}>Leader leaderboard</h3>
+      <div style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 12, overflow: 'hidden', marginBottom: 30 }}>
+        <div style={{ overflowX: 'auto' }}>
+          <div style={{ minWidth: 640 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: leaderboardGrid, gap: 8, padding: '11px 16px', background: '#F6EFD8', fontSize: 10.5, fontWeight: 700, letterSpacing: '.03em', color: dt.gold }}>
+              <div>#</div><div>LEADER</div>
+              {['SESS', ...clusterCodes, 'COMP'].map((h) => (
+                <button key={h} type="button" onClick={onToggleKey} style={{ textAlign: 'right', cursor: 'pointer', background: 'none', border: 'none', font: 'inherit', color: 'inherit', textDecoration: 'underline dotted', textUnderlineOffset: 3 }}>{h}</button>
+              ))}
+              <div style={{ textAlign: 'right' }}>STATUS</div>
+            </div>
+            {showKey && <div style={{ padding: '10px 16px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.6 }}>{clusterKeyLine(rubric)}</div>}
+            {leaders.map((l, i) => {
+              const b = statusBand(l.status, bandLabels);
+              const cl = clusterAvgs(l, rubric);
+              return (
+                <button key={l.id} type="button" data-testid={`oversight-leaderboard-${l.id}`} onClick={() => onOpenLeader(l.id)} style={{ display: 'grid', gridTemplateColumns: leaderboardGrid, gap: 8, padding: '8px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'center', cursor: 'pointer', width: '100%', background: 'none', border: 'none', textAlign: 'left' }}>
+                  <div style={{ color: dt.textLighter, fontWeight: 700 }}>{i + 1}</div>
+                  <div style={{ fontWeight: 600 }}>{l.name}</div>
+                  <div style={{ textAlign: 'right', color: dt.textLight }}>{l.sessions}</div>
+                  {clusterCodes.map((code) => (
+                    <div key={code} style={{ textAlign: 'right', color: dt.textMuted, fontVariantNumeric: 'tabular-nums' }}>{cl[code.toLowerCase()] ?? '—'}</div>
+                  ))}
+                  <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>{l.avgScore?.toFixed(1) ?? '—'}</div>
+                  <div style={{ justifySelf: 'end', fontSize: 9.5, fontWeight: 700, padding: '4px 7px', borderRadius: 5, color: b.c, background: b.bg }}>{l.status}</div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Score distribution */}
+      <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: '0 0 12px' }}>Score distribution</h3>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 12, marginBottom: 30 }}>
+        {distribution.map((d) => (
+          <div key={d.label} data-testid={`oversight-distribution-${d.label}`} style={{ ...innerCard, padding: '16px 18px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+              <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', color: d.c, background: d.bg, padding: '4px 9px', borderRadius: 6 }}>{d.label}</span>
+              <span style={{ fontWeight: 700, fontSize: 18 }}>{d.count}</span>
+            </div>
+            <div style={{ fontSize: 12.5, color: dt.textLight, lineHeight: 1.5 }}>{d.names}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Heat map */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 11, margin: '0 0 6px' }}>
+        <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: 0 }}>Dimension heat map</h3>
+        <span style={{ fontSize: 11.5, fontWeight: 600, color: dt.textLight }}>{(rubric?.dimensionBands ?? []).map((b) => `${b.label} ≥ ${b.min}`).join(' · ')}</span>
+      </div>
+      <p style={{ margin: '0 0 12px', fontSize: 12.5, color: dt.textLight }}>Tap any <strong style={{ color: dt.gold }}>D#</strong> column header to see what it measures.</p>
+      <div style={{ overflowX: 'auto', border: `1px solid ${dt.cardBorder}`, borderRadius: 12, marginBottom: 30 }}>
+        <div style={{ minWidth: 760 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: heatColumns, gap: 3, padding: '10px 12px', background: '#F6EFD8', fontSize: 10, fontWeight: 700, color: dt.gold }}>
+            <div>LEADER</div>
+            {heatDims.map((d) => (
+              <button key={d.n} type="button" onClick={onToggleKey} style={{ textAlign: 'center', cursor: 'pointer', background: 'none', border: 'none', font: 'inherit', color: 'inherit', textDecoration: 'underline dotted', textUnderlineOffset: 3 }}>{`D${d.n}`}</button>
+            ))}
+          </div>
+          {showKey && <div style={{ padding: '10px 12px', background: '#FBF7EE', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 12, color: dt.gold2, lineHeight: 1.7 }}>{dimKeyLine(rubric)}</div>}
+          {leaders.map((l) => (
+            <div key={l.id} style={{ display: 'grid', gridTemplateColumns: heatColumns, gap: 3, padding: '5px 12px', borderTop: `1px solid ${dt.rowDivider}`, alignItems: 'center' }}>
+              <button type="button" onClick={() => onOpenLeader(l.id)} title={`Open ${l.name}'s page`} style={{ ...leaderNameButton, fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{l.name}</button>
+              {l.dimensions.map((d) => {
+                const v = d.avg;
+                const cc = cellColor(v, rubric);
+                return <div key={d.n} data-testid={`oversight-heat-${l.id}-${d.n}`} style={{ textAlign: 'center', fontSize: 11, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 4 }}>{v == null ? 'N/A' : v.toFixed(1)}</div>;
+              })}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* What's moving */}
+      {data.narrative?.trends?.length ? (
+        <>
+          <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: '0 0 12px' }}>What's moving</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 9, marginBottom: 30 }}>
+            {data.narrative.trends.map((t, i) => (
+              <div key={i} style={{ display: 'flex', gap: 10, fontSize: 14, lineHeight: 1.55, color: dt.body }}><span style={{ color: dt.gold, flex: 'none' }}>●</span><span>{t}</span></div>
+            ))}
+          </div>
+        </>
+      ) : null}
+
+      {/* Coaching priority matrix */}
+      <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: '0 0 12px' }}>Coaching priority matrix</h3>
+      <div style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 12, overflow: 'hidden', marginBottom: 30 }}>
+        <div style={{ overflowX: 'auto' }}>
+          <div style={{ minWidth: 620 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '150px 56px 110px 1.4fr', gap: 12, padding: '11px 16px', background: '#F6EFD8', fontSize: 10.5, fontWeight: 700, letterSpacing: '.03em', color: dt.gold }}>
+              <div>LEADER</div><div style={{ textAlign: 'right' }}>COMP</div><div>PRIORITY</div><div>KEY AREA TO WORK ON</div>
+            </div>
+            {leaders.map((l) => {
+              const pri = priorityFor(l);
+              const weak = [...l.dimensions].filter((d) => d.avg != null).sort((a, b) => (a.avg ?? 0) - (b.avg ?? 0))[0];
+              return (
+                <div key={l.id} style={{ display: 'grid', gridTemplateColumns: '150px 56px 110px 1.4fr', gap: 12, padding: '12px 16px', borderTop: `1px solid ${dt.rowDivider}`, fontSize: 13, alignItems: 'start' }}>
+                  <button type="button" onClick={() => onOpenLeader(l.id)} title={`Open ${l.name}'s page`} style={{ ...leaderNameButton, fontWeight: 600, paddingTop: 1 }}>{l.name}</button>
+                  <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', paddingTop: 1 }}>{l.avgScore?.toFixed(1) ?? '—'}</div>
+                  <div><span style={{ fontSize: 10.5, fontWeight: 700, color: pri.c, background: pri.bg, padding: '4px 8px', borderRadius: 6, display: 'inline-block' }}>{pri.label}</span></div>
+                  <div style={{ fontSize: 12.5, color: dt.body, lineHeight: 1.5 }}>{weak ? `Lowest dimension: ${weak.name} (${weak.avg?.toFixed(1)}/5).` : '—'}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Program initiatives */}
+      {data.narrative?.executiveSummary && data.narrative.executiveSummary.length > 1 ? (
+        <div style={{ background: dt.goldChip, borderRadius: 13, padding: '22px 24px' }}>
+          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', color: dt.gold, marginBottom: 12 }}>RECOMMENDED PROGRAM INITIATIVES</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
+            {data.narrative.executiveSummary.slice(1).map((n, i) => (
+              <div key={i} style={{ display: 'flex', gap: 11, fontSize: 14, lineHeight: 1.55, color: dt.body }}><span style={{ color: dt.gold, fontWeight: 700, flex: 'none' }}>→</span><span>{n}</span></div>
+            ))}
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+// ─── View 4 · Class links ───────────────────────────────────────────────────
+
+function ClassLinksView({ roster, onBack, onInvite }: { roster: CoachSummary[]; onBack: () => void; onInvite: () => void }) {
+  const classesQuery = useAdminClasses();
+  const state = coachState(classesQuery);
+  const classes = useMemo(() => classesQuery.data || [], [classesQuery.data]);
+
+  const groups = useMemo(() => {
+    const map = new Map<string, { name: string; classes: AdminCoachClass[] }>();
+    for (const c of classes) {
+      const key = c.leader.id || c.leader.name;
+      const g = map.get(key) || { name: c.leader.name, classes: [] };
+      g.classes.push(c);
+      map.set(key, g);
+    }
+    return [...map.values()].sort((a, b) => a.name.localeCompare(b.name));
+  }, [classes]);
+
+  return (
+    <div style={{ paddingTop: 22 }}>
+      <button type="button" onClick={onBack} style={backLink}>← All leaders</button>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 16, flexWrap: 'wrap', margin: '14px 0 20px' }}>
+        <div>
+          <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 30, margin: '0 0 6px', letterSpacing: '-.01em' }}>Class links</h2>
+          <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>The meeting links your notetaker joins, grouped by leader. Click a link to copy it.</p>
+        </div>
+        <button type="button" onClick={onInvite} style={{ background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13.5, padding: '11px 16px', borderRadius: 9, border: 'none', cursor: 'pointer' }}>+ Add leader</button>
+      </div>
+
+      <CoachGate loading={state.loading} authError={state.authError} error={state.error} onRetry={() => classesQuery.refetch()}>
+        {groups.length === 0 ? (
+          <div style={dashedNote}>No class links yet. Leaders register their classes from their own Class Setup screen.</div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            {groups.map((g) => (
+              <div key={g.name} style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 13, overflow: 'hidden' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 11, padding: '14px 18px', background: dt.innerBg, borderBottom: `1px solid ${dt.rowDivider}` }}>
+                  <div style={{ width: 34, height: 34, borderRadius: 9, background: dt.goldChip, color: dt.gold2, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 12.5 }}>{initialsOf(g.name)}</div>
+                  <span style={{ fontWeight: 700, fontSize: 16 }}>{g.name}</span>
+                </div>
+                <div style={{ padding: '8px 18px 14px' }}>
+                  {g.classes.map((c) => (
+                    <div key={c.id} style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.6fr) 60px', gap: 10, alignItems: 'center', padding: '10px 0', borderTop: `1px solid ${dt.rowDivider}` }}>
+                      <span style={{ fontSize: 13.5, fontWeight: 600 }}>{c.name}</span>
+                      <span style={{ fontSize: 13, color: dt.textMuted }}>{recurrenceLabel(c.recurrence)}{c.classDate ? ` · ${c.classDate.slice(5)}` : ''}</span>
+                      {c.zoomLink ? (
+                        <a href={c.zoomLink} target="_blank" rel="noreferrer" style={{ fontSize: 13, color: dt.gold, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{c.zoomLink}</a>
+                      ) : (
+                        <span style={{ fontSize: 13, color: dt.rust }}>No link yet</span>
+                      )}
+                      <button type="button" onClick={() => { try { navigator.clipboard.writeText(c.zoomLink); toast.success('Link copied'); } catch { /* ignore */ } }} style={{ textAlign: 'center', fontSize: 12.5, fontWeight: 700, color: dt.gold, background: 'none', border: 'none', cursor: 'pointer' }}>Copy</button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </CoachGate>
+    </div>
+  );
+}
+
+// ─── Invite modal ───────────────────────────────────────────────────────────
+
+function InviteModal({ onClose, onAdded }: { onClose: () => void; onAdded: (id: string) => void }) {
+  const addLeader = useAddLeader();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [study, setStudy] = useState('');
+  const [error, setError] = useState<string | null>(null);
+
+  const submit = () => {
+    const e = email.trim();
+    const bad = e ? badAddressText(e) : 'Enter the leader\'s email address';
+    if (bad) {
+      setError(bad);
+      return;
+    }
+    setError(null);
+    addLeader.mutate(
+      { email: e, name: name.trim() || undefined, group: study.trim() || undefined },
+      {
+        onSuccess: (c) => { toast.success(`${c.name} added, invite sent`); onAdded(c.id); },
+        onError: (err) => setError(err instanceof CoachApiError && err.serverMessage ? err.serverMessage : 'Could not add the leader'),
+      },
+    );
+  };
+
+  return (
+    <div onClick={onClose} style={{ position: 'fixed', inset: 0, zIndex: 60, background: 'rgba(20,18,16,.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
+      <div onClick={(e) => e.stopPropagation()} data-testid="oversight-invite-modal" style={{ width: 460, maxWidth: '100%', background: dt.cardBg, borderRadius: 16, padding: '28px 30px', boxShadow: '0 30px 70px -20px rgba(20,18,16,.6)' }}>
+        <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 24, margin: '0 0 4px' }}>Invite a leader</h3>
+        <p style={{ fontSize: 14, color: dt.textMuted, margin: '0 0 20px' }}>They'll get an email to connect their class recordings and start receiving coaching.</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <ModalField label="Leader name"><input value={name} onChange={(e) => setName(e.target.value)} placeholder="Full name" data-testid="oversight-invite-name" style={modalInput} /></ModalField>
+          <ModalField label="Email"><input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@church.org" data-testid="oversight-invite-email" style={modalInput} /></ModalField>
+          <ModalField label="Study / group"><input value={study} onChange={(e) => setStudy(e.target.value)} placeholder="e.g. Men's Study" style={modalInput} /></ModalField>
+        </div>
+        {error && <div role="alert" data-testid="oversight-invite-error" style={{ marginTop: 14, fontSize: 13.5, color: dt.rust, lineHeight: 1.5 }}>{error}</div>}
+        <div style={{ display: 'flex', gap: 10, marginTop: 22 }}>
+          <button type="button" onClick={submit} disabled={addLeader.isPending} data-testid="oversight-invite-send" style={{ ...goldPill, opacity: addLeader.isPending ? 0.6 : 1 }}>{addLeader.isPending ? 'Sending…' : 'Send invite'}</button>
+          <button type="button" onClick={onClose} style={{ border: `1px solid ${dt.inputBorder}`, color: dt.textMuted, fontWeight: 600, fontSize: 14, padding: '11px 20px', borderRadius: 9, background: 'transparent', cursor: 'pointer' }}>Cancel</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Small building blocks ──────────────────────────────────────────────────
+
+function NavItem({ label, active, onClick, testId }: { label: string; active: boolean; onClick: () => void; testId: string }) {
+  return (
+    <button type="button" onClick={onClick} data-testid={testId} style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', color: active ? dt.textPrimary : dt.textMuted, fontWeight: 500 }}>{label}</button>
+  );
+}
+
+function StatBox({ label, labelC, children }: { label: string; labelC: string; children: React.ReactNode }) {
+  return (
+    <div style={{ minWidth: 180, background: dt.innerBg, border: `1px solid ${dt.cardBorder}`, borderRadius: 12, padding: '16px 18px' }}>
+      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', color: labelC, marginBottom: 8 }}>{label}</div>
+      {children}
+    </div>
+  );
+}
+
+function ModalField({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <label style={{ display: 'block' }}>
+      <span style={{ fontSize: 12, fontWeight: 600, color: dt.textMuted, display: 'block', marginBottom: 6 }}>{label}</span>
+      {children}
+    </label>
+  );
+}
+
+// ─── Data helpers ───────────────────────────────────────────────────────────
+
+function byDateDesc(a: { date: string }, b: { date: string }): number {
+  return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
+}
+
+function compositeStatus(score: number | null, rubric: RubricContract | null): string {
+  if (score == null) return '';
+  return statusForScore(score, rubric?.statusBands ?? [])?.label ?? '';
+}
+
+type ClusterPcts = Record<string, number | null>;
+
+function rollUpClusters(means: Map<number, number>, rubric: RubricContract | null): ClusterPcts {
+  const buckets = new Map<string, number[]>();
+  for (const [n, v] of means) {
+    const cluster = rubric?.dimensions.find((d) => d.n === n)?.cluster;
+    if (!cluster) continue;
+    buckets.set(cluster, [...(buckets.get(cluster) ?? []), v]);
+  }
+  return Object.fromEntries(
+    clusterOrder(rubric).map((name) => {
+      const arr = buckets.get(name) ?? [];
+      return [shortCode(name).toLowerCase(), arr.length ? Math.round((arr.reduce((a, b) => a + b, 0) / arr.length / 5) * 100) : null];
+    }),
+  );
+}
+
+function clusterAvgs(l: CoachMonthly['leaders'][number], rubric: RubricContract | null): ClusterPcts {
+  const means = new Map<number, number>();
+  for (const d of l.dimensions) if (d.avg != null) means.set(d.n, d.avg);
+  return rollUpClusters(means, rubric);
+}
+
+function clusterAvgsFromSessions(
+  dimensionSeries: TrendRow[],
+  latest: CoachReport,
+  rubric: RubricContract | null,
+): { avg: ClusterPcts } | null {
+  const nameToNum = new Map(latest.dimensions.map((d) => [d.name, d.n]));
+  const thisMonth = dimensionSeries.filter((r) => String(r.date).startsWith(currentMonth()));
+  const rows = thisMonth.length ? thisMonth : dimensionSeries;
+
+  const perDim = new Map<number, number[]>();
+  const push = (n: number, v: number) => {
+    if (!Number.isFinite(v)) return;
+    const arr = perDim.get(n);
+    if (arr) arr.push(v);
+    else perDim.set(n, [v]);
+  };
+  if (rows.length) {
+    for (const r of rows) {
+      for (const [name, n] of nameToNum) push(n, Number(r[name]));
+    }
+  } else {
+    for (const d of latest.dimensions) if (d.score != null) push(d.n, d.score);
+  }
+  if (perDim.size === 0) return null;
+
+  const means = new Map<number, number>();
+  for (const [n, arr] of perDim) if (arr.length) means.set(n, arr.reduce((a, b) => a + b, 0) / arr.length);
+  return { avg: rollUpClusters(means, rubric) };
+}
+
+/** Default comparison lines: the top leaders (by newest month) with ≥2 points. */
+function defaultCompareIds(threeMonths: { data: CoachMonthly | undefined }[]): string[] {
+  const series = leaderMonthlySeries(threeMonths);
+  const newest = [...(threeMonths[threeMonths.length - 1]?.data?.leaders ?? [])].sort((a, b) => (b.avgScore ?? 0) - (a.avgScore ?? 0));
+  return newest.filter((l) => (series.get(l.id) ?? []).length > 1).slice(0, 5).map((l) => l.id);
+}
+
+function priorityFor(l: CoachMonthly['leaders'][number]): { label: string; c: string; bg: string } {
+  const s = l.avgScore ?? 0;
+  if (s < 70) return { label: 'HIGH', c: '#A94E2B', bg: '#F4E1D7' };
+  if (s < 80) return { label: 'MEDIUM', c: '#9A6E1F', bg: '#F6EFD8' };
+  return { label: 'SUSTAIN', c: '#3E7A54', bg: '#E8EFE6' };
+}
+
+function recurrenceLabel(r: string): string {
+  switch (r) {
+    case 'weekly': return 'Weekly';
+    case 'biweekly': return 'Every other week';
+    case 'monthly': return 'Monthly';
+    case 'daily': return 'Daily';
+    default: return 'One-time';
+  }
+}
+
+function currentMonth(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+
+/** The month string `back` calendar months before the current one. */
+function monthMinus(back: number): string {
+  const d = new Date();
+  d.setDate(1);
+  d.setMonth(d.getMonth() - back);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+
+const CLUSTER_PALETTE = ['#9A6E1F', '#3E7A54', '#3E6E9A', '#A94E2B', '#8A5A9A', '#2F8F86', '#C9A24B', '#B07A3D'];
+
+function monthLabel(m: string): string {
+  const [y, mo] = m.split('-').map(Number);
+  const names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  return mo >= 1 && mo <= 12 ? `${names[mo - 1]} ${y}` : m;
+}
+
+function shortDate(iso: string): string {
+  const d = new Date(iso + 'T00:00:00Z');
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+}
+
+// ─── Styles ─────────────────────────────────────────────────────────────────
+
+const shellRoot: React.CSSProperties = {
+  flex: '1 1 auto',
+  minHeight: 0,
+  background: dt.pageBg,
+  color: dt.textPrimary,
+  fontFamily: dt.sans,
+  WebkitFontSmoothing: 'antialiased',
+  padding: '0 0 80px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  overflowY: 'auto',
+};
+
+const card: React.CSSProperties = {
+  background: dt.cardBg,
+  border: `1px solid ${dt.cardBorder}`,
+  borderRadius: 18,
+  padding: '36px clamp(18px, 4vw, 40px) 44px',
+  marginTop: 32,
+  boxShadow: '0 18px 48px -30px rgba(50,40,20,.35)',
+};
+
+const topbar: React.CSSProperties = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  gap: 16,
+  flexWrap: 'wrap',
+  paddingBottom: 26,
+  borderBottom: `1px solid ${dt.rowDivider}`,
+};
+
+const logoMark: React.CSSProperties = {
+  width: 30, height: 30, borderRadius: 8, background: dt.darkBg,
+  display: 'flex', alignItems: 'center', justifyContent: 'center',
+  color: dt.goldChip, fontFamily: dt.serif, fontWeight: 600, fontSize: 17,
+};
+
+const avatarChip: React.CSSProperties = {
+  width: 34, height: 34, borderRadius: '50%', background: '#E8E8E6',
+  display: 'flex', alignItems: 'center', justifyContent: 'center',
+  fontWeight: 700, color: dt.textMuted, fontSize: 13, overflow: 'hidden',
+};
+
+const kicker: React.CSSProperties = {
+  fontSize: 11, fontWeight: 700, letterSpacing: '.1em', color: dt.gold, marginBottom: 10,
+};
+
+const innerCard: React.CSSProperties = {
+  background: dt.innerBg, border: `1px solid ${dt.cardBorder}`, borderRadius: 13, padding: '18px 20px',
+};
+
+const rosterRow: React.CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: '52px 1fr 150px 128px 20px',
+  gap: 18,
+  alignItems: 'center',
+  background: dt.cardBg,
+  border: `1px solid ${dt.cardBorder}`,
+  borderRadius: 14,
+  padding: '16px 22px',
+  cursor: 'pointer',
+  width: '100%',
+  textAlign: 'left',
+};
+
+// Leader names render as buttons that open the leader's dedicated page.
+// Styled to read like the surrounding text (no chrome) but with a dotted
+// underline, the same affordance the D# column headers use, to signal
+// they're clickable.
+const leaderNameButton: React.CSSProperties = {
+  background: 'none', border: 'none', padding: 0, margin: 0, font: 'inherit',
+  color: 'inherit', cursor: 'pointer', textAlign: 'left',
+  textDecoration: 'underline dotted', textUnderlineOffset: 3,
+  display: 'block', maxWidth: '100%',
+};
+
+const goldPill: React.CSSProperties = {
+  background: dt.brightGold, color: dt.textPrimary, fontWeight: 700, fontSize: 14,
+  padding: '11px 18px', borderRadius: 10, border: 'none', cursor: 'pointer',
+};
+
+const backLink: React.CSSProperties = {
+  background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+  fontSize: 13.5, fontWeight: 600, color: dt.gold,
+};
+
+const dashedNote: React.CSSProperties = {
+  background: dt.innerBg, border: `1px dashed ${dt.dashed}`, borderRadius: 12,
+  padding: 24, fontSize: 14.5, color: dt.textMuted, lineHeight: 1.65,
+};
+
+const modalInput: React.CSSProperties = {
+  width: '100%', fontSize: 14, padding: '10px 12px', border: `1px solid ${dt.inputBorder}`,
+  borderRadius: 9, background: dt.cardBg, color: dt.textPrimary, fontFamily: dt.sans, boxSizing: 'border-box',
+};

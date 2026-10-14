@@ -1,0 +1,651 @@
+{
+  "issue": "NOTICKET-20",
+  "screens": [
+    {
+      "name": "gate",
+      "states": [
+        {
+          "name": "offer-new",
+          "route": "/noticket-20/gate/offer-new",
+          "fixtures": "gate-offer-new",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "offer-started",
+          "route": "/noticket-20/gate/offer-started",
+          "fixtures": "gate-offer-started",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "confirm-address",
+          "route": "/noticket-20/gate/confirm-address",
+          "fixtures": "gate-confirm-address",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "signed-out",
+          "route": "/noticket-20/gate/signed-out",
+          "fixtures": "gate-signed-out",
+          "setup": [
+            "signed-out"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "start",
+      "states": [
+        {
+          "name": "intro",
+          "route": "/noticket-20/start/intro",
+          "fixtures": "start-intro",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "not-open",
+          "route": "/noticket-20/start/not-open",
+          "fixtures": "start-not-open",
+          "setup": [
+            "signed-in"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "path",
+      "states": [
+        {
+          "name": "continue",
+          "route": "/noticket-20/path/continue",
+          "fixtures": "path-continue",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "leader",
+          "route": "/noticket-20/path/leader",
+          "fixtures": "path-leader",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "check-open",
+          "route": "/noticket-20/path/check-open",
+          "fixtures": "path-check-open",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "new-lesson-ahead",
+          "route": "/noticket-20/path/new-lesson-ahead",
+          "fixtures": "path-new-lesson-ahead",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "new-module-ahead",
+          "route": "/noticket-20/path/new-module-ahead",
+          "fixtures": "path-new-module-ahead",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "completed-new-module",
+          "route": "/noticket-20/path/completed-new-module",
+          "fixtures": "path-completed-new-module",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "long",
+          "route": "/noticket-20/path/long",
+          "fixtures": "path-long",
+          "setup": [
+            "signed-in"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lesson",
+      "states": [
+        {
+          "name": "video",
+          "route": "/noticket-20/lesson/video",
+          "fixtures": "lesson-video",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "no-video",
+          "route": "/noticket-20/lesson/no-video",
+          "fixtures": "lesson-no-video",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "done",
+          "route": "/noticket-20/lesson/done",
+          "fixtures": "lesson-done",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "locked",
+          "route": "/noticket-20/lesson/locked",
+          "fixtures": "lesson-locked",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "unsafe-text",
+          "route": "/noticket-20/lesson/unsafe-text",
+          "fixtures": "lesson-unsafe-text",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "long",
+          "route": "/noticket-20/lesson/long",
+          "fixtures": "lesson-long",
+          "setup": [
+            "signed-in"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check",
+      "states": [
+        {
+          "name": "open",
+          "route": "/noticket-20/check/open",
+          "fixtures": "check-open",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "incomplete",
+          "route": "/noticket-20/check/incomplete",
+          "fixtures": "check-incomplete",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "failed",
+          "route": "/noticket-20/check/failed",
+          "fixtures": "check-failed",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "passed",
+          "route": "/noticket-20/check/passed",
+          "fixtures": "check-passed",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "changed",
+          "route": "/noticket-20/check/changed",
+          "fixtures": "check-changed",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "locked",
+          "route": "/noticket-20/check/locked",
+          "fixtures": "check-locked",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "long",
+          "route": "/noticket-20/check/long",
+          "fixtures": "check-long",
+          "setup": [
+            "signed-in"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "completion",
+      "states": [
+        {
+          "name": "request-form",
+          "route": "/noticket-20/completion/request-form",
+          "fixtures": "completion-request-form",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "unverified",
+          "route": "/noticket-20/completion/unverified",
+          "fixtures": "completion-unverified",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "request-open",
+          "route": "/noticket-20/completion/request-open",
+          "fixtures": "completion-request-open",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "approved",
+          "route": "/noticket-20/completion/approved",
+          "fixtures": "completion-approved",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "declined",
+          "route": "/noticket-20/completion/declined",
+          "fixtures": "completion-declined",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "already-in-program",
+          "route": "/noticket-20/completion/already-in-program",
+          "fixtures": "completion-already-in-program",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "leader",
+          "route": "/noticket-20/completion/leader",
+          "fixtures": "completion-leader",
+          "setup": [
+            "signed-in"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "admin-home",
+      "states": [
+        {
+          "name": "requests",
+          "route": "/noticket-20/admin-home/requests",
+          "fixtures": "admin-home-requests",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "approve",
+          "route": "/noticket-20/admin-home/approve",
+          "fixtures": "admin-home-approve",
+          "setup": [
+            "signed-in",
+            "dialog-open"
+          ]
+        },
+        {
+          "name": "approve-name-taken",
+          "route": "/noticket-20/admin-home/approve-name-taken",
+          "fixtures": "admin-home-approve-name-taken",
+          "setup": [
+            "signed-in",
+            "dialog-open"
+          ]
+        },
+        {
+          "name": "approve-address-changed",
+          "route": "/noticket-20/admin-home/approve-address-changed",
+          "fixtures": "admin-home-approve-address-changed",
+          "setup": [
+            "signed-in",
+            "dialog-open"
+          ]
+        },
+        {
+          "name": "approve-duplicate",
+          "route": "/noticket-20/admin-home/approve-duplicate",
+          "fixtures": "admin-home-approve-duplicate",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "no-longer-open",
+          "route": "/noticket-20/admin-home/no-longer-open",
+          "fixtures": "admin-home-no-longer-open",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "decline",
+          "route": "/noticket-20/admin-home/decline",
+          "fixtures": "admin-home-decline",
+          "setup": [
+            "signed-in",
+            "dialog-open"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "admin-program",
+      "states": [
+        {
+          "name": "empty",
+          "route": "/noticket-20/admin-program/empty",
+          "fixtures": "admin-program-empty",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "modules",
+          "route": "/noticket-20/admin-program/modules",
+          "fixtures": "admin-program-modules",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "publish-refused",
+          "route": "/noticket-20/admin-program/publish-refused",
+          "fixtures": "admin-program-publish-refused",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "long",
+          "route": "/noticket-20/admin-program/long",
+          "fixtures": "admin-program-long",
+          "setup": [
+            "signed-in"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "admin-module",
+      "states": [
+        {
+          "name": "edit",
+          "route": "/noticket-20/admin-module/edit",
+          "fixtures": "admin-module-edit",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "question-invalid",
+          "route": "/noticket-20/admin-module/question-invalid",
+          "fixtures": "admin-module-question-invalid",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "emptying-refused",
+          "route": "/noticket-20/admin-module/emptying-refused",
+          "fixtures": "admin-module-emptying-refused",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "delete-refused",
+          "route": "/noticket-20/admin-module/delete-refused",
+          "fixtures": "admin-module-delete-refused",
+          "setup": [
+            "signed-in",
+            "dialog-open"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "admin-lesson",
+      "states": [
+        {
+          "name": "edit",
+          "route": "/noticket-20/admin-lesson/edit",
+          "fixtures": "admin-lesson-edit",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "passage-invalid",
+          "route": "/noticket-20/admin-lesson/passage-invalid",
+          "fixtures": "admin-lesson-passage-invalid",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "video-uploading",
+          "route": "/noticket-20/admin-lesson/video-uploading",
+          "fixtures": "admin-lesson-video-uploading",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "video-refused",
+          "route": "/noticket-20/admin-lesson/video-refused",
+          "fixtures": "admin-lesson-video-refused",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "video-failed",
+          "route": "/noticket-20/admin-lesson/video-failed",
+          "fixtures": "admin-lesson-video-failed",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "draft-preview",
+          "route": "/noticket-20/admin-lesson/draft-preview",
+          "fixtures": "admin-lesson-draft-preview",
+          "setup": [
+            "signed-in"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "admin-learners",
+      "states": [
+        {
+          "name": "list",
+          "route": "/noticket-20/admin-learners/list",
+          "fixtures": "admin-learners-list",
+          "setup": [
+            "signed-in"
+          ]
+        },
+        {
+          "name": "search",
+          "route": "/noticket-20/admin-learners/search",
+          "fixtures": "admin-learners-search",
+          "setup": [
+            "signed-in"
+          ]
+        }
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "name": "A newcomer starts the program",
+      "screens": [
+        "gate",
+        "lesson",
+        "start"
+      ],
+      "steps": [
+        {
+          "from": "gate/offer-new",
+          "action": "Start the learning program",
+          "to": "start/intro"
+        },
+        {
+          "from": "start/intro",
+          "action": "Start the program",
+          "to": "lesson/video"
+        },
+        {
+          "from": "lesson/video",
+          "action": "Mark as done",
+          "to": "lesson/done"
+        }
+      ]
+    },
+    {
+      "name": "Taking a module check",
+      "screens": [
+        "check",
+        "path"
+      ],
+      "steps": [
+        {
+          "from": "path/check-open",
+          "action": "Take the check",
+          "to": "check/open"
+        },
+        {
+          "from": "check/open",
+          "action": "Submit answers",
+          "to": "check/incomplete"
+        },
+        {
+          "from": "check/failed",
+          "action": "Retake the check",
+          "to": "check/open"
+        }
+      ]
+    },
+    {
+      "name": "From the path to the record",
+      "screens": [
+        "completion",
+        "path"
+      ],
+      "steps": [
+        {
+          "from": "path/completed-new-module",
+          "action": "See your record",
+          "to": "completion/request-form"
+        }
+      ]
+    },
+    {
+      "name": "An admin answers a request",
+      "screens": [
+        "admin-home"
+      ],
+      "steps": [
+        {
+          "from": "admin-home/requests",
+          "action": "Approve",
+          "to": "admin-home/approve"
+        },
+        {
+          "from": "admin-home/requests",
+          "action": "Decline",
+          "to": "admin-home/decline"
+        }
+      ]
+    },
+    {
+      "name": "An admin edits the program",
+      "screens": [
+        "admin-home",
+        "admin-learners",
+        "admin-lesson",
+        "admin-module",
+        "admin-program"
+      ],
+      "steps": [
+        {
+          "from": "admin-home/requests",
+          "action": "Program",
+          "to": "admin-program/modules"
+        },
+        {
+          "from": "admin-program/modules",
+          "action": "Teaching craft: shaping the hour",
+          "to": "admin-module/edit"
+        },
+        {
+          "from": "admin-module/edit",
+          "action": "Reading the passage together",
+          "to": "admin-lesson/edit"
+        },
+        {
+          "from": "admin-lesson/edit",
+          "action": "Preview as a learner",
+          "to": "admin-lesson/draft-preview"
+        },
+        {
+          "from": "admin-program/modules",
+          "action": "Learners",
+          "to": "admin-learners/list"
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "name": "Program shell and shared pieces (top bar with Learning and Program, tags, step marks, progress, dialog, safe Markdown)",
+      "file": "src/prototype/noticket-20/ui.tsx"
+    },
+    {
+      "name": "Learner screens: gate, start, path, lesson, check, completion and join request",
+      "file": "src/prototype/noticket-20/learner.tsx"
+    },
+    {
+      "name": "Admin screens: join requests, modules, module editor, lesson editor with live preview and video upload, learners",
+      "file": "src/prototype/noticket-20/admin.tsx"
+    },
+    {
+      "name": "Admin home: the roster with the Program nav item and the open join requests",
+      "file": "src/prototype/noticket-20/AdminHome.tsx"
+    }
+  ]
+}

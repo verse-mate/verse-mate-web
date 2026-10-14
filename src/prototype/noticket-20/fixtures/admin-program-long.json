@@ -1,0 +1,135 @@
+{
+  "GET /user/me": {
+    "id": "user-admin",
+    "email": "program.admin@example.com",
+    "firstName": "Morgan",
+    "lastName": "Ellis",
+    "fullName": "Morgan Ellis",
+    "emailVerified": true,
+    "hasPassword": true
+  },
+  "GET /coach/admin/program/modules": {
+    "modules": [
+      {
+        "id": "m-long-0",
+        "n": 1,
+        "title": "Teaching craft: shaping the hour so the passage stays at the centre from start to finish",
+        "lessons": 3,
+        "publishedLessons": 3,
+        "questions": 5,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-long-1",
+        "n": 2,
+        "title": "Engaging people around the table when the group is large, shy, or new to reading together",
+        "lessons": 4,
+        "publishedLessons": 4,
+        "questions": 6,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-long-2",
+        "n": 3,
+        "title": "Being real: honesty about your own week, prayer that includes everyone, and keeping trust",
+        "lessons": 5,
+        "publishedLessons": 5,
+        "questions": 7,
+        "passMark": 75,
+        "published": true
+      },
+      {
+        "id": "m-long-3",
+        "n": 4,
+        "title": "Building ministry beyond the room by welcoming newcomers and giving others a real part",
+        "lessons": 6,
+        "publishedLessons": 6,
+        "questions": 8,
+        "passMark": 80,
+        "published": true
+      },
+      {
+        "id": "m-long-4",
+        "n": 5,
+        "title": "Helping it stick through the week with memory work, simple visuals and a five-minute review",
+        "lessons": 3,
+        "publishedLessons": 3,
+        "questions": 9,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-long-5",
+        "n": 6,
+        "title": "Reading difficult passages together when the group disagrees about what the text says",
+        "lessons": 4,
+        "publishedLessons": 4,
+        "questions": 10,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-long-6",
+        "n": 7,
+        "title": "Leading online and hybrid groups without losing the people who join from a small screen",
+        "lessons": 5,
+        "publishedLessons": 5,
+        "questions": 5,
+        "passMark": 75,
+        "published": true
+      },
+      {
+        "id": "m-long-7",
+        "n": 8,
+        "title": "Handling grief, conflict and hard questions with care, and knowing when to refer someone",
+        "lessons": 6,
+        "publishedLessons": 6,
+        "questions": 6,
+        "passMark": 80,
+        "published": true
+      },
+      {
+        "id": "m-long-8",
+        "n": 9,
+        "title": "Teaching from the Gospels: narrative, parables and the questions Jesus asked his listeners",
+        "lessons": 3,
+        "publishedLessons": 3,
+        "questions": 7,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-long-9",
+        "n": 10,
+        "title": "Teaching from the letters: following an argument and applying it to a different culture",
+        "lessons": 4,
+        "publishedLessons": 4,
+        "questions": 8,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-long-10",
+        "n": 11,
+        "title": "Teaching from the Old Testament: law, poetry and prophecy without losing the thread",
+        "lessons": 5,
+        "publishedLessons": 4,
+        "questions": 9,
+        "passMark": 75,
+        "published": false
+      },
+      {
+        "id": "m-long-11",
+        "n": 12,
+        "title": "A whole session, start to finish, scored on all twelve dimensions with the reasons given",
+        "lessons": 6,
+        "publishedLessons": 5,
+        "questions": 10,
+        "passMark": 80,
+        "published": false
+      }
+    ]
+  }
+}

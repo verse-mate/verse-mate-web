@@ -1,0 +1,91 @@
+{
+  "GET /user/me": {
+    "id": "user-admin",
+    "email": "program.admin@example.com",
+    "firstName": "Morgan",
+    "lastName": "Ellis",
+    "fullName": "Morgan Ellis",
+    "emailVerified": true,
+    "hasPassword": true
+  },
+  "GET /coach/admin/program/modules/:id": {
+    "n": 6,
+    "title": "A whole session, start to finish",
+    "summary": "One session walked through end to end, how Coach scores fairly, and where you go from here.",
+    "passMark": 70,
+    "published": true,
+    "lessons": [
+      {
+        "id": "l-6-1",
+        "title": "Watching a whole session",
+        "published": true,
+        "doneBy": 40,
+        "video": true
+      },
+      {
+        "id": "l-6-2",
+        "title": "How Coach scores fairly",
+        "published": false,
+        "doneBy": 0,
+        "video": false
+      },
+      {
+        "id": "l-6-3",
+        "title": "Your next step",
+        "published": false,
+        "doneBy": 0,
+        "video": false
+      }
+    ],
+    "questions": [
+      {
+        "n": 1,
+        "text": "A group member gives an answer that misreads the passage. What does the rubric reward the leader for doing next?",
+        "options": [
+          {
+            "text": "Correcting them at once so nobody is confused",
+            "correct": false
+          },
+          {
+            "text": "Asking the group what the verse itself says",
+            "correct": true
+          },
+          {
+            "text": "Moving on to keep the session on time",
+            "correct": false
+          },
+          {
+            "text": "Explaining the right reading in a short talk",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "n": 2,
+        "text": "What is the clearest sign of Scripture engagement in a session?",
+        "options": [
+          {
+            "text": "The leader quotes many verses from memory",
+            "correct": false
+          },
+          {
+            "text": "People read the passage aloud and point to it when they answer",
+            "correct": true
+          },
+          {
+            "text": "Everyone brings a different translation",
+            "correct": false
+          },
+          {
+            "text": "The session covers a whole book",
+            "correct": false
+          }
+        ]
+      }
+    ],
+    "refusal": {
+      "kind": "emptying",
+      "lesson": "Watching a whole session"
+    }
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "GET /coach/admin/coaches": {
+    "coaches": [
+      {
+        "id": "c-1",
+        "name": "Samuel Achterberg",
+        "group": "Tuesday Men's Study",
+        "coachName": "Ruth Varga",
+        "sessionCount": 14,
+        "addressChange": null,
+        "latest": {
+          "date": "2026-10-07",
+          "dateLabel": "Oct 7, 2026",
+          "score": 82.5,
+          "status": "Strong",
+          "statusEmoji": "🟢"
+        }
+      },
+      {
+        "id": "c-2",
+        "name": "Priya Natarajan",
+        "group": "Women's Morning Group",
+        "coachName": "Ruth Varga",
+        "sessionCount": 11,
+        "addressChange": null,
+        "latest": {
+          "date": "2026-10-07",
+          "dateLabel": "Oct 7, 2026",
+          "score": 88.1,
+          "status": "Exceptional",
+          "statusEmoji": "🔷"
+        }
+      },
+      {
+        "id": "c-3",
+        "name": "Tobias Bauer",
+        "group": "Young Adults",
+        "coachName": "Elias Moreau",
+        "sessionCount": 9,
+        "addressChange": null,
+        "latest": {
+          "date": "2026-10-07",
+          "dateLabel": "Oct 7, 2026",
+          "score": 66.0,
+          "status": "On Target",
+          "statusEmoji": "🟡"
+        }
+      },
+      {
+        "id": "c-4",
+        "name": "Mei Haddad",
+        "group": "Newcomers Class",
+        "coachName": "Elias Moreau",
+        "sessionCount": 7,
+        "addressChange": null,
+        "latest": {
+          "date": "2026-10-07",
+          "dateLabel": "Oct 7, 2026",
+          "score": 58.4,
+          "status": "Developing",
+          "statusEmoji": "🟠"
+        }
+      },
+      {
+        "id": "c-5",
+        "name": "Kwame Asante",
+        "group": "Thursday Home Group",
+        "coachName": "Ruth Varga",
+        "sessionCount": 12,
+        "addressChange": null,
+        "latest": {
+          "date": "2026-10-07",
+          "dateLabel": "Oct 7, 2026",
+          "score": 75.2,
+          "status": "Strong",
+          "statusEmoji": "🟢"
+        }
+      },
+      {
+        "id": "c-6",
+        "name": "Lucia Ferreira",
+        "group": "Couples Study",
+        "coachName": "Elias Moreau",
+        "sessionCount": 5,
+        "addressChange": null,
+        "latest": {
+          "date": "2026-10-07",
+          "dateLabel": "Oct 7, 2026",
+          "score": 61.7,
+          "status": "On Target",
+          "statusEmoji": "🟡"
+        }
+      }
+    ]
+  },
+  "GET /coach/admin/monthly": {
+    "month": "2026-10",
+    "monthLabel": "October 2026",
+    "program": {
+      "sessions": 24,
+      "activeLeaders": 6,
+      "newcomers": 5,
+      "avgScore": 72.0,
+      "clusters": [
+        {
+          "name": "Teaching Craft",
+          "weight": 33,
+          "avg": 74
+        },
+        {
+          "name": "Building Ministry",
+          "weight": 31,
+          "avg": 68
+        },
+        {
+          "name": "Engaging People",
+          "weight": 18,
+          "avg": 71
+        },
+        {
+          "name": "Being Real",
+          "weight": 18,
+          "avg": 77
+        }
+      ],
+      "delta": 1.8
+    },
+    "leaders": [
+      {
+        "id": "c-1",
+        "name": "Samuel Achterberg",
+        "avgScore": 82.5
+      },
+      {
+        "id": "c-2",
+        "name": "Priya Natarajan",
+        "avgScore": 88.1
+      },
+      {
+        "id": "c-3",
+        "name": "Tobias Bauer",
+        "avgScore": 66.0
+      },
+      {
+        "id": "c-4",
+        "name": "Mei Haddad",
+        "avgScore": 58.4
+      },
+      {
+        "id": "c-5",
+        "name": "Kwame Asante",
+        "avgScore": 75.2
+      },
+      {
+        "id": "c-6",
+        "name": "Lucia Ferreira",
+        "avgScore": 61.7
+      }
+    ],
+    "availableMonths": [
+      "2026-10",
+      "2026-09",
+      "2026-08"
+    ],
+    "narrative": null
+  },
+  "GET /coach/rubric": {
+    "model": "v3-weighted-100",
+    "clusters": [
+      {
+        "name": "Teaching Craft",
+        "weight": 33
+      },
+      {
+        "name": "Building Ministry",
+        "weight": 31
+      },
+      {
+        "name": "Engaging People",
+        "weight": 18
+      },
+      {
+        "name": "Being Real",
+        "weight": 18
+      }
+    ],
+    "dimensions": [
+      {
+        "n": 1,
+        "name": "Session Structure & Flow",
+        "cluster": "Teaching Craft",
+        "clusterWeight": 33,
+        "what": "The shape of the hour, from the opening to the closing prayer",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 2,
+        "name": "Newcomer Welcome",
+        "cluster": "Building Ministry",
+        "clusterWeight": 31,
+        "what": "How a first-time guest is greeted, named and included",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 3,
+        "name": "Scripture Engagement",
+        "cluster": "Teaching Craft",
+        "clusterWeight": 33,
+        "what": "How much the group works with the text itself",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 4,
+        "name": "Facilitation vs. Lecture",
+        "cluster": "Engaging People",
+        "clusterWeight": 18,
+        "what": "How much the leader talks compared with the group",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 5,
+        "name": "Application Questions",
+        "cluster": "Teaching Craft",
+        "clusterWeight": 33,
+        "what": "Questions that move from the text to this week",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 6,
+        "name": "Participant Engagement",
+        "cluster": "Engaging People",
+        "clusterWeight": 18,
+        "what": "How many people speak, and how freely",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 7,
+        "name": "Visual Aids",
+        "cluster": "Teaching Craft",
+        "clusterWeight": 33,
+        "what": "Anything shown that helps people follow the passage",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 8,
+        "name": "Vulnerability / Authenticity",
+        "cluster": "Being Real",
+        "clusterWeight": 18,
+        "what": "The leader being honest about their own life",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 9,
+        "name": "Memory Reinforcement",
+        "cluster": "Teaching Craft",
+        "clusterWeight": 33,
+        "what": "Helping people carry a verse or an idea into the week",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 10,
+        "name": "Homework References",
+        "cluster": "Building Ministry",
+        "clusterWeight": 31,
+        "what": "Linking the session to what people did between meetings",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 11,
+        "name": "Prayer",
+        "cluster": "Being Real",
+        "clusterWeight": 18,
+        "what": "Praying together, beyond an opening formality",
+        "target": "See the Leader's Guide"
+      },
+      {
+        "n": 12,
+        "name": "Leader Development",
+        "cluster": "Building Ministry",
+        "clusterWeight": 31,
+        "what": "Giving others a part, so new leaders grow",
+        "target": "See the Leader's Guide"
+      }
+    ],
+    "statusBands": [
+      {
+        "min": 85,
+        "label": "Exceptional",
+        "emoji": "🔷"
+      },
+      {
+        "min": 72,
+        "label": "Strong",
+        "emoji": "🟢"
+      },
+      {
+        "min": 60,
+        "label": "On Target",
+        "emoji": "🟡"
+      },
+      {
+        "min": 45,
+        "label": "Developing",
+        "emoji": "🟠"
+      },
+      {
+        "min": 0,
+        "label": "Early Stage",
+        "emoji": "🔴"
+      }
+    ],
+    "dimensionBands": [
+      {
+        "min": 5,
+        "label": "Exemplary"
+      },
+      {
+        "min": 4,
+        "label": "Strong"
+      },
+      {
+        "min": 3,
+        "label": "On target"
+      },
+      {
+        "min": 2,
+        "label": "Developing"
+      },
+      {
+        "min": 1,
+        "label": "Early stage"
+      }
+    ]
+  },
+  "GET /user/me": {
+    "id": "user-admin",
+    "email": "program.admin@example.com",
+    "firstName": "Morgan",
+    "lastName": "Ellis",
+    "fullName": "Morgan Ellis",
+    "emailVerified": true,
+    "hasPassword": true
+  },
+  "GET /coach/admin/program/requests": {
+    "items": [
+      {
+        "id": "r-2",
+        "name": "Grace Okafor",
+        "email": "grace.okafor@example.com",
+        "completedOn": "2026-10-09",
+        "sentOn": "2026-10-10",
+        "passed": 6,
+        "total": 6,
+        "scores": [
+          100,
+          100,
+          93,
+          86,
+          80,
+          92
+        ],
+        "note": "Our church is starting three new home groups in January and I will lead one of them."
+      },
+      {
+        "id": "r-3",
+        "name": "Hannah Lindqvist",
+        "email": "hannah.l@example.com",
+        "completedOn": "2026-10-08",
+        "sentOn": "2026-10-08",
+        "passed": 6,
+        "total": 6,
+        "scores": [
+          74,
+          80,
+          86,
+          72,
+          78,
+          80
+        ],
+        "note": ""
+      }
+    ],
+    "notice": {
+      "kind": "duplicate",
+      "name": "Rafael Mendes"
+    }
+  }
+}

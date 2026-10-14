@@ -1,0 +1,80 @@
+{
+  "GET /user/me": {
+    "id": "user-admin",
+    "email": "program.admin@example.com",
+    "firstName": "Morgan",
+    "lastName": "Ellis",
+    "fullName": "Morgan Ellis",
+    "emailVerified": true,
+    "hasPassword": true
+  },
+  "GET /coach/admin/program/modules": {
+    "modules": [
+      {
+        "id": "m-1",
+        "n": 1,
+        "title": "Teaching craft: shaping the hour",
+        "lessons": 4,
+        "publishedLessons": 4,
+        "questions": 5,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-2",
+        "n": 2,
+        "title": "Engaging people around the table",
+        "lessons": 4,
+        "publishedLessons": 3,
+        "questions": 3,
+        "passMark": 67,
+        "published": true
+      },
+      {
+        "id": "m-3",
+        "n": 3,
+        "title": "Being real: honesty and prayer",
+        "lessons": 3,
+        "publishedLessons": 3,
+        "questions": 5,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-4",
+        "n": 4,
+        "title": "Building ministry beyond the room",
+        "lessons": 3,
+        "publishedLessons": 3,
+        "questions": 5,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-5",
+        "n": 5,
+        "title": "Helping it stick through the week",
+        "lessons": 3,
+        "publishedLessons": 3,
+        "questions": 5,
+        "passMark": 70,
+        "published": true
+      },
+      {
+        "id": "m-6",
+        "n": 6,
+        "title": "A whole session, start to finish",
+        "lessons": 3,
+        "publishedLessons": 0,
+        "questions": 0,
+        "passMark": 70,
+        "published": false
+      }
+    ],
+    "refusal": {
+      "module": 6,
+      "title": "A whole session, start to finish",
+      "reason": "has no published lesson and no check question yet."
+    }
+  }
+}
