@@ -107,7 +107,7 @@ function DeclineDialog({ r, onClose }: { r: JoinRequest; onClose: () => void }) 
 
 function ProgramTabs({ active }: { active: 'modules' | 'learners' }) {
   const tab = (key: 'modules' | 'learners', label: string, href: string) => (
-    <Link to={href} aria-current={active === key ? 'page' : undefined} style={{ minHeight: 40, display: 'inline-flex', alignItems: 'center', padding: '0 16px', borderRadius: 999, textDecoration: 'none', fontSize: 14, fontWeight: active === key ? 700 : 500, color: active === key ? dt.textPrimary : dt.textMuted, background: active === key ? dt.goldChip : 'transparent' }}>
+    <Link to={href} aria-current={active === key ? 'page' : undefined} style={{ minHeight: 44, display: 'inline-flex', alignItems: 'center', padding: '0 16px', borderRadius: 999, textDecoration: 'none', fontSize: 14, fontWeight: active === key ? 700 : 500, color: active === key ? dt.textPrimary : dt.textMuted, background: active === key ? dt.goldChip : 'transparent' }}>
       {label}
     </Link>
   );
@@ -257,8 +257,9 @@ export function AdminModuleScreen() {
                 <p style={{ margin: 0, fontWeight: 600, fontSize: 15, lineHeight: 1.45 }}><span className="nt20-num" style={{ color: dt.gold, marginRight: 8 }}>{q.n}.</span>{q.text}</p>
                 <div role="radiogroup" aria-label={`Correct option for question ${q.n}`} style={{ display: 'grid', gap: 6 }}>
                   {q.options.map((o, i) => (
-                    <label key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, minHeight: 40, fontSize: 14.5, color: dt.body }}>
-                      <input type="radio" name={`key-${q.n}`} defaultChecked={o.correct} style={{ accentColor: dt.green, width: 16, height: 16 }} />
+                    <label key={i} className="nt20-radio" style={{ display: 'flex', alignItems: 'center', gap: 10, minHeight: 44, fontSize: 14.5, color: dt.body, cursor: 'pointer' }}>
+                      <input type="radio" name={`key-${q.n}`} defaultChecked={o.correct} />
+                      <span aria-hidden className="nt20-dot" style={{ marginTop: 0 }} />
                       <span style={{ flex: 1 }}>{o.text}</span>
                       {o.correct && <Tag tone="green">Correct</Tag>}
                     </label>
@@ -394,7 +395,7 @@ export function AdminLessonScreen() {
           <p style={muted}>Markdown: headings, lists, emphasis, quotes and links. HTML and images are not shown to learners.</p>
           <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))' }}>
             <textarea aria-label="Lesson text in Markdown" value={source} onChange={(e) => setBody(e.target.value)} style={{ ...input, minHeight: 420, fontFamily: "ui-monospace, 'SF Mono', Menlo, monospace", fontSize: 16, lineHeight: 1.55, resize: 'vertical' }} />
-            <div aria-label="Preview" role="region" style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 9, padding: '16px 20px', maxHeight: 520, overflowY: 'auto', background: dt.cardBg }}>
+            <div aria-label="Preview" role="region" style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 9, padding: '16px 20px', background: dt.cardBg }}>
               <p style={{ margin: '0 0 10px', fontSize: 12.5, fontWeight: 700, color: dt.textMuted }}>Live preview</p>
               <Markdown source={source} size={16} />
             </div>
@@ -452,9 +453,8 @@ export function AdminLearnersScreen() {
         </div>
         <form role="search" onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
           <label style={{ position: 'relative', flex: '1 1 280px', maxWidth: 440 }}>
-            <span style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0 0 0 0)' }}>Search by name or email</span>
             <Search size={16} aria-hidden color={dt.textMuted} style={{ position: 'absolute', left: 13, top: 14 }} />
-            <input type="search" value={q ?? v.q} onChange={(e) => setQ(e.target.value)} placeholder="Search by name or email" style={{ ...input, paddingLeft: 38 }} />
+            <input type="search" aria-label="Search by name or email" value={q ?? v.q} onChange={(e) => setQ(e.target.value)} placeholder="Search by name or email" style={{ ...input, paddingLeft: 38 }} />
           </label>
           <span className="nt20-num" role="status" style={muted}>
             {v.total === 0 ? 'No learners match' : `${from}–${toN} of ${v.total.toLocaleString('en-US')}${v.q ? ` matching “${v.q}”` : ''}`}

@@ -1,4 +1,5 @@
 import { type CSSProperties, Fragment, type KeyboardEvent, type ReactNode, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, NavLink } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { CheckCircle2, Circle, CircleDot, Lock } from 'lucide-react';
@@ -84,9 +85,13 @@ html, body, #root { background: ${dt.pageBg} !important; }
 .nt20 input, .nt20 textarea, .nt20 select { caret-color: ${dt.gold}; }
 .nt20 a { text-underline-offset: 3px; }
 .nt20-num { font-variant-numeric: tabular-nums; }
-.nt20-lesson { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 40px; align-items: start; }
-.nt20-lesson > aside { grid-column: 2; grid-row: 1; }
-@media (max-width: 860px) { .nt20-lesson { grid-template-columns: minmax(0, 1fr); gap: 20px; } .nt20-lesson > aside { grid-column: 1; grid-row: auto; position: static !important; } }
+.nt20-lesson { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; max-width: 780px; }
+.nt20-lesson > aside { position: static !important; }
+.nt20-radio { position: relative; }
+.nt20-radio > input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: inherit; font-size: 16px; }
+.nt20-dot { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; box-sizing: border-box; border: 2px solid ${dt.textMuted}; margin-top: 2px; }
+.nt20-radio > input:checked + .nt20-dot { border-color: ${dt.gold}; background: radial-gradient(${dt.gold} 0 4px, transparent 5px); }
+.nt20-radio:has(input:focus-visible) { outline: 2px solid ${dt.gold}; outline-offset: 2px; }
 `;
 
 function TopBar({ nav, active }: { nav: NavKey | null; active?: string }) {
@@ -102,7 +107,7 @@ function TopBar({ nav, active }: { nav: NavKey | null; active?: string }) {
       <nav aria-label="Coaching" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginLeft: 'auto', gap: '0 clamp(14px, 2vw, 22px)', fontSize: 14, fontWeight: 500, flexWrap: 'wrap' }}>
         {nav &&
           NAVS[nav].map((n) => (
-            <NavLink key={n.key} to={n.to} aria-current={active === n.key ? 'page' : undefined} style={{ color: active === n.key ? dt.textPrimary : dt.textMuted, textDecoration: 'none', fontWeight: active === n.key ? 700 : 500, borderBottom: `2px solid ${active === n.key ? dt.brightGold : 'transparent'}`, minHeight: 44, display: 'inline-flex', alignItems: 'center', boxSizing: 'border-box' }}>
+            <NavLink key={n.key} to={n.to} aria-current={active === n.key ? 'page' : undefined} style={{ color: active === n.key ? dt.textPrimary : dt.textMuted, textDecoration: 'none', fontWeight: active === n.key ? 700 : 500, borderBottom: `2px solid ${active === n.key ? dt.brightGold : 'transparent'}`, minHeight: 44, minWidth: 44, justifyContent: 'center', display: 'inline-flex', alignItems: 'center', boxSizing: 'border-box' }}>
               {n.label}
             </NavLink>
           ))}
@@ -129,7 +134,7 @@ export const btn = {
   outline: { ...btnBase, background: dt.cardBg, color: dt.textPrimary, border: `1px solid ${dt.inputBorder}`, fontWeight: 600 } as CSSProperties,
   quiet: { ...btnBase, background: 'transparent', color: dt.gold, border: 'none', padding: '0 8px', fontWeight: 700 } as CSSProperties,
   danger: { ...btnBase, background: dt.cardBg, color: dt.rust, border: `1px solid ${dt.rust}`, fontWeight: 600 } as CSSProperties,
-  disabled: { opacity: 0.5, cursor: 'not-allowed' } as CSSProperties,
+  disabled: { background: dt.fill2, color: dt.textMuted, border: `1px solid ${dt.cardBorder}`, cursor: 'not-allowed' } as CSSProperties,
 };
 
 export function Btn({ to: href, kind = 'primary', children, onClick, disabled, type = 'button', style, label }: { to?: string; kind?: keyof typeof btn; children: ReactNode; onClick?: () => void; disabled?: boolean; type?: 'button' | 'submit'; style?: CSSProperties; label?: string }) {
@@ -182,7 +187,7 @@ export function Notice({ tone, title, children, action }: { tone: 'rust' | 'gree
   return (
     <div role={tone === 'rust' ? 'alert' : 'status'} style={{ background: bg, borderRadius: 12, padding: '14px 18px', display: 'flex', gap: 14, alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' }}>
       <div style={{ minWidth: 0, flex: '1 1 260px' }}>
-        <p style={{ margin: 0, fontWeight: 700, fontSize: 14.5, color: c }}>{title}</p>
+        <p style={{ margin: 0, fontWeight: 700, fontSize: 14.5, color: `color-mix(in srgb, ${c} 78%, black)` }}>{title}</p>
         {children && <div style={{ margin: '4px 0 0', fontSize: 14, lineHeight: 1.55, color: dt.body }}>{children}</div>}
       </div>
       {action}
@@ -221,14 +226,15 @@ export function Dialog({ title, children, onClose }: { title: string; children: 
     if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last?.focus(); }
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
   };
-  return (
+  return createPortal(
     <div style={{ position: 'fixed', inset: 0, zIndex: 60, background: 'rgba(20,18,16,.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }} onClick={onClose}>
       <style>{GLOBAL_CSS}</style>
       <div ref={ref} role="dialog" aria-modal="true" aria-labelledby="nt20-dialog-title" onKeyDown={onKeyDown} onClick={(e) => e.stopPropagation()} className="nt20" style={{ width: 500, maxWidth: '100%', maxHeight: '90vh', overflowY: 'auto', background: dt.cardBg, borderRadius: 16, padding: 'clamp(20px, 4vw, 30px)', boxShadow: '0 30px 70px -20px rgba(20,18,16,.6)', fontFamily: dt.sans, color: dt.textPrimary }}>
         <h2 id="nt20-dialog-title" style={{ ...h2, marginBottom: 6 }}>{title}</h2>
         {children}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 

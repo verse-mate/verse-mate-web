@@ -188,6 +188,7 @@ function moduleTag(m: ModuleView) {
 }
 
 function ModuleBlock({ m }: { m: ModuleView }) {
+  const [open, setOpen] = useState(false);
   const lessonHref = (s: StepState) => (s === 'locked' ? `${P}/lesson/locked` : s === 'done' ? to.lessonDone : to.lesson);
   const expanded = m.state === 'current' || m.state === 'open' || m.lessons.some((l) => l.isNew || (m.state === 'locked' && l.state !== 'locked'));
   const checkHref = m.check.state === 'locked' ? `${P}/check/locked` : m.check.state === 'done' ? `${P}/check/passed` : to.check;
@@ -218,10 +219,12 @@ function ModuleBlock({ m }: { m: ModuleView }) {
       {expanded ? (
         steps
       ) : m.state === 'passed' ? (
-        <details>
-          <summary style={{ fontSize: 13.5, fontWeight: 700, color: dt.goldHover, cursor: 'pointer', minHeight: 44, display: 'flex', alignItems: 'center' }}>Show its {m.lessons.length} lessons and check</summary>
-          {steps}
-        </details>
+        <div>
+          <button type="button" aria-expanded={open} onClick={() => setOpen(!open)} style={{ fontSize: 13.5, fontWeight: 700, color: dt.goldHover, cursor: 'pointer', minHeight: 44, padding: 0, background: 'none', border: 'none', fontFamily: dt.sans }}>
+            {open ? 'Hide' : 'Show'} its {m.lessons.length} lessons and check
+          </button>
+          {open && steps}
+        </div>
       ) : (
         <p className="nt20-num" style={{ ...muted, fontSize: 13.5 }}>{m.lessons.length} lessons and a check of {m.check.questions} questions. Opens when Module {m.n - 1} is passed.</p>
       )}
@@ -289,8 +292,8 @@ export function PathScreen() {
             </div>
           )
         )}
-        <div style={{ display: 'grid', gap: 24, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', alignItems: 'start' }}>
-          <ol style={{ margin: 0, padding: 0, display: 'grid', gap: 14, gridColumn: 'span 2', minWidth: 0 }} className="nt20-span" aria-label="Modules">
+        <div style={{ display: 'grid', gap: 24, maxWidth: 820 }}>
+          <ol style={{ margin: 0, padding: 0, display: 'grid', gap: 14, minWidth: 0 }} aria-label="Modules">
             {p.modules.map((m) => <ModuleBlock key={m.id} m={m} />)}
           </ol>
           <aside style={{ ...panel, display: 'grid', gap: 12 }}>
@@ -302,7 +305,6 @@ export function PathScreen() {
           </aside>
         </div>
       </div>
-      <style>{'@media (max-width: 760px){.nt20-span{grid-column:auto !important}}'}</style>
     </Shell>
   );
 }
@@ -333,8 +335,8 @@ export function LessonView({ l }: { l: LessonView }) {
         </p>
       </header>
       <div className="nt20-lesson">
-        <aside style={{ display: 'grid', gap: 10, position: 'sticky', top: 16 }}>
-          <h2 style={{ fontSize: 14, fontWeight: 700, margin: 0 }}>Passages</h2>
+        <aside aria-labelledby="nt20-passages" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center' }}>
+          <h2 id="nt20-passages" style={{ fontSize: 14, fontWeight: 700, margin: '0 6px 0 0' }}>Passages</h2>
           {l.passages.map((ps) => (
             <a key={ps.ref} href={ps.href} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, flexWrap: 'wrap', minHeight: 44, padding: '10px 14px', border: `1px solid ${dt.cardBorder}`, borderRadius: 10, textDecoration: 'none', color: dt.textPrimary, background: dt.innerBg }}>
               <span style={{ fontFamily: dt.serif, fontSize: 17, whiteSpace: 'nowrap' }}>{ps.ref}</span>
@@ -468,8 +470,13 @@ export function CheckScreen() {
             <p className="nt20-num" style={{ margin: 0, fontSize: 15, fontWeight: 700, color: dt.body }}>Your score: {pct(graded.score)}</p>
             <p className="nt20-num" style={{ ...muted, color: dt.body }}>
               You answered {graded.right} of {c.questions.length} correctly{graded.passed ? `. Best score ${pct(graded.best)}, attempt ${graded.attempt}.` : '.'}
-              {!graded.passed && graded.wrong.length > 0 && <> Look again at {graded.wrong.map((n, i) => <span key={n}>{i ? ', ' : ''}<a href={`#nt20-q${n}`} style={{ color: dt.goldHover, fontWeight: 700 }}>question {n}</a></span>)}.</>}
             </p>
+            {!graded.passed && graded.wrong.length > 0 && (
+              <p style={{ margin: 0, display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap', fontSize: 14.5, color: dt.body }}>
+                Look again at
+                {graded.wrong.map((n) => <a key={n} href={`#nt20-q${n}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, minWidth: 44, padding: '0 12px', borderRadius: 9, border: `1px solid ${dt.inputBorder}`, background: dt.cardBg, color: dt.textPrimary, fontWeight: 700, textDecoration: 'none' }}>Question {n}</a>)}
+              </p>
+            )}
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 4 }}>
               {graded.passed ? (
                 c.next ? <Btn to={to.lesson}>Start Module {c.next.module}</Btn> : <Btn to={to.completion}>See your record</Btn>
@@ -512,8 +519,9 @@ export function CheckScreen() {
                     {q.options.map((o, i) => {
                       const on = answers[q.n] === i;
                       return (
-                        <label key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', minHeight: 44, padding: '10px 12px', borderRadius: 9, border: `1px solid ${on ? dt.brightGold : dt.inputBorder}`, background: on ? '#FBF6EA' : dt.cardBg, cursor: graded ? 'default' : 'pointer', fontSize: 15, lineHeight: 1.45, boxSizing: 'border-box' }}>
-                          <input type="radio" name={`q${q.n}`} checked={on} onChange={() => setPicked({ ...answers, [q.n]: i })} style={{ marginTop: 3, accentColor: dt.gold, width: 16, height: 16, flexShrink: 0 }} />
+                        <label key={i} className="nt20-radio" style={{ display: 'flex', gap: 12, alignItems: 'flex-start', minHeight: 44, padding: '10px 12px', borderRadius: 9, border: `1px solid ${on ? dt.brightGold : dt.inputBorder}`, background: on ? '#FBF6EA' : dt.cardBg, cursor: graded ? 'default' : 'pointer', fontSize: 15, lineHeight: 1.45, boxSizing: 'border-box' }}>
+                          <input type="radio" name={`q${q.n}`} checked={on} onChange={() => setPicked({ ...answers, [q.n]: i })} />
+                          <span aria-hidden className="nt20-dot" />
                           <span style={{ fontWeight: on ? 600 : 400 }}>{o}</span>
                         </label>
                       );
