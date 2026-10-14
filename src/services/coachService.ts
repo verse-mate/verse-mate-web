@@ -364,7 +364,7 @@ export async function fetchCoachReportSummaries(
   try {
     data = await coachRequest<Partial<CoachReportSummaryPage>>(`${reportsPath(coachId)}/summary?limit=${limit}&offset=${offset}`);
   } catch (err) {
-    if (!(err instanceof CoachApiError && err.status === 404)) throw err;
+    if (!(err instanceof CoachApiError && err.status === 404 && err.details.refusal === undefined)) throw err;
     const { reports = [] } = await coachRequest<{ reports?: CoachReport[] }>(reportsPath(coachId));
     data = { items: reports.slice(offset, offset + limit), total: reports.length };
   }

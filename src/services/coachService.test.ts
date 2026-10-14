@@ -109,6 +109,14 @@ describe('coachService', () => {
     expect(calls.map((c) => c.url).some((u) => u.endsWith('/coach/reports'))).toBe(false);
   });
 
+  it("an admin's drill-in into a leader that does not exist keeps the server's refusal, with no fallback", async () => {
+    mockFetch(() =>
+      jsonResponse({ error: 'NOT_FOUND', message: 'Coach not found', details: { refusal: 'unknown-leader' } }, 404),
+    );
+    await expect(fetchCoachReportSummaries(0, 10, 'nobody-here')).rejects.toMatchObject({ status: 404, serverMessage: 'Coach not found' });
+    expect(calls).toHaveLength(1);
+  });
+
   it('reads an unknown report as not found, and a server failure as a failure', async () => {
     mockFetch(() => jsonResponse({ error: 'NOT_FOUND', message: 'Report not found' }, 404));
     await expect(fetchCoachReportDetail('gone')).resolves.toBeNull();
