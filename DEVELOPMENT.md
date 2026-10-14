@@ -67,9 +67,6 @@ git clone https://github.com/verse-mate/versemate.git
 cd versemate
 
 # 2. Install dependencies
-# The @versemate/* packages come from private repos over git+ssh. Without a
-# GitHub SSH key, route them through your HTTPS git credentials once:
-#   git config --global url."https://github.com/".insteadOf ssh://git@github.com/
 bun install
 
 # 3. Start the dev server
