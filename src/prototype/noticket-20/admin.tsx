@@ -20,7 +20,7 @@ export function JoinRequests({ dialog, refusal }: { dialog?: 'approve' | 'declin
     <section aria-labelledby="nt20-requests" style={{ ...panel, marginTop: 28, display: 'grid', gap: 14 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
         <h2 id="nt20-requests" style={h2}>Join requests <span className="nt20-num" style={{ color: dt.textMuted, fontSize: 18 }}>{items.length}</span></h2>
-        <Link to={to.learners} style={{ fontSize: 13.5, fontWeight: 700, color: dt.gold, textDecoration: 'none' }}>All learners →</Link>
+        <Link to={to.learners} style={{ fontSize: 13.5, fontWeight: 700, color: dt.goldHover, textDecoration: 'none', minHeight: 44, display: 'inline-flex', alignItems: 'center' }}>All learners →</Link>
       </div>
       <p style={muted}>People who completed the learning program and asked to join. Approving adds them with the invite form, which sends the usual invitation.</p>
       {notice?.kind === 'duplicate' && (

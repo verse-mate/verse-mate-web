@@ -53,7 +53,14 @@ import RotatingClassesAdmin from '@/components/coach/RotatingClassesAdmin';
 import LikelyDuplicates from '@/components/coach/LikelyDuplicates';
 import ReportReview from '@/components/coach/ReportReview';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
-import { dt, statusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
+import { dt as baseDt, statusBand as baseStatusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
+
+const dt = { ...baseDt, gold: '#7D5915', textLight: '#6B6455', textLighter: '#6B6455', rust: '#8F3F20', green: '#2F6543' };
+const darker = (c: string) => `color-mix(in srgb, ${c} 78%, black)`;
+const statusBand: typeof baseStatusBand = (...a) => {
+  const b = baseStatusBand(...a);
+  return { ...b, c: darker(b.c) };
+};
 import { PipelineCopyTag } from '@/components/coach/CoachUi';
 import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
 import { type RubricContract, bandFloor, statusForScore } from '@/services/rubric';
@@ -152,7 +159,7 @@ export default function AdminHomeScreen({ requests }: { requests: ReactNode }) {
               <NavItem label="Rotating classes" active={view === 'rotating'} onClick={() => setView('rotating')} testId="oversight-nav-rotating" />
               <NavItem label="Duplicates" active={view === 'duplicates'} onClick={() => setView('duplicates')} testId="oversight-nav-duplicates" />
               <NavItem label="Upload" active={false} onClick={() => navigate('/coach/upload')} testId="oversight-nav-upload" />
-              <button type="button" onClick={() => navigate('/coach/settings')} aria-label="Coach settings" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#9A9484', fontSize: 16 }}>⚙</button>
+              <button type="button" onClick={() => navigate('/coach/settings')} aria-label="Coach settings" style={{ background: 'none', border: 'none', cursor: 'pointer', color: dt.textMuted, fontSize: 16, minWidth: 44, minHeight: 44 }}>⚙</button>
               <div style={avatarChip}>{state.userAvatarUrl ? <img src={state.userAvatarUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} /> : initials}</div>
             </div>
           </div>
@@ -266,11 +273,11 @@ function RosterView({
       </div>
 
       {/* Status mix */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 300px', gap: 20, marginBottom: 34 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 20, marginBottom: 34 }}>
         <div style={{ ...innerCard, padding: '20px 22px 12px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 4 }}>
             <span style={{ ...kicker, marginBottom: 0 }}>PROGRAM COMPOSITE · LAST {programLine.length || 3} MONTHS</span>
-            <button type="button" onClick={onViewTrends} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12.5, fontWeight: 700, color: dt.gold }}>View full trends →</button>
+            <button type="button" onClick={onViewTrends} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12.5, fontWeight: 700, color: dt.gold, minHeight: 44, minWidth: 44 }}>View full trends →</button>
           </div>
           {programLine.length > 1 ? (
             <AxisLineChart values={programLine} min={bandFloor(bands, programLine)} max={100} color={dt.gold} labels={programLabels} />
@@ -330,7 +337,7 @@ function RosterRow({ leader, last3, onOpen }: { leader: CoachSummary; last3: num
         <div style={{ fontSize: 13.5, color: dt.textLight, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{leader.group} · {leader.sessionCount} session{leader.sessionCount === 1 ? '' : 's'}</div>
       </div>
       <div>
-        <div style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: '.08em', color: dt.textLighter, marginBottom: 5 }}>LAST 3 CLASSES</div>
+        <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', color: dt.textLighter, marginBottom: 5 }}>LAST 3 CLASSES</div>
         {chips.length > 0 ? (
           <div style={{ display: 'flex', gap: 6 }}>
             {chips.map((s, i) => (
@@ -344,10 +351,10 @@ function RosterRow({ leader, last3, onOpen }: { leader: CoachSummary; last3: num
       <div style={{ textAlign: 'right' }}>
         <div style={{ fontWeight: 700, fontSize: 22, fontVariantNumeric: 'tabular-nums', lineHeight: 1, marginBottom: 6 }}>{score ?? '—'}</div>
         {leader.latest && (
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11.5, fontWeight: 700, color: st.c, background: st.bg, padding: '4px 10px', borderRadius: 99 }}>{leader.latest.status}</div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 700, color: st.c, background: st.bg, padding: '4px 10px', borderRadius: 99 }}>{leader.latest.status}</div>
         )}
       </div>
-      <div style={{ color: '#C4BDAE', fontSize: 16 }}>›</div>
+      <div style={{ color: dt.textMuted, fontSize: 16 }}>›</div>
     </button>
   );
 }
@@ -410,7 +417,7 @@ function LeaderDetailView({
             <div style={{ fontSize: 14, color: dt.textMuted }}>{study}{study ? ' · ' : ''}{sessionCount} session{sessionCount === 1 ? '' : 's'}</div>
           </div>
         </div>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11.5, fontWeight: 700, color: st.c, background: st.bg, padding: '5px 12px', borderRadius: 99 }}>{status}</div>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 700, color: st.c, background: st.bg, padding: '5px 12px', borderRadius: 99 }}>{status}</div>
       </div>
 
       <CoachGate
@@ -433,7 +440,7 @@ function LeaderDetailView({
             {/* Classes + comments */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 11, margin: '6px 0 6px' }}>
               <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: 0 }}>Classes</h3>
-              <span style={{ fontSize: 11.5, fontWeight: 700, color: dt.gold2, background: dt.goldChip, padding: '4px 10px', borderRadius: 99 }}>Comment to coach</span>
+              <span style={{ fontSize: 12, fontWeight: 700, color: dt.gold2, background: dt.goldChip, padding: '4px 10px', borderRadius: 99 }}>Comment to coach</span>
             </div>
             <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>Leave coaching notes on a session, {firstName(name)} sees them on their session report.</p>
 
@@ -467,9 +474,9 @@ function LeaderDetailView({
 
             {totalPages > 1 && (
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 14 }}>
-                <button type="button" onClick={() => turnTo(page - 1)} style={{ background: 'none', border: 'none', cursor: page > 0 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page > 0 ? dt.textPrimary : '#C4BDAE' }}>← Newer</button>
+                <button type="button" onClick={() => turnTo(page - 1)} style={{ background: 'none', border: 'none', cursor: page > 0 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page > 0 ? dt.textPrimary : dt.textMuted }}>← Newer</button>
                 <span style={{ fontSize: 12.5, color: dt.textLight }}>Page {page + 1} of {totalPages} · {sessionCount} classes</span>
-                <button type="button" onClick={() => turnTo(page + 1)} style={{ background: 'none', border: 'none', cursor: page < totalPages - 1 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page < totalPages - 1 ? dt.textPrimary : '#C4BDAE' }}>Older →</button>
+                <button type="button" onClick={() => turnTo(page + 1)} style={{ background: 'none', border: 'none', cursor: page < totalPages - 1 ? 'pointer' : 'default', fontSize: 13, fontWeight: 700, color: page < totalPages - 1 ? dt.textPrimary : dt.textMuted }}>Older →</button>
               </div>
             )}
           </>
@@ -486,7 +493,7 @@ function StrengthsGrowth({ summary }: { summary: LeaderMonthlySummary }) {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 14, marginBottom: 28 }}>
       <div style={{ background: dt.greenBg, borderRadius: 12, padding: '16px 18px' }}>
-        <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', color: dt.green, marginBottom: 10 }}>STRENGTHS</div>
+        <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', color: dt.green, marginBottom: 10 }}>STRENGTHS</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
           {strengths.map((s, i) => (
             <div key={i} style={{ display: 'flex', gap: 9, fontSize: 13, lineHeight: 1.5, color: dt.darkBorder }}><span style={{ color: dt.green, flex: 'none', fontWeight: 700 }}>↑</span><span>{s.text}</span></div>
@@ -494,7 +501,7 @@ function StrengthsGrowth({ summary }: { summary: LeaderMonthlySummary }) {
         </div>
       </div>
       <div style={{ background: dt.rustBg, borderRadius: 12, padding: '16px 18px' }}>
-        <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.08em', color: dt.rust, marginBottom: 10 }}>GROWTH AREAS</div>
+        <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', color: dt.rust, marginBottom: 10 }}>GROWTH AREAS</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
           {growth.map((g, i) => (
             <div key={i} style={{ display: 'flex', gap: 9, fontSize: 13, lineHeight: 1.5, color: dt.darkBorder }}><span style={{ color: dt.rust, flex: 'none', fontWeight: 700 }}>↓</span><span>{g.text}</span></div>
@@ -550,7 +557,7 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
       <div style={{ ...innerCard, padding: '20px 22px 12px', marginBottom: 16 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, marginBottom: 6 }}>
           <span style={{ ...kicker, marginBottom: 0 }}>SESSION SCORE OVER TIME</span>
-          <span style={{ fontSize: 11.5, color: dt.textLight }}>Bands · {(rubric?.statusBands ?? []).map((b) => (b.min > 0 ? `${b.emoji}${b.min}+` : b.emoji)).join(' · ')}</span>
+          <span style={{ fontSize: 12, color: dt.textLight }}>Bands · {(rubric?.statusBands ?? []).map((b) => (b.min > 0 ? `${b.emoji}${b.min}+` : b.emoji)).join(' · ')}</span>
         </div>
         {trendValues.length > 0 ? <BandedTrend values={trendValues} labels={trendLabels} bands={rubric?.statusBands ?? []} /> : <div style={{ padding: '30px 0', textAlign: 'center', color: dt.textLight, fontSize: 13 }}>Trend appears after a couple of scored sessions.</div>}
       </div>
@@ -566,7 +573,7 @@ function Development({ trends, latest, monthly }: { trends: CoachTrends | undefi
         </div>
         <div style={innerCard}>
           <div style={{ ...kicker, marginBottom: clustersArePartial ? 4 : 14 }}>CLUSTER MIX · {monthLabel(currentMonth()).toUpperCase()}</div>
-          {clustersArePartial && <div style={{ fontSize: 11.5, color: dt.textLight, marginBottom: 12 }}>Sessions so far, updates as the month fills in.</div>}
+          {clustersArePartial && <div style={{ fontSize: 12, color: dt.textLight, marginBottom: 12 }}>Sessions so far, updates as the month fills in.</div>}
           {clusters.length > 0 ? clusters.map((c) => (
             <div key={c.name} data-testid={`oversight-cluster-mix-${c.name}`} style={{ marginBottom: 14 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, marginBottom: 5 }}><span style={{ color: dt.textMuted }}>{c.name}</span><span style={{ fontWeight: 700 }}>{c.pct == null ? 'N/A' : `${c.pct}%`}</span></div>
@@ -663,14 +670,14 @@ function ClassCardBody({
         </div>
         {micro && <div style={{ fontSize: 12.5, color: dt.body, lineHeight: 1.5, marginTop: 11 }}>{micro}</div>}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center', marginTop: 11 }}>
-          <span style={{ fontSize: 11.5, color: dt.body }}><strong style={{ color: dt.textPrimary }}>Strongest</strong></span>
+          <span style={{ fontSize: 12, color: dt.body }}><strong style={{ color: dt.textPrimary }}>Strongest</strong></span>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '.03em', color: dt.green, background: dt.greenBg, padding: '3px 8px', borderRadius: 5 }}>↑ {strong}</span>
-          <span style={{ fontSize: 11.5, color: dt.body, marginLeft: 4 }}><strong style={{ color: dt.textPrimary }}>Growth edge</strong></span>
+          <span style={{ fontSize: 12, color: dt.body, marginLeft: 4 }}><strong style={{ color: dt.textPrimary }}>Growth edge</strong></span>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '.03em', color: dt.rust, background: dt.rustBg, padding: '3px 8px', borderRadius: 5 }}>↓ {weak}</span>
         </div>
         {improveList.length > 0 && (
           <div style={{ marginTop: 12, paddingTop: 11, borderTop: `1px solid ${dt.rowDivider}` }}>
-            <div style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: '.05em', color: dt.rust, textTransform: 'uppercase', marginBottom: 8 }}>Key improvement areas</div>
+            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.05em', color: dt.rust, textTransform: 'uppercase', marginBottom: 8 }}>Key improvement areas</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
               {improveList.map((d) => (
                 <div key={d.n} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
@@ -893,13 +900,13 @@ function TrendsDetail({
       <div style={{ background: dt.darkBg, color: dt.darkText, borderRadius: 14, padding: '26px 30px', marginBottom: 22 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 20, flexWrap: 'wrap' }}>
           <div>
-            <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.12em', color: dt.brightGold, marginBottom: 8 }}>PROGRAM-WIDE MONTHLY SUMMARY</div>
+            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', color: dt.brightGold, marginBottom: 8 }}>PROGRAM-WIDE MONTHLY SUMMARY</div>
             <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 28, margin: '0 0 6px' }}>{data.monthLabel}</h3>
             <div style={{ fontSize: 13.5, color: dt.darkMuted }}>{data.program.sessions} sessions · {data.program.activeLeaders} leaders evaluated</div>
           </div>
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontFamily: dt.serif, fontSize: 40, lineHeight: 1, color: dt.darkText }}>{composite != null ? composite.toFixed(1) : '—'}<span style={{ fontSize: 18, color: dt.darkMuted2 }}> / 100</span></div>
-            <div style={{ display: 'inline-block', marginTop: 8, fontSize: 11, fontWeight: 700, letterSpacing: '.05em', color: band.c, background: band.bg, padding: '4px 10px', borderRadius: 6 }}>{programStatus}</div>
+            <div style={{ display: 'inline-block', marginTop: 8, fontSize: 12, fontWeight: 700, letterSpacing: '.05em', color: band.c, background: band.bg, padding: '4px 10px', borderRadius: 6 }}>{programStatus}</div>
             {data.program.delta != null && <div style={{ fontSize: 12.5, color: '#9FCBA8', marginTop: 6 }}>{data.program.delta >= 0 ? '▲ ' : '▼ '}{Math.abs(data.program.delta).toFixed(1)} vs. prior month</div>}
           </div>
         </div>
@@ -925,7 +932,7 @@ function TrendsDetail({
               const on = idx >= 0;
               return (
                 <button key={l.id} type="button" onClick={() => onToggleCompare(l.id)} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, cursor: 'pointer', fontSize: 12.5, fontWeight: 600, padding: '6px 11px', borderRadius: 99, background: on ? dt.darkBg : dt.innerBg, color: on ? dt.goldChip : dt.textMuted, border: `1px solid ${on ? dt.darkBg : dt.cardBorder}` }}>
-                  <span style={{ width: 9, height: 9, borderRadius: '50%', background: on ? CLUSTER_PALETTE[idx % CLUSTER_PALETTE.length] : '#C4BDAE' }} />{l.name}
+                  <span style={{ width: 9, height: 9, borderRadius: '50%', background: on ? CLUSTER_PALETTE[idx % CLUSTER_PALETTE.length] : dt.textMuted }} />{l.name}
                 </button>
               );
             })}
@@ -970,7 +977,7 @@ function TrendsDetail({
                     <div key={code} style={{ textAlign: 'right', color: dt.textMuted, fontVariantNumeric: 'tabular-nums' }}>{cl[code.toLowerCase()] ?? '—'}</div>
                   ))}
                   <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>{l.avgScore?.toFixed(1) ?? '—'}</div>
-                  <div style={{ justifySelf: 'end', fontSize: 9.5, fontWeight: 700, padding: '4px 7px', borderRadius: 5, color: b.c, background: b.bg }}>{l.status}</div>
+                  <div style={{ justifySelf: 'end', fontSize: 12, fontWeight: 700, padding: '4px 7px', borderRadius: 5, color: b.c, background: b.bg }}>{l.status}</div>
                 </button>
               );
             })}
@@ -995,7 +1002,7 @@ function TrendsDetail({
       {/* Heat map */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 11, margin: '0 0 6px' }}>
         <h3 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 22, margin: 0 }}>Dimension heat map</h3>
-        <span style={{ fontSize: 11.5, fontWeight: 600, color: dt.textLight }}>{(rubric?.dimensionBands ?? []).map((b) => `${b.label} ≥ ${b.min}`).join(' · ')}</span>
+        <span style={{ fontSize: 12, fontWeight: 600, color: dt.textLight }}>{(rubric?.dimensionBands ?? []).map((b) => `${b.label} ≥ ${b.min}`).join(' · ')}</span>
       </div>
       <p style={{ margin: '0 0 12px', fontSize: 12.5, color: dt.textLight }}>Tap any <strong style={{ color: dt.gold }}>D#</strong> column header to see what it measures.</p>
       <div style={{ overflowX: 'auto', border: `1px solid ${dt.cardBorder}`, borderRadius: 12, marginBottom: 30 }}>
@@ -1013,7 +1020,7 @@ function TrendsDetail({
               {l.dimensions.map((d) => {
                 const v = d.avg;
                 const cc = cellColor(v, rubric);
-                return <div key={d.n} data-testid={`oversight-heat-${l.id}-${d.n}`} style={{ textAlign: 'center', fontSize: 11, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 4 }}>{v == null ? 'N/A' : v.toFixed(1)}</div>;
+                return <div key={d.n} data-testid={`oversight-heat-${l.id}-${d.n}`} style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: cc.c, background: cc.bg, padding: '5px 0', borderRadius: 4 }}>{v == null ? 'N/A' : v.toFixed(1)}</div>;
               })}
             </div>
           ))}
@@ -1059,7 +1066,7 @@ function TrendsDetail({
       {/* Program initiatives */}
       {data.narrative?.executiveSummary && data.narrative.executiveSummary.length > 1 ? (
         <div style={{ background: dt.goldChip, borderRadius: 13, padding: '22px 24px' }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', color: dt.gold, marginBottom: 12 }}>RECOMMENDED PROGRAM INITIATIVES</div>
+          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', color: dt.gold, marginBottom: 12 }}>RECOMMENDED PROGRAM INITIATIVES</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
             {data.narrative.executiveSummary.slice(1).map((n, i) => (
               <div key={i} style={{ display: 'flex', gap: 11, fontSize: 14, lineHeight: 1.55, color: dt.body }}><span style={{ color: dt.gold, fontWeight: 700, flex: 'none' }}>→</span><span>{n}</span></div>
@@ -1184,14 +1191,14 @@ function InviteModal({ onClose, onAdded }: { onClose: () => void; onAdded: (id: 
 
 function NavItem({ label, active, onClick, testId }: { label: string; active: boolean; onClick: () => void; testId: string }) {
   return (
-    <button type="button" onClick={onClick} data-testid={testId} style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', color: active ? dt.textPrimary : dt.textMuted, fontWeight: 500 }}>{label}</button>
+    <button type="button" onClick={onClick} data-testid={testId} style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', color: active ? dt.textPrimary : dt.textMuted, fontWeight: 500, minHeight: 44, padding: '0 2px' }}>{label}</button>
   );
 }
 
 function StatBox({ label, labelC, children }: { label: string; labelC: string; children: React.ReactNode }) {
   return (
     <div style={{ minWidth: 180, background: dt.innerBg, border: `1px solid ${dt.cardBorder}`, borderRadius: 12, padding: '16px 18px' }}>
-      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', color: labelC, marginBottom: 8 }}>{label}</div>
+      <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.04em', color: labelC, marginBottom: 8 }}>{label}</div>
       {children}
     </div>
   );
@@ -1363,13 +1370,13 @@ const logoMark: React.CSSProperties = {
 };
 
 const avatarChip: React.CSSProperties = {
-  width: 34, height: 34, borderRadius: '50%', background: '#E8E8E6',
+  width: '2.6em', height: '2.6em', borderRadius: '50%', background: '#E8E8E6',
   display: 'flex', alignItems: 'center', justifyContent: 'center',
   fontWeight: 700, color: dt.textMuted, fontSize: 13, overflow: 'hidden',
 };
 
 const kicker: React.CSSProperties = {
-  fontSize: 11, fontWeight: 700, letterSpacing: '.1em', color: dt.gold, marginBottom: 10,
+  fontSize: 12, fontWeight: 700, letterSpacing: '.04em', color: dt.gold, marginBottom: 10,
 };
 
 const innerCard: React.CSSProperties = {
@@ -1403,7 +1410,7 @@ const leaderNameButton: React.CSSProperties = {
 
 const goldPill: React.CSSProperties = {
   background: dt.brightGold, color: dt.textPrimary, fontWeight: 700, fontSize: 14,
-  padding: '11px 18px', borderRadius: 10, border: 'none', cursor: 'pointer',
+  padding: '11px 18px', minHeight: 44, borderRadius: 10, border: 'none', cursor: 'pointer',
 };
 
 const backLink: React.CSSProperties = {
