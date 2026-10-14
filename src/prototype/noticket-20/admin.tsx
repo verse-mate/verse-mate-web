@@ -167,8 +167,8 @@ export function AdminProgramScreen() {
               <Row key={m.id} first={i === 0}>
                 <MoveButtons label={`module ${m.n}`} first={i === 0} last={i === modules.length - 1} />
                 <Link to={to.module} style={{ flex: '1 1 280px', minWidth: 0, textDecoration: 'none', color: dt.textPrimary }}>
-                  <span style={{ display: 'block', fontWeight: 600, fontSize: 15.5, overflowWrap: 'anywhere' }}>
-                    <span className="nt20-num" style={{ color: dt.gold, marginRight: 8, fontFamily: dt.serif }}>{m.n}</span>{' '}
+                  <span style={{ display: 'flex', gap: 8, fontWeight: 600, fontSize: 15.5, overflowWrap: 'anywhere' }}>
+                    <span className="nt20-num" style={{ color: dt.goldHover, fontFamily: dt.serif, flexShrink: 0 }}>{m.n}</span>{' '}
                     <span>{m.title}</span>
                   </span>
                   <span className="nt20-num" style={{ display: 'block', fontSize: 13, color: dt.textMuted, marginTop: 2 }}>

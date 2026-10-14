@@ -16,10 +16,11 @@
  * useAdminClasses / useAddLeader / useAddNote).
  */
 
-import { type ReactNode, useEffect, useMemo, useState } from 'react';
+import { lazy, type ReactNode, Suspense, useEffect, useMemo, useState } from 'react';
 import { to } from './ui';
+
+const toast = { success: (message: string) => void import('sonner').then((m) => m.toast.success(message)) };
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'sonner';
 import { useApp } from '@/contexts/AppContext';
 import {
   useAdminCoaches,
@@ -47,10 +48,10 @@ import type {
 import { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
 import PendingReshares from '@/components/coach/PendingReshares';
-import PipelineHealth from '@/components/coach/PipelineHealth';
-import ParallelRunComparison from '@/components/coach/ParallelRunComparison';
-import RotatingClassesAdmin from '@/components/coach/RotatingClassesAdmin';
-import LikelyDuplicates from '@/components/coach/LikelyDuplicates';
+const PipelineHealth = lazy(() => import('@/components/coach/PipelineHealth'));
+const ParallelRunComparison = lazy(() => import('@/components/coach/ParallelRunComparison'));
+const RotatingClassesAdmin = lazy(() => import('@/components/coach/RotatingClassesAdmin'));
+const LikelyDuplicates = lazy(() => import('@/components/coach/LikelyDuplicates'));
 import ReportReview from '@/components/coach/ReportReview';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt as baseDt, statusBand as baseStatusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
@@ -170,10 +171,12 @@ export default function AdminHomeScreen({ requests }: { requests: ReactNode }) {
             {view === 'leader' && selLeader && <LeaderDetailView leaderId={selLeader} summary={roster.find((r) => r.id === selLeader)} onBack={() => setView('leaders')} />}
             {view === 'trends' && <TrendsView onOpenLeader={openLeader} onBack={() => setView('leaders')} />}
             {view === 'links' && <ClassLinksView roster={roster} onBack={() => setView('leaders')} onInvite={() => setInvite(true)} />}
-            {view === 'pipeline' && <PipelineHealth />}
-            {view === 'parallel-run' && <ParallelRunComparison />}
-            {view === 'rotating' && <RotatingClassesAdmin />}
-            {view === 'duplicates' && <LikelyDuplicates />}
+            <Suspense fallback={null}>
+              {view === 'pipeline' && <PipelineHealth />}
+              {view === 'parallel-run' && <ParallelRunComparison />}
+              {view === 'rotating' && <RotatingClassesAdmin />}
+              {view === 'duplicates' && <LikelyDuplicates />}
+            </Suspense>
           </CoachGate>
         </div>
       </div>
