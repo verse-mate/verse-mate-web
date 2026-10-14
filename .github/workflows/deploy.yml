@@ -47,6 +47,10 @@ jobs:
           bun-version: 1.2.23
 
       - name: Install dependencies
+        env:
+          GIT_CONFIG_COUNT: 1
+          GIT_CONFIG_KEY_0: url.https://x-access-token:${{ secrets.GH_PAT }}@github.com/.insteadOf
+          GIT_CONFIG_VALUE_0: ssh://git@github.com/
         run: bun install --frozen-lockfile
 
       - name: Type-check
