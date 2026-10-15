@@ -61,6 +61,14 @@ describe('the analytics client', () => {
     );
   });
 
+  it('reports a rejection that is not an Error without its contents', async () => {
+    const { unmount } = await mount('/read');
+    window.onunhandledrejection?.call(window, { reason: { body: 'secret body' } } as PromiseRejectionEvent);
+    unmount();
+    expect(captureException.mock.calls[0][0].message).toBe('Non-Error rejection: object');
+    expect(JSON.stringify(captureException.mock.calls)).not.toContain('secret body');
+  });
+
   it('reports an error thrown while rendering', async () => {
     const quiet = vi.spyOn(console, 'error').mockImplementation(() => {});
     const Broken = () => {

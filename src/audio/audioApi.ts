@@ -127,7 +127,11 @@ export async function requestAudio(args: {
     { signal: args.signal },
   );
   const body =
-    res.status === 204 ? {} : ((await res.json()) as AudioResponse);
+    res.status === 204
+      ? {}
+      : ((await res.json().catch(() => {
+          throw new Error('Audio request returned invalid JSON');
+        })) as AudioResponse);
   return { status: res.status, body };
 }
 
@@ -198,7 +202,9 @@ export async function fetchProgress(
 ): Promise<ResumeProgress | null> {
   const res = await fetchWithAuth(progressUrl(explanationId));
   if (res.status === 404 || !res.ok) return null;
-  return (await res.json()) as ResumeProgress;
+  return (await res.json().catch(() => {
+    throw new Error('Audio progress returned invalid JSON');
+  })) as ResumeProgress;
 }
 
 export async function saveProgress(args: {

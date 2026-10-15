@@ -100,12 +100,16 @@ function keyName(key: readonly unknown[] | undefined): string | undefined {
   return typeof second === 'string' && KEY_WORD.test(second) ? `${first}/${second}` : first;
 }
 
+export function toReportableError(value: unknown): Error {
+  return value instanceof Error ? value : new Error(`Non-Error rejection: ${typeof value}`);
+}
+
 export function captureRequestError(
   error: unknown,
   key: { query_key?: readonly unknown[]; mutation_key?: readonly unknown[] },
 ): void {
   if (shouldExcludeError(error)) return;
-  analytics.captureException(error instanceof Error ? error : new Error(`Non-Error rejection: ${typeof error}`), {
+  analytics.captureException(toReportableError(error), {
     ...collectErrorContext(),
     source: 'react-query',
     ...(key.query_key && { query_key: keyName(key.query_key) }),

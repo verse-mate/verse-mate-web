@@ -4,7 +4,7 @@ import { Component, type ReactNode, useCallback, useEffect, useRef } from 'react
 import { useLocation } from 'react-router-dom';
 import { analytics } from '@/lib/analytics';
 import { scrubEvent, scrubNetworkRequest, stripQuery } from '@/lib/analyticsPrivacy';
-import { collectErrorContext, shouldExcludeError } from '@/lib/errorFilters';
+import { collectErrorContext, shouldExcludeError, toReportableError } from '@/lib/errorFilters';
 
 const POSTHOG_KEY = (import.meta.env.VITE_POSTHOG_KEY as string | undefined) || '';
 const POSTHOG_HOST =
@@ -76,9 +76,9 @@ class RenderErrorReporter extends Component<{ children: ReactNode }, { failed: b
     return { failed: true };
   }
 
-  componentDidCatch(error: Error) {
+  componentDidCatch(error: unknown) {
     if (shouldExcludeError(error)) return;
-    analytics.captureException(error, { ...collectErrorContext(), source: 'error-boundary' });
+    analytics.captureException(toReportableError(error), { ...collectErrorContext(), source: 'error-boundary' });
   }
 
   render() {
@@ -133,7 +133,7 @@ function ErrorHandlerInstaller({ errorHandlersSet }: ErrorHandlerInstallerProps)
   );
 
   const handleUnhandledRejection = useCallback((event: PromiseRejectionEvent) => {
-    const error = event.reason instanceof Error ? event.reason : new Error(String(event.reason));
+    const error = toReportableError(event.reason);
     if (shouldExcludeError(error)) return;
     analytics.captureException(error, {
       ...collectErrorContext(),

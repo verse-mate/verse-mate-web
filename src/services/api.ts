@@ -126,7 +126,9 @@ export async function fetchWithAuth(
   if (token) headers.set('Authorization', `Bearer ${token}`);
 
   const res = await fetch(url, { ...init, headers }).catch((err: unknown) => {
-    throw new ApiError(0, null, `Network error: ${init.method ?? 'GET'} ${stripQuery(url)}: ${String(err)}`);
+    if ((err as Error)?.name === 'AbortError') throw err;
+    const path = stripQuery(url).replace(/^https?:\/\/[^/]+/, '');
+    throw new ApiError(0, null, `Network error: ${init.method ?? 'GET'} ${path} failed: ${String(err)}`);
   });
 
   if (
@@ -233,7 +235,7 @@ export async function request<T = unknown>(path: string, opts: RequestOptions = 
       body: body !== undefined ? JSON.stringify(body) : undefined,
     });
   } catch (err) {
-    throw new ApiError(0, null, `Network error: ${method} ${stripQuery(path)}: ${String(err)}`);
+    throw new ApiError(0, null, `Network error: ${method} ${stripQuery(path)} failed: ${String(err)}`);
   }
 
   // Try token refresh on 401 (once). Don't refresh on the auth endpoints
