@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes, Navigate, Outlet } from "react-router-dom";
 import { useTrackPreAuthLocation } from "@/hooks/useTrackPreAuthLocation";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -45,8 +45,17 @@ import CoachFeedbackScreen from "@/pages/CoachFeedbackScreen";
 import CoachLeaderScreen from "@/pages/CoachLeaderScreen";
 import NotFound from "@/pages/NotFound";
 import { REPLAY_BLOCK_CLASS } from "@/lib/analyticsPrivacy";
+import { captureRequestError } from "@/lib/errorFilters";
 
-const queryClient = new QueryClient();
+export const queryClient = new QueryClient({
+  queryCache: new QueryCache({
+    onError: (error, query) => captureRequestError(error, { query_key: query.queryKey }),
+  }),
+  mutationCache: new MutationCache({
+    onError: (error, _variables, _context, mutation) =>
+      captureRequestError(error, { mutation_key: mutation.options.mutationKey }),
+  }),
+});
 
 function ReplayBlocked() {
   return (

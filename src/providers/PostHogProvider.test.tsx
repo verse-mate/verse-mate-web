@@ -2,16 +2,26 @@ import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-const init = vi.fn();
-const capture = vi.fn();
-vi.mock('posthog-js', () => ({ default: { init, capture, __loaded: true } }));
-vi.mock('posthog-js/react', () => ({ PostHogProvider: ({ children }: { children: React.ReactNode }) => children }));
+const { client, init, capture, captureException } = vi.hoisted(() => {
+  const client = { __loaded: false } as Record<string, unknown>;
+  const init = vi.fn();
+  init.mockImplementation(() => {
+    client.__loaded = true;
+  });
+  const capture = vi.fn();
+  const captureException = vi.fn();
+  Object.assign(client, { init, capture, captureException });
+  return { client, init, capture, captureException };
+});
+vi.mock('posthog-js', () => ({ default: client }));
 
 describe('the analytics client', () => {
   beforeEach(() => {
     vi.resetModules();
-    init.mockReset();
+    client.__loaded = false;
+    init.mockClear();
     capture.mockReset();
+    captureException.mockReset();
     vi.stubEnv('VITE_POSTHOG_KEY', 'test-key');
   });
 
@@ -20,16 +30,54 @@ describe('the analytics client', () => {
     window.history.replaceState({}, '', '/');
   });
 
-  async function mount(url: string) {
+  async function mount(url: string, child: React.ReactNode = <div />) {
     const { PostHogProvider } = await import('./PostHogProvider');
-    render(
+    return render(
       <MemoryRouter initialEntries={[url]}>
-        <PostHogProvider>
-          <div />
-        </PostHogProvider>
+        <PostHogProvider>{child}</PostHogProvider>
       </MemoryRouter>,
     );
   }
+
+  it('reports an uncaught error once PostHog has started', async () => {
+    const { unmount } = await mount('/read');
+    window.onerror?.('boom', 'https://app.test/main.js', 1, 2, new Error('NOTICKET-21 uncaught'));
+    unmount();
+    expect(captureException).toHaveBeenCalledWith(
+      expect.objectContaining({ message: 'NOTICKET-21 uncaught' }),
+      expect.objectContaining({ source: 'window-error' }),
+    );
+  });
+
+  it('reports an unhandled promise rejection once PostHog has started', async () => {
+    const { unmount } = await mount('/read');
+    window.onunhandledrejection?.call(window, {
+      reason: new Error('NOTICKET-21 rejected'),
+    } as PromiseRejectionEvent);
+    unmount();
+    expect(captureException).toHaveBeenCalledWith(
+      expect.objectContaining({ message: 'NOTICKET-21 rejected' }),
+      expect.objectContaining({ source: 'unhandled-promise' }),
+    );
+  });
+
+  it('reports an error thrown while rendering', async () => {
+    const quiet = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const Broken = () => {
+      throw new Error('NOTICKET-21 render');
+    };
+    await mount('/read', <Broken />);
+    quiet.mockRestore();
+    expect(captureException).toHaveBeenCalledWith(
+      expect.objectContaining({ message: 'NOTICKET-21 render' }),
+      expect.objectContaining({ source: 'error-boundary' }),
+    );
+  });
+
+  it('sends the first pageview of the visit', async () => {
+    await mount('/read');
+    expect(capture).toHaveBeenCalledWith('$pageview', expect.objectContaining({ pathname: '/read' }));
+  });
 
   it('scrubs events and replay network entries before they leave the browser', async () => {
     await mount('/coach');

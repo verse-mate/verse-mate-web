@@ -1,5 +1,5 @@
 import posthog from 'posthog-js';
-import { PostHogProvider as PHProvider } from 'posthog-js/react';
+import { PostHogErrorBoundary, PostHogProvider as PHProvider } from 'posthog-js/react';
 import { type ReactNode, useCallback, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { analytics } from '@/lib/analytics';
@@ -15,74 +15,53 @@ interface PostHogProviderProps {
   children: ReactNode;
 }
 
-/**
- * Initializes PostHog client-side analytics:
- *  - automatic pageview tracking on every React Router location change
- *    (posthog-js's default capture_pageview only fires on full reloads)
- *  - global error handlers (window.onerror + unhandledrejection) with
- *    the same exclusion filters as the monorepo's frontend-base
- *  - initial anonymous user properties (language, country)
- *  - "platform: web" super property on every event
- *
- * No-ops entirely when VITE_POSTHOG_KEY is not set, so dev builds don't
- * pollute production analytics.
- */
+if (POSTHOG_KEY && typeof window !== 'undefined' && !posthog.__loaded) {
+  posthog.init(POSTHOG_KEY, {
+    api_host: POSTHOG_HOST,
+    capture_pageview: false,
+    capture_pageleave: true,
+    disable_session_recording: !POSTHOG_SESSION_REPLAY,
+    session_recording: {
+      maskAllInputs: true,
+      recordBody: false,
+      recordHeaders: false,
+      maskCapturedNetworkRequestFn: scrubNetworkRequest,
+    },
+    enable_recording_console_log: false,
+    mask_personal_data_properties: true,
+    custom_personal_data_properties: ['accessToken', 'refreshToken', 'state', 's'],
+    before_send: scrubEvent,
+    advanced_disable_feature_flags: true,
+    persistence: 'localStorage+cookie',
+    loaded: (instance) => {
+      if (import.meta.env.DEV) instance.debug();
+      instance.register({ platform: 'web' });
+      const language = navigator.language;
+      const localeParts = language.split('-');
+      const country =
+        localeParts.length > 1 ? localeParts[1].toUpperCase() : language.toUpperCase().slice(0, 2);
+      analytics.setUserProperties({
+        language_setting: language,
+        country,
+        is_registered: false,
+      });
+    },
+  });
+}
+
 export function PostHogProvider({ children }: PostHogProviderProps) {
-  const initialized = useRef(false);
-  const propertiesSet = useRef(false);
   const errorHandlersSet = useRef(false);
-
-  useEffect(() => {
-    if (initialized.current || typeof window === 'undefined') return;
-    if (!POSTHOG_KEY) return;
-
-    posthog.init(POSTHOG_KEY, {
-      api_host: POSTHOG_HOST,
-      capture_pageview: false, // captured manually below on route change
-      capture_pageleave: true,
-      disable_session_recording: !POSTHOG_SESSION_REPLAY,
-      session_recording: {
-        maskAllInputs: true,
-        recordBody: false,
-        recordHeaders: false,
-        maskCapturedNetworkRequestFn: scrubNetworkRequest,
-      },
-      enable_recording_console_log: false,
-      mask_personal_data_properties: true,
-      custom_personal_data_properties: ['accessToken', 'refreshToken', 'state', 's'],
-      before_send: scrubEvent,
-      advanced_disable_feature_flags: true,
-      persistence: 'localStorage+cookie',
-      loaded: (instance) => {
-        if (import.meta.env.DEV) instance.debug();
-        instance.register({ platform: 'web' });
-
-        if (!propertiesSet.current) {
-          const language = navigator.language;
-          const localeParts = language.split('-');
-          const country =
-            localeParts.length > 1
-              ? localeParts[1].toUpperCase()
-              : language.toUpperCase().slice(0, 2);
-
-          analytics.setUserProperties({
-            language_setting: language,
-            country,
-            is_registered: false,
-          });
-          propertiesSet.current = true;
-        }
-      },
-    });
-
-    initialized.current = true;
-  }, []);
 
   return (
     <PHProvider client={posthog}>
       <PageviewTracker />
       <ErrorHandlerInstaller errorHandlersSet={errorHandlersSet} />
-      {children}
+      <PostHogErrorBoundary
+        fallback={<></>}
+        additionalProperties={() => ({ ...collectErrorContext(), source: 'error-boundary' })}
+      >
+        {children}
+      </PostHogErrorBoundary>
     </PHProvider>
   );
 }
