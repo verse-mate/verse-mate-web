@@ -1,10 +1,10 @@
 import posthog from 'posthog-js';
 import { PostHogProvider as PHProvider } from 'posthog-js/react';
-import { type ReactNode, useCallback, useEffect, useRef } from 'react';
+import { Component, type ReactNode, useCallback, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { analytics } from '@/lib/analytics';
 import { scrubEvent, scrubNetworkRequest, stripQuery } from '@/lib/analyticsPrivacy';
-import { collectErrorContext, shouldExcludeError } from '@/lib/errorFilters';
+import { collectErrorContext, shouldExcludeError, toReportableError } from '@/lib/errorFilters';
 
 const POSTHOG_KEY = (import.meta.env.VITE_POSTHOG_KEY as string | undefined) || '';
 const POSTHOG_HOST =
@@ -16,75 +16,74 @@ interface PostHogProviderProps {
 }
 
 /**
- * Initializes PostHog client-side analytics:
- *  - automatic pageview tracking on every React Router location change
- *    (posthog-js's default capture_pageview only fires on full reloads)
- *  - global error handlers (window.onerror + unhandledrejection) with
- *    the same exclusion filters as the monorepo's frontend-base
- *  - initial anonymous user properties (language, country)
- *  - "platform: web" super property on every event
- *
- * No-ops entirely when VITE_POSTHOG_KEY is not set, so dev builds don't
- * pollute production analytics.
+ * PostHog starts when this module loads, not in an effect: React runs a
+ * parent's effects after its children's, so an init in this provider's
+ * effect left the error handlers and the first pageview below looking at a
+ * client that was not loaded yet. No-ops when VITE_POSTHOG_KEY is not set,
+ * so dev builds don't pollute production analytics.
  */
+if (POSTHOG_KEY && typeof window !== 'undefined' && !posthog.__loaded) {
+  posthog.init(POSTHOG_KEY, {
+    api_host: POSTHOG_HOST,
+    capture_pageview: false,
+    capture_pageleave: true,
+    disable_session_recording: !POSTHOG_SESSION_REPLAY,
+    session_recording: {
+      maskAllInputs: true,
+      recordBody: false,
+      recordHeaders: false,
+      maskCapturedNetworkRequestFn: scrubNetworkRequest,
+    },
+    enable_recording_console_log: false,
+    mask_personal_data_properties: true,
+    custom_personal_data_properties: ['accessToken', 'refreshToken', 'state', 's'],
+    before_send: scrubEvent,
+    advanced_disable_feature_flags: true,
+    capture_exceptions: false,
+    persistence: 'localStorage+cookie',
+    loaded: (instance) => {
+      if (import.meta.env.DEV) instance.debug();
+      instance.register({ platform: 'web' });
+      const language = navigator.language;
+      const localeParts = language.split('-');
+      const country =
+        localeParts.length > 1 ? localeParts[1].toUpperCase() : language.toUpperCase().slice(0, 2);
+      analytics.setUserProperties({
+        language_setting: language,
+        country,
+        is_registered: false,
+      });
+    },
+  });
+}
+
 export function PostHogProvider({ children }: PostHogProviderProps) {
-  const initialized = useRef(false);
-  const propertiesSet = useRef(false);
   const errorHandlersSet = useRef(false);
-
-  useEffect(() => {
-    if (initialized.current || typeof window === 'undefined') return;
-    if (!POSTHOG_KEY) return;
-
-    posthog.init(POSTHOG_KEY, {
-      api_host: POSTHOG_HOST,
-      capture_pageview: false, // captured manually below on route change
-      capture_pageleave: true,
-      disable_session_recording: !POSTHOG_SESSION_REPLAY,
-      session_recording: {
-        maskAllInputs: true,
-        recordBody: false,
-        recordHeaders: false,
-        maskCapturedNetworkRequestFn: scrubNetworkRequest,
-      },
-      enable_recording_console_log: false,
-      mask_personal_data_properties: true,
-      custom_personal_data_properties: ['accessToken', 'refreshToken', 'state', 's'],
-      before_send: scrubEvent,
-      advanced_disable_feature_flags: true,
-      persistence: 'localStorage+cookie',
-      loaded: (instance) => {
-        if (import.meta.env.DEV) instance.debug();
-        instance.register({ platform: 'web' });
-
-        if (!propertiesSet.current) {
-          const language = navigator.language;
-          const localeParts = language.split('-');
-          const country =
-            localeParts.length > 1
-              ? localeParts[1].toUpperCase()
-              : language.toUpperCase().slice(0, 2);
-
-          analytics.setUserProperties({
-            language_setting: language,
-            country,
-            is_registered: false,
-          });
-          propertiesSet.current = true;
-        }
-      },
-    });
-
-    initialized.current = true;
-  }, []);
 
   return (
     <PHProvider client={posthog}>
       <PageviewTracker />
       <ErrorHandlerInstaller errorHandlersSet={errorHandlersSet} />
-      {children}
+      <RenderErrorReporter>{children}</RenderErrorReporter>
     </PHProvider>
   );
+}
+
+class RenderErrorReporter extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+
+  componentDidCatch(error: unknown) {
+    if (shouldExcludeError(error)) return;
+    analytics.captureException(toReportableError(error), { ...collectErrorContext(), source: 'error-boundary' });
+  }
+
+  render() {
+    return this.state.failed ? null : this.props.children;
+  }
 }
 
 function PageviewTracker() {
@@ -134,7 +133,7 @@ function ErrorHandlerInstaller({ errorHandlersSet }: ErrorHandlerInstallerProps)
   );
 
   const handleUnhandledRejection = useCallback((event: PromiseRejectionEvent) => {
-    const error = event.reason instanceof Error ? event.reason : new Error(String(event.reason));
+    const error = toReportableError(event.reason);
     if (shouldExcludeError(error)) return;
     analytics.captureException(error, {
       ...collectErrorContext(),

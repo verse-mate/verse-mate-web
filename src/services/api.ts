@@ -14,6 +14,8 @@
  * already in their browser are still valid.
  */
 
+import { stripQuery } from '@/lib/analyticsPrivacy';
+
 const DEFAULT_BASE_URL = 'https://api.versemate.org';
 
 export const API_BASE_URL =
@@ -123,7 +125,11 @@ export async function fetchWithAuth(
   const token = getAccessToken();
   if (token) headers.set('Authorization', `Bearer ${token}`);
 
-  const res = await fetch(url, { ...init, headers });
+  const res = await fetch(url, { ...init, headers }).catch((err: unknown) => {
+    if ((err as Error)?.name === 'AbortError') throw err;
+    const path = stripQuery(url).replace(/^https?:\/\/[^/]+/, '');
+    throw new ApiError(0, null, `Network error: ${init.method ?? 'GET'} ${path} failed: ${String(err)}`);
+  });
 
   if (
     res.status === 401 &&
@@ -229,7 +235,7 @@ export async function request<T = unknown>(path: string, opts: RequestOptions = 
       body: body !== undefined ? JSON.stringify(body) : undefined,
     });
   } catch (err) {
-    throw new ApiError(0, null, `Network error: ${String(err)}`);
+    throw new ApiError(0, null, `Network error: ${method} ${stripQuery(path)} failed: ${String(err)}`);
   }
 
   // Try token refresh on 401 (once). Don't refresh on the auth endpoints
@@ -255,7 +261,7 @@ export async function request<T = unknown>(path: string, opts: RequestOptions = 
   }
 
   if (!res.ok) {
-    throw new ApiError(res.status, data, `API ${method} ${path} failed: ${res.status}`);
+    throw new ApiError(res.status, data, `API ${method} ${stripQuery(path)} failed: ${res.status}`);
   }
 
   return data as T;
