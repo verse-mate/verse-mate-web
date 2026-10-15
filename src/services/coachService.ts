@@ -258,8 +258,11 @@ async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T>
   });
   if (res.status === 401) throw new CoachAuthError('signed_out');
   if (res.status === 403) throw new CoachAuthError('not_a_coach');
-  if (!res.ok) throw new Error(`coach api ${scrubCoachPath(`/coach/${stripQuery(path)}`)} failed: ${res.status}`);
-  return (await res.json()) as T;
+  const name = `coach api ${scrubCoachPath(`/coach/${stripQuery(path)}`)}`;
+  if (!res.ok) throw new Error(`${name} failed: ${res.status}`);
+  return (await res.json().catch(() => {
+    throw new Error(`${name} returned invalid JSON`);
+  })) as T;
 }
 
 /** GET /api/coach/me — profile + saved Zoom link + model metadata. */
