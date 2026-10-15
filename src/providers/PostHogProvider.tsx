@@ -1,6 +1,6 @@
 import posthog from 'posthog-js';
-import { PostHogErrorBoundary, PostHogProvider as PHProvider } from 'posthog-js/react';
-import { type ReactNode, useCallback, useEffect, useRef } from 'react';
+import { PostHogProvider as PHProvider } from 'posthog-js/react';
+import { Component, type ReactNode, useCallback, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { analytics } from '@/lib/analytics';
 import { scrubEvent, scrubNetworkRequest, stripQuery } from '@/lib/analyticsPrivacy';
@@ -15,6 +15,13 @@ interface PostHogProviderProps {
   children: ReactNode;
 }
 
+/**
+ * PostHog starts when this module loads, not in an effect: React runs a
+ * parent's effects after its children's, so an init in this provider's
+ * effect left the error handlers and the first pageview below looking at a
+ * client that was not loaded yet. No-ops when VITE_POSTHOG_KEY is not set,
+ * so dev builds don't pollute production analytics.
+ */
 if (POSTHOG_KEY && typeof window !== 'undefined' && !posthog.__loaded) {
   posthog.init(POSTHOG_KEY, {
     api_host: POSTHOG_HOST,
@@ -32,6 +39,7 @@ if (POSTHOG_KEY && typeof window !== 'undefined' && !posthog.__loaded) {
     custom_personal_data_properties: ['accessToken', 'refreshToken', 'state', 's'],
     before_send: scrubEvent,
     advanced_disable_feature_flags: true,
+    capture_exceptions: false,
     persistence: 'localStorage+cookie',
     loaded: (instance) => {
       if (import.meta.env.DEV) instance.debug();
@@ -56,14 +64,26 @@ export function PostHogProvider({ children }: PostHogProviderProps) {
     <PHProvider client={posthog}>
       <PageviewTracker />
       <ErrorHandlerInstaller errorHandlersSet={errorHandlersSet} />
-      <PostHogErrorBoundary
-        fallback={<></>}
-        additionalProperties={() => ({ ...collectErrorContext(), source: 'error-boundary' })}
-      >
-        {children}
-      </PostHogErrorBoundary>
+      <RenderErrorReporter>{children}</RenderErrorReporter>
     </PHProvider>
   );
+}
+
+class RenderErrorReporter extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+
+  componentDidCatch(error: Error) {
+    if (shouldExcludeError(error)) return;
+    analytics.captureException(error, { ...collectErrorContext(), source: 'error-boundary' });
+  }
+
+  render() {
+    return this.state.failed ? null : this.props.children;
+  }
 }
 
 function PageviewTracker() {

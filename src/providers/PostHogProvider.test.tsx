@@ -74,6 +74,26 @@ describe('the analytics client', () => {
     );
   });
 
+  it('leaves out a render error from a signed-out state', async () => {
+    const quiet = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const { CoachAuthError } = await import('@/services/coachService');
+    const SignedOut = () => {
+      throw new CoachAuthError('signed_out');
+    };
+    await mount('/read', <SignedOut />);
+    quiet.mockRestore();
+    expect(captureException).not.toHaveBeenCalled();
+  });
+
+  it('starts nothing without a key', async () => {
+    vi.stubEnv('VITE_POSTHOG_KEY', '');
+    const before = window.onerror;
+    await mount('/read', <p>still here</p>);
+    expect(init).not.toHaveBeenCalled();
+    expect(window.onerror).toBe(before);
+    expect(document.body.textContent).toContain('still here');
+  });
+
   it('sends the first pageview of the visit', async () => {
     await mount('/read');
     expect(capture).toHaveBeenCalledWith('$pageview', expect.objectContaining({ pathname: '/read' }));
@@ -89,6 +109,7 @@ describe('the analytics client', () => {
     expect(config.session_recording).toMatchObject({ recordBody: false, recordHeaders: false });
     expect(config.enable_recording_console_log).toBe(false);
     expect(config.advanced_disable_feature_flags).toBe(true);
+    expect(config.capture_exceptions).toBe(false);
     expect(
       config.before_send({ uuid: 'u', event: 'x', properties: { $current_url: 'https://a.test/coach?s=r1' } })
         .properties.$current_url,

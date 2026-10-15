@@ -92,13 +92,12 @@ export function collectErrorContext(): ExceptionContext {
   return context;
 }
 
+const KEY_WORD = /^[a-z][a-z-]*$/;
+
 function keyName(key: readonly unknown[] | undefined): string | undefined {
-  const names: string[] = [];
-  for (const part of key ?? []) {
-    if (typeof part !== 'string' || names.length === 2) break;
-    names.push(part);
-  }
-  return names.join('/') || undefined;
+  const [first, second] = key ?? [];
+  if (typeof first !== 'string') return undefined;
+  return typeof second === 'string' && KEY_WORD.test(second) ? `${first}/${second}` : first;
 }
 
 export function captureRequestError(
@@ -106,7 +105,7 @@ export function captureRequestError(
   key: { query_key?: readonly unknown[]; mutation_key?: readonly unknown[] },
 ): void {
   if (shouldExcludeError(error)) return;
-  analytics.captureException(error instanceof Error ? error : new Error(String(error)), {
+  analytics.captureException(error instanceof Error ? error : new Error(`Non-Error rejection: ${typeof error}`), {
     ...collectErrorContext(),
     source: 'react-query',
     ...(key.query_key && { query_key: keyName(key.query_key) }),

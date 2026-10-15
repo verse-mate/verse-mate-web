@@ -153,7 +153,9 @@ async function pollJob(args: {
     return { job_id: args.jobId, status: 'queued' };
   }
   if (!res.ok) throw new Error(`Job status failed: HTTP ${res.status}`);
-  const body = (await res.json()) as JobStatusResponse;
+  const body = (await res.json().catch(() => {
+    throw new Error('Job status returned invalid JSON');
+  })) as JobStatusResponse;
   return body.job;
 }
 

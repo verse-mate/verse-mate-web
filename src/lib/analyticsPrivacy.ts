@@ -5,6 +5,7 @@ export const REPLAY_BLOCK_CLASS = 'ph-no-capture';
 const URL_KEY = /(^\$?|_)(url|referrer|href)$/i;
 const QUERY_PROPERTIES = ['search', '$search'];
 const EMBEDDED_QUERY = /((?:https?:\/\/|href=")[^\s"'?#\\()<>[\]]*)(?:[?#][^\s"'\\()<>[\]]*)?/g;
+const RELATIVE_QUERY = /(^|[\s"'(=])(\/[^\s"'?#\\()<>[\]]*)[?#][^\s"'\\()<>[\]]*/g;
 const GOOGLE_FILE_LINK = /(https?:\/\/(?:docs|drive|drive\.usercontent)\.google\.com)(?=[/?#\s"'\\()<>[\]]|$)[^\s"'\\()<>[\]]*/gi;
 const COACH_PATH = /\/coach((?:\/[^/?#\s"'<>\\]+)+)/gi;
 const COACH_WORDS = new Set([
@@ -56,7 +57,7 @@ export function stripQuery(url: string): string {
 }
 
 function stripEmbeddedQueries(text: string): string {
-  return text.replace(EMBEDDED_QUERY, '$1');
+  return text.replace(EMBEDDED_QUERY, '$1').replace(RELATIVE_QUERY, '$1$2');
 }
 
 function scrubText(text: string, isUrl = false): string {

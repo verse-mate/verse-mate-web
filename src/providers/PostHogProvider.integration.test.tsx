@@ -50,4 +50,39 @@ describe('the analytics client against the real posthog-js', () => {
     await waitFor(() => expect(requested.some((url) => url.includes('/e/'))).toBe(true));
     expect(requested.some((url) => url.includes('/flags') || url.includes('/decide'))).toBe(false);
   });
+
+  it('scrubs an exception and starts before the first render', async () => {
+    vi.resetModules();
+    vi.stubEnv('VITE_POSTHOG_KEY', 'test-key');
+    vi.stubEnv('DEV', false);
+    vi.stubGlobal('fetch', vi.fn(async () => new Response('{}', { status: 200, headers: { 'Content-Type': 'application/json' } })));
+    window.history.pushState({}, '', '/coach/leader/l-77/manage?s=report-1');
+
+    const { default: posthog } = await import('posthog-js');
+    const { PostHogProvider } = await import('./PostHogProvider');
+    const { captureRequestError } = await import('@/lib/errorFilters');
+    expect(posthog.__loaded).toBe(true);
+
+    const captured: CaptureResult[] = [];
+    posthog.on('eventCaptured', (event) => captured.push(event));
+    const Broken = () => {
+      throw new Error('render failed at https://api.test/coach/admin/reports/rep-8?token=t-render');
+    };
+    const quiet = vi.spyOn(console, 'error').mockImplementation(() => {});
+    render(
+      <MemoryRouter initialEntries={['/coach/leader/l-77/manage?s=report-1']}>
+        <PostHogProvider>
+          <Broken />
+        </PostHogProvider>
+      </MemoryRouter>,
+    );
+    quiet.mockRestore();
+    captureRequestError(new Error('GET https://api.test/coach/admin/reports/rep-9?token=t-secret failed'), {
+      query_key: ['coach', 'admin', 'reports', 'rep-9'],
+    });
+
+    await waitFor(() => expect(captured.filter((e) => e.event === '$exception')).toHaveLength(2));
+    const sent = JSON.stringify(captured);
+    for (const secret of ['rep-8', 'rep-9', 't-render', 't-secret', 'l-77', 'report-1']) expect(sent).not.toContain(secret);
+  });
 });

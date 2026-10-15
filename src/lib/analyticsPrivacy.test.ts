@@ -123,6 +123,22 @@ describe('what reaches analytics', () => {
     expect(out?.properties.note).toBe('See https://a.test/x then (https://b.test/z). Frame (https://app.test/a.js)');
   });
 
+  it('drops the query after a relative path in an exception message', () => {
+    const out = scrubEvent({
+      uuid: 'u',
+      event: '$exception',
+      properties: {
+        $exception_list: [
+          { type: 'Error', value: 'API DELETE /bible/book/note/remove?note_id=42 failed: 500' },
+          { type: 'Error', value: 'rejected at /coach/leader/abc-123?x=s3cret (retry)' },
+        ],
+      },
+    });
+    expect(JSON.stringify(out?.properties.$exception_list)).not.toMatch(/note_id|s3cret/);
+    expect(out?.properties.$exception_list[0].value).toBe('API DELETE /bible/book/note/remove failed: 500');
+    expect(out?.properties.$exception_list[1].value).toBe('rejected at /coach/leader/:id (retry)');
+  });
+
   it('scrubs a long run of links in linear time', () => {
     const run = 'url(https://a.test/x.png)'.repeat(40_000) + 'http://'.repeat(40_000);
     const started = performance.now();
