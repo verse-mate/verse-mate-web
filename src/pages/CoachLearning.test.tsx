@@ -131,6 +131,14 @@ describe('the coach gate', () => {
     expect(screen.getByTestId('coach-nav-home')).toBeTruthy();
   });
 
+  it('asks a signed-out visitor to sign in, with no program offer', async () => {
+    signedIn.current = false;
+    vi.mocked(coachService.fetchCoachMe).mockRejectedValue(new CoachAuthError('signed_out'));
+    at('/coach', { '/coach': <CoachHome /> });
+    expect(await screen.findByTestId('coach-signed-out', {}, { timeout: 4000 })).toBeTruthy();
+    expect(screen.queryByTestId('learning-offer')).toBeNull();
+  });
+
   it('offers to open it, with progress, once the account started', async () => {
     gate('not_a_coach');
     expect(await screen.findByRole('link', { name: 'Open the program' }, { timeout: 4000 })).toBeTruthy();
@@ -171,7 +179,7 @@ describe('the program path', () => {
 
   it('tells a newcomer that admins see their name, address and progress, and lands them on the first lesson', async () => {
     L.state.mockResolvedValueOnce(program({ enrolledAt: null, next: null }));
-    L.enrol.mockResolvedValue({ ok: true });
+    L.enrol.mockResolvedValue(program());
     L.state.mockResolvedValue(program({ next: { kind: 'lesson', lessonId: 11, moduleId: 1 } }));
     at('/coach/learning', learner);
     expect(await screen.findByText(/Program admins see your name, your email address and your progress/)).toBeTruthy();
@@ -220,7 +228,7 @@ describe('a lesson', () => {
 
   it('marks a lesson done and offers the step that opened', async () => {
     L.lesson.mockResolvedValueOnce(lesson()).mockResolvedValue(lesson({ done: true }));
-    L.markDone.mockResolvedValue({ ok: true });
+    L.markDone.mockResolvedValue(program());
     at('/coach/learning/lessons/13', learner);
     fireEvent.click(await screen.findByRole('button', { name: 'Mark as done' }));
     L.state.mockResolvedValue(program({ next: { kind: 'check', moduleId: 1 } }));
@@ -233,12 +241,13 @@ describe('a lesson', () => {
 describe('lesson text', () => {
   it('renders formatting and leaves every unsafe input inert', () => {
     const source = [
+      '# Title',
       '## Heading',
       '<script>window.hacked = 1</script>',
       '<iframe src="https://evil.test/frame"></iframe>',
       '<img src="https://evil.test/a.png" onerror="window.hacked = 2">',
       '![tracker](https://evil.test/pixel.png)',
-      '[run](javascript:alert(1)) and [blob](data:text/html;base64,PHNjcmlwdD4=) and [proto](//evil.test/x)',
+      '[run](javascript:alert(1)) and [blob](data:text/html;base64,PHNjcmlwdD4=) and [proto](//evil.test/x) and [slash](/\\evil.test/x)',
       '[web](https://versemate.org/give) and [mail](mailto:team@example.test) and [reader](/bible/john/3)',
       '> a quote with *emphasis*',
       '- one\n- two',
@@ -250,9 +259,17 @@ describe('lesson text', () => {
     const hrefs = [...container.querySelectorAll('a')].map((a) => a.getAttribute('href'));
     expect(hrefs).toEqual(['https://versemate.org/give', 'mailto:team@example.test', '/bible/john/3']);
     expect(container.textContent).toContain('<script>window.hacked = 1</script>');
-    expect(container.querySelector('h2')?.textContent).toBe('Heading');
+    expect([...container.querySelectorAll('h2')].map((h) => h.textContent)).toEqual(['Title', 'Heading']);
     expect(container.querySelector('blockquote em')?.textContent).toBe('emphasis');
     expect(container.querySelectorAll('li')).toHaveLength(2);
+  });
+});
+
+describe('lesson text that never closes a link', () => {
+  it('renders a long run of unmatched brackets quickly', () => {
+    const started = performance.now();
+    render(<Markdown source={'['.repeat(100_000)} />);
+    expect(performance.now() - started).toBeLessThan(1500);
   });
 });
 
@@ -327,7 +344,7 @@ describe('the completion record', () => {
 
   it('lists each published module with its best score or as not yet taken, and sends a request with a note', async () => {
     L.state.mockResolvedValue(done());
-    L.sendRequest.mockResolvedValue({ id: 1, status: 'open', reason: null, note: 'Tuesday group', sentAt: '2026-10-11T00:00:00Z', answeredAt: null });
+    L.sendRequest.mockResolvedValue({ request: { id: 1, status: 'open', reason: null, note: 'Tuesday group', sentAt: '2026-10-11T12:00:00Z', answeredAt: null } });
     at('/coach/learning/completion', learner);
     expect(await screen.findByText('87.5%')).toBeTruthy();
     expect(screen.getByText('Not yet taken')).toBeTruthy();
@@ -351,7 +368,7 @@ describe('the completion record', () => {
     ['already-in-program', 'Already in the program', null, true],
     ['declined', 'Declined · October 12, 2026', 'Groups must meet weekly', false],
   ] as const)('shows a %s request, and a new request only after a decline', async (status, tag, reason, isLeader) => {
-    L.state.mockResolvedValue(done({ isLeader, request: { id: 1, status, reason, note: '', sentAt: '2026-10-11T00:00:00Z', answeredAt: '2026-10-12T00:00:00Z' } }));
+    L.state.mockResolvedValue(done({ isLeader, request: { id: 1, status, reason, note: '', sentAt: '2026-10-11T12:00:00Z', answeredAt: '2026-10-12T12:00:00Z' } }));
     at('/coach/learning/completion', learner);
     expect(await screen.findByText(tag)).toBeTruthy();
     if (reason) expect(screen.getByText(reason)).toBeTruthy();

@@ -5,6 +5,7 @@ import { CheckCircle2, Circle, CircleDot, Lock, Settings } from 'lucide-react';
 import { dt } from '@/components/coach/dashboardTheme';
 import { useApp } from '@/contexts/AppContext';
 import { getBookSlug } from '@/lib/bookSlugs';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 
 export const LEARN = {
   path: '/coach/learning',
@@ -239,7 +240,7 @@ export function Dialog({ title, children, onClose, focusTitle }: { title: string
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
   };
   return createPortal(
-    <div style={{ position: 'fixed', inset: 0, zIndex: 60, background: 'rgba(20,18,16,.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }} onClick={onClose}>
+    <div className={REPLAY_BLOCK_CLASS} style={{ position: 'fixed', inset: 0, zIndex: 60, background: 'rgba(20,18,16,.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }} onClick={onClose}>
       <style>{GLOBAL_CSS}</style>
       <div ref={ref} role="dialog" aria-modal="true" aria-labelledby="nt20-dialog-title" onKeyDown={onKeyDown} onClick={(e) => e.stopPropagation()} className="nt20" style={{ width: 500, maxWidth: '100%', maxHeight: '90vh', overflowY: 'auto', background: dt.cardBg, borderRadius: 16, padding: 'clamp(20px, 4vw, 30px)', boxShadow: '0 30px 70px -20px rgba(20,18,16,.6)', fontFamily: dt.sans, color: dt.textPrimary }}>
         <h2 id="nt20-dialog-title" tabIndex={-1} style={{ ...h2, marginBottom: 6, outline: 'none' }}>{title}</h2>
@@ -272,11 +273,11 @@ export function pct(n: number) {
 
 type Inline = string | { b: Inline[] } | { i: Inline[] } | { a: string; c: Inline[] };
 
-const SAFE_LINK = /^(https?:\/\/|mailto:|\/(?!\/))/i;
+const SAFE_LINK = /^(https?:\/\/|mailto:|\/(?![/\\]))/i;
 
 function inline(text: string): Inline[] {
   const out: Inline[] = [];
-  const re = /!\[([^\]]*)\]\([^)]*\)|\*\*(.+?)\*\*|\*(.+?)\*|\[([^\]]+)\]\(((?:[^()\s]|\([^()\s]*\))+)\)/g;
+  const re = /!\[([^\]\n]{0,300})\]\([^)\n]{0,2000}\)|\*\*(.{1,500}?)\*\*|\*(.{1,500}?)\*|\[([^\]\n]{1,300})\]\(((?:[^()\s]|\([^()\s]{0,200}\)){1,2000})\)/g;
   let last = 0;
   for (const m of text.matchAll(re)) {
     if (m.index! > last) out.push(text.slice(last, m.index));
@@ -308,6 +309,7 @@ export function Markdown({ source, size = 18 }: { source: string; size?: number 
       {blocks.map((block, i) => {
         const b = block.trim();
         if (!b) return null;
+        if (b.startsWith('# ')) return <h2 key={i} style={{ ...h3, fontSize: size + 4, margin: '1.5em 0 .5em' }}>{renderInline(inline(b.slice(2)))}</h2>;
         if (b.startsWith('## ')) return <h2 key={i} style={{ ...h3, fontSize: size + 4, margin: '1.5em 0 .5em' }}>{renderInline(inline(b.slice(3)))}</h2>;
         if (b.startsWith('### ')) return <h3 key={i} style={{ fontFamily: dt.sans, fontSize: size - 2, fontWeight: 700, margin: '1.4em 0 .4em' }}>{renderInline(inline(b.slice(4)))}</h3>;
         if (b.startsWith('> ')) return <blockquote key={i} style={{ ...body, fontStyle: 'italic', color: dt.body, margin: '0 0 1em', padding: '2px 0 2px 18px', borderLeft: `1px solid ${dt.brightGold}` }}>{renderInline(inline(b.replace(/^> ?/gm, '')))}</blockquote>;
@@ -329,5 +331,5 @@ export function passageHref(p: { bookId: number; chapter: number }) {
 }
 
 export function day(iso: string) {
-  return iso.slice(0, 10);
+  return new Date(iso).toLocaleDateString('en-CA');
 }

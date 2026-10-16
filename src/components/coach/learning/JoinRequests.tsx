@@ -93,7 +93,7 @@ function ApproveDialog({ r, onClose, onDone }: { r: OpenRequest; onClose: () => 
   const [refusal, setRefusal] = useState<{ code?: string; message: string } | null>(null);
   const answered = useAnswered();
   const approve = useMutation({
-    mutationFn: () => learningAdmin.approve(r.id, { name: name.trim() || undefined, group: group.trim() || undefined }),
+    mutationFn: () => learningAdmin.approve(r.id, { email: r.email, name: name.trim() || undefined, group: group.trim() || undefined }),
     onSuccess: (res) => {
       answered();
       onDone(
@@ -109,6 +109,7 @@ function ApproveDialog({ r, onClose, onDone }: { r: OpenRequest; onClose: () => 
         onDone(noLongerOpen(r, f.details));
         return;
       }
+      if (f.code === 'address-changed') answered();
       setRefusal(f);
     },
   });

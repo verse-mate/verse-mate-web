@@ -450,6 +450,7 @@ export function LearningLessonScreen() {
                   <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap', justifyContent: 'space-between' }}>
                     <p style={muted}>Read it through{l.hasVideo ? ' and watch the video' : ''}, then mark it done to open the next step.</p>
                     <Btn onClick={() => done.mutate()} disabled={done.isPending}>Mark as done</Btn>
+                    {done.error && <Notice tone="rust" title="Not marked done">{refusalOf(done.error).message}</Notice>}
                   </div>
                 )}
               </div>

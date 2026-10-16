@@ -184,6 +184,8 @@ describe('what reaches analytics', () => {
     ['/coach/learning/modules/7/check', '/coach/learning/modules/:id/check'],
     ['/coach/admin/learning/lessons/41/preview', '/coach/admin/learning/lessons/:id/preview'],
     ['/coach/admin/learning/learners?q=ann@example.test', '/coach/admin/learning/learners'],
+    ['/coach/learning/completion', '/coach/learning/completion'],
+    ['/coach/admin/learning/modules/7', '/coach/admin/learning/modules/:id'],
   ])('keeps the learning program words of %s and drops its ids', (url, scrubbed) => {
     expect(scrubEvent({ uuid: 'u', event: '$pageview', properties: { $current_url: `https://app.test${url}` } })?.properties).toEqual({
       $current_url: `https://app.test${scrubbed}`,

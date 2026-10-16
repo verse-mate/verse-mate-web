@@ -1,10 +1,11 @@
 import { QueryClientProvider } from "@tanstack/react-query";
+import { useEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes, Navigate, Outlet } from "react-router-dom";
 import { useTrackPreAuthLocation } from "@/hooks/useTrackPreAuthLocation";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { AppProvider } from "@/contexts/AppContext";
+import { AppProvider, useApp } from "@/contexts/AppContext";
 import { PostHogProvider } from "@/providers/PostHogProvider";
 import { AudioPlayerProvider } from "@/audio";
 import AppLayout from "@/components/AppLayout";
@@ -66,6 +67,16 @@ function ReplayBlocked() {
   );
 }
 
+function ClearQueriesOnAccountChange() {
+  const { state } = useApp();
+  const seen = useRef(state.userId);
+  useEffect(() => {
+    if (seen.current && seen.current !== state.userId) queryClient.clear();
+    seen.current = state.userId;
+  }, [state.userId]);
+  return null;
+}
+
 function PreAuthLocationTracker() {
   useTrackPreAuthLocation();
   return null;
@@ -75,6 +86,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <AppProvider>
+        <ClearQueriesOnAccountChange />
         <Toaster />
         <Sonner />
         <BrowserRouter>

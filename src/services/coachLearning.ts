@@ -162,14 +162,14 @@ const del = (path: string) => request<{ ok: boolean }>(path, 'DELETE');
 
 export const learning = {
   state: () => request<ProgramState>('learning'),
-  enrol: () => post('learning/enrol'),
+  enrol: () => post<ProgramState>('learning/enrol'),
   lesson: (id: number) => request<Lesson>(`learning/lessons/${id}`),
-  markDone: (id: number) => post(`learning/lessons/${id}/done`),
+  markDone: (id: number) => post<ProgramState>(`learning/lessons/${id}/done`),
   video: (id: number) => request<{ url: string; type: string }>(`learning/lessons/${id}/video`),
   check: (moduleId: number) => request<Check>(`learning/modules/${moduleId}/check`),
   submit: (moduleId: number, version: number, answers: { questionId: number; option: number }[]) =>
     post<Grade>(`learning/modules/${moduleId}/check`, { version, answers }),
-  sendRequest: (note: string) => post<JoinRequest>('learning/join-request', { note }),
+  sendRequest: (note: string) => post<{ request: JoinRequest | null }>('learning/join-request', { note }),
 };
 
 export const learningAdmin = {
@@ -194,7 +194,7 @@ export const learningAdmin = {
   attachVideo: (id: number) => post<{ type: string }>(`admin/learning/lessons/${id}/video/attach`),
   removeVideo: (id: number) => del(`admin/learning/lessons/${id}/video`),
   requests: () => request<{ requests: OpenRequest[] }>('admin/learning/requests'),
-  approve: (id: number, input: { name?: string; group?: string }) =>
+  approve: (id: number, input: { email: string; name?: string; group?: string }) =>
     post<{ status: 'approved' | 'already-in-program'; leaderId: string | null }>(`admin/learning/requests/${id}/approve`, input),
   decline: (id: number, reason: string) => post<{ status: 'declined' }>(`admin/learning/requests/${id}/decline`, { reason }),
   learners: (q: string, offset: number, limit: number) =>

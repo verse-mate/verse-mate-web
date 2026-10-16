@@ -136,7 +136,11 @@ export function LearningAdminScreen() {
   const [refusal, setRefusal] = useState<{ n: number; title: string; message: string } | null>(null);
   const modules = tree.data?.modules ?? [];
   const refresh = useTreeRefresh();
-  const order = useAction((ids: number[]) => learningAdmin.orderModules(ids), () => refresh());
+  const [orderError, setOrderError] = useState<string | null>(null);
+  const order = useAction((ids: number[]) => learningAdmin.orderModules(ids), (message) => {
+    setOrderError(message);
+    refresh();
+  });
   const publish = useMutation({
     mutationFn: (m: AdminModule) => learningAdmin.publishModule(m.id, !m.published),
     onSuccess: () => {
@@ -176,6 +180,7 @@ export function LearningAdminScreen() {
               </div>
               {modules.length > 0 && <Btn onClick={() => create.mutate()} disabled={create.isPending}><Plus size={16} aria-hidden /> New module</Btn>}
             </div>
+            {orderError && <Notice tone="rust" title="Not reordered">{orderError}</Notice>}
             {refusal && (
               <Notice tone="rust" title={`Module ${refusal.n} was not changed`}>
                 <em>{refusal.title}</em>: {refusal.message}. A published module needs at least one published lesson and one check question.
@@ -237,7 +242,8 @@ function ModuleEditor({ m, n, onGone }: { m: AdminModule; n: number; onGone: () 
   const [passMark, setPassMark] = useState(String(m.passMark));
   const [notice, setNotice] = useState<{ tone: 'rust' | 'green'; title: string; body: string } | null>(null);
   const [cannotDelete, setCannotDelete] = useState<AdminLesson | 'module' | null>(null);
-  const [drafts, setDrafts] = useState(0);
+  const [drafts, setDrafts] = useState<number[]>([]);
+  const nextDraft = useRef(0);
   const refused = (title: string) => (message: string) => setNotice({ tone: 'rust', title, body: message });
   const save = useAction(() => learningAdmin.updateModule(m.id, { title, description, passMark: Number(passMark) }), refused('Not saved'));
   const publish = useAction(() => learningAdmin.publishModule(m.id, !m.published), refused(m.published ? 'Not unpublished' : 'Not published'));
@@ -277,9 +283,9 @@ function ModuleEditor({ m, n, onGone }: { m: AdminModule; n: number; onGone: () 
       </div>
       {notice && <Notice tone={notice.tone} title={notice.title}>{notice.body}</Notice>}
       <section style={{ display: 'grid', gap: 14 }} aria-label="Module details">
-        <Field label="Title"><input value={title} onChange={(e) => setTitle(e.target.value)} style={input} data-testid="learning-module-title" /></Field>
+        <Field label="Title"><input value={title} maxLength={200} onChange={(e) => setTitle(e.target.value)} style={input} data-testid="learning-module-title" /></Field>
         <Field label="Short description" hint="One or two sentences, shown on the learner's path.">
-          <textarea value={description} onChange={(e) => setDescription(e.target.value)} rows={2} style={{ ...input, minHeight: 70, lineHeight: 1.5, resize: 'vertical' }} data-testid="learning-module-description" />
+          <textarea value={description} maxLength={2000} onChange={(e) => setDescription(e.target.value)} rows={2} style={{ ...input, minHeight: 70, lineHeight: 1.5, resize: 'vertical' }} data-testid="learning-module-description" />
         </Field>
         <div style={{ maxWidth: 220 }}>
           <Field label="Pass mark (%)" hint="1 to 100. Changing it never takes back a pass." error={passMarkValid ? undefined : 'Use a whole number from 1 to 100.'}>
@@ -318,13 +324,13 @@ function ModuleEditor({ m, n, onGone }: { m: AdminModule; n: number; onGone: () 
       <section style={{ display: 'grid', gap: 12 }} aria-labelledby="learning-check-editor">
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
           <h2 id="learning-check-editor" style={h2}>Check</h2>
-          <Btn kind="outline" onClick={() => setDrafts(drafts + 1)}><Plus size={16} aria-hidden /> Add a question</Btn>
+          <Btn kind="outline" onClick={() => setDrafts([...drafts, nextDraft.current++])}><Plus size={16} aria-hidden /> Add a question</Btn>
         </div>
         <p style={muted}>Two to six options per question, exactly one correct. Learners never see which one; they see which questions they got wrong. A learner who passed keeps the pass and the best score whatever you change here.</p>
         <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 12 }}>
           {m.questions.map((q, i) => <li key={q.id}><QuestionEditor moduleId={m.id} n={i + 1} q={q} /></li>)}
-          {Array.from({ length: drafts }, (_, i) => (
-            <li key={`draft-${i}`}><QuestionEditor moduleId={m.id} n={m.questions.length + i + 1} onSaved={() => setDrafts((d) => d - 1)} /></li>
+          {drafts.map((draft, i) => (
+            <li key={`draft-${draft}`}><QuestionEditor moduleId={m.id} n={m.questions.length + i + 1} onSaved={() => setDrafts((d) => d.filter((x) => x !== draft))} /></li>
           ))}
         </ol>
       </section>
@@ -392,7 +398,7 @@ function QuestionEditor({ moduleId, n, q, onSaved }: { moduleId: number; n: numb
   return (
     <div data-testid={`learning-question-${n}`} style={{ border: `1px solid ${error ? dt.rust : dt.cardBorder}`, borderRadius: 12, padding: '14px 16px', display: 'grid', gap: 8 }}>
       <Field label={`Question ${n}`}>
-        <input value={prompt} onChange={(e) => { setSaved(false); setPrompt(e.target.value); }} style={input} data-testid="learning-question-prompt" />
+        <input value={prompt} maxLength={1000} onChange={(e) => { setSaved(false); setPrompt(e.target.value); }} style={input} data-testid="learning-question-prompt" />
       </Field>
       <div role="radiogroup" aria-label={`Correct option for question ${n}`} style={{ display: 'grid', gap: 6 }}>
         {options.map((o, i) => (
@@ -401,7 +407,7 @@ function QuestionEditor({ moduleId, n, q, onSaved }: { moduleId: number; n: numb
               <input type="radio" name={`key-${moduleId}-${n}`} checked={correct === i} onChange={() => { setSaved(false); setCorrect(i); }} aria-label={`Option ${i + 1} is correct`} />
               <span aria-hidden className="nt20-dot" style={{ marginTop: 0 }} />
             </label>
-            <input value={o} onChange={(e) => { setSaved(false); setOption(i, e.target.value); }} aria-label={`Option ${i + 1}`} style={{ ...input, flex: 1 }} data-testid="learning-question-option" />
+            <input value={o} maxLength={500} onChange={(e) => { setSaved(false); setOption(i, e.target.value); }} aria-label={`Option ${i + 1}`} style={{ ...input, flex: 1 }} data-testid="learning-question-option" />
             {correct === i && <Tag tone="green">Correct</Tag>}
             <button type="button" aria-label={`Remove option ${i + 1}`} disabled={options.length <= 2} onClick={() => dropOption(i)} style={{ width: 44, height: 44, border: 'none', background: 'transparent', color: dt.rust, cursor: 'pointer', opacity: options.length <= 2 ? 0.35 : 1 }}>
               <Trash2 size={16} aria-hidden />
@@ -478,7 +484,7 @@ function LessonEditor({ m, n, l, ln }: { m: AdminModule; n: number; l: AdminLess
         </span>
       </div>
       {notice && <Notice tone={notice.tone} title={notice.title}>{notice.body}</Notice>}
-      <Field label="Title"><input value={title} onChange={(e) => setTitle(e.target.value)} style={input} data-testid="learning-lesson-title" /></Field>
+      <Field label="Title"><input value={title} maxLength={200} onChange={(e) => setTitle(e.target.value)} style={input} data-testid="learning-lesson-title" /></Field>
       <VideoPanel l={l} />
       <section aria-labelledby="learning-passages-editor" style={{ display: 'grid', gap: 10 }}>
         <h2 id="learning-passages-editor" style={h3}>Passages</h2>
@@ -505,7 +511,7 @@ function LessonEditor({ m, n, l, ln }: { m: AdminModule; n: number; l: AdminLess
         <h2 id="learning-text" style={h3}>Text</h2>
         <p style={muted}>Markdown: headings, lists, emphasis, quotes and links. HTML and images are not shown to learners.</p>
         <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))' }}>
-          <textarea aria-label="Lesson text in Markdown" value={body} onChange={(e) => setBody(e.target.value)} data-testid="learning-lesson-body" style={{ ...input, minHeight: 420, fontFamily: "ui-monospace, 'SF Mono', Menlo, monospace", fontSize: 16, lineHeight: 1.55, resize: 'vertical' }} />
+          <textarea aria-label="Lesson text in Markdown" value={body} maxLength={100000} onChange={(e) => setBody(e.target.value)} data-testid="learning-lesson-body" style={{ ...input, minHeight: 420, fontFamily: "ui-monospace, 'SF Mono', Menlo, monospace", fontSize: 16, lineHeight: 1.55, resize: 'vertical' }} />
           <div aria-label="Preview" role="region" style={{ border: `1px solid ${dt.cardBorder}`, borderRadius: 9, padding: '16px 20px', background: dt.cardBg }}>
             <p style={{ margin: '0 0 10px', fontSize: 12.5, fontWeight: 700, color: dt.textMuted }}>Live preview</p>
             <Markdown source={body} size={16} />
@@ -700,7 +706,7 @@ export function LearningAdminLearnersScreen() {
                   </thead>
                   <tbody>
                     {v.learners.map((l: Learner) => (
-                      <tr key={l.email} data-testid="learning-learner-row">
+                      <tr key={`${l.email}-${l.enrolledAt}`} data-testid="learning-learner-row">
                         <td style={td}><span style={{ display: 'block', fontWeight: 600 }}>{l.name || l.email}</span><span style={{ display: 'block', color: dt.textMuted, fontSize: 13 }}>{l.email}</span></td>
                         <td style={td} className="nt20-num" data-label="Started">{formatDate(day(l.enrolledAt))}</td>
                         <td style={td} className="nt20-num" data-label="Modules passed">{l.passed} of {l.total}</td>

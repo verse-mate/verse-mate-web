@@ -6,6 +6,7 @@ import { CoachApiError } from '@/services/coachService';
 import * as coachService from '@/services/coachService';
 import { type AdminModule, type OpenRequest, learning, learningAdmin, uploadVideo } from '@/services/coachLearning';
 import { JoinRequests } from '@/components/coach/learning/JoinRequests';
+import CoachHome from './CoachHome';
 import {
   LearningAdminLearnersScreen,
   LearningAdminLessonScreen,
@@ -27,7 +28,7 @@ vi.mock('@/services/coachLearning', async (importOriginal) => {
 
 vi.mock('@/services/coachService', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@/services/coachService')>();
-  return { ...actual, fetchCoachMe: vi.fn() };
+  return { ...actual, fetchCoachMe: vi.fn(), fetchAdminCoaches: vi.fn(async () => []) };
 });
 
 vi.mock('@/contexts/AppContext', () => ({
@@ -82,8 +83,8 @@ const request: OpenRequest = {
   name: 'Rui Mendes',
   email: 'rui@example.test',
   note: 'Tuesday group',
-  sentAt: '2026-10-11T00:00:00Z',
-  completedAt: '2026-10-10T00:00:00Z',
+  sentAt: '2026-10-11T12:00:00Z',
+  completedAt: '2026-10-10T12:00:00Z',
   scores: [{ moduleId: 1, title: 'Opening well', bestScore: 100 }],
 };
 
@@ -116,7 +117,19 @@ describe('join requests on the admin home', () => {
     fireEvent.change(screen.getByTestId('learning-approve-name'), { target: { value: 'Rui Mendes Jr' } });
     fireEvent.click(screen.getByRole('button', { name: 'Approve and send invite' }));
     expect(await screen.findByText('Rui Mendes Jr added as a leader')).toBeTruthy();
-    expect(A.approve).toHaveBeenLastCalledWith(9, { name: 'Rui Mendes Jr', group: undefined });
+    expect(A.approve).toHaveBeenLastCalledWith(9, { email: 'rui@example.test', name: 'Rui Mendes Jr', group: undefined });
+  });
+
+  it('an admin at /coach reaches the program from the roster and sees the open requests there, even with nothing published', async () => {
+    at('/coach', { '/coach': <CoachHome /> });
+    expect(await screen.findByTestId('oversight-nav-program', {}, { timeout: 4000 })).toBeTruthy();
+    expect(await screen.findByTestId('learning-requests')).toBeTruthy();
+  });
+
+  it('keeps the dialog, with the learner name and address, out of session replay', async () => {
+    at('/', { '/': <JoinRequests /> });
+    fireEvent.click(await screen.findByRole('button', { name: 'Approve Rui Mendes' }));
+    expect(screen.getByRole('dialog').closest('.ph-no-capture')).not.toBeNull();
   });
 
   it('tells the admin when the address is no longer confirmed and offers no approve', async () => {
@@ -149,7 +162,7 @@ describe('join requests on the admin home', () => {
 
 describe('authoring', () => {
   it('shows why a module was not published and keeps it a draft', async () => {
-    A.publishModule.mockRejectedValue(refusal(409, 'module-incomplete', 'a published module needs a published lesson and a question'));
+    A.publishModule.mockRejectedValue(refusal(409, 'incomplete-module', 'a published module needs a published lesson and a question'));
     at('/coach/admin/learning', admin);
     fireEvent.click(await screen.findByRole('button', { name: 'Publish Opening well' }));
     expect(await screen.findByText('Module 1 was not changed')).toBeTruthy();
@@ -170,6 +183,21 @@ describe('authoring', () => {
     const q = await screen.findByTestId('learning-question-1');
     fireEvent.click(within(q).getByRole('button', { name: 'Save question' }));
     expect(await within(q).findByText('Not saved: Mark exactly one option as correct')).toBeTruthy();
+  });
+
+  it('saving one of two new questions keeps the other one as it was typed', async () => {
+    A.createQuestion.mockResolvedValue({ id: 102 } as never);
+    at('/coach/admin/learning/modules/1', admin);
+    const add = await screen.findByRole('button', { name: 'Add a question' });
+    fireEvent.click(add);
+    fireEvent.click(add);
+    const prompt = (n: number) => within(screen.getByTestId(`learning-question-${n}`)).getByTestId('learning-question-prompt') as HTMLInputElement;
+    fireEvent.change(prompt(2), { target: { value: 'First draft' } });
+    fireEvent.change(prompt(3), { target: { value: 'Second draft' } });
+    fireEvent.click(within(screen.getByTestId('learning-question-2')).getByRole('button', { name: 'Save question' }));
+    await waitFor(() => expect(screen.queryByTestId('learning-question-3')).toBeNull());
+    expect(prompt(2).value).toBe('Second draft');
+    expect(A.createQuestion).toHaveBeenCalledTimes(1);
   });
 
   it('offers to unpublish a lesson learners have done instead of deleting it', async () => {
@@ -230,7 +258,7 @@ describe('authoring', () => {
 });
 
 describe('the learners list', () => {
-  const learner = (i: number) => ({ name: `Learner ${i}`, email: `l${i}@example.test`, enrolledAt: '2026-10-01T00:00:00Z', completedAt: null, passed: 1, total: 2, request: i === 1 ? ('open' as const) : null });
+  const learner = (i: number) => ({ name: `Learner ${i}`, email: `l${i}@example.test`, enrolledAt: '2026-10-01T12:00:00Z', completedAt: null, passed: 1, total: 2, request: i === 1 ? ('open' as const) : null });
 
   it('pages through the learners and searches by part of an address', async () => {
     A.learners.mockImplementation(async (q, offset) => ({ total: q ? 1 : 60, limit: 25, offset, learners: q ? [learner(42)] : Array.from({ length: 25 }, (_, i) => learner(offset + i + 1)) }));
