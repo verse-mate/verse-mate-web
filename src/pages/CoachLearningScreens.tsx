@@ -498,12 +498,14 @@ export function LearningCheckScreen() {
   const [changed, setChanged] = useState<number[]>([]);
   const [graded, setGraded] = useState<Grade | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const top = useRef<HTMLDivElement>(null);
+  const toTop = () => top.current?.scrollIntoView?.({ block: 'start' });
   const submit = useMutation({
     mutationFn: (c: Check) => learning.submit(moduleId, c.version, c.questions.map((q) => ({ questionId: q.id, option: answers[q.id] }))),
     onSuccess: (g) => {
       setGraded(g);
       qc.invalidateQueries({ queryKey: learningKeys.state });
-      window.scrollTo(0, 0);
+      toTop();
     },
     onError: async (err, c) => {
       const f = refusalOf(err);
@@ -550,11 +552,11 @@ export function LearningCheckScreen() {
           setAnswers({});
           setMissing([]);
           check.refetch();
-          window.scrollTo(0, 0);
+          toTop();
         };
         return (
           <Shell nav={program.viewer.nav} active={program.viewer.active}>
-            <div style={{ display: 'grid', gap: 22, paddingTop: 12, maxWidth: 760 }} data-testid="learning-check">
+            <div ref={top} style={{ display: 'grid', gap: 22, paddingTop: 12, maxWidth: 760 }} data-testid="learning-check">
               <BackLink to={LEARN.path}>Your path</BackLink>
               <header style={{ display: 'grid', gap: 10 }}>
                 <h1 style={h1}>Module {mIndex + 1} check</h1>
@@ -673,6 +675,7 @@ function CompletionView({ p, viewer }: { p: ProgramState; viewer: { nav: NavKey;
     },
   });
   const r = p.request;
+  const leaderCard = p.isLeader && r?.status !== 'approved' && r?.status !== 'already-in-program';
   const canRequest = !p.isLeader && (!r || r.status === 'declined');
   const email = state.userEmail;
   return (
@@ -698,30 +701,30 @@ function CompletionView({ p, viewer }: { p: ProgramState; viewer: { nav: NavKey;
             <p style={{ ...muted, fontSize: 13, marginTop: 10 }}>Best score in each module's check. A module added later shows as not yet taken and does not change your completion.</p>
           </section>
           <section className="nt20-request-first" style={{ ...panel, display: 'grid', gap: 14 }} aria-label="Join the coaching program" data-testid="learning-join">
-            <h2 style={h2}>{p.isLeader ? 'You are already a coaching leader' : 'Join the coaching program'}</h2>
-            {p.isLeader && <p style={{ ...muted, color: dt.body }}>Your account already belongs to the coaching program, so there is nothing to request. Your dashboard is where it was.</p>}
-            {!p.isLeader && r?.status === 'open' && (
+            <h2 style={h2}>{leaderCard ? 'You are already a coaching leader' : 'Join the coaching program'}</h2>
+            {leaderCard && <p style={{ ...muted, color: dt.body }}>Your account already belongs to the coaching program, so there is nothing to request. Your dashboard is where it was.</p>}
+            {!leaderCard && r?.status === 'open' && (
               <>
                 <p><Tag tone="gold">Request open · sent {formatDate(day(r.sentAt))}</Tag></p>
                 <p style={{ ...muted, color: dt.body }}>An admin will read it. The answer shows here; nothing else is needed from you.</p>
                 {r.note && <blockquote style={{ margin: 0, padding: '2px 0 2px 14px', borderLeft: `1px solid ${dt.brightGold}`, fontFamily: dt.serif, fontSize: 16, lineHeight: 1.6, color: dt.body, overflowWrap: 'anywhere' }}>{r.note}</blockquote>}
               </>
             )}
-            {!p.isLeader && r?.status === 'approved' && (
+            {!leaderCard && r?.status === 'approved' && (
               <>
                 <p><Tag tone="green">Approved · {formatDate(day(r.answeredAt ?? r.sentAt))}</Tag></p>
                 <p style={{ ...muted, color: dt.body }}>You are in the coaching program. An invitation went to {email}. The next time you open Coach, your leader dashboard is there.</p>
                 <div><Btn kind="dark" to="/coach">Open Coach</Btn></div>
               </>
             )}
-            {!p.isLeader && r?.status === 'already-in-program' && (
+            {!leaderCard && r?.status === 'already-in-program' && (
               <>
                 <p><Tag tone="blue">Already in the program</Tag></p>
                 <p style={{ ...muted, color: dt.body }}>This account's address already belongs to a leader in the coaching program, so no new place was needed. Open Coach to reach your leader dashboard.</p>
                 <div><Btn kind="dark" to="/coach">Open Coach</Btn></div>
               </>
             )}
-            {!p.isLeader && r?.status === 'declined' && (
+            {!leaderCard && r?.status === 'declined' && (
               <div style={{ display: 'grid', gap: 8 }}>
                 <p><Tag tone="rust">Declined · {formatDate(day(r.answeredAt ?? r.sentAt))}</Tag></p>
                 {r.reason && <blockquote style={{ margin: 0, padding: '2px 0 2px 14px', borderLeft: `1px solid ${dt.rust}`, fontSize: 14.5, lineHeight: 1.55, color: dt.body }}>{r.reason}</blockquote>}

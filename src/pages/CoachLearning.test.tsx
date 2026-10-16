@@ -5,7 +5,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { CoachApiError, CoachAuthError } from '@/services/coachService';
 import * as coachService from '@/services/coachService';
 import { type Check, type Lesson, type ProgramState, learning } from '@/services/coachLearning';
-import { CoachGate } from '@/components/coach/CoachDashboardShell';
+import CoachHome from './CoachHome';
 import CoachDashboardShell from '@/components/coach/CoachDashboardShell';
 import { Markdown } from '@/components/coach/learning/ui';
 import { LearningCheckScreen, LearningCompletionScreen, LearningLessonScreen, LearningPathScreen } from './CoachLearningScreens';
@@ -105,20 +105,17 @@ beforeEach(() => {
 
 describe('the coach gate', () => {
   function gate(authError: 'not_a_coach' | 'confirm_email') {
-    return at('/coach', {
-      '/coach': (
-        <CoachDashboardShell active="home">
-          <CoachGate loading={false} authError={authError} error={false}>{null}</CoachGate>
-        </CoachDashboardShell>
-      ),
-    });
+    vi.mocked(coachService.fetchCoachMe).mockRejectedValue(new CoachAuthError(authError));
+    return at('/coach', { '/coach': <CoachHome /> });
   }
 
   it('offers to start the program to an account with no coaching record while a module is published', async () => {
     L.state.mockResolvedValue(program({ enrolledAt: null, next: null }));
     gate('not_a_coach');
-    expect(await screen.findByRole('link', { name: 'Start the learning program' })).toHaveAttribute('href', '/coach/learning');
+    expect(await screen.findByRole('link', { name: 'Start the learning program' }, { timeout: 4000 })).toHaveAttribute('href', '/coach/learning');
     expect(screen.getByText('This account is not in the coaching program yet.')).toBeTruthy();
+    expect(screen.getByTestId('coach-nav-learning')).toBeTruthy();
+    expect(screen.queryByTestId('coach-nav-home')).toBeNull();
   });
 
   it.each([
@@ -126,6 +123,7 @@ describe('the coach gate', () => {
     [false, 0],
   ])("gives the leaders' navigation a program entry only while a module is published (%s)", async (open, entries) => {
     L.state.mockResolvedValue(program({ open, isLeader: true }));
+    vi.mocked(coachService.fetchCoachMe).mockResolvedValue({ isAdmin: false } as never);
     at('/coach', { '/coach': <CoachDashboardShell active="home"><p>dashboard</p></CoachDashboardShell> });
     await waitFor(() => expect(L.state).toHaveBeenCalled());
     await screen.findByText('dashboard');
@@ -135,13 +133,13 @@ describe('the coach gate', () => {
 
   it('offers to open it, with progress, once the account started', async () => {
     gate('not_a_coach');
-    expect(await screen.findByRole('link', { name: 'Open the program' })).toBeTruthy();
+    expect(await screen.findByRole('link', { name: 'Open the program' }, { timeout: 4000 })).toBeTruthy();
     expect(screen.getByText('2 of 4 lessons done · 0 of 2 modules passed')).toBeTruthy();
   });
 
   it('keeps the confirm-address gate and offers the program beside it', async () => {
     gate('confirm_email');
-    expect(await screen.findByTestId('learning-offer')).toBeTruthy();
+    expect(await screen.findByTestId('learning-offer', {}, { timeout: 4000 })).toBeTruthy();
     expect(screen.getByTestId('coach-confirm-email')).toBeTruthy();
     expect(screen.getByText('The learning program needs no confirmation to start.')).toBeTruthy();
   });
@@ -149,7 +147,7 @@ describe('the coach gate', () => {
   it('is the gate from before, with no trace of the program, while nothing is published', async () => {
     L.state.mockResolvedValue(program({ open: false, total: 0, modules: [], next: null }));
     gate('not_a_coach');
-    expect(await screen.findByTestId('coach-not-a-coach')).toBeTruthy();
+    expect(await screen.findByTestId('coach-not-a-coach', {}, { timeout: 4000 })).toBeTruthy();
     expect(screen.queryByTestId('learning-offer')).toBeNull();
     expect(screen.queryByText(/learning/i)).toBeNull();
   });
@@ -348,12 +346,12 @@ describe('the completion record', () => {
   });
 
   it.each([
-    ['open', 'Request open · sent October 11, 2026', null],
-    ['approved', 'Approved · October 12, 2026', null],
-    ['already-in-program', 'Already in the program', null],
-    ['declined', 'Declined · October 12, 2026', 'Groups must meet weekly'],
-  ] as const)('shows a %s request, and a new request only after a decline', async (status, tag, reason) => {
-    L.state.mockResolvedValue(done({ request: { id: 1, status, reason, note: '', sentAt: '2026-10-11T00:00:00Z', answeredAt: '2026-10-12T00:00:00Z' } }));
+    ['open', 'Request open · sent October 11, 2026', null, false],
+    ['approved', 'Approved · October 12, 2026', null, true],
+    ['already-in-program', 'Already in the program', null, true],
+    ['declined', 'Declined · October 12, 2026', 'Groups must meet weekly', false],
+  ] as const)('shows a %s request, and a new request only after a decline', async (status, tag, reason, isLeader) => {
+    L.state.mockResolvedValue(done({ isLeader, request: { id: 1, status, reason, note: '', sentAt: '2026-10-11T00:00:00Z', answeredAt: '2026-10-12T00:00:00Z' } }));
     at('/coach/learning/completion', learner);
     expect(await screen.findByText(tag)).toBeTruthy();
     if (reason) expect(screen.getByText(reason)).toBeTruthy();

@@ -14,10 +14,10 @@ import { ReactNode } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { GraduationCap } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
-import type { CoachAuthReason } from '@/services/coachService';
+import { CoachAuthError, type CoachAuthReason } from '@/services/coachService';
 import { dt } from './dashboardTheme';
 import ConfirmEmailGate from './ConfirmEmailGate';
-import { useEmailCheck } from '@/hooks/useCoach';
+import { useCoachMe, useEmailCheck } from '@/hooks/useCoach';
 import { useLearningOpen } from '@/hooks/useCoachLearning';
 import LearningOffer from './learning/LearningOffer';
 import { LEARN } from './learning/ui';
@@ -127,10 +127,15 @@ function TopBar({ active, coachId }: { active: Page; coachId?: string }) {
   const { state } = useApp();
   const base = basePathFor(coachId);
   const learningOpen = useLearningOpen({ enabled: !coachId });
+  const noCoachRecord = useCoachMe().error instanceof CoachAuthError;
   const NAV: { page: Page | 'learning'; label: string; to: string }[] = [
-    { page: 'home', label: 'Home', to: base },
-    { page: 'sessions', label: 'Sessions', to: `${base}/sessions` },
-    { page: 'trends', label: 'Trends', to: `${base}/trends` },
+    ...(noCoachRecord
+      ? []
+      : [
+          { page: 'home' as const, label: 'Home', to: base },
+          { page: 'sessions' as const, label: 'Sessions', to: `${base}/sessions` },
+          { page: 'trends' as const, label: 'Trends', to: `${base}/trends` },
+        ]),
     ...(learningOpen && !coachId ? [{ page: 'learning' as const, label: 'Learning', to: LEARN.path }] : []),
   ];
 
