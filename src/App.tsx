@@ -46,6 +46,14 @@ import CoachTrendsScreen from "@/pages/CoachTrendsScreen";
 import CoachFeedbackScreen from "@/pages/CoachFeedbackScreen";
 import CoachLeaderScreen from "@/pages/CoachLeaderScreen";
 import CoachConfirmAddressScreen from "@/pages/CoachConfirmAddressScreen";
+import { LearningCheckScreen, LearningCompletionScreen, LearningLessonScreen, LearningPathScreen } from "@/pages/CoachLearningScreens";
+import {
+  LearningAdminLearnersScreen,
+  LearningAdminLessonScreen,
+  LearningAdminModuleScreen,
+  LearningAdminPreviewScreen,
+  LearningAdminScreen,
+} from "@/pages/CoachLearningAdminScreens";
 import NotFound from "@/pages/NotFound";
 import { REPLAY_BLOCK_CLASS } from "@/lib/analyticsPrivacy";
 import { queryClient } from "@/lib/queryClient";
@@ -151,6 +159,15 @@ const App = () => (
               <Route path="/coach/leader/:coachId/trends" element={<CoachTrendsScreen />} />
               <Route path="/coach/leader/:coachId/manage" element={<CoachLeaderScreen />} />
               <Route path="/coach/leader/:coachId/monthly" element={<CoachLeaderMonthlyScreen />} />
+              <Route path="/coach/learning" element={<LearningPathScreen />} />
+              <Route path="/coach/learning/completion" element={<LearningCompletionScreen />} />
+              <Route path="/coach/learning/lessons/:id" element={<LearningLessonScreen />} />
+              <Route path="/coach/learning/modules/:id/check" element={<LearningCheckScreen />} />
+              <Route path="/coach/admin/learning" element={<LearningAdminScreen />} />
+              <Route path="/coach/admin/learning/learners" element={<LearningAdminLearnersScreen />} />
+              <Route path="/coach/admin/learning/modules/:id" element={<LearningAdminModuleScreen />} />
+              <Route path="/coach/admin/learning/lessons/:id" element={<LearningAdminLessonScreen />} />
+              <Route path="/coach/admin/learning/lessons/:id/preview" element={<LearningAdminPreviewScreen />} />
               </Route>
               <Route path="/menu" element={<MenuScreen />} />
               <Route path="/menu/settings" element={<SettingsScreen />} />

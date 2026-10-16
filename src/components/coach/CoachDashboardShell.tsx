@@ -18,6 +18,9 @@ import type { CoachAuthReason } from '@/services/coachService';
 import { dt } from './dashboardTheme';
 import ConfirmEmailGate from './ConfirmEmailGate';
 import { useEmailCheck } from '@/hooks/useCoach';
+import { useLearningOpen } from '@/hooks/useCoachLearning';
+import LearningOffer from './learning/LearningOffer';
+import { LEARN } from './learning/ui';
 
 type Page = 'home' | 'sessions' | 'trends';
 
@@ -123,10 +126,12 @@ function TopBar({ active, coachId }: { active: Page; coachId?: string }) {
   const navigate = useNavigate();
   const { state } = useApp();
   const base = basePathFor(coachId);
-  const NAV: { page: Page; label: string; to: string }[] = [
+  const learningOpen = useLearningOpen({ enabled: !coachId });
+  const NAV: { page: Page | 'learning'; label: string; to: string }[] = [
     { page: 'home', label: 'Home', to: base },
     { page: 'sessions', label: 'Sessions', to: `${base}/sessions` },
     { page: 'trends', label: 'Trends', to: `${base}/trends` },
+    ...(learningOpen && !coachId ? [{ page: 'learning' as const, label: 'Learning', to: LEARN.path }] : []),
   ];
 
   const initials = (() => {
@@ -290,12 +295,16 @@ export function CoachGate({
 
   if (authError === 'confirm_email' || (authError === 'not_a_coach' && emailCheck.unverified)) {
     return (
-      <ConfirmEmailGate container={centered} title={gateTitle} body={gateBody} button={primaryBtn} iconColor={dt.gold} />
+      <LearningOffer
+        confirm
+        fallback={<ConfirmEmailGate container={centered} title={gateTitle} body={gateBody} button={primaryBtn} iconColor={dt.gold} />}
+      />
     );
   }
 
   if (authError === 'not_a_coach') {
     return (
+      <LearningOffer fallback={
       <div style={centered} data-testid="coach-not-a-coach">
         <GraduationCap size={44} style={{ color: dt.textLight }} strokeWidth={1.5} />
         <h2 style={gateTitle}>Not a coaching account</h2>
@@ -307,6 +316,7 @@ export function CoachGate({
           Back to reading
         </button>
       </div>
+      } />
     );
   }
 
