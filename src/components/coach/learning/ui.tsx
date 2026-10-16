@@ -331,5 +331,6 @@ export function passageHref(p: { bookId: number; chapter: number }) {
 }
 
 export function day(iso: string) {
-  return new Date(iso).toLocaleDateString('en-CA');
+  const d = new Date(iso);
+  return [d.getFullYear(), d.getMonth() + 1, d.getDate()].map((n) => String(n).padStart(2, '0')).join('-');
 }

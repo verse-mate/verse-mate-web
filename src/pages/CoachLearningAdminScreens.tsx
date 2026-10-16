@@ -137,7 +137,10 @@ export function LearningAdminScreen() {
   const modules = tree.data?.modules ?? [];
   const refresh = useTreeRefresh();
   const [orderError, setOrderError] = useState<string | null>(null);
-  const order = useAction((ids: number[]) => learningAdmin.orderModules(ids), (message) => {
+  const order = useAction((ids: number[]) => {
+    setOrderError(null);
+    return learningAdmin.orderModules(ids);
+  }, (message) => {
     setOrderError(message);
     refresh();
   });

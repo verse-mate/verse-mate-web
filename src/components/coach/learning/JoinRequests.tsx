@@ -109,7 +109,15 @@ function ApproveDialog({ r, onClose, onDone }: { r: OpenRequest; onClose: () => 
         onDone(noLongerOpen(r, f.details));
         return;
       }
-      if (f.code === 'address-changed') answered();
+      if (f.code === 'address-changed') {
+        answered();
+        onDone({
+          tone: 'gold',
+          title: `Not added: ${r.name || r.email}'s address changed`,
+          body: `The account now uses ${String(f.details.email ?? 'another address')}. No leader was added and the request stays open. Review it again in the list below.`,
+        });
+        return;
+      }
       setRefusal(f);
     },
   });

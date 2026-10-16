@@ -141,6 +141,15 @@ describe('join requests on the admin home', () => {
     expect(screen.getByRole('button', { name: 'Approve and send invite' })).toBeDisabled();
   });
 
+  it('closes the dialog and names the new address when it changed since the list was read', async () => {
+    A.approve.mockRejectedValue(refusal(409, 'address-changed', 'changed', { email: 'rui.new@example.test' }));
+    at('/', { '/': <JoinRequests /> });
+    fireEvent.click(await screen.findByRole('button', { name: 'Approve Rui Mendes' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Approve and send invite' }));
+    expect(await screen.findByText(/The account now uses rui.new@example.test/)).toBeTruthy();
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
   it('says a request another admin answered changed nothing', async () => {
     A.decline.mockRejectedValue(refusal(409, 'not-open', 'That request was already answered', { status: 'approved' }));
     at('/', { '/': <JoinRequests /> });
