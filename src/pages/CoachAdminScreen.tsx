@@ -17,7 +17,7 @@
  */
 
 import { useEffect, useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { useApp } from '@/contexts/AppContext';
 import {
@@ -50,6 +50,8 @@ import PipelineHealth from '@/components/coach/PipelineHealth';
 import ParallelRunComparison from '@/components/coach/ParallelRunComparison';
 import RotatingClassesAdmin from '@/components/coach/RotatingClassesAdmin';
 import LikelyDuplicates from '@/components/coach/LikelyDuplicates';
+import { JoinRequests } from '@/components/coach/learning/JoinRequests';
+import { LEARN } from '@/components/coach/learning/ui';
 import ReportReview from '@/components/coach/ReportReview';
 import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/components/coach/oversightCharts';
 import { dt, statusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
@@ -111,8 +113,14 @@ export default function CoachAdminScreen() {
   const navigate = useNavigate();
   const { state } = useApp();
 
-  const [view, setView] = useState<View>('leaders');
+  const location = useLocation();
+  const [view, setView] = useState<View>((location.state as { view?: View } | null)?.view ?? 'leaders');
   const [selLeader, setSelLeader] = useState<string | null>(null);
+
+  useEffect(() => {
+    const asked = (location.state as { view?: View } | null)?.view;
+    if (asked) setView(asked);
+  }, [location.state]);
   const [invite, setInvite] = useState(false);
 
   const coachesQuery = useAdminCoaches();
@@ -143,6 +151,7 @@ export default function CoachAdminScreen() {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap', fontSize: 14, fontWeight: 500, color: dt.textMuted }}>
               <NavItem label="Dashboard" active={view === 'leaders' || view === 'leader'} onClick={() => setView('leaders')} testId="oversight-nav-dashboard" />
+              <NavItem label="Program" active={false} onClick={() => navigate(LEARN.admin)} testId="oversight-nav-program" />
               <NavItem label="Trends" active={view === 'trends'} onClick={() => setView('trends')} testId="oversight-nav-trends" />
               <NavItem label="Class links" active={view === 'links'} onClick={() => setView('links')} testId="oversight-nav-links" />
               <NavItem label="Pipeline" active={view === 'pipeline'} onClick={() => setView('pipeline')} testId="oversight-nav-pipeline" />
@@ -156,6 +165,7 @@ export default function CoachAdminScreen() {
           </div>
 
           <CoachGate loading={coaches.loading} authError={coaches.authError} error={coaches.error} onRetry={() => coachesQuery.refetch()}>
+            {view === 'leaders' && <JoinRequests />}
             {view === 'leaders' && <RosterView roster={roster} onOpenLeader={openLeader} onInvite={() => setInvite(true)} onViewTrends={() => setView('trends')} />}
             {view === 'leader' && selLeader && <LeaderDetailView leaderId={selLeader} summary={roster.find((r) => r.id === selLeader)} onBack={() => setView('leaders')} />}
             {view === 'trends' && <TrendsView onOpenLeader={openLeader} onBack={() => setView('leaders')} />}

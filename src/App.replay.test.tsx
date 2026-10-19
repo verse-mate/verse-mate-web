@@ -21,6 +21,15 @@ const COACH_PATHS = [
   '/coach/leader/l-1/trends',
   '/coach/leader/l-1/manage',
   '/coach/leader/l-1/monthly',
+  '/coach/learning',
+  '/coach/learning/completion',
+  '/coach/learning/lessons/7',
+  '/coach/learning/modules/3/check',
+  '/coach/admin/learning',
+  '/coach/admin/learning/learners',
+  '/coach/admin/learning/modules/3',
+  '/coach/admin/learning/lessons/7',
+  '/coach/admin/learning/lessons/7/preview',
 ];
 
 describe('session replay on the coach portal', () => {
