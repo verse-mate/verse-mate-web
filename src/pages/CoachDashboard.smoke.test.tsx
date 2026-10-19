@@ -26,13 +26,15 @@ vi.mock('@/services/coachService', async (importOriginal) => {
   return {
     ...actual,
     fetchCoachMe: vi.fn(),
-    fetchCoachReports: vi.fn(),
+    fetchCoachReportSummaries: vi.fn(),
     fetchCoachTrends: vi.fn(),
     fetchCoachClasses: vi.fn(),
     fetchMyMonthlySummary: vi.fn(),
-    fetchCoachReportsFor: vi.fn(),
+    fetchAdminCoaches: vi.fn(),
     fetchCoachTrendsFor: vi.fn(),
     fetchAllCoachClasses: vi.fn(),
+    fetchCoachReportDetail: vi.fn(),
+    mintRecordingUrl: vi.fn(),
   };
 });
 
@@ -40,9 +42,9 @@ vi.mock('@/contexts/AppContext', () => ({
   useApp: () => ({
     state: {
       isSignedIn: true,
-      userFirstName: 'Bryan',
-      userLastName: 'Bailey',
-      userEmail: 'bryan@example.com',
+      userFirstName: 'Avery',
+      userLastName: 'Hollis',
+      userEmail: 'avery@example.com',
       userAvatarUrl: '',
     },
   }),
@@ -51,7 +53,7 @@ vi.mock('@/contexts/AppContext', () => ({
 const me: CoachMe = {
   isCoach: true,
   isAdmin: false,
-  profile: { id: 'bryan', name: 'Bryan Bailey', email: 'bryan@example.com', group: 'Saturday Morning', coachName: '' },
+  profile: { id: 'avery', name: 'Avery Hollis', email: 'avery@example.com', group: 'Saturday Morning', coachName: '' },
   zoomLink: '',
   affiliatedChurch: '',
   bibleCoach: '',
@@ -107,8 +109,6 @@ function makeReport(over: Partial<CoachReport> = {}): CoachReport {
         bullets: ['Mike, what are you thinking about your wealth? — Level 4 — apply to life — The session signature moment.'],
       },
     ],
-    docUrl: '',
-    pdfUrl: 'https://drive.google.com/file/d/abc/view',
     ...over,
   };
 }
@@ -132,18 +132,18 @@ const trends: CoachTrends = {
 };
 
 const classes: CoachClass[] = [
-  { id: 'sat', name: 'James — Saturday Morning Group', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1' },
+  { id: 'sat', name: 'James — Riverbend Sunday Group', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1' },
 ];
 
 const monthly: LeaderMonthlyResponse = {
-  profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning' },
+  profile: { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning' },
   availableMonths: ['2026-06'],
   summary: {
     month: '2026-06',
     monthLabel: 'June 2026',
     priorMonthLabel: 'May 2026',
-    leaderId: 'bryan',
-    leaderName: 'Bryan Bailey',
+    leaderId: 'avery',
+    leaderName: 'Avery Hollis',
     group: 'Saturday Morning',
     sessionsCount: 6,
     composite: 82.4,
@@ -195,23 +195,30 @@ function renderAt(path: string, element: React.ReactNode) {
 }
 
 beforeEach(() => {
+  vi.clearAllMocks();
   vi.mocked(coachService.fetchCoachMe).mockResolvedValue(me);
-  vi.mocked(coachService.fetchCoachReports).mockResolvedValue(reports);
+  vi.mocked(coachService.fetchCoachReportSummaries).mockResolvedValue({
+    items: reports,
+    total: reports.length,
+    streakWeeks: 14,
+    quarterSessions: 13,
+  });
   vi.mocked(coachService.fetchCoachTrends).mockResolvedValue(trends);
   vi.mocked(coachService.fetchCoachClasses).mockResolvedValue(classes);
   vi.mocked(coachService.fetchMyMonthlySummary).mockResolvedValue(monthly);
-  // Admin drill-in ("For") endpoints — same shapes, per-leader.
-  vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue({
-    profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning', coachName: '' },
-    reports,
-  });
+  vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(
+    async (id) => reports.find((r) => r.id === id) ?? null,
+  );
+  vi.mocked(coachService.fetchAdminCoaches).mockResolvedValue([
+    { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning', coachName: '', sessionCount: 2, latest: null },
+  ]);
   vi.mocked(coachService.fetchCoachTrendsFor).mockResolvedValue(trends);
   vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue(
-    classes.map((c) => ({ ...c, leader: { id: 'bryan', name: 'Bryan Bailey', email: 'b@x.com' } })),
+    classes.map((c) => ({ ...c, leader: { id: 'avery', name: 'Avery Hollis', email: 'b@x.com' } })),
   );
 });
 
-describe('Coaching dashboard — Home', () => {
+describe('Coaching dashboard, Home', () => {
   it('renders the greeting, latest score, next class and session detail', async () => {
     renderAt('/coach', <CoachDashboardScreen />);
     // Session detail header (waits for reports to resolve).
@@ -219,9 +226,56 @@ describe('Coaching dashboard — Home', () => {
     // Latest score shown as a letter grade + real /100 composite (tile + ring).
     expect(screen.getAllByText(/87\/100/).length).toBeGreaterThan(0);
     // Next class band pulls the recurring class.
-    expect(screen.getByText('James — Saturday Morning Group')).toBeInTheDocument();
+    expect(screen.getByText('James — Riverbend Sunday Group')).toBeInTheDocument();
     // Session detail header + tabs.
     expect(screen.getByTestId('coach-tab-scorecard')).toBeInTheDocument();
+  });
+
+  it('takes the streak and the quarter count from the server, not from the page it holds', async () => {
+    renderAt('/coach', <CoachDashboardScreen />);
+    expect(await screen.findByText(/14-week streak · 13 sessions this quarter/)).toBeInTheDocument();
+  });
+
+  it('clears a failed session detail when Retry is pressed', async () => {
+    let fail = true;
+    vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(async (id) => {
+      if (fail) throw new coachService.CoachApiError(`reports/${id}`, 500, 'boom');
+      return reports.find((r) => r.id === id) ?? null;
+    });
+
+    renderAt('/coach', <CoachDashboardScreen />);
+    await screen.findByTestId('coach-error');
+    fail = false;
+    fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
+
+    expect(await screen.findByTestId('coach-tab-scorecard', {}, { timeout: 3000 })).toBeInTheDocument();
+    expect(screen.queryByTestId('coach-error')).toBeNull();
+  });
+
+  it('offers the RECORDING on a session VerseMate ingested', async () => {
+    // The component and its endpoint both existed and were tested, and neither
+    // was reachable: SessionNotes (which mounts it) renders only on the
+    // admin-gated manage screen, so a leader opening their own session saw
+    // nothing. Found by driving the real portal against a real backend.
+    vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(async (id) => {
+      const found = reports.find((r) => r.id === id) ?? null;
+      return found && found.id === reports[0].id ? ({ ...found, hasRetainedRecording: true } as CoachReport) : found;
+    });
+
+    renderAt('/coach', <CoachDashboardScreen />);
+    expect(
+      await screen.findByTestId(`coach-recording-play-${reports[0].id}`),
+    ).toBeInTheDocument();
+    // And nothing is minted just by opening the session.
+    expect(coachService.mintRecordingUrl).not.toHaveBeenCalled();
+  });
+
+  it('offers NOTHING when the session has no retained recording', async () => {
+    renderAt('/coach', <CoachDashboardScreen />);
+    await screen.findByText(/Good (morning|afternoon|evening), Avery/);
+    expect(
+      screen.queryByTestId(`coach-recording-play-${reports[0].id}`),
+    ).toBeNull();
   });
 
   it('switches to the Scorecard tab and expands a dimension', async () => {
@@ -232,10 +286,10 @@ describe('Coaching dashboard — Home', () => {
   });
 });
 
-describe('Coaching dashboard — Sessions', () => {
+describe('Coaching dashboard, Sessions', () => {
   it('lists recurring classes and past sessions with the view action', async () => {
     renderAt('/coach/sessions', <CoachSessionsScreen />);
-    expect(await screen.findByText('James — Saturday Morning Group')).toBeInTheDocument();
+    expect(await screen.findByText('James — Riverbend Sunday Group')).toBeInTheDocument();
     expect(screen.getAllByTestId('coach-view-report').length).toBeGreaterThan(0);
     // Add form toggles.
     fireEvent.click(screen.getByTestId('coach-sessions-add'));
@@ -243,7 +297,7 @@ describe('Coaching dashboard — Sessions', () => {
   });
 });
 
-describe('Coaching dashboard — Trends', () => {
+describe('Coaching dashboard, Trends', () => {
   it('renders the monthly summary band and per-session detail', async () => {
     renderAt('/coach/trends', <CoachTrendsScreen />);
     expect(await screen.findByText('MONTHLY COACHING SUMMARY')).toBeInTheDocument();
@@ -255,23 +309,27 @@ describe('Coaching dashboard — Trends', () => {
   });
 });
 
-describe('Coaching dashboard — admin drill-in', () => {
+describe('Coaching dashboard, admin drill-in', () => {
   it('renders a leader’s dashboard via the per-leader endpoints with the admin context bar', async () => {
     const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
     render(
       <QueryClientProvider client={client}>
-        <MemoryRouter initialEntries={['/coach/leader/bryan']}>
+        <MemoryRouter initialEntries={['/coach/leader/avery']}>
           <Routes>
             <Route path="/coach/leader/:coachId" element={<CoachDashboardScreen />} />
           </Routes>
         </MemoryRouter>
       </QueryClientProvider>,
     );
-    // Data-dependent element first (waits for the "For" endpoint to resolve).
     expect((await screen.findAllByText('James — Lesson 9: Wealth & Patience')).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/87\/100/).length).toBeGreaterThan(0);
-    // Admin context bar + a way back to the roster.
     expect(screen.getByTestId('coach-admin-tools')).toBeInTheDocument();
     expect(screen.getByText(/All leaders/)).toBeInTheDocument();
+    expect(await screen.findByText(/Admin view · Avery Hollis/)).toBeInTheDocument();
+    expect(screen.getByText(/14-week streak · 13 sessions this quarter/)).toBeInTheDocument();
+    expect(vi.mocked(coachService.fetchCoachReportSummaries).mock.calls).toEqual([[0, 50, 'avery']]);
+    const details = vi.mocked(coachService.fetchCoachReportDetail).mock.calls;
+    expect(details.length).toBeGreaterThan(0);
+    expect(details.every(([, coachId]) => coachId === 'avery')).toBe(true);
   });
 });

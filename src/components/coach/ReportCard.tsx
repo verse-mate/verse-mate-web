@@ -1,18 +1,10 @@
-/**
- * One coaching "feedback document" in the reports list. Collapsed it shows
- * date / session / status / score; expanded (tap the chevron) it renders the
- * SAME full coaching narrative as the document-style <ReportDetail> — Summary
- * & Big Ideas, full-prose strengths / growth areas / recommendations, the
- * pipeline's PDF-parity sections, and the 12 dimensions — via the shared
- * <ReportBody>, plus a compact cluster breakdown, coaching notes, and a
- * per-session PDF download. No Google Docs hop.
- */
-
 import { useState } from 'react';
-import { ChevronDown, Download, FileText } from 'lucide-react';
+import { ChevronDown, FileText } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
-import { pdfDownloadUrl, statusColor, type CoachReport } from '@/services/coachService';
-import { CoachCard, StatusPill } from './CoachUi';
+import { useRubric } from '@/hooks/useRubric';
+import { useCoachReportDetail } from '@/hooks/useCoach';
+import { statusColor, type CoachReport, type CoachReportSummary } from '@/services/coachService';
+import { CoachCard, PdfDownload, PipelineCopyTag, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import SessionNotes from './SessionNotes';
 
@@ -21,18 +13,20 @@ export default function ReportCard({
   leaderName = '',
   admin = false,
   coachId,
+  held,
 }: {
-  report: CoachReport;
+  report: CoachReport | CoachReportSummary;
+  held?: boolean;
   leaderName?: string;
   /** When true (admin drill-in) the recording + notes are editable. */
   admin?: boolean;
-  /** The leader whose report this is — required for admin edits. */
+  /** The leader whose report this is, required for admin edits. */
   coachId?: string;
 }) {
   const [open, setOpen] = useState(false);
-  const color = statusColor(report.status);
-  // Direct-download link to the coach-produced PDF; null hides the button.
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const color = statusColor(report.status, bandLabels);
 
   return (
     <CoachCard testId={`coach-report-${report.id}`} style={{ padding: 0, overflow: 'hidden' }}>
@@ -72,6 +66,7 @@ export default function ReportCard({
           <p style={{ margin: '2px 0 0', fontSize: 12, color: vmTokens.textSecondary, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             {report.session}
           </p>
+          <PipelineCopyTag reportId={report.id} held={held} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4, flexShrink: 0 }}>
           <span style={{ fontSize: 18, fontWeight: 700, color: vmTokens.textPrimary, lineHeight: 1 }}>
@@ -85,68 +80,64 @@ export default function ReportCard({
         />
       </button>
 
-      {open && (
-        <div style={{ padding: '0 14px 16px', borderTop: `1px solid ${vmTokens.divider}` }}>
-          <p style={metaLine}>
-            {report.duration} · {report.attendees} attending · {report.newcomers} newcomer
-            {report.newcomers === 1 ? '' : 's'}
-          </p>
-
-          {/* Compact cluster breakdown — the card's at-a-glance score visual. */}
-          <p style={sectionLabel}>Cluster breakdown</p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {report.clusters.map((c) => {
-              const pct = c.scorePct == null ? 0 : c.scorePct;
-              return (
-                <div key={c.name}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
-                    <span style={{ fontSize: 12, color: vmTokens.textSecondary }}>{c.name}</span>
-                    <span style={{ fontSize: 12, color: vmTokens.textTertiary }}>
-                      {c.scorePct == null ? 'N/A' : `${c.scorePct}%`} · {c.contribution.toFixed(1)} pts
-                    </span>
-                  </div>
-                  <div style={{ height: 6, borderRadius: 3, background: vmTokens.divider, overflow: 'hidden' }}>
-                    <div style={{ width: `${pct}%`, height: '100%', background: vmTokens.gold, borderRadius: 3 }} />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* The full coaching narrative — identical to <ReportDetail>. */}
-          <ReportBody report={report} />
-
-          {pdfHref && (
-            <a
-              href={pdfHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              data-testid={`coach-report-pdf-${report.id}`}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 6,
-                marginTop: 16,
-                padding: '8px 14px',
-                borderRadius: 9,
-                border: `1px solid ${vmTokens.gold}`,
-                background: 'transparent',
-                color: vmTokens.gold,
-                fontSize: 13,
-                fontWeight: 600,
-                cursor: 'pointer',
-                textDecoration: 'none',
-              }}
-            >
-              <Download size={15} strokeWidth={2} /> Download PDF
-            </a>
-          )}
-
-          <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} compact />
-        </div>
-      )}
+      {open &&
+        ('clusters' in report ? (
+          <ExpandedReport report={report} admin={admin} coachId={coachId} leaderName={leaderName} />
+        ) : (
+          <FetchedReport id={report.id} admin={admin} coachId={coachId} leaderName={leaderName} />
+        ))}
     </CoachCard>
+  );
+}
+
+type BodyProps = { admin: boolean; coachId?: string; leaderName: string };
+
+function FetchedReport({ id, ...props }: BodyProps & { id: string }) {
+  const detail = useCoachReportDetail(id, props.coachId);
+  if (!detail.data) {
+    return (
+      <p style={{ ...metaLine, padding: '0 14px 16px' }}>
+        {detail.isLoading ? 'Loading the report…' : 'Could not load this report.'}
+      </p>
+    );
+  }
+  return <ExpandedReport report={detail.data} {...props} />;
+}
+
+function ExpandedReport({ report, admin, coachId, leaderName }: BodyProps & { report: CoachReport }) {
+  return (
+    <div style={{ padding: '0 14px 16px', borderTop: `1px solid ${vmTokens.divider}` }}>
+      <p style={metaLine}>
+        {report.duration} · {report.attendees === null ? 'attendance not recorded' : `${report.attendees} attending`} · {report.newcomers} newcomer
+        {report.newcomers === 1 ? '' : 's'}
+      </p>
+
+      <p style={sectionLabel}>Cluster breakdown</p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {report.clusters.map((c) => {
+          const pct = c.scorePct == null ? 0 : c.scorePct;
+          return (
+            <div key={c.name}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
+                <span style={{ fontSize: 12, color: vmTokens.textSecondary }}>{c.name}</span>
+                <span style={{ fontSize: 12, color: vmTokens.textTertiary }}>
+                  {c.scorePct == null ? 'N/A' : `${c.scorePct}%`} · {c.contribution.toFixed(1)} pts
+                </span>
+              </div>
+              <div style={{ height: 6, borderRadius: 3, background: vmTokens.divider, overflow: 'hidden' }}>
+                <div style={{ width: `${pct}%`, height: '100%', background: vmTokens.gold, borderRadius: 3 }} />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <ReportBody report={report} />
+
+      <PdfDownload reportId={report.id} pdfUrl={report.pdfUrl} style={{ marginTop: 16 }} />
+
+      <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} compact />
+    </div>
   );
 }
 

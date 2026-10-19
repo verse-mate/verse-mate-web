@@ -36,6 +36,8 @@ import CoachHome from "@/pages/CoachHome";
 import CoachDashboardScreen from "@/pages/CoachDashboardScreen";
 import CoachSessionsScreen from "@/pages/CoachSessionsScreen";
 import CoachClassesScreen from "@/pages/CoachClassesScreen";
+import CoachUploadScreen from "@/pages/CoachUploadScreen";
+import EmailVerifiedScreen from "@/pages/EmailVerifiedScreen";
 import CoachAdminClassesScreen from "@/pages/CoachAdminClassesScreen";
 import CoachSettingsScreen from "@/pages/CoachSettingsScreen";
 import CoachMonthlyScreen from "@/pages/CoachMonthlyScreen";
@@ -43,6 +45,7 @@ import CoachLeaderMonthlyScreen from "@/pages/CoachLeaderMonthlyScreen";
 import CoachTrendsScreen from "@/pages/CoachTrendsScreen";
 import CoachFeedbackScreen from "@/pages/CoachFeedbackScreen";
 import CoachLeaderScreen from "@/pages/CoachLeaderScreen";
+import CoachConfirmAddressScreen from "@/pages/CoachConfirmAddressScreen";
 import NotFound from "@/pages/NotFound";
 import { REPLAY_BLOCK_CLASS } from "@/lib/analyticsPrivacy";
 import { queryClient } from "@/lib/queryClient";
@@ -125,6 +128,8 @@ const App = () => (
               {/* Class Setup — register the classes/meeting links the coaching
                   Notetaker bot joins. */}
               <Route path="/coach/classes" element={<CoachClassesScreen />} />
+              <Route path="/coach/upload" element={<CoachUploadScreen />} />
+              <Route path="/email-verified" element={<EmailVerifiedScreen />} />
               {/* Admin oversight of every leader's class links (admin only;
                   gated in-screen). */}
               <Route path="/coach/admin/classes" element={<CoachAdminClassesScreen />} />
@@ -134,6 +139,9 @@ const App = () => (
               <Route path="/coach/monthly-summary" element={<CoachLeaderMonthlyScreen />} />
               <Route path="/coach/trends" element={<CoachTrendsScreen />} />
               <Route path="/coach/feedback" element={<CoachFeedbackScreen />} />
+              {/* Public: the link in an address-confirmation email. No sign-in;
+                  opening it only reads the change, the button confirms it. */}
+              <Route path="/coach/confirm-address" element={<CoachConfirmAddressScreen />} />
               {/* Admin drill-in: a leader's dashboard in the coaching-dashboard
                   design (Home / Sessions / Trends), wired to that leader's data.
                   The classic management screen (coaching notes + recording

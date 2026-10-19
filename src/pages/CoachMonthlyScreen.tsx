@@ -1,16 +1,5 @@
-/**
- * Monthly cross-leader analysis (/coach/monthly, program admins only).
- *
- * Replicates the coaching pipeline's monthly summary in the portal: a
- * program-wide rollup (sessions, active leaders, newcomers, average composite +
- * month-over-month delta, cluster averages) and a per-leader table with each
- * leader's monthly composite, status, delta, and a 12-dimension heatmap. Data
- * is computed live by the backend from the same report dataset, so it always
- * reflects the current v3 weighted model.
- */
-
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { BarChart3, ChevronLeft, ChevronRight } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -18,14 +7,20 @@ import { vmTokens } from '@/styles/themeStyles';
 import { useAdminMonthly, coachState } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel, StatusPill } from '@/components/coach/CoachUi';
 import { statusColor, type MonthlyLeader } from '@/services/coachService';
+import { bandHeat, type DimensionBand } from '@/components/coach/dashboardTheme';
+import { useRubric } from '@/hooks/useRubric';
+import ProgramReportView from '@/components/coach/ProgramReportView';
+import MonthlyReportsAdmin from '@/components/coach/MonthlyReportsAdmin';
 
 export default function CoachMonthlyScreen() {
   const navigate = useNavigate();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
-  const [month, setMonth] = useState(currentMonth());
+  const asked = useSearchParams()[0].get('month');
+  const [month, setMonth] = useState(asked && /^\d{4}-\d{2}$/.test(asked) ? asked : currentMonth());
   const query = useAdminMonthly(month);
   const state = coachState(query);
   const data = state.data;
+  const dimensionBands = useRubric().rubric?.dimensionBands ?? [];
 
   // Months that actually have reports (newest first). Held in local state so
   // the picker stays populated across month changes and transient errors —
@@ -138,8 +133,9 @@ export default function CoachMonthlyScreen() {
               </CoachCard>
             ) : data ? (
               <>
-                {/* Program narrative (same prose as the monthly PDF) */}
-                {data.narrative &&
+                {data.programReport ? (
+                  <ProgramReportView report={data.programReport} padding={isDesktop ? 22 : 16} />
+                ) : data.narrative &&
                 (data.narrative.executiveSummary.length > 0 || data.narrative.trends.length > 0) ? (
                   <div data-testid="coach-monthly-narrative">
                     <SectionLabel>Executive summary</SectionLabel>
@@ -215,7 +211,7 @@ export default function CoachMonthlyScreen() {
                             <th style={th}>Sessions</th>
                             <th style={th}>Avg</th>
                             <th style={th}>Δ</th>
-                            <th style={{ ...th, textAlign: 'left' }}>12-dimension heatmap</th>
+                            <th style={{ ...th, textAlign: 'left' }}>Dimension heatmap</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -224,6 +220,7 @@ export default function CoachMonthlyScreen() {
                               key={l.id}
                               leader={l}
                               zebra={i % 2 === 1}
+                              bands={dimensionBands}
                               onOpen={() => navigate(`/coach/leader/${l.id}`)}
                             />
                           ))}
@@ -231,14 +228,21 @@ export default function CoachMonthlyScreen() {
                       </table>
                     </div>
                   </CoachCard>
-                  <p style={{ margin: '10px 2px 0', fontSize: 12, color: vmTokens.textTertiary }}>
-                    Heatmap cells are each dimension's average (1–5) for the month —{' '}
-                    <HeatSwatch color={HEAT.strong} /> ≥ 4 · <HeatSwatch color={HEAT.mid} /> 3–3.9 ·{' '}
-                    <HeatSwatch color={HEAT.low} /> &lt; 3.
+                  <p data-testid="coach-monthly-heat-legend" style={{ margin: '10px 2px 0', fontSize: 12, color: vmTokens.textTertiary }}>
+                    Heatmap cells are each dimension's average for the month:{' '}
+                    {dimensionBands.map((b, i) => (
+                      <span key={b.label}>
+                        {i > 0 ? ' · ' : ''}
+                        <HeatSwatch color={heatColor(b.min, dimensionBands)} /> {b.label} ≥ {b.min}
+                      </span>
+                    ))}
                   </p>
                 </div>
               </>
             ) : null}
+            {data && (
+              <MonthlyReportsAdmin month={month} leaderNames={Object.fromEntries(data.leaders.map((l) => [l.id, l.name]))} />
+            )}
           </CoachStateBoundary>
         </div>
       </div>
@@ -249,10 +253,12 @@ export default function CoachMonthlyScreen() {
 function LeaderRow({
   leader,
   zebra,
+  bands,
   onOpen,
 }: {
   leader: MonthlyLeader;
   zebra: boolean;
+  bands: DimensionBand[];
   onOpen: () => void;
 }) {
   return (
@@ -304,7 +310,7 @@ function LeaderRow({
                 fontSize: 10.5,
                 fontWeight: 700,
                 color: d.avg == null ? vmTokens.textTertiary : '#0b0b0b',
-                background: heatColor(d.avg),
+                background: heatColor(d.avg, bands),
                 flexShrink: 0,
               }}
             >
@@ -337,13 +343,12 @@ function HeatSwatch({ color }: { color: string }) {
   );
 }
 
-const HEAT = { strong: '#86EFAC', mid: '#FDE68A', low: '#FCA5A5', na: 'color-mix(in srgb, var(--fg-primary) 8%, transparent)' };
+const HEAT_BY_BAND = ['#86EFAC', '#D9F99D', '#FDE68A', '#FDBA74', '#FCA5A5'];
+const HEAT_NA = 'color-mix(in srgb, var(--fg-primary) 8%, transparent)';
 
-function heatColor(avg: number | null): string {
-  if (avg == null) return HEAT.na;
-  if (avg >= 4) return HEAT.strong;
-  if (avg >= 3) return HEAT.mid;
-  return HEAT.low;
+function heatColor(avg: number | null, bands: DimensionBand[]): string {
+  if (avg == null) return HEAT_NA;
+  return bandHeat(avg, bands, HEAT_BY_BAND) ?? HEAT_NA;
 }
 
 function fmt(n: number | null): string {

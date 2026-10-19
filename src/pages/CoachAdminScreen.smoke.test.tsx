@@ -1,16 +1,17 @@
 /**
- * Smoke test for the Coach Oversight page — renders the four views (roster,
+ * Smoke test for the Coach Oversight page, renders the four views (roster,
  * leader detail, program trends, class links) against mocked admin data and
  * exercises the nav + drill-in, guarding against runtime crashes and confirming
  * the design's key sections land on the page.
  */
 
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MemoryRouter } from 'react-router-dom';
 import CoachAdminScreen from './CoachAdminScreen';
 import * as coachService from '@/services/coachService';
+import { primeRubricCache } from '@/hooks/useRubric';
 import type { CoachSummary, CoachMonthly, CoachReport, CoachTrends, LeaderMonthlyResponse, AdminCoachClass } from '@/services/coachService';
 
 vi.mock('@/services/coachService', async (io) => {
@@ -19,10 +20,13 @@ vi.mock('@/services/coachService', async (io) => {
     ...actual,
     fetchAdminCoaches: vi.fn(),
     fetchAdminMonthly: vi.fn(),
-    fetchCoachReportsFor: vi.fn(),
+    fetchCoachReportSummaries: vi.fn(),
+    fetchCoachReportDetail: vi.fn(),
     fetchCoachTrendsFor: vi.fn(),
     fetchLeaderMonthlySummary: vi.fn(),
     fetchAllCoachClasses: vi.fn(),
+    addCoachLeader: vi.fn(),
+    addCoachNote: vi.fn(),
   };
 });
 vi.mock('@/contexts/AppContext', () => ({
@@ -31,16 +35,16 @@ vi.mock('@/contexts/AppContext', () => ({
 
 const DIM = ['Structure & Flow', 'Newcomer Welcome', 'Scripture', 'Facilitation', 'Application', 'Participation', 'Visual Aids', 'Vulnerability', 'Memory', 'Homework', 'Prayer', 'Leader Dev'];
 const roster: CoachSummary[] = [
-  { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning Study', coachName: '', sessionCount: 12, latest: { date: '2026-07-18', dateLabel: 'Jul 18, 2026', score: 92, status: 'Exceptional', statusEmoji: '🔷' } },
-  { id: 'joel', name: 'Joel Hurt', group: "Thursday Men's Study", coachName: '', sessionCount: 7, latest: { date: '2026-07-16', dateLabel: 'Jul 16, 2026', score: 84, status: 'Strong', statusEmoji: '🟢' } },
+  { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning Study', coachName: '', sessionCount: 12, latest: { date: '2026-07-18', dateLabel: 'Jul 18, 2026', score: 92, status: 'Exceptional', statusEmoji: '🔷' } },
+  { id: 'ezra', name: 'Ezra Holt', group: "Thursday Men's Study", coachName: '', sessionCount: 7, latest: { date: '2026-07-16', dateLabel: 'Jul 16, 2026', score: 84, status: 'Strong', statusEmoji: '🟢' } },
 ];
 const monthly: CoachMonthly = {
   month: '2026-07', monthLabel: 'July 2026',
   program: { sessions: 37, activeLeaders: 15, newcomers: 12, avgScore: 73.7, clusters: [], delta: 4.2 },
   availableMonths: ['2026-07', '2026-06'],
   leaders: [
-    { id: 'bryan', name: 'Bryan Bailey', group: '', sessions: 6, avgScore: 82.4, status: 'Strong', statusEmoji: '', delta: 2, dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, avg: [4.2, 4.4, 5, 3.7, 4.5, 4, 3, 4.2, 3.5, 4, 4.1, 3.3][i] })) },
-    { id: 'joel', name: 'Joel Hurt', group: '', sessions: 5, avgScore: 82.6, status: 'Strong', statusEmoji: '', delta: 2, dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, avg: 4 })) },
+    { id: 'avery', name: 'Avery Hollis', group: '', sessions: 6, avgScore: 82.4, status: 'Strong', statusEmoji: '', delta: 2, dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, avg: [4.2, 4.4, 5, 3.7, 4.5, 4, 3, 4.2, 3.5, 4, 4.1, 3.3][i] })) },
+    { id: 'ezra', name: 'Ezra Holt', group: '', sessions: 5, avgScore: 82.6, status: 'Strong', statusEmoji: '', delta: 2, dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, avg: 4 })) },
   ],
   narrative: { executiveSummary: ['Program composite reached 73.7 / 100 — Strong.', 'Visual Aids is the single largest training leverage.'], trends: ['Scripture Engagement is the strongest dimension.'] },
 };
@@ -50,25 +54,45 @@ const report: CoachReport = {
   dimensions: DIM.map((n, i) => ({ n: i + 1, name: n, score: [4, 4, 5, 4, 4, 4, 2, 4, 3, 4, 4, 3][i], note: `Note ${n}.` })),
   bigIdeas: ['Faith without works is dead.'],
   feedback: { headline: 'Scripture carried the hour.', strengths: [], improvements: [], recommendations: [], overview: [], strengthsProse: [], improvementsProse: [], recommendationsProse: [] },
-  sections: [], docUrl: '', pdfUrl: '', notes: [{ id: 'n1', body: 'Great job on the pairings.', createdAt: '2026-07-19', emailed: true }],
+  sections: [], notes: [{ id: 'n1', body: 'Great job on the pairings.', createdAt: '2026-07-19', emailed: true }],
 };
-const reportsFor = { profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning Study', coachName: '' }, reports: [report] };
 const trendsFor: CoachTrends = {
   scoreSeries: [{ date: '2026-07-11', dateLabel: 'Jul 11', session: 'L8', score: 87, status: 'Exceptional' }, { date: '2026-07-18', dateLabel: 'Jul 18', session: 'L9', score: 92, status: 'Exceptional' }],
   clusterSeries: [], dimensionSeries: [{ date: '2026-07-18', dateLabel: 'Jul 18', ...Object.fromEntries(DIM.map((n, i) => [n, [4, 4, 5, 4, 4, 4, 2, 4, 3, 4, 4, 3][i]])) }] as never, delta: null,
 };
 const leaderMonthly: LeaderMonthlyResponse = {
-  profile: { id: 'bryan', name: 'Bryan Bailey', group: 'Saturday Morning Study' }, availableMonths: ['2026-07'],
-  summary: { month: '2026-07', monthLabel: 'July 2026', priorMonthLabel: 'June 2026', leaderId: 'bryan', leaderName: 'Bryan Bailey', group: '', sessionsCount: 4, composite: 88, status: { label: 'Exceptional', emoji: '🔷' }, priorComposite: 82, delta: 6, clusterAvg: { tc: 88, bm: 76, ep: 77, br: 84 }, glance: { rows: [], avg: { bm: 76, tc: 88, ep: 77, br: 84, composite: 88, status: 'Exceptional' } }, trajectory: [], clusters: [], strengths: [{ text: 'Cross-references built a framework.', session: '07-18' }], growth: [{ text: 'Visual Aids at 2/5.', session: '07-18' }], trends: [], conversationGuide: [], focus: { clusterName: 'Building Ministry', clusterPct: 76, goals: [] }, sessions: [] },
+  profile: { id: 'avery', name: 'Avery Hollis', group: 'Saturday Morning Study' }, availableMonths: ['2026-07'],
+  summary: { month: '2026-07', monthLabel: 'July 2026', priorMonthLabel: 'June 2026', leaderId: 'avery', leaderName: 'Avery Hollis', group: '', sessionsCount: 4, composite: 88, status: { label: 'Exceptional', emoji: '🔷' }, priorComposite: 82, delta: 6, clusterAvg: { tc: 88, bm: 76, ep: 77, br: 84 }, glance: { rows: [], avg: { bm: 76, tc: 88, ep: 77, br: 84, composite: 88, status: 'Exceptional' } }, trajectory: [], clusters: [], strengths: [{ text: 'Cross-references built a framework.', session: '07-18' }], growth: [{ text: 'Visual Aids at 2/5.', session: '07-18' }], trends: [], conversationGuide: [], focus: { clusterName: 'Building Ministry', clusterPct: 76, goals: [] }, sessions: [] },
 };
 const classes: AdminCoachClass[] = [
-  { id: 'c1', name: 'Saturday Morning Study', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', leader: { id: 'bryan', name: 'Bryan Bailey', email: 'b@x.com' } },
+  { id: 'c1', name: 'Saturday Morning Study', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', leader: { id: 'avery', name: 'Avery Hollis', email: 'b@x.com' } },
 ];
 
 beforeEach(() => {
+  // Cluster names and band labels are served, not hardcoded, so the screen
+  // needs the rubric to render them (tasks 8.1-8.3).
+  primeRubricCache({
+    model: 'v3-weighted-100',
+    clusters: [
+      { name: 'Teaching Craft', weight: 33 },
+      { name: 'Building Ministry', weight: 31 },
+      { name: 'Engaging People', weight: 18 },
+      { name: 'Being Real', weight: 18 },
+    ],
+    dimensions: [],
+    statusBands: [
+      { min: 85, label: 'Exceptional', emoji: '🔷' },
+      { min: 72, label: 'Strong', emoji: '🟢' },
+      { min: 60, label: 'On Target', emoji: '🟡' },
+      { min: 45, label: 'Developing', emoji: '🟠' },
+      { min: 0, label: 'Early Stage', emoji: '🔴' },
+    ],
+    dimensionBands: [],
+  });
   vi.mocked(coachService.fetchAdminCoaches).mockResolvedValue(roster);
   vi.mocked(coachService.fetchAdminMonthly).mockResolvedValue(monthly);
-  vi.mocked(coachService.fetchCoachReportsFor).mockResolvedValue(reportsFor);
+  vi.mocked(coachService.fetchCoachReportSummaries).mockResolvedValue({ items: [report], total: 1, streakWeeks: 1, quarterSessions: 1 });
+  vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(async (id) => (id === report.id ? report : null));
   vi.mocked(coachService.fetchCoachTrendsFor).mockResolvedValue(trendsFor);
   vi.mocked(coachService.fetchLeaderMonthlySummary).mockResolvedValue(leaderMonthly);
   vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue(classes);
@@ -89,23 +113,58 @@ describe('Coach Oversight', () => {
   it('renders the roster with program health and every leader', async () => {
     renderScreen();
     expect(await screen.findByText('Bible Leader Coach')).toBeInTheDocument();
-    expect(await screen.findByTestId('oversight-roster-bryan')).toBeInTheDocument();
-    expect(screen.getByText('Joel Hurt')).toBeInTheDocument();
+    expect(await screen.findByTestId('oversight-roster-avery')).toBeInTheDocument();
+    expect(screen.getByText('Ezra Holt')).toBeInTheDocument();
   });
 
   it('opens a leader detail with development + classes', async () => {
     renderScreen();
-    fireEvent.click(await screen.findByTestId('oversight-roster-bryan'));
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
     expect(await screen.findByText('Development · the coaching conversation')).toBeInTheDocument();
     expect(screen.getByText('Classes')).toBeInTheDocument();
     // Comment composer for the session is present.
     expect(await screen.findByTestId('oversight-comment-s6')).toBeInTheDocument();
   });
 
+  it("marks a held pipeline copy among a leader's classes as admin-only", async () => {
+    const held = { ...report, id: 's7', date: '2026-07-17' };
+    vi.mocked(coachService.fetchCoachReportSummaries).mockResolvedValue({
+      items: [{ ...report, held: false }, { ...held, held: true }],
+      total: 2,
+      streakWeeks: 1,
+      quarterSessions: 1,
+    });
+    vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(async (id) => (id === held.id ? held : report));
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
+
+    expect(await screen.findByTestId('coach-pipeline-copy-s7')).toHaveTextContent('Pipeline copy, not visible to the leader');
+    expect(screen.queryByTestId('coach-pipeline-copy-s6')).toBeNull();
+  });
+
+  it('shows why a comment on a held report was refused, and keeps the draft', async () => {
+    vi.mocked(coachService.addCoachNote).mockRejectedValue(
+      new coachService.CoachApiError(
+        'x',
+        409,
+        'This report is held from its leader, so a note would email them about a report they cannot open. Release it first.',
+      ),
+    );
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
+    fireEvent.change(await screen.findByTestId('oversight-comment-s6'), { target: { value: 'Well led.' } });
+    fireEvent.click(screen.getByTestId('oversight-comment-send-s6'));
+
+    expect(await screen.findByTestId('oversight-comment-error-s6')).toHaveTextContent(
+      'Refused (409): This report is held from its leader, so a note would email them about a report they cannot open. Release it first.',
+    );
+    expect(screen.getByTestId('oversight-comment-s6')).toHaveValue('Well led.');
+  });
+
   it('falls back to available sessions for cluster mix when no monthly summary yet', async () => {
     vi.mocked(coachService.fetchLeaderMonthlySummary).mockResolvedValueOnce({ ...leaderMonthly, summary: null });
     renderScreen();
-    fireEvent.click(await screen.findByTestId('oversight-roster-bryan'));
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
     // Cluster mix still renders (never blank) using the sessions we have.
     expect(await screen.findByText(/Sessions so far/)).toBeInTheDocument();
     expect(screen.getByText('Building Ministry')).toBeInTheDocument();
@@ -130,9 +189,99 @@ describe('Coach Oversight', () => {
     await screen.findByText('Dimension heat map');
     // Every leader name across the trends tables is a button that opens that
     // leader's dedicated page. Clicking one drills into the leader detail view.
-    const nameButtons = screen.getAllByTitle("Open Joel Hurt's page");
+    const nameButtons = screen.getAllByTitle("Open Ezra Holt's page");
     expect(nameButtons.length).toBeGreaterThan(0);
     fireEvent.click(nameButtons[0]);
     expect(await screen.findByText('Development · the coaching conversation')).toBeInTheDocument();
+  });
+});
+
+describe('adding a leader', () => {
+  const fillInvite = async () => {
+    fireEvent.click(await screen.findByTestId('oversight-add-leader'));
+    fireEvent.change(screen.getByTestId('oversight-invite-name'), { target: { value: 'Ezra Holt' } });
+    fireEvent.change(screen.getByTestId('oversight-invite-email'), { target: { value: 'joel2@example.test' } });
+    fireEvent.click(screen.getByTestId('oversight-invite-send'));
+  };
+
+  it("shows the server's refusal of a name whose id is taken, and keeps the form open", async () => {
+    vi.mocked(coachService.addCoachLeader).mockRejectedValue(
+      new coachService.CoachApiError(
+        'admin/leaders',
+        409,
+        'Another leader already uses the id "ezra-holt". Enter a different name.',
+      ),
+    );
+    renderScreen();
+    await fillInvite();
+
+    expect(await screen.findByTestId('oversight-invite-error')).toHaveTextContent(
+      'Another leader already uses the id "ezra-holt". Enter a different name.',
+    );
+    expect(screen.getByTestId('oversight-invite-modal')).toBeInTheDocument();
+    expect(screen.getByTestId('oversight-invite-name')).toHaveValue('Ezra Holt');
+  });
+
+  it("shows the server's refusal of a name that contains another leader's keyword, and keeps the form open", async () => {
+    const refusal =
+      'Name refused: it contains "tuesday night", a keyword of evan-ellis. Their sessions would be routed to that leader. Enter a different name or change that leader\'s keywords first.';
+    vi.mocked(coachService.addCoachLeader).mockRejectedValue(new coachService.CoachApiError('admin/leaders', 409, refusal));
+    renderScreen();
+    await fillInvite();
+
+    expect(await screen.findByTestId('oversight-invite-error')).toHaveTextContent(refusal);
+    expect(screen.getByTestId('oversight-invite-modal')).toBeInTheDocument();
+    expect(screen.getByTestId('oversight-invite-name')).toHaveValue('Ezra Holt');
+  });
+
+  it('holds an address that breaks the rule before it reaches the server, naming the rule', async () => {
+    vi.mocked(coachService.addCoachLeader).mockClear();
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-add-leader'));
+    fireEvent.change(screen.getByTestId('oversight-invite-name'), { target: { value: 'Ezra Holt' } });
+    fireEvent.change(screen.getByTestId('oversight-invite-email'), { target: { value: 'ezra.@example.test' } });
+    fireEvent.click(screen.getByTestId('oversight-invite-send'));
+
+    expect(await screen.findByTestId('oversight-invite-error')).toHaveTextContent(coachService.EMAIL_RULE);
+    expect(coachService.addCoachLeader).not.toHaveBeenCalled();
+  });
+
+  it('opens the new leader by the id the server returned', async () => {
+    vi.mocked(coachService.addCoachLeader).mockResolvedValue({
+      id: 'ezra-holt-2',
+      name: 'Ezra Holt',
+      group: '',
+      coachName: '',
+      sessionCount: 0,
+      latest: null,
+    });
+    renderScreen();
+    await fillInvite();
+
+    await waitFor(() => expect(screen.queryByTestId('oversight-invite-modal')).toBeNull());
+    await waitFor(() =>
+      expect(coachService.fetchCoachReportSummaries).toHaveBeenCalledWith(0, 50, 'ezra-holt-2'),
+    );
+  });
+});
+
+describe("a leader's older classes", () => {
+  it('offers a retry when the next page fails, and loads it on retry', async () => {
+    const row = (i: number) => ({ ...report, id: `s${i}`, date: `2026-07-${String(17 - i).padStart(2, '0')}` });
+    const first = [report, row(1), row(2), row(3), row(4)];
+    vi.mocked(coachService.fetchCoachReportSummaries).mockClear();
+    vi.mocked(coachService.fetchCoachReportSummaries)
+      .mockResolvedValueOnce({ items: first, total: 7, streakWeeks: 1, quarterSessions: 1 })
+      .mockRejectedValueOnce(new coachService.CoachApiError('admin/coaches/avery/reports/summary', 500, ''))
+      .mockResolvedValueOnce({ items: [row(5), row(7)], total: 7, streakWeeks: 1, quarterSessions: 1 });
+    renderScreen();
+    fireEvent.click(await screen.findByTestId('oversight-roster-avery'));
+    fireEvent.click(await screen.findByText('Older →'));
+
+    expect(await screen.findByText('Could not load these classes.')).toBeInTheDocument();
+    fireEvent.click(screen.getByTestId('oversight-classes-retry'));
+
+    expect(await screen.findByTestId('oversight-class-pending-s5')).toBeInTheDocument();
+    expect(coachService.fetchCoachReportSummaries).toHaveBeenCalledTimes(3);
   });
 });

@@ -16,6 +16,8 @@ import { GraduationCap } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import type { CoachAuthReason } from '@/services/coachService';
 import { dt } from './dashboardTheme';
+import ConfirmEmailGate from './ConfirmEmailGate';
+import { useEmailCheck } from '@/hooks/useCoach';
 
 type Page = 'home' | 'sessions' | 'trends';
 
@@ -251,6 +253,7 @@ export function CoachGate({
   children: ReactNode;
 }) {
   const navigate = useNavigate();
+  const emailCheck = useEmailCheck(authError === 'not_a_coach');
 
   if (loading) {
     return (
@@ -280,6 +283,14 @@ export function CoachGate({
           Sign in
         </button>
       </div>
+    );
+  }
+
+  if (authError === 'not_a_coach' && emailCheck.pending) return null;
+
+  if (authError === 'confirm_email' || (authError === 'not_a_coach' && emailCheck.unverified)) {
+    return (
+      <ConfirmEmailGate container={centered} title={gateTitle} body={gateBody} button={primaryBtn} iconColor={dt.gold} />
     );
   }
 

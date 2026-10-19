@@ -53,7 +53,7 @@ jobs:
         run: bunx tsc --noEmit
 
       - name: Build SPA
-        env:
+        env: &build-env
           # Build-time env vars baked into the bundle. Real values come
           # from repo secrets in production; placeholders below mirror
           # the monorepo's apps/lovable build step (Phase 1 of FE
@@ -70,14 +70,6 @@ jobs:
           NODE_OPTIONS: --max-old-space-size=8192
         run: bunx vite build
 
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist/
-          retention-days: 1
-          if-no-files-found: error
-
   deploy:
     name: Deploy (${{ github.event_name == 'pull_request' && 'preview' || 'main' }})
     needs: build
@@ -91,11 +83,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          name: dist
-          path: dist/
+          bun-version: 1.2.23
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build SPA
+        env: *build-env
+        run: bunx vite build
 
       - name: Deploy to Cloudflare Workers
         id: deploy

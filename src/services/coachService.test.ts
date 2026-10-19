@@ -5,7 +5,29 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   addCoachLeader,
+  amendReport,
+  correctDimension,
+  fetchCoverage,
+  fetchLeaderAttribution,
+  fetchPendingReshares,
+  fetchPipelineFailures,
+  EMAIL_RULE,
+  isEmailAddress,
+  isPlaceholderAddress,
+  fetchReportReview,
+  fetchReportRevisions,
+  mintRecordingUrl,
+  releaseHeldReport,
+  requeuePipelineFailure,
+  requeueRevision,
+  resolveReshareRequest,
+  saveLeaderAttribution,
+  sendReshareRequest,
+  sendRevision,
+  setFirstLesson,
+  editImprovements,
   addCoachNote,
+  attributeSession,
   CoachAuthError,
   createCoachClass,
   deleteCoachClass,
@@ -13,14 +35,20 @@ import {
   fetchAdminMonthly,
   fetchAllCoachClasses,
   fetchCoachClasses,
-  fetchCoachReports,
-  fetchCoachReportsFor,
+  fetchCoachReportDetail,
+  fetchCoachReportSummaries,
   fetchCoachMe,
   saveCoachZoomLink,
-  pdfDownloadUrl,
   saveRecordingLink,
+  setNotTeaching,
   statusColor,
   updateCoachClass,
+  updateLeaderEmail,
+  needsBenchmarkConfirm,
+  describeAddressChange,
+  confirmAddressChange,
+  fetchParallelRunComparison,
+  refusalCode,
 } from './coachService';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -54,19 +82,57 @@ afterEach(() => {
 });
 
 describe('coachService', () => {
-  it('fetches reports and attaches the bearer token', async () => {
+  it('fetches one page of report summaries and attaches the bearer token', async () => {
     mockFetch((url) => {
-      if (url.endsWith('/coach/reports')) {
-        return jsonResponse({ reports: [{ id: 'r1', session: 'James L5', score: 86 }] });
+      if (url.endsWith('/coach/reports/summary?limit=50&offset=50')) {
+        return jsonResponse({ items: [{ id: 'r1', session: 'James L5', score: 86 }], total: 51 });
       }
       return jsonResponse({}, 404);
     });
 
-    const reports = await fetchCoachReports();
-    expect(reports).toHaveLength(1);
-    expect(reports[0].id).toBe('r1');
+    const page = await fetchCoachReportSummaries(50);
+    expect(page.total).toBe(51);
+    expect(page.items[0].id).toBe('r1');
+    expect(calls.map((c) => c.url).some((u) => u.endsWith('/coach/reports'))).toBe(false);
     const auth = new Headers(calls[0].init?.headers).get('Authorization');
     expect(auth).toBe('Bearer test-token');
+  });
+
+  it('reads the session list from the older reports route when the summary route is not there yet', async () => {
+    mockFetch((url) => {
+      if (url.endsWith('/coach/reports')) return jsonResponse({ reports: [{ id: 'r3' }, { id: 'r2' }, { id: 'r1' }] });
+      return jsonResponse({ error: 'NOT_FOUND', message: 'Not found' }, 404);
+    });
+    await expect(fetchCoachReportSummaries(1, 1)).resolves.toEqual({ items: [{ id: 'r2' }], total: 3, streakWeeks: 0, quarterSessions: 0 });
+    mockFetch(() => jsonResponse({ error: 'INTERNAL', message: 'boom' }, 500));
+    await expect(fetchCoachReportSummaries()).rejects.toThrow();
+    expect(calls.map((c) => c.url).some((u) => u.endsWith('/coach/reports'))).toBe(false);
+  });
+
+  it("an admin's drill-in into a leader that does not exist keeps the server's refusal, with no fallback", async () => {
+    mockFetch(() =>
+      jsonResponse({ error: 'NOT_FOUND', message: 'Coach not found', details: { refusal: 'unknown-leader' } }, 404),
+    );
+    await expect(fetchCoachReportSummaries(0, 10, 'nobody-here')).rejects.toMatchObject({ status: 404, serverMessage: 'Coach not found' });
+    expect(calls).toHaveLength(1);
+  });
+
+  it('reads an unknown report as not found, and a server failure as a failure', async () => {
+    mockFetch(() => jsonResponse({ error: 'NOT_FOUND', message: 'Report not found' }, 404));
+    await expect(fetchCoachReportDetail('gone')).resolves.toBeNull();
+    mockFetch(() => jsonResponse({ error: 'INTERNAL', message: 'boom' }, 500));
+    await expect(fetchCoachReportDetail('r1')).rejects.toThrow();
+  });
+
+  it('reads a review with no scores as legacy, and any other failure as a failure', async () => {
+    mockFetch(() => jsonResponse({ error: 'NOT_FOUND', message: 'No scores for that report', details: { refusal: 'unknown-report' } }, 404));
+    await expect(fetchReportReview('legacy')).resolves.toBeNull();
+    mockFetch(() => jsonResponse({ error: 'NOT_FOUND', message: 'Route not found' }, 404));
+    await expect(fetchReportReview('r1')).rejects.toMatchObject({ status: 404, serverMessage: 'Route not found' });
+    for (const status of [500, 502, 409, 400]) {
+      mockFetch(() => jsonResponse({ error: 'X', message: 'boom' }, status));
+      await expect(fetchReportReview('r1')).rejects.toMatchObject({ status, serverMessage: 'boom' });
+    }
   });
 
   it('maps 401 to a signed_out auth error', async () => {
@@ -93,29 +159,72 @@ describe('coachService', () => {
     expect(saved).toBe('https://zoom.us/j/123');
   });
 
-  it('assigns distinct status colors, gold for Exceptional', () => {
-    expect(statusColor('Exceptional')).toBe('var(--vm-dust)');
-    expect(statusColor('Exceptional')).not.toBe(statusColor('Strong'));
+  // Band labels are now SERVED, so the colour follows a band's POSITION rather
+  // than its name. The switch this replaced named all five labels, which made
+  // it a copy of the rubric: renaming a band dropped its colour to the red
+  // default, showing a leader in the TOP band the colour of the bottom one.
+  const BANDS = ['Exceptional', 'Strong', 'On Target', 'Developing', 'Early Stage'];
+
+  it('assigns distinct status colors, gold for the top band', () => {
+    expect(statusColor('Exceptional', BANDS)).toBe('var(--vm-dust)');
+    expect(statusColor('Exceptional', BANDS)).not.toBe(
+      statusColor('Strong', BANDS),
+    );
+  });
+
+  it('a RENAMED top band still gets the top colour', () => {
+    expect(statusColor('Outstanding', ['Outstanding', 'Strong'])).toBe(
+      'var(--vm-dust)',
+    );
+  });
+
+  it('a sixth served band takes the bottom colour, not the unknown grey', () => {
+    const six = [...BANDS, 'Sixth'];
+    expect(statusColor('Exceptional', six)).toBe('var(--vm-dust)');
+    expect(statusColor('Sixth', six)).toBe('#B91C1C');
+    expect(six.map((b) => statusColor(b, six))).not.toContain('#8A8272');
+  });
+
+  it('an unknown label falls back rather than throwing', () => {
+    expect(statusColor('Nonsense', BANDS)).toBe('#8A8272');
+  });
+
+  it('a status is NOT red before the bands have loaded', () => {
+    // Every caller passes [] on first paint. Keyed by position with a
+    // last-entry fallback, the top band rendered in the bottom band's red
+    // until the fetch resolved.
+    const bottom = statusColor('Early Stage', BANDS);
+    expect(statusColor('Exceptional', [])).not.toBe(bottom);
+    expect(statusColor('Exceptional', [])).toBe('#8A8272');
   });
 
   it('fetches the admin roster', async () => {
     mockFetch((url) => {
       expect(url).toContain('/coach/admin/coaches');
-      return jsonResponse({ coaches: [{ id: 'jeff-ward', name: 'Jeff Ward', sessionCount: 3 }] });
+      return jsonResponse({ coaches: [{ id: 'milo-kerr', name: 'Milo Kerr', sessionCount: 3 }] });
     });
     const coaches = await fetchAdminCoaches();
     expect(coaches).toHaveLength(1);
-    expect(coaches[0].id).toBe('jeff-ward');
+    expect(coaches[0].id).toBe('milo-kerr');
   });
 
-  it('fetches a specific leader (admin drill-in) with profile + reports', async () => {
+  it("reads one leader's summaries a page at a time and one report at a time through the admin routes", async () => {
     mockFetch((url) => {
-      expect(url).toContain('/coach/admin/coaches/jeff-ward/reports');
-      return jsonResponse({ profile: { id: 'jeff-ward', name: 'Jeff Ward' }, reports: [{ id: 'r1' }] });
+      if (url.endsWith('/coach/admin/coaches/milo-kerr/reports/summary?limit=5&offset=10')) {
+        return jsonResponse({ items: [{ id: 'r1' }], total: 11, streakWeeks: 4, quarterSessions: 6 });
+      }
+      if (url.endsWith('/coach/admin/coaches/milo-kerr/reports/r1')) return jsonResponse({ report: { id: 'r1' } });
+      return jsonResponse({ error: 'NOT_FOUND', message: 'Session not found' }, 404);
     });
-    const data = await fetchCoachReportsFor('jeff-ward');
-    expect(data.profile.id).toBe('jeff-ward');
-    expect(data.reports).toHaveLength(1);
+    await expect(fetchCoachReportSummaries(10, 5, 'milo-kerr')).resolves.toEqual({
+      items: [{ id: 'r1' }],
+      total: 11,
+      streakWeeks: 4,
+      quarterSessions: 6,
+    });
+    await expect(fetchCoachReportDetail('r1', 'milo-kerr')).resolves.toMatchObject({ id: 'r1' });
+    await expect(fetchCoachReportDetail('gone', 'milo-kerr')).resolves.toBeNull();
+    expect(calls.map((c) => c.url).some((u) => /\/reports$/.test(u))).toBe(false);
   });
 
   it('maps admin 403 (non-admin coach) to a not_a_coach error', async () => {
@@ -134,14 +243,14 @@ describe('coachService', () => {
             classDate: '2026-07-23',
             recurrence: 'weekly',
             zoomLink: 'https://zoom.us/j/1',
-            leader: { id: 'jeff-ward', name: 'Jeff Ward', email: 'jeff@example.com' },
+            leader: { id: 'milo-kerr', name: 'Milo Kerr', email: 'milo@example.com' },
           },
         ],
       });
     });
     const classes = await fetchAllCoachClasses();
     expect(classes).toHaveLength(1);
-    expect(classes[0].leader.name).toBe('Jeff Ward');
+    expect(classes[0].leader.name).toBe('Milo Kerr');
     expect(classes[0].zoomLink).toBe('https://zoom.us/j/1');
   });
 
@@ -226,26 +335,112 @@ describe('coachService', () => {
     expect(coach.sessionCount).toBe(0);
   });
 
+  it("PUTs a leader's new address to the leader's id and returns the stored one", async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/admin/leaders/wyatt-wellington/email');
+      expect(init?.method).toBe('PUT');
+      expect(JSON.parse(String(init?.body))).toEqual({ email: 'Wyatt@Example.test' });
+      return jsonResponse({ email: 'wyatt@example.test', status: 'pending', expiresAt: '2026-10-16T15:00:00.000Z', confirmationSent: true });
+    });
+    expect(await updateLeaderEmail('wyatt-wellington', 'Wyatt@Example.test')).toEqual({
+      email: 'wyatt@example.test',
+      status: 'pending',
+      expiresAt: '2026-10-16T15:00:00.000Z',
+      confirmationSent: true,
+    });
+  });
+
+  it("asks for the benchmark confirm on the server's confirm-required refusal code, never on the wording of its message", async () => {
+    mockFetch(() =>
+      jsonResponse({ error: 'CONFLICT', message: 'Reworded by the server', details: { refusal: 'confirm-required' } }, 409),
+    );
+    const coded = await updateLeaderEmail('nora-quill', 'nora@example.org').catch((e) => e);
+    expect(needsBenchmarkConfirm(coded)).toBe(true);
+
+    mockFetch(() =>
+      jsonResponse({ error: 'CONFLICT', message: 'Another leader already uses that address; send confirm: true to change it' }, 409),
+    );
+    const worded = await updateLeaderEmail('nora-quill', 'nora@example.org').catch((e) => e);
+    expect(needsBenchmarkConfirm(worded)).toBe(false);
+  });
+
+  it('POSTs the leader a session is assigned to', async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/admin/sessions/ff%2F4/attribute');
+      expect(init?.method).toBe('POST');
+      expect(JSON.parse(String(init?.body))).toEqual({ coachId: 'amy-lee', expectedCoachId: null });
+      return jsonResponse({ coachId: 'amy-lee', state: 'retained' });
+    });
+    expect(await attributeSession('ff/4', 'amy-lee', null)).toEqual({ coachId: 'amy-lee', state: 'retained' });
+  });
+
+  it.each([
+    ['a.b+c_d%e-f@example.org', true],
+    ['leader@church.example.org', true],
+    ['a,b@example.org', false],
+    ['a;b@example.org', false],
+    ['<a>@example.org', false],
+    ['"a"@example.org', false],
+    ['a b@example.org', false],
+    ['.a@example.org', false],
+    ['a.@example.org', false],
+    ['a..b@example.org', false],
+    ['a@example.org.', false],
+    ['a@example', false],
+    ['a@-example.org', false],
+    ['a@b@example.org', false],
+    ['@example.org', false],
+    [`${'a'.repeat(250)}@x.org`, false],
+  ])('holds %s to the server\'s address rule: %s', (address, ok) => {
+    expect(isEmailAddress(address)).toBe(ok);
+  });
+
+  it('names the rule the server enforces, and reads a placeholder with a trailing dot as one', () => {
+    expect(EMAIL_RULE).toBe(
+      'Enter one email address: letters, digits and . _ % + - before the @, then a domain such as example.org, with no trailing dot',
+    );
+    expect(isPlaceholderAddress('dana@needs-real-email.invalid.')).toBe(true);
+    expect(isPlaceholderAddress(' Dana@Needs-Real-Email.INVALID ')).toBe(true);
+    expect(isPlaceholderAddress('dana@example.org')).toBe(false);
+  });
+
+  it('reads one page of stuck sessions with the total the server counted', async () => {
+    const stuck = { sourceSessionId: 'ff-1', coachId: null, title: 't', sessionDate: '2026-09-01', state: 'observed', attempts: 0, reportId: null, reason: null, action: 'attribute', updatedAt: '2026-09-02T00:00:00Z' };
+    mockFetch(() => jsonResponse({ sessions: [stuck], total: 120, limit: 50, offset: 50 }));
+    expect(await fetchPipelineFailures(50)).toEqual({ sessions: [stuck], total: 120, limit: 50, offset: 50 });
+  });
+
+  it('POSTs a not-teaching attestation and DELETEs it to clear', async () => {
+    mockFetch((url, init) => {
+      expect(url).toContain('/coach/admin/leaders/amy-lee/not-teaching');
+      return jsonResponse({ attested: init?.method === 'POST' });
+    });
+    expect(await setNotTeaching('amy-lee', true)).toEqual({ attested: true });
+    expect(calls[0].init?.method).toBe('POST');
+    expect(await setNotTeaching('amy-lee', false)).toEqual({ attested: false });
+    expect(calls[1].init?.method).toBe('DELETE');
+  });
+
   it('PUTs a session recording link', async () => {
     mockFetch((url, init) => {
-      expect(url).toContain('/coach/admin/coaches/jeff-ward/reports/r1/recording');
+      expect(url).toContain('/coach/admin/coaches/milo-kerr/reports/r1/recording');
       expect(init?.method).toBe('PUT');
       const body = JSON.parse(String(init?.body));
       return jsonResponse({ recordingUrl: body.recordingUrl });
     });
-    const saved = await saveRecordingLink('jeff-ward', 'r1', 'https://zoom.us/rec/abc');
+    const saved = await saveRecordingLink('milo-kerr', 'r1', 'https://zoom.us/rec/abc');
     expect(saved).toBe('https://zoom.us/rec/abc');
   });
 
   it('POSTs a coaching note and returns it', async () => {
     mockFetch((url, init) => {
-      expect(url).toContain('/coach/admin/coaches/jeff-ward/reports/r1/notes');
+      expect(url).toContain('/coach/admin/coaches/milo-kerr/reports/r1/notes');
       expect(init?.method).toBe('POST');
       return jsonResponse({
         note: { id: 'n1', body: 'Great job.', createdAt: '2026-07-21T00:00:00.000Z', emailed: true },
       });
     });
-    const note = await addCoachNote('jeff-ward', 'r1', 'Great job.');
+    const note = await addCoachNote('milo-kerr', 'r1', 'Great job.');
     expect(note.id).toBe('n1');
     expect(note.emailed).toBe(true);
   });
@@ -273,7 +468,7 @@ describe('coachService', () => {
     mockFetch((url) => {
       expect(url).toContain('/coach/monthly-summary?month=2026-06');
       return jsonResponse({
-        profile: { id: 'bryan-bailey', name: 'Bryan Bailey', group: 'James' },
+        profile: { id: 'avery-hollis', name: 'Avery Hollis', group: 'James' },
         summary: { month: '2026-06', monthLabel: 'June 2026', composite: 79, clusters: [], sessions: [] },
         availableMonths: ['2026-06', '2026-05'],
       });
@@ -286,54 +481,139 @@ describe('coachService', () => {
 
   it("fetches a leader's monthly summary for admin drill-in", async () => {
     mockFetch((url) => {
-      expect(url).toContain('/coach/admin/coaches/jeff-ward/monthly-summary?month=2026-05');
+      expect(url).toContain('/coach/admin/coaches/milo-kerr/monthly-summary?month=2026-05');
       return jsonResponse({
-        profile: { id: 'jeff-ward', name: 'Jeff Ward', group: 'Colossians' },
+        profile: { id: 'milo-kerr', name: 'Milo Kerr', group: 'Colossians' },
         summary: null,
         availableMonths: ['2026-05'],
       });
     });
     const { fetchLeaderMonthlySummary } = await import('./coachService');
-    const data = await fetchLeaderMonthlySummary('jeff-ward', '2026-05');
-    expect(data.profile.id).toBe('jeff-ward');
+    const data = await fetchLeaderMonthlySummary('milo-kerr', '2026-05');
+    expect(data.profile.id).toBe('milo-kerr');
     expect(data.summary).toBeNull();
+  });
+
+  it.each<[string, () => Promise<unknown>, string, string, unknown]>([
+    ['mint a recording address', () => mintRecordingUrl('r/1'), 'GET', '/coach/reports/r%2F1/recording-url', undefined],
+    ['list pending re-shares', () => fetchPendingReshares(), 'GET', '/coach/admin/reshares', undefined],
+    ['ask for a re-share', () => sendReshareRequest('ff/1'), 'POST', '/coach/admin/reshares/ff%2F1/send', undefined],
+    ['resolve a re-share', () => resolveReshareRequest('ff/1'), 'POST', '/coach/admin/reshares/ff%2F1/resolve', undefined],
+    ['list pipeline failures', () => fetchPipelineFailures(), 'GET', '/coach/admin/pipeline-failures?limit=50&offset=0', undefined],
+    ['list a later page of pipeline failures', () => fetchPipelineFailures(100, 25), 'GET', '/coach/admin/pipeline-failures?limit=25&offset=100', undefined],
+    ['requeue a failure', () => requeuePipelineFailure('ff/1'), 'POST', '/coach/admin/pipeline-failures/ff%2F1/requeue', undefined],
+    [
+      'assign an unattributed session',
+      () => attributeSession('ff/4', 'amy-lee', null),
+      'POST',
+      '/coach/admin/sessions/ff%2F4/attribute',
+      { coachId: 'amy-lee', expectedCoachId: null },
+    ],
+    [
+      'move a session from the leader it was attributed to',
+      () => attributeSession('ff/4', 'amy-lee', 'milo-kerr'),
+      'POST',
+      '/coach/admin/sessions/ff%2F4/attribute',
+      { coachId: 'amy-lee', expectedCoachId: 'milo-kerr' },
+    ],
+    ['release a held report', () => releaseHeldReport('rep/2'), 'POST', '/coach/admin/reports/rep%2F2/release', undefined],
+    ['read a report review', () => fetchReportReview('rep/1'), 'GET', '/coach/admin/reports/rep%2F1/review', undefined],
+    [
+      'correct a dimension of an undelivered report',
+      () => correctDimension('rep/1', 9, { score: 3, rationale: 'r' }),
+      'POST',
+      '/coach/admin/reports/rep%2F1/dimensions/9',
+      { score: 3, rationale: 'r' },
+    ],
+    [
+      'amend a report',
+      () => amendReport('rep/1', { body: { headline: 'x' } }),
+      'POST',
+      '/coach/admin/reports/rep%2F1/amend',
+      { body: { headline: 'x' } },
+    ],
+    [
+      'set the first-lesson flag',
+      () => setFirstLesson('rep/1', { firstLesson: false, score: 3, rationale: 'r' }),
+      'PUT',
+      '/coach/admin/reports/rep%2F1/first-lesson',
+      { firstLesson: false, score: 3, rationale: 'r' },
+    ],
+    [
+      "replace an undelivered report's improvements",
+      () => editImprovements('rep/1', { improvements: ['a'], improvementsProse: [{ title: 't', paragraphs: ['p'] }] }),
+      'PUT',
+      '/coach/admin/reports/rep%2F1/improvements',
+      { improvements: ['a'], improvementsProse: [{ title: 't', paragraphs: ['p'] }] },
+    ],
+    ['list kept versions', () => fetchReportRevisions('rep/1'), 'GET', '/coach/admin/reports/rep%2F1/revisions', undefined],
+    ['send the latest revision', () => sendRevision('rep/1'), 'POST', '/coach/admin/reports/rep%2F1/revision/send', undefined],
+    ['requeue the latest revision', () => requeueRevision('rep/1'), 'POST', '/coach/admin/reports/rep%2F1/revision/requeue', undefined],
+    ['read coverage', () => fetchCoverage(14), 'GET', '/coach/admin/coverage?windowDays=14', undefined],
+    ['attest not teaching', () => setNotTeaching('amy/lee', true), 'POST', '/coach/admin/leaders/amy%2Flee/not-teaching', undefined],
+    ['clear the attestation', () => setNotTeaching('amy/lee', false), 'DELETE', '/coach/admin/leaders/amy%2Flee/not-teaching', undefined],
+    ['change a leader address', () => updateLeaderEmail('amy/lee', 'a@example.test'), 'PUT', '/coach/admin/leaders/amy%2Flee/email', { email: 'a@example.test' }],
+    [
+      "confirm a change to the benchmark leader's address",
+      () => updateLeaderEmail('amy/lee', 'a@example.test', true),
+      'PUT',
+      '/coach/admin/leaders/amy%2Flee/email',
+      { email: 'a@example.test', confirm: true },
+    ],
+    ['read keywords and addresses', () => fetchLeaderAttribution('amy/lee'), 'GET', '/coach/admin/leaders/amy%2Flee/attribution', undefined],
+    [
+      'save keywords and addresses',
+      () => saveLeaderAttribution('amy/lee', { titleMatch: ['ruth'], altEmails: [] }),
+      'PUT',
+      '/coach/admin/leaders/amy%2Flee/attribution',
+      { titleMatch: ['ruth'], altEmails: [] },
+    ],
+  ])('%s: exactly one request, with its method, path and body', async (_name, call, method, path, body) => {
+    mockFetch(() => jsonResponse({ email: 'a@example.test' }));
+    await call();
+    expect(calls).toHaveLength(1);
+    const [{ url, init }] = calls;
+    expect(init?.method ?? 'GET').toBe(method);
+    expect(url.slice(-path.length)).toBe(path);
+    expect(init?.body === undefined ? undefined : JSON.parse(String(init.body))).toEqual(body);
   });
 });
 
-describe('pdfDownloadUrl', () => {
-  it('returns null for empty / missing values', () => {
-    expect(pdfDownloadUrl(undefined)).toBeNull();
-    expect(pdfDownloadUrl('')).toBeNull();
-    expect(pdfDownloadUrl('   ')).toBeNull();
+describe('the address confirmation link', () => {
+  it('describes a change with a POST carrying the token in the body, never in the address', async () => {
+    mockFetch(() => jsonResponse({ leaderName: 'Leader A', newEmail: 'n***@example.test', state: 'pending', expiresAt: '2026-10-16T15:00:00.000Z' }));
+    const change = await describeAddressChange('a+b/c');
+    expect(calls[0].url).toMatch(/\/coach\/confirm-address\/describe$/);
+    expect(calls[0].init?.method).toBe('POST');
+    expect(JSON.parse(String(calls[0].init?.body))).toEqual({ token: 'a+b/c' });
+    expect(change.state).toBe('pending');
   });
 
-  it('returns null for a Drive folder link (the exporter fallback)', () => {
-    expect(
-      pdfDownloadUrl('https://drive.google.com/drive/folders/1vvVpdPk2ARawV3wOM9LeXJ0BtpVJ2qjV'),
-    ).toBeNull();
+  it('confirms with a POST carrying the token in the body', async () => {
+    mockFetch(() => jsonResponse({ email: 'new@example.test', noticeSent: false }));
+    expect(await confirmAddressChange('tok-1')).toEqual({ email: 'new@example.test', noticeSent: false });
+    expect(calls[0].url).toMatch(/\/coach\/confirm-address$/);
+    expect(calls[0].init?.method).toBe('POST');
+    expect(JSON.parse(String(calls[0].init?.body))).toEqual({ token: 'tok-1' });
   });
 
-  it('rewrites a Drive file /view link to a direct download', () => {
-    expect(pdfDownloadUrl('https://drive.google.com/file/d/ABC123def/view?usp=drivesdk')).toBe(
-      'https://drive.google.com/uc?export=download&id=ABC123def',
-    );
+  it('carries the refusal code of a refused confirm', async () => {
+    mockFetch(() => jsonResponse({ error: 'CONFLICT', message: 'Reworded', details: { refusal: 'superseded' } }, 409));
+    expect(refusalCode(await confirmAddressChange('tok-1').catch((e) => e))).toBe('superseded');
   });
+});
 
-  it('rewrites an ?id= Drive link to a direct download', () => {
-    expect(pdfDownloadUrl('https://drive.google.com/open?id=XYZ-789')).toBe(
-      'https://drive.google.com/uc?export=download&id=XYZ-789',
-    );
-  });
-
-  it('exports Google Docs links as PDF', () => {
-    expect(pdfDownloadUrl('https://docs.google.com/document/d/DOC_1/edit?usp=drivesdk')).toBe(
-      'https://docs.google.com/document/d/DOC_1/export?format=pdf',
-    );
-  });
-
-  it('passes a plain absolute PDF URL through unchanged', () => {
-    expect(pdfDownloadUrl('https://cdn.versemate.org/reports/x.pdf')).toBe(
-      'https://cdn.versemate.org/reports/x.pdf',
-    );
+describe('the parallel-run comparison', () => {
+  it('is read from the admin route as the server computes it', async () => {
+    const body = {
+      sessions: [],
+      needsPairing: [],
+      unmatched: { backend: [], host: [] },
+      share: { withinOne: 0, comparable: 0, ratio: null },
+      counts: { compared: 0, flagged: 0, needsPairing: 0, unmatchedBackend: 0, unmatchedHost: 0 },
+    };
+    mockFetch(() => jsonResponse(body));
+    expect(await fetchParallelRunComparison()).toEqual(body);
+    expect(calls[0].url).toMatch(/\/coach\/admin\/parallel-run\/comparison$/);
   });
 });

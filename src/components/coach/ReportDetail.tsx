@@ -1,23 +1,23 @@
 /**
- * Full, document-style rendering of a single coaching report — the desktop
+ * Full, document-style rendering of a single coaching report, the desktop
  * counterpart to the compact, tap-to-expand <ReportCard>.
  *
  * The score/identity header (tappable score ring → breakdown) and the session
- * notes live here; the coaching narrative below — Summary & Big Ideas, the
+ * notes live here; the coaching narrative below, Summary & Big Ideas, the
  * full prose feedback, the pipeline's PDF-parity sections, and the 12
- * dimensions — is rendered by the shared <ReportBody>, so the expanded card
+ * dimensions, is rendered by the shared <ReportBody>, so the expanded card
  * and this document view stay identical.
  */
 
 import { useState } from 'react';
-import { Download } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
-import { type CoachReport, pdfDownloadUrl } from '@/services/coachService';
-import { CoachCard, ScoreRing, StatusPill } from './CoachUi';
+import { type CoachReport } from '@/services/coachService';
+import { CoachCard, PdfDownload, PipelineCopyTag, ScoreRing, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
+import ReportReview from './ReportReview';
 import SessionNotes from './SessionNotes';
 
-// Darker body grey than the token default — matches the shared <ReportBody>.
+// Darker body grey than the token default, matches the shared <ReportBody>.
 const BODY = 'color-mix(in srgb, var(--fg-secondary) 42%, var(--fg-primary))';
 
 export default function ReportDetail({
@@ -26,19 +26,20 @@ export default function ReportDetail({
   delta = null,
   admin = false,
   coachId,
+  held,
 }: {
   report: CoachReport;
   leaderName?: string;
   delta?: number | null;
   /** When true (admin drill-in), the recording link + notes are editable. */
   admin?: boolean;
-  /** The leader whose report this is — required for admin edits. */
+  /** The leader whose report this is, required for admin edits. */
   coachId?: string;
+  held?: boolean;
 }) {
   const [showBreakdown, setShowBreakdown] = useState(false);
   // A link that downloads the coach-produced PDF; null hides the button when
   // there is no real per-session PDF (empty or a Drive-folder fallback).
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
 
   return (
     <CoachCard testId={`coach-report-detail-${report.id}`} style={{ padding: 24 }}>
@@ -75,6 +76,7 @@ export default function ReportDetail({
           </p>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
             <StatusPill status={report.status} emoji={report.statusEmoji} />
+            <PipelineCopyTag reportId={report.id} held={held} />
             {delta !== null && (
               <span
                 style={{
@@ -86,41 +88,30 @@ export default function ReportDetail({
                 {delta >= 0 ? '▲' : '▼'} {Math.abs(delta).toFixed(1)} vs. prior
               </span>
             )}
-            {pdfHref && (
-              <a
-                href={pdfHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                download
-                data-testid={`coach-report-pdf-${report.id}`}
-                style={pdfBtn}
-              >
-                <Download size={15} strokeWidth={2} /> Download PDF
-              </a>
-            )}
+            <PdfDownload reportId={report.id} pdfUrl={report.pdfUrl} style={{ padding: '7px 13px' }} />
           </div>
         </div>
       </div>
 
-      {/* Score breakdown — revealed by tapping the ring. */}
+      {/* Score breakdown, revealed by tapping the ring. */}
       {showBreakdown && <ScoreBreakdown report={report} />}
 
       <p style={metaLine}>
-        {report.duration} · {report.attendees} attending · {report.newcomers} newcomer
+        {report.duration} · {report.attendees === null ? 'attendance not recorded' : `${report.attendees} attending`} · {report.newcomers} newcomer
         {report.newcomers === 1 ? '' : 's'}
       </p>
 
-      {/* Recording link + coaching notes — editable for admins, read-only for
-          the leader. */}
-      <SessionNotes report={report} admin={admin} coachId={coachId} leaderName={leaderName} />
+      <SessionNotes key={report.id} report={report} admin={admin} coachId={coachId} leaderName={leaderName} />
 
-      {/* The coaching narrative — shared with the expanded <ReportCard>. */}
+      {/* The coaching narrative, shared with the expanded <ReportCard>. */}
       <ReportBody report={report} />
+
+      {admin && coachId && <ReportReview key={report.id} report={report} coachId={coachId} />}
     </CoachCard>
   );
 }
 
-/** The score composition — shown when the score ring is tapped. */
+/** The score composition, shown when the score ring is tapped. */
 function ScoreBreakdown({ report }: { report: CoachReport }) {
   const bonuses: { label: string; value: number }[] = [];
   if (report.newcomerBonus) bonuses.push({ label: 'Newcomer growth', value: report.newcomerBonus });
@@ -196,19 +187,4 @@ const metaLine: React.CSSProperties = {
   fontSize: 13.5,
   color: vmTokens.textTertiary,
   margin: '16px 0 0',
-};
-
-const pdfBtn: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 6,
-  padding: '7px 13px',
-  borderRadius: 9,
-  border: `1px solid ${vmTokens.gold}`,
-  background: 'transparent',
-  color: vmTokens.gold,
-  fontSize: 13,
-  fontWeight: 600,
-  cursor: 'pointer',
-  textDecoration: 'none',
 };

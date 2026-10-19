@@ -7,6 +7,9 @@
 
 import {
   keepPreviousData,
+  useInfiniteQuery,
+  type UseInfiniteQueryResult,
+  type InfiniteData,
   useMutation,
   type UseMutationResult,
   useQuery,
@@ -23,7 +26,6 @@ import {
   type CoachMe,
   type CoachMonthly,
   type CoachNote,
-  type CoachProfileHeader,
   type CoachReport,
   type CoachSummary,
   type CoachTrends,
@@ -35,12 +37,47 @@ import {
   fetchAllCoachClasses,
   fetchCoachClasses,
   fetchCoachMe,
-  fetchCoachReports,
-  fetchCoachReportsFor,
+  fetchCoachReportDetail,
+  fetchCoachReportSummaries,
+  type CoachReportSummaryPage,
+  REPORT_PAGE_SIZE,
   fetchCoachTrends,
   fetchCoachTrendsFor,
   saveRecordingLink,
+  fetchPipelineFailures,
+  requeuePipelineFailure,
+  releaseHeldReport,
+  fetchCoverage,
+  fetchParallelRunComparison,
+  type ParallelRunComparison,
+  type PipelineFailurePage,
+  type CoverageReport,
+  type ReleaseOutcome,
+  updateLeaderEmail,
+  type LeaderEmailRequest,
+  attributeSession,
+  setNotTeaching,
+  amendReport,
+  fetchReportReview,
+  fetchReportRevisions,
+  sendRevision,
+  requeueRevision,
+  setFirstLesson,
+  correctDimension,
+  type DimensionCorrection,
+  editImprovements,
+  type ImprovementsEdit,
+  fetchLeaderAttribution,
+  saveLeaderAttribution,
+  type LeaderAttribution,
+  type ReportAmendment,
+  type ReportReviewState,
+  type ReportVersion,
+  type RevisionResult,
+  type BigIdeasReviewRow,
+  type RevisionSendResult,
 } from '@/services/coachService';
+import { fetchEmailVerified } from '@/services/emailVerification';
 
 export const coachKeys = {
   me: ['coach', 'me'] as const,
@@ -49,16 +86,31 @@ export const coachKeys = {
   classes: ['coach', 'classes'] as const,
   adminCoaches: ['coach', 'admin', 'coaches'] as const,
   adminClasses: ['coach', 'admin', 'classes'] as const,
+  pipelineFailures: ['coach', 'admin', 'pipeline-failures'] as const,
+  coverage: ['coach', 'admin', 'coverage'] as const,
+  parallelRun: ['coach', 'admin', 'parallel-run'] as const,
+  attribution: (coachId: string) => ['coach', 'admin', 'attribution', coachId] as const,
   adminReports: (id: string) => ['coach', 'admin', 'reports', id] as const,
+  reportReview: (reportId: string) => ['coach', 'admin', 'review', reportId] as const,
+  reportRevisions: (reportId: string) => ['coach', 'admin', 'revisions', reportId] as const,
   adminTrends: (id: string) => ['coach', 'admin', 'trends', id] as const,
   adminMonthly: (month: string) => ['coach', 'admin', 'monthly', month] as const,
+  rotatingClasses: ['coach', 'admin', 'rotating-classes'] as const,
+  duplicates: ['coach', 'admin', 'duplicates'] as const,
+  monthlyReports: (month: string) => ['coach', 'admin', 'monthly-reports', month] as const,
   monthlySummary: (month: string) => ['coach', 'monthly-summary', month] as const,
+  uploads: (admin: boolean, coachId: string | null) => ['coach', 'uploads', admin ? 'admin' : 'own', coachId ?? 'all'] as const,
+  uploadClasses: (coachId: string | null) => ['coach', 'uploads', 'classes', coachId ?? 'own'] as const,
   adminMonthlySummary: (id: string, month: string) =>
     ['coach', 'admin', 'monthly-summary', id, month] as const,
 };
 
-/** Normalize a query's error into the shape <CoachStateBoundary> expects. */
-export function coachState<T>(q: UseQueryResult<T>): {
+export function coachState<T>(q: {
+  isLoading: boolean;
+  error: unknown;
+  data: T | undefined;
+  isFetchNextPageError?: boolean;
+}): {
   loading: boolean;
   authError: CoachAuthReason | null;
   error: boolean;
@@ -68,7 +120,7 @@ export function coachState<T>(q: UseQueryResult<T>): {
   return {
     loading: q.isLoading,
     authError,
-    error: !!q.error && !authError,
+    error: !!q.error && !authError && !q.isFetchNextPageError,
     data: q.data,
   };
 }
@@ -77,12 +129,35 @@ export function useCoachMe(): UseQueryResult<CoachMe> {
   return useQuery({ queryKey: coachKeys.me, queryFn: fetchCoachMe, retry: false });
 }
 
-export function useCoachReports(opts: { enabled?: boolean } = {}): UseQueryResult<CoachReport[]> {
-  return useQuery({
-    queryKey: coachKeys.reports,
-    queryFn: fetchCoachReports,
+function reportsKey(coachId?: string) {
+  return coachId ? coachKeys.adminReports(coachId) : coachKeys.reports;
+}
+
+export function useCoachReportSummaries(
+  opts: { enabled?: boolean; coachId?: string } = {},
+): UseInfiniteQueryResult<InfiniteData<CoachReportSummaryPage, number>> {
+  return useInfiniteQuery({
+    queryKey: [...reportsKey(opts.coachId), 'summary'],
+    queryFn: ({ pageParam }) => fetchCoachReportSummaries(pageParam, REPORT_PAGE_SIZE, opts.coachId),
+    initialPageParam: 0,
+    getNextPageParam: (last, pages) => {
+      const loaded = pages.reduce((n, p) => n + p.items.length, 0);
+      return loaded < last.total && last.items.length > 0 ? loaded : undefined;
+    },
     retry: false,
     enabled: opts.enabled ?? true,
+  });
+}
+
+export function useCoachReportDetail(
+  reportId: string | undefined,
+  coachId?: string,
+): UseQueryResult<CoachReport | null> {
+  return useQuery({
+    queryKey: [...reportsKey(coachId), 'detail', reportId ?? ''],
+    queryFn: () => fetchCoachReportDetail(reportId as string, coachId),
+    enabled: Boolean(reportId),
+    retry: false,
   });
 }
 
@@ -115,19 +190,18 @@ export function useAdminClasses(opts: { enabled?: boolean } = {}): UseQueryResul
   });
 }
 
-export function useAdminCoaches(): UseQueryResult<CoachSummary[]> {
-  return useQuery({ queryKey: coachKeys.adminCoaches, queryFn: fetchAdminCoaches, retry: false });
+export function useAdminCoaches(opts: { enabled?: boolean } = {}): UseQueryResult<CoachSummary[]> {
+  return useQuery({ queryKey: coachKeys.adminCoaches, queryFn: fetchAdminCoaches, retry: false, enabled: opts.enabled ?? true });
 }
 
-export function useCoachReportsFor(
-  coachId: string,
-): UseQueryResult<{ profile: CoachProfileHeader; reports: CoachReport[] }> {
-  return useQuery({
-    queryKey: coachKeys.adminReports(coachId),
-    queryFn: () => fetchCoachReportsFor(coachId),
+export function useAdminLeader(coachId: string | undefined): CoachSummary | undefined {
+  const roster = useQuery({
+    queryKey: coachKeys.adminCoaches,
+    queryFn: fetchAdminCoaches,
     retry: false,
     enabled: !!coachId,
   });
+  return roster.data?.find((c) => c.id === coachId);
 }
 
 export function useCoachTrendsFor(coachId: string): UseQueryResult<CoachTrends> {
@@ -172,7 +246,8 @@ export function useLeaderMonthlySummary(
     queryFn: () => fetchLeaderMonthlySummary(coachId, month),
     retry: false,
     enabled: !!coachId && !!month,
-    placeholderData: keepPreviousData,
+    placeholderData: (previous, previousQuery) =>
+      previousQuery?.queryKey[3] === coachId ? keepPreviousData(previous) : undefined,
   });
 }
 
@@ -186,7 +261,7 @@ export function useAddLeader(): UseMutationResult<
 > {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: addCoachLeader,
+    mutationFn: (input) => addCoachLeader(input),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: coachKeys.adminCoaches });
     },
@@ -220,4 +295,200 @@ export function useAddNote(
       qc.invalidateQueries({ queryKey: coachKeys.reports });
     },
   });
+}
+
+export function usePipelineFailures(offset = 0): UseQueryResult<PipelineFailurePage> {
+  return useQuery({
+    queryKey: [...coachKeys.pipelineFailures, offset],
+    queryFn: () => fetchPipelineFailures(offset),
+    retry: false,
+    placeholderData: keepPreviousData,
+  });
+}
+
+export function useCoverage(): UseQueryResult<CoverageReport> {
+  return useQuery({ queryKey: coachKeys.coverage, queryFn: () => fetchCoverage(), retry: false });
+}
+
+export function useParallelRunComparison(): UseQueryResult<ParallelRunComparison> {
+  return useQuery({ queryKey: coachKeys.parallelRun, queryFn: fetchParallelRunComparison, retry: false });
+}
+
+export function useRequeuePipelineFailure(): UseMutationResult<{ requeued: boolean }, Error, string> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (sourceSessionId) => requeuePipelineFailure(sourceSessionId),
+    onSuccess: () => qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures }),
+  });
+}
+
+function useRefreshPipelineWrite() {
+  const qc = useQueryClient();
+  return () => {
+    for (const queryKey of [
+      coachKeys.pipelineFailures,
+      ['coach', 'admin', 'reports'],
+      ['coach', 'admin', 'review'],
+      ['coach', 'admin', 'revisions'],
+      ['coach', 'admin', 'trends'],
+      coachKeys.reports,
+    ]) {
+      qc.invalidateQueries({ queryKey });
+    }
+  };
+}
+
+export function useReleaseHeldReport(): UseMutationResult<ReleaseOutcome, Error, string> {
+  const refresh = useRefreshPipelineWrite();
+  return useMutation({ mutationFn: (reportId) => releaseHeldReport(reportId), onSuccess: refresh });
+}
+
+export function useUpdateLeaderEmail(): UseMutationResult<
+  LeaderEmailRequest,
+  Error,
+  { coachId: string; email: string; confirm: boolean }
+> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ coachId, email, confirm }) => updateLeaderEmail(coachId, email, confirm),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: coachKeys.coverage });
+      qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
+      qc.invalidateQueries({ queryKey: coachKeys.adminCoaches });
+    },
+  });
+}
+
+export function useAttributeSession(): UseMutationResult<
+  { coachId: string; state: string },
+  Error,
+  { sourceSessionId: string; coachId: string; expectedCoachId: string | null }
+> {
+  const qc = useQueryClient();
+  const refresh = useRefreshPipelineWrite();
+  return useMutation({
+    mutationFn: ({ sourceSessionId, coachId, expectedCoachId }) => attributeSession(sourceSessionId, coachId, expectedCoachId),
+    onSettled: () => {
+      refresh();
+      qc.invalidateQueries({ queryKey: coachKeys.coverage });
+    },
+  });
+}
+
+export function useSetNotTeaching(): UseMutationResult<{ attested: boolean }, Error, { coachId: string; attested: boolean }> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ coachId, attested }) => setNotTeaching(coachId, attested),
+    onSuccess: () => qc.invalidateQueries({ queryKey: coachKeys.coverage }),
+  });
+}
+
+export function useReportReview(reportId: string): UseQueryResult<ReportReviewState | null> {
+  return useQuery({ queryKey: coachKeys.reportReview(reportId), queryFn: () => fetchReportReview(reportId), retry: false });
+}
+
+export function useReportRevisions(reportId: string, enabled: boolean): UseQueryResult<ReportVersion[]> {
+  return useQuery({
+    queryKey: coachKeys.reportRevisions(reportId),
+    queryFn: () => fetchReportRevisions(reportId),
+    retry: false,
+    enabled,
+  });
+}
+
+function useRefreshReport(coachId: string, reportId: string) {
+  const qc = useQueryClient();
+  return () => {
+    qc.invalidateQueries({ queryKey: coachKeys.reportReview(reportId) });
+    qc.invalidateQueries({ queryKey: coachKeys.reportRevisions(reportId) });
+    qc.invalidateQueries({ queryKey: coachKeys.adminReports(coachId) });
+    qc.invalidateQueries({ queryKey: coachKeys.adminTrends(coachId) });
+    qc.invalidateQueries({ queryKey: coachKeys.reports });
+  };
+}
+
+export function useAmendReport(coachId: string, reportId: string): UseMutationResult<RevisionResult, Error, ReportAmendment> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({
+    mutationFn: (amendment) => amendReport(reportId, amendment),
+    onSuccess: (result) => {
+      if (result.applied) refresh();
+    },
+  });
+}
+
+export function useSendRevision(coachId: string, reportId: string): UseMutationResult<RevisionSendResult, Error, void> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({ mutationFn: () => sendRevision(reportId), onSettled: refresh });
+}
+
+export function useRequeueRevision(coachId: string, reportId: string): UseMutationResult<{ requeued: boolean }, Error, void> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({ mutationFn: () => requeueRevision(reportId), onSuccess: refresh });
+}
+
+export function useSetFirstLesson(
+  coachId: string,
+  reportId: string,
+): UseMutationResult<
+  RevisionResult,
+  Error,
+  { firstLesson: boolean; score?: number; rationale?: string; bigIdeasReview?: BigIdeasReviewRow }
+> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({
+    mutationFn: (input) => setFirstLesson(reportId, input),
+    onSuccess: (result) => {
+      if (result.applied) refresh();
+    },
+  });
+}
+
+export function useCorrectDimension(
+  coachId: string,
+  reportId: string,
+): UseMutationResult<{ base: number; score: number; status: string }, Error, { n: number } & DimensionCorrection> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({
+    mutationFn: ({ n, ...correction }) => correctDimension(reportId, n, correction),
+    onSuccess: refresh,
+  });
+}
+
+export function useEditImprovements(coachId: string, reportId: string): UseMutationResult<RevisionResult, Error, ImprovementsEdit> {
+  const refresh = useRefreshReport(coachId, reportId);
+  return useMutation({
+    mutationFn: (edit) => editImprovements(reportId, edit),
+    onSuccess: (result) => {
+      if (result.applied) refresh();
+    },
+  });
+}
+
+export function useLeaderAttribution(coachId: string, enabled: boolean): UseQueryResult<LeaderAttribution> {
+  return useQuery({
+    queryKey: coachKeys.attribution(coachId),
+    queryFn: () => fetchLeaderAttribution(coachId),
+    retry: false,
+    enabled,
+  });
+}
+
+export function useSaveLeaderAttribution(
+  coachId: string,
+): UseMutationResult<LeaderAttribution & { resolved: number }, Error, LeaderAttribution> {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (attribution) => saveLeaderAttribution(coachId, attribution),
+    onSuccess: (saved) => {
+      qc.setQueryData(coachKeys.attribution(coachId), { titleMatch: saved.titleMatch, altEmails: saved.altEmails });
+      qc.invalidateQueries({ queryKey: coachKeys.pipelineFailures });
+      qc.invalidateQueries({ queryKey: coachKeys.coverage });
+    },
+  });
+}
+
+export function useEmailCheck(enabled: boolean): { pending: boolean; unverified: boolean } {
+  const q = useQuery({ queryKey: ['account', 'email-verified'], queryFn: fetchEmailVerified, enabled, retry: false });
+  return { pending: enabled && q.isLoading, unverified: q.data === false };
 }

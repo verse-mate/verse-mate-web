@@ -1,13 +1,4 @@
-/**
- * Custom inline-SVG charts for the Coach Oversight page — faithful recreations
- * of the design handoff's prototype charts (do not port the prototype runtime).
- * All share the handoff's muted, low-ink style.
- *
- *   AxisLineChart  — line + area, Y-axis ticks, emphasized last point
- *   BandedTrend    — session score over time with the 5 composite bands shaded
- *   RadarChart     — 12-dimension shape (gold) overlaid with a dashed 3-session avg
- *   MultiLineChart — overlaid leader trajectories across months
- */
+import { bandFloor } from '@/services/rubric';
 
 const SANS = "'Public Sans', system-ui, sans-serif";
 
@@ -60,8 +51,9 @@ export function AxisLineChart({
   );
 }
 
-// ── Session score over time with the five composite bands shaded ────────────
-export function BandedTrend({ values, labels }: { values: number[]; labels: string[] }) {
+const BAND_FILLS = ['#E1EAF4', '#E2EEE2', '#F7EDD6', '#F2E2D5', '#F4DFD5'];
+
+export function BandedTrend({ values, labels, bands: served }: { values: number[]; labels: string[]; bands: { min: number }[] }) {
   const W = 640;
   const H = 200;
   const L = 40;
@@ -69,25 +61,24 @@ export function BandedTrend({ values, labels }: { values: number[]; labels: stri
   const T = 12;
   const B = 34;
   const n = values.length;
-  const min = 40;
+  const min = bandFloor(served, values);
   const max = 100;
   if (n === 0) return null;
   const px = (i: number) => (n > 1 ? L + (i * (W - L - R)) / (n - 1) : (L + W - R) / 2);
   const py = (v: number) => H - B - ((v - min) / (max - min)) * (H - B - T);
-  const bands: [number, number, string][] = [
-    [85, 100, '#E1EAF4'],
-    [72, 85, '#E2EEE2'],
-    [60, 72, '#F7EDD6'],
-    [45, 60, '#F2E2D5'],
-    [40, 45, '#F4DFD5'],
-  ];
+  const bands: [number, number, string][] = served.map((b, i) => [
+    Math.max(b.min, min),
+    i === 0 ? max : Math.max(served[i - 1].min, min),
+    BAND_FILLS[i] ?? BAND_FILLS[BAND_FILLS.length - 1],
+  ]);
+  const ticks = served.map((b) => b.min).filter((m) => m > min).reverse();
   const pts = values.map((v, i) => [px(i), py(v)] as const);
   return (
     <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', height: 'auto', overflow: 'visible' }} role="img" aria-label="Session score over time">
       {bands.map((b, i) => (
         <rect key={`b${i}`} x={L} y={py(b[1])} width={W - L - R} height={py(b[0]) - py(b[1])} fill={b[2]} />
       ))}
-      {[45, 60, 72, 85].map((tv, i) => (
+      {ticks.map((tv, i) => (
         <text key={`y${i}`} x={L - 8} y={py(tv) + 3} textAnchor="end" fontSize={9} fill="#9A9484" fontFamily={SANS}>{tv}</text>
       ))}
       {n > 1 && <polyline points={pts.map((p) => `${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ')} fill="none" stroke="#4A453B" strokeWidth={2.5} strokeLinejoin="round" strokeLinecap="round" />}
@@ -102,19 +93,18 @@ export function BandedTrend({ values, labels }: { values: number[]; labels: stri
   );
 }
 
-// ── 12-dimension radar (gold) + dashed 3-session average ────────────────────
 export function RadarChart({ vals, avg }: { vals: number[]; avg?: number[] }) {
   const W = 380;
   const H = 330;
   const cx = 190;
   const cy = 160;
   const rad = 112;
-  const N = 12;
+  const N = vals.length;
   const ang = (i: number) => ((-90 + i * (360 / N)) * Math.PI) / 180;
   const pt = (v: number, i: number) => [cx + rad * (v / 5) * Math.cos(ang(i)), cy + rad * (v / 5) * Math.sin(ang(i))] as const;
   const polyPoints = (arr: number[]) => arr.map((v, i) => { const q = pt(v, i); return `${q[0].toFixed(1)},${q[1].toFixed(1)}`; }).join(' ');
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', height: 'auto', overflow: 'visible', maxWidth: 380, margin: '0 auto' }} role="img" aria-label="12-dimension radar">
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', height: 'auto', overflow: 'visible', maxWidth: 380, margin: '0 auto' }} role="img" aria-label={`${N}-dimension radar`}>
       {[1, 2, 3, 4, 5].map((lv, ri) => {
         const p = [];
         for (let i = 0; i < N; i++) { const q = pt(lv, i); p.push(`${q[0].toFixed(1)},${q[1].toFixed(1)}`); }

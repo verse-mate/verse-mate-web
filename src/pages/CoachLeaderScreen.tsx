@@ -20,7 +20,14 @@ import ScreenHeader from '@/components/ScreenHeader';
 import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
-import { useAdminClasses, useCoachReportsFor, useCoachTrendsFor, coachState } from '@/hooks/useCoach';
+import {
+  useAdminClasses,
+  useAdminLeader,
+  useCoachReportDetail,
+  useCoachReportSummaries,
+  useCoachTrendsFor,
+  coachState,
+} from '@/hooks/useCoach';
 import {
   CoachCard,
   CoachStateBoundary,
@@ -36,41 +43,54 @@ export default function CoachLeaderScreen() {
   const navigate = useNavigate();
   const { coachId = '' } = useParams();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
-  const query = useCoachReportsFor(coachId);
+  const summaries = useCoachReportSummaries({ coachId });
+  const profile = useAdminLeader(coachId);
   const trendsQuery = useCoachTrendsFor(coachId);
-  const state = coachState(query);
+  const state = coachState(summaries);
 
-  // This leader's registered classes + meeting links, filtered from the admin
-  // export (shared cache with the all-leaders Class links screen).
   const classesQuery = useAdminClasses();
   const leaderClasses = (classesQuery.data || []).filter((c) => c.leader.id === coachId);
 
-  const profile = state.data?.profile;
-  // Newest first by session date — primary sort for the latest-session detail
-  // and the earlier-documents list alike.
-  const reports = [...(state.data?.reports || [])].sort(byDateDesc);
+  const reports = [...(summaries.data?.pages.flatMap((p) => p.items) ?? [])].sort(byDateDesc);
   const latest = reports[0] || null;
 
-  // Which session the full report shows — defaults to the latest; tapping a
-  // trend point opens that session here.
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  // When minimized, the selected session collapses from the full prose report
-  // to a compact card — so every session on the page reads as a minimized card.
   const [minimized, setMinimized] = useState(false);
+  const [trendOpenFailed, setTrendOpenFailed] = useState(false);
   const detailRef = useRef<HTMLDivElement>(null);
-  const selected = (selectedId && reports.find((r) => r.id === selectedId)) || latest;
-  const selIdx = selected ? reports.findIndex((r) => r.id === selected.id) : -1;
+  const selectedSummary = selectedId ? reports.find((r) => r.id === selectedId) : latest;
+  const selIdx = selectedSummary ? reports.findIndex((r) => r.id === selectedSummary.id) : -1;
   const selPrev = selIdx >= 0 ? reports[selIdx + 1] : undefined;
   const delta =
-    selected && selPrev ? Math.round((selected.score - selPrev.score) * 100) / 100 : null;
+    selectedSummary && selPrev ? Math.round((selectedSummary.score - selPrev.score) * 100) / 100 : null;
+  const selectedDetail = useCoachReportDetail(selectedId ?? latest?.id, coachId);
+  const selected = selectedDetail.data ?? null;
 
-  const openByDate = (isoDate: string) => {
-    const match = reports.find((r) => r.date === isoDate);
-    if (match) {
-      setSelectedId(match.id);
-      requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
-    }
+  const openReport = (id: string) => {
+    setSelectedId(id);
+    requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
   };
+
+  const openByDate = async (isoDate: string, reportId?: string) => {
+    const id = reportId ?? trendsQuery.data?.scoreSeries.find((p) => p.date === isoDate)?.reportId;
+    setTrendOpenFailed(false);
+    if (id) return openReport(id);
+    let match = reports.find((r) => r.date === isoDate);
+    let more = summaries.hasNextPage;
+    while (!match && more) {
+      const next = await summaries.fetchNextPage();
+      if (next.isError) return setTrendOpenFailed(true);
+      match = next.data?.pages.flatMap((p) => p.items).find((r) => r.date === isoDate);
+      more = next.hasNextPage;
+    }
+    if (match) openReport(match.id);
+  };
+
+  const trendOpenFailure = trendOpenFailed && (
+    <p role="alert" data-testid="coach-trend-open-failed" style={{ margin: '8px 0 0', fontSize: 13, color: vmTokens.textSecondary }}>
+      Could not open that session: loading more sessions failed. Try again.
+    </p>
+  );
 
   const header = profile && (
     <div>
@@ -81,6 +101,25 @@ export default function CoachLeaderScreen() {
         </p>
       ) : null}
     </div>
+  );
+
+  const moreButton = summaries.hasNextPage && (
+    <>
+      <button
+        type="button"
+        onClick={() => summaries.fetchNextPage()}
+        disabled={summaries.isFetchingNextPage}
+        data-testid="coach-leader-more"
+        style={{ ...leaderLinkBtn, alignSelf: 'center', padding: 8 }}
+      >
+        {summaries.isFetchingNextPage ? 'Loading…' : 'Show more sessions'}
+      </button>
+      {summaries.isFetchNextPageError && (
+        <p data-testid="coach-leader-more-failed" style={{ margin: 0, alignSelf: 'center', fontSize: 13, color: vmTokens.textSecondary }}>
+          Could not load more sessions. Try again.
+        </p>
+      )}
+    </>
   );
 
   // Admin entry into this leader's rich monthly summary (PDF parity).
@@ -138,10 +177,13 @@ export default function CoachLeaderScreen() {
         style={{ flex: 1, overflowY: 'auto', borderTop: `1px solid ${vmTokens.divider}` }}
       >
         <CoachStateBoundary
-          loading={state.loading}
+          loading={state.loading || selectedDetail.isLoading}
           authError={state.authError}
-          error={state.error}
-          onRetry={() => query.refetch()}
+          error={state.error || !!selectedDetail.error}
+          onRetry={() => {
+            summaries.refetch();
+            selectedDetail.refetch();
+          }}
         >
           {isDesktop ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 24, maxWidth: 1180, margin: '0 auto' }}>
@@ -159,6 +201,7 @@ export default function CoachLeaderScreen() {
                     <ScoreTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
                     <ClusterTrendCard trends={trendsQuery.data} onSelectDate={openByDate} />
                   </div>
+                  {trendOpenFailure}
                 </div>
               )}
 
@@ -192,7 +235,7 @@ export default function CoachLeaderScreen() {
                     </div>
                   </div>
                   {minimized ? (
-                    <ReportCard report={selected} leaderName={profile?.name || ''} admin coachId={coachId} />
+                    <ReportCard key={selected.id} report={selected} held={selectedSummary?.held} leaderName={profile?.name || ''} admin coachId={coachId} />
                   ) : (
                     <ReportDetail
                       report={selected}
@@ -200,6 +243,7 @@ export default function CoachLeaderScreen() {
                       delta={delta}
                       admin
                       coachId={coachId}
+                      held={selectedSummary?.held}
                     />
                   )}
                 </div>
@@ -211,8 +255,9 @@ export default function CoachLeaderScreen() {
                   <SectionLabel>Earlier feedback documents</SectionLabel>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                     {reports.slice(1).map((r) => (
-                      <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} admin coachId={coachId} />
+                      <ReportCard key={r.id} report={r} held={r.held} leaderName={profile?.name || ''} admin coachId={coachId} />
                     ))}
+                    {moreButton}
                   </div>
                 </div>
               )}
@@ -253,8 +298,9 @@ export default function CoachLeaderScreen() {
                   <SectionLabel>Feedback documents</SectionLabel>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     {reports.map((r) => (
-                      <ReportCard key={r.id} report={r} leaderName={profile?.name || ''} admin coachId={coachId} />
+                      <ReportCard key={r.id} report={r} held={r.held} leaderName={profile?.name || ''} admin coachId={coachId} />
                     ))}
+                    {moreButton}
                   </div>
                 </div>
               )}

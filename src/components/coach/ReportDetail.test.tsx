@@ -30,14 +30,12 @@ function makeReport(overrides: Partial<CoachReport['feedback']> = {}): CoachRepo
       recommendations: ['Hold silence for a full 5 seconds.'],
       ...overrides,
     },
-    docUrl: '',
-    pdfUrl: '',
   };
 }
 
 describe('ReportDetail', () => {
   it('renders the terse bullets when the pipeline has not supplied prose', () => {
-    render(<ReportDetail report={makeReport()} leaderName="Bryan Bailey" />);
+    render(<ReportDetail report={makeReport()} leaderName="Avery Hollis" />);
     expect(screen.getByText('Strong cross-referencing anchored the discussion.')).toBeInTheDocument();
     expect(screen.getByText('Top Strengths')).toBeInTheDocument();
   });
@@ -57,7 +55,7 @@ describe('ReportDetail', () => {
             },
           ],
         })}
-        leaderName="Bryan Bailey"
+        leaderName="Avery Hollis"
       />,
     );
     // Overview narrative shows.
@@ -70,8 +68,18 @@ describe('ReportDetail', () => {
     expect(screen.queryByText('Strong cross-referencing anchored the discussion.')).not.toBeInTheDocument();
   });
 
+  it('offers the PDF of a host report that has one, and nothing for a report without', () => {
+    const { unmount } = render(
+      <ReportDetail report={{ ...makeReport(), pdfUrl: 'https://drive.google.com/file/d/abc/view' }} leaderName="Avery Hollis" />,
+    );
+    expect(screen.getByTestId('coach-report-pdf-r1')).toHaveAttribute('href', 'https://drive.google.com/uc?export=download&id=abc');
+    unmount();
+    render(<ReportDetail report={makeReport()} leaderName="Avery Hollis" />);
+    expect(screen.queryByTestId('coach-report-pdf-r1')).toBeNull();
+  });
+
   it('keeps the 12 dimensions collapsed until tapped', () => {
-    render(<ReportDetail report={makeReport()} leaderName="Bryan Bailey" />);
+    render(<ReportDetail report={makeReport()} leaderName="Avery Hollis" />);
     // The dimension line is visible…
     expect(screen.getByText(/Session Structure & Flow/)).toBeInTheDocument();
     // …but its "why this score" detail is hidden until the row is expanded.
@@ -95,11 +103,18 @@ describe('ReportDetail', () => {
             },
           ],
         }}
-        leaderName="Bryan Bailey"
+        leaderName="Avery Hollis"
       />,
     );
     expect(screen.getByText('Key moments')).toBeInTheDocument();
     expect(screen.getByText('[50:03]')).toBeInTheDocument();
     expect(screen.getByText(/personal coping mechanism/)).toBeInTheDocument();
+  });
+
+  it("marks a held pipeline copy in the admin's full report as not visible to the leader", () => {
+    const { rerender } = render(<ReportDetail report={makeReport()} held />);
+    expect(screen.getByTestId('coach-pipeline-copy-r1')).toHaveTextContent('Pipeline copy, not visible to the leader');
+    rerender(<ReportDetail report={makeReport()} held={false} />);
+    expect(screen.queryByTestId('coach-pipeline-copy-r1')).toBeNull();
   });
 });
