@@ -153,31 +153,90 @@ export interface StatusBand {
 /** Allowed recurrence keywords for a class (mirrors the backend DTO). */
 export type CoachClassRecurrence = 'none' | 'daily' | 'weekly' | 'biweekly' | 'monthly';
 
-/** One registered class. Its `zoomLink` is a meeting the coaching Notetaker
- *  bot joins; a leader can register several. */
+/** One registered class. The VerseMate notetaker joins its `zoomLink` on
+ *  `classDate` at `startTime` in `timeZone`, then on every repeat; a leader can
+ *  register several. */
 export interface CoachClass {
   id: string;
   name: string;
-  /** ISO yyyy-mm-dd, or null when no date is pinned (recurrence only). */
+  /** ISO yyyy-mm-dd, the first or next class, or null when no date is pinned.
+   *  A weekly class keeps its weekday, a monthly one its day of the month. */
   classDate: string | null;
   recurrence: CoachClassRecurrence;
   zoomLink: string;
+  /** 24-hour HH:MM wall-clock time in `timeZone`, or null until set. */
+  startTime: string | null;
+  /** IANA zone, e.g. America/Chicago, or null until set. */
+  timeZone: string | null;
+  /** False keeps the notetaker out of this class. */
+  notetaker: boolean;
 }
 
 /** Fields a caller sends when creating / updating a class. `classDate` is an
- *  ISO yyyy-mm-dd string or '' (no pinned date). */
+ *  ISO yyyy-mm-dd string or '' (no pinned date). The server refuses a start
+ *  time without a zone. Left out, the optional fields save as empty with the
+ *  notetaker on, not as they were, so an edit sends them back. */
 export interface CoachClassInput {
   name: string;
   classDate: string;
   recurrence: CoachClassRecurrence;
   zoomLink: string;
+  startTime?: string;
+  timeZone?: string;
+  notetaker?: boolean;
 }
 
 /** One class in the admin all-leaders export, the class plus the leader it
- *  belongs to. This is the single feed the Fireflies bot's auto-joins are
- *  configured from, so admins can see every meeting link across the cohort. */
+ *  belongs to, so admins can see every class the notetaker records across the
+ *  cohort. */
 export interface AdminCoachClass extends CoachClass {
   leader: { id: string | null; name: string; email: string };
+}
+
+/** Whether the signed-in leader connected their Zoom account to the
+ *  notetaker. `known` false: the notetaker did not answer, so `connected`
+ *  says nothing either way. */
+export interface NotetakerStatus {
+  known: boolean;
+  connected: boolean;
+  zoomEmail: string | null;
+  /** Where a leader connects Zoom; it brings them back to versemate.org. */
+  connectUrl: string;
+}
+
+/** A roster leader a connected Zoom account or meeting was matched to. */
+export type NotetakerLeaderRef = { id: string; name: string } | null;
+
+export interface NotetakerZoomConnection {
+  email: string;
+  name: string;
+  connectedAt: string | null;
+  leader: NotetakerLeaderRef;
+}
+
+/** A scheduled meeting of a connected Zoom account, in Class Setup's terms. */
+export interface NotetakerZoomMeeting {
+  meetingId: string;
+  topic: string;
+  joinUrl: string;
+  hostEmail: string;
+  classDate: string | null;
+  startTime: string | null;
+  timeZone: string | null;
+  recurrence: string;
+  /** The host invited the notetaker in Zoom or by calendar invitation. */
+  invited: boolean;
+  leader: NotetakerLeaderRef;
+  /** The class that already records this meeting, if any. */
+  classId: string | null;
+}
+
+/** The admin's view of the notetaker. `available` false: it did not answer. */
+export interface NotetakerZoom {
+  available: boolean;
+  connectUrl: string;
+  connections: NotetakerZoomConnection[];
+  meetings: NotetakerZoomMeeting[];
 }
 
 export interface CoachMe {
@@ -847,12 +906,53 @@ export async function deleteCoachClass(id: string): Promise<void> {
   });
 }
 
+/** GET /api/coach/notetaker/status, whether this leader's Zoom account is
+ *  connected to the notetaker. */
+export function fetchNotetakerStatus(): Promise<NotetakerStatus> {
+  return coachRequest<NotetakerStatus>('notetaker/status');
+}
+
 /** GET /coach/admin/classes, every leader's classes with owner identity
- *  (admin only; 403 for non-admins). The single feed the Fireflies bot's
- *  auto-joins are configured from. */
+ *  (admin only; 403 for non-admins). */
 export async function fetchAllCoachClasses(): Promise<AdminCoachClass[]> {
   const data = await coachRequest<{ classes: AdminCoachClass[] }>('admin/classes');
   return data.classes || [];
+}
+
+/** POST /coach/admin/classes, an admin schedules a class for the roster
+ *  leader `coachId`, also one who has not signed up yet. A leader the roster
+ *  does not know is refused with `unknown-leader`. */
+export async function createAdminCoachClass(coachId: string, input: CoachClassInput): Promise<AdminCoachClass> {
+  const data = await coachRequest<{ class: AdminCoachClass }>('admin/classes', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ ...input, coachId }),
+  });
+  return data.class;
+}
+
+/** PUT /coach/admin/classes/:id, an admin edits any leader's class. */
+export async function updateAdminCoachClass(id: string, input: CoachClassInput): Promise<CoachClass> {
+  const data = await coachRequest<{ class: CoachClass }>(`admin/classes/${encodeURIComponent(id)}`, {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(input),
+  });
+  return data.class;
+}
+
+/** DELETE /coach/admin/classes/:id, an admin removes any leader's class. */
+export async function deleteAdminCoachClass(id: string): Promise<void> {
+  await coachRequest<{ success: boolean }>(`admin/classes/${encodeURIComponent(id)}`, {
+    method: 'DELETE',
+  });
+}
+
+/** GET /coach/admin/notetaker/zoom, the connected Zoom accounts and their
+ *  scheduled meetings, so an admin can pick the ones to record. */
+export async function fetchNotetakerZoom(): Promise<NotetakerZoom> {
+  const data = await coachRequest<NotetakerZoom>('admin/notetaker/zoom');
+  return { ...data, connections: data.connections || [], meetings: data.meetings || [] };
 }
 
 /** PUT /api/coach/affiliated-church, persist the coach's affiliated church. */

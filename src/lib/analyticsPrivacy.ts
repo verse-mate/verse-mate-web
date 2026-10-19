@@ -38,6 +38,7 @@ const COACH_WORDS = new Set([
   'monthly-summary',
   'not-teaching',
   'notes',
+  'notetaker',
   'pipeline-failures',
   'preview',
   'recording',
@@ -54,9 +55,11 @@ const COACH_WORDS = new Set([
   'send',
   'sessions',
   'settings',
+  'status',
   'summary',
   'transcript-url',
   'trends',
+  'zoom',
   'zoom-link',
 ]);
 

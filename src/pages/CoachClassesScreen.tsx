@@ -1,10 +1,12 @@
 /**
- * Class Setup (/coach/classes) — a leader registers each study they run.
+ * Class Setup (/coach/classes) — a leader lists each class they run, and the
+ * list is the VerseMate notetaker's schedule.
  *
- * Every class carries a name, an optional next-meeting date, a recurrence, and
- * the Zoom / Meet / Teams link the coaching Notetaker bot (Fireflies) joins.
- * A leader can add several; the program admin reads the whole set to configure
- * which meetings the bot auto-joins. Persisted via the /coach/classes API.
+ * Every class carries a name, its first or next date, a recurrence, a start
+ * time and time zone, the meeting link, and whether the notetaker records it.
+ * The notetaker joins the link at that time; with the leader's Zoom account
+ * connected (the card at the top) it joins as their guest, otherwise the host
+ * admits it. Persisted via the /coach/classes API.
  *
  * Signed-out / not-a-coach states are handled by <CoachStateBoundary> — the
  * same gate the rest of the portal uses.
@@ -13,7 +15,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { CalendarDays, Check, Pencil, Plus, Trash2, Video, X } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import { toast } from 'sonner';
 import ScreenHeader from '@/components/ScreenHeader';
 import { vmTokens } from '@/styles/themeStyles';
@@ -23,38 +25,23 @@ import {
   CoachStateBoundary,
   SectionLabel,
 } from '@/components/coach/CoachUi';
+import { ClassForm, ClassRow } from '@/components/coach/ClassSchedule';
+import NotetakerConnectCard from '@/components/coach/NotetakerConnectCard';
+import { classDraft } from '@/lib/coachClassSchedule';
 import {
+  CoachApiError,
   createCoachClass,
   updateCoachClass,
   deleteCoachClass,
-  type CoachClass,
   type CoachClassInput,
-  type CoachClassRecurrence,
 } from '@/services/coachService';
 
-const RECURRENCE_OPTIONS: { value: CoachClassRecurrence; label: string }[] = [
-  { value: 'weekly', label: 'Weekly' },
-  { value: 'biweekly', label: 'Every other week' },
-  { value: 'monthly', label: 'Monthly' },
-  { value: 'daily', label: 'Daily' },
-  { value: 'none', label: 'One-time (no repeat)' },
-];
-
-function recurrenceLabel(value: string): string {
-  return RECURRENCE_OPTIONS.find((o) => o.value === value)?.label ?? value;
-}
-
-function formatDate(iso: string | null): string {
-  if (!iso) return 'No date set';
-  // Parse as a plain calendar date (avoid TZ shifting the day).
-  const [y, m, d] = iso.split('-').map(Number);
-  if (!y || !m || !d) return iso;
-  return new Date(y, m - 1, d).toLocaleDateString(undefined, {
-    weekday: 'short',
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  });
+// A 400 names what the server refused ("Choose the time zone the start time is
+// in"), which says more than "check the fields".
+function saveProblem(err: unknown, what: string): string {
+  return err instanceof CoachApiError && err.status === 400 && err.serverMessage
+    ? `${what}: ${err.serverMessage}`
+    : `${what} — check the fields and try again`;
 }
 
 export default function CoachClassesScreen() {
@@ -79,7 +66,7 @@ export default function CoachClassesScreen() {
       setEditing(null);
       toast.success('Class added');
     },
-    onError: () => toast.error('Could not add the class — check the fields and try again'),
+    onError: (err) => toast.error(saveProblem(err, 'Could not add the class')),
   });
 
   const updateMutation = useMutation({
@@ -89,7 +76,7 @@ export default function CoachClassesScreen() {
       setEditing(null);
       toast.success('Class saved');
     },
-    onError: () => toast.error('Could not save the class — check the fields and try again'),
+    onError: (err) => toast.error(saveProblem(err, 'Could not save the class')),
   });
 
   const deleteMutation = useMutation({
@@ -131,13 +118,15 @@ export default function CoachClassesScreen() {
               margin: '0 auto',
             }}
           >
+            <NotetakerConnectCard />
+
             <div>
               <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: vmTokens.textPrimary }}>
                 Your classes
               </h2>
               <p style={{ margin: '6px 0 0', fontSize: 13, color: vmTokens.textSecondary, lineHeight: 1.5 }}>
-                Add each study you lead. The meeting link you set is where your coaching notetaker joins and records
-                the session automatically — so keep it current for every class.
+                Add each study you lead. The VerseMate notetaker joins at the start time and records the class for
+                your coaching, so keep the link, date and time current.
               </p>
             </div>
 
@@ -156,8 +145,9 @@ export default function CoachClassesScreen() {
                 editing === cls.id ? (
                   <ClassForm
                     key={cls.id}
-                    initial={cls}
+                    initial={classDraft(cls)}
                     busy={busy}
+                    submitLabel="Save"
                     onCancel={() => setEditing(null)}
                     onSubmit={(input) => updateMutation.mutate({ id: cls.id, input })}
                   />
@@ -180,6 +170,7 @@ export default function CoachClassesScreen() {
             {editing === 'new' ? (
               <ClassForm
                 busy={busy}
+                submitLabel="Add class"
                 onCancel={() => setEditing(null)}
                 onSubmit={(input) => createMutation.mutate(input)}
               />
@@ -210,278 +201,5 @@ export default function CoachClassesScreen() {
         </CoachStateBoundary>
       </div>
     </div>
-  );
-}
-
-// ─── One class, read-only row ────────────────────────────────────────────────
-
-function ClassRow({
-  cls,
-  onEdit,
-  onDelete,
-  deleting,
-}: {
-  cls: CoachClass;
-  onEdit: () => void;
-  onDelete: () => void;
-  deleting: boolean;
-}) {
-  return (
-    <CoachCard testId="coach-class-row">
-      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
-        <div style={{ minWidth: 0 }}>
-          <h3 style={{ margin: 0, fontSize: 15, fontWeight: 600, color: vmTokens.textPrimary }}>{cls.name}</h3>
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '4px 14px',
-              marginTop: 6,
-              fontSize: 12.5,
-              color: vmTokens.textSecondary,
-            }}
-          >
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-              <CalendarDays size={14} style={{ color: vmTokens.textTertiary }} /> {formatDate(cls.classDate)}
-            </span>
-            <span>{recurrenceLabel(cls.recurrence)}</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, minWidth: 0 }}>
-            <Video size={14} style={{ color: cls.zoomLink ? vmTokens.gold : vmTokens.textTertiary, flexShrink: 0 }} />
-            {cls.zoomLink ? (
-              <a
-                href={cls.zoomLink}
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  fontSize: 12.5,
-                  color: vmTokens.gold,
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {cls.zoomLink}
-              </a>
-            ) : (
-              <span style={{ fontSize: 12.5, color: vmTokens.statusError }}>No meeting link yet</span>
-            )}
-          </div>
-        </div>
-
-        <div style={{ display: 'flex', gap: 4, flexShrink: 0 }}>
-          <IconButton label="Edit class" onClick={onEdit} testId="coach-class-edit">
-            <Pencil size={16} strokeWidth={1.9} />
-          </IconButton>
-          <IconButton label="Remove class" onClick={onDelete} disabled={deleting} testId="coach-class-delete">
-            <Trash2 size={16} strokeWidth={1.9} />
-          </IconButton>
-        </div>
-      </div>
-    </CoachCard>
-  );
-}
-
-// ─── Add / edit form ─────────────────────────────────────────────────────────
-
-function ClassForm({
-  initial,
-  busy,
-  onCancel,
-  onSubmit,
-}: {
-  initial?: CoachClass;
-  busy: boolean;
-  onCancel: () => void;
-  onSubmit: (input: CoachClassInput) => void;
-}) {
-  const [name, setName] = useState(initial?.name ?? '');
-  const [classDate, setClassDate] = useState(initial?.classDate ?? '');
-  const [recurrence, setRecurrence] = useState<CoachClassRecurrence>(initial?.recurrence ?? 'weekly');
-  const [zoomLink, setZoomLink] = useState(initial?.zoomLink ?? '');
-
-  const nameEmpty = name.trim() === '';
-  const linkInvalid = zoomLink.trim() !== '' && !/^https?:\/\/\S+$/i.test(zoomLink.trim());
-  const canSave = !nameEmpty && !linkInvalid && !busy;
-
-  const submit = () => {
-    if (!canSave) return;
-    onSubmit({
-      name: name.trim(),
-      classDate: classDate.trim(),
-      recurrence,
-      zoomLink: zoomLink.trim(),
-    });
-  };
-
-  return (
-    <CoachCard testId="coach-class-form">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        <Field label="Class name">
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Thursday Evening — James"
-            data-testid="coach-class-name"
-            style={inputStyle(false)}
-          />
-        </Field>
-
-        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <Field label="Next meeting date" style={{ flex: '1 1 180px' }}>
-            <input
-              type="date"
-              value={classDate}
-              onChange={(e) => setClassDate(e.target.value)}
-              data-testid="coach-class-date"
-              style={inputStyle(false)}
-            />
-          </Field>
-          <Field label="Repeats" style={{ flex: '1 1 180px' }}>
-            <select
-              value={recurrence}
-              onChange={(e) => setRecurrence(e.target.value as CoachClassRecurrence)}
-              data-testid="coach-class-recurrence"
-              style={inputStyle(false)}
-            >
-              {RECURRENCE_OPTIONS.map((o) => (
-                <option key={o.value} value={o.value}>
-                  {o.label}
-                </option>
-              ))}
-            </select>
-          </Field>
-        </div>
-
-        <Field label="Meeting link (Zoom, Google Meet, or Teams)">
-          <input
-            value={zoomLink}
-            onChange={(e) => setZoomLink(e.target.value)}
-            placeholder="https://zoom.us/j/…"
-            inputMode="url"
-            autoCapitalize="off"
-            autoCorrect="off"
-            spellCheck={false}
-            data-testid="coach-class-zoom"
-            style={inputStyle(linkInvalid)}
-          />
-          {linkInvalid && (
-            <p style={{ margin: '6px 0 0', fontSize: 12, color: vmTokens.statusError }}>Enter a valid http(s) link.</p>
-          )}
-        </Field>
-
-        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 2 }}>
-          <button type="button" onClick={onCancel} data-testid="coach-class-cancel" style={ghostBtnStyle}>
-            <X size={15} /> Cancel
-          </button>
-          <button
-            type="button"
-            onClick={submit}
-            disabled={!canSave}
-            data-testid="coach-class-save"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 6,
-              padding: '9px 18px',
-              borderRadius: 10,
-              border: 'none',
-              background: canSave ? vmTokens.gold : vmTokens.divider,
-              color: canSave ? vmTokens.goldOnLight : vmTokens.textTertiary,
-              fontSize: 13.5,
-              fontWeight: 600,
-              cursor: canSave ? 'pointer' : 'default',
-            }}
-          >
-            <Check size={15} /> {busy ? 'Saving…' : initial ? 'Save' : 'Add class'}
-          </button>
-        </div>
-      </div>
-    </CoachCard>
-  );
-}
-
-// ─── Small building blocks ───────────────────────────────────────────────────
-
-function Field({
-  label,
-  children,
-  style,
-}: {
-  label: string;
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-}) {
-  return (
-    <label style={{ display: 'flex', flexDirection: 'column', gap: 5, ...style }}>
-      <span style={{ fontSize: 12, fontWeight: 600, color: vmTokens.textSecondary }}>{label}</span>
-      {children}
-    </label>
-  );
-}
-
-function inputStyle(invalid: boolean): React.CSSProperties {
-  return {
-    width: '100%',
-    padding: '10px 12px',
-    borderRadius: 10,
-    border: `1px solid ${invalid ? vmTokens.statusError : vmTokens.inputBorder}`,
-    background: vmTokens.inputBg,
-    color: vmTokens.textPrimary,
-    fontSize: 14,
-    outline: 'none',
-  };
-}
-
-const ghostBtnStyle: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 6,
-  padding: '9px 14px',
-  borderRadius: 10,
-  border: `1px solid ${vmTokens.divider}`,
-  background: 'transparent',
-  color: vmTokens.textSecondary,
-  fontSize: 13.5,
-  fontWeight: 600,
-  cursor: 'pointer',
-};
-
-function IconButton({
-  children,
-  label,
-  onClick,
-  disabled,
-  testId,
-}: {
-  children: React.ReactNode;
-  label: string;
-  onClick: () => void;
-  disabled?: boolean;
-  testId?: string;
-}) {
-  return (
-    <button
-      type="button"
-      aria-label={label}
-      onClick={onClick}
-      disabled={disabled}
-      data-testid={testId}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 34,
-        height: 34,
-        borderRadius: 9,
-        border: `1px solid ${vmTokens.divider}`,
-        background: vmTokens.surfaceRaisedBg,
-        color: vmTokens.textSecondary,
-        cursor: disabled ? 'default' : 'pointer',
-        opacity: disabled ? 0.5 : 1,
-      }}
-    >
-      {children}
-    </button>
   );
 }

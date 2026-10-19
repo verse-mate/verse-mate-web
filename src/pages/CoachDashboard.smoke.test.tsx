@@ -132,7 +132,7 @@ const trends: CoachTrends = {
 };
 
 const classes: CoachClass[] = [
-  { id: 'sat', name: 'James — Riverbend Sunday Group', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1' },
+  { id: 'sat', name: 'James — Riverbend Sunday Group', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', startTime: null, timeZone: null, notetaker: true },
 ];
 
 const monthly: LeaderMonthlyResponse = {

@@ -65,7 +65,7 @@ const leaderMonthly: LeaderMonthlyResponse = {
   summary: { month: '2026-07', monthLabel: 'July 2026', priorMonthLabel: 'June 2026', leaderId: 'avery', leaderName: 'Avery Hollis', group: '', sessionsCount: 4, composite: 88, status: { label: 'Exceptional', emoji: '🔷' }, priorComposite: 82, delta: 6, clusterAvg: { tc: 88, bm: 76, ep: 77, br: 84 }, glance: { rows: [], avg: { bm: 76, tc: 88, ep: 77, br: 84, composite: 88, status: 'Exceptional' } }, trajectory: [], clusters: [], strengths: [{ text: 'Cross-references built a framework.', session: '07-18' }], growth: [{ text: 'Visual Aids at 2/5.', session: '07-18' }], trends: [], conversationGuide: [], focus: { clusterName: 'Building Ministry', clusterPct: 76, goals: [] }, sessions: [] },
 };
 const classes: AdminCoachClass[] = [
-  { id: 'c1', name: 'Saturday Morning Study', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', leader: { id: 'avery', name: 'Avery Hollis', email: 'b@x.com' } },
+  { id: 'c1', name: 'Saturday Morning Study', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', startTime: null, timeZone: null, notetaker: true, leader: { id: 'avery', name: 'Avery Hollis', email: 'b@x.com' } },
 ];
 
 beforeEach(() => {
