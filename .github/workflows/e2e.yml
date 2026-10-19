@@ -189,6 +189,7 @@ jobs:
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: playwright-report-${{ matrix.shard }}
           path: tests/e2e/playwright-report/
@@ -198,6 +199,7 @@ jobs:
       - name: Upload test traces
         if: failure()
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: playwright-traces-${{ matrix.shard }}
           path: test-results/
@@ -207,6 +209,7 @@ jobs:
       - name: Upload API log
         if: always()
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: api-log-${{ matrix.shard }}
           path: |
