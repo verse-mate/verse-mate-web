@@ -5,6 +5,8 @@ export const REPLAY_BLOCK_CLASS = 'ph-no-capture';
 const URL_KEY = /(^\$?|_)(url|referrer|href)$/i;
 const QUERY_PROPERTIES = ['search', '$search'];
 const EMBEDDED_QUERY = /((?:https?:\/\/|href=")[^\s"'?#\\()<>[\]]*)(?:[?#][^\s"'\\()<>[\]]*)?/g;
+const TEXT_TOKEN = /[^\s"'`\\()<>[\]]+/g;
+const PATH_START = /^\/|[=:]\//;
 const GOOGLE_FILE_LINK = /(https?:\/\/(?:docs|drive|drive\.usercontent)\.google\.com)(?=[/?#\s"'\\()<>[\]]|$)[^\s"'\\()<>[\]]*/gi;
 const COACH_PATH = /\/coach((?:\/[^/?#\s"'<>\\]+)+)/gi;
 const COACH_WORDS = new Set([
@@ -55,8 +57,13 @@ export function stripQuery(url: string): string {
   return url.split(/[?#]/)[0];
 }
 
+function stripRelativeQuery(token: string): string {
+  const cut = token.search(/[?#]/);
+  return cut > 0 && PATH_START.test(token.slice(0, cut)) ? token.slice(0, cut) : token;
+}
+
 function stripEmbeddedQueries(text: string): string {
-  return text.replace(EMBEDDED_QUERY, '$1');
+  return text.replace(EMBEDDED_QUERY, '$1').replace(TEXT_TOKEN, stripRelativeQuery);
 }
 
 function scrubText(text: string, isUrl = false): string {

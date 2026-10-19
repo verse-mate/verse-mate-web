@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes, Navigate, Outlet } from "react-router-dom";
 import { useTrackPreAuthLocation } from "@/hooks/useTrackPreAuthLocation";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -48,8 +48,7 @@ import CoachLeaderScreen from "@/pages/CoachLeaderScreen";
 import CoachConfirmAddressScreen from "@/pages/CoachConfirmAddressScreen";
 import NotFound from "@/pages/NotFound";
 import { REPLAY_BLOCK_CLASS } from "@/lib/analyticsPrivacy";
-
-const queryClient = new QueryClient();
+import { queryClient } from "@/lib/queryClient";
 
 function ReplayBlocked() {
   return (

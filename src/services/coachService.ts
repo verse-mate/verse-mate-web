@@ -320,7 +320,9 @@ async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T>
     const body = (await res.json().catch(() => null)) as { message?: string; details?: Record<string, unknown> } | null;
     throw new CoachApiError(path, res.status, body?.message ?? '', body?.details ?? {});
   }
-  return (await res.json()) as T;
+  return (await res.json().catch(() => {
+    throw new Error(`coach api ${scrubCoachPath(`/coach/${stripQuery(path)}`)} returned invalid JSON`);
+  })) as T;
 }
 
 /** GET /api/coach/me, profile + saved Zoom link + model metadata. */

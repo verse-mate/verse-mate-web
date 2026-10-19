@@ -5,6 +5,7 @@
  */
 
 import posthog from 'posthog-js';
+import { analytics } from './analytics';
 
 export interface ExceptionContext {
   timestamp: string;
@@ -21,6 +22,12 @@ export interface ExceptionContext {
 
 function isOffline(): boolean {
   return typeof navigator !== 'undefined' && navigator.onLine === false;
+}
+
+const SIGNED_OUT_ERRORS = ['CoachAuthError', 'GuestScopeExceededError'];
+
+function isSignedOutError(error: unknown): boolean {
+  return error instanceof Error && SIGNED_OUT_ERRORS.includes(error.name);
 }
 
 function isAbortError(error: unknown): boolean {
@@ -51,6 +58,7 @@ function isCrossOriginError(error: unknown): boolean {
 export function shouldExcludeError(error: unknown): boolean {
   if (isOffline()) return true;
   if (isAbortError(error)) return true;
+  if (isSignedOutError(error)) return true;
   const status = getStatusCode(error);
   if (status === 401 || status === 403) return true;
   if (isResizeObserverError(error)) return true;
@@ -82,4 +90,29 @@ export function collectErrorContext(): ExceptionContext {
   }
 
   return context;
+}
+
+const KEY_WORD = /^[a-z][a-z-]*$/;
+
+function keyName(key: readonly unknown[] | undefined): string | undefined {
+  const [first, second] = key ?? [];
+  if (typeof first !== 'string') return undefined;
+  return typeof second === 'string' && KEY_WORD.test(second) ? `${first}/${second}` : first;
+}
+
+export function toReportableError(value: unknown): Error {
+  return value instanceof Error ? value : new Error(`Non-Error rejection: ${typeof value}`);
+}
+
+export function captureRequestError(
+  error: unknown,
+  key: { query_key?: readonly unknown[]; mutation_key?: readonly unknown[] },
+): void {
+  if (shouldExcludeError(error)) return;
+  analytics.captureException(toReportableError(error), {
+    ...collectErrorContext(),
+    source: 'react-query',
+    ...(key.query_key && { query_key: keyName(key.query_key) }),
+    ...(key.mutation_key && { mutation_key: keyName(key.mutation_key) }),
+  });
 }
