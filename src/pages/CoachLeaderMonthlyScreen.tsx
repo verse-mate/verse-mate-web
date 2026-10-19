@@ -12,7 +12,7 @@
  */
 
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { BarChart3, ChevronLeft, ChevronRight } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -20,13 +20,19 @@ import { vmTokens } from '@/styles/themeStyles';
 import { useMyMonthlySummary, useLeaderMonthlySummary, coachState } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel, StatusPill } from '@/components/coach/CoachUi';
 import type { LeaderMonthlySummary } from '@/services/coachService';
+import { bandHeat } from '@/components/coach/dashboardTheme';
+import { clusterKey, shortCode, useRubric } from '@/hooks/useRubric';
+import type { StatusBand } from '@/services/rubric';
+
+const NO_MONTHS: string[] = [];
 
 export default function CoachLeaderMonthlyScreen() {
   const navigate = useNavigate();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   const { coachId } = useParams();
   const admin = !!coachId;
-  const [month, setMonth] = useState(currentMonth());
+  const asked = useSearchParams()[0].get('month');
+  const [month, setMonth] = useState(asked && /^\d{4}-\d{2}$/.test(asked) ? asked : currentMonth());
 
   const selfQuery = useMyMonthlySummary(admin ? '' : month);
   const adminQuery = useLeaderMonthlySummary(coachId ?? '', admin ? month : '');
@@ -35,11 +41,7 @@ export default function CoachLeaderMonthlyScreen() {
   const data = state.data;
   const summary = data?.summary ?? null;
 
-  const [knownMonths, setKnownMonths] = useState<string[]>([]);
-  const availableMonths = data?.availableMonths;
-  useEffect(() => {
-    if (availableMonths && availableMonths.length > 0) setKnownMonths(availableMonths);
-  }, [availableMonths]);
+  const knownMonths = data?.availableMonths ?? NO_MONTHS;
 
   // Land on the most recent completed month when the current month has no
   // summary yet (only fires for the initial default month).
@@ -142,7 +144,13 @@ export default function CoachLeaderMonthlyScreen() {
   );
 }
 
+type ClusterKey = keyof LeaderMonthlySummary['clusterAvg'];
+
 function Summary({ summary: s, isDesktop }: { summary: LeaderMonthlySummary; isDesktop: boolean }) {
+  const { rubric } = useRubric();
+  const bands = rubric?.statusBands ?? [];
+  const heatText = (pct: number | null) => heatFor(pct, bands);
+  const clusters = (rubric?.clusters ?? []).map((c) => ({ name: c.name, code: shortCode(c.name), key: clusterKey(c.name) as ClusterKey }));
   return (
     <>
       {/* Headline */}
@@ -166,9 +174,14 @@ function Summary({ summary: s, isDesktop }: { summary: LeaderMonthlySummary; isD
             </>
           ) : null}
         </p>
+        {profileLine(s.profile) && (
+          <p data-testid="coach-leader-monthly-profile" style={{ margin: '6px 0 0', fontSize: 13.5, color: vmTokens.textSecondary }}>
+            {profileLine(s.profile)}
+          </p>
+        )}
         <div style={{ display: 'flex', gap: 8, marginTop: 14, flexWrap: 'wrap' }}>
-          {(['tc', 'bm', 'ep', 'br'] as const).map((k) => (
-            <ClusterChip key={k} label={CLUSTER_SHORT[k]} pct={s.clusterAvg[k]} />
+          {clusters.map((c) => (
+            <ClusterChip key={c.key} id={c.key} label={c.name} pct={s.clusterAvg[c.key] ?? null} color={heatText(s.clusterAvg[c.key] ?? null)} />
           ))}
         </div>
       </CoachCard>
@@ -180,10 +193,9 @@ function Summary({ summary: s, isDesktop }: { summary: LeaderMonthlySummary; isD
             <tr style={theadRow}>
               <th style={{ ...th, textAlign: 'left' }}>Date</th>
               <th style={{ ...th, textAlign: 'left' }}>Session</th>
-              <th style={th}>BM%</th>
-              <th style={th}>TC%</th>
-              <th style={th}>EP%</th>
-              <th style={th}>BR%</th>
+              {clusters.map((c) => (
+                <th key={c.key} style={th}>{`${c.code}%`}</th>
+              ))}
               <th style={th}>Composite</th>
               <th style={th}>Status</th>
             </tr>
@@ -193,10 +205,9 @@ function Summary({ summary: s, isDesktop }: { summary: LeaderMonthlySummary; isD
               <tr key={`${r.date}-${r.session}`} style={zebra(i)}>
                 <td style={{ ...td, whiteSpace: 'nowrap' }}>{r.date.slice(5)}</td>
                 <td style={td}>{r.session}</td>
-                <PctCell v={r.bm} />
-                <PctCell v={r.tc} />
-                <PctCell v={r.ep} />
-                <PctCell v={r.br} />
+                {clusters.map((c) => (
+                  <PctCell key={c.key} v={r[c.key] ?? null} color={heatText(r[c.key] ?? null)} />
+                ))}
                 <td style={{ ...td, textAlign: 'center', fontWeight: 700, color: vmTokens.textPrimary }}>{r.composite.toFixed(1)}</td>
                 <td style={{ ...td, textAlign: 'center' }}>{r.status}</td>
               </tr>
@@ -205,10 +216,9 @@ function Summary({ summary: s, isDesktop }: { summary: LeaderMonthlySummary; isD
               <td style={{ ...td, fontWeight: 800 }} colSpan={2}>
                 Monthly average
               </td>
-              <PctCell v={s.glance.avg.bm} bold />
-              <PctCell v={s.glance.avg.tc} bold />
-              <PctCell v={s.glance.avg.ep} bold />
-              <PctCell v={s.glance.avg.br} bold />
+              {clusters.map((c) => (
+                <PctCell key={c.key} v={s.glance.avg[c.key] ?? null} color={heatText(s.glance.avg[c.key] ?? null)} bold />
+              ))}
               <td style={{ ...td, textAlign: 'center', fontWeight: 800, color: vmTokens.textPrimary }}>{s.glance.avg.composite.toFixed(1)}</td>
               <td style={{ ...td, textAlign: 'center', fontWeight: 700 }}>{s.glance.avg.status}</td>
             </tr>
@@ -260,7 +270,7 @@ function Summary({ summary: s, isDesktop }: { summary: LeaderMonthlySummary; isD
                 <span style={{ fontWeight: 700, color: vmTokens.textPrimary }}>
                   {c.name} <span style={{ color: vmTokens.textTertiary, fontWeight: 400 }}>· weight {c.weight}</span>
                 </span>
-                <span style={{ fontVariantNumeric: 'tabular-nums', fontWeight: 700, color: heatText(c.avgPct) }}>
+                <span data-testid={`coach-monthly-deepdive-${c.key}`} style={{ fontVariantNumeric: 'tabular-nums', fontWeight: 700, color: heatText(c.avgPct) }}>
                   {c.avgPct == null ? 'N/A' : `${c.avgPct}%`} {c.statusLabel ? `· ${c.statusLabel}` : ''}
                 </span>
               </div>
@@ -421,9 +431,10 @@ function BulletCard({
   );
 }
 
-function ClusterChip({ label, pct }: { label: string; pct: number | null }) {
+function ClusterChip({ id, label, pct, color }: { id: string; label: string; pct: number | null; color: string }) {
   return (
     <div
+      data-testid={`coach-monthly-cluster-${id}`}
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -434,28 +445,32 @@ function ClusterChip({ label, pct }: { label: string; pct: number | null }) {
         minWidth: 62,
       }}
     >
-      <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: 0.4, color: vmTokens.textTertiary }}>{label}</span>
-      <span style={{ fontSize: 15, fontWeight: 800, color: heatText(pct) }}>{pct == null ? 'N/A' : `${pct}%`}</span>
+      <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: 0.4, textTransform: 'uppercase', color: vmTokens.textTertiary }}>{label}</span>
+      <span data-testid={`coach-monthly-cluster-pct-${id}`} style={{ fontSize: 15, fontWeight: 800, color }}>{pct == null ? 'N/A' : `${pct}%`}</span>
     </div>
   );
 }
 
-function PctCell({ v, bold }: { v: number | null; bold?: boolean }) {
+function PctCell({ v, color, bold }: { v: number | null; color: string; bold?: boolean }) {
   return (
-    <td style={{ ...td, textAlign: 'center', fontWeight: bold ? 800 : 500, color: heatText(v) }}>
+    <td style={{ ...td, textAlign: 'center', fontWeight: bold ? 800 : 500, color }}>
       {v == null ? '—' : `${v}%`}
     </td>
   );
 }
 
-const CLUSTER_SHORT = { tc: 'TEACHING', bm: 'MINISTRY', ep: 'ENGAGING', br: 'BEING REAL' } as const;
+const HEAT_BY_BAND = ['#15803D', '#4D7C0F', '#B08900', '#C2620F', '#B91C1C'];
 
-function heatText(pct: number | null): string {
+function heatFor(pct: number | null, bands: StatusBand[]): string {
   if (pct == null) return vmTokens.textTertiary;
-  if (pct >= 85) return '#15803D';
-  if (pct >= 72) return '#4D7C0F';
-  if (pct >= 60) return '#B08900';
-  return '#B91C1C';
+  return bandHeat(pct, bands, HEAT_BY_BAND) ?? vmTokens.textTertiary;
+}
+
+function profileLine(p: LeaderMonthlySummary['profile']): string {
+  if (!p) return '';
+  return [p.study, p.format, p.groupSize !== undefined && p.groupSize !== '' ? `group of ${p.groupSize}` : undefined]
+    .filter((x): x is string => typeof x === 'string' && x.trim() !== '')
+    .join(' · ');
 }
 
 function currentMonth(): string {

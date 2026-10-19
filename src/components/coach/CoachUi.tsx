@@ -9,10 +9,14 @@
 
 import { CSSProperties, ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GraduationCap, LogIn } from 'lucide-react';
+import { Download, GraduationCap, LogIn } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
-import { statusColor } from '@/services/coachService';
-import type { CoachAuthReason, CoachReport } from '@/services/coachService';
+import { useRubric } from '@/hooks/useRubric';
+import { pdfDownloadUrl, statusColor } from '@/services/coachService';
+import { dt } from './dashboardTheme';
+import ConfirmEmailGate from './ConfirmEmailGate';
+import { useEmailCheck } from '@/hooks/useCoach';
+import type { CoachAuthReason, CoachReportSummary } from '@/services/coachService';
 
 // ─── Card ──────────────────────────────────────────────────────────────────
 
@@ -41,6 +45,35 @@ export function CoachCard({
   );
 }
 
+export function PdfDownload({ reportId, pdfUrl, style }: { reportId: string; pdfUrl?: string; style?: CSSProperties }) {
+  const href = pdfDownloadUrl(pdfUrl);
+  if (!href) return null;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      download
+      data-testid={`coach-report-pdf-${reportId}`}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 6,
+        padding: '8px 14px',
+        borderRadius: 9,
+        border: `1px solid ${vmTokens.gold}`,
+        color: vmTokens.gold,
+        fontSize: 13,
+        fontWeight: 600,
+        textDecoration: 'none',
+        ...style,
+      }}
+    >
+      <Download size={15} strokeWidth={2} /> Download PDF
+    </a>
+  );
+}
+
 export function SectionLabel({ children }: { children: ReactNode }) {
   return (
     <p
@@ -58,6 +91,27 @@ export function SectionLabel({ children }: { children: ReactNode }) {
   );
 }
 
+export function PipelineCopyTag({ reportId, held }: { reportId: string; held?: boolean }) {
+  if (!held) return null;
+  return (
+    <span
+      data-testid={`coach-pipeline-copy-${reportId}`}
+      style={{
+        display: 'inline-block',
+        fontSize: 11,
+        fontWeight: 700,
+        letterSpacing: '.03em',
+        color: dt.rust,
+        background: dt.rustBg,
+        padding: '3px 8px',
+        borderRadius: 5,
+      }}
+    >
+      Pipeline copy, not visible to the leader
+    </span>
+  );
+}
+
 // ─── Status pill ─────────────────────────────────────────────────────────────
 
 export function StatusPill({
@@ -69,7 +123,11 @@ export function StatusPill({
   emoji?: string;
   size?: 'sm' | 'md';
 }) {
-  const color = statusColor(status);
+  // Band labels come from the served rubric, so a renamed band keeps its
+  // colour instead of falling through to the bottom one.
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const color = statusColor(status, bandLabels);
   return (
     <span
       style={{
@@ -104,7 +162,11 @@ export function ScoreRing({
   status: string;
   diameter?: number;
 }) {
-  const color = statusColor(status);
+  // Band labels come from the served rubric, so a renamed band keeps its
+  // colour instead of falling through to the bottom one.
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const color = statusColor(status, bandLabels);
   const pct = Math.max(0, Math.min(100, value));
   return (
     <div
@@ -148,7 +210,7 @@ export function LatestSessionHero({
   delta,
   testId = 'coach-latest-card',
 }: {
-  latest: CoachReport;
+  latest: CoachReportSummary;
   delta: number | null;
   testId?: string;
 }) {
@@ -190,6 +252,7 @@ interface CoachStateProps {
 
 export function CoachStateBoundary({ loading, authError, error, onRetry, children }: CoachStateProps) {
   const navigate = useNavigate();
+  const emailCheck = useEmailCheck(authError === 'not_a_coach');
 
   if (loading) {
     return (
@@ -220,6 +283,14 @@ export function CoachStateBoundary({ loading, authError, error, onRetry, childre
           <LogIn size={16} strokeWidth={2} /> Sign in
         </button>
       </div>
+    );
+  }
+
+  if (authError === 'not_a_coach' && emailCheck.pending) return null;
+
+  if (authError === 'confirm_email' || (authError === 'not_a_coach' && emailCheck.unverified)) {
+    return (
+      <ConfirmEmailGate container={centeredStyle} title={gateTitle} body={gateBody} button={primaryBtn} iconColor={vmTokens.gold} />
     );
   }
 

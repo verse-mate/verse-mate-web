@@ -12,7 +12,9 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { Send, Video } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
-import type { CoachNote, CoachReport } from '@/services/coachService';
+import RetainedRecording from './RetainedRecording';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
+import { refusalText, type CoachNote, type CoachReport } from '@/services/coachService';
 import { useAddNote, useSetRecordingLink } from '@/hooks/useCoach';
 
 const BLUE = '#2563A6';
@@ -28,18 +30,22 @@ export default function SessionNotes({
   report: CoachReport;
   /** When true (admin drill-in) the recording + notes are editable. */
   admin?: boolean;
-  /** The leader whose report this is — required for admin edits. */
+  /** The leader whose report this is, required for admin edits. */
   coachId?: string;
   leaderName?: string;
   /** Tighter type sizing for the compact card. */
   compact?: boolean;
 }) {
   const editable = admin && !!coachId;
-  const recording = report.recordingUrl?.trim() || '';
+  const recording = report.attachedRecordingUrl?.trim() || '';
   const notes = report.notes ?? [];
+  // Sessions VerseMate ingested carry their own recording, no admin
+  // attachment step (task 8.5).
+  const retained = report.hasRetainedRecording === true;
 
-  // Nothing to show for a leader with no recording and no notes.
-  if (!editable && !recording && notes.length === 0) return null;
+  // Nothing to show for a leader with no recording, nothing retained and no
+  // notes.
+  if (!editable && !recording && !retained && notes.length === 0) return null;
 
   return (
     <section
@@ -51,7 +57,18 @@ export default function SessionNotes({
       }}
     >
       <p style={{ margin: '0 0 10px', ...labelStyle(compact) }}>Recording &amp; coaching notes</p>
-      <RecordingRow report={report} editable={editable} coachId={coachId} recording={recording} />
+      <div className={REPLAY_BLOCK_CLASS}>
+        <RecordingRow report={report} editable={editable} coachId={coachId} recording={recording} />
+      </div>
+      {retained && !recording && (
+        <div style={{ margin: '8px 0 4px' }}>
+          <RetainedRecording
+            reportId={report.id}
+            hasRetained={retained}
+            attachedUrl={recording}
+          />
+        </div>
+      )}
       <NotesPanel
         report={report}
         editable={editable}
@@ -174,10 +191,12 @@ function NotesPanel({
 }) {
   const addNote = useAddNote(coachId ?? '');
   const [body, setBody] = useState('');
+  const [refusal, setRefusal] = useState<string | null>(null);
 
   const send = () => {
     const text = body.trim();
     if (!text) return;
+    setRefusal(null);
     addNote.mutate(
       { reportId: report.id, body: text },
       {
@@ -185,7 +204,7 @@ function NotesPanel({
           setBody('');
           toast.success(`Note sent to ${leaderName || 'the leader'}`);
         },
-        onError: () => toast.error('Could not send the note'),
+        onError: (err) => setRefusal(refusalText(err)),
       },
     );
   };
@@ -217,7 +236,7 @@ function NotesPanel({
           <textarea
             value={body}
             onChange={(e) => setBody(e.target.value)}
-            placeholder={`Write a note to ${leaderName || 'this leader'} — it's saved here and emailed to them.`}
+            placeholder={`Write a note to ${leaderName || 'this leader'}, it's saved here and emailed to them.`}
             data-testid={`coach-note-input-${report.id}`}
             rows={3}
             style={textareaStyle}
@@ -232,6 +251,11 @@ function NotesPanel({
               <Send size={15} strokeWidth={2} /> {addNote.isPending ? 'Sending…' : 'Send to leader'}
             </button>
           </div>
+          {refusal && (
+            <p role="alert" data-testid={`coach-note-error-${report.id}`} style={{ margin: '8px 0 0', fontSize: 13, color: 'var(--vm-status-error)' }}>
+              {refusal}
+            </p>
+          )}
         </div>
       )}
     </div>

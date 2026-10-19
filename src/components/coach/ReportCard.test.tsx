@@ -29,15 +29,20 @@ function makeReport(overrides: Partial<CoachReport> = {}): CoachReport {
       improvements: ['Leader talk crowded out discussion.'],
       recommendations: ['Hold silence for a full 5 seconds.'],
     },
-    docUrl: '',
-    pdfUrl: '',
     ...overrides,
   };
 }
 
 describe('ReportCard', () => {
+  it('an uploaded session with no head count says attendance was not recorded, not zero', () => {
+    render(<ReportCard report={makeReport({ attendees: null })} leaderName="Avery Hollis" />);
+    fireEvent.click(screen.getByRole('button', { expanded: false }));
+    expect(screen.getByText(/attendance not recorded/)).toBeInTheDocument();
+    expect(screen.queryByText(/0 attending/)).not.toBeInTheDocument();
+  });
+
   it('keeps the feedback collapsed until the chevron is tapped', () => {
-    render(<ReportCard report={makeReport()} leaderName="Bryan Bailey" />);
+    render(<ReportCard report={makeReport()} leaderName="Avery Hollis" />);
     // Collapsed: header identity is visible…
     expect(screen.getByText('July 16, 2026')).toBeInTheDocument();
     // …but no feedback prose yet.
@@ -65,13 +70,13 @@ describe('ReportCard', () => {
             ],
           },
         })}
-        leaderName="Bryan Bailey"
+        leaderName="Avery Hollis"
       />,
     );
 
     fireEvent.click(screen.getByRole('button', { expanded: false }));
 
-    // The full prose block — title + both paragraphs + overview narrative.
+    // The full prose block, title + both paragraphs + overview narrative.
     expect(screen.getByText(/landed strongest in scripture engagement/)).toBeInTheDocument();
     expect(screen.getByText('Exceptional discussion balance')).toBeInTheDocument();
     expect(screen.getByText(/talk ratio during discussion was ~32%/)).toBeInTheDocument();
@@ -93,7 +98,7 @@ describe('ReportCard', () => {
             },
           ],
         })}
-        leaderName="Bryan Bailey"
+        leaderName="Avery Hollis"
       />,
     );
 
@@ -102,5 +107,15 @@ describe('ReportCard', () => {
     expect(screen.getByText('Key moments')).toBeInTheDocument();
     expect(screen.getByText('[50:03]')).toBeInTheDocument();
     expect(screen.getByText(/personal coping mechanism/)).toBeInTheDocument();
+  });
+
+  it("marks a held pipeline copy in an admin's drill-in as not visible to the leader", () => {
+    render(<ReportCard report={makeReport()} held admin coachId="avery" />);
+    expect(screen.getByTestId('coach-pipeline-copy-r1')).toHaveTextContent('Pipeline copy, not visible to the leader');
+  });
+
+  it('carries no such mark on a report the leader can see', () => {
+    render(<ReportCard report={makeReport()} held={false} admin coachId="avery" />);
+    expect(screen.queryByTestId('coach-pipeline-copy-r1')).toBeNull();
   });
 });

@@ -1,7 +1,7 @@
 /**
  * The "Most recent session" detail block on the coaching dashboard Home:
- * a session header (identity, Download PDF, status + delta, score badge) and a
- * tab bar — Full report · Scorecard · Question coaching · Next steps.
+ * a session header (identity, status + delta, score badge) and a
+ * tab bar, Full report · Scorecard · Question coaching · Next steps.
  *
  * Recreated from the design handoff, wired to the real /coach report shape
  * (CoachReport): the mock's /55 letter grade is presented as the live /100
@@ -14,9 +14,12 @@ import { useMemo, useState } from 'react';
 import {
   type CoachReport,
   type CoachReportSection,
-  pdfDownloadUrl,
 } from '@/services/coachService';
-import { DIMENSION_INFO } from './dimensionInfo';
+import { useCoachReportDetail } from '@/hooks/useCoach';
+import { useRubric } from '@/hooks/useRubric';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
+import { PdfDownload } from './CoachUi';
+import RetainedRecording from './RetainedRecording';
 import { dt, letterGrade, ratingForScore, statusBand } from './dashboardTheme';
 
 type Tab = 'report' | 'scorecard' | 'questions' | 'nextsteps';
@@ -26,15 +29,23 @@ export default function CoachSessionDetail({
   delta,
   prev,
   label = 'MOST RECENT SESSION',
+  coachId,
 }: {
   report: CoachReport;
   delta: number | null;
   prev?: CoachReport;
   label?: string;
+  coachId?: string;
 }) {
   const [tab, setTab] = useState<Tab>('report');
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
-  const band = statusBand(report.status);
+  // The band's colour follows its POSITION in the served order, so a renamed
+  // or added band keeps a sensible colour instead of falling to the worst one.
+  const { rubric } = useRubric();
+  const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
+  const band = statusBand(report.status, bandLabels);
+  const detail = useCoachReportDetail(coachId ? undefined : report.id).data;
+  const attachedRecording = (detail?.attachedRecordingUrl ?? report.attachedRecordingUrl ?? '').trim();
+  const hasRetained = (coachId ? report : detail)?.hasRetainedRecording === true;
   const deltaText =
     delta == null ? '' : delta > 0 ? `▲ ${delta} pts` : delta < 0 ? `▼ ${Math.abs(delta)} pts` : 'no change';
 
@@ -46,7 +57,7 @@ export default function CoachSessionDetail({
   ];
 
   return (
-    <div style={{ marginTop: 34, borderTop: `1px solid ${dt.border2}`, paddingTop: 30 }}>
+    <div className={REPLAY_BLOCK_CLASS} style={{ marginTop: 34, borderTop: `1px solid ${dt.border2}`, paddingTop: 30 }}>
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 20, flexWrap: 'wrap' }}>
         <div>
@@ -61,30 +72,7 @@ export default function CoachSessionDetail({
           </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          {pdfHref && (
-            <a
-              href={pdfHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              data-testid={`coach-report-pdf-${report.id}`}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 7,
-                fontSize: 13,
-                fontWeight: 700,
-                color: dt.gold2,
-                background: dt.goldChip,
-                border: `1px solid ${dt.goldChipBorder}`,
-                padding: '10px 15px',
-                borderRadius: 9,
-                textDecoration: 'none',
-              }}
-            >
-              ↓ Download PDF
-            </a>
-          )}
+          <PdfDownload reportId={report.id} pdfUrl={report.pdfUrl} />
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.06em', color: band.c }}>{band.label}</div>
             {deltaText && <div style={{ fontSize: 12.5, color: dt.textLight }}>{deltaText} vs. last</div>}
@@ -109,6 +97,19 @@ export default function CoachSessionDetail({
           </div>
         </div>
       </div>
+
+      {/* The session's own recording, for the leader whose session it is.
+          Sessions VerseMate ingested carry one with no admin attachment step;
+          an admin's pasted link still takes precedence. */}
+      {(hasRetained || attachedRecording) && (
+        <div style={{ marginTop: 18 }}>
+          <RetainedRecording
+            reportId={report.id}
+            hasRetained={hasRetained}
+            attachedUrl={attachedRecording}
+          />
+        </div>
+      )}
 
       {/* Tabs */}
       <div style={{ display: 'flex', gap: 6, margin: '22px 0 4px', borderBottom: `1px solid ${dt.border2}`, flexWrap: 'wrap' }}>
@@ -135,7 +136,7 @@ export default function CoachSessionDetail({
         ))}
       </div>
 
-      {tab === 'report' && <FullReport report={report} />}
+      {tab === 'report' && <FullReport report={report} onOpenMetrics={() => setTab('scorecard')} />}
       {tab === 'scorecard' && <Scorecard report={report} />}
       {tab === 'questions' && <QuestionCoaching report={report} />}
       {tab === 'nextsteps' && <NextSteps report={report} />}
@@ -145,8 +146,7 @@ export default function CoachSessionDetail({
 
 // ─── Full report ─────────────────────────────────────────────────────────────
 
-function FullReport({ report }: { report: CoachReport }) {
-  const pdfHref = pdfDownloadUrl(report.pdfUrl);
+function FullReport({ report, onOpenMetrics }: { report: CoachReport; onOpenMetrics: () => void }) {
   const snapshot = buildSnapshot(report);
   const strengths = feedbackPoints(report.feedback?.strengthsProse, report.feedback?.strengths);
   const improvements = feedbackPoints(report.feedback?.improvementsProse, report.feedback?.improvements);
@@ -205,29 +205,6 @@ function FullReport({ report }: { report: CoachReport }) {
         </>
       )}
 
-      {/* Cluster breakdown */}
-      {report.clusters.length > 0 && (
-        <>
-          <SectionKicker>CLUSTER BREAKDOWN · BASE {report.base.toFixed(1)}</SectionKicker>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 11, margin: '14px 0 34px' }}>
-            {report.clusters.map((c) => {
-              const pct = c.scorePct == null ? 0 : c.scorePct;
-              return (
-                <div key={c.name} style={{ display: 'grid', gridTemplateColumns: '180px 1fr 52px', gap: 16, alignItems: 'center' }}>
-                  <div style={{ fontWeight: 600, fontSize: 14.5 }}>{c.name}</div>
-                  <div style={{ height: 9, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}>
-                    <div style={{ height: '100%', borderRadius: 99, width: `${pct}%`, background: dt.brightGold }} />
-                  </div>
-                  <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', fontSize: 14 }}>
-                    {c.scorePct == null ? 'N/A' : `${Math.round(c.scorePct)}%`}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </>
-      )}
-
       {/* Strengths */}
       {strengths.length > 0 && (
         <>
@@ -272,7 +249,7 @@ function FullReport({ report }: { report: CoachReport }) {
         <>
           <SectionHeading title="This week's playbook" pill={`${plays.length} plays`} pillC={dt.gold2} pillBg={dt.goldChip} />
           <p style={{ margin: '0 0 16px', fontSize: 14, color: dt.textLight }}>
-            Concrete, transferable changes for next session — each one testable in a single class.
+            Concrete, transferable changes for next session, each one testable in a single class.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {plays.map((r, i) => (
@@ -282,14 +259,19 @@ function FullReport({ report }: { report: CoachReport }) {
         </>
       )}
 
-      <div style={{ marginTop: 24, fontSize: 13.5, color: dt.textLight, borderTop: `1px dashed ${dt.dashed}`, paddingTop: 16 }}>
-        Full metrics — Score Composition & the appendix (attendance, timeline, talk ratio, engagement, monologues,
-        vulnerability, the full dimension scorecard, cross-references, drift log) — are in the downloadable report.{' '}
-        {pdfHref ? (
-          <a href={pdfHref} target="_blank" rel="noopener noreferrer" download style={{ color: dt.gold, fontWeight: 600 }}>
-            Download the full PDF →
-          </a>
-        ) : null}
+      <div
+        data-testid="coach-metrics-link"
+        style={{ marginTop: 24, fontSize: 13.5, color: dt.textLight, borderTop: `1px dashed ${dt.dashed}`, paddingTop: 16 }}
+      >
+        The full session metrics are kept apart from this report: the score composition first, then every dimension
+        against its target.{' '}
+        <button
+          type="button"
+          onClick={onOpenMetrics}
+          style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', font: 'inherit', fontWeight: 700, color: dt.gold }}
+        >
+          Open the full metrics
+        </button>
       </div>
     </div>
   );
@@ -299,19 +281,28 @@ function FullReport({ report }: { report: CoachReport }) {
 
 function Scorecard({ report }: { report: CoachReport }) {
   const [open, setOpen] = useState<number | null>(null);
+  // The dimension targets come from the served rubric, so the scorecard shows
+  // what the score was actually computed against (task 8.3).
+  const { rubric } = useRubric();
   if (!report.dimensions?.length) {
-    return <EmptyPanel>No dimension scorecard is available for this session yet.</EmptyPanel>;
+    return (
+      <>
+        <ScoreComposition report={report} />
+        <EmptyPanel>No dimension scorecard is available for this session yet.</EmptyPanel>
+      </>
+    );
   }
   return (
     <div style={{ paddingTop: 8 }}>
+      <ScoreComposition report={report} />
       <div style={{ fontSize: 12.5, color: dt.textLight, marginBottom: 4 }}>
         Tap any dimension to read the session-specific coaching behind its score.
       </div>
       {report.dimensions.map((d) => {
-        const r = ratingForScore(d.score);
+        const r = ratingForScore(d.score, rubric?.dimensionBands ?? []);
         const isOpen = open === d.n;
         const pct = d.score == null ? 0 : (d.score / 5) * 100;
-        const desc = DIMENSION_INFO[d.n]?.target ?? '';
+        const desc = rubric?.dimensions.find((x) => x.n === d.n)?.target ?? '';
         return (
           <div key={d.n} style={{ borderBottom: `1px solid ${dt.rowDivider}` }}>
             <button
@@ -347,6 +338,7 @@ function Scorecard({ report }: { report: CoachReport }) {
                   fontSize: 10.5,
                   fontWeight: 700,
                   letterSpacing: '.04em',
+                  textTransform: 'uppercase',
                   padding: '5px 9px',
                   borderRadius: 6,
                   color: r.c,
@@ -375,6 +367,40 @@ function Scorecard({ report }: { report: CoachReport }) {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+function ScoreComposition({ report }: { report: CoachReport }) {
+  const bonuses = [
+    report.newcomerBonus ? ` + newcomer growth ${report.newcomerBonus}` : '',
+    report.sizeBonus ? ` + group size ${report.sizeBonus}` : '',
+  ].join('');
+  return (
+    <div data-testid="coach-score-composition" style={{ paddingTop: 12 }}>
+      <SectionKicker>SCORE COMPOSITION</SectionKicker>
+      <p style={{ fontSize: 13.5, color: dt.textLight, margin: '6px 0 14px' }}>
+        Base {report.base.toFixed(1)}
+        {bonuses} = {report.score} / 100
+      </p>
+      {report.clusters.length > 0 && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 11, margin: '0 0 30px' }}>
+          {report.clusters.map((c) => {
+            const pct = c.scorePct == null ? 0 : c.scorePct;
+            return (
+              <div key={c.name} style={{ display: 'grid', gridTemplateColumns: '180px 1fr 52px', gap: 16, alignItems: 'center' }}>
+                <div style={{ fontWeight: 600, fontSize: 14.5 }}>{c.name}</div>
+                <div style={{ height: 9, background: dt.barTrack, borderRadius: 99, overflow: 'hidden' }}>
+                  <div style={{ height: '100%', borderRadius: 99, width: `${pct}%`, background: dt.brightGold }} />
+                </div>
+                <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', fontSize: 14 }}>
+                  {c.scorePct == null ? 'N/A' : `${Math.round(c.scorePct)}%`}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
@@ -568,17 +594,17 @@ interface Point {
 
 /** Normalize either the pipeline's titled prose or terse bullets to cards. */
 function feedbackPoints(
-  prose: { title: string; paragraphs: string[] }[] | undefined,
+  prose: { title: string; paragraphs: string[]; evidence?: { quote: string; timestamp: string } }[] | undefined,
   bullets: string[] | undefined,
 ): Point[] {
   if (prose?.length) {
     return prose.map((p) => ({
       title: p.title,
-      body: (p.paragraphs || []).join('\n\n'),
+      body: [...(p.paragraphs || []), ...(p.evidence ? [`“${p.evidence.quote}” at ${p.evidence.timestamp}`] : [])].join('\n\n'),
     }));
   }
   if (bullets?.length) {
-    // Terse bullets sometimes read "Title — body"; split on the first em/en dash.
+    // Terse bullets sometimes read "Title, body"; split on the first em/en dash.
     return bullets.map((b) => {
       const m = b.match(/^(.{3,60}?)\s+[—–-]\s+([\s\S]+)$/);
       return m ? { title: m[1].trim(), body: m[2].trim() } : { title: b.trim(), body: '' };
@@ -592,7 +618,7 @@ function buildSnapshot(report: CoachReport): { k: string; v: string }[] {
   if (report.dateLabel) rows.push({ k: 'DATE', v: report.dateLabel });
   if (report.topic) rows.push({ k: 'TOPIC', v: report.topic });
   if (report.duration) rows.push({ k: 'DURATION', v: report.duration });
-  rows.push({ k: 'ATTENDEES', v: `${report.attendees}` });
+  rows.push({ k: 'ATTENDEES', v: report.attendees === null ? 'Not recorded' : `${report.attendees}` });
   rows.push({
     k: 'NEWCOMERS',
     v: report.newcomers ? `${report.newcomers} first-timer${report.newcomers === 1 ? '' : 's'}` : 'None this week',

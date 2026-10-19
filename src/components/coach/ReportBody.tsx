@@ -1,16 +1,6 @@
-/**
- * Shared full-prose body of a coaching report — the narrative that both the
- * document-style <ReportDetail> and the tap-to-expand <ReportCard> render, so
- * the two presentations never drift apart. It renders everything below a
- * report's score/identity header: Summary & Big Ideas, the full prose
- * feedback (Top Strengths / Areas of Improvement / Recommendations, each
- * falling back to the terse bullets when the pipeline hasn't supplied prose),
- * the PDF-parity pipeline sections (scorecard tables, monologues, key moments,
- * DOK-scored application questions), and the 12 dimensions.
- */
-
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { REPLAY_BLOCK_CLASS } from '@/lib/analyticsPrivacy';
 import { vmTokens } from '@/styles/themeStyles';
 import {
   type CoachFeedbackPoint,
@@ -29,12 +19,14 @@ const BODY = 'color-mix(in srgb, var(--fg-secondary) 42%, var(--fg-primary))';
 export default function ReportBody({ report }: { report: CoachReport }) {
   // Drop the pipeline's "Score composition" section — that content is the ring
   // breakdown / cluster bars now, so it must not render inline as well.
+  const details = (report.sections ?? []).find((s) => (s.title ?? '').trim() === SESSION_DETAILS);
   const sections = (report.sections ?? []).filter(
-    (s) => !/^score composition$/i.test((s.title ?? '').trim()),
+    (s) => !/^score composition$/i.test((s.title ?? '').trim()) && s !== details,
   );
 
   return (
-    <>
+    <div className={REPLAY_BLOCK_CLASS}>
+      {details?.bullets?.length ? <TitlePage section={details} /> : null}
       {/* Summary + Big Ideas — one collapse for both, side by side on wide screens. */}
       {(report.feedback?.headline || report.feedback?.overview?.length || report.bigIdeas.length > 0) && (
         <CollapsibleSection title="Summary & Big Ideas" accent={vmTokens.gold}>
@@ -95,9 +87,8 @@ export default function ReportBody({ report }: { report: CoachReport }) {
         <ReportSection key={i} section={section} />
       ))}
 
-      {/* The 12 dimensions as a single tappable list. */}
       {report.dimensions?.length > 0 && (
-        <CollapsibleSection title="The 12 Dimensions · tap a row for detail" accent={BLUE}>
+        <CollapsibleSection title={`The ${report.dimensions.length} Dimensions · tap a row for detail`} accent={BLUE}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
             {report.dimensions.map((d) => (
               <DimensionRow key={d.n} dim={d} />
@@ -105,7 +96,36 @@ export default function ReportBody({ report }: { report: CoachReport }) {
           </div>
         </CollapsibleSection>
       )}
-    </>
+    </div>
+  );
+}
+
+const SESSION_DETAILS = 'Session Details';
+
+function TitlePage({ section }: { section: CoachReportSection }) {
+  return (
+    <CollapsibleSection title="Session" accent={BLUE}>
+      <div data-testid="coach-report-title-page">
+        <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 6 }}>
+          {(section.bullets ?? []).map((row) => {
+            const at = row.indexOf(': ');
+            const label = at >= 0 ? row.slice(0, at) : row;
+            const value = at >= 0 ? row.slice(at + 2) : '';
+            return (
+              <li key={row} style={{ display: 'flex', gap: 10, fontSize: 15, color: BODY, lineHeight: 1.5 }}>
+                <span style={{ fontWeight: 700, color: vmTokens.textPrimary, minWidth: 130 }}>{label}</span>
+                <span>{value}</span>
+              </li>
+            );
+          })}
+        </ul>
+        {section.paragraphs?.map((para, i) => (
+          <p key={i} style={{ ...proseParagraph, fontStyle: 'italic', marginTop: 12 }}>
+            {para}
+          </p>
+        ))}
+      </div>
+    </CollapsibleSection>
   );
 }
 
@@ -419,6 +439,11 @@ function ProseSection({
               {pt.paragraphs.map((para, j) => (
                 <p key={j} style={proseParagraph}>{para}</p>
               ))}
+              {pt.evidence && (
+                <p data-testid="coach-point-evidence" style={{ ...proseParagraph, fontStyle: 'italic', color: vmTokens.textSecondary }}>
+                  “{pt.evidence.quote}” at {pt.evidence.timestamp}
+                </p>
+              )}
             </div>
           ))}
         </div>
