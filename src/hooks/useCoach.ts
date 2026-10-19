@@ -36,6 +36,10 @@ import {
   type LeaderMonthlyResponse,
   fetchAllCoachClasses,
   fetchCoachClasses,
+  fetchNotetakerStatus,
+  fetchNotetakerZoom,
+  type NotetakerStatus,
+  type NotetakerZoom,
   fetchCoachMe,
   fetchCoachReportDetail,
   fetchCoachReportSummaries,
@@ -84,8 +88,10 @@ export const coachKeys = {
   reports: ['coach', 'reports'] as const,
   trends: ['coach', 'trends'] as const,
   classes: ['coach', 'classes'] as const,
+  notetakerStatus: ['coach', 'notetaker', 'status'] as const,
   adminCoaches: ['coach', 'admin', 'coaches'] as const,
   adminClasses: ['coach', 'admin', 'classes'] as const,
+  notetakerZoom: ['coach', 'admin', 'notetaker', 'zoom'] as const,
   pipelineFailures: ['coach', 'admin', 'pipeline-failures'] as const,
   coverage: ['coach', 'admin', 'coverage'] as const,
   parallelRun: ['coach', 'admin', 'parallel-run'] as const,
@@ -179,7 +185,27 @@ export function useCoachClasses(opts: { enabled?: boolean } = {}): UseQueryResul
   });
 }
 
+/** Whether the leader's Zoom account is connected to the notetaker. */
+export function useNotetakerStatus(opts: { enabled?: boolean } = {}): UseQueryResult<NotetakerStatus> {
+  return useQuery({
+    queryKey: coachKeys.notetakerStatus,
+    queryFn: fetchNotetakerStatus,
+    retry: false,
+    enabled: opts.enabled ?? true,
+  });
+}
+
 // ─── Admin oversight ────────────────────────────────────────────────────────
+
+/** The connected Zoom accounts and their meetings (admin only). */
+export function useNotetakerZoom(opts: { enabled?: boolean } = {}): UseQueryResult<NotetakerZoom> {
+  return useQuery({
+    queryKey: coachKeys.notetakerZoom,
+    queryFn: fetchNotetakerZoom,
+    retry: false,
+    enabled: opts.enabled ?? true,
+  });
+}
 
 export function useAdminClasses(opts: { enabled?: boolean } = {}): UseQueryResult<AdminCoachClass[]> {
   return useQuery({

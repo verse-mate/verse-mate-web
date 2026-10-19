@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { scrubEvent } from '@/lib/analyticsPrivacy';
 import { requestAudio } from '@/audio/audioApi';
 import { api } from './api';
-import { fetchAdminMonthly, fetchCoachTrendsFor } from './coachService';
+import { fetchAdminMonthly, fetchCoachTrendsFor, fetchNotetakerStatus, fetchNotetakerZoom, updateAdminCoachClass } from './coachService';
 
 describe('a failed coach request', () => {
   afterEach(() => vi.unstubAllGlobals());
@@ -18,6 +18,21 @@ describe('a failed coach request', () => {
     vi.stubGlobal('fetch', vi.fn(async () => new Response('{}', { status: 502 })));
     const error = await fetchAdminMonthly('2026-08').catch((e: Error) => e);
     expect((error as Error).message).toBe('coach api /coach/admin/monthly failed: 502');
+  });
+
+  it('names the notetaker and admin class routes, without the class id', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response('{}', { status: 500 })));
+    const failure = (request: Promise<unknown>) => request.then(() => '', (e: Error) => e.message);
+    const messages = await Promise.all([
+      failure(fetchNotetakerStatus()),
+      failure(fetchNotetakerZoom()),
+      failure(updateAdminCoachClass('class-7', { name: 'X', classDate: '', recurrence: 'weekly', zoomLink: '' })),
+    ]);
+    expect(messages).toEqual([
+      'coach api /coach/notetaker/status failed: 500',
+      'coach api /coach/admin/notetaker/zoom failed: 500',
+      'coach api /coach/admin/classes/:id failed: 500',
+    ]);
   });
 
   it('names a request that never reached the server, without the leader id in the report', async () => {

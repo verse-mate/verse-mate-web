@@ -29,6 +29,7 @@ vi.mock('@/services/coachService', async (importOriginal) => {
     fetchCoachReportSummaries: vi.fn(),
     fetchCoachTrends: vi.fn(),
     fetchCoachClasses: vi.fn(),
+    fetchNotetakerStatus: vi.fn(),
     fetchMyMonthlySummary: vi.fn(),
     fetchAdminCoaches: vi.fn(),
     fetchCoachTrendsFor: vi.fn(),
@@ -132,7 +133,7 @@ const trends: CoachTrends = {
 };
 
 const classes: CoachClass[] = [
-  { id: 'sat', name: 'James — Riverbend Sunday Group', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1' },
+  { id: 'sat', name: 'James — Riverbend Sunday Group', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', startTime: null, timeZone: null, notetaker: true },
 ];
 
 const monthly: LeaderMonthlyResponse = {
@@ -205,6 +206,7 @@ beforeEach(() => {
   });
   vi.mocked(coachService.fetchCoachTrends).mockResolvedValue(trends);
   vi.mocked(coachService.fetchCoachClasses).mockResolvedValue(classes);
+  vi.mocked(coachService.fetchNotetakerStatus).mockResolvedValue({ known: false, connected: false, zoomEmail: null, connectUrl: '' });
   vi.mocked(coachService.fetchMyMonthlySummary).mockResolvedValue(monthly);
   vi.mocked(coachService.fetchCoachReportDetail).mockImplementation(
     async (id) => reports.find((r) => r.id === id) ?? null,

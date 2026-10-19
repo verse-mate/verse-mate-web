@@ -36,6 +36,7 @@ const NAVS: Record<NavKey, NavEntry[]> = {
     { label: 'Program', to: LEARN.admin, key: 'program' },
     { label: 'Trends', to: '/coach', key: 'trends', view: 'trends' },
     { label: 'Class links', to: '/coach', key: 'links', view: 'links' },
+    { label: 'Class schedule', to: '/coach/admin/classes', key: 'schedule' },
     { label: 'Pipeline', to: '/coach', key: 'pipeline', view: 'pipeline' },
     { label: 'Parallel run', to: '/coach', key: 'parallel', view: 'parallel-run' },
     { label: 'Rotating classes', to: '/coach', key: 'rotating', view: 'rotating' },
