@@ -27,22 +27,13 @@ import {
 } from '@/components/coach/CoachUi';
 import { ClassForm, ClassRow } from '@/components/coach/ClassSchedule';
 import NotetakerConnectCard from '@/components/coach/NotetakerConnectCard';
-import { classDraft } from '@/lib/coachClassSchedule';
+import { classDraft, classSaveProblem } from '@/lib/coachClassSchedule';
 import {
-  CoachApiError,
   createCoachClass,
   updateCoachClass,
   deleteCoachClass,
   type CoachClassInput,
 } from '@/services/coachService';
-
-// A 400 names what the server refused ("Choose the time zone the start time is
-// in"), which says more than "check the fields".
-function saveProblem(err: unknown, what: string): string {
-  return err instanceof CoachApiError && err.status === 400 && err.serverMessage
-    ? `${what}: ${err.serverMessage}`
-    : `${what} — check the fields and try again`;
-}
 
 export default function CoachClassesScreen() {
   const navigate = useNavigate();
@@ -66,7 +57,7 @@ export default function CoachClassesScreen() {
       setEditing(null);
       toast.success('Class added');
     },
-    onError: (err) => toast.error(saveProblem(err, 'Could not add the class')),
+    onError: (err) => toast.error(classSaveProblem(err, 'Could not add the class')),
   });
 
   const updateMutation = useMutation({
@@ -76,7 +67,7 @@ export default function CoachClassesScreen() {
       setEditing(null);
       toast.success('Class saved');
     },
-    onError: (err) => toast.error(saveProblem(err, 'Could not save the class')),
+    onError: (err) => toast.error(classSaveProblem(err, 'Could not save the class')),
   });
 
   const deleteMutation = useMutation({

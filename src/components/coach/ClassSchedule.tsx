@@ -17,27 +17,29 @@ import {
   classDraft,
   classInput,
   classWhen,
+  draftProblems,
   notetakerState,
   notetakerText,
   otherTimeZones,
   timeZoneLabel,
-  zoomLinkHint,
+  zoomLinkHintText,
   type ClassDraft,
 } from '@/lib/coachClassSchedule';
 
 // ─── One class, read-only row ────────────────────────────────────────────────
 
+/** Without `onEdit` / `onDelete` the row is read-only. */
 export function ClassRow({
   cls,
   onEdit,
   onDelete,
-  deleting,
+  deleting = false,
   testId = 'coach-class-row',
 }: {
   cls: CoachClass;
-  onEdit: () => void;
-  onDelete: () => void;
-  deleting: boolean;
+  onEdit?: () => void;
+  onDelete?: () => void;
+  deleting?: boolean;
   testId?: string;
 }) {
   const state = notetakerState(cls);
@@ -85,14 +87,20 @@ export function ClassRow({
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: 4, flexShrink: 0 }}>
-          <IconButton label="Edit class" onClick={onEdit} testId="coach-class-edit">
-            <Pencil size={16} strokeWidth={1.9} />
-          </IconButton>
-          <IconButton label="Remove class" onClick={onDelete} disabled={deleting} testId="coach-class-delete">
-            <Trash2 size={16} strokeWidth={1.9} />
-          </IconButton>
-        </div>
+        {(onEdit || onDelete) && (
+          <div style={{ display: 'flex', gap: 4, flexShrink: 0 }}>
+            {onEdit && (
+              <IconButton label="Edit class" onClick={onEdit} testId="coach-class-edit">
+                <Pencil size={16} strokeWidth={1.9} />
+              </IconButton>
+            )}
+            {onDelete && (
+              <IconButton label="Remove class" onClick={onDelete} disabled={deleting} testId="coach-class-delete">
+                <Trash2 size={16} strokeWidth={1.9} />
+              </IconButton>
+            )}
+          </div>
+        )}
       </div>
     </CoachCard>
   );
@@ -127,14 +135,10 @@ export function ClassForm({
   const [leader, setLeader] = useState(initialLeader);
   const set = <K extends keyof ClassDraft>(key: K, value: ClassDraft[K]) => setDraft((d) => ({ ...d, [key]: value }));
 
-  const otherZones = useMemo(() => otherTimeZones(initial?.timeZone), [initial?.timeZone]);
-
-  const nameEmpty = draft.name.trim() === '';
-  const linkInvalid = draft.zoomLink.trim() !== '' && !/^https?:\/\/\S+$/i.test(draft.zoomLink.trim());
-  const zoneMissing = draft.startTime.trim() !== '' && draft.timeZone === '';
+  const { nameEmpty, linkInvalid, zoneMissing } = draftProblems(draft);
   const leaderMissing = !!leaders && leader === '';
   const canSave = !nameEmpty && !linkInvalid && !zoneMissing && !leaderMissing && !busy;
-  const hint = draft.notetaker ? zoomLinkHint(draft.zoomLink) : null;
+  const hint = draft.notetaker && !linkInvalid ? zoomLinkHintText(draft.zoomLink) : null;
 
   const submit = () => {
     if (!canSave) return;
@@ -215,21 +219,7 @@ export function ClassForm({
               data-testid="coach-class-zone"
               style={inputStyle(zoneMissing)}
             >
-              {draft.timeZone === '' && <option value="">Choose a time zone</option>}
-              <optgroup label="United States">
-                {COMMON_TIME_ZONES.map((z) => (
-                  <option key={z.value} value={z.value}>
-                    {timeZoneLabel(z.value)}
-                  </option>
-                ))}
-              </optgroup>
-              <optgroup label="All time zones">
-                {otherZones.map((z) => (
-                  <option key={z} value={z}>
-                    {timeZoneLabel(z)}
-                  </option>
-                ))}
-              </optgroup>
+              <TimeZoneOptions keep={initial?.timeZone} empty={draft.timeZone === ''} />
             </select>
           </Field>
         </div>
@@ -255,14 +245,9 @@ export function ClassForm({
           {linkInvalid && (
             <p style={{ margin: '6px 0 0', fontSize: 12, color: vmTokens.statusError }}>Enter a valid http(s) link.</p>
           )}
-          {!linkInvalid && hint === 'passcode' && (
+          {hint && (
             <p data-testid="coach-class-link-hint" style={{ ...hintStyle, marginTop: 6 }}>
-              If your meeting has a passcode, paste the invite link that includes it (…?pwd=…).
-            </p>
-          )}
-          {!linkInvalid && hint === 'not-zoom' && (
-            <p data-testid="coach-class-link-hint" style={{ ...hintStyle, marginTop: 6 }}>
-              The notetaker joins Zoom meetings only for now.
+              {hint}
             </p>
           )}
         </Field>
@@ -312,6 +297,34 @@ export function ClassForm({
         </div>
       </div>
     </CoachCard>
+  );
+}
+
+/**
+ * A time-zone `<select>`'s options: the common US zones, then every other zone
+ * the browser knows, keeping `keep` (a saved zone) even if it does not. With
+ * `empty`, a "Choose a time zone" option leads, for a browser that named none.
+ */
+export function TimeZoneOptions({ keep, empty }: { keep?: string | null; empty?: boolean }) {
+  const others = useMemo(() => otherTimeZones(keep), [keep]);
+  return (
+    <>
+      {empty && <option value="">Choose a time zone</option>}
+      <optgroup label="United States">
+        {COMMON_TIME_ZONES.map((z) => (
+          <option key={z.value} value={z.value}>
+            {timeZoneLabel(z.value)}
+          </option>
+        ))}
+      </optgroup>
+      <optgroup label="All time zones">
+        {others.map((z) => (
+          <option key={z} value={z}>
+            {timeZoneLabel(z)}
+          </option>
+        ))}
+      </optgroup>
+    </>
   );
 }
 

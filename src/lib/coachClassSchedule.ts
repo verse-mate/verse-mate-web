@@ -8,7 +8,7 @@
  * "7:00 PM (America/Chicago)" reads the same wherever the reader is.
  */
 
-import type { CoachClass, CoachClassInput, CoachClassRecurrence } from '@/services/coachService';
+import { CoachApiError, type CoachClass, type CoachClassInput, type CoachClassRecurrence } from '@/services/coachService';
 
 export const RECURRENCE_OPTIONS: { value: CoachClassRecurrence; label: string }[] = [
   { value: 'weekly', label: 'Weekly' },
@@ -113,6 +113,18 @@ export function zoomLinkHint(link: string): 'passcode' | 'not-zoom' | null {
   return url.searchParams.has('pwd') ? null : 'passcode';
 }
 
+/** The words for `zoomLinkHint`, or null when there is nothing to say. */
+export function zoomLinkHintText(link: string): string | null {
+  switch (zoomLinkHint(link)) {
+    case 'passcode':
+      return 'If your meeting has a passcode, paste the invite link that includes it (…?pwd=…).';
+    case 'not-zoom':
+      return 'The notetaker joins Zoom meetings only for now.';
+    default:
+      return null;
+  }
+}
+
 export type NotetakerState =
   | { kind: 'off' }
   | { kind: 'ready' }
@@ -149,6 +161,28 @@ export function notetakerText(state: NotetakerState): string {
     case 'incomplete':
       return `Add the ${listInWords(state.missing)} so the notetaker can join`;
   }
+}
+
+/** What the "Connect your Zoom account" card says, on Class Setup and on the
+ *  coaching dashboard's Sessions page alike. */
+export const NOTETAKER_CONNECT = {
+  title: 'Connect your Zoom account (recommended)',
+  why: 'Connect once, and the notetaker joins your classes as your guest. It skips the waiting room and records without anyone clicking “Allow”.',
+  without: 'Without it, the notetaker still joins from your meeting link, but the host has to admit it and allow recording.',
+  explainerUrl: 'https://versemate.org/coach/notetaker',
+} as const;
+
+export function zoomConnectedText(zoomEmail: string | null): string {
+  return zoomEmail ? `Zoom connected as ${zoomEmail}` : 'Zoom connected';
+}
+
+/** A failed class save in words. A 400 or 404 names what the server refused
+ *  ("Choose the time zone the start time is in", "Leader not found"), which
+ *  says more than "check the fields". */
+export function classSaveProblem(err: unknown, what: string): string {
+  return err instanceof CoachApiError && (err.status === 400 || err.status === 404) && err.serverMessage
+    ? `${what}: ${err.serverMessage}`
+    : `${what} — check the fields and try again`;
 }
 
 // ─── Time zones ────────────────────────────────────────────────────────────
@@ -229,6 +263,16 @@ export function classDraft(
     startTime: from.startTime ?? '',
     timeZone: from.timeZone || browserTimeZone(),
     notetaker: from.notetaker !== false,
+  };
+}
+
+/** What keeps a draft from saving: it needs a name, a well-formed link (or
+ *  none yet), and a zone for any start time, as the server does. */
+export function draftProblems(d: ClassDraft): { nameEmpty: boolean; linkInvalid: boolean; zoneMissing: boolean } {
+  return {
+    nameEmpty: d.name.trim() === '',
+    linkInvalid: d.zoomLink.trim() !== '' && !/^https?:\/\/\S+$/i.test(d.zoomLink.trim()),
+    zoneMissing: d.startTime.trim() !== '' && d.timeZone.trim() === '',
   };
 }
 

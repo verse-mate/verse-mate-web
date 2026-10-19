@@ -8,7 +8,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import CoachAdminScreen from './CoachAdminScreen';
 import * as coachService from '@/services/coachService';
 import { primeRubricCache } from '@/hooks/useRubric';
@@ -181,6 +181,55 @@ describe('Coach Oversight', () => {
 
     fireEvent.click(screen.getByTestId('oversight-nav-links'));
     expect(await screen.findByText(/The meeting links your notetaker joins/)).toBeInTheDocument();
+  });
+
+  it('says when each class meets and whether the notetaker can join it, and leads to the class schedule', async () => {
+    vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue([
+      ...classes,
+      { ...classes[0], id: 'c2', name: 'Thursday — James', classDate: '2026-10-22', startTime: '19:00', timeZone: 'America/Chicago' },
+    ]);
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    render(
+      <QueryClientProvider client={client}>
+        <MemoryRouter initialEntries={['/coach']}>
+          <Routes>
+            <Route path="/coach" element={<CoachAdminScreen />} />
+            <Route path="/coach/admin/classes" element={<div data-testid="admin-class-schedule-page" />} />
+          </Routes>
+        </MemoryRouter>
+      </QueryClientProvider>,
+    );
+
+    fireEvent.click(await screen.findByTestId('oversight-nav-links'));
+    await screen.findByText('Thursday — James');
+    expect(screen.getAllByTestId('oversight-class-when').map((el) => el.textContent)).toEqual([
+      'Weekly',
+      'Thursdays at 7:00 PM (America/Chicago)',
+    ]);
+    expect(screen.getAllByTestId('oversight-class-notetaker').map((el) => el.textContent?.trim())).toEqual([
+      'Add the date, start time and time zone so the notetaker can join',
+      'Notetaker records this class',
+    ]);
+
+    fireEvent.click(screen.getByTestId('oversight-links-schedule'));
+    expect(await screen.findByTestId('admin-class-schedule-page')).toBeInTheDocument();
+  });
+
+  it('reaches the class schedule from the top navigation', async () => {
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    render(
+      <QueryClientProvider client={client}>
+        <MemoryRouter initialEntries={['/coach']}>
+          <Routes>
+            <Route path="/coach" element={<CoachAdminScreen />} />
+            <Route path="/coach/admin/classes" element={<div data-testid="admin-class-schedule-page" />} />
+          </Routes>
+        </MemoryRouter>
+      </QueryClientProvider>,
+    );
+
+    fireEvent.click(await screen.findByTestId('oversight-nav-schedule'));
+    expect(await screen.findByTestId('admin-class-schedule-page')).toBeInTheDocument();
   });
 
   it('opens a leader page from a clickable leader name in the trends tables', async () => {

@@ -9,7 +9,10 @@
  *                          with a coaching comment thread
  *   Trends (program)    , cohort composite, leaderboard, dimension heat map,
  *                          coaching priority matrix, program initiatives
- *   Class links         , the meeting links the notetaker joins, per leader
+ *   Class links         , the meeting links the notetaker joins, per leader,
+ *                          with when each class meets and whether the
+ *                          notetaker can join it; scheduling for a leader and
+ *                          connected Zoom accounts live on /coach/admin/classes
  *
  * Wired to the real admin API (useAdminCoaches / useAdminMonthly /
  * useCoachReportSummaries / useCoachTrendsFor / useLeaderMonthlySummary /
@@ -57,6 +60,7 @@ import { AxisLineChart, BandedTrend, RadarChart, MultiLineChart } from '@/compon
 import { dt, statusBand, firstName, ratingForScore } from '@/components/coach/dashboardTheme';
 import { PipelineCopyTag } from '@/components/coach/CoachUi';
 import { bandLabelsOf, clusterOrder, shortCode, useRubric } from '@/hooks/useRubric';
+import { classWhen, notetakerState, notetakerText } from '@/lib/coachClassSchedule';
 import { type RubricContract, bandFloor, statusForScore } from '@/services/rubric';
 
 type View = 'leaders' | 'leader' | 'trends' | 'links' | 'pipeline' | 'parallel-run' | 'rotating' | 'duplicates';
@@ -154,6 +158,7 @@ export default function CoachAdminScreen() {
               <NavItem label="Program" active={false} onClick={() => navigate(LEARN.admin)} testId="oversight-nav-program" />
               <NavItem label="Trends" active={view === 'trends'} onClick={() => setView('trends')} testId="oversight-nav-trends" />
               <NavItem label="Class links" active={view === 'links'} onClick={() => setView('links')} testId="oversight-nav-links" />
+              <NavItem label="Class schedule" active={false} onClick={() => navigate('/coach/admin/classes')} testId="oversight-nav-schedule" />
               <NavItem label="Pipeline" active={view === 'pipeline'} onClick={() => setView('pipeline')} testId="oversight-nav-pipeline" />
               <NavItem label="Parallel run" active={view === 'parallel-run'} onClick={() => setView('parallel-run')} testId="oversight-nav-parallel-run" />
               <NavItem label="Rotating classes" active={view === 'rotating'} onClick={() => setView('rotating')} testId="oversight-nav-rotating" />
@@ -1081,6 +1086,7 @@ function TrendsDetail({
 // ─── View 4 · Class links ───────────────────────────────────────────────────
 
 function ClassLinksView({ roster, onBack, onInvite }: { roster: CoachSummary[]; onBack: () => void; onInvite: () => void }) {
+  const navigate = useNavigate();
   const classesQuery = useAdminClasses();
   const state = coachState(classesQuery);
   const classes = useMemo(() => classesQuery.data || [], [classesQuery.data]);
@@ -1102,14 +1108,17 @@ function ClassLinksView({ roster, onBack, onInvite }: { roster: CoachSummary[]; 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 16, flexWrap: 'wrap', margin: '14px 0 20px' }}>
         <div>
           <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 30, margin: '0 0 6px', letterSpacing: '-.01em' }}>Class links</h2>
-          <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>The meeting links your notetaker joins, grouped by leader. Click a link to copy it.</p>
+          <p style={{ fontSize: 15, color: dt.textMuted, margin: 0 }}>The meeting links your notetaker joins, grouped by leader, with when each class meets. Click a link to copy it.</p>
         </div>
-        <button type="button" onClick={onInvite} style={{ background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13.5, padding: '11px 16px', borderRadius: 9, border: 'none', cursor: 'pointer' }}>+ Add leader</button>
+        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          <button type="button" onClick={() => navigate('/coach/admin/classes')} data-testid="oversight-links-schedule" style={{ background: dt.goldChip, color: dt.gold2, fontWeight: 700, fontSize: 13.5, padding: '11px 16px', borderRadius: 9, border: `1px solid ${dt.goldChipBorder}`, cursor: 'pointer' }}>Schedule classes / connected Zoom accounts →</button>
+          <button type="button" onClick={onInvite} style={{ background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13.5, padding: '11px 16px', borderRadius: 9, border: 'none', cursor: 'pointer' }}>+ Add leader</button>
+        </div>
       </div>
 
       <CoachGate loading={state.loading} authError={state.authError} error={state.error} onRetry={() => classesQuery.refetch()}>
         {groups.length === 0 ? (
-          <div style={dashedNote}>No class links yet. Leaders register their classes from their own Class Setup screen.</div>
+          <div style={dashedNote}>No class links yet. Leaders add their classes on their Sessions page, or schedule one for them from the class schedule.</div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             {groups.map((g) => (
@@ -1119,18 +1128,26 @@ function ClassLinksView({ roster, onBack, onInvite }: { roster: CoachSummary[]; 
                   <span style={{ fontWeight: 700, fontSize: 16 }}>{g.name}</span>
                 </div>
                 <div style={{ padding: '8px 18px 14px' }}>
-                  {g.classes.map((c) => (
-                    <div key={c.id} style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.6fr) 60px', gap: 10, alignItems: 'center', padding: '10px 0', borderTop: `1px solid ${dt.rowDivider}` }}>
-                      <span style={{ fontSize: 13.5, fontWeight: 600 }}>{c.name}</span>
-                      <span style={{ fontSize: 13, color: dt.textMuted }}>{recurrenceLabel(c.recurrence)}{c.classDate ? ` · ${c.classDate.slice(5)}` : ''}</span>
-                      {c.zoomLink ? (
-                        <a href={c.zoomLink} target="_blank" rel="noreferrer" style={{ fontSize: 13, color: dt.gold, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{c.zoomLink}</a>
-                      ) : (
-                        <span style={{ fontSize: 13, color: dt.rust }}>No link yet</span>
-                      )}
-                      <button type="button" onClick={() => { try { navigator.clipboard.writeText(c.zoomLink); toast.success('Link copied'); } catch { /* ignore */ } }} style={{ textAlign: 'center', fontSize: 12.5, fontWeight: 700, color: dt.gold, background: 'none', border: 'none', cursor: 'pointer' }}>Copy</button>
-                    </div>
-                  ))}
+                  {g.classes.map((c) => {
+                    const notetaker = notetakerState(c);
+                    return (
+                      <div key={c.id} data-testid="oversight-class-link" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.4fr) minmax(0, 1.2fr) minmax(0, 1.4fr) 60px', gap: 10, alignItems: 'center', padding: '10px 0', borderTop: `1px solid ${dt.rowDivider}` }}>
+                        <div style={{ minWidth: 0 }}>
+                          <div style={{ fontSize: 13.5, fontWeight: 600 }}>{c.name}</div>
+                          <div data-testid="oversight-class-notetaker" data-state={notetaker.kind} style={{ fontSize: 12, marginTop: 2, color: notetaker.kind === 'ready' ? dt.green : notetaker.kind === 'off' ? dt.textLight : dt.rust }}>
+                            {notetakerText(notetaker)}
+                          </div>
+                        </div>
+                        <span data-testid="oversight-class-when" style={{ fontSize: 13, color: dt.textMuted }}>{classWhen(c)}</span>
+                        {c.zoomLink ? (
+                          <a href={c.zoomLink} target="_blank" rel="noreferrer" style={{ fontSize: 13, color: dt.gold, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{c.zoomLink}</a>
+                        ) : (
+                          <span style={{ fontSize: 13, color: dt.rust }}>No link yet</span>
+                        )}
+                        <button type="button" onClick={() => { try { navigator.clipboard.writeText(c.zoomLink); toast.success('Link copied'); } catch { /* ignore */ } }} style={{ textAlign: 'center', fontSize: 12.5, fontWeight: 700, color: dt.gold, background: 'none', border: 'none', cursor: 'pointer' }}>Copy</button>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}
@@ -1289,16 +1306,6 @@ function priorityFor(l: CoachMonthly['leaders'][number]): { label: string; c: st
   if (s < 70) return { label: 'HIGH', c: '#A94E2B', bg: '#F4E1D7' };
   if (s < 80) return { label: 'MEDIUM', c: '#9A6E1F', bg: '#F6EFD8' };
   return { label: 'SUSTAIN', c: '#3E7A54', bg: '#E8EFE6' };
-}
-
-function recurrenceLabel(r: string): string {
-  switch (r) {
-    case 'weekly': return 'Weekly';
-    case 'biweekly': return 'Every other week';
-    case 'monthly': return 'Monthly';
-    case 'daily': return 'Daily';
-    default: return 'One-time';
-  }
 }
 
 function currentMonth(): string {

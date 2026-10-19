@@ -1,16 +1,21 @@
 import { describe, expect, it } from 'vitest';
+import { CoachApiError } from '@/services/coachService';
 import {
   COMMON_TIME_ZONES,
   browserTimeZone,
   classDraft,
   classInput,
+  classSaveProblem,
   classWhen,
+  draftProblems,
   formatClockTime,
   notetakerState,
   notetakerText,
   otherTimeZones,
   timeZoneLabel,
+  zoomConnectedText,
   zoomLinkHint,
+  zoomLinkHintText,
   type ClassSchedule,
 } from './coachClassSchedule';
 
@@ -116,6 +121,34 @@ describe('zoomLinkHint', () => {
     expect(zoomLinkHint('')).toBeNull();
     expect(zoomLinkHint('zoom.us/j/123')).toBeNull();
   });
+
+  it('puts each hint in words', () => {
+    expect(zoomLinkHintText('https://zoom.us/j/123')).toBe(
+      'If your meeting has a passcode, paste the invite link that includes it (…?pwd=…).',
+    );
+    expect(zoomLinkHintText('https://meet.google.com/abc')).toBe('The notetaker joins Zoom meetings only for now.');
+    expect(zoomLinkHintText('https://zoom.us/j/123?pwd=abc')).toBeNull();
+  });
+});
+
+describe('words for the page', () => {
+  it('names the connected Zoom account when it is known', () => {
+    expect(zoomConnectedText('jeff@zoom.example')).toBe('Zoom connected as jeff@zoom.example');
+    expect(zoomConnectedText(null)).toBe('Zoom connected');
+  });
+
+  it('passes on what the server refused, and asks to check the fields otherwise', () => {
+    expect(classSaveProblem(new CoachApiError('classes', 400, 'Choose the time zone the start time is in'), 'Could not add the class')).toBe(
+      'Could not add the class: Choose the time zone the start time is in',
+    );
+    expect(classSaveProblem(new CoachApiError('admin/classes', 404, 'Leader not found'), 'Could not add the class')).toBe(
+      'Could not add the class: Leader not found',
+    );
+    expect(classSaveProblem(new CoachApiError('classes', 500, 'boom'), 'Could not save the class')).toBe(
+      'Could not save the class — check the fields and try again',
+    );
+    expect(classSaveProblem(new Error('offline'), 'Could not save the class')).toBe('Could not save the class — check the fields and try again');
+  });
 });
 
 describe('time zones', () => {
@@ -152,6 +185,16 @@ describe('classDraft', () => {
   it('keeps a saved class as it is, and fills only its missing zone', () => {
     const draft = classDraft({ name: 'James', classDate: '2026-10-22', recurrence: 'none', zoomLink: 'https://zoom.us/j/1', startTime: null, timeZone: null, notetaker: false });
     expect(draft).toMatchObject({ name: 'James', classDate: '2026-10-22', recurrence: 'none', startTime: '', timeZone: browserTimeZone(), notetaker: false });
+  });
+
+  it('needs a name, a well-formed link and a zone for any start time', () => {
+    const ok = { ...classDraft(), name: 'James', zoomLink: 'https://zoom.us/j/1', startTime: '19:00', timeZone: 'America/Chicago' };
+    expect(draftProblems(ok)).toEqual({ nameEmpty: false, linkInvalid: false, zoneMissing: false });
+    expect(draftProblems({ ...ok, name: ' ' }).nameEmpty).toBe(true);
+    expect(draftProblems({ ...ok, zoomLink: 'zoom.us/j/1' }).linkInvalid).toBe(true);
+    expect(draftProblems({ ...ok, zoomLink: '' }).linkInvalid).toBe(false);
+    expect(draftProblems({ ...ok, timeZone: '' }).zoneMissing).toBe(true);
+    expect(draftProblems({ ...ok, timeZone: '', startTime: '' }).zoneMissing).toBe(false);
   });
 
   it('sends a trimmed body', () => {
