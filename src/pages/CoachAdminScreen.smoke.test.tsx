@@ -8,7 +8,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import CoachAdminScreen from './CoachAdminScreen';
 import * as coachService from '@/services/coachService';
 import { primeRubricCache } from '@/hooks/useRubric';
@@ -65,7 +65,7 @@ const leaderMonthly: LeaderMonthlyResponse = {
   summary: { month: '2026-07', monthLabel: 'July 2026', priorMonthLabel: 'June 2026', leaderId: 'avery', leaderName: 'Avery Hollis', group: '', sessionsCount: 4, composite: 88, status: { label: 'Exceptional', emoji: '🔷' }, priorComposite: 82, delta: 6, clusterAvg: { tc: 88, bm: 76, ep: 77, br: 84 }, glance: { rows: [], avg: { bm: 76, tc: 88, ep: 77, br: 84, composite: 88, status: 'Exceptional' } }, trajectory: [], clusters: [], strengths: [{ text: 'Cross-references built a framework.', session: '07-18' }], growth: [{ text: 'Visual Aids at 2/5.', session: '07-18' }], trends: [], conversationGuide: [], focus: { clusterName: 'Building Ministry', clusterPct: 76, goals: [] }, sessions: [] },
 };
 const classes: AdminCoachClass[] = [
-  { id: 'c1', name: 'Saturday Morning Study', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', leader: { id: 'avery', name: 'Avery Hollis', email: 'b@x.com' } },
+  { id: 'c1', name: 'Saturday Morning Study', classDate: null, recurrence: 'weekly', zoomLink: 'https://zoom.us/j/1', startTime: null, timeZone: null, notetaker: true, leader: { id: 'avery', name: 'Avery Hollis', email: 'b@x.com' } },
 ];
 
 beforeEach(() => {
@@ -181,6 +181,55 @@ describe('Coach Oversight', () => {
 
     fireEvent.click(screen.getByTestId('oversight-nav-links'));
     expect(await screen.findByText(/The meeting links your notetaker joins/)).toBeInTheDocument();
+  });
+
+  it('says when each class meets and whether the notetaker can join it, and leads to the class schedule', async () => {
+    vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue([
+      ...classes,
+      { ...classes[0], id: 'c2', name: 'Thursday — James', classDate: '2026-10-22', startTime: '19:00', timeZone: 'America/Chicago' },
+    ]);
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    render(
+      <QueryClientProvider client={client}>
+        <MemoryRouter initialEntries={['/coach']}>
+          <Routes>
+            <Route path="/coach" element={<CoachAdminScreen />} />
+            <Route path="/coach/admin/classes" element={<div data-testid="admin-class-schedule-page" />} />
+          </Routes>
+        </MemoryRouter>
+      </QueryClientProvider>,
+    );
+
+    fireEvent.click(await screen.findByTestId('oversight-nav-links'));
+    await screen.findByText('Thursday — James');
+    expect(screen.getAllByTestId('oversight-class-when').map((el) => el.textContent)).toEqual([
+      'Weekly',
+      'Thursdays at 7:00 PM (America/Chicago)',
+    ]);
+    expect(screen.getAllByTestId('oversight-class-notetaker').map((el) => el.textContent?.trim())).toEqual([
+      'Add the date, start time and time zone so the notetaker can join',
+      'Notetaker records this class',
+    ]);
+
+    fireEvent.click(screen.getByTestId('oversight-links-schedule'));
+    expect(await screen.findByTestId('admin-class-schedule-page')).toBeInTheDocument();
+  });
+
+  it('reaches the class schedule from the top navigation', async () => {
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    render(
+      <QueryClientProvider client={client}>
+        <MemoryRouter initialEntries={['/coach']}>
+          <Routes>
+            <Route path="/coach" element={<CoachAdminScreen />} />
+            <Route path="/coach/admin/classes" element={<div data-testid="admin-class-schedule-page" />} />
+          </Routes>
+        </MemoryRouter>
+      </QueryClientProvider>,
+    );
+
+    fireEvent.click(await screen.findByTestId('oversight-nav-schedule'));
+    expect(await screen.findByTestId('admin-class-schedule-page')).toBeInTheDocument();
   });
 
   it('opens a leader page from a clickable leader name in the trends tables', async () => {

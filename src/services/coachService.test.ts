@@ -29,7 +29,9 @@ import {
   addCoachNote,
   attributeSession,
   CoachAuthError,
+  createAdminCoachClass,
   createCoachClass,
+  deleteAdminCoachClass,
   deleteCoachClass,
   fetchAdminCoaches,
   fetchAdminMonthly,
@@ -38,10 +40,13 @@ import {
   fetchCoachReportDetail,
   fetchCoachReportSummaries,
   fetchCoachMe,
+  fetchNotetakerStatus,
+  fetchNotetakerZoom,
   saveCoachZoomLink,
   saveRecordingLink,
   setNotTeaching,
   statusColor,
+  updateAdminCoachClass,
   updateCoachClass,
   updateLeaderEmail,
   needsBenchmarkConfirm,
@@ -318,6 +323,121 @@ describe('coachService', () => {
     expect(seen).not.toBeNull();
     expect(seen?.url).toContain('/coach/classes/c1');
     expect(seen?.method).toBe('DELETE');
+  });
+
+  it('sends the start time, zone and notetaker choice with a class', async () => {
+    mockFetch((_url, init) => {
+      const body = JSON.parse(String(init?.body));
+      return jsonResponse({ class: { id: 'new', ...body, classDate: body.classDate || null } });
+    });
+    const created = await createCoachClass({
+      name: 'Thursday — James',
+      classDate: '2026-10-22',
+      recurrence: 'weekly',
+      zoomLink: 'https://zoom.us/j/1?pwd=x',
+      startTime: '19:00',
+      timeZone: 'America/Chicago',
+      notetaker: false,
+    });
+    expect(JSON.parse(String(calls[0].init?.body))).toMatchObject({ startTime: '19:00', timeZone: 'America/Chicago', notetaker: false });
+    expect(created.startTime).toBe('19:00');
+  });
+
+  it("reads the leader's notetaker connection", async () => {
+    mockFetch(() =>
+      jsonResponse({ known: true, connected: true, zoomEmail: 'jeff@example.com', connectUrl: 'https://notetaker.example/zoom/install' }),
+    );
+    await expect(fetchNotetakerStatus()).resolves.toEqual({
+      known: true,
+      connected: true,
+      zoomEmail: 'jeff@example.com',
+      connectUrl: 'https://notetaker.example/zoom/install',
+    });
+    expect(calls[0].url).toMatch(/\/coach\/notetaker\/status$/);
+  });
+
+  it('maps notetaker/status 403 to a not_a_coach error', async () => {
+    mockFetch(() => jsonResponse({ error: 'FORBIDDEN', message: 'Not a coaching account' }, 403));
+    await expect(fetchNotetakerStatus()).rejects.toBeInstanceOf(CoachAuthError);
+  });
+
+  it("schedules a class for a roster leader, the leader's id in the body", async () => {
+    mockFetch((url, init) => {
+      expect(url).toMatch(/\/coach\/admin\/classes$/);
+      expect(init?.method).toBe('POST');
+      const { coachId, ...rest } = JSON.parse(String(init?.body));
+      return jsonResponse({ class: { id: 'c9', ...rest, leader: { id: coachId, name: 'Milo Kerr', email: 'milo@example.com' } } });
+    });
+    const created = await createAdminCoachClass('milo-kerr', {
+      name: 'Tuesday — Acts',
+      classDate: '2026-10-20',
+      recurrence: 'biweekly',
+      zoomLink: 'https://zoom.us/j/9',
+      startTime: '18:30',
+      timeZone: 'America/New_York',
+      notetaker: true,
+    });
+    expect(JSON.parse(String(calls[0].init?.body))).toEqual({
+      name: 'Tuesday — Acts',
+      classDate: '2026-10-20',
+      recurrence: 'biweekly',
+      zoomLink: 'https://zoom.us/j/9',
+      startTime: '18:30',
+      timeZone: 'America/New_York',
+      notetaker: true,
+      coachId: 'milo-kerr',
+    });
+    expect(created.leader.id).toBe('milo-kerr');
+  });
+
+  it('keeps the refusal when the roster does not know the leader', async () => {
+    mockFetch(() => jsonResponse({ error: 'NOT_FOUND', message: 'Leader not found', details: { refusal: 'unknown-leader' } }, 404));
+    const err = await createAdminCoachClass('gone', { name: 'X', classDate: '', recurrence: 'weekly', zoomLink: '' }).catch((e) => e);
+    expect(refusalCode(err)).toBe('unknown-leader');
+  });
+
+  it("edits and removes any leader's class through the admin routes", async () => {
+    mockFetch((url, init) => {
+      if (init?.method === 'DELETE') return jsonResponse({ success: true });
+      return jsonResponse({ class: { id: 'c1', ...JSON.parse(String(init?.body)) } });
+    });
+    const updated = await updateAdminCoachClass('c1', { name: 'Renamed', classDate: '', recurrence: 'weekly', zoomLink: '', notetaker: false });
+    await deleteAdminCoachClass('c1');
+    expect(calls.map((c) => [c.init?.method, c.url.replace(/^.*\/coach\//, '')])).toEqual([
+      ['PUT', 'admin/classes/c1'],
+      ['DELETE', 'admin/classes/c1'],
+    ]);
+    expect(updated.notetaker).toBe(false);
+  });
+
+  it("reads the connected Zoom accounts and their meetings, empty lists when the notetaker did not answer", async () => {
+    const meeting = {
+      meetingId: '123',
+      topic: 'Thursday Bible Study',
+      joinUrl: 'https://zoom.us/j/123',
+      hostEmail: 'jeff@example.com',
+      classDate: '2026-10-22',
+      startTime: '19:00',
+      timeZone: 'America/Chicago',
+      recurrence: 'weekly',
+      invited: false,
+      leader: { id: 'jeff-ward', name: 'Jeff Ward' },
+      classId: null,
+    };
+    mockFetch(() =>
+      jsonResponse({
+        available: true,
+        connectUrl: 'https://notetaker.example/zoom/install',
+        connections: [{ email: 'jeff@example.com', name: 'Jeff Ward', connectedAt: null, leader: { id: 'jeff-ward', name: 'Jeff Ward' } }],
+        meetings: [meeting],
+      }),
+    );
+    const zoom = await fetchNotetakerZoom();
+    expect(calls[0].url).toMatch(/\/coach\/admin\/notetaker\/zoom$/);
+    expect(zoom.meetings).toEqual([meeting]);
+
+    mockFetch(() => jsonResponse({ available: false, connectUrl: 'x' }));
+    await expect(fetchNotetakerZoom()).resolves.toEqual({ available: false, connectUrl: 'x', connections: [], meetings: [] });
   });
 
   it('POSTs a new leader by email and returns the roster summary', async () => {
