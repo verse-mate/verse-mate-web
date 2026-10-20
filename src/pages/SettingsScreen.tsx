@@ -39,6 +39,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { bibleVersions, languageLabel, type BibleVersionInfo } from '@/constants/bible-versions';
 import { useApp } from '@/contexts/AppContext';
 import { useDeleteAccount } from '@/hooks/useDeleteAccount';
+import { usePendingEmail, useSetPendingEmail } from '@/hooks/usePendingEmail';
+import PendingEmailNotice from '@/components/settings/PendingEmailNotice';
 import { ApiError } from '@/services/api';
 import {
   fetchBibleLanguages,
@@ -113,6 +115,8 @@ export default function SettingsScreen() {
   const userEmail = state.userEmail;
   const userAvatarUrl = state.userAvatarUrl;
   const userPreferredLanguage = state.userPreferredLanguage;
+  const pendingEmail = usePendingEmail(isAuthenticated ? state.userId : null).data;
+  const setPendingEmail = useSetPendingEmail(state.userId);
 
   // Bible version state. The list is driven by GET /bible/versions (grouped
   // by language below) and falls back to the static catalog while that
@@ -308,13 +312,17 @@ export default function SettingsScreen() {
     if (errorClearTimeoutRef.current) clearTimeout(errorClearTimeoutRef.current);
 
     try {
-      await updateAuthProfile({
-        firstName: firstName.trim(),
-        lastName: lastName.trim(),
-        email: email.trim(),
-      });
+      const sentEmail = email;
+      setPendingEmail(
+        await updateAuthProfile({
+          firstName: firstName.trim(),
+          lastName: lastName.trim(),
+          email: email.trim(),
+        })
+      );
 
       await restoreSession();
+      setEmail((current) => (current === sentEmail ? userEmail || '' : current));
 
       setSaveStatus('saved');
       setTimeout(() => setSaveStatus('idle'), 2000);
@@ -346,7 +354,7 @@ export default function SettingsScreen() {
         setGlobalError(null);
       }, 5000);
     }
-  }, [firstName, lastName, email, userFirstName, userLastName, userEmail, restoreSession]);
+  }, [firstName, lastName, email, userFirstName, userLastName, userEmail, restoreSession, setPendingEmail]);
 
   // Auto-save profile changes 1s after the last edit.
   useEffect(() => {
@@ -548,8 +556,10 @@ export default function SettingsScreen() {
                   placeholder="Enter your email"
                   autoCapitalize="none"
                   data-testid="settings-email-input"
+                  aria-describedby="settings-pending-email"
                   style={textInputStyle}
                 />
+                <PendingEmailNotice id="settings-pending-email" email={pendingEmail} testId="settings-pending-email" />
               </div>
             </div>
           </section>

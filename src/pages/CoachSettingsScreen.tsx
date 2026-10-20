@@ -23,6 +23,8 @@ import { CoachCard, CoachStateBoundary, SectionLabel } from '@/components/coach/
 import AffiliatedChurchCard from '@/components/coach/AffiliatedChurchCard';
 import { useApp } from '@/contexts/AppContext';
 import { useCoachMe, coachKeys, coachState } from '@/hooks/useCoach';
+import { usePendingEmail, useSetPendingEmail } from '@/hooks/usePendingEmail';
+import PendingEmailNotice from '@/components/settings/PendingEmailNotice';
 import { ApiError } from '@/services/api';
 import {
   BIBLE_COACHES,
@@ -132,6 +134,8 @@ function ProfileSection() {
   const userLastName = state.userLastName;
   const userEmail = state.userEmail;
   const userAvatarUrl = state.userAvatarUrl;
+  const pendingEmail = usePendingEmail(state.isSignedIn ? state.userId : null).data;
+  const setPendingEmail = useSetPendingEmail(state.userId);
 
   const [firstName, setFirstName] = useState(userFirstName || '');
   const [lastName, setLastName] = useState(userLastName || '');
@@ -183,12 +187,16 @@ function ProfileSection() {
     if (errorClearTimeoutRef.current) clearTimeout(errorClearTimeoutRef.current);
 
     try {
-      await updateAuthProfile({
-        firstName: firstName.trim(),
-        lastName: lastName.trim(),
-        email: email.trim(),
-      });
+      const sentEmail = email;
+      setPendingEmail(
+        await updateAuthProfile({
+          firstName: firstName.trim(),
+          lastName: lastName.trim(),
+          email: email.trim(),
+        }),
+      );
       await restoreSession();
+      setEmail((current) => (current === sentEmail ? userEmail || '' : current));
       setSaveStatus('saved');
       setTimeout(() => setSaveStatus('idle'), 2000);
     } catch (err: unknown) {
@@ -213,7 +221,7 @@ function ProfileSection() {
         setGlobalError(null);
       }, 5000);
     }
-  }, [firstName, lastName, email, userFirstName, userLastName, userEmail, restoreSession]);
+  }, [firstName, lastName, email, userFirstName, userLastName, userEmail, restoreSession, setPendingEmail]);
 
   // Auto-save 1s after the last edit.
   useEffect(() => {
@@ -279,7 +287,13 @@ function ProfileSection() {
             placeholder="Enter your email"
             autoCapitalize="none"
             data-testid="coach-settings-email-input"
+            aria-describedby="coach-settings-pending-email"
             style={textInputStyle}
+          />
+          <PendingEmailNotice
+            id="coach-settings-pending-email"
+            email={pendingEmail}
+            testId="coach-settings-pending-email"
           />
         </div>
       </CoachCard>
