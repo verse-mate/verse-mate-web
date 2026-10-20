@@ -1254,13 +1254,28 @@ export async function fetchBibleLanguages(): Promise<BibleLanguage[]> {
     .sort((a, b) => a.nativeName.localeCompare(b.nativeName));
 }
 
-/** PUT /auth/profile — update first/last/email. Returns when server has saved. */
+interface PendingEmailRaw {
+  pendingEmail?: string | null;
+}
+
+/**
+ * PUT /auth/profile — update first/last/email. A new email is not applied
+ * until the user confirms it from the new inbox, so this resolves to the
+ * address waiting for that confirmation, or null.
+ */
 export async function updateAuthProfile(body: {
   firstName: string;
   lastName: string;
   email: string;
-}): Promise<void> {
-  await api.put('/auth/profile', body);
+}): Promise<string | null> {
+  const data = await api.put<PendingEmailRaw>('/auth/profile', body);
+  return data?.pendingEmail ?? null;
+}
+
+/** GET /auth/session — the email change waiting for confirmation, or null. /user/me does not carry it. */
+export async function fetchPendingEmail(): Promise<string | null> {
+  const data = await api.get<PendingEmailRaw>('/auth/session');
+  return data?.pendingEmail ?? null;
 }
 
 /** PATCH /user/preferences — update preferred_language. */
