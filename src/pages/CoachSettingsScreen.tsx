@@ -144,11 +144,14 @@ function ProfileSection() {
   const [globalError, setGlobalError] = useState<string | null>(null);
   const errorClearTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Sync fields when the user record changes (e.g. after restoreSession).
+  const syncedRef = useRef({ firstName: userFirstName || '', lastName: userLastName || '', email: userEmail || '' });
   useEffect(() => {
-    setFirstName(userFirstName || '');
-    setLastName(userLastName || '');
-    setEmail(userEmail || '');
+    const prev = syncedRef.current;
+    const next = { firstName: userFirstName || '', lastName: userLastName || '', email: userEmail || '' };
+    syncedRef.current = next;
+    setFirstName((current) => (current === prev.firstName ? next.firstName : current));
+    setLastName((current) => (current === prev.lastName ? next.lastName : current));
+    setEmail((current) => (current === prev.email ? next.email : current));
   }, [userFirstName, userLastName, userEmail]);
 
   const initials = useMemo(() => {
@@ -186,8 +189,9 @@ function ProfileSection() {
     setSaveStatus('saving');
     if (errorClearTimeoutRef.current) clearTimeout(errorClearTimeoutRef.current);
 
+    const sentEmail = email;
+    const keepCurrentEmail = () => setEmail((current) => (current === sentEmail ? userEmail || '' : current));
     try {
-      const sentEmail = email;
       setPendingEmail(
         await updateAuthProfile({
           firstName: firstName.trim(),
@@ -196,7 +200,7 @@ function ProfileSection() {
         }),
       );
       await restoreSession();
-      setEmail((current) => (current === sentEmail ? userEmail || '' : current));
+      keepCurrentEmail();
       setSaveStatus('saved');
       setTimeout(() => setSaveStatus('idle'), 2000);
     } catch (err: unknown) {
@@ -204,15 +208,12 @@ function ProfileSection() {
       const apiErr = err instanceof ApiError ? err : null;
       const body =
         apiErr && typeof apiErr.body === 'object' && apiErr.body !== null
-          ? (apiErr.body as { value?: { message?: string } | string; message?: string })
+          ? (apiErr.body as { value?: string })
           : null;
-      if (body?.value && typeof body.value === 'object' && body.value.message === 'EMAIL_ALREADY_EXISTS') {
-        errorMessage = 'This email address is already in use by another account.';
-      } else if (body?.message === 'EMAIL_ALREADY_EXISTS') {
-        errorMessage = 'This email address is already in use by another account.';
-      } else if (body?.value && typeof body.value === 'string') {
+      if (body?.value && typeof body.value === 'string') {
         errorMessage = body.value;
       }
+      if (apiErr?.status === 429) keepCurrentEmail();
       setGlobalError(errorMessage);
       setSaveStatus('error');
       if (errorClearTimeoutRef.current) clearTimeout(errorClearTimeoutRef.current);

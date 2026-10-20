@@ -19,7 +19,9 @@ export function useSetPendingEmail(userId: string | null | undefined) {
   const queryClient = useQueryClient();
   return useCallback(
     (pendingEmail: string | null) => {
-      if (userId) queryClient.setQueryData(pendingEmailKeys.user(userId), pendingEmail);
+      if (!userId) return;
+      void queryClient.cancelQueries({ queryKey: pendingEmailKeys.user(userId) });
+      queryClient.setQueryData(pendingEmailKeys.user(userId), pendingEmail);
     },
     [queryClient, userId],
   );

@@ -43,6 +43,19 @@ vi.mock('@/contexts/AppContext', async () => {
 });
 
 const CURRENT = 'jeff@example.com';
+const TOO_MANY = new ApiError(
+  429,
+  { error: 'TOO_MANY_REQUESTS', message: 'Too many email changes. Try again later.', retryAfter: 3600 },
+  'Too many requests',
+);
+
+function deferred<T>() {
+  let resolve!: (value: T) => void;
+  const promise = new Promise<T>((r) => {
+    resolve = r;
+  });
+  return { promise, resolve };
+}
 
 const screens: Array<{ name: string; Screen: ComponentType; path: string; field: string; notice: string }> = [
   {
@@ -164,7 +177,7 @@ describe.each(screens)('$name pending email notice', ({ Screen, path, field, not
 
   it('A refused request', async () => {
     vi.mocked(bibleService.fetchPendingEmail).mockResolvedValue('first@example.com');
-    vi.mocked(bibleService.updateAuthProfile).mockRejectedValue(new ApiError(429, {}, 'Too many requests'));
+    vi.mocked(bibleService.updateAuthProfile).mockRejectedValue(TOO_MANY);
     renderScreen();
     await expectNotice('first@example.com');
     await typeEmail('second@example.com');
@@ -172,6 +185,45 @@ describe.each(screens)('$name pending email notice', ({ Screen, path, field, not
       await screen.findByText('An error occurred while saving your changes.', {}, { timeout: 3000 }),
     ).toBeInTheDocument();
     await expectNotice('first@example.com');
+  });
+
+  it('A refused request does not block saving the name afterwards', async () => {
+    vi.mocked(bibleService.updateAuthProfile).mockRejectedValueOnce(TOO_MANY).mockResolvedValue(null);
+    renderScreen();
+    await typeEmail('second@example.com');
+    await screen.findByText('An error occurred while saving your changes.', {}, { timeout: 3000 });
+    await waitFor(() => expect(screen.getByTestId(field)).toHaveValue(CURRENT));
+    fireEvent.change(screen.getByDisplayValue('Ward'), { target: { value: 'Warden' } });
+    await waitFor(() => expect(bibleService.updateAuthProfile).toHaveBeenCalledTimes(2), { timeout: 3000 });
+    expect(vi.mocked(bibleService.updateAuthProfile).mock.calls[1][0]).toEqual({
+      firstName: 'Jeff',
+      lastName: 'Warden',
+      email: CURRENT,
+    });
+  });
+
+  it('Typing during a save keeps what was typed', async () => {
+    const save = deferred<string | null>();
+    vi.mocked(bibleService.updateAuthProfile).mockReturnValue(save.promise);
+    renderScreen();
+    await typeEmail('new@example.com');
+    await waitFor(() => expect(bibleService.updateAuthProfile).toHaveBeenCalled(), { timeout: 3000 });
+    await typeEmail('newer@example.co');
+    save.resolve('new@example.com');
+    await expectNotice('new@example.com');
+    expect(screen.getByTestId(field)).toHaveValue('newer@example.co');
+  });
+
+  it('A session read still in flight does not overwrite the save', async () => {
+    const opening = deferred<string | null>();
+    vi.mocked(bibleService.fetchPendingEmail).mockReturnValue(opening.promise);
+    vi.mocked(bibleService.updateAuthProfile).mockResolvedValue('new@example.com');
+    renderScreen();
+    await typeEmail('new@example.com');
+    await expectNotice('new@example.com');
+    opening.resolve(null);
+    await new Promise((r) => setTimeout(r, 50));
+    await expectNotice('new@example.com');
   });
 
   it.each([
