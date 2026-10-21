@@ -8,14 +8,15 @@ import { expect, test } from '@playwright/test';
  *   - Phase 5 (SSO callback URL contract — though we can only test the
  *             error path without a real OAuth flow)
  *
- * Uses the apple-review test account. Credentials live in env-only:
- *   VM_TEST_EMAIL / VM_TEST_PASSWORD (default to the apple-review account
- *   so this works in local dev too).
+ * Uses the apple-review test account. Credentials live in env only:
+ *   VM_TEST_EMAIL / VM_TEST_PASSWORD. Without them the login-backed
+ *   groups skip.
  */
 
 const API_BASE = 'https://api.versemate.org';
-const TEST_EMAIL = process.env.VM_TEST_EMAIL || 'apple.review@versemate.org';
-const TEST_PASSWORD = process.env.VM_TEST_PASSWORD || 'AppleReview2025$';
+const TEST_EMAIL = process.env.VM_TEST_EMAIL ?? '';
+const TEST_PASSWORD = process.env.VM_TEST_PASSWORD ?? '';
+const HAS_CREDENTIALS = TEST_EMAIL !== '' && TEST_PASSWORD !== '';
 
 interface LoginResponse {
   accessToken: string;
@@ -34,6 +35,8 @@ async function login(): Promise<LoginResponse> {
 }
 
 test.describe('Phase 4 — live API auth contract', () => {
+  test.skip(!HAS_CREDENTIALS, 'Set VM_TEST_EMAIL and VM_TEST_PASSWORD to run against production');
+
   test('/auth/login returns { accessToken, refreshToken, verified }', async () => {
     const data = await login();
     expect(data.accessToken).toMatch(/^eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+$/);
@@ -147,6 +150,8 @@ test.describe('Phase 5 — live API SSO callback contract', () => {
 });
 
 test.describe('Cookie sharing — verify same attributes used on app.versemate.org', () => {
+  test.skip(!HAS_CREDENTIALS, 'Set VM_TEST_EMAIL and VM_TEST_PASSWORD to run against production');
+
   test('frontend-next at app.versemate.org uses the same cookie name/path Phase 4 expects', async () => {
     // We can't directly read the production cookies (CORS / browser
     // sandbox), but we can verify the auth contract is consistent:

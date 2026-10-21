@@ -7,8 +7,11 @@ import { expect, test } from '@playwright/test';
  */
 
 const BASE = 'https://app.versemate.org';
-const TEST_EMAIL = process.env.VM_TEST_EMAIL || 'apple.review@versemate.org';
-const TEST_PASSWORD = process.env.VM_TEST_PASSWORD || 'AppleReview2025$';
+const TEST_EMAIL = process.env.VM_TEST_EMAIL ?? '';
+const TEST_PASSWORD = process.env.VM_TEST_PASSWORD ?? '';
+const HAS_CREDENTIALS = TEST_EMAIL !== '' && TEST_PASSWORD !== '';
+
+test.skip(!HAS_CREDENTIALS, 'Set VM_TEST_EMAIL and VM_TEST_PASSWORD to run against production');
 
 test('email/password login: capture flow + post-login state', async ({ page, context }) => {
   test.setTimeout(60_000);
