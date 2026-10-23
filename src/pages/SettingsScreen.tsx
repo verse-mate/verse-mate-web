@@ -39,6 +39,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { bibleVersions, languageLabel, type BibleVersionInfo } from '@/constants/bible-versions';
 import { useApp } from '@/contexts/AppContext';
 import { useDeleteAccount } from '@/hooks/useDeleteAccount';
+import { usePendingEmail, useSetPendingEmail } from '@/hooks/usePendingEmail';
+import PendingEmailNotice from '@/components/settings/PendingEmailNotice';
 import { ApiError } from '@/services/api';
 import {
   fetchBibleLanguages,
@@ -113,6 +115,8 @@ export default function SettingsScreen() {
   const userEmail = state.userEmail;
   const userAvatarUrl = state.userAvatarUrl;
   const userPreferredLanguage = state.userPreferredLanguage;
+  const pendingEmail = usePendingEmail(isAuthenticated ? state.userId : null).data;
+  const setPendingEmail = useSetPendingEmail(state.userId);
 
   // Bible version state. The list is driven by GET /bible/versions (grouped
   // by language below) and falls back to the static catalog while that
@@ -192,11 +196,14 @@ export default function SettingsScreen() {
   const [deletePassword, setDeletePassword] = useState<string | undefined>();
   const { deleteAccount, isDeleting, error: deleteError, clearError } = useDeleteAccount();
 
-  // Sync form fields when the user record changes (e.g. after restoreSession).
+  const syncedRef = useRef({ firstName: userFirstName || '', lastName: userLastName || '', email: userEmail || '' });
   useEffect(() => {
-    setFirstName(userFirstName || '');
-    setLastName(userLastName || '');
-    setEmail(userEmail || '');
+    const prev = syncedRef.current;
+    const next = { firstName: userFirstName || '', lastName: userLastName || '', email: userEmail || '' };
+    syncedRef.current = next;
+    setFirstName((current) => (current === prev.firstName ? next.firstName : current));
+    setLastName((current) => (current === prev.lastName ? next.lastName : current));
+    setEmail((current) => (current === prev.email ? next.email : current));
   }, [userFirstName, userLastName, userEmail]);
 
   // Sync language when first loading or when user record arrives.
@@ -307,36 +314,37 @@ export default function SettingsScreen() {
     setSaveStatus('saving');
     if (errorClearTimeoutRef.current) clearTimeout(errorClearTimeoutRef.current);
 
+    const sentEmail = email;
+    const keepCurrentEmail = () => setEmail((current) => (current === sentEmail ? userEmail || '' : current));
     try {
-      await updateAuthProfile({
-        firstName: firstName.trim(),
-        lastName: lastName.trim(),
-        email: email.trim(),
-      });
+      setPendingEmail(
+        await updateAuthProfile({
+          firstName: firstName.trim(),
+          lastName: lastName.trim(),
+          email: email.trim(),
+        })
+      );
 
       await restoreSession();
+      keepCurrentEmail();
 
       setSaveStatus('saved');
       setTimeout(() => setSaveStatus('idle'), 2000);
     } catch (err: unknown) {
       let errorMessage = 'An error occurred while saving your changes.';
 
-      // ApiError carries server body; mobile inspects multiple shapes.
       const apiErr = err instanceof ApiError ? err : null;
       const body =
         apiErr && typeof apiErr.body === 'object' && apiErr.body !== null
-          ? (apiErr.body as { value?: { message?: string } | string; message?: string })
+          ? (apiErr.body as { value?: string })
           : null;
 
-      if (body?.value && typeof body.value === 'object' && body.value.message === 'EMAIL_ALREADY_EXISTS') {
-        errorMessage = 'This email address is already in use by another account.';
-      } else if (body?.message === 'EMAIL_ALREADY_EXISTS') {
-        errorMessage = 'This email address is already in use by another account.';
-      } else if (body?.value && typeof body.value === 'string') {
+      if (body?.value && typeof body.value === 'string') {
         errorMessage = body.value;
       } else if (typeof err === 'string') {
         errorMessage = err;
       }
+      if (apiErr?.status === 429) keepCurrentEmail();
 
       setGlobalError(errorMessage);
       setSaveStatus('error');
@@ -346,7 +354,7 @@ export default function SettingsScreen() {
         setGlobalError(null);
       }, 5000);
     }
-  }, [firstName, lastName, email, userFirstName, userLastName, userEmail, restoreSession]);
+  }, [firstName, lastName, email, userFirstName, userLastName, userEmail, restoreSession, setPendingEmail]);
 
   // Auto-save profile changes 1s after the last edit.
   useEffect(() => {
@@ -548,8 +556,10 @@ export default function SettingsScreen() {
                   placeholder="Enter your email"
                   autoCapitalize="none"
                   data-testid="settings-email-input"
+                  aria-describedby="settings-pending-email"
                   style={textInputStyle}
                 />
+                <PendingEmailNotice id="settings-pending-email" email={pendingEmail} testId="settings-pending-email" />
               </div>
             </div>
           </section>

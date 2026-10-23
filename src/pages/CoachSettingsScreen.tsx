@@ -23,6 +23,8 @@ import { CoachCard, CoachStateBoundary, SectionLabel } from '@/components/coach/
 import AffiliatedChurchCard from '@/components/coach/AffiliatedChurchCard';
 import { useApp } from '@/contexts/AppContext';
 import { useCoachMe, coachKeys, coachState } from '@/hooks/useCoach';
+import { usePendingEmail, useSetPendingEmail } from '@/hooks/usePendingEmail';
+import PendingEmailNotice from '@/components/settings/PendingEmailNotice';
 import { ApiError } from '@/services/api';
 import {
   BIBLE_COACHES,
@@ -132,6 +134,8 @@ function ProfileSection() {
   const userLastName = state.userLastName;
   const userEmail = state.userEmail;
   const userAvatarUrl = state.userAvatarUrl;
+  const pendingEmail = usePendingEmail(state.isSignedIn ? state.userId : null).data;
+  const setPendingEmail = useSetPendingEmail(state.userId);
 
   const [firstName, setFirstName] = useState(userFirstName || '');
   const [lastName, setLastName] = useState(userLastName || '');
@@ -140,11 +144,14 @@ function ProfileSection() {
   const [globalError, setGlobalError] = useState<string | null>(null);
   const errorClearTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Sync fields when the user record changes (e.g. after restoreSession).
+  const syncedRef = useRef({ firstName: userFirstName || '', lastName: userLastName || '', email: userEmail || '' });
   useEffect(() => {
-    setFirstName(userFirstName || '');
-    setLastName(userLastName || '');
-    setEmail(userEmail || '');
+    const prev = syncedRef.current;
+    const next = { firstName: userFirstName || '', lastName: userLastName || '', email: userEmail || '' };
+    syncedRef.current = next;
+    setFirstName((current) => (current === prev.firstName ? next.firstName : current));
+    setLastName((current) => (current === prev.lastName ? next.lastName : current));
+    setEmail((current) => (current === prev.email ? next.email : current));
   }, [userFirstName, userLastName, userEmail]);
 
   const initials = useMemo(() => {
@@ -182,13 +189,18 @@ function ProfileSection() {
     setSaveStatus('saving');
     if (errorClearTimeoutRef.current) clearTimeout(errorClearTimeoutRef.current);
 
+    const sentEmail = email;
+    const keepCurrentEmail = () => setEmail((current) => (current === sentEmail ? userEmail || '' : current));
     try {
-      await updateAuthProfile({
-        firstName: firstName.trim(),
-        lastName: lastName.trim(),
-        email: email.trim(),
-      });
+      setPendingEmail(
+        await updateAuthProfile({
+          firstName: firstName.trim(),
+          lastName: lastName.trim(),
+          email: email.trim(),
+        }),
+      );
       await restoreSession();
+      keepCurrentEmail();
       setSaveStatus('saved');
       setTimeout(() => setSaveStatus('idle'), 2000);
     } catch (err: unknown) {
@@ -196,15 +208,12 @@ function ProfileSection() {
       const apiErr = err instanceof ApiError ? err : null;
       const body =
         apiErr && typeof apiErr.body === 'object' && apiErr.body !== null
-          ? (apiErr.body as { value?: { message?: string } | string; message?: string })
+          ? (apiErr.body as { value?: string })
           : null;
-      if (body?.value && typeof body.value === 'object' && body.value.message === 'EMAIL_ALREADY_EXISTS') {
-        errorMessage = 'This email address is already in use by another account.';
-      } else if (body?.message === 'EMAIL_ALREADY_EXISTS') {
-        errorMessage = 'This email address is already in use by another account.';
-      } else if (body?.value && typeof body.value === 'string') {
+      if (body?.value && typeof body.value === 'string') {
         errorMessage = body.value;
       }
+      if (apiErr?.status === 429) keepCurrentEmail();
       setGlobalError(errorMessage);
       setSaveStatus('error');
       if (errorClearTimeoutRef.current) clearTimeout(errorClearTimeoutRef.current);
@@ -213,7 +222,7 @@ function ProfileSection() {
         setGlobalError(null);
       }, 5000);
     }
-  }, [firstName, lastName, email, userFirstName, userLastName, userEmail, restoreSession]);
+  }, [firstName, lastName, email, userFirstName, userLastName, userEmail, restoreSession, setPendingEmail]);
 
   // Auto-save 1s after the last edit.
   useEffect(() => {
@@ -279,7 +288,13 @@ function ProfileSection() {
             placeholder="Enter your email"
             autoCapitalize="none"
             data-testid="coach-settings-email-input"
+            aria-describedby="coach-settings-pending-email"
             style={textInputStyle}
+          />
+          <PendingEmailNotice
+            id="coach-settings-pending-email"
+            email={pendingEmail}
+            testId="coach-settings-pending-email"
           />
         </div>
       </CoachCard>
