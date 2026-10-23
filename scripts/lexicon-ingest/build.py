@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import sys
 import unicodedata
 import urllib.request
@@ -380,7 +381,9 @@ def parse_tbe(path: Path, prefix: str) -> dict[str, dict]:
     keys are extended Strong numbers like 'G0001', 'G0007G' or 'H0001G'. We
     key on the base 4-digit number so it joins cleanly with BSB's plain
     integer Strong's. When multiple variants exist for the same base, keep
-    the first encountered entry — hand-curated overrides handle nuance.
+    the first encountered entry. That row is often a rare sense or a proper
+    name, so main() runs the lexicon repo's fix_dominant_senses.py afterwards
+    to replace the headline gloss with the most-used sense.
 
     For Aramaic words (Daniel/Ezra) BSB uses Hebrew Strong's numbers; TBESH
     includes them. So a single 'H' parse covers both Hebrew + Aramaic.
@@ -695,6 +698,19 @@ def main() -> int:
     # --all-nt has already run) preserve the other testament's entries.
     write_lexicon(all_lexicons, all_lemmas_used, combined_freq,
                   existing_path=OUT_DIR / '_lemmas.json')
+
+    # parse_tbe keeps STEP's FIRST row per Strong's, which for ~100 lemmas is a
+    # rare sense or a proper name (house → "place", city → "excitement"). The
+    # lexicon repo's post-pass swaps in the most-used sense, counted word by
+    # word in STEP's tagged OT/NT; it only rewrites first-row defaults, so
+    # re-running it after every build is safe.
+    fix_senses = OUT_DIR.parent.parent / 'scripts' / 'fix_dominant_senses.py'
+    if fix_senses.exists():
+        print('\n=== Headline glosses: dominant sense ===')
+        subprocess.run([sys.executable, str(fix_senses)], check=True)
+    else:
+        print(f'\nWARN: {fix_senses} not found — headline glosses keep STEP\'s '
+              'first-listed sense. Update verse-mate-lexicon.')
     print('\nDone.')
     return 0
 
