@@ -928,8 +928,8 @@ const FEATURES: Feature[] = [
   {
     id: 'lexicon',
     eyebrow: 'Original Languages',
-    title: 'Greek & Hebrew behind every word',
-    desc: 'Right-click any word — or press and hold it on a phone or tablet — to reveal its original-language definition: Strong’s number, pronunciation, semantic range, and related words. Read Scripture in the language it was written.',
+    title: 'Greek & Hebrew, one tap away',
+    desc: 'Right-click any word to reveal its original-language definition: Strong’s number, pronunciation, semantic range, and related words. Read Scripture in the language it was written.',
     Preview: LexiconPreview,
   },
   {

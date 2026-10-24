@@ -17,7 +17,7 @@ const SCREEN_TITLES = [
   'Explore any book. Any verse.',
   'Understand Scripture at every level',
   'Explore the bigger story',
-  'Greek & Hebrew behind every word',
+  'Greek & Hebrew, one tap away',
   'The inductive method, step by step',
   'See the whole book at a glance',
   'Multiple languages. Always free. Worldwide.',
