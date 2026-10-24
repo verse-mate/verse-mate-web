@@ -1,7 +1,8 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import type { AlignedToken, LexEntry } from '@versemate/lexicon';
 import LexiconPopover from './LexiconPopover';
+import { shouldSuppressVerseInsightClick } from '@/lib/verseInsightGuard';
 
 vi.mock('@/hooks/usePreferredLanguage', () => ({ usePreferredLanguage: () => 'en' }));
 
@@ -13,24 +14,10 @@ const ENTRY = {
   basicGloss: 'settled, self-giving love',
 } as LexEntry;
 const TOKEN: AlignedToken = { surface: 'loved', lemma: 'agapao' };
+const GLOSS = 'settled, self-giving love';
 
-const originalMatchMedia = window.matchMedia;
-
-/** Pretend the reader has a mouse (hover + fine pointer), or a touch screen. */
-function setPointer(kind: 'mouse' | 'touch') {
-  window.matchMedia = ((query: string) => ({
-    matches: kind === 'mouse' && query.includes('pointer: fine'),
-    media: query,
-    onchange: null,
-    addListener: () => {},
-    removeListener: () => {},
-    addEventListener: () => {},
-    removeEventListener: () => {},
-    dispatchEvent: () => false,
-  })) as typeof window.matchMedia;
-}
-
-function renderWord(onVerseClick = vi.fn()) {
+function renderWord() {
+  const onVerseClick = vi.fn();
   const utils = render(
     <span onClick={onVerseClick}>
       For God so{' '}
@@ -43,37 +30,60 @@ function renderWord(onVerseClick = vi.fn()) {
   return { ...utils, word, onVerseClick };
 }
 
-afterEach(() => {
-  window.matchMedia = originalMatchMedia;
-});
+const touchAt = (x: number, y: number) => ({ touches: [{ clientX: x, clientY: y }] });
 
 describe('LexiconPopover with a mouse', () => {
   it('opens the definition on right-click instead of the browser menu', () => {
-    setPointer('mouse');
     const { word } = renderWord();
-
     const notCancelled = fireEvent.contextMenu(word);
     expect(notCancelled).toBe(false);
-    expect(screen.getByText('settled, self-giving love')).toBeInTheDocument();
+    expect(screen.getByText(GLOSS)).toBeInTheDocument();
+    expect(word).toHaveClass('lex-word-open');
   });
 
   it('lets a left click fall through to the verse', () => {
-    setPointer('mouse');
     const { word, onVerseClick } = renderWord();
     fireEvent.click(word);
     expect(onVerseClick).toHaveBeenCalled();
-    expect(screen.queryByText('settled, self-giving love')).not.toBeInTheDocument();
+    expect(screen.queryByText(GLOSS)).not.toBeInTheDocument();
   });
 });
 
 describe('LexiconPopover on a touch screen', () => {
-  it('opens the definition on tap', () => {
-    setPointer('touch');
-    const { word, onVerseClick } = renderWord();
+  beforeEach(() => vi.useFakeTimers());
+  afterEach(() => vi.useRealTimers());
 
+  it('opens the definition on press-and-hold, and the verse stands down', () => {
+    const { word, onVerseClick } = renderWord();
+    fireEvent.touchStart(word, touchAt(10, 10));
+    act(() => vi.advanceTimersByTime(400));
+    fireEvent.touchEnd(word);
+    // Some browsers still send a click on release; it must not reach the verse.
     fireEvent.click(word);
+
+    expect(screen.getByText(GLOSS)).toBeInTheDocument();
     expect(onVerseClick).not.toHaveBeenCalled();
-    expect(screen.getByText('settled, self-giving love')).toBeInTheDocument();
-    expect(word).toHaveClass('lex-word-open');
+    expect(shouldSuppressVerseInsightClick()).toBe(true);
+  });
+
+  it('leaves a short tap to the verse', () => {
+    const { word, onVerseClick } = renderWord();
+    fireEvent.touchStart(word, touchAt(10, 10));
+    act(() => vi.advanceTimersByTime(150));
+    fireEvent.touchEnd(word);
+    fireEvent.click(word);
+    act(() => vi.advanceTimersByTime(1000));
+
+    expect(onVerseClick).toHaveBeenCalled();
+    expect(screen.queryByText(GLOSS)).not.toBeInTheDocument();
+  });
+
+  it('does not open while the finger is scrolling', () => {
+    const { word } = renderWord();
+    fireEvent.touchStart(word, touchAt(10, 10));
+    fireEvent.touchMove(word, touchAt(10, 40));
+    act(() => vi.advanceTimersByTime(1000));
+
+    expect(screen.queryByText(GLOSS)).not.toBeInTheDocument();
   });
 });

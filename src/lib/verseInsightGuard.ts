@@ -7,13 +7,18 @@
  * scripture text behind the card and would open the Verse Insight sheet —
  * so a single "dismiss the word card" gesture wrongly surfaced Verse Insight.
  *
+ * A press-and-hold on a word raises it too: the hold opens the word's card,
+ * and the verse underneath must not also open its long-press actions or, on
+ * release, Verse Insight.
+ *
  * A horizontal swipe raises the same problem: it ends over some verse, and the
  * click that follows is part of the page-turn, not a choice of verse.
  *
- * Both callers — the popover when it handles an outside interaction, and
- * `useHorizontalSwipe` when it recognises a swipe — call
+ * Each caller — the popover when it handles an outside interaction or a
+ * hold, and `useHorizontalSwipe` when it recognises a swipe — calls
  * `suppressVerseInsightClick()`, opening a short suppression window. `ReadingScreen`'s
- * `openVerseInsight` consults `shouldSuppressVerseInsightClick()` and bails
+ * `openVerseInsight` and `openVerseActions` consult
+ * `shouldSuppressVerseInsightClick()` and bail
  * while that window is open, so the dismiss click just closes the card and
  * returns to the text. A verse tapped deliberately (well after the window
  * lapses) still opens Verse Insight as before.
