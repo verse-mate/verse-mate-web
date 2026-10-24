@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Popover, PopoverAnchor, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import type { LexEntry, AlignedToken } from '@versemate/lexicon';
 import { vmTokens } from '@/styles/themeStyles';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -97,6 +97,11 @@ export default function LexiconPopover({
   // sees as much of the card as possible at once.
   const shortViewport = useMediaQuery('(max-height: 720px)');
 
+  // With a mouse, the card opens on right-click and the word carries no
+  // underline: a left click falls through to the verse like any other text.
+  // Touch screens have no right-click, so there a tap still opens the card.
+  const rightClickToDefine = useMediaQuery('(hover: hover) and (pointer: fine)');
+
   // Controlled so we can dismiss the card when the Bible scrolls behind it.
   const [open, setOpen] = useState(false);
 
@@ -171,6 +176,32 @@ export default function LexiconPopover({
   );
   const contentRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLSpanElement>(null);
+
+  // Right-click opens the card in place of the browser menu — unless the
+  // reader has text selected, where the browser menu (Copy, etc.) is what they
+  // want.
+  const onContextMenu = useCallback(
+    (e: React.MouseEvent) => {
+      const sel = window.getSelection();
+      if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
+      e.preventDefault();
+      e.stopPropagation();
+      onActivate?.();
+      setOpen(true);
+    },
+    [onActivate],
+  );
+
+  // In right-click mode the word is plain verse text to the left button, so it
+  // keeps none of the tap handlers below and lets clicks reach the verse.
+  const rightClickWordProps = {
+    ref: triggerRef,
+    onContextMenu,
+    className: open ? 'lex-word-quiet' : undefined,
+    'data-state': open ? 'open' : 'closed',
+    'data-lex-word': entry.translit,
+    'aria-label': `${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`,
+  };
 
   // Open on whichever side of the word has more vertical room so the card gets
   // the most available height (Radix caps max-height to the chosen side). This
@@ -460,28 +491,32 @@ export default function LexiconPopover({
   if (shortViewport) {
     return (
       <>
-        <span
-          ref={triggerRef}
-          role="button"
-          tabIndex={0}
-          onClick={(e) => {
-            e.stopPropagation();
-            onActivate?.();
-            const sel = typeof window !== 'undefined' ? window.getSelection() : null;
-            if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
-            setOpen((o) => !o);
-          }}
-          onTouchStart={(e) => e.stopPropagation()}
-          onTouchEnd={(e) => e.stopPropagation()}
-          onMouseDown={(e) => e.stopPropagation()}
-          onMouseUp={(e) => e.stopPropagation()}
-          className={underline ? 'lex-word' : undefined}
-          data-lex-word={entry.translit}
-          aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
-          style={{ cursor: 'pointer', color: 'inherit', WebkitTouchCallout: 'none' }}
-        >
-          {children}
-        </span>
+        {rightClickToDefine ? (
+          <span {...rightClickWordProps}>{children}</span>
+        ) : (
+          <span
+            ref={triggerRef}
+            role="button"
+            tabIndex={0}
+            onClick={(e) => {
+              e.stopPropagation();
+              onActivate?.();
+              const sel = typeof window !== 'undefined' ? window.getSelection() : null;
+              if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
+              setOpen((o) => !o);
+            }}
+            onTouchStart={(e) => e.stopPropagation()}
+            onTouchEnd={(e) => e.stopPropagation()}
+            onMouseDown={(e) => e.stopPropagation()}
+            onMouseUp={(e) => e.stopPropagation()}
+            className={underline ? 'lex-word' : undefined}
+            data-lex-word={entry.translit}
+            aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
+            style={{ cursor: 'pointer', color: 'inherit', WebkitTouchCallout: 'none' }}
+          >
+            {children}
+          </span>
+        )}
         {open &&
           createPortal(
             <div style={{ position: 'fixed', inset: 0, zIndex: 60 }}>
@@ -529,31 +564,37 @@ export default function LexiconPopover({
 
   return (
     <Popover open={open} onOpenChange={handleOpenChange}>
-      <PopoverTrigger asChild>
-        <span
-          ref={triggerRef}
-          role="button"
-          tabIndex={0}
-          onClick={(e) => {
-            e.stopPropagation();
-            onActivate?.();
-          }}
-          onTouchStart={(e) => e.stopPropagation()}
-          onTouchEnd={(e) => e.stopPropagation()}
-          onMouseDown={(e) => e.stopPropagation()}
-          onMouseUp={(e) => e.stopPropagation()}
-          className={underline ? 'lex-word' : undefined}
-          data-lex-word={entry.translit}
-          aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
-          style={{
-            cursor: 'pointer',
-            color: 'inherit',
-            WebkitTouchCallout: 'none',
-          }}
-        >
-          {children}
-        </span>
-      </PopoverTrigger>
+      {rightClickToDefine ? (
+        <PopoverAnchor asChild>
+          <span {...rightClickWordProps}>{children}</span>
+        </PopoverAnchor>
+      ) : (
+        <PopoverTrigger asChild>
+          <span
+            ref={triggerRef}
+            role="button"
+            tabIndex={0}
+            onClick={(e) => {
+              e.stopPropagation();
+              onActivate?.();
+            }}
+            onTouchStart={(e) => e.stopPropagation()}
+            onTouchEnd={(e) => e.stopPropagation()}
+            onMouseDown={(e) => e.stopPropagation()}
+            onMouseUp={(e) => e.stopPropagation()}
+            className={underline ? 'lex-word' : undefined}
+            data-lex-word={entry.translit}
+            aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
+            style={{
+              cursor: 'pointer',
+              color: 'inherit',
+              WebkitTouchCallout: 'none',
+            }}
+          >
+            {children}
+          </span>
+        </PopoverTrigger>
+      )}
       <PopoverContent
         ref={contentRef}
         align="center"

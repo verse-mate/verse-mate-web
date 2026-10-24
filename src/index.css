@@ -362,6 +362,14 @@
     text-decoration-color: #E2CB94;
   }
 
+  /* With a mouse, words open their card on right-click and carry no underline
+     (see LexiconPopover). The soft gold tint marks which word the open card
+     belongs to. */
+  .lex-word-quiet {
+    background-color: rgba(199, 176, 116, 0.18);
+    border-radius: 3px;
+  }
+
   /* Production highlight classes */
   .hl-yellow { background-color: var(--hl-yellow); }
   .hl-green { background-color: var(--hl-green); }
