@@ -1539,6 +1539,81 @@ export function trackRecentBook(bookId: number) {
   }
 }
 
+// ─── Bible search ────────────────────────────────────────────────────────
+
+export interface VerseSearchResult {
+  /** "exact": the words in that order; "words": all words, any order. */
+  match: 'exact' | 'words';
+  bookId: number;
+  bookName: string;
+  chapter: number;
+  verse: number;
+  text: string;
+  /** [start, end) ranges of `text` to show in bold. */
+  highlights: [number, number][];
+}
+
+export interface VerseSearchResponse {
+  results: VerseSearchResult[];
+  nextCursor: string | null;
+  /** First page only: totals across the whole Bible, filters ignored. */
+  totals: { exact: number; words: number } | null;
+  /** First page only: match count per book, filters ignored. */
+  books: { bookId: number; name: string; testament: 'OT' | 'NT'; count: number }[] | null;
+}
+
+/**
+ * Phrase / word search over the verses of one translation
+ * (GET /bible/search). Pass `signal` to cancel a search the user has
+ * already typed past.
+ */
+export async function searchVerses(params: {
+  q: string;
+  version: string;
+  testament?: 'OT' | 'NT';
+  book?: number;
+  cursor?: string | null;
+  signal?: AbortSignal;
+}): Promise<VerseSearchResponse> {
+  return api.get<VerseSearchResponse>(
+    '/bible/search',
+    {
+      q: params.q,
+      bible_version: params.version,
+      testament: params.testament,
+      book: params.book,
+      cursor: params.cursor ?? undefined,
+    },
+    { auth: false, signal: params.signal },
+  );
+}
+
+const _bookNamesByVersion = new Map<string, Promise<Record<number, string>>>();
+
+/**
+ * The version's own book names (version_book_names, e.g. "Geneza" for VDC),
+ * by book id, so the search box understands references typed in the
+ * reader's language. Empty when the request fails; English names still work.
+ */
+export function fetchLocalizedBookNames(version: string): Promise<Record<number, string>> {
+  let pending = _bookNamesByVersion.get(version);
+  if (!pending) {
+    pending = api
+      .get<{ testaments: { b: number; n: string }[] }>(
+        '/bible/testaments',
+        { bible_version: version },
+        { auth: false },
+      )
+      .then(data => Object.fromEntries((data.testaments || []).map(t => [t.b, t.n])))
+      .catch(() => {
+        _bookNamesByVersion.delete(version);
+        return {};
+      });
+    _bookNamesByVersion.set(version, pending);
+  }
+  return pending;
+}
+
 // Legacy export that some screens may still use
 export const AUTO_HIGHLIGHTS: Record<string, number[]> = {};
 

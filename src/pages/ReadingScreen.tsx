@@ -10,6 +10,7 @@ import {
 } from '@/services/bibleService';
 import { getRedLetterVerses } from '@versemate/red-letter';
 import { shouldSuppressVerseInsightClick } from '@/lib/verseInsightGuard';
+import { parseVerseTarget } from '@/lib/bibleSearch/verseLinks';
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
@@ -240,6 +241,45 @@ export default function ReadingScreen() {
     dispatch({ type: 'SET_VERSE', verse: verseNum });
     setInsightVerse(verseNum);
   };
+
+  // Verse links (/bible/<book>/<chapter>?v=11[-12][&insight=1]), from search
+  // results and shared URLs: once the chapter they point into has rendered,
+  // scroll to the verse, flash it, and open Verse Insight when asked. This is
+  // not a click, so the click-suppression guard doesn't apply; the Settings
+  // toggle still does. `insight=1` is then dropped from the URL (keeping
+  // ?v=) so a refresh or Back doesn't pop the sheet open again.
+  const [flashRange, setFlashRange] = useState<{ start: number; end: number } | null>(null);
+  const handledTargetRef = useRef<string | null>(null);
+  useEffect(() => {
+    const target = parseVerseTarget(location.search);
+    if (!target || !chapter) return;
+    if (chapter.bookId !== state.bookId || chapter.chapter !== state.chapter) return;
+    if (!chapter.verses.some(v => v.number === target.start)) return;
+    const key = `${chapter.bookId}:${chapter.chapter}:${target.start}-${target.end}`;
+    if (handledTargetRef.current === key && !target.insight) return;
+    handledTargetRef.current = key;
+
+    requestAnimationFrame(() => {
+      scrollRef.current
+        ?.querySelector(`[data-verse="${target.start}"]`)
+        ?.scrollIntoView({ block: 'center' });
+    });
+    setFlashRange({ start: target.start, end: target.end });
+    if (target.insight) {
+      if (state.settings.verseInsightsPopup !== false) {
+        dispatch({ type: 'SET_VERSE', verse: target.start });
+        setInsightVerse(target.start);
+      }
+      const params = new URLSearchParams(location.search);
+      params.delete('insight');
+      navigate({ pathname: location.pathname, search: `?${params}` }, { replace: true });
+    }
+  }, [chapter, location.search, location.pathname, state.bookId, state.chapter, state.settings.verseInsightsPopup, dispatch, navigate]);
+  useEffect(() => {
+    if (!flashRange) return;
+    const timer = setTimeout(() => setFlashRange(null), 2500);
+    return () => clearTimeout(timer);
+  }, [flashRange]);
 
   const openVerseActions = (verseNum: number) => {
     // A press-and-hold on a word opens its lexical card and claims the
@@ -495,6 +535,8 @@ export default function ReadingScreen() {
                   {group.items.map(verse => {
                     const hl = getHighlightForVerse(verse.number);
                     const isSelected = state.selectedVerse === verse.number;
+                    const isFlashing =
+                      !!flashRange && verse.number >= flashRange.start && verse.number <= flashRange.end;
                     const autoClass = !hl ? autoHighlightByVerse[verse.number] : undefined;
                     const isRedLetter = redLetterVerses.has(verse.number);
                     return (
@@ -517,7 +559,7 @@ export default function ReadingScreen() {
                             }
                           },
                         })}
-                        className={`verse-span ${hl ? highlightColorClass[hl.color] : ''} ${autoClass || ''} ${isRedLetter ? 'red-letter' : ''} ${isSelected ? 'selected' : ''}`}
+                        className={`verse-span ${hl ? highlightColorClass[hl.color] : ''} ${autoClass || ''} ${isRedLetter ? 'red-letter' : ''} ${isSelected ? 'selected' : ''} ${isFlashing ? 'verse-flash' : ''}`}
                         style={!isDesktop ? {
                           // Suppress iOS long-press text selection callout
                           WebkitUserSelect: 'none',

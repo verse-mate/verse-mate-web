@@ -1,6 +1,12 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { fetchBooks, getRecentBooks, fetchTopics } from '@/services/bibleService';
+import {
+  fetchBooks,
+  getRecentBooks,
+  fetchTopics,
+  fetchLocalizedBookNames,
+  type VerseSearchResult,
+} from '@/services/bibleService';
 import { fetchJesusEntries, fetchJesusOverview } from '@/services/jesusService';
 import {
   BibleBook,
@@ -9,7 +15,7 @@ import {
   Topic,
   TopicCategory,
 } from '@/services/types';
-import { ChevronRight, Search, ArrowLeft, Clock } from 'lucide-react';
+import { ChevronRight, Search, ArrowLeft, Clock, CornerDownRight } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { buildTopicUrl } from '@/lib/topicSlugs';
@@ -21,6 +27,12 @@ import {
   jesusTestId,
   JESUS_ROOT,
 } from '@/lib/jesusSlugs';
+import { ReferenceParser, type BibleReference } from '@/lib/bibleSearch/referenceParser';
+import { buildVerseUrl } from '@/lib/bibleSearch/verseLinks';
+import { useVerseSearch } from '@/hooks/useVerseSearch';
+import VerseSearchSection from '@/components/search/VerseSearchSection';
+import { LOAD_MORE_OPTION_ID, verseOptionId } from '@/lib/bibleSearch/resultIds';
+import { analytics } from '@/lib/analytics';
 
 interface Props {
   onClose: () => void;
@@ -47,6 +59,16 @@ interface Props {
 }
 
 type Tab = 'OT' | 'NT' | 'Jesus' | 'Topics';
+
+/** One keyboard-reachable row of the search results (combobox option). */
+interface SearchOption {
+  id: string;
+  select: () => void;
+}
+
+const LISTBOX_ID = 'bible-search-results';
+const slugify = (name: string) =>
+  name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 /**
  * One row in the Jesus tab's browse list. The tab is a jumping-off point into
@@ -110,6 +132,10 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   // Four tabs don't fit "Old Testament" / "New Testament" on a narrow phone,
   // so those two abbreviate below ~420px. The test ids stay constant.
   const roomForLongLabels = useMediaQuery('(min-width: 420px)');
+  // The current version's own book names ("Geneza", "1. Mose"), so a
+  // reference typed in the reader's language is understood too.
+  const [localizedNames, setLocalizedNames] = useState<Record<number, string>>({});
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   useEffect(() => {
     fetchBooks().then(books => {
@@ -131,6 +157,10 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   // should never show a spinner.
   useEffect(() => {
     fetchJesusOverview(state.version).then(setJesusOverview);
+  }, [state.version]);
+
+  useEffect(() => {
+    fetchLocalizedBookNames(state.version).then(setLocalizedNames);
   }, [state.version]);
 
   // Searching inside the Jesus tab hits the backend rather than filtering the
@@ -219,6 +249,111 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
       t => String(t.category || '').toUpperCase() === topicCategory
     );
   }, [topics, query, topicCategory]);
+
+  // ─── Bible search (OT / NT tabs) ─────────────────────────────────────
+  // Typing on the Bible tabs searches three things at once: references
+  // ("John 3:16" → a "Go to" row), book names, and verse text.
+  const isBibleTab = tab === 'OT' || tab === 'NT';
+  const searching = isBibleTab && query.trim() !== '';
+
+  const parser = useMemo(
+    () =>
+      new ReferenceParser(
+        allBooks.map(b => ({ bookId: b.bookId, name: b.name, chapters: b.chapters })),
+        localizedNames,
+      ),
+    [allBooks, localizedNames],
+  );
+  const references = useMemo<BibleReference[]>(
+    () => (searching && allBooks.length > 0 ? parser.parse(query) : []),
+    [searching, allBooks.length, parser, query],
+  );
+  // "John 3:16" is a place, not words to look for; "Job" or "Romans" may be
+  // either, so those still search verse text too.
+  const isPureReference = references.some(r => r.chapter !== undefined);
+  // A book-only reference whose book is already listed under Books ("Romans")
+  // would just repeat that row; keep it for "rom", "Philipians", "Geneza".
+  const goToRefs = references.filter(
+    r => r.chapter !== undefined || !filteredBooks.some(b => b.bookId === r.bookId),
+  );
+  const verseSearch = useVerseSearch(query, state.version, searching && !isPureReference);
+
+  const goToReference = (ref: BibleReference) => {
+    analytics.track('bible_search_go_to', {
+      kind: ref.verseStart !== undefined ? 'verse' : ref.chapter !== undefined ? 'chapter' : 'book',
+    });
+    if (ref.chapter === undefined) {
+      setSelectedBook(ref.bookName); // book only: open its chapter picker
+      return;
+    }
+    const url = buildVerseUrl(
+      ref.bookId,
+      ref.chapter,
+      ref.verseStart !== undefined
+        ? {
+            start: ref.verseStart,
+            // A range into the next chapter only marks its first verse.
+            end: ref.chapterEnd === undefined ? ref.verseEnd : undefined,
+            insight: true,
+          }
+        : undefined,
+    );
+    if (!url) return;
+    onClose();
+    navigate(url);
+  };
+
+  const openVerseResult = (r: VerseSearchResult, index: number) => {
+    analytics.track('bible_search_result_click', { match: r.match, position: index });
+    const url = buildVerseUrl(r.bookId, r.chapter, { start: r.verse, insight: true });
+    if (!url) return;
+    onClose();
+    navigate(url);
+  };
+
+  // Every row of the results in screen order, for arrow keys + Enter.
+  const searchOptions = useMemo<SearchOption[]>(() => {
+    if (!searching) return [];
+    const options: SearchOption[] = goToRefs.map((ref, i) => ({
+      id: `search-go-to-${i}`,
+      select: () => goToReference(ref),
+    }));
+    for (const b of filteredBooks) {
+      options.push({ id: `search-book-${b.bookId}`, select: () => setSelectedBook(b.name) });
+    }
+    verseSearch.results.forEach((r, i) => {
+      options.push({ id: verseOptionId(r), select: () => openVerseResult(r, i) });
+    });
+    if (verseSearch.nextCursor) {
+      options.push({ id: LOAD_MORE_OPTION_ID, select: verseSearch.loadMore });
+    }
+    return options;
+    // goToReference / openVerseResult only close over stable values.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searching, goToRefs, filteredBooks, verseSearch.results, verseSearch.nextCursor, verseSearch.loadMore]);
+  const activeId = searchOptions[activeIndex]?.id ?? null;
+
+  useEffect(() => {
+    setActiveIndex(-1);
+  }, [query, tab]);
+
+  useEffect(() => {
+    if (activeId) document.getElementById(activeId)?.scrollIntoView({ block: 'nearest' });
+  }, [activeId]);
+
+  const onSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!searching || searchOptions.length === 0) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActiveIndex(i => Math.min(i + 1, searchOptions.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActiveIndex(i => Math.max(i - 1, -1));
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      searchOptions[activeIndex >= 0 ? activeIndex : 0]?.select();
+    }
+  };
 
   const selectedBookObj = selectedBook
     ? allBooks.find(b => b.name === selectedBook)
@@ -382,6 +517,17 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
             ref={searchInputRef}
             value={query}
             onChange={e => setQuery(e.target.value)}
+            onKeyDown={onSearchKeyDown}
+            {...(isBibleTab
+              ? {
+                  role: 'combobox',
+                  'aria-label': 'Search books, verses and references',
+                  'aria-autocomplete': 'list' as const,
+                  'aria-expanded': searching,
+                  'aria-controls': LISTBOX_ID,
+                  'aria-activedescendant': activeId ?? undefined,
+                }
+              : {})}
             data-testid={
               tab === 'Topics'
                 ? 'topics-search-input'
@@ -389,7 +535,13 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
                   ? 'jesus-search-input'
                   : 'books-search-input'
             }
-            placeholder={tab === 'Jesus' ? 'Search His words and actions...' : 'Search...'}
+            placeholder={
+              tab === 'Jesus'
+                ? 'Search His words and actions...'
+                : isBibleTab
+                  ? 'Search verses, or go to John 3:16'
+                  : 'Search...'
+            }
             className="flex-1 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none"
             style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '24px' }}
           />
@@ -484,6 +636,74 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
           ) : (
             <EmptyState query={query} loading={topics.length === 0 && !query} what="topics" />
           )
+        ) : searching ? (
+          <div role="listbox" id={LISTBOX_ID} aria-label="Search results" data-testid="bible-search-results">
+            {goToRefs.length > 0 && (
+              <div data-testid="search-go-to">
+                {goToRefs.map((ref, i) => {
+                  const id = `search-go-to-${i}`;
+                  return (
+                    <button
+                      key={id}
+                      id={id}
+                      role="option"
+                      aria-selected={activeId === id}
+                      tabIndex={-1}
+                      onClick={() => goToReference(ref)}
+                      data-testid={id}
+                      className={`flex items-center gap-3 w-full ${bookRowH} px-2 -mx-2 border-b border-border ${
+                        activeId === id ? 'bg-secondary' : ''
+                      }`}
+                    >
+                      <CornerDownRight size={18} className="text-gold shrink-0" strokeWidth={2} />
+                      <span className={`${rowText} text-foreground text-left`}>
+                        Go to <span className="font-medium">{ref.display}</span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+            {filteredBooks.length > 0 && (
+              <>
+                <p className="text-[11px] uppercase tracking-wider text-muted-foreground/70 pt-4 pb-1">
+                  Books
+                </p>
+                {filteredBooks.map(b => {
+                  const id = `search-book-${b.bookId}`;
+                  return (
+                    <button
+                      key={id}
+                      id={id}
+                      role="option"
+                      aria-selected={activeId === id}
+                      tabIndex={-1}
+                      onClick={() => setSelectedBook(b.name)}
+                      data-testid={`book-item-${slugify(b.name)}`}
+                      className={`flex items-center justify-between w-full ${bookRowH} px-2 -mx-2 border-b border-border ${
+                        activeId === id ? 'bg-secondary' : ''
+                      }`}
+                    >
+                      <span className={`${rowText} text-left text-foreground`}>{b.name}</span>
+                      <ChevronRight size={18} className="text-muted-foreground" />
+                    </button>
+                  );
+                })}
+              </>
+            )}
+            {verseSearch.active && (
+              <VerseSearchSection
+                query={query}
+                search={verseSearch}
+                activeId={activeId}
+                compact={compact}
+                onPick={openVerseResult}
+              />
+            )}
+            {goToRefs.length === 0 && filteredBooks.length === 0 && !verseSearch.active && (
+              <EmptyState query={query} loading={allBooks.length === 0} what="books" />
+            )}
+          </div>
         ) : filteredBooks.length > 0 ? (
           <div>
             {/* Recents (only when no active query) */}

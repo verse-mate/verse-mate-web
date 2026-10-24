@@ -501,6 +501,16 @@ button { font-family: inherit; }
   outline-offset: 2px;
   background-color: rgba(176, 154, 109, 0.15);
 }
+/* A verse opened from a link or a search result (?v=): a gold wash that
+   fades out, so the eye finds the verse after the jump. */
+.verse-span.verse-flash { animation: verse-flash 2.4s ease-out; }
+@keyframes verse-flash {
+  0%, 40% { background-color: rgba(176, 154, 109, 0.35); }
+  100% { background-color: transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .verse-span.verse-flash { animation: none; background-color: rgba(176, 154, 109, 0.2); }
+}
 
 /* Highlights */
 .hl-yellow { background-color: var(--hl-yellow); }

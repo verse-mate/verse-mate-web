@@ -151,6 +151,8 @@ interface RequestOptions {
   body?: unknown;
   query?: Record<string, string | number | boolean | undefined | null>;
   auth?: boolean; // default true
+  /** Cancels the request (e.g. a search superseded by newer input). */
+  signal?: AbortSignal;
   /** Internal — used to prevent refresh recursion */
   _retrying?: boolean;
 }
@@ -219,7 +221,7 @@ function isAuthEndpoint(path: string): boolean {
 }
 
 export async function request<T = unknown>(path: string, opts: RequestOptions = {}): Promise<T> {
-  const { method = 'GET', body, query, auth = true, _retrying } = opts;
+  const { method = 'GET', body, query, auth = true, signal, _retrying } = opts;
   const headers: Record<string, string> = {};
   if (body !== undefined) headers['Content-Type'] = 'application/json';
   if (auth) {
@@ -233,8 +235,10 @@ export async function request<T = unknown>(path: string, opts: RequestOptions = 
       method,
       headers,
       body: body !== undefined ? JSON.stringify(body) : undefined,
+      signal,
     });
   } catch (err) {
+    if (signal?.aborted) throw err;
     throw new ApiError(0, null, `Network error: ${method} ${stripQuery(path)} failed: ${String(err)}`);
   }
 
