@@ -928,7 +928,7 @@ const FEATURES: Feature[] = [
   {
     id: 'lexicon',
     eyebrow: 'Original Languages',
-    title: 'Greek & Hebrew, one tap away',
+    title: 'Greek & Hebrew, one click away',
     desc: 'Right-click any word to reveal its original-language definition: Strong’s number, pronunciation, semantic range, and related words. Read Scripture in the language it was written.',
     Preview: LexiconPreview,
   },
