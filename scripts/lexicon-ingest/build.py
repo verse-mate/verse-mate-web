@@ -382,8 +382,9 @@ def parse_tbe(path: Path, prefix: str) -> dict[str, dict]:
     key on the base 4-digit number so it joins cleanly with BSB's plain
     integer Strong's. When multiple variants exist for the same base, keep
     the first encountered entry. That row is often a rare sense or a proper
-    name, so main() runs the lexicon repo's fix_dominant_senses.py afterwards
-    to replace the headline gloss with the most-used sense.
+    name, so main() runs the lexicon repo's post-passes afterwards, starting
+    with fix_dominant_senses.py, to replace the headline gloss with the
+    most-used sense.
 
     For Aramaic words (Daniel/Ezra) BSB uses Hebrew Strong's numbers; TBESH
     includes them. So a single 'H' parse covers both Hebrew + Aramaic.
@@ -699,18 +700,32 @@ def main() -> int:
     write_lexicon(all_lexicons, all_lemmas_used, combined_freq,
                   existing_path=OUT_DIR / '_lemmas.json')
 
-    # parse_tbe keeps STEP's FIRST row per Strong's, which for ~100 lemmas is a
-    # rare sense or a proper name (house → "place", city → "excitement"). The
-    # lexicon repo's post-pass swaps in the most-used sense, counted word by
-    # word in STEP's tagged OT/NT; it only rewrites first-row defaults, so
-    # re-running it after every build is safe.
-    fix_senses = OUT_DIR.parent.parent / 'scripts' / 'fix_dominant_senses.py'
-    if fix_senses.exists():
-        print('\n=== Headline glosses: dominant sense ===')
-        subprocess.run([sys.executable, str(fix_senses)], check=True)
-    else:
-        print(f'\nWARN: {fix_senses} not found — headline glosses keep STEP\'s '
-              'first-listed sense. Update verse-mate-lexicon.')
+    # The lexicon repo's post-passes correct the generated data against STEP's
+    # tagged OT/NT. Each only touches what build.py would have left wrong, so
+    # re-running them after every build is safe:
+    #   - parse_tbe keeps STEP's FIRST row per Strong's, which for ~100 lemmas
+    #     is a rare sense or a proper name (house → "place"); swap in the
+    #     most-used sense, then restore the hand-reviewed prose for those
+    #     entries;
+    #   - the BSB tables leave words inside multi-word phrases without English
+    #     (Israel in "the Israelites"); add them as tokens;
+    #   - add the English renderings each word has across the OT/NT to its
+    #     aliases.
+    lexicon_scripts = OUT_DIR.parent.parent / 'scripts'
+    post_passes = [
+        ['fix_dominant_senses.py'],
+        ['apply_enrichment.py', 'data/reenrich_displaced_senses.json'],
+        ['add_missing_tokens.py'],
+        ['build_step_aliases.py'],
+    ]
+    for script, *script_args in post_passes:
+        path = lexicon_scripts / script
+        if not path.exists():
+            print(f'\nWARN: {path} not found — skipped. Update verse-mate-lexicon.')
+            continue
+        print(f'\n=== {script} ===')
+        subprocess.run([sys.executable, str(path), *script_args], check=True, cwd=lexicon_scripts)
+    print('\nRegenerate the light lexicon in verse-mate-lexicon: bun run build:light')
     print('\nDone.')
     return 0
 
