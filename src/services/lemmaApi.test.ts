@@ -115,20 +115,56 @@ describe('apiCardToLexEntry', () => {
     expect(entry.related).toBeUndefined();
   });
 
-  it('defaults null fields to empty so the popover hides those sections', () => {
+  it('omits null and empty fields so the bundled English shows through', () => {
     const sparse: ApiLemmaCard = {
       ...SPANISH_CARD,
       pronunciation: null,
-      semantic_range: null,
+      semantic_range: [],
       notes: null,
       nt_frequency: null,
       ot_frequency: null,
     };
     const entry = apiCardToLexEntry(sparse);
-    expect(entry.pronunciation).toBeUndefined();
-    expect(entry.semanticRange).toEqual([]);
-    expect(entry.notes).toBe('');
-    expect(entry.ntFrequency).toBe(0);
-    expect(entry.otFrequency).toBe(0);
+    expect(entry.basicGloss).toBe('Santiago');
+    expect('pronunciation' in entry).toBe(false);
+    expect('semanticRange' in entry).toBe(false);
+    expect('notes' in entry).toBe(false);
+    expect('ntFrequency' in entry).toBe(false);
+    expect('otFrequency' in entry).toBe(false);
+  });
+
+  it('defaults a word with no backend text to the bundled English definition', () => {
+    // Outside the ~2,200 `loaded` lemmas the backend stores no prose in any
+    // language, so the card arrives bare.
+    const bare: ApiLemmaCard = {
+      ...SPANISH_CARD,
+      strongs: 'H5483',
+      lemma: 'סוּס',
+      translit: 'sus',
+      pronunciation: null,
+      loaded: false,
+      pos: null,
+      basic_gloss: null,
+      semantic_range: null,
+      notes: null,
+      related: null,
+      language_code: 'en',
+      source: null,
+      is_translated: false,
+    };
+    const bundled = {
+      lemma: 'סוּס',
+      translit: 'sus',
+      strongs: 'H5483',
+      pos: 'Noun (masc.)',
+      basicGloss: 'horse',
+      semanticRange: ['horse, esp. war or chariot horse'],
+      notes: 'In Israel\'s world the horse is mainly a weapon of war.',
+    };
+    const merged = { ...bundled, ...apiCardToLexEntry(bare) };
+    expect(merged.basicGloss).toBe('horse');
+    expect(merged.pos).toBe('Noun (masc.)');
+    expect(merged.semanticRange).toEqual(['horse, esp. war or chariot horse']);
+    expect(merged.notes).toContain('weapon of war');
   });
 });
