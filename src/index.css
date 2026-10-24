@@ -335,31 +335,13 @@
     font-weight: 500;
   }
 
-  /* Tappable lexicon words in scripture. A single uniform tier: a hairline
-     dotted underline on the distinctive words worth surfacing. Common "glue"
-     words (the copula, "all", "said", "God/Lord", …) stay tappable but render
-     with no underline — see shouldUnderlineLexeme in TokenizedVerse — so the
-     underlines focus attention instead of marking every word. Underline uses
-     text-decoration so it wraps cleanly across line breaks. Hover/focus +
-     open-popover states add a soft gold tint so click feedback is never
-     ambiguous. */
-  .lex-word {
-    text-decoration: underline dotted #B09A6D;
-    text-decoration-thickness: 1.25px;
-    text-underline-offset: 3px;
-    border-radius: 3px;
-    padding: 0 1px;
-    transition: background-color 120ms ease, text-decoration-color 120ms ease;
-  }
-  .lex-word:hover,
-  .lex-word:focus-visible {
-    background-color: rgba(199, 176, 116, 0.12);
-    text-decoration-color: #D8C089;
-    outline: none;
-  }
-  .lex-word[data-state='open'] {
+  /* Lexicon words in scripture carry no underline — a word's card opens on
+     right-click with a mouse, or on tap on a touch screen (see
+     LexiconPopover). The soft gold tint marks which word the open card
+     belongs to. */
+  .lex-word-open {
     background-color: rgba(199, 176, 116, 0.18);
-    text-decoration-color: #E2CB94;
+    border-radius: 3px;
   }
 
   /* Production highlight classes */

@@ -242,6 +242,9 @@ export default function ReadingScreen() {
   };
 
   const openVerseActions = (verseNum: number) => {
+    // A press-and-hold on a word opens its lexical card and claims the
+    // gesture; the verse's own long-press stands down.
+    if (shouldSuppressVerseInsightClick()) return;
     setLongPressVerse(verseNum);
     dispatch({ type: 'SET_VERSE', verse: verseNum });
   };

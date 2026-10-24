@@ -1,13 +1,20 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Popover, PopoverAnchor, PopoverContent } from '@/components/ui/popover';
 import type { LexEntry, AlignedToken } from '@versemate/lexicon';
 import { vmTokens } from '@/styles/themeStyles';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { OVERLAY_MODAL_WIDTH } from '@/constants/overlayModal';
 import { usePreferredLanguage } from '@/hooks/usePreferredLanguage';
 import { fetchLemmaCard, apiCardToLexEntry } from '@/services/lemmaApi';
-import { suppressVerseInsightClick } from '@/lib/verseInsightGuard';
+import { holdVerseInsightWhileCardOpen, suppressVerseInsightClick } from '@/lib/verseInsightGuard';
+
+// How long a finger rests on a word before its card opens. Kept below the
+// verse's own 400ms long-press (ReadingScreen) so the word claims the gesture
+// first; the verse then stands down via the verseInsightGuard window.
+const HOLD_MS = 350;
+// Finger travel that turns a hold into a scroll.
+const HOLD_MOVE_TOLERANCE_PX = 12;
 
 // Hebrew + Aramaic block (U+0590-U+05FF) — if a lemma contains any character
 // in this range, render it RTL. Greek lemmas have no Hebrew chars so the
@@ -23,21 +30,15 @@ interface LexiconPopoverProps {
   entry: LexEntry;
   token: AlignedToken;
   children: React.ReactNode;
-  /**
-   * When false, the word stays tappable (opens the lexical card) but renders
-   * WITHOUT the dotted underline. Used to de-emphasize common / low-importance
-   * words so the underlines focus attention on the distinctive ones.
-   */
-  underline?: boolean;
   onActivate?: () => void;
 }
 
-// Renders a tappable verse word that opens a Layer-1 lexical card.
-// All six sections render in a fixed order so every card has the same
+// Renders a verse word that opens a Layer-1 lexical card on right-click or
+// press-and-hold. All six sections render in a fixed order so every card has the same
 // visual rhythm: header → in-this-verse → basic → semantic range →
 // related → note → loaded caveat. Sections present only when their data
-// exists. Click events stop propagation so the parent verse span's
-// tap handler (which opens VerseInsightSheet) doesn't fire at the same time.
+// exists. A plain click or tap passes through to the parent verse span,
+// which opens VerseInsightSheet.
 
 // Brand-constant gold (identical across themes) + a token reference for the
 // section body color so the popover follows the app's theme. The gold tint
@@ -86,7 +87,6 @@ export default function LexiconPopover({
   entry,
   token,
   children,
-  underline = true,
   onActivate,
 }: LexiconPopoverProps) {
   const contextual = token.contextual;
@@ -117,7 +117,7 @@ export default function LexiconPopover({
       return;
     }
     // Non-English: only fetch once the card is actually opened. A popover is
-    // mounted for every underlined word in the chapter, so fetching on mount
+    // mounted for every lexicon word in the chapter, so fetching on mount
     // would fire one request per word; gating on `open` limits it to the word
     // the user taps (cached thereafter, so re-opening is instant).
     if (!open) return;
@@ -150,19 +150,6 @@ export default function LexiconPopover({
     };
   }, [open, entry, lang]);
 
-  // Don't let a drag-to-select gesture pop the lexical card. On desktop the
-  // verse text is real, selectable text and releasing a highlight drag often
-  // lands on a word — that click would otherwise open this card and steal
-  // focus, collapsing the selection before the highlight toolbar can act.
-  // When a non-empty selection exists, refuse to open (a plain click leaves
-  // the selection collapsed, so normal taps still open the card).
-  const handleOpenChange = useCallback((next: boolean) => {
-    if (next) {
-      const sel = typeof window !== 'undefined' ? window.getSelection() : null;
-      if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
-    }
-    setOpen(next);
-  }, []);
   // Free-drag offset applied on top of Radix's anchored position, so the user
   // can move the card out of the way (e.g. when zoomed in and it's tall).
   const [drag, setDrag] = useState({ x: 0, y: 0 });
@@ -171,6 +158,95 @@ export default function LexiconPopover({
   );
   const contentRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLSpanElement>(null);
+
+  // Words carry no underline, and a plain click or tap is never theirs: it
+  // falls through to the verse (Verse Insight) like any other text. The card
+  // opens on right-click with a mouse, or on press-and-hold on a touch screen.
+  const openCard = useCallback(() => {
+    // Close the window in which the verse would act on this same gesture —
+    // the verse's own long-press (verse actions) or the release that ends it
+    // (Verse Insight).
+    suppressVerseInsightClick();
+    onActivate?.();
+    setOpen(true);
+  }, [onActivate]);
+
+  // Right-click opens the card in place of the browser menu — unless the
+  // reader has text selected, where the browser menu (Copy, etc.) is what they
+  // want. Android also reports a long-press as a contextmenu event; the hold
+  // timer below has already opened the card by then, so this is a no-op.
+  const onContextMenu = useCallback(
+    (e: React.MouseEvent) => {
+      const sel = window.getSelection();
+      if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
+      e.preventDefault();
+      e.stopPropagation();
+      openCard();
+    },
+    [openCard],
+  );
+
+  // Press-and-hold. iOS Safari fires no contextmenu event, so time the touch.
+  const holdRef = useRef<{ timer: ReturnType<typeof setTimeout>; x: number; y: number } | null>(
+    null,
+  );
+  // Set once a hold has opened the card, so the click some browsers still
+  // send on release doesn't reach the verse.
+  const heldRef = useRef(false);
+  const cancelHold = useCallback(() => {
+    if (holdRef.current) clearTimeout(holdRef.current.timer);
+    holdRef.current = null;
+  }, []);
+  const onTouchStart = useCallback(
+    (e: React.TouchEvent) => {
+      cancelHold();
+      heldRef.current = false;
+      const t = e.touches[0];
+      if (!t || e.touches.length > 1) return;
+      holdRef.current = {
+        x: t.clientX,
+        y: t.clientY,
+        timer: setTimeout(() => {
+          holdRef.current = null;
+          heldRef.current = true;
+          openCard();
+        }, HOLD_MS),
+      };
+    },
+    [cancelHold, openCard],
+  );
+  const onTouchMove = useCallback(
+    (e: React.TouchEvent) => {
+      const h = holdRef.current;
+      const t = e.touches[0];
+      if (!h || !t) return;
+      if (Math.hypot(t.clientX - h.x, t.clientY - h.y) > HOLD_MOVE_TOLERANCE_PX) cancelHold();
+    },
+    [cancelHold],
+  );
+  const onClickCapture = useCallback((e: React.MouseEvent) => {
+    if (!heldRef.current) return;
+    heldRef.current = false;
+    e.stopPropagation();
+  }, []);
+  useEffect(() => cancelHold, [cancelHold]);
+
+  // Touch and mouse events otherwise propagate untouched, so a tap or click
+  // reaches the verse exactly as it would on plain text.
+  const wordProps = {
+    ref: triggerRef,
+    onContextMenu,
+    onTouchStart,
+    onTouchMove,
+    onTouchEnd: cancelHold,
+    onTouchCancel: cancelHold,
+    onClickCapture,
+    className: open ? 'lex-word-open' : undefined,
+    'data-state': open ? 'open' : 'closed',
+    'data-lex-word': entry.translit,
+    'aria-label': `${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`,
+    style: { WebkitTouchCallout: 'none' } as React.CSSProperties,
+  };
 
   // Open on whichever side of the word has more vertical room so the card gets
   // the most available height (Radix caps max-height to the chosen side). This
@@ -192,6 +268,21 @@ export default function LexiconPopover({
     }
   }, [open]);
 
+  // While the card is open, a tap on the scripture behind it only closes the
+  // card — it must not also open Verse Insight or the verse menu.
+  useEffect(() => {
+    if (!open) return;
+    return holdVerseInsightWhileCardOpen();
+  }, [open]);
+
+  // The modal's height, measured when it opens: on a phone `vh` counts the
+  // area behind the browser toolbars, which would push the bottom of the card
+  // off screen where it can't be scrolled to.
+  const [modalMaxHeight, setModalMaxHeight] = useState(900);
+  useEffect(() => {
+    if (open) setModalMaxHeight(Math.min(window.innerHeight * 0.92, 900));
+  }, [open]);
+
   // Dismiss on background scroll. Radix's avoid-collision/reposition logic
   // otherwise makes the card slide and flip while the reading body scrolls
   // underneath it. Ignore scrolls that originate inside the card itself so
@@ -209,6 +300,9 @@ export default function LexiconPopover({
 
   const onHandlePointerDown = useCallback(
     (e: React.PointerEvent) => {
+      // A finger on the header scrolls the card like the rest of it; only a
+      // mouse or pen drags the card around.
+      if (e.pointerType === 'touch') return;
       e.stopPropagation();
       e.currentTarget.setPointerCapture?.(e.pointerId);
       // While dragging the card, lock page text selection. A mouse drag that
@@ -276,8 +370,9 @@ export default function LexiconPopover({
             top: 0,
             zIndex: 1,
             cursor: 'grab',
-            // Stop the browser claiming the drag as a scroll/selection gesture.
-            touchAction: 'none',
+            // Let a finger scroll the card from the header too (the drag above
+            // ignores touch).
+            touchAction: 'pan-y',
             userSelect: 'none',
           }}
         >
@@ -460,28 +555,7 @@ export default function LexiconPopover({
   if (shortViewport) {
     return (
       <>
-        <span
-          ref={triggerRef}
-          role="button"
-          tabIndex={0}
-          onClick={(e) => {
-            e.stopPropagation();
-            onActivate?.();
-            const sel = typeof window !== 'undefined' ? window.getSelection() : null;
-            if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
-            setOpen((o) => !o);
-          }}
-          onTouchStart={(e) => e.stopPropagation()}
-          onTouchEnd={(e) => e.stopPropagation()}
-          onMouseDown={(e) => e.stopPropagation()}
-          onMouseUp={(e) => e.stopPropagation()}
-          className={underline ? 'lex-word' : undefined}
-          data-lex-word={entry.translit}
-          aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
-          style={{ cursor: 'pointer', color: 'inherit', WebkitTouchCallout: 'none' }}
-        >
-          {children}
-        </span>
+        <span {...wordProps}>{children}</span>
         {open &&
           createPortal(
             <div style={{ position: 'fixed', inset: 0, zIndex: 60 }}>
@@ -508,8 +582,13 @@ export default function LexiconPopover({
                   transform: `translate(calc(-50% + ${drag.x}px), calc(-50% + ${drag.y}px))`,
                   width: OVERLAY_MODAL_WIDTH,
                   maxWidth: '92vw',
-                  maxHeight: 'min(94vh, 900px)',
+                  maxHeight: modalMaxHeight,
                   overflowY: 'auto',
+                  // Scroll the card itself, without the page scrolling (and
+                  // dismissing it) once the card reaches its end.
+                  overscrollBehavior: 'contain',
+                  touchAction: 'pan-y',
+                  WebkitOverflowScrolling: 'touch',
                   backgroundColor: vmTokens.surfaceRaisedBg,
                   color: vmTokens.textPrimary,
                   border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
@@ -528,32 +607,10 @@ export default function LexiconPopover({
   }
 
   return (
-    <Popover open={open} onOpenChange={handleOpenChange}>
-      <PopoverTrigger asChild>
-        <span
-          ref={triggerRef}
-          role="button"
-          tabIndex={0}
-          onClick={(e) => {
-            e.stopPropagation();
-            onActivate?.();
-          }}
-          onTouchStart={(e) => e.stopPropagation()}
-          onTouchEnd={(e) => e.stopPropagation()}
-          onMouseDown={(e) => e.stopPropagation()}
-          onMouseUp={(e) => e.stopPropagation()}
-          className={underline ? 'lex-word' : undefined}
-          data-lex-word={entry.translit}
-          aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
-          style={{
-            cursor: 'pointer',
-            color: 'inherit',
-            WebkitTouchCallout: 'none',
-          }}
-        >
-          {children}
-        </span>
-      </PopoverTrigger>
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverAnchor asChild>
+        <span {...wordProps}>{children}</span>
+      </PopoverAnchor>
       <PopoverContent
         ref={contentRef}
         align="center"
@@ -574,6 +631,9 @@ export default function LexiconPopover({
           // capping to it guarantees the popover never overflows the viewport.
           maxHeight: 'var(--radix-popover-content-available-height)',
           overflowY: 'auto',
+          overscrollBehavior: 'contain',
+          touchAction: 'pan-y',
+          WebkitOverflowScrolling: 'touch',
           transform: drag.x || drag.y ? `translate(${drag.x}px, ${drag.y}px)` : undefined,
         }}
         // This popover has no backing overlay, so the outside click that
