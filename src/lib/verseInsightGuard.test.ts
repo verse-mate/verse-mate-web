@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
+  holdVerseInsightWhileCardOpen,
   shouldSuppressVerseInsightClick,
   suppressVerseInsightClick,
 } from './verseInsightGuard';
@@ -32,6 +33,18 @@ describe('verseInsightGuard', () => {
     const now = vi.spyOn(Date, 'now').mockReturnValue(40_000);
     suppressVerseInsightClick(); // dismissal that lands off any verse
     now.mockReturnValue(60_000); // seconds later, a genuine verse tap
+    expect(shouldSuppressVerseInsightClick()).toBe(false);
+  });
+
+  it('suppresses for as long as a card is open, however long that is', () => {
+    const now = vi.spyOn(Date, 'now').mockReturnValue(40_000);
+    const release = holdVerseInsightWhileCardOpen();
+    // A slow tap outside the card on a touch screen: the verse sees touchend
+    // long after any time window, and before Radix closes the card.
+    now.mockReturnValue(45_000);
+    expect(shouldSuppressVerseInsightClick()).toBe(true);
+    release();
+    release();
     expect(shouldSuppressVerseInsightClick()).toBe(false);
   });
 });

@@ -66,6 +66,25 @@ describe('LexiconPopover on a touch screen', () => {
     expect(shouldSuppressVerseInsightClick()).toBe(true);
   });
 
+  it('closes on a tap outside without the verse opening Verse Insight', () => {
+    const { word, onVerseClick } = renderWord();
+    fireEvent.touchStart(word, touchAt(10, 10));
+    act(() => vi.advanceTimersByTime(400));
+    fireEvent.touchEnd(word);
+    // Long after any time window, the reader taps the scripture to close it.
+    act(() => vi.advanceTimersByTime(5000));
+    // The verse acts on touchend, before Radix closes the card on the click.
+    expect(shouldSuppressVerseInsightClick()).toBe(true);
+    fireEvent.pointerDown(document.body);
+    fireEvent.click(document.body);
+
+    expect(screen.queryByText(GLOSS)).not.toBeInTheDocument();
+    expect(onVerseClick).not.toHaveBeenCalled();
+    act(() => vi.advanceTimersByTime(1000));
+    // With the card gone, the next tap on a verse is the reader's again.
+    expect(shouldSuppressVerseInsightClick()).toBe(false);
+  });
+
   it('leaves a short tap to the verse', () => {
     const { word, onVerseClick } = renderWord();
     fireEvent.touchStart(word, touchAt(10, 10));

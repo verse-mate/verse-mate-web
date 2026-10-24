@@ -7,7 +7,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { OVERLAY_MODAL_WIDTH } from '@/constants/overlayModal';
 import { usePreferredLanguage } from '@/hooks/usePreferredLanguage';
 import { fetchLemmaCard, apiCardToLexEntry } from '@/services/lemmaApi';
-import { suppressVerseInsightClick } from '@/lib/verseInsightGuard';
+import { holdVerseInsightWhileCardOpen, suppressVerseInsightClick } from '@/lib/verseInsightGuard';
 
 // How long a finger rests on a word before its card opens. Kept below the
 // verse's own 400ms long-press (ReadingScreen) so the word claims the gesture
@@ -268,6 +268,21 @@ export default function LexiconPopover({
     }
   }, [open]);
 
+  // While the card is open, a tap on the scripture behind it only closes the
+  // card — it must not also open Verse Insight or the verse menu.
+  useEffect(() => {
+    if (!open) return;
+    return holdVerseInsightWhileCardOpen();
+  }, [open]);
+
+  // The modal's height, measured when it opens: on a phone `vh` counts the
+  // area behind the browser toolbars, which would push the bottom of the card
+  // off screen where it can't be scrolled to.
+  const [modalMaxHeight, setModalMaxHeight] = useState(900);
+  useEffect(() => {
+    if (open) setModalMaxHeight(Math.min(window.innerHeight * 0.92, 900));
+  }, [open]);
+
   // Dismiss on background scroll. Radix's avoid-collision/reposition logic
   // otherwise makes the card slide and flip while the reading body scrolls
   // underneath it. Ignore scrolls that originate inside the card itself so
@@ -285,6 +300,9 @@ export default function LexiconPopover({
 
   const onHandlePointerDown = useCallback(
     (e: React.PointerEvent) => {
+      // A finger on the header scrolls the card like the rest of it; only a
+      // mouse or pen drags the card around.
+      if (e.pointerType === 'touch') return;
       e.stopPropagation();
       e.currentTarget.setPointerCapture?.(e.pointerId);
       // While dragging the card, lock page text selection. A mouse drag that
@@ -352,8 +370,9 @@ export default function LexiconPopover({
             top: 0,
             zIndex: 1,
             cursor: 'grab',
-            // Stop the browser claiming the drag as a scroll/selection gesture.
-            touchAction: 'none',
+            // Let a finger scroll the card from the header too (the drag above
+            // ignores touch).
+            touchAction: 'pan-y',
             userSelect: 'none',
           }}
         >
@@ -563,8 +582,13 @@ export default function LexiconPopover({
                   transform: `translate(calc(-50% + ${drag.x}px), calc(-50% + ${drag.y}px))`,
                   width: OVERLAY_MODAL_WIDTH,
                   maxWidth: '92vw',
-                  maxHeight: 'min(94vh, 900px)',
+                  maxHeight: modalMaxHeight,
                   overflowY: 'auto',
+                  // Scroll the card itself, without the page scrolling (and
+                  // dismissing it) once the card reaches its end.
+                  overscrollBehavior: 'contain',
+                  touchAction: 'pan-y',
+                  WebkitOverflowScrolling: 'touch',
                   backgroundColor: vmTokens.surfaceRaisedBg,
                   color: vmTokens.textPrimary,
                   border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
@@ -607,6 +631,9 @@ export default function LexiconPopover({
           // capping to it guarantees the popover never overflows the viewport.
           maxHeight: 'var(--radix-popover-content-available-height)',
           overflowY: 'auto',
+          overscrollBehavior: 'contain',
+          touchAction: 'pan-y',
+          WebkitOverflowScrolling: 'touch',
           transform: drag.x || drag.y ? `translate(${drag.x}px, ${drag.y}px)` : undefined,
         }}
         // This popover has no backing overlay, so the outside click that
