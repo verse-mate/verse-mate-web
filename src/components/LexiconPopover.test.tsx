@@ -51,7 +51,6 @@ describe('LexiconPopover with a mouse', () => {
   it('opens the definition on right-click instead of the browser menu', () => {
     setPointer('mouse');
     const { word } = renderWord();
-    expect(word).not.toHaveClass('lex-word');
 
     const notCancelled = fireEvent.contextMenu(word);
     expect(notCancelled).toBe(false);
@@ -68,13 +67,13 @@ describe('LexiconPopover with a mouse', () => {
 });
 
 describe('LexiconPopover on a touch screen', () => {
-  it('keeps the underline and opens the definition on tap', () => {
+  it('opens the definition on tap', () => {
     setPointer('touch');
     const { word, onVerseClick } = renderWord();
-    expect(word).toHaveClass('lex-word');
 
     fireEvent.click(word);
     expect(onVerseClick).not.toHaveBeenCalled();
     expect(screen.getByText('settled, self-giving love')).toBeInTheDocument();
+    expect(word).toHaveClass('lex-word-open');
   });
 });

@@ -23,12 +23,6 @@ interface LexiconPopoverProps {
   entry: LexEntry;
   token: AlignedToken;
   children: React.ReactNode;
-  /**
-   * When false, the word stays tappable (opens the lexical card) but renders
-   * WITHOUT the dotted underline. Used to de-emphasize common / low-importance
-   * words so the underlines focus attention on the distinctive ones.
-   */
-  underline?: boolean;
   onActivate?: () => void;
 }
 
@@ -86,7 +80,6 @@ export default function LexiconPopover({
   entry,
   token,
   children,
-  underline = true,
   onActivate,
 }: LexiconPopoverProps) {
   const contextual = token.contextual;
@@ -97,9 +90,9 @@ export default function LexiconPopover({
   // sees as much of the card as possible at once.
   const shortViewport = useMediaQuery('(max-height: 720px)');
 
-  // With a mouse, the card opens on right-click and the word carries no
-  // underline: a left click falls through to the verse like any other text.
-  // Touch screens have no right-click, so there a tap still opens the card.
+  // Words carry no underline. With a mouse, the card opens on right-click and
+  // a left click falls through to the verse like any other text. Touch screens
+  // have no right-click, so there a tap opens the card.
   const rightClickToDefine = useMediaQuery('(hover: hover) and (pointer: fine)');
 
   // Controlled so we can dismiss the card when the Bible scrolls behind it.
@@ -122,7 +115,7 @@ export default function LexiconPopover({
       return;
     }
     // Non-English: only fetch once the card is actually opened. A popover is
-    // mounted for every underlined word in the chapter, so fetching on mount
+    // mounted for every lexicon word in the chapter, so fetching on mount
     // would fire one request per word; gating on `open` limits it to the word
     // the user taps (cached thereafter, so re-opening is instant).
     if (!open) return;
@@ -197,7 +190,7 @@ export default function LexiconPopover({
   const rightClickWordProps = {
     ref: triggerRef,
     onContextMenu,
-    className: open ? 'lex-word-quiet' : undefined,
+    className: open ? 'lex-word-open' : undefined,
     'data-state': open ? 'open' : 'closed',
     'data-lex-word': entry.translit,
     'aria-label': `${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`,
@@ -509,7 +502,7 @@ export default function LexiconPopover({
             onTouchEnd={(e) => e.stopPropagation()}
             onMouseDown={(e) => e.stopPropagation()}
             onMouseUp={(e) => e.stopPropagation()}
-            className={underline ? 'lex-word' : undefined}
+            className={open ? 'lex-word-open' : undefined}
             data-lex-word={entry.translit}
             aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
             style={{ cursor: 'pointer', color: 'inherit', WebkitTouchCallout: 'none' }}
@@ -582,7 +575,7 @@ export default function LexiconPopover({
             onTouchEnd={(e) => e.stopPropagation()}
             onMouseDown={(e) => e.stopPropagation()}
             onMouseUp={(e) => e.stopPropagation()}
-            className={underline ? 'lex-word' : undefined}
+            className={open ? 'lex-word-open' : undefined}
             data-lex-word={entry.translit}
             aria-label={`${surface} — ${renderEntry.translit}, ${renderEntry.basicGloss}`}
             style={{

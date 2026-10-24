@@ -2,7 +2,6 @@ import React from 'react';
 import LexiconPopover from './LexiconPopover';
 import type { AlignedToken, ChapterAlignment, LexEntry } from '@versemate/lexicon';
 import { loadStrongsIndex } from '@versemate/lexicon';
-import { shouldUnderlineLexeme } from '@/lib/lexiconImportance';
 import type { VerseToken } from '@/services/types';
 
 interface Chunk {
@@ -153,7 +152,6 @@ function TaggedVerse({ tokens }: { tokens: VerseToken[] }) {
             surface={tok.text}
             entry={entry}
             token={aligned}
-            underline={shouldUnderlineLexeme(entry)}
           >
             {tok.text}
           </LexiconPopover>
@@ -201,7 +199,6 @@ export default function TokenizedVerse({
             surface={c.text}
             entry={entry}
             token={c.token!}
-            underline={shouldUnderlineLexeme(entry)}
           >
             {c.text}
           </LexiconPopover>
