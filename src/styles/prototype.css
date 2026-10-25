@@ -349,6 +349,37 @@ button { font-family: inherit; }
 }
 .header-pill-scroll::-webkit-scrollbar { display: none; }
 
+/* Search mode on phones and tablets: the title row and tabs above the search
+   bar fold away (and back) instead of jumping. Animating grid-template-rows
+   from 1fr to 0fr collapses to the content's real height; the arrow beside
+   the bar grows in as the space frees up. */
+.search-chrome {
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition: grid-template-rows 220ms ease, opacity 160ms ease;
+}
+.search-chrome > * { min-height: 0; overflow: hidden; }
+.search-chrome.is-folded { grid-template-rows: 0fr; opacity: 0; }
+.search-back {
+  width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: width 220ms ease, margin 220ms ease, opacity 160ms ease;
+}
+.search-back.is-shown {
+  width: 44px;
+  margin-left: -8px;
+  margin-right: 4px;
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  .search-chrome, .search-back { transition: none; }
+}
+
 /* A row of chips that scrolls sideways (search filters): swipeable, with no
    scrollbar line under it. */
 .chip-scroll {

@@ -139,10 +139,14 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   const [activeIndex, setActiveIndex] = useState(-1);
   // Phones and tablets: the on-screen keyboard and iOS's focus zoom.
   const hasCoarsePointer = useMediaQuery('(pointer: coarse)');
-  const [inputFocused, setInputFocused] = useState(false);
   const keyboardTop = useKeyboardTop();
-  const keyboardUp = inputFocused && keyboardTop !== null;
   const listRef = useRef<HTMLDivElement>(null);
+  // Search mode (phones and tablets): tapping the field slides the title row
+  // and the tabs away so the bar sits at the top, with an arrow beside it to
+  // come back. It holds while the keyboard comes and goes; only that arrow
+  // (or closing Search) leaves it.
+  const [searchMode, setSearchMode] = useState(false);
+  const chromeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchBooks().then(books => {
@@ -374,11 +378,16 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
     }
   };
 
-  // While typing with the keyboard up, fold the title row and the tabs away
-  // so the search bar sits at the top and the results get the room the
-  // keyboard leaves. A back arrow moves next to the bar. Not in the compact
-  // modal card, which has room to spare.
-  const typingMode = keyboardUp && !compact && query.trim() !== '';
+  const exitSearchMode = () => {
+    setSearchMode(false);
+    setQuery('');
+    searchInputRef.current?.blur();
+  };
+
+  // The folded-away title row and tabs must not take keyboard focus.
+  useEffect(() => {
+    if (chromeRef.current) chromeRef.current.inert = searchMode;
+  }, [searchMode]);
 
   // The keyboard covers the bottom of a full-screen list: pad the list by
   // that much so its last rows can still scroll above the keyboard.
@@ -390,7 +399,7 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
       return;
     }
     setKeyboardOverlap(Math.max(0, Math.round(list.getBoundingClientRect().bottom - keyboardTop)));
-  }, [keyboardTop, typingMode]);
+  }, [keyboardTop, searchMode]);
 
   // New text or a new filter is a new list: start it at the top, not at the
   // scroll position of the previous results.
@@ -400,7 +409,8 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
 
   // Dragging the results puts the keyboard away, as native search screens do.
   const dismissKeyboard = () => {
-    if (keyboardUp) searchInputRef.current?.blur();
+    const input = searchInputRef.current;
+    if (input && document.activeElement === input) input.blur();
   };
 
   const selectedBookObj = selectedBook
@@ -453,8 +463,13 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
           Content is capped to a centered column (max-w-[680px]) so the
           full-screen overlay doesn't stretch the tabs / search bar edge-to-edge
           on wide or zoomed-in viewports — see the `items-center` on the parent. */}
-      {!typingMode && (
-        <>
+      <div
+        ref={chromeRef}
+        data-testid="search-chrome"
+        aria-hidden={searchMode || undefined}
+        className={`search-chrome w-full ${searchMode ? 'is-folded' : ''}`}
+      >
+        <div className="flex flex-col items-center">
           <header
             className="shrink-0 safe-top w-full max-w-[680px]"
             style={{ paddingTop: headerPadTop }}
@@ -559,24 +574,26 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
             </div>
           )}
 
-        </>
-      )}
+        </div>
+      </div>
 
-      {/* Search input */}
+      {/* Search input. In search mode the arrow slides in beside it. */}
       <div
-        className={`px-4 pt-3 w-full max-w-[680px] ${typingMode ? 'flex items-center gap-1' : ''}`}
-        style={typingMode ? { paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' } : undefined}
+        className="flex items-center px-4 pt-3 w-full max-w-[680px] transition-[padding] duration-200"
+        style={searchMode ? { paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' } : undefined}
       >
-        {typingMode && (
-          <button
-            onClick={onClose}
-            aria-label="Close"
-            data-testid="bible-navigation-modal-close-inline"
-            className="shrink-0 -ml-2 w-[44px] h-[44px] flex items-center justify-center"
-          >
-            <ArrowLeft size={22} className="text-foreground" strokeWidth={2} />
-          </button>
-        )}
+        <button
+          onClick={exitSearchMode}
+          aria-label="Back to browsing"
+          aria-hidden={!searchMode || undefined}
+          tabIndex={searchMode ? 0 : -1}
+          data-testid="search-mode-back"
+          className={`search-back shrink-0 h-[44px] flex items-center justify-center overflow-hidden ${
+            searchMode ? 'is-shown' : ''
+          }`}
+        >
+          <ArrowLeft size={22} className="text-foreground shrink-0" strokeWidth={2} />
+        </button>
         <div className={`flex flex-1 items-center gap-2 ${compact ? 'h-10' : 'h-12'} px-4 rounded-full bg-secondary border border-border`}>
           <Search size={18} className="text-muted-foreground" strokeWidth={2} />
           <input
@@ -584,8 +601,9 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
             value={query}
             onChange={e => setQuery(e.target.value)}
             onKeyDown={onSearchKeyDown}
-            onFocus={() => setInputFocused(true)}
-            onBlur={() => setInputFocused(false)}
+            onFocus={() => {
+              if (hasCoarsePointer) setSearchMode(true);
+            }}
             enterKeyHint="search"
             {...(isBibleTab
               ? {

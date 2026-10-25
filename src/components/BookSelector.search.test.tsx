@@ -191,6 +191,12 @@ describe('BookSelector search', () => {
     );
   });
 
+  it('keeps the title and tabs with a mouse: search mode is for touch screens', () => {
+    const { input } = renderSelector();
+    fireEvent.focus(input);
+    expect(screen.getByTestId('search-chrome')).not.toHaveClass('is-folded');
+  });
+
   it('says so when nothing matches', async () => {
     searchVerses.mockResolvedValue({
       results: [],
@@ -236,20 +242,40 @@ describe('BookSelector search on a phone with the keyboard up', () => {
     Object.defineProperty(window, 'visualViewport', { configurable: true, value: undefined });
   });
 
-  it('folds the title and tabs away while typing, and brings them back with the keyboard down', async () => {
+  const folded = () => screen.getByTestId('search-chrome').classList.contains('is-folded');
+
+  it('enters search mode as soon as the field is tapped', () => {
     const { input } = renderSelector();
+    expect(folded()).toBe(false);
     fireEvent.focus(input);
+    expect(folded()).toBe(true);
+    expect(screen.getByTestId('search-chrome')).toHaveAttribute('aria-hidden', 'true');
+    expect(screen.getByTestId('search-mode-back')).toHaveClass('is-shown');
+  });
+
+  it('stays in search mode when the keyboard closes', async () => {
+    const { input } = renderSelector();
+    input.focus();
     setKeyboard(320);
     type(input, 'east and west');
-
     await screen.findByTestId('verse-result-40-8-11');
-    expect(screen.queryByTestId('tab-new-testament')).toBeNull();
-    expect(screen.queryByTestId('bible-navigation-modal-close')).toBeNull();
-    expect(screen.getByTestId('bible-navigation-modal-close-inline')).toBeInTheDocument();
 
     setKeyboard(0);
-    expect(screen.getByTestId('tab-new-testament')).toBeInTheDocument();
-    expect(screen.getByTestId('bible-navigation-modal-close')).toBeInTheDocument();
+    input.blur();
+    expect(folded()).toBe(true);
+  });
+
+  it('the arrow beside the bar leaves search mode and clears the text', async () => {
+    const { input, onClose } = renderSelector();
+    input.focus();
+    type(input, 'east and west');
+    await screen.findByTestId('verse-result-40-8-11');
+
+    fireEvent.click(screen.getByTestId('search-mode-back'));
+    expect(folded()).toBe(false);
+    expect(input).toHaveValue('');
+    expect(document.activeElement).not.toBe(input);
+    expect(onClose).not.toHaveBeenCalled();
   });
 
   it('uses a 16px field so iOS does not zoom in on focus', () => {
@@ -268,6 +294,7 @@ describe('BookSelector search on a phone with the keyboard up', () => {
     expect(document.activeElement).not.toBe(input);
     expect(onClose).not.toHaveBeenCalled();
     expect(currentUrl).toBe('/bible/john/1');
+    expect(folded()).toBe(true);
   });
 
   it('still jumps to a typed reference on the Search key', async () => {
@@ -280,15 +307,15 @@ describe('BookSelector search on a phone with the keyboard up', () => {
     expect(currentUrl).toBe('/bible/john/3?v=16&insight=1');
   });
 
-  it('puts the keyboard away when the results are dragged', async () => {
+  it('puts the keyboard away when the results are dragged, staying in search mode', async () => {
     const { input } = renderSelector();
     input.focus();
-    fireEvent.focus(input);
     setKeyboard(320);
     type(input, 'east and west');
     const row = await screen.findByTestId('verse-result-40-8-11');
 
     fireEvent.touchMove(row);
     expect(document.activeElement).not.toBe(input);
+    expect(folded()).toBe(true);
   });
 });
