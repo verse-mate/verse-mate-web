@@ -392,6 +392,12 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
     setKeyboardOverlap(Math.max(0, Math.round(list.getBoundingClientRect().bottom - keyboardTop)));
   }, [keyboardTop, typingMode]);
 
+  // New text or a new filter is a new list: start it at the top, not at the
+  // scroll position of the previous results.
+  useEffect(() => {
+    listRef.current?.scrollTo?.({ top: 0 });
+  }, [query, verseSearch.filters]);
+
   // Dragging the results puts the keyboard away, as native search screens do.
   const dismissKeyboard = () => {
     if (keyboardUp) searchInputRef.current?.blur();
