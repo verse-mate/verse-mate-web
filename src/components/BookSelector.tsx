@@ -28,7 +28,7 @@ import {
   jesusTestId,
   JESUS_ROOT,
 } from '@/lib/jesusSlugs';
-import { ReferenceParser, type BibleReference } from '@/lib/bibleSearch/referenceParser';
+import { ReferenceParser, type BibleReference } from '@versemate/bible-search';
 import { buildVerseUrl } from '@/lib/bibleSearch/verseLinks';
 import { useVerseSearch } from '@/hooks/useVerseSearch';
 import VerseSearchSection from '@/components/search/VerseSearchSection';
