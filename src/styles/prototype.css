@@ -349,6 +349,46 @@ button { font-family: inherit; }
 }
 .header-pill-scroll::-webkit-scrollbar { display: none; }
 
+/* Search mode on phones and tablets: the title row and tabs above the search
+   bar fold away (and back) instead of jumping. Animating grid-template-rows
+   from 1fr to 0fr collapses to the content's real height; the arrow beside
+   the bar grows in as the space frees up. */
+.search-chrome {
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition: grid-template-rows 220ms ease, opacity 160ms ease;
+}
+.search-chrome > * { min-height: 0; overflow: hidden; }
+.search-chrome.is-folded { grid-template-rows: 0fr; opacity: 0; }
+.search-back {
+  width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: width 220ms ease, margin 220ms ease, opacity 160ms ease;
+}
+.search-back.is-shown {
+  width: 44px;
+  margin-left: -8px;
+  margin-right: 4px;
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  .search-chrome, .search-back { transition: none; }
+}
+
+/* A row of chips that scrolls sideways (search filters): swipeable, with no
+   scrollbar line under it. */
+.chip-scroll {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.chip-scroll::-webkit-scrollbar { display: none; }
+
 .icon-btn {
   display: flex;
   align-items: center;
@@ -500,6 +540,16 @@ button { font-family: inherit; }
   outline: 2px solid var(--vm-dust);
   outline-offset: 2px;
   background-color: rgba(176, 154, 109, 0.15);
+}
+/* A verse opened from a link or a search result (?v=): a gold wash that
+   fades out, so the eye finds the verse after the jump. */
+.verse-span.verse-flash { animation: verse-flash 2.4s ease-out; }
+@keyframes verse-flash {
+  0%, 40% { background-color: rgba(176, 154, 109, 0.35); }
+  100% { background-color: transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .verse-span.verse-flash { animation: none; background-color: rgba(176, 154, 109, 0.2); }
 }
 
 /* Highlights */
