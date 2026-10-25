@@ -80,7 +80,7 @@ export default function VerseSearchSection({ query, search, activeId, compact, o
           -top-3 / -mx-4 undo the list's own padding, so the bar pins flush
           against the search field and full width, with no strip of
           scrolling verses showing above or beside it. */}
-      <div className="sticky -top-3 z-10 -mx-4 px-4 bg-background">
+      <div className="sticky -top-3 z-10 -mx-4 px-4 bg-background border-b border-border">
         <div className="flex items-baseline justify-between pt-4 pb-2">
           <p className="text-[11px] uppercase tracking-wider text-muted-foreground/70">Verses</p>
           {total !== null && total > 0 && (
@@ -91,7 +91,7 @@ export default function VerseSearchSection({ query, search, activeId, compact, o
         </div>
 
         {total !== null && total > 0 && (
-          <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1" data-testid="verse-search-filters">
+          <div className="flex gap-2 chip-scroll pb-3 -mx-1 px-1" data-testid="verse-search-filters">
             {chip('All', total, !filters.testament && !filters.book, () => setFilters({}), 'verse-filter-all')}
             {otCount > 0 &&
               chip('Old Testament', otCount, filters.testament === 'OT' && !filters.book, () => setFilters({ testament: 'OT' }), 'verse-filter-ot')}

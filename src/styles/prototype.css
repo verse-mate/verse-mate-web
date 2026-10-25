@@ -349,6 +349,15 @@ button { font-family: inherit; }
 }
 .header-pill-scroll::-webkit-scrollbar { display: none; }
 
+/* A row of chips that scrolls sideways (search filters): swipeable, with no
+   scrollbar line under it. */
+.chip-scroll {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.chip-scroll::-webkit-scrollbar { display: none; }
+
 .icon-btn {
   display: flex;
   align-items: center;
