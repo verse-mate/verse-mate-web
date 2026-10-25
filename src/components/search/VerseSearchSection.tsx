@@ -76,8 +76,11 @@ export default function VerseSearchSection({ query, search, activeId, compact, o
 
   return (
     <section aria-label="Verses" data-testid="verse-search-section">
-      {/* Title, count and filters stay pinned while the results scroll. */}
-      <div className="sticky top-0 z-10 bg-background">
+      {/* Title, count and filters stay pinned while the results scroll.
+          -top-3 / -mx-4 undo the list's own padding, so the bar pins flush
+          against the search field and full width, with no strip of
+          scrolling verses showing above or beside it. */}
+      <div className="sticky -top-3 z-10 -mx-4 px-4 bg-background">
         <div className="flex items-baseline justify-between pt-4 pb-2">
           <p className="text-[11px] uppercase tracking-wider text-muted-foreground/70">Verses</p>
           {total !== null && total > 0 && (

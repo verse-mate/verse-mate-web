@@ -1,5 +1,5 @@
-import { describe, expect, it, vi, beforeEach } from 'vitest';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, useLocation } from 'react-router-dom';
 import BookSelector from './BookSelector';
 import { AppProvider } from '@/contexts/AppContext';
@@ -201,5 +201,94 @@ describe('BookSelector search', () => {
     const { input } = renderSelector();
     type(input, 'zzqx');
     expect(await screen.findByText(/No verses match "zzqx"/)).toBeInTheDocument();
+  });
+});
+
+describe('BookSelector search on a phone with the keyboard up', () => {
+  const realMatchMedia = window.matchMedia;
+  let viewport: EventTarget & { height: number; offsetTop: number; scale: number };
+
+  const setKeyboard = (px: number) =>
+    act(() => {
+      viewport.height = window.innerHeight - px;
+      viewport.dispatchEvent(new Event('resize'));
+    });
+
+  beforeEach(() => {
+    localStorage.clear();
+    searchVerses.mockReset();
+    searchVerses.mockResolvedValue(EAST_AND_WEST);
+    currentUrl = '';
+    window.matchMedia = ((query: string) => ({
+      ...realMatchMedia(query),
+      matches: query === '(pointer: coarse)',
+    })) as typeof window.matchMedia;
+    viewport = Object.assign(new EventTarget(), {
+      height: window.innerHeight,
+      offsetTop: 0,
+      scale: 1,
+    });
+    Object.defineProperty(window, 'visualViewport', { configurable: true, value: viewport });
+  });
+
+  afterEach(() => {
+    window.matchMedia = realMatchMedia;
+    Object.defineProperty(window, 'visualViewport', { configurable: true, value: undefined });
+  });
+
+  it('folds the title and tabs away while typing, and brings them back with the keyboard down', async () => {
+    const { input } = renderSelector();
+    fireEvent.focus(input);
+    setKeyboard(320);
+    type(input, 'east and west');
+
+    await screen.findByTestId('verse-result-40-8-11');
+    expect(screen.queryByTestId('tab-new-testament')).toBeNull();
+    expect(screen.queryByTestId('bible-navigation-modal-close')).toBeNull();
+    expect(screen.getByTestId('bible-navigation-modal-close-inline')).toBeInTheDocument();
+
+    setKeyboard(0);
+    expect(screen.getByTestId('tab-new-testament')).toBeInTheDocument();
+    expect(screen.getByTestId('bible-navigation-modal-close')).toBeInTheDocument();
+  });
+
+  it('uses a 16px field so iOS does not zoom in on focus', () => {
+    const { input } = renderSelector();
+    expect(input.style.fontSize).toBe('16px');
+  });
+
+  it("puts the keyboard away on its Search key instead of opening the first result", async () => {
+    const { input, onClose } = renderSelector();
+    input.focus();
+    setKeyboard(320);
+    type(input, 'east and west');
+    await screen.findByTestId('verse-result-40-8-11');
+
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(document.activeElement).not.toBe(input);
+    expect(onClose).not.toHaveBeenCalled();
+    expect(currentUrl).toBe('/bible/john/1');
+  });
+
+  it('still jumps to a typed reference on the Search key', async () => {
+    const { input } = renderSelector();
+    await waitFor(() => expect(bibleService.fetchBooks).toHaveBeenCalled());
+    input.focus();
+    type(input, 'jn 3.16');
+    await screen.findByText('John 3:16');
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(currentUrl).toBe('/bible/john/3?v=16&insight=1');
+  });
+
+  it('puts the keyboard away when the results are dragged', async () => {
+    const { input } = renderSelector();
+    input.focus();
+    fireEvent.focus(input);
+    setKeyboard(320);
+    type(input, 'east and west');
+    const row = await screen.findByTestId('verse-result-40-8-11');
+
+    fireEvent.touchMove(row);
+    expect(document.activeElement).not.toBe(input);
   });
 });

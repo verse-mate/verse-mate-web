@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useRef } from 'react';
+import { useState, useMemo, useEffect, useLayoutEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import {
   fetchBooks,
@@ -18,6 +18,7 @@ import {
 import { ChevronRight, Search, ArrowLeft, Clock, CornerDownRight } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { useKeyboardTop } from '@/hooks/useKeyboardTop';
 import { buildTopicUrl } from '@/lib/topicSlugs';
 import {
   buildJesusEntryUrl,
@@ -136,6 +137,12 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   // reference typed in the reader's language is understood too.
   const [localizedNames, setLocalizedNames] = useState<Record<number, string>>({});
   const [activeIndex, setActiveIndex] = useState(-1);
+  // Phones and tablets: the on-screen keyboard and iOS's focus zoom.
+  const hasCoarsePointer = useMediaQuery('(pointer: coarse)');
+  const [inputFocused, setInputFocused] = useState(false);
+  const keyboardTop = useKeyboardTop();
+  const keyboardUp = inputFocused && keyboardTop !== null;
+  const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchBooks().then(books => {
@@ -342,6 +349,21 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   }, [activeId]);
 
   const onSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const picked =
+        activeIndex >= 0
+          ? searchOptions[activeIndex]
+          : goToRefs.length > 0 || !hasCoarsePointer
+            ? searchOptions[0]
+            : undefined;
+      if (picked) picked.select();
+      // The on-screen keyboard's Search key with nothing picked: put the
+      // keyboard away so the results can be read, rather than opening the
+      // first one.
+      else searchInputRef.current?.blur();
+      return;
+    }
     if (!searching || searchOptions.length === 0) return;
     if (e.key === 'ArrowDown') {
       e.preventDefault();
@@ -349,10 +371,30 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
       setActiveIndex(i => Math.max(i - 1, -1));
-    } else if (e.key === 'Enter') {
-      e.preventDefault();
-      searchOptions[activeIndex >= 0 ? activeIndex : 0]?.select();
     }
+  };
+
+  // While typing with the keyboard up, fold the title row and the tabs away
+  // so the search bar sits at the top and the results get the room the
+  // keyboard leaves. A back arrow moves next to the bar. Not in the compact
+  // modal card, which has room to spare.
+  const typingMode = keyboardUp && !compact && query.trim() !== '';
+
+  // The keyboard covers the bottom of a full-screen list: pad the list by
+  // that much so its last rows can still scroll above the keyboard.
+  const [keyboardOverlap, setKeyboardOverlap] = useState(0);
+  useLayoutEffect(() => {
+    const list = listRef.current;
+    if (!list || keyboardTop === null) {
+      setKeyboardOverlap(0);
+      return;
+    }
+    setKeyboardOverlap(Math.max(0, Math.round(list.getBoundingClientRect().bottom - keyboardTop)));
+  }, [keyboardTop, typingMode]);
+
+  // Dragging the results puts the keyboard away, as native search screens do.
+  const dismissKeyboard = () => {
+    if (keyboardUp) searchInputRef.current?.blur();
   };
 
   const selectedBookObj = selectedBook
@@ -405,119 +447,140 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
           Content is capped to a centered column (max-w-[680px]) so the
           full-screen overlay doesn't stretch the tabs / search bar edge-to-edge
           on wide or zoomed-in viewports — see the `items-center` on the parent. */}
-      <header
-        className="shrink-0 safe-top w-full max-w-[680px]"
-        style={{ paddingTop: headerPadTop }}
-      >
-        <div className="relative flex items-center justify-center px-3" style={{ height: compact ? 48 : 56 }}>
-          <button
-            onClick={onClose}
-            aria-label="Close"
-            data-testid="bible-navigation-modal-close"
-            className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
+      {!typingMode && (
+        <>
+          <header
+            className="shrink-0 safe-top w-full max-w-[680px]"
+            style={{ paddingTop: headerPadTop }}
           >
-            <ArrowLeft size={22} className="text-foreground" strokeWidth={2} />
-          </button>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: titleSize, lineHeight: '24px', letterSpacing: '-0.01em' }}>Search</h2>
-        </div>
-      </header>
-
-      {/* Segmented tabs */}
-      <div className="px-4 pt-2 w-full max-w-[680px]">
-        <div className="flex items-center gap-0.5 rounded-full bg-secondary p-1">
-          {(['OT', 'NT', 'Jesus', 'Topics'] as Tab[]).map(t => {
-            const label =
-              t === 'OT'
-                ? roomForLongLabels
-                  ? 'Old Testament'
-                  : 'OT'
-                : t === 'NT'
-                  ? roomForLongLabels
-                    ? 'New Testament'
-                    : 'NT'
-                  : t;
-            const testId =
-              t === 'OT'
-                ? 'tab-old-testament'
-                : t === 'NT'
-                  ? 'tab-new-testament'
-                  : t === 'Jesus'
-                    ? 'tab-jesus'
-                    : 'tab-topics';
-            return (
+            <div className="relative flex items-center justify-center px-3" style={{ height: compact ? 48 : 56 }}>
               <button
-                key={t}
-                onClick={() => {
-                  setTab(t);
-                  setQuery('');
-                }}
-                data-testid={testId}
-                // `flex-auto` (not `flex-1`) so each tab starts at its own
-                // label width and only the leftover space is split evenly.
-                // Equal-width tabs crowded "Old Testament" and "New Testament"
-                // together while padding out "Jesus" / "Topics".
-                className={`flex-auto ${compact ? 'h-9 px-2' : 'h-10 px-2.5'} rounded-full transition-colors ${
-                  tab === t ? 'bg-gold text-[#1A1A1A]' : 'text-foreground/80'
-                }`}
-                style={{
-                  fontFamily: 'Roboto, sans-serif',
-                  fontWeight: 400,
-                  // Four tabs share the row, so the type scale drops a step
-                  // from the previous three-tab layout.
-                  fontSize: compact ? 12 : 13,
-                  lineHeight: '24px',
-                  whiteSpace: 'nowrap',
-                }}
+                onClick={onClose}
+                aria-label="Close"
+                data-testid="bible-navigation-modal-close"
+                className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
               >
-                {label}
+                <ArrowLeft size={22} className="text-foreground" strokeWidth={2} />
               </button>
-            );
-          })}
-        </div>
-      </div>
+              <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: titleSize, lineHeight: '24px', letterSpacing: '-0.01em' }}>Search</h2>
+            </div>
+          </header>
 
-      {/* Topic category pills (only on Topics tab) — Events / Prophecies / Parables / Themes */}
-      {tab === 'Topics' && (
-        <div className="px-4 pt-2 w-full max-w-[680px]">
-          <div className="flex items-center gap-1 rounded-full bg-secondary p-1">
-            {TOPIC_CATEGORIES.map(c => {
-              const active = topicCategory === c.key;
-              return (
-                <button
-                  key={c.key}
-                  onClick={() => {
-                    setTopicCategory(c.key);
-                    setQuery('');
-                  }}
-                  data-testid={`topic-category-${c.key.toLowerCase()}`}
-                  aria-pressed={active}
-                  className={`flex-1 h-8 rounded-full transition-colors ${
-                    active ? 'bg-gold text-[#1A1A1A]' : 'text-foreground/80'
-                  }`}
-                  style={{
-                    fontFamily: 'Roboto, sans-serif',
-                    fontWeight: active ? 500 : 400,
-                    fontSize: 13,
-                    lineHeight: '20px',
-                  }}
-                >
-                  {c.label}
-                </button>
-              );
-            })}
+          {/* Segmented tabs */}
+          <div className="px-4 pt-2 w-full max-w-[680px]">
+            <div className="flex items-center gap-0.5 rounded-full bg-secondary p-1">
+              {(['OT', 'NT', 'Jesus', 'Topics'] as Tab[]).map(t => {
+                const label =
+                  t === 'OT'
+                    ? roomForLongLabels
+                      ? 'Old Testament'
+                      : 'OT'
+                    : t === 'NT'
+                      ? roomForLongLabels
+                        ? 'New Testament'
+                        : 'NT'
+                      : t;
+                const testId =
+                  t === 'OT'
+                    ? 'tab-old-testament'
+                    : t === 'NT'
+                      ? 'tab-new-testament'
+                      : t === 'Jesus'
+                        ? 'tab-jesus'
+                        : 'tab-topics';
+                return (
+                  <button
+                    key={t}
+                    onClick={() => {
+                      setTab(t);
+                      setQuery('');
+                    }}
+                    data-testid={testId}
+                    // `flex-auto` (not `flex-1`) so each tab starts at its own
+                    // label width and only the leftover space is split evenly.
+                    // Equal-width tabs crowded "Old Testament" and "New Testament"
+                    // together while padding out "Jesus" / "Topics".
+                    className={`flex-auto ${compact ? 'h-9 px-2' : 'h-10 px-2.5'} rounded-full transition-colors ${
+                      tab === t ? 'bg-gold text-[#1A1A1A]' : 'text-foreground/80'
+                    }`}
+                    style={{
+                      fontFamily: 'Roboto, sans-serif',
+                      fontWeight: 400,
+                      // Four tabs share the row, so the type scale drops a step
+                      // from the previous three-tab layout.
+                      fontSize: compact ? 12 : 13,
+                      lineHeight: '24px',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
+
+          {/* Topic category pills (only on Topics tab) — Events / Prophecies / Parables / Themes */}
+          {tab === 'Topics' && (
+            <div className="px-4 pt-2 w-full max-w-[680px]">
+              <div className="flex items-center gap-1 rounded-full bg-secondary p-1">
+                {TOPIC_CATEGORIES.map(c => {
+                  const active = topicCategory === c.key;
+                  return (
+                    <button
+                      key={c.key}
+                      onClick={() => {
+                        setTopicCategory(c.key);
+                        setQuery('');
+                      }}
+                      data-testid={`topic-category-${c.key.toLowerCase()}`}
+                      aria-pressed={active}
+                      className={`flex-1 h-8 rounded-full transition-colors ${
+                        active ? 'bg-gold text-[#1A1A1A]' : 'text-foreground/80'
+                      }`}
+                      style={{
+                        fontFamily: 'Roboto, sans-serif',
+                        fontWeight: active ? 500 : 400,
+                        fontSize: 13,
+                        lineHeight: '20px',
+                      }}
+                    >
+                      {c.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+        </>
       )}
 
       {/* Search input */}
-      <div className="px-4 pt-3 w-full max-w-[680px]">
-        <div className={`flex items-center gap-2 ${compact ? 'h-10' : 'h-12'} px-4 rounded-full bg-secondary border border-border`}>
+      <div
+        className={`px-4 pt-3 w-full max-w-[680px] ${typingMode ? 'flex items-center gap-1' : ''}`}
+        style={typingMode ? { paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' } : undefined}
+      >
+        {typingMode && (
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            data-testid="bible-navigation-modal-close-inline"
+            className="shrink-0 -ml-2 w-[44px] h-[44px] flex items-center justify-center"
+          >
+            <ArrowLeft size={22} className="text-foreground" strokeWidth={2} />
+          </button>
+        )}
+        <div className={`flex flex-1 items-center gap-2 ${compact ? 'h-10' : 'h-12'} px-4 rounded-full bg-secondary border border-border`}>
           <Search size={18} className="text-muted-foreground" strokeWidth={2} />
           <input
             ref={searchInputRef}
             value={query}
             onChange={e => setQuery(e.target.value)}
             onKeyDown={onSearchKeyDown}
+            onFocus={() => setInputFocused(true)}
+            onBlur={() => setInputFocused(false)}
+            enterKeyHint="search"
             {...(isBibleTab
               ? {
                   role: 'combobox',
@@ -543,13 +606,20 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
                   : 'Search...'
             }
             className="flex-1 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none"
-            style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '24px' }}
+            // iOS Safari zooms the page in when an input under 16px gets
+            // focus; keep touch screens at 16px so it doesn't.
+            style={{ fontFamily: 'Roboto, sans-serif', fontSize: hasCoarsePointer ? 16 : 14, lineHeight: '24px' }}
           />
         </div>
       </div>
 
       {/* List */}
-      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6 w-full max-w-[680px]">
+      <div
+        ref={listRef}
+        onTouchMove={dismissKeyboard}
+        className="flex-1 overflow-y-auto px-4 pt-3 pb-6 w-full max-w-[680px]"
+        style={keyboardOverlap ? { paddingBottom: keyboardOverlap + 24 } : undefined}
+      >
         {tab === 'Jesus' ? (
           query.trim() ? (
             jesusResults.length > 0 ? (
