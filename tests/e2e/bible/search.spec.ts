@@ -8,8 +8,14 @@ import { test, expect, type Page } from '@playwright/test';
  * translation), e.g. a local backend started on a seeded database.
  */
 
+/** The reader has rendered (the first load of a cold dev server is slow). */
+async function readerReady(page: Page) {
+  await expect(page.getByTestId('chapter-header').first()).toBeVisible({ timeout: 30_000 });
+}
+
 async function openSearch(page: Page, url = '/bible/john/1') {
   await page.goto(url);
+  await readerReady(page);
   // Desktop renders the selector in DesktopLayout's header, mobile in the
   // reader's own header.
   const desktop = page.getByTestId('desktop-chapter-selector-button');
@@ -52,6 +58,7 @@ test.describe('Bible search', () => {
 
   test('a shared verse link opens the verse with Verse Insight once', async ({ page }) => {
     await page.goto('/bible/psalms/23?v=1&insight=1');
+    await readerReady(page);
     await expect(page.getByRole('dialog', { name: 'Verse Insight' })).toContainText('Psalms 23:1');
     // insight=1 is dropped, so a reload doesn't pop the sheet again.
     await expect(page).toHaveURL(/\/bible\/psalms\/23\?v=1$/);

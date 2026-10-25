@@ -589,12 +589,15 @@ export async function fetchVerseInsights(
       });
     }
     // Fallback: if no per-verse splits succeeded, emit a single verse-1 entry
-    // with the summary text so the insight screen still has content.
-    if (insights.length === 0 && cache.summary) {
+    // with the summary text so the insight screen still has content. The
+    // summary is an { text, id } entry: passing the entry itself handed
+    // VerseInsightSheet an object where it expects Markdown, and the crash
+    // blanked the reader on any chapter without a By Line explanation.
+    if (insights.length === 0 && cache.summary.text) {
       insights.push({
         verse: 1,
-        crossReferences: [],
-        historicalContext: cache.summary,
+        crossReferences: extractCrossRefs(cache.summary.text),
+        historicalContext: cache.summary.text,
       });
     }
     return insights;
