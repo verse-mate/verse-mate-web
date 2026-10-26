@@ -8,7 +8,7 @@
  */
 export const JESUS_TABS = [
   { id: 'summary', label: 'Summary' },
-  { id: 'byline', label: 'By-Line' },
+  { id: 'byline', label: 'By Line' },
   { id: 'study', label: 'Study' },
   { id: 'compare', label: 'Compare' },
 ] as const;

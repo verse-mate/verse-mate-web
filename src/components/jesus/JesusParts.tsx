@@ -1,10 +1,12 @@
 /**
  * Shared building blocks for the Jesus tab.
  *
- * Every Jesus screen is a list of the same card, so the card lives here once:
+ * Every Jesus screen is a list of the same row, so the row lives here once:
  * the hub, the kind/theme/study lists, the chronological walk and the "read
- * next" rail on an entry all render `JesusEntryCard`. Styling follows the rest
- * of the app — inline styles off `vmTokens` so the Settings → Theme switch
+ * next" list on an entry all render it. The pieces follow the web design
+ * system — lists of places to open are divider rows (the Topics list and the
+ * book selector), chips are the app's small pills, section labels are the
+ * sidebar's — and style inline off `vmTokens` so the Settings → Theme switch
  * applies without a per-screen dark-mode pass.
  */
 
@@ -13,34 +15,40 @@ import type { SwipeHandlers } from '@/hooks/useHorizontalSwipe';
 import { BookOpen, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import type { JesusEntry, JesusReference } from '@/services/types';
+import { jesusHeadline, jesusQuoteStyle, jesusRowStyle } from '@/lib/jesusRows';
 import { buildJesusEntryUrl, jesusTestId } from '@/lib/jesusSlugs';
 import { vmTokens } from '@/styles/themeStyles';
 
 const FONT = 'Roboto, sans-serif';
 
 /**
- * The gutter a Jesus surface leaves on each side of a split pane.
- *
- * The Bible reader caps its column at `min(660px, 100% - 104px)` so the verse
- * text never runs into the pane's edge (`.reading-inner` in prototype.css).
- * The Jesus screens sat at a flat 20px instead, which reads as cramped beside
- * the reading column it shares a screen with. Same shape, wider measure: the
- * card lists want more room than a verse column, but they floor at the same
- * 52px-a-side gutter so the two panes line up.
+ * The column a Jesus screen sits in on the split layout — the reading column's
+ * own measure (`.reading-inner`: `min(660px, 100% - 104px)`), so a Jesus list
+ * and a chapter are the same width on screen.
  */
-export const JESUS_SPLIT_MEASURE = 'min(920px, calc(100% - 104px))';
+export const JESUS_SPLIT_MEASURE = 'min(660px, calc(100% - 104px))';
 
-const jesusCardStyle: CSSProperties = {
-  backgroundColor: vmTokens.surfaceRaisedBg,
-  border: `1px solid ${vmTokens.divider}`,
-  borderRadius: 12,
-  textAlign: 'left',
-  width: '100%',
-  cursor: 'pointer',
-  fontFamily: FONT,
-};
+/** Small ordinal in front of a row on the chronological walk. */
+export function JesusRowIndex({ n }: { n: number }) {
+  return (
+    <span
+      aria-hidden="true"
+      style={{
+        flexShrink: 0,
+        minWidth: 18,
+        fontFamily: FONT,
+        fontSize: 13,
+        lineHeight: '24px',
+        color: vmTokens.textSecondary,
+        fontVariantNumeric: 'tabular-nums',
+      }}
+    >
+      {n}
+    </span>
+  );
+}
 
-/** Section label above a group of cards ("Explore by Topic"). */
+/** Section label above a group of rows ("Explore by Topic") — the sidebar's "OLD TESTAMENT". */
 export function JesusSectionLabel({
   children,
   action,
@@ -55,15 +63,15 @@ export function JesusSectionLabel({
         alignItems: 'baseline',
         justifyContent: 'space-between',
         gap: 12,
-        margin: '24px 0 10px',
+        margin: '28px 0 8px',
       }}
     >
       <h2
         style={{
           fontFamily: FONT,
           fontSize: 13,
-          fontWeight: 500,
-          letterSpacing: '0.08em',
+          fontWeight: 700,
+          letterSpacing: '0.5px',
           textTransform: 'uppercase',
           color: vmTokens.textSecondary,
         }}
@@ -84,8 +92,9 @@ export function JesusCount({ count }: { count: number }) {
         fontFamily: FONT,
         fontSize: 12,
         lineHeight: '20px',
-        color: vmTokens.textTertiary,
+        color: vmTokens.textSecondary,
         whiteSpace: 'nowrap',
+        fontVariantNumeric: 'tabular-nums',
       }}
     >
       {count}
@@ -139,11 +148,11 @@ export function JesusReferencePills({
           fontFamily: FONT,
           fontSize: 12,
           lineHeight: '18px',
-          padding: '3px 10px',
+          padding: '4px 12px',
           borderRadius: 999,
           border: `1px solid ${vmTokens.divider}`,
-          backgroundColor: vmTokens.pageBg,
-          color: vmTokens.textSecondary,
+          backgroundColor: vmTokens.surfaceRaisedBg,
+          color: vmTokens.textPrimary,
         };
 
         return onOpenReference ? (
@@ -172,8 +181,8 @@ export function JesusReferencePills({
           style={{
             fontFamily: FONT,
             fontSize: 12,
-            lineHeight: '24px',
-            color: vmTokens.textTertiary,
+            lineHeight: '26px',
+            color: vmTokens.textSecondary,
           }}
         >
           +{hidden} more
@@ -190,11 +199,12 @@ export function JesusReferencePills({
  * the headline material and the summary becomes supporting text — that is the
  * whole point of storing `quote` separately from `summary` on the backend.
  *
- * The whole card is clickable, but the card itself is NOT a `<button>`: it
- * carries interactive reference pills, and a button inside a button is invalid
- * HTML that browsers resolve unpredictably. Instead the title is the real
- * control and it stretches an invisible hit area over the card, which gives one
- * tab stop for "open this entry" plus separate tab stops for the pills.
+ * It is a divider row like the rest of the app's lists, not a boxed card. The
+ * whole row is clickable, but the row itself is NOT a `<button>`: it carries
+ * interactive reference pills, and a button inside a button is invalid HTML
+ * that browsers resolve unpredictably. Instead the title is the real control
+ * and it stretches an invisible hit area over the row, which gives one tab stop
+ * for "open this entry" plus separate tab stops for the pills.
  */
 export function JesusEntryCard({
   entry,
@@ -214,40 +224,21 @@ export function JesusEntryCard({
   return (
     <article
       data-testid={jesusTestId('jesus-entry-card', entry.slug)}
-      style={{ ...jesusCardStyle, padding: 14, position: 'relative', cursor: 'default' }}
+      style={{ ...jesusRowStyle, padding: '14px 0', position: 'relative', cursor: 'default' }}
     >
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-        {index !== undefined && (
-          <span
-            aria-hidden="true"
-            style={{
-              flexShrink: 0,
-              width: 24,
-              height: 24,
-              borderRadius: 999,
-              backgroundColor: vmTokens.pageBg,
-              border: `1px solid ${vmTokens.divider}`,
-              color: vmTokens.textTertiary,
-              fontFamily: FONT,
-              fontSize: 11,
-              lineHeight: '22px',
-              textAlign: 'center',
-            }}
-          >
-            {index}
-          </span>
-        )}
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+        {index !== undefined && <JesusRowIndex n={index} />}
 
         <div style={{ flex: 1, minWidth: 0 }}>
           {showKind && (
             <p
               style={{
                 fontFamily: FONT,
-                fontSize: 11,
-                fontWeight: 500,
+                fontSize: 12,
+                fontWeight: 700,
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
-                color: vmTokens.gold,
+                color: vmTokens.textSecondary,
                 marginBottom: 4,
               }}
             >
@@ -269,32 +260,18 @@ export function JesusEntryCard({
                 fontFamily: FONT,
                 fontSize: 16,
                 fontWeight: 500,
-                lineHeight: '22px',
+                lineHeight: '24px',
                 color: vmTokens.textPrimary,
               }}
             >
-              {/* Stretches the title's hit area over the whole card. */}
-              <span
-                aria-hidden="true"
-                style={{ position: 'absolute', inset: 0, borderRadius: 12 }}
-              />
-              {entry.title}
+              {/* Stretches the title's hit area over the whole row. */}
+              <span aria-hidden="true" style={{ position: 'absolute', inset: 0 }} />
+              {jesusHeadline(entry.title)}
             </button>
           </h3>
 
           {entry.quote && (
-            <blockquote
-              style={{
-                margin: '8px 0 0',
-                paddingLeft: 10,
-                borderLeft: `2px solid ${vmTokens.gold}`,
-                fontFamily: FONT,
-                fontSize: 14,
-                lineHeight: '21px',
-                fontStyle: 'italic',
-                color: vmTokens.textPrimary,
-              }}
-            >
+            <blockquote style={jesusQuoteStyle}>
               “{entry.quote}”
             </blockquote>
           )}
@@ -302,10 +279,10 @@ export function JesusEntryCard({
           {entry.summary && (
             <p
               style={{
-                marginTop: 8,
+                marginTop: 6,
                 fontFamily: FONT,
                 fontSize: 14,
-                lineHeight: '20px',
+                lineHeight: '21px',
                 color: vmTokens.textSecondary,
               }}
             >
@@ -331,7 +308,10 @@ export function JesusEntryCard({
   );
 }
 
-/** A navigation card: title, blurb, count, chevron. */
+/**
+ * A navigation row: title, blurb, count, chevron — the book selector's Jesus
+ * row, with the blurb the overview ships for every kind as a second line.
+ */
 export function JesusNavCard({
   title,
   blurb,
@@ -346,7 +326,10 @@ export function JesusNavCard({
   count?: number;
   onClick: () => void;
   testId?: string;
-  /** Gold-tinted treatment for the hero card ("Follow His Life"). */
+  /**
+   * The lead row ("Follow His Life"). It keeps the row shape and carries its
+   * gold icon; gold stays an accent, never a container.
+   */
   emphasis?: boolean;
   icon?: ReactNode;
 }) {
@@ -355,18 +338,14 @@ export function JesusNavCard({
       type="button"
       onClick={onClick}
       data-testid={testId}
+      data-emphasis={emphasis || undefined}
       style={{
-        ...jesusCardStyle,
-        padding: 14,
+        ...jesusRowStyle,
+        minHeight: 56,
+        padding: '12px 0',
         display: 'flex',
         alignItems: 'center',
         gap: 12,
-        ...(emphasis
-          ? {
-              backgroundColor: 'rgba(176,154,109,0.10)',
-              border: `1px solid ${vmTokens.gold}`,
-            }
-          : null),
       }}
     >
       {icon && (
@@ -380,8 +359,8 @@ export function JesusNavCard({
             display: 'block',
             fontFamily: FONT,
             fontSize: 16,
-            fontWeight: 500,
-            lineHeight: '22px',
+            fontWeight: 400,
+            lineHeight: '24px',
             color: vmTokens.textPrimary,
           }}
         >
@@ -391,10 +370,10 @@ export function JesusNavCard({
           <span
             style={{
               display: 'block',
-              marginTop: 3,
+              marginTop: 2,
               fontFamily: FONT,
               fontSize: 13,
-              lineHeight: '18px',
+              lineHeight: '20px',
               color: vmTokens.textSecondary,
             }}
           >
@@ -408,7 +387,10 @@ export function JesusNavCard({
   );
 }
 
-/** Rounded pill used for the theme row. */
+/**
+ * A chip — the app's small pill (search filters, reference pills): radius full,
+ * card surface with a hairline, gold fill when active.
+ */
 export function JesusPill({
   label,
   count,
@@ -432,11 +414,12 @@ export function JesusPill({
         display: 'inline-flex',
         alignItems: 'center',
         gap: 6,
-        padding: '7px 14px',
+        padding: '5px 12px',
         borderRadius: 999,
         fontFamily: FONT,
-        fontSize: 14,
+        fontSize: 13,
         lineHeight: '20px',
+        fontWeight: active ? 500 : 400,
         cursor: 'pointer',
         backgroundColor: active ? vmTokens.gold : vmTokens.surfaceRaisedBg,
         border: `1px solid ${active ? vmTokens.gold : vmTokens.divider}`,
@@ -448,7 +431,7 @@ export function JesusPill({
         <span
           style={{
             fontSize: 12,
-            color: active ? vmTokens.goldOnLight : vmTokens.textTertiary,
+            color: active ? vmTokens.goldOnLight : vmTokens.textSecondary,
           }}
         >
           {count}
@@ -467,7 +450,7 @@ export function JesusLoading({ label = 'Loading…' }: { label?: string }) {
         fontSize: 14,
         textAlign: 'center',
         padding: '32px 0',
-        color: vmTokens.textTertiary,
+        color: vmTokens.textSecondary,
       }}
     >
       {label}
@@ -482,9 +465,11 @@ export function JesusEmpty({ label }: { label: string }) {
       style={{
         fontFamily: FONT,
         fontSize: 14,
+        lineHeight: '21px',
+        fontStyle: 'italic',
         textAlign: 'center',
         padding: '32px 0',
-        color: vmTokens.textTertiary,
+        color: vmTokens.textSecondary,
       }}
     >
       {label}
@@ -492,13 +477,13 @@ export function JesusEmpty({ label }: { label: string }) {
   );
 }
 
-/** Shared page frame: header slot + scrollable body capped to a reading column. */
 /**
- * The screen's title when it sits in the split pane.
+ * The screen's title when it sits in the split pane — set like a chapter title
+ * ("Genesis 1"), since it heads the left pane the way a chapter does.
  *
  * Below 768px `ScreenHeader` carries the title; at ≥768px DesktopLayout owns
- * the header bar, so the title moves into the content the way a browse list's
- * heading does. Both carry the same test id and only one is ever mounted.
+ * the header bar, so the title moves into the content. Both carry the same
+ * test id and only one is ever mounted.
  */
 export function JesusPageTitle({
   children,
@@ -512,12 +497,11 @@ export function JesusPageTitle({
       data-testid={testId}
       style={{
         fontFamily: FONT,
-        fontSize: 24,
-        fontWeight: 600,
-        lineHeight: '30px',
-        letterSpacing: '-0.01em',
+        fontSize: 28,
+        fontWeight: 500,
+        lineHeight: '36px',
         color: vmTokens.textPrimary,
-        margin: '0 0 6px',
+        margin: '0 0 8px',
       }}
     >
       {children}
@@ -558,7 +542,9 @@ export function JesusPageBody({
           width: '100%',
           maxWidth: wide ? JESUS_SPLIT_MEASURE : 680,
           margin: '0 auto',
-          padding: wide ? '20px 0 72px' : '4px 16px 40px',
+          // Split: the reading column's own padding (.reading-inner, 32 / 96).
+          // Phone: the app's 16px gutter.
+          padding: wide ? '32px 0 96px' : '8px 16px 40px',
         }}
       >
         {children}

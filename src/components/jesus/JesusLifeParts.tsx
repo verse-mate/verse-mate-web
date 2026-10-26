@@ -1,22 +1,23 @@
 /**
- * The visual furniture of "Follow His Life".
+ * The pieces of "Follow His Life".
  *
- * The timeline used to navigate through a single horizontally scrolling row of
- * pills, which hid two thirds of the ministry off the right edge and said
- * nothing about any of it beyond a count. These parts replace that row with a
- * wrapping map of the arc: a proportional band across the top, then one card
- * per period carrying what the payload already knows — which gospels cover the
- * stretch, how many sayings and deeds are catalogued in it, what it keeps
- * returning to, and how much of the record it holds.
+ * The timeline is laid out the way a category (Teachings, Questions…) is: an
+ * intro, a wrapping row of chips that jumps to each stretch, then one section
+ * per period — its name, scripture span and what is catalogued in it as plain
+ * text, then its events as divided rows. That is the shape the rest of the
+ * Jesus tab and the Topics list already use, and the shape the mobile app gives
+ * the same screen. Nothing the earlier card map carried is dropped: every
+ * period still shows its span, description, which gospels cover it, its event /
+ * saying / deed counts and the themes it keeps returning to.
  *
- * Everything reads off `vmTokens` / prototype.css variables, so the Settings →
- * Theme switch applies without a per-screen pass.
+ * Everything reads off `vmTokens`, so the Settings → Theme switch applies
+ * without a per-screen pass.
  */
 
-import type { CSSProperties, ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Hand, LayoutGrid, MessageSquareQuote } from 'lucide-react';
+import type { CSSProperties } from 'react';
+import { ArrowLeft, ArrowRight, ChevronRight } from 'lucide-react';
 import type { JesusGospel, JesusPeriodStats } from '@/lib/jesusLife';
-import { JESUS_GOSPELS, jesusPeriodWeight, pluralize } from '@/lib/jesusLife';
+import { pluralize } from '@/lib/jesusLife';
 import type { JesusEventLifePeriod } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
 
@@ -30,314 +31,124 @@ export interface JesusPeriodView {
   ordinal: number;
 }
 
-// ─── Small pieces ────────────────────────────────────────────────────────────
+// ─── Text lines ──────────────────────────────────────────────────────────────
 
-/** The gold circle carrying a period's position in the arc. */
-export function JesusOrdinal({ n, size = 26 }: { n: number; size?: number }) {
-  return (
-    <span
-      aria-hidden="true"
-      style={{
-        flexShrink: 0,
-        width: size,
-        height: size,
-        borderRadius: 999,
-        border: `1px solid ${vmTokens.gold}`,
-        color: vmTokens.gold,
-        fontFamily: FONT,
-        fontSize: size <= 26 ? 12 : 14,
-        fontWeight: 600,
-        lineHeight: `${size - 2}px`,
-        textAlign: 'center',
-      }}
-    >
-      {n}
-    </span>
-  );
+/** "10 events · 55 sayings · 31 deeds". */
+function periodCounts(stats: JesusPeriodStats): string {
+  return [
+    pluralize(stats.events, 'event'),
+    pluralize(stats.words, 'saying'),
+    pluralize(stats.actions, 'deed'),
+  ].join(' · ');
 }
 
-/**
- * Which of the four accounts cover this stretch.
- *
- * Absent gospels are drawn rather than omitted — that John records nothing of
- * the Galilean crowds is a fact about the text, and a strip that simply dropped
- * him would read as an oversight instead.
- */
-export function JesusGospelStrip({
-  gospels,
-  label = true,
-}: {
-  gospels: JesusGospel[];
-  label?: boolean;
-}) {
-  const covered = new Set(gospels.map((g) => g.bookId));
-  return (
-    <div
-      style={{ display: 'flex', alignItems: 'center', gap: 4 }}
-      aria-label={
-        covered.size
-          ? `Recorded in ${gospels.map((g) => g.name).join(', ')}`
-          : 'No gospel passages catalogued'
-      }
-    >
-      {label && (
-        <BookOpen size={12} strokeWidth={1.75} style={{ color: vmTokens.textTertiary, marginRight: 2 }} />
-      )}
-      {JESUS_GOSPELS.map((g) => {
-        const on = covered.has(g.bookId);
-        return (
-          <span
-            key={g.bookId}
-            title={on ? `${g.name} records events here` : `Nothing from ${g.name} in this period`}
-            style={{
-              minWidth: 24,
-              padding: '1px 5px',
-              borderRadius: 5,
-              textAlign: 'center',
-              fontFamily: FONT,
-              fontSize: 10.5,
-              fontWeight: 600,
-              letterSpacing: '0.03em',
-              color: on ? vmTokens.goldOnLight : vmTokens.textTertiary,
-              backgroundColor: on ? vmTokens.gold : 'transparent',
-              border: `1px solid ${on ? vmTokens.gold : vmTokens.divider}`,
-            }}
-          >
-            {g.short}
-          </span>
-        );
-      })}
-    </div>
-  );
-}
-
-/** Events / sayings / deeds, the three counts every period has. */
-export function JesusStatRow({ stats, compact = false }: { stats: JesusPeriodStats; compact?: boolean }) {
-  const items: { icon: ReactNode; value: number; label: string }[] = [
-    { icon: <LayoutGrid size={12} strokeWidth={1.75} />, value: stats.events, label: 'event' },
-    { icon: <MessageSquareQuote size={12} strokeWidth={1.75} />, value: stats.words, label: 'saying' },
-    { icon: <Hand size={12} strokeWidth={1.75} />, value: stats.actions, label: 'deed' },
-  ];
-  return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: compact ? 8 : 10 }}>
-      {items.map((item) => (
-        <span
-          key={item.label}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 4,
-            fontFamily: FONT,
-            fontSize: 12,
-            lineHeight: '18px',
-            color: item.value ? vmTokens.textSecondary : vmTokens.textTertiary,
-          }}
-        >
-          <span style={{ display: 'flex', color: vmTokens.gold }}>{item.icon}</span>
-          {pluralize(item.value, item.label)}
-        </span>
-      ))}
-    </div>
-  );
-}
-
-/** Share-of-the-record bar. Silent when a period has nothing catalogued. */
-function WeightBar({ weight }: { weight: number }) {
-  return (
-    <div
-      aria-hidden="true"
-      style={{
-        height: 3,
-        borderRadius: 999,
-        backgroundColor: vmTokens.divider,
-        overflow: 'hidden',
-      }}
-    >
-      <div
-        style={{
-          // A floor, so a period with a single event still draws something.
-          width: `${Math.max(Math.round(weight * 100), 2)}%`,
-          height: '100%',
-          borderRadius: 999,
-          backgroundColor: vmTokens.gold,
-          opacity: 0.55 + weight * 0.45,
-        }}
-      />
-    </div>
-  );
+/** "Matthew · Mark · Luke" — the accounts that cover a stretch. */
+function gospelNames(gospels: JesusGospel[]): string {
+  return gospels.map((g) => g.name).join(' · ');
 }
 
 /** Theme names this stretch keeps returning to. */
-function ThemeLine({ stats, max = 3 }: { stats: JesusPeriodStats; max?: number }) {
-  if (stats.themes.length === 0) return null;
-  return (
-    <p
-      style={{
-        fontFamily: FONT,
-        fontSize: 11.5,
-        lineHeight: '17px',
-        color: vmTokens.textTertiary,
-      }}
-    >
-      {stats.themes.slice(0, max).map((t) => t.name).join(' · ')}
-      {stats.themes.length > max && ` +${stats.themes.length - max}`}
-    </p>
-  );
+function themeNames(stats: JesusPeriodStats, max: number): string {
+  const names = stats.themes.slice(0, max).map((t) => t.name).join(' · ');
+  return stats.themes.length > max ? `${names} +${stats.themes.length - max}` : names;
 }
 
-// ─── The arc band ────────────────────────────────────────────────────────────
+/** The app's meta line ("(Genesis 1:1-31)"): 13 / 20, secondary. */
+const metaStyle: CSSProperties = {
+  fontFamily: FONT,
+  fontSize: 13,
+  lineHeight: '20px',
+  color: vmTokens.textSecondary,
+};
+
+/** The category intro's stats line: 12px small caps, secondary. */
+const statsStyle: CSSProperties = {
+  fontFamily: FONT,
+  fontSize: 12,
+  letterSpacing: '0.04em',
+  textTransform: 'uppercase',
+  color: vmTokens.textSecondary,
+};
+
+// ─── Period heading (the timeline) ───────────────────────────────────────────
 
 /**
- * The whole ministry in one line, each period sized by how much of the record
- * it holds. It is the orientation device the pill row never was: the reader can
- * see at a glance that thirty years pass in a sentence and that the last week
- * takes a quarter of the corpus.
+ * A period's heading on the timeline, set like a category's topic heading. The
+ * whole heading opens the period.
  */
-export function JesusArcBand({
-  views,
-  activeSlug,
-  onSelect,
-}: {
-  views: JesusPeriodView[];
-  activeSlug?: string;
-  onSelect: (slug: string) => void;
-}) {
-  const counts = views.map((v) => v.stats.events);
-  const first = views[0]?.period.name;
-  const last = views[views.length - 1]?.period.name;
-
-  return (
-    <div style={{ margin: '14px 0 4px' }} data-testid="jesus-life-arc">
-      <div style={{ display: 'flex', gap: 2 }}>
-        {views.map((view) => {
-          const weight = jesusPeriodWeight(view.stats.events, counts);
-          const active = view.period.slug === activeSlug;
-          return (
-            <button
-              key={view.period.slug}
-              type="button"
-              className="jl-arc-seg"
-              onClick={() => onSelect(view.period.slug)}
-              title={`${view.period.name} — ${pluralize(view.stats.events, 'event')}`}
-              aria-label={`${view.period.name}, ${pluralize(view.stats.events, 'event')}`}
-              style={{
-                // Square-rooted so the Galilean ministry doesn't squeeze the
-                // hidden years down to a hairline: the band is meant to be read
-                // period by period, not measured. The floor keeps the ordinal
-                // legible in a stretch with nothing catalogued.
-                flex: `${Math.sqrt(Math.max(view.stats.events, 0.5))} 1 0`,
-                minWidth: 26,
-                height: 34,
-                borderRadius: 6,
-                cursor: 'pointer',
-                fontFamily: FONT,
-                fontSize: 11,
-                fontWeight: 600,
-                position: 'relative',
-                overflow: 'hidden',
-                color: active ? vmTokens.goldOnLight : vmTokens.textSecondary,
-                backgroundColor: active ? vmTokens.gold : 'transparent',
-                border: `1px solid ${active ? vmTokens.gold : vmTokens.divider}`,
-              }}
-            >
-              {/* A tinted fill rather than a translucent background colour, so
-                  the ordinal on top keeps its full contrast. */}
-              {!active && (
-                <span
-                  aria-hidden="true"
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    backgroundColor: vmTokens.gold,
-                    opacity: 0.1 + weight * 0.4,
-                  }}
-                />
-              )}
-              <span style={{ position: 'relative' }}>{view.ordinal}</span>
-            </button>
-          );
-        })}
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          gap: 12,
-          marginTop: 5,
-          fontFamily: FONT,
-          fontSize: 11,
-          color: vmTokens.textTertiary,
-        }}
-      >
-        <span>{first}</span>
-        <span style={{ textAlign: 'right' }}>{last}</span>
-      </div>
-    </div>
-  );
-}
-
-// ─── Period card ─────────────────────────────────────────────────────────────
-
-/** One period of the arc, as the map renders it. */
-export function JesusPeriodCard({
+export function JesusPeriodHeading({
   view,
-  weight,
   onOpen,
   testId,
 }: {
   view: JesusPeriodView;
-  weight: number;
   onOpen: () => void;
   testId: string;
 }) {
-  const { period, stats, ordinal } = view;
-  const empty = stats.events === 0;
+  const { period, stats } = view;
 
   return (
     <button
       type="button"
       onClick={onOpen}
       data-testid={testId}
-      className={`jl-card${empty ? ' is-empty' : ''}`}
+      style={{
+        display: 'block',
+        width: '100%',
+        padding: 0,
+        background: 'none',
+        border: 'none',
+        textAlign: 'left',
+        cursor: 'pointer',
+        fontFamily: FONT,
+      }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
-        <JesusOrdinal n={ordinal} />
+      <span
+        style={{
+          display: 'flex',
+          alignItems: 'baseline',
+          justifyContent: 'space-between',
+          gap: 12,
+        }}
+      >
         <span
           style={{
-            flex: 1,
-            minWidth: 0,
-            fontFamily: FONT,
-            fontSize: 15,
+            fontSize: 17,
             fontWeight: 600,
-            lineHeight: '20px',
+            lineHeight: '24px',
             color: vmTokens.textPrimary,
           }}
         >
           {period.name}
         </span>
-      </div>
-
-      {period.subtitle && (
         <span
           style={{
-            fontFamily: FONT,
-            fontSize: 11.5,
-            lineHeight: '17px',
-            letterSpacing: '0.02em',
-            color: vmTokens.gold,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 4,
+            fontSize: 12,
+            color: vmTokens.textSecondary,
+            whiteSpace: 'nowrap',
           }}
         >
+          {pluralize(stats.events, 'event')}
+          <ChevronRight size={18} style={{ color: vmTokens.textSecondary }} />
+        </span>
+      </span>
+
+      {period.subtitle && (
+        <span style={{ display: 'block', marginTop: 2, ...metaStyle }}>
           {period.subtitle}
         </span>
       )}
 
       {period.description && (
         <span
-          className="jl-clamp"
           style={{
-            fontFamily: FONT,
-            fontSize: 13,
-            lineHeight: '19px',
+            display: 'block',
+            marginTop: 6,
+            fontSize: 15,
+            lineHeight: '23px',
             color: vmTokens.textSecondary,
           }}
         >
@@ -345,138 +156,37 @@ export function JesusPeriodCard({
         </span>
       )}
 
-      <span style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: 8 }}>
-        {empty ? (
-          <span
-            style={{
-              fontFamily: FONT,
-              fontSize: 12,
-              fontStyle: 'italic',
-              color: vmTokens.textTertiary,
-            }}
-          >
-            Nothing catalogued yet.
-          </span>
-        ) : (
-          <>
-            <WeightBar weight={weight} />
-            <JesusStatRow stats={stats} compact />
-            <ThemeLine stats={stats} />
-          </>
-        )}
-        <JesusGospelStrip gospels={stats.gospels} />
-      </span>
+      {stats.events > 0 && (
+        <span style={{ display: 'block', marginTop: 6, ...metaStyle }}>
+          {periodCounts(stats)}
+          {stats.gospels.length > 0 && ` · ${gospelNames(stats.gospels)}`}
+        </span>
+      )}
+
+      {stats.themes.length > 0 && (
+        <span style={{ display: 'block', ...metaStyle }}>{themeNames(stats, 3)}</span>
+      )}
     </button>
   );
 }
+
+// ─── Opened period ───────────────────────────────────────────────────────────
 
 /**
- * The compact form used once a period is open, where the map has already done
- * its work and the row is only a way back out. It wraps rather than scrolls,
- * so no period is ever hidden off the edge.
+ * The opened period's introduction — the category intro's shape: the stretch's
+ * place in the arc, its span and description, then its numbers.
  */
-export function JesusPeriodChip({
-  label,
-  count,
-  active,
-  onClick,
-  testId,
-}: {
-  label: string;
-  count?: number;
-  active: boolean;
-  onClick: () => void;
-  testId: string;
-}) {
-  const style: CSSProperties = {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: 6,
-    padding: '5px 11px',
-    borderRadius: 999,
-    cursor: 'pointer',
-    fontFamily: FONT,
-    fontSize: 12.5,
-    lineHeight: '18px',
-    backgroundColor: active ? vmTokens.gold : 'transparent',
-    border: `1px solid ${active ? vmTokens.gold : vmTokens.divider}`,
-    color: active ? vmTokens.goldOnLight : vmTokens.textSecondary,
-  };
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      data-testid={testId}
-      aria-pressed={active}
-      className="jl-chip"
-      style={style}
-    >
-      {label}
-      {count ? (
-        <span style={{ fontSize: 11, opacity: active ? 0.75 : 1, color: 'inherit' }}>{count}</span>
-      ) : null}
-    </button>
-  );
-}
-
-// ─── Period hero ─────────────────────────────────────────────────────────────
-
-/** The opened period's masthead: everything its card said, at full size. */
 export function JesusPeriodHero({ view, total }: { view: JesusPeriodView; total: number }) {
   const { period, stats, ordinal } = view;
 
   return (
-    <section
-      data-testid="jesus-life-period-hero"
-      style={{
-        marginTop: 14,
-        padding: 16,
-        borderRadius: 14,
-        border: `1px solid ${vmTokens.gold}`,
-        backgroundColor: 'rgba(176,154,109,0.10)',
-      }}
-    >
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <JesusOrdinal n={ordinal} size={32} />
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <p
-            style={{
-              fontFamily: FONT,
-              fontSize: 10.5,
-              fontWeight: 600,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: vmTokens.textTertiary,
-            }}
-          >
-            Period {ordinal} of {total}
-          </p>
-          <h2
-            style={{
-              fontFamily: FONT,
-              fontSize: 20,
-              fontWeight: 600,
-              lineHeight: '26px',
-              color: vmTokens.textPrimary,
-            }}
-          >
-            {period.name}
-          </h2>
-        </div>
-      </div>
+    <section data-testid="jesus-life-period-hero" style={{ paddingTop: 4 }}>
+      <p style={statsStyle}>
+        Period {ordinal} of {total}
+      </p>
 
       {period.subtitle && (
-        <p
-          style={{
-            marginTop: 8,
-            fontFamily: FONT,
-            fontSize: 13,
-            letterSpacing: '0.02em',
-            color: vmTokens.gold,
-          }}
-        >
-          {period.subtitle}
-        </p>
+        <p style={{ marginTop: 6, ...metaStyle }}>{period.subtitle}</p>
       )}
 
       {period.description && (
@@ -484,8 +194,8 @@ export function JesusPeriodHero({ view, total }: { view: JesusPeriodView; total:
           style={{
             marginTop: 8,
             fontFamily: FONT,
-            fontSize: 14.5,
-            lineHeight: '22px',
+            fontSize: 15,
+            lineHeight: '23px',
             color: vmTokens.textSecondary,
           }}
         >
@@ -493,44 +203,19 @@ export function JesusPeriodHero({ view, total }: { view: JesusPeriodView; total:
         </p>
       )}
 
-      <div
-        style={{
-          marginTop: 14,
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          gap: 14,
-        }}
-      >
-        <JesusStatRow stats={stats} />
-        <JesusGospelStrip gospels={stats.gospels} />
-      </div>
+      <p style={{ marginTop: 10, ...statsStyle }}>
+        {periodCounts(stats)}
+        {stats.gospels.length > 0 && ` · ${gospelNames(stats.gospels)}`}
+      </p>
 
       {stats.themes.length > 0 && (
-        <p
-          style={{
-            marginTop: 10,
-            fontFamily: FONT,
-            fontSize: 12,
-            lineHeight: '18px',
-            color: vmTokens.textTertiary,
-          }}
-        >
-          Themes: {stats.themes.slice(0, 5).map((t) => t.name).join(' · ')}
-        </p>
+        <p style={{ marginTop: 6, ...metaStyle }}>Themes: {themeNames(stats, 5)}</p>
       )}
 
       {(stats.harmonized > 0 || stats.unsettled > 0) && (
         <p
           data-testid="jesus-life-period-caveat"
-          style={{
-            marginTop: 6,
-            fontFamily: FONT,
-            fontSize: 12,
-            lineHeight: '18px',
-            fontStyle: 'italic',
-            color: vmTokens.textTertiary,
-          }}
+          style={{ marginTop: 2, ...metaStyle, fontStyle: 'italic' }}
         >
           {[
             stats.harmonized > 0 &&
@@ -546,7 +231,7 @@ export function JesusPeriodHero({ view, total }: { view: JesusPeriodView; total:
   );
 }
 
-/** Walk to the period either side of the open one. */
+/** Walk to the period either side of the open one — plain text links, like "Expand All". */
 export function JesusPeriodStep({
   previous,
   next,
@@ -558,28 +243,48 @@ export function JesusPeriodStep({
 }) {
   if (!previous && !next) return null;
 
+  const stepStyle: CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+    maxWidth: '48%',
+    padding: '6px 0',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    fontFamily: FONT,
+    fontSize: 14,
+    lineHeight: '20px',
+    color: vmTokens.textPrimary,
+  };
+  const captionStyle: CSSProperties = {
+    display: 'block',
+    fontSize: 12,
+    lineHeight: '18px',
+    color: vmTokens.textSecondary,
+  };
+
   return (
     <div
       data-testid="jesus-life-period-step"
       style={{
         display: 'flex',
         justifyContent: 'space-between',
-        gap: 10,
-        marginTop: 22,
+        gap: 12,
+        // The last event row above already rules the list off.
+        marginTop: 14,
       }}
     >
       {previous ? (
         <button
           type="button"
-          className="jl-step"
+          style={{ ...stepStyle, textAlign: 'left' }}
           onClick={() => onGo(previous.period.slug)}
           data-testid="jesus-life-period-previous"
         >
-          <ArrowLeft size={15} style={{ color: vmTokens.gold, flexShrink: 0 }} />
+          <ArrowLeft size={18} style={{ color: vmTokens.gold, flexShrink: 0 }} />
           <span style={{ minWidth: 0 }}>
-            <span style={{ display: 'block', fontSize: 10.5, color: vmTokens.textTertiary }}>
-              Before this
-            </span>
+            <span style={captionStyle}>Before this</span>
             {previous.period.name}
           </span>
         </button>
@@ -589,18 +294,15 @@ export function JesusPeriodStep({
       {next && (
         <button
           type="button"
-          className="jl-step"
-          style={{ marginLeft: 'auto', textAlign: 'right' }}
+          style={{ ...stepStyle, marginLeft: 'auto', textAlign: 'right' }}
           onClick={() => onGo(next.period.slug)}
           data-testid="jesus-life-period-next"
         >
           <span style={{ minWidth: 0 }}>
-            <span style={{ display: 'block', fontSize: 10.5, color: vmTokens.textTertiary }}>
-              What follows
-            </span>
+            <span style={captionStyle}>What follows</span>
             {next.period.name}
           </span>
-          <ArrowRight size={15} style={{ color: vmTokens.gold, flexShrink: 0 }} />
+          <ArrowRight size={18} style={{ color: vmTokens.gold, flexShrink: 0 }} />
         </button>
       )}
     </div>

@@ -32,6 +32,7 @@ import {
   jesusTestId,
 } from '@/lib/jesusSlugs';
 import { fetchJesusEvent } from '@/services/jesusService';
+import { jesusEyebrowStyle } from '@/lib/jesusRows';
 import { vmTokens } from '@/styles/themeStyles';
 
 const FONT = 'Roboto, sans-serif';
@@ -166,9 +167,9 @@ export default function JesusEventScreen() {
               data-testid="jesus-event-title"
               style={{
                 fontFamily: FONT,
-                fontSize: 24,
+                fontSize: 28,
                 fontWeight: 500,
-                lineHeight: '30px',
+                lineHeight: '36px',
                 color: vmTokens.textPrimary,
                 paddingTop: 16,
               }}
@@ -183,17 +184,14 @@ export default function JesusEventScreen() {
               onClick={() => event.period_slug && navigate(buildJesusLifeUrl(event.period_slug))}
               data-testid="jesus-event-period"
               style={{
-                marginTop: inSplit ? 20 : 8,
-                padding: 0,
+                marginTop: inSplit ? 16 : 4,
+                // Small text, full-size tap target.
+                padding: '4px 0',
+                minHeight: 24,
                 background: 'none',
                 border: 'none',
                 cursor: event.period_slug ? 'pointer' : 'default',
-                fontFamily: FONT,
-                fontSize: 11,
-                fontWeight: 700,
-                letterSpacing: '0.09em',
-                textTransform: 'uppercase',
-                color: vmTokens.gold,
+                ...jesusEyebrowStyle,
                 display: 'block',
               }}
             >
@@ -206,9 +204,9 @@ export default function JesusEventScreen() {
               data-testid="jesus-event-title"
               style={{
                 fontFamily: FONT,
-                fontSize: 26,
+                fontSize: 28,
                 fontWeight: 500,
-                lineHeight: '32px',
+                lineHeight: '36px',
                 color: vmTokens.textPrimary,
                 margin: '6px 0 0',
               }}
@@ -266,7 +264,7 @@ export default function JesusEventScreen() {
             <>
               <JesusSectionLabel>Related events</JesusSectionLabel>
               <div
-                style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
+                style={{ display: 'flex', flexDirection: 'column' }}
                 data-testid="jesus-event-related"
               >
                 {limitRelated(detail.related).map((r) => (

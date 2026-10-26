@@ -71,7 +71,7 @@ function SummaryBody({ detail }: { detail: JesusEventDetail }) {
       {where && (
         <p
           data-testid="jesus-event-where"
-          style={{ fontFamily: FONT, fontSize: 12.5, color: vmTokens.textTertiary, margin: '0 0 14px' }}
+          style={{ fontFamily: FONT, fontSize: 13, color: vmTokens.textSecondary, margin: '0 0 14px' }}
         >
           {where}
         </p>
@@ -95,7 +95,7 @@ function SummaryBody({ detail }: { detail: JesusEventDetail }) {
                   <p
                     style={{
                       fontFamily: FONT,
-                      fontSize: 10.5,
+                      fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: '0.08em',
                       textTransform: 'uppercase',
@@ -329,65 +329,82 @@ function CompareBody({ detail }: { detail: JesusEventDetail }) {
         omitted, so a gap always reads as a fact about the text.
       </p>
 
-      <div
-        data-testid="jesus-compare-grid"
-        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 10 }}
-      >
-        {compare.accounts.map((a) => (
+      {/* One hairline-separated row per gospel — the By Line tab's shape —
+          rather than a grid of boxed cards. */}
+      <div data-testid="jesus-compare-grid" style={{ display: 'flex', flexDirection: 'column' }}>
+        {compare.accounts.map((a, i) => (
           <div
             key={a.gospel}
             style={{
-              background: a.records_it ? vmTokens.surfaceRaisedBg : 'transparent',
-              border: `1px ${a.records_it ? 'solid' : 'dashed'} ${vmTokens.divider}`,
-              borderRadius: 8,
-              padding: '11px 12px',
+              padding: '12px 0 14px',
+              borderTop: `1px solid ${vmTokens.divider}`,
+              borderBottom:
+                i === compare.accounts.length - 1 ? `1px solid ${vmTokens.divider}` : undefined,
               minWidth: 0,
             }}
           >
             <p
               style={{
-                fontFamily: FONT,
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: '0.05em',
-                textTransform: 'uppercase',
-                color: a.records_it ? vmTokens.gold : vmTokens.textTertiary,
-                margin: '0 0 3px',
+                display: 'flex',
+                alignItems: 'baseline',
+                justifyContent: 'space-between',
+                gap: 12,
+                margin: 0,
               }}
             >
-              {a.gospel}
-            </p>
-            {a.records_it ? (
-              <>
-                <p
+              <span
+                style={{
+                  fontFamily: FONT,
+                  fontSize: 12,
+                  fontWeight: 700,
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  color: a.records_it ? vmTokens.gold : vmTokens.textSecondary,
+                }}
+              >
+                {a.gospel}
+              </span>
+              {a.records_it && (
+                <span
                   style={{
                     fontFamily: FONT,
-                    fontSize: 11.5,
-                    color: vmTokens.textTertiary,
-                    margin: '0 0 8px',
+                    fontSize: 13,
+                    color: vmTokens.textSecondary,
+                    fontFeatureSettings: "'tnum'",
+                    textAlign: 'right',
                   }}
                 >
                   {a.passages.map((p) => p.display).join(', ')}
-                </p>
-                {a.passages.map(
-                  (p) =>
-                    p.unique_to_account && (
-                      <p
-                        key={p.display}
-                        style={{ fontSize: 14, lineHeight: '20px', color: vmTokens.textSecondary, margin: 0 }}
-                      >
-                        {p.unique_to_account}
-                      </p>
-                    ),
-                )}
-              </>
+                </span>
+              )}
+            </p>
+            {a.records_it ? (
+              a.passages.map(
+                (p) =>
+                  p.unique_to_account && (
+                    <p
+                      key={p.display}
+                      style={{
+                        fontFamily: "'Roboto Serif', Georgia, serif",
+                        fontSize: '0.85em',
+                        lineHeight: 1.6,
+                        color: vmTokens.textPrimary,
+                        margin: '8px 0 0',
+                      }}
+                    >
+                      {p.unique_to_account}
+                    </p>
+                  ),
+              )
             ) : (
               <p
                 style={{
-                  fontSize: 14,
+                  fontFamily: "'Roboto Serif', Georgia, serif",
+                  fontSize: '0.85em',
+                  lineHeight: 1.6,
                   fontStyle: 'italic',
-                  color: vmTokens.textTertiary,
-                  margin: 0,
+                  color: vmTokens.textSecondary,
+                  margin: '6px 0 0',
                 }}
               >
                 Does not record this event.
