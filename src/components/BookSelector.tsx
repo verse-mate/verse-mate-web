@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useLayoutEffect, useRef } from 'react';
+import { useState, useMemo, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import {
   fetchBooks,
@@ -100,8 +100,8 @@ const TOPIC_CATEGORIES: { key: TopicCategory; label: string }[] = [
  */
 export default function BookSelector({ onClose, onSelect, initialTab, initialQuery, compact }: Props) {
   // Header top padding: full-screen honors the notch inset (min 48px); the
-  // compact modal drops it to a tidy 12px since there's no status bar to clear.
-  const headerPadTop = compact ? 12 : 'max(env(safe-area-inset-top, 0px), 48px)';
+  // compact modal drops it to 4px since there's no status bar to clear.
+  const headerPadTop = compact ? 4 : 'max(env(safe-area-inset-top, 0px), 48px)';
   // Trimmed type scale + row heights for the compact modal.
   const titleSize = compact ? 16 : 18;
   const rowText = compact ? 'text-[14px]' : 'text-[16px]';
@@ -141,6 +141,11 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   const hasCoarsePointer = useMediaQuery('(pointer: coarse)');
   const keyboardTop = useKeyboardTop();
   const listRef = useRef<HTMLDivElement>(null);
+  // The compact modal is short (especially when the browser is zoomed in), so
+  // the title, tabs and search field scroll away with the results instead of
+  // staying fixed above them: the whole card is the scroller there.
+  const rootRef = useRef<HTMLDivElement>(null);
+  const scroller = useCallback(() => (compact ? rootRef.current : listRef.current), [compact]);
   // Search mode (phones and tablets): tapping the field slides the title row
   // and the tabs away so the bar sits at the top, with an arrow beside it to
   // come back. It holds while the keyboard comes and goes; only that arrow
@@ -393,19 +398,19 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   // that much so its last rows can still scroll above the keyboard.
   const [keyboardOverlap, setKeyboardOverlap] = useState(0);
   useLayoutEffect(() => {
-    const list = listRef.current;
+    const list = scroller();
     if (!list || keyboardTop === null) {
       setKeyboardOverlap(0);
       return;
     }
     setKeyboardOverlap(Math.max(0, Math.round(list.getBoundingClientRect().bottom - keyboardTop)));
-  }, [keyboardTop, searchMode]);
+  }, [keyboardTop, searchMode, scroller]);
 
   // New text or a new filter is a new list: start it at the top, not at the
   // scroll position of the previous results.
   useEffect(() => {
-    listRef.current?.scrollTo?.({ top: 0 });
-  }, [query, verseSearch.filters]);
+    scroller()?.scrollTo?.({ top: 0 });
+  }, [query, verseSearch.filters, scroller]);
 
   // Dragging the results puts the keyboard away, as native search screens do.
   const dismissKeyboard = () => {
@@ -425,7 +430,7 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
           className="shrink-0 safe-top w-full max-w-[680px]"
           style={{ paddingTop: headerPadTop }}
         >
-          <div className="relative flex items-center justify-center px-3" style={{ height: compact ? 48 : 56 }}>
+          <div className="relative flex items-center justify-center px-3" style={{ height: compact ? 44 : 56 }}>
             <button
               onClick={() => setSelectedBook(null)}
               aria-label="Back"
@@ -458,7 +463,15 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   }
 
   return (
-    <div data-testid="bible-navigation-modal" className="absolute inset-0 z-50 bg-background flex flex-col items-center animate-fade-in text-foreground">
+    <div
+      ref={rootRef}
+      onTouchMove={compact ? dismissKeyboard : undefined}
+      data-testid="bible-navigation-modal"
+      className={`absolute inset-0 z-50 bg-background flex flex-col items-center animate-fade-in text-foreground ${
+        compact ? 'overflow-y-auto' : ''
+      }`}
+      style={compact && keyboardOverlap ? { paddingBottom: keyboardOverlap } : undefined}
+    >
       {/* Header: Search title.
           Content is capped to a centered column (max-w-[680px]) so the
           full-screen overlay doesn't stretch the tabs / search bar edge-to-edge
@@ -467,14 +480,14 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
         ref={chromeRef}
         data-testid="search-chrome"
         aria-hidden={searchMode || undefined}
-        className={`search-chrome w-full ${searchMode ? 'is-folded' : ''}`}
+        className={`search-chrome shrink-0 w-full ${searchMode ? 'is-folded' : ''}`}
       >
         <div className="flex flex-col items-center">
           <header
             className="shrink-0 safe-top w-full max-w-[680px]"
             style={{ paddingTop: headerPadTop }}
           >
-            <div className="relative flex items-center justify-center px-3" style={{ height: compact ? 48 : 56 }}>
+            <div className="relative flex items-center justify-center px-3" style={{ height: compact ? 44 : 56 }}>
               <button
                 onClick={onClose}
                 aria-label="Close"
@@ -579,7 +592,7 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
 
       {/* Search input. In search mode the arrow slides in beside it. */}
       <div
-        className="flex items-center px-4 pt-3 w-full max-w-[680px] transition-[padding] duration-200"
+        className={`shrink-0 flex items-center px-4 ${compact ? 'pt-2' : 'pt-3'} w-full max-w-[680px] transition-[padding] duration-200`}
         style={searchMode ? { paddingTop: 'max(env(safe-area-inset-top, 0px), 12px)' } : undefined}
       >
         <button
@@ -640,9 +653,9 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
       {/* List */}
       <div
         ref={listRef}
-        onTouchMove={dismissKeyboard}
-        className="flex-1 overflow-y-auto px-4 pt-3 pb-6 w-full max-w-[680px]"
-        style={keyboardOverlap ? { paddingBottom: keyboardOverlap + 24 } : undefined}
+        onTouchMove={compact ? undefined : dismissKeyboard}
+        className={`px-4 pb-6 w-full max-w-[680px] ${compact ? 'shrink-0 pt-1' : 'flex-1 overflow-y-auto pt-3'}`}
+        style={!compact && keyboardOverlap ? { paddingBottom: keyboardOverlap + 24 } : undefined}
       >
         {tab === 'Jesus' ? (
           query.trim() ? (
