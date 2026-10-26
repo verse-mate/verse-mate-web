@@ -175,12 +175,31 @@ export default function LexiconPopover({
   // reader has text selected, where the browser menu (Copy, etc.) is what they
   // want. Android also reports a long-press as a contextmenu event; the hold
   // timer below has already opened the card by then, so this is a no-op.
+  //
+  // Safari on macOS selects the word under the cursor on the right-button
+  // mousedown, before contextmenu fires, so by then every right-click looks
+  // like one on selected text. Note whether a selection existed *before* that
+  // mousedown and judge by that instead.
+  const hadSelectionRef = useRef<boolean | null>(null);
+  const hasSelection = () => {
+    const sel = window.getSelection();
+    return !!sel && !sel.isCollapsed && sel.toString().trim().length > 0;
+  };
+  const onMouseDown = useCallback((e: React.MouseEvent) => {
+    // Right button, or Ctrl+click (the Mac's secondary click).
+    const secondary = e.button === 2 || (e.button === 0 && e.ctrlKey);
+    hadSelectionRef.current = secondary ? hasSelection() : null;
+  }, []);
   const onContextMenu = useCallback(
     (e: React.MouseEvent) => {
-      const sel = window.getSelection();
-      if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
+      const hadSelection = hadSelectionRef.current ?? hasSelection();
+      hadSelectionRef.current = null;
+      if (hadSelection) return;
       e.preventDefault();
       e.stopPropagation();
+      // Drop the word selection Safari made, so it doesn't stay highlighted
+      // (or raise the highlight toolbar) behind the card.
+      window.getSelection()?.removeAllRanges();
       openCard();
     },
     [openCard],
@@ -235,6 +254,7 @@ export default function LexiconPopover({
   // reaches the verse exactly as it would on plain text.
   const wordProps = {
     ref: triggerRef,
+    onMouseDown,
     onContextMenu,
     onTouchStart,
     onTouchMove,
