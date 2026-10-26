@@ -79,9 +79,11 @@ export default function VerseSearchSection({ query, search, activeId, compact, o
       {/* Title, count and filters stay pinned while the results scroll.
           -top-3 / -mx-4 undo the list's own padding, so the bar pins flush
           against the search field and full width, with no strip of
-          scrolling verses showing above or beside it. */}
-      <div className="sticky -top-3 z-10 -mx-4 px-4 bg-background border-b border-border">
-        <div className="flex items-baseline justify-between pt-4 pb-2">
+          scrolling verses showing above or beside it. The compact modal is
+          too short to spare the room, so there they scroll away with the
+          rest of the top of the card. */}
+      <div className={`${compact ? '' : 'sticky -top-3 z-10'} -mx-4 px-4 bg-background border-b border-border`}>
+        <div className={`flex items-baseline justify-between ${compact ? 'pt-3' : 'pt-4'} pb-2`}>
           <p className="text-[11px] uppercase tracking-wider text-muted-foreground/70">Verses</p>
           {total !== null && total > 0 && (
             <p className="text-[12px] text-muted-foreground" data-testid="verse-search-total">
