@@ -41,6 +41,27 @@ describe('LexiconPopover with a mouse', () => {
     expect(word).toHaveClass('lex-word-open');
   });
 
+  it('opens on right-click in Safari, which selects the word before the menu event', () => {
+    const { word } = renderWord();
+    fireEvent.mouseDown(word, { button: 2 });
+    // Safari's right-click selects the word under the cursor.
+    window.getSelection()?.selectAllChildren(word);
+    const notCancelled = fireEvent.contextMenu(word);
+    expect(notCancelled).toBe(false);
+    expect(screen.getByText(GLOSS)).toBeInTheDocument();
+    expect(window.getSelection()?.isCollapsed).toBe(true);
+  });
+
+  it('keeps the browser menu when the reader had already selected text', () => {
+    const { word } = renderWord();
+    window.getSelection()?.selectAllChildren(word);
+    fireEvent.mouseDown(word, { button: 2 });
+    const notCancelled = fireEvent.contextMenu(word);
+    expect(notCancelled).toBe(true);
+    expect(screen.queryByText(GLOSS)).not.toBeInTheDocument();
+    window.getSelection()?.removeAllRanges();
+  });
+
   it('lets a left click fall through to the verse', () => {
     const { word, onVerseClick } = renderWord();
     fireEvent.click(word);
