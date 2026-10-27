@@ -710,13 +710,16 @@ def main() -> int:
     #   - the BSB tables leave words inside multi-word phrases without English
     #     (Israel in "the Israelites"); add them as tokens;
     #   - add the English renderings each word has across the OT/NT to its
-    #     aliases.
+    #     aliases;
+    #   - last, drop aliases that mostly name another word in the verse
+    #     (the alias passes only add, so this must run after them).
     lexicon_scripts = OUT_DIR.parent.parent / 'scripts'
     post_passes = [
         ['fix_dominant_senses.py'],
         ['apply_enrichment.py', 'data/reenrich_displaced_senses.json'],
         ['add_missing_tokens.py'],
         ['build_step_aliases.py'],
+        ['prune_aliases.py'],
     ]
     for script, *script_args in post_passes:
         path = lexicon_scripts / script
