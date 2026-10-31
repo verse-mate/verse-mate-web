@@ -536,6 +536,9 @@ button { font-family: inherit; }
    auto-highlight `ahl-*` classes — so a highlighted line keeps its color on
    hover instead of disappearing under the gold wash. */
 .verse-span:where(:not([class*="hl-"])):hover { background-color: rgba(176, 154, 109, 0.10); }
+/* The highlight sits on the verse text, not the whole verse: a background
+   behind the raised verse number covered half of the numeral. */
+.verse-span > [class*="hl-"] { border-radius: 2px; }
 .verse-span.selected {
   outline: 2px solid var(--vm-dust);
   outline-offset: 2px;
