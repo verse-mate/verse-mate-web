@@ -2,8 +2,9 @@ import { test, expect, type Page } from '@playwright/test';
 
 /**
  * Bible search — phrase, word and reference search in the Search screen,
- * the jump from a result to its verse with Verse Insight open, and a typed
- * reference landing on its verse with a temporary mark instead.
+ * and the jump from a result or a typed reference to its verse, which is
+ * marked in yellow until the reader leaves the chapter (no Verse Insight).
+ * A shared link with &insight=1 still opens Verse Insight.
  *
  * Needs an API with GET /bible/search and NASB1995 loaded (the default
  * translation), e.g. a local backend started on a seeded database.
@@ -28,7 +29,7 @@ async function openSearch(page: Page, url = '/bible/john/1') {
 }
 
 test.describe('Bible search', () => {
-  test('finds an exact phrase and its words, then opens the verse with Verse Insight', async ({ page }) => {
+  test('finds an exact phrase and its words, then lands on the verse marked, without Verse Insight', async ({ page }) => {
     const input = await openSearch(page);
     await input.fill('east and west');
 
@@ -42,9 +43,8 @@ test.describe('Bible search', () => {
 
     await expect(page).toHaveURL(/\/bible\/matthew\/8\?v=11$/);
     await expect(page.getByTestId('chapter-header')).toHaveText('Matthew 8');
-    const insight = page.getByRole('dialog', { name: 'Verse Insight' });
-    await expect(insight).toBeVisible();
-    await expect(insight).toContainText('Matthew 8:11');
+    await expect(page.locator('[data-verse="11"]').first()).toHaveAttribute('data-search-mark', 'true');
+    await expect(page.getByRole('dialog', { name: 'Verse Insight' })).toHaveCount(0);
   });
 
   test('jumps to a typed reference with Enter and marks the verse, without Verse Insight', async ({ page }) => {

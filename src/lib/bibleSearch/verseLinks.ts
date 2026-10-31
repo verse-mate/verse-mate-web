@@ -2,9 +2,10 @@ import { getBookSlug } from '@/lib/bookSlugs';
 
 /**
  * Links that open the reader at a verse: /bible/<book>/<chapter>?v=11
- * (or ?v=5-6 for a range). With `insight`, the link also opens Verse Insight
- * on the first verse (&insight=1) — search results use it so one click lands
- * on the verse with its explanation open, and a shared link does the same.
+ * (or ?v=5-6 for a range). Without `insight` the reader marks the verse in
+ * yellow until it leaves the chapter (search results and typed references).
+ * With `insight`, the link opens Verse Insight on the first verse instead
+ * (&insight=1, for shared links).
  */
 export function buildVerseUrl(
   bookId: number,
