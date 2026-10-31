@@ -370,7 +370,10 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
 
   const openVerseResult = (r: VerseSearchResult, index: number) => {
     analytics.track('bible_search_result_click', { match: r.match, position: index });
-    const url = buildVerseUrl(r.bookId, r.chapter, { start: r.verse, insight: true });
+    // A result from a book-scoped search ("Amos XYZ") is a place the reader
+    // is looking for inside a book they named: land on it and mark the verse,
+    // like a typed reference. A plain text search still opens Verse Insight.
+    const url = buildVerseUrl(r.bookId, r.chapter, { start: r.verse, insight: !scope });
     if (!url) return;
     onClose();
     navigate(url);

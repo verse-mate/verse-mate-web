@@ -149,6 +149,17 @@ describe('BookSelector search', () => {
     expect(searchVerses.mock.calls.at(-1)?.[0].book).toBeUndefined();
   });
 
+  it('opens a book-scoped result at its verse to mark it, without Verse Insight', async () => {
+    searchVerses.mockResolvedValue(EAST_AND_WEST);
+    const { input, onClose } = renderSelector();
+    await waitFor(() => expect(bibleService.fetchBooks).toHaveBeenCalled());
+    type(input, 'Psalms east and west');
+
+    fireEvent.click(await screen.findByTestId('verse-result-19-103-12'));
+    expect(onClose).toHaveBeenCalled();
+    expect(currentUrl).toBe('/bible/psalms/103?v=12');
+  });
+
   it('shows exact-phrase matches, then all-words matches, with the words in bold', async () => {
     searchVerses.mockResolvedValue(EAST_AND_WEST);
     const { input } = renderSelector();
