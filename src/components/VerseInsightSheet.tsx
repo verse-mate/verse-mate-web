@@ -239,10 +239,10 @@ export default function VerseInsightSheet({
                 transition: dragStartYRef.current === null ? 'transform 0.2s ease' : 'none',
               }
             : {
+                // Content-sized up to nearly full height: a forced resting
+                // height (minHeight 92%) left a short summary floating far
+                // above the action buttons, with dead space between them.
                 maxHeight: '98%',
-                // Taller resting height so the sheet occupies more of the
-                // screen (was 80%).
-                minHeight: '92%',
                 transform: dragOffset > 0 ? `translateY(${dragOffset}px)` : undefined,
                 transition: dragStartYRef.current === null ? 'transform 0.2s ease' : 'none',
               }
@@ -301,11 +301,9 @@ export default function VerseInsightSheet({
             and overscroll-behavior contain make iOS Safari give us native
             momentum scroll without rubber-banding the parent. */}
         <div
-          // Stronger bottom buffer: the inner grey card carries its own
-          // margin-bottom (mb-6 = 24px) AND the scroll container adds pb-12
-          // (48px), so the visible gap between the card's bottom edge and
-          // the action-button row is unmistakable at any scroll position.
-          className="flex-1 overflow-y-auto px-4 mt-4 pb-12"
+          // A modest bottom buffer so the card's edge clears the action row
+          // without leaving a band of empty space above the buttons.
+          className="flex-1 overflow-y-auto px-4 mt-4 pb-4"
           style={{
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
@@ -321,7 +319,7 @@ export default function VerseInsightSheet({
             </p>
           )}
           <div
-            className="rounded-xl bg-secondary border border-border p-5 mb-6"
+            className="rounded-xl bg-secondary border border-border p-5"
             // Capped to the Search / definition ceiling (insightFontPx) so the
             // summary stays a comfortable modal size regardless of the reading
             // font size or browser zoom.

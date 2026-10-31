@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef, lazy, Suspense } from 'react';
+import React, { useState, useEffect, useCallback, useRef, useLayoutEffect, lazy, Suspense } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -127,11 +127,20 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // fallback) leave the list collapsed so the sidebar doesn't open Genesis by
   // default.
   const [expandedBook, setExpandedBook] = useState<string | null>(() => {
+    // Coming back to the split view in the same tab (browser Back from a
+    // full-screen page) keeps the book the reader had open in the list.
+    try {
+      const stored = sessionStorage.getItem('versemate-sidebar-expanded-book');
+      if (stored !== null) return stored || null;
+    } catch { /* ignore */ }
     if (typeof window !== 'undefined' && /^\/bible\/[^/]+\/\d+/.test(window.location.pathname)) {
       return state.book;
     }
     return null;
   });
+  useEffect(() => {
+    try { sessionStorage.setItem('versemate-sidebar-expanded-book', expandedBook ?? ''); } catch { /* ignore */ }
+  }, [expandedBook]);
   // Right panel can be fully minimized to the right (tablet + desktop) so the
   // reading column expands to full width — mirroring how the left sidebar can
   // be dragged fully closed. Persisted across reloads. A thin reveal strip +
@@ -225,10 +234,23 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const hasJesusEvent = isJesusRoute && !!jesusDetail;
   const jesusFullWidth = isJesusRoute && !jesusDetail;
 
-  // Resizable split state (percentage of content area, not including sidebar)
-  const [leftPct, setLeftPct] = useState(65);
+  // Resizable split state (percentage of content area, not including sidebar).
+  // Persisted, so leaving the split view (a full-screen page, sign-in) and
+  // coming back with the browser's Back button restores the user's layout
+  // instead of snapping back to the default 65/35.
+  const [leftPct, setLeftPct] = useState<number>(() => {
+    try {
+      const n = parseInt(localStorage.getItem('versemate-split-left-pct') ?? '', 10);
+      if (!isNaN(n)) return Math.max(MIN_LEFT_PCT, Math.min(MAX_LEFT_PCT, n));
+    } catch { /* ignore */ }
+    return 65;
+  });
+  useEffect(() => {
+    try { localStorage.setItem('versemate-split-left-pct', String(leftPct)); } catch { /* ignore */ }
+  }, [leftPct]);
   const isDragging = useRef(false);
   const contentRef = useRef<HTMLDivElement>(null);
+  const leftPanelRef = useRef<HTMLDivElement>(null);
 
   // Resizable sidebar state — width in px, persisted across reloads.
   const [sidebarWidth, setSidebarWidth] = useState<number>(() => {
@@ -484,6 +506,40 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // max-width 660px, centered, with 16px inner padding — i.e. a 68px floor that
   // opens up as the panel widens) so the two views line up. Split panes are
   // already narrow, so this only applies to the tablet full-width view.
+  // Horizontal center of the Search modal: the middle of the Bible (left)
+  // panel as it is actually laid out, clamped so the 420px card stays on
+  // screen. Measured rather than derived from the split ratio, which ignored
+  // a collapsed right pane / hidden sidebar and put the card off to the left
+  // at some window sizes and zoom levels.
+  const [searchCenterX, setSearchCenterX] = useState<number | null>(null);
+  useLayoutEffect(() => {
+    if (!showBookSelector) return;
+    const measure = () => {
+      const panel = leftPanelRef.current;
+      const vw = window.innerWidth;
+      if (!panel || isTablet) {
+        setSearchCenterX(null);
+        return;
+      }
+      const rect = panel.getBoundingClientRect();
+      if (rect.width <= 0) {
+        setSearchCenterX(null);
+        return;
+      }
+      const half = Math.min(420, vw * 0.92) / 2;
+      const center = rect.left + rect.width / 2;
+      setSearchCenterX(Math.round(Math.min(Math.max(center, half + 8), vw - half - 8)));
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    const ro = typeof ResizeObserver !== 'undefined' && leftPanelRef.current ? new ResizeObserver(measure) : null;
+    if (ro && leftPanelRef.current) ro.observe(leftPanelRef.current);
+    return () => {
+      window.removeEventListener('resize', measure);
+      ro?.disconnect();
+    };
+  }, [showBookSelector, isTablet, effectiveRightCollapsed, effectiveLeftPct, sidebarWidth, effectiveSidebarOpen]);
+
   const readingGutter = 'max(68px, calc((100% - 660px) / 2 + 16px))';
   const fullWidthContentPad: React.CSSProperties | undefined = panelFullWidth
     ? { paddingLeft: readingGutter, paddingRight: readingGutter }
@@ -824,6 +880,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           style={{ '--reading-pct': `${effectiveRightCollapsed ? 100 : effectiveLeftPct}%` } as React.CSSProperties}
         >
           <div
+            ref={leftPanelRef}
             data-testid="desktop-left-panel"
             className="left-panel"
             style={{ width: effectiveRightCollapsed ? '100%' : `${effectiveLeftPct}%` }}
@@ -950,14 +1007,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             onClick={() => { setShowBookSelector(false); setBookSelectorQuery(''); }}
             style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 55 }}
           />
-          <div style={{
+          <div data-testid="desktop-search-modal" style={{
             position: 'fixed',
-            // Vertically centered. Tablet uses a full-screen swap (no split), so
-            // center on screen; desktop centers over the Bible (left) panel.
+            // Vertically centered, horizontally over the Bible (left) panel as
+            // it actually sits on screen (measured — see searchCenterX), so it
+            // follows a collapsed right pane, a hidden sidebar and any zoom.
             top: '50%',
-            left: isTablet
-              ? '50%'
-              : `${(sidebarOpen ? sidebarWidth : 0) + (contentRef.current ? contentRef.current.getBoundingClientRect().width * leftPct / 100 / 2 : 300)}px`,
+            left: searchCenterX ?? '50%',
             transform: 'translate(-50%, -50%)',
             width: 420,
             maxWidth: '92vw',

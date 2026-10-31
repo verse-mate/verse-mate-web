@@ -494,7 +494,6 @@
    clamp() above; here we only claw back a little surrounding padding. */
 @media (max-height: 760px) {
   .verse-insight-sheet {
-    min-height: 92%;
     max-height: 100%;
   }
   .verse-insight-sheet .vis-actions {
