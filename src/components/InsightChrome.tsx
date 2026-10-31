@@ -56,7 +56,10 @@ export function InsightHeader({
         <button
           onClick={onTitleClick}
           data-testid={titleTestId}
-          className="flex items-center gap-1.5 min-h-[44px] pr-2 -ml-1"
+          // min-w-0 lets a long title (an event or topic name) shrink and
+          // ellipsize, so it never pushes the Bible / Insight toggle and the
+          // menu button off the right edge of a narrow phone.
+          className="flex items-center gap-1.5 min-h-[44px] min-w-0 pr-2 -ml-1"
           style={{ color: vmTokens.headerFg }}
         >
           <span
@@ -66,6 +69,7 @@ export function InsightHeader({
               fontSize: 14,
               lineHeight: '24px',
               color: vmTokens.headerFg,
+              minWidth: 0,
               maxWidth: 180,
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -74,10 +78,10 @@ export function InsightHeader({
           >
             {title}
           </span>
-          <ChevronDown size={18} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
+          <ChevronDown size={18} style={{ color: vmTokens.headerFg, flexShrink: 0 }} strokeWidth={2} />
         </button>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <div
             style={{
               display: 'flex',

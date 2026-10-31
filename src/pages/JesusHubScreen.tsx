@@ -118,7 +118,7 @@ export default function JesusHubScreen() {
         >
           Explore His life, words, and actions
           {overview && overview.total_events > 0 ? (
-            <span style={{ color: vmTokens.textTertiary }}>
+            <span style={{ color: vmTokens.textSecondary }}>
               {' '}
               · {overview.total_events} events
             </span>
@@ -131,7 +131,7 @@ export default function JesusHubScreen() {
             display: 'flex',
             alignItems: 'center',
             gap: 8,
-            height: 44,
+            height: 40,
             padding: '0 14px',
             marginTop: 12,
             borderRadius: 999,
@@ -139,7 +139,7 @@ export default function JesusHubScreen() {
             border: `1px solid ${vmTokens.divider}`,
           }}
         >
-          <Search size={17} style={{ color: vmTokens.textTertiary }} strokeWidth={2} />
+          <Search size={18} style={{ color: vmTokens.textSecondary }} strokeWidth={2} />
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -164,7 +164,7 @@ export default function JesusHubScreen() {
         ) : (
           <>
             {/* Follow His Life — the hero entry point */}
-            <div style={{ marginTop: 20 }}>
+            <div style={{ marginTop: 12 }}>
               <JesusNavCard
                 title="Follow His Life"
                 blurb="A chronological journey through His ministry"
@@ -188,14 +188,14 @@ export default function JesusHubScreen() {
                   style={{
                     fontFamily: FONT,
                     fontSize: 13,
-                    lineHeight: '18px',
-                    color: vmTokens.textTertiary,
-                    marginBottom: 10,
+                    lineHeight: '20px',
+                    color: vmTokens.textSecondary,
+                    marginBottom: 4,
                   }}
                 >
                   {section.blurb}
                 </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
                   {section.types.map((type) => (
                     <JesusNavCard
                       key={type.type}
@@ -236,7 +236,7 @@ export default function JesusHubScreen() {
               <>
                 <JesusSectionLabel>Popular Studies</JesusSectionLabel>
                 <div
-                  style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
+                  style={{ display: 'flex', flexDirection: 'column' }}
                   data-testid="jesus-studies-list"
                 >
                   {overview.collections.map((collection) => (
@@ -279,7 +279,7 @@ function SearchResults({
         Results
       </JesusSectionLabel>
       <div
-        style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
+        style={{ display: 'flex', flexDirection: 'column' }}
         data-testid="jesus-search-results"
       >
         {results.map((event) => (

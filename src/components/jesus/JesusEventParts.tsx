@@ -15,7 +15,9 @@ import {
   ScriptureSection,
   ScripturePlaceholder,
 } from '@/components/scripture/ScriptureBlock';
+import { JesusRowIndex } from '@/components/jesus/JesusParts';
 import type { useOpenReference } from '@/hooks/useOpenReference';
+import { jesusEyebrowStyle, jesusHeadline, jesusQuoteStyle, jesusRowStyle } from '@/lib/jesusRows';
 import { buildJesusEventUrl, jesusTestId } from '@/lib/jesusSlugs';
 import type {
   JesusConfidence,
@@ -50,11 +52,11 @@ export function JesusProvenanceChip({ level }: { level: number }) {
         padding: '1px 7px',
         borderRadius: 999,
         fontFamily: FONT,
-        fontSize: 10,
+        fontSize: 11,
         letterSpacing: '0.04em',
         textTransform: 'uppercase',
         verticalAlign: 'middle',
-        color: vmTokens.textTertiary,
+        color: vmTokens.textSecondary,
         border: `1px solid ${vmTokens.divider}`,
       }}
     >
@@ -158,6 +160,10 @@ export function JesusPassageBlock({
  *
  * A WORD facet leads with the saying; an ACTION facet leads with the deed.
  * That difference is the reason the two tabs exist rather than one list.
+ *
+ * It lives in the insight pane, so it is set the way that pane sets its rows —
+ * hairline-separated like the Study tab's steps, sized in `em` so it follows
+ * the reading font size — rather than as boxed cards.
  */
 export function JesusFacetList({
   facets,
@@ -168,57 +174,44 @@ export function JesusFacetList({
   onOpenReference: ReturnType<typeof useOpenReference>;
   testId: string;
 }) {
-  // Nothing to say is said by omitting the card, not by a placeholder inside it.
+  // Nothing to say is said by omitting the row, not by a placeholder inside it.
   if (facets.length === 0) return null;
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }} data-testid={testId}>
-      {facets.map((facet) => (
+    <div style={{ display: 'flex', flexDirection: 'column' }} data-testid={testId}>
+      {facets.map((facet, i) => (
         <article
           key={facet.slug}
           data-testid={jesusTestId('jesus-facet', facet.slug)}
           style={{
-            padding: 14,
-            borderRadius: 12,
-            backgroundColor: vmTokens.surfaceRaisedBg,
-            border: `1px solid ${vmTokens.divider}`,
+            padding: '12px 0 14px',
+            borderTop: `1px solid ${vmTokens.divider}`,
+            borderBottom: i === facets.length - 1 ? `1px solid ${vmTokens.divider}` : undefined,
           }}
         >
-          <p
-            style={{
-              fontFamily: FONT,
-              fontSize: 11,
-              fontWeight: 500,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: vmTokens.gold,
-              marginBottom: 4,
-            }}
-          >
-            {facet.type_label}
-          </p>
+          <p style={{ ...jesusEyebrowStyle, marginBottom: 4 }}>{facet.type_label}</p>
 
           <h3
             style={{
               fontFamily: FONT,
-              fontSize: 16,
-              fontWeight: 500,
-              lineHeight: '22px',
+              fontSize: '0.8em',
+              fontWeight: 600,
+              lineHeight: 1.4,
               color: vmTokens.textPrimary,
             }}
           >
-            {facet.title}
+            {jesusHeadline(facet.title)}
           </h3>
 
           {facet.text && (
             <blockquote
               style={{
                 margin: '8px 0 0',
-                paddingLeft: 10,
-                borderLeft: `2px solid ${vmTokens.gold}`,
-                fontFamily: FONT,
-                fontSize: 15,
-                lineHeight: '23px',
+                padding: '2px 0 2px 16px',
+                borderLeft: `3px solid ${vmTokens.gold}`,
+                fontFamily: "'Roboto Serif', Georgia, serif",
+                fontSize: '0.85em',
+                lineHeight: 1.6,
                 fontStyle: 'italic',
                 color: vmTokens.textPrimary,
               }}
@@ -231,9 +224,9 @@ export function JesusFacetList({
             <p
               style={{
                 marginTop: 8,
-                fontFamily: FONT,
-                fontSize: 14,
-                lineHeight: '20px',
+                fontFamily: "'Roboto Serif', Georgia, serif",
+                fontSize: '0.75em',
+                lineHeight: 1.55,
                 color: vmTokens.textSecondary,
               }}
             >
@@ -264,18 +257,18 @@ export function JesusFacetList({
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: 5,
-                  padding: '3px 10px',
+                  gap: 6,
+                  padding: '4px 12px',
                   borderRadius: 999,
                   cursor: 'pointer',
-                  backgroundColor: vmTokens.pageBg,
+                  backgroundColor: vmTokens.surfaceRaisedBg,
                   border: `1px solid ${vmTokens.divider}`,
                   fontFamily: FONT,
                   fontSize: 12,
-                  color: vmTokens.textSecondary,
+                  color: vmTokens.textPrimary,
                 }}
               >
-                <BookOpen size={11} strokeWidth={1.75} />
+                <BookOpen size={12} strokeWidth={1.75} />
                 {facet.reference}
               </button>
             )}
@@ -287,20 +280,30 @@ export function JesusFacetList({
   );
 }
 
-/** An event, as it appears in every list. */
+/**
+ * An event, as it appears in every list — a divider row, the shape of a Topics
+ * row, not a boxed card.
+ */
 export function JesusEventCardView({
   event,
   index,
   detail = false,
+  showKind = true,
 }: {
   event: JesusEventCard;
   index?: number;
   /**
    * Show the episode's summary underneath the matched saying rather than only
-   * as a fallback for it. The topic browse sets this: there the card is the
+   * as a fallback for it. The topic browse sets this: there the row is the
    * worked example, so what He said and what was going on both belong on it.
    */
   detail?: boolean;
+  /**
+   * Label the matched saying's kind above the title. A list that is already one
+   * kind (the Teachings page) turns it off — "TEACHING" on every row says
+   * nothing the page title doesn't.
+   */
+  showKind?: boolean;
 }) {
   const navigate = useNavigate();
   // On a filtered list the API labels which facets matched, so a Questions
@@ -311,47 +314,25 @@ export function JesusEventCardView({
     <article
       data-testid={jesusTestId('jesus-event-card', event.slug)}
       style={{
+        ...jesusRowStyle,
         position: 'relative',
-        padding: 14,
-        borderRadius: 12,
-        backgroundColor: vmTokens.surfaceRaisedBg,
-        border: `1px solid ${vmTokens.divider}`,
-        width: '100%',
-        textAlign: 'left',
+        padding: '14px 0',
+        cursor: 'default',
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-        {index !== undefined && (
-          <span
-            aria-hidden="true"
-            style={{
-              flexShrink: 0,
-              width: 24,
-              height: 24,
-              borderRadius: 999,
-              backgroundColor: vmTokens.pageBg,
-              border: `1px solid ${vmTokens.divider}`,
-              color: vmTokens.textTertiary,
-              fontFamily: FONT,
-              fontSize: 11,
-              lineHeight: '22px',
-              textAlign: 'center',
-            }}
-          >
-            {index}
-          </span>
-        )}
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+        {index !== undefined && <JesusRowIndex n={index} />}
 
         <div style={{ flex: 1, minWidth: 0 }}>
-          {highlight && (
+          {highlight && showKind && (
             <p
               style={{
                 fontFamily: FONT,
-                fontSize: 11,
-                fontWeight: 500,
+                fontSize: 12,
+                fontWeight: 700,
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
-                color: vmTokens.gold,
+                color: vmTokens.textSecondary,
                 marginBottom: 4,
               }}
             >
@@ -373,24 +354,27 @@ export function JesusEventCardView({
                 fontFamily: FONT,
                 fontSize: 16,
                 fontWeight: 500,
-                lineHeight: '22px',
+                lineHeight: '24px',
                 color: vmTokens.textPrimary,
               }}
             >
-              {/* Stretches the title's hit area over the card without nesting
+              {/* Stretches the title's hit area over the row without nesting
                   a button inside a button. */}
-              <span aria-hidden="true" style={{ position: 'absolute', inset: 0, borderRadius: 12 }} />
-              {highlight && highlight.title !== event.title ? highlight.title : event.title}
+              <span aria-hidden="true" style={{ position: 'absolute', inset: 0 }} />
+              {jesusHeadline(
+                highlight && highlight.title !== event.title ? highlight.title : event.title,
+              )}
             </button>
           </h3>
 
           {highlight && highlight.title !== event.title && (
             <p
               style={{
-                marginTop: 3,
+                marginTop: 2,
                 fontFamily: FONT,
-                fontSize: 12,
-                color: vmTokens.textTertiary,
+                fontSize: 13,
+                lineHeight: '20px',
+                color: vmTokens.textSecondary,
               }}
             >
               in {event.title}
@@ -398,18 +382,7 @@ export function JesusEventCardView({
           )}
 
           {highlight?.text && (
-            <blockquote
-              style={{
-                margin: '8px 0 0',
-                paddingLeft: 10,
-                borderLeft: `2px solid ${vmTokens.gold}`,
-                fontFamily: FONT,
-                fontSize: 14,
-                lineHeight: '21px',
-                fontStyle: 'italic',
-                color: vmTokens.textPrimary,
-              }}
-            >
+            <blockquote style={jesusQuoteStyle}>
               “{highlight.text}”
             </blockquote>
           )}
@@ -417,10 +390,10 @@ export function JesusEventCardView({
           {(detail || !highlight) && event.summary && (
             <p
               style={{
-                marginTop: 8,
+                marginTop: 6,
                 fontFamily: FONT,
                 fontSize: 14,
-                lineHeight: '20px',
+                lineHeight: '21px',
                 color: vmTokens.textSecondary,
               }}
             >
@@ -430,15 +403,17 @@ export function JesusEventCardView({
 
           <p
             style={{
-              marginTop: 10,
+              marginTop: 6,
               fontFamily: FONT,
-              fontSize: 12,
-              color: vmTokens.textTertiary,
+              fontSize: 13,
+              lineHeight: '20px',
+              color: vmTokens.textSecondary,
+              fontFeatureSettings: "'tnum'",
             }}
           >
             {event.passages.map((p) => p.display).join(' · ')}
             {event.gospels.length > 1 && (
-              <span style={{ color: vmTokens.gold }}> · {event.gospels.length} accounts</span>
+              <span> · {event.gospels.length} accounts</span>
             )}
           </p>
         </div>

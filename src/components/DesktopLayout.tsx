@@ -114,7 +114,14 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // Jesus context — populated by JesusEventScreen when an event resolves, and
   // read here so the chrome (selector label, pill group, right pane) mirrors
   // the Bible and topic sides rather than inventing a third arrangement.
-  const { detail: jesusDetail, tab: jesusTab, setTab: setJesusTab } = useJesusView();
+  const {
+    detail: jesusDetail,
+    tab: jesusTab,
+    setTab: setJesusTab,
+    entry: jesusEntry,
+    entryTab: jesusEntryTab,
+    setEntryTab: setJesusEntryTab,
+  } = useJesusView();
 
   const [showBookSelector, setShowBookSelector] = useState(false);
   // Seed text for the Search modal when it's opened via "just start typing".
@@ -232,7 +239,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // the full split width the way topic routes do.
   const isJesusRoute = location.pathname.startsWith('/jesus');
   const hasJesusEvent = isJesusRoute && !!jesusDetail;
-  const jesusFullWidth = isJesusRoute && !jesusDetail;
+  // A legacy entry page reads like a topic: its passages on the left, its
+  // Summary / By Line / Detailed insight on the right, tabs in the header.
+  const hasJesusEntry = isJesusRoute && !jesusDetail && !!jesusEntry;
+  const jesusFullWidth = isJesusRoute && !jesusDetail && !jesusEntry;
 
   // Resizable split state (percentage of content area, not including sidebar).
   // Persisted, so leaving the split view (a full-screen page, sign-in) and
@@ -655,7 +665,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             >
               <span>
                 {isJesusRoute
-                  ? jesusDetail?.event.title || 'Jesus'
+                  ? jesusDetail?.event.title || jesusEntry?.title || 'Jesus'
                   : isTopicRoute
                     ? currentTopic?.name || 'Topic'
                     : `${state.book} ${state.chapter}`}
@@ -781,6 +791,44 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     className={`pill ${(jesusTab === t.id && showTabHighlight) ? 'active' : ''}`}
                     onClick={() => { setJesusTab(t.id); if (effectiveRightCollapsed) setRightPanelCollapsed(false); }}
                     data-testid={`desktop-jesus-tab-${t.id}`}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {hasJesusEntry && !isSubPage && (
+            <div
+              className="header-pill-scroll"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                left: isTablet ? 140 : (effectiveRightCollapsed ? 'calc(50% + 108px)' : `${effectiveLeftPct}%`),
+                right: 64,
+                justifyContent: isTablet ? 'center' : (effectiveRightCollapsed ? 'flex-end' : undefined),
+                zIndex: 2,
+                pointerEvents: isTablet ? 'none' : undefined,
+              }}
+            >
+              <div
+                className="pill-group"
+                role="tablist"
+                aria-label="Jesus entry insight"
+                data-testid="jesus-insight-tabs"
+                style={{ pointerEvents: 'auto' }}
+              >
+                {TOPIC_INSIGHT_TABS.map(t => (
+                  <button
+                    key={t.id}
+                    role="tab"
+                    aria-selected={jesusEntryTab === t.id}
+                    tabIndex={jesusEntryTab === t.id ? 0 : -1}
+                    className={`pill ${(jesusEntryTab === t.id && showTabHighlight) ? 'active' : ''}`}
+                    onClick={() => { setJesusEntryTab(t.id); if (effectiveRightCollapsed) setRightPanelCollapsed(false); }}
+                    data-testid={`jesus-insight-tab-${t.id}`}
                   >
                     {t.label}
                   </button>
@@ -927,6 +975,27 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 data-testid="desktop-jesus-pane"
               >
                 <JesusTabBodies tab={jesusTab} detail={jesusDetail} />
+              </div>
+            ) : hasJesusEntry && jesusEntry ? (
+              <div
+                className="commentary-body"
+                style={{ fontSize: `${state.settings.fontSize}px`, ...fullWidthContentPad }}
+                data-testid="jesus-insight-body"
+              >
+                {jesusEntry.explanation[jesusEntryTab].trim() ? (
+                  <TopicExplanationTab
+                    text={jesusEntry.explanation[jesusEntryTab]}
+                    kind={jesusEntryTab}
+                    loading={false}
+                  />
+                ) : (
+                  <p
+                    className="text-center py-10 text-[14px]"
+                    style={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic', color: vmTokens.textSecondary }}
+                  >
+                    No {TOPIC_INSIGHT_TABS.find(t => t.id === jesusEntryTab)?.label.toLowerCase()} insight for this entry yet.
+                  </p>
+                )}
               </div>
             ) : isTopicRoute ? (
               <div
