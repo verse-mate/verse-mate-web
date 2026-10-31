@@ -178,14 +178,14 @@ describe('BookSelector search', () => {
     );
   });
 
-  it('opens a result at its verse with Verse Insight', async () => {
+  it('opens a result at its verse to mark it, without Verse Insight', async () => {
     searchVerses.mockResolvedValue(EAST_AND_WEST);
     const { input, onClose } = renderSelector();
     type(input, 'east and west');
     fireEvent.click(await screen.findByTestId('verse-result-19-103-12'));
 
     expect(onClose).toHaveBeenCalled();
-    expect(currentUrl).toBe('/bible/psalms/103?v=12&insight=1');
+    expect(currentUrl).toBe('/bible/psalms/103?v=12');
   });
 
   it('drops a slow response for text the user has typed past', async () => {
@@ -225,7 +225,7 @@ describe('BookSelector search', () => {
     expect(screen.getByTestId('verse-result-19-103-12')).toHaveAttribute('aria-selected', 'true');
 
     fireEvent.keyDown(input, { key: 'Enter' });
-    expect(currentUrl).toBe('/bible/psalms/103?v=12&insight=1');
+    expect(currentUrl).toBe('/bible/psalms/103?v=12');
   });
 
   it('filters by testament from the chips', async () => {
