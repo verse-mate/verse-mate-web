@@ -406,7 +406,7 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
                 <p
                   style={{
                     fontFamily: FONT,
-                    fontSize: 10.5,
+                    fontSize: 12,
                     fontWeight: 700,
                     letterSpacing: '0.08em',
                     textTransform: 'uppercase',
@@ -587,10 +587,10 @@ function ChapterContextBadge() {
         padding: '1px 7px',
         borderRadius: 999,
         fontFamily: FONT,
-        fontSize: 10,
+        fontSize: 11,
         letterSpacing: '0.04em',
         textTransform: 'uppercase',
-        color: vmTokens.textTertiary,
+        color: vmTokens.textSecondary,
         border: `1px solid ${vmTokens.divider}`,
       }}
     >
@@ -607,14 +607,16 @@ function CountPill({ count }: { count: number }) {
         alignItems: 'center',
         justifyContent: 'center',
         minWidth: 24,
-        height: 20,
-        padding: '0 7px',
-        borderRadius: 10,
+        height: 22,
+        padding: '0 8px',
+        borderRadius: 999,
         border: `1px solid ${vmTokens.gold}`,
-        color: vmTokens.gold,
+        backgroundColor: vmTokens.gold,
+        color: vmTokens.goldOnLight,
         fontFamily: FONT,
         fontSize: 11,
-        fontWeight: 700,
+        fontWeight: 600,
+        fontFeatureSettings: "'tnum'",
       }}
     >
       {count}
@@ -651,7 +653,7 @@ function EventSetting({ detail }: { detail: JesusEventDetail }) {
               flexShrink: 0,
               width: 96,
               fontFamily: FONT,
-              fontSize: 10.5,
+              fontSize: 12,
               fontWeight: 700,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',

@@ -4,7 +4,7 @@
  * A browse screen that answers "what did He teach?" with 29 undifferentiated
  * cards leaves the reader to do the synthesis. These pieces put the synthesis
  * first: the category says what it is and each topic says what it is about,
- * then the sayings themselves follow as the cards. Every category tab —
+ * then the sayings themselves follow as rows. Every category tab —
  * Teachings, Questions, Commands, Claims, Miracles and the rest — renders
  * through here, so the shape of the screen never depends on which tab was
  * opened.
@@ -63,7 +63,7 @@ export function JesusCategoryIntro({
           fontSize: 12,
           letterSpacing: '0.04em',
           textTransform: 'uppercase',
-          color: vmTokens.textTertiary,
+          color: vmTokens.textSecondary,
         }}
       >
         {categoryStats(browse)}
@@ -125,10 +125,9 @@ export function JesusTopicSection({
           data-testid={jesusTestId('jesus-topic-name', testKey)}
           style={{
             fontFamily: FONT,
-            fontSize: 19,
+            fontSize: 17,
             fontWeight: 600,
-            lineHeight: '25px',
-            letterSpacing: '-0.01em',
+            lineHeight: '24px',
             color: vmTokens.textPrimary,
           }}
         >
@@ -138,7 +137,7 @@ export function JesusTopicSection({
           style={{
             fontFamily: FONT,
             fontSize: 12,
-            color: vmTokens.textTertiary,
+            color: vmTokens.textSecondary,
             whiteSpace: 'nowrap',
           }}
         >
@@ -191,8 +190,9 @@ export function JesusTopicSection({
           style={{
             marginTop: 6,
             fontFamily: FONT,
-            fontSize: 12,
-            color: vmTokens.textTertiary,
+            fontSize: 13,
+            lineHeight: '20px',
+            color: vmTokens.textSecondary,
           }}
         >
           {gospels}
@@ -204,12 +204,11 @@ export function JesusTopicSection({
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: 8,
-          marginTop: 12,
+          marginTop: 6,
         }}
       >
         {topic.events.map((event) => (
-          <JesusEventCardView key={event.slug} event={event} detail />
+          <JesusEventCardView key={event.slug} event={event} detail showKind={false} />
         ))}
       </div>
     </section>
@@ -249,7 +248,7 @@ export function JesusTopicBrowse({ browse }: { browse: JesusBrowse }) {
             fontFamily: FONT,
             fontSize: 12,
             fontStyle: 'italic',
-            color: vmTokens.textTertiary,
+            color: vmTokens.textSecondary,
           }}
         >
           Showing the first {browse.total_events} — this category is larger than

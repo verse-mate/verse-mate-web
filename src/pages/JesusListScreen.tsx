@@ -224,11 +224,11 @@ export default function JesusListScreen({ mode }: Props) {
               <JesusEmpty label="Nothing here yet." />
             ) : (
               <div
-                style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
+                style={{ display: 'flex', flexDirection: 'column' }}
                 data-testid="jesus-entry-list"
               >
                 {events.map((event) => (
-                  <JesusEventCardView key={event.slug} event={event} />
+                  <JesusEventCardView key={event.slug} event={event} showKind={mode !== 'kind'} />
                 ))}
               </div>
             )}
@@ -239,17 +239,18 @@ export default function JesusListScreen({ mode }: Props) {
                 onClick={loadMore}
                 disabled={loadingMore}
                 data-testid="jesus-load-more"
+                // A text action, like the insight pane's "Expand All".
                 style={{
-                  width: '100%',
-                  marginTop: 12,
-                  padding: '12px 0',
-                  borderRadius: 12,
+                  display: 'block',
+                  marginTop: 8,
+                  padding: '8px 0',
+                  background: 'none',
+                  border: 'none',
                   cursor: loadingMore ? 'default' : 'pointer',
-                  backgroundColor: vmTokens.surfaceRaisedBg,
-                  border: `1px solid ${vmTokens.divider}`,
                   fontFamily: FONT,
-                  fontSize: 14,
-                  color: loadingMore ? vmTokens.textTertiary : vmTokens.textPrimary,
+                  fontSize: 13,
+                  fontWeight: 500,
+                  color: loadingMore ? vmTokens.textSecondary : vmTokens.gold,
                 }}
               >
                 {loadingMore ? 'Loading…' : `Show more (${total - events.length} left)`}
