@@ -107,9 +107,26 @@ describe('BookSelector search', () => {
     fireEvent.keyDown(input, { key: 'Enter' });
 
     expect(onClose).toHaveBeenCalled();
-    expect(currentUrl).toBe('/bible/john/3?v=16&insight=1');
+    expect(currentUrl).toBe('/bible/john/3?v=16');
     await new Promise((r) => setTimeout(r, 300));
     expect(searchVerses).not.toHaveBeenCalled();
+  });
+
+  it('searches the words after a book name within that book, and can widen to all books', async () => {
+    searchVerses.mockResolvedValue({ ...EAST_AND_WEST, results: [], totals: { exact: 0, words: 0 }, books: [] });
+    const { input } = renderSelector();
+    await waitFor(() => expect(bibleService.fetchBooks).toHaveBeenCalled());
+    type(input, 'Psalms east and west');
+
+    await waitFor(() => expect(searchVerses).toHaveBeenCalled());
+    expect(searchVerses.mock.calls.at(-1)?.[0]).toMatchObject({ q: 'east and west', book: 19 });
+    expect(await screen.findByTestId('verse-search-scope')).toHaveTextContent('in Psalms');
+
+    fireEvent.click(screen.getByTestId('verse-search-scope-all'));
+    await waitFor(() =>
+      expect(searchVerses.mock.calls.at(-1)?.[0]).toMatchObject({ q: 'Psalms east and west' }),
+    );
+    expect(searchVerses.mock.calls.at(-1)?.[0].book).toBeUndefined();
   });
 
   it('shows exact-phrase matches, then all-words matches, with the words in bold', async () => {
@@ -304,7 +321,7 @@ describe('BookSelector search on a phone with the keyboard up', () => {
     type(input, 'jn 3.16');
     await screen.findByText('John 3:16');
     fireEvent.keyDown(input, { key: 'Enter' });
-    expect(currentUrl).toBe('/bible/john/3?v=16&insight=1');
+    expect(currentUrl).toBe('/bible/john/3?v=16');
   });
 
   it('puts the keyboard away when the results are dragged, staying in search mode', async () => {

@@ -39,7 +39,13 @@ export function isVerseSearchable(query: string): boolean {
  * "east and" can never overwrite the one for "east and west". The filters
  * reset whenever the text changes.
  */
-export function useVerseSearch(query: string, version: string, enabled: boolean) {
+export function useVerseSearch(
+  query: string,
+  version: string,
+  enabled: boolean,
+  /** Search only this book ("Amos XYZ" → XYZ within Amos; see bookScope). */
+  scopeBookId?: number,
+) {
   const [filters, setFilters] = useState<VerseSearchFilters>({});
   const [state, setState] = useState<VerseSearchState>(IDLE);
   const controllerRef = useRef<AbortController | null>(null);
@@ -48,11 +54,12 @@ export function useVerseSearch(query: string, version: string, enabled: boolean)
   const keyRef = useRef('');
 
   const trimmed = query.trim();
+  const scope = scopeBookId ? { book: scopeBookId } : {};
   const active = enabled && isVerseSearchable(trimmed);
 
   useEffect(() => {
     setFilters({});
-  }, [trimmed]);
+  }, [trimmed, scopeBookId]);
 
   useEffect(() => {
     controllerRef.current?.abort();
@@ -61,7 +68,7 @@ export function useVerseSearch(query: string, version: string, enabled: boolean)
       setState(IDLE);
       return;
     }
-    const key = JSON.stringify([version, query, filters]);
+    const key = JSON.stringify([version, query, filters, scopeBookId]);
     keyRef.current = key;
     setState(s => ({ ...s, status: 'loading' }));
     const controller = new AbortController();
@@ -69,7 +76,7 @@ export function useVerseSearch(query: string, version: string, enabled: boolean)
     const timer = setTimeout(() => {
       // Send the raw text, not the trimmed one: a trailing space tells the
       // server the last word is finished (no prefix match).
-      searchVerses({ q: query, version, ...filters, signal: controller.signal })
+      searchVerses({ q: query, version, ...filters, ...scope, signal: controller.signal })
         .then(data => {
           if (keyRef.current !== key) return;
           setState({
@@ -80,7 +87,7 @@ export function useVerseSearch(query: string, version: string, enabled: boolean)
             nextCursor: data.nextCursor,
             loadingMore: false,
           });
-          if (!filters.testament && !filters.book) {
+          if (!filters.testament && !filters.book && !scopeBookId) {
             const total = (data.totals?.exact ?? 0) + (data.totals?.words ?? 0);
             // Counts only, never the search text (open question 4 of the
             // search plan: raw queries stay out of analytics until decided).
@@ -103,14 +110,14 @@ export function useVerseSearch(query: string, version: string, enabled: boolean)
     };
     // `trimmed` is derived from `query`; listing it would re-run for nothing.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [active, query, version, filters]);
+  }, [active, query, version, filters, scopeBookId]);
 
   const loadMore = useCallback(() => {
     const cursor = state.nextCursor;
     if (!cursor || state.loadingMore) return;
     const key = keyRef.current;
     setState(s => ({ ...s, loadingMore: true }));
-    searchVerses({ q: query, version, ...filters, cursor })
+    searchVerses({ q: query, version, ...filters, ...scope, cursor })
       .then(data => {
         if (keyRef.current !== key) return;
         setState(s => ({
@@ -124,7 +131,9 @@ export function useVerseSearch(query: string, version: string, enabled: boolean)
         if (keyRef.current !== key) return;
         setState(s => ({ ...s, loadingMore: false }));
       });
-  }, [state.nextCursor, state.loadingMore, query, version, filters]);
+    // `scope` is derived from scopeBookId.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.nextCursor, state.loadingMore, query, version, filters, scopeBookId]);
 
   return { ...state, active, filters, setFilters, loadMore };
 }

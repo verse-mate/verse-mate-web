@@ -1,3 +1,7 @@
+// @vitest-environment node
+// The worker runs on Cloudflare, not in a page: test it with the runtime's own
+// Request / AbortSignal. Under jsdom, `new Request(url, request)` mixes jsdom's
+// AbortSignal into undici's Request and throws on newer Node versions.
 import { describe, expect, it } from 'vitest';
 
 import worker from '../worker.js';

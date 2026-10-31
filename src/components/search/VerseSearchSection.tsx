@@ -32,6 +32,8 @@ interface Props {
   activeId: string | null;
   compact?: boolean;
   onPick: (result: VerseSearchResult, index: number) => void;
+  /** The search is limited to one book ("Amos XYZ"); offers to widen it. */
+  scope?: { bookName: string; onSearchAll: () => void } | null;
 }
 
 /**
@@ -40,7 +42,7 @@ interface Props {
  * Rows are listbox options; the search field owns keyboard focus and points
  * at the active row through aria-activedescendant.
  */
-export default function VerseSearchSection({ query, search, activeId, compact, onPick }: Props) {
+export default function VerseSearchSection({ query, search, activeId, compact, onPick, scope }: Props) {
   const { status, results, totals, books, nextCursor, loadingMore, filters, setFilters } = search;
   const total = totals ? totals.exact + totals.words : null;
   const otCount = books?.filter(b => b.testament === 'OT').reduce((n, b) => n + b.count, 0) ?? 0;
@@ -84,7 +86,9 @@ export default function VerseSearchSection({ query, search, activeId, compact, o
           rest of the top of the card. */}
       <div className={`${compact ? '' : 'sticky -top-3 z-10'} -mx-4 px-4 bg-background border-b border-border`}>
         <div className={`flex items-baseline justify-between ${compact ? 'pt-3' : 'pt-4'} pb-2`}>
-          <p className="text-[11px] uppercase tracking-wider text-muted-foreground/70">Verses</p>
+          <p className="text-[11px] uppercase tracking-wider text-muted-foreground/70">
+            {scope ? `Verses in ${scope.bookName}` : 'Verses'}
+          </p>
           {total !== null && total > 0 && (
             <p className="text-[12px] text-muted-foreground" data-testid="verse-search-total">
               {total} {total === 1 ? 'verse' : 'verses'}
@@ -92,7 +96,22 @@ export default function VerseSearchSection({ query, search, activeId, compact, o
           )}
         </div>
 
-        {total !== null && total > 0 && (
+        {scope && (
+          <p className="text-[12px] text-muted-foreground pb-2" data-testid="verse-search-scope">
+            Searching “{query.trim()}” in {scope.bookName} ·{' '}
+            <button
+              type="button"
+              onClick={scope.onSearchAll}
+              onMouseDown={e => e.preventDefault()}
+              className="text-gold underline-offset-2 hover:underline"
+              data-testid="verse-search-scope-all"
+            >
+              Search all books
+            </button>
+          </p>
+        )}
+
+        {!scope && total !== null && total > 0 && (
           <div className="flex gap-2 chip-scroll pb-3 -mx-1 px-1" data-testid="verse-search-filters">
             {chip('All', total, !filters.testament && !filters.book, () => setFilters({}), 'verse-filter-all')}
             {otCount > 0 &&
@@ -119,7 +138,9 @@ export default function VerseSearchSection({ query, search, activeId, compact, o
             ? 'Searching…'
             : status === 'error'
               ? 'Search is unavailable right now. Try again in a moment.'
-              : `No verses match "${query.trim()}". Try fewer words or check the spelling.`}
+              : scope
+                ? `No verses in ${scope.bookName} match "${query.trim()}".`
+                : `No verses match "${query.trim()}". Try fewer words or check the spelling.`}
         </p>
       ) : (
         <div role="group" aria-label="Verse results" data-testid="verse-search-results">

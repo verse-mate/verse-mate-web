@@ -31,6 +31,7 @@ import {
 import { ReferenceParser, type BibleReference } from '@versemate/bible-search';
 import { buildVerseUrl } from '@/lib/bibleSearch/verseLinks';
 import { useVerseSearch } from '@/hooks/useVerseSearch';
+import { splitBookScope } from '@/lib/bibleSearch/bookScope';
 import VerseSearchSection from '@/components/search/VerseSearchSection';
 import { LOAD_MORE_OPTION_ID, verseOptionId } from '@/lib/bibleSearch/resultIds';
 import { analytics } from '@/lib/analytics';
@@ -292,7 +293,20 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
   const goToRefs = references.filter(
     r => r.chapter !== undefined || !filteredBooks.some(b => b.bookId === r.bookId),
   );
-  const verseSearch = useVerseSearch(query, state.version, searching && !isPureReference);
+  // "Amos XYZ": a book name followed by words searches those words in that
+  // book. "Search all books" turns it off for the text as typed.
+  const bookScope = useMemo(
+    () => (searching && !isPureReference && allBooks.length > 0 ? splitBookScope(query, parser, localizedNames) : null),
+    [searching, isPureReference, allBooks.length, query, parser, localizedNames],
+  );
+  const [unscopedQuery, setUnscopedQuery] = useState<string | null>(null);
+  const scope = bookScope && unscopedQuery !== query.trim() ? bookScope : null;
+  const verseSearch = useVerseSearch(
+    scope ? scope.text : query,
+    state.version,
+    searching && !isPureReference,
+    scope?.bookId,
+  );
 
   const goToReference = (ref: BibleReference) => {
     analytics.track('bible_search_go_to', {
@@ -310,7 +324,8 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
             start: ref.verseStart,
             // A range into the next chapter only marks its first verse.
             end: ref.chapterEnd === undefined ? ref.verseEnd : undefined,
-            insight: true,
+            // A typed reference goes straight to the verse and marks it in
+            // the text (see ReadingScreen) — no Verse Insight popup.
           }
         : undefined,
     );
@@ -800,11 +815,12 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
             )}
             {verseSearch.active && (
               <VerseSearchSection
-                query={query}
+                query={scope ? scope.text : query}
                 search={verseSearch}
                 activeId={activeId}
                 compact={compact}
                 onPick={openVerseResult}
+                scope={scope ? { bookName: scope.bookName, onSearchAll: () => setUnscopedQuery(query.trim()) } : null}
               />
             )}
             {goToRefs.length === 0 && filteredBooks.length === 0 && !verseSearch.active && (

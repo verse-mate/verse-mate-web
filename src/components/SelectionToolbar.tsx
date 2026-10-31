@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Copy, Bookmark, Check, Trash2 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import { useApp } from '@/contexts/AppContext';
@@ -27,7 +27,20 @@ interface Props {
  */
 export default function SelectionToolbar({ book, chapter, bookId }: Props) {
   const { state, dispatch, addHighlight, updateHighlight, removeHighlight, addBookmark } = useApp();
-  const [position, setPosition] = useState<{ x: number; y: number } | null>(null);
+  // `below`: the bar sits under the selection instead of above it.
+  const [position, setPosition] = useState<{ x: number; y: number; below: boolean } | null>(null);
+  // How the last selection was made. A finger drag (iPad, touch laptop) also
+  // raises the browser's own Copy / Look Up callout, which iOS and Chrome
+  // place ABOVE the selection — right where this bar goes — so it covered the
+  // highlight colors. For touch the bar goes below the selection instead.
+  const lastPointerRef = useRef<string>('mouse');
+  useEffect(() => {
+    const onPointerDown = (e: PointerEvent) => {
+      lastPointerRef.current = e.pointerType || 'mouse';
+    };
+    document.addEventListener('pointerdown', onPointerDown, true);
+    return () => document.removeEventListener('pointerdown', onPointerDown, true);
+  }, []);
   const [selectedText, setSelectedText] = useState('');
   const [selectedVerses, setSelectedVerses] = useState<number[]>([]);
   const [copied, setCopied] = useState(false);
@@ -45,12 +58,23 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
 
     // Find which verses are in the selection by looking at sup elements
     const range = sel.getRangeAt(0);
-    const container = range.commonAncestorContainer;
-    const parent = container instanceof Element ? container : container.parentElement;
-    if (!parent) return;
+    const asElement = (n: Node | null) => (n instanceof Element ? n : n?.parentElement ?? null);
+    const parent = asElement(range.commonAncestorContainer);
+    if (!parent) {
+      setPosition(null);
+      return;
+    }
 
-    // Walk up to find the font-scripture container
-    const scriptureContainer = parent.closest('.font-scripture');
+    // Walk up to find the font-scripture container. A drag that starts in the
+    // verses but ends past them (on the chapter-end link, the margin, a
+    // section heading outside the column) has a common ancestor ABOVE the
+    // scripture, which used to drop the bar and leave only the browser's own
+    // menu. Either end of the selection being in the scripture is enough.
+    const scriptureContainer =
+      parent.closest('.font-scripture') ??
+      asElement(range.startContainer)?.closest('.font-scripture') ??
+      asElement(range.endContainer)?.closest('.font-scripture') ??
+      null;
     if (!scriptureContainer) {
       setPosition(null);
       return;
@@ -92,12 +116,15 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
     }
     setSelectedVerses(verses);
 
-    // Position the toolbar above the selection
+    // Position the toolbar above the selection — or below it for a touch
+    // selection (see lastPointerRef), or when there's no room above (the
+    // first line under the header), where it would be clipped off-screen.
     const rect = range.getBoundingClientRect();
-    setPosition({
-      x: rect.left + rect.width / 2,
-      y: rect.top - 8,
-    });
+    const TOOLBAR_ROOM = 96;
+    const below = lastPointerRef.current === 'touch' || rect.top - TOOLBAR_ROOM < 8;
+    const half = 110; // about half the toolbar's width: keep it on screen
+    const x = Math.min(Math.max(rect.left + rect.width / 2, half + 8), window.innerWidth - half - 8);
+    setPosition({ x, y: below ? rect.bottom + (lastPointerRef.current === 'touch' ? 28 : 8) : rect.top - 8, below });
   }, []);
 
   useEffect(() => {
@@ -245,7 +272,7 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
         position: 'fixed',
         left: position.x,
         top: position.y,
-        transform: 'translate(-50%, -100%)',
+        transform: position.below ? 'translate(-50%, 0)' : 'translate(-50%, -100%)',
         zIndex: 60,
         backgroundColor: 'var(--card-bg)',
         border: '1px solid var(--card-border)',
@@ -385,17 +412,17 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
         </button>
       </div>
 
-      {/* Arrow pointing down */}
+      {/* Arrow pointing at the selection */}
       <div style={{
         position: 'absolute',
-        bottom: -6,
+        ...(position.below ? { top: -6 } : { bottom: -6 }),
         left: '50%',
         transform: 'translateX(-50%)',
         width: 0,
         height: 0,
         borderLeft: '6px solid transparent',
         borderRight: '6px solid transparent',
-        borderTop: '6px solid #1e1e1e',
+        ...(position.below ? { borderBottom: '6px solid #1e1e1e' } : { borderTop: '6px solid #1e1e1e' }),
       }} />
     </div>
   );

@@ -2945,4 +2945,9 @@ button { font-family: inherit; }
 
   /* Destructive a touch lighter on dark for WCAG */
   --fg-destructive: #f87171;
+
+  /* Yellow highlight: the light-theme marker (bright yellow at 62%) turns
+     the near-white scripture text unreadable on black. A deeper gold at a
+     lower alpha still reads as yellow but keeps the text legible. */
+  --hl-yellow: rgba(204, 160, 0, 0.5);
 }

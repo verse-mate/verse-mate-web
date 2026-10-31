@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useApp } from '@/contexts/AppContext';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, useNavigationType } from 'react-router-dom';
 import {
   fetchChapter,
   fetchBooks,
@@ -30,6 +30,8 @@ import { vmTokens } from '@/styles/themeStyles';
 // Style primitives come from @/styles/themeStyles so colors flip with the
 // active theme. Hex values that are intentionally constant across themes
 // (gold accent, header chrome) reference vmTokens.* instead.
+
+const READING_SCROLL_KEY = 'versemate-reading-scroll';
 
 export default function ReadingScreen() {
   const { state, dispatch, addBookmark, removeBookmark } = useApp();
@@ -96,6 +98,45 @@ export default function ReadingScreen() {
     if (state.bookId) trackRecentBook(state.bookId);
     scrollRef.current?.scrollTo(0, 0); // Always scroll to top on book/chapter change
   }, [state.book, state.chapter, state.version, state.bookId]);
+
+  // Browser Back / Forward into the reader puts the reader back where they
+  // were in the chapter (the reader remounts after a full-screen page or a
+  // topic, which otherwise starts the chapter over at the top). The position
+  // is kept per chapter in sessionStorage; only a POP navigation restores it,
+  // and a ?v= verse link scrolls to its verse instead.
+  const navigationType = useNavigationType();
+  const restoreScrollRef = useRef(navigationType === 'POP');
+  const passageKey = `${state.bookId}:${state.chapter}`;
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    let frame = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        try {
+          sessionStorage.setItem(READING_SCROLL_KEY, JSON.stringify({ key: passageKey, top: el.scrollTop }));
+        } catch { /* ignore */ }
+      });
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      el.removeEventListener('scroll', onScroll);
+    };
+  }, [passageKey]);
+  useEffect(() => {
+    if (!restoreScrollRef.current || !chapter) return;
+    if (chapter.bookId !== state.bookId || chapter.chapter !== state.chapter) return;
+    restoreScrollRef.current = false;
+    if (parseVerseTarget(location.search)) return;
+    try {
+      const saved = JSON.parse(sessionStorage.getItem(READING_SCROLL_KEY) ?? 'null');
+      if (saved?.key === passageKey && typeof saved.top === 'number' && saved.top > 0) {
+        requestAnimationFrame(() => scrollRef.current?.scrollTo(0, saved.top));
+      }
+    } catch { /* ignore */ }
+  }, [chapter, state.bookId, state.chapter, passageKey, location.search]);
 
   useEffect(() => {
     if (state.settings.autoHighlights) {
@@ -244,11 +285,23 @@ export default function ReadingScreen() {
 
   // Verse links (/bible/<book>/<chapter>?v=11[-12][&insight=1]), from search
   // results and shared URLs: once the chapter they point into has rendered,
-  // scroll to the verse, flash it, and open Verse Insight when asked. This is
-  // not a click, so the click-suppression guard doesn't apply; the Settings
-  // toggle still does. `insight=1` is then dropped from the URL (keeping
-  // ?v=) so a refresh or Back doesn't pop the sheet open again.
+  // scroll to the verse, and either open Verse Insight (insight=1, verse-text
+  // search results) with a brief flash, or — for a typed reference like
+  // "John 3:16" — mark the verse in yellow until the reader moves to another
+  // chapter or book. The mark is display-only: it is never saved to the
+  // user's Highlights. This is not a click, so the click-suppression guard
+  // doesn't apply; the Settings toggle still does. `insight=1` is then
+  // dropped from the URL (keeping ?v=) so a refresh or Back doesn't pop the
+  // sheet open again.
   const [flashRange, setFlashRange] = useState<{ start: number; end: number } | null>(null);
+  const [markRange, setMarkRange] = useState<{ bookId: number; chapter: number; start: number; end: number } | null>(null);
+  const activeMark =
+    markRange && markRange.bookId === state.bookId && markRange.chapter === state.chapter ? markRange : null;
+  // Leaving the chapter drops the mark for good, so coming back to it later
+  // (arrows, sidebar) shows it plain again.
+  useEffect(() => {
+    if (markRange && !activeMark) setMarkRange(null);
+  }, [markRange, activeMark]);
   const handledTargetRef = useRef<string | null>(null);
   useEffect(() => {
     const target = parseVerseTarget(location.search);
@@ -264,7 +317,8 @@ export default function ReadingScreen() {
         ?.querySelector(`[data-verse="${target.start}"]`)
         ?.scrollIntoView({ block: 'center' });
     });
-    setFlashRange({ start: target.start, end: target.end });
+    if (target.insight) setFlashRange({ start: target.start, end: target.end });
+    else setMarkRange({ bookId: chapter.bookId, chapter: chapter.chapter, start: target.start, end: target.end });
     if (target.insight) {
       if (state.settings.verseInsightsPopup !== false) {
         dispatch({ type: 'SET_VERSE', verse: target.start });
@@ -537,7 +591,9 @@ export default function ReadingScreen() {
                     const isSelected = state.selectedVerse === verse.number;
                     const isFlashing =
                       !!flashRange && verse.number >= flashRange.start && verse.number <= flashRange.end;
-                    const autoClass = !hl ? autoHighlightByVerse[verse.number] : undefined;
+                    const isMarked =
+                      !hl && !!activeMark && verse.number >= activeMark.start && verse.number <= activeMark.end;
+                    const autoClass = !hl && !isMarked ? autoHighlightByVerse[verse.number] : undefined;
                     const isRedLetter = redLetterVerses.has(verse.number);
                     return (
                       <span
@@ -559,7 +615,8 @@ export default function ReadingScreen() {
                             }
                           },
                         })}
-                        className={`verse-span ${hl ? highlightColorClass[hl.color] : ''} ${autoClass || ''} ${isRedLetter ? 'red-letter' : ''} ${isSelected ? 'selected' : ''} ${isFlashing ? 'verse-flash' : ''}`}
+                        className={`verse-span ${hl ? highlightColorClass[hl.color] : ''} ${autoClass || ''} ${isRedLetter ? 'red-letter' : ''} ${isSelected ? 'selected' : ''} ${isFlashing ? 'verse-flash' : ''} ${isMarked ? 'hl-yellow verse-search-mark' : ''}`}
+                        data-search-mark={isMarked || undefined}
                         style={!isDesktop ? {
                           // Suppress iOS long-press text selection callout
                           WebkitUserSelect: 'none',
