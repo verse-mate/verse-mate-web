@@ -112,6 +112,26 @@ describe('BookSelector search', () => {
     expect(searchVerses).not.toHaveBeenCalled();
   });
 
+  it('sends typing to the search field when it is not focused', async () => {
+    searchVerses.mockResolvedValue(EAST_AND_WEST);
+    const { input } = renderSelector();
+    await waitFor(() => expect(bibleService.fetchBooks).toHaveBeenCalled());
+    // Focus is elsewhere (a tab button), as after clicking one.
+    const tab = screen.getByTestId('tab-old-testament');
+    tab.focus();
+
+    fireEvent.keyDown(tab, { key: 'j' });
+    fireEvent.keyDown(tab, { key: 'o' });
+    fireEvent.keyDown(tab, { key: 'x' });
+    fireEvent.keyDown(tab, { key: 'Backspace' });
+    expect(input).toHaveValue('jo');
+    expect(document.activeElement).toBe(input);
+
+    // Shortcuts are left alone.
+    fireEvent.keyDown(tab, { key: 'c', metaKey: true });
+    expect(input).toHaveValue('jo');
+  });
+
   it('searches the words after a book name within that book, and can widen to all books', async () => {
     searchVerses.mockResolvedValue({ ...EAST_AND_WEST, results: [], totals: { exact: 0, words: 0 }, books: [] });
     const { input } = renderSelector();

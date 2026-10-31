@@ -594,6 +594,11 @@ export default function ReadingScreen() {
                     const isMarked =
                       !hl && !!activeMark && verse.number >= activeMark.start && verse.number <= activeMark.end;
                     const autoClass = !hl && !isMarked ? autoHighlightByVerse[verse.number] : undefined;
+                    const highlightClass = hl
+                      ? highlightColorClass[hl.color]
+                      : isMarked
+                        ? 'hl-yellow verse-search-mark'
+                        : autoClass || '';
                     const isRedLetter = redLetterVerses.has(verse.number);
                     return (
                       <span
@@ -615,7 +620,11 @@ export default function ReadingScreen() {
                             }
                           },
                         })}
-                        className={`verse-span ${hl ? highlightColorClass[hl.color] : ''} ${autoClass || ''} ${isRedLetter ? 'red-letter' : ''} ${isSelected ? 'selected' : ''} ${isFlashing ? 'verse-flash' : ''} ${isMarked ? 'hl-yellow verse-search-mark' : ''}`}
+                        // The highlight colors the verse TEXT only (inner span
+                        // below), not the verse number: a background behind
+                        // the raised numeral covered half of it. `verse-hl-on`
+                        // only tells the hover rule this verse is highlighted.
+                        className={`verse-span ${highlightClass ? 'verse-hl-on' : ''} ${isRedLetter ? 'red-letter' : ''} ${isSelected ? 'selected' : ''} ${isFlashing ? 'verse-flash' : ''}`}
                         data-search-mark={isMarked || undefined}
                         style={!isDesktop ? {
                           // Suppress iOS long-press text selection callout
@@ -628,12 +637,14 @@ export default function ReadingScreen() {
                             {verse.number}
                           </sup>
                         )}
-                        <LexicalVerseText
-                          text={verse.text}
-                          verseNumber={verse.number}
-                          alignment={lexAlignment}
-                          wireTokens={verse.tokens}
-                        />{' '}
+                        <span className={highlightClass || undefined}>
+                          <LexicalVerseText
+                            text={verse.text}
+                            verseNumber={verse.number}
+                            alignment={lexAlignment}
+                            wireTokens={verse.tokens}
+                          />
+                        </span>{' '}
                       </span>
                     );
                   })}

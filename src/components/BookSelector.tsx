@@ -244,6 +244,40 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Search open, field not focused (the user clicked a tab, a row, or the
+  // card): typing still goes into the search field. A bare printable key (or
+  // Backspace) anywhere outside another text field is redirected there, with
+  // the caret at the end, instead of being lost.
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      const input = searchInputRef.current;
+      if (!input || e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.isComposing) return;
+      const target = e.target;
+      if (target === input) return;
+      if (
+        target instanceof HTMLInputElement ||
+        target instanceof HTMLTextAreaElement ||
+        target instanceof HTMLSelectElement ||
+        (target instanceof HTMLElement && target.isContentEditable)
+      ) {
+        return;
+      }
+      const printable = e.key.length === 1 && e.key !== ' ';
+      const backspace = e.key === 'Backspace';
+      if (!printable && !backspace) return;
+      e.preventDefault();
+      setQuery(q => (printable ? q + e.key : q.slice(0, -1)));
+      input.focus();
+      requestAnimationFrame(() => {
+        const len = input.value.length;
+        input.setSelectionRange(len, len);
+      });
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, []);
+
   const filteredBooks = useMemo(() => {
     const q = query.trim().toLowerCase();
     // While searching, match across the whole canon regardless of the active

@@ -12,7 +12,7 @@ interface Props {
 }
 
 const HIGHLIGHT_COLORS: { color: HighlightColor; label: string; bgColor: string }[] = [
-  { color: 'yellow', label: 'Yellow', bgColor: '#FFD600' },
+  { color: 'yellow', label: 'Yellow', bgColor: 'var(--hl-swatch-yellow, #FFD600)' },
   { color: 'green', label: 'Green', bgColor: '#4CAF50' },
   { color: 'blue', label: 'Blue', bgColor: '#2196F3' },
   { color: 'pink', label: 'Pink', bgColor: '#E91E63' },
