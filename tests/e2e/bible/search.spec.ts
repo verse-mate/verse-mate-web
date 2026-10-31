@@ -2,7 +2,8 @@ import { test, expect, type Page } from '@playwright/test';
 
 /**
  * Bible search — phrase, word and reference search in the Search screen,
- * and the jump from a result to its verse with Verse Insight open.
+ * the jump from a result to its verse with Verse Insight open, and a typed
+ * reference landing on its verse with a temporary mark instead.
  *
  * Needs an API with GET /bible/search and NASB1995 loaded (the default
  * translation), e.g. a local backend started on a seeded database.
@@ -46,14 +47,29 @@ test.describe('Bible search', () => {
     await expect(insight).toContainText('Matthew 8:11');
   });
 
-  test('jumps to a typed reference with Enter', async ({ page }) => {
+  test('jumps to a typed reference with Enter and marks the verse, without Verse Insight', async ({ page }) => {
     const input = await openSearch(page);
     await input.fill('jn 3.16');
     await expect(page.getByTestId('search-go-to-0')).toContainText('John 3:16');
     await input.press('Enter');
 
     await expect(page).toHaveURL(/\/bible\/john\/3\?v=16$/);
-    await expect(page.getByRole('dialog', { name: 'Verse Insight' })).toContainText('John 3:16');
+    const verse = page.locator('[data-verse="16"]').first();
+    await expect(verse).toHaveAttribute('data-search-mark', 'true');
+    await expect(page.getByRole('dialog', { name: 'Verse Insight' })).toHaveCount(0);
+
+    // The mark is display-only and goes away with the chapter.
+    await page.getByTestId('next-chapter-button').or(page.getByLabel('Next chapter')).first().click();
+    await expect(page.getByTestId('chapter-header').first()).toHaveText('John 4');
+    await expect(page.locator('[data-search-mark]')).toHaveCount(0);
+  });
+
+  test('searches the words after a book name within that book', async ({ page }) => {
+    const input = await openSearch(page);
+    await input.fill('Matthew east and west');
+    await expect(page.getByTestId('verse-search-scope')).toContainText('in Matthew');
+    await expect(page.getByTestId('verse-result-40-8-11')).toBeVisible();
+    await expect(page.getByTestId('verse-result-19-103-12')).toHaveCount(0);
   });
 
   test('a shared verse link opens the verse with Verse Insight once', async ({ page }) => {
