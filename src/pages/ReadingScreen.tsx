@@ -693,7 +693,13 @@ export default function ReadingScreen() {
 
         {/* Desktop: floating toolbar on text selection */}
         {isDesktop && (
-          <SelectionToolbar book={state.book} chapter={state.chapter} bookId={state.bookId} />
+          <SelectionToolbar
+            book={state.book}
+            chapter={state.chapter}
+            bookId={state.bookId}
+            searchMark={activeMark}
+            onClearSearchMark={() => setMarkRange(null)}
+          />
         )}
       </div>
 
@@ -778,6 +784,8 @@ export default function ReadingScreen() {
       {longPressVerse !== null && (
         <VerseActions
           verse={longPressVerse}
+          searchMarked={!!activeMark && longPressVerse >= activeMark.start && longPressVerse <= activeMark.end}
+          onClearSearchMark={() => setMarkRange(null)}
           onClose={() => {
             setLongPressVerse(null);
             dispatch({ type: 'SET_VERSE', verse: null });
