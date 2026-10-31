@@ -9,6 +9,9 @@ import AddNoteSheet from '@/components/AddNoteSheet';
 interface Props {
   verse: number;
   onClose: () => void;
+  /** This verse carries the display-only search mark; Remove clears it. */
+  searchMarked?: boolean;
+  onClearSearchMark?: () => void;
 }
 
 const HIGHLIGHT_COLORS: { color: HighlightColor; label: string; bgColor: string }[] = [
@@ -19,7 +22,7 @@ const HIGHLIGHT_COLORS: { color: HighlightColor; label: string; bgColor: string 
   { color: 'orange', label: 'Orange', bgColor: '#FF9800' },
 ];
 
-export default function VerseActions({ verse, onClose }: Props) {
+export default function VerseActions({ verse, onClose, searchMarked, onClearSearchMark }: Props) {
   const { state, addBookmark, removeBookmark, addHighlight: ctxAddHighlight, updateHighlight, removeHighlight } = useApp();
   const navigate = useNavigate();
   const [showAddNote, setShowAddNote] = useState(false);
@@ -171,9 +174,13 @@ export default function VerseActions({ verse, onClose }: Props) {
               />
             </button>
           ))}
-          {existingHighlight && (
+          {(existingHighlight || searchMarked) && (
             <button
-              onClick={async () => { await removeHighlight(existingHighlight.id); onClose(); }}
+              onClick={async () => {
+                if (existingHighlight) await removeHighlight(existingHighlight.id);
+                if (searchMarked) onClearSearchMark?.();
+                onClose();
+              }}
               data-testid="verse-action-remove-highlight"
               className="text-[11px] text-destructive ml-auto"
             >

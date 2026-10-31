@@ -19,13 +19,20 @@ interface Props {
   book: string;
   chapter: number;
   bookId: number;
+  /**
+   * The display-only yellow mark from a search (not a saved highlight). When
+   * the selection touches it, the trash button clears it too, so every yellow
+   * line on the page can be removed from this menu.
+   */
+  searchMark?: { start: number; end: number } | null;
+  onClearSearchMark?: () => void;
 }
 
 /**
  * SelectionToolbar — floating toolbar that appears above selected text on desktop.
  * Shows highlight color dots, copy, share, and bookmark actions.
  */
-export default function SelectionToolbar({ book, chapter, bookId }: Props) {
+export default function SelectionToolbar({ book, chapter, bookId, searchMark, onClearSearchMark }: Props) {
   const { state, dispatch, addHighlight, updateHighlight, removeHighlight, addBookmark } = useApp();
   // `below`: the bar sits under the selection instead of above it.
   const [position, setPosition] = useState<{ x: number; y: number; below: boolean } | null>(null);
@@ -196,6 +203,13 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
     });
   })();
 
+  // The selection touches the search mark (display-only yellow).
+  const marksSelection =
+    !!searchMark &&
+    selectedVerses.length > 0 &&
+    Math.min(...selectedVerses) <= searchMark.end &&
+    Math.max(...selectedVerses) >= searchMark.start;
+
   const handleHighlight = async (color: HighlightColor) => {
     if (selectedVerses.length === 0) return;
     const startVerse = Math.min(...selectedVerses);
@@ -308,15 +322,19 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
         {/* Remove (un-highlight) — only shows when the current selection
             overlaps an existing highlight, so users have a clear way to
             undo without going through the long-press / right-panel flow. */}
-        {existingHighlight && (
+        {(existingHighlight || marksSelection) && (
           <button
+            data-testid="selection-remove-highlight"
             onClick={async () => {
               try {
-                if (state.isSignedIn) {
-                  await removeHighlight(existingHighlight.id);
-                } else {
-                  dispatch({ type: 'REMOVE_HIGHLIGHT', id: existingHighlight.id });
+                if (existingHighlight) {
+                  if (state.isSignedIn) {
+                    await removeHighlight(existingHighlight.id);
+                  } else {
+                    dispatch({ type: 'REMOVE_HIGHLIGHT', id: existingHighlight.id });
+                  }
                 }
+                if (marksSelection) onClearSearchMark?.();
                 setPosition(null);
                 window.getSelection()?.removeAllRanges();
               } catch { /* ignore */ }
