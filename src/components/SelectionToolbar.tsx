@@ -5,7 +5,7 @@ import { useApp } from '@/contexts/AppContext';
 import { HighlightColor } from '@/services/types';
 
 const HIGHLIGHT_COLORS: { color: HighlightColor; hex: string }[] = [
-  { color: 'yellow', hex: '#FFEB3B' },
+  { color: 'yellow', hex: 'var(--hl-swatch-yellow, #FFEB3B)' },
   { color: 'green', hex: '#4CAF50' },
   { color: 'blue', hex: '#2196F3' },
   { color: 'pink', hex: '#E91E63' },

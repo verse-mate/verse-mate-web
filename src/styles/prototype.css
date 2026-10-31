@@ -65,6 +65,8 @@
 
   /* Solid dot colors (popover swatches) */
   --hl-dot-yellow: #FFCC33;
+  /* Yellow in the highlight menus (selection toolbar, verse actions). */
+  --hl-swatch-yellow: #FFEB3B;
   --hl-dot-green:  #34C759;
   --hl-dot-blue:   #3B82F6;
   --hl-dot-pink:   #E0436E;
@@ -2950,7 +2952,10 @@ button { font-family: inherit; }
   --fg-destructive: #f87171;
 
   /* Yellow highlight: the light-theme marker (bright yellow at 62%) turns
-     the near-white scripture text unreadable on black. A deeper gold at a
-     lower alpha still reads as yellow but keeps the text legible. */
-  --hl-yellow: rgba(204, 160, 0, 0.5);
+     the near-white scripture text unreadable on black. A deeper gold still
+     reads as yellow but keeps the text legible (about 5:1 for the text).
+     On the black reading surface it lands on #997B00, which is what the
+     yellow swatch in the highlight menus shows, so the two match. */
+  --hl-yellow: rgba(232, 186, 0, 0.66);
+  --hl-swatch-yellow: #997B00;
 }
