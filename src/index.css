@@ -355,6 +355,18 @@
   .hl-teal { background-color: var(--hl-teal); }
   .hl-brown { background-color: var(--hl-brown); }
 
+  /* Word highlights (some words of a verse, not all of it), painted over the
+     verse text by the CSS Custom Highlight API — see lib/highlights/charHighlights.ts. */
+  ::highlight(vm-hl-yellow) { background-color: var(--hl-yellow); }
+  ::highlight(vm-hl-green) { background-color: var(--hl-green); }
+  ::highlight(vm-hl-blue) { background-color: var(--hl-blue); }
+  ::highlight(vm-hl-pink) { background-color: var(--hl-pink); }
+  ::highlight(vm-hl-purple) { background-color: var(--hl-purple); }
+  ::highlight(vm-hl-orange) { background-color: var(--hl-orange); }
+  ::highlight(vm-hl-red) { background-color: var(--hl-red); }
+  ::highlight(vm-hl-teal) { background-color: var(--hl-teal); }
+  ::highlight(vm-hl-brown) { background-color: var(--hl-brown); }
+
   /* Auto-highlight = lighter bg + colored underline. No cursor: pointer
      — these are passive emphasis marks, no click handler is wired. */
   .ahl-yellow { background-color: var(--ahl-yellow-bg); border-bottom: 2px solid var(--ahl-yellow-border); }
