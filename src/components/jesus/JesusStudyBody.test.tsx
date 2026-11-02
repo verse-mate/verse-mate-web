@@ -191,13 +191,13 @@ async function waitForStudy() {
   );
 }
 
-function renderTab() {
+function renderTab(eventDetail: JesusEventDetail = detail) {
   const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
   return render(
     <QueryClientProvider client={client}>
       <MemoryRouter>
         <AppProvider>
-          <JesusStudyBody detail={detail} />
+          <JesusStudyBody detail={eventDetail} />
         </AppProvider>
       </MemoryRouter>
     </QueryClientProvider>,
@@ -363,5 +363,31 @@ describe('JesusStudyBody', () => {
     expect(screen.getByText('What He says')).toBeInTheDocument();
     fireEvent.click(screen.getByText(/What this event reveals about Him/));
     expect(screen.getByTestId('jesus-study-reveals')).toHaveTextContent('Father’s house');
+  });
+
+  it('studies every Gospel account, not only the primary one', async () => {
+    const temptation: JesusEventDetail = {
+      ...detail,
+      passages: [
+        { book_id: 40, book_name: 'Matthew', chapter: 4, verse_start: 1, verse_end: 11, is_primary: true, display: 'Matthew 4:1-11' },
+        { book_id: 41, book_name: 'Mark', chapter: 1, verse_start: 12, verse_end: 13, is_primary: false, display: 'Mark 1:12-13' },
+      ],
+    };
+    renderTab(temptation);
+    await waitForStudy();
+    expect(bibleService.fetchStudy).toHaveBeenLastCalledWith(40, 4, expect.anything());
+    expect(screen.getByTestId('jesus-study-accounts')).toHaveTextContent('Mark 1:12-13');
+
+    fireEvent.click(screen.getByTestId('jesus-study-account-1'));
+    await waitFor(() =>
+      expect(bibleService.fetchStudy).toHaveBeenLastCalledWith(41, 1, expect.anything()),
+    );
+    expect(screen.getByText(/Inductive Study of Mark 1:12-13/)).toBeInTheDocument();
+  });
+
+  it('shows no account picker for an event told once', async () => {
+    renderTab();
+    await waitForStudy();
+    expect(screen.queryByTestId('jesus-study-accounts')).not.toBeInTheDocument();
   });
 });
