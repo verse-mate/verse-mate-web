@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { canHighlightAll, collectBookOccurrences, findPhraseOccurrences } from './highlightAll';
+import {
+  canHighlightAll,
+  collectBookOccurrences,
+  findPhraseOccurrences,
+  highlightAllIds,
+} from './highlightAll';
 
 describe('findPhraseOccurrences', () => {
   it('finds whole words only, any case', () => {
@@ -49,5 +54,40 @@ describe('canHighlightAll', () => {
     expect(canHighlightAll('I am', 6, 6)).toBe(true);
     expect(canHighlightAll('I am', 6, 7)).toBe(false);
     expect(canHighlightAll('one two three four five six seven', 6, 6)).toBe(false);
+  });
+});
+
+describe('highlightAllIds', () => {
+  const t0 = Date.parse('2026-11-02T10:00:00Z');
+  const word = (id: string, text: string, secondsIn: number, extra: Record<string, unknown> = {}) => ({
+    id,
+    bookId: 1,
+    color: 'green',
+    startChar: 0,
+    endChar: text.length,
+    selectedText: text,
+    createdAt: new Date(t0 + secondsIn * 1000).toISOString(),
+    ...extra,
+  });
+
+  it('picks out a run of the same words saved together', () => {
+    const ids = highlightAllIds([
+      word('a', 'light', 0),
+      word('b', 'Light', 1),
+      word('c', 'light', 3),
+      word('d', 'darkness', 2),
+    ]);
+    expect([...ids].sort()).toEqual(['a', 'b', 'c']);
+  });
+
+  it('leaves alone a single word, other colours, other books, and far-apart saves', () => {
+    const ids = highlightAllIds([
+      word('a', 'light', 0),
+      word('b', 'light', 1, { color: 'blue' }),
+      word('c', 'light', 2, { bookId: 2 }),
+      word('d', 'light', 3600),
+      word('e', 'light', 0, { startChar: null, endChar: null }),
+    ]);
+    expect(ids.size).toBe(0);
   });
 });

@@ -134,6 +134,7 @@ interface HighlightRaw {
   end_verse?: number;
   start_char?: number | null;
   end_char?: number | null;
+  selected_text?: string | null;
   color: string;
   created_at?: string;
 }
@@ -1057,6 +1058,7 @@ export async function fetchHighlights(userId: string): Promise<Highlight[]> {
       endVerse: h.end_verse,
       startChar: h.start_char,
       endChar: h.end_char,
+      ...(h.selected_text ? { selectedText: h.selected_text } : {}),
       color: h.color as HighlightColor,
       createdAt: h.created_at || new Date().toISOString(),
     }));
