@@ -3,6 +3,7 @@ import type React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { JesusFacetList, JesusProvenanceChip } from '@/components/jesus/JesusEventParts';
+import { JesusPill } from '@/components/jesus/JesusParts';
 import {
   EventAddendum,
   EventBlockCard,
@@ -82,11 +83,20 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
   const language = usePreferredLanguage();
   const labels = useStudyLabels(language);
 
-  const primary = useMemo(
-    () => detail.passages.find((p) => p.is_primary) ?? detail.passages[0] ?? null,
-    [detail.passages],
+  // One study per Gospel account. The temptation is Matthew 4, Mark 1 and
+  // Luke 4; narrowing only the primary passage's chapter made this tab a
+  // study of Matthew alone while the scripture and By-Line carry every
+  // account. Each account is its own chapter study, so the reader picks one
+  // (primary first) and it is narrowed to that account's verses.
+  const primaryIndex = Math.max(
+    0,
+    detail.passages.findIndex((p) => p.is_primary),
   );
-  const span = useMemo(() => eventVerseSpan(primary), [primary]);
+  const [selected, setSelected] = useState<number | null>(null);
+  const activeIndex =
+    selected != null && selected < detail.passages.length ? selected : primaryIndex;
+  const active = detail.passages[activeIndex] ?? null;
+  const span = useMemo(() => eventVerseSpan(active), [active]);
 
   const [study, setStudy] = useState<InductiveStudy | null>(null);
   const [loading, setLoading] = useState(true);
@@ -290,6 +300,23 @@ export default function JesusStudyBody({ detail }: { detail: JesusEventDetail })
   return (
     <div style={{ fontSize: bodyFontSize, lineHeight: `${bodyLineHeight}px` }}>
       <JesusTabToolbar title={title} copyText={copyText} />
+
+      {detail.passages.length > 1 && (
+        <div
+          data-testid="jesus-study-accounts"
+          style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 12 }}
+        >
+          {detail.passages.map((passage, index) => (
+            <JesusPill
+              key={`${passage.display}-${index}`}
+              label={passage.display}
+              active={index === activeIndex}
+              onClick={() => setSelected(index)}
+              testId={`jesus-study-account-${index}`}
+            />
+          ))}
+        </div>
+      )}
 
       <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
         <button
