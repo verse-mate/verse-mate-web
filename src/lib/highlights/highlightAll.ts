@@ -135,3 +135,58 @@ export function canHighlightAll(text: string, startVerse: number, endVerse: numb
   const words = text.trim().split(/\s+/).filter(Boolean);
   return startVerse === endVerse && words.length > 0 && words.length <= HIGHLIGHT_ALL_MAX_WORDS;
 }
+
+/** Word highlights saved further apart than this are separate highlights, not one "All in" run. */
+const HIGHLIGHT_ALL_RUN_GAP_MS = 2 * 60 * 1000;
+
+interface SavedWordHighlight {
+  id: string;
+  bookId: number;
+  color: string;
+  startChar?: number | null;
+  endChar?: number | null;
+  selectedText?: string;
+  createdAt: string;
+}
+
+/**
+ * The ids of highlights made by "All in <book>", so lists of the reader's own highlights can
+ * leave them out.
+ *
+ * Nothing on a highlight says how it was made, so they are recognised by their shape: word
+ * highlights in one book, of the same words in the same colour, saved within moments of each
+ * other (each one less than two minutes after the last). One highlight on its own is never one.
+ */
+export function highlightAllIds(highlights: SavedWordHighlight[]): Set<string> {
+  const groups = new Map<string, { id: string; at: number }[]>();
+  for (const h of highlights) {
+    if (typeof h.startChar !== 'number' || typeof h.endChar !== 'number') continue;
+    const text = h.selectedText?.trim().toLowerCase().replace(/\s+/g, ' ');
+    if (!text) continue;
+    const at = Date.parse(h.createdAt);
+    if (Number.isNaN(at)) continue;
+    const key = `${h.bookId}|${h.color}|${text}`;
+    const list = groups.get(key) ?? [];
+    list.push({ id: h.id, at });
+    groups.set(key, list);
+  }
+  const ids = new Set<string>();
+  for (const list of groups.values()) {
+    if (list.length < 2) continue;
+    list.sort((a, b) => a.at - b.at);
+    let run: string[] = [list[0].id];
+    const flush = () => {
+      if (run.length >= 2) for (const id of run) ids.add(id);
+    };
+    for (let i = 1; i < list.length; i++) {
+      if (list[i].at - list[i - 1].at <= HIGHLIGHT_ALL_RUN_GAP_MS) {
+        run.push(list[i].id);
+      } else {
+        flush();
+        run = [list[i].id];
+      }
+    }
+    flush();
+  }
+  return ids;
+}

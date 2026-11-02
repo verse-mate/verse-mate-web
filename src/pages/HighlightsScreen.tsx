@@ -5,6 +5,7 @@ import { Highlighter, ChevronRight } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { api } from '@/services/api';
 import { vmTokens } from '@/styles/themeStyles';
+import { highlightAllIds } from '@/lib/highlights/highlightAll';
 
 interface HighlightTheme {
   theme_id: number;
@@ -49,7 +50,11 @@ export default function HighlightsScreen() {
 
   const groupedHighlights = useMemo(() => {
     const groups = new Map<string, { book: string; bookId: number; chapter: number; count: number }>();
+    // "All in <book>" highlights (every "light" in Genesis) are a study layer
+    // over the text, not the reader's own highlights: leave them out here.
+    const fromHighlightAll = highlightAllIds(state.highlights);
     for (const h of state.highlights) {
+      if (fromHighlightAll.has(h.id)) continue;
       const key = `${h.bookId}:${h.chapter}`;
       const existing = groups.get(key);
       if (existing) existing.count += 1;
