@@ -449,7 +449,8 @@ export default function SelectionToolbar({
 
   /**
    * The trash button on "All in <book>": removes the word highlights on every place the selected
-   * words occur in this book — what "All in <book>" highlighted, in whatever colour.
+   * words occur in this book — what "All in <book>" highlighted, in whatever colour. No confirm:
+   * the toast says how many went.
    */
   const removeAllInBook = async (phrase: string) => {
     const toastId = toast.loading(`Finding \u201C${phrase}\u201D highlights in ${book}\u2026`);
@@ -463,15 +464,6 @@ export default function SelectionToolbar({
     });
     if (targets.length === 0) {
       toast(`No \u201C${phrase}\u201D highlights in ${book}`, { id: toastId });
-      return;
-    }
-    if (
-      targets.length > 1 &&
-      !window.confirm(
-        `Remove ${targets.length} highlights?\n\nEvery highlighted \u201C${phrase}\u201D in ${book} will be removed.`,
-      )
-    ) {
-      toast.dismiss(toastId);
       return;
     }
     let removed = 0;
