@@ -49,6 +49,11 @@ interface SelectionExtent {
   wholeVerses: boolean;
   /** The selected words, from the verse text alone (no verse numbers). */
   words: string;
+  /**
+   * The words "All in <book>" looks for: the selection widened to whole words, so dragging
+   * over most of "darkness" still means "darkness".
+   */
+  phrase: string;
 }
 
 interface Props {
@@ -265,7 +270,7 @@ export default function SelectionToolbar({
     Math.min(...selectedVerses) <= searchMark.end &&
     Math.max(...selectedVerses) >= searchMark.start;
 
-  const offerAll = !!extent && canHighlightAll(extent.words, extent.startVerse, extent.endVerse);
+  const offerAll = !!extent && canHighlightAll(extent.phrase, extent.startVerse, extent.endVerse);
   const activeScope: HighlightScope = scope === 'book' && !offerAll ? 'verse' : scope;
 
   const close = () => {
@@ -299,10 +304,9 @@ export default function SelectionToolbar({
     else dispatch({ type: 'UPDATE_HIGHLIGHT', id: h.id, color });
   };
 
-  /** "All in <book>": every place the selected words occur in this book, in one colour. */
-  const highlightAllInBook = async (phrase: string, color: HighlightColor) => {
-    const toastId = toast.loading(`Finding \u201C${phrase}\u201D in ${book}\u2026`);
-    const { occurrences, missingChapters } = await collectBookOccurrences({
+  /** Every place `phrase` occurs in this book, read chapter by chapter. */
+  const findInBook = (phrase: string) =>
+    collectBookOccurrences({
       phrase,
       chapterCount,
       loadChapter: async ch => {
@@ -312,6 +316,11 @@ export default function SelectionToolbar({
           : null;
       },
     });
+
+  /** "All in <book>": every place the selected words occur in this book, in one colour. */
+  const highlightAllInBook = async (phrase: string, color: HighlightColor) => {
+    const toastId = toast.loading(`Finding \u201C${phrase}\u201D in ${book}\u2026`);
+    const { occurrences, missingChapters } = await findInBook(phrase);
     if (occurrences.length === 0) {
       toast(`\u201C${phrase}\u201D was not found in ${book}`, { id: toastId });
       return;
@@ -374,7 +383,7 @@ export default function SelectionToolbar({
   const handleHighlight = async (color: HighlightColor) => {
     if (!extent) return;
     const target = { ...extent };
-    const phrase = extent.words;
+    const phrase = activeScope === 'book' ? extent.phrase : extent.words;
     close();
     try {
       if (activeScope === 'book') {
@@ -438,7 +447,57 @@ export default function SelectionToolbar({
     }
   };
 
+  /**
+   * The trash button on "All in <book>": removes the word highlights on every place the selected
+   * words occur in this book — what "All in <book>" highlighted, in whatever colour.
+   */
+  const removeAllInBook = async (phrase: string) => {
+    const toastId = toast.loading(`Finding \u201C${phrase}\u201D highlights in ${book}\u2026`);
+    const { occurrences, missingChapters } = await findInBook(phrase);
+    const places = new Set(occurrences.map(o => `${o.chapter}:${o.verse}:${o.start}:${o.end}`));
+    const targets = state.highlights.filter(h => {
+      if (h.bookId !== bookId || !isCharHighlight(h)) return false;
+      const startVerse = h.startVerse ?? h.verse;
+      if ((h.endVerse ?? startVerse) !== startVerse) return false;
+      return places.has(`${h.chapter}:${startVerse}:${h.startChar}:${h.endChar}`);
+    });
+    if (targets.length === 0) {
+      toast(`No \u201C${phrase}\u201D highlights in ${book}`, { id: toastId });
+      return;
+    }
+    if (
+      targets.length > 1 &&
+      !window.confirm(
+        `Remove ${targets.length} highlights?\n\nEvery highlighted \u201C${phrase}\u201D in ${book} will be removed.`,
+      )
+    ) {
+      toast.dismiss(toastId);
+      return;
+    }
+    let removed = 0;
+    for (const h of targets) {
+      try {
+        if (state.isSignedIn) await removeHighlight(h.id);
+        else dispatch({ type: 'REMOVE_HIGHLIGHT', id: h.id });
+        removed++;
+      } catch {
+        /* one failed; the rest still go */
+      }
+    }
+    const partial = missingChapters.length > 0 ? ' (some chapters could not be read)' : '';
+    toast.success(
+      `Removed ${removed} ${removed === 1 ? 'highlight' : 'highlights'} in ${book}${partial}`,
+      { id: toastId },
+    );
+  };
+
   const handleRemove = async () => {
+    if (activeScope === 'book' && extent) {
+      const phrase = extent.phrase;
+      close();
+      await removeAllInBook(phrase);
+      return;
+    }
     const targets = overlapping;
     close();
     try {
@@ -517,12 +576,20 @@ export default function SelectionToolbar({
         {/* Remove (un-highlight) — only shows when the current selection
             overlaps an existing highlight, so users have a clear way to
             undo without going through the long-press / right-panel flow. */}
-        {(overlapping.length > 0 || marksSelection) && (
+        {(overlapping.length > 0 || marksSelection || activeScope === 'book') && (
           <button
             data-testid="selection-remove-highlight"
             onClick={handleRemove}
-            title="Remove highlight"
-            aria-label="Remove highlight"
+            title={
+              activeScope === 'book' && extent
+                ? `Remove every \u201C${extent.phrase}\u201D highlight in ${book}`
+                : 'Remove highlight'
+            }
+            aria-label={
+              activeScope === 'book' && extent
+                ? `Remove every \u201C${extent.phrase}\u201D highlight in ${book}`
+                : 'Remove highlight'
+            }
             style={{
               width: 20,
               height: 20,
@@ -567,7 +634,7 @@ export default function SelectionToolbar({
               onClick={() => setScope(value)}
               title={
                 value === 'book' && extent
-                  ? `Highlight every \u201C${extent.words}\u201D in ${book}`
+                  ? `Highlight every \u201C${extent.phrase}\u201D in ${book}`
                   : undefined
               }
               style={{
@@ -711,11 +778,22 @@ function selectionExtent(range: Range, container: Element): SelectionExtent | nu
     .join(' ')
     .replace(/\s+/g, ' ')
     .trim();
+  // Widen a one-verse selection to whole words for "All in <book>".
+  let phrase = words;
+  if (first === last && endChar > startChar) {
+    const isWord = (ch: string | undefined) => !!ch && /[\p{L}\p{N}'’]/u.test(ch);
+    let from = startChar;
+    let to = endChar;
+    while (from > 0 && isWord(first.text[from - 1]) && isWord(first.text[from])) from--;
+    while (to < first.text.length && isWord(first.text[to]) && isWord(first.text[to - 1])) to++;
+    phrase = first.text.slice(from, to).replace(/\s+/g, ' ').trim();
+  }
   return {
     startVerse: first.verse,
     endVerse: last.verse,
     startChar,
     endChar,
+    phrase,
     wholeVerses:
       first.text.slice(0, startChar).trim() === '' && last.text.slice(endChar).trim() === '',
     words,
