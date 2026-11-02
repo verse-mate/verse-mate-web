@@ -151,6 +151,9 @@
     /* Red-letter (words of Jesus) — colors the verse TEXT, not the background.
        A deep red in light mode; flipped to a lighter red in .dark below. */
     --red-letter: #c1121f;
+    /* Red-letter text under a highlight: a deeper red, at least 5:1 on every
+       highlight colour (the plain red drops to about 3:1 on brown). */
+    --red-letter-on-hl: #8a0b14;
 
     /* Desktop chrome — white in light, near-black in dark */
     --chrome-bg: 0 0% 100%;           /* #FFFFFF */
@@ -211,6 +214,11 @@
 
     /* Red-letter — lighter red so Jesus' words stay legible on black */
     --red-letter: #ff6b6b;
+    /* Red-letter text under a highlight: a pale rose. The light red above
+       all but disappears on the gold yellow highlight (1.5:1); this keeps a
+       red tint and reads on every highlight colour (3.3:1 on yellow, 5.8:1
+       or more on the rest — scripture is large text). */
+    --red-letter-on-hl: #ffe3e0;
 
     /* Desktop books sidebar — near-black in dark */
     --vm-sidebar-bg: #111111;
@@ -384,6 +392,22 @@
      verse-number <sup> keeps its own muted color, so only the scripture text
      turns red — matching classic red-letter editions. */
   .red-letter { color: var(--red-letter); }
+
+  /* Highlighted words of Jesus: the red that reads on the page does not read
+     on every highlight, so under one the text takes --red-letter-on-hl.
+     Whole-verse highlights (and auto-highlights, the search mark) mark the
+     verse `verse-hl-on`; word highlights are painted ranges, styled through
+     their ::highlight() (see lib/highlights/charHighlights.ts). */
+  .red-letter.verse-hl-on [data-verse-text] { color: var(--red-letter-on-hl); }
+  .red-letter [data-verse-text]::highlight(vm-hl-yellow),
+  .red-letter [data-verse-text]::highlight(vm-hl-green),
+  .red-letter [data-verse-text]::highlight(vm-hl-blue),
+  .red-letter [data-verse-text]::highlight(vm-hl-pink),
+  .red-letter [data-verse-text]::highlight(vm-hl-purple),
+  .red-letter [data-verse-text]::highlight(vm-hl-orange),
+  .red-letter [data-verse-text]::highlight(vm-hl-red),
+  .red-letter [data-verse-text]::highlight(vm-hl-teal),
+  .red-letter [data-verse-text]::highlight(vm-hl-brown) { color: var(--red-letter-on-hl); }
 }
 
 /* ─── Tablet+ : hide per-screen headers since DesktopLayout renders a shared one ─── */
