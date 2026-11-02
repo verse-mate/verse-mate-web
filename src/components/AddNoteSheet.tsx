@@ -6,12 +6,16 @@ interface Props {
   book: string;
   chapter: number;
   verse: number;
+  /** Words selected in the verse (the selection toolbar's Note): the note starts by quoting them. */
+  quote?: string;
   onClose: () => void;
 }
 
-export default function AddNoteSheet({ book, chapter, verse, onClose }: Props) {
+export default function AddNoteSheet({ book, chapter, verse, quote, onClose }: Props) {
   const { state, addNote } = useApp();
-  const [text, setText] = useState('');
+  const [text, setText] = useState(() =>
+    quote ? `\u201C${quote}\u201D\n\n`.slice(0, 500) : '',
+  );
   const [saving, setSaving] = useState(false);
   const maxChars = 500;
 

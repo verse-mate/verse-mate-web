@@ -18,6 +18,14 @@ import JesusEventLink from '@/components/jesus/JesusEventLink';
 import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
+import AddNoteSheet from '@/components/AddNoteSheet';
+import {
+  VERSE_TEXT_ATTR,
+  clearCharHighlights,
+  isCharHighlight,
+  paintCharHighlights,
+  supportsCharHighlights,
+} from '@/lib/highlights/charHighlights';
 import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/ChapterNotesSheet';
 import LexicalVerseText from '@/components/LexicalVerseText';
 import { useHorizontalSwipe } from '@/hooks/useHorizontalSwipe';
@@ -84,6 +92,8 @@ export default function ReadingScreen() {
     }
   }, [state.bookId, state.chapter]);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
+  // A note started from the selection toolbar: its verse and the selected words.
+  const [noteDraft, setNoteDraft] = useState<{ verse: number; quote: string } | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
   const [apiAutoHighlights, setApiAutoHighlights] = useState<AutoHighlightRange[]>([]);
   const [books, setBooks] = useState<BibleBook[]>([]);
@@ -157,8 +167,12 @@ export default function ReadingScreen() {
     }
   }, [state.chapter, state.book, maxChapter, dispatch]);
 
+  // Word highlights are painted over the text (see the effect below) where the
+  // browser can; elsewhere they show on their whole verse, as they used to.
+  const paintsWords = supportsCharHighlights();
   const getHighlightForVerse = (verseNum: number) => {
     return state.highlights.find(h => {
+      if (paintsWords && isCharHighlight(h)) return false;
       // Match by bookId (always populated). The book name from
       // fetchHighlights is intentionally empty since the API only returns
       // book_id, so name-based matching silently dropped every highlight.
@@ -238,6 +252,39 @@ export default function ReadingScreen() {
     document.addEventListener('selectstart', onSelectStart);
     return () => document.removeEventListener('selectstart', onSelectStart);
   }, [isDesktop]);
+
+  // Paint word highlights over the verse text. The text nodes change under us
+  // (lexicon words hydrate after the chapter renders, settings re-render the
+  // verses), and a range over a replaced node collapses, so repaint whenever
+  // the verse column's DOM changes.
+  const scriptureRef = useRef<HTMLDivElement | null>(null);
+  const chapterHighlights = state.highlights.filter(
+    h => h.bookId === state.bookId && h.chapter === state.chapter && isCharHighlight(h),
+  );
+  const chapterHighlightsKey = chapterHighlights
+    .map(h => `${h.id}:${h.color}:${h.startVerse ?? h.verse}:${h.endVerse}:${h.startChar}:${h.endChar}`)
+    .join('|');
+  const chapterHighlightsRef = useRef(chapterHighlights);
+  chapterHighlightsRef.current = chapterHighlights;
+  useEffect(() => {
+    const el = scriptureRef.current;
+    if (!el || !paintsWords) return;
+    let frame = 0;
+    const paint = () => {
+      frame = 0;
+      paintCharHighlights(el, chapterHighlightsRef.current);
+    };
+    paint();
+    const observer = new MutationObserver(() => {
+      if (!frame) frame = requestAnimationFrame(paint);
+    });
+    observer.observe(el, { childList: true, subtree: true, characterData: true });
+    return () => {
+      observer.disconnect();
+      if (frame) cancelAnimationFrame(frame);
+      clearCharHighlights();
+    };
+  }, [paintsWords, chapterHighlightsKey, chapter]);
 
   // "Just start typing" → open Search seeded with the first character, so a
   // keyboard user (incl. a zoomed-in desktop browser that has dropped into
@@ -553,7 +600,11 @@ export default function ReadingScreen() {
         </div>
 
         {/* Verses grouped by API subtitles — prototype .font-scripture */}
-        <div className="font-scripture" style={{ fontSize: `${state.settings.fontSize}px` }}>
+        <div
+          ref={scriptureRef}
+          className="font-scripture"
+          style={{ fontSize: `${state.settings.fontSize}px` }}
+        >
           {(() => {
             const verses = chapter?.verses || [];
             const groups: Array<{ title: string | null; range: string; items: typeof verses }> = [];
@@ -637,7 +688,10 @@ export default function ReadingScreen() {
                             {verse.number}
                           </sup>
                         )}
-                        <span className={highlightClass || undefined}>
+                        <span
+                          className={highlightClass || undefined}
+                          {...{ [VERSE_TEXT_ATTR]: verse.number }}
+                        >
                           <LexicalVerseText
                             text={verse.text}
                             verseNumber={verse.number}
@@ -697,6 +751,8 @@ export default function ReadingScreen() {
             book={state.book}
             chapter={state.chapter}
             bookId={state.bookId}
+            chapterCount={maxChapter}
+            onNote={(verse, quote) => setNoteDraft({ verse, quote })}
             searchMark={activeMark}
             onClearSearchMark={() => setMarkRange(null)}
           />
@@ -781,6 +837,15 @@ export default function ReadingScreen() {
           </>
         );
       })()}
+      {noteDraft && (
+        <AddNoteSheet
+          book={state.book}
+          chapter={state.chapter}
+          verse={noteDraft.verse}
+          quote={noteDraft.quote}
+          onClose={() => setNoteDraft(null)}
+        />
+      )}
       {longPressVerse !== null && (
         <VerseActions
           verse={longPressVerse}

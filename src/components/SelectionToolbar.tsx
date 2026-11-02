@@ -1,8 +1,21 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { Copy, Bookmark, Check, Trash2 } from 'lucide-react';
+import { Copy, Check, Trash2, FileText } from 'lucide-react';
+import { toast } from 'sonner';
 import ShareIcon from '@/components/ShareIcon';
 import { useApp } from '@/contexts/AppContext';
-import { HighlightColor } from '@/services/types';
+import { fetchChapterById } from '@/services/bibleService';
+import { Highlight, HighlightColor } from '@/services/types';
+import {
+  VERSE_TEXT_ATTR,
+  highlightsOverlap,
+  isCharHighlight,
+  textOffsetWithin,
+} from '@/lib/highlights/charHighlights';
+import {
+  HIGHLIGHT_ALL_CONFIRM_ABOVE,
+  canHighlightAll,
+  collectBookOccurrences,
+} from '@/lib/highlights/highlightAll';
 
 const HIGHLIGHT_COLORS: { color: HighlightColor; hex: string }[] = [
   { color: 'yellow', hex: 'var(--hl-swatch-yellow, #FFEB3B)' },
@@ -15,10 +28,37 @@ const HIGHLIGHT_COLORS: { color: HighlightColor; hex: string }[] = [
   { color: 'teal', hex: '#009688' },
 ];
 
+/**
+ * What a colour highlights (the same choice as the mobile app's highlight sheet):
+ * - `verse`: the whole verse(s) the selection touches — the default
+ * - `selection`: just the selected words
+ * - `book`: every place the selected words occur in this book ("All in John": a study method for
+ *   a book's repeated words and phrases, like "I am" in John)
+ */
+export type HighlightScope = 'verse' | 'selection' | 'book';
+
+/** Where the selection starts and ends, as verses and offsets into their text. */
+interface SelectionExtent {
+  startVerse: number;
+  endVerse: number;
+  /** Offset into the start verse's text, inclusive. */
+  startChar: number;
+  /** Offset into the end verse's text, exclusive. */
+  endChar: number;
+  /** The selection covers its verses whole. */
+  wholeVerses: boolean;
+  /** The selected words, from the verse text alone (no verse numbers). */
+  words: string;
+}
+
 interface Props {
   book: string;
   chapter: number;
   bookId: number;
+  /** Chapters in this book, for "All in <book>". */
+  chapterCount: number;
+  /** Open a note on this verse, quoting the selected words. */
+  onNote?: (verse: number, quote: string) => void;
   /**
    * The display-only yellow mark from a search (not a saved highlight). When
    * the selection touches it, the trash button clears it too, so every yellow
@@ -30,10 +70,19 @@ interface Props {
 
 /**
  * SelectionToolbar — floating toolbar that appears above selected text on desktop.
- * Shows highlight color dots, copy, share, and bookmark actions.
+ * Shows highlight color dots, the highlight scope (whole verse / selection / all in book), and
+ * copy, share and note actions.
  */
-export default function SelectionToolbar({ book, chapter, bookId, searchMark, onClearSearchMark }: Props) {
-  const { state, dispatch, addHighlight, updateHighlight, removeHighlight, addBookmark } = useApp();
+export default function SelectionToolbar({
+  book,
+  chapter,
+  bookId,
+  chapterCount,
+  onNote,
+  searchMark,
+  onClearSearchMark,
+}: Props) {
+  const { state, dispatch, addHighlight, updateHighlight, removeHighlight } = useApp();
   // `below`: the bar sits under the selection instead of above it.
   const [position, setPosition] = useState<{ x: number; y: number; below: boolean } | null>(null);
   // How the last selection was made. A finger drag (iPad, touch laptop) also
@@ -50,13 +99,16 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
   }, []);
   const [selectedText, setSelectedText] = useState('');
   const [selectedVerses, setSelectedVerses] = useState<number[]>([]);
+  const [extent, setExtent] = useState<SelectionExtent | null>(null);
+  const [scope, setScope] = useState<HighlightScope>('verse');
   const [copied, setCopied] = useState(false);
-  const [saved, setSaved] = useState(false);
 
   const checkSelection = useCallback(() => {
     const sel = window.getSelection();
     if (!sel || sel.isCollapsed || !sel.toString().trim()) {
       setPosition(null);
+      // Every new selection starts on the whole verse, whatever the last one chose.
+      setScope('verse');
       return;
     }
 
@@ -122,14 +174,15 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
       }
     }
     setSelectedVerses(verses);
+    setExtent(selectionExtent(range, scriptureContainer));
 
     // Position the toolbar above the selection — or below it for a touch
     // selection (see lastPointerRef), or when there's no room above (the
     // first line under the header), where it would be clipped off-screen.
     const rect = range.getBoundingClientRect();
-    const TOOLBAR_ROOM = 96;
+    const TOOLBAR_ROOM = 132;
     const below = lastPointerRef.current === 'touch' || rect.top - TOOLBAR_ROOM < 8;
-    const half = 110; // about half the toolbar's width: keep it on screen
+    const half = 150; // about half the toolbar's width: keep it on screen
     const x = Math.min(Math.max(rect.left + rect.width / 2, half + 8), window.innerWidth - half - 8);
     setPosition({ x, y: below ? rect.bottom + (lastPointerRef.current === 'touch' ? 28 : 8) : rect.top - 8, below });
   }, []);
@@ -189,19 +242,21 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
     }
   };
 
-  // Compute existing highlight overlap at component level so the UI can
-  // conditionally render the Remove button (not just handleHighlight).
-  const existingHighlight = (() => {
-    if (selectedVerses.length === 0) return undefined;
-    const startVerse = Math.min(...selectedVerses);
-    const endVerse = Math.max(...selectedVerses);
-    return state.highlights.find(h => {
-      if (h.bookId !== bookId || h.chapter !== chapter) return false;
-      const hStart = h.startVerse ?? h.verse;
-      const hEnd = h.endVerse ?? h.verse;
-      return hStart <= endVerse && hEnd >= startVerse;
-    });
-  })();
+  const chapterHighlights = state.highlights.filter(
+    h => h.bookId === bookId && h.chapter === chapter,
+  );
+  const extentOf = (h: Highlight) => ({
+    startVerse: h.startVerse ?? h.verse,
+    endVerse: h.endVerse ?? h.verse,
+    startChar: isCharHighlight(h) ? h.startChar : null,
+    endChar: isCharHighlight(h) ? h.endChar : null,
+  });
+
+  // Saved highlights the selection touches, character by character: a word highlighted
+  // elsewhere in the verse is not touched. The Remove button removes these.
+  const overlapping = extent
+    ? chapterHighlights.filter(h => highlightsOverlap(extentOf(h), extent))
+    : [];
 
   // The selection touches the search mark (display-only yellow).
   const marksSelection =
@@ -210,72 +265,206 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
     Math.min(...selectedVerses) <= searchMark.end &&
     Math.max(...selectedVerses) >= searchMark.start;
 
-  const handleHighlight = async (color: HighlightColor) => {
-    if (selectedVerses.length === 0) return;
-    const startVerse = Math.min(...selectedVerses);
-    const endVerse = Math.max(...selectedVerses);
-    const existing = existingHighlight;
-    try {
-      if (state.isSignedIn) {
-        if (existing) {
-          if (existing.color !== color) {
-            await updateHighlight(existing.id, color);
-          }
-        } else {
-          await addHighlight({
-            bookId,
-            book,
-            chapter,
-            verse: startVerse,
-            startVerse,
-            endVerse,
-            color,
-          });
-        }
-      } else {
-        // Signed-out: ephemeral, in-memory only. Dropped on passage change
-        // (see SET_PASSAGE in AppContext). Never persisted to API or
-        // localStorage.
-        if (existing) {
-          if (existing.color !== color) {
-            dispatch({ type: 'UPDATE_HIGHLIGHT', id: existing.id, color });
-          }
-        } else {
-          dispatch({
-            type: 'ADD_HIGHLIGHT',
-            highlight: {
-              id: `local-${Date.now()}`,
-              bookId,
-              book,
-              chapter,
-              verse: startVerse,
-              startVerse,
-              endVerse,
-              color,
-              createdAt: new Date().toISOString(),
-            },
-          });
-        }
-      }
-      setPosition(null);
-      window.getSelection()?.removeAllRanges();
-    } catch { /* ignore */ }
+  const offerAll = !!extent && canHighlightAll(extent.words, extent.startVerse, extent.endVerse);
+  const activeScope: HighlightScope = scope === 'book' && !offerAll ? 'verse' : scope;
+
+  const close = () => {
+    setPosition(null);
+    setScope('verse');
+    window.getSelection()?.removeAllRanges();
   };
 
-  const handleBookmark = async () => {
-    if (!state.isSignedIn || selectedVerses.length === 0) return;
+  /** Save a new highlight: through the API when signed in, in memory only when not. */
+  const saveHighlight = async (h: Omit<Highlight, 'id' | 'createdAt'>) => {
+    if (state.isSignedIn) {
+      await addHighlight(h);
+    } else {
+      // Signed-out: ephemeral, in-memory only. Dropped on passage change
+      // (see SET_PASSAGE in AppContext). Never persisted to API or
+      // localStorage.
+      dispatch({
+        type: 'ADD_HIGHLIGHT',
+        highlight: {
+          ...h,
+          id: `local-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+          createdAt: new Date().toISOString(),
+        },
+      });
+    }
+  };
+
+  const recolor = async (h: Highlight, color: HighlightColor) => {
+    if (h.color === color) return;
+    if (state.isSignedIn) await updateHighlight(h.id, color);
+    else dispatch({ type: 'UPDATE_HIGHLIGHT', id: h.id, color });
+  };
+
+  /** "All in <book>": every place the selected words occur in this book, in one colour. */
+  const highlightAllInBook = async (phrase: string, color: HighlightColor) => {
+    const toastId = toast.loading(`Finding \u201C${phrase}\u201D in ${book}\u2026`);
+    const { occurrences, missingChapters } = await collectBookOccurrences({
+      phrase,
+      chapterCount,
+      loadChapter: async ch => {
+        const data = await fetchChapterById(bookId, book, ch, state.version);
+        return data.verses.length > 0
+          ? data.verses.map(v => ({ verseNumber: v.number, text: v.text }))
+          : null;
+      },
+    });
+    if (occurrences.length === 0) {
+      toast(`\u201C${phrase}\u201D was not found in ${book}`, { id: toastId });
+      return;
+    }
+    if (
+      occurrences.length > HIGHLIGHT_ALL_CONFIRM_ABOVE &&
+      !window.confirm(
+        `Highlight ${occurrences.length} places?\n\n\u201C${phrase}\u201D appears ${occurrences.length} times in ${book}.`,
+      )
+    ) {
+      toast.dismiss(toastId);
+      return;
+    }
+    // Places already highlighted in this colour are left as they are.
+    const fresh = occurrences.filter(
+      o =>
+        !state.highlights.some(
+          h =>
+            h.bookId === bookId &&
+            h.chapter === o.chapter &&
+            h.color === color &&
+            highlightsOverlap(extentOf(h), {
+              startVerse: o.verse,
+              endVerse: o.verse,
+              startChar: o.start,
+              endChar: o.end,
+            }),
+        ),
+    );
+    let next = 0;
+    const worker = async () => {
+      while (next < fresh.length) {
+        const o = fresh[next++];
+        try {
+          await saveHighlight({
+            bookId,
+            book,
+            chapter: o.chapter,
+            verse: o.verse,
+            startVerse: o.verse,
+            endVerse: o.verse,
+            startChar: o.start,
+            endChar: o.end,
+            selectedText: o.text,
+            color,
+          });
+        } catch {
+          /* one place failed; the rest still save */
+        }
+      }
+    };
+    await Promise.all(Array.from({ length: Math.min(4, fresh.length) }, worker));
+    const partial = missingChapters.length > 0 ? ' (some chapters could not be read)' : '';
+    toast.success(
+      `Highlighted ${occurrences.length} ${occurrences.length === 1 ? 'place' : 'places'} in ${book}${partial}`,
+      { id: toastId },
+    );
+  };
+
+  const handleHighlight = async (color: HighlightColor) => {
+    if (!extent) return;
+    const target = { ...extent };
+    const phrase = extent.words;
+    close();
     try {
-      await addBookmark({
+      if (activeScope === 'book') {
+        await highlightAllInBook(phrase, color);
+        return;
+      }
+      // A selection of whole verses is a whole-verse highlight.
+      const words = activeScope === 'selection' && !target.wholeVerses;
+      if (words) {
+        const same = chapterHighlights.find(h => {
+          const e = extentOf(h);
+          return (
+            e.startVerse === target.startVerse &&
+            e.endVerse === target.endVerse &&
+            e.startChar === target.startChar &&
+            e.endChar === target.endChar
+          );
+        });
+        if (same) {
+          await recolor(same, color);
+          return;
+        }
+        await saveHighlight({
+          bookId,
+          book,
+          chapter,
+          verse: target.startVerse,
+          startVerse: target.startVerse,
+          endVerse: target.endVerse,
+          startChar: target.startChar,
+          endChar: target.endChar,
+          selectedText: phrase,
+          color,
+        });
+        return;
+      }
+      // Whole verse: recolor a whole-verse highlight already over these verses, else add one.
+      const existing = chapterHighlights.find(
+        h =>
+          !isCharHighlight(h) &&
+          highlightsOverlap(extentOf(h), {
+            startVerse: target.startVerse,
+            endVerse: target.endVerse,
+          }),
+      );
+      if (existing) {
+        await recolor(existing, color);
+        return;
+      }
+      await saveHighlight({
         bookId,
         book,
         chapter,
-        verse: selectedVerses[0],
-        version: state.version,
+        verse: target.startVerse,
+        startVerse: target.startVerse,
+        endVerse: target.endVerse,
+        color,
       });
-      setSaved(true);
-      setTimeout(() => setSaved(false), 1500);
+    } catch {
+      toast.error('Could not save the highlight');
+    }
+  };
+
+  const handleRemove = async () => {
+    const targets = overlapping;
+    close();
+    try {
+      for (const h of targets) {
+        if (state.isSignedIn) await removeHighlight(h.id);
+        else dispatch({ type: 'REMOVE_HIGHLIGHT', id: h.id });
+      }
+      if (marksSelection) onClearSearchMark?.();
     } catch { /* ignore */ }
   };
+
+  const handleNote = () => {
+    if (!extent || !onNote) return;
+    const { startVerse, words } = extent;
+    close();
+    onNote(startVerse, words);
+  };
+
+  const scopeLabel = (value: HighlightScope) => {
+    if (value === 'verse') {
+      return extent && extent.startVerse !== extent.endVerse ? 'Whole verses' : 'Whole verse';
+    }
+    if (value === 'selection') return 'Selection';
+    return `All in ${book}`;
+  };
+  const scopes: HighlightScope[] = offerAll ? ['verse', 'selection', 'book'] : ['verse', 'selection'];
 
   if (!position) return null;
 
@@ -298,7 +487,12 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
         gap: 6,
         minWidth: 200,
       }}
-      onMouseDown={(e) => e.stopPropagation()}
+      // preventDefault keeps the text selection while a scope is picked: a
+      // collapsed selection would close the bar.
+      onMouseDown={(e) => {
+        e.stopPropagation();
+        e.preventDefault();
+      }}
     >
       {/* Highlight colors row + remove (when an existing highlight overlaps the selection) */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}>
@@ -306,6 +500,7 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
           <button
             key={color}
             onClick={() => handleHighlight(color)}
+            data-testid={`selection-color-${color}`}
             title={state.isSignedIn ? `Highlight ${color}` : `Highlight ${color} (sign in to save)`}
             style={{
               width: 20,
@@ -322,23 +517,10 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
         {/* Remove (un-highlight) — only shows when the current selection
             overlaps an existing highlight, so users have a clear way to
             undo without going through the long-press / right-panel flow. */}
-        {(existingHighlight || marksSelection) && (
+        {(overlapping.length > 0 || marksSelection) && (
           <button
             data-testid="selection-remove-highlight"
-            onClick={async () => {
-              try {
-                if (existingHighlight) {
-                  if (state.isSignedIn) {
-                    await removeHighlight(existingHighlight.id);
-                  } else {
-                    dispatch({ type: 'REMOVE_HIGHLIGHT', id: existingHighlight.id });
-                  }
-                }
-                if (marksSelection) onClearSearchMark?.();
-                setPosition(null);
-                window.getSelection()?.removeAllRanges();
-              } catch { /* ignore */ }
-            }}
+            onClick={handleRemove}
             title="Remove highlight"
             aria-label="Remove highlight"
             style={{
@@ -359,6 +541,54 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
             <Trash2 size={11} strokeWidth={2} />
           </button>
         )}
+      </div>
+
+      {/* Highlight scope: what a colour highlights */}
+      <div
+        role="radiogroup"
+        aria-label="Highlight"
+        data-testid="selection-scope"
+        style={{
+          display: 'flex',
+          gap: 2,
+          padding: 2,
+          borderRadius: 8,
+          backgroundColor: 'var(--hover-bg)',
+        }}
+      >
+        {scopes.map(value => {
+          const selected = value === activeScope;
+          return (
+            <button
+              key={value}
+              role="radio"
+              aria-checked={selected}
+              data-testid={`selection-scope-${value}`}
+              onClick={() => setScope(value)}
+              title={
+                value === 'book' && extent
+                  ? `Highlight every \u201C${extent.words}\u201D in ${book}`
+                  : undefined
+              }
+              style={{
+                flex: value === 'book' ? '1.4 1 0' : '1 1 0',
+                padding: '5px 8px',
+                borderRadius: 6,
+                border: 'none',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                backgroundColor: selected ? 'var(--card-bg)' : 'transparent',
+                boxShadow: selected ? '0 1px 3px rgba(27,27,27,0.14)' : 'none',
+                color: selected ? 'var(--fg-primary)' : 'var(--fg-secondary)',
+                fontFamily: 'Roboto, sans-serif',
+                fontSize: 12,
+                fontWeight: selected ? 600 : 400,
+              }}
+            >
+              {scopeLabel(value)}
+            </button>
+          );
+        })}
       </div>
 
       {/* Action buttons row */}
@@ -406,8 +636,9 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
           Share
         </button>
         <button
-          onClick={handleBookmark}
-          disabled={!state.isSignedIn}
+          onClick={handleNote}
+          disabled={!onNote}
+          data-testid="selection-note"
           style={{
             flex: 1,
             display: 'flex',
@@ -418,15 +649,15 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
             borderRadius: 8,
             backgroundColor: 'var(--hover-bg)',
             border: 'none',
-            cursor: state.isSignedIn ? 'pointer' : 'not-allowed',
-            color: saved ? 'var(--vm-dust)' : 'var(--fg-primary)',
+            cursor: onNote ? 'pointer' : 'not-allowed',
+            color: 'var(--fg-primary)',
             fontFamily: 'Roboto, sans-serif',
             fontSize: 12,
-            opacity: state.isSignedIn ? 1 : 0.5,
+            opacity: onNote ? 1 : 0.5,
           }}
         >
-          {saved ? <Check size={13} strokeWidth={2} /> : <Bookmark size={13} strokeWidth={1.5} />}
-          {saved ? 'Saved' : 'Save'}
+          <FileText size={13} strokeWidth={1.5} />
+          Note
         </button>
       </div>
 
@@ -444,4 +675,49 @@ export default function SelectionToolbar({ book, chapter, bookId, searchMark, on
       }} />
     </div>
   );
+}
+
+/**
+ * Where `range` starts and ends in the verse text: the first and last verse with selected text,
+ * and offsets into each (trimmed of surrounding spaces). Verse numbers and the space between
+ * verses do not count. Null when no verse text is selected.
+ */
+function selectionExtent(range: Range, container: Element): SelectionExtent | null {
+  const picked: { verse: number; start: number; end: number; text: string }[] = [];
+  for (const el of container.querySelectorAll(`[${VERSE_TEXT_ATTR}]`)) {
+    if (!range.intersectsNode(el)) continue;
+    const verse = Number(el.getAttribute(VERSE_TEXT_ATTR));
+    if (Number.isNaN(verse)) continue;
+    const text = el.textContent ?? '';
+    const start = el.contains(range.startContainer)
+      ? textOffsetWithin(el, range.startContainer, range.startOffset)
+      : 0;
+    const end = el.contains(range.endContainer)
+      ? textOffsetWithin(el, range.endContainer, range.endOffset)
+      : text.length;
+    if (end > start && text.slice(start, end).trim()) picked.push({ verse, start, end, text });
+  }
+  if (picked.length === 0) return null;
+  const first = picked[0];
+  const last = picked[picked.length - 1];
+  let startChar = first.start;
+  while (startChar < first.text.length && /\s/.test(first.text[startChar])) startChar++;
+  let endChar = last.end;
+  while (endChar > 0 && /\s/.test(last.text[endChar - 1])) endChar--;
+  const words = picked
+    .map((p, i) =>
+      p.text.slice(i === 0 ? startChar : p.start, i === picked.length - 1 ? endChar : p.end),
+    )
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return {
+    startVerse: first.verse,
+    endVerse: last.verse,
+    startChar,
+    endChar,
+    wholeVerses:
+      first.text.slice(0, startChar).trim() === '' && last.text.slice(endChar).trim() === '',
+    words,
+  };
 }

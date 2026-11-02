@@ -1072,6 +1072,11 @@ export async function addHighlight(h: {
   startVerse: number;
   endVerse?: number;
   color: HighlightColor;
+  /** Word highlight: offset into the start verse's text (inclusive). */
+  startChar?: number | null;
+  /** Word highlight: offset into the end verse's text (exclusive). */
+  endChar?: number | null;
+  selectedText?: string;
 }) {
   // Backend requires user_id in the body — POST /bible/highlight/add
   // throws ValidationError("Missing required fields") otherwise. Without
@@ -1084,6 +1089,9 @@ export async function addHighlight(h: {
     start_verse: h.startVerse,
     end_verse: h.endVerse ?? h.startVerse,
     color: h.color,
+    ...(typeof h.startChar === 'number' && typeof h.endChar === 'number'
+      ? { start_char: h.startChar, end_char: h.endChar, selected_text: h.selectedText }
+      : {}),
   });
 }
 

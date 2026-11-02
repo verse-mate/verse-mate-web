@@ -64,6 +64,14 @@ type Action =
   | { type: 'UPDATE_HIGHLIGHT'; id: string; color: HighlightColor }
   | { type: 'REPLACE_HIGHLIGHT_ID'; oldId: string; newId: string; highlightId?: number }
   | { type: 'REMOVE_HIGHLIGHT'; id: string }
+  | {
+      type: 'SET_HIGHLIGHT_EXTENT';
+      id: string;
+      startVerse?: number;
+      endVerse?: number;
+      startChar: number | null;
+      endChar: number | null;
+    }
   | { type: 'UPDATE_SETTINGS'; settings: Partial<AppSettings> }
   | {
       type: 'SET_SIGNED_IN';
@@ -136,6 +144,22 @@ function reducer(state: AppState, action: Action): AppState {
       };
     case 'REMOVE_HIGHLIGHT':
       return { ...state, highlights: state.highlights.filter(h => h.id !== action.id) };
+    case 'SET_HIGHLIGHT_EXTENT':
+      return {
+        ...state,
+        highlights: state.highlights.map(h => {
+          if (h.id !== action.id) return h;
+          const startVerse = action.startVerse ?? h.startVerse ?? h.verse;
+          return {
+            ...h,
+            verse: startVerse,
+            startVerse,
+            endVerse: action.endVerse ?? h.endVerse,
+            startChar: action.startChar,
+            endChar: action.endChar,
+          };
+        }),
+      };
     case 'UPDATE_SETTINGS':
       return { ...state, settings: { ...state.settings, ...action.settings } };
     case 'SET_SIGNED_IN':
@@ -479,11 +503,23 @@ export function AppProvider({ children }: { children: ReactNode }) {
           startVerse: h.startVerse ?? h.verse,
           endVerse: h.endVerse ?? h.verse,
           color: h.color,
+          startChar: h.startChar,
+          endChar: h.endChar,
+          selectedText: h.selectedText,
         });
-        const realId =
-          (res as { highlight?: { highlight_id?: number }; highlight_id?: number } | undefined)
-            ?.highlight?.highlight_id ??
-          (res as { highlight_id?: number } | undefined)?.highlight_id;
+        type AddResponse = {
+          highlight?: {
+            highlight_id?: number;
+            start_verse?: number;
+            end_verse?: number;
+            start_char?: number | null;
+            end_char?: number | null;
+          };
+          highlight_id?: number;
+          merged_highlight_ids?: number[];
+        };
+        const body = res as AddResponse | undefined;
+        const realId = body?.highlight?.highlight_id ?? body?.highlight_id;
         if (typeof realId === 'number' && realId > 0) {
           dispatch({
             type: 'REPLACE_HIGHLIGHT_ID',
@@ -491,6 +527,21 @@ export function AppProvider({ children }: { children: ReactNode }) {
             newId: String(realId),
             highlightId: realId,
           });
+          // The backend folds an overlapping highlight of the same colour into
+          // the new one: drop the folded ones and take the merged extent.
+          const merged = (body?.merged_highlight_ids ?? []).filter(id => id !== realId);
+          if (merged.length > 0 && body?.highlight) {
+            for (const id of merged) dispatch({ type: 'REMOVE_HIGHLIGHT', id: String(id) });
+            const m = body.highlight;
+            dispatch({
+              type: 'SET_HIGHLIGHT_EXTENT',
+              id: String(realId),
+              startVerse: m.start_verse,
+              endVerse: m.end_verse,
+              startChar: m.start_char ?? null,
+              endChar: m.end_char ?? null,
+            });
+          }
         }
       } catch {
         dispatch({ type: 'REMOVE_HIGHLIGHT', id: tmpId });

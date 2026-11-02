@@ -102,6 +102,8 @@ export interface Highlight {
   endVerse?: number;
   startChar?: number | null;
   endChar?: number | null;
+  /** The highlighted words, for a word highlight (sent on create). */
+  selectedText?: string;
   color: HighlightColor;
   createdAt: string;
 }
