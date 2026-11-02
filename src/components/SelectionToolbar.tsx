@@ -271,6 +271,24 @@ export default function SelectionToolbar({
     Math.max(...selectedVerses) >= searchMark.start;
 
   const offerAll = !!extent && canHighlightAll(extent.phrase, extent.startVerse, extent.endVerse);
+
+  // What the trash on "All in <book>" removes: when the selection sits inside a word highlight
+  // ("Son of" in a highlighted "Son of Man"), every highlight of those highlighted words;
+  // otherwise every highlight of the selected words.
+  const removalPhrase = (() => {
+    if (!extent) return '';
+    for (const h of overlapping) {
+      if (!isCharHighlight(h)) continue;
+      const verse = h.startVerse ?? h.verse;
+      if ((h.endVerse ?? verse) !== verse) continue;
+      const el = document.querySelector(`[${VERSE_TEXT_ATTR}="${verse}"]`);
+      const words = (
+        el?.textContent?.slice(h.startChar as number, h.endChar as number) ?? h.selectedText ?? ''
+      ).trim();
+      if (words) return words;
+    }
+    return extent.phrase;
+  })();
   const activeScope: HighlightScope = scope === 'book' && !offerAll ? 'verse' : scope;
 
   const close = () => {
@@ -322,7 +340,7 @@ export default function SelectionToolbar({
     const toastId = toast.loading(`Finding \u201C${phrase}\u201D in ${book}\u2026`);
     const { occurrences, missingChapters } = await findInBook(phrase);
     if (occurrences.length === 0) {
-      toast(`\u201C${phrase}\u201D was not found in ${book}`, { id: toastId });
+      toast.info(`\u201C${phrase}\u201D was not found in ${book}`, { id: toastId });
       return;
     }
     if (
@@ -463,7 +481,7 @@ export default function SelectionToolbar({
       return places.has(`${h.chapter}:${startVerse}:${h.startChar}:${h.endChar}`);
     });
     if (targets.length === 0) {
-      toast(`No \u201C${phrase}\u201D highlights in ${book}`, { id: toastId });
+      toast.info(`No \u201C${phrase}\u201D highlights in ${book}`, { id: toastId });
       return;
     }
     let removed = 0;
@@ -485,7 +503,7 @@ export default function SelectionToolbar({
 
   const handleRemove = async () => {
     if (activeScope === 'book' && extent) {
-      const phrase = extent.phrase;
+      const phrase = removalPhrase;
       close();
       await removeAllInBook(phrase);
       return;
@@ -574,12 +592,12 @@ export default function SelectionToolbar({
             onClick={handleRemove}
             title={
               activeScope === 'book' && extent
-                ? `Remove every \u201C${extent.phrase}\u201D highlight in ${book}`
+                ? `Remove every \u201C${removalPhrase}\u201D highlight in ${book}`
                 : 'Remove highlight'
             }
             aria-label={
               activeScope === 'book' && extent
-                ? `Remove every \u201C${extent.phrase}\u201D highlight in ${book}`
+                ? `Remove every \u201C${removalPhrase}\u201D highlight in ${book}`
                 : 'Remove highlight'
             }
             style={{

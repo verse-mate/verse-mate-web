@@ -92,7 +92,11 @@ export default function ReadingScreen() {
   }, [state.bookId, state.chapter]);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   // A note started from the selection toolbar: its verse and the selected words.
-  const [noteDraft, setNoteDraft] = useState<{ verse: number; quote: string } | null>(null);
+  const [noteDraft, setNoteDraft] = useState<{
+    verse: number;
+    quote: string;
+    centerX: number | null;
+  } | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
   const [apiAutoHighlights, setApiAutoHighlights] = useState<AutoHighlightRange[]>([]);
   const [books, setBooks] = useState<BibleBook[]>([]);
@@ -743,7 +747,16 @@ export default function ReadingScreen() {
             chapter={state.chapter}
             bookId={state.bookId}
             chapterCount={maxChapter}
-            onNote={(verse, quote) => setNoteDraft({ verse, quote })}
+            onNote={(verse, quote) => {
+              // Centre the note card over the reading column, as the search
+              // box centres over the Bible panel, kept on screen.
+              const rect = scriptureRef.current?.closest('.reading-body')?.getBoundingClientRect();
+              const half = Math.min(420, window.innerWidth * 0.92) / 2;
+              const centerX = rect && rect.width > 0
+                ? Math.round(Math.min(Math.max(rect.left + rect.width / 2, half + 8), window.innerWidth - half - 8))
+                : null;
+              setNoteDraft({ verse, quote, centerX });
+            }}
             searchMark={activeMark}
             onClearSearchMark={() => setMarkRange(null)}
           />
@@ -834,6 +847,7 @@ export default function ReadingScreen() {
           chapter={state.chapter}
           verse={noteDraft.verse}
           quote={noteDraft.quote}
+          centerX={noteDraft.centerX}
           onClose={() => setNoteDraft(null)}
         />
       )}
