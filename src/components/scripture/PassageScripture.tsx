@@ -16,6 +16,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { loadAlignmentFor, type ChapterAlignment } from '@versemate/lexicon';
 import LexicalVerseText from '@/components/LexicalVerseText';
+import { isEnglishVersion } from '@/constants/bible-versions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import { ScriptureText, type ScriptureVerse } from '@/components/scripture/ScriptureBlock';
 import { useApp } from '@/contexts/AppContext';
@@ -121,6 +122,7 @@ export default function PassageScripture({ bookId, bookName, chapter, verses, fo
               verseNumber={number}
               alignment={alignment}
               wireTokens={tokensByVerse[number]}
+              englishDefinitions={isEnglishVersion(state.version)}
             />
           );
         }}

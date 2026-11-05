@@ -1,3 +1,4 @@
+import EnglishWordDefinitions from '@/components/EnglishWordDefinitions';
 import TokenizedVerse from '@/components/TokenizedVerse';
 import type { ChapterAlignment } from '@versemate/lexicon';
 import type { VerseToken } from '@/services/types';
@@ -26,6 +27,11 @@ interface Props {
   alignment: ChapterAlignment | null;
   /** Backend-emitted Strong's tokens for this verse, when the row has them. */
   wireTokens?: VerseToken[];
+  /**
+   * Right-click a word the lexicon doesn't cover for its English dictionary
+   * definition (Easton's / Webster's). Pass false for non-English text.
+   */
+  englishDefinitions?: boolean;
 }
 
 /**
@@ -38,7 +44,20 @@ interface Props {
  * rather than in each surface. That is what keeps a word behaving the same
  * whether the reader meets the verse in the reader or in a Jesus passage.
  */
-export default function LexicalVerseText({ text, verseNumber, alignment, wireTokens }: Props) {
+export default function LexicalVerseText({ englishDefinitions = true, ...props }: Props) {
+  return (
+    <EnglishWordDefinitions enabled={englishDefinitions}>
+      <VerseWords {...props} />
+    </EnglishWordDefinitions>
+  );
+}
+
+function VerseWords({
+  text,
+  verseNumber,
+  alignment,
+  wireTokens,
+}: Omit<Props, 'englishDefinitions'>) {
   if (alignment) {
     return (
       <TokenizedVerse

@@ -170,3 +170,13 @@ export function languageLabel(code: string): string {
     return code.toUpperCase();
   }
 }
+
+/**
+ * Whether a translation's text is English. Unknown keys count as English:
+ * NASB1995 is the default the app falls back to.
+ */
+export function isEnglishVersion(key: string | null | undefined): boolean {
+  if (!key) return true;
+  const info = bibleVersions.find((v) => v.key === key);
+  return !info || info.languageCode === 'en';
+}
