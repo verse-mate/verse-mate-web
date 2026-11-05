@@ -5,12 +5,16 @@
  * was authored against a different translation (BSB) than the reader shows,
  * so a large share of a chapter's English — "flood" in Psalm 90:5, most small
  * words — has no card. The mobile app answers those from Easton's Bible
- * Dictionary first, then Webster's 1913. This is the same lookup for web, over
- * the same data files (copied from verse-mate-mobile `assets/data/`), served
- * as static files under `public/dictionary/` and fetched only when a reader
- * asks for a word: Easton's is one 3.5MB file, Webster's is split by first
- * letter so a lookup pulls one ~1MB shard.
+ * Dictionary, then Webster's 1913. This is the same lookup for web, over the
+ * same data files (copied from verse-mate-mobile `assets/data/`), served as
+ * static files under `public/dictionary/` and fetched only when a reader asks
+ * for a word: Easton's is one 3.5MB file, Webster's is split by first letter
+ * so a lookup pulls one ~1MB shard.
+ *
+ * The lookup order matches mobile's `services/dictionary-service.ts`; keep
+ * the two in step.
  */
+import { baseForms } from '@/lib/wordForms';
 
 export interface EnglishDefinition {
   /** The word as the reader asked for it. */
@@ -37,14 +41,20 @@ const DICTIONARY_BASE = '/dictionary';
 // KJV typography uses Latin ligatures ("Cæsar"); NFKD does not decompose them.
 const LIGATURES: Record<string, string> = { æ: 'ae', Æ: 'AE', œ: 'oe', Œ: 'OE' };
 
-/** Same normalization as mobile's word-mapping-service: the files are keyed by it. */
+/**
+ * Same normalization as mobile's word-mapping-service — the files are keyed by
+ * it — including its possessive rule: "David’s" looks up David.
+ */
 export function normalizeWord(word: string): string {
   return word
+    .trim()
+    .replace(/['’]s?(?=[.,;:!?"”)]*$)/i, '')
+    .replace(/[‘’]/g, "'")
     .replace(/[æÆœŒ]/g, (c) => LIGATURES[c])
     .normalize('NFKD')
     .replace(/\p{M}/gu, '')
     .toLowerCase()
-    .replace(/[.,;:!?'"()‘’“”]/g, '');
+    .replace(/[.,;:!?'"()“”]/g, '');
 }
 
 const cache = new Map<string, Promise<Dictionary>>();
@@ -64,40 +74,87 @@ function load(file: string): Promise<Dictionary> {
   return p;
 }
 
-function levenshtein(a: string, b: string): number {
-  const prev = Array.from({ length: b.length + 1 }, (_, j) => j);
-  for (let i = 1; i <= a.length; i++) {
-    let diag = prev[0];
-    prev[0] = i;
-    for (let j = 1; j <= b.length; j++) {
-      const tmp = prev[j];
-      prev[j] = a[i - 1] === b[j - 1] ? diag : 1 + Math.min(diag, prev[j], prev[j - 1]);
-      diag = tmp;
-    }
-  }
-  return prev[b.length];
+/**
+ * Easton's headwords that are a biblical name spelled like a common English
+ * word: "so" is King So of Egypt, "on" the city On, "no" No-Amon (Thebes),
+ * "a" the Greek letter Alpha. ALWAYS: the English word however it is
+ * capitalized (a poetry line opens with a capital: "So teach us to number our
+ * days"). LOWERCASE: the English word only in lowercase; capitalized they are
+ * names (Ram son of Hezron, Beer the well-station, Madmen the Moabite town).
+ */
+const NAME_ENTRY_ALWAYS = new Set(['a', 'on', 'so', 'no']);
+const NAME_ENTRY_LOWERCASE = new Set(['ram', 'beer', 'madmen']);
+
+function firstLetter(word: string): string | undefined {
+  return word.match(/\p{L}/u)?.[0];
+}
+function startsLowercase(word: string): boolean {
+  const c = firstLetter(word);
+  return !!c && c === c.toLowerCase() && c !== c.toUpperCase();
+}
+function startsUppercase(word: string): boolean {
+  const c = firstLetter(word);
+  return !!c && c === c.toUpperCase() && c !== c.toLowerCase();
 }
 
-/** Easton's, exact headword. */
-async function lookupEaston(key: string): Promise<DictEntry | null> {
+async function lookupEaston(word: string, key: string): Promise<DictEntry | null> {
+  if (NAME_ENTRY_ALWAYS.has(key)) return null;
+  if (NAME_ENTRY_LOWERCASE.has(key) && startsLowercase(word)) return null;
   const dict = await load('easton.json');
   return dict[key] ?? null;
 }
 
 /**
- * Mobile's fuzzy fallback for biblical name spellings ("zaccheus" →
- * "zacchaeus"): same first letter, edit distance 1, or 2 for words of six
- * letters or more. Tried only after every exact lookup has missed — run first,
- * as on mobile, it turns ordinary words into names ("anew" → Anab).
+ * A name's spelling with the transliteration variants that differ between
+ * English Bibles folded away: doubled consonants (Bezaleel/Bezalel), "ae"/"ee"
+ * (Zacchaeus/Zaccheus), "ch" for "c" (Maachah/Maacah), a final "h" after a
+ * vowel (Ramah/Rama), hyphens (Bath-sheba/Bathsheba). Doubled "a" stays: in a
+ * Hebrew name it marks a different word (Raamah is not Ramah).
  */
-async function lookupEastonFuzzy(key: string): Promise<DictEntry | null> {
-  if (key.length < 4) return null;
+function canonicalName(key: string): string {
+  return key
+    .replace(/-/g, '')
+    .replace(/ae|ee/g, 'e')
+    .replace(/ch/g, 'c')
+    .replace(/([b-df-hj-np-tv-z])\1/g, '$1')
+    .replace(/([aeiou])h$/, '$1');
+}
+
+let canonicalIndex: Promise<Map<string, string[]>> | null = null;
+
+function canonicalKeys(): Promise<Map<string, string[]>> {
+  canonicalIndex ??= load('easton.json').then((dict) => {
+    const index = new Map<string, string[]>();
+    for (const key of Object.keys(dict)) {
+      const c = canonicalName(key);
+      const list = index.get(c);
+      if (list) list.push(key);
+      else index.set(c, [key]);
+    }
+    return index;
+  });
+  return canonicalIndex;
+}
+
+/**
+ * The entry another spelling of a name is filed under. Every rule is an exact
+ * match on a rewritten form — an edit-distance match (as mobile had) also
+ * caught near-misses that are other words or names ("anew" → Anab, "will" →
+ * Wall, "Pilate" → Palace, "Herod" → Harod).
+ *
+ * 1. Gentilic singular: "Jebusite" → "jebusites".
+ * 2. A longer headword that begins with the name, when it is the only one:
+ *    "Pilate" → "pilate pontius" (but "Herod" has six — none is guessed).
+ * 3. The same canonical spelling, when unambiguous.
+ */
+async function lookupEastonVariant(key: string): Promise<DictEntry | null> {
+  if (key.length < 3) return null;
   const dict = await load('easton.json');
-  for (const k of Object.keys(dict)) {
-    if (k[0] !== key[0] || Math.abs(k.length - key.length) > 2) continue;
-    const d = levenshtein(key, k);
-    if (d === 1 || (d === 2 && key.length >= 6)) return dict[k];
-  }
+  if (dict[`${key}s`]) return dict[`${key}s`];
+  const longer = Object.keys(dict).filter((k) => k.startsWith(`${key} `));
+  if (longer.length === 1) return dict[longer[0]];
+  const same = (await canonicalKeys()).get(canonicalName(key));
+  if (same && same.length === 1) return dict[same[0]];
   return null;
 }
 
@@ -110,20 +167,11 @@ async function lookupWebster(key: string): Promise<DictEntry | null> {
 
 // Webster's lists many inflections only as a pointer: "swept" is
 // "imp. & p. p. of Sweep." A card that says only that isn't a definition, so
-// follow it one step to the headword it names.
-// Only the grammatical pointers (imp., p. p., pl., …): "The act of anatomizing."
-// has the same shape but is a real definition.
+// follow it one step to the headword it names. Only the grammatical pointers
+// (imp., p. p., pl., …): "The act of anatomizing." has the same shape but is a
+// real definition.
 const POINTER_RE =
   /^(?:(?:imp|p\.\s*p|p\.\s*pr|pl|pres|superl|compar|3d\s+pers\.\s*sing(?:\.\s*pres)?)\.?\s*(?:&|,|or)?\s*)+of\s+([A-Za-z][A-Za-z-]*)\.?\s*$/;
-
-/** Plain English plurals / 3rd-person forms the dictionaries don't list. */
-function stems(key: string): string[] {
-  const out: string[] = [];
-  if (key.endsWith('ies') && key.length > 4) out.push(`${key.slice(0, -3)}y`);
-  if (key.endsWith('es') && key.length > 3) out.push(key.slice(0, -2));
-  if (key.endsWith('s') && !key.endsWith('ss') && key.length > 3) out.push(key.slice(0, -1));
-  return out;
-}
 
 function fromEaston(word: string, easton: DictEntry): EnglishDefinition {
   return {
@@ -135,9 +183,7 @@ function fromEaston(word: string, easton: DictEntry): EnglishDefinition {
   };
 }
 
-async function lookupKey(word: string, key: string): Promise<EnglishDefinition | null> {
-  const easton = await lookupEaston(key);
-  if (easton) return fromEaston(word, easton);
+async function fromWebster(word: string, key: string): Promise<EnglishDefinition | null> {
   const webster = await lookupWebster(key);
   if (!webster) return null;
   const pointer = webster.definition.match(POINTER_RE);
@@ -156,20 +202,32 @@ async function lookupKey(word: string, key: string): Promise<EnglishDefinition |
   return { word, term: webster.term, definition: webster.definition, source: 'webster' };
 }
 
+async function exact(word: string, key: string): Promise<EnglishDefinition | null> {
+  const easton = await lookupEaston(word, key);
+  if (easton) return fromEaston(word, easton);
+  return fromWebster(word, key);
+}
+
 /**
- * Look a word up as mobile does — Easton's, then Webster's — then by its
- * singular ("sprouts" → "sprout"), then Easton's spelling variants. Null when
- * no dictionary has it.
+ * Look a word up as mobile does: Easton's, then Webster's, then the same for
+ * its base forms ("sons" → son, "called" → call), and only then — for a
+ * capitalized word, i.e. a name — another spelling of it in Easton's. Null
+ * when no dictionary has it.
+ *
+ * @param word - As written in the verse; its capitalization matters.
  */
 export async function lookupEnglishWord(word: string): Promise<EnglishDefinition | null> {
   const key = normalizeWord(word);
   if (!key || !/\p{L}/u.test(key)) return null;
-  const direct = await lookupKey(word, key);
+  const direct = await exact(word, key);
   if (direct) return direct;
-  for (const stem of stems(key)) {
-    const hit = await lookupKey(word, stem);
+  for (const base of baseForms(key)) {
+    const hit = await exact(word, base);
     if (hit) return hit;
   }
-  const fuzzy = await lookupEastonFuzzy(key);
-  return fuzzy ? fromEaston(word, fuzzy) : null;
+  if (startsUppercase(word)) {
+    const variant = await lookupEastonVariant(key);
+    if (variant) return fromEaston(word, variant);
+  }
+  return null;
 }

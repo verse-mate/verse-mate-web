@@ -67,6 +67,50 @@ describe('lookupEnglishWord', () => {
     expect(r?.term).toMatch(/^Zacch/);
   });
 
+  it.each([
+    ['will', 'Wall'],
+    ['soul', 'Saul'],
+    ['holy', 'Hold'],
+    ['servant', 'Serpent'],
+    ['with', 'Witch'],
+  ])('does not answer "%s" with a near spelling (%s)', async (word, wrong) => {
+    const r = await lookupEnglishWord(word);
+    expect(r).not.toBeNull();
+    expect(r?.term).not.toBe(wrong);
+  });
+
+  it.each(['so', 'So', 'on', 'no', 'a'])('"%s" is the English word, not a biblical name', async (word) => {
+    expect((await lookupEnglishWord(word))?.source).toBe('webster');
+  });
+
+  it('lowercase "ram" is the animal; "Ram" is the man', async () => {
+    expect((await lookupEnglishWord('ram'))?.source).toBe('webster');
+    expect((await lookupEnglishWord('Ram'))?.source).toBe('easton');
+  });
+
+  it.each([
+    ['called', 'call'],
+    ['hoped', 'hope'],
+    ['sinned', 'sin'],
+    ['eyes', 'eye'],
+    ['brought', 'bring'],
+    ['sons', 'son'],
+  ])('reaches the base form of "%s" (%s)', async (word, base) => {
+    const r = await lookupEnglishWord(word);
+    expect(`${r?.term}\n${r?.formOf ?? ''}`.toLowerCase()).toContain(base);
+  });
+
+  it('a possessive looks up its noun', async () => {
+    expect((await lookupEnglishWord('David’s'))?.term).toBe('David');
+  });
+
+  it('finds other spellings of a name without swapping names', async () => {
+    expect((await lookupEnglishWord('Pilate'))?.term).toMatch(/Pilate/);
+    expect((await lookupEnglishWord('Bathsheba'))?.term).toMatch(/Bath-?sheba/i);
+    expect((await lookupEnglishWord('Ramah'))?.term).toMatch(/^Ramah?$/i);
+    expect((await lookupEnglishWord('Herod'))?.term ?? '').not.toMatch(/^Harod$/i);
+  });
+
   it('returns null for non-words', async () => {
     expect(await lookupEnglishWord('')).toBeNull();
     expect(await lookupEnglishWord('42')).toBeNull();
