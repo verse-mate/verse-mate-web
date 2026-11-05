@@ -27,6 +27,7 @@ import {
 } from '@/lib/highlights/charHighlights';
 import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/ChapterNotesSheet';
 import LexicalVerseText from '@/components/LexicalVerseText';
+import { isEnglishVersion } from '@/constants/bible-versions';
 import { useHorizontalSwipe } from '@/hooks/useHorizontalSwipe';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
@@ -700,6 +701,7 @@ export default function ReadingScreen() {
                             verseNumber={verse.number}
                             alignment={lexAlignment}
                             wireTokens={verse.tokens}
+                            englishDefinitions={isEnglishVersion(state.version)}
                           />
                         </span>{' '}
                       </span>
