@@ -10,6 +10,7 @@
  * render an empty state, not a white screen.
  */
 
+import { getVisitLanguage } from '@/hooks/usePreferredLanguage';
 import { api } from './api';
 import type {
   JesusEntry,
@@ -67,7 +68,7 @@ export async function fetchJesusOverview(bibleVersion?: string): Promise<JesusOv
   try {
     const data = await api.get<JesusOverview>(
       '/jesus/overview',
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data ?? EMPTY_OVERVIEW;
@@ -85,7 +86,7 @@ export async function fetchJesusEntries(
   try {
     const data = await api.get<JesusEntryList>(
       '/jesus/entries',
-      compact({ ...query, limit, offset, bible_version: bibleVersion }),
+      compact({ ...query, limit, offset, bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data ?? { entries: [], total: 0, limit, offset };
@@ -102,7 +103,7 @@ export async function fetchJesusEntry(
   try {
     const data = await api.get<JesusEntryDetail>(
       `/jesus/entries/${encodeURIComponent(slug)}`,
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.entry ? data : null;
@@ -117,7 +118,7 @@ export async function fetchJesusLife(
   try {
     const data = await api.get<{ periods: JesusLifePeriod[] }>(
       '/jesus/life',
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.periods ?? [];
@@ -132,7 +133,7 @@ export async function fetchJesusThemes(
   try {
     const data = await api.get<{ themes: JesusThemeSummary[] }>(
       '/jesus/themes',
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.themes ?? [];
@@ -147,7 +148,7 @@ export async function fetchJesusCollections(
   try {
     const data = await api.get<{ collections: JesusCollectionSummary[] }>(
       '/jesus/collections',
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.collections ?? [];
@@ -166,7 +167,7 @@ export async function fetchJesusCollection(
       entries: JesusEntry[];
     }>(
       `/jesus/collections/${encodeURIComponent(slug)}`,
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.collection ? data : null;
@@ -206,7 +207,7 @@ export async function fetchJesusEventOverview(
   try {
     const data = await api.get<JesusEventOverview>(
       '/jesus/events/overview',
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data ?? EMPTY_EVENT_OVERVIEW;
@@ -224,7 +225,7 @@ export async function fetchJesusEvents(
   try {
     const data = await api.get<JesusEventList>(
       '/jesus/events',
-      compact({ ...query, limit, offset, bible_version: bibleVersion }),
+      compact({ ...query, limit, offset, bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data ?? { events: [], total: 0, limit, offset };
@@ -248,7 +249,7 @@ export async function fetchJesusBrowse(
   try {
     const data = await api.get<JesusBrowse>(
       `/jesus/events/browse/${encodeURIComponent(typeSlug)}`,
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.type ? data : null;
@@ -264,7 +265,7 @@ export async function fetchJesusEvent(
   try {
     const data = await api.get<JesusEventDetail>(
       `/jesus/events/${encodeURIComponent(slug)}`,
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.event ? data : null;
@@ -280,7 +281,7 @@ export async function fetchJesusCompare(
   try {
     const data = await api.get<JesusCompare>(
       `/jesus/events/${encodeURIComponent(slug)}/compare`,
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.accounts ? data : null;
@@ -302,7 +303,7 @@ export async function fetchJesusEventsForPassage(
   try {
     const data = await api.get<{ events: JesusEventCard[] }>(
       '/jesus/for-passage',
-      compact({ book_id: bookId, chapter, verse, bible_version: bibleVersion }),
+      compact({ book_id: bookId, chapter, verse, bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.events ?? [];
@@ -317,7 +318,7 @@ export async function fetchJesusEventLife(
   try {
     const data = await api.get<{ periods: JesusEventLifePeriod[] }>(
       '/jesus/events/life',
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.periods ?? [];
@@ -339,7 +340,7 @@ export async function fetchJesusEventCollection(
       events: JesusEventCard[];
     }>(
       `/jesus/events/collections/${encodeURIComponent(slug)}`,
-      compact({ bible_version: bibleVersion }),
+      compact({ bible_version: bibleVersion, lang: getVisitLanguage() ?? undefined }),
       { auth: false },
     );
     return data?.collection ? data : null;

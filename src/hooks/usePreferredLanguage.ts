@@ -1,8 +1,6 @@
 import { useSyncExternalStore } from 'react';
+import { LANGUAGES } from '@/edge/config';
 
-// Written by SettingsScreen.handleLanguageChange for both guests and signed-in
-// users (the signed-in path also reloads the page after persisting). So this
-// localStorage read is the single source of truth and is current on mount.
 const PREFERRED_LANGUAGE_KEY = '@versemate:preferred_language';
 
 // Collapse a stored locale to its base ISO language code: "es-MX" → "es",
@@ -12,12 +10,10 @@ function toBaseIso(code: string | null | undefined): string {
   return base || 'en';
 }
 
-const URL_LANGUAGES = ['en-US', 'es-MX', 'pt-BR', 'uk', 'ru', 'ro-RO', 'de', 'fr'];
-
 function readUrlLanguage(): string | null {
   if (typeof window === 'undefined') return null;
   const requested = new URLSearchParams(window.location.search).get('lang')?.trim().toLowerCase();
-  return URL_LANGUAGES.find((code) => code.toLowerCase() === requested) ?? null;
+  return LANGUAGES.find((code) => code.toLowerCase() === requested) ?? null;
 }
 
 let visitLanguage = readUrlLanguage();
@@ -29,6 +25,10 @@ function readPreferredLanguage(): string {
   } catch {
     return 'en';
   }
+}
+
+export function getVisitLanguage(): string | null {
+  return visitLanguage;
 }
 
 export function choosePreferredLanguage(languageCode: string): void {

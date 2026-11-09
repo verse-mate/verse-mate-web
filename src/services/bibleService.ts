@@ -19,7 +19,7 @@ import {
 } from './types';
 import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, getRefreshToken, ApiError, API_BASE_URL } from './api';
 import { bibleVersions, BibleVersionInfo, TestamentCoverage } from '@/constants/bible-versions';
-import { getPreferredLanguageCode } from '@/hooks/usePreferredLanguage';
+import { getPreferredLanguageCode, getVisitLanguage } from '@/hooks/usePreferredLanguage';
 import { getStudyFor, type InductiveStudy, type StudyLabels } from '@versemate/studies';
 
 // ─── Raw API response shapes ─────────────────────────────────────────────
@@ -656,6 +656,14 @@ export async function fetchAutoHighlights(
 }
 
 // ─── Topics ──────────────────────────────────────────────────────────────
+function topicLanguageQuery(bibleVersion?: string): Record<string, string> {
+  const visit = getVisitLanguage();
+  return {
+    ...(bibleVersion ? { bible_version: bibleVersion } : {}),
+    ...(visit ? { lang: visit } : {}),
+  };
+}
+
 export async function fetchTopics(): Promise<Topic[]> {
   try {
     // Try to get the full topic list from admin endpoint first; fall back to
@@ -670,7 +678,7 @@ export async function fetchTopics(): Promise<Topic[]> {
       try {
         const result = await api.get<{ topics?: TopicSearchRaw[] }>(
           '/topics/search',
-          { category: cat, limit: 500 },
+          { category: cat, limit: 500, ...topicLanguageQuery() },
           { auth: false }
         );
         const list: TopicSearchRaw[] = result?.topics || [];
@@ -852,7 +860,7 @@ export async function fetchTopicDetails(
       api
         .get<TopicDetailsResponse>(
           `/topics/${topicId}`,
-          bibleVersion ? { bible_version: bibleVersion } : undefined,
+          topicLanguageQuery(bibleVersion),
           { auth: false }
         )
         .catch(() => null),
