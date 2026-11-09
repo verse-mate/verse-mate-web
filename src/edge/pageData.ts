@@ -96,9 +96,21 @@ async function explanationsIn<T>(languages: Language[], read: (language: Languag
   return new Map(languages.map((language, index) => [language, results[index]]));
 }
 
+const CHAPTER_PARAM = /^[1-9]\d*$/;
+
+export type RouteCheck = { kind: 'ok' } | { kind: 'missing' } | { kind: 'moved'; bookParam: string; bookSlug: string };
+
+export function checkRoute(route: PageRoute): RouteCheck {
+  if (route.kind !== 'chapter') return { kind: 'ok' };
+  const bookId = /^\d+$/.test(route.bookParam) ? null : parseBookParam(route.bookParam);
+  if (!bookId || !CHAPTER_PARAM.test(route.chapterParam)) return { kind: 'missing' };
+  const bookSlug = getBookSlug(bookId) as string;
+  return bookSlug === route.bookParam ? { kind: 'ok' } : { kind: 'moved', bookParam: route.bookParam, bookSlug };
+}
+
 async function loadChapter(api: ApiGet, route: Extract<PageRoute, { kind: 'chapter' }>, lang: Language): Promise<ChapterPage | null> {
   const bookId = /^\d+$/.test(route.bookParam) ? null : parseBookParam(route.bookParam);
-  if (!bookId || !/^\d+$/.test(route.chapterParam)) return null;
+  if (!bookId || !CHAPTER_PARAM.test(route.chapterParam)) return null;
   const chapter = Number.parseInt(route.chapterParam, 10);
   const book = (await loadBooks(api)).find((entry) => entry.bookId === bookId);
   if (!book || chapter < 1 || chapter > book.chapters) return null;
@@ -132,6 +144,7 @@ interface EventDetail {
 }
 
 async function loadEvent(api: ApiGet, slug: string, lang: Language, published: Language[]): Promise<EventPage | null> {
+  if (!(await listEvents(api)).some((event) => event.slug === slug)) return null;
   const details = await explanationsIn(languagesToRead(lang, published), (language) =>
     api<EventDetail>(
       `/jesus/events/${encodeURIComponent(slug)}`,

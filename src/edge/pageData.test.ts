@@ -79,6 +79,55 @@ describe('legacy chapter links', () => {
   });
 });
 
+describe('addresses that are not canonical', () => {
+  const get = (path: string) => worker.fetch(new Request(`https://app.versemate.org${path}`), edgeEnv(), context());
+
+  for (const path of ['/bible/john/03', '/bible/john/03.md', '/og/bible/genesis/0001.png']) {
+    it(`answers ${path} with 404 before calling the API`, async () => {
+      const { api } = installEdgeGlobals();
+
+      const response = await get(path);
+
+      expect(response.status).toBe(404);
+      expect(api.calls).toEqual([]);
+    });
+  }
+
+  for (const [path, target] of [
+    ['/bible/JOHN/3?lang=es-MX', '/bible/john/3?lang=es-MX'],
+    ['/bible/John/3.md', '/bible/john/3.md'],
+    ['/og/bible/Genesis/1.png?lang=es-MX', '/og/bible/genesis/1.png?lang=es-MX'],
+  ]) {
+    it(`redirects ${path} to the canonical slug before calling the API`, async () => {
+      const { api } = installEdgeGlobals();
+
+      const response = await get(path);
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe(`https://app.versemate.org${target}`);
+      expect(api.calls).toEqual([]);
+    });
+  }
+
+  it('checks unknown Jesus events against the cached list, without asking the API for each', async () => {
+    const { api } = installEdgeGlobals();
+    const probe = async (path: string) => {
+      const ctx = context();
+      const response = await worker.fetch(new Request(`https://app.versemate.org${path}`), edgeEnv(), ctx);
+      await ctx.settle();
+      return response;
+    };
+
+    expect((await probe('/jesus/event/no-such-event-1')).status).toBe(404);
+    const calls = api.calls.length;
+    expect((await probe('/jesus/event/no-such-event-2')).status).toBe(404);
+    expect((await probe('/jesus/event/no-such-event-3.md')).status).toBe(404);
+
+    expect(api.calls.length).toBe(calls);
+    expect((await probe('/jesus/event/event-baptism')).status).toBe(200);
+  });
+});
+
 describe('pages that do not exist', () => {
   const get = (path: string) => worker.fetch(new Request(`https://app.versemate.org${path}`), edgeEnv(), context());
 

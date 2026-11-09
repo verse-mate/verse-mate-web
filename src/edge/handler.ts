@@ -5,7 +5,7 @@ import { edgeCacheKey, FRESH, SHORT, STALE, withEdgeCache } from './cache';
 import { buildHead, pageUrl, rewritePage } from './head';
 import { indexingFor, loadCoverage, type Indexing } from './indexing';
 import { DAY, reportFailure, type EdgeRequest, type ExecutionContextLike, type Rendered } from './common';
-import { loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
+import { checkRoute, loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
 import { matchCard, renderCard } from './og';
 import { llmsTxt, pageMarkdown } from './pageMarkdown';
 import { buildSitemap, matchSitemap } from './sitemaps';
@@ -153,9 +153,20 @@ async function renderShareCard(edge: EdgeRequest, route: PageRoute) {
   return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
 }
 
+function canonicalRedirect(url: URL, prefix: string, bookParam: string, bookSlug: string) {
+  const target = new URL(url.href);
+  target.pathname = url.pathname.replace(`${prefix}/${bookParam}/`, `${prefix}/${bookSlug}/`);
+  return Response.redirect(target.href, 301);
+}
+
 async function dispatch(edge: EdgeRequest) {
   const card = matchCard(edge.url.pathname);
-  if (card) return renderShareCard(edge, card);
+  if (card) {
+    const check = checkRoute(card);
+    if (check.kind === 'missing') return textResponse('Not found', 404);
+    if (check.kind === 'moved') return canonicalRedirect(edge.url, '/og/bible', check.bookParam, check.bookSlug);
+    return renderShareCard(edge, card);
+  }
 
   const isLlms = edge.url.pathname === '/llms.txt';
   const sitemap = matchSitemap(edge.url.pathname);
@@ -171,6 +182,13 @@ async function dispatch(edge: EdgeRequest) {
 
   const match = matchPageRoute(edge.url.pathname);
   if (!match) return edge.url.pathname.endsWith('.md') ? textResponse('Not found', 404, { 'X-Robots-Tag': 'noindex' }) : null;
+  const check = checkRoute(match.route);
+  if (check.kind === 'moved') return canonicalRedirect(edge.url, '/bible', check.bookParam, check.bookSlug);
+  if (check.kind === 'missing') {
+    return match.markdown
+      ? textResponse('Not found', 404, { 'X-Robots-Tag': 'noindex' })
+      : shellResponse(edge.env, edge.url, 404, { 'X-Robots-Tag': 'noindex' });
+  }
   return match.markdown ? renderMarkdownPage(edge, match.route) : renderPage(edge, match);
 }
 
