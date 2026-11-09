@@ -14,6 +14,7 @@ import {
 } from '@/components/topic/TopicViewParts';
 import { generateTopicSlug, getCategoryFromSlug } from '@/lib/topicSlugs';
 import { vmTokens } from '@/styles/themeStyles';
+import NotFound from './NotFound';
 
 type Tab = 'content' | InsightTab;
 
@@ -60,11 +61,13 @@ export default function TopicEventsScreen() {
 
   const [phoneTab, setPhoneTab] = useState<Tab>('content');
   const [showBookSelector, setShowBookSelector] = useState(false);
+  const [notFound, setNotFound] = useState(false);
 
   // Resolve topic from whichever route shape and push to context so
   // DesktopLayout's chrome can label the chapter-selector with it.
   useEffect(() => {
     let cancelled = false;
+    setNotFound(false);
     (async () => {
       let resolvedId: string | null = null;
       let resolvedTopic: Topic | null = null;
@@ -86,7 +89,10 @@ export default function TopicEventsScreen() {
         }
       }
 
-      if (!resolvedId) return;
+      if (!resolvedId) {
+        setNotFound(true);
+        return;
+      }
       if (resolvedTopic) setTopic(resolvedTopic);
       const fetched = await fetchTopicDetails(resolvedId, state.version);
       if (cancelled) return;
@@ -120,6 +126,8 @@ export default function TopicEventsScreen() {
   };
 
   const isInitialLoading = details === null;
+
+  if (notFound) return <NotFound />;
 
   // ─── Desktop / Tablet — render only the Content pane. DesktopLayout
   //     owns the header chrome and the right-pane explanation render.
