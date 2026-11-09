@@ -101,14 +101,33 @@ const VISUALS_CDN_ORIGIN = "https://versemate.nyc3.cdn.digitaloceanspaces.com";
 
 const SSO_CALLBACK_PATH = /^\/auth\/callback(\/|$)/;
 
-function withoutReferrer(response) {
+const PRODUCTION_HOST = "app.versemate.org";
+
+const APP_LINK_FILES = new Set([
+  "/.well-known/apple-app-site-association",
+  "/.well-known/assetlinks.json",
+]);
+
+function withHeaders(response, extra) {
   const headers = new Headers(response.headers);
-  headers.set("Referrer-Policy", "no-referrer");
+  for (const [name, value] of Object.entries(extra)) headers.set(name, value);
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
     headers,
   });
+}
+
+async function serveAppLinkFile(request, env) {
+  const response = await env.ASSETS.fetch(request);
+  const isHtml = (response.headers.get("content-type") || "").includes("text/html");
+  if (response.status === 404 || isHtml) {
+    return new Response("Not found", {
+      status: 404,
+      headers: { "content-type": "text/plain; charset=utf-8" },
+    });
+  }
+  return withHeaders(response, { "content-type": "application/json" });
 }
 
 async function serveApp(request, env, url) {
@@ -128,6 +147,15 @@ async function serveApp(request, env, url) {
   return response;
 }
 
+async function route(request, env, url) {
+  if (APP_LINK_FILES.has(url.pathname)) return serveAppLinkFile(request, env);
+
+  const response = await serveApp(request, env, url);
+  return SSO_CALLBACK_PATH.test(url.pathname)
+    ? withHeaders(response, { "Referrer-Policy": "no-referrer" })
+    : response;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -141,9 +169,9 @@ export default {
     const redirect = checkLegacyRedirects(url);
     if (redirect) return redirect;
 
-    const response = await serveApp(request, env, url);
-    return SSO_CALLBACK_PATH.test(url.pathname)
-      ? withoutReferrer(response)
-      : response;
+    const response = await route(request, env, url);
+    return url.hostname === PRODUCTION_HOST
+      ? response
+      : withHeaders(response, { "X-Robots-Tag": "noindex" });
   },
 };

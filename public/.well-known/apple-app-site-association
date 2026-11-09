@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["U9SRD4VJPX.org.versemate.app"],
+        "components": [
+          { "/": "/bible*" },
+          { "/": "/topic*" },
+          { "/": "/names-of-god*" },
+          { "/": "/jesus*" }
+        ]
+      }
+    ]
+  }
+}
