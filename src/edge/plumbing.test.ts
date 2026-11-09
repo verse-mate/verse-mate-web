@@ -1,10 +1,11 @@
 // @vitest-environment node
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import robotsParser from 'robots-parser';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import worker from '../../worker.js';
+import { context, edgeEnv, installEdgeGlobals } from './testing/fakeEdge';
 
 const publicDir = join(__dirname, '../../public');
 const typeOf = (path: string) =>
@@ -48,6 +49,16 @@ describe('app-link verification files', () => {
 
     expect(response.status).toBe(404);
     expect(response.headers.get('content-type')).not.toContain('text/html');
+  });
+
+  it('answers a missing association file with 404 where the assets answer every path with the app page', async () => {
+    const response = await worker.fetch(new Request('https://app.versemate.org/.well-known/assetlinks.json'), {
+      ASSETS: { fetch: async () => new Response('<!doctype html><div id="root"></div>', { headers: { 'content-type': 'text/html; charset=utf-8' } }) },
+    });
+
+    expect(response.status).toBe(404);
+    expect(response.headers.get('content-type')).not.toContain('text/html');
+    expect(await response.text()).not.toContain('<div id="root">');
   });
 
   it('serves the Android association as JSON when it exists', async () => {
@@ -97,6 +108,54 @@ describe('robots.txt as each admitted crawler reads it', () => {
   });
 });
 
+describe('private screens', () => {
+  it('answer with noindex, matching whole path segments only', async () => {
+    const privatePaths = [
+      '/notes',
+      '/notes/john/3',
+      '/bookmarks',
+      '/highlights',
+      '/menu',
+      '/login',
+      '/logout',
+      '/create-account',
+      '/auth/callback/google',
+      '/email-verified',
+      '/coach',
+      '/coach/sessions',
+    ];
+    for (const path of privatePaths) {
+      expect((await get(`https://app.versemate.org${path}`)).headers.get('x-robots-tag'), path).toBe('noindex');
+    }
+    for (const path of ['/coaching', '/menus', '/bible/john/3', '/']) {
+      expect((await get(`https://app.versemate.org${path}`)).headers.get('x-robots-tag'), path).toBeNull();
+    }
+  });
+});
+
+describe('responses rendered at the edge', () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  it('tell browsers not to sniff their type, for every kind of response', async () => {
+    installEdgeGlobals();
+    const kinds = {
+      '/bible/john/3': 'text/html',
+      '/bible/john/3.md': 'text/markdown',
+      '/sitemap.xml': 'application/xml',
+      '/bible/john/999.md': 'text/plain',
+      '/og/bible/john/3.png': 'image/png',
+    };
+
+    for (const [path, type] of Object.entries(kinds)) {
+      const ctx = context();
+      const response = await worker.fetch(new Request(`https://app.versemate.org${path}`), edgeEnv(), ctx);
+      await ctx.settle();
+      expect(response.headers.get('content-type'), path).toContain(type);
+      expect(response.headers.get('x-content-type-options'), path).toBe('nosniff');
+    }
+  }, 30_000);
+});
+
 describe('hosts other than app.versemate.org', () => {
   it('answers with noindex on preview and workers.dev hosts', async () => {
     for (const host of ['verse-mate-web-preview.verse-mate.workers.dev', 'verse-mate-web-production.verse-mate.workers.dev']) {
@@ -112,12 +171,11 @@ describe('hosts other than app.versemate.org', () => {
 });
 
 describe('IndexNow key', () => {
-  it('is served as text at the site root', async () => {
-    const keyFile = readFileSync(join(publicDir, '0cef9078b0b1b3b32fb3a427739bdc64.txt'), 'utf8');
-    const response = await get('https://app.versemate.org/0cef9078b0b1b3b32fb3a427739bdc64.txt');
+  it('is a 32-character hex key named after itself, the same as the website key', () => {
+    const [keyFile] = readdirSync(publicDir).filter((name) => /^[0-9a-f]{32}\.txt$/.test(name));
+    const key = keyFile.replace(/\.txt$/, '');
 
-    expect(response.status).toBe(200);
-    expect(response.headers.get('content-type')).toContain('text/plain');
-    expect(await response.text()).toBe(keyFile);
+    expect(readFileSync(join(publicDir, keyFile), 'utf8')).toBe(key);
+    expect(key).toBe('0cef9078b0b1b3b32fb3a427739bdc64');
   });
 });

@@ -196,6 +196,8 @@ export async function handleEdge(request: Request, env: EdgeEnv, url: URL, ctx?:
   const config = readConfig(env);
   if (!config.enabled || (request.method !== 'GET' && request.method !== 'HEAD')) return null;
   const response = await dispatch({ request, env, url, config, runtime: runtimeFor(ctx) });
-  if (!response || request.method === 'GET') return response;
-  return new Response(null, { status: response.status, headers: response.headers });
+  if (!response) return null;
+  const headers = new Headers(response.headers);
+  headers.set('X-Content-Type-Options', 'nosniff');
+  return new Response(request.method === 'GET' ? response.body : null, { status: response.status, headers });
 }

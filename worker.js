@@ -72,6 +72,9 @@ const SSO_CALLBACK_PATH = /^\/auth\/callback(\/|$)/;
 
 const PRODUCTION_HOST = "app.versemate.org";
 
+const PRIVATE_SCREEN =
+  /^\/(notes|bookmarks|highlights|menu|login|logout|create-account|auth|email-verified|coach)(\/|$)/;
+
 const APP_LINK_FILES = new Set([
   "/.well-known/apple-app-site-association",
   "/.well-known/assetlinks.json",
@@ -139,7 +142,7 @@ export default {
     if (redirect) return redirect;
 
     const response = await route(request, env, url, ctx);
-    return url.hostname === PRODUCTION_HOST
+    return url.hostname === PRODUCTION_HOST && !PRIVATE_SCREEN.test(url.pathname)
       ? response
       : withHeaders(response, { "X-Robots-Tag": "noindex" });
   },
