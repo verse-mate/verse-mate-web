@@ -161,16 +161,32 @@ export function fakeApi(data: FakeData) {
   return { fetch, calls };
 }
 
+const keyOf = (key: RequestInfo | URL) => String(typeof key === 'object' && 'url' in key ? key.url : key);
+
 export function fakeCache() {
   const entries = new Map<string, Response>();
+  const expiries = new Map<string, number>();
+  const ops = { match: 0, put: 0 };
   return {
     entries,
+    ops,
     async match(key: RequestInfo | URL) {
-      const hit = entries.get(String(typeof key === 'object' && 'url' in key ? key.url : key));
+      ops.match++;
+      const id = keyOf(key);
+      if ((expiries.get(id) ?? Infinity) <= Date.now()) {
+        entries.delete(id);
+        expiries.delete(id);
+      }
+      const hit = entries.get(id);
       return hit ? hit.clone() : undefined;
     },
     async put(key: RequestInfo | URL, response: Response) {
-      entries.set(String(typeof key === 'object' && 'url' in key ? key.url : key), response.clone());
+      ops.put++;
+      const id = keyOf(key);
+      const maxAge = response.headers.get('cache-control')?.match(/max-age=(\d+)/)?.[1];
+      entries.set(id, response.clone());
+      if (maxAge) expiries.set(id, Date.now() + Number(maxAge) * 1000);
+      else expiries.delete(id);
     },
   };
 }

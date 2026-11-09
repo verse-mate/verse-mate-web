@@ -1,14 +1,18 @@
 import { SITE_ORIGIN } from './config';
-import { DAY, type EdgeRequest, type Rendered } from './common';
+import { DAY, reportFailure, type EdgeRequest, type Rendered } from './common';
 
 export const FRESH = DAY;
 export const STALE = 7 * DAY;
 export const SHORT = 10 * 60;
+export const LEASE = 60;
 
 const RENDERED_AT = 'x-edge-rendered-at';
 const FRESH_FOR = 'x-edge-fresh';
 const STALE_FOR = 'x-edge-stale';
+const LEASED_UNTIL = 'x-edge-leased-until';
 const CLIENT_CACHE_CONTROL = 'x-edge-cache-control';
+
+const inflight = new Map<string, Promise<Rendered | null>>();
 
 export function edgeCacheKey(edge: EdgeRequest, variant: string, lang: string) {
   const path = edge.url.pathname.replace(/(.)\/$/, '$1');
@@ -45,6 +49,25 @@ function ageOf(stored: Response) {
   return (Date.now() - Number(stored.headers.get(RENDERED_AT))) / 1000;
 }
 
+function leased(stored: Response) {
+  return Number(stored.headers.get(LEASED_UNTIL) ?? 0) > Date.now();
+}
+
+function withLease(stored: Response, remaining: number) {
+  const headers = new Headers(stored.headers);
+  headers.set(LEASED_UNTIL, String(Date.now() + LEASE * 1000));
+  headers.set('cache-control', `public, max-age=${Math.max(1, Math.ceil(remaining))}`);
+  return new Response(stored.body, { status: stored.status, headers });
+}
+
+function single(key: string, run: () => Promise<Rendered | null>) {
+  const running = inflight.get(key);
+  if (running) return running;
+  const promise = run().finally(() => inflight.delete(key));
+  inflight.set(key, promise);
+  return promise;
+}
+
 export async function withEdgeCache(edge: EdgeRequest, key: string, render: () => Promise<Rendered | null>) {
   const { cache, waitUntil } = edge.runtime;
   const store = (rendered: Rendered | null) => {
@@ -59,9 +82,15 @@ export async function withEdgeCache(edge: EdgeRequest, key: string, render: () =
     const stale = Number(stored.headers.get(STALE_FOR));
     if (age < fresh) return fromStored(stored);
     if (age < fresh + stale) {
-      waitUntil(render().then(store, () => null));
+      if (!leased(stored) && !inflight.has(key)) {
+        const lease = cache.put(key, withLease(stored.clone(), fresh + stale - age));
+        const rerender = single(key, () => lease.then(render).then(store));
+        waitUntil(rerender.catch(reportFailure));
+      }
       return fromStored(stored);
     }
   }
-  return store(await render());
+  const rendering = single(key, () => render().then(store));
+  waitUntil(rendering.catch(() => undefined));
+  return rendering;
 }

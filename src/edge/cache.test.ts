@@ -2,7 +2,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import worker from '../../worker.js';
-import { context, edgeEnv, fakeData, installEdgeGlobals, SHELL } from './testing/fakeEdge';
+import { context, edgeEnv, fakeData, installEdgeGlobals, SHELL, type FakeData } from './testing/fakeEdge';
 
 const HOUR = 60 * 60 * 1000;
 let now = Date.UTC(2026, 10, 9, 12);
@@ -125,6 +125,83 @@ describe('the edge cache', () => {
     await get('/bible/john/3');
 
     expect(api.calls.length).toBeGreaterThan(calls);
+  });
+});
+
+describe('one render per page at a time', () => {
+  const PARALLEL = 6;
+
+  async function callsForOneColdRender() {
+    const { api } = installEdgeGlobals();
+    await (await get('/bible/john/3')).ctx.settle();
+    vi.unstubAllGlobals();
+    return api.calls.length;
+  }
+
+  async function together(path: string) {
+    const visits = await Promise.all(Array.from({ length: PARALLEL }, () => get(path)));
+    await Promise.all(visits.map((visit) => visit.ctx.settle()));
+    return visits;
+  }
+
+  it('merges parallel requests for a page nobody has rendered yet', async () => {
+    const single = await callsForOneColdRender();
+    const { api } = installEdgeGlobals();
+
+    const visits = await together('/bible/john/3');
+
+    expect(api.calls.length).toBe(single);
+    for (const visit of visits) expect(visit.body).toContain('For God so loved the world');
+  });
+
+  it('renders a stale page again once for parallel requests', async () => {
+    const single = await callsForOneColdRender();
+    const { api } = installEdgeGlobals();
+    await (await get('/bible/john/3')).ctx.settle();
+
+    now += 25 * HOUR;
+    const calls = api.calls.length;
+    const visits = await together('/bible/john/3');
+
+    expect(api.calls.length - calls).toBe(single);
+    for (const visit of visits) expect(visit.body).toContain('nighttime talk');
+  });
+
+  it('retries a failing background render at most once per lease, whichever isolate asks', async () => {
+    const data = fakeData();
+    const { api } = installEdgeGlobals(data);
+    await (await get('/bible/john/3')).ctx.settle();
+
+    now += 25 * HOUR;
+    data.down = true;
+    await (await get('/bible/john/3')).ctx.settle();
+    const afterFirstRetry = api.calls.length;
+
+    now += 30 * 1000;
+    const again = await get('/bible/john/3');
+    await again.ctx.settle();
+
+    expect(again.body).toContain('nighttime talk');
+    expect(api.calls.length).toBe(afterFirstRetry);
+
+    now += 2 * 60 * 1000;
+    await (await get('/bible/john/3')).ctx.settle();
+    expect(api.calls.length).toBeGreaterThan(afterFirstRetry);
+  });
+
+  it('reports a background render that fails for a reason other than the API', async () => {
+    const data = fakeData();
+    installEdgeGlobals(data);
+    await (await get('/bible/john/3')).ctx.settle();
+    const errors = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    now += 25 * HOUR;
+    data.verses['43:3'] = 'not a verse list' as unknown as FakeData['verses'][string];
+    const stale = await get('/bible/john/3');
+    await stale.ctx.settle();
+
+    expect(stale.body).toContain('nighttime talk');
+    expect(errors).toHaveBeenCalledWith('edge render failed', expect.any(TypeError));
   });
 });
 
