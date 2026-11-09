@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { parseBookParam, getBookSlug } from '@/lib/bookSlugs';
 import { fetchBooks } from '@/services/bibleService';
+import NotFound from '@/pages/NotFound';
 import ReadingScreen from '@/pages/ReadingScreen';
 
 /**
@@ -57,8 +58,12 @@ export default function BibleRoute() {
     (async () => {
       const books = await fetchBooks();
       if (cancelled) return;
+      if (books.length === 0) {
+        setResolved(true);
+        return;
+      }
       const book = books.find((b) => b.bookId === bookId);
-      if (!book) {
+      if (!book || chapterNumber > book.chapters) {
         setNotFound(true);
         return;
       }
@@ -81,7 +86,7 @@ export default function BibleRoute() {
   if (numericRedirectSlug) {
     return <Navigate to={`/bible/${numericRedirectSlug}/${chapterNumber}`} replace />;
   }
-  if (notFound) return <Navigate to="/read" replace />;
+  if (notFound) return <NotFound />;
   if (!resolved) return null;
   return <ReadingScreen />;
 }
