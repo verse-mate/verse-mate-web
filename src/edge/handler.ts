@@ -1,6 +1,7 @@
 import { ApiUnavailable, createApi, type Runtime } from './api';
 import { languageFromQuery, readConfig, type EdgeConfig, type EdgeEnv, type Language } from './config';
 import { renderArticle } from './article';
+import { edgeCacheKey, FRESH, SHORT, STALE, withEdgeCache } from './cache';
 import { buildHead, rewritePage } from './head';
 import { indexingFor, loadCoverage, type Indexing } from './indexing';
 import { loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
@@ -45,7 +46,12 @@ export interface Rendered {
   body: string;
   status: number;
   headers: Record<string, string>;
-  complete: boolean;
+  fresh: number;
+  stale: number;
+}
+
+export function lifetime(complete: boolean) {
+  return complete ? { fresh: FRESH, stale: STALE } : { fresh: SHORT, stale: 0 };
 }
 
 export async function resolvePage(edge: EdgeRequest, route: PageRoute, lang: Language) {
@@ -68,21 +74,23 @@ async function renderHtml(edge: EdgeRequest, data: PageData, lang: Language, ind
     'cache-control': shell.headers.get('cache-control') || 'public, max-age=0, must-revalidate',
   };
   if (head.noindex) headers['X-Robots-Tag'] = 'noindex';
-  return { body, status: 200, headers, complete: indexing.complete };
+  return { body, status: 200, headers, ...lifetime(indexing.complete) };
 }
 
 async function renderPage(edge: EdgeRequest, match: NonNullable<ReturnType<typeof matchPageRoute>>) {
   const { env, url } = edge;
   const lang = languageFromQuery(url.searchParams.get('lang'));
-  let rendered: Rendered;
+  let rendered: Rendered | null;
   try {
-    const page = await resolvePage(edge, match.route, lang);
-    if (!page) return shellResponse(env, url, 404, { 'X-Robots-Tag': 'noindex' });
-    rendered = await renderHtml(edge, page.data, lang, page.indexing);
+    rendered = await withEdgeCache(edge, edgeCacheKey(edge, 'html', lang), async () => {
+      const page = await resolvePage(edge, match.route, lang);
+      return page ? renderHtml(edge, page.data, lang, page.indexing) : null;
+    });
   } catch (error) {
     reportFailure(error);
     return shellResponse(env, url, 200);
   }
+  if (!rendered) return shellResponse(env, url, 404, { 'X-Robots-Tag': 'noindex' });
   return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
 }
 
