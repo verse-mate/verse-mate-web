@@ -1,9 +1,11 @@
 // @vitest-environment node
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { JSDOM } from 'jsdom';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import worker from '../../worker.js';
-import { context, edgeEnv, fakeData, installEdgeGlobals } from './testing/fakeEdge';
+import { context, edgeEnv, fakeAssets, fakeData, installEdgeGlobals } from './testing/fakeEdge';
 
 afterEach(() => vi.unstubAllGlobals());
 
@@ -154,5 +156,29 @@ describe('a Jesus event in a published language', () => {
       'Vida de Jesús',
       'The baptism of Jesus',
     ]);
+  });
+});
+
+describe('the reader\'s own index.html', () => {
+  it('takes the chapter head and article once, with none of its defaults left', async () => {
+    installEdgeGlobals();
+    const shell = readFileSync(join(__dirname, '../../index.html'), 'utf8');
+    const html = () => new Response(shell, { headers: { 'content-type': 'text/html; charset=utf-8' } });
+    const assets = fakeAssets({ '/': html, '/index.html': html });
+
+    const john = await page('/bible/john/3', { ASSETS: assets });
+    const all = (selector: string) => [...john.document.querySelectorAll(selector)].map((node) => node.getAttribute('content') ?? node.getAttribute('href'));
+
+    expect(john.document.querySelectorAll('title')).toHaveLength(1);
+    expect(john.title).toBe('John 3 explained: summary and verse by verse | VerseMate');
+    expect(all('link[rel="canonical"]')).toEqual(['https://app.versemate.org/bible/john/3']);
+    expect(all('meta[property="og:image"]')).toEqual(['https://app.versemate.org/og/bible/john/3.png']);
+    expect(all('meta[name="twitter:image"]')).toEqual(['https://app.versemate.org/og/bible/john/3.png']);
+    expect(all('meta[name="description"]')).toHaveLength(1);
+    expect(john.description).toContain('nighttime talk with Nicodemus');
+    expect(john.description).not.toContain('reverent mobile Bible reading app');
+    expect(john.og('description')).toBe(john.description);
+    expect(john.document.querySelector('#root')?.textContent).toContain('For God so loved the world');
+    expect(john.document.querySelector('script[type="module"]')).not.toBeNull();
   });
 });
