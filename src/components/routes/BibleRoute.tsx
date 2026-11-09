@@ -34,7 +34,7 @@ export default function BibleRoute() {
   stateRef.current = state;
 
   const bookId = bookSlug ? parseBookParam(bookSlug) : null;
-  const chapterNumber = chapterStr ? Number.parseInt(chapterStr, 10) : NaN;
+  const chapterNumber = chapterStr && /^[1-9]\d*$/.test(chapterStr) ? Number(chapterStr) : NaN;
 
   // Numeric → slug redirect: if the URL is /bible/<num>/<chapter>, send
   // the user to /bible/<slug>/<chapter>. Worker.js does this server-side

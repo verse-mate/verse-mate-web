@@ -38,6 +38,11 @@ describe('BibleRoute', () => {
     expect(await screen.findByText('Oops! Page not found')).toBeInTheDocument();
   });
 
+  it('shows the not-found screen for a chapter that is not a plain number', async () => {
+    open('/bible/john/3abc');
+    expect(await screen.findByText('Oops! Page not found')).toBeInTheDocument();
+  });
+
   it('opens the reader on a chapter that exists', async () => {
     open('/bible/john/21');
     expect(await screen.findByText('reading screen')).toBeInTheDocument();
