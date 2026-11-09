@@ -104,13 +104,12 @@ describe('llms.txt', () => {
     }
   });
 
-  it('names app.versemate.org links on any other host', async () => {
-    installEdgeGlobals(allBooks());
+  it('is not built on any host other than app.versemate.org', async () => {
+    const { api } = installEdgeGlobals(allBooks());
 
-    const { body } = await get('https://verse-mate-web-preview.verse-mate.workers.dev/llms.txt');
+    const { response } = await get('https://verse-mate-web-preview.verse-mate.workers.dev/llms.txt');
 
-    const links = [...body.matchAll(/\]\((https?:\/\/[^)]+)\)/g)].map((m) => m[1]);
-    expect(links.length).toBeGreaterThan(66);
-    expect(links.every((link) => link.startsWith('https://app.versemate.org/'))).toBe(true);
+    expect(response.status).toBe(404);
+    expect(api.calls).toEqual([]);
   });
 });

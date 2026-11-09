@@ -1,4 +1,5 @@
 export const SITE_ORIGIN = 'https://app.versemate.org';
+export const PRODUCTION_HOST = new URL(SITE_ORIGIN).hostname;
 export const ORGANIZATION_ID = 'https://versemate.org/#org';
 export const DEFAULT_LANGUAGE = 'en-US';
 export const LANGUAGES = ['en-US', 'es-MX', 'pt-BR', 'uk', 'ru', 'ro-RO', 'de', 'fr'] as const;

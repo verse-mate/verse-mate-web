@@ -56,14 +56,17 @@ describe('the sitemap index', () => {
     expect(await valid(index.body, 'siteindex.xsd')).toEqual([]);
   });
 
-  it('names app.versemate.org URLs on any other host', async () => {
-    installEdgeGlobals(withEvents());
+  it('are not built on any host other than app.versemate.org', async () => {
+    const { api } = installEdgeGlobals(withEvents());
 
-    for (const path of ['/sitemap.xml', '/sitemaps/bible-en-US.xml', '/sitemaps/jesus.xml', '/sitemaps/topics.xml']) {
-      const { locs } = await get(path, {}, 'verse-mate-web-preview.verse-mate.workers.dev');
-      expect(locs.length, path).toBeGreaterThan(0);
-      expect(locs.every((loc) => loc.startsWith('https://app.versemate.org/')), path).toBe(true);
+    for (const host of ['verse-mate-web-preview.verse-mate.workers.dev', 'verse-mate-web-production.verse-mate.workers.dev']) {
+      for (const path of ['/sitemap.xml', '/sitemaps/bible-en-US.xml']) {
+        const { response } = await get(path, {}, host);
+        expect(response.status, `${host}${path}`).toBe(404);
+        expect(response.headers.get('x-robots-tag'), `${host}${path}`).toBe('noindex');
+      }
     }
+    expect(api.calls).toEqual([]);
   });
 });
 

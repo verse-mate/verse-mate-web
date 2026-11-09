@@ -74,6 +74,7 @@
     },
     "production": {
       "name": "verse-mate-web-production",
+      "workers_dev": false,
       "vars": {
         "EDGE_RENDER": true,
         "API_URL": "https://api.versemate.org",

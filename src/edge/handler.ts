@@ -1,5 +1,5 @@
 import { BUILD_TIMEOUT_MS, createApi, type Runtime } from './api';
-import { languageFromQuery, readConfig, type EdgeEnv, type Language } from './config';
+import { languageFromQuery, PRODUCTION_HOST, readConfig, type EdgeEnv, type Language } from './config';
 import { renderArticle } from './article';
 import { edgeCacheKey, FRESH, SHORT, STALE, withEdgeCache } from './cache';
 import { buildHead, pageUrl, rewritePage } from './head';
@@ -157,9 +157,12 @@ async function dispatch(edge: EdgeRequest) {
   const card = matchCard(edge.url.pathname);
   if (card) return renderShareCard(edge, card);
 
-  if (edge.url.pathname === '/llms.txt') return serveGenerated(edge, 'llms', 'text/plain; charset=utf-8', llmsTxt);
-
+  const isLlms = edge.url.pathname === '/llms.txt';
   const sitemap = matchSitemap(edge.url.pathname);
+  if ((isLlms || sitemap) && edge.url.hostname !== PRODUCTION_HOST) return textResponse('Not found', 404);
+
+  if (isLlms) return serveGenerated(edge, 'llms', 'text/plain; charset=utf-8', llmsTxt);
+
   if (sitemap) {
     return serveGenerated(edge, 'sitemap', 'application/xml; charset=utf-8', (api) =>
       buildSitemap(sitemap, api, edge.config.indexedLanguages),
