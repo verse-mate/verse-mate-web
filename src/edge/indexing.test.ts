@@ -72,4 +72,15 @@ describe('published languages', () => {
     });
     expect(await indexing('/topic/events/the-fall-of-man', 'en-US', ['en-US'])).toMatchObject({ indexable: false });
   });
+
+  it('reads coverage stored under a base or differently cased language code', async () => {
+    installEdgeGlobals(fakeData({ coverage: { en: [{ bookId: 43, chapters: [3] }], 'ES-mx': [{ bookId: 43, chapters: [3] }] } }));
+    expect(await indexing('/bible/john/3', 'es-MX', ['en-US', 'es-MX'])).toMatchObject({ indexable: true, alternates: ['en-US', 'es-MX'] });
+
+    installEdgeGlobals(fakeData({ coverage: { es: [{ bookId: 43, chapters: [3] }] } }));
+    expect(await indexing('/bible/john/3', 'es-MX', ['en-US', 'es-MX'])).toMatchObject({ indexable: true });
+
+    installEdgeGlobals(fakeData({ coverage: { 'es-ES': [{ bookId: 43, chapters: [3] }] } }));
+    expect(await indexing('/bible/john/3', 'es-MX', ['en-US', 'es-MX'])).toMatchObject({ indexable: false });
+  });
 });

@@ -1,5 +1,5 @@
 import { ApiUnavailable, type ApiGet } from './api';
-import { DEFAULT_LANGUAGE, type Language } from './config';
+import { DEFAULT_LANGUAGE, LANGUAGES, type Language } from './config';
 import type { PageData } from './pageData';
 
 export type Coverage = Map<string, Map<number, Set<number>>>;
@@ -15,6 +15,12 @@ const COVERAGE_TTL = 60 * 60;
 
 type CoverageBody = { languages?: Record<string, { bookId: number; chapters: number[] }[]> };
 
+function servesLanguage(stored: string, language: Language) {
+  const code = stored.trim().toLowerCase();
+  const wanted = language.toLowerCase();
+  return code === wanted || code === wanted.split('-')[0];
+}
+
 export async function loadCoverage(api: ApiGet): Promise<Coverage | null> {
   let data: CoverageBody | null;
   try {
@@ -25,9 +31,17 @@ export async function loadCoverage(api: ApiGet): Promise<Coverage | null> {
   }
   if (!data?.languages || typeof data.languages !== 'object') return null;
   const coverage: Coverage = new Map();
-  for (const [language, books] of Object.entries(data.languages)) {
+  for (const [stored, books] of Object.entries(data.languages)) {
     if (!Array.isArray(books)) return null;
-    coverage.set(language, new Map(books.map((book) => [book.bookId, new Set(book.chapters)])));
+    for (const language of LANGUAGES.filter((code) => servesLanguage(stored, code))) {
+      const chapters = coverage.get(language) ?? new Map<number, Set<number>>();
+      for (const book of books) {
+        const known = chapters.get(book.bookId) ?? new Set<number>();
+        for (const chapter of book.chapters) known.add(chapter);
+        chapters.set(book.bookId, known);
+      }
+      coverage.set(language, chapters);
+    }
   }
   return coverage;
 }
