@@ -4,7 +4,8 @@ import { renderArticle } from './article';
 import { edgeCacheKey, FRESH, SHORT, STALE, withEdgeCache } from './cache';
 import { buildHead, rewritePage } from './head';
 import { indexingFor, loadCoverage, type Indexing } from './indexing';
-import { loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
+import { DAY, loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
+import { buildSitemap, matchSitemap } from './sitemaps';
 
 export interface ExecutionContextLike {
   waitUntil(promise: Promise<unknown>): void;
@@ -94,7 +95,43 @@ async function renderPage(edge: EdgeRequest, match: NonNullable<ReturnType<typeo
   return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
 }
 
+export function textResponse(body: string, status: number, headers: Record<string, string> = {}) {
+  return new Response(body, { status, headers: { 'content-type': 'text/plain; charset=utf-8', ...headers } });
+}
+
+export function unavailable() {
+  return textResponse('Temporarily unavailable', 503, { 'retry-after': '3600', 'cache-control': 'no-store' });
+}
+
+async function serveGenerated(
+  edge: EdgeRequest,
+  variant: string,
+  contentType: string,
+  build: (api: ReturnType<typeof createApi>) => Promise<string | null>,
+) {
+  let rendered: Rendered | null;
+  try {
+    rendered = await withEdgeCache(edge, edgeCacheKey(edge, variant, '-'), async () => {
+      const body = await build(createApi(edge.config.apiUrl, edge.runtime));
+      if (body === null) return null;
+      return { body, status: 200, headers: { 'content-type': contentType, 'cache-control': `public, max-age=${DAY}` }, fresh: FRESH, stale: STALE };
+    });
+  } catch (error) {
+    reportFailure(error);
+    return unavailable();
+  }
+  if (!rendered) return textResponse('Not found', 404);
+  return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
+}
+
 async function dispatch(edge: EdgeRequest) {
+  const sitemap = matchSitemap(edge.url.pathname);
+  if (sitemap) {
+    return serveGenerated(edge, 'sitemap', 'application/xml; charset=utf-8', (api) =>
+      buildSitemap(sitemap, api, edge.config.indexedLanguages),
+    );
+  }
+
   const match = matchPageRoute(edge.url.pathname);
   if (match && !match.markdown) return renderPage(edge, match);
   return null;

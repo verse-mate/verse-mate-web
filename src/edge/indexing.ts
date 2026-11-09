@@ -36,13 +36,15 @@ export function chapterCovered(coverage: Coverage | null, language: Language, bo
   return coverage?.get(language)?.get(bookId)?.has(chapter) ?? false;
 }
 
-export function explainedIn(data: PageData, language: Language, coverage: Coverage | null) {
-  if (data.kind === 'chapter') {
-    return chapterCovered(coverage, language, data.bookId, data.chapter);
-  }
-  const text = data.explanations[language];
+export function hasOwnExplanation(explanations: Partial<Record<Language, string>>, language: Language) {
+  const text = explanations[language];
   if (!text) return false;
-  return language === DEFAULT_LANGUAGE || text !== data.explanations[DEFAULT_LANGUAGE];
+  return language === DEFAULT_LANGUAGE || text !== explanations[DEFAULT_LANGUAGE];
+}
+
+export function explainedIn(data: PageData, language: Language, coverage: Coverage | null) {
+  if (data.kind === 'chapter') return chapterCovered(coverage, language, data.bookId, data.chapter);
+  return hasOwnExplanation(data.explanations, language);
 }
 
 export function indexingFor(data: PageData, lang: Language, published: Language[], coverage: Coverage | null): Indexing {

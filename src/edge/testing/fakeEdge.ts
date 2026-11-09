@@ -123,9 +123,15 @@ export function fakeApi(data: FakeData) {
       return json({ book: { bookId: Number(m[1]), name: book?.n, chapters: [{ chapterNumber: Number(m[2]), verses }] } });
     }
     if (path === '/jesus/events') {
+      const limit = Math.min(Number(q.get('limit') || 50), 2);
+      const offset = Number(q.get('offset') || 0);
       return json({
-        events: data.events.map((e) => ({ slug: e.slug, title: e.title, passages: e.passages.map((display) => ({ display })) })),
+        events: data.events
+          .slice(offset, offset + limit)
+          .map((e) => ({ slug: e.slug, title: e.title, passages: e.passages.map((display) => ({ display })) })),
         total: data.events.length,
+        limit,
+        offset,
       });
     }
     if ((m = path.match(/^\/jesus\/events\/([^/]+)$/))) {
