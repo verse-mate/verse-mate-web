@@ -33,7 +33,7 @@ test.describe('Topics — TopicEventsScreen', () => {
     viewport,
   }) => {
     const events = new TopicEventsPage(page);
-    await events.gotoCanonical('events', 'the-creation-of-the-world');
+    await events.gotoCanonical('events', 'the-resurrection-of-jesus');
     await expect(topicSelectorLocator(page, viewport)).toBeVisible({ timeout: 15_000 });
     await expect(events.contentBody).toBeVisible();
   });
@@ -73,7 +73,7 @@ test.describe('Topics — TopicEventsScreen', () => {
     viewport,
   }) => {
     const events = new TopicEventsPage(page);
-    await events.gotoCanonical('events', 'the-creation-of-the-world');
+    await events.gotoCanonical('events', 'the-resurrection-of-jesus');
 
     // Topics are treated like a Bible chapter — no in-page ScreenHeader
     // back arrow. The topic name lives in the same dropdown slot the
