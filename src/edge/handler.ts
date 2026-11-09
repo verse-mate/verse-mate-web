@@ -1,6 +1,8 @@
 import { ApiUnavailable, createApi, type Runtime } from './api';
-import { languageFromQuery, readConfig, type EdgeConfig, type EdgeEnv } from './config';
-import { loadPage, matchPageRoute } from './pageData';
+import { languageFromQuery, readConfig, type EdgeConfig, type EdgeEnv, type Language } from './config';
+import { buildHead, rewritePage } from './head';
+import { indexingFor, loadCoverage, type Indexing } from './indexing';
+import { loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
 
 export interface ExecutionContextLike {
   waitUntil(promise: Promise<unknown>): void;
@@ -38,19 +40,49 @@ export function reportFailure(error: unknown) {
   if (!(error instanceof ApiUnavailable)) console.error('edge render failed', error);
 }
 
+export interface Rendered {
+  body: string;
+  status: number;
+  headers: Record<string, string>;
+  complete: boolean;
+}
+
+export async function resolvePage(edge: EdgeRequest, route: PageRoute, lang: Language) {
+  const api = createApi(edge.config.apiUrl, edge.runtime);
+  const published = edge.config.indexedLanguages;
+  const [data, coverage] = await Promise.all([
+    loadPage(api, route, lang, published),
+    route.kind === 'chapter' ? loadCoverage(api) : null,
+  ]);
+  if (!data) return null;
+  return { data, indexing: indexingFor(data, lang, published, coverage) };
+}
+
+async function renderHtml(edge: EdgeRequest, data: PageData, lang: Language, indexing: Indexing): Promise<Rendered> {
+  const shell = await fetchShell(edge.env, edge.url);
+  const head = buildHead(data, lang, indexing);
+  const body = await rewritePage(shell, head, '').text();
+  const headers: Record<string, string> = {
+    'content-type': 'text/html; charset=utf-8',
+    'cache-control': shell.headers.get('cache-control') || 'public, max-age=0, must-revalidate',
+  };
+  if (head.noindex) headers['X-Robots-Tag'] = 'noindex';
+  return { body, status: 200, headers, complete: indexing.complete };
+}
+
 async function renderPage(edge: EdgeRequest, match: NonNullable<ReturnType<typeof matchPageRoute>>) {
-  const { env, url, config, runtime } = edge;
+  const { env, url } = edge;
   const lang = languageFromQuery(url.searchParams.get('lang'));
-  const api = createApi(config.apiUrl, runtime);
-  let data;
+  let rendered: Rendered;
   try {
-    data = await loadPage(api, match.route, lang);
+    const page = await resolvePage(edge, match.route, lang);
+    if (!page) return shellResponse(env, url, 404, { 'X-Robots-Tag': 'noindex' });
+    rendered = await renderHtml(edge, page.data, lang, page.indexing);
   } catch (error) {
     reportFailure(error);
     return shellResponse(env, url, 200);
   }
-  if (!data) return shellResponse(env, url, 404, { 'X-Robots-Tag': 'noindex' });
-  return shellResponse(env, url, 200);
+  return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
 }
 
 async function dispatch(edge: EdgeRequest) {

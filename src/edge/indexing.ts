@@ -5,6 +5,7 @@ import type { PageData } from './pageData';
 export type Coverage = Map<string, Map<number, Set<number>>>;
 
 export interface Indexing {
+  explained: boolean;
   indexable: boolean;
   alternates: Language[];
   complete: boolean;
@@ -49,8 +50,10 @@ export function indexingFor(data: PageData, lang: Language, published: Language[
     data.kind === 'chapter' && language === lang && language === DEFAULT_LANGUAGE
       ? data.summary.trim() !== ''
       : explainedIn(data, language, coverage);
-  const indexable = published.includes(lang) && explained(lang);
+  const explainedHere = explained(lang);
+  const indexable = published.includes(lang) && explainedHere;
   return {
+    explained: explainedHere,
     indexable,
     alternates: indexable ? published.filter(explained) : [],
     complete: data.kind !== 'chapter' || coverage !== null,

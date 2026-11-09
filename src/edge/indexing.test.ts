@@ -48,6 +48,7 @@ describe('published languages', () => {
 
       expect(await indexing('/bible/john/3', 'es-MX', ['en-US', 'es-MX'])).toMatchObject({ indexable: false, alternates: [] });
       expect(await indexing('/bible/john/3', 'en-US', ['en-US', 'es-MX'])).toEqual({
+        explained: true,
         indexable: true,
         alternates: ['en-US'],
         complete: false,
