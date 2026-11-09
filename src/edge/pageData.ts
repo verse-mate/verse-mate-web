@@ -51,6 +51,9 @@ export interface TopicPage {
 
 export type PageData = ChapterPage | EventPage | TopicPage;
 
+export const ITEM_TTL = 60 * 60;
+const EVENT_PAGE = 200;
+
 const PATTERNS: [RegExp, (m: RegExpMatchArray) => PageRoute][] = [
   [/^\/bible\/([^/]+)\/([^/]+?)(\.md)?\/?$/, (m) => ({ kind: 'chapter', bookParam: m[1], chapterParam: m[2] })],
   [/^\/jesus\/event\/([^/]+?)(\.md)?\/?$/, (m) => ({ kind: 'event', slug: m[1] })],
@@ -130,7 +133,11 @@ interface EventDetail {
 
 async function loadEvent(api: ApiGet, slug: string, lang: Language, published: Language[]): Promise<EventPage | null> {
   const details = await explanationsIn(languagesToRead(lang, published), (language) =>
-    api<EventDetail>(`/jesus/events/${encodeURIComponent(slug)}`, { bible_version: GUEST_VERSION, lang: langQuery(language) }),
+    api<EventDetail>(
+      `/jesus/events/${encodeURIComponent(slug)}`,
+      { bible_version: GUEST_VERSION, lang: langQuery(language) },
+      { ttl: ITEM_TTL },
+    ),
   );
   const detail = details.get(lang);
   if (!detail?.event) return null;
@@ -145,6 +152,20 @@ async function loadEvent(api: ApiGet, slug: string, lang: Language, published: L
     explanation: explanations[lang],
     explanations,
   };
+}
+
+export async function listEvents(api: ApiGet) {
+  const events: { slug: string; title: string }[] = [];
+  for (let offset = 0; ; offset += EVENT_PAGE) {
+    const page = await api<{ events?: { slug: string; title: string }[]; total?: number }>(
+      '/jesus/events',
+      { limit: EVENT_PAGE, offset },
+      { ttl: ITEM_TTL },
+    );
+    if (!page?.events) throw new ApiUnavailable('/jesus/events: missing');
+    events.push(...page.events);
+    if (page.events.length === 0 || events.length >= (page.total ?? 0)) return events;
+  }
 }
 
 interface TopicSummary {
@@ -166,10 +187,11 @@ export async function loadTopicList(api: ApiGet, category: string) {
 }
 
 export async function loadTopicExplanation(api: ApiGet, topicId: string, lang: Language) {
-  const data = await api<{ explanation?: { explanation?: string } | null }>(`/topics/${topicId}/explanation`, {
-    type: 'summary',
-    lang: langQuery(lang),
-  });
+  const data = await api<{ explanation?: { explanation?: string } | null }>(
+    `/topics/${topicId}/explanation`,
+    { type: 'summary', lang: langQuery(lang) },
+    { ttl: ITEM_TTL },
+  );
   return data?.explanation?.explanation ?? '';
 }
 

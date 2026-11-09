@@ -1,4 +1,4 @@
-import { BUILD_TIMEOUT_MS, createApi, type Runtime } from './api';
+import { BUILD_CACHE_WRITES, BUILD_TIMEOUT_MS, createApi, type Runtime } from './api';
 import { languageFromQuery, PRODUCTION_HOST, readConfig, type EdgeEnv, type Language } from './config';
 import { renderArticle } from './article';
 import { edgeCacheKey, FRESH, SHORT, STALE, withEdgeCache } from './cache';
@@ -91,7 +91,7 @@ async function serveGenerated(
   let rendered: Rendered | null;
   try {
     rendered = await withEdgeCache(edge, edgeCacheKey(edge, variant, '-'), async () => {
-      const body = await build(createApi(edge.config.apiUrl, edge.runtime, BUILD_TIMEOUT_MS));
+      const body = await build(createApi(edge.config.apiUrl, edge.runtime, { timeoutMs: BUILD_TIMEOUT_MS, cacheWrites: BUILD_CACHE_WRITES }));
       if (body === null) return null;
       return { body, status: 200, headers: { 'content-type': contentType, 'cache-control': `public, max-age=${DAY}` }, fresh: FRESH, stale: STALE };
     });

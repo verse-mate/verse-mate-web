@@ -24,6 +24,7 @@ export interface FakeData {
   events: { slug: string; title: string; passages: string[]; overview: Record<string, string> }[];
   topics: { id: string; name: string; category: string; references: string; summary: Record<string, string> }[];
   down: boolean;
+  eventPageCap: number;
 }
 
 export function fakeData(overrides: Partial<FakeData> = {}): FakeData {
@@ -86,6 +87,7 @@ export function fakeData(overrides: Partial<FakeData> = {}): FakeData {
       },
     ],
     down: false,
+    eventPageCap: 2,
     ...overrides,
   };
 }
@@ -123,7 +125,7 @@ export function fakeApi(data: FakeData) {
       return json({ book: { bookId: Number(m[1]), name: book?.n, chapters: [{ chapterNumber: Number(m[2]), verses }] } });
     }
     if (path === '/jesus/events') {
-      const limit = Math.min(Number(q.get('limit') || 50), 2);
+      const limit = Math.min(Number(q.get('limit') || 50), data.eventPageCap);
       const offset = Number(q.get('offset') || 0);
       return json({
         events: data.events

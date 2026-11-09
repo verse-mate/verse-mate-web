@@ -4,11 +4,10 @@ import { DEFAULT_LANGUAGE, LANGUAGES, SITE_ORIGIN, type Language } from './confi
 import { pageUrl } from './head';
 import { chapterCovered, explainedIn, hasOwnExplanation, loadCoverage } from './indexing';
 import { DAY } from './common';
-import { loadBooks, loadPage, loadTopicExplanation, loadTopicList } from './pageData';
+import { listEvents, loadBooks, loadPage, loadTopicExplanation, loadTopicList, type EventPage } from './pageData';
 import { escapeHtml } from './text';
 
 const CONCURRENCY = 6;
-const EVENT_PAGE = 200;
 
 export async function mapLimited<T, R>(items: T[], run: (item: T) => Promise<R>) {
   const results: R[] = new Array(items.length);
@@ -28,8 +27,10 @@ function urlset(urls: string[]) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;
 }
 
+const KINDS = ['bible', 'jesus', 'topics'] as const;
+
 export function sitemapIndex(published: Language[]) {
-  const children = [...published.map((lang) => `/sitemaps/bible-${lang}.xml`), '/sitemaps/jesus.xml', '/sitemaps/topics.xml'];
+  const children = published.flatMap((lang) => KINDS.map((kind) => `/sitemaps/${kind}-${lang}.xml`));
   const entries = children.map((path) => `<sitemap><loc>${SITE_ORIGIN}${path}</loc></sitemap>`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</sitemapindex>\n`;
 }
@@ -46,20 +47,6 @@ export async function chapterUrls(api: ApiGet, lang: Language) {
   return urls;
 }
 
-async function listEvents(api: ApiGet) {
-  const events: { slug: string; title: string }[] = [];
-  for (let offset = 0; ; offset += EVENT_PAGE) {
-    const page = await api<{ events?: { slug: string; title: string }[]; total?: number }>(
-      '/jesus/events',
-      { limit: EVENT_PAGE, offset },
-      { ttl: DAY },
-    );
-    if (!page?.events) throw new ApiUnavailable('/jesus/events: missing');
-    events.push(...page.events);
-    if (page.events.length === 0 || events.length >= (page.total ?? 0)) return events;
-  }
-}
-
 export interface Listed {
   title: string;
   path: string;
@@ -70,7 +57,7 @@ export async function listedEvents(api: ApiGet, published: Language[]): Promise<
   const events = await listEvents(api);
   const pages = await mapLimited(events, (event) => loadPage(api, { kind: 'event', slug: event.slug }, DEFAULT_LANGUAGE, published));
   return pages
-    .filter((page) => page !== null)
+    .filter((page): page is EventPage => page?.kind === 'event')
     .map((page) => ({ title: page.title, path: page.path, languages: published.filter((lang) => explainedIn(page, lang, null)) }))
     .filter((entry) => entry.languages.length > 0);
 }
@@ -104,11 +91,9 @@ function expand(entries: Listed[]) {
 
 export function matchSitemap(pathname: string) {
   if (pathname === '/sitemap.xml') return { kind: 'index' as const };
-  if (pathname === '/sitemaps/jesus.xml') return { kind: 'jesus' as const };
-  if (pathname === '/sitemaps/topics.xml') return { kind: 'topics' as const };
-  const bible = pathname.match(/^\/sitemaps\/bible-([A-Za-z-]+)\.xml$/);
-  const lang = bible && LANGUAGES.find((code) => code === bible[1]);
-  return lang ? { kind: 'bible' as const, lang } : null;
+  const child = pathname.match(/^\/sitemaps\/(bible|jesus|topics)-([A-Za-z-]+)\.xml$/);
+  const lang = child && LANGUAGES.find((code) => code === child[2]);
+  return lang ? { kind: child[1] as (typeof KINDS)[number], lang } : null;
 }
 
 export async function buildSitemap(
@@ -117,8 +102,8 @@ export async function buildSitemap(
   published: Language[],
 ): Promise<string | null> {
   if (match.kind === 'index') return sitemapIndex(published);
-  if (match.kind === 'bible') return published.includes(match.lang) ? urlset(await chapterUrls(api, match.lang)) : null;
-  if (match.kind === 'jesus') return urlset(expand(await listedEvents(api, published)));
-  return urlset(expand((await listedTopics(api, published)).flatMap((group) => group.topics)));
+  if (!published.includes(match.lang)) return null;
+  if (match.kind === 'bible') return urlset(await chapterUrls(api, match.lang));
+  if (match.kind === 'jesus') return urlset(expand(await listedEvents(api, [match.lang])));
+  return urlset(expand((await listedTopics(api, [match.lang])).flatMap((group) => group.topics)));
 }
-

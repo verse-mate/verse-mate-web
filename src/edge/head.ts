@@ -61,7 +61,7 @@ export function buildHead(data: PageData, lang: Language, indexing: Indexing): H
   const title = data.kind === 'chapter' ? labels.chapterTitle(name) : labels.explainedTitle(name);
   const image = cardUrl(data, lang);
 
-  const alternates = indexing.alternates.map((language) => ({ hreflang: language, href: pageUrl(data.path, language) }));
+  const alternates: Head['alternates'] = indexing.alternates.map((language) => ({ hreflang: language, href: pageUrl(data.path, language) }));
   if (indexing.alternates.includes(DEFAULT_LANGUAGE)) {
     alternates.push({ hreflang: 'x-default', href: pageUrl(data.path, DEFAULT_LANGUAGE) });
   }

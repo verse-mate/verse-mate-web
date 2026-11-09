@@ -6,6 +6,7 @@ import { validateXML } from 'xmllint-wasm';
 
 import worker from '../../worker.js';
 import { getBookSlug } from '../lib/bookSlugs';
+import { LANGUAGES } from './config';
 import { context, edgeEnv, fakeData, installEdgeGlobals } from './testing/fakeEdge';
 
 afterEach(() => vi.unstubAllGlobals());
@@ -41,7 +42,7 @@ function withEvents() {
 }
 
 describe('the sitemap index', () => {
-  it('lists a child per published language plus Jesus events and topics, as XML', async () => {
+  it('lists the chapter, Jesus event and topic children of each published language, as XML', async () => {
     installEdgeGlobals();
 
     const index = await get('/sitemap.xml', { INDEXED_LANGUAGES: ['en-US', 'es-MX'] });
@@ -49,9 +50,11 @@ describe('the sitemap index', () => {
     expect(index.response.headers.get('content-type')).toBe('application/xml; charset=utf-8');
     expect(index.locs).toEqual([
       'https://app.versemate.org/sitemaps/bible-en-US.xml',
+      'https://app.versemate.org/sitemaps/jesus-en-US.xml',
+      'https://app.versemate.org/sitemaps/topics-en-US.xml',
       'https://app.versemate.org/sitemaps/bible-es-MX.xml',
-      'https://app.versemate.org/sitemaps/jesus.xml',
-      'https://app.versemate.org/sitemaps/topics.xml',
+      'https://app.versemate.org/sitemaps/jesus-es-MX.xml',
+      'https://app.versemate.org/sitemaps/topics-es-MX.xml',
     ]);
     expect(await valid(index.body, 'siteindex.xsd')).toEqual([]);
   });
@@ -118,32 +121,92 @@ describe('the chapter sitemaps', () => {
 });
 
 describe('the Jesus and topic sitemaps', () => {
-  it('list the events that have an explanation, in each published language', async () => {
+  it('list the events that have an explanation, one child per published language', async () => {
     installEdgeGlobals(withEvents());
+    const env = { INDEXED_LANGUAGES: ['en-US', 'es-MX'] };
 
-    const jesus = await get('/sitemaps/jesus.xml', { INDEXED_LANGUAGES: ['en-US', 'es-MX'] });
+    const english = await get('/sitemaps/jesus-en-US.xml', env);
+    const spanish = await get('/sitemaps/jesus-es-MX.xml', env);
 
-    expect(jesus.locs).toEqual([
+    expect(english.locs).toEqual([
       'https://app.versemate.org/jesus/event/event-baptism',
-      'https://app.versemate.org/jesus/event/event-baptism?lang=es-MX',
       'https://app.versemate.org/jesus/event/the-boy-in-the-temple',
     ]);
-    expect(await valid(jesus.body, 'sitemap.xsd')).toEqual([]);
+    expect(spanish.locs).toEqual(['https://app.versemate.org/jesus/event/event-baptism?lang=es-MX']);
+    expect(await valid(english.body, 'sitemap.xsd')).toEqual([]);
   });
 
   it('list the topics that have an explanation, and no shell-only route', async () => {
     installEdgeGlobals(withEvents());
 
-    const topics = await get('/sitemaps/topics.xml');
+    const topics = await get('/sitemaps/topics-en-US.xml');
 
     expect(topics.locs).toEqual(['https://app.versemate.org/topic/events/the-creation-of-the-world']);
     expect(await valid(topics.body, 'sitemap.xsd')).toEqual([]);
 
     const all = [
       ...topics.locs,
-      ...(await get('/sitemaps/jesus.xml')).locs,
+      ...(await get('/sitemaps/jesus-en-US.xml')).locs,
       ...(await get('/sitemaps/bible-en-US.xml')).locs,
     ];
     for (const loc of all) expect(loc).toMatch(/^https:\/\/app\.versemate\.org\/(bible\/[^/]+\/\d+|jesus\/event\/[^/?]+|topic\/[^/]+\/[^/?]+)(\?lang=[\w-]+)?$/);
   });
+
+  it('do not exist for an unpublished language', async () => {
+    installEdgeGlobals(withEvents());
+
+    expect((await get('/sitemaps/jesus-es-MX.xml')).response.status).toBe(404);
+    expect((await get('/sitemaps/topics-es-MX.xml')).response.status).toBe(404);
+  });
+});
+
+describe('the work one request may do', () => {
+  const SUBREQUEST_LIMIT = 1000;
+  const CACHE_API_LIMIT = 1000;
+  const EVENTS = 214;
+  const TOPICS = 196;
+  const CATEGORIES = ['EVENT', 'PARABLE', 'PROPHECY', 'THEME'];
+
+  function productionSize() {
+    const books = CHAPTERS.map((c, index) => ({ b: index + 1, n: `Book ${index + 1}`, c }));
+    const full = books.map((book) => ({ bookId: book.b, chapters: Array.from({ length: book.c }, (_, i) => i + 1) }));
+    const everywhere = (text: string) => Object.fromEntries(LANGUAGES.map((lang) => [lang, `${text} (${lang})`]));
+    return fakeData({
+      books,
+      coverage: Object.fromEntries(LANGUAGES.map((lang) => [lang, full])),
+      eventPageCap: 200,
+      events: Array.from({ length: EVENTS }, (_, i) => ({
+        slug: `event-${i}`,
+        title: `Event ${i}`,
+        passages: ['Mark 1:1'],
+        overview: everywhere(`Event ${i}.`),
+      })),
+      topics: Array.from({ length: TOPICS }, (_, i) => ({
+        id: `topic-${i}`,
+        name: `Topic number ${i}`,
+        category: CATEGORIES[i % CATEGORIES.length],
+        references: '## Part\n(Genesis 1)\n',
+        summary: everywhere(`Topic ${i}.`),
+      })),
+    });
+  }
+
+  it('stays under the per-request subrequest limits for every sitemap and llms.txt with all languages published', async () => {
+    const env = { INDEXED_LANGUAGES: [...LANGUAGES] };
+    const paths = ['/sitemap.xml', '/llms.txt', ...LANGUAGES.flatMap((lang) => ['bible', 'jesus', 'topics'].map((kind) => `/sitemaps/${kind}-${lang}.xml`))];
+
+    for (const path of paths) {
+      const { api, cache } = installEdgeGlobals(productionSize());
+      const { response, locs } = await get(path, env);
+      const fetches = api.calls.length;
+      const cacheOps = cache.ops.match + cache.ops.put;
+
+      expect(response.status, path).toBe(200);
+      if (path.includes('/jesus-')) expect(locs, path).toHaveLength(EVENTS);
+      if (path.includes('/topics-')) expect(locs, path).toHaveLength(TOPICS);
+      expect(cacheOps, path).toBeLessThan(CACHE_API_LIMIT);
+      expect(fetches + cacheOps, path).toBeLessThan(SUBREQUEST_LIMIT);
+      vi.unstubAllGlobals();
+    }
+  }, 60_000);
 });
