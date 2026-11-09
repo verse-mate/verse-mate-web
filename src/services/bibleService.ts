@@ -664,38 +664,48 @@ function topicLanguageQuery(bibleVersion?: string): Record<string, string> {
   };
 }
 
+async function loadTopicIndex(): Promise<{ categories: string[]; topics: Topic[]; complete: boolean }> {
+  const catResp = await api.get<{ categories: string[] }>('/topics/categories', undefined, {
+    auth: false,
+  });
+  const categories = catResp?.categories || [];
+  const topics: Topic[] = [];
+  let complete = true;
+  for (const cat of categories) {
+    try {
+      const result = await api.get<{ topics?: TopicSearchRaw[] }>(
+        '/topics/search',
+        { category: cat, limit: 500, ...topicLanguageQuery() },
+        { auth: false }
+      );
+      for (const t of result?.topics || []) {
+        topics.push({
+          id: t.topic_id || t.id,
+          name: t.name,
+          description: t.description || '',
+          category: t.category || cat,
+          slug: t.slug,
+        });
+      }
+    } catch {
+      complete = false;
+    }
+  }
+  return { categories, topics, complete };
+}
+
+export async function fetchTopicIndex(): Promise<Topic[] | null> {
+  try {
+    const { topics, complete } = await loadTopicIndex();
+    return complete ? topics : null;
+  } catch {
+    return null;
+  }
+}
+
 export async function fetchTopics(): Promise<Topic[]> {
   try {
-    // Try to get the full topic list from admin endpoint first; fall back to
-    // categories if that's not allowed.
-    const catResp = await api.get<{ categories: string[] }>('/topics/categories', undefined, {
-      auth: false,
-    });
-    const categories = catResp?.categories || [];
-    // /topics/search with empty query gives us topics grouped under categories
-    const topics: Topic[] = [];
-    for (const cat of categories) {
-      try {
-        const result = await api.get<{ topics?: TopicSearchRaw[] }>(
-          '/topics/search',
-          { category: cat, limit: 500, ...topicLanguageQuery() },
-          { auth: false }
-        );
-        const list: TopicSearchRaw[] = result?.topics || [];
-        for (const t of list) {
-          topics.push({
-            id: t.topic_id || t.id,
-            name: t.name,
-            description: t.description || '',
-            category: t.category || cat,
-            slug: t.slug,
-          });
-        }
-      } catch {
-        /* ignore category failure */
-      }
-    }
-    // If search returned nothing, expose the categories themselves as pseudo-topics
+    const { categories, topics } = await loadTopicIndex();
     if (topics.length === 0) {
       return categories.map(c => ({
         id: c.toLowerCase(),

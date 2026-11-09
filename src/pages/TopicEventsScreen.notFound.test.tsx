@@ -4,11 +4,11 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import TopicEventsScreen from './TopicEventsScreen';
 
-const topics = vi.hoisted(() => ({ list: [] as { id: string; name: string; category: string; description: string }[] }));
+const topics = vi.hoisted(() => ({ list: [] as { id: string; name: string; category: string; description: string }[] | null }));
 const fetchTopicDetails = vi.hoisted(() => vi.fn());
 
 vi.mock('@/services/bibleService', () => ({
-  fetchTopics: async () => topics.list,
+  fetchTopicIndex: async () => topics.list,
   fetchTopicDetails,
 }));
 vi.mock('@/contexts/AppContext', () => ({
@@ -47,6 +47,14 @@ describe('TopicEventsScreen on a topic URL', () => {
     open('/topic/nonsense/birth-of-jesus');
 
     expect(await screen.findByText('page not found')).toBeTruthy();
+  });
+
+  it('does not call a topic missing when the topic list could not be loaded', async () => {
+    topics.list = null;
+    open('/topic/events/birth-of-jesus');
+
+    await new Promise((resolve) => setTimeout(resolve, 50));
+    expect(screen.queryByText('page not found')).toBeNull();
   });
 
   it('loads a topic that exists', async () => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchTopicDetails, fetchTopics } from '@/services/bibleService';
+import { fetchTopicDetails, fetchTopicIndex } from '@/services/bibleService';
 import type { Topic, TopicSection } from '@/services/types';
 import { useApp } from '@/contexts/AppContext';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -75,8 +75,8 @@ export default function TopicEventsScreen() {
       if (topicId) {
         resolvedId = topicId;
       } else if (categorySlug && topicSlug) {
-        const topics = await fetchTopics();
-        if (cancelled) return;
+        const topics = await fetchTopicIndex();
+        if (cancelled || topics === null) return;
         const backendCategory = getCategoryFromSlug(categorySlug);
         if (backendCategory) {
           resolvedTopic =
