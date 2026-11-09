@@ -21,7 +21,8 @@
 
   "vars": {
     "EDGE_RENDER": true,
-    "API_URL": "https://api.versemate.org"
+    "API_URL": "https://api.versemate.org",
+    "INDEXED_LANGUAGES": ["en-US"]
   },
   "version_metadata": { "binding": "CF_VERSION_METADATA" },
 
@@ -53,7 +54,8 @@
       "name": "verse-mate-web-preview",
       "vars": {
         "EDGE_RENDER": true,
-        "API_URL": "https://api.versemate.org"
+        "API_URL": "https://api.versemate.org",
+        "INDEXED_LANGUAGES": ["en-US"]
       },
       "version_metadata": { "binding": "CF_VERSION_METADATA" }
     },
@@ -61,7 +63,8 @@
       "name": "verse-mate-web-staging",
       "vars": {
         "EDGE_RENDER": true,
-        "API_URL": "https://api.versemate.org"
+        "API_URL": "https://api.versemate.org",
+        "INDEXED_LANGUAGES": ["en-US"]
       },
       "version_metadata": { "binding": "CF_VERSION_METADATA" }
       // No domain — *.workers.dev only. The monorepo's apps/lovable still
@@ -72,7 +75,8 @@
       "name": "verse-mate-web-production",
       "vars": {
         "EDGE_RENDER": true,
-        "API_URL": "https://api.versemate.org"
+        "API_URL": "https://api.versemate.org",
+        "INDEXED_LANGUAGES": ["en-US"]
       },
       "version_metadata": { "binding": "CF_VERSION_METADATA" },
       "routes": [

@@ -32,7 +32,7 @@ export interface EventPage {
   title: string;
   passages: string[];
   explanation: string;
-  englishExplanation: string;
+  explanations: Partial<Record<Language, string>>;
 }
 
 export interface TopicPage {
@@ -45,7 +45,7 @@ export interface TopicPage {
   title: string;
   sections: { subtitle: string; references: string[] }[];
   explanation: string;
-  englishExplanation: string;
+  explanations: Partial<Record<Language, string>>;
 }
 
 export type PageData = ChapterPage | EventPage | TopicPage;
@@ -85,6 +85,15 @@ function langQuery(lang: Language) {
   return lang === DEFAULT_LANGUAGE ? undefined : lang;
 }
 
+function languagesToRead(lang: Language, published: Language[]) {
+  return [...new Set<Language>([lang, DEFAULT_LANGUAGE, ...published])];
+}
+
+async function explanationsIn<T>(languages: Language[], read: (language: Language) => Promise<T>) {
+  const results = await Promise.all(languages.map(read));
+  return new Map(languages.map((language, index) => [language, results[index]]));
+}
+
 async function loadChapter(api: ApiGet, route: Extract<PageRoute, { kind: 'chapter' }>, lang: Language): Promise<ChapterPage | null> {
   const bookId = /^\d+$/.test(route.bookParam) ? null : parseBookParam(route.bookParam);
   if (!bookId || !/^\d+$/.test(route.chapterParam)) return null;
@@ -120,20 +129,22 @@ interface EventDetail {
   explanation?: { overview?: string };
 }
 
-async function loadEvent(api: ApiGet, slug: string, lang: Language): Promise<EventPage | null> {
-  const get = (language: Language) =>
-    api<EventDetail>(`/jesus/events/${encodeURIComponent(slug)}`, { bible_version: GUEST_VERSION, lang: langQuery(language) });
-  const [detail, english] = await Promise.all([get(lang), lang === DEFAULT_LANGUAGE ? null : get(DEFAULT_LANGUAGE)]);
+async function loadEvent(api: ApiGet, slug: string, lang: Language, published: Language[]): Promise<EventPage | null> {
+  const details = await explanationsIn(languagesToRead(lang, published), (language) =>
+    api<EventDetail>(`/jesus/events/${encodeURIComponent(slug)}`, { bible_version: GUEST_VERSION, lang: langQuery(language) }),
+  );
+  const detail = details.get(lang);
   if (!detail?.event) return null;
-  const explanation = detail.explanation?.overview ?? '';
+  const explanations: Partial<Record<Language, string>> = {};
+  for (const [language, entry] of details) explanations[language] = entry?.explanation?.overview ?? '';
   return {
     kind: 'event',
     path: `/jesus/event/${detail.event.slug}`,
     slug: detail.event.slug,
     title: detail.event.title,
     passages: (detail.event.passages ?? []).map((passage) => passage.display),
-    explanation,
-    englishExplanation: english ? (english.explanation?.overview ?? '') : explanation,
+    explanation: explanations[lang],
+    explanations,
   };
 }
 
@@ -180,7 +191,12 @@ function parseTopicSections(content: string) {
     });
 }
 
-async function loadTopic(api: ApiGet, route: Extract<PageRoute, { kind: 'topic' }>, lang: Language): Promise<TopicPage | null> {
+async function loadTopic(
+  api: ApiGet,
+  route: Extract<PageRoute, { kind: 'topic' }>,
+  lang: Language,
+  published: Language[],
+): Promise<TopicPage | null> {
   const category = getCategoryFromSlug(route.categorySlug);
   if (!category) return null;
   const topic = (await loadTopicList(api, category)).find(
@@ -188,11 +204,11 @@ async function loadTopic(api: ApiGet, route: Extract<PageRoute, { kind: 'topic' 
   );
   if (!topic?.id) return null;
 
-  const [explanation, english, references] = await Promise.all([
-    loadTopicExplanation(api, topic.id, lang),
-    lang === DEFAULT_LANGUAGE ? null : loadTopicExplanation(api, topic.id, DEFAULT_LANGUAGE),
+  const [texts, references] = await Promise.all([
+    explanationsIn(languagesToRead(lang, published), (language) => loadTopicExplanation(api, topic.id, language)),
     api<{ references?: { content?: string } | null }>(`/topics/${topic.id}/references`),
   ]);
+  const explanations = Object.fromEntries(texts) as Partial<Record<Language, string>>;
   return {
     kind: 'topic',
     path: `/topic/${route.categorySlug}/${topic.slug}`,
@@ -202,13 +218,13 @@ async function loadTopic(api: ApiGet, route: Extract<PageRoute, { kind: 'topic' 
     slug: topic.slug,
     title: topic.name,
     sections: parseTopicSections(references?.references?.content ?? ''),
-    explanation,
-    englishExplanation: english ?? explanation,
+    explanation: explanations[lang],
+    explanations,
   };
 }
 
-export function loadPage(api: ApiGet, route: PageRoute, lang: Language): Promise<PageData | null> {
+export function loadPage(api: ApiGet, route: PageRoute, lang: Language, published: Language[] = []): Promise<PageData | null> {
   if (route.kind === 'chapter') return loadChapter(api, route, lang);
-  if (route.kind === 'event') return loadEvent(api, route.slug, lang);
-  return loadTopic(api, route, lang);
+  if (route.kind === 'event') return loadEvent(api, route.slug, lang, published);
+  return loadTopic(api, route, lang, published);
 }
