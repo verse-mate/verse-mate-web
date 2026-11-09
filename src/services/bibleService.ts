@@ -670,7 +670,7 @@ export async function fetchTopics(): Promise<Topic[]> {
       try {
         const result = await api.get<{ topics?: TopicSearchRaw[] }>(
           '/topics/search',
-          { category: cat, limit: 50 },
+          { category: cat, limit: 500 },
           { auth: false }
         );
         const list: TopicSearchRaw[] = result?.topics || [];
