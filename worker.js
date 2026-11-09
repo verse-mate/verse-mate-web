@@ -1,36 +1,5 @@
-/**
- * Cloudflare Worker for serving the VerseMate web app (Vite SPA).
- *
- * Three responsibilities:
- *   1. SEO 301 redirects for legacy URL shapes (so existing Google links
- *      flow into the canonical /bible/<slug>/<chapter> URL).
- *   2. Static asset serving from the Vite build output.
- *   3. SPA fallback to /index.html for any non-asset path so React Router
- *      handles client-side routing.
- *
- * Source-of-truth for slugs: src/lib/bookSlugs.ts (kept in sync — when
- * the canonical map there changes, also update BOOK_SLUGS below).
- */
-
-// MUST stay in sync with src/lib/bookSlugs.ts
-const BOOK_SLUGS = {
-  1: "genesis", 2: "exodus", 3: "leviticus", 4: "numbers", 5: "deuteronomy",
-  6: "joshua", 7: "judges", 8: "ruth", 9: "1-samuel", 10: "2-samuel",
-  11: "1-kings", 12: "2-kings", 13: "1-chronicles", 14: "2-chronicles",
-  15: "ezra", 16: "nehemiah", 17: "esther", 18: "job", 19: "psalms",
-  20: "proverbs", 21: "ecclesiastes", 22: "song-of-solomon", 23: "isaiah",
-  24: "jeremiah", 25: "lamentations", 26: "ezekiel", 27: "daniel",
-  28: "hosea", 29: "joel", 30: "amos", 31: "obadiah", 32: "jonah",
-  33: "micah", 34: "nahum", 35: "habakkuk", 36: "zephaniah", 37: "haggai",
-  38: "zechariah", 39: "malachi",
-  40: "matthew", 41: "mark", 42: "luke", 43: "john", 44: "acts",
-  45: "romans", 46: "1-corinthians", 47: "2-corinthians", 48: "galatians",
-  49: "ephesians", 50: "philippians", 51: "colossians",
-  52: "1-thessalonians", 53: "2-thessalonians", 54: "1-timothy",
-  55: "2-timothy", 56: "titus", 57: "philemon", 58: "hebrews",
-  59: "james", 60: "1-peter", 61: "2-peter", 62: "1-john",
-  63: "2-john", 64: "3-john", 65: "jude", 66: "revelation",
-};
+import { BOOK_SLUGS } from "./src/lib/bookSlugs.ts";
+import { handleEdge } from "./src/edge/handler.ts";
 
 /**
  * Match the same legacy redirects the monorepo's frontend-next does in
@@ -147,17 +116,17 @@ async function serveApp(request, env, url) {
   return response;
 }
 
-async function route(request, env, url) {
+async function route(request, env, url, ctx) {
   if (APP_LINK_FILES.has(url.pathname)) return serveAppLinkFile(request, env);
 
-  const response = await serveApp(request, env, url);
+  const response = (await handleEdge(request, env, url, ctx)) ?? (await serveApp(request, env, url));
   return SSO_CALLBACK_PATH.test(url.pathname)
     ? withHeaders(response, { "Referrer-Policy": "no-referrer" })
     : response;
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     // 0. Visuals are served from the Spaces CDN, not this app's bundle.
@@ -169,7 +138,7 @@ export default {
     const redirect = checkLegacyRedirects(url);
     if (redirect) return redirect;
 
-    const response = await route(request, env, url);
+    const response = await route(request, env, url, ctx);
     return url.hostname === PRODUCTION_HOST
       ? response
       : withHeaders(response, { "X-Robots-Tag": "noindex" });

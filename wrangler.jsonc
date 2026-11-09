@@ -19,6 +19,12 @@
 
   "workers_dev": true,
 
+  "vars": {
+    "EDGE_RENDER": true,
+    "API_URL": "https://api.versemate.org"
+  },
+  "version_metadata": { "binding": "CF_VERSION_METADATA" },
+
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
@@ -44,16 +50,31 @@
 
   "env": {
     "preview": {
-      "name": "verse-mate-web-preview"
+      "name": "verse-mate-web-preview",
+      "vars": {
+        "EDGE_RENDER": true,
+        "API_URL": "https://api.versemate.org"
+      },
+      "version_metadata": { "binding": "CF_VERSION_METADATA" }
     },
     "staging": {
-      "name": "verse-mate-web-staging"
+      "name": "verse-mate-web-staging",
+      "vars": {
+        "EDGE_RENDER": true,
+        "API_URL": "https://api.versemate.org"
+      },
+      "version_metadata": { "binding": "CF_VERSION_METADATA" }
       // No domain — *.workers.dev only. The monorepo's apps/lovable still
       // owns staging.versemate.org and we keep it that way for now since
       // it's the existing review surface for the Lovable design.
     },
     "production": {
       "name": "verse-mate-web-production",
+      "vars": {
+        "EDGE_RENDER": true,
+        "API_URL": "https://api.versemate.org"
+      },
+      "version_metadata": { "binding": "CF_VERSION_METADATA" },
       "routes": [
         {
           "pattern": "app.versemate.org",
