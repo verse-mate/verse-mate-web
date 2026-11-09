@@ -1,0 +1,128 @@
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+import { parseJsonc } from './jsonc';
+
+export const HOST = 'app.versemate.org';
+const ENDPOINT = 'https://api.indexnow.org/indexnow';
+const MAX_URLS_PER_SUBMISSION = 10_000;
+
+export type Fetcher = (input: string, init?: RequestInit) => Promise<Response>;
+type Result = { ok: boolean; status: number; detail?: string };
+type Wrangler = { vars?: Record<string, unknown>; env?: Record<string, { vars?: Record<string, unknown> }> };
+
+function asList(value: unknown): string[] {
+  if (Array.isArray(value)) return value.map((item) => String(item).trim());
+  if (typeof value === 'string') {
+    try {
+      return asList(JSON.parse(value));
+    } catch {
+      return value.split(',').map((item) => item.trim()).filter(Boolean);
+    }
+  }
+  return [];
+}
+
+export function publishedLanguages(wranglerSource: string, env = 'production') {
+  const config = parseJsonc<Wrangler>(wranglerSource);
+  return asList(config.env?.[env]?.vars?.INDEXED_LANGUAGES ?? config.vars?.INDEXED_LANGUAGES);
+}
+
+export function newlyPublished(previous: string[], current: string[]) {
+  return current.filter((lang) => !previous.includes(lang));
+}
+
+export const urlsFromSitemap = (xml: string) =>
+  [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) =>
+    match[1]
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&apos;/g, "'")
+      .replace(/&amp;/g, '&'),
+  );
+
+async function readSitemap(url: string, fetcher: Fetcher) {
+  const response = await fetcher(url);
+  if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
+  return urlsFromSitemap(await response.text());
+}
+
+export async function urlsForLanguages(languages: string[], fetcher: Fetcher) {
+  const children = (await readSitemap(`https://${HOST}/sitemap.xml`, fetcher)).filter((child) =>
+    languages.some((lang) => child.endsWith(`-${lang}.xml`)),
+  );
+  const urls: string[] = [];
+  for (const child of children) urls.push(...(await readSitemap(child, fetcher)));
+  return urls;
+}
+
+export async function submitToIndexNow({ key, urls, fetcher }: { key: string; urls: string[]; fetcher: Fetcher }): Promise<Result> {
+  let last: Result = { ok: true, status: 0 };
+  for (let start = 0; start < urls.length; start += MAX_URLS_PER_SUBMISSION) {
+    try {
+      const response = await fetcher(ENDPOINT, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json; charset=utf-8' },
+        body: JSON.stringify({
+          host: HOST,
+          key,
+          keyLocation: `https://${HOST}/${key}.txt`,
+          urlList: urls.slice(start, start + MAX_URLS_PER_SUBMISSION),
+        }),
+      });
+      if (!response.ok) return { ok: false, status: response.status, detail: (await response.text()).slice(0, 500) };
+      last = { ok: true, status: response.status };
+    } catch (error) {
+      return { ok: false, status: 0, detail: String(error) };
+    }
+  }
+  return last;
+}
+
+export function keyIn(publicDir: string) {
+  const files = readdirSync(publicDir).filter((name) => /^[0-9a-f]{32}\.txt$/.test(name));
+  if (files.length !== 1) throw new Error(`indexnow: expected one <32 hex>.txt key file in ${publicDir}, found ${files.length}`);
+  return files[0].replace(/\.txt$/, '');
+}
+
+const USAGE = 'usage: bun scripts/indexnow.ts changed <previous wrangler.jsonc> <current wrangler.jsonc> | all <current wrangler.jsonc>';
+
+export async function run(args: string[], { fetcher = fetch as Fetcher, publicDir = 'public', log = console.log, error = console.error } = {}) {
+  const [mode, ...files] = args;
+  let languages: string[];
+  if (mode === 'changed' && files.length === 2) {
+    const [previous, current] = files.map((file) => publishedLanguages(readFileSync(file, 'utf8')));
+    languages = newlyPublished(previous, current);
+  } else if (mode === 'all' && files.length === 1) {
+    languages = publishedLanguages(readFileSync(files[0], 'utf8'));
+  } else {
+    error(USAGE);
+    return 1;
+  }
+  if (languages.length === 0) {
+    log('indexnow: no newly published languages, nothing to submit');
+    return 0;
+  }
+
+  let urls: string[];
+  try {
+    urls = await urlsForLanguages(languages, fetcher);
+  } catch (failure) {
+    error(`indexnow: could not read the sitemaps of ${languages.join(', ')}: ${String(failure)}`);
+    return 1;
+  }
+  const result = await submitToIndexNow({ key: keyIn(publicDir), urls, fetcher });
+  const line = `indexnow: ${urls.length} URLs for ${HOST} (${languages.join(', ')}), HTTP ${result.status}`;
+  if (result.ok) {
+    log(line);
+    return 0;
+  }
+  error(`${line}, submission failed: ${result.detail ?? ''}`);
+  return 1;
+}
+
+const entry = import.meta as ImportMeta & { main?: boolean; dir?: string };
+if (entry.main) {
+  process.exit(await run(process.argv.slice(2), { publicDir: join(entry.dir ?? '.', '..', 'public') }));
+}
