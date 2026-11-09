@@ -126,9 +126,10 @@ async function renderMarkdownPage(edge: EdgeRequest, route: PageRoute) {
   return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
 }
 
-async function asset(env: EdgeEnv, url: URL, path: string) {
+async function pngAsset(env: EdgeEnv, url: URL, path: string) {
   const response = await env.ASSETS.fetch(new Request(`${url.origin}${path}`));
-  return response.ok ? response : null;
+  const isPng = (response.headers.get('content-type') || '').startsWith('image/png');
+  return response.ok && isPng ? response : null;
 }
 
 async function renderShareCard(edge: EdgeRequest, route: PageRoute) {
@@ -138,14 +139,14 @@ async function renderShareCard(edge: EdgeRequest, route: PageRoute) {
     rendered = await withEdgeCache(edge, edgeCacheKey(edge, 'og', lang), async () => {
       const page = await resolvePage(edge, route, lang);
       if (!page || page.data.kind !== 'chapter') return null;
-      const logo = await asset(edge.env, edge.url, '/versemate-logo-white.png');
+      const logo = await pngAsset(edge.env, edge.url, '/versemate-logo-white.png');
       const body = await renderCard(page.data, lang, page.indexing, logo ? await logo.arrayBuffer() : null);
       const headers = { 'content-type': 'image/png', 'cache-control': `public, max-age=${DAY}` };
       return { body, status: 200, headers, ...lifetime(page.indexing.complete) };
     });
   } catch (error) {
     reportFailure(error);
-    const fallback = await asset(edge.env, edge.url, '/og/default.png');
+    const fallback = await pngAsset(edge.env, edge.url, '/og/default.png');
     if (!fallback) return unavailable();
     return new Response(fallback.body, { status: 200, headers: { 'content-type': 'image/png', 'cache-control': 'no-store' } });
   }
@@ -172,7 +173,7 @@ async function dispatch(edge: EdgeRequest) {
   const sitemap = matchSitemap(edge.url.pathname);
   if ((isLlms || sitemap) && edge.url.hostname !== PRODUCTION_HOST) return textResponse('Not found', 404);
 
-  if (isLlms) return serveGenerated(edge, 'llms', 'text/plain; charset=utf-8', llmsTxt);
+  if (isLlms) return serveGenerated(edge, 'llms', 'text/markdown; charset=utf-8', llmsTxt);
 
   if (sitemap) {
     return serveGenerated(edge, 'sitemap', 'application/xml; charset=utf-8', (api) =>

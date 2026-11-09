@@ -84,7 +84,7 @@ describe('llms.txt', () => {
 
     const { response, body } = await get('/llms.txt');
 
-    expect(response.headers.get('content-type')).toBe('text/plain; charset=utf-8');
+    expect(response.headers.get('content-type')).toBe('text/markdown; charset=utf-8');
     expect(body.startsWith('# VerseMate\n')).toBe(true);
     expect(body).not.toMatch(/<(div|html)/);
     const links = [...body.matchAll(/\]\((https:\/\/app\.versemate\.org[^)]+)\)/g)].map((m) => m[1]);

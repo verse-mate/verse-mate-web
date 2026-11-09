@@ -71,4 +71,28 @@ describe('chapter share cards', () => {
     expect(Buffer.from(fallback.bytes).equals(publicFile('og/default.png'))).toBe(true);
     expect([...cache.entries.keys()].some((key) => key.includes('/og/'))).toBe(false);
   });
+
+  it('are drawn without the logo when the assets answer it with the app page', async () => {
+    installEdgeGlobals();
+    const ctx = context();
+    const spa = edgeEnv({ ASSETS: fakeAssets({ '/versemate-logo-white.png': () => new Response('<!doctype html>', { headers: { 'content-type': 'text/html' } }) }) });
+
+    const response = await worker.fetch(new Request('https://app.versemate.org/og/bible/john/3.png'), spa, ctx);
+    const bytes = Buffer.from(await response.arrayBuffer());
+    await ctx.settle();
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('content-type')).toBe('image/png');
+    expect(bytes.subarray(1, 4).toString()).toBe('PNG');
+  }, 30_000);
+
+  it('never serve the app page as the fallback card', async () => {
+    installEdgeGlobals(fakeData({ down: true }));
+    const spa = edgeEnv({ ASSETS: fakeAssets({ '/og/default.png': () => new Response('<!doctype html>', { headers: { 'content-type': 'text/html' } }) }) });
+
+    const response = await worker.fetch(new Request('https://app.versemate.org/og/bible/john/3.png'), spa, context());
+
+    expect(response.status).toBe(503);
+    expect(await response.text()).not.toContain('<!doctype html>');
+  });
 });
