@@ -190,7 +190,7 @@ async function dispatch(edge: EdgeRequest) {
   }
 
   const match = matchPageRoute(edge.url.pathname);
-  if (!match) return null;
+  if (!match) return edge.url.pathname.endsWith('.md') ? textResponse('Not found', 404, { 'X-Robots-Tag': 'noindex' }) : null;
   return match.markdown ? renderMarkdownPage(edge, match.route) : renderPage(edge, match);
 }
 

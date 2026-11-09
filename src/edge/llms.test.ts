@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import worker from '../../worker.js';
 import { BOOK_SLUGS } from '../lib/bookSlugs';
-import { context, edgeEnv, fakeData, installEdgeGlobals } from './testing/fakeEdge';
+import { context, edgeEnv, fakeData, installEdgeGlobals, SHELL } from './testing/fakeEdge';
 
 afterEach(() => vi.unstubAllGlobals());
 
@@ -65,12 +65,14 @@ describe('Markdown versions of the pages', () => {
     expect(topic.body).toContain('- Genesis 2:1-3');
   });
 
-  it('do not exist for a page that does not exist or is not rendered', async () => {
+  it('do not exist for a page that does not exist or is not rendered, even where the assets answer every path with the shell', async () => {
     installEdgeGlobals();
+    const spaAssets = { fetch: async () => new Response(SHELL, { headers: { 'content-type': 'text/html' } }) };
 
-    for (const path of ['/bible/john/999.md', '/jesus.md', '/read.md', '/topics.md']) {
-      const { response } = await get(path);
+    for (const path of ['/bible/john/999.md', '/jesus.md', '/read.md', '/topics.md', '/bible/john/3/commentary.md']) {
+      const response = await worker.fetch(new Request(`https://app.versemate.org${path}`), edgeEnv({ ASSETS: spaAssets }), context());
       expect(response.status, path).toBe(404);
+      expect(await response.text(), path).not.toContain('<div id="root">');
     }
     expect((await get('/bible/john/999.md')).response.headers.get('x-robots-tag')).toBe('noindex');
   });
