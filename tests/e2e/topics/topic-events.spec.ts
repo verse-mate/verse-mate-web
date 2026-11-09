@@ -33,11 +33,7 @@ test.describe('Topics — TopicEventsScreen', () => {
     viewport,
   }) => {
     const events = new TopicEventsPage(page);
-    // "creation" is the canonical category slug for the Creation topic
-    // group — confirmed by `topics/browse.spec.ts`. The URL shape is
-    // /topic/<category>/<topic>. Using "creation/creation" matches the
-    // most stable production fixture (the top-level Creation topic).
-    await events.gotoCanonical('creation', 'creation');
+    await events.gotoCanonical('events', 'the-creation-of-the-world');
     await expect(topicSelectorLocator(page, viewport)).toBeVisible({ timeout: 15_000 });
     await expect(events.contentBody).toBeVisible();
   });
@@ -77,7 +73,7 @@ test.describe('Topics — TopicEventsScreen', () => {
     viewport,
   }) => {
     const events = new TopicEventsPage(page);
-    await events.gotoCanonical('creation', 'creation');
+    await events.gotoCanonical('events', 'the-creation-of-the-world');
 
     // Topics are treated like a Bible chapter — no in-page ScreenHeader
     // back arrow. The topic name lives in the same dropdown slot the
