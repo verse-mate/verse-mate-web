@@ -22,7 +22,10 @@ export function apiCacheKey(url: string) {
   return `${SITE_ORIGIN}/__edge-cache/api/${encodeURIComponent(url)}`;
 }
 
-export function createApi(baseUrl: string, runtime: Runtime): ApiGet {
+export const PAGE_TIMEOUT_MS = 2000;
+export const BUILD_TIMEOUT_MS = 10_000;
+
+export function createApi(baseUrl: string, runtime: Runtime, timeoutMs = PAGE_TIMEOUT_MS): ApiGet {
   return async function get<T>(path: string, query: Query = {}, options: { ttl?: number } = {}) {
     const url = new URL(baseUrl + path);
     for (const [key, value] of Object.entries(query)) {
@@ -36,15 +39,19 @@ export function createApi(baseUrl: string, runtime: Runtime): ApiGet {
     }
 
     let response: Response;
+    let text: string;
     try {
-      response = await fetch(target, { headers: { 'user-agent': USER_AGENT, accept: 'application/json' } });
+      response = await fetch(target, {
+        headers: { 'user-agent': USER_AGENT, accept: 'application/json' },
+        signal: AbortSignal.timeout(timeoutMs),
+      });
+      if (response.status === 404) return null;
+      if (!response.ok) throw new ApiUnavailable(`${path}: HTTP ${response.status}`);
+      text = await response.text();
     } catch (error) {
+      if (error instanceof ApiUnavailable) throw error;
       throw new ApiUnavailable(`${path}: ${String(error)}`);
     }
-    if (response.status === 404) return null;
-    if (!response.ok) throw new ApiUnavailable(`${path}: HTTP ${response.status}`);
-
-    const text = await response.text();
     let data: T;
     try {
       data = JSON.parse(text) as T;

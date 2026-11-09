@@ -102,4 +102,21 @@ describe('pages that do not exist', () => {
     expect(response.status).toBe(200);
     expect(await response.text()).toBe(SHELL);
   });
+
+  it('answers with the shell when the API never answers', async () => {
+    installEdgeGlobals();
+    const stalled = vi.fn(
+      (_input: RequestInfo | URL, init?: RequestInit) =>
+        new Promise<Response>((_resolve, reject) => init?.signal?.addEventListener('abort', () => reject(init.signal.reason))),
+    );
+    vi.stubGlobal('fetch', stalled);
+    const started = Date.now();
+
+    const response = await get('/bible/john/3');
+
+    expect(stalled).toHaveBeenCalled();
+    expect(Date.now() - started).toBeLessThan(4000);
+    expect(response.status).toBe(200);
+    expect(await response.text()).toBe(SHELL);
+  }, 10_000);
 });
