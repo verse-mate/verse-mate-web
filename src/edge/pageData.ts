@@ -1,6 +1,7 @@
 import { getBookSlug, parseBookParam } from '../lib/bookSlugs';
 import { generateTopicSlug, getCategoryFromSlug } from '../lib/topicSlugs';
 import { ApiUnavailable, type ApiGet } from './api';
+import { DAY } from './common';
 import { DEFAULT_LANGUAGE, GUEST_VERSION, type Language } from './config';
 
 export type PageRoute =
@@ -49,8 +50,6 @@ export interface TopicPage {
 }
 
 export type PageData = ChapterPage | EventPage | TopicPage;
-
-export const DAY = 24 * 60 * 60;
 
 const PATTERNS: [RegExp, (m: RegExpMatchArray) => PageRoute][] = [
   [/^\/bible\/([^/]+)\/([^/]+?)(\.md)?\/?$/, (m) => ({ kind: 'chapter', bookParam: m[1], chapterParam: m[2] })],
@@ -169,7 +168,7 @@ export async function loadTopicList(api: ApiGet, category: string) {
 export async function loadTopicExplanation(api: ApiGet, topicId: string, lang: Language) {
   const data = await api<{ explanation?: { explanation?: string } | null }>(`/topics/${topicId}/explanation`, {
     type: 'summary',
-    lang,
+    lang: langQuery(lang),
   });
   return data?.explanation?.explanation ?? '';
 }

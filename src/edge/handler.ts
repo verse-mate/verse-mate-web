@@ -1,25 +1,14 @@
-import { ApiUnavailable, createApi, type Runtime } from './api';
-import { languageFromQuery, readConfig, type EdgeConfig, type EdgeEnv, type Language } from './config';
+import { createApi, type Runtime } from './api';
+import { languageFromQuery, readConfig, type EdgeEnv, type Language } from './config';
 import { renderArticle } from './article';
 import { edgeCacheKey, FRESH, SHORT, STALE, withEdgeCache } from './cache';
 import { buildHead, pageUrl, rewritePage } from './head';
 import { indexingFor, loadCoverage, type Indexing } from './indexing';
-import { DAY, loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
+import { DAY, reportFailure, type EdgeRequest, type ExecutionContextLike, type Rendered } from './common';
+import { loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
 import { matchCard, renderCard } from './og';
 import { llmsTxt, pageMarkdown } from './pageMarkdown';
 import { buildSitemap, matchSitemap } from './sitemaps';
-
-export interface ExecutionContextLike {
-  waitUntil(promise: Promise<unknown>): void;
-}
-
-export interface EdgeRequest {
-  request: Request;
-  env: EdgeEnv;
-  url: URL;
-  config: EdgeConfig;
-  runtime: Runtime;
-}
 
 function runtimeFor(ctx?: ExecutionContextLike): Runtime {
   const storage = (globalThis as { caches?: { default?: Runtime['cache'] } }).caches;
@@ -39,18 +28,6 @@ export async function shellResponse(env: EdgeEnv, url: URL, status: number, extr
   headers.delete('etag');
   for (const [name, value] of Object.entries(extra)) headers.set(name, value);
   return new Response(shell.body, { status, headers });
-}
-
-export function reportFailure(error: unknown) {
-  if (!(error instanceof ApiUnavailable)) console.error('edge render failed', error);
-}
-
-export interface Rendered {
-  body: string | ArrayBuffer;
-  status: number;
-  headers: Record<string, string>;
-  fresh: number;
-  stale: number;
 }
 
 export function lifetime(complete: boolean) {

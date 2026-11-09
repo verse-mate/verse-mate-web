@@ -1,6 +1,5 @@
 import { SITE_ORIGIN } from './config';
-import type { EdgeRequest, Rendered } from './handler';
-import { DAY } from './pageData';
+import { DAY, type EdgeRequest, type Rendered } from './common';
 
 export const FRESH = DAY;
 export const STALE = 7 * DAY;

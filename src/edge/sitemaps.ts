@@ -3,7 +3,8 @@ import { ApiUnavailable, type ApiGet } from './api';
 import { DEFAULT_LANGUAGE, LANGUAGES, SITE_ORIGIN, type Language } from './config';
 import { pageUrl } from './head';
 import { chapterCovered, explainedIn, hasOwnExplanation, loadCoverage } from './indexing';
-import { DAY, loadBooks, loadPage, loadTopicExplanation, loadTopicList } from './pageData';
+import { DAY } from './common';
+import { loadBooks, loadPage, loadTopicExplanation, loadTopicList } from './pageData';
 import { escapeHtml } from './text';
 
 const CONCURRENCY = 6;

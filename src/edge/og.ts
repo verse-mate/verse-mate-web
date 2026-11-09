@@ -68,8 +68,8 @@ export async function renderCard(data: ChapterPage, lang: Language, indexing: In
     width: WIDTH,
     height: HEIGHT,
     fonts: [
-      { name: 'Roboto', data: regular as unknown as ArrayBuffer, weight: 400, style: 'normal' },
-      { name: 'Roboto', data: bold as unknown as ArrayBuffer, weight: 700, style: 'normal' },
+      { name: 'Roboto', data: regular, weight: 400, style: 'normal' },
+      { name: 'Roboto', data: bold, weight: 700, style: 'normal' },
     ],
   });
   return response.arrayBuffer();
