@@ -12,11 +12,31 @@ function toBaseIso(code: string | null | undefined): string {
   return base || 'en';
 }
 
+const URL_LANGUAGES = ['en-US', 'es-MX', 'pt-BR', 'uk', 'ru', 'ro-RO', 'de', 'fr'];
+
+function readUrlLanguage(): string | null {
+  if (typeof window === 'undefined') return null;
+  const requested = new URLSearchParams(window.location.search).get('lang')?.trim().toLowerCase();
+  return URL_LANGUAGES.find((code) => code.toLowerCase() === requested) ?? null;
+}
+
+let visitLanguage = readUrlLanguage();
+
 function readPreferredLanguage(): string {
+  if (visitLanguage) return toBaseIso(visitLanguage);
   try {
     return toBaseIso(localStorage.getItem(PREFERRED_LANGUAGE_KEY));
   } catch {
     return 'en';
+  }
+}
+
+export function choosePreferredLanguage(languageCode: string): void {
+  visitLanguage = null;
+  try {
+    localStorage.setItem(PREFERRED_LANGUAGE_KEY, languageCode);
+  } catch {
+    return;
   }
 }
 

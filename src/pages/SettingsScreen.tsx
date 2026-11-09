@@ -37,6 +37,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { bibleVersions, languageLabel, type BibleVersionInfo } from '@/constants/bible-versions';
+import { choosePreferredLanguage } from '@/hooks/usePreferredLanguage';
 import { useApp } from '@/contexts/AppContext';
 import { useDeleteAccount } from '@/hooks/useDeleteAccount';
 import { usePendingEmail, useSetPendingEmail } from '@/hooks/usePendingEmail';
@@ -395,11 +396,7 @@ export default function SettingsScreen() {
     setSelectedLanguage(languageCode);
     setShowLanguagePicker(false);
 
-    try {
-      localStorage.setItem(PREFERRED_LANGUAGE_KEY, languageCode);
-    } catch {
-      /* ignore quota */
-    }
+    choosePreferredLanguage(languageCode);
 
     if (isAuthenticated) {
       try {
