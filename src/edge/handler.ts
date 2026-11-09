@@ -2,9 +2,10 @@ import { ApiUnavailable, createApi, type Runtime } from './api';
 import { languageFromQuery, readConfig, type EdgeConfig, type EdgeEnv, type Language } from './config';
 import { renderArticle } from './article';
 import { edgeCacheKey, FRESH, SHORT, STALE, withEdgeCache } from './cache';
-import { buildHead, rewritePage } from './head';
+import { buildHead, pageUrl, rewritePage } from './head';
 import { indexingFor, loadCoverage, type Indexing } from './indexing';
 import { DAY, loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
+import { llmsTxt, pageMarkdown } from './pageMarkdown';
 import { buildSitemap, matchSitemap } from './sitemaps';
 
 export interface ExecutionContextLike {
@@ -124,7 +125,32 @@ async function serveGenerated(
   return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
 }
 
+async function renderMarkdownPage(edge: EdgeRequest, route: PageRoute) {
+  const lang = languageFromQuery(edge.url.searchParams.get('lang'));
+  let rendered: Rendered | null;
+  try {
+    rendered = await withEdgeCache(edge, edgeCacheKey(edge, 'md', lang), async () => {
+      const page = await resolvePage(edge, route, lang);
+      if (!page) return null;
+      const headers: Record<string, string> = {
+        'content-type': 'text/markdown; charset=utf-8',
+        'cache-control': 'public, max-age=0, must-revalidate',
+        link: `<${pageUrl(page.data.path, lang)}>; rel="canonical"`,
+      };
+      if (!page.indexing.indexable) headers['X-Robots-Tag'] = 'noindex';
+      return { body: pageMarkdown(page.data, lang), status: 200, headers, ...lifetime(page.indexing.complete) };
+    });
+  } catch (error) {
+    reportFailure(error);
+    return unavailable();
+  }
+  if (!rendered) return textResponse('Not found', 404, { 'X-Robots-Tag': 'noindex' });
+  return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
+}
+
 async function dispatch(edge: EdgeRequest) {
+  if (edge.url.pathname === '/llms.txt') return serveGenerated(edge, 'llms', 'text/plain; charset=utf-8', llmsTxt);
+
   const sitemap = matchSitemap(edge.url.pathname);
   if (sitemap) {
     return serveGenerated(edge, 'sitemap', 'application/xml; charset=utf-8', (api) =>
@@ -133,8 +159,8 @@ async function dispatch(edge: EdgeRequest) {
   }
 
   const match = matchPageRoute(edge.url.pathname);
-  if (match && !match.markdown) return renderPage(edge, match);
-  return null;
+  if (!match) return null;
+  return match.markdown ? renderMarkdownPage(edge, match.route) : renderPage(edge, match);
 }
 
 export async function handleEdge(request: Request, env: EdgeEnv, url: URL, ctx?: ExecutionContextLike) {
