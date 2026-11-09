@@ -1,5 +1,6 @@
 import { ApiUnavailable, createApi, type Runtime } from './api';
 import { languageFromQuery, readConfig, type EdgeConfig, type EdgeEnv, type Language } from './config';
+import { renderArticle } from './article';
 import { buildHead, rewritePage } from './head';
 import { indexingFor, loadCoverage, type Indexing } from './indexing';
 import { loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
@@ -61,7 +62,7 @@ export async function resolvePage(edge: EdgeRequest, route: PageRoute, lang: Lan
 async function renderHtml(edge: EdgeRequest, data: PageData, lang: Language, indexing: Indexing): Promise<Rendered> {
   const shell = await fetchShell(edge.env, edge.url);
   const head = buildHead(data, lang, indexing);
-  const body = await rewritePage(shell, head, '').text();
+  const body = await rewritePage(shell, head, renderArticle(data, lang)).text();
   const headers: Record<string, string> = {
     'content-type': 'text/html; charset=utf-8',
     'cache-control': shell.headers.get('cache-control') || 'public, max-age=0, must-revalidate',
