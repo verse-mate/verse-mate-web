@@ -34,7 +34,7 @@ async function fromStored(stored: Response): Promise<Rendered> {
   const clientCacheControl = stored.headers.get(CLIENT_CACHE_CONTROL);
   if (clientCacheControl) headers['cache-control'] = clientCacheControl;
   return {
-    body: await stored.text(),
+    body: await stored.arrayBuffer(),
     status: stored.status,
     headers,
     fresh: Number(stored.headers.get(FRESH_FOR)),

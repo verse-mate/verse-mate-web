@@ -5,6 +5,7 @@ import { edgeCacheKey, FRESH, SHORT, STALE, withEdgeCache } from './cache';
 import { buildHead, pageUrl, rewritePage } from './head';
 import { indexingFor, loadCoverage, type Indexing } from './indexing';
 import { DAY, loadPage, matchPageRoute, type PageData, type PageRoute } from './pageData';
+import { matchCard, renderCard } from './og';
 import { llmsTxt, pageMarkdown } from './pageMarkdown';
 import { buildSitemap, matchSitemap } from './sitemaps';
 
@@ -45,7 +46,7 @@ export function reportFailure(error: unknown) {
 }
 
 export interface Rendered {
-  body: string;
+  body: string | ArrayBuffer;
   status: number;
   headers: Record<string, string>;
   fresh: number;
@@ -148,7 +149,37 @@ async function renderMarkdownPage(edge: EdgeRequest, route: PageRoute) {
   return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
 }
 
+async function asset(env: EdgeEnv, url: URL, path: string) {
+  const response = await env.ASSETS.fetch(new Request(`${url.origin}${path}`));
+  return response.ok ? response : null;
+}
+
+async function renderShareCard(edge: EdgeRequest, route: PageRoute) {
+  const lang = languageFromQuery(edge.url.searchParams.get('lang'));
+  let rendered: Rendered | null;
+  try {
+    rendered = await withEdgeCache(edge, edgeCacheKey(edge, 'og', lang), async () => {
+      const page = await resolvePage(edge, route, lang);
+      if (!page || page.data.kind !== 'chapter') return null;
+      const logo = await asset(edge.env, edge.url, '/versemate-logo-white.png');
+      const body = await renderCard(page.data, lang, page.indexing, logo ? await logo.arrayBuffer() : null);
+      const headers = { 'content-type': 'image/png', 'cache-control': `public, max-age=${DAY}` };
+      return { body, status: 200, headers, ...lifetime(page.indexing.complete) };
+    });
+  } catch (error) {
+    reportFailure(error);
+    const fallback = await asset(edge.env, edge.url, '/og/default.png');
+    if (!fallback) return unavailable();
+    return new Response(fallback.body, { status: 200, headers: { 'content-type': 'image/png', 'cache-control': 'no-store' } });
+  }
+  if (!rendered) return textResponse('Not found', 404);
+  return new Response(rendered.body, { status: rendered.status, headers: rendered.headers });
+}
+
 async function dispatch(edge: EdgeRequest) {
+  const card = matchCard(edge.url.pathname);
+  if (card) return renderShareCard(edge, card);
+
   if (edge.url.pathname === '/llms.txt') return serveGenerated(edge, 'llms', 'text/plain; charset=utf-8', llmsTxt);
 
   const sitemap = matchSitemap(edge.url.pathname);
