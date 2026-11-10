@@ -82,6 +82,8 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -104,6 +106,13 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy --env ${{ env.CLOUDFLARE_ENV }}
+
+      - name: Submit newly published languages to IndexNow
+        if: env.CLOUDFLARE_ENV == 'production'
+        continue-on-error: true
+        run: |
+          git show HEAD^:wrangler.jsonc > "$RUNNER_TEMP/wrangler.previous.jsonc"
+          bun scripts/indexnow.ts changed "$RUNNER_TEMP/wrangler.previous.jsonc" wrangler.jsonc
 
       - name: Comment PR with preview URL
         if: github.event_name == 'pull_request'

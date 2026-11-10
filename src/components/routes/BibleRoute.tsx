@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { parseBookParam, getBookSlug } from '@/lib/bookSlugs';
 import { fetchBooks } from '@/services/bibleService';
+import NotFound from '@/pages/NotFound';
 import ReadingScreen from '@/pages/ReadingScreen';
 
 /**
@@ -33,7 +34,7 @@ export default function BibleRoute() {
   stateRef.current = state;
 
   const bookId = bookSlug ? parseBookParam(bookSlug) : null;
-  const chapterNumber = chapterStr ? Number.parseInt(chapterStr, 10) : NaN;
+  const chapterNumber = chapterStr && /^[1-9]\d*$/.test(chapterStr) ? Number(chapterStr) : NaN;
 
   // Numeric → slug redirect: if the URL is /bible/<num>/<chapter>, send
   // the user to /bible/<slug>/<chapter>. Worker.js does this server-side
@@ -57,8 +58,12 @@ export default function BibleRoute() {
     (async () => {
       const books = await fetchBooks();
       if (cancelled) return;
+      if (books.length === 0) {
+        setResolved(true);
+        return;
+      }
       const book = books.find((b) => b.bookId === bookId);
-      if (!book) {
+      if (!book || chapterNumber > book.chapters) {
         setNotFound(true);
         return;
       }
@@ -81,7 +86,7 @@ export default function BibleRoute() {
   if (numericRedirectSlug) {
     return <Navigate to={`/bible/${numericRedirectSlug}/${chapterNumber}`} replace />;
   }
-  if (notFound) return <Navigate to="/read" replace />;
+  if (notFound) return <NotFound />;
   if (!resolved) return null;
   return <ReadingScreen />;
 }
