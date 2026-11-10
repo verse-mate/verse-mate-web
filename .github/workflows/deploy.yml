@@ -110,6 +110,7 @@ jobs:
       - name: Submit newly published languages to IndexNow
         if: env.CLOUDFLARE_ENV == 'production'
         continue-on-error: true
+        timeout-minutes: 15
         run: |
           git show HEAD^:wrangler.jsonc > "$RUNNER_TEMP/wrangler.previous.jsonc"
           bun scripts/indexnow.ts changed "$RUNNER_TEMP/wrangler.previous.jsonc" wrangler.jsonc
