@@ -9404,6 +9404,82 @@ export type PostBibleExplanationAudioByExplanationIdProgressResponses = {
 
 export type PostBibleExplanationAudioByExplanationIdProgressResponse = PostBibleExplanationAudioByExplanationIdProgressResponses[keyof PostBibleExplanationAudioByExplanationIdProgressResponses];
 
+export type GetBibleExplanationsCoverageData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/bible/explanations/coverage';
+};
+
+export type GetBibleExplanationsCoverageErrors = {
+    /**
+     * Response for status 400
+     */
+    400: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 422
+     */
+    422: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 429
+     */
+    429: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 500
+     */
+    500: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+};
+
+export type GetBibleExplanationsCoverageError = GetBibleExplanationsCoverageErrors[keyof GetBibleExplanationsCoverageErrors];
+
+export type GetBibleExplanationsCoverageResponses = {
+    /**
+     * Response for status 200
+     */
+    200: {
+        languages: {
+            [key: string]: unknown | Array<{
+                bookId: number;
+                chapters: Array<number>;
+            }>;
+        };
+    };
+};
+
+export type GetBibleExplanationsCoverageResponse = GetBibleExplanationsCoverageResponses[keyof GetBibleExplanationsCoverageResponses];
+
 export type GetBibleHighlightThemesData = {
     body?: never;
     path?: never;
@@ -26530,6 +26606,7 @@ export type GetJesusCollectionsData = {
     path?: never;
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/collections';
 };
@@ -26613,6 +26690,7 @@ export type GetJesusCollectionsBySlugData = {
     };
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/collections/{slug}';
 };
@@ -26736,6 +26814,7 @@ export type GetJesusEntriesData = {
         limit?: string | number;
         offset?: string | number;
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/entries';
 };
@@ -26840,6 +26919,7 @@ export type GetJesusEntriesBySlugData = {
     };
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/entries/{slug}';
 };
@@ -27004,6 +27084,7 @@ export type GetJesusEventsData = {
         limit?: string | number;
         offset?: string | number;
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/events';
 };
@@ -27130,6 +27211,7 @@ export type GetJesusEventsBrowseByTypeData = {
     };
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/events/browse/{type}';
 };
@@ -27293,6 +27375,7 @@ export type GetJesusEventsCollectionsBySlugData = {
     };
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/events/collections/{slug}';
 };
@@ -27429,6 +27512,7 @@ export type GetJesusEventsLifeData = {
     path?: never;
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/events/life';
 };
@@ -27558,6 +27642,7 @@ export type GetJesusEventsOverviewData = {
     path?: never;
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/events/overview';
 };
@@ -27674,6 +27759,7 @@ export type GetJesusEventsBySlugData = {
     };
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/events/{slug}';
 };
@@ -28272,6 +28358,7 @@ export type GetJesusEventsBySlugCompareData = {
     };
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/events/{slug}/compare';
 };
@@ -28427,6 +28514,7 @@ export type GetJesusForPassageData = {
         chapter: string | number;
         verse?: string | number;
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/for-passage';
 };
@@ -28548,6 +28636,7 @@ export type GetJesusLifeData = {
     path?: never;
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/life';
 };
@@ -28656,6 +28745,7 @@ export type GetJesusOverviewData = {
     path?: never;
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/overview';
 };
@@ -28768,6 +28858,7 @@ export type GetJesusThemesData = {
     path?: never;
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/jesus/themes';
 };
@@ -29710,6 +29801,7 @@ export type GetTopicsSearchData = {
     query: {
         category: string;
         bible_version?: string;
+        lang?: string;
     };
     url: '/topics/search';
 };
@@ -29791,6 +29883,7 @@ export type GetTopicsByIdData = {
     };
     query?: {
         bible_version?: string;
+        lang?: string;
     };
     url: '/topics/{id}';
 };

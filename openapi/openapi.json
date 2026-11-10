@@ -27321,6 +27321,178 @@
         }
       }
     },
+    "/bible/explanations/coverage": {
+      "get": {
+        "operationId": "getBibleExplanationsCoverage",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "languages": {
+                      "patternProperties": {
+                        "^(.*)$": {
+                          "items": {
+                            "properties": {
+                              "bookId": {
+                                "type": "number"
+                              },
+                              "chapters": {
+                                "items": {
+                                  "type": "number"
+                                },
+                                "type": "array"
+                              }
+                            },
+                            "required": [
+                              "bookId",
+                              "chapters"
+                            ],
+                            "type": "object"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "languages"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Response for status 200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "data": {},
+                    "details": {
+                      "additionalProperties": true,
+                      "properties": {},
+                      "type": "object"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "retryAfter": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "error",
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Response for status 400"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "data": {},
+                    "details": {
+                      "additionalProperties": true,
+                      "properties": {},
+                      "type": "object"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "retryAfter": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "error",
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Response for status 422"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "data": {},
+                    "details": {
+                      "additionalProperties": true,
+                      "properties": {},
+                      "type": "object"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "retryAfter": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "error",
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Response for status 429"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "data": {},
+                    "details": {
+                      "additionalProperties": true,
+                      "properties": {},
+                      "type": "object"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "retryAfter": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "error",
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Response for status 500"
+          }
+        }
+      }
+    },
     "/bible/highlight-themes": {
       "get": {
         "operationId": "getBibleHighlight-themes",
@@ -52281,12 +52453,12 @@
                             },
                             "required": [
                               "id",
+                              "kind",
+                              "coachId",
                               "month",
                               "state",
                               "holdReason",
                               "skipped",
-                              "kind",
-                              "coachId",
                               "summary"
                             ],
                             "type": "object"
@@ -52702,12 +52874,12 @@
                             },
                             "required": [
                               "id",
+                              "kind",
+                              "coachId",
                               "month",
                               "state",
                               "holdReason",
                               "skipped",
-                              "kind",
-                              "coachId",
                               "summary"
                             ],
                             "type": "object"
@@ -77586,6 +77758,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -77801,6 +77981,14 @@
           {
             "in": "query",
             "name": "bible_version",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "lang",
             "required": false,
             "schema": {
               "type": "string"
@@ -78304,6 +78492,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -78653,6 +78849,14 @@
           {
             "in": "query",
             "name": "bible_version",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "lang",
             "required": false,
             "schema": {
               "type": "string"
@@ -79419,6 +79623,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -79925,6 +80137,14 @@
           {
             "in": "query",
             "name": "bible_version",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "lang",
             "required": false,
             "schema": {
               "type": "string"
@@ -80643,6 +80863,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -81201,6 +81429,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -81740,6 +81976,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -82127,6 +82371,14 @@
           {
             "in": "query",
             "name": "bible_version",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "lang",
             "required": false,
             "schema": {
               "type": "string"
@@ -84070,6 +84322,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -84786,6 +85046,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -85276,6 +85544,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -85670,6 +85946,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -86034,6 +86318,14 @@
           {
             "in": "query",
             "name": "bible_version",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "lang",
             "required": false,
             "schema": {
               "type": "string"
@@ -88594,6 +88886,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -88799,6 +89099,14 @@
           {
             "in": "query",
             "name": "bible_version",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "lang",
             "required": false,
             "schema": {
               "type": "string"
