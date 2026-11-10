@@ -61,13 +61,24 @@ describe('app-link verification files', () => {
     expect(await response.text()).not.toContain('<div id="root">');
   });
 
-  it('serves the Android association as JSON when it exists', async () => {
-    const response = await worker.fetch(new Request('https://app.versemate.org/.well-known/assetlinks.json'), {
-      ASSETS: { fetch: async () => new Response('[]', { headers: { 'content-type': 'application/octet-stream' } }) },
-    });
+  it('serves the Android association as JSON, delegating every link to the Play-signed app', async () => {
+    const response = await get('https://app.versemate.org/.well-known/assetlinks.json');
 
     expect(response.status).toBe(200);
     expect(response.headers.get('content-type')).toBe('application/json');
+    expect(response.headers.get('location')).toBeNull();
+    expect(await response.json()).toEqual([
+      {
+        relation: ['delegate_permission/common.handle_all_urls'],
+        target: {
+          namespace: 'android_app',
+          package_name: 'org.versemate.app',
+          sha256_cert_fingerprints: [
+            'C1:CA:A8:D0:9D:BC:55:64:69:43:66:7A:AD:D7:25:33:EA:1D:72:E0:0B:23:D8:A0:16:4F:82:0C:93:4E:89:6D',
+          ],
+        },
+      },
+    ]);
   });
 });
 
