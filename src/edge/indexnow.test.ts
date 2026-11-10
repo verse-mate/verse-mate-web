@@ -198,6 +198,38 @@ describe('the IndexNow submission', () => {
     expect(errors.join('\n')).toMatch(/en-US/);
   });
 
+  it('fails without submitting when a child sitemap answers with HTML', async () => {
+    const { current } = files([], ['en-US']);
+    const { fetcher, submitted } = site(['en-US'], () => new Response(null, { status: 200 }));
+    const html: Fetcher = async (input, init) =>
+      input.endsWith('/sitemaps/topics-en-US.xml')
+        ? new Response('<!doctype html><title>VerseMate</title>', { headers: { 'content-type': 'text/html' } })
+        : fetcher(input, init);
+    const errors: string[] = [];
+
+    const code = await run(['all', current], { fetcher: html, publicDir, log: () => undefined, error: (line) => errors.push(line), wait: async () => undefined });
+
+    expect(code).toBe(1);
+    expect(submitted).toHaveLength(0);
+    expect(errors.join('\n')).toMatch(/topics-en-US\.xml: not a sitemap \(text\/html/);
+  });
+
+  it('fails when one published language has no URLs even though another has', async () => {
+    const { previous, current } = files([], ['en-US', 'es-MX']);
+    const { fetcher, submitted } = site(['en-US', 'es-MX'], () => new Response(null, { status: 200 }));
+    const emptySpanish: Fetcher = async (input, init) =>
+      /\/sitemaps\/[a-z]+-es-MX\.xml$/.test(input)
+        ? new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>', { headers: { 'content-type': 'application/xml' } })
+        : fetcher(input, init);
+    const errors: string[] = [];
+
+    const code = await run(['changed', previous, current], { fetcher: emptySpanish, publicDir, log: () => undefined, error: (line) => errors.push(line), wait: async () => undefined });
+
+    expect(code).toBe(1);
+    expect(submitted).toHaveLength(0);
+    expect(errors.join('\n')).toMatch(/sitemaps of es-MX list no URLs/);
+  });
+
   it('retries a child sitemap that is still building', async () => {
     const { current } = files([], ['en-US']);
     const { fetcher, submitted } = site(['en-US'], () => new Response(null, { status: 200 }));
