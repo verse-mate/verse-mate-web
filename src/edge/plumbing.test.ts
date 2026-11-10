@@ -61,7 +61,7 @@ describe('app-link verification files', () => {
     expect(await response.text()).not.toContain('<div id="root">');
   });
 
-  it('serves the Android association as JSON, delegating every link to the Play-signed app', async () => {
+  it('serves the Android association as JSON, delegating every link to the Play-signed and upload-signed app', async () => {
     const response = await get('https://app.versemate.org/.well-known/assetlinks.json');
 
     expect(response.status).toBe(200);
@@ -75,6 +75,7 @@ describe('app-link verification files', () => {
           package_name: 'org.versemate.app',
           sha256_cert_fingerprints: [
             'C1:CA:A8:D0:9D:BC:55:64:69:43:66:7A:AD:D7:25:33:EA:1D:72:E0:0B:23:D8:A0:16:4F:82:0C:93:4E:89:6D',
+            '04:40:0E:CA:EC:A0:2D:49:F2:DA:57:DD:CD:60:7E:FB:9F:AA:C1:D3:C0:FF:AC:59:13:CE:91:80:D6:0C:3E:C6',
           ],
         },
       },
