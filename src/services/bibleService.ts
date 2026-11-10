@@ -1209,10 +1209,17 @@ export async function login(email: string, password: string): Promise<AuthUser> 
   return user;
 }
 
-export async function signup(email: string, password: string, name?: string): Promise<AuthUser> {
+export interface SignupInput {
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+}
+
+export async function signup({ email, password, firstName, lastName }: SignupInput): Promise<AuthUser> {
   const data = await api.post<{ accessToken: string; refreshToken?: string }>(
     '/auth/signup',
-    { email, password, name },
+    { email, password, firstName, lastName },
     { auth: false }
   );
   setAccessToken(data.accessToken);
