@@ -28,7 +28,7 @@ let requestedUrls: string[] = [];
 function mockBylineMarkdown(byline: string) {
   requestedUrls = [];
   global.fetch = vi.fn(async (input: RequestInfo | URL) => {
-    const url = typeof input === 'string' ? input : input.toString();
+    const url = input instanceof Request ? input.url : input.toString();
     requestedUrls.push(url);
     if (url.includes('/bible/books')) return jsonResponse(BOOKS);
     if (url.includes('explanationType=byline')) return explanationResponse(byline);

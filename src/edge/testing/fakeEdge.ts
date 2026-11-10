@@ -114,15 +114,17 @@ export function fakeApi(data: FakeData) {
       return json({ languages: data.coverage });
     }
     if ((m = path.match(/^\/bible\/book\/explanation\/(\d+)\/(\d+)$/))) {
+      const [, first = '', second = ''] = m;
       const type = q.get('explanationType');
-      const text = data.explanations[`${m[1]}:${m[2]}:${type}:${lang}`] ?? data.explanations[`${m[1]}:${m[2]}:${type}:en-US`];
-      return json({ explanation: text ? { book_id: Number(m[1]), chapter_number: Number(m[2]), type, explanation: text } : null });
+      const text = data.explanations[`${first}:${second}:${type}:${lang}`] ?? data.explanations[`${first}:${second}:${type}:en-US`];
+      return json({ explanation: text ? { book_id: Number(first), chapter_number: Number(second), type, explanation: text } : null });
     }
     if ((m = path.match(/^\/bible\/book\/(\d+)\/(\d+)$/))) {
-      const verses = data.verses[`${m[1]}:${m[2]}`];
+      const [, first = '', second = ''] = m;
+      const verses = data.verses[`${first}:${second}`];
       if (!verses) return json({ message: 'Chapter not found' });
-      const book = data.books.find((b) => b.b === Number(m[1]));
-      return json({ book: { bookId: Number(m[1]), name: book?.n, chapters: [{ chapterNumber: Number(m[2]), verses }] } });
+      const book = data.books.find((b) => b.b === Number(first));
+      return json({ book: { bookId: Number(first), name: book?.n, chapters: [{ chapterNumber: Number(second), verses }] } });
     }
     if (path === '/jesus/events') {
       const limit = Math.min(Number(q.get('limit') || 50), data.eventPageCap);
@@ -137,7 +139,8 @@ export function fakeApi(data: FakeData) {
       });
     }
     if ((m = path.match(/^\/jesus\/events\/([^/]+)$/))) {
-      const event = data.events.find((e) => e.slug === decodeURIComponent(m[1]));
+      const [, first = '', second = ''] = m;
+      const event = data.events.find((e) => e.slug === decodeURIComponent(first));
       if (!event) return json({ error: 'Event not found' }, 404);
       return json({
         event: { slug: event.slug, title: event.title, passages: event.passages.map((display) => ({ display })) },
@@ -150,12 +153,14 @@ export function fakeApi(data: FakeData) {
       return json({ topics: topics.map((t) => ({ topic_id: t.id, name: t.name, description: '' })) });
     }
     if ((m = path.match(/^\/topics\/([^/]+)\/explanation$/))) {
-      const topic = data.topics.find((t) => t.id === m[1]);
+      const [, first = '', second = ''] = m;
+      const topic = data.topics.find((t) => t.id === first);
       const text = topic?.summary[lang] ?? topic?.summary['en-US'];
       return json({ explanation: text ? { explanation: text } : null });
     }
     if ((m = path.match(/^\/topics\/([^/]+)\/references$/))) {
-      const topic = data.topics.find((t) => t.id === m[1]);
+      const [, first = '', second = ''] = m;
+      const topic = data.topics.find((t) => t.id === first);
       return json({ references: topic ? { content: topic.references } : null });
     }
     return json({ error: 'not stubbed' }, 404);

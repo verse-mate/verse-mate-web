@@ -67,8 +67,8 @@ describe('summarizeJesusPeriod', () => {
   it('counts events whose chronological placement is not stated as certain', () => {
     const stats = summarizeJesusPeriod([
       event({ chronology_confidence: 'high' }),
-      event({ slug: 'b', chronology_confidence: 'medium' }),
-      event({ slug: 'c', chronology_confidence: 'low' }),
+      event({ slug: 'b', chronology_confidence: 'probable' }),
+      event({ slug: 'c', chronology_confidence: 'disputed' }),
     ]);
 
     expect(stats.unsettled).toBe(2);

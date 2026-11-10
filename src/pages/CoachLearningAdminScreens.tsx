@@ -389,7 +389,7 @@ function QuestionEditor({ moduleId, n, q, onSaved }: { moduleId: number; n: numb
     },
   });
   const remove = useMutation({
-    mutationFn: () => learningAdmin.deleteQuestion(q.id),
+    mutationFn: (id: number) => learningAdmin.deleteQuestion(id),
     onSuccess: () => refresh(),
     onError: (err) => setError(refusalOf(err).message),
   });
@@ -423,7 +423,7 @@ function QuestionEditor({ moduleId, n, q, onSaved }: { moduleId: number; n: numb
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
         <Btn kind="outline" disabled={options.length >= 6} onClick={() => setOptions([...options, ''])}><Plus size={16} aria-hidden /> Add an option</Btn>
         <Btn onClick={() => save.mutate()} disabled={save.isPending}>Save question</Btn>
-        {q && <Btn kind="danger" onClick={() => remove.mutate()} disabled={remove.isPending}>Delete question</Btn>}
+        {q && <Btn kind="danger" onClick={() => remove.mutate(q.id)} disabled={remove.isPending}>Delete question</Btn>}
       </div>
     </div>
   );

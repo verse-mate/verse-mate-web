@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import { clearTokens, getAccessToken, getRefreshToken } from '@/services/api';
+import { clearTokens, getAccessToken } from '@/api/client';
 import { SSO_VERIFIER_KEY, handleSSOCallback, startSSOSignIn } from './ssoCallback';
 
 const PENDING_VERIFIER = 'v'.repeat(43);
@@ -173,7 +173,6 @@ describe('the sign-in callback handler', () => {
 
     expect(result.success).toBe(true);
     expect(getAccessToken()).toBe('legacy-token');
-    expect(getRefreshToken()).toBeNull();
     expect(document.cookie).not.toContain('planted-refresh');
   });
 

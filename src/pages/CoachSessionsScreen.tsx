@@ -410,7 +410,7 @@ function NotetakerSwitch({ on, onChange }: { on: boolean; onChange: (on: boolean
 function PastSessionRow({ report, onView }: { report: CoachReportSummary; onView: () => void }) {
   const { rubric } = useRubric();
   const band = statusBand(
-    report.status,
+    report.status ?? '',
     (rubric?.statusBands ?? []).map((b) => b.label),
   );
   return (
@@ -427,7 +427,7 @@ function PastSessionRow({ report, onView }: { report: CoachReportSummary; onView
         {band.label}
       </div>
       <div style={{ textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>
-        {Math.round(report.score)}/100 · {letterGrade(report.score)}
+        {report.score === undefined ? '–' : `${Math.round(report.score)}/100 · ${letterGrade(report.score)}`}
       </div>
       <button type="button" onClick={onView} data-testid="coach-view-report" style={{ justifySelf: 'end', cursor: 'pointer', fontSize: 13, fontWeight: 700, color: dt.gold2, background: dt.goldChip, border: `1px solid ${dt.goldChipBorder}`, padding: '8px 14px', borderRadius: 8 }}>
         View report →

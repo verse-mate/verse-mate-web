@@ -7,7 +7,7 @@ import CoachSettingsScreen from './CoachSettingsScreen';
 import SettingsScreen from './SettingsScreen';
 import * as bibleService from '@/services/bibleService';
 import * as coachService from '@/services/coachService';
-import { ApiError } from '@/services/api';
+import { ApiError } from '@/api/client';
 
 vi.mock('@/services/coachService', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@/services/coachService')>();

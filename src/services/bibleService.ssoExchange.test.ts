@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { describeFetch } from '@/test/fetchCall';
 
-import { clearTokens, setAccessToken, setRefreshToken } from './api';
+import { clearTokens, setAccessToken } from '@/api/client';
 import { exchangeSSOCode } from './bibleService';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -17,17 +18,16 @@ function jsonResponse(body: unknown, status = 200): Response {
 let calls: Array<{ url: string; init?: RequestInit }> = [];
 function mockFetch(router: (url: string, init?: RequestInit) => Response) {
   calls = [];
-  global.fetch = vi.fn((input: RequestInfo | URL, init?: RequestInit) => {
-    const url = typeof input === 'string' ? input : input.toString();
-    calls.push({ url, init });
-    return Promise.resolve(router(url, init));
+  global.fetch = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+    const call = await describeFetch(input, init);
+    calls.push(call);
+    return router(call.url, call.init);
   }) as unknown as typeof fetch;
 }
 
 describe('exchangeSSOCode', () => {
   beforeEach(() => {
     setAccessToken('placeholder-access');
-    setRefreshToken('placeholder-refresh');
   });
 
   afterEach(() => {

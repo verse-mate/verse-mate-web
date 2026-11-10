@@ -42,11 +42,10 @@ import { useApp } from '@/contexts/AppContext';
 import { useDeleteAccount } from '@/hooks/useDeleteAccount';
 import { usePendingEmail, useSetPendingEmail } from '@/hooks/usePendingEmail';
 import PendingEmailNotice from '@/components/settings/PendingEmailNotice';
-import { ApiError } from '@/services/api';
+import { ApiError } from '@/api/client';
 import {
   fetchBibleLanguages,
   fetchBibleVersions,
-  refreshTokens,
   updateAuthProfile,
   updateUserPreferredLanguage,
 } from '@/services/bibleService';
@@ -400,14 +399,7 @@ export default function SettingsScreen() {
 
     if (isAuthenticated) {
       try {
-        // Persist as the server-side default. Localization now travels via the
-        // `lang` query param and the explanation cache is keyed by language, so
-        // returning to the reader refetches under the new language — no
-        // full-page reload. The token refresh keeps the `preferred_language`
-        // claim current as the backend's fallback.
         await updateUserPreferredLanguage(languageCode);
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        await refreshTokens();
       } catch (err) {
         console.error('Failed to save language preference:', err);
       }
@@ -423,17 +415,18 @@ export default function SettingsScreen() {
   };
 
   const handlePasswordConfirm = (password: string) => {
+    clearError();
     setDeletePassword(password);
     setShowPasswordModal(false);
     setShowFinalModal(true);
   };
 
   const handleFinalConfirm = async () => {
-    const success = await deleteAccount(deletePassword);
-    if (success) {
-      setShowFinalModal(false);
-      setDeletePassword(undefined);
-    }
+    const outcome = await deleteAccount(deletePassword);
+    if (outcome === 'refused') return;
+    setShowFinalModal(false);
+    setDeletePassword(undefined);
+    if (outcome === 'password-refused') setShowPasswordModal(true);
   };
 
   const handleCancelDelete = () => {
@@ -852,12 +845,14 @@ export default function SettingsScreen() {
         onConfirm={handlePasswordConfirm}
         isLoading={isDeleting}
         error={deleteError || undefined}
+        passwordOptional={state.userHasPassword !== true}
       />
       <DeleteAccountFinalModal
         visible={showFinalModal}
         onCancel={handleCancelDelete}
         onConfirm={handleFinalConfirm}
         isLoading={isDeleting}
+        error={deleteError || undefined}
       />
     </div>
   );

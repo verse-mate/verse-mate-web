@@ -6,6 +6,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 # Cancel in-flight runs for the same branch — last push wins
 concurrency:
   group: ci-${{ github.ref }}
@@ -35,7 +38,33 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: TypeScript type check
-        run: bunx tsc --noEmit
+        run: bun run typecheck
+
+  contract:
+    name: API client matches its snapshot
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.23
+
+      - name: Cache Bun dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Regenerate from the snapshot and compare
+        run: bun run api:check
 
   lint:
     name: Lint

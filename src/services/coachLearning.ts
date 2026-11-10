@@ -1,204 +1,150 @@
-import { API_BASE_URL, fetchWithAuth } from './api';
-import { CoachApiError, CoachAuthError } from './coachService';
+import type {
+  GetCoachAdminLearningLearnersResponse,
+  GetCoachAdminLearningRequestsResponse,
+  GetCoachAdminLearningResponse,
+  GetCoachLearningLessonsByIdResponse,
+  GetCoachLearningModulesByIdCheckResponse,
+  GetCoachLearningResponse,
+  PostCoachLearningJoinRequestResponse,
+  PostCoachLearningModulesByIdCheckResponse,
+} from '@/api/generated/types.gen';
+import {
+  deleteCoachAdminLearningLessonsById,
+  deleteCoachAdminLearningLessonsByIdVideo,
+  deleteCoachAdminLearningModulesById,
+  deleteCoachAdminLearningQuestionsById,
+  getCoachAdminLearning,
+  getCoachAdminLearningLearners,
+  getCoachAdminLearningLessonsById,
+  getCoachAdminLearningRequests,
+  getCoachLearning,
+  getCoachLearningLessonsById,
+  getCoachLearningLessonsByIdVideo,
+  getCoachLearningModulesByIdCheck,
+  postCoachAdminLearningLessonsByIdPublish,
+  postCoachAdminLearningLessonsByIdUnpublish,
+  postCoachAdminLearningLessonsByIdVideoAttach,
+  postCoachAdminLearningLessonsByIdVideoUpload,
+  postCoachAdminLearningModules,
+  postCoachAdminLearningModulesByIdLessons,
+  postCoachAdminLearningModulesByIdPublish,
+  postCoachAdminLearningModulesByIdQuestions,
+  postCoachAdminLearningModulesByIdUnpublish,
+  postCoachAdminLearningRequestsByIdApprove,
+  postCoachAdminLearningRequestsByIdDecline,
+  postCoachLearningEnrol,
+  postCoachLearningJoinRequest,
+  postCoachLearningLessonsByIdDone,
+  postCoachLearningModulesByIdCheck,
+  putCoachAdminLearningLessonsById,
+  putCoachAdminLearningModulesById,
+  putCoachAdminLearningModulesByIdLessonsOrder,
+  putCoachAdminLearningModulesOrder,
+  putCoachAdminLearningQuestionsById,
+} from '@/api/generated/sdk.gen';
+import { CoachApiError, coachCall, newCoachClient } from './coachService';
 
 export type Continue = { kind: 'lesson'; lessonId: number; moduleId: number } | { kind: 'check'; moduleId: number } | null;
 
-export type RequestStatus = 'open' | 'approved' | 'declined' | 'already-in-program';
+export type RequestStatus = JoinRequest['status'];
 
-export interface JoinRequest {
-  id: number;
-  status: RequestStatus;
-  reason: string | null;
-  note: string;
-  sentAt: string;
-  answeredAt: string | null;
-}
+export type JoinRequest = NonNullable<PostCoachLearningJoinRequestResponse['request']>;
 
-export interface PathLesson {
-  id: number;
-  title: string;
-  state: 'locked' | 'open' | 'done';
-}
+export type PathLesson = PathModule['lessons'][number];
 
-export interface PathModule {
-  id: number;
-  title: string;
-  description: string;
-  passMark: number;
-  state: 'locked' | 'open' | 'passed';
-  bestScore: number | null;
-  questionCount: number;
-  lessons: PathLesson[];
-}
+export type PathModule = ProgramState['modules'][number];
 
-export interface ProgramState {
-  open: boolean;
-  enrolledAt: string | null;
-  completedAt: string | null;
-  passed: number;
-  total: number;
-  next: Continue;
-  modules: PathModule[];
-  isLeader: boolean;
-  addressConfirmed: boolean;
-  request: JoinRequest | null;
-}
+export type ProgramState = GetCoachLearningResponse;
 
-export interface Passage {
-  bookId: number;
-  bookName: string;
-  chapter: number;
-  verseStart: number | null;
-  verseEnd: number | null;
-}
+export type Passage = Lesson['passages'][number];
 
-export interface Lesson {
-  id: number;
-  moduleId: number;
-  moduleTitle: string;
-  title: string;
-  body: string;
-  passages: Passage[];
-  hasVideo: boolean;
-  done: boolean;
-  draft: boolean;
-}
+export type Lesson = GetCoachLearningLessonsByIdResponse;
 
-export interface Check {
-  moduleId: number;
-  title: string;
-  passMark: number;
-  version: number;
-  passed: boolean;
-  bestScore: number | null;
-  questions: { id: number; prompt: string; options: string[] }[];
-}
+export type Check = GetCoachLearningModulesByIdCheckResponse;
 
-export interface Grade {
-  score: number;
-  correct: number;
-  total: number;
-  passed: boolean;
-  passMark: number;
-  wrong: number[];
-  bestScore: number | null;
-  modulePassed: boolean;
-}
+export type Grade = PostCoachLearningModulesByIdCheckResponse;
 
-export interface AdminLesson {
-  id: number;
-  title: string;
-  body: string;
-  passages: Passage[];
-  published: boolean;
-  hasVideo: boolean;
-  videoType: string | null;
-  used: boolean;
-}
+export type AdminLesson = AdminModule['lessons'][number];
 
-export interface AdminQuestion {
-  id: number;
-  prompt: string;
-  options: string[];
-  correct: number;
-}
+export type AdminQuestion = AdminModule['questions'][number];
 
-export interface AdminModule {
-  id: number;
-  title: string;
-  description: string;
-  passMark: number;
-  published: boolean;
-  checkVersion: number;
-  used: boolean;
-  lessons: AdminLesson[];
-  questions: AdminQuestion[];
-}
+export type AdminModule = GetCoachAdminLearningResponse['modules'][number];
 
-export interface OpenRequest {
-  id: number;
-  name: string;
-  email: string;
-  note: string;
-  sentAt: string;
-  completedAt: string | null;
-  scores: { moduleId: number; title: string; bestScore: number | null }[];
-}
+export type OpenRequest = GetCoachAdminLearningRequestsResponse['requests'][number];
 
-export interface Learner {
-  name: string;
-  email: string;
-  enrolledAt: string;
-  completedAt: string | null;
-  passed: number;
-  total: number;
-  request: RequestStatus | null;
-}
+export type Learner = LearnersPage['learners'][number];
 
-export interface LearnersPage {
-  total: number;
-  limit: number;
-  offset: number;
-  learners: Learner[];
-}
+export type LearnersPage = GetCoachAdminLearningLearnersResponse;
 
 export type PassageInput = { bookId: number; chapter: number; verseStart?: number | null; verseEnd?: number | null };
 
-async function request<T>(path: string, method = 'GET', body?: unknown): Promise<T> {
-  const res = await fetchWithAuth(`${API_BASE_URL}/coach/${path}`, {
-    method,
-    headers: body === undefined ? { accept: 'application/json' } : { accept: 'application/json', 'content-type': 'application/json' },
-    body: body === undefined ? undefined : JSON.stringify(body),
-  });
-  if (res.status === 401) throw new CoachAuthError('signed_out');
-  const data = (await res.json().catch(() => null)) as { message?: string; details?: Record<string, unknown> } | null;
-  if (!res.ok) throw new CoachApiError(path, res.status, data?.message ?? '', data?.details ?? {});
-  return data as T;
+const learningClient = newCoachClient();
+
+function call<T>(pending: Promise<{ data?: T; error?: unknown; request: Request; response: Response }>): Promise<T> {
+  return coachCall(pending, 'refusal');
 }
 
-const post = <T = { ok: boolean }>(path: string, body: unknown = {}) => request<T>(path, 'POST', body);
-const put = <T = { ok: boolean }>(path: string, body: unknown) => request<T>(path, 'PUT', body);
-const del = (path: string) => request<{ ok: boolean }>(path, 'DELETE');
+type ModuleInput = { title: string; description: string; passMark: number };
+type LessonInput = { title: string; body: string; passages: PassageInput[] };
+type QuestionInput = { prompt: string; options: string[]; correct: number };
 
 export const learning = {
-  state: () => request<ProgramState>('learning'),
-  enrol: () => post<ProgramState>('learning/enrol'),
-  lesson: (id: number) => request<Lesson>(`learning/lessons/${id}`),
-  markDone: (id: number) => post<ProgramState>(`learning/lessons/${id}/done`),
-  video: (id: number) => request<{ url: string; type: string }>(`learning/lessons/${id}/video`),
-  check: (moduleId: number) => request<Check>(`learning/modules/${moduleId}/check`),
-  submit: (moduleId: number, version: number, answers: { questionId: number; option: number }[]) =>
-    post<Grade>(`learning/modules/${moduleId}/check`, { version, answers }),
-  sendRequest: (note: string) => post<{ request: JoinRequest | null }>('learning/join-request', { note }),
+  state: (): Promise<ProgramState> => call(getCoachLearning({ client: learningClient })),
+  enrol: (): Promise<ProgramState> => call(postCoachLearningEnrol({ client: learningClient })),
+  lesson: (id: number): Promise<Lesson> => call(getCoachLearningLessonsById({ client: learningClient, path: { id } })),
+  markDone: (id: number): Promise<ProgramState> => call(postCoachLearningLessonsByIdDone({ client: learningClient, path: { id } })),
+  video: (id: number): Promise<{ url: string; type: string }> =>
+    call(getCoachLearningLessonsByIdVideo({ client: learningClient, path: { id } })),
+  check: (moduleId: number): Promise<Check> => call(getCoachLearningModulesByIdCheck({ client: learningClient, path: { id: moduleId } })),
+  submit: (moduleId: number, version: number, answers: { questionId: number; option: number }[]): Promise<Grade> =>
+    call(postCoachLearningModulesByIdCheck({ client: learningClient, path: { id: moduleId }, body: { version, answers } })),
+  sendRequest: (note: string): Promise<{ request: JoinRequest | null }> =>
+    call(postCoachLearningJoinRequest({ client: learningClient, body: { note } })),
 };
 
 export const learningAdmin = {
-  tree: () => request<{ modules: AdminModule[] }>('admin/learning'),
-  createModule: (input: { title: string; description: string; passMark: number }) => post<{ id: number }>('admin/learning/modules', input),
-  updateModule: (id: number, input: { title: string; description: string; passMark: number }) => put(`admin/learning/modules/${id}`, input),
-  orderModules: (ids: number[]) => put('admin/learning/modules/order', { ids }),
-  publishModule: (id: number, published: boolean) => post(`admin/learning/modules/${id}/${published ? 'publish' : 'unpublish'}`),
-  deleteModule: (id: number) => del(`admin/learning/modules/${id}`),
-  createLesson: (moduleId: number, input: { title: string; body: string; passages: PassageInput[] }) =>
-    post<{ id: number }>(`admin/learning/modules/${moduleId}/lessons`, input),
-  orderLessons: (moduleId: number, ids: number[]) => put(`admin/learning/modules/${moduleId}/lessons/order`, { ids }),
-  lesson: (id: number) => request<Lesson>(`admin/learning/lessons/${id}`),
-  updateLesson: (id: number, input: { title: string; body: string; passages: PassageInput[] }) => put(`admin/learning/lessons/${id}`, input),
-  publishLesson: (id: number, published: boolean) => post(`admin/learning/lessons/${id}/${published ? 'publish' : 'unpublish'}`),
-  deleteLesson: (id: number) => del(`admin/learning/lessons/${id}`),
-  createQuestion: (moduleId: number, input: { prompt: string; options: string[]; correct: number }) =>
-    post<{ id: number }>(`admin/learning/modules/${moduleId}/questions`, input),
-  updateQuestion: (id: number, input: { prompt: string; options: string[]; correct: number }) => put(`admin/learning/questions/${id}`, input),
-  deleteQuestion: (id: number) => del(`admin/learning/questions/${id}`),
-  videoUploadUrl: (id: number, size: number, type: string) => post<{ uploadUrl: string }>(`admin/learning/lessons/${id}/video/upload`, { size, type }),
-  attachVideo: (id: number) => post<{ type: string }>(`admin/learning/lessons/${id}/video/attach`),
-  removeVideo: (id: number) => del(`admin/learning/lessons/${id}/video`),
-  requests: () => request<{ requests: OpenRequest[] }>('admin/learning/requests'),
-  approve: (id: number, input: { email: string; name?: string; group?: string }) =>
-    post<{ status: 'approved' | 'already-in-program'; leaderId: string | null }>(`admin/learning/requests/${id}/approve`, input),
-  decline: (id: number, reason: string) => post<{ status: 'declined' }>(`admin/learning/requests/${id}/decline`, { reason }),
-  learners: (q: string, offset: number, limit: number) =>
-    request<LearnersPage>(`admin/learning/learners?${new URLSearchParams({ q, offset: String(offset), limit: String(limit) })}`),
+  tree: (): Promise<{ modules: AdminModule[] }> => call(getCoachAdminLearning({ client: learningClient })),
+  createModule: (input: ModuleInput): Promise<{ id: number }> => call(postCoachAdminLearningModules({ client: learningClient, body: input })),
+  updateModule: (id: number, input: ModuleInput) => call(putCoachAdminLearningModulesById({ client: learningClient, path: { id }, body: input })),
+  orderModules: (ids: number[]) => call(putCoachAdminLearningModulesOrder({ client: learningClient, body: { ids } })),
+  publishModule: (id: number, published: boolean) =>
+    call(
+      published
+        ? postCoachAdminLearningModulesByIdPublish({ client: learningClient, path: { id } })
+        : postCoachAdminLearningModulesByIdUnpublish({ client: learningClient, path: { id } }),
+    ),
+  deleteModule: (id: number) => call(deleteCoachAdminLearningModulesById({ client: learningClient, path: { id } })),
+  createLesson: (moduleId: number, input: LessonInput): Promise<{ id: number }> =>
+    call(postCoachAdminLearningModulesByIdLessons({ client: learningClient, path: { id: moduleId }, body: input })),
+  orderLessons: (moduleId: number, ids: number[]) =>
+    call(putCoachAdminLearningModulesByIdLessonsOrder({ client: learningClient, path: { id: moduleId }, body: { ids } })),
+  lesson: (id: number): Promise<Lesson> => call(getCoachAdminLearningLessonsById({ client: learningClient, path: { id } })),
+  updateLesson: (id: number, input: LessonInput) => call(putCoachAdminLearningLessonsById({ client: learningClient, path: { id }, body: input })),
+  publishLesson: (id: number, published: boolean) =>
+    call(
+      published
+        ? postCoachAdminLearningLessonsByIdPublish({ client: learningClient, path: { id } })
+        : postCoachAdminLearningLessonsByIdUnpublish({ client: learningClient, path: { id } }),
+    ),
+  deleteLesson: (id: number) => call(deleteCoachAdminLearningLessonsById({ client: learningClient, path: { id } })),
+  createQuestion: (moduleId: number, input: QuestionInput): Promise<{ id: number }> =>
+    call(postCoachAdminLearningModulesByIdQuestions({ client: learningClient, path: { id: moduleId }, body: input })),
+  updateQuestion: (id: number, input: QuestionInput) => call(putCoachAdminLearningQuestionsById({ client: learningClient, path: { id }, body: input })),
+  deleteQuestion: (id: number) => call(deleteCoachAdminLearningQuestionsById({ client: learningClient, path: { id } })),
+  videoUploadUrl: (id: number, size: number, type: string): Promise<{ uploadUrl: string }> =>
+    call(postCoachAdminLearningLessonsByIdVideoUpload({ client: learningClient, path: { id }, body: { size, type } })),
+  attachVideo: (id: number): Promise<{ type: string }> => call(postCoachAdminLearningLessonsByIdVideoAttach({ client: learningClient, path: { id } })),
+  removeVideo: (id: number) => call(deleteCoachAdminLearningLessonsByIdVideo({ client: learningClient, path: { id } })),
+  requests: (): Promise<{ requests: OpenRequest[] }> => call(getCoachAdminLearningRequests({ client: learningClient })),
+  approve: (
+    id: number,
+    input: { email: string; name?: string; group?: string },
+  ): Promise<{ status: 'approved' | 'already-in-program'; leaderId: string | null }> =>
+    call(postCoachAdminLearningRequestsByIdApprove({ client: learningClient, path: { id }, body: input })),
+  decline: (id: number, reason: string): Promise<{ status: 'declined' }> =>
+    call(postCoachAdminLearningRequestsByIdDecline({ client: learningClient, path: { id }, body: { reason } })),
+  learners: (q: string, offset: number, limit: number): Promise<LearnersPage> =>
+    call(getCoachAdminLearningLearners({ client: learningClient, query: { q, offset, limit } })),
 };
 
 export function uploadVideo(url: string, file: File, onProgress: (pct: number) => void, signal: AbortSignal): Promise<void> {

@@ -57,7 +57,7 @@ const report: CoachReport = {
   sections: [], notes: [{ id: 'n1', body: 'Great job on the pairings.', createdAt: '2026-07-19', emailed: true }],
 };
 const trendsFor: CoachTrends = {
-  scoreSeries: [{ date: '2026-07-11', dateLabel: 'Jul 11', session: 'L8', score: 87, status: 'Exceptional' }, { date: '2026-07-18', dateLabel: 'Jul 18', session: 'L9', score: 92, status: 'Exceptional' }],
+  scoreSeries: [{ date: '2026-07-11', dateLabel: 'Jul 11', reportId: 'r8', session: 'L8', score: 87, status: 'Exceptional' }, { date: '2026-07-18', dateLabel: 'Jul 18', reportId: 'r9', session: 'L9', score: 92, status: 'Exceptional' }],
   clusterSeries: [], dimensionSeries: [{ date: '2026-07-18', dateLabel: 'Jul 18', ...Object.fromEntries(DIM.map((n, i) => [n, [4, 4, 5, 4, 4, 4, 2, 4, 3, 4, 4, 3][i]])) }] as never, delta: null,
 };
 const leaderMonthly: LeaderMonthlyResponse = {

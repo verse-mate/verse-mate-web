@@ -121,8 +121,8 @@ const reports: CoachReport[] = [
 
 const trends: CoachTrends = {
   scoreSeries: [
-    { date: '2026-07-11', dateLabel: 'Jul 11', session: 'L8', score: 82, status: 'Strong' },
-    { date: '2026-07-18', dateLabel: 'Jul 18', session: 'L9', score: 87, status: 'Exceptional' },
+    { date: '2026-07-11', dateLabel: 'Jul 11', reportId: 'r8', session: 'L8', score: 82, status: 'Strong' },
+    { date: '2026-07-18', dateLabel: 'Jul 18', reportId: 'r9', session: 'L9', score: 87, status: 'Exceptional' },
   ],
   clusterSeries: [],
   dimensionSeries: [

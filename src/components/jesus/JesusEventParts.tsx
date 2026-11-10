@@ -23,6 +23,7 @@ import type {
   JesusConfidence,
   JesusEventCard,
   JesusEventPassage,
+  JesusHydratedPassage,
   JesusFacet,
 } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
@@ -124,10 +125,11 @@ export function JesusPassageBlock({
   onOpen,
   isLast = false,
 }: {
-  passage: JesusEventPassage;
+  passage: JesusEventPassage | JesusHydratedPassage;
   onOpen: () => void;
   isLast?: boolean;
 }) {
+  const verses = 'verses' in passage ? passage.verses : [];
   return (
     <ScriptureSection testId={jesusTestId('jesus-passage', passage.display)} isLast={isLast}>
       <ReferencePillRow>
@@ -138,12 +140,12 @@ export function JesusPassageBlock({
         />
       </ReferencePillRow>
 
-      {passage.verses && passage.verses.length > 0 ? (
+      {verses.length > 0 ? (
         <PassageScripture
           bookId={passage.book_id}
           bookName={passage.book_name}
           chapter={passage.chapter}
-          verses={passage.verses.map((verse) => ({
+          verses={verses.map((verse) => ({
             number: verse.verse_number,
             text: verse.text,
           }))}

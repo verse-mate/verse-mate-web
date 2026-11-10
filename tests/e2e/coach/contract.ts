@@ -11,6 +11,7 @@ type Schema = {
   enum?: unknown[];
   format?: string;
   patternProperties?: Record<string, Schema>;
+  additionalProperties?: boolean | Schema;
 };
 
 type Refusal = { status: number; message: string; template?: true };
@@ -96,11 +97,15 @@ export function schemaErrors(schema: Schema, value: unknown, at = 'body'): strin
     return Object.entries(obj).flatMap(([k, v]) => (new RegExp(pattern).test(k) ? schemaErrors(each, v, `${at}.${k}`) : [`${at}.${k}: not allowed`]));
   }
   const props = schema.properties ?? {};
+  const extra = schema.additionalProperties;
+  const extraErrors = (k: string, v: unknown) => {
+    if (extra === true) return [];
+    if (extra && typeof extra === 'object') return v === undefined ? [] : schemaErrors(extra, v, `${at}.${k}`);
+    return [`${at}.${k}: not in the contract, the server strips it`];
+  };
   return [
     ...(schema.required ?? []).filter((k) => !(k in obj)).map((k) => `${at}.${k}: missing`),
-    ...Object.keys(obj)
-      .filter((k) => !(k in props))
-      .map((k) => `${at}.${k}: not in the contract, the server strips it`),
+    ...Object.entries(obj).flatMap(([k, v]) => (k in props ? [] : extraErrors(k, v))),
     ...Object.entries(obj).flatMap(([k, v]) => (k in props && v !== undefined ? schemaErrors(props[k], v, `${at}.${k}`) : [])),
   ];
 }

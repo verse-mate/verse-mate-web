@@ -68,14 +68,8 @@ export function matchPageRoute(pathname: string): RouteMatch | null {
   return null;
 }
 
-interface Testament {
-  b: number;
-  n: string;
-  c: number;
-}
-
 export async function loadBooks(api: ApiGet) {
-  const data = await api<{ testaments?: Testament[] }>('/bible/testaments', { bible_version: GUEST_VERSION }, { ttl: DAY });
+  const data = await api('/bible/testaments', { query: { bible_version: GUEST_VERSION } }, { ttl: DAY });
   const books = data?.testaments ?? [];
   if (books.length === 0) throw new ApiUnavailable('/bible/testaments: empty');
   return books
@@ -115,14 +109,14 @@ async function loadChapter(api: ApiGet, route: Extract<PageRoute, { kind: 'chapt
   const book = (await loadBooks(api)).find((entry) => entry.bookId === bookId);
   if (!book || chapter < 1 || chapter > book.chapters) return null;
 
-  type Explanation = { explanation?: { explanation?: string } | null };
-  type ChapterText = { book?: { chapters?: { verses?: { verseNumber: number; text: string }[] }[] } };
+  const path = { bookId, chapterNumber: chapter };
   const [text, summary, byline] = await Promise.all([
-    api<ChapterText>(`/bible/book/${bookId}/${chapter}`, { bible_version: GUEST_VERSION }),
-    api<Explanation>(`/bible/book/explanation/${bookId}/${chapter}`, { explanationType: 'summary', lang: langQuery(lang) }),
-    api<Explanation>(`/bible/book/explanation/${bookId}/${chapter}`, { explanationType: 'byline', lang: langQuery(lang) }),
+    api('/bible/book/{bookId}/{chapterNumber}', { path, query: { bible_version: GUEST_VERSION } }),
+    api('/bible/book/explanation/{bookId}/{chapterNumber}', { path, query: { explanationType: 'summary', lang: langQuery(lang) } }),
+    api('/bible/book/explanation/{bookId}/{chapterNumber}', { path, query: { explanationType: 'byline', lang: langQuery(lang) } }),
   ]);
-  const verses = (text?.book?.chapters?.[0]?.verses ?? []).map((verse) => ({ number: verse.verseNumber, text: verse.text }));
+  const chapterBook = text && 'book' in text ? text.book : null;
+  const verses = (chapterBook?.chapters[0]?.verses ?? []).map((verse) => ({ number: verse.verseNumber, text: verse.text }));
   if (verses.length === 0) throw new ApiUnavailable(`/bible/book/${bookId}/${chapter}: no verses`);
 
   return {
@@ -138,31 +132,26 @@ async function loadChapter(api: ApiGet, route: Extract<PageRoute, { kind: 'chapt
   };
 }
 
-interface EventDetail {
-  event?: { slug: string; title: string; passages?: { display: string }[] };
-  explanation?: { overview?: string };
-}
-
 async function loadEvent(api: ApiGet, slug: string, lang: Language, published: Language[]): Promise<EventPage | null> {
   if (!(await listEvents(api)).some((event) => event.slug === slug)) return null;
   const details = await explanationsIn(languagesToRead(lang, published), (language) =>
-    api<EventDetail>(
-      `/jesus/events/${encodeURIComponent(slug)}`,
-      { bible_version: GUEST_VERSION, lang: langQuery(language) },
+    api(
+      '/jesus/events/{slug}',
+      { path: { slug }, query: { bible_version: GUEST_VERSION, lang: langQuery(language) } },
       { ttl: ITEM_TTL },
     ),
   );
   const detail = details.get(lang);
   if (!detail?.event) return null;
   const explanations: Partial<Record<Language, string>> = {};
-  for (const [language, entry] of details) explanations[language] = entry?.explanation?.overview ?? '';
+  for (const [language, entry] of details) explanations[language] = entry?.explanation.overview ?? '';
   return {
     kind: 'event',
     path: `/jesus/event/${detail.event.slug}`,
     slug: detail.event.slug,
     title: detail.event.title,
-    passages: (detail.event.passages ?? []).map((passage) => passage.display),
-    explanation: explanations[lang],
+    passages: detail.event.passages.map((passage) => passage.display),
+    explanation: explanations[lang] ?? '',
     explanations,
   };
 }
@@ -170,39 +159,28 @@ async function loadEvent(api: ApiGet, slug: string, lang: Language, published: L
 export async function listEvents(api: ApiGet) {
   const events: { slug: string; title: string }[] = [];
   for (let offset = 0; ; offset += EVENT_PAGE) {
-    const page = await api<{ events?: { slug: string; title: string }[]; total?: number }>(
-      '/jesus/events',
-      { limit: EVENT_PAGE, offset },
-      { ttl: ITEM_TTL },
-    );
+    const page = await api('/jesus/events', { query: { limit: EVENT_PAGE, offset } }, { ttl: ITEM_TTL });
     if (!page?.events) throw new ApiUnavailable('/jesus/events: missing');
     events.push(...page.events);
     if (page.events.length === 0 || events.length >= (page.total ?? 0)) return events;
   }
 }
 
-interface TopicSummary {
-  topic_id?: string;
-  id?: string;
-  name: string;
-  slug?: string;
-}
-
 export async function loadTopicList(api: ApiGet, category: string) {
-  const data = await api<{ topics?: TopicSummary[] }>('/topics/search', { category, limit: 500 }, { ttl: DAY });
+  const data = await api('/topics/search', { query: { category } }, { ttl: DAY });
   if (!data) throw new ApiUnavailable(`/topics/search ${category}: missing`);
-  return (data.topics ?? []).map((topic) => ({
-    id: topic.topic_id || topic.id,
+  return data.topics.map((topic) => ({
+    id: topic.topic_id,
     name: topic.name,
-    slug: topic.slug || generateTopicSlug(topic.name),
+    slug: generateTopicSlug(topic.name),
     generatedSlug: generateTopicSlug(topic.name),
   }));
 }
 
 export async function loadTopicExplanation(api: ApiGet, topicId: string, lang: Language) {
-  const data = await api<{ explanation?: { explanation?: string } | null }>(
-    `/topics/${topicId}/explanation`,
-    { type: 'summary', lang: langQuery(lang) },
+  const data = await api(
+    '/topics/{id}/explanation',
+    { path: { id: topicId }, query: { type: 'summary', lang: langQuery(lang) } },
     { ttl: ITEM_TTL },
   );
   return data?.explanation?.explanation ?? '';
@@ -236,11 +214,11 @@ async function loadTopic(
   const topic = (await loadTopicList(api, category)).find(
     (entry) => entry.slug === route.slug || entry.generatedSlug === route.slug,
   );
-  if (!topic?.id) return null;
+  if (!topic) return null;
 
   const [texts, references] = await Promise.all([
     explanationsIn(languagesToRead(lang, published), (language) => loadTopicExplanation(api, topic.id, language)),
-    api<{ references?: { content?: string } | null }>(`/topics/${topic.id}/references`),
+    api('/topics/{id}/references', { path: { id: topic.id } }),
   ]);
   const explanations = Object.fromEntries(texts) as Partial<Record<Language, string>>;
   return {
@@ -252,7 +230,7 @@ async function loadTopic(
     slug: topic.slug,
     title: topic.name,
     sections: parseTopicSections(references?.references?.content ?? ''),
-    explanation: explanations[lang],
+    explanation: explanations[lang] ?? '',
     explanations,
   };
 }

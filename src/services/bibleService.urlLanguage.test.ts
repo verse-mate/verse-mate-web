@@ -21,8 +21,9 @@ function jsonResponse(body: unknown): Response {
 function mockApi() {
   requests = [];
   global.fetch = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
-    const url = typeof input === 'string' ? input : input.toString();
-    requests.push({ url, method: (init?.method ?? 'GET').toUpperCase() });
+    const url = input instanceof globalThis.Request ? input.url : input.toString();
+    const method = input instanceof globalThis.Request ? input.method : (init?.method ?? 'GET');
+    requests.push({ url, method: method.toUpperCase() });
     if (url.includes('/bible/books')) return jsonResponse(BOOKS);
     return jsonResponse({ explanation: { explanation: 'text', explanation_id: 9 } });
   }) as typeof global.fetch;

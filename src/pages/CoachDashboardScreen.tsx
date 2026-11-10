@@ -27,6 +27,7 @@ import {
   useAdminClasses,
   coachState,
 } from '@/hooks/useCoach';
+import { scoreDelta } from '@/services/coachService';
 import type { CoachClass, CoachReport, CoachReportSummary, CoachTrends } from '@/services/coachService';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import CoachSessionDetail from '@/components/coach/CoachSessionDetail';
@@ -86,7 +87,7 @@ export default function CoachDashboardScreen() {
   const selected = selectedFull.report;
   const latest = latestFull.report;
   const prev = prevFull.report ?? undefined;
-  const delta = selected && prevSummary ? Math.round((selected.score - prevSummary.score) * 100) / 100 : null;
+  const delta = selected && prevSummary ? scoreDelta(selected.score, prevSummary.score) : null;
   const detailLoading = selectedFull.loading || latestFull.loading || prevFull.loading;
   const detailError = selectedFull.error || latestFull.error || prevFull.error;
 
@@ -115,7 +116,7 @@ export default function CoachDashboardScreen() {
               streakWeeks={firstPage?.streakWeeks ?? 0}
               quarterSessions={firstPage?.quarterSessions ?? 0}
               latest={latest}
-              delta={list.length > 1 ? Math.round((latestSummary.score - list[1].score) * 100) / 100 : null}
+              delta={list.length > 1 ? scoreDelta(latestSummary.score, list[1].score) : null}
             />
             <NextClassBand
               nextClass={pickNextClass(classes)}

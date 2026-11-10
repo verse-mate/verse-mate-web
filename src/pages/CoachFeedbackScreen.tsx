@@ -49,7 +49,7 @@ export default function CoachFeedbackScreen() {
               </div>
               <h2 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: vmTokens.textPrimary }}>Coming soon</h2>
               <p style={{ margin: 0, fontSize: 14, color: vmTokens.textSecondary, lineHeight: 1.5, maxWidth: 380 }}>
-                This is where {me.data ? me.data.profile.coachName : 'your coach'} will leave personal, session-by-session
+                This is where {me.data?.profile?.coachName || 'your coach'} will leave personal, session-by-session
                 notes and you’ll be able to reply. For now, your scored feedback documents live on the{' '}
                 <button onClick={() => navigate('/coach')} style={linkBtn}>coaching dashboard</button>.
               </p>

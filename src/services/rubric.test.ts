@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
+import { clearTokens, setAccessToken } from '@/api/client';
 import {
   type RubricContract,
   dimensionBandLabel,
@@ -64,18 +65,17 @@ describe('the portal reads the rubric instead of keeping one', () => {
     );
     const rubric = await fetchRubric();
     expect(rubric.clusters).toHaveLength(4);
-    expect(fetchSpy.mock.calls[0][0]).toContain('/coach/rubric');
+    expect((fetchSpy.mock.calls[0][0] as Request).url).toContain('/coach/rubric');
   });
 
   it('does NOT send credentials, the explainer is not leader data', async () => {
-    // It describes the scoring model, so it must render for anyone who can
-    // already see a score.
+    setAccessToken('signed-in-leader');
     const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValue(
-      new Response(JSON.stringify(CONTRACT), { status: 200 }),
+      new Response(JSON.stringify(CONTRACT), { status: 200, headers: { 'content-type': 'application/json' } }),
     );
     await fetchRubric();
-    const init = fetchSpy.mock.calls[0][1] as RequestInit;
-    expect(JSON.stringify(init.headers ?? {})).not.toContain('Authorization');
+    clearTokens();
+    expect((fetchSpy.mock.calls[0][0] as Request).headers.get('Authorization')).toBeNull();
   });
 
   it('a failing request throws rather than returning a half rubric', async () => {

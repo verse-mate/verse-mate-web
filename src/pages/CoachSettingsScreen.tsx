@@ -25,7 +25,7 @@ import { useApp } from '@/contexts/AppContext';
 import { useCoachMe, coachKeys, coachState } from '@/hooks/useCoach';
 import { usePendingEmail, useSetPendingEmail } from '@/hooks/usePendingEmail';
 import PendingEmailNotice from '@/components/settings/PendingEmailNotice';
-import { ApiError } from '@/services/api';
+import { ApiError } from '@/api/client';
 import {
   BIBLE_COACHES,
   DEFAULT_BIBLE_COACH,

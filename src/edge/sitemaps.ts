@@ -63,16 +63,16 @@ export async function listedEvents(api: ApiGet, published: Language[]): Promise<
 }
 
 export async function listedTopics(api: ApiGet, published: Language[]) {
-  const data = await api<{ categories?: string[] }>('/topics/categories', {}, { ttl: DAY });
+  const data = await api('/topics/categories', {}, { ttl: DAY });
   if (!data?.categories) throw new ApiUnavailable('/topics/categories: missing');
   const groups: { category: string; topics: Listed[] }[] = [];
   for (const category of data.categories) {
     const categorySlug = getCategorySlug(category);
     if (!categorySlug) continue;
-    const topics = (await loadTopicList(api, category)).filter((topic) => topic.id);
+    const topics = await loadTopicList(api, category);
     const listed = await mapLimited(topics, async (topic) => {
       const languages = [...new Set<Language>([DEFAULT_LANGUAGE, ...published])];
-      const texts = await Promise.all(languages.map((lang) => loadTopicExplanation(api, topic.id as string, lang)));
+      const texts = await Promise.all(languages.map((lang) => loadTopicExplanation(api, topic.id, lang)));
       const explanations = Object.fromEntries(languages.map((lang, index) => [lang, texts[index]]));
       return {
         title: topic.name,

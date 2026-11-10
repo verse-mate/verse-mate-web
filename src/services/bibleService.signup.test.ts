@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
+import { describeFetch } from '@/test/fetchCall';
 
-import { clearTokens } from './api';
+import { clearTokens } from '@/api/client';
 import { signup } from './bibleService';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -20,9 +21,10 @@ describe('signup', () => {
 
   it('posts the first and last name the backend requires', async () => {
     const calls: Array<{ url: string; init?: RequestInit }> = [];
-    global.fetch = vi.fn((input: RequestInfo | URL, init?: RequestInit) => {
-      const url = typeof input === 'string' ? input : input.toString();
-      calls.push({ url, init });
+    global.fetch = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+      const call = await describeFetch(input, init);
+      calls.push(call);
+      const url = call.url;
       if (new URL(url).pathname === '/auth/signup') {
         return Promise.resolve(jsonResponse({ accessToken: 'session-token', verified: false }));
       }

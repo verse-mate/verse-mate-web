@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { getAccessToken } from './api';
+import { describeFetch } from '@/test/fetchCall';
+import { getAccessToken } from '@/api/client';
 import { confirmEmail, fetchEmailVerified, sendVerificationEmail } from './emailVerification';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -7,9 +8,12 @@ let calls: Array<{ url: string; init?: RequestInit }> = [];
 
 function respond(status: number, body?: unknown) {
   calls = [];
-  global.fetch = vi.fn((input: RequestInfo | URL, init?: RequestInit) => {
-    calls.push({ url: String(input), init });
-    return Promise.resolve(new Response(body === undefined ? null : JSON.stringify(body), { status }));
+  global.fetch = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+    calls.push(await describeFetch(input, init));
+    return new Response(body === undefined ? null : JSON.stringify(body), {
+      status,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }) as unknown as typeof fetch;
 }
 
