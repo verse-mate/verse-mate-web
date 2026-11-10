@@ -5,6 +5,8 @@ import { useLocation } from 'react-router-dom';
 import { analytics } from '@/lib/analytics';
 import { scrubEvent, scrubNetworkRequest, stripQuery } from '@/lib/analyticsPrivacy';
 import { collectErrorContext, shouldExcludeError, toReportableError } from '@/lib/errorFilters';
+import { recordFirstTouch } from '@/lib/firstTouch';
+import { storageAvailable } from '@/lib/storageAvailable';
 
 const POSTHOG_KEY = (import.meta.env.VITE_POSTHOG_KEY as string | undefined) || '';
 const POSTHOG_HOST =
@@ -22,7 +24,8 @@ interface PostHogProviderProps {
  * client that was not loaded yet. No-ops when VITE_POSTHOG_KEY is not set,
  * so dev builds don't pollute production analytics.
  */
-if (POSTHOG_KEY && typeof window !== 'undefined' && !posthog.__loaded) {
+if (POSTHOG_KEY && typeof window !== 'undefined' && !posthog.__loaded && storageAvailable(window)) {
+  const returning = window.localStorage.getItem(`ph_${POSTHOG_KEY}_posthog`) !== null;
   posthog.init(POSTHOG_KEY, {
     api_host: POSTHOG_HOST,
     capture_pageview: false,
@@ -43,7 +46,15 @@ if (POSTHOG_KEY && typeof window !== 'undefined' && !posthog.__loaded) {
     persistence: 'localStorage+cookie',
     loaded: (instance) => {
       if (import.meta.env.DEV) instance.debug();
-      instance.register({ platform: 'web' });
+      analytics.registerSurface(instance);
+      recordFirstTouch({
+        posthog: instance,
+        storage: window.localStorage,
+        surface: 'reader',
+        url: window.location.href,
+        referrer: document.referrer,
+        returning,
+      });
       const language = navigator.language;
       const localeParts = language.split('-');
       const country =

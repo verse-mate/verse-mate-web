@@ -289,4 +289,17 @@ describe('what reaches analytics', () => {
       'https://app.test/bible/john/3': [{ x: 5, y: 6 }],
     });
   });
+
+  it('bounds campaign values on events and on the person', () => {
+    const out = scrubEvent({
+      uuid: 'u',
+      event: '$pageview',
+      properties: { utm_content: 'jane@example.com', utm_campaign: 'a'.repeat(150), utm_source: 'newsletter' },
+      $set_once: { $initial_utm_content: 'jane@example.com' },
+    });
+    expect(out?.properties.utm_content).toBe('[redacted]');
+    expect(out?.properties.utm_campaign).toBe('a'.repeat(100));
+    expect(out?.properties.utm_source).toBe('newsletter');
+    expect(out?.$set_once?.$initial_utm_content).toBe('[redacted]');
+  });
 });

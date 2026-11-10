@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-const { client, init, capture, captureException } = vi.hoisted(() => {
+const { client, init, capture, captureException, register, reset } = vi.hoisted(() => {
   const client = { __loaded: false } as Record<string, unknown>;
   const init = vi.fn();
   init.mockImplementation(() => {
@@ -10,8 +10,10 @@ const { client, init, capture, captureException } = vi.hoisted(() => {
   });
   const capture = vi.fn();
   const captureException = vi.fn();
-  Object.assign(client, { init, capture, captureException });
-  return { client, init, capture, captureException };
+  const register = vi.fn();
+  const reset = vi.fn();
+  Object.assign(client, { init, capture, captureException, register, reset });
+  return { client, init, capture, captureException, register, reset };
 });
 vi.mock('posthog-js', () => ({ default: client }));
 
@@ -22,6 +24,9 @@ describe('the analytics client', () => {
     init.mockClear();
     capture.mockReset();
     captureException.mockReset();
+    register.mockReset();
+    reset.mockReset();
+    window.localStorage.clear();
     vi.stubEnv('VITE_POSTHOG_KEY', 'test-key');
   });
 
@@ -149,5 +154,38 @@ describe('the analytics client', () => {
     expect(props).toBeDefined();
     expect(JSON.stringify(props)).not.toContain('report-1');
     expect(JSON.stringify(props)).not.toContain('leader=l1');
+  });
+
+  it('starts nothing when the browser refuses storage', async () => {
+    const blocked = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+      throw new Error('blocked');
+    });
+    await mount('/read');
+    blocked.mockRestore();
+    expect(init).not.toHaveBeenCalled();
+    expect(capture).not.toHaveBeenCalled();
+  });
+
+  it('names the surface and records the first touch once loaded', async () => {
+    window.history.replaceState({}, '', '/bible/john/3?utm_source=chatgpt.com');
+    await mount('/bible/john/3');
+    const instance = { register: vi.fn(), capture: vi.fn(), debug: vi.fn() };
+    init.mock.calls[0][1].loaded(instance);
+    expect(instance.register).toHaveBeenCalledWith({ platform: 'web', surface: 'reader' });
+    expect(instance.capture).toHaveBeenCalledWith(
+      'acquisition_first_touch',
+      expect.objectContaining({ surface: 'reader', channel: 'ai', ai_source: 'chatgpt', returning: false }),
+    );
+  });
+
+  it('keeps the surface and first touch on events after a sign-out', async () => {
+    window.history.replaceState({}, '', '/bible/john/3?utm_source=chatgpt.com');
+    await mount('/bible/john/3');
+    init.mock.calls[0][1].loaded({ register: vi.fn(), capture: vi.fn(), debug: vi.fn() });
+    const { analytics } = await import('@/lib/analytics');
+    analytics.reset();
+    expect(reset).toHaveBeenCalled();
+    expect(register).toHaveBeenCalledWith({ platform: 'web', surface: 'reader' });
+    expect(register).toHaveBeenCalledWith({ first_touch_channel: 'ai', first_touch_ai_source: 'chatgpt' });
   });
 });
