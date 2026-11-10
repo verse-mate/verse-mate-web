@@ -42,6 +42,7 @@ test.describe('Auth — login (providers screen)', () => {
     await login.goto('/login');
     await login.openEmailScreen();
     await expect(login.firstNameInput).not.toBeVisible();
+    await expect(login.lastNameInput).not.toBeVisible();
 
     await login.modeToggle.click();
     await expect(login.firstNameInput).toBeVisible();

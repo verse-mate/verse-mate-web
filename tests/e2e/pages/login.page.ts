@@ -1,15 +1,5 @@
 import type { Page, Locator } from '@playwright/test';
 
-/**
- * Page object for /login and /create-account (SignInScreen).
- *
- * Two screens behind one URL:
- *  - "providers": Google / Apple / Continue-with-Email buttons
- *  - "email": email + password (+ first and last name on signup) + submit
- *
- * The mobile testID inventory uses `login-*` for both modes; this page
- * mirrors that. Submit testid is mode-aware (login-submit vs signup-submit).
- */
 export class LoginPage {
   readonly page: Page;
   readonly googleButton: Locator;

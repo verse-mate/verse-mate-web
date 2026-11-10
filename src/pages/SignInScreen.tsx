@@ -92,6 +92,18 @@ const providerButtonStyle = {
   cursor: 'pointer',
 } as const;
 
+function meetsSignupPasswordRules(password: string): boolean {
+  return password.length >= 8 && password.length <= 20 && /\d/.test(password) && /[a-zA-Z]/.test(password);
+}
+
+function authErrorMessage(mode: Mode, err: unknown): string {
+  if (!err || typeof err !== 'object' || !('status' in err)) return 'Network error — please try again';
+  const status = (err as { status: number }).status;
+  if (mode === 'signup' && status === 409) return 'An account with this email already exists. Sign in instead.';
+  if (mode === 'signup' && status === 422) return 'Check your name, email and password, then try again.';
+  return `Sign ${mode === 'signin' ? 'in' : 'up'} failed (${status})`;
+}
+
 export default function SignInScreen({ initialMode = 'signin' }: SignInScreenProps = {}) {
   const navigate = useNavigate();
   const { dispatch } = useApp();
@@ -137,6 +149,10 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
       setError('Enter your first and last name');
       return;
     }
+    if (mode === 'signup' && !meetsSignupPasswordRules(password)) {
+      setError('Use a password of 8 to 20 characters with at least one letter and one number');
+      return;
+    }
     setSubmitting(true);
     try {
       const user =
@@ -163,11 +179,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
         navigate(returnTo || '/menu');
       }
     } catch (err: unknown) {
-      const msg =
-        err && typeof err === 'object' && 'status' in err
-          ? `Sign ${mode === 'signin' ? 'in' : 'up'} failed (${(err as { status: number }).status})`
-          : 'Network error — please try again';
-      setError(msg);
+      setError(authErrorMessage(mode, err));
     } finally {
       setSubmitting(false);
     }
@@ -231,7 +243,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
                     data-testid="signup-first-name"
                     className="mt-1.5 w-full h-[52px] px-4 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4285F4]"
                     style={{ backgroundColor: vmTokens.inputBg, border: `1px solid ${vmTokens.inputBorder}`, color: vmTokens.textPrimary }}
-                    placeholder="First"
+                    placeholder="Ruth"
                   />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -245,7 +257,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
                     data-testid="signup-last-name"
                     className="mt-1.5 w-full h-[52px] px-4 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4285F4]"
                     style={{ backgroundColor: vmTokens.inputBg, border: `1px solid ${vmTokens.inputBorder}`, color: vmTokens.textPrimary }}
-                    placeholder="Last"
+                    placeholder="Miller"
                   />
                 </div>
               </div>
