@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.versemate.app",
+      "sha256_cert_fingerprints": [
+        "C1:CA:A8:D0:9D:BC:55:64:69:43:66:7A:AD:D7:25:33:EA:1D:72:E0:0B:23:D8:A0:16:4F:82:0C:93:4E:89:6D"
+      ]
+    }
+  }
+]
