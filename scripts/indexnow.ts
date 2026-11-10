@@ -42,18 +42,42 @@ export const urlsFromSitemap = (xml: string) =>
       .replace(/&amp;/g, '&'),
   );
 
+type Wait = (ms: number) => Promise<void>;
+const sleep: Wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 async function readSitemap(url: string, fetcher: Fetcher) {
   const response = await fetcher(url);
   if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
+  if (!(response.headers.get('content-type') ?? '').includes('xml')) throw new Error(`${url}: not a sitemap`);
   return urlsFromSitemap(await response.text());
 }
 
-export async function urlsForLanguages(languages: string[], fetcher: Fetcher) {
-  const children = (await readSitemap(`https://${HOST}/sitemap.xml`, fetcher)).filter((child) =>
-    languages.some((lang) => child.endsWith(`-${lang}.xml`)),
-  );
+const childrenOf = (index: string[], lang: string) => index.filter((child) => child.endsWith(`-${lang}.xml`));
+
+async function publishedIndex(languages: string[], fetcher: Fetcher, wait: Wait, attempts: number, intervalMs: number) {
+  let reason = '';
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const index = await readSitemap(`https://${HOST}/sitemap.xml`, fetcher);
+      const missing = languages.filter((lang) => childrenOf(index, lang).length === 0);
+      if (missing.length === 0) return index;
+      reason = `the sitemap index lists no sitemap for ${missing.join(', ')}`;
+    } catch (failure) {
+      reason = String(failure);
+    }
+    if (attempt < attempts) await wait(intervalMs);
+  }
+  throw new Error(`${reason} after ${attempts} reads`);
+}
+
+export async function urlsForLanguages(
+  languages: string[],
+  fetcher: Fetcher,
+  { wait = sleep, attempts = 20, intervalMs = 15_000 }: { wait?: Wait; attempts?: number; intervalMs?: number } = {},
+) {
+  const index = await publishedIndex(languages, fetcher, wait, attempts, intervalMs);
   const urls: string[] = [];
-  for (const child of children) urls.push(...(await readSitemap(child, fetcher)));
+  for (const lang of languages) for (const child of childrenOf(index, lang)) urls.push(...(await readSitemap(child, fetcher)));
   return urls;
 }
 
@@ -88,7 +112,10 @@ export function keyIn(publicDir: string) {
 
 const USAGE = 'usage: bun scripts/indexnow.ts changed <previous wrangler.jsonc> <current wrangler.jsonc> | all <current wrangler.jsonc>';
 
-export async function run(args: string[], { fetcher = fetch as Fetcher, publicDir = 'public', log = console.log, error = console.error } = {}) {
+export async function run(
+  args: string[],
+  { fetcher = fetch as Fetcher, publicDir = 'public', log = console.log, error = console.error, wait = sleep }: { fetcher?: Fetcher; publicDir?: string; log?: (line: string) => void; error?: (line: string) => void; wait?: Wait } = {},
+) {
   const [mode, ...files] = args;
   let languages: string[];
   if (mode === 'changed' && files.length === 2) {
@@ -107,9 +134,13 @@ export async function run(args: string[], { fetcher = fetch as Fetcher, publicDi
 
   let urls: string[];
   try {
-    urls = await urlsForLanguages(languages, fetcher);
+    urls = await urlsForLanguages(languages, fetcher, { wait });
   } catch (failure) {
     error(`indexnow: could not read the sitemaps of ${languages.join(', ')}: ${String(failure)}`);
+    return 1;
+  }
+  if (urls.length === 0) {
+    error(`indexnow: the sitemaps of ${languages.join(', ')} list no URLs, nothing submitted`);
     return 1;
   }
   const result = await submitToIndexNow({ key: keyIn(publicDir), urls, fetcher });

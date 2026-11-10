@@ -109,6 +109,42 @@ describe('the IndexNow submission', () => {
     ]);
   });
 
+  it('waits for the new deploy to serve the sitemap index before submitting', async () => {
+    const { current } = files([], ['en-US']);
+    const { fetcher, submitted } = site(['en-US'], () => new Response(null, { status: 200 }));
+    let oldDeployReads = 2;
+    const deploying: Fetcher = async (input, init) => {
+      if (input === 'https://app.versemate.org/sitemap.xml' && oldDeployReads > 0) {
+        oldDeployReads -= 1;
+        return new Response('<!doctype html><title>VerseMate</title>', { headers: { 'content-type': 'text/html' } });
+      }
+      return fetcher(input, init);
+    };
+    const waits: number[] = [];
+
+    const code = await run(['all', current], { fetcher: deploying, publicDir, ...quiet, wait: async (ms) => void waits.push(ms) });
+
+    expect(code).toBe(0);
+    expect(waits).toHaveLength(2);
+    expect((submitted[0] as { urlList: string[] }).urlList.length).toBeGreaterThan(0);
+  });
+
+  it('fails without submitting when the sitemap never lists the published language', async () => {
+    const { current } = files([], ['en-US']);
+    const { fetcher, submitted } = site(['en-US'], () => new Response(null, { status: 200 }));
+    const stale: Fetcher = async (input, init) =>
+      input === 'https://app.versemate.org/sitemap.xml'
+        ? new Response('<!doctype html><title>VerseMate</title>', { headers: { 'content-type': 'text/html' } })
+        : fetcher(input, init);
+    const errors: string[] = [];
+
+    const code = await run(['all', current], { fetcher: stale, publicDir, log: () => undefined, error: (line) => errors.push(line), wait: async () => undefined });
+
+    expect(code).toBe(1);
+    expect(submitted).toHaveLength(0);
+    expect(errors.join('\n')).toMatch(/en-US/);
+  });
+
   it('fails with the status when IndexNow refuses or cannot be reached', async () => {
     const { current } = files([], ['en-US']);
     for (const answer of [() => new Response('bad key', { status: 403 }), () => Promise.reject(new Error('ECONNREFUSED'))]) {
