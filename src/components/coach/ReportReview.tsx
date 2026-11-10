@@ -232,7 +232,10 @@ function draftChanges(amendment: ReportAmendment, initial: Draft): ReportRevisio
   const body = amendment.body ?? {};
   const cleared = PROSE_LISTS.filter((list) => initial.stored[list] && body[list] !== undefined && body[proseField(list)] === undefined);
   return {
-    dimensions: (amendment.dimensions ?? []).map((d) => ({ n: d.n, from: initial.dims[d.n], to: d })),
+    dimensions: (amendment.dimensions ?? []).map((d) => {
+      const n = Number(d.n);
+      return { n, from: initial.dims[n], to: { score: d.score === null ? null : Number(d.score), rationale: d.rationale } };
+    }),
     ...(amendment.firstLesson !== undefined ? { firstLesson: { from: initial.firstLesson, to: amendment.firstLesson } } : {}),
     body: {
       ...Object.fromEntries(
@@ -441,7 +444,7 @@ function FirstLessonPanel({
         if (r.applied) setClearing(null);
         if (!r.applied || r.revision !== undefined) {
           const outcome = amendOutcome(r);
-          const mrDim = input.score === undefined ? {} : { [MEMORY_REINFORCEMENT]: { score: input.score, rationale: input.rationale ?? '' } };
+          const mrDim: Draft['dims'] = input.score === undefined ? {} : { [MEMORY_REINFORCEMENT]: { score: input.score, rationale: input.rationale ?? '' } };
           onCarry({
             last: { outcome: { ...outcome, text: `${DELIVERED_MEANWHILE} ${outcome.text}` }, held: r.coldRecall, violations: r.violations },
             draft: r.applied

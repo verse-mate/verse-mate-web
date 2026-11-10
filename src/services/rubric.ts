@@ -1,4 +1,8 @@
-import { API_BASE_URL } from './api';
+import type {
+  GetCoachRubricResponse,
+} from '@/api/generated/types.gen';
+import { publicClient } from '@/api/client';
+import { getCoachRubric } from '@/api/generated/sdk.gen';
 
 /**
  * The rubric contract, served by the backend (change: port-coach-pipeline,
@@ -15,35 +19,13 @@ import { API_BASE_URL } from './api';
  * Now it is fetched. The portal renders what computed the score.
  */
 
-export interface RubricCluster {
-  name: string;
-  weight: number;
-}
+export type RubricCluster = RubricContract['clusters'][number];
 
-export interface RubricDimension {
-  n: number;
-  name: string;
-  cluster: string;
-  clusterWeight: number;
-  /** What the dimension measures, in plain English. */
-  what: string;
-  /** The research-backed target it is scored against. */
-  target: string;
-}
+export type RubricDimension = RubricContract['dimensions'][number];
 
-export interface StatusBand {
-  min: number;
-  label: string;
-  emoji: string;
-}
+export type StatusBand = RubricContract['statusBands'][number];
 
-export interface RubricContract {
-  model: string;
-  clusters: RubricCluster[];
-  dimensions: RubricDimension[];
-  statusBands: StatusBand[];
-  dimensionBands: Array<{ min: number; label: string }>;
-}
+export type RubricContract = GetCoachRubricResponse;
 
 /**
  * GET /coach/rubric.
@@ -58,11 +40,9 @@ export function spreadOver<T>(position: number, count: number, palette: readonly
 }
 
 export async function fetchRubric(): Promise<RubricContract> {
-  const res = await fetch(`${API_BASE_URL}/coach/rubric`, {
-    headers: { accept: 'application/json' },
-  });
-  if (!res.ok) throw new Error(`coach rubric failed: ${res.status}`);
-  return (await res.json()) as RubricContract;
+  const { data, response } = await getCoachRubric({ client: publicClient, parseAs: 'json' });
+  if (!response.ok || !data) throw new Error(`coach rubric failed: ${response.status}`);
+  return data;
 }
 
 /** The band a composite score falls in, from the SERVED bands. */

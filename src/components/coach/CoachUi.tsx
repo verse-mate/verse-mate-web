@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import { Download, GraduationCap, LogIn } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { useRubric } from '@/hooks/useRubric';
-import { pdfDownloadUrl, statusColor } from '@/services/coachService';
+import { dateLabelOf, pdfDownloadUrl, statusColor } from '@/services/coachService';
 import { dt } from './dashboardTheme';
 import ConfirmEmailGate from './ConfirmEmailGate';
 import { useEmailCheck } from '@/hooks/useCoach';
@@ -119,7 +119,7 @@ export function StatusPill({
   emoji,
   size = 'md',
 }: {
-  status: string;
+  status?: string;
   emoji?: string;
   size?: 'sm' | 'md';
 }) {
@@ -127,7 +127,7 @@ export function StatusPill({
   // colour instead of falling through to the bottom one.
   const { rubric } = useRubric();
   const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
-  const color = statusColor(status, bandLabels);
+  const color = statusColor(status ?? '', bandLabels);
   return (
     <span
       style={{
@@ -158,16 +158,16 @@ export function ScoreRing({
   status,
   diameter = 96,
 }: {
-  value: number;
-  status: string;
+  value?: number;
+  status?: string;
   diameter?: number;
 }) {
   // Band labels come from the served rubric, so a renamed band keeps its
   // colour instead of falling through to the bottom one.
   const { rubric } = useRubric();
   const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
-  const color = statusColor(status, bandLabels);
-  const pct = Math.max(0, Math.min(100, value));
+  const color = statusColor(status ?? '', bandLabels);
+  const pct = value === undefined ? 0 : Math.max(0, Math.min(100, value));
   return (
     <div
       style={{
@@ -179,7 +179,7 @@ export function ScoreRing({
         background: `conic-gradient(${color} ${pct * 3.6}deg, ${vmTokens.divider} 0deg)`,
         flexShrink: 0,
       }}
-      aria-label={`Score ${value} out of 100`}
+      aria-label={value === undefined ? 'No score' : `Score ${value} out of 100`}
     >
       <div
         style={{
@@ -192,7 +192,7 @@ export function ScoreRing({
         }}
       >
         <span style={{ fontSize: diameter * 0.28, fontWeight: 700, color: vmTokens.textPrimary, lineHeight: 1 }}>
-          {Math.round(value)}
+          {value === undefined ? '–' : Math.round(value)}
         </span>
         <span style={{ fontSize: 10, color: vmTokens.textTertiary, marginTop: 2 }}>/ 100</span>
       </div>
@@ -220,7 +220,7 @@ export function LatestSessionHero({
       <div style={{ minWidth: 0, flex: 1 }}>
         <SectionLabel>Latest session</SectionLabel>
         <p style={{ margin: 0, fontSize: 15, fontWeight: 600, color: vmTokens.textPrimary }}>{latest.session}</p>
-        <p style={{ margin: '2px 0 8px', fontSize: 12.5, color: vmTokens.textTertiary }}>{latest.dateLabel}</p>
+        <p style={{ margin: '2px 0 8px', fontSize: 12.5, color: vmTokens.textTertiary }}>{dateLabelOf(latest)}</p>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
           <StatusPill status={latest.status} emoji={latest.statusEmoji} />
           {delta !== null && (

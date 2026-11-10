@@ -1,5 +1,9 @@
+import type {
+  GetLemmaByStrongsResponse,
+} from '@/api/generated/types.gen';
 import type { LexEntry } from '@versemate/lexicon';
-import { api, ApiError } from './api';
+import { ApiError, publicClient, unwrap } from '@/api/client';
+import { getLemmaByStrongs } from '@/api/generated/sdk.gen';
 
 /**
  * Raw shape of GET /lemma/:strongs?lang= (snake_case, nullable fields).
@@ -10,23 +14,7 @@ import { api, ApiError } from './api';
  * for the other ~16K its English fields are null too, so a card for most words
  * arrives with null gloss / notes / range (`is_translated: false`).
  */
-export interface ApiLemmaCard {
-  strongs: string;
-  lemma: string;
-  translit: string | null;
-  pronunciation: string | null;
-  nt_frequency: number | null;
-  ot_frequency: number | null;
-  loaded: boolean;
-  pos: string | null;
-  basic_gloss: string | null;
-  semantic_range: string[] | null;
-  notes: string | null;
-  related: Array<{ translit: string; note: string }> | null;
-  language_code: string;
-  source: string | null;
-  is_translated: boolean;
-}
+export type ApiLemmaCard = GetLemmaByStrongsResponse;
 
 // Lemma cards are immutable within a session (translation updates ship via
 // redeploy), so a (strongs, lang) result — including a 404 miss, stored as
@@ -47,21 +35,14 @@ export async function fetchLemmaCard(
   if (cache.has(key)) return cache.get(key) ?? null;
 
   try {
-    const card = await api.get<ApiLemmaCard>(
-      `/lemma/${encodeURIComponent(strongs)}`,
-      { lang },
-      { auth: false },
-    );
+    const card: ApiLemmaCard = await unwrap(getLemmaByStrongs({ client: publicClient, path: { strongs }, query: { lang } }));
     cache.set(key, card);
     return card;
   } catch (err) {
-    // 404 = Strong's not in the loaded set; cache the miss so we never retry.
     if (err instanceof ApiError && err.status === 404) {
       cache.set(key, null);
       return null;
     }
-    // Transient failure (network / 5xx): don't cache, so a later tap is free
-    // to retry. The caller renders the bundled English entry meanwhile.
     console.warn(`lemma fetch failed for ${strongs} (${lang}):`, err);
     return null;
   }

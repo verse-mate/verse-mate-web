@@ -42,6 +42,7 @@ const CLOSE = {
   withinOne: 2,
   comparable: 2,
   flagged: false,
+  flagReasons: [],
 };
 
 const FAR = {
@@ -58,6 +59,7 @@ const FAR = {
   withinOne: 2,
   comparable: 3,
   flagged: true,
+  flagReasons: ['composite', 'dimension'] as Comparison['sessions'][number]['flagReasons'],
 };
 
 const FULL: Comparison = {

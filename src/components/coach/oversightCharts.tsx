@@ -106,7 +106,7 @@ export function RadarChart({ vals, avg }: { vals: number[]; avg?: number[] }) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block', height: 'auto', overflow: 'visible', maxWidth: 380, margin: '0 auto' }} role="img" aria-label={`${N}-dimension radar`}>
       {[1, 2, 3, 4, 5].map((lv, ri) => {
-        const p = [];
+        const p: string[] = [];
         for (let i = 0; i < N; i++) { const q = pt(lv, i); p.push(`${q[0].toFixed(1)},${q[1].toFixed(1)}`); }
         return <polygon key={`r${ri}`} points={p.join(' ')} fill="none" stroke="#EAE6DC" strokeWidth={1} />;
       })}

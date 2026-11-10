@@ -3,10 +3,14 @@ import { ChevronDown, FileText } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { useRubric } from '@/hooks/useRubric';
 import { useCoachReportDetail } from '@/hooks/useCoach';
-import { statusColor, type CoachReport, type CoachReportSummary } from '@/services/coachService';
+import { dateLabelOf, statusColor, type CoachReport, type CoachReportSummary } from '@/services/coachService';
 import { CoachCard, PdfDownload, PipelineCopyTag, StatusPill } from './CoachUi';
 import ReportBody from './ReportBody';
 import SessionNotes from './SessionNotes';
+
+function isFullReport(report: CoachReport | CoachReportSummary): report is CoachReport {
+  return 'clusters' in report && Array.isArray(report.clusters) && 'feedback' in report;
+}
 
 export default function ReportCard({
   report,
@@ -26,7 +30,7 @@ export default function ReportCard({
   const [open, setOpen] = useState(false);
   const { rubric } = useRubric();
   const bandLabels = (rubric?.statusBands ?? []).map((b) => b.label);
-  const color = statusColor(report.status, bandLabels);
+  const color = statusColor(report.status ?? '', bandLabels);
 
   return (
     <CoachCard testId={`coach-report-${report.id}`} style={{ padding: 0, overflow: 'hidden' }}>
@@ -61,7 +65,7 @@ export default function ReportCard({
         </div>
         <div style={{ minWidth: 0, flex: 1 }}>
           <p style={{ margin: 0, fontSize: 13.5, fontWeight: 700, color: vmTokens.textPrimary, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-            {report.dateLabel}
+            {dateLabelOf(report)}
           </p>
           <p style={{ margin: '2px 0 0', fontSize: 12, color: vmTokens.textSecondary, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             {report.session}
@@ -70,7 +74,7 @@ export default function ReportCard({
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4, flexShrink: 0 }}>
           <span style={{ fontSize: 18, fontWeight: 700, color: vmTokens.textPrimary, lineHeight: 1 }}>
-            {Math.round(report.score)}
+            {report.score === undefined ? '–' : Math.round(report.score)}
           </span>
           <StatusPill status={report.status} emoji={report.statusEmoji} size="sm" />
         </div>
@@ -81,7 +85,7 @@ export default function ReportCard({
       </button>
 
       {open &&
-        ('clusters' in report ? (
+        (isFullReport(report) ? (
           <ExpandedReport report={report} admin={admin} coachId={coachId} leaderName={leaderName} />
         ) : (
           <FetchedReport id={report.id} admin={admin} coachId={coachId} leaderName={leaderName} />

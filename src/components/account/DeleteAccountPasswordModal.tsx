@@ -13,6 +13,7 @@ interface DeleteAccountPasswordModalProps {
   onConfirm: (password: string) => void;
   isLoading: boolean;
   error?: string;
+  passwordOptional?: boolean;
 }
 
 const overlayStyle: React.CSSProperties = {
@@ -135,6 +136,7 @@ export function DeleteAccountPasswordModal({
   visible,
   onCancel,
   onConfirm,
+  passwordOptional = false,
   isLoading,
   error,
 }: DeleteAccountPasswordModalProps) {
@@ -160,10 +162,10 @@ export function DeleteAccountPasswordModal({
   if (!visible) return null;
 
   const handleConfirm = () => {
-    if (password.trim()) onConfirm(password);
+    if (passwordOptional || password.trim()) onConfirm(password);
   };
 
-  const disabled = isLoading || !password.trim();
+  const disabled = isLoading || (!passwordOptional && !password.trim());
 
   return (
     <div
@@ -180,6 +182,11 @@ export function DeleteAccountPasswordModal({
           Verify Your Password
         </h2>
         <p style={subtitleStyle}>Enter your password to confirm account deletion</p>
+        {passwordOptional ? (
+          <p style={subtitleStyle}>
+            If you sign in with Google or Apple and never set a password, leave this empty.
+          </p>
+        ) : null}
 
         <form
           onSubmit={(e) => {

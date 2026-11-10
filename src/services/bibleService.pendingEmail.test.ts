@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { describeFetch } from '@/test/fetchCall';
 
-import { clearTokens, setAccessToken } from './api';
+import { clearTokens, setAccessToken } from '@/api/client';
 import { fetchPendingEmail, updateAuthProfile } from './bibleService';
 
 const ORIGINAL_FETCH = global.fetch;
@@ -15,10 +16,10 @@ function jsonResponse(body: unknown, status = 200): Response {
 let calls: Array<{ url: string; init?: RequestInit }> = [];
 function mockFetch(router: (url: string, init?: RequestInit) => Response) {
   calls = [];
-  global.fetch = ((input: RequestInfo | URL, init?: RequestInit) => {
-    const url = typeof input === 'string' ? input : input.toString();
-    calls.push({ url, init });
-    return Promise.resolve(router(url, init));
+  global.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+    const call = await describeFetch(input, init);
+    calls.push(call);
+    return router(call.url, call.init);
   }) as typeof fetch;
 }
 

@@ -501,7 +501,7 @@ export default function BookSelector({ onClose, onSelect, initialTab, initialQue
             {Array.from({ length: selectedBookObj.chapters }, (_, i) => i + 1).map(ch => (
               <button
                 key={ch}
-                onClick={() => onSelect(selectedBook, ch, selectedBookObj.bookId)}
+                onClick={() => onSelect(selectedBookObj.name, ch, selectedBookObj.bookId)}
                 data-testid={`chapter-${ch}`}
                 className="h-12 rounded-xl bg-secondary border border-border text-foreground text-[14px] font-medium"
               >

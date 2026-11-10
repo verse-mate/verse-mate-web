@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { scrubEvent } from '@/lib/analyticsPrivacy';
 import { requestAudio } from '@/audio/audioApi';
-import { api } from './api';
+import { removeNote } from './bibleService';
 import { fetchAdminMonthly, fetchCoachTrendsFor, fetchNotetakerStatus, fetchNotetakerZoom, updateAdminCoachClass } from './coachService';
 
 describe('a failed coach request', () => {
@@ -67,13 +67,13 @@ describe('a failed API request', () => {
 
   it('names its path without the query string', async () => {
     vi.stubGlobal('fetch', vi.fn(async () => new Response('{}', { status: 500 })));
-    const error = await api.delete('/bible/book/note/remove?note_id=42').catch((e: Error) => e);
+    const error = await removeNote('42').catch((e: Error) => e);
     expect((error as Error).message).toBe('API DELETE /bible/book/note/remove failed: 500');
   });
 
   it('names a request that never reached the server', async () => {
     vi.stubGlobal('fetch', vi.fn(async () => Promise.reject(new TypeError('Failed to fetch'))));
-    const error = await api.delete('/bible/book/note/remove?note_id=42').catch((e: Error) => e);
+    const error = await removeNote('42').catch((e: Error) => e);
     expect((error as Error).message).toBe('Network error: DELETE /bible/book/note/remove failed: TypeError: Failed to fetch');
   });
 });

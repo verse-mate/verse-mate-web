@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 import { expect, test } from '@playwright/test';
 
-import { CONTRACT, INVALID_REQUEST, UNMATCHED_ROUTE, contractErrors, refusalOf } from './contract';
+import { CONTRACT, INVALID_REQUEST, UNMATCHED_ROUTE, contractErrors, refusalOf, schemaErrors } from './contract';
 import { API, useCoachApi } from './fixtures';
 
 const SOURCE = JSON.parse(readFileSync(join(import.meta.dirname, 'coach-contract.source.json'), 'utf8'));
@@ -35,6 +35,21 @@ test.describe("The fake API is held to the backend's contract snapshot (refresh:
     expect(contractErrors('POST', CORRECTION, 200, { base: 80, status: 'Strong' })).not.toEqual([]);
     expect(contractErrors('POST', CORRECTION, 200, { base: 80, score: 84, status: 'Strong', emoji: '🟢' })).not.toEqual([]);
     expect(contractErrors('POST', CORRECTION, 200, { base: '80', score: 84, status: 'Strong' })).not.toEqual([]);
+  });
+
+  test('an open object takes the keys its additionalProperties allows, and a closed one strips the rest', () => {
+    const row = { date: '2026-07-18', 'Teaching Craft': 80 };
+    const known = { date: { type: 'string' } };
+    expect(schemaErrors({ type: 'object', properties: known, additionalProperties: true }, row)).toEqual([]);
+    expect(schemaErrors({ type: 'object', properties: known, additionalProperties: { type: 'number' } }, row)).toEqual([]);
+    expect(schemaErrors({ type: 'object', properties: known, additionalProperties: { type: 'number' } }, { ...row, note: 'x' })).toEqual([
+      'body.note: expected number, got "x"',
+    ]);
+    for (const closed of [{}, { additionalProperties: false }]) {
+      expect(schemaErrors({ type: 'object', properties: known, ...closed }, row)).toEqual([
+        'body.Teaching Craft: not in the contract, the server strips it',
+      ]);
+    }
   });
 
   test('a path with no server route answers 404, and an invalid body answers the validator 422', () => {

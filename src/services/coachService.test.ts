@@ -56,6 +56,8 @@ import {
   refusalCode,
 } from './coachService';
 
+import { describeFetch } from '@/test/fetchCall';
+
 const ORIGINAL_FETCH = global.fetch;
 
 function jsonResponse(body: unknown, status = 200): Response {
@@ -68,10 +70,10 @@ function jsonResponse(body: unknown, status = 200): Response {
 let calls: Array<{ url: string; init?: RequestInit }> = [];
 function mockFetch(router: (url: string, init?: RequestInit) => Response) {
   calls = [];
-  global.fetch = vi.fn((input: RequestInfo | URL, init?: RequestInit) => {
-    const url = typeof input === 'string' ? input : input.toString();
-    calls.push({ url, init });
-    return Promise.resolve(router(url, init));
+  global.fetch = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+    const call = await describeFetch(input, init);
+    calls.push(call);
+    return router(call.url, call.init);
   }) as unknown as typeof fetch;
 }
 
@@ -103,16 +105,6 @@ describe('coachService', () => {
     expect(auth).toBe('Bearer test-token');
   });
 
-  it('reads the session list from the older reports route when the summary route is not there yet', async () => {
-    mockFetch((url) => {
-      if (url.endsWith('/coach/reports')) return jsonResponse({ reports: [{ id: 'r3' }, { id: 'r2' }, { id: 'r1' }] });
-      return jsonResponse({ error: 'NOT_FOUND', message: 'Not found' }, 404);
-    });
-    await expect(fetchCoachReportSummaries(1, 1)).resolves.toEqual({ items: [{ id: 'r2' }], total: 3, streakWeeks: 0, quarterSessions: 0 });
-    mockFetch(() => jsonResponse({ error: 'INTERNAL', message: 'boom' }, 500));
-    await expect(fetchCoachReportSummaries()).rejects.toThrow();
-    expect(calls.map((c) => c.url).some((u) => u.endsWith('/coach/reports'))).toBe(false);
-  });
 
   it("an admin's drill-in into a leader that does not exist keeps the server's refusal, with no fallback", async () => {
     mockFetch(() =>
@@ -314,15 +306,15 @@ describe('coachService', () => {
   });
 
   it('DELETEs a class by id', async () => {
-    let seen: { url: string; method?: string } | null = null;
+    const seen: { url: string; method?: string }[] = [];
     mockFetch((url, init) => {
-      seen = { url, method: init?.method };
+      seen.push({ url, method: init?.method });
       return jsonResponse({ success: true });
     });
     await deleteCoachClass('c1');
-    expect(seen).not.toBeNull();
-    expect(seen?.url).toContain('/coach/classes/c1');
-    expect(seen?.method).toBe('DELETE');
+    expect(seen).toHaveLength(1);
+    expect(seen[0].url).toContain('/coach/classes/c1');
+    expect(seen[0].method).toBe('DELETE');
   });
 
   it('sends the start time, zone and notetaker choice with a class', async () => {

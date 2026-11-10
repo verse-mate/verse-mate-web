@@ -1,19 +1,16 @@
-/**
- * feat-explanation-audio (verse-mate-web port).
- *
- * Reader endpoint contract — br-audio-007 four-field shape:
- *   200 { audio: { url, duration_seconds, voice, language_code } }
- *   202 { job: { job_id, estimated_ready_seconds } }
- *
- * Per br-audio-017 the audio endpoints intentionally use raw fetch
- * (long-poll + AbortController) rather than the generated SDK — easier
- * timeout + cancellation control. We route through `fetchWithAuth` so
- * the access token is attached AND auto-refreshed on 401, matching the
- * rest of the app. Without that retry, an expired access token would
- * silently 401 → flip the chip to GuestScopeExceededError, and the user
- * would see "Sign in to listen" even though they ARE signed in.
- */
-import { API_BASE_URL, fetchWithAuth } from '@/services/api';
+import type {
+  GetBibleExplanationAudioByExplanationIdProgressResponse,
+  GetBibleExplanationAudioByExplanationIdResponses,
+  GetBibleExplanationAudioJobsByJobIdResponse,
+  PostBibleExplanationAudioByExplanationIdProgressData,
+} from '@/api/generated/types.gen';
+import { getAccessToken, quietClient } from '@/api/client';
+import {
+  getBibleExplanationAudioByExplanationId,
+  getBibleExplanationAudioByExplanationIdProgress,
+  getBibleExplanationAudioJobsByJobId,
+  postBibleExplanationAudioByExplanationIdProgress,
+} from '@/api/generated/sdk.gen';
 
 const POLL_INTERVAL_MS = 2000;
 
@@ -54,45 +51,18 @@ function pollTimeoutMs(estimatedReadySeconds: number | undefined): number {
   return Math.max(POLL_TIMEOUT_MIN_MS, Math.min(POLL_TIMEOUT_MAX_MS, computed));
 }
 
-export interface ReaderAudio {
-  url: string;
-  duration_seconds: number;
-  voice: string;
-  language_code: string;
-}
+export type ReaderAudio = GetBibleExplanationAudioByExplanationIdResponses[200]['audio'];
 
-export interface ResumeProgress {
-  position_seconds: number;
-  duration_seconds: number;
-  updated_at: string;
-}
+export type ResumeProgress = GetBibleExplanationAudioByExplanationIdProgressResponse;
 
-export type SaveReason = 'pause' | 'complete' | 'background' | 'navigation';
+export type SaveReason = PostBibleExplanationAudioByExplanationIdProgressData['body']['reason'];
 
-interface AudioResponse {
-  audio?: ReaderAudio;
-  job?: { job_id: string; estimated_ready_seconds: number };
-}
+type AudioResponse = Partial<
+  GetBibleExplanationAudioByExplanationIdResponses[200] & GetBibleExplanationAudioByExplanationIdResponses[202]
+>;
 
-interface JobStatusResponse {
-  job: {
-    job_id: string;
-    status: 'queued' | 'active' | 'completed' | 'failed';
-    audio?: ReaderAudio;
-    error_code?: string;
-  };
-}
+type AudioJob = GetBibleExplanationAudioJobsByJobIdResponse['job'];
 
-/**
- * Thrown when a guest (br-audio-013) requests audio for a chapter
- * outside their allowed scope. Lets the UI render a sign-in CTA
- * instead of a generic error message.
- *
- * Surfaced only when fetchWithAuth could NOT refresh into a valid
- * session (no refresh token, refresh returned non-OK, or refresh
- * succeeded but the retry still came back 401). All three mean the
- * user is effectively a guest from the backend's perspective.
- */
 export class GuestScopeExceededError extends Error {
   constructor() {
     super('Sign in to listen to this chapter');
@@ -100,20 +70,11 @@ export class GuestScopeExceededError extends Error {
   }
 }
 
-function audioUrl(
-  explanationId: number,
-  voice?: string,
-  language?: string,
-): string {
-  const params = new URLSearchParams();
-  if (voice) params.set('voice', voice);
-  if (language) params.set('language', language);
-  const qs = params.toString();
-  return `${API_BASE_URL}/bible/explanation/audio/${explanationId}${qs ? `?${qs}` : ''}`;
-}
-
-function progressUrl(explanationId: number): string {
-  return `${API_BASE_URL}/bible/explanation/audio/${explanationId}/progress`;
+async function parsed<T>(pending: Promise<T>, what: string): Promise<T> {
+  return pending.catch((error: unknown) => {
+    if (error instanceof SyntaxError) throw new Error(`${what} returned invalid JSON`);
+    throw error;
+  });
 }
 
 export async function requestAudio(args: {
@@ -122,45 +83,35 @@ export async function requestAudio(args: {
   language?: string;
   signal?: AbortSignal;
 }): Promise<{ status: number; body: AudioResponse }> {
-  const res = await fetchWithAuth(
-    audioUrl(args.explanationId, args.voice, args.language),
-    { signal: args.signal },
+  const { data, response } = await parsed(
+    getBibleExplanationAudioByExplanationId({
+      client: quietClient,
+      path: { explanationId: args.explanationId },
+      query: {
+        ...(args.voice ? { voice: args.voice } : {}),
+        ...(args.language ? { language: args.language } : {}),
+      },
+      parseAs: 'json',
+      signal: args.signal,
+    }),
+    'Audio request',
   );
-  const body =
-    res.status === 204
-      ? {}
-      : ((await res.json().catch(() => {
-          throw new Error('Audio request returned invalid JSON');
-        })) as AudioResponse);
-  return { status: res.status, body };
+  return { status: response.status, body: response.ok && data ? data : {} };
 }
 
-async function pollJob(args: {
-  jobId: string;
-  signal?: AbortSignal;
-}): Promise<JobStatusResponse['job']> {
-  const res = await fetchWithAuth(
-    `${API_BASE_URL}/bible/explanation/audio/jobs/${encodeURIComponent(args.jobId)}`,
-    { signal: args.signal },
+async function pollJob(args: { jobId: string; signal?: AbortSignal }): Promise<AudioJob> {
+  const { data, response } = await parsed(
+    getBibleExplanationAudioJobsByJobId({
+      client: quietClient,
+      path: { jobId: args.jobId },
+      parseAs: 'json',
+      signal: args.signal,
+    }),
+    'Job status',
   );
-  // 404 right after enqueue is a known race in the backend's
-  // dedup-clear path (verse-mate#194): when a previously-failed job
-  // is removed and a new one added under the same id, BullMQ has a
-  // brief window where `getJob` returns nothing. Surfacing that 404
-  // as a hard error caused the chip to flip to "Audio unavailable"
-  // even though the worker was processing the job — exactly the
-  // intermittent error users hit on Genesis 20 immediately after
-  // verse-mate#195 deployed. Treat 404 as still-queued and let the
-  // outer poll loop's bounded timeout decide if the job is genuinely
-  // gone.
-  if (res.status === 404) {
-    return { job_id: args.jobId, status: 'queued' };
-  }
-  if (!res.ok) throw new Error(`Job status failed: HTTP ${res.status}`);
-  const body = (await res.json().catch(() => {
-    throw new Error('Job status returned invalid JSON');
-  })) as JobStatusResponse;
-  return body.job;
+  if (response.status === 404) return { job_id: args.jobId, status: 'queued' };
+  if (!response.ok || !data) throw new Error(`Job status failed: HTTP ${response.status}`);
+  return data.job;
 }
 
 /**
@@ -175,9 +126,6 @@ export async function fetchAudioWithPolling(args: {
 }): Promise<ReaderAudio> {
   const initial = await requestAudio(args);
   if (initial.status === 200 && initial.body.audio) return initial.body.audio;
-  // br-audio-013: guests can only request Genesis 1. fetchWithAuth
-  // already attempted a refresh, so a 401 here means the user is
-  // genuinely outside the allowed scope.
   if (initial.status === 401) throw new GuestScopeExceededError();
   if (initial.status !== 202 || !initial.body.job) {
     throw new Error(`Unexpected audio response: ${initial.status}`);
@@ -197,31 +145,43 @@ export async function fetchAudioWithPolling(args: {
   throw new Error(`Audio generation timed out after ${Math.round(timeoutMs / 1000)}s`);
 }
 
-export async function fetchProgress(
-  explanationId: number,
-): Promise<ResumeProgress | null> {
-  const res = await fetchWithAuth(progressUrl(explanationId));
-  if (res.status === 404 || !res.ok) return null;
-  return (await res.json().catch(() => {
-    throw new Error('Audio progress returned invalid JSON');
-  })) as ResumeProgress;
+export async function fetchProgress(explanationId: number): Promise<ResumeProgress | null> {
+  const { data, response } = await parsed(
+    getBibleExplanationAudioByExplanationIdProgress({
+      client: quietClient,
+      path: { explanationId },
+      parseAs: 'json',
+    }),
+    'Audio progress',
+  );
+  return response.ok && data ? data : null;
 }
 
-export async function saveProgress(args: {
+interface ProgressSave {
   explanationId: number;
   positionSeconds: number;
   durationSeconds: number;
   reason: SaveReason;
-}): Promise<void> {
-  await fetchWithAuth(progressUrl(args.explanationId), {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
+}
+
+function postProgress(args: ProgressSave, keepalive: boolean) {
+  return postBibleExplanationAudioByExplanationIdProgress({
+    client: quietClient,
+    path: { explanationId: args.explanationId },
+    body: {
       position_seconds: args.positionSeconds,
       duration_seconds: args.durationSeconds,
       reason: args.reason,
-    }),
-  }).catch(() => {
-    // Best-effort save — never block playback on a failed save.
+    },
+    keepalive,
   });
+}
+
+export async function saveProgress(args: ProgressSave): Promise<void> {
+  await postProgress(args, false).catch(() => undefined);
+}
+
+export function saveProgressOnUnload(args: Omit<ProgressSave, 'reason'>): void {
+  if (!getAccessToken()) return;
+  postProgress({ ...args, reason: 'navigation' }, true).catch(() => undefined);
 }

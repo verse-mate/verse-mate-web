@@ -1,4 +1,4 @@
-import type { Commentary, JesusEventPassage } from '@/services/types';
+import type { Commentary, JesusEventPassage, JesusHydratedPassage } from '@/services/types';
 
 /**
  * Assemble the By-Line rows for a Jesus event out of the chapter commentary
@@ -90,14 +90,14 @@ export function bylineChapters(
  *   passages that overlap inside one chapter don't print the same verse twice
  */
 export function buildJesusByline(
-  passage: JesusEventPassage | null,
+  passage: JesusEventPassage | JesusHydratedPassage | null,
   commentaries: Commentary[],
   taken?: Set<string>,
 ): JesusBylineRow[] {
   if (!passage) return [];
 
   const textByVerse = new Map<number, string>();
-  for (const v of passage.verses ?? []) textByVerse.set(v.verse_number, v.text);
+  for (const v of 'verses' in passage ? passage.verses : []) textByVerse.set(v.verse_number, v.text);
 
   return commentaries
     .filter((c) => c.type === 'byline' && c.verse > 0 && covers(passage, c.verse))

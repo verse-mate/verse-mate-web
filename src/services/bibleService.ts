@@ -17,139 +17,54 @@ import {
   MostQuotedVerse,
   ExplanationType,
 } from './types';
-import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, getRefreshToken, ApiError, API_BASE_URL } from './api';
+import { clearTokens, setAccessToken, getAccessToken, ApiError, API_BASE_URL } from '@/api/client';
+import { apiClient, publicClient, quietClient, unwrap } from '@/api/client';
+import { textOrUndefined } from '@/api/values';
+import type { GetBibleSearchResponse, PostBibleHighlightAddResponse } from '@/api/generated/types.gen';
+import {
+  deleteAuthAccount as deleteAccountRequest,
+  deleteBibleBookNoteRemove,
+  deleteBibleHighlightByHighlightId,
+  getAuthSession,
+  getBibleAutoHighlightsByBookIdByChapterNumber,
+  getBibleBookBookmarksByUserId,
+  getBibleBookByBookIdByChapterNumber,
+  getBibleBookExplanationByBookIdByChapterNumber,
+  getBibleBookNotesByUserId,
+  getBibleBooks,
+  getBibleHighlightsByUserId,
+  getBibleHighlightThemes,
+  getBibleLanguages,
+  getBibleSearch,
+  getBibleStudyByBookIdByChapterNumber,
+  getBibleStudyLabels,
+  getBibleTestaments,
+  getBibleUserThemePreferences,
+  getBibleVersions,
+  getTopicsById,
+  getTopicsByIdReferences,
+  getTopicsCategories,
+  getTopicsSearch,
+  patchBibleUserThemePreferencesByThemeId,
+  postBibleBookBookmarkAdd,
+  postBibleBookBookmarkRemove,
+  postBibleBookNoteAdd,
+  postBibleHighlightAdd,
+  postUserRecentlyViewedBooksSync,
+  putBibleBookNoteUpdate,
+  putBibleHighlightByHighlightId,
+  getUserMe,
+  patchUserPreferences,
+  postAuthLogin,
+  postAuthLogout,
+  postAuthSignup,
+  postAuthSso,
+  postAuthSsoExchange,
+  putAuthProfile,
+} from '@/api/generated/sdk.gen';
 import { bibleVersions, BibleVersionInfo, TestamentCoverage } from '@/constants/bible-versions';
 import { getPreferredLanguageCode, getVisitLanguage } from '@/hooks/usePreferredLanguage';
 import { getStudyFor, type InductiveStudy, type StudyLabels } from '@versemate/studies';
-
-// ─── Raw API response shapes ─────────────────────────────────────────────
-// Narrow definitions of just the fields we read from each backend payload.
-// Kept local to this file because they are not part of the domain model.
-
-interface BibleBookRaw {
-  bookId: number;
-  name: string;
-  testament: string;
-  chapters?: unknown[];
-}
-
-interface VerseTokenRaw {
-  text: string;
-  strongs?: string;
-  strongs_alt?: string[];
-  confidence?: number;
-}
-
-interface VerseRaw {
-  verseNumber: number;
-  text: string;
-  /**
-   * Strong's-tagged tokens. Returned only when the chapter was fetched with
-   * `tagged=1` AND the row has tokens seeded. Joining each `text` reproduces
-   * the verse's `text` field byte-for-byte (lossless-join invariant).
-   */
-  tokens?: VerseTokenRaw[];
-}
-
-interface ChapterRaw {
-  name?: string;
-  chapters?: Array<{
-    verses?: VerseRaw[];
-    subtitles?: ChapterSubtitle[];
-  }>;
-}
-
-interface ExplanationResponse {
-  explanation?: {
-    explanation?: unknown;
-    explanation_id?: unknown;
-  };
-}
-
-interface AutoHighlightRaw {
-  start_verse: number;
-  end_verse?: number;
-  theme_name?: string;
-  theme_color?: string;
-}
-
-type AutoHighlightsResponse = AutoHighlightRaw[] | { data?: AutoHighlightRaw[] };
-
-interface TopicSearchRaw {
-  topic_id?: string;
-  id?: string;
-  name: string;
-  description?: string;
-  category?: string;
-  slug?: string;
-}
-
-interface TopicReferencesResponse {
-  references?: { content?: string };
-}
-
-interface TopicDetailsResponse {
-  topic?: {
-    topic_id?: string;
-    id?: string;
-    name?: string;
-    description?: string;
-    category?: string;
-    slug?: string;
-  };
-  explanation?: {
-    summary?: unknown;
-    byline?: unknown;
-    detailed?: unknown;
-  };
-}
-
-interface BookmarkRaw {
-  favorite_id: number;
-  book_id: number;
-  book_name: string;
-  chapter_number: number;
-  created_at?: string;
-}
-
-interface NoteRaw {
-  note_id?: number | string;
-  id?: number | string;
-  book_id: number;
-  book_name?: string;
-  chapter_number: number;
-  verse_number?: number;
-  start_verse?: number;
-  text?: string;
-  content?: string;
-  created_at?: string;
-  updated_at?: string;
-}
-
-interface HighlightRaw {
-  highlight_id: number;
-  book_id: number;
-  chapter_number: number;
-  start_verse: number;
-  end_verse?: number;
-  start_char?: number | null;
-  end_char?: number | null;
-  selected_text?: string | null;
-  color: string;
-  created_at?: string;
-}
-
-interface CurrentUserResponse {
-  id?: string;
-  email?: string;
-  fullName?: string;
-  firstName?: string;
-  lastName?: string;
-  imageSrc?: string;
-  hasPassword?: boolean;
-  preferred_language?: string;
-  preferredLanguage?: string;
-}
 
 // ─── Helper: book id <-> name cache ───────────────────────────────────────
 let _booksCache: BibleBook[] | null = null;
@@ -164,14 +79,14 @@ export async function fetchBooks(): Promise<BibleBook[]> {
   if (_booksPromise) return _booksPromise;
   _booksPromise = (async () => {
     try {
-      const data = await api.get<{ books: BibleBookRaw[] }>('/bible/books', undefined, { auth: false });
-      const mapped: BibleBook[] = (data.books || [])
+      const data = await unwrap(getBibleBooks({ client: publicClient }));
+      const mapped: BibleBook[] = data.books
         .map(b => ({
           bookId: b.bookId,
           name: b.name,
           shortName: shortenBookName(b.name),
-          testament: b.testament as 'OT' | 'NT',
-          chapters: Array.isArray(b.chapters) ? b.chapters.length : 0,
+          testament: b.testament,
+          chapters: b.chapters.length,
         }))
         .sort((a, b) => a.bookId - b.bookId);
       _booksCache = mapped;
@@ -273,32 +188,25 @@ async function requestChapter(
   version: BibleVersion
 ): Promise<Chapter> {
   try {
-    // Request Strong's-tagged tokens for every fetch. The backend serves
-    // tokens only for rows that have been seeded; rows without are returned
-    // in the legacy `{verseNumber, text}` shape, so this flag is harmless
-    // for translations we haven't tagged yet (e.g. NASB1995, KJV — those
-    // use the lexicon-overlay path which doesn't need wire tokens).
-    const query: Record<string, string> = { tagged: '1' };
-    if (version) query.bible_version = version;
-
-    const data = await api.get<{ book?: ChapterRaw }>(
-      `/bible/book/${bookId}/${chapter}`,
-      query,
-      { auth: false }
+    const data = await unwrap(
+      getBibleBookByBookIdByChapterNumber({
+        client: publicClient,
+        path: { bookId, chapterNumber: chapter },
+        query: { tagged: '1', ...(version ? { bible_version: version } : {}) },
+      })
     );
-    const bookObj = data?.book;
-    const ch = bookObj?.chapters?.[0];
-    const verses = (ch?.verses || []).map((v: VerseRaw) => ({
-      number: v.verseNumber,
-      text: v.text,
-      ...(v.tokens ? { tokens: v.tokens } : {}),
-    }));
+    const bookObj = 'book' in data ? data.book : null;
+    const ch = bookObj?.chapters[0];
     return {
       book: bookObj?.name || book,
       bookId,
       chapter,
-      verses,
-      subtitles: ch?.subtitles || [],
+      verses: (ch?.verses ?? []).map(v => ({
+        number: v.verseNumber,
+        text: v.text,
+        ...(v.tokens ? { tokens: v.tokens } : {}),
+      })),
+      subtitles: ch?.subtitles ?? [],
     };
   } catch {
     return { book, bookId, chapter, verses: [] };
@@ -306,16 +214,6 @@ async function requestChapter(
 }
 
 // ─── Bible versions (discovery) ────────────────────────────────────────────
-interface BibleVersionRaw {
-  version_key: string;
-  version_name?: string;
-  language_code?: string;
-  license?: string;
-  license_url?: string | null;
-  attribution?: string | null;
-  testament_coverage?: string;
-}
-
 const _staticVersionByKey = new Map(bibleVersions.map(v => [v.key, v]));
 
 /**
@@ -334,10 +232,8 @@ const _staticVersionByKey = new Map(bibleVersions.map(v => [v.key, v]));
  */
 export async function fetchBibleVersions(): Promise<BibleVersionInfo[]> {
   try {
-    const data = await api.get<{ versions?: BibleVersionRaw[] }>('/bible/versions', undefined, {
-      auth: false,
-    });
-    const list = data?.versions || [];
+    const data = await unwrap(getBibleVersions({ client: publicClient }));
+    const list = data.versions;
     if (list.length === 0) return bibleVersions;
     return list.map((v): BibleVersionInfo => {
       const fallback = _staticVersionByKey.get(v.version_key);
@@ -403,6 +299,10 @@ async function loadExplanations(bookId: number, chapter: number): Promise<Explan
 
 const _studyCache = new Map<string, Promise<InductiveStudy | null>>();
 
+function isInductiveStudy(value: unknown): value is InductiveStudy {
+  return typeof value === 'object' && value !== null && 'steps' in value && Array.isArray(value.steps);
+}
+
 /**
  * Fetch the inductive study for a chapter, localized to the current language
  * with English fallback. Mirrors fetchExplanation/loadExplanations: hits the
@@ -420,20 +320,16 @@ export async function fetchStudy(
   const existing = _studyCache.get(key);
   if (existing) return existing;
   const promise = (async (): Promise<InductiveStudy | null> => {
-    try {
-      const data = await api.get<{ study?: { content?: InductiveStudy } | null }>(
-        `/bible/study/${bookId}/${chapter}`,
-        { lang },
-        { auth: true }
-      );
-      if (data?.study?.content) return data.study.content;
-    } catch {
-      // network/API failure → bundled fallback below
-    }
-    // We only reach here on an API miss/failure. DON'T retain the bundled
-    // fallback in the cache: a transient failure (or a translation that lands
-    // a moment later) must not stick permanently — drop the entry so the next
-    // call retries the API.
+    const fromApi = await unwrap(
+      getBibleStudyByBookIdByChapterNumber({
+        client: apiClient,
+        path: { bookId, chapterNumber: chapter },
+        query: { lang },
+      })
+    )
+      .then(data => data.study?.content ?? null)
+      .catch(() => null);
+    if (isInductiveStudy(fromApi)) return fromApi;
     _studyCache.delete(key);
     return (await getStudyFor(bookId, chapter)) ?? null;
   })();
@@ -452,14 +348,14 @@ export async function fetchStudyLabels(
   lang: string
 ): Promise<Partial<StudyLabels> | null> {
   try {
-    const data = await api.get<{ labels?: Record<string, string> | null }>(
-      '/bible/study-labels',
-      { lang },
-      { auth: true }
-    );
-    return (data?.labels as Partial<StudyLabels> | undefined) ?? null;
+    const data = await unwrap(getBibleStudyLabels({ client: apiClient, query: { lang } }));
+    if (!data.labels) return null;
+    const labels: Record<string, string> = {};
+    for (const [name, value] of Object.entries(data.labels)) {
+      if (typeof value === 'string') labels[name] = value;
+    }
+    return labels as Partial<StudyLabels>;
   } catch {
-    // network/API failure → bundled fallback handled by the caller
     return null;
   }
 }
@@ -511,22 +407,17 @@ async function fetchExplanation(
   lang: string
 ): Promise<ExplanationEntry> {
   try {
-    const data = await api.get<ExplanationResponse>(
-      `/bible/book/explanation/${bookId}/${chapter}`,
-      // `lang` localizes commentary for everyone, including guests with no
-      // token. The backend honors it over the JWT `preferred_language` claim,
-      // so a guest's picker choice takes effect without signing in. The token
-      // is still sent (auth: true) so the claim remains the fallback.
-      { explanationType, lang },
-      { auth: true }
+    const data = await unwrap(
+      getBibleBookExplanationByBookIdByChapterNumber({
+        client: apiClient,
+        path: { bookId, chapterNumber: chapter },
+        query: { explanationType, lang },
+      })
     );
-    const text = data?.explanation?.explanation;
-    const rawId = data?.explanation?.explanation_id;
+    const explanation = data.explanation;
     return {
-      text: typeof text === 'string' ? text : '',
-      // Treat 0 / falsy as "unknown id" — local-fallback paths use that
-      // sentinel and AudioInlineEntry must not request audio for it.
-      id: typeof rawId === 'number' && rawId > 0 ? rawId : null,
+      text: explanation?.explanation ?? '',
+      id: explanation && explanation.explanation_id > 0 ? explanation.explanation_id : null,
     };
   } catch {
     return { text: '', id: null };
@@ -627,10 +518,6 @@ export interface AutoHighlightRange {
   color: string; // API color names: blue, green, yellow, ...
 }
 
-/**
- * Fetch auto-highlight ranges for a chapter.
- * API shape: `{ success: true, data: [{ start_verse, end_verse, theme_name, theme_color, ... }] }`
- */
 export async function fetchAutoHighlights(
   book: string,
   chapter: number
@@ -638,57 +525,48 @@ export async function fetchAutoHighlights(
   const bookId = await resolveBookId(book);
   if (!bookId) return [];
   try {
-    const resp = await api.get<AutoHighlightsResponse>(
-      `/bible/auto-highlights/${bookId}/${chapter}`,
-      undefined,
-      { auth: false }
+    const resp = await unwrap(
+      getBibleAutoHighlightsByBookIdByChapterNumber({
+        client: publicClient,
+        path: { book_id: String(bookId), chapter_number: String(chapter) },
+      })
     );
-    const list: AutoHighlightRaw[] = Array.isArray(resp) ? resp : resp?.data || [];
-    return list.map(h => ({
+    return resp.data.map(h => ({
       startVerse: h.start_verse,
-      endVerse: h.end_verse ?? h.start_verse,
-      theme: h.theme_name || '',
-      color: h.theme_color || 'yellow',
+      endVerse: h.end_verse,
+      theme: h.theme_name,
+      color: h.theme_color,
     }));
   } catch {
     return [];
   }
 }
 
-// ─── Topics ──────────────────────────────────────────────────────────────
-function topicLanguageQuery(bibleVersion?: string): Record<string, string> {
+function topicLanguage(): { lang?: string } {
   const visit = getVisitLanguage();
-  return {
-    ...(bibleVersion ? { bible_version: bibleVersion } : {}),
-    ...(visit ? { lang: visit } : {}),
-  };
+  return visit ? { lang: visit } : {};
 }
 
 async function loadTopicIndex(): Promise<{ categories: string[]; topics: Topic[]; complete: boolean }> {
-  const catResp = await api.get<{ categories: string[] }>('/topics/categories', undefined, {
-    auth: false,
-  });
-  const categories = catResp?.categories || [];
+  const catResp = await unwrap(getTopicsCategories({ client: publicClient }));
+  const categories = catResp.categories;
   const topics: Topic[] = [];
   let complete = true;
   for (const cat of categories) {
-    try {
-      const result = await api.get<{ topics?: TopicSearchRaw[] }>(
-        '/topics/search',
-        { category: cat, limit: 500, ...topicLanguageQuery() },
-        { auth: false }
-      );
-      for (const t of result?.topics || []) {
-        topics.push({
-          id: t.topic_id || t.id,
-          name: t.name,
-          description: t.description || '',
-          category: t.category || cat,
-          slug: t.slug,
-        });
-      }
-    } catch {
+    const result = await unwrap(
+      getTopicsSearch({ client: publicClient, query: { category: cat, ...topicLanguage() } })
+    ).catch(() => null);
+    if (!result) {
       complete = false;
+      continue;
+    }
+    for (const t of result.topics) {
+      topics.push({
+        id: t.topic_id,
+        name: t.name,
+        description: t.description ?? '',
+        category: cat,
+      });
     }
   }
   return { categories, topics, complete };
@@ -718,6 +596,10 @@ export async function fetchTopics(): Promise<Topic[]> {
   } catch {
     return [];
   }
+}
+
+function referencesContentOf(references: { content: string } | null | undefined): string {
+  return references?.content ?? '';
 }
 
 function capitalize(s: string) {
@@ -835,11 +717,8 @@ function parseTopicVerses(text: string): TopicVerse[] {
  */
 export async function fetchTopicSections(topicId: string): Promise<TopicSection[]> {
   try {
-    const data = await api.get<TopicReferencesResponse>(`/topics/${topicId}/references`, undefined, {
-      auth: false,
-    });
-    const content: string = data?.references?.content || '';
-    return parseTopicReferencesMarkdown(content, topicId);
+    const data = await unwrap(getTopicsByIdReferences({ client: publicClient, path: { id: topicId } }));
+    return parseTopicReferencesMarkdown(referencesContentOf(data.references), topicId);
   } catch {
     return [];
   }
@@ -866,37 +745,31 @@ export async function fetchTopicDetails(
   bibleVersion?: string
 ): Promise<TopicDetails> {
   try {
-    const [detailsRes, refsRes] = await Promise.all([
-      api
-        .get<TopicDetailsResponse>(
-          `/topics/${topicId}`,
-          topicLanguageQuery(bibleVersion),
-          { auth: false }
-        )
-        .catch(() => null),
-      api
-        .get<TopicReferencesResponse>(`/topics/${topicId}/references`, undefined, { auth: false })
-        .catch(() => null),
+    const [data, refsRes] = await Promise.all([
+      unwrap(
+        getTopicsById({
+          client: publicClient,
+          path: { id: topicId },
+          query: { ...(bibleVersion ? { bible_version: bibleVersion } : {}), ...topicLanguage() },
+        })
+      ).catch(() => null),
+      unwrap(getTopicsByIdReferences({ client: publicClient, path: { id: topicId } })).catch(() => null),
     ]);
 
-    const data = detailsRes;
-    const topic: Topic | null = data?.topic
+    const raw = data?.topic;
+    const topic: Topic | null = raw
       ? {
-          id: data.topic.topic_id || data.topic.id || topicId,
-          name: data.topic.name || '',
-          description: data.topic.description || '',
-          category: data.topic.category,
-          slug: data.topic.slug,
+          id: raw.topic_id,
+          name: raw.name,
+          description: raw.description ?? '',
+          category: raw.category,
         }
       : null;
-    const sections = parseTopicReferencesMarkdown(
-      refsRes?.references?.content || '',
-      topicId
-    );
+    const sections = parseTopicReferencesMarkdown(referencesContentOf(refsRes?.references), topicId);
     const explanation = {
-      summary: typeof data?.explanation?.summary === 'string' ? data.explanation.summary : '',
-      byline: typeof data?.explanation?.byline === 'string' ? data.explanation.byline : '',
-      detailed: typeof data?.explanation?.detailed === 'string' ? data.explanation.detailed : '',
+      summary: data?.explanation.summary ?? '',
+      byline: data?.explanation.byline ?? '',
+      detailed: data?.explanation.detailed ?? '',
     };
     return { topic, sections, explanation };
   } catch {
@@ -954,68 +827,75 @@ const TOP_VERSES_FALLBACK: MostQuotedVerse[] = [
   { reference: 'Ephesians 2:8-9', book: 'Ephesians', bookId: 49, chapter: 2, verse: 8, text: 'For by grace you have been saved through faith. And this is not your own doing; it is the gift of God.', quoteCount: 3456 },
 ];
 
-// ─── Bookmarks ────────────────────────────────────────────────────────────
-export async function fetchBookmarks(userId: string): Promise<Bookmark[]> {
+export class RefusedWriteError extends Error {
+  constructor(public operation: string, public reason?: string) {
+    super(reason ? `${operation} was refused: ${reason}` : `${operation} was refused`);
+  }
+}
+
+function saved<T extends { success: boolean }>(operation: string, data: T): T {
+  if (!data.success) throw new RefusedWriteError(operation);
+  return data;
+}
+
+export async function fetchBookmarks(userId: string): Promise<Bookmark[] | null> {
   try {
-    const data = await api.get<{ favorites: BookmarkRaw[] }>(`/bible/book/bookmarks/${userId}`);
-    return (data.favorites || []).map(f => ({
+    const data = await unwrap(getBibleBookBookmarksByUserId({ client: apiClient, path: { user_id: userId } }));
+    return data.favorites.map(f => ({
       id: String(f.favorite_id),
       favoriteId: f.favorite_id,
       bookId: f.book_id,
       book: f.book_name,
       chapter: f.chapter_number,
       version: 'ESV' as BibleVersion,
-      createdAt: f.created_at || new Date().toISOString(),
     }));
   } catch {
-    return [];
+    return null;
   }
 }
 
-export async function addBookmark(args: {
+interface BookmarkTarget {
   userId: string;
   bookId: number;
   chapter: number;
   insightType?: string;
-}) {
-  return api.post('/bible/book/bookmark/add', {
+}
+
+function bookmarkBody(args: BookmarkTarget) {
+  return {
     user_id: args.userId,
     book_id: args.bookId,
     chapter_number: args.chapter,
     ...(args.insightType ? { insight_type: args.insightType } : {}),
-  });
+  };
 }
 
-export async function removeBookmark(args: {
-  userId: string;
-  bookId: number;
-  chapter: number;
-  insightType?: string;
-}) {
-  return api.post('/bible/book/bookmark/remove', {
-    user_id: args.userId,
-    book_id: args.bookId,
-    chapter_number: args.chapter,
-    ...(args.insightType ? { insight_type: args.insightType } : {}),
-  });
+export async function addBookmark(args: BookmarkTarget) {
+  return saved('Bookmark add', await unwrap(postBibleBookBookmarkAdd({ client: apiClient, body: bookmarkBody(args) })));
 }
 
-// ─── Notes ────────────────────────────────────────────────────────────────
-export async function fetchNotes(userId: string): Promise<Note[]> {
+export async function removeBookmark(args: BookmarkTarget) {
+  return saved(
+    'Bookmark removal',
+    await unwrap(postBibleBookBookmarkRemove({ client: apiClient, body: bookmarkBody(args) }))
+  );
+}
+
+export async function fetchNotes(userId: string): Promise<Note[] | null> {
   try {
-    const data = await api.get<{ notes: NoteRaw[] }>(`/bible/book/notes/${userId}`);
-    return (data.notes || []).map(n => ({
-      id: String(n.note_id ?? n.id),
+    const data = await unwrap(getBibleBookNotesByUserId({ client: apiClient, path: { user_id: userId } }));
+    return data.notes.map(n => ({
+      id: n.note_id,
       bookId: n.book_id,
-      book: n.book_name || '',
+      book: n.book_name,
       chapter: n.chapter_number,
-      verse: n.verse_number ?? n.start_verse,
-      text: n.text || n.content || '',
-      createdAt: n.created_at || new Date().toISOString(),
-      updatedAt: n.updated_at || n.created_at || new Date().toISOString(),
+      verse: n.verse_number ?? 0,
+      text: n.content,
+      createdAt: n.created_at,
+      updatedAt: n.updated_at,
     }));
   } catch {
-    return [];
+    return null;
   }
 }
 
@@ -1023,66 +903,92 @@ export async function addNote(args: {
   userId: string;
   bookId: number;
   chapter: number;
-  /** 0 means chapter-level note — `verse_id` is omitted in that case. */
   verse: number;
   text: string;
 }) {
-  // Backend schema (verified against verse-mate-mobile/src/api/generated):
-  //   POST /bible/book/note/add
-  //   body: { user_id, book_id, chapter_number, verse_id?, content }
-  // `verse_id` is OPTIONAL — omit it for chapter-level notes (where the
-  // frontend uses verse=0 as a marker matching BookmarksScreen's `!b.verse`).
-  // Earlier revisions sent `verse_number` + `text`, both wrong field names —
-  // every POST 400'd and AppContext rolled back the optimistic note, so the
-  // user never saw their note persist after sign-in. Issue #133 follow-up.
-  return api.post('/bible/book/note/add', {
-    user_id: args.userId,
-    book_id: args.bookId,
-    chapter_number: args.chapter,
-    ...(args.verse > 0 ? { verse_id: args.verse } : {}),
-    content: args.text,
-  });
+  return saved(
+    'Note add',
+    await unwrap(
+      postBibleBookNoteAdd({
+        client: apiClient,
+        body: {
+          user_id: args.userId,
+          book_id: args.bookId,
+          chapter_number: args.chapter,
+          ...(args.verse > 0 ? { verse_id: args.verse } : {}),
+          content: args.text,
+        },
+      })
+    )
+  );
 }
 
 export async function updateNote(id: string, text: string) {
-  // Backend expects `content` (not `text`) per the generated schema:
-  //   PUT /bible/book/note/update body: { note_id, content }
-  return api.put('/bible/book/note/update', { note_id: id, content: text });
+  return saved(
+    'Note edit',
+    await unwrap(putBibleBookNoteUpdate({ client: apiClient, body: { note_id: id, content: text } }))
+  );
 }
 
 export async function removeNote(id: string) {
-  return api.delete(`/bible/book/note/remove?note_id=${id}`);
+  return saved(
+    'Note removal',
+    await unwrap(deleteBibleBookNoteRemove({ client: apiClient, query: { note_id: id } }))
+  );
 }
 
-// ─── Highlights ───────────────────────────────────────────────────────────
 export async function fetchHighlights(userId: string): Promise<Highlight[]> {
   try {
-    // Resolve book_id → book name in parallel with the fetch so downstream
-    // consumers (HighlightsScreen, etc.) can display "James 2" instead of
-    // " 2". The /bible/highlights API only returns book_id.
     const [data, books] = await Promise.all([
-      api.get<{ highlights: HighlightRaw[] }>(`/bible/highlights/${userId}`),
+      unwrap(getBibleHighlightsByUserId({ client: apiClient, path: { user_id: userId } })),
       fetchBooks(),
     ]);
     const bookNameById = new Map(books.map(b => [b.bookId, b.name]));
-    return (data.highlights || []).map(h => ({
-      id: String(h.highlight_id),
-      highlightId: h.highlight_id,
-      bookId: h.book_id,
-      book: bookNameById.get(h.book_id) || '',
-      chapter: h.chapter_number,
-      verse: h.start_verse,
-      startVerse: h.start_verse,
-      endVerse: h.end_verse,
-      startChar: h.start_char,
-      endChar: h.end_char,
-      ...(h.selected_text ? { selectedText: h.selected_text } : {}),
-      color: h.color as HighlightColor,
-      createdAt: h.created_at || new Date().toISOString(),
-    }));
+    return data.highlights.map(h => {
+      const selectedText = h.selected_text;
+      return {
+        id: String(h.highlight_id),
+        highlightId: h.highlight_id,
+        bookId: h.book_id,
+        book: bookNameById.get(h.book_id) || '',
+        chapter: h.chapter_number,
+        verse: h.start_verse,
+        startVerse: h.start_verse,
+        endVerse: h.end_verse,
+        startChar: h.start_char,
+        endChar: h.end_char,
+        ...(selectedText ? { selectedText } : {}),
+        color: h.color,
+        createdAt: h.created_at,
+      };
+    });
   } catch {
     return [];
   }
+}
+
+export interface SavedHighlight {
+  highlightId: number;
+  startVerse: number;
+  endVerse: number;
+  startChar: number | null;
+  endChar: number | null;
+  mergedHighlightIds: number[];
+}
+
+function savedHighlightOf(data: PostBibleHighlightAddResponse): SavedHighlight {
+  if (!('highlight' in data) || !data.success) {
+    throw new RefusedWriteError('Highlight add', 'error' in data ? data.error : undefined);
+  }
+  const h = data.highlight;
+  return {
+    highlightId: h.highlight_id,
+    startVerse: h.start_verse,
+    endVerse: h.end_verse,
+    startChar: h.start_char,
+    endChar: h.end_char,
+    mergedHighlightIds: data.merged_highlight_ids ?? [],
+  };
 }
 
 export async function addHighlight(h: {
@@ -1092,35 +998,80 @@ export async function addHighlight(h: {
   startVerse: number;
   endVerse?: number;
   color: HighlightColor;
-  /** Word highlight: offset into the start verse's text (inclusive). */
   startChar?: number | null;
-  /** Word highlight: offset into the end verse's text (exclusive). */
   endChar?: number | null;
   selectedText?: string;
-}) {
-  // Backend requires user_id in the body — POST /bible/highlight/add
-  // throws ValidationError("Missing required fields") otherwise. Without
-  // it, the optimistic highlight added in AppContext gets rolled back on
-  // the catch path, so the highlight visually flashes and disappears.
-  return api.post('/bible/highlight/add', {
-    user_id: h.userId,
-    book_id: h.bookId,
-    chapter_number: h.chapter,
-    start_verse: h.startVerse,
-    end_verse: h.endVerse ?? h.startVerse,
-    color: h.color,
-    ...(typeof h.startChar === 'number' && typeof h.endChar === 'number'
-      ? { start_char: h.startChar, end_char: h.endChar, selected_text: h.selectedText }
-      : {}),
-  });
+}): Promise<SavedHighlight> {
+  const data = await unwrap(
+    postBibleHighlightAdd({
+      client: apiClient,
+      body: {
+        user_id: h.userId,
+        book_id: h.bookId,
+        chapter_number: h.chapter,
+        start_verse: h.startVerse,
+        end_verse: h.endVerse ?? h.startVerse,
+        color: h.color,
+        ...(typeof h.startChar === 'number' && typeof h.endChar === 'number'
+          ? { start_char: h.startChar, end_char: h.endChar, selected_text: h.selectedText }
+          : {}),
+      },
+    })
+  );
+  return savedHighlightOf(data);
 }
 
-export async function updateHighlight(id: string, color: HighlightColor) {
-  return api.put(`/bible/highlight/${id}`, { color });
+export async function updateHighlight(highlightId: number, color: HighlightColor) {
+  return saved(
+    'Highlight recolour',
+    await unwrap(
+      putBibleHighlightByHighlightId({ client: apiClient, path: { highlight_id: highlightId }, body: { color } })
+    )
+  );
 }
 
-export async function removeHighlight(id: string) {
-  return api.delete(`/bible/highlight/${id}`);
+export async function removeHighlight(highlightId: number) {
+  return saved(
+    'Highlight removal',
+    await unwrap(deleteBibleHighlightByHighlightId({ client: apiClient, path: { highlight_id: highlightId } }))
+  );
+}
+
+export interface HighlightTheme {
+  theme_id: number;
+  name: string;
+  color: string;
+  description: string;
+  is_active: boolean;
+}
+
+export async function fetchHighlightThemes(): Promise<HighlightTheme[]> {
+  const body = await unwrap(getBibleHighlightThemes({ client: publicClient }));
+  return body.data.map(t => ({
+    theme_id: t.theme_id,
+    name: t.name,
+    color: t.color,
+    description: t.description ?? '',
+    is_active: t.is_active === true,
+  }));
+}
+
+export async function fetchEnabledThemeIds(): Promise<Set<number>> {
+  const body = await unwrap(getBibleUserThemePreferences({ client: apiClient }));
+  return new Set(body.data.filter(p => p.is_enabled).map(p => p.theme_id));
+}
+
+export async function setThemeEnabled(themeId: number, isEnabled: boolean): Promise<void> {
+  saved(
+    'Highlight theme change',
+    await unwrap(
+      patchBibleUserThemePreferencesByThemeId({
+        client: apiClient,
+        path: { theme_id: String(themeId) },
+        body: { is_enabled: isEnabled },
+      })
+    )
+  );
 }
 
 // ─── Auth ─────────────────────────────────────────────────────────────────
@@ -1137,11 +1088,6 @@ export interface AuthUser {
   preferredLanguage?: string;
 }
 
-/**
- * Exchange a provider ID token (from Google Identity Services or Apple
- * Sign In) for a VerseMate accessToken + refreshToken. Uses the backend's
- * POST /auth/sso endpoint which accepts { provider, token, platform }.
- */
 function decodeJwtSub(token: string): string | null {
   try {
     const parts = token.split('.');
@@ -1172,41 +1118,25 @@ async function identifyAfterAuth(
   }
 }
 
-export async function signInWithSSO(
-  provider: 'google' | 'apple',
-  token: string
-): Promise<AuthUser> {
-  const data = await api.post<{ accessToken: string; refreshToken?: string; verified: boolean }>(
-    '/auth/sso',
-    { provider, token, platform: 'web' },
-    { auth: false }
-  );
-  setAccessToken(data.accessToken);
-  if (data.refreshToken) setRefreshToken(data.refreshToken);
+async function startSession(accessToken: string, method: 'google' | 'apple' | 'email'): Promise<AuthUser> {
+  setAccessToken(accessToken);
   const user = await fetchCurrentUser();
-  identifyAfterAuth(data.accessToken, user.email, provider);
+  identifyAfterAuth(accessToken, user.email, method);
   return user;
+}
+
+export async function signInWithSSO(provider: 'google' | 'apple', token: string): Promise<AuthUser> {
+  const data = await unwrap(postAuthSso({ client: publicClient, body: { provider, token, platform: 'web' } }));
+  return startSession(data.accessToken, provider);
 }
 
 export function exchangeSSOCode(code: string, verifier: string) {
-  return api.post<{ accessToken: string; verified: boolean }>(
-    '/auth/sso/exchange',
-    { code, verifier },
-    { auth: false }
-  );
+  return unwrap(postAuthSsoExchange({ client: publicClient, body: { code, verifier } }));
 }
 
 export async function login(email: string, password: string): Promise<AuthUser> {
-  const data = await api.post<{ accessToken: string; refreshToken?: string; verified: boolean }>(
-    '/auth/login',
-    { email, password },
-    { auth: false }
-  );
-  setAccessToken(data.accessToken);
-  if (data.refreshToken) setRefreshToken(data.refreshToken);
-  const user = await fetchCurrentUser();
-  identifyAfterAuth(data.accessToken, user.email, 'email');
-  return user;
+  const data = await unwrap(postAuthLogin({ client: publicClient, body: { email, password } }));
+  return startSession(data.accessToken, 'email');
 }
 
 export interface SignupInput {
@@ -1217,52 +1147,38 @@ export interface SignupInput {
 }
 
 export async function signup({ email, password, firstName, lastName }: SignupInput): Promise<AuthUser> {
-  const data = await api.post<{ accessToken: string; refreshToken?: string }>(
-    '/auth/signup',
-    { email, password, firstName, lastName },
-    { auth: false }
-  );
-  setAccessToken(data.accessToken);
-  if (data.refreshToken) setRefreshToken(data.refreshToken);
-  const user = await fetchCurrentUser();
-  identifyAfterAuth(data.accessToken, user.email, 'email');
-  return user;
+  const data = await unwrap(postAuthSignup({ client: publicClient, body: { email, password, firstName, lastName } }));
+  return startSession(data.accessToken, 'email');
 }
 
 export async function logout(): Promise<void> {
-  // Backend /auth/logout requires the access token via Authorization
-  // header (api.post adds it automatically). Body is optional — we send
-  // refreshToken when we have it so the server can revoke it as well.
-  // (Verified live: omitting the auth header returns 401 even with body;
-  // including the auth header returns 200 with or without body.)
-  const refreshToken = getRefreshToken();
   try {
-    await api.post('/auth/logout', refreshToken ? { refreshToken } : undefined);
+    await unwrap(postAuthLogout({ client: quietClient, parseAs: 'text' }));
   } catch {
-    /* server-side logout is best-effort */
+    clearTokens();
+    return;
   }
   clearTokens();
 }
 
+export async function checkSession(): Promise<void> {
+  await unwrap(getUserMe({ client: quietClient }));
+}
+
 export async function fetchCurrentUser(): Promise<AuthUser> {
-  // /auth/user returns only {id} — minimal payload meant for token-only
-  // checks. /user/me returns the full record:
-  //   { id, email, firstName, lastName, fullName, emailVerified,
-  //     hasPassword, preferred_language }
-  // The MenuScreen + AuthCallback dispatch paths need the full record
-  // for the profile UI to render past the "Loading..." state.
-  const data = await api.get<CurrentUserResponse>('/user/me');
+  const [me, session] = await Promise.all([
+    unwrap(getUserMe({ client: apiClient })),
+    unwrap(getAuthSession({ client: apiClient })).catch(() => null),
+  ]);
   return {
-    id: data?.id || '',
-    email: data?.email || '',
-    name: data?.fullName || data?.firstName || undefined,
-    // Backend doesn't return an avatar URL today; left here so existing
-    // call sites that read user.avatarUrl don't break.
-    avatarUrl: data?.imageSrc || undefined,
-    firstName: data?.firstName || '',
-    lastName: data?.lastName || '',
-    hasPassword: typeof data?.hasPassword === 'boolean' ? data.hasPassword : true,
-    preferredLanguage: data?.preferred_language || data?.preferredLanguage || undefined,
+    id: me.id,
+    email: me.email,
+    name: me.fullName || me.firstName || undefined,
+    avatarUrl: session?.imageSrc || undefined,
+    firstName: me.firstName,
+    lastName: me.lastName,
+    hasPassword: session ? session.hasPassword : undefined,
+    preferredLanguage: me.preferred_language || undefined,
   };
 }
 
@@ -1274,26 +1190,15 @@ export interface BibleLanguage {
   nativeName: string;
 }
 
-interface BibleLanguageRaw {
-  language_code: string;
-  name: string;
-  native_name: string;
-}
-
-/** GET /bible/languages — list of language codes the backend has content for. */
 export async function fetchBibleLanguages(): Promise<BibleLanguage[]> {
-  const data = await api.get<BibleLanguageRaw[]>('/bible/languages');
-  return (Array.isArray(data) ? data : [])
+  const data = await unwrap(getBibleLanguages({ client: apiClient }));
+  return data
     .map((l) => ({
       code: l.language_code,
       name: l.name,
       nativeName: l.native_name,
     }))
     .sort((a, b) => a.nativeName.localeCompare(b.nativeName));
-}
-
-interface PendingEmailRaw {
-  pendingEmail?: string | null;
 }
 
 /**
@@ -1306,86 +1211,53 @@ export async function updateAuthProfile(body: {
   lastName: string;
   email: string;
 }): Promise<string | null> {
-  const data = await api.put<PendingEmailRaw>('/auth/profile', body);
-  return data?.pendingEmail ?? null;
+  const data = await unwrap(putAuthProfile({ client: apiClient, body }));
+  return data.pendingEmail || null;
 }
 
 /** GET /auth/session — the email change waiting for confirmation, or null. /user/me does not carry it. */
 export async function fetchPendingEmail(): Promise<string | null> {
-  const data = await api.get<PendingEmailRaw>('/auth/session');
-  return data?.pendingEmail ?? null;
+  const data = await unwrap(getAuthSession({ client: apiClient }));
+  return data.pendingEmail || null;
 }
 
 /** PATCH /user/preferences — update preferred_language. */
 export async function updateUserPreferredLanguage(languageCode: string): Promise<void> {
-  await api.patch('/user/preferences', { preferred_language: languageCode });
-}
-
-/**
- * Refresh tokens using the current refreshToken cookie. Returns the new
- * accessToken (also written to the cookie), or null if the refresh failed.
- * Mirrors mobile's refreshTokens() — used after preference changes so the
- * next API call gets a token whose claims reflect the change.
- */
-export async function refreshTokens(): Promise<string | null> {
-  const refreshToken = getRefreshToken();
-  if (!refreshToken) return null;
-  try {
-    const data = await api.post<{ accessToken: string; refreshToken?: string }>(
-      '/auth/refresh',
-      { refreshToken },
-      { auth: false }
-    );
-    if (data.accessToken) {
-      setAccessToken(data.accessToken);
-      if (data.refreshToken) setRefreshToken(data.refreshToken);
-      return data.accessToken;
-    }
-    return null;
-  } catch {
-    return null;
-  }
+  await unwrap(patchUserPreferences({ client: apiClient, body: { preferred_language: languageCode } }));
 }
 
 interface DeleteAccountResult {
   ok: boolean;
   status: number;
   errorCode?: string;
+  message?: string;
+  retryAfterSeconds?: number;
 }
 
-/**
- * DELETE /auth/account — permanently delete the current user's account.
- * Returns a structured result so callers can surface the right error string.
- * Caller is responsible for clearing local session on success.
- */
-export async function deleteAuthAccount(password?: string): Promise<DeleteAccountResult> {
-  const accessToken = getAccessToken();
-  if (!accessToken) return { ok: false, status: 401, errorCode: 'NOT_AUTHENTICATED' };
+function errorFields(body: unknown): Pick<DeleteAccountResult, 'errorCode' | 'message' | 'retryAfterSeconds'> {
+  if (!body || typeof body !== 'object') return {};
+  const { error, message, details } = body as { error?: unknown; message?: unknown; details?: unknown };
+  const retryAfter =
+    details && typeof details === 'object' ? (details as { retryAfter?: unknown }).retryAfter : undefined;
+  return {
+    errorCode: textOrUndefined(error),
+    message: textOrUndefined(message),
+    ...(typeof retryAfter === 'number' && retryAfter > 0 ? { retryAfterSeconds: retryAfter } : {}),
+  };
+}
 
-  let res: Response;
+export async function deleteAuthAccount(password?: string): Promise<DeleteAccountResult> {
+  if (!getAccessToken()) return { ok: false, status: 401, errorCode: 'NOT_AUTHENTICATED' };
   try {
-    res = await fetch(`${API_BASE_URL}/auth/account`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${accessToken}`,
-      },
-      body: password ? JSON.stringify({ password }) : undefined,
+    const { response, error } = await deleteAccountRequest({
+      client: apiClient,
+      body: password ? { password } : {},
     });
+    if (response.ok) return { ok: true, status: response.status };
+    return { ok: false, status: response.status, ...errorFields(error) };
   } catch {
     return { ok: false, status: 0, errorCode: 'NETWORK_ERROR' };
   }
-
-  if (res.ok) return { ok: true, status: res.status };
-
-  let errorCode: string | undefined;
-  try {
-    const data = await res.json();
-    errorCode = data?.error;
-  } catch {
-    /* no body */
-  }
-  return { ok: false, status: res.status, errorCode };
 }
 
 export function isSignedIn(): boolean {
@@ -1564,13 +1436,13 @@ export function trackRecentBook(bookId: number) {
     const existing = getRecentBooks().filter(r => r.bookId !== bookId);
     const next = [{ bookId, timestamp: Date.now() }, ...existing].slice(0, MAX_RECENTS);
     localStorage.setItem(RECENTS_KEY, JSON.stringify(next));
-    // Best-effort sync to server when signed in
     if (getAccessToken()) {
-      api
-        .post('/user/recently-viewed-books/sync', {
-          books: next.map(r => ({ bookId: String(r.bookId), timestamp: r.timestamp })),
+      unwrap(
+        postUserRecentlyViewedBooksSync({
+          client: apiClient,
+          body: { books: next.map(r => ({ bookId: String(r.bookId), timestamp: r.timestamp })) },
         })
-        .catch(() => undefined);
+      ).catch(() => undefined);
     }
   } catch {
     /* ignore */
@@ -1613,17 +1485,42 @@ export async function searchVerses(params: {
   cursor?: string | null;
   signal?: AbortSignal;
 }): Promise<VerseSearchResponse> {
-  return api.get<VerseSearchResponse>(
-    '/bible/search',
-    {
-      q: params.q,
-      bible_version: params.version,
-      testament: params.testament,
-      book: params.book,
-      cursor: params.cursor ?? undefined,
-    },
-    { auth: false, signal: params.signal },
+  const data = await unwrap(
+    getBibleSearch({
+      client: publicClient,
+      query: {
+        q: params.q,
+        bible_version: params.version,
+        ...(params.testament ? { testament: params.testament } : {}),
+        ...(params.book !== undefined ? { book: params.book } : {}),
+        ...(params.cursor ? { cursor: params.cursor } : {}),
+      },
+      signal: params.signal,
+    }),
   );
+  return verseSearchOf(data);
+}
+
+function rangeOf(pair: [unknown, unknown]): [number, number] | null {
+  const [start, end] = pair;
+  return typeof start === 'number' && typeof end === 'number' ? [start, end] : null;
+}
+
+function verseSearchOf(data: GetBibleSearchResponse): VerseSearchResponse {
+  return {
+    results: data.results.map(r => ({
+      match: r.match,
+      bookId: r.bookId,
+      bookName: r.bookName,
+      chapter: r.chapter,
+      verse: r.verse,
+      text: r.text,
+      highlights: r.highlights.map(rangeOf).filter((range): range is [number, number] => range !== null),
+    })),
+    nextCursor: data.nextCursor,
+    totals: data.totals,
+    books: data.books,
+  };
 }
 
 const _bookNamesByVersion = new Map<string, Promise<Record<number, string>>>();
@@ -1636,13 +1533,8 @@ const _bookNamesByVersion = new Map<string, Promise<Record<number, string>>>();
 export function fetchLocalizedBookNames(version: string): Promise<Record<number, string>> {
   let pending = _bookNamesByVersion.get(version);
   if (!pending) {
-    pending = api
-      .get<{ testaments: { b: number; n: string }[] }>(
-        '/bible/testaments',
-        { bible_version: version },
-        { auth: false },
-      )
-      .then(data => Object.fromEntries((data.testaments || []).map(t => [t.b, t.n])))
+    pending = unwrap(getBibleTestaments({ client: publicClient, query: { bible_version: version } }))
+      .then(data => Object.fromEntries(data.testaments.map(t => [t.b, t.n])))
       .catch(() => {
         _bookNamesByVersion.delete(version);
         return {};

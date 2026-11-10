@@ -12,7 +12,17 @@ interface DeleteAccountFinalModalProps {
   onCancel: () => void;
   onConfirm: () => void;
   isLoading: boolean;
+  error?: string;
 }
+
+const errorStyle: React.CSSProperties = {
+  background: '#fef2f2',
+  color: vmTokens.statusError,
+  fontSize: 14,
+  padding: '8px 12px',
+  borderRadius: 6,
+  marginBottom: 12,
+};
 
 const overlayStyle: React.CSSProperties = {
   position: 'fixed',
@@ -107,6 +117,7 @@ export function DeleteAccountFinalModal({
   onCancel,
   onConfirm,
   isLoading,
+  error,
 }: DeleteAccountFinalModalProps) {
   useEffect(() => {
     if (!visible) return;
@@ -143,6 +154,12 @@ export function DeleteAccountFinalModal({
             Your account and all data will be permanently deleted and cannot be recovered.
           </p>
         </div>
+
+        {error ? (
+          <p role="alert" style={errorStyle}>
+            {error}
+          </p>
+        ) : null}
 
         <div style={buttonContainerStyle}>
           <button

@@ -81,7 +81,13 @@ describe('buildJesusByline', () => {
 
   it('attaches hydrated verse text when the passage carries it', () => {
     const rows = buildJesusByline(
-      passage({ verses: [{ verse_number: 39, text: 'And he awoke and rebuked the wind…' }] }),
+      {
+        ...passage(),
+        canonical_order: 1,
+        emphasis: null,
+        unique_to_account: null,
+        verses: [{ verse_number: 39, text: 'And he awoke and rebuked the wind…' }],
+      },
       [byline(39), byline(40)],
     );
     expect(rows[0].text).toBe('And he awoke and rebuked the wind…');

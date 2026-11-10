@@ -25,6 +25,7 @@ import {
   fetchBooks as apiFetchBooks,
   resolveBookId,
   logout as apiLogout,
+  type SavedHighlight,
 } from '@/services/bibleService';
 
 interface AppState {
@@ -58,6 +59,11 @@ type Action =
   | { type: 'SET_NOTES'; notes: Note[] }
   | { type: 'ADD_NOTE'; note: Note }
   | { type: 'UPDATE_NOTE'; id: string; text: string }
+  | { type: 'RESTORE_NOTE_AT'; note: Note; index: number }
+  | { type: 'UNDO_NOTE_TEXT'; id: string; written: string; previous: string }
+  | { type: 'RESTORE_BOOKMARK'; bookmark: Bookmark; index: number }
+  | { type: 'RESTORE_HIGHLIGHT'; highlight: Highlight; index: number }
+  | { type: 'UNDO_HIGHLIGHT_COLOR'; highlightId: number; tmpId: string; written: HighlightColor; previous: HighlightColor }
   | { type: 'REMOVE_NOTE'; id: string }
   | { type: 'SET_HIGHLIGHTS'; highlights: Highlight[] }
   | { type: 'ADD_HIGHLIGHT'; highlight: Highlight }
@@ -85,6 +91,12 @@ type Action =
       userHasPassword?: boolean | null;
       userPreferredLanguage?: string | null;
     };
+
+function insertAt<T extends { id: string }>(items: T[], item: T, index: number): T[] {
+  if (items.some(existing => existing.id === item.id)) return items;
+  const at = index < 0 ? items.length : Math.min(index, items.length);
+  return [...items.slice(0, at), item, ...items.slice(at)];
+}
 
 function reducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -118,6 +130,28 @@ function reducer(state: AppState, action: Action): AppState {
         ...state,
         notes: state.notes.map(n =>
           n.id === action.id ? { ...n, text: action.text, updatedAt: new Date().toISOString() } : n
+        ),
+      };
+    case 'RESTORE_NOTE_AT':
+      return { ...state, notes: insertAt(state.notes, action.note, action.index) };
+    case 'UNDO_NOTE_TEXT':
+      return {
+        ...state,
+        notes: state.notes.map(n =>
+          n.id === action.id && n.text === action.written ? { ...n, text: action.previous } : n
+        ),
+      };
+    case 'RESTORE_BOOKMARK':
+      return { ...state, bookmarks: insertAt(state.bookmarks, action.bookmark, action.index) };
+    case 'RESTORE_HIGHLIGHT':
+      return { ...state, highlights: insertAt(state.highlights, action.highlight, action.index) };
+    case 'UNDO_HIGHLIGHT_COLOR':
+      return {
+        ...state,
+        highlights: state.highlights.map(h =>
+          (h.highlightId === action.highlightId || h.id === action.tmpId) && h.color === action.written
+            ? { ...h, color: action.previous }
+            : h
         ),
       };
     case 'REMOVE_NOTE':
@@ -234,7 +268,7 @@ interface AppContextType {
   state: AppState;
   dispatch: React.Dispatch<Action>;
   // Higher-level mutations that also write through to the API
-  addBookmark: (bookmark: Omit<Bookmark, 'id' | 'createdAt'>) => Promise<void>;
+  addBookmark: (bookmark: Omit<Bookmark, 'id'>) => Promise<void>;
   removeBookmark: (id: string) => Promise<void>;
   addNote: (note: Omit<Note, 'id' | 'createdAt' | 'updatedAt'>) => Promise<void>;
   updateNote: (id: string, text: string) => Promise<void>;
@@ -354,8 +388,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
           apiFetchNotes(user.id),
           apiFetchHighlights(user.id),
         ]);
-        dispatch({ type: 'SET_BOOKMARKS', bookmarks });
-        dispatch({ type: 'SET_NOTES', notes });
+        if (bookmarks) dispatch({ type: 'SET_BOOKMARKS', bookmarks });
+        if (notes) dispatch({ type: 'SET_NOTES', notes });
         dispatch({ type: 'SET_HIGHLIGHTS', highlights });
       } catch {
         // Token probably invalid — treat as signed out
@@ -375,14 +409,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
     })();
   }, [state.isSignedIn]);
 
-  // ─── API-backed mutations ────────────────────────────────────────────
   const addBookmark = useCallback(
-    async (bookmark: Omit<Bookmark, 'id' | 'createdAt'>) => {
-      const optimistic: Bookmark = {
-        ...bookmark,
-        id: `tmp-${Date.now()}`,
-        createdAt: new Date().toISOString(),
-      };
+    async (bookmark: Omit<Bookmark, 'id'>) => {
+      const optimistic: Bookmark = { ...bookmark, id: `tmp-${Date.now()}` };
       dispatch({ type: 'ADD_BOOKMARK', bookmark: optimistic });
       if (!state.userId) return;
       try {
@@ -391,18 +420,20 @@ export function AppProvider({ children }: { children: ReactNode }) {
           bookId: bookmark.bookId,
           chapter: bookmark.chapter,
         });
-        const refreshed = await apiFetchBookmarks(state.userId);
-        dispatch({ type: 'SET_BOOKMARKS', bookmarks: refreshed });
       } catch {
         dispatch({ type: 'REMOVE_BOOKMARK', id: optimistic.id });
+        return;
       }
+      const refreshed = await apiFetchBookmarks(state.userId);
+      if (refreshed) dispatch({ type: 'SET_BOOKMARKS', bookmarks: refreshed });
     },
     [state.userId]
   );
 
   const removeBookmark = useCallback(
     async (id: string) => {
-      const existing = state.bookmarks.find(b => b.id === id);
+      const index = state.bookmarks.findIndex(b => b.id === id);
+      const existing = state.bookmarks[index];
       if (!existing) return;
       dispatch({ type: 'REMOVE_BOOKMARK', id });
       if (!state.userId) return;
@@ -412,12 +443,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
           bookId: existing.bookId,
           chapter: existing.chapter,
         });
-        // Refetch to reconcile any state the server changed
-        const refreshed = await apiFetchBookmarks(state.userId);
-        dispatch({ type: 'SET_BOOKMARKS', bookmarks: refreshed });
       } catch {
-        if (existing) dispatch({ type: 'ADD_BOOKMARK', bookmark: existing });
+        dispatch({ type: 'RESTORE_BOOKMARK', bookmark: existing, index });
+        return;
       }
+      const refreshed = await apiFetchBookmarks(state.userId);
+      if (refreshed) dispatch({ type: 'SET_BOOKMARKS', bookmarks: refreshed });
     },
     [state.bookmarks, state.userId]
   );
@@ -427,9 +458,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const now = new Date().toISOString();
       const optimistic: Note = { ...note, id: `tmp-${Date.now()}`, createdAt: now, updatedAt: now };
       dispatch({ type: 'ADD_NOTE', note: optimistic });
-      // Mirror addBookmark/addHighlight: skip the API roundtrip for guests
-      // so the optimistic note doesn't flash-and-vanish on the inevitable
-      // 401. Caller is responsible for gating the UX on isSignedIn.
       if (!state.userId) return;
       try {
         await apiAddNote({
@@ -439,36 +467,45 @@ export function AppProvider({ children }: { children: ReactNode }) {
           verse: note.verse,
           text: note.text,
         });
-        const refreshed = await apiFetchNotes(state.userId);
-        dispatch({ type: 'SET_NOTES', notes: refreshed });
       } catch {
         dispatch({ type: 'REMOVE_NOTE', id: optimistic.id });
+        return;
       }
+      const refreshed = await apiFetchNotes(state.userId);
+      if (refreshed) dispatch({ type: 'SET_NOTES', notes: refreshed });
     },
     [state.userId]
   );
 
-  const updateNote = useCallback(async (id: string, text: string) => {
-    dispatch({ type: 'UPDATE_NOTE', id, text });
-    try {
-      await apiUpdateNote(id, text);
-    } catch {
-      /* keep optimistic */
-    }
-  }, []);
+  const updateNote = useCallback(
+    async (id: string, text: string) => {
+      const existing = state.notes.find(n => n.id === id);
+      dispatch({ type: 'UPDATE_NOTE', id, text });
+      if (!state.userId || !existing) return;
+      await apiUpdateNote(id, text).catch(() =>
+        dispatch({ type: 'UNDO_NOTE_TEXT', id, written: text, previous: existing.text })
+      );
+    },
+    [state.notes, state.userId]
+  );
 
   const removeNote = useCallback(
     async (id: string) => {
-      const existing = state.notes.find(n => n.id === id);
+      const index = state.notes.findIndex(n => n.id === id);
+      const existing = state.notes[index];
       dispatch({ type: 'REMOVE_NOTE', id });
-      try {
-        await apiRemoveNote(id);
-      } catch {
-        if (existing) dispatch({ type: 'ADD_NOTE', note: existing });
-      }
+      if (!state.userId || !existing) return;
+      await apiRemoveNote(id).catch(() => dispatch({ type: 'RESTORE_NOTE_AT', note: existing, index }));
     },
-    [state.notes]
+    [state.notes, state.userId]
   );
+
+  const pendingAdds = useRef(new Map<string, Promise<number | null>>());
+
+  const savedIdOf = useCallback(async (h: Highlight): Promise<number | null> => {
+    if (h.highlightId !== undefined) return h.highlightId;
+    return (await pendingAdds.current.get(h.id)) ?? null;
+  }, []);
 
   const addHighlight = useCallback(
     async (h: Omit<Highlight, 'id' | 'createdAt'>) => {
@@ -479,97 +516,79 @@ export function AppProvider({ children }: { children: ReactNode }) {
         createdAt: new Date().toISOString(),
       };
       dispatch({ type: 'ADD_HIGHLIGHT', highlight: optimistic });
-
-      // Signed-out: keep the optimistic highlight in memory only — never
-      // hit the API. SelectionToolbar handles its own ephemeral path; this
-      // branch covers VerseActions and any other call site that goes
-      // through addHighlight without checking auth first.
       if (!state.userId) return;
 
-      try {
-        // Best-effort: pull the real highlight_id off the POST response so
-        // subsequent recolor / remove on the just-added highlight hits the
-        // right backend record. We deliberately do NOT refetch the full
-        // list here: that previously caused two bugs — (1) racing refetches
-        // across rapid adds could overwrite earlier optimistic state, and
-        // (2) if the backend's GET response for /bible/highlights collapses
-        // a multi-verse range to a single verse, the refetch would clobber
-        // the user's correctly-rendered range. The full list is re-fetched
-        // on sign-in / passage load instead.
-        const res = await apiAddHighlight({
-          userId: state.userId,
-          bookId: h.bookId,
-          chapter: h.chapter,
-          startVerse: h.startVerse ?? h.verse,
-          endVerse: h.endVerse ?? h.verse,
-          color: h.color,
-          startChar: h.startChar,
-          endChar: h.endChar,
-          selectedText: h.selectedText,
-        });
-        type AddResponse = {
-          highlight?: {
-            highlight_id?: number;
-            start_verse?: number;
-            end_verse?: number;
-            start_char?: number | null;
-            end_char?: number | null;
-          };
-          highlight_id?: number;
-          merged_highlight_ids?: number[];
-        };
-        const body = res as AddResponse | undefined;
-        const realId = body?.highlight?.highlight_id ?? body?.highlight_id;
-        if (typeof realId === 'number' && realId > 0) {
-          dispatch({
-            type: 'REPLACE_HIGHLIGHT_ID',
-            oldId: tmpId,
-            newId: String(realId),
-            highlightId: realId,
-          });
-          // The backend folds an overlapping highlight of the same colour into
-          // the new one: drop the folded ones and take the merged extent.
-          const merged = (body?.merged_highlight_ids ?? []).filter(id => id !== realId);
-          if (merged.length > 0 && body?.highlight) {
-            for (const id of merged) dispatch({ type: 'REMOVE_HIGHLIGHT', id: String(id) });
-            const m = body.highlight;
-            dispatch({
-              type: 'SET_HIGHLIGHT_EXTENT',
-              id: String(realId),
-              startVerse: m.start_verse,
-              endVerse: m.end_verse,
-              startChar: m.start_char ?? null,
-              endChar: m.end_char ?? null,
-            });
-          }
-        }
-      } catch {
+      const userId = state.userId;
+      const saving = apiAddHighlight({
+        userId,
+        bookId: h.bookId,
+        chapter: h.chapter,
+        startVerse: h.startVerse ?? h.verse,
+        endVerse: h.endVerse ?? h.verse,
+        color: h.color,
+        startChar: h.startChar,
+        endChar: h.endChar,
+        selectedText: h.selectedText,
+      }).then(
+        (result): SavedHighlight | null => result,
+        () => null
+      );
+      pendingAdds.current.set(tmpId, saving.then(result => result?.highlightId ?? null));
+      const result = await saving;
+      pendingAdds.current.delete(tmpId);
+      if (!result) {
         dispatch({ type: 'REMOVE_HIGHLIGHT', id: tmpId });
+        return;
       }
+      const realId = result.highlightId;
+      dispatch({ type: 'REPLACE_HIGHLIGHT_ID', oldId: tmpId, newId: String(realId), highlightId: realId });
+      const merged = result.mergedHighlightIds.filter(id => id !== realId);
+      if (merged.length === 0) return;
+      for (const id of merged) dispatch({ type: 'REMOVE_HIGHLIGHT', id: String(id) });
+      dispatch({
+        type: 'SET_HIGHLIGHT_EXTENT',
+        id: String(realId),
+        startVerse: result.startVerse,
+        endVerse: result.endVerse,
+        startChar: result.startChar,
+        endChar: result.endChar,
+      });
     },
     [state.userId]
   );
 
-  const updateHighlight = useCallback(async (id: string, color: HighlightColor) => {
-    dispatch({ type: 'UPDATE_HIGHLIGHT', id, color });
-    try {
-      await apiUpdateHighlight(id, color);
-    } catch {
-      /* keep optimistic */
-    }
-  }, []);
+  const updateHighlight = useCallback(
+    async (id: string, color: HighlightColor) => {
+      const existing = state.highlights.find(h => h.id === id);
+      dispatch({ type: 'UPDATE_HIGHLIGHT', id, color });
+      if (!state.userId || !existing) return;
+      const highlightId = await savedIdOf(existing);
+      if (highlightId === null) return;
+      await apiUpdateHighlight(highlightId, color).catch(() =>
+        dispatch({ type: 'UNDO_HIGHLIGHT_COLOR', highlightId, tmpId: id, written: color, previous: existing.color })
+      );
+    },
+    [state.highlights, state.userId, savedIdOf]
+  );
 
   const removeHighlight = useCallback(
     async (id: string) => {
-      const existing = state.highlights.find(h => h.id === id);
+      const index = state.highlights.findIndex(h => h.id === id);
+      const existing = state.highlights[index];
       dispatch({ type: 'REMOVE_HIGHLIGHT', id });
-      try {
-        await apiRemoveHighlight(id);
-      } catch {
-        if (existing) dispatch({ type: 'ADD_HIGHLIGHT', highlight: existing });
-      }
+      if (!state.userId || !existing) return;
+      const highlightId = await savedIdOf(existing);
+      if (highlightId === null) return;
+      if (existing.highlightId === undefined) dispatch({ type: 'REMOVE_HIGHLIGHT', id: String(highlightId) });
+      await apiRemoveHighlight(highlightId).catch(() =>
+        dispatch({
+          type: 'RESTORE_HIGHLIGHT',
+          highlight: { ...existing, id: String(highlightId), highlightId },
+          index,
+        })
+      );
     },
-    [state.highlights]
+    [state.highlights, state.userId, savedIdOf]
   );
 
   const signOut = useCallback(async () => {
@@ -600,7 +619,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         userAvatarUrl: user.avatarUrl || null,
         userFirstName: user.firstName || null,
         userLastName: user.lastName || null,
-        userHasPassword: typeof user.hasPassword === 'boolean' ? user.hasPassword : null,
+        userHasPassword: typeof user.hasPassword === 'boolean' ? user.hasPassword : undefined,
         userPreferredLanguage: user.preferredLanguage || null,
       });
     } catch {

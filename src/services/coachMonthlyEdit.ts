@@ -1,13 +1,7 @@
-export interface MonthlyReportRow {
-  id: number;
-  kind: 'leader' | 'program';
-  coachId: string | null;
-  month: string;
-  state: 'held' | 'pending' | 'sending' | 'sent' | 'parallel-run';
-  holdReason: string | null;
-  skipped: string[];
-  summary: unknown;
-}
+import type {
+  GetCoachAdminMonthlyReportsResponse,
+} from '@/api/generated/types.gen';
+export type MonthlyReportRow = GetCoachAdminMonthlyReportsResponse['reports'][number];
 
 export interface EditField {
   key: string;

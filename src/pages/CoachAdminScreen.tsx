@@ -35,7 +35,7 @@ import {
   useAddNote,
   coachState,
 } from '@/hooks/useCoach';
-import { CoachApiError, badAddressText, refusalText } from '@/services/coachService';
+import { CoachApiError, badAddressText, dateLabelOf, refusalText } from '@/services/coachService';
 import type {
   CoachSummary,
   CoachMonthly,
@@ -393,7 +393,7 @@ function LeaderDetailView({
   const name = summary?.name || 'Leader';
   const study = summary?.group || '';
   const { rubric } = useRubric();
-  const status = summary?.latest?.status || (reports[0] ? compositeStatus(reports[0].score, rubric) : '');
+  const status = summary?.latest?.status || (reports[0] ? compositeStatus(reports[0].score ?? null, rubric) : '');
   const st = statusBand(status, bandLabelsOf(rubric));
 
   const [page, setPage] = useState(0);
@@ -630,7 +630,7 @@ function ClassCard({ report: row, ...props }: ClassCardProps & { report: CoachRe
   if (!detail.data) {
     return (
       <div data-testid={`oversight-class-pending-${row.id}`} style={dashedNote}>
-        {row.dateLabel} · {detail.error ? 'Could not load this session.' : 'Loading…'}
+        {dateLabelOf(row)} · {detail.error ? 'Could not load this session.' : 'Loading…'}
       </div>
     );
   }
@@ -663,7 +663,7 @@ function ClassCardBody({
               <span style={{ fontSize: 8, fontWeight: 700, letterSpacing: '.04em', opacity: 0.7 }}>/100</span>
             </div>
             <div style={{ minWidth: 0 }}>
-              <div style={{ fontWeight: 600, fontSize: 15 }}>{report.dateLabel}</div>
+              <div style={{ fontWeight: 600, fontSize: 15 }}>{dateLabelOf(report)}</div>
               <div style={{ fontSize: 12.5, color: dt.textLight }}>{report.session}{report.topic ? ` · ${report.topic}` : ''}{study ? ` · ${study}` : ''}</div>
               <PipelineCopyTag reportId={report.id} held={held} />
             </div>

@@ -1,154 +1,149 @@
-/**
- * Bible-Coach portal API client.
- *
- * Talks to the VerseMate backend's coach module at `${API_BASE_URL}/coach/*`
- * (verse-mate/packages/backend-base/src/coach). Auth reuses the app's
- * `fetchWithAuth`, which attaches the existing Bearer access token and
- * transparently refreshes on 401, so a signed-in VerseMate user is a
- * signed-in coach with no extra login step. Unlike the shared `request()`
- * helper, `fetchWithAuth` does NOT hard-redirect to /logout on auth failure,
- * so this module can render its own sign-in / not-a-coach gates.
- *
- * The three states a caller must handle:
- *   - signed out / expired      → 401  → `CoachAuthError('signed_out')`
- *   - signed in but not a coach → 403  → `CoachAuthError('not_a_coach')`
- *   - signed in coach           → 200  → data
- */
-
-import { API_BASE_URL, fetchWithAuth } from './api';
+import type {
+  GetCoachAdminClassesResponse,
+  GetCoachAdminCoachesResponse,
+  GetCoachAdminCoverageResponse,
+  GetCoachAdminDuplicatesResponse,
+  GetCoachAdminLeadersByIdAttributionResponse,
+  GetCoachAdminMonthlyResponse,
+  GetCoachAdminNotetakerZoomResponse,
+  GetCoachAdminParallelRunComparisonResponse,
+  GetCoachAdminPipelineFailuresResponse,
+  GetCoachAdminReportsByReportIdReviewResponse,
+  GetCoachAdminResharesResponse,
+  GetCoachAdminRotatingClassesResponse,
+  GetCoachClassesResponse,
+  GetCoachMeResponse,
+  GetCoachMonthlySummaryResponse,
+  GetCoachNotetakerStatusResponse,
+  GetCoachReportsByReportIdResponse,
+  GetCoachTrendsResponse,
+  GetCoachUploadsClassesResponse,
+  GetCoachUploadsResponse,
+  PostCoachAdminCoachesByIdReportsByReportIdNotesResponse,
+  PostCoachAdminReportsByReportIdAmendResponse,
+  PostCoachAdminReportsByReportIdReleaseResponse,
+  PostCoachAdminReportsByReportIdRevisionSendResponse,
+  PostCoachAdminRotatingClassesData,
+  PostCoachAdminUploadsData,
+  PostCoachClassesData,
+  PostCoachConfirmAddressDescribeResponse,
+  PostCoachUploadsData,
+  PostCoachUploadsResponse,
+  PutCoachAdminLeadersByIdEmailResponse,
+  GetCoachAdminReportsByReportIdRevisionsResponse,
+  GetCoachReportsSummaryResponse,
+  PostCoachAdminReportsByReportIdAmendData,
+  PutCoachAdminMonthlyReportsByIdData,
+} from '@/api/generated/types.gen';
+import { newQuietClient } from '@/api/client';
+import {
+  deleteCoachAdminClassesById,
+  deleteCoachAdminLeadersByIdNotTeaching,
+  deleteCoachClassesById,
+  getCoachAdminClasses,
+  getCoachAdminCoaches,
+  getCoachAdminCoachesByIdMonthlySummary,
+  getCoachAdminCoachesByIdReportsByReportId,
+  getCoachAdminCoachesByIdReportsSummary,
+  getCoachAdminCoachesByIdTrends,
+  getCoachAdminCoverage,
+  getCoachAdminDuplicates,
+  getCoachAdminLeadersByIdAttribution,
+  getCoachAdminMonthly,
+  getCoachAdminMonthlyReports,
+  getCoachAdminNotetakerZoom,
+  getCoachAdminParallelRunComparison,
+  getCoachAdminPipelineFailures,
+  getCoachAdminReportsByReportIdReview,
+  getCoachAdminReportsByReportIdRevisions,
+  getCoachAdminReshares,
+  getCoachAdminRotatingClasses,
+  getCoachAdminUploads,
+  getCoachAdminUploadsClasses,
+  getCoachClasses,
+  getCoachMe,
+  getCoachMonthlySummary,
+  getCoachNotetakerStatus,
+  getCoachReportsByReportId,
+  getCoachReportsByReportIdRecordingUrl,
+  getCoachReportsSummary,
+  getCoachTrends,
+  getCoachUploads,
+  getCoachUploadsClasses,
+  postCoachAdminClasses,
+  postCoachAdminCoachesByIdReportsByReportIdNotes,
+  postCoachAdminDuplicatesBySourceSessionIdDismiss,
+  postCoachAdminDuplicatesBySourceSessionIdScore,
+  postCoachAdminLeaders,
+  postCoachAdminLeadersByIdNotTeaching,
+  postCoachAdminMonthlyReportsByIdRelease,
+  postCoachAdminPipelineFailuresBySourceSessionIdRequeue,
+  postCoachAdminReportsByReportIdAmend,
+  postCoachAdminReportsByReportIdDimensionsByDimensionN,
+  postCoachAdminReportsByReportIdRelease,
+  postCoachAdminReportsByReportIdRevisionRequeue,
+  postCoachAdminReportsByReportIdRevisionSend,
+  postCoachAdminResharesBySourceSessionIdResolve,
+  postCoachAdminResharesBySourceSessionIdSend,
+  postCoachAdminRotatingClasses,
+  postCoachAdminSessionsBySourceSessionIdAttribute,
+  postCoachAdminUploads,
+  postCoachAdminUploadsByIdComplete,
+  postCoachAdminUploadsByIdParts,
+  postCoachClasses,
+  postCoachConfirmAddress,
+  postCoachConfirmAddressDescribe,
+  postCoachUploads,
+  postCoachUploadsByIdComplete,
+  postCoachUploadsByIdParts,
+  putCoachAdminClassesById,
+  putCoachAdminCoachesByIdReportsByReportIdRecording,
+  putCoachAdminLeadersByIdAttribution,
+  putCoachAdminLeadersByIdEmail,
+  putCoachAdminLeadersByIdRotatingOnly,
+  putCoachAdminMonthlyReportsById,
+  putCoachAdminReportsByReportIdFirstLesson,
+  putCoachAdminReportsByReportIdImprovements,
+  putCoachAdminRotatingClassesById,
+  putCoachAffiliatedChurch,
+  putCoachBibleCoach,
+  putCoachClassesById,
+  putCoachZoomLink,
+} from '@/api/generated/sdk.gen';
 import { spreadOver } from './rubric';
 import type { MonthlyReportRow } from './coachMonthlyEdit';
 import { scrubCoachPath, stripQuery } from '@/lib/analyticsPrivacy';
 
 // ─── Domain types ──────────────────────────────────────────────────────────
 
-export interface CoachCluster {
-  name: string;
-  weight: number;
-  /** Percentage of the cluster's max earned this session (null when all
-   *  member dimensions were N/A). */
-  scorePct: number | null;
-  /** Weighted points this cluster contributed to the composite. */
-  contribution: number;
-}
+export type CoachCluster = CoachReport['clusters'][number];
 
-export interface CoachDimension {
-  n: number;
-  name: string;
-  /** 1–5, or null for N/A (no penalty; reduces the cluster max). */
-  score: number | null;
-  /** Coach's rationale for this session's score ("why this score"); may be empty. */
-  note?: string;
-}
+export type CoachDimension = CoachReport['dimensions'][number];
 
-export interface CoachReport {
-  id: string;
-  date: string; // ISO yyyy-mm-dd
-  dateLabel: string; // "June 13, 2026"
-  session: string;
-  topic: string;
-  duration: string;
-  attendees: number | null;
-  newcomers: number;
-  score: number; // 0–100 weighted composite + bonuses
-  base: number;
-  newcomerBonus: number;
-  sizeBonus: number;
-  status: string;
-  statusEmoji: string;
-  clusters: CoachCluster[];
-  dimensions: CoachDimension[];
-  bigIdeas: string[];
-  /** Coaching feedback rendered directly on the page (no Google Docs hop). */
-  feedback: CoachFeedback;
-  /** Additional named report sections straight from the pipeline, e.g. "Key
-   *  moments", "Session flow timeline", "Vulnerability moments". Optional and
-   *  ordered; the desktop report renders each in order after the recommendations
-   *  so the portal can match the depth of the full PDF without further UI work
-   *  as the pipeline adds sections. */
-  sections?: CoachReportSection[];
-  /** The host's PDF of a backfilled report; machine-scored reports have none. */
-  pdfUrl?: string;
-  recordingUrl?: string;
-  attachedRecordingUrl?: string | null;
-  /**
-   * DETAIL-ONLY (task 4.5). Whether VerseMate holds a recording for this
-   * session, never WHERE it is. The address is minted per session by
-   * `mintRecordingUrl`, so opening a list mints nothing.
-   */
-  hasRetainedRecording?: boolean;
-  /** Coaching notes on this session, newest first. Shown editable to admins
-   *  (composer + history) and read-only to the leader on their dashboard. */
-  notes?: CoachNote[];
-}
+export type CoachReport = GetCoachReportsByReportIdResponse['report'];
 
 /** A coaching note on a session, written by an admin, emailed to the leader. */
-export interface CoachNote {
-  id: string;
-  body: string;
-  createdAt: string; // ISO timestamp
-  /** True once the note was handed to the mailer. */
-  emailed: boolean;
-}
+export type CoachNote = PostCoachAdminCoachesByIdReportsByReportIdNotesResponse['note'];
 
 /** One timestamped moment within a report section (e.g. a key moment or a
  *  point on the session-flow timeline). */
-export interface CoachMoment {
-  /** Source timestamp, e.g. "[50:03]" or "55:18–58:18". Optional. */
-  timestamp?: string;
-  /** What happened. */
-  detail: string;
-}
+export type CoachMoment = NonNullable<CoachReportSection['moments']>[number];
 
 /** A free-form report section from the pipeline. Any combination of prose
  *  paragraphs, bullet points, and timestamped moments, whatever the section
  *  needs, so new PDF sections surface on the portal without a schema change. */
-export interface CoachReportSection {
-  title: string;
-  paragraphs?: string[];
-  bullets?: string[];
-  moments?: CoachMoment[];
-}
+export type CoachReportSection = NonNullable<CoachReport['sections']>[number];
 
 /** One fully-written coaching point: a short title plus prose paragraphs.
  *  Emitted directly by the Bible-Coach pipeline (no Google Docs hop) so the
  *  portal can render the complete narrative on-page. */
-export interface CoachFeedbackPoint {
-  /** Short heading for the point, e.g. "Exceptional discussion balance". */
-  title: string;
-  /** The full write-up, one string per paragraph. */
-  paragraphs: string[];
-  evidence?: { quote: string; timestamp: string };
-}
+export type CoachFeedbackPoint = NonNullable<CoachFeedback['strengthsProse']>[number];
 
-export interface CoachFeedback {
-  headline: string;
-  /** Terse one-line bullets, the compact (mobile) presentation. */
-  strengths: string[];
-  improvements: string[];
-  recommendations: string[];
-  /** Full prose straight from the coaching pipeline, the expanded (desktop)
-   *  presentation. All optional: a report generated before prose export simply
-   *  falls back to the terse bullets above, so old and new data both render. */
-  overview?: string[];
-  strengthsProse?: CoachFeedbackPoint[];
-  improvementsProse?: CoachFeedbackPoint[];
-  recommendationsProse?: CoachFeedbackPoint[];
-}
+export type CoachFeedback = CoachReport['feedback'];
 
-export interface CoachProfile {
-  id: string;
-  name: string;
-  email: string;
-  group: string;
-  coachName: string;
-}
+export type CoachProfile = NonNullable<CoachMe['profile']>;
 
-export interface StatusBand {
-  min: number;
-  label: string;
-  emoji: string;
-}
+export type { StatusBand } from './rubric';
 
 /** Allowed recurrence keywords for a class (mirrors the backend DTO). */
 export type CoachClassRecurrence = 'none' | 'daily' | 'weekly' | 'biweekly' | 'monthly';
@@ -156,157 +151,46 @@ export type CoachClassRecurrence = 'none' | 'daily' | 'weekly' | 'biweekly' | 'm
 /** One registered class. The VerseMate notetaker joins its `zoomLink` on
  *  `classDate` at `startTime` in `timeZone`, then on every repeat; a leader can
  *  register several. */
-export interface CoachClass {
-  id: string;
-  name: string;
-  /** ISO yyyy-mm-dd, the first or next class, or null when no date is pinned.
-   *  A weekly class keeps its weekday, a monthly one its day of the month. */
-  classDate: string | null;
-  recurrence: CoachClassRecurrence;
-  zoomLink: string;
-  /** 24-hour HH:MM wall-clock time in `timeZone`, or null until set. */
-  startTime: string | null;
-  /** IANA zone, e.g. America/Chicago, or null until set. */
-  timeZone: string | null;
-  /** False keeps the notetaker out of this class. */
-  notetaker: boolean;
-}
+export type CoachClass = GetCoachClassesResponse['classes'][number];
 
 /** Fields a caller sends when creating / updating a class. `classDate` is an
  *  ISO yyyy-mm-dd string or '' (no pinned date). The server refuses a start
  *  time without a zone. Left out, the optional fields save as empty with the
  *  notetaker on, not as they were, so an edit sends them back. */
-export interface CoachClassInput {
-  name: string;
-  classDate: string;
-  recurrence: CoachClassRecurrence;
-  zoomLink: string;
-  startTime?: string;
-  timeZone?: string;
-  notetaker?: boolean;
-}
+export type CoachClassInput = PostCoachClassesData['body'];
 
 /** One class in the admin all-leaders export, the class plus the leader it
  *  belongs to, so admins can see every class the notetaker records across the
  *  cohort. */
-export interface AdminCoachClass extends CoachClass {
-  leader: { id: string | null; name: string; email: string };
-}
+export type AdminCoachClass = GetCoachAdminClassesResponse['classes'][number];
 
 /** Whether the signed-in leader connected their Zoom account to the
  *  notetaker. `known` false: the notetaker did not answer, so `connected`
  *  says nothing either way. */
-export interface NotetakerStatus {
-  known: boolean;
-  connected: boolean;
-  zoomEmail: string | null;
-  /** Where a leader connects Zoom; it brings them back to versemate.org. */
-  connectUrl: string;
-}
+export type NotetakerStatus = GetCoachNotetakerStatusResponse;
 
 /** A roster leader a connected Zoom account or meeting was matched to. */
 export type NotetakerLeaderRef = { id: string; name: string } | null;
 
-export interface NotetakerZoomConnection {
-  email: string;
-  name: string;
-  connectedAt: string | null;
-  leader: NotetakerLeaderRef;
-}
-
 /** A scheduled meeting of a connected Zoom account, in Class Setup's terms. */
-export interface NotetakerZoomMeeting {
-  meetingId: string;
-  topic: string;
-  joinUrl: string;
-  hostEmail: string;
-  classDate: string | null;
-  startTime: string | null;
-  timeZone: string | null;
-  recurrence: string;
-  /** The host invited the notetaker in Zoom or by calendar invitation. */
-  invited: boolean;
-  leader: NotetakerLeaderRef;
-  /** The class that already records this meeting, if any. */
-  classId: string | null;
-}
+export type NotetakerZoomMeeting = NotetakerZoom['meetings'][number];
 
 /** The admin's view of the notetaker. `available` false: it did not answer. */
-export interface NotetakerZoom {
-  available: boolean;
-  connectUrl: string;
-  connections: NotetakerZoomConnection[];
-  meetings: NotetakerZoomMeeting[];
-}
+export type NotetakerZoom = GetCoachAdminNotetakerZoomResponse;
 
-export interface CoachMe {
-  /** True when the signed-in account maps to an evaluated leader. */
-  isCoach: boolean;
-  /** True for program admins, oversight over every leader. */
-  isAdmin: boolean;
-  /** The leader's own record; null for an admin who isn't a coachee. */
-  profile: CoachProfile | null;
-  zoomLink: string;
-  /** The leader's affiliated church (free-form; empty when unset). */
-  affiliatedChurch: string;
-  /** The leader's selected Bible coach (empty → portal defaults to Bryan). */
-  bibleCoach: string;
-  model: string;
-  clusters: { name: string; weight: number }[];
-  statusBands: StatusBand[];
-}
+export type CoachMe = GetCoachMeResponse;
 
 /** An address change an admin asked for that has not taken effect. */
-export interface AddressChange {
-  newEmail: string;
-  state: 'pending' | 'expired' | 'refused';
-  reason: string | null;
-  requestedAt: string;
-  expiresAt: string;
-}
+export type AddressChange = NonNullable<CoachSummary['addressChange']>;
 
 /** One row in the admin oversight roster. */
-export interface CoachSummary {
-  id: string;
-  name: string;
-  group: string;
-  coachName: string;
-  sessionCount: number;
-  addressChange?: AddressChange | null;
-  latest: {
-    date: string;
-    dateLabel: string;
-    score: number;
-    status: string;
-    statusEmoji: string;
-  } | null;
-}
-
-export interface ScorePoint {
-  date: string;
-  dateLabel: string;
-  session: string;
-  score: number;
-  status: string;
-  reportId?: string;
-}
+export type CoachSummary = GetCoachAdminCoachesResponse['coaches'][number];
 
 /** Row shape for the cluster + dimension trend charts: a date plus one
  *  numeric key per cluster / dimension name. */
-export type TrendRow = { date: string; dateLabel: string } & Record<string, number | string | null>;
+export type TrendRow = CoachTrends['clusterSeries'][number];
 
-export interface CoachTrends {
-  scoreSeries: ScorePoint[];
-  clusterSeries: TrendRow[];
-  dimensionSeries: TrendRow[];
-  delta: {
-    score: number;
-    from: number;
-    to: number;
-    fromLabel: string;
-    toLabel: string;
-  } | null;
-}
+export type CoachTrends = GetCoachTrendsResponse;
 
 // ─── Errors ────────────────────────────────────────────────────────────────
 
@@ -365,43 +249,65 @@ export function refusalText(err: unknown): string {
 
 // ─── Requests ──────────────────────────────────────────────────────────────
 
-async function coachRequest<T>(path: string, init: RequestInit = {}): Promise<T> {
-  const res = await fetchWithAuth(`${API_BASE_URL}/coach/${path}`, {
-    ...init,
-    headers: { accept: 'application/json', ...(init.headers || {}) },
+export function newCoachClient() {
+  const client = newQuietClient();
+  client.setConfig({ parseAs: 'json' });
+  client.interceptors.response.use(namingInvalidJson);
+  return client;
+}
+
+const coachClient = newCoachClient();
+
+function coachRoute(request: Request): string {
+  const { pathname } = new URL(request.url);
+  const at = pathname.indexOf('/coach/');
+  return at === -1 ? pathname : pathname.slice(at + '/coach/'.length);
+}
+
+function namingInvalidJson(response: Response, request: Request): Response {
+  const parse = response.json.bind(response);
+  response.json = () =>
+    parse().catch((error: unknown) => {
+      if (!(error instanceof SyntaxError)) throw error;
+      throw new SyntaxError(`coach api ${scrubCoachPath(`/coach/${coachRoute(request)}`)} returned invalid JSON`);
+    });
+  return response;
+}
+
+type CoachErrorBody = { message?: unknown; details?: Record<string, unknown> };
+
+function errorBodyOf(error: unknown): CoachErrorBody {
+  return error && typeof error === 'object' ? (error as CoachErrorBody) : {};
+}
+
+export type ForbiddenMode = 'gate' | 'refusal';
+
+export async function coachCall<T>(
+  pending: Promise<{ data?: T; error?: unknown; request: Request; response: Response }>,
+  forbidden: ForbiddenMode = 'gate',
+): Promise<T> {
+  const { data, error, request, response } = await pending.catch((failure: unknown) => {
+    if (failure instanceof SyntaxError) throw new Error(failure.message);
+    throw failure;
   });
-  if (res.status === 401) throw new CoachAuthError('signed_out');
-  if (res.status === 403) {
-    const body = (await res.json().catch(() => null)) as { details?: { refusal?: string } } | null;
-    throw new CoachAuthError(body?.details?.refusal === 'confirm-email' ? 'confirm_email' : 'not_a_coach');
+  if (response.status === 401) throw new CoachAuthError('signed_out');
+  const body = errorBodyOf(error);
+  if (response.status === 403 && forbidden === 'gate') {
+    throw new CoachAuthError(body.details?.refusal === 'confirm-email' ? 'confirm_email' : 'not_a_coach');
   }
-  if (!res.ok) {
-    const body = (await res.json().catch(() => null)) as { message?: string; details?: Record<string, unknown> } | null;
-    throw new CoachApiError(path, res.status, body?.message ?? '', body?.details ?? {});
+  if (!response.ok || data === undefined) {
+    const message = typeof body.message === 'string' ? body.message : '';
+    throw new CoachApiError(coachRoute(request), response.status, message, body.details ?? {});
   }
-  return (await res.json().catch(() => {
-    throw new Error(`coach api ${scrubCoachPath(`/coach/${stripQuery(path)}`)} returned invalid JSON`);
-  })) as T;
+  return data;
 }
 
 /** GET /api/coach/me, profile + saved Zoom link + model metadata. */
 export function fetchCoachMe(): Promise<CoachMe> {
-  return coachRequest<CoachMe>('me');
+  return coachCall(getCoachMe({ client: coachClient }));
 }
 
-export type CoachReportSummary = Pick<
-  CoachReport,
-  | 'id'
-  | 'date'
-  | 'dateLabel'
-  | 'session'
-  | 'topic'
-  | 'score'
-  | 'status'
-  | 'statusEmoji'
-  | 'hasRetainedRecording'
-  | 'attachedRecordingUrl'
-> & { held?: boolean };
+export type CoachReportSummary = GetCoachReportsSummaryResponse['items'][number];
 
 export interface CoachReportSummaryPage {
   items: CoachReportSummary[];
@@ -412,8 +318,8 @@ export interface CoachReportSummaryPage {
 
 export const REPORT_PAGE_SIZE = 50;
 
-function reportsPath(coachId?: string): string {
-  return coachId ? `admin/coaches/${encodeURIComponent(coachId)}/reports` : 'reports';
+export function scoreDelta(current: number | undefined, previous: number | undefined): number | null {
+  return current === undefined || previous === undefined ? null : Math.round((current - previous) * 100) / 100;
 }
 
 export async function fetchCoachReportSummaries(
@@ -421,20 +327,12 @@ export async function fetchCoachReportSummaries(
   limit = REPORT_PAGE_SIZE,
   coachId?: string,
 ): Promise<CoachReportSummaryPage> {
-  let data: Partial<CoachReportSummaryPage>;
-  try {
-    data = await coachRequest<Partial<CoachReportSummaryPage>>(`${reportsPath(coachId)}/summary?limit=${limit}&offset=${offset}`);
-  } catch (err) {
-    if (!(err instanceof CoachApiError && err.status === 404 && err.details.refusal === undefined)) throw err;
-    const { reports = [] } = await coachRequest<{ reports?: CoachReport[] }>(reportsPath(coachId));
-    data = { items: reports.slice(offset, offset + limit), total: reports.length };
-  }
-  return {
-    items: data.items || [],
-    total: data.total ?? 0,
-    streakWeeks: data.streakWeeks ?? 0,
-    quarterSessions: data.quarterSessions ?? 0,
-  };
+  const query = { limit, offset };
+  return coachCall(
+    coachId
+      ? getCoachAdminCoachesByIdReportsSummary({ client: coachClient, path: { id: coachId }, query })
+      : getCoachReportsSummary({ client: coachClient, query }),
+  );
 }
 
 export async function fetchCoachReportDetail(
@@ -442,10 +340,12 @@ export async function fetchCoachReportDetail(
   coachId?: string,
 ): Promise<CoachReport | null> {
   try {
-    const data = await coachRequest<{ report: CoachReport }>(
-      `${reportsPath(coachId)}/${encodeURIComponent(reportId)}`,
+    const data = await coachCall(
+      coachId
+        ? getCoachAdminCoachesByIdReportsByReportId({ client: coachClient, path: { id: coachId, reportId } })
+        : getCoachReportsByReportId({ client: coachClient, path: { reportId } }),
     );
-    return data.report ?? null;
+    return data.report;
   } catch (err) {
     if (err instanceof CoachApiError && err.status === 404) return null;
     throw err;
@@ -462,45 +362,20 @@ export async function fetchCoachReportDetail(
 export async function mintRecordingUrl(
   reportId: string,
 ): Promise<{ url: string; expiresInSeconds: number } | null> {
-  try {
-    return await coachRequest<{ url: string; expiresInSeconds: number }>(
-      `reports/${encodeURIComponent(reportId)}/recording-url`,
-    );
-  } catch {
-    // Every refusal looks the same by design (no session, not yours, nothing
-    // retained), so there is nothing to distinguish here either.
-    return null;
-  }
+  return coachCall(getCoachReportsByReportIdRecordingUrl({ client: coachClient, path: { reportId } })).catch(() => null);
 }
 
 /** A session whose recording could not be retrieved (tasks 4.9a, 8.5a). */
-export interface PendingReshare {
-  sourceSessionId: string;
-  coachId: string | null;
-  title: string;
-  sessionDate: string;
-  sessionStartedAt: string | null;
-  requestedAt: string;
-  attempts: number;
-  /** True once the leader has actually been emailed about this session. */
-  asked: boolean;
-  parallelRun: boolean;
-}
+export type PendingReshare = GetCoachAdminResharesResponse['requests'][number];
 
 /** GET /api/coach/admin/reshares, admin only. */
 export async function fetchPendingReshares(): Promise<PendingReshare[]> {
-  const data = await coachRequest<{ requests: PendingReshare[] }>(
-    'admin/reshares',
-  );
-  return data.requests || [];
+  return (await coachCall(getCoachAdminReshares({ client: coachClient }))).requests;
 }
 
 /** POST /api/coach/admin/reshares/:id/send, asks the leader to re-share. */
 export function sendReshareRequest(sourceSessionId: string): Promise<{ sent: boolean }> {
-  return coachRequest<{ sent: boolean }>(
-    `admin/reshares/${encodeURIComponent(sourceSessionId)}/send`,
-    { method: 'POST' },
-  );
+  return coachCall(postCoachAdminResharesBySourceSessionIdSend({ client: coachClient, path: { sourceSessionId } }));
 }
 
 /**
@@ -511,10 +386,7 @@ export function sendReshareRequest(sourceSessionId: string): Promise<{ sent: boo
 export function resolveReshareRequest(
   sourceSessionId: string,
 ): Promise<{ resolved: boolean }> {
-  return coachRequest<{ resolved: boolean }>(
-    `admin/reshares/${encodeURIComponent(sourceSessionId)}/resolve`,
-    { method: 'POST' },
-  );
+  return coachCall(postCoachAdminResharesBySourceSessionIdResolve({ client: coachClient, path: { sourceSessionId } }));
 }
 
 export function sessionDateText(session: { sessionDate: string; sessionStartedAt: string | null }): string {
@@ -532,41 +404,18 @@ export const PARALLEL_RUN_COPY = 'Parallel-run copy: kept for comparison, never 
 
 export type HoldKind = 'review' | 'reattributed' | 'governance' | 'cold-recall' | 'no-mailer' | 'send-failed' | 'scoring-version';
 
-export interface PipelineFailure {
-  sourceSessionId: string;
-  coachId: string | null;
-  title: string;
-  sessionDate: string;
-  sessionStartedAt: string | null;
-  state: string;
-  attempts: number;
-  reportId: string | null;
-  reason: string | null;
-  holdKind: HoldKind | null;
-  coldRecall?: string[];
-  parallelRun: boolean;
-  action: 'release' | 'requeue' | 'attribute' | null;
-  updatedAt: string;
-}
+export type PipelineFailure = PipelineFailurePage['sessions'][number];
 
-export interface PipelineFailurePage {
-  sessions: PipelineFailure[];
-  total: number;
-  limit: number;
-  offset: number;
-}
+export type PipelineFailurePage = GetCoachAdminPipelineFailuresResponse;
 
 export const PIPELINE_PAGE_SIZE = 50;
 
 export function fetchPipelineFailures(offset = 0, limit = PIPELINE_PAGE_SIZE): Promise<PipelineFailurePage> {
-  return coachRequest<PipelineFailurePage>(`admin/pipeline-failures?limit=${limit}&offset=${offset}`);
+  return coachCall(getCoachAdminPipelineFailures({ client: coachClient, query: { limit, offset } }));
 }
 
 export function requeuePipelineFailure(sourceSessionId: string): Promise<{ requeued: boolean }> {
-  return coachRequest<{ requeued: boolean }>(
-    `admin/pipeline-failures/${encodeURIComponent(sourceSessionId)}/requeue`,
-    { method: 'POST' },
-  );
+  return coachCall(postCoachAdminPipelineFailuresBySourceSessionIdRequeue({ client: coachClient, path: { sourceSessionId } }));
 }
 
 export function attributeSession(
@@ -574,54 +423,21 @@ export function attributeSession(
   coachId: string,
   expectedCoachId: string | null,
 ): Promise<{ coachId: string; state: string }> {
-  return coachRequest<{ coachId: string; state: string }>(
-    `admin/sessions/${encodeURIComponent(sourceSessionId)}/attribute`,
-    {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ coachId, expectedCoachId }),
-    },
+  return coachCall(
+    postCoachAdminSessionsBySourceSessionIdAttribute({ client: coachClient, path: { sourceSessionId }, body: { coachId, expectedCoachId } }),
   );
 }
 
-export interface ReleaseOutcome {
-  delivered: boolean;
-  refusal?: string;
-  violations?: string[];
-  coldRecall?: string[];
-  skipped?: string[];
-}
+export type ReleaseOutcome = PostCoachAdminReportsByReportIdReleaseResponse;
 
 export function releaseHeldReport(reportId: string): Promise<ReleaseOutcome> {
-  return coachRequest<ReleaseOutcome>(`admin/reports/${encodeURIComponent(reportId)}/release`, {
-    method: 'POST',
-  });
+  return coachCall(postCoachAdminReportsByReportIdRelease({ client: coachClient, path: { reportId } }));
 }
 
-export interface ReportReviewState {
-  reportId: string;
-  delivered: boolean;
-  base: number;
-  humanCorrected: boolean;
-  firstLesson: boolean;
-  firstLessonSource: string | null;
-  firstLessonLine: string | null;
-  parallelRun: boolean;
-  dimensions: ReviewDimension[];
-}
+export type ReportReviewState = GetCoachAdminReportsByReportIdReviewResponse;
 
 /** One dimension under review. Each of what produced it is null when it was not recorded. */
-export interface ReviewDimension {
-  n: number;
-  score: number | null;
-  rationale: string;
-  provenance: string;
-  /** The rubric version. */
-  modelVersion: string | null;
-  languageModel: string | null;
-  promptVersion: string | null;
-  settings: { temperature: number | null; reasoningEffort: string | null } | null;
-}
+export type ReviewDimension = ReportReviewState['dimensions'][number];
 
 export const AMENDABLE_BODY_FIELDS = ['headline', 'overview', 'strengths', 'improvements', 'recommendations'] as const;
 export type AmendableBodyField = (typeof AMENDABLE_BODY_FIELDS)[number];
@@ -638,76 +454,22 @@ export interface BigIdeasReviewRow {
   rating: ScorecardRating;
 }
 
-export interface ReportAmendment {
-  dimensions?: { n: number; score: number | null; rationale: string }[];
-  firstLesson?: boolean;
-  bigIdeasReview?: BigIdeasReviewRow;
-  body?: Partial<Record<AmendableBodyField, string | string[]>> & Partial<Record<ProseField, CoachFeedbackPoint[]>>;
-}
+export type ReportAmendment = PostCoachAdminReportsByReportIdAmendData['body'];
 
-export interface RevisionSends {
-  sends?: { email: string; delivered: boolean; error?: string; neverConfirmed?: true }[];
-  skipped?: string[];
-}
+export type RevisionSends = Pick<RevisionResult, 'sends' | 'skipped'>;
 
-export interface RevisionResult extends RevisionSends {
-  applied: boolean;
-  refusal?: string;
-  violations?: string[];
-  coldRecall?: string[];
-  revision?: number;
-  firstLesson?: boolean;
-  base?: number;
-  score?: number;
-  status?: string;
-  sent?: boolean;
-  pending?: string;
-}
+export type RevisionResult = PostCoachAdminReportsByReportIdAmendResponse;
 
-export interface RevisionSendResult extends RevisionSends {
-  sent: boolean;
-  refusal?: string;
-  revision?: number;
-}
+export type RevisionSendResult = PostCoachAdminReportsByReportIdRevisionSendResponse;
 
-type ScoreAndRationale = { score: number | null; rationale: string };
-
-export interface ReportRevisionChanges {
-  dimensions?: { n: number; from: ScoreAndRationale; to: ScoreAndRationale }[];
-  firstLesson?: { from: boolean; to: boolean };
-  body?: Partial<Record<AmendableBodyField | ProseField, { from: unknown; to: unknown }>>;
-}
-
-export interface ReportRevision {
-  kind: 'revision';
-  revision: number;
-  previous: Record<string, unknown>;
-  changes: ReportRevisionChanges;
-  amendedBy: string | null;
-  amendedAt: string;
-  sentTo: string[];
-  skipped: string[];
-  sentAt: string | null;
-  attemptedTo: string[];
-}
-
-export interface ReportEdit {
-  kind: 'edit';
-  edit: number;
-  changes: Partial<Record<'improvements' | 'improvementsProse', { from: unknown; to: unknown }>>;
-  editedBy: string | null;
-  editedAt: string;
-}
-
-export type ReportVersion = ReportRevision | ReportEdit;
-
-function adminReportPath(reportId: string, rest: string): string {
-  return `admin/reports/${encodeURIComponent(reportId)}/${rest}`;
-}
+export type ReportVersion = GetCoachAdminReportsByReportIdRevisionsResponse['revisions'][number];
+export type ReportRevision = Extract<ReportVersion, { kind: 'revision' }>;
+export type ReportEdit = Extract<ReportVersion, { kind: 'edit' }>;
+export type ReportRevisionChanges = ReportRevision['changes'];
 
 export async function fetchReportReview(reportId: string): Promise<ReportReviewState | null> {
   try {
-    return await coachRequest<ReportReviewState>(adminReportPath(reportId, 'review'));
+    return await coachCall(getCoachAdminReportsByReportIdReview({ client: coachClient, path: { reportId } }));
   } catch (err) {
     if (refusalCode(err) === 'unknown-report') return null;
     throw err;
@@ -726,30 +488,20 @@ export function correctDimension(
   dimensionN: number,
   correction: DimensionCorrection,
 ): Promise<{ base: number; score: number; status: string }> {
-  return coachRequest<{ base: number; score: number; status: string }>(adminReportPath(reportId, `dimensions/${dimensionN}`), {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(correction),
-  });
+  return coachCall(
+    postCoachAdminReportsByReportIdDimensionsByDimensionN({ client: coachClient, path: { reportId, dimensionN: String(dimensionN) }, body: correction }),
+  );
 }
 
 export function amendReport(reportId: string, amendment: ReportAmendment): Promise<RevisionResult> {
-  return coachRequest<RevisionResult>(adminReportPath(reportId, 'amend'), {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(amendment),
-  });
+  return coachCall(postCoachAdminReportsByReportIdAmend({ client: coachClient, path: { reportId }, body: amendment }));
 }
 
 export function setFirstLesson(
   reportId: string,
   input: { firstLesson: boolean; score?: number; rationale?: string; bigIdeasReview?: BigIdeasReviewRow },
 ): Promise<RevisionResult> {
-  return coachRequest<RevisionResult>(adminReportPath(reportId, 'first-lesson'), {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(input),
-  });
+  return coachCall(putCoachAdminReportsByReportIdFirstLesson({ client: coachClient, path: { reportId }, body: input }));
 }
 
 export interface ImprovementsEdit {
@@ -758,92 +510,47 @@ export interface ImprovementsEdit {
 }
 
 export function editImprovements(reportId: string, edit: ImprovementsEdit): Promise<RevisionResult> {
-  return coachRequest<RevisionResult>(adminReportPath(reportId, 'improvements'), {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(edit),
-  });
+  return coachCall(putCoachAdminReportsByReportIdImprovements({ client: coachClient, path: { reportId }, body: edit }));
 }
 
 export async function fetchReportRevisions(reportId: string): Promise<ReportVersion[]> {
-  const data = await coachRequest<{ revisions: ReportVersion[] }>(adminReportPath(reportId, 'revisions'));
-  return data.revisions || [];
+  return (await coachCall(getCoachAdminReportsByReportIdRevisions({ client: coachClient, path: { reportId } }))).revisions;
 }
 
 export function sendRevision(reportId: string): Promise<RevisionSendResult> {
-  return coachRequest<RevisionSendResult>(adminReportPath(reportId, 'revision/send'), { method: 'POST' });
+  return coachCall(postCoachAdminReportsByReportIdRevisionSend({ client: coachClient, path: { reportId } }));
 }
 
 export function requeueRevision(reportId: string): Promise<{ requeued: boolean }> {
-  return coachRequest<{ requeued: boolean }>(adminReportPath(reportId, 'revision/requeue'), { method: 'POST' });
+  return coachCall(postCoachAdminReportsByReportIdRevisionRequeue({ client: coachClient, path: { reportId } }));
 }
 
-export interface ComparedSession {
-  coachId: string;
-  date: string;
-  backend: { sourceSessionId: string; reportId: string; composite: number };
-  host: { reportId: string; composite: number | null };
-  compositeDifference: number | null;
-  dimensions: { n: number; host: number | null; backend: number | null; difference: number | null }[];
-  withinOne: number;
-  comparable: number;
-  flagged: boolean;
-  flagReasons?: ('composite' | 'dimension' | 'one-sided-not-applicable')[];
-}
+export type ComparedSession = ParallelRunComparison['sessions'][number];
 
-export interface ParallelRunComparison {
-  sessions: ComparedSession[];
-  needsPairing: {
-    coachId: string;
-    date: string;
-    backend: { sourceSessionId: string; reportId: string }[];
-    host: { reportId: string }[];
-  }[];
-  unmatched: {
-    backend: { coachId: string; date: string; sourceSessionId: string; reportId: string }[];
-    host: { coachId: string; date: string; reportId: string }[];
-  };
-  share: { withinOne: number; comparable: number; ratio: number | null };
-  counts: { compared: number; flagged: number; needsPairing: number; unmatchedBackend: number; unmatchedHost: number };
-}
+export type ParallelRunComparison = GetCoachAdminParallelRunComparisonResponse;
 
 export function fetchParallelRunComparison(): Promise<ParallelRunComparison> {
-  return coachRequest<ParallelRunComparison>('admin/parallel-run/comparison');
+  return coachCall(getCoachAdminParallelRunComparison({ client: coachClient }));
 }
 
-export interface CoverageLeader {
-  coachId: string;
-  name: string;
-  email: string;
-  covered: boolean;
-  basis: 'observed' | 'rotating-class' | 'attested-not-teaching' | 'attestation-lapsed' | 'no-observation';
-  observedSessions: number;
-  accountStatus: string;
-  linkedClassName: string | null;
-  classAlert: boolean;
-  attestedAt: string | null;
-  attestedBy: string | null;
-}
+export type CoverageLeader = CoverageReport['leaders'][number];
 
-export interface CoverageReport {
-  windowDays: number;
-  allCovered: boolean;
-  leaders: CoverageLeader[];
-}
+export type CoverageReport = GetCoachAdminCoverageResponse;
 
 export function fetchCoverage(windowDays = 30): Promise<CoverageReport> {
-  return coachRequest<CoverageReport>(`admin/coverage?windowDays=${windowDays}`);
+  return coachCall(getCoachAdminCoverage({ client: coachClient, query: { windowDays } }));
 }
 
 export function setNotTeaching(coachId: string, attested: boolean): Promise<{ attested: boolean }> {
-  return coachRequest<{ attested: boolean }>(`admin/leaders/${encodeURIComponent(coachId)}/not-teaching`, {
-    method: attested ? 'POST' : 'DELETE',
-  });
+  const options = { client: coachClient, path: { id: coachId } };
+  return coachCall(
+    attested ? postCoachAdminLeadersByIdNotTeaching(options) : deleteCoachAdminLeadersByIdNotTeaching(options),
+  );
 }
 
 /** GET /api/coach/trends, derived score / cluster / dimension series. */
 export function fetchCoachTrends(): Promise<CoachTrends> {
-  return coachRequest<CoachTrends>('trends');
+  return coachCall(getCoachTrends({ client: coachClient }));
 }
 
 // ─── Admin oversight (program admins only) ─────────────────────────────────
@@ -851,23 +558,17 @@ export function fetchCoachTrends(): Promise<CoachTrends> {
 /** GET /coach/admin/coaches, every leader's roster summary. 403 for
  *  non-admins → surfaces as CoachAuthError('not_a_coach'). */
 export async function fetchAdminCoaches(): Promise<CoachSummary[]> {
-  const data = await coachRequest<{ coaches: CoachSummary[] }>('admin/coaches');
-  return data.coaches || [];
+  return (await coachCall(getCoachAdminCoaches({ client: coachClient }))).coaches;
 }
 
 /** GET /coach/admin/coaches/:id/trends, a specific leader's trends. */
 export function fetchCoachTrendsFor(coachId: string): Promise<CoachTrends> {
-  return coachRequest<CoachTrends>(`admin/coaches/${encodeURIComponent(coachId)}/trends`);
+  return coachCall(getCoachAdminCoachesByIdTrends({ client: coachClient, path: { id: coachId } }));
 }
 
 /** PUT /api/coach/zoom-link, persist the coach's meeting link. */
 export async function saveCoachZoomLink(zoomLink: string): Promise<string> {
-  const data = await coachRequest<{ zoomLink: string }>('zoom-link', {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ zoomLink }),
-  });
-  return data.zoomLink;
+  return (await coachCall(putCoachZoomLink({ client: coachClient, body: { zoomLink } }))).zoomLink;
 }
 
 // ─── Classes (Class Setup) ──────────────────────────────────────────────────
@@ -875,104 +576,68 @@ export async function saveCoachZoomLink(zoomLink: string): Promise<string> {
 /** GET /api/coach/classes, this coach's registered classes, newest-edited
  *  first. */
 export async function fetchCoachClasses(): Promise<CoachClass[]> {
-  const data = await coachRequest<{ classes: CoachClass[] }>('classes');
-  return data.classes || [];
+  return (await coachCall(getCoachClasses({ client: coachClient }))).classes;
 }
 
 /** POST /api/coach/classes, register a new class. */
 export async function createCoachClass(input: CoachClassInput): Promise<CoachClass> {
-  const data = await coachRequest<{ class: CoachClass }>('classes', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(input),
-  });
-  return data.class;
+  return (await coachCall(postCoachClasses({ client: coachClient, body: input }))).class;
 }
 
 /** PUT /api/coach/classes/:id, update an existing class. */
 export async function updateCoachClass(id: string, input: CoachClassInput): Promise<CoachClass> {
-  const data = await coachRequest<{ class: CoachClass }>(`classes/${encodeURIComponent(id)}`, {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(input),
-  });
-  return data.class;
+  return (await coachCall(putCoachClassesById({ client: coachClient, path: { id }, body: input }))).class;
 }
 
 /** DELETE /api/coach/classes/:id, remove a class. */
 export async function deleteCoachClass(id: string): Promise<void> {
-  await coachRequest<{ success: boolean }>(`classes/${encodeURIComponent(id)}`, {
-    method: 'DELETE',
-  });
+  await coachCall(deleteCoachClassesById({ client: coachClient, path: { id } }));
 }
 
 /** GET /api/coach/notetaker/status, whether this leader's Zoom account is
  *  connected to the notetaker. */
 export function fetchNotetakerStatus(): Promise<NotetakerStatus> {
-  return coachRequest<NotetakerStatus>('notetaker/status');
+  return coachCall(getCoachNotetakerStatus({ client: coachClient }));
 }
 
 /** GET /coach/admin/classes, every leader's classes with owner identity
  *  (admin only; 403 for non-admins). */
 export async function fetchAllCoachClasses(): Promise<AdminCoachClass[]> {
-  const data = await coachRequest<{ classes: AdminCoachClass[] }>('admin/classes');
-  return data.classes || [];
+  return (await coachCall(getCoachAdminClasses({ client: coachClient }))).classes;
 }
 
 /** POST /coach/admin/classes, an admin schedules a class for the roster
  *  leader `coachId`, also one who has not signed up yet. A leader the roster
  *  does not know is refused with `unknown-leader`. */
 export async function createAdminCoachClass(coachId: string, input: CoachClassInput): Promise<AdminCoachClass> {
-  const data = await coachRequest<{ class: AdminCoachClass }>('admin/classes', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ ...input, coachId }),
-  });
-  return data.class;
+  return (await coachCall(postCoachAdminClasses({ client: coachClient, body: { ...input, coachId } }))).class;
 }
 
 /** PUT /coach/admin/classes/:id, an admin edits any leader's class. */
 export async function updateAdminCoachClass(id: string, input: CoachClassInput): Promise<CoachClass> {
-  const data = await coachRequest<{ class: CoachClass }>(`admin/classes/${encodeURIComponent(id)}`, {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(input),
-  });
-  return data.class;
+  return (await coachCall(putCoachAdminClassesById({ client: coachClient, path: { id }, body: input }))).class;
 }
 
 /** DELETE /coach/admin/classes/:id, an admin removes any leader's class. */
 export async function deleteAdminCoachClass(id: string): Promise<void> {
-  await coachRequest<{ success: boolean }>(`admin/classes/${encodeURIComponent(id)}`, {
-    method: 'DELETE',
-  });
+  await coachCall(deleteCoachAdminClassesById({ client: coachClient, path: { id } }));
 }
 
 /** GET /coach/admin/notetaker/zoom, the connected Zoom accounts and their
  *  scheduled meetings, so an admin can pick the ones to record. */
 export async function fetchNotetakerZoom(): Promise<NotetakerZoom> {
-  const data = await coachRequest<NotetakerZoom>('admin/notetaker/zoom');
-  return { ...data, connections: data.connections || [], meetings: data.meetings || [] };
+  const data = await coachCall(getCoachAdminNotetakerZoom({ client: coachClient }));
+  return { ...data, connections: data.connections ?? [], meetings: data.meetings ?? [] };
 }
 
 /** PUT /api/coach/affiliated-church, persist the coach's affiliated church. */
 export async function saveCoachAffiliatedChurch(affiliatedChurch: string): Promise<string> {
-  const data = await coachRequest<{ affiliatedChurch: string }>('affiliated-church', {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ affiliatedChurch }),
-  });
-  return data.affiliatedChurch;
+  return (await coachCall(putCoachAffiliatedChurch({ client: coachClient, body: { affiliatedChurch } }))).affiliatedChurch;
 }
 
 /** PUT /api/coach/bible-coach, persist the coach's selected Bible coach. */
 export async function saveCoachBibleCoach(bibleCoach: string): Promise<string> {
-  const data = await coachRequest<{ bibleCoach: string }>('bible-coach', {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ bibleCoach }),
-  });
-  return data.bibleCoach;
+  return (await coachCall(putCoachBibleCoach({ client: coachClient, body: { bibleCoach } }))).bibleCoach;
 }
 
 /** Bible coaches a leader can be paired with. Bryan is the only option today;
@@ -990,71 +655,42 @@ export async function addCoachLeader(input: {
   group?: string;
   coachName?: string;
 }): Promise<CoachSummary> {
-  const data = await coachRequest<{ coach: CoachSummary }>('admin/leaders', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(input),
-  });
-  return data.coach;
+  return (await coachCall(postCoachAdminLeaders({ client: coachClient, body: input }))).coach;
 }
 
-export interface LeaderEmailRequest {
-  email: string;
-  status: 'pending' | 'unchanged';
-  expiresAt: string | null;
-  confirmationSent: boolean;
-}
+export type LeaderEmailRequest = PutCoachAdminLeadersByIdEmailResponse;
 
 export function updateLeaderEmail(coachId: string, email: string, confirm = false): Promise<LeaderEmailRequest> {
-  return coachRequest<LeaderEmailRequest>(`admin/leaders/${encodeURIComponent(coachId)}/email`, {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(confirm ? { email, confirm: true } : { email }),
-  });
+  return coachCall(
+    putCoachAdminLeadersByIdEmail({ client: coachClient, path: { id: coachId }, body: confirm ? { email, confirm: true } : { email } }),
+  );
 }
 
-export type AddressChangeDescription =
-  | { leaderName: string; newEmail: string; state: 'pending'; expiresAt: string }
-  | { state: 'expired' | 'confirmed' | 'superseded' | 'refused'; expiresAt: string };
+export type AddressChangeDescription = PostCoachConfirmAddressDescribeResponse;
 
 export function describeAddressChange(token: string): Promise<AddressChangeDescription> {
-  return coachRequest<AddressChangeDescription>('confirm-address/describe', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ token }),
-  });
+  return coachCall(postCoachConfirmAddressDescribe({ client: coachClient, body: { token } }));
 }
 
 export function confirmAddressChange(token: string): Promise<{ email: string; noticeSent: boolean }> {
-  return coachRequest<{ email: string; noticeSent: boolean }>('confirm-address', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ token }),
-  });
+  return coachCall(postCoachConfirmAddress({ client: coachClient, body: { token } }));
 }
 
 export function needsBenchmarkConfirm(err: unknown): boolean {
   return err instanceof CoachApiError && err.status === 409 && err.details.refusal === 'confirm-required';
 }
 
-export interface LeaderAttribution {
-  titleMatch: string[];
-  altEmails: string[];
-}
+export type LeaderAttribution = GetCoachAdminLeadersByIdAttributionResponse;
 
 export function fetchLeaderAttribution(coachId: string): Promise<LeaderAttribution> {
-  return coachRequest<LeaderAttribution>(`admin/leaders/${encodeURIComponent(coachId)}/attribution`);
+  return coachCall(getCoachAdminLeadersByIdAttribution({ client: coachClient, path: { id: coachId } }));
 }
 
 export function saveLeaderAttribution(
   coachId: string,
   attribution: LeaderAttribution,
 ): Promise<LeaderAttribution & { resolved: number }> {
-  return coachRequest<LeaderAttribution & { resolved: number }>(`admin/leaders/${encodeURIComponent(coachId)}/attribution`, {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(attribution),
-  });
+  return coachCall(putCoachAdminLeadersByIdAttribution({ client: coachClient, path: { id: coachId }, body: attribution }));
 }
 
 export function isPlaceholderAddress(email: string): boolean {
@@ -1085,13 +721,8 @@ export async function saveRecordingLink(
   reportId: string,
   recordingUrl: string,
 ): Promise<string> {
-  const data = await coachRequest<{ recordingUrl: string }>(
-    `admin/coaches/${encodeURIComponent(coachId)}/reports/${encodeURIComponent(reportId)}/recording`,
-    {
-      method: 'PUT',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ recordingUrl }),
-    },
+  const data = await coachCall(
+    putCoachAdminCoachesByIdReportsByReportIdRecording({ client: coachClient, path: { id: coachId, reportId }, body: { recordingUrl } }),
   );
   return data.recordingUrl;
 }
@@ -1102,161 +733,38 @@ export async function addCoachNote(
   reportId: string,
   body: string,
 ): Promise<CoachNote> {
-  const data = await coachRequest<{ note: CoachNote }>(
-    `admin/coaches/${encodeURIComponent(coachId)}/reports/${encodeURIComponent(reportId)}/notes`,
-    {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ body }),
-    },
+  const data = await coachCall(
+    postCoachAdminCoachesByIdReportsByReportIdNotes({ client: coachClient, path: { id: coachId, reportId }, body: { body } }),
   );
   return data.note;
 }
 
 // ─── Monthly cross-leader analysis ─────────────────────────────────────────
 
-export interface MonthlyLeader {
-  id: string;
-  name: string;
-  group: string;
-  sessions: number;
-  avgScore: number | null;
-  status: string;
-  statusEmoji: string;
-  dimensions: { n: number; name: string; avg: number | null }[];
-  delta: number | null;
-}
+export type MonthlyLeader = CoachMonthly['leaders'][number];
 
-export interface CoachMonthly {
-  month: string; // "2026-07"
-  monthLabel: string; // "July 2026"
-  program: {
-    sessions: number;
-    activeLeaders: number;
-    newcomers: number;
-    avgScore: number | null;
-    clusters: { name: string; weight: number; avg: number | null }[];
-    delta: number | null;
-  };
-  leaders: MonthlyLeader[];
-  /** Every YYYY-MM month with at least one report, newest first. Drives the
-   *  month picker so only months that were actually done are selectable. */
-  availableMonths: string[];
-  /** Program-wide narrative prose for the month (Executive Summary + Trends),
-   *  or null. Comes straight from the coaching pipeline's shared generator, so
-   *  this reads identically to the monthly PDF. */
-  narrative: MonthlyNarrative | null;
-  programReport?: ProgramReport;
-}
+export type CoachMonthly = GetCoachAdminMonthlyResponse;
 
-export interface ProgramReport {
-  month: string;
-  monthLabel: string;
-  overview: { sessions: number; leaders: number; from: string; to: string };
-  leaderboard: { id: string; name: string; composite: number; status: string }[];
-  bands: { label: string; count: number }[];
-  heatMap: {
-    dimensions: { n: number; name: string }[];
-    rows: { id: string; name: string; cells: { n: number; avg: number | null; mark: 'strong' | 'middle' | 'weak' | null }[] }[];
-  };
-  trends: {
-    priorAvg: number | null;
-    allTimeAvg: number | null;
-    bestImproving: { id: string; name: string; delta: number } | null;
-    mostImprovedDimension: { name: string; delta: number } | null;
-    needsAttention: { name: string; avg: number } | null;
-    text: string[];
-  };
-  snapshots: { id: string; name: string; text: string }[];
-  priorityMatrix: { lowest: string[]; declining: string[]; plateau: string[] };
-  initiatives: string[];
-  executiveSummary: string[];
-}
-
-/** Program-wide monthly narrative, the same prose the monthly PDF carries. */
-export interface MonthlyNarrative {
-  executiveSummary: string[];
-  trends: string[];
-}
+export type ProgramReport = NonNullable<CoachMonthly['programReport']>;
 
 /** GET /coach/admin/monthly?month=YYYY-MM, program-wide + per-leader rollup. */
 export function fetchAdminMonthly(month: string): Promise<CoachMonthly> {
-  return coachRequest<CoachMonthly>(`admin/monthly?month=${encodeURIComponent(month)}`);
+  return coachCall(getCoachAdminMonthly({ client: coachClient, query: { month } }));
 }
 
 // ─── Per-leader monthly summary (full parity with the individual monthly PDF)
 
-export interface LeaderMonthlyClusterAvg {
-  tc: number | null;
-  bm: number | null;
-  ep: number | null;
-  br: number | null;
-}
-export interface LeaderMonthlyGlanceRow {
-  date: string;
-  session: string;
-  bm: number | null;
-  tc: number | null;
-  ep: number | null;
-  br: number | null;
-  composite: number;
-  status: string;
-}
-export interface LeaderMonthlyCluster {
-  key: string;
-  name: string;
-  weight: number;
-  avgPct: number | null;
-  statusLabel: string;
-  strongestDim: { name: string; val: number } | null;
-  weakestDim: { name: string; val: number } | null;
-  insight: string;
-}
-export interface LeaderMonthlySessionDetail {
-  date: string;
-  session: string;
-  composite: number;
-  status: string;
-  dimensions: { n: number; name: string; cluster: string; score: number | null; note: string }[];
-}
-export interface LeaderMonthlySummary {
-  month: string;
-  monthLabel: string;
-  priorMonthLabel: string;
-  leaderId: string;
-  leaderName: string;
-  group: string;
-  sessionsCount: number;
-  composite: number;
-  status: { label: string; emoji: string };
-  priorComposite: number | null;
-  delta: number | null;
-  clusterAvg: LeaderMonthlyClusterAvg;
-  glance: {
-    rows: LeaderMonthlyGlanceRow[];
-    avg: { bm: number | null; tc: number | null; ep: number | null; br: number | null; composite: number; status: string };
-  };
-  trajectory: { date: string; session: string; composite: number; status: string; delta: number | null }[];
-  clusters: LeaderMonthlyCluster[];
-  strengths: { text: string; session: string }[];
-  growth: { text: string; session: string }[];
-  trends: string[];
-  conversationGuide: { label: string; q: string }[];
-  focus: { clusterName: string; clusterPct: number | null; goals: string[] };
-  sessions: LeaderMonthlySessionDetail[];
-  profile?: { study?: string; format?: string; groupSize?: string | number };
-}
+export type LeaderMonthlyClusterAvg = LeaderMonthlySummary['clusterAvg'];
+export type LeaderMonthlyGlanceRow = LeaderMonthlySummary['glance']['rows'][number];
+export type LeaderMonthlyCluster = LeaderMonthlySummary['clusters'][number];
+export type LeaderMonthlySessionDetail = LeaderMonthlySummary['sessions'][number];
+export type LeaderMonthlySummary = NonNullable<LeaderMonthlyResponse['summary']>;
 
-export interface LeaderMonthlyResponse {
-  profile: { id: string; name: string; group: string };
-  summary: LeaderMonthlySummary | null;
-  /** Months this leader has a summary for, newest first. */
-  availableMonths: string[];
-}
+export type LeaderMonthlyResponse = GetCoachMonthlySummaryResponse;
 
 /** GET /coach/monthly-summary?month=YYYY-MM, the signed-in leader's own. */
 export function fetchMyMonthlySummary(month: string): Promise<LeaderMonthlyResponse> {
-  return coachRequest<LeaderMonthlyResponse>(`monthly-summary?month=${encodeURIComponent(month)}`);
+  return coachCall(getCoachMonthlySummary({ client: coachClient, query: { month } }));
 }
 
 /** GET /coach/admin/coaches/:id/monthly-summary?month=YYYY-MM, admin drill-in. */
@@ -1264,12 +772,14 @@ export function fetchLeaderMonthlySummary(
   coachId: string,
   month: string,
 ): Promise<LeaderMonthlyResponse> {
-  return coachRequest<LeaderMonthlyResponse>(
-    `admin/coaches/${encodeURIComponent(coachId)}/monthly-summary?month=${encodeURIComponent(month)}`,
-  );
+  return coachCall(getCoachAdminCoachesByIdMonthlySummary({ client: coachClient, path: { id: coachId }, query: { month } }));
 }
 
 // ─── Small view helpers (shared across the coach screens) ──────────────────
+
+export function dateLabelOf(report: { date: string; dateLabel?: string }): string {
+  return report.dateLabel || shortDate(report.date);
+}
 
 export function shortDate(iso: string): string {
   return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -1340,148 +850,96 @@ export function statusColor(
   return spreadOver(bandLabels.indexOf(status), bandLabels.length, STATUS_PALETTE) ?? STATUS_UNKNOWN;
 }
 
+export type UploadClass = GetCoachUploadsClassesResponse['classes'][number];
 
-export interface UploadClass {
-  key: string;
-  name: string;
-  kind: 'registered' | 'rotating' | 'group';
-}
+export type UploadParts = PostCoachUploadsResponse;
 
-export interface UploadParts {
-  uploadId: string;
-  partBytes: number;
-  parts: { partNumber: number; url: string }[];
-  expiresAt: string;
-}
+export type UploadStatus = UploadView['status'];
 
-export type UploadStatus = 'uploading' | 'processing' | 'held' | 'waiting-for-admin' | 'attributed-elsewhere' | 'ready' | 'failed';
+export type UploadView = GetCoachUploadsResponse['uploads'][number];
 
-export interface UploadView {
-  id: string;
-  coachId: string;
-  classKey: string;
-  className: string;
-  sessionDate: string;
-  title: string | null;
-  status: UploadStatus;
-  reason: string | null;
-  reportId: string | null;
-  createdAt: string;
-}
+export type UploadRequest = PostCoachUploadsData['body'];
 
-export interface UploadRequest {
-  classKey: string;
-  sessionDate: string;
-  title?: string | null;
-  fileName: string;
-  fileBytes: number;
-  contentType: string;
-}
-
-export interface AdminUploadRequest extends UploadRequest {
-  coachId: string;
-  replace?: boolean;
-}
-
-const uploadBase = (admin: boolean) => (admin ? 'admin/uploads' : 'uploads');
-
-function postJson(body: unknown): RequestInit {
-  return { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) };
-}
+export type AdminUploadRequest = PostCoachAdminUploadsData['body'];
 
 export async function fetchUploadClasses(coachId: string | null): Promise<UploadClass[]> {
-  const path = coachId === null ? 'uploads/classes' : `admin/uploads/classes?coachId=${encodeURIComponent(coachId)}`;
-  return (await coachRequest<{ classes: UploadClass[] }>(path)).classes;
+  const data = await coachCall(
+    coachId === null
+      ? getCoachUploadsClasses({ client: coachClient })
+      : getCoachAdminUploadsClasses({ client: coachClient, query: { coachId } }),
+  );
+  return data.classes;
 }
 
 export async function fetchUploads(admin: boolean, coachId: string | null = null): Promise<UploadView[]> {
-  const path = !admin ? 'uploads' : coachId ? `admin/uploads?coachId=${encodeURIComponent(coachId)}` : 'admin/uploads';
-  return (await coachRequest<{ uploads: UploadView[] }>(path)).uploads;
+  const data = await coachCall(
+    !admin
+      ? getCoachUploads({ client: coachClient })
+      : getCoachAdminUploads({ client: coachClient, ...(coachId ? { query: { coachId } } : {}) }),
+  );
+  return data.uploads;
 }
 
 export function requestUpload(input: UploadRequest | AdminUploadRequest): Promise<UploadParts> {
-  return coachRequest<UploadParts>('coachId' in input ? 'admin/uploads' : 'uploads', postJson(input));
+  return coachCall(
+    'coachId' in input ? postCoachAdminUploads({ client: coachClient, body: input }) : postCoachUploads({ client: coachClient, body: input }),
+  );
 }
 
 export function refreshUploadParts(uploadId: string, admin: boolean): Promise<UploadParts> {
-  return coachRequest<UploadParts>(`${uploadBase(admin)}/${encodeURIComponent(uploadId)}/parts`, { method: 'POST' });
+  const options = { client: coachClient, path: { id: uploadId } };
+  return coachCall(admin ? postCoachAdminUploadsByIdParts(options) : postCoachUploadsByIdParts(options));
 }
 
 export function completeUpload(uploadId: string, admin: boolean): Promise<{ status: UploadStatus }> {
-  return coachRequest<{ status: UploadStatus }>(`${uploadBase(admin)}/${encodeURIComponent(uploadId)}/complete`, { method: 'POST' });
+  const options = { client: coachClient, path: { id: uploadId } };
+  return coachCall(admin ? postCoachAdminUploadsByIdComplete(options) : postCoachUploadsByIdComplete(options));
 }
 
 export async function fetchMonthlyReports(month: string): Promise<MonthlyReportRow[]> {
-  return (await coachRequest<{ reports: MonthlyReportRow[] }>(`admin/monthly-reports?month=${encodeURIComponent(month)}`)).reports;
+  return (await coachCall(getCoachAdminMonthlyReports({ client: coachClient, query: { month } }))).reports;
 }
 
-export function editMonthlyReport(id: number, body: Record<string, unknown>): Promise<{ edited: boolean }> {
-  return coachRequest<{ edited: boolean }>(`admin/monthly-reports/${id}`, {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(body),
-  });
+export type MonthlyReportEdit = PutCoachAdminMonthlyReportsByIdData['body'];
+
+export function editMonthlyReport(id: number, body: MonthlyReportEdit): Promise<{ edited: boolean }> {
+  return coachCall(putCoachAdminMonthlyReportsById({ client: coachClient, path: { id: String(id) }, body }));
 }
 
 export function releaseMonthlyReport(id: number): Promise<{ released: boolean; sent: boolean }> {
-  return coachRequest<{ released: boolean; sent: boolean }>(`admin/monthly-reports/${id}/release`, { method: 'POST' });
+  return coachCall(postCoachAdminMonthlyReportsByIdRelease({ client: coachClient, path: { id: String(id) } }));
 }
 
-export interface RotatingClass {
-  id: number;
-  name: string;
-  groupEmail: string;
-  titleMatch: string[];
-  leaders: { id: string; name: string; rotatingOnly: boolean }[];
-}
+export type RotatingClass = GetCoachAdminRotatingClassesResponse['classes'][number];
 
-export interface RotatingClassBody {
-  name: string;
-  groupEmail: string;
-  titleMatch: string[];
-  leaders: string[];
-}
+export type RotatingClassBody = PostCoachAdminRotatingClassesData['body'];
 
 export async function fetchRotatingClasses(): Promise<RotatingClass[]> {
-  return (await coachRequest<{ classes: RotatingClass[] }>('admin/rotating-classes')).classes;
+  return (await coachCall(getCoachAdminRotatingClasses({ client: coachClient }))).classes;
 }
 
 export function saveRotatingClass(body: RotatingClassBody, id?: number): Promise<{ id: number }> {
-  return coachRequest<{ id: number }>(id === undefined ? 'admin/rotating-classes' : `admin/rotating-classes/${id}`, {
-    method: id === undefined ? 'POST' : 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(body),
-  });
+  return coachCall(
+    id === undefined
+      ? postCoachAdminRotatingClasses({ client: coachClient, body })
+      : putCoachAdminRotatingClassesById({ client: coachClient, path: { id: String(id) }, body }),
+  );
 }
 
 export function setRotatingOnly(coachId: string, rotatingOnly: boolean): Promise<{ rotatingOnly: boolean }> {
-  return coachRequest<{ rotatingOnly: boolean }>(`admin/leaders/${encodeURIComponent(coachId)}/rotating-only`, {
-    method: 'PUT',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ rotatingOnly }),
-  });
+  return coachCall(putCoachAdminLeadersByIdRotatingOnly({ client: coachClient, path: { id: coachId }, body: { rotatingOnly } }));
 }
 
-export interface LikelyDuplicate {
-  sourceSessionId: string;
-  source: 'bot' | 'upload';
-  coachId: string | null;
-  classKey: string | null;
-  title: string;
-  sessionDate: string;
-  duplicateOf: string | null;
-  against: 'upload' | 'host-report';
-  canScoreInstead: boolean;
-}
+export type LikelyDuplicate = GetCoachAdminDuplicatesResponse['duplicates'][number];
 
 export async function fetchLikelyDuplicates(): Promise<LikelyDuplicate[]> {
-  return (await coachRequest<{ duplicates: LikelyDuplicate[] }>('admin/duplicates')).duplicates;
+  return (await coachCall(getCoachAdminDuplicates({ client: coachClient }))).duplicates;
 }
 
 export function dismissDuplicate(sourceSessionId: string): Promise<{ dismissed: boolean }> {
-  return coachRequest<{ dismissed: boolean }>(`admin/duplicates/${encodeURIComponent(sourceSessionId)}/dismiss`, { method: 'POST' });
+  return coachCall(postCoachAdminDuplicatesBySourceSessionIdDismiss({ client: coachClient, path: { sourceSessionId } }));
 }
 
 export function scoreDuplicateInstead(sourceSessionId: string): Promise<{ queued: boolean }> {
-  return coachRequest<{ queued: boolean }>(`admin/duplicates/${encodeURIComponent(sourceSessionId)}/score`, { method: 'POST' });
+  return coachCall(postCoachAdminDuplicatesBySourceSessionIdScore({ client: coachClient, path: { sourceSessionId } }));
 }

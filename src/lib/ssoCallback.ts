@@ -1,4 +1,4 @@
-import { setAccessToken } from '@/services/api';
+import { setAccessToken } from '@/api/client';
 
 export type SSOErrorCode =
   | 'access_denied'

@@ -19,7 +19,7 @@ let urls: string[] = [];
 function mockFetch(router: (url: string) => Response | Promise<Response>) {
   urls = [];
   global.fetch = vi.fn(async (input: RequestInfo | URL) => {
-    const url = typeof input === 'string' ? input : input.toString();
+    const url = input instanceof Request ? input.url : input.toString();
     urls.push(url);
     return router(url);
   }) as typeof global.fetch;

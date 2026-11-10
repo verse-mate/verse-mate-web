@@ -1,31 +1,35 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { fetchTopicIndex, fetchTopics } from './bibleService';
 
-const events = Array.from({ length: 94 }, (_, i) => ({ topic_id: `e${i}`, name: `Event ${i}`, category: 'EVENT' }));
-const failing = vi.hoisted(() => ({ category: '' }));
+const events = Array.from({ length: 94 }, (_, i) => ({ topic_id: `e${i}`, name: `Event ${i}`, description: null, sort_order: i }));
+let failing = '';
 
-vi.mock('./api', () => ({
-  api: {
-    get: async (path: string, params?: { category?: string; limit?: number }) => {
-      if (path === '/topics/categories') return { categories: ['EVENT', 'THEME'] };
-      if (path === '/topics/search') {
-        if (params?.category === failing.category) throw new Error('search failed');
-        return { topics: params?.category === 'EVENT' ? events.slice(0, params?.limit ?? 20) : [] };
-      }
-      throw new Error(`unexpected ${path}`);
-    },
-  },
-}));
+function json(body: unknown, status = 200) {
+  return new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
+}
 
 beforeEach(() => {
-  failing.category = '';
+  failing = '';
+  vi.stubGlobal(
+    'fetch',
+    vi.fn(async (input: Request) => {
+      const url = new URL(input.url);
+      if (url.pathname === '/topics/categories') return json({ categories: ['EVENT', 'THEME'] });
+      if (url.pathname === '/topics/search') {
+        const category = url.searchParams.get('category');
+        if (category === failing) return json({ error: 'INTERNAL', message: 'search failed' }, 500);
+        return json({ topics: category === 'EVENT' ? events : [] });
+      }
+      return json({ message: 'not found' }, 404);
+    }),
+  );
 });
 
+afterEach(() => vi.unstubAllGlobals());
+
 describe('fetchTopics', () => {
-  it('returns every topic of a category, past the first 50', async () => {
-    const { fetchTopics } = await import('./bibleService');
-
+  it('returns every topic of a category the search answers with', async () => {
     const topics = await fetchTopics();
-
     expect(topics).toHaveLength(94);
     expect(topics.at(-1)?.name).toBe('Event 93');
   });
@@ -33,15 +37,11 @@ describe('fetchTopics', () => {
 
 describe('fetchTopicIndex', () => {
   it('returns the full list when every category loads', async () => {
-    const { fetchTopicIndex } = await import('./bibleService');
-
     expect(await fetchTopicIndex()).toHaveLength(94);
   });
 
   it('returns null when one category could not be loaded', async () => {
-    failing.category = 'THEME';
-    const { fetchTopicIndex } = await import('./bibleService');
-
+    failing = 'THEME';
     expect(await fetchTopicIndex()).toBeNull();
   });
 });

@@ -3,17 +3,14 @@ import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { Highlighter, ChevronRight } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
-import { api } from '@/services/api';
+import {
+  fetchEnabledThemeIds,
+  fetchHighlightThemes,
+  setThemeEnabled,
+  type HighlightTheme,
+} from '@/services/bibleService';
 import { vmTokens } from '@/styles/themeStyles';
 import { highlightAllIds } from '@/lib/highlights/highlightAll';
-
-interface HighlightTheme {
-  theme_id: number;
-  name: string;
-  color: string;
-  description: string;
-  is_active: boolean;
-}
 
 export default function HighlightsScreen() {
   const { state, dispatch } = useApp();
@@ -22,28 +19,13 @@ export default function HighlightsScreen() {
   const [enabledThemes, setEnabledThemes] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    api
-      .get<{ data: HighlightTheme[] }>('/bible/highlight-themes', undefined, { auth: false })
-      .then(r => setThemes(r?.data || []))
+    fetchHighlightThemes()
+      .then(setThemes)
       .catch(() => setThemes([]));
 
-    // Only fetch user theme preferences when signed in. The endpoint is
-    // auth-required, and a 401 here triggers the api wrapper's
-    // /logout → /login redirect — which used to break the guest /highlights
-    // experience by yanking visitors to login (issue #44). Guests just see
-    // the default empty + theme-list state, matching /bookmarks and /notes.
     if (state.isSignedIn) {
-      api
-        .get<{ data: Array<{ theme_id: number; is_enabled: boolean }> }>(
-          '/bible/user/theme-preferences'
-        )
-        .then(r => {
-          const active = new Set<number>();
-          for (const p of r?.data || []) {
-            if (p.is_enabled) active.add(p.theme_id);
-          }
-          setEnabledThemes(active);
-        })
+      fetchEnabledThemeIds()
+        .then(setEnabledThemes)
         .catch(() => undefined);
     }
   }, [state.isSignedIn]);
@@ -82,7 +64,7 @@ export default function HighlightsScreen() {
     else next.delete(themeId);
     setEnabledThemes(next);
     try {
-      await api.patch(`/bible/user/theme-preferences/${themeId}`, { is_enabled: newState });
+      await setThemeEnabled(themeId, newState);
     } catch {
       setEnabledThemes(enabledThemes);
     }
@@ -93,9 +75,7 @@ export default function HighlightsScreen() {
     const next = enable ? new Set(themes.map(t => t.theme_id)) : new Set<number>();
     setEnabledThemes(next);
     for (const t of themes) {
-      api
-        .patch(`/bible/user/theme-preferences/${t.theme_id}`, { is_enabled: enable })
-        .catch(() => undefined);
+      setThemeEnabled(t.theme_id, enable).catch(() => undefined);
     }
   };
 

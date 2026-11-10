@@ -7,7 +7,7 @@ beforeEach(() => {
   urls = [];
   localStorage.clear();
   global.fetch = vi.fn(async (input: RequestInfo | URL) => {
-    urls.push(new URL(typeof input === 'string' ? input : input.toString()));
+    urls.push(new URL(input instanceof Request ? input.url : input.toString()));
     return new Response(JSON.stringify({ event: { slug: 'x' }, topic: null, references: null }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },

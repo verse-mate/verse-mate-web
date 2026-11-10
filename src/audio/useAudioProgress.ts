@@ -12,6 +12,7 @@ import { useAudioPlayer } from './AudioPlayerContext';
 import {
   fetchProgress,
   saveProgress,
+  saveProgressOnUnload,
   type ResumeProgress,
 } from './audioApi';
 
@@ -56,19 +57,21 @@ export function useAudioProgress(): UseAudioProgressResult {
     };
   }, [track]);
 
-  // Periodic save while playing.
+  const elapsedRef = useRef(player.elapsedSeconds);
+  elapsedRef.current = player.elapsedSeconds;
+
   useEffect(() => {
     if (!track || playbackState !== 'playing') return;
     const interval = window.setInterval(() => {
       saveProgress({
         explanationId: track.explanation_id,
-        positionSeconds: player.elapsedSeconds,
+        positionSeconds: elapsedRef.current,
         durationSeconds: track.duration_seconds,
         reason: 'pause',
       });
     }, SAVE_INTERVAL_MS);
     return () => window.clearInterval(interval);
-  }, [playbackState, track, player.elapsedSeconds]);
+  }, [playbackState, track]);
 
   // Save on pause + complete.
   const prevStateRef = useRef(playbackState);
@@ -93,25 +96,38 @@ export function useAudioProgress(): UseAudioProgressResult {
     }
   }, [playbackState, track, player.elapsedSeconds]);
 
-  // Save on beforeunload via sendBeacon — survives page tear-down.
+  const stateRef = useRef(playbackState);
+  stateRef.current = playbackState;
+
   useEffect(() => {
     if (!track) return;
-    const handler = () => {
-      const state = playbackState;
-      if (state !== 'playing' && state !== 'paused') return;
-      const body = JSON.stringify({
-        position_seconds: player.elapsedSeconds,
-        duration_seconds: track.duration_seconds,
-        reason: 'navigation',
+    let saved = false;
+    const saveOnClose = () => {
+      if (saved || (stateRef.current !== 'playing' && stateRef.current !== 'paused')) return;
+      saved = true;
+      saveProgressOnUnload({
+        explanationId: track.explanation_id,
+        positionSeconds: elapsedRef.current,
+        durationSeconds: track.duration_seconds,
       });
-      navigator.sendBeacon?.(
-        `${import.meta.env.VITE_API_URL ?? 'https://api.versemate.org'}/bible/explanation/audio/${track.explanation_id}/progress`,
-        new Blob([body], { type: 'application/json' }),
-      );
     };
-    window.addEventListener('beforeunload', handler);
-    return () => window.removeEventListener('beforeunload', handler);
-  }, [track, playbackState, player.elapsedSeconds]);
+    const reopened = () => {
+      saved = false;
+    };
+    const visible = () => {
+      if (document.visibilityState === 'visible') saved = false;
+    };
+    window.addEventListener('beforeunload', saveOnClose);
+    window.addEventListener('pagehide', saveOnClose);
+    window.addEventListener('pageshow', reopened);
+    document.addEventListener('visibilitychange', visible);
+    return () => {
+      document.removeEventListener('visibilitychange', visible);
+      window.removeEventListener('beforeunload', saveOnClose);
+      window.removeEventListener('pagehide', saveOnClose);
+      window.removeEventListener('pageshow', reopened);
+    };
+  }, [track]);
 
   return {
     resumeProgress,

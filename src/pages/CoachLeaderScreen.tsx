@@ -20,6 +20,7 @@ import ScreenHeader from '@/components/ScreenHeader';
 import CoachProfileAvatar from '@/components/coach/CoachProfileAvatar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
+import { scoreDelta } from '@/services/coachService';
 import {
   useAdminClasses,
   useAdminLeader,
@@ -62,7 +63,7 @@ export default function CoachLeaderScreen() {
   const selIdx = selectedSummary ? reports.findIndex((r) => r.id === selectedSummary.id) : -1;
   const selPrev = selIdx >= 0 ? reports[selIdx + 1] : undefined;
   const delta =
-    selectedSummary && selPrev ? Math.round((selectedSummary.score - selPrev.score) * 100) / 100 : null;
+    selectedSummary && selPrev ? scoreDelta(selectedSummary.score, selPrev.score) : null;
   const selectedDetail = useCoachReportDetail(selectedId ?? latest?.id, coachId);
   const selected = selectedDetail.data ?? null;
 

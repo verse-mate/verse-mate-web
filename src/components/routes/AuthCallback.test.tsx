@@ -5,7 +5,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { exchangeSSOCode } from '@/services/bibleService';
 import { SSO_VERIFIER_KEY } from '@/lib/ssoCallback';
-import { clearTokens, getAccessToken } from '@/services/api';
+import { clearTokens, getAccessToken } from '@/api/client';
 import AuthCallback from './AuthCallback';
 
 vi.mock('@/contexts/AppContext', () => ({ useApp: () => ({ dispatch: vi.fn() }) }));

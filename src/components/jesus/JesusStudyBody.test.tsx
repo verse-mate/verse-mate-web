@@ -76,6 +76,10 @@ const detail: JesusEventDetail = {
       verse_end: 52,
       is_primary: true,
       display: 'Luke 2:41-52',
+      canonical_order: null,
+      emphasis: null,
+      unique_to_account: null,
+      verses: [],
     },
   ],
   reveals: {
@@ -89,7 +93,8 @@ const detail: JesusEventDetail = {
   reactions: [
     { who: 'The teachers', what: 'were amazed at His understanding', source_ref: 'Luke 2:47', provenance: 1 },
   ],
-  explanation: {},
+  explanation: { application: '', compare: '', insights: '', overview: '' },
+  study: { application: { questions: [] }, bookId: 42, bookName: 'Luke', chapter: 2, interpretation: { movements: [] }, steps: [], subtitle: '', themeOneLine: '', title: '' },
   related: [
     {
       slug: 'the-presentation',
@@ -369,8 +374,8 @@ describe('JesusStudyBody', () => {
     const temptation: JesusEventDetail = {
       ...detail,
       passages: [
-        { book_id: 40, book_name: 'Matthew', chapter: 4, verse_start: 1, verse_end: 11, is_primary: true, display: 'Matthew 4:1-11' },
-        { book_id: 41, book_name: 'Mark', chapter: 1, verse_start: 12, verse_end: 13, is_primary: false, display: 'Mark 1:12-13' },
+        { book_id: 40, book_name: 'Matthew', chapter: 4, verse_start: 1, verse_end: 11, is_primary: true, display: 'Matthew 4:1-11', canonical_order: null, emphasis: null, unique_to_account: null, verses: [] },
+        { book_id: 41, book_name: 'Mark', chapter: 1, verse_start: 12, verse_end: 13, is_primary: false, display: 'Mark 1:12-13', canonical_order: null, emphasis: null, unique_to_account: null, verses: [] },
       ],
     };
     renderTab(temptation);

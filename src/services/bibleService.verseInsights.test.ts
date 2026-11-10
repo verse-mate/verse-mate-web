@@ -1,24 +1,24 @@
-import { describe, expect, it, vi, beforeEach } from 'vitest';
-import * as apiModule from '@/services/api';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { fetchVerseInsights } from '@/services/bibleService';
 
-vi.mock('@/services/api', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@/services/api')>();
-  return { ...actual, api: { ...actual.api, get: vi.fn() } };
-});
+const ORIGINAL_FETCH = global.fetch;
 
-const get = vi.mocked(apiModule.api.get);
-
-/** Answer the explanation endpoint with the given text per type. */
 function explanations(byType: Record<string, string>) {
-  get.mockImplementation(async (_path: string, query?: Record<string, unknown>) => ({
-    explanation: { explanation: byType[String(query?.explanationType)] ?? '', explanation_id: 7 },
-  }));
+  global.fetch = vi.fn(async (input: RequestInfo | URL) => {
+    const url = new URL(input instanceof Request ? input.url : input.toString());
+    const text = byType[String(url.searchParams.get('explanationType'))] ?? '';
+    return new Response(JSON.stringify({ explanation: { explanation: text, explanation_id: 7 } }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }) as typeof global.fetch;
 }
 
-describe('fetchVerseInsights', () => {
-  beforeEach(() => get.mockReset());
+afterEach(() => {
+  global.fetch = ORIGINAL_FETCH;
+});
 
+describe('fetchVerseInsights', () => {
   it('splits the By Line explanation into one insight per verse', async () => {
     explanations({
       byline: '## Psalms 23:1\n> The Lord is my shepherd\nCare.\n## Psalms 23:2\nRest.',

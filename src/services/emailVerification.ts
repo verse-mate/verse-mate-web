@@ -1,22 +1,22 @@
-import { ApiError, api, getAccessToken, setAccessToken, setRefreshToken } from './api';
+import { ApiError, apiClient, getAccessToken, setAccessToken, unwrap } from '@/api/client';
+import { getUserMe, postAuthSendEmailVerification, postAuthVerifyEmail } from '@/api/generated/sdk.gen';
 
 export type ConfirmOutcome = 'confirmed' | 'already' | 'invalid' | 'signed-out' | 'failed';
 
 export async function fetchEmailVerified(): Promise<boolean | null> {
-  const me = await api.get<{ emailVerified?: unknown }>('/user/me');
-  return typeof me?.emailVerified === 'boolean' ? me.emailVerified : null;
+  const me = await unwrap(getUserMe({ client: apiClient }));
+  return typeof me.emailVerified === 'boolean' ? me.emailVerified : null;
 }
 
 export async function sendVerificationEmail(): Promise<void> {
-  await api.post('/auth/send-email-verification');
+  await unwrap(postAuthSendEmailVerification({ client: apiClient }));
 }
 
 export async function confirmEmail(key: string): Promise<ConfirmOutcome> {
   if (!getAccessToken()) return 'signed-out';
   try {
-    const session = await api.post<{ accessToken?: string; refreshToken?: string }>('/auth/verify-email', { token: key });
-    if (session?.accessToken) setAccessToken(session.accessToken);
-    if (session?.refreshToken) setRefreshToken(session.refreshToken);
+    const session = await unwrap(postAuthVerifyEmail({ client: apiClient, body: { token: key } }));
+    if (session.accessToken) setAccessToken(session.accessToken);
     return 'confirmed';
   } catch (err) {
     if (!(err instanceof ApiError)) return 'failed';
