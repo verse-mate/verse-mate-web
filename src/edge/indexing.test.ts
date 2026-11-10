@@ -12,8 +12,9 @@ afterEach(() => vi.unstubAllGlobals());
 const api = () => createApi('https://api.example.test', { cache: null, waitUntil: () => undefined });
 
 async function indexing(path: string, lang: Language, indexed: unknown) {
-  const published = readConfig({ ASSETS: null, INDEXED_LANGUAGES: indexed as string[] }).indexedLanguages;
+  const published = readConfig({ ASSETS: { fetch: async () => new Response() }, INDEXED_LANGUAGES: indexed as string[] }).indexedLanguages;
   const page = await loadPage(api(), matchPageRoute(path)!.route, lang, published);
+  if (!page) throw new Error(`no page for ${path}`);
   return indexingFor(page, lang, published, await loadCoverage(api()));
 }
 

@@ -76,7 +76,7 @@ export async function withEdgeCache(edge: EdgeRequest, key: string, render: () =
   };
 
   const stored = cache ? await cache.match(key) : undefined;
-  if (stored) {
+  if (stored && cache) {
     const age = ageOf(stored);
     const fresh = Number(stored.headers.get(FRESH_FOR));
     const stale = Number(stored.headers.get(STALE_FOR));

@@ -19,9 +19,9 @@ describe('page data for each route kind', () => {
     const page = await loadPage(api(), route('/bible/john/3'), 'es-MX');
 
     expect(page).toMatchObject({ kind: 'chapter', path: '/bible/john/3', bookId: 43, bookName: 'John', chapter: 3 });
-    expect(page.kind === 'chapter' && page.verses.find((v) => v.number === 16)?.text).toContain('For God so loved');
-    expect(page.kind === 'chapter' && page.summary).toContain('Resumen de Juan 3');
-    expect(page.kind === 'chapter' && page.byline).toContain('Análisis de Juan 3');
+    expect(page?.kind === 'chapter' && page.verses.find((v) => v.number === 16)?.text).toContain('For God so loved');
+    expect(page?.kind === 'chapter' && page.summary).toContain('Resumen de Juan 3');
+    expect(page?.kind === 'chapter' && page.byline).toContain('Análisis de Juan 3');
     expect(fake.calls).toContain('/bible/book/43/3?bible_version=NASB1995');
   });
 
@@ -36,7 +36,7 @@ describe('page data for each route kind', () => {
       title: 'The baptism of Jesus',
       passages: ['Matthew 3:13-17', 'Mark 1:9-11'],
     });
-    expect(page.kind === 'event' && page.explanation).toContain('Jesus comes from Nazareth');
+    expect(page?.kind === 'event' && page.explanation).toContain('Jesus comes from Nazareth');
   });
 
   it('resolves a topic by the slug the reader links to', async () => {
@@ -50,7 +50,7 @@ describe('page data for each route kind', () => {
       title: 'The Creation of the World',
       sections: [{ subtitle: 'The Six Days of Creation', references: ['Genesis 1', 'Genesis 2:1-3'] }],
     });
-    expect(page.kind === 'topic' && page.explanation).toContain('God alone created all things');
+    expect(page?.kind === 'topic' && page.explanation).toContain('God alone created all things');
   });
 
   it('finds nothing for an unknown book, chapter, event, topic or category', async () => {
@@ -156,7 +156,7 @@ describe('pages that do not exist', () => {
     installEdgeGlobals();
     const stalled = vi.fn(
       (_input: RequestInfo | URL, init?: RequestInit) =>
-        new Promise<Response>((_resolve, reject) => init?.signal?.addEventListener('abort', () => reject(init.signal.reason))),
+        new Promise<Response>((_resolve, reject) => init?.signal?.addEventListener('abort', () => reject(init?.signal?.reason))),
     );
     vi.stubGlobal('fetch', stalled);
     const started = Date.now();

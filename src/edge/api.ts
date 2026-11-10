@@ -1,3 +1,4 @@
+import type * as Api from '../api/generated/types.gen';
 import { SITE_ORIGIN } from './config';
 
 export const USER_AGENT = 'VerseMate-Edge';
@@ -14,9 +15,36 @@ export interface Runtime {
   waitUntil(promise: Promise<unknown>): void;
 }
 
-type Query = Record<string, string | number | undefined>;
+type Read<Data extends { url: string; path?: unknown; query?: unknown }, Response> = { data: Data; response: Response };
 
-export type ApiGet = <T>(path: string, query?: Query, options?: { ttl?: number }) => Promise<T | null>;
+type Reads =
+  | Read<Api.GetBibleTestamentsData, Api.GetBibleTestamentsResponse>
+  | Read<Api.GetBibleBookByBookIdByChapterNumberData, Api.GetBibleBookByBookIdByChapterNumberResponse>
+  | Read<Api.GetBibleBookExplanationByBookIdByChapterNumberData, Api.GetBibleBookExplanationByBookIdByChapterNumberResponse>
+  | Read<Api.GetBibleExplanationsCoverageData, Api.GetBibleExplanationsCoverageResponse>
+  | Read<Api.GetJesusEventsData, Api.GetJesusEventsResponse>
+  | Read<Api.GetJesusEventsBySlugData, Api.GetJesusEventsBySlugResponse>
+  | Read<Api.GetTopicsCategoriesData, Api.GetTopicsCategoriesResponse>
+  | Read<Api.GetTopicsSearchData, Api.GetTopicsSearchResponse>
+  | Read<Api.GetTopicsByIdExplanationData, Api.GetTopicsByIdExplanationResponse>
+  | Read<Api.GetTopicsByIdReferencesData, Api.GetTopicsByIdReferencesResponse>;
+
+export type ApiPath = Reads['data']['url'];
+type ReadOf<P extends ApiPath> = Extract<Reads, { data: { url: P } }>;
+export type ApiParams<P extends ApiPath> = Pick<ReadOf<P>['data'], 'path' | 'query'>;
+export type ApiResponse<P extends ApiPath> = ReadOf<P>['response'];
+
+export type ApiGet = <P extends ApiPath>(
+  path: P,
+  params: ApiParams<P>,
+  options?: { ttl?: number },
+) => Promise<ApiResponse<P> | null>;
+
+type Values = Record<string, string | number | boolean | undefined> | undefined;
+
+function fill(template: string, path: Values) {
+  return template.replace(/\{(\w+)\}/g, (_, name: string) => encodeURIComponent(String(path?.[name] ?? '')));
+}
 
 export function apiCacheKey(url: string) {
   return `${SITE_ORIGIN}/__edge-cache/api/${encodeURIComponent(url)}`;
@@ -73,9 +101,12 @@ export function createApi(baseUrl: string, runtime: Runtime, options: ApiOptions
     return data;
   }
 
-  return function get<T>(path: string, query: Query = {}, options: { ttl?: number } = {}) {
+  return function get<P extends ApiPath>(template: P, params: ApiParams<P>, options: { ttl?: number } = {}) {
+    type T = ApiResponse<P>;
+    const { path: pathValues, query } = params as { path?: Values; query?: Values };
+    const path = fill(template, pathValues);
     const url = new URL(baseUrl + path);
-    for (const [key, value] of Object.entries(query)) {
+    for (const [key, value] of Object.entries(query ?? {})) {
       if (value !== undefined && value !== '') url.searchParams.set(key, String(value));
     }
     const target = url.toString();

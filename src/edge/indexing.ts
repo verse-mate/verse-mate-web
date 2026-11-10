@@ -1,4 +1,4 @@
-import { ApiUnavailable, type ApiGet } from './api';
+import { ApiUnavailable, type ApiGet, type ApiResponse } from './api';
 import { DEFAULT_LANGUAGE, LANGUAGES, type Language } from './config';
 import type { PageData } from './pageData';
 
@@ -13,8 +13,6 @@ export interface Indexing {
 
 const COVERAGE_TTL = 60 * 60;
 
-type CoverageBody = { languages?: Record<string, { bookId: number; chapters: number[] }[]> };
-
 function servesLanguage(stored: string, language: Language) {
   const code = stored.trim().toLowerCase();
   const wanted = language.toLowerCase();
@@ -22,9 +20,9 @@ function servesLanguage(stored: string, language: Language) {
 }
 
 export async function loadCoverage(api: ApiGet): Promise<Coverage | null> {
-  let data: CoverageBody | null;
+  let data: ApiResponse<'/bible/explanations/coverage'> | null;
   try {
-    data = await api<CoverageBody>('/bible/explanations/coverage', {}, { ttl: COVERAGE_TTL });
+    data = await api('/bible/explanations/coverage', {}, { ttl: COVERAGE_TTL });
   } catch (error) {
     if (error instanceof ApiUnavailable) return null;
     throw error;
