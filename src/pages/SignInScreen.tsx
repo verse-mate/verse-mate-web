@@ -104,7 +104,8 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
   const [mode, setMode] = useState<Mode>(initialMode);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
@@ -130,9 +131,18 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
       setError('Enter your email and password');
       return;
     }
+    const first = firstName.trim();
+    const last = lastName.trim();
+    if (mode === 'signup' && (!first || !last)) {
+      setError('Enter your first and last name');
+      return;
+    }
     setSubmitting(true);
     try {
-      const user = mode === 'signin' ? await apiLogin(email, password) : await apiSignup(email, password, name);
+      const user =
+        mode === 'signin'
+          ? await apiLogin(email, password)
+          : await apiSignup({ email, password, firstName: first, lastName: last });
       dispatch({
         type: 'SET_SIGNED_IN',
         value: true,
@@ -209,16 +219,35 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
             </div>
 
             {mode === 'signup' && (
-              <div className="mb-3">
-                <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Name</label>
-                <input
-                  value={name}
-                  onChange={e => setName(e.target.value)}
-                  data-testid="signup-name"
-                  className="mt-1.5 w-full h-[52px] px-4 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4285F4]"
-                  style={{ backgroundColor: vmTokens.inputBg, border: `1px solid ${vmTokens.inputBorder}`, color: vmTokens.textPrimary }}
-                  placeholder="Your name"
-                />
+              <div className="mb-3 flex gap-3">
+                <div className="flex-1 min-w-0">
+                  <label htmlFor="signup-first-name" className="text-[13px]" style={{ color: vmTokens.textTertiary }}>First name</label>
+                  <input
+                    id="signup-first-name"
+                    autoComplete="given-name"
+                    maxLength={100}
+                    value={firstName}
+                    onChange={e => setFirstName(e.target.value)}
+                    data-testid="signup-first-name"
+                    className="mt-1.5 w-full h-[52px] px-4 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4285F4]"
+                    style={{ backgroundColor: vmTokens.inputBg, border: `1px solid ${vmTokens.inputBorder}`, color: vmTokens.textPrimary }}
+                    placeholder="First"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <label htmlFor="signup-last-name" className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Last name</label>
+                  <input
+                    id="signup-last-name"
+                    autoComplete="family-name"
+                    maxLength={100}
+                    value={lastName}
+                    onChange={e => setLastName(e.target.value)}
+                    data-testid="signup-last-name"
+                    className="mt-1.5 w-full h-[52px] px-4 rounded-lg text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4285F4]"
+                    style={{ backgroundColor: vmTokens.inputBg, border: `1px solid ${vmTokens.inputBorder}`, color: vmTokens.textPrimary }}
+                    placeholder="Last"
+                  />
+                </div>
               </div>
             )}
             <div className="mb-3">

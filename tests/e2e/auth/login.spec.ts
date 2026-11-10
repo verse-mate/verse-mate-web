@@ -37,14 +37,15 @@ test.describe('Auth — login (providers screen)', () => {
     await expect(page.getByTestId('login-mode-toggle')).toBeVisible();
   });
 
-  test('mode toggle reveals the signup name field', async ({ page }) => {
+  test('mode toggle reveals the signup name fields', async ({ page }) => {
     const login = new LoginPage(page);
     await login.goto('/login');
     await login.openEmailScreen();
-    await expect(login.nameInput).not.toBeVisible();
+    await expect(login.firstNameInput).not.toBeVisible();
 
     await login.modeToggle.click();
-    await expect(login.nameInput).toBeVisible();
+    await expect(login.firstNameInput).toBeVisible();
+    await expect(login.lastNameInput).toBeVisible();
     await expect(page.getByTestId('signup-submit')).toBeVisible();
   });
 });

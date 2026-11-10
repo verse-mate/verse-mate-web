@@ -5,7 +5,7 @@ import type { Page, Locator } from '@playwright/test';
  *
  * Two screens behind one URL:
  *  - "providers": Google / Apple / Continue-with-Email buttons
- *  - "email": email + password (+ name on signup) + submit
+ *  - "email": email + password (+ first and last name on signup) + submit
  *
  * The mobile testID inventory uses `login-*` for both modes; this page
  * mirrors that. Submit testid is mode-aware (login-submit vs signup-submit).
@@ -17,7 +17,8 @@ export class LoginPage {
   readonly emailButton: Locator;
   readonly emailInput: Locator;
   readonly passwordInput: Locator;
-  readonly nameInput: Locator;
+  readonly firstNameInput: Locator;
+  readonly lastNameInput: Locator;
   readonly modeToggle: Locator;
   readonly providersModeToggle: Locator;
   readonly emailScreenBack: Locator;
@@ -31,7 +32,8 @@ export class LoginPage {
     this.emailButton = page.getByTestId('login-email-button');
     this.emailInput = page.getByTestId('login-email');
     this.passwordInput = page.getByTestId('login-password');
-    this.nameInput = page.getByTestId('signup-name');
+    this.firstNameInput = page.getByTestId('signup-first-name');
+    this.lastNameInput = page.getByTestId('signup-last-name');
     this.modeToggle = page.getByTestId('login-mode-toggle');
     this.providersModeToggle = page.getByTestId('login-providers-mode-toggle');
     // Back button shown on the email-screen sub-view (returns to providers view).
@@ -57,16 +59,14 @@ export class LoginPage {
     await this.page.getByTestId('login-submit').click();
   }
 
-  async signUp(email: string, password: string, name: string) {
+  async signUp(email: string, password: string, firstName: string, lastName: string) {
     await this.openEmailScreen();
-    // The combined screen starts in signin mode; toggle to signup if needed
-    if (await this.nameInput.isVisible().catch(() => false)) {
-      // already in signup
-    } else {
+    if (!(await this.firstNameInput.isVisible().catch(() => false))) {
       await this.modeToggle.click();
-      await this.nameInput.waitFor({ state: 'visible' });
+      await this.firstNameInput.waitFor({ state: 'visible' });
     }
-    await this.nameInput.fill(name);
+    await this.firstNameInput.fill(firstName);
+    await this.lastNameInput.fill(lastName);
     await this.emailInput.fill(email);
     await this.passwordInput.fill(password);
     await this.page.getByTestId('signup-submit').click();
