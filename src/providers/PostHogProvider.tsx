@@ -50,6 +50,7 @@ if (POSTHOG_KEY && typeof window !== 'undefined' && !posthog.__loaded && storage
       recordFirstTouch({
         posthog: instance,
         storage: window.localStorage,
+        locks: navigator.locks,
         surface: 'reader',
         url: window.location.href,
         referrer: document.referrer,
