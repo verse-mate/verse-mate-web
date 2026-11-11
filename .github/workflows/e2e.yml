@@ -132,7 +132,7 @@ jobs:
 
       - name: Install API dependencies
         working-directory: backend
-        run: bun install --ignore-scripts
+        run: bun install --frozen-lockfile --ignore-scripts
 
       - name: Migrate and seed the API database
         working-directory: backend/packages/database
