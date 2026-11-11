@@ -6,6 +6,9 @@
  */
 
 import posthog from 'posthog-js';
+import { readFirstTouch, registerFirstTouch } from '@/lib/firstTouch';
+
+type Registrar = { register: (properties: Record<string, unknown>) => unknown };
 
 function safe<T>(fn: () => T): T | undefined {
   try {
@@ -36,7 +39,16 @@ export const analytics = {
     safe(() => posthog.captureException(error, context));
   },
 
+  registerSurface(instance: Registrar = posthog) {
+    safe(() => instance.register({ platform: 'web', surface: 'reader' }));
+  },
+
   reset() {
     safe(() => posthog.reset());
+    this.registerSurface();
+    safe(() => {
+      const touch = readFirstTouch(window.localStorage);
+      if (touch) registerFirstTouch(posthog, touch);
+    });
   },
 };

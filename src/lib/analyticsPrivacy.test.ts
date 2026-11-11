@@ -289,4 +289,34 @@ describe('what reaches analytics', () => {
       'https://app.test/bible/john/3': [{ x: 5, y: 6 }],
     });
   });
+
+  it('bounds campaign values on events and on the person', () => {
+    const out = scrubEvent({
+      uuid: 'u',
+      event: '$pageview',
+      properties: {
+        utm_content: 'jane@example.com',
+        utm_campaign: 'a'.repeat(150),
+        utm_source: 'newsletter',
+        $session_entry_utm_content: 'jane@example.com',
+      },
+      $set_once: { $initial_utm_content: 'jane@example.com' },
+    });
+    expect(out?.properties.utm_content).toBe('[redacted]');
+    expect(out?.properties.utm_campaign).toBe('a'.repeat(100));
+    expect(out?.properties.utm_source).toBe('newsletter');
+    expect(out?.properties.$session_entry_utm_content).toBe('[redacted]');
+    expect(out?.$set_once?.$initial_utm_content).toBe('[redacted]');
+  });
+
+  it('drops search keywords PostHog lifts from a search referrer', () => {
+    const out = scrubEvent({
+      uuid: 'u',
+      event: '$pageview',
+      properties: { $session_entry_ph_keyword: 'jane smith', kept: 1 },
+      $set_once: { $initial_ph_keyword: 'jane smith' },
+    });
+    expect(out?.properties).toEqual({ kept: 1 });
+    expect(out?.$set_once).toEqual({});
+  });
 });

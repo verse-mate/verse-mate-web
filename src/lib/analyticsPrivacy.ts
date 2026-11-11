@@ -1,8 +1,11 @@
 import type { CapturedNetworkRequest, CaptureResult } from 'posthog-js';
+import { boundCampaignValue } from './firstTouch';
 
 export const REPLAY_BLOCK_CLASS = 'ph-no-capture';
 
 const URL_KEY = /(^\$?|_)(url|referrer|href)$/i;
+const CAMPAIGN_KEY = /(^|_)utm_(source|medium|campaign|content|term)$/;
+const SEARCH_KEYWORD = /(^|_)ph_keyword$/;
 const QUERY_PROPERTIES = ['search', '$search'];
 const EMBEDDED_QUERY = /((?:https?:\/\/|href=")[^\s"'?#\\()<>[\]]*)(?:[?#][^\s"'\\()<>[\]]*)?/g;
 const TEXT_TOKEN = /[^\s"'`\\()<>[\]]+/g;
@@ -88,6 +91,7 @@ export function scrubCoachPath(text: string): string {
 }
 
 function scrubValue(value: unknown, key = ''): unknown {
+  if (typeof value === 'string' && CAMPAIGN_KEY.test(key)) return boundCampaignValue(value);
   if (typeof value === 'string') return scrubText(value, URL_KEY.test(key));
   if (Array.isArray(value)) return value.map((v) => scrubValue(v, key));
   if (value && typeof value === 'object' && [Object.prototype, null].includes(Object.getPrototypeOf(value))) {
@@ -108,6 +112,7 @@ function scrubProperties<T extends Record<string, unknown> | undefined>(props: T
   if (!props) return props;
   const out = scrubValue(props) as Record<string, unknown>;
   for (const key of QUERY_PROPERTIES) delete out[key];
+  for (const key of Object.keys(out)) if (SEARCH_KEYWORD.test(key)) delete out[key];
   if (out.$heatmap_data) out.$heatmap_data = scrubHeatmap(out.$heatmap_data as Record<string, unknown[]>);
   return out as T;
 }

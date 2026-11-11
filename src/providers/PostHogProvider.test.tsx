@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-const { client, init, capture, captureException } = vi.hoisted(() => {
+const { client, init, capture, captureException, register, reset } = vi.hoisted(() => {
   const client = { __loaded: false } as Record<string, unknown>;
   const init = vi.fn();
   init.mockImplementation(() => {
@@ -10,8 +10,10 @@ const { client, init, capture, captureException } = vi.hoisted(() => {
   });
   const capture = vi.fn();
   const captureException = vi.fn();
-  Object.assign(client, { init, capture, captureException });
-  return { client, init, capture, captureException };
+  const register = vi.fn();
+  const reset = vi.fn();
+  Object.assign(client, { init, capture, captureException, register, reset, debug: vi.fn() });
+  return { client, init, capture, captureException, register, reset };
 });
 vi.mock('posthog-js', () => ({ default: client }));
 
@@ -22,6 +24,9 @@ describe('the analytics client', () => {
     init.mockClear();
     capture.mockReset();
     captureException.mockReset();
+    register.mockReset();
+    reset.mockReset();
+    window.localStorage.clear();
     vi.stubEnv('VITE_POSTHOG_KEY', 'test-key');
   });
 
@@ -149,5 +154,87 @@ describe('the analytics client', () => {
     expect(props).toBeDefined();
     expect(JSON.stringify(props)).not.toContain('report-1');
     expect(JSON.stringify(props)).not.toContain('leader=l1');
+  });
+
+  it('starts nothing and reports nothing when the browser refuses storage', async () => {
+    const blocked = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+      throw new Error('blocked');
+    });
+    await mount('/read');
+    blocked.mockRestore();
+    window.onerror?.('boom', 'https://app.test/main.js', 1, 2, new Error('after refusal'));
+    expect(init).not.toHaveBeenCalled();
+    expect(capture).not.toHaveBeenCalled();
+    expect(captureException).not.toHaveBeenCalled();
+  });
+
+  it('starts nothing when the browser refuses cookies', async () => {
+    Object.defineProperty(document, 'cookie', { configurable: true, get: () => '', set: () => {} });
+    try {
+      await mount('/read');
+    } finally {
+      delete (document as unknown as Record<string, unknown>).cookie;
+    }
+    expect(init).not.toHaveBeenCalled();
+  });
+
+  it('decides returning before PostHog writes its own state', async () => {
+    window.history.replaceState({}, '', '/bible/john/3');
+    init.mockImplementationOnce((key: string, config: { loaded: (c: unknown) => void }) => {
+      client.__loaded = true;
+      window.localStorage.setItem(`ph_${key}_posthog`, '{}');
+      config.loaded(client);
+    });
+    await mount('/bible/john/3');
+    expect(capture).toHaveBeenCalledWith('acquisition_first_touch', expect.objectContaining({ returning: false }));
+  });
+
+  it('marks a browser that used the reader before as returning', async () => {
+    window.localStorage.setItem('ph_test-key_posthog', '{}');
+    init.mockImplementationOnce((_key: string, config: { loaded: (c: unknown) => void }) => {
+      client.__loaded = true;
+      config.loaded(client);
+    });
+    await mount('/read');
+    expect(capture).toHaveBeenCalledWith('acquisition_first_touch', expect.objectContaining({ returning: true }));
+  });
+
+  it('sends the first page view after the first touch, carrying its channel', async () => {
+    window.history.replaceState({}, '', '/bible/john/3?utm_source=chatgpt.com');
+    init.mockImplementationOnce((_key: string, config: { loaded: (c: unknown) => void }) => {
+      client.__loaded = true;
+      config.loaded(client);
+    });
+    await mount('/bible/john/3');
+    const channelAt = register.mock.calls.findIndex(([props]) => props.first_touch_channel === 'ai');
+    const pageviewAt = capture.mock.calls.findIndex(([event]) => event === '$pageview');
+    expect(channelAt).toBeGreaterThanOrEqual(0);
+    expect(register.mock.invocationCallOrder[channelAt]).toBeLessThan(capture.mock.invocationCallOrder[pageviewAt]);
+  });
+
+  it('names the surface and records the first touch once loaded', async () => {
+    window.history.replaceState({}, '', '/bible/john/3?utm_source=chatgpt.com');
+    await mount('/bible/john/3');
+    const instance = { register: vi.fn(), capture: vi.fn(), debug: vi.fn() };
+    init.mock.calls[0][1].loaded(instance);
+    expect(instance.register).toHaveBeenCalledWith({ platform: 'web', surface: 'reader' });
+    expect(instance.capture).toHaveBeenCalledWith(
+      'acquisition_first_touch',
+      expect.objectContaining({ surface: 'reader', channel: 'ai', ai_source: 'chatgpt' }),
+    );
+  });
+
+  it('keeps the surface and first touch on events after a sign-out', async () => {
+    window.history.replaceState({}, '', '/bible/john/3?utm_source=chatgpt.com');
+    await mount('/bible/john/3');
+    init.mock.calls[0][1].loaded({ register: vi.fn(), capture: vi.fn(), debug: vi.fn() });
+    const { analytics } = await import('@/lib/analytics');
+    analytics.reset();
+    const resetAt = reset.mock.invocationCallOrder[0];
+    const surfaceAt = register.mock.calls.findIndex(([props]) => props.surface === 'reader');
+    const touchAt = register.mock.calls.findIndex(([props]) => props.first_touch_channel === 'ai');
+    expect(register.mock.calls[touchAt][0]).toEqual({ first_touch_channel: 'ai', first_touch_ai_source: 'chatgpt' });
+    expect(register.mock.invocationCallOrder[surfaceAt]).toBeGreaterThan(resetAt);
+    expect(register.mock.invocationCallOrder[touchAt]).toBeGreaterThan(resetAt);
   });
 });
