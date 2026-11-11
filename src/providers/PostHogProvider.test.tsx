@@ -237,4 +237,29 @@ describe('the analytics client', () => {
     expect(register.mock.invocationCallOrder[surfaceAt]).toBeGreaterThan(resetAt);
     expect(register.mock.invocationCallOrder[touchAt]).toBeGreaterThan(resetAt);
   });
+
+  it('sends no first touch when another tab of this browser already sent one', async () => {
+    window.history.replaceState({}, '', '/bible/john/3?utm_source=chatgpt.com');
+    window.localStorage.setItem(
+      'vm_first_touch_sent',
+      JSON.stringify({ channel: 'search', at: '2026-11-11T00:00:00.000Z' }),
+    );
+    Object.defineProperty(navigator, 'locks', {
+      configurable: true,
+      value: { request: (_name: string, callback: () => Promise<void>) => callback() },
+    });
+    init.mockImplementationOnce((_key: string, config: { loaded: (c: unknown) => void }) => {
+      client.__loaded = true;
+      config.loaded(client);
+    });
+    try {
+      await mount('/bible/john/3');
+      await new Promise((resolve) => setTimeout(resolve, 0));
+    } finally {
+      Reflect.deleteProperty(navigator, 'locks');
+    }
+    expect(capture).not.toHaveBeenCalledWith('acquisition_first_touch', expect.anything());
+    const channels = register.mock.calls.filter(([props]) => 'first_touch_channel' in props);
+    expect(channels.at(-1)?.[0]).toEqual({ first_touch_channel: 'search' });
+  });
 });
