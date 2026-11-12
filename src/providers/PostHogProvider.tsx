@@ -3,7 +3,7 @@ import { PostHogProvider as PHProvider } from 'posthog-js/react';
 import { Component, type ReactNode, useCallback, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { analytics } from '@/lib/analytics';
-import { scrubEvent, scrubNetworkRequest, stripQuery } from '@/lib/analyticsPrivacy';
+import { scrubEvent, scrubNetworkRequest, scrubStoredInitialInfo, stripQuery } from '@/lib/analyticsPrivacy';
 import { collectErrorContext, shouldExcludeError, toReportableError } from '@/lib/errorFilters';
 import { recordFirstTouch } from '@/lib/firstTouch';
 import { storageAvailable } from '@/lib/storageAvailable';
@@ -45,6 +45,7 @@ if (POSTHOG_KEY && typeof window !== 'undefined' && !posthog.__loaded && storage
     capture_exceptions: false,
     persistence: 'localStorage+cookie',
     loaded: (instance) => {
+      scrubStoredInitialInfo(posthog.persistence, window);
       if (import.meta.env.DEV) instance.debug();
       analytics.registerSurface(instance);
       recordFirstTouch({
