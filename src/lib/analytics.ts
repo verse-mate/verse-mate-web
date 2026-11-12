@@ -6,6 +6,7 @@
  */
 
 import posthog from 'posthog-js';
+import { scrubStoredInitialInfo } from '@/lib/analyticsPrivacy';
 import { readFirstTouch, registerFirstTouch } from '@/lib/firstTouch';
 
 type Registrar = { register: (properties: Record<string, unknown>) => unknown };
@@ -45,6 +46,7 @@ export const analytics = {
 
   reset() {
     safe(() => posthog.reset());
+    safe(() => scrubStoredInitialInfo(posthog.persistence, window));
     this.registerSurface();
     safe(() => {
       const touch = readFirstTouch(window.localStorage);
