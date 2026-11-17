@@ -180,5 +180,8 @@ describe('the reader\'s own index.html', () => {
     expect(john.og('description')).toBe(john.description);
     expect(john.document.querySelector('#root')?.textContent).toContain('For God so loved the world');
     expect(john.document.querySelector('script[type="module"]')).not.toBeNull();
+    expect(all('meta[name="apple-itunes-app"]')).toEqual([
+      'app-id=6756897180, affiliate-data=pt=128394884&ct=reader-banner&mt=8',
+    ]);
   });
 });
