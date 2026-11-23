@@ -10,7 +10,7 @@ const BROWSER_ACCEPT = 'text/html,application/xhtml+xml,application/xml;q=0.9,im
 
 async function get(path: string, accept?: string, method = 'GET') {
   const ctx = context();
-  const headers = accept === undefined ? {} : { accept };
+  const headers: Record<string, string> = accept === undefined ? {} : { accept };
   const response = await worker.fetch(
     new Request(`https://app.versemate.org${path}`, { method, headers }),
     edgeEnv(),
