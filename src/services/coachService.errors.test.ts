@@ -3,7 +3,16 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { scrubEvent } from '@/lib/analyticsPrivacy';
 import { requestAudio } from '@/audio/audioApi';
 import { removeNote } from './bibleService';
-import { fetchAdminMonthly, fetchCoachTrendsFor, fetchNotetakerStatus, fetchNotetakerZoom, updateAdminCoachClass } from './coachService';
+import {
+  disconnectNotetaker,
+  fetchAdminMonthly,
+  fetchCoachTrendsFor,
+  fetchNotetakerActivity,
+  fetchNotetakerMeetings,
+  fetchNotetakerStatus,
+  fetchNotetakerZoom,
+  updateAdminCoachClass,
+} from './coachService';
 
 describe('a failed coach request', () => {
   afterEach(() => vi.unstubAllGlobals());
@@ -27,11 +36,19 @@ describe('a failed coach request', () => {
       failure(fetchNotetakerStatus()),
       failure(fetchNotetakerZoom()),
       failure(updateAdminCoachClass('class-7', { name: 'X', classDate: '', recurrence: 'weekly', zoomLink: '' })),
+      failure(fetchNotetakerMeetings()),
+      failure(fetchNotetakerActivity()),
+      failure(fetchNotetakerActivity(true)),
+      failure(disconnectNotetaker()),
     ]);
     expect(messages).toEqual([
       'coach api /coach/notetaker/status failed: 500',
       'coach api /coach/admin/notetaker/zoom failed: 500',
       'coach api /coach/admin/classes/:id failed: 500',
+      'coach api /coach/notetaker/meetings failed: 500',
+      'coach api /coach/notetaker/activity failed: 500',
+      'coach api /coach/admin/notetaker/activity failed: 500',
+      'coach api /coach/notetaker/disconnect failed: 500',
     ]);
   });
 

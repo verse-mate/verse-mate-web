@@ -13,6 +13,7 @@ const PATH_START = /^\/|[=:]\//;
 const GOOGLE_FILE_LINK = /(https?:\/\/(?:docs|drive|drive\.usercontent)\.google\.com)(?=[/?#\s"'\\()<>[\]]|$)[^\s"'\\()<>[\]]*/gi;
 const COACH_PATH = /\/coach((?:\/[^/?#\s"'<>\\]+)+)/gi;
 const COACH_WORDS = new Set([
+  'activity',
   'admin',
   'affiliated-church',
   'amend',
@@ -25,6 +26,7 @@ const COACH_WORDS = new Set([
   'completion',
   'coverage',
   'dimensions',
+  'disconnect',
   'email',
   'feedback',
   'first-lesson',
@@ -36,6 +38,7 @@ const COACH_WORDS = new Set([
   'lessons',
   'manage',
   'me',
+  'meetings',
   'modules',
   'monthly',
   'monthly-summary',

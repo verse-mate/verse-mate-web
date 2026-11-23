@@ -170,6 +170,9 @@ export const NOTETAKER_CONNECT = {
   why: 'Connect once, and the notetaker joins your classes as your guest. It skips the waiting room and records without anyone clicking “Allow”.',
   without: 'Without it, the notetaker still joins from your meeting link, but the host has to admit it and allow recording.',
   explainerUrl: 'https://versemate.org/coach/notetaker',
+  /** What disconnecting changes, said before the leader confirms it. */
+  disconnectConsequence:
+    'The notetaker can still join your classes from their links, but the host will have to let it in and allow recording each time. You can connect again whenever you like.',
 } as const;
 
 export function zoomConnectedText(zoomEmail: string | null): string {

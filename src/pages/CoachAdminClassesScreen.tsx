@@ -2,7 +2,8 @@
  * Admin class schedule (/coach/admin/classes) — program admins only.
  *
  * Every leader's classes, which together are the VerseMate notetaker's
- * schedule: when each one meets and whether the notetaker can join it. An
+ * schedule: when each one meets, whether the notetaker can join it, when it
+ * records next and how its last run went. An
  * admin schedules, edits and removes classes for any leader on the roster,
  * also one who has not signed up yet (the class waits under their roster id),
  * and can record a meeting straight from a leader's connected Zoom account.
@@ -19,7 +20,7 @@ import { toast } from 'sonner';
 import ScreenHeader from '@/components/ScreenHeader';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { vmTokens } from '@/styles/themeStyles';
-import { useAdminClasses, useAdminCoaches, useNotetakerZoom, coachKeys, coachState } from '@/hooks/useCoach';
+import { useAdminClasses, useAdminCoaches, useNotetakerActivity, useNotetakerZoom, coachKeys, coachState } from '@/hooks/useCoach';
 import { CoachCard, CoachStateBoundary, SectionLabel } from '@/components/coach/CoachUi';
 import { ClassForm, ClassRow } from '@/components/coach/ClassSchedule';
 import { classDraft, classWhen, notetakerState, type ClassDraft } from '@/lib/coachClassSchedule';
@@ -52,6 +53,9 @@ export default function CoachAdminClassesScreen() {
   const classes = coachState(classesQuery);
   const roster = useAdminCoaches();
   const zoom = useNotetakerZoom();
+  // What the bot did per class; nothing shows while the notetaker is silent.
+  const activity = useNotetakerActivity({ admin: true });
+  const activityOf = (id: string) => (activity.data?.available ? activity.data.classes[id] : undefined);
 
   const list = useMemo(() => classes.data || [], [classes.data]);
 
@@ -87,6 +91,7 @@ export default function CoachAdminClassesScreen() {
   const refresh = () => {
     queryClient.invalidateQueries({ queryKey: coachKeys.adminClasses });
     queryClient.invalidateQueries({ queryKey: coachKeys.notetakerZoom });
+    queryClient.invalidateQueries({ queryKey: coachKeys.adminNotetakerActivity });
   };
 
   const createMutation = useMutation({
@@ -251,6 +256,7 @@ export default function CoachAdminClassesScreen() {
                       <ClassRow
                         key={cls.id}
                         cls={cls}
+                        activity={activityOf(cls.id)}
                         testId="coach-admin-class-row"
                         onEdit={() => openEdit(cls.id)}
                         onDelete={() => {

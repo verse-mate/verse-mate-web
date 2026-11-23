@@ -4,21 +4,25 @@
  * Two jobs from the design handoff: manage the leader's recurring classes
  * and revisit past coaching reports. The classes are the VerseMate notetaker's
  * schedule: each one's link, first or next date, start time and zone are what
- * it joins by, and the card under the heading suggests connecting Zoom so it
- * joins as the leader's guest. Multiple recurring classes per week are
- * supported; adding, editing and removing are live. Choosing a past session
+ * it joins by, and each card says when it records next and how its last run
+ * went. The card under the heading connects the leader's Zoom account (the bot
+ * then joins as their guest) or disconnects it; once connected, their Zoom
+ * meetings are listed so one can become a class in a click. Zoom sends the
+ * leader back here with `?zoom=connected`. Multiple recurring classes per week
+ * are supported; adding, editing and removing are live. Choosing a past session
  * opens it on Home's Full report tab.
  *
  * An admin drilling into a leader (/coach/leader/:coachId/sessions) schedules,
- * edits and removes that leader's classes through the admin class routes.
+ * edits and removes that leader's classes through the admin class routes, and
+ * sees the same activity; the Zoom account stays the leader's own business.
  *
  * Wired to the real /coach API: classes via /coach/classes (or
  * /coach/admin/classes for an admin) and past sessions via
  * /coach/reports/summary, one page at a time. The mock's /55 grade is shown as the live /100 + status.
  */
 
-import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { AlertTriangle, CheckCircle2, CircleOff } from 'lucide-react';
@@ -27,6 +31,9 @@ import {
   useCoachReportSummaries,
   useCoachClasses,
   useAdminClasses,
+  useNotetakerActivity,
+  useNotetakerMeetings,
+  useNotetakerStatus,
   coachKeys,
   coachState,
 } from '@/hooks/useCoach';
@@ -37,13 +44,16 @@ import {
   deleteCoachClass,
   updateAdminCoachClass,
   updateCoachClass,
+  type ClassActivity,
   type CoachClass,
   type CoachClassInput,
   type CoachClassRecurrence,
   type CoachReportSummary,
+  type NotetakerMeeting,
 } from '@/services/coachService';
 import CoachDashboardShell, { CoachGate } from '@/components/coach/CoachDashboardShell';
 import { TimeZoneOptions } from '@/components/coach/ClassSchedule';
+import ClassActivityLines from '@/components/coach/ClassActivity';
 import { NotetakerConnectPanel } from '@/components/coach/NotetakerConnectCard';
 import { dt, letterGrade, statusBand } from '@/components/coach/dashboardTheme';
 import { PipelineCopyTag } from '@/components/coach/CoachUi';
@@ -83,19 +93,72 @@ export default function CoachSessionsScreen() {
     : selfClasses.data || [];
   const leaderName = adminLeader?.name || '';
 
-  const [showAdd, setShowAdd] = useState(false);
+  // The leader's Zoom account and its meetings (the leader's own view only),
+  // and what the bot did for each class.
+  const status = useNotetakerStatus({ enabled: !admin && classesState.data !== undefined });
+  const connected = !admin && status.data?.known === true && status.data.connected;
+  const meetings = useNotetakerMeetings({ enabled: connected });
+  const activity = useNotetakerActivity({ admin, enabled: classesState.data !== undefined });
+  const activityOf = (id: string): ClassActivity | undefined =>
+    activity.data?.available ? activity.data.classes[id] : undefined;
+
+  // The add form, empty or filled from a Zoom meeting; its key restarts it.
+  const [adding, setAdding] = useState<{ key: string; draft?: ClassDraft } | null>(null);
   const [editing, setEditing] = useState<string | null>(null);
+  const addForm = useRef<HTMLDivElement>(null);
+  const showAdd = adding !== null;
+
+  // Zoom sends a leader who connected from this page back with ?zoom=connected:
+  // say so once, read the connection again, and drop the marker from the URL.
+  const [searchParams, setSearchParams] = useSearchParams();
+  const zoomReturn = !admin && searchParams.get('zoom') === 'connected';
+  const zoomReturnSeen = useRef(false);
+  useEffect(() => {
+    if (!zoomReturn || zoomReturnSeen.current) return;
+    zoomReturnSeen.current = true;
+    toast.success('Zoom connected. The notetaker now joins your classes as your guest.');
+    queryClient.invalidateQueries({ queryKey: coachKeys.notetakerStatus });
+    queryClient.invalidateQueries({ queryKey: coachKeys.notetakerMeetings });
+    setSearchParams(
+      (params) => {
+        params.delete('zoom');
+        return params;
+      },
+      { replace: true },
+    );
+  }, [zoomReturn, queryClient, setSearchParams]);
+
+  const recordMeeting = (m: NotetakerMeeting) => {
+    setEditing(null);
+    setAdding({
+      key: `meeting:${m.meetingId}`,
+      draft: classDraft({
+        name: m.topic,
+        zoomLink: m.joinUrl,
+        classDate: m.classDate,
+        startTime: m.startTime,
+        timeZone: m.timeZone,
+        recurrence: m.recurrence,
+        notetaker: true,
+      }),
+    });
+  };
+  useEffect(() => {
+    if (adding?.draft) addForm.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [adding]);
 
   const invalidate = () => {
     queryClient.invalidateQueries({ queryKey: coachKeys.classes });
     queryClient.invalidateQueries({ queryKey: coachKeys.adminClasses });
+    queryClient.invalidateQueries({ queryKey: admin ? coachKeys.adminNotetakerActivity : coachKeys.notetakerActivity });
     if (admin) queryClient.invalidateQueries({ queryKey: coachKeys.notetakerZoom });
+    else queryClient.invalidateQueries({ queryKey: coachKeys.notetakerMeetings });
   };
   const createMutation = useMutation({
     mutationFn: (input: CoachClassInput) => (admin ? createAdminCoachClass(coachId, input) : createCoachClass(input)),
     onSuccess: () => {
       invalidate();
-      setShowAdd(false);
+      setAdding(null);
       toast.success(admin ? 'Class scheduled' : 'Class added');
     },
     onError: (err) => toast.error(classSaveProblem(err, 'Could not add the class')),
@@ -146,6 +209,10 @@ export default function CoachSessionsScreen() {
 
           {!admin && <NotetakerConnectPanel />}
 
+          {connected && meetings.data?.available && meetings.data.meetings.length > 0 && (
+            <ZoomMeetings meetings={meetings.data.meetings} onRecord={recordMeeting} />
+          )}
+
           {/* Recurring classes */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 16 }}>
             <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 23, margin: 0 }}>Recurring classes</h2>
@@ -153,7 +220,7 @@ export default function CoachSessionsScreen() {
               type="button"
               onClick={() => {
                 setEditing(null);
-                setShowAdd((v) => !v);
+                setAdding((a) => (a ? null : { key: 'new' }));
               }}
               data-testid="coach-sessions-add"
               style={{ background: dt.darkBg, color: dt.goldChip, fontWeight: 700, fontSize: 13.5, padding: '10px 16px', borderRadius: 9, border: 'none', cursor: 'pointer' }}
@@ -162,15 +229,19 @@ export default function CoachSessionsScreen() {
             </button>
           </div>
 
-          {showAdd && (
-            <ClassForm
-              title={admin ? 'NEW CLASS FOR THIS LEADER' : 'NEW RECURRING CLASS'}
-              submitLabel={admin ? 'Schedule class' : 'Add class'}
-              footnote="Add as many as you need — multiple recurring classes per week are supported."
-              busy={createMutation.isPending}
-              onCancel={() => setShowAdd(false)}
-              onSubmit={(input) => createMutation.mutate(input)}
-            />
+          {adding && (
+            <div ref={addForm}>
+              <ClassForm
+                key={adding.key}
+                initial={adding.draft}
+                title={admin ? 'NEW CLASS FOR THIS LEADER' : adding.draft ? 'NEW CLASS FROM ZOOM' : 'NEW RECURRING CLASS'}
+                submitLabel={admin ? 'Schedule class' : 'Add class'}
+                footnote="Add as many as you need — multiple recurring classes per week are supported."
+                busy={createMutation.isPending}
+                onCancel={() => setAdding(null)}
+                onSubmit={(input) => createMutation.mutate(input)}
+              />
+            </div>
           )}
 
           {classList.length > 0 ? (
@@ -191,8 +262,9 @@ export default function CoachSessionsScreen() {
                   <ClassCard
                     key={c.id}
                     cls={c}
+                    activity={activityOf(c.id)}
                     onEdit={() => {
-                      setShowAdd(false);
+                      setAdding(null);
                       setEditing(c.id);
                     }}
                     onRemove={() => {
@@ -249,7 +321,17 @@ export default function CoachSessionsScreen() {
 
 // ─── Class card ──────────────────────────────────────────────────────────────
 
-function ClassCard({ cls, onEdit, onRemove }: { cls: CoachClass; onEdit: () => void; onRemove: () => void }) {
+function ClassCard({
+  cls,
+  activity,
+  onEdit,
+  onRemove,
+}: {
+  cls: CoachClass;
+  activity: ClassActivity | undefined;
+  onEdit: () => void;
+  onRemove: () => void;
+}) {
   const state = notetakerState(cls);
   const stateColor = state.kind === 'ready' ? dt.green : state.kind === 'off' ? dt.textLight : dt.rust;
   const StateIcon = state.kind === 'ready' ? CheckCircle2 : state.kind === 'off' ? CircleOff : AlertTriangle;
@@ -291,6 +373,50 @@ function ClassCard({ cls, onEdit, onRemove }: { cls: CoachClass; onEdit: () => v
         >
           <StateIcon size={15} style={{ flexShrink: 0 }} /> {notetakerText(state)}
         </div>
+        <ClassActivityLines activity={activity} timeZone={cls.timeZone} look="dashboard" />
+      </div>
+    </div>
+  );
+}
+
+// ─── From your Zoom account ──────────────────────────────────────────────────
+
+/** The leader's scheduled Zoom meetings: one a class already records says so,
+ *  any other becomes a class in one step, the form filled from the meeting. */
+function ZoomMeetings({ meetings, onRecord }: { meetings: NotetakerMeeting[]; onRecord: (m: NotetakerMeeting) => void }) {
+  return (
+    <div data-testid="coach-zoom-meetings" style={{ marginBottom: 32 }}>
+      <h2 style={{ fontFamily: dt.serif, fontWeight: 500, fontSize: 23, margin: '0 0 6px' }}>From your Zoom account</h2>
+      <p style={{ fontSize: 14, color: dt.textMuted, margin: '0 0 14px' }}>
+        Your scheduled Zoom meetings. Pick the ones the notetaker should record.
+      </p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {meetings.map((m) => (
+          <div
+            key={m.meetingId}
+            data-testid="coach-zoom-meeting"
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, padding: '14px 18px', border: `1px solid ${dt.border2}`, borderRadius: 12, background: dt.innerBg }}
+          >
+            <div style={{ minWidth: 0 }}>
+              <div style={{ fontWeight: 600, fontSize: 15 }}>{m.topic || 'Untitled meeting'}</div>
+              <div style={{ fontSize: 13, color: dt.textMuted, marginTop: 2 }}>{classWhen(m)}</div>
+            </div>
+            {m.classId ? (
+              <span data-testid="coach-zoom-meeting-recorded" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 600, color: dt.green }}>
+                <CheckCircle2 size={15} /> Recorded by the notetaker
+              </span>
+            ) : (
+              <button
+                type="button"
+                onClick={() => onRecord(m)}
+                data-testid="coach-zoom-meeting-record"
+                style={{ cursor: 'pointer', fontSize: 13, fontWeight: 700, color: dt.gold2, background: dt.goldChip, border: `1px solid ${dt.goldChipBorder}`, padding: '8px 14px', borderRadius: 8 }}
+              >
+                Record this
+              </button>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

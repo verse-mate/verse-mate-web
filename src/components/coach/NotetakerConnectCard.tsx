@@ -8,14 +8,22 @@
  * Both render nothing while the status loads, when the notetaker did not
  * answer (`known` false) or when the request failed: the page works either
  * way, so there is nothing to warn about.
+ *
+ * The dashboard's card connects in the same tab (Zoom brings the leader back to
+ * Sessions with `?zoom=connected`) and, once connected, can disconnect.
  */
 
+import { useState } from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { CheckCircle2, ExternalLink, Video } from 'lucide-react';
+import { toast } from 'sonner';
 import { vmTokens } from '@/styles/themeStyles';
-import { useNotetakerStatus } from '@/hooks/useCoach';
+import { coachKeys, useNotetakerStatus } from '@/hooks/useCoach';
 import { NOTETAKER_CONNECT, zoomConnectedText } from '@/lib/coachClassSchedule';
+import { disconnectNotetaker } from '@/services/coachService';
 import { CoachCard } from './CoachUi';
 import { dt } from './dashboardTheme';
+import { Btn, Dialog, muted } from './learning/ui';
 
 export default function NotetakerConnectCard() {
   const { data: status } = useNotetakerStatus();
@@ -90,17 +98,55 @@ export default function NotetakerConnectCard() {
 
 /** The same card in the coaching dashboard's look (dashboardTheme). */
 export function NotetakerConnectPanel() {
+  const queryClient = useQueryClient();
   const { data: status } = useNotetakerStatus();
+  const [confirming, setConfirming] = useState(false);
+  const disconnect = useMutation({
+    mutationFn: disconnectNotetaker,
+    onSuccess: (result) => {
+      setConfirming(false);
+      if (!result.available) toast.error('The notetaker isn’t reachable right now, so Zoom is still connected. Try again later.');
+      else toast.success(result.disconnected ? 'Zoom disconnected' : 'No Zoom account was connected');
+      queryClient.invalidateQueries({ queryKey: coachKeys.notetakerStatus });
+      queryClient.invalidateQueries({ queryKey: coachKeys.notetakerMeetings });
+    },
+    onError: () => toast.error('Could not disconnect Zoom. Try again.'),
+  });
   if (!status?.known) return null;
 
   if (status.connected) {
     return (
-      <div
-        data-testid="coach-notetaker-connected"
-        style={{ display: 'flex', alignItems: 'center', gap: 9, background: dt.greenBg, borderRadius: 11, padding: '12px 16px', marginBottom: 22, fontSize: 14, fontWeight: 600, color: dt.green }}
-      >
-        <CheckCircle2 size={17} style={{ flexShrink: 0 }} /> {zoomConnectedText(status.zoomEmail)}
-      </div>
+      <>
+        <div
+          data-testid="coach-notetaker-connected"
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 9, background: dt.greenBg, borderRadius: 11, padding: '12px 16px', marginBottom: 22, fontSize: 14, fontWeight: 600, color: dt.green }}
+        >
+          <span style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+            <CheckCircle2 size={17} style={{ flexShrink: 0 }} /> {zoomConnectedText(status.zoomEmail)}
+          </span>
+          <button
+            type="button"
+            onClick={() => setConfirming(true)}
+            data-testid="coach-notetaker-disconnect"
+            style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontSize: 13, fontWeight: 600, color: dt.rust }}
+          >
+            Disconnect
+          </button>
+        </div>
+        {confirming && (
+          <Dialog title="Disconnect your Zoom account?" onClose={() => !disconnect.isPending && setConfirming(false)}>
+            <p style={{ ...muted, color: dt.body, margin: '0 0 18px' }}>{NOTETAKER_CONNECT.disconnectConsequence}</p>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+              <Btn kind="danger" onClick={() => disconnect.mutate()} disabled={disconnect.isPending}>
+                {disconnect.isPending ? 'Disconnecting…' : 'Disconnect Zoom'}
+              </Btn>
+              <Btn kind="outline" onClick={() => setConfirming(false)} disabled={disconnect.isPending}>
+                Keep it connected
+              </Btn>
+            </div>
+          </Dialog>
+        )}
+      </>
     );
   }
 
@@ -115,9 +161,7 @@ export function NotetakerConnectPanel() {
       <p style={{ fontSize: 13, lineHeight: 1.55, color: dt.textMuted, margin: '6px 0 0', maxWidth: '62ch' }}>{NOTETAKER_CONNECT.without}</p>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 16 }}>
         <a
-          href={status.connectUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={status.portalConnectUrl || status.connectUrl}
           data-testid="coach-notetaker-connect-button"
           style={{ background: dt.brightGold, color: dt.textPrimary, fontWeight: 700, fontSize: 13.5, padding: '10px 18px', borderRadius: 9, textDecoration: 'none' }}
         >
