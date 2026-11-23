@@ -11,7 +11,7 @@ function parseAccept(header: string): Range[] {
     if (!type || !subtype) return [];
     const qParam = params.map((param) => param.trim().toLowerCase()).find((param) => param.startsWith('q='));
     const q = qParam ? Number(qParam.slice(2)) : 1;
-    return [{ type, subtype, q: Number.isFinite(q) ? q : 0 }];
+    return [{ type, subtype, q: Number.isFinite(q) ? Math.min(1, Math.max(0, q)) : 0 }];
   });
 }
 

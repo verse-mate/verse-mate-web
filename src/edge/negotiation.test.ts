@@ -2,7 +2,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import worker from '../../worker.js';
-import { context, edgeEnv, installEdgeGlobals } from './testing/fakeEdge';
+import { prefersMarkdown } from './accept';
+import { context, edgeEnv, fakeData, installEdgeGlobals } from './testing/fakeEdge';
 
 afterEach(() => vi.unstubAllGlobals());
 
@@ -94,5 +95,80 @@ describe('a page URL asked for Markdown', () => {
     installEdgeGlobals();
 
     expect((await get('/bible/john/3.md')).response.headers.get('vary')).toMatch(/\bAccept\b/);
+  });
+});
+
+describe('the edges of Markdown negotiation', () => {
+  it('redirects a moved book slug to its canonical page URL, keeping Vary for the next request', async () => {
+    installEdgeGlobals();
+
+    const { response } = await get('/bible/JOHN/3', 'text/markdown');
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('https://app.versemate.org/bible/john/3');
+    expect(response.headers.get('vary')).toMatch(/\bAccept\b/);
+  });
+
+  it('answers like the .md path while the API is down', async () => {
+    installEdgeGlobals(fakeData({ down: true }));
+
+    const negotiated = await get('/bible/john/3', 'text/markdown');
+    const direct = await get('/bible/john/3.md');
+
+    expect(negotiated.response.status).toBe(503);
+    expect(negotiated.response.status).toBe(direct.response.status);
+    expect(negotiated.response.headers.get('cache-control')).toBe('no-store');
+  });
+
+  it('keeps noindex and the language for an unpublished language', async () => {
+    installEdgeGlobals();
+
+    const { response, type } = await get('/bible/john/3?lang=ru', 'text/markdown');
+
+    expect(type).toBe('text/markdown; charset=utf-8');
+    expect(response.headers.get('x-robots-tag')).toBe('noindex');
+    expect(response.headers.get('link')).toBe('<https://app.versemate.org/bible/john/3?lang=ru>; rel="canonical"');
+  });
+
+  it('gives HEAD the headers of GET, for both representations', async () => {
+    for (const accept of ['text/markdown', BROWSER_ACCEPT]) {
+      installEdgeGlobals();
+      const full = await get('/bible/john/3', accept);
+      installEdgeGlobals();
+      const head = await get('/bible/john/3', accept, 'HEAD');
+
+      for (const name of ['content-type', 'vary', 'link', 'x-robots-tag', 'cache-control']) {
+        expect(head.response.headers.get(name), `${accept} ${name}`).toBe(full.response.headers.get(name));
+      }
+      expect(head.body).toBe('');
+      vi.unstubAllGlobals();
+    }
+  });
+});
+
+describe('the Markdown cache', () => {
+  it('is one entry for the .md path and the negotiated page URL', async () => {
+    const { api } = installEdgeGlobals();
+
+    await get('/bible/john/3.md');
+    const before = api.calls.length;
+    const negotiated = await get('/bible/john/3', 'text/markdown');
+
+    expect(negotiated.type).toBe('text/markdown; charset=utf-8');
+    expect(api.calls.length).toBe(before);
+  });
+});
+
+describe('reading the Accept header', () => {
+  it('follows text/* and */* when deciding how much HTML is wanted', () => {
+    expect(prefersMarkdown('text/markdown;q=0.5, text/*')).toBe(false);
+    expect(prefersMarkdown('text/markdown;q=0.5, */*;q=0.4')).toBe(true);
+  });
+
+  it('ignores case and spacing, treats a broken quality as zero, and caps it at one', () => {
+    expect(prefersMarkdown('Text/Markdown')).toBe(true);
+    expect(prefersMarkdown('text/markdown ; q=0.8 , text/html ; q=0.5')).toBe(true);
+    expect(prefersMarkdown('text/markdown;q=abc, text/html;q=0.1')).toBe(false);
+    expect(prefersMarkdown('text/html;q=5, text/markdown')).toBe(true);
   });
 });

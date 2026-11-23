@@ -16,7 +16,8 @@ const CLIENT_CACHE_CONTROL = 'x-edge-cache-control';
 const inflight = new Map<string, Promise<Rendered | null>>();
 
 export function edgeCacheKey(edge: EdgeRequest, variant: string, lang: string) {
-  const path = edge.url.pathname.replace(/(.)\/$/, '$1');
+  const trimmed = edge.url.pathname.replace(/(.)\/$/, '$1');
+  const path = variant === 'md' ? trimmed.replace(/\.md$/, '') : trimmed;
   return `${SITE_ORIGIN}/__edge-cache/${encodeURIComponent(edge.config.buildId)}${path}?lang=${encodeURIComponent(lang)}&v=${variant}`;
 }
 
