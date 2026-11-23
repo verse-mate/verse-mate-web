@@ -7,7 +7,7 @@ import { validateXML } from 'xmllint-wasm';
 import worker from '../../worker.js';
 import { getBookSlug } from '../lib/bookSlugs';
 import { LANGUAGES } from './config';
-import { context, edgeEnv, fakeData, installEdgeGlobals } from './testing/fakeEdge';
+import { context, edgeEnv, fakeData, installEdgeGlobals, type LastModifiedData } from './testing/fakeEdge';
 
 afterEach(() => vi.unstubAllGlobals());
 
@@ -126,12 +126,12 @@ describe('the dates in the sitemaps', () => {
       lastModified: {
         'en-US': {
           chapters: [
-            { bookId: 1, chapter: 1, lastModified: '2025-11-02T10:00:00.000Z' },
-            { bookId: 43, chapter: 3, lastModified: '2026-11-20T23:30:00.000Z' },
-            { bookId: 43, chapter: 4, lastModified: '2026-03-01T00:00:00.000Z' },
+            { bookId: 1, chapter: 1, lastModified: '2025-11-02' },
+            { bookId: 43, chapter: 3, lastModified: '2026-11-20' },
+            { bookId: 43, chapter: 4, lastModified: '2026-03-01' },
           ],
-          events: [{ slug: 'event-baptism', lastModified: '2026-06-15T12:00:00.000Z' }],
-          topics: [{ topicId: '5b50774c-9f98-41ab-b43c-8271dd963e01', lastModified: '2026-07-04T08:00:00.000Z' }],
+          events: [{ slug: 'event-baptism', lastModified: '2026-06-15' }],
+          topics: [{ topicId: '5b50774c-9f98-41ab-b43c-8271dd963e01', lastModified: '2026-07-04' }],
         },
       },
     });
@@ -175,34 +175,65 @@ describe('the dates in the sitemaps', () => {
     expect(await valid(index.body, 'siteindex.xsd')).toEqual([]);
   });
 
-  it('answer 503, kept nowhere, while the dates cannot be read', async () => {
-    const { cache } = installEdgeGlobals(fakeData({ lastModified: 'down' }));
+  it('answer 503, kept nowhere, while the dates cannot be read, and recover once they return', async () => {
+    const healthy = installEdgeGlobals(fakeData());
+    await get('/sitemaps/bible-en-US.xml');
+    expect([...healthy.cache.entries.keys()].some((key) => key.includes('/sitemaps/'))).toBe(true);
+    vi.unstubAllGlobals();
 
+    const data = fakeData({ lastModified: 'down' });
+    const { cache } = installEdgeGlobals(data);
     for (const path of ['/sitemap.xml', '/sitemaps/bible-en-US.xml', '/sitemaps/jesus-en-US.xml', '/sitemaps/topics-en-US.xml']) {
-      expect((await get(path)).response.status, path).toBe(503);
+      const { response } = await get(path);
+      expect(response.status, path).toBe(503);
+      expect(response.headers.get('cache-control'), path).toBe('no-store');
     }
     expect([...cache.entries.keys()].some((key) => key.includes('/sitemap'))).toBe(false);
+
+    data.lastModified = undefined;
+    const recovered = await get('/sitemaps/bible-en-US.xml');
+    expect(recovered.response.status).toBe(200);
+    expect(recovered.body).toContain('<lastmod>2026-01-01</lastmod>');
   });
 
-  it('are never served from a copy older than a day, and re-read the dates within an hour', async () => {
+  it('show a changed date within a day, and never serve a copy older than that', async () => {
     vi.useFakeTimers({ now: new Date('2026-11-23T06:00:00Z'), toFake: ['Date'] });
     try {
-      const data = fakeData();
-      const { cache } = installEdgeGlobals(data);
-      expect((await get('/sitemaps/bible-en-US.xml')).response.status).toBe(200);
+      const data = dated();
+      installEdgeGlobals(data);
+      expect(lastmods((await get('/sitemaps/bible-en-US.xml')).body)['https://app.versemate.org/bible/john/4']).toBe('2026-03-01');
 
-      const datesKey = [...cache.entries.keys()].find((key) => decodeURIComponent(key).includes('/bible/explanations/last-modified'));
-      const datesAge = cache.entries.get(datesKey ?? '')?.headers.get('cache-control')?.match(/max-age=(\d+)/)?.[1];
-      expect(Number(datesAge)).toBeLessThanOrEqual(3600);
+      const english = (data.lastModified as Record<string, LastModifiedData>)['en-US'];
+      english.chapters = english.chapters.map((row) => (row.chapter === 4 ? { ...row, lastModified: '2026-11-23' } : row));
+      vi.setSystemTime(new Date('2026-11-24T06:30:00Z'));
+      await get('/sitemaps/bible-en-US.xml');
+      const fresh = lastmods((await get('/sitemaps/bible-en-US.xml')).body);
+      expect(fresh['https://app.versemate.org/bible/john/4']).toBe('2026-11-23');
+      expect(fresh['https://app.versemate.org/bible/genesis/1']).toBe('2025-11-02');
 
       data.down = true;
-      vi.setSystemTime(new Date('2026-11-23T19:00:00Z'));
+      vi.setSystemTime(new Date('2026-11-24T19:00:00Z'));
       expect((await get('/sitemaps/bible-en-US.xml')).response.status).toBe(200);
-      vi.setSystemTime(new Date('2026-11-24T06:30:00Z'));
+      vi.setSystemTime(new Date('2026-11-25T07:00:00Z'));
       expect((await get('/sitemaps/bible-en-US.xml')).response.status).toBe(503);
     } finally {
       vi.useRealTimers();
     }
+  });
+
+  it('report a listed URL that has no date instead of passing it over', async () => {
+    const errors = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const data = dated();
+    const english = (data.lastModified as Record<string, LastModifiedData>)['en-US'];
+    english.chapters = english.chapters.filter((row) => row.chapter !== 4);
+    installEdgeGlobals(data);
+
+    const bible = await get('/sitemaps/bible-en-US.xml');
+
+    expect(bible.locs).toContain('https://app.versemate.org/bible/john/4');
+    expect(lastmods(bible.body)['https://app.versemate.org/bible/john/4']).toBeUndefined();
+    expect(errors.mock.calls.map((call) => String(call[1]))).toContainEqual(expect.stringContaining('bible-en-US: 1 of 3 URLs have no date'));
+    errors.mockRestore();
   });
 });
 

@@ -151,7 +151,10 @@ async function recentUrls(languages: string[], since: string, fetcher: Fetcher) 
     if (children.length === 0) failures.push(`the sitemap index lists no sitemap for ${lang}`);
     for (const child of children) {
       try {
-        for (const entry of datedUrlsFromSitemap(await readText(child, fetcher))) {
+        const entries = datedUrlsFromSitemap(await readText(child, fetcher));
+        const undated = entries.filter((entry) => !entry.lastmod).length;
+        if (undated > 0) failures.push(`${child}: ${undated} of ${entries.length} URLs have no lastmod`);
+        for (const entry of entries) {
           if (entry.lastmod && entry.lastmod >= since) urls.push(entry.url);
         }
       } catch (failure) {
@@ -175,13 +178,18 @@ async function runRecent(
   }
   const dryRun = flags.includes('--dry-run');
   const languages = publishedLanguages(readFileSync(file, 'utf8'));
+  if (languages.length === 0) {
+    error(`indexnow: ${file} publishes no language, nothing to read`);
+    return 1;
+  }
   const since = windowStart(now, days);
   const { urls, failures } = await recentUrls(languages, since, fetcher);
-  for (const failure of failures) error(`indexnow: could not read ${failure}`);
+  for (const failure of failures) error(`indexnow: ${failure}`);
 
   let submitted = true;
   if (urls.length === 0) {
-    log(`indexnow: no URL changed since ${since} for ${HOST} (${languages.join(', ')}), nothing to submit`);
+    const scope = failures.length > 0 ? 'in the sitemaps that could be read' : `for ${HOST} (${languages.join(', ')})`;
+    log(`indexnow: no URL changed since ${since} ${scope}, nothing to submit`);
   } else if (dryRun) {
     log(`indexnow: dry run, would submit ${urls.length} URLs changed since ${since}:`);
     for (const url of urls) log(`  ${url}`);

@@ -3,7 +3,7 @@ import { ApiUnavailable, type ApiGet } from './api';
 import { DEFAULT_LANGUAGE, LANGUAGES, SITE_ORIGIN, type Language } from './config';
 import { pageUrl } from './head';
 import { chapterCovered, explainedIn, hasOwnExplanation, loadCoverage } from './indexing';
-import { DAY } from './common';
+import { DAY, reportFailure } from './common';
 import { listEvents, loadBooks, loadPage, loadTopicExplanation, loadTopicList, type EventPage } from './pageData';
 import { escapeHtml } from './text';
 
@@ -50,7 +50,9 @@ async function loadDates(api: ApiGet, lang: Language): Promise<Dates> {
   };
 }
 
-function urlset(entries: Entry[]) {
+function urlset(entries: Entry[], name: string) {
+  const undated = entries.filter((entry) => !entry.lastmod).length;
+  if (undated > 0) reportFailure(new Error(`sitemap ${name}: ${undated} of ${entries.length} URLs have no date`));
   const lines = entries
     .map(({ loc, lastmod }) => `<url><loc>${escapeHtml(loc)}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`)
     .join('\n');
@@ -154,12 +156,13 @@ export async function buildSitemap(
 ): Promise<string | null> {
   if (match.kind === 'index') return sitemapIndex(api, published);
   if (!published.includes(match.lang)) return null;
-  if (match.kind === 'bible') return urlset(await chapterUrls(api, match.lang));
+  const name = `${match.kind}-${match.lang}`;
+  if (match.kind === 'bible') return urlset(await chapterUrls(api, match.lang), name);
   const [listed, dates] = await Promise.all([
     match.kind === 'jesus'
       ? listedEvents(api, [match.lang])
       : listedTopics(api, [match.lang]).then((groups) => groups.flatMap((group) => group.topics)),
     loadDates(api, match.lang),
   ]);
-  return urlset(dated(listed, match.lang, match.kind === 'jesus' ? dates.events : dates.topics));
+  return urlset(dated(listed, match.lang, match.kind === 'jesus' ? dates.events : dates.topics), name);
 }

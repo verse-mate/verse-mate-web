@@ -6,7 +6,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { keyIn, newlyPublished, publishedLanguages, run, submitToIndexNow, type Fetcher } from '../../scripts/indexnow';
 import worker from '../../worker.js';
-import { context, edgeEnv, fakeData, installEdgeGlobals } from './testing/fakeEdge';
+import { context, edgeEnv, fakeData, installEdgeGlobals, type LastModifiedData } from './testing/fakeEdge';
 
 afterEach(() => vi.unstubAllGlobals());
 
@@ -341,6 +341,49 @@ describe('the daily submission of recently changed pages', () => {
     expect(submitted).toEqual([]);
     expect(lines.join('\n')).toContain('https://app.versemate.org/bible/john/3');
     expect(lines.join('\n')).toMatch(/dry run/);
+  });
+
+  it('fails and says so when IndexNow refuses the daily submission', async () => {
+    const { current } = files([], ['en-US']);
+    const { fetcher } = site(['en-US'], () => new Response('bad key', { status: 403 }), 'build-1', dated());
+    const errors: string[] = [];
+
+    expect(await run(['recent', current, '--days', '4'], { fetcher, publicDir, now: NOW, log: () => undefined, error: (line) => errors.push(line) })).toBe(1);
+    expect(errors.join('\n')).toMatch(/3 URLs .* HTTP 403, submission failed: bad key/);
+  });
+
+  it('fails without claiming a quiet day when every child sitemap is unreadable', async () => {
+    const { current } = files([], ['en-US']);
+    const children = ['bible', 'jesus', 'topics'].map((kind) => `https://app.versemate.org/sitemaps/${kind}-en-US.xml`);
+    const { fetcher, submitted } = site(['en-US'], () => new Response(null, { status: 202 }), 'build-1', dated(), children);
+    const lines: string[] = [];
+
+    expect(await run(['recent', current, '--days', '4'], { fetcher, publicDir, now: NOW, log: (line) => lines.push(line), error: (line) => lines.push(line) })).toBe(1);
+    expect(submitted).toEqual([]);
+    expect(lines.join('\n')).toContain('in the sitemaps that could be read');
+    for (const child of children) expect(lines.join('\n')).toContain(child);
+  });
+
+  it('fails, naming the sitemap, when listed URLs carry no lastmod', async () => {
+    const { current } = files([], ['en-US']);
+    const data = dated();
+    const english = (data.lastModified as Record<string, LastModifiedData>)['en-US'];
+    english.chapters = english.chapters.filter((row) => row.chapter !== 4);
+    const { fetcher, submitted } = site(['en-US'], () => new Response(null, { status: 202 }), 'build-1', data);
+    const errors: string[] = [];
+    vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    expect(await run(['recent', current, '--days', '4'], { fetcher, publicDir, now: NOW, log: () => undefined, error: (line) => errors.push(line) })).toBe(1);
+    expect((submitted[0] as { urlList: string[] }).urlList).toContain('https://app.versemate.org/bible/john/3');
+    expect(errors.join('\n')).toContain('https://app.versemate.org/sitemaps/bible-en-US.xml: 1 of 3 URLs have no lastmod');
+  });
+
+  it('refuses to report a quiet day when no language is published', async () => {
+    const { current } = files([], []);
+    const errors: string[] = [];
+
+    expect(await run(['recent', current, '--days', '4'], { publicDir, now: NOW, log: () => undefined, error: (line) => errors.push(line) })).toBe(1);
+    expect(errors.join('\n')).toMatch(/publishes no language/);
   });
 
   it('splits a large submission into batches of at most 10,000 URLs', async () => {

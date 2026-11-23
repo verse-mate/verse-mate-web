@@ -34,7 +34,7 @@ export interface LastModifiedData {
   topics: { topicId: string; lastModified: string }[];
 }
 
-export const DEFAULT_LAST_MODIFIED = '2026-01-01T00:00:00.000Z';
+export const DEFAULT_LAST_MODIFIED = '2026-01-01';
 
 function synthesizedLastModified(data: FakeData, lang: string): LastModifiedData {
   const coverage = typeof data.coverage === 'object' ? (data.coverage[lang] ?? []) : [];
