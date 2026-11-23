@@ -33,6 +33,7 @@ import {
   createCoachClass,
   deleteAdminCoachClass,
   deleteCoachClass,
+  disconnectNotetaker,
   fetchAdminCoaches,
   fetchAdminMonthly,
   fetchAllCoachClasses,
@@ -40,6 +41,8 @@ import {
   fetchCoachReportDetail,
   fetchCoachReportSummaries,
   fetchCoachMe,
+  fetchNotetakerActivity,
+  fetchNotetakerMeetings,
   fetchNotetakerStatus,
   fetchNotetakerZoom,
   saveCoachZoomLink,
@@ -336,16 +339,57 @@ describe('coachService', () => {
   });
 
   it("reads the leader's notetaker connection", async () => {
-    mockFetch(() =>
-      jsonResponse({ known: true, connected: true, zoomEmail: 'jeff@example.com', connectUrl: 'https://notetaker.example/zoom/install' }),
-    );
-    await expect(fetchNotetakerStatus()).resolves.toEqual({
+    const status = {
       known: true,
       connected: true,
       zoomEmail: 'jeff@example.com',
-      connectUrl: 'https://notetaker.example/zoom/install',
-    });
+      connectUrl: 'https://notetaker.example/zoom/install?from=versemate',
+      portalConnectUrl: 'https://notetaker.example/zoom/install?from=portal',
+    };
+    mockFetch(() => jsonResponse(status));
+    await expect(fetchNotetakerStatus()).resolves.toEqual(status);
     expect(calls[0].url).toMatch(/\/coach\/notetaker\/status$/);
+  });
+
+  it("reads the leader's own Zoom meetings, and an empty list when the notetaker did not answer", async () => {
+    const meeting = {
+      meetingId: '123',
+      topic: 'Thursday Bible Study',
+      joinUrl: 'https://zoom.us/j/123',
+      hostEmail: 'jeff@example.com',
+      classDate: '2026-12-03',
+      startTime: '19:00',
+      timeZone: 'America/Chicago',
+      recurrence: 'weekly',
+      invited: false,
+      classId: null,
+    };
+    mockFetch(() => jsonResponse({ available: true, meetings: [meeting] }));
+    await expect(fetchNotetakerMeetings()).resolves.toEqual({ available: true, meetings: [meeting] });
+    expect(calls[0].url).toMatch(/\/coach\/notetaker\/meetings$/);
+
+    mockFetch(() => jsonResponse({ available: false }));
+    await expect(fetchNotetakerMeetings()).resolves.toEqual({ available: false, meetings: [] });
+  });
+
+  it("reads what the bot did, from the leader's route or, for an admin, every class's", async () => {
+    const classes = {
+      c1: { next: '2026-12-04T01:00+00:00', recent: [{ start: '2026-11-27T01:00:00+00:00', status: 'recorded', reason: null, updatedAt: null }] },
+    };
+    mockFetch(() => jsonResponse({ available: true, classes }));
+    await expect(fetchNotetakerActivity()).resolves.toEqual({ available: true, classes });
+    await fetchNotetakerActivity(true);
+    expect(calls.map((c) => c.url.replace(/^.*\/coach\//, ''))).toEqual(['notetaker/activity', 'admin/notetaker/activity']);
+
+    mockFetch(() => jsonResponse({ available: false }));
+    await expect(fetchNotetakerActivity()).resolves.toEqual({ available: false, classes: {} });
+  });
+
+  it("disconnects the leader's Zoom account with a POST", async () => {
+    mockFetch(() => jsonResponse({ available: true, disconnected: true }));
+    await expect(disconnectNotetaker()).resolves.toEqual({ available: true, disconnected: true });
+    expect(calls[0].init?.method).toBe('POST');
+    expect(calls[0].url).toMatch(/\/coach\/notetaker\/disconnect$/);
   });
 
   it('maps notetaker/status 403 to a not_a_coach error', async () => {

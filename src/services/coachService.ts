@@ -14,6 +14,7 @@ import type {
   GetCoachClassesResponse,
   GetCoachMeResponse,
   GetCoachMonthlySummaryResponse,
+  GetCoachNotetakerMeetingsResponse,
   GetCoachNotetakerStatusResponse,
   GetCoachReportsByReportIdResponse,
   GetCoachTrendsResponse,
@@ -27,6 +28,7 @@ import type {
   PostCoachAdminUploadsData,
   PostCoachClassesData,
   PostCoachConfirmAddressDescribeResponse,
+  PostCoachNotetakerDisconnectResponse,
   PostCoachUploadsData,
   PostCoachUploadsResponse,
   PutCoachAdminLeadersByIdEmailResponse,
@@ -51,6 +53,7 @@ import {
   getCoachAdminLeadersByIdAttribution,
   getCoachAdminMonthly,
   getCoachAdminMonthlyReports,
+  getCoachAdminNotetakerActivity,
   getCoachAdminNotetakerZoom,
   getCoachAdminParallelRunComparison,
   getCoachAdminPipelineFailures,
@@ -63,6 +66,8 @@ import {
   getCoachClasses,
   getCoachMe,
   getCoachMonthlySummary,
+  getCoachNotetakerActivity,
+  getCoachNotetakerMeetings,
   getCoachNotetakerStatus,
   getCoachReportsByReportId,
   getCoachReportsByReportIdRecordingUrl,
@@ -93,6 +98,7 @@ import {
   postCoachClasses,
   postCoachConfirmAddress,
   postCoachConfirmAddressDescribe,
+  postCoachNotetakerDisconnect,
   postCoachUploads,
   postCoachUploadsByIdComplete,
   postCoachUploadsByIdParts,
@@ -177,6 +183,42 @@ export type NotetakerZoomMeeting = NotetakerZoom['meetings'][number];
 
 /** The admin's view of the notetaker. `available` false: it did not answer. */
 export type NotetakerZoom = GetCoachAdminNotetakerZoomResponse;
+
+/** The signed-in leader's own scheduled Zoom meetings, each with the class of
+ *  theirs that already records it (`classId`). `available` false: the
+ *  notetaker did not answer. */
+export type NotetakerMeetings = GetCoachNotetakerMeetingsResponse;
+export type NotetakerMeeting = NotetakerMeetings['meetings'][number];
+
+/** One run of the bot for a class: its start, how far it got and, when it
+ *  failed, why. `status`: starting, joining, waiting_room, in_meeting,
+ *  recording, recording_denied, processing, recorded, failed. `reason`:
+ *  not_admitted, recording_denied, meeting_not_started, bot_error. */
+export interface NotetakerRun {
+  start: string | null;
+  status: string;
+  reason: string | null;
+  updatedAt: string | null;
+}
+
+/** A class's next start on the bot's calendar (UTC ISO) and its latest runs,
+ *  newest first. */
+export interface ClassActivity {
+  next: string | null;
+  recent: NotetakerRun[];
+}
+
+/** What the bot did, per class id. `available` false: the notetaker did not
+ *  answer. Declared here because the document's per-class map comes out of
+ *  the generator as `unknown`. */
+export interface NotetakerActivity {
+  available: boolean;
+  classes: Record<string, ClassActivity>;
+}
+
+/** `disconnected` false: nothing was connected on the leader's addresses;
+ *  `available` false: the notetaker did not answer. */
+export type NotetakerDisconnect = PostCoachNotetakerDisconnectResponse;
 
 export type CoachMe = GetCoachMeResponse;
 
@@ -598,6 +640,28 @@ export async function deleteCoachClass(id: string): Promise<void> {
  *  connected to the notetaker. */
 export function fetchNotetakerStatus(): Promise<NotetakerStatus> {
   return coachCall(getCoachNotetakerStatus({ client: coachClient }));
+}
+
+/** GET /api/coach/notetaker/meetings, the leader's own scheduled Zoom
+ *  meetings, to pick the ones the notetaker records. */
+export async function fetchNotetakerMeetings(): Promise<NotetakerMeetings> {
+  const data = await coachCall(getCoachNotetakerMeetings({ client: coachClient }));
+  return { ...data, meetings: data.meetings ?? [] };
+}
+
+/** GET /api/coach/notetaker/activity (the leader's classes) or, for an admin,
+ *  /coach/admin/notetaker/activity (every class): what the bot did. */
+export async function fetchNotetakerActivity(admin = false): Promise<NotetakerActivity> {
+  const data = await coachCall(
+    admin ? getCoachAdminNotetakerActivity({ client: coachClient }) : getCoachNotetakerActivity({ client: coachClient }),
+  );
+  return { available: data.available, classes: (data.classes ?? {}) as Record<string, ClassActivity> };
+}
+
+/** POST /api/coach/notetaker/disconnect, the leader disconnects their Zoom
+ *  account from the notetaker (revoked at Zoom too). */
+export function disconnectNotetaker(): Promise<NotetakerDisconnect> {
+  return coachCall(postCoachNotetakerDisconnect({ client: coachClient }));
 }
 
 /** GET /coach/admin/classes, every leader's classes with owner identity

@@ -15,6 +15,7 @@ vi.mock('@/services/coachService', async (importOriginal) => {
     fetchAllCoachClasses: vi.fn(),
     fetchAdminCoaches: vi.fn(),
     fetchNotetakerZoom: vi.fn(),
+    fetchNotetakerActivity: vi.fn(),
     createAdminCoachClass: vi.fn(),
     updateAdminCoachClass: vi.fn(),
     deleteAdminCoachClass: vi.fn(),
@@ -82,6 +83,7 @@ beforeEach(() => {
   vi.mocked(coachService.fetchAllCoachClasses).mockResolvedValue([thursday]);
   vi.mocked(coachService.fetchAdminCoaches).mockResolvedValue(roster);
   vi.mocked(coachService.fetchNotetakerZoom).mockResolvedValue(zoom);
+  vi.mocked(coachService.fetchNotetakerActivity).mockResolvedValue({ available: false, classes: {} });
   vi.mocked(coachService.createAdminCoachClass).mockResolvedValue(thursday);
   vi.mocked(coachService.updateAdminCoachClass).mockResolvedValue(thursday);
   vi.mocked(coachService.deleteAdminCoachClass).mockResolvedValue(undefined);
@@ -101,6 +103,32 @@ describe('CoachAdminClassesScreen', () => {
     expect(within(row).getByTestId('coach-class-notetaker-state')).toHaveTextContent('Notetaker records this class');
   });
 
+  it('says when each class records next and how its last run went, from the admin activity route', async () => {
+    vi.mocked(coachService.fetchNotetakerActivity).mockResolvedValue({
+      available: true,
+      classes: {
+        c1: {
+          next: '2026-12-04T01:00+00:00',
+          recent: [{ start: '2026-11-27T01:00:00+00:00', status: 'failed', reason: 'recording_denied', updatedAt: null }],
+        },
+      },
+    });
+    renderScreen();
+
+    const row = await screen.findByTestId('coach-admin-class-row');
+    await waitFor(() => expect(within(row).getByTestId('coach-class-next')).toHaveTextContent('Next recording: Thu, Dec 3 at 7:00 PM'));
+    expect(within(row).getByTestId('coach-class-last-run')).toHaveTextContent('Missed on Thu, Nov 26: recording wasn’t allowed');
+    expect(vi.mocked(coachService.fetchNotetakerActivity).mock.calls[0]).toEqual([true]);
+  });
+
+  it('keeps quiet about activity while the notetaker does not answer', async () => {
+    renderScreen();
+    await screen.findByTestId('coach-admin-class-row');
+    await waitFor(() => expect(coachService.fetchNotetakerActivity).toHaveBeenCalled());
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(screen.queryByTestId('coach-class-activity')).toBeNull();
+  });
+
   it('schedules a class for a leader picked from the roster', async () => {
     renderScreen();
 
@@ -110,7 +138,7 @@ describe('CoachAdminClassesScreen', () => {
     // No leader chosen yet → nothing to save.
     expect(save.disabled).toBe(true);
 
-    await waitFor(() => expect(screen.getAllByRole('option', { name: 'Milo Kerr' })).toHaveLength(1));
+    await waitFor(() => expect(within(screen.getByTestId('coach-class-leader')).getAllByRole('option', { name: 'Milo Kerr' })).toHaveLength(1));
     fireEvent.change(screen.getByTestId('coach-class-leader'), { target: { value: 'milo-kerr' } });
     fireEvent.change(screen.getByTestId('coach-class-date'), { target: { value: '2026-10-20' } });
     fireEvent.change(screen.getByTestId('coach-class-time'), { target: { value: '18:30' } });
@@ -138,7 +166,7 @@ describe('CoachAdminClassesScreen', () => {
     renderScreen();
 
     fireEvent.click(await screen.findByTestId('coach-admin-schedule'));
-    await waitFor(() => expect(screen.getAllByRole('option', { name: 'Milo Kerr' })).toHaveLength(1));
+    await waitFor(() => expect(within(screen.getByTestId('coach-class-leader')).getAllByRole('option', { name: 'Milo Kerr' })).toHaveLength(1));
     fireEvent.change(screen.getByTestId('coach-class-leader'), { target: { value: 'milo-kerr' } });
     fireEvent.change(screen.getByTestId('coach-class-name'), { target: { value: 'X' } });
     fireEvent.click(screen.getByTestId('coach-class-save'));

@@ -18297,6 +18297,112 @@ export type PostCoachAdminMonthlyReportsByIdReleaseResponses = {
 
 export type PostCoachAdminMonthlyReportsByIdReleaseResponse = PostCoachAdminMonthlyReportsByIdReleaseResponses[keyof PostCoachAdminMonthlyReportsByIdReleaseResponses];
 
+export type GetCoachAdminNotetakerActivityData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/coach/admin/notetaker/activity';
+};
+
+export type GetCoachAdminNotetakerActivityErrors = {
+    /**
+     * Response for status 400
+     */
+    400: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 401
+     */
+    401: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 403
+     */
+    403: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 422
+     */
+    422: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 429
+     */
+    429: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 500
+     */
+    500: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+};
+
+export type GetCoachAdminNotetakerActivityError = GetCoachAdminNotetakerActivityErrors[keyof GetCoachAdminNotetakerActivityErrors];
+
+export type GetCoachAdminNotetakerActivityResponses = {
+    /**
+     * Response for status 200
+     */
+    200: {
+        available: boolean;
+        classes: {
+            [key: string]: unknown | {
+                next: string | null;
+                recent: Array<{
+                    reason: string | null;
+                    start: string | null;
+                    status: string;
+                    updatedAt: string | null;
+                }>;
+            };
+        };
+    };
+};
+
+export type GetCoachAdminNotetakerActivityResponse = GetCoachAdminNotetakerActivityResponses[keyof GetCoachAdminNotetakerActivityResponses];
+
 export type GetCoachAdminNotetakerZoomData = {
     body?: never;
     path?: never;
@@ -24594,6 +24700,112 @@ export type GetCoachMonthlySummaryResponses = {
 
 export type GetCoachMonthlySummaryResponse = GetCoachMonthlySummaryResponses[keyof GetCoachMonthlySummaryResponses];
 
+export type GetCoachNotetakerActivityData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/coach/notetaker/activity';
+};
+
+export type GetCoachNotetakerActivityErrors = {
+    /**
+     * Response for status 400
+     */
+    400: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 401
+     */
+    401: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 403
+     */
+    403: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 422
+     */
+    422: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 429
+     */
+    429: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 500
+     */
+    500: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+};
+
+export type GetCoachNotetakerActivityError = GetCoachNotetakerActivityErrors[keyof GetCoachNotetakerActivityErrors];
+
+export type GetCoachNotetakerActivityResponses = {
+    /**
+     * Response for status 200
+     */
+    200: {
+        available: boolean;
+        classes: {
+            [key: string]: unknown | {
+                next: string | null;
+                recent: Array<{
+                    reason: string | null;
+                    start: string | null;
+                    status: string;
+                    updatedAt: string | null;
+                }>;
+            };
+        };
+    };
+};
+
+export type GetCoachNotetakerActivityResponse = GetCoachNotetakerActivityResponses[keyof GetCoachNotetakerActivityResponses];
+
 export type GetCoachNotetakerClassesData = {
     body?: never;
     path?: never;
@@ -24691,6 +24903,209 @@ export type GetCoachNotetakerClassesResponses = {
 
 export type GetCoachNotetakerClassesResponse = GetCoachNotetakerClassesResponses[keyof GetCoachNotetakerClassesResponses];
 
+export type PostCoachNotetakerDisconnectData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/coach/notetaker/disconnect';
+};
+
+export type PostCoachNotetakerDisconnectErrors = {
+    /**
+     * Response for status 400
+     */
+    400: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 401
+     */
+    401: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 403
+     */
+    403: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 422
+     */
+    422: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 429
+     */
+    429: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 500
+     */
+    500: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+};
+
+export type PostCoachNotetakerDisconnectError = PostCoachNotetakerDisconnectErrors[keyof PostCoachNotetakerDisconnectErrors];
+
+export type PostCoachNotetakerDisconnectResponses = {
+    /**
+     * Response for status 200
+     */
+    200: {
+        available: boolean;
+        disconnected: boolean;
+    };
+};
+
+export type PostCoachNotetakerDisconnectResponse = PostCoachNotetakerDisconnectResponses[keyof PostCoachNotetakerDisconnectResponses];
+
+export type GetCoachNotetakerMeetingsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/coach/notetaker/meetings';
+};
+
+export type GetCoachNotetakerMeetingsErrors = {
+    /**
+     * Response for status 400
+     */
+    400: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 401
+     */
+    401: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 403
+     */
+    403: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 422
+     */
+    422: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 429
+     */
+    429: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 500
+     */
+    500: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+};
+
+export type GetCoachNotetakerMeetingsError = GetCoachNotetakerMeetingsErrors[keyof GetCoachNotetakerMeetingsErrors];
+
+export type GetCoachNotetakerMeetingsResponses = {
+    /**
+     * Response for status 200
+     */
+    200: {
+        available: boolean;
+        meetings: Array<{
+            classDate: string | null;
+            classId: string | null;
+            hostEmail: string;
+            invited: boolean;
+            joinUrl: string;
+            meetingId: string;
+            recurrence: string;
+            startTime: string | null;
+            timeZone: string | null;
+            topic: string;
+        }>;
+    };
+};
+
+export type GetCoachNotetakerMeetingsResponse = GetCoachNotetakerMeetingsResponses[keyof GetCoachNotetakerMeetingsResponses];
+
 export type GetCoachNotetakerStatusData = {
     body?: never;
     path?: never;
@@ -24783,6 +25198,7 @@ export type GetCoachNotetakerStatusResponses = {
         connectUrl: string;
         connected: boolean;
         known: boolean;
+        portalConnectUrl: string;
         zoomEmail: string | null;
     };
 };

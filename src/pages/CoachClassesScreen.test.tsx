@@ -42,7 +42,7 @@ const meCoach = {
 };
 
 const CONNECT_URL = 'https://notetaker.example/zoom/install?from=versemate';
-const unknownStatus = { known: false, connected: false, zoomEmail: null, connectUrl: CONNECT_URL };
+const unknownStatus = { known: false, connected: false, zoomEmail: null, connectUrl: CONNECT_URL, portalConnectUrl: `${CONNECT_URL}&portal` };
 
 const thursday = {
   id: 'c1',
@@ -235,6 +235,7 @@ describe('CoachClassesScreen', () => {
       connected: true,
       zoomEmail: 'jeff@zoom.example',
       connectUrl: CONNECT_URL,
+      portalConnectUrl: `${CONNECT_URL}&portal`,
     });
 
     renderScreen();

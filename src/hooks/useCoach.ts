@@ -36,8 +36,12 @@ import {
   type LeaderMonthlyResponse,
   fetchAllCoachClasses,
   fetchCoachClasses,
+  fetchNotetakerActivity,
+  fetchNotetakerMeetings,
   fetchNotetakerStatus,
   fetchNotetakerZoom,
+  type NotetakerActivity,
+  type NotetakerMeetings,
   type NotetakerStatus,
   type NotetakerZoom,
   fetchCoachMe,
@@ -82,6 +86,7 @@ import {
   type RevisionSendResult,
 } from '@/services/coachService';
 import { fetchEmailVerified } from '@/services/emailVerification';
+import { activityRefreshMs } from '@/lib/notetakerActivity';
 
 export const coachKeys = {
   me: ['coach', 'me'] as const,
@@ -89,9 +94,12 @@ export const coachKeys = {
   trends: ['coach', 'trends'] as const,
   classes: ['coach', 'classes'] as const,
   notetakerStatus: ['coach', 'notetaker', 'status'] as const,
+  notetakerMeetings: ['coach', 'notetaker', 'meetings'] as const,
+  notetakerActivity: ['coach', 'notetaker', 'activity'] as const,
   adminCoaches: ['coach', 'admin', 'coaches'] as const,
   adminClasses: ['coach', 'admin', 'classes'] as const,
   notetakerZoom: ['coach', 'admin', 'notetaker', 'zoom'] as const,
+  adminNotetakerActivity: ['coach', 'admin', 'notetaker', 'activity'] as const,
   pipelineFailures: ['coach', 'admin', 'pipeline-failures'] as const,
   coverage: ['coach', 'admin', 'coverage'] as const,
   parallelRun: ['coach', 'admin', 'parallel-run'] as const,
@@ -192,6 +200,30 @@ export function useNotetakerStatus(opts: { enabled?: boolean } = {}): UseQueryRe
     queryFn: fetchNotetakerStatus,
     retry: false,
     enabled: opts.enabled ?? true,
+  });
+}
+
+/** The leader's own scheduled Zoom meetings; read only once Zoom is connected. */
+export function useNotetakerMeetings(opts: { enabled?: boolean } = {}): UseQueryResult<NotetakerMeetings> {
+  return useQuery({
+    queryKey: coachKeys.notetakerMeetings,
+    queryFn: fetchNotetakerMeetings,
+    retry: false,
+    enabled: opts.enabled ?? true,
+  });
+}
+
+/** What the bot did for the leader's classes, or for every class (`admin`).
+ *  Re-read every 30 s while a run is live (joining, in the waiting room,
+ *  recording…), and not at all otherwise. */
+export function useNotetakerActivity(opts: { admin?: boolean; enabled?: boolean } = {}): UseQueryResult<NotetakerActivity> {
+  const admin = opts.admin ?? false;
+  return useQuery({
+    queryKey: admin ? coachKeys.adminNotetakerActivity : coachKeys.notetakerActivity,
+    queryFn: () => fetchNotetakerActivity(admin),
+    retry: false,
+    enabled: opts.enabled ?? true,
+    refetchInterval: (query) => activityRefreshMs(query.state.data),
   });
 }
 

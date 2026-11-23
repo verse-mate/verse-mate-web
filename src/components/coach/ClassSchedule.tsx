@@ -10,7 +10,8 @@ import { useMemo, useState } from 'react';
 import { AlertTriangle, CalendarDays, Check, CheckCircle2, CircleOff, Pencil, Trash2, Video, X } from 'lucide-react';
 import { vmTokens } from '@/styles/themeStyles';
 import { CoachCard } from './CoachUi';
-import type { CoachClass, CoachClassInput, CoachClassRecurrence } from '@/services/coachService';
+import ClassActivityLines from './ClassActivity';
+import type { ClassActivity, CoachClass, CoachClassInput, CoachClassRecurrence } from '@/services/coachService';
 import {
   COMMON_TIME_ZONES,
   RECURRENCE_OPTIONS,
@@ -28,18 +29,21 @@ import {
 
 // ─── One class, read-only row ────────────────────────────────────────────────
 
-/** Without `onEdit` / `onDelete` the row is read-only. */
+/** Without `onEdit` / `onDelete` the row is read-only. With `activity`, it
+ *  also says when the notetaker records next and how its last run went. */
 export function ClassRow({
   cls,
   onEdit,
   onDelete,
   deleting = false,
+  activity,
   testId = 'coach-class-row',
 }: {
   cls: CoachClass;
   onEdit?: () => void;
   onDelete?: () => void;
   deleting?: boolean;
+  activity?: ClassActivity;
   testId?: string;
 }) {
   const state = notetakerState(cls);
@@ -64,6 +68,7 @@ export function ClassRow({
           >
             <StateIcon size={14} style={{ flexShrink: 0 }} /> {notetakerText(state)}
           </div>
+          {activity && <ClassActivityLines activity={activity} timeZone={cls.timeZone} look="portal" />}
           <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, minWidth: 0 }}>
             <Video size={14} style={{ color: cls.zoomLink ? vmTokens.gold : vmTokens.textTertiary, flexShrink: 0 }} />
             {cls.zoomLink ? (
