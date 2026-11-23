@@ -159,6 +159,29 @@ describe('a Jesus event in a published language', () => {
   });
 });
 
+describe('the Markdown version named in the head', () => {
+  const markdownLinks = (document: Document) =>
+    [...document.querySelectorAll('link[rel="alternate"][type="text/markdown"]')].map((link) => link.getAttribute('href'));
+
+  it('points every page kind at its own .md, keeping the language', async () => {
+    installEdgeGlobals();
+    const published = { INDEXED_LANGUAGES: ['en-US', 'es-MX'] };
+
+    expect(markdownLinks((await page('/bible/john/3')).document)).toEqual([
+      'https://app.versemate.org/bible/john/3.md',
+    ]);
+    expect(markdownLinks((await page('/bible/john/3?lang=es-MX', published)).document)).toEqual([
+      'https://app.versemate.org/bible/john/3.md?lang=es-MX',
+    ]);
+    expect(markdownLinks((await page('/jesus/event/event-baptism?lang=es-MX', published)).document)).toEqual([
+      'https://app.versemate.org/jesus/event/event-baptism.md?lang=es-MX',
+    ]);
+    expect(markdownLinks((await page('/topic/events/the-creation-of-the-world')).document)).toEqual([
+      'https://app.versemate.org/topic/events/the-creation-of-the-world.md',
+    ]);
+  });
+});
+
 describe('the reader\'s own index.html', () => {
   it('takes the chapter head and article once, with none of its defaults left', async () => {
     installEdgeGlobals();
