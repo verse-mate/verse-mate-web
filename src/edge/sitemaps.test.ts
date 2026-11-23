@@ -120,6 +120,92 @@ describe('the chapter sitemaps', () => {
   });
 });
 
+describe('the dates in the sitemaps', () => {
+  const dated = () =>
+    fakeData({
+      lastModified: {
+        'en-US': {
+          chapters: [
+            { bookId: 1, chapter: 1, lastModified: '2025-11-02T10:00:00.000Z' },
+            { bookId: 43, chapter: 3, lastModified: '2026-11-20T23:30:00.000Z' },
+            { bookId: 43, chapter: 4, lastModified: '2026-03-01T00:00:00.000Z' },
+          ],
+          events: [{ slug: 'event-baptism', lastModified: '2026-06-15T12:00:00.000Z' }],
+          topics: [{ topicId: '5b50774c-9f98-41ab-b43c-8271dd963e01', lastModified: '2026-07-04T08:00:00.000Z' }],
+        },
+      },
+    });
+  const lastmods = (body: string) =>
+    Object.fromEntries([...body.matchAll(/<loc>([^<]+)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?/g)].map((m) => [m[1], m[2]]));
+
+  it('give each chapter the date its own explanations last changed, never the build date', async () => {
+    installEdgeGlobals(dated());
+
+    const bible = await get('/sitemaps/bible-en-US.xml');
+
+    expect(lastmods(bible.body)).toEqual({
+      'https://app.versemate.org/bible/genesis/1': '2025-11-02',
+      'https://app.versemate.org/bible/john/3': '2026-11-20',
+      'https://app.versemate.org/bible/john/4': '2026-03-01',
+    });
+    expect(await valid(bible.body, 'sitemap.xsd')).toEqual([]);
+  });
+
+  it('date the Jesus event and topic URLs too', async () => {
+    installEdgeGlobals(dated());
+
+    expect(lastmods((await get('/sitemaps/jesus-en-US.xml')).body)).toEqual({
+      'https://app.versemate.org/jesus/event/event-baptism': '2026-06-15',
+    });
+    expect(lastmods((await get('/sitemaps/topics-en-US.xml')).body)).toEqual({
+      'https://app.versemate.org/topic/events/the-creation-of-the-world': '2026-07-04',
+    });
+  });
+
+  it('date each child in the index no earlier than its newest URL', async () => {
+    installEdgeGlobals(dated());
+
+    const index = await get('/sitemap.xml');
+
+    expect(lastmods(index.body)).toEqual({
+      'https://app.versemate.org/sitemaps/bible-en-US.xml': '2026-11-20',
+      'https://app.versemate.org/sitemaps/jesus-en-US.xml': '2026-06-15',
+      'https://app.versemate.org/sitemaps/topics-en-US.xml': '2026-07-04',
+    });
+    expect(await valid(index.body, 'siteindex.xsd')).toEqual([]);
+  });
+
+  it('answer 503, kept nowhere, while the dates cannot be read', async () => {
+    const { cache } = installEdgeGlobals(fakeData({ lastModified: 'down' }));
+
+    for (const path of ['/sitemap.xml', '/sitemaps/bible-en-US.xml', '/sitemaps/jesus-en-US.xml', '/sitemaps/topics-en-US.xml']) {
+      expect((await get(path)).response.status, path).toBe(503);
+    }
+    expect([...cache.entries.keys()].some((key) => key.includes('/sitemap'))).toBe(false);
+  });
+
+  it('are never served from a copy older than a day, and re-read the dates within an hour', async () => {
+    vi.useFakeTimers({ now: new Date('2026-11-23T06:00:00Z'), toFake: ['Date'] });
+    try {
+      const data = fakeData();
+      const { cache } = installEdgeGlobals(data);
+      expect((await get('/sitemaps/bible-en-US.xml')).response.status).toBe(200);
+
+      const datesKey = [...cache.entries.keys()].find((key) => decodeURIComponent(key).includes('/bible/explanations/last-modified'));
+      const datesAge = cache.entries.get(datesKey ?? '')?.headers.get('cache-control')?.match(/max-age=(\d+)/)?.[1];
+      expect(Number(datesAge)).toBeLessThanOrEqual(3600);
+
+      data.down = true;
+      vi.setSystemTime(new Date('2026-11-23T19:00:00Z'));
+      expect((await get('/sitemaps/bible-en-US.xml')).response.status).toBe(200);
+      vi.setSystemTime(new Date('2026-11-24T06:30:00Z'));
+      expect((await get('/sitemaps/bible-en-US.xml')).response.status).toBe(503);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+});
+
 describe('the Jesus and topic sitemaps', () => {
   it('list the events that have an explanation, one child per published language', async () => {
     installEdgeGlobals(withEvents());

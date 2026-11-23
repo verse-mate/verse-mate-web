@@ -4,6 +4,7 @@ import { DAY, reportFailure, type EdgeRequest, type Rendered } from './common';
 export const FRESH = DAY;
 export const STALE = 7 * DAY;
 export const SHORT = 10 * 60;
+export const SITEMAP_LIFETIME = { fresh: DAY / 2, stale: DAY / 2 };
 export const LEASE = 60;
 
 const RENDERED_AT = 'x-edge-rendered-at';

@@ -25,6 +25,26 @@ export interface FakeData {
   topics: { id: string; name: string; category: string; references: string; summary: Record<string, string> }[];
   down: boolean;
   eventPageCap: number;
+  lastModified?: Record<string, LastModifiedData> | 'down';
+}
+
+export interface LastModifiedData {
+  chapters: { bookId: number; chapter: number; lastModified: string }[];
+  events: { slug: string; lastModified: string }[];
+  topics: { topicId: string; lastModified: string }[];
+}
+
+export const DEFAULT_LAST_MODIFIED = '2026-01-01T00:00:00.000Z';
+
+function synthesizedLastModified(data: FakeData, lang: string): LastModifiedData {
+  const coverage = typeof data.coverage === 'object' ? (data.coverage[lang] ?? []) : [];
+  return {
+    chapters: coverage.flatMap((book) =>
+      book.chapters.map((chapter) => ({ bookId: book.bookId, chapter, lastModified: DEFAULT_LAST_MODIFIED })),
+    ),
+    events: data.events.filter((event) => event.overview[lang]).map((event) => ({ slug: event.slug, lastModified: DEFAULT_LAST_MODIFIED })),
+    topics: data.topics.filter((topic) => topic.summary[lang]).map((topic) => ({ topicId: topic.id, lastModified: DEFAULT_LAST_MODIFIED })),
+  };
 }
 
 export function fakeData(overrides: Partial<FakeData> = {}): FakeData {
@@ -112,6 +132,12 @@ export function fakeApi(data: FakeData) {
       if (data.coverage === 'missing') return json({ message: 'NOT_FOUND' }, 404);
       if (data.coverage === 'down') return json({ error: 'down' }, 503);
       return json({ languages: data.coverage });
+    }
+    if (path === '/bible/explanations/last-modified') {
+      if (data.lastModified === 'down') return json({ error: 'down' }, 503);
+      const wanted = q.get('lang') ?? '';
+      const dates = data.lastModified?.[wanted] ?? synthesizedLastModified(data, wanted);
+      return json({ language: wanted, ...dates });
     }
     if ((m = path.match(/^\/bible\/book\/explanation\/(\d+)\/(\d+)$/))) {
       const [, first = '', second = ''] = m;
