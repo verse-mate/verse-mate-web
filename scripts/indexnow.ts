@@ -46,12 +46,16 @@ type Wait = (ms: number) => Promise<void>;
 const sleep: Wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const READ_TIMEOUT_MS = 60_000;
 
-async function readSitemap(url: string, fetcher: Fetcher) {
+async function readText(url: string, fetcher: Fetcher) {
   const response = await fetcher(url, { signal: AbortSignal.timeout(READ_TIMEOUT_MS) });
   if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
   const type = response.headers.get('content-type') ?? 'no content type';
   if (!/\b(application|text)\/xml\b/.test(type)) throw new Error(`${url}: not a sitemap (${type})`);
-  return urlsFromSitemap(await response.text());
+  return response.text();
+}
+
+async function readSitemap(url: string, fetcher: Fetcher) {
+  return urlsFromSitemap(await readText(url, fetcher));
 }
 
 const messageOf = (failure: unknown) => (failure instanceof Error ? failure.message : String(failure));
@@ -118,13 +122,92 @@ export function keyIn(publicDir: string) {
   return files[0].replace(/\.txt$/, '');
 }
 
-const USAGE = 'usage: bun scripts/indexnow.ts changed <previous wrangler.jsonc> <current wrangler.jsonc> | all <current wrangler.jsonc>';
+const USAGE =
+  'usage: bun scripts/indexnow.ts changed <previous wrangler.jsonc> <current wrangler.jsonc> | all <current wrangler.jsonc> | recent <current wrangler.jsonc> --days <n> [--dry-run]';
+
+export const datedUrlsFromSitemap = (xml: string) =>
+  [...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*(?:<lastmod>([^<]+)<\/lastmod>)?/g)].map((match) => ({
+    url: urlsFromSitemap(`<loc>${match[1]}</loc>`)[0],
+    lastmod: match[2]?.slice(0, 10),
+  }));
+
+function windowStart(now: Date, days: number) {
+  const start = new Date(now);
+  start.setUTCDate(start.getUTCDate() - (days - 1));
+  return start.toISOString().slice(0, 10);
+}
+
+async function recentUrls(languages: string[], since: string, fetcher: Fetcher) {
+  const failures: string[] = [];
+  const urls: string[] = [];
+  let index: string[];
+  try {
+    index = urlsFromSitemap(await readText(`https://${HOST}/sitemap.xml`, fetcher));
+  } catch (failure) {
+    return { urls, failures: [messageOf(failure)] };
+  }
+  for (const lang of languages) {
+    const children = childrenOf(index, lang);
+    if (children.length === 0) failures.push(`the sitemap index lists no sitemap for ${lang}`);
+    for (const child of children) {
+      try {
+        for (const entry of datedUrlsFromSitemap(await readText(child, fetcher))) {
+          if (entry.lastmod && entry.lastmod >= since) urls.push(entry.url);
+        }
+      } catch (failure) {
+        failures.push(messageOf(failure));
+      }
+    }
+  }
+  return { urls, failures };
+}
+
+async function runRecent(
+  file: string,
+  flags: string[],
+  { fetcher, publicDir, log, error, now }: { fetcher: Fetcher; publicDir: string; log: (line: string) => void; error: (line: string) => void; now: Date },
+) {
+  const daysAt = flags.indexOf('--days');
+  const days = Number(flags[daysAt + 1]);
+  if (daysAt < 0 || !Number.isInteger(days) || days < 1) {
+    error(USAGE);
+    return 1;
+  }
+  const dryRun = flags.includes('--dry-run');
+  const languages = publishedLanguages(readFileSync(file, 'utf8'));
+  const since = windowStart(now, days);
+  const { urls, failures } = await recentUrls(languages, since, fetcher);
+  for (const failure of failures) error(`indexnow: could not read ${failure}`);
+
+  let submitted = true;
+  if (urls.length === 0) {
+    log(`indexnow: no URL changed since ${since} for ${HOST} (${languages.join(', ')}), nothing to submit`);
+  } else if (dryRun) {
+    log(`indexnow: dry run, would submit ${urls.length} URLs changed since ${since}:`);
+    for (const url of urls) log(`  ${url}`);
+  } else {
+    const result = await submitToIndexNow({ key: keyIn(publicDir), urls, fetcher });
+    const line = `indexnow: ${urls.length} URLs changed since ${since} for ${HOST} (${languages.join(', ')}), HTTP ${result.status}`;
+    if (result.ok) log(line);
+    else error(`${line}, submission failed: ${result.detail ?? ''}`);
+    submitted = result.ok;
+  }
+  return submitted && failures.length === 0 ? 0 : 1;
+}
 
 export async function run(
   args: string[],
-  { fetcher = fetch as Fetcher, publicDir = 'public', log = console.log, error = console.error, wait = sleep }: { fetcher?: Fetcher; publicDir?: string; log?: (line: string) => void; error?: (line: string) => void; wait?: Wait } = {},
+  {
+    fetcher = fetch as Fetcher,
+    publicDir = 'public',
+    log = console.log,
+    error = console.error,
+    wait = sleep,
+    now = new Date(),
+  }: { fetcher?: Fetcher; publicDir?: string; log?: (line: string) => void; error?: (line: string) => void; wait?: Wait; now?: Date } = {},
 ) {
   const [mode, ...files] = args;
+  if (mode === 'recent' && files.length >= 1) return runRecent(files[0], files.slice(1), { fetcher, publicDir, log, error, now });
   let languages: string[];
   if (mode === 'changed' && files.length === 2) {
     const [previous, current] = files.map((file) => publishedLanguages(readFileSync(file, 'utf8')));
