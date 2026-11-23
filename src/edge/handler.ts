@@ -1,3 +1,4 @@
+import { prefersMarkdown } from './accept';
 import { BUILD_CACHE_WRITES, BUILD_TIMEOUT_MS, createApi, type Runtime } from './api';
 import { languageFromQuery, PRODUCTION_HOST, readConfig, type EdgeEnv, type Language } from './config';
 import { renderArticle } from './article';
@@ -183,14 +184,15 @@ async function dispatch(edge: EdgeRequest) {
 
   const match = matchPageRoute(edge.url.pathname);
   if (!match) return edge.url.pathname.endsWith('.md') ? textResponse('Not found', 404, { 'X-Robots-Tag': 'noindex' }) : null;
+  const markdown = match.markdown || prefersMarkdown(edge.request.headers.get('accept'));
   const check = checkRoute(match.route);
   if (check.kind === 'moved') return canonicalRedirect(edge.url, '/bible', check.bookParam, check.bookSlug);
   if (check.kind === 'missing') {
-    return match.markdown
+    return markdown
       ? textResponse('Not found', 404, { 'X-Robots-Tag': 'noindex' })
       : shellResponse(edge.env, edge.url, 404, { 'X-Robots-Tag': 'noindex' });
   }
-  return match.markdown ? renderMarkdownPage(edge, match.route) : renderPage(edge, match);
+  return markdown ? renderMarkdownPage(edge, match.route) : renderPage(edge, match);
 }
 
 export async function handleEdge(request: Request, env: EdgeEnv, url: URL, ctx?: ExecutionContextLike) {
@@ -200,5 +202,6 @@ export async function handleEdge(request: Request, env: EdgeEnv, url: URL, ctx?:
   if (!response) return null;
   const headers = new Headers(response.headers);
   headers.set('X-Content-Type-Options', 'nosniff');
+  if (matchPageRoute(url.pathname)) headers.append('Vary', 'Accept');
   return new Response(request.method === 'GET' ? response.body : null, { status: response.status, headers });
 }
