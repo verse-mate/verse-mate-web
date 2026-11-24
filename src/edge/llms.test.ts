@@ -78,6 +78,67 @@ describe('Markdown versions of the pages', () => {
   });
 });
 
+function romansAndGenesis() {
+  const books = [
+    { b: 1, n: 'Genesis', c: 50 },
+    { b: 45, n: 'Romans', c: 16 },
+  ];
+  const data = fakeData({ books });
+  data.verses['45:12'] = [{ verseNumber: 1, text: 'Therefore I urge you, brethren.' }];
+  return data;
+}
+
+function markdownLinks(body: string) {
+  return [...body.matchAll(/\]\(([^)]+)\)/g)].map((m) => m[1]);
+}
+
+describe('the links at the end of a Markdown version', () => {
+  it('lead from Romans 12 to the Markdown of Romans 11 and 13, the book page and both llms.txt files', async () => {
+    installEdgeGlobals(romansAndGenesis());
+
+    const { body } = await get('/bible/romans/12.md');
+
+    expect(body.trimEnd().endsWith('[versemate.org/llms.txt](https://versemate.org/llms.txt)')).toBe(true);
+    expect(markdownLinks(body)).toEqual([
+      'https://app.versemate.org/bible/romans/11.md',
+      'https://app.versemate.org/bible/romans/13.md',
+      'https://versemate.org/bible/romans/',
+      'https://app.versemate.org/llms.txt',
+      'https://versemate.org/llms.txt',
+    ]);
+    expect(body).toContain('[Previous chapter: Romans 11](https://app.versemate.org/bible/romans/11.md)');
+  });
+
+  it('have no previous chapter on Genesis 1', async () => {
+    installEdgeGlobals(romansAndGenesis());
+
+    const { body } = await get('/bible/genesis/1.md');
+
+    expect(markdownLinks(body)[0]).toBe('https://app.versemate.org/bible/genesis/2.md');
+    expect(body).not.toContain('Previous chapter');
+  });
+
+  it('keep the language of the Markdown version', async () => {
+    installEdgeGlobals(romansAndGenesis());
+
+    const { body } = await get('/bible/romans/12.md?lang=pt-BR');
+
+    expect(markdownLinks(body).slice(0, 2)).toEqual([
+      'https://app.versemate.org/bible/romans/11.md?lang=pt-BR',
+      'https://app.versemate.org/bible/romans/13.md?lang=pt-BR',
+    ]);
+  });
+
+  it('give a Jesus event and a topic both llms.txt links and no chapter links', async () => {
+    installEdgeGlobals();
+
+    for (const path of ['/jesus/event/event-baptism.md', '/topic/events/the-creation-of-the-world.md']) {
+      const { body } = await get(path);
+      expect(markdownLinks(body), path).toEqual(['https://app.versemate.org/llms.txt', 'https://versemate.org/llms.txt']);
+    }
+  });
+});
+
 describe('llms.txt', () => {
   it('describes VerseMate and links all 66 books, the Jesus events and the topics', async () => {
     installEdgeGlobals(allBooks());
