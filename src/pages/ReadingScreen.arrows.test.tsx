@@ -1,10 +1,6 @@
-import { describe, expect, it, vi } from 'vitest';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
-import ReadingScreen from './ReadingScreen';
-import BibleRoute from '@/components/routes/BibleRoute';
-import { AppProvider } from '@/contexts/AppContext';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { fireEvent, screen, waitFor } from '@testing-library/react';
+import { location, nextArrow, previousArrow, renderAt } from './readingScreenArrows.harness';
 import * as bibleService from '@/services/bibleService';
 
 vi.hoisted(() => {
@@ -33,30 +29,18 @@ vi.mock('@/services/bibleService', async (importOriginal) => {
   };
 });
 
-function LocationProbe() {
-  const location = useLocation();
-  return <div data-testid="location">{`${location.pathname}${location.search}`}</div>;
-}
+beforeEach(() => vi.clearAllMocks());
 
-function renderAt(entry: string) {
-  const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
-  return render(
-    <QueryClientProvider client={client}>
-      <MemoryRouter initialEntries={[entry]}>
-        <AppProvider>
-          <LocationProbe />
-          <Routes>
-            <Route path="/bible/:bookSlug/:chapterNumber" element={<BibleRoute />} />
-            <Route path="/read" element={<ReadingScreen />} />
-          </Routes>
-        </AppProvider>
-      </MemoryRouter>
-    </QueryClientProvider>,
-  );
-}
-
-async function nextArrow() {
-  return (await screen.findAllByTestId('next-chapter-button'))[0];
+function followedByBrowser(arrow: HTMLElement, init: MouseEventInit) {
+  let prevented: boolean | null = null;
+  const record = (event: Event) => {
+    prevented = event.defaultPrevented;
+    event.preventDefault();
+  };
+  document.addEventListener('click', record);
+  fireEvent.click(arrow, init);
+  document.removeEventListener('click', record);
+  return prevented === false;
 }
 
 describe('the reader chapter arrows', () => {
@@ -64,7 +48,7 @@ describe('the reader chapter arrows', () => {
     renderAt('/bible/romans/12');
 
     const next = await nextArrow();
-    const previous = (await screen.findAllByTestId('previous-chapter-button'))[0];
+    const previous = await previousArrow();
 
     expect(next.tagName).toBe('A');
     expect(next.getAttribute('href')).toBe('/bible/romans/13');
@@ -78,10 +62,8 @@ describe('the reader chapter arrows', () => {
     renderAt('/bible/romans/12');
     const next = await nextArrow();
 
-    const followed = fireEvent.click(next);
-
-    expect(followed).toBe(false);
-    await waitFor(() => expect(screen.getByTestId('location').textContent).toBe('/bible/romans/13'));
+    expect(followedByBrowser(next, {})).toBe(false);
+    await waitFor(() => expect(location()).toBe('/bible/romans/13'));
     expect(vi.mocked(bibleService.fetchChapter)).toHaveBeenCalledWith('Romans', 13, expect.anything());
   });
 
@@ -90,9 +72,18 @@ describe('the reader chapter arrows', () => {
     const next = await nextArrow();
 
     for (const modifier of [{ metaKey: true }, { ctrlKey: true }, { shiftKey: true }]) {
-      expect(fireEvent.click(next, modifier), JSON.stringify(modifier)).toBe(true);
+      expect(followedByBrowser(next, modifier), JSON.stringify(modifier)).toBe(true);
     }
-    expect(screen.getByTestId('location').textContent).toBe('/bible/romans/12');
+    expect(location()).toBe('/bible/romans/12');
+  });
+
+  it('leave Enter to the link itself, which follows it as a click', async () => {
+    renderAt('/bible/romans/12');
+    const next = await nextArrow();
+    next.focus();
+
+    expect(fireEvent.keyDown(next, { key: 'Enter', code: 'Enter' })).toBe(true);
+    expect(location()).toBe('/bible/romans/12');
   });
 
   it('move to the next chapter on Space without scrolling the page', async () => {
@@ -103,12 +94,26 @@ describe('the reader chapter arrows', () => {
     const scrolled = fireEvent.keyDown(next, { key: ' ', code: 'Space' });
 
     expect(scrolled).toBe(false);
-    await waitFor(() => expect(screen.getByTestId('location').textContent).toBe('/bible/romans/13'));
+    await waitFor(() => expect(location()).toBe('/bible/romans/13'));
+  });
+
+  it('move one chapter, not several, while Space is held down', async () => {
+    renderAt('/bible/romans/12');
+    const next = await nextArrow();
+    next.focus();
+
+    fireEvent.keyDown(next, { key: ' ', code: 'Space' });
+    await waitFor(() => expect(location()).toBe('/bible/romans/13'));
+    const held = await nextArrow();
+    expect(fireEvent.keyDown(held, { key: ' ', code: 'Space', repeat: true })).toBe(false);
+    expect(fireEvent.keyDown(held, { key: ' ', code: 'Space', repeat: true })).toBe(false);
+
+    expect(location()).toBe('/bible/romans/13');
   });
 
   it('show no next arrow on the last chapter of a book and no previous arrow on the first', async () => {
     const last = renderAt('/bible/romans/16');
-    await screen.findAllByTestId('previous-chapter-button');
+    await previousArrow();
     expect(screen.queryByTestId('next-chapter-button')).toBeNull();
     last.unmount();
 

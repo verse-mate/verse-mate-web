@@ -80,7 +80,8 @@ export async function loadBooks(api: ApiGet) {
   const data = await api('/bible/testaments', { query: { bible_version: GUEST_VERSION } }, { ttl: DAY });
   const books = data?.testaments ?? [];
   if (books.length === 0) throw new ApiUnavailable('/bible/testaments: empty');
-  return books
+  return [...books]
+    .sort((a, b) => a.b - b.b)
     .filter((book) => getBookSlug(book.b))
     .map((book) => ({ bookId: book.b, slug: getBookSlug(book.b) as string, name: book.n, chapters: book.c }));
 }

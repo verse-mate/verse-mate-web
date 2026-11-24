@@ -1,11 +1,6 @@
-import { describe, expect, it, vi } from 'vitest';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
-import ReadingScreen from './ReadingScreen';
-import BibleRoute from '@/components/routes/BibleRoute';
-import { AppProvider } from '@/contexts/AppContext';
-import * as bibleService from '@/services/bibleService';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { fireEvent, screen, waitFor } from '@testing-library/react';
+import { location, nextArrow, previousArrow, renderAt } from './readingScreenArrows.harness';
 
 vi.hoisted(() => {
   window.history.replaceState(null, '', '/bible/romans/12?lang=pt-BR');
@@ -33,31 +28,7 @@ vi.mock('@/services/bibleService', async (importOriginal) => {
   };
 });
 
-function LocationProbe() {
-  const location = useLocation();
-  return <div data-testid="location">{`${location.pathname}${location.search}`}</div>;
-}
-
-function renderAt(entry: string) {
-  const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
-  return render(
-    <QueryClientProvider client={client}>
-      <MemoryRouter initialEntries={[entry]}>
-        <AppProvider>
-          <LocationProbe />
-          <Routes>
-            <Route path="/bible/:bookSlug/:chapterNumber" element={<BibleRoute />} />
-            <Route path="/read" element={<ReadingScreen />} />
-          </Routes>
-        </AppProvider>
-      </MemoryRouter>
-    </QueryClientProvider>,
-  );
-}
-
-async function nextArrow() {
-  return (await screen.findAllByTestId('next-chapter-button'))[0];
-}
+beforeEach(() => vi.clearAllMocks());
 
 describe('the reader chapter arrows during a ?lang= visit', () => {
   it('keep the visit language in their address, so a new tab opens the chapter in that language', async () => {
@@ -66,9 +37,9 @@ describe('the reader chapter arrows during a ?lang= visit', () => {
     const next = await nextArrow();
 
     expect(next.getAttribute('href')).toBe('/bible/romans/13?lang=pt-BR');
-    expect((await screen.findAllByTestId('previous-chapter-button'))[0].getAttribute('href')).toBe('/bible/romans/11?lang=pt-BR');
+    expect((await previousArrow()).getAttribute('href')).toBe('/bible/romans/11?lang=pt-BR');
     fireEvent.click(next);
-    await waitFor(() => expect(screen.getByTestId('location').textContent).toBe('/bible/romans/13'));
+    await waitFor(() => expect(location()).toMatch(/^\/bible\/romans\/13/));
     expect((await nextArrow()).getAttribute('href')).toBe('/bible/romans/14?lang=pt-BR');
   });
 });

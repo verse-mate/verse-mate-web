@@ -152,6 +152,14 @@ describe('the navigation block of the server-rendered article', () => {
       'Próximo capítulo: Romans 13 -> /bible/romans/13?lang=pt-BR',
       'Todos os capítulos de Romans -> https://versemate.org/bible/romans/',
     ]);
+    expect(romans.element.querySelector('nav')?.textContent).toContain('Para assistentes de IA:');
+  });
+
+  it('crosses books in Bible order even when the API lists the books out of order', async () => {
+    installEdgeGlobals(bible([...NEW_TESTAMENT_SLICE].reverse()));
+
+    expect(chapterLinks((await root('/bible/romans/1')).element)).toEqual(['/bible/acts/28', '/bible/romans/2']);
+    expect(chapterLinks((await root('/bible/romans/16')).element)).toEqual(['/bible/romans/15', '/bible/1-corinthians/1']);
   });
 
   it('gives the English page links with no lang for lang=en-US and for an unknown language', async () => {

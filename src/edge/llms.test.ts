@@ -84,9 +84,13 @@ function romansAndGenesis() {
   const books = [
     { b: 1, n: 'Genesis', c: 50 },
     { b: 45, n: 'Romans', c: 16 },
+    { b: 46, n: '1 Corinthians', c: 16 },
+    { b: 66, n: 'Revelation', c: 22 },
   ];
   const data = fakeData({ books });
   data.verses['45:12'] = [{ verseNumber: 1, text: 'Therefore I urge you, brethren.' }];
+  data.verses['45:16'] = [{ verseNumber: 1, text: 'I commend to you our sister Phoebe.' }];
+  data.verses['66:22'] = [{ verseNumber: 1, text: 'Then he showed me a river.' }];
   return data;
 }
 
@@ -120,6 +124,18 @@ describe('the links at the end of a Markdown version', () => {
     expect(body).not.toContain('Previous chapter');
   });
 
+  it('cross into the next book from Romans 16 and stop after Revelation 22', async () => {
+    installEdgeGlobals(romansAndGenesis());
+
+    expect(markdownLinks((await get('/bible/romans/16.md')).body).slice(0, 2)).toEqual([
+      'https://app.versemate.org/bible/romans/15.md',
+      'https://app.versemate.org/bible/1-corinthians/1.md',
+    ]);
+    const revelation = (await get('/bible/revelation/22.md')).body;
+    expect(markdownLinks(revelation)[0]).toBe('https://app.versemate.org/bible/revelation/21.md');
+    expect(revelation).not.toContain('Next chapter');
+  });
+
   it('keep the language of the Markdown version', async () => {
     installEdgeGlobals(romansAndGenesis());
 
@@ -129,6 +145,7 @@ describe('the links at the end of a Markdown version', () => {
       'https://app.versemate.org/bible/romans/11.md?lang=pt-BR',
       'https://app.versemate.org/bible/romans/13.md?lang=pt-BR',
     ]);
+    expect(body).toContain('[Próximo capítulo: Romans 13](https://app.versemate.org/bible/romans/13.md?lang=pt-BR)');
   });
 
   it('give a Jesus event and a topic both llms.txt links and no chapter links', async () => {

@@ -137,7 +137,9 @@ describe('robots.txt as each crawler reads it', () => {
     expect(start).toBeGreaterThan(-1);
     expect(group[1]).toBe('Allow: /');
     expect(group.filter((line) => /^content-signal:/i.test(line))).toEqual([]);
-    expect(group.filter((line) => line.startsWith('Disallow:')).length).toBeGreaterThan(0);
+    const everyone = lines.slice(lines.indexOf('User-agent: *'));
+    const disallows = (rules: string[]) => rules.slice(0, rules.indexOf('')).filter((line) => line.startsWith('Disallow:'));
+    expect(disallows(group.concat(''))).toEqual(disallows(everyone));
   });
 
   it('names Google-Extended only in comments, one of which says why it is not blocked', () => {

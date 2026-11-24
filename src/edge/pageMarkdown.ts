@@ -72,7 +72,7 @@ export async function llmsTxt(api: ApiGet) {
     ...books.map((book) => {
       const pattern = book.chapters === 1 ? `/bible/${book.slug}/1.md` : `/bible/${book.slug}/{1-${book.chapters}}.md`;
       const count = book.chapters === 1 ? '1 chapter' : `${book.chapters} chapters`;
-      const all = `[${LABELS[DEFAULT_LANGUAGE].allChapters(book.name)}](${bookPageUrl(book.slug)})`;
+      const all = `[${LABELS[DEFAULT_LANGUAGE].allChapters(book.name).replace(/[[\]]/g, '')}](${bookPageUrl(book.slug)})`;
       return `${link(book.name, `/bible/${book.slug}/1`)}: ${count} at \`${pattern}\`. ${all}`;
     }),
     '',
