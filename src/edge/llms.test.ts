@@ -20,6 +20,8 @@ function allBooks() {
   const data = fakeData({ books });
   data.books.find((book) => book.b === 43)!.n = 'John';
   data.books.find((book) => book.b === 1)!.n = 'Genesis';
+  Object.assign(data.books.find((book) => book.b === 45)!, { n: 'Romans', c: 16 });
+  Object.assign(data.books.find((book) => book.b === 31)!, { n: 'Obadiah', c: 1 });
   for (const book of books) data.verses[`${book.b}:1`] ??= [{ verseNumber: 1, text: `First verse of book ${book.b}.` }];
   return data;
 }
@@ -152,6 +154,17 @@ describe('llms.txt', () => {
     const books = links.filter((link) => link.startsWith('https://app.versemate.org/bible/'));
     expect(books).toHaveLength(66);
     expect(books).toContain('https://app.versemate.org/bible/john/1.md');
+    expect(body).toContain(
+      '- [Romans](https://app.versemate.org/bible/romans/1.md): 16 chapters at `/bible/romans/{1-16}.md`. [All chapters of Romans](https://versemate.org/bible/romans/)\n',
+    );
+    expect(body).toContain(
+      '- [Obadiah](https://app.versemate.org/bible/obadiah/1.md): 1 chapter at `/bible/obadiah/1.md`. [All chapters of Obadiah](https://versemate.org/bible/obadiah/)\n',
+    );
+    const intro = body.slice(0, body.indexOf('## Books of the Bible'));
+    expect(intro).toContain('Links to app.versemate.org are the Markdown versions of VerseMate pages');
+    expect(intro).toContain('Links to versemate.org/bible/ are book pages');
+    expect(intro).not.toContain('Each link below is the Markdown version');
+    expect([...body.matchAll(/\]\((https:\/\/versemate\.org\/bible\/[^)]+)\)/g)]).toHaveLength(66);
     expect(body).toContain('[The baptism of Jesus](https://app.versemate.org/jesus/event/event-baptism.md)');
     expect(body).toMatch(/### Events\n+- \[The Creation of the World\]\(https:\/\/app\.versemate\.org\/topic\/events\/the-creation-of-the-world\.md\)/);
     expect(body).not.toContain('the-fall-of-man');
