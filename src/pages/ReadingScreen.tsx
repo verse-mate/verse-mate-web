@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, type KeyboardEvent, type MouseEvent } from 'react';
+import { useState, useEffect, useCallback, useRef, type KeyboardEvent as ReactKeyboardEvent, type MouseEvent as ReactMouseEvent } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate, useLocation, useNavigationType } from 'react-router-dom';
 import {
@@ -44,12 +44,14 @@ import { vmTokens } from '@/styles/themeStyles';
 const READING_SCROLL_KEY = 'versemate-reading-scroll';
 
 function chapterHref(bookId: number, chapter: number) {
+  const slug = getBookSlug(bookId);
+  if (!slug) return undefined;
   const language = getVisitLanguage();
   const query = language && language !== DEFAULT_LANGUAGE ? `?lang=${encodeURIComponent(language)}` : '';
-  return `/bible/${getBookSlug(bookId)}/${chapter}${query}`;
+  return `/bible/${slug}/${chapter}${query}`;
 }
 
-function isPlainClick(event: MouseEvent) {
+function isPlainClick(event: ReactMouseEvent) {
   return event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
 }
 
@@ -186,15 +188,15 @@ export default function ReadingScreen() {
   const arrowProps = (delta: number) => ({
     href: chapterHref(state.bookId, state.chapter + delta),
     draggable: false,
-    onClick: (event: MouseEvent<HTMLAnchorElement>) => {
+    onClick: (event: ReactMouseEvent<HTMLAnchorElement>) => {
       if (!isPlainClick(event)) return;
       event.preventDefault();
       goToChapter(delta);
     },
-    onKeyDown: (event: KeyboardEvent<HTMLAnchorElement>) => {
+    onKeyDown: (event: ReactKeyboardEvent<HTMLAnchorElement>) => {
       if (event.key !== ' ') return;
       event.preventDefault();
-      goToChapter(delta);
+      if (!event.repeat) goToChapter(delta);
     },
   });
 
