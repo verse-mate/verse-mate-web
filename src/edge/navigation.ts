@@ -2,7 +2,7 @@ import { DEFAULT_LANGUAGE, SITE_ORIGIN, type Language } from './config';
 import { LABELS } from './labels';
 import type { ChapterRef, PageData } from './pageData';
 
-export const WEBSITE_ORIGIN = 'https://versemate.org';
+const WEBSITE_ORIGIN = 'https://versemate.org';
 
 export interface NavLink {
   text: string;
@@ -16,7 +16,7 @@ export interface PageNavigation {
   assistants: NavLink[];
 }
 
-export const LLMS_LINKS: NavLink[] = [
+const LLMS_LINKS: NavLink[] = [
   { text: 'app.versemate.org/llms.txt', href: `${SITE_ORIGIN}/llms.txt` },
   { text: 'versemate.org/llms.txt', href: `${WEBSITE_ORIGIN}/llms.txt` },
 ];
