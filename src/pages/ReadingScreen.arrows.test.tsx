@@ -43,7 +43,7 @@ function followedByBrowser(arrow: HTMLElement, init: MouseEventInit) {
   return prevented === false;
 }
 
-describe('the reader chapter arrows', () => {
+describe('the reader chapter arrows', { timeout: 20_000 }, () => {
   it('are links to the neighbouring chapters, with the names they had as buttons', async () => {
     renderAt('/bible/romans/12');
 

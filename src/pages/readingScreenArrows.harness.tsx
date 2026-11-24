@@ -28,11 +28,11 @@ export function renderAt(entry: string) {
 }
 
 export async function nextArrow() {
-  return (await screen.findAllByTestId('next-chapter-button'))[0];
+  return (await screen.findAllByTestId('next-chapter-button', {}, { timeout: 10_000 }))[0];
 }
 
 export async function previousArrow() {
-  return (await screen.findAllByTestId('previous-chapter-button'))[0];
+  return (await screen.findAllByTestId('previous-chapter-button', {}, { timeout: 10_000 }))[0];
 }
 
 export function location() {

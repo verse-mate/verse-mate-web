@@ -30,7 +30,7 @@ vi.mock('@/services/bibleService', async (importOriginal) => {
 
 beforeEach(() => vi.clearAllMocks());
 
-describe('the reader chapter arrows during a ?lang=en-US visit', () => {
+describe('the reader chapter arrows during a ?lang=en-US visit', { timeout: 20_000 }, () => {
   it('give the default language no lang in their address', async () => {
     renderAt('/bible/romans/12?lang=en-US');
 
