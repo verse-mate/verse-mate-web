@@ -1,6 +1,7 @@
 import { DEFAULT_LANGUAGE, ORGANIZATION_ID, SITE_ORIGIN, type Language } from './config';
 import type { Indexing } from './indexing';
 import { LABELS } from './labels';
+import { bookPageUrl } from './navigation';
 import type { PageData } from './pageData';
 import { escapeHtml, firstParagraph, jsonForScript, truncate } from './text';
 
@@ -41,7 +42,7 @@ function breadcrumb(data: PageData, lang: Language, canonical: string) {
   const labels = LABELS[lang];
   const section =
     data.kind === 'chapter'
-      ? { name: data.bookName, item: pageUrl(`/bible/${data.bookSlug}/1`, lang) }
+      ? { name: data.bookName, item: bookPageUrl(data.bookSlug) }
       : data.kind === 'event'
         ? { name: labels.jesus, item: pageUrl('/jesus', lang) }
         : { name: labels.categories[data.category] ?? data.category, item: pageUrl('/topics', lang) };
