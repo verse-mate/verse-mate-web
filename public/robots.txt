@@ -12,6 +12,22 @@ Disallow: /auth/
 Disallow: /email-verified
 Disallow: /coach
 
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /notes
+Disallow: /bookmarks
+Disallow: /highlights
+Disallow: /menu
+Disallow: /login
+Disallow: /logout
+Disallow: /create-account
+Disallow: /auth/
+Disallow: /email-verified
+Disallow: /coach
+
+# Google-Extended is left out of the list below on purpose. The token governs
+# training and also grounding in Gemini's answers, so disallowing it would take
+# VerseMate out of those answers. Do not add it.
 User-agent: GPTBot
 User-agent: ClaudeBot
 User-agent: anthropic-ai
