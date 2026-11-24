@@ -7,7 +7,7 @@ import { validateXML } from 'xmllint-wasm';
 import worker from '../../worker.js';
 import { getBookSlug } from '../lib/bookSlugs';
 import { LANGUAGES } from './config';
-import { context, edgeEnv, fakeData, installEdgeGlobals } from './testing/fakeEdge';
+import { context, edgeEnv, fakeData, installEdgeGlobals, type LastModifiedData } from './testing/fakeEdge';
 
 afterEach(() => vi.unstubAllGlobals());
 
@@ -117,6 +117,123 @@ describe('the chapter sitemaps', () => {
     expect(missing.response.status).toBe(503);
     expect(missing.response.headers.get('retry-after')).toBeTruthy();
     expect([...cache.entries.keys()].some((key) => key.includes('/sitemaps/'))).toBe(false);
+  });
+});
+
+describe('the dates in the sitemaps', () => {
+  const dated = () =>
+    fakeData({
+      lastModified: {
+        'en-US': {
+          chapters: [
+            { bookId: 1, chapter: 1, lastModified: '2025-11-02' },
+            { bookId: 43, chapter: 3, lastModified: '2026-11-20' },
+            { bookId: 43, chapter: 4, lastModified: '2026-03-01' },
+          ],
+          events: [{ slug: 'event-baptism', lastModified: '2026-06-15' }],
+          topics: [{ topicId: '5b50774c-9f98-41ab-b43c-8271dd963e01', lastModified: '2026-07-04' }],
+        },
+      },
+    });
+  const lastmods = (body: string) =>
+    Object.fromEntries([...body.matchAll(/<loc>([^<]+)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?/g)].map((m) => [m[1], m[2]]));
+
+  it('give each chapter the date its own explanations last changed, never the build date', async () => {
+    installEdgeGlobals(dated());
+
+    const bible = await get('/sitemaps/bible-en-US.xml');
+
+    expect(lastmods(bible.body)).toEqual({
+      'https://app.versemate.org/bible/genesis/1': '2025-11-02',
+      'https://app.versemate.org/bible/john/3': '2026-11-20',
+      'https://app.versemate.org/bible/john/4': '2026-03-01',
+    });
+    expect(await valid(bible.body, 'sitemap.xsd')).toEqual([]);
+  });
+
+  it('date the Jesus event and topic URLs too', async () => {
+    installEdgeGlobals(dated());
+
+    expect(lastmods((await get('/sitemaps/jesus-en-US.xml')).body)).toEqual({
+      'https://app.versemate.org/jesus/event/event-baptism': '2026-06-15',
+    });
+    expect(lastmods((await get('/sitemaps/topics-en-US.xml')).body)).toEqual({
+      'https://app.versemate.org/topic/events/the-creation-of-the-world': '2026-07-04',
+    });
+  });
+
+  it('date each child in the index no earlier than its newest URL', async () => {
+    installEdgeGlobals(dated());
+
+    const index = await get('/sitemap.xml');
+
+    expect(lastmods(index.body)).toEqual({
+      'https://app.versemate.org/sitemaps/bible-en-US.xml': '2026-11-20',
+      'https://app.versemate.org/sitemaps/jesus-en-US.xml': '2026-06-15',
+      'https://app.versemate.org/sitemaps/topics-en-US.xml': '2026-07-04',
+    });
+    expect(await valid(index.body, 'siteindex.xsd')).toEqual([]);
+  });
+
+  it('answer 503, kept nowhere, while the dates cannot be read, and recover once they return', async () => {
+    const healthy = installEdgeGlobals(fakeData());
+    await get('/sitemaps/bible-en-US.xml');
+    expect([...healthy.cache.entries.keys()].some((key) => key.includes('/sitemaps/'))).toBe(true);
+    vi.unstubAllGlobals();
+
+    const data = fakeData({ lastModified: 'down' });
+    const { cache } = installEdgeGlobals(data);
+    for (const path of ['/sitemap.xml', '/sitemaps/bible-en-US.xml', '/sitemaps/jesus-en-US.xml', '/sitemaps/topics-en-US.xml']) {
+      const { response } = await get(path);
+      expect(response.status, path).toBe(503);
+      expect(response.headers.get('cache-control'), path).toBe('no-store');
+    }
+    expect([...cache.entries.keys()].some((key) => key.includes('/sitemap'))).toBe(false);
+
+    data.lastModified = undefined;
+    const recovered = await get('/sitemaps/bible-en-US.xml');
+    expect(recovered.response.status).toBe(200);
+    expect(recovered.body).toContain('<lastmod>2026-01-01</lastmod>');
+  });
+
+  it('show a changed date within a day, and never serve a copy older than that', async () => {
+    vi.useFakeTimers({ now: new Date('2026-11-23T06:00:00Z'), toFake: ['Date'] });
+    try {
+      const data = dated();
+      installEdgeGlobals(data);
+      expect(lastmods((await get('/sitemaps/bible-en-US.xml')).body)['https://app.versemate.org/bible/john/4']).toBe('2026-03-01');
+
+      const english = (data.lastModified as Record<string, LastModifiedData>)['en-US'];
+      english.chapters = english.chapters.map((row) => (row.chapter === 4 ? { ...row, lastModified: '2026-11-23' } : row));
+      vi.setSystemTime(new Date('2026-11-24T06:30:00Z'));
+      await get('/sitemaps/bible-en-US.xml');
+      const fresh = lastmods((await get('/sitemaps/bible-en-US.xml')).body);
+      expect(fresh['https://app.versemate.org/bible/john/4']).toBe('2026-11-23');
+      expect(fresh['https://app.versemate.org/bible/genesis/1']).toBe('2025-11-02');
+
+      data.down = true;
+      vi.setSystemTime(new Date('2026-11-24T19:00:00Z'));
+      expect((await get('/sitemaps/bible-en-US.xml')).response.status).toBe(200);
+      vi.setSystemTime(new Date('2026-11-25T07:00:00Z'));
+      expect((await get('/sitemaps/bible-en-US.xml')).response.status).toBe(503);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('report a listed URL that has no date instead of passing it over', async () => {
+    const errors = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const data = dated();
+    const english = (data.lastModified as Record<string, LastModifiedData>)['en-US'];
+    english.chapters = english.chapters.filter((row) => row.chapter !== 4);
+    installEdgeGlobals(data);
+
+    const bible = await get('/sitemaps/bible-en-US.xml');
+
+    expect(bible.locs).toContain('https://app.versemate.org/bible/john/4');
+    expect(lastmods(bible.body)['https://app.versemate.org/bible/john/4']).toBeUndefined();
+    expect(errors.mock.calls.map((call) => String(call[1]))).toContainEqual(expect.stringContaining('bible-en-US: 1 of 3 URLs have no date'));
+    errors.mockRestore();
   });
 });
 

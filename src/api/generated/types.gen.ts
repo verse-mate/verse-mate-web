@@ -9480,6 +9480,95 @@ export type GetBibleExplanationsCoverageResponses = {
 
 export type GetBibleExplanationsCoverageResponse = GetBibleExplanationsCoverageResponses[keyof GetBibleExplanationsCoverageResponses];
 
+export type GetBibleExplanationsLastModifiedData = {
+    body?: never;
+    path?: never;
+    query: {
+        /**
+         * BCP-47 language code (e.g. 'en-US', 'pt-BR') whose explanation dates to list.
+         */
+        lang: string;
+    };
+    url: '/bible/explanations/last-modified';
+};
+
+export type GetBibleExplanationsLastModifiedErrors = {
+    /**
+     * Response for status 400
+     */
+    400: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 422
+     */
+    422: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 429
+     */
+    429: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+    /**
+     * Response for status 500
+     */
+    500: {
+        data?: unknown;
+        details?: {
+            [key: string]: unknown;
+        };
+        error: string;
+        message: string;
+        retryAfter?: number;
+    };
+};
+
+export type GetBibleExplanationsLastModifiedError = GetBibleExplanationsLastModifiedErrors[keyof GetBibleExplanationsLastModifiedErrors];
+
+export type GetBibleExplanationsLastModifiedResponses = {
+    /**
+     * Response for status 200
+     */
+    200: {
+        chapters: Array<{
+            bookId: number;
+            chapter: number;
+            lastModified: string;
+        }>;
+        events: Array<{
+            lastModified: string;
+            slug: string;
+        }>;
+        language: string;
+        topics: Array<{
+            lastModified: string;
+            topicId: string;
+        }>;
+    };
+};
+
+export type GetBibleExplanationsLastModifiedResponse = GetBibleExplanationsLastModifiedResponses[keyof GetBibleExplanationsLastModifiedResponses];
+
 export type GetBibleHighlightThemesData = {
     body?: never;
     path?: never;

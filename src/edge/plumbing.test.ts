@@ -5,6 +5,7 @@ import robotsParser from 'robots-parser';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import worker from '../../worker.js';
+import { ADMITTED_CRAWLERS, CONTENT_SIGNAL, REFUSED_CRAWLERS } from './testing/crawlerPolicy';
 import { context, edgeEnv, installEdgeGlobals } from './testing/fakeEdge';
 
 const publicDir = join(__dirname, '../../public');
@@ -83,9 +84,8 @@ describe('app-link verification files', () => {
   });
 });
 
-describe('robots.txt as each admitted crawler reads it', () => {
-  const managed = readFileSync(join(__dirname, 'fixtures/cloudflare-managed-robots.txt'), 'utf8');
-  const served = `${managed}\n${readFileSync(join(publicDir, 'robots.txt'), 'utf8')}`;
+describe('robots.txt as each crawler reads it', () => {
+  const served = readFileSync(join(publicDir, 'robots.txt'), 'utf8');
   const robots = robotsParser('https://app.versemate.org/robots.txt', served);
   const privatePaths = [
     '/notes',
@@ -102,17 +102,26 @@ describe('robots.txt as each admitted crawler reads it', () => {
     '/coach/sessions',
   ];
 
-  for (const agent of ['Googlebot', 'Bingbot', 'OAI-SearchBot', 'PerplexityBot', 'Applebot']) {
+  for (const agent of [...ADMITTED_CRAWLERS, 'SomeNewBot']) {
     it(`keeps ${agent} out of private screens and lets it read chapters`, () => {
       for (const path of privatePaths)
         expect(robots.isDisallowed(`https://app.versemate.org${path}`, agent), `${agent} ${path}`).toBe(true);
       expect(robots.isAllowed('https://app.versemate.org/bible/john/3', agent)).toBe(true);
+      expect(robots.isAllowed('https://app.versemate.org/', agent)).toBe(true);
     });
   }
 
-  it('still refuses training crawlers', () => {
-    expect(robots.isDisallowed('https://app.versemate.org/bible/john/3', 'GPTBot')).toBe(true);
-    expect(robots.isDisallowed('https://app.versemate.org/bible/john/3', 'CCBot')).toBe(true);
+  it('refuses every training crawler and commercial scraper the whole site', () => {
+    for (const agent of REFUSED_CRAWLERS) {
+      expect(robots.isDisallowed('https://app.versemate.org/', agent), agent).toBe(true);
+      expect(robots.isDisallowed('https://app.versemate.org/bible/john/3', agent), agent).toBe(true);
+    }
+  });
+
+  it('carries one content signal, allowing search and answers but not training', () => {
+    const signals = served.split('\n').filter((line) => /^content-signal:/i.test(line.trim()));
+    expect(signals).toEqual([CONTENT_SIGNAL]);
+    expect(served).not.toMatch(/use=/);
   });
 
   it('names the sitemap index', () => {

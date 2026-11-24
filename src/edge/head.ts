@@ -12,6 +12,7 @@ export interface Head {
   title: string;
   description: string;
   canonical: string;
+  markdown: string;
   image: string;
   imageAlt: string;
   noindex: boolean;
@@ -71,6 +72,7 @@ export function buildHead(data: PageData, lang: Language, indexing: Indexing): H
     title,
     description,
     canonical,
+    markdown: pageUrl(`${data.path}.md`, lang),
     image,
     imageAlt: name,
     noindex: !indexing.indexable,
@@ -106,6 +108,7 @@ export function headExtras(head: Head) {
     `<meta property="og:url" content="${attribute(head.canonical)}">`,
     `<meta property="og:locale" content="${LABELS[head.lang].locale}">`,
     ...head.alternates.map((alt) => `<link rel="alternate" hreflang="${alt.hreflang}" href="${attribute(alt.href)}">`),
+    `<link rel="alternate" type="text/markdown" href="${attribute(head.markdown)}">`,
     head.noindex ? '<meta name="robots" content="noindex">' : '',
     `<script type="application/ld+json">${jsonForScript(head.jsonLd)}</script>`,
   ];

@@ -1,7 +1,8 @@
+import { prefersMarkdown } from './accept';
 import { BUILD_CACHE_WRITES, BUILD_TIMEOUT_MS, createApi, type Runtime } from './api';
 import { languageFromQuery, PRODUCTION_HOST, readConfig, type EdgeEnv, type Language } from './config';
 import { renderArticle } from './article';
-import { edgeCacheKey, FRESH, SHORT, STALE, withEdgeCache } from './cache';
+import { edgeCacheKey, FRESH, SHORT, SITEMAP_LIFETIME, STALE, withEdgeCache } from './cache';
 import { buildHead, pageUrl, rewritePage } from './head';
 import { indexingFor, loadCoverage, type Indexing } from './indexing';
 import { DAY, reportFailure, type EdgeRequest, type ExecutionContextLike, type Rendered } from './common';
@@ -87,13 +88,15 @@ async function serveGenerated(
   variant: string,
   contentType: string,
   build: (api: ReturnType<typeof createApi>) => Promise<string | null>,
+  lifetime: { fresh: number; stale: number } = { fresh: FRESH, stale: STALE },
 ) {
   let rendered: Rendered | null;
   try {
     rendered = await withEdgeCache(edge, edgeCacheKey(edge, variant, '-'), async () => {
       const body = await build(createApi(edge.config.apiUrl, edge.runtime, { timeoutMs: BUILD_TIMEOUT_MS, cacheWrites: BUILD_CACHE_WRITES }));
       if (body === null) return null;
-      return { body, status: 200, headers: { 'content-type': contentType, 'cache-control': `public, max-age=${DAY}` }, fresh: FRESH, stale: STALE };
+      const headers = { 'content-type': contentType, 'cache-control': `public, max-age=${Math.min(DAY, lifetime.fresh)}` };
+      return { body, status: 200, headers, ...lifetime };
     });
   } catch (error) {
     reportFailure(error);
@@ -176,21 +179,26 @@ async function dispatch(edge: EdgeRequest) {
   if (isLlms) return serveGenerated(edge, 'llms', 'text/markdown; charset=utf-8', llmsTxt);
 
   if (sitemap) {
-    return serveGenerated(edge, 'sitemap', 'application/xml; charset=utf-8', (api) =>
-      buildSitemap(sitemap, api, edge.config.indexedLanguages),
+    return serveGenerated(
+      edge,
+      'sitemap',
+      'application/xml; charset=utf-8',
+      (api) => buildSitemap(sitemap, api, edge.config.indexedLanguages),
+      SITEMAP_LIFETIME,
     );
   }
 
   const match = matchPageRoute(edge.url.pathname);
   if (!match) return edge.url.pathname.endsWith('.md') ? textResponse('Not found', 404, { 'X-Robots-Tag': 'noindex' }) : null;
+  const markdown = match.markdown || prefersMarkdown(edge.request.headers.get('accept'));
   const check = checkRoute(match.route);
   if (check.kind === 'moved') return canonicalRedirect(edge.url, '/bible', check.bookParam, check.bookSlug);
   if (check.kind === 'missing') {
-    return match.markdown
+    return markdown
       ? textResponse('Not found', 404, { 'X-Robots-Tag': 'noindex' })
       : shellResponse(edge.env, edge.url, 404, { 'X-Robots-Tag': 'noindex' });
   }
-  return match.markdown ? renderMarkdownPage(edge, match.route) : renderPage(edge, match);
+  return markdown ? renderMarkdownPage(edge, match.route) : renderPage(edge, match);
 }
 
 export async function handleEdge(request: Request, env: EdgeEnv, url: URL, ctx?: ExecutionContextLike) {
@@ -200,5 +208,6 @@ export async function handleEdge(request: Request, env: EdgeEnv, url: URL, ctx?:
   if (!response) return null;
   const headers = new Headers(response.headers);
   headers.set('X-Content-Type-Options', 'nosniff');
+  if (matchPageRoute(url.pathname)) headers.append('Vary', 'Accept');
   return new Response(request.method === 'GET' ? response.body : null, { status: response.status, headers });
 }

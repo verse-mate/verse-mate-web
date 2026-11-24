@@ -1,0 +1,45 @@
+name: IndexNow
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: recent submits the URLs dated on the last four UTC dates; all submits every published URL once
+        type: choice
+        required: true
+        default: recent
+        options:
+          - recent
+          - all
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    name: Submit changed pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.23
+
+      - name: Submit to IndexNow
+        env:
+          MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'recent' }}
+        run: |
+          if [ "$MODE" = "all" ]; then
+            bun scripts/indexnow.ts all wrangler.jsonc
+          else
+            bun scripts/indexnow.ts recent wrangler.jsonc --days 4
+          fi

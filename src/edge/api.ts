@@ -22,6 +22,7 @@ type Reads =
   | Read<Api.GetBibleBookByBookIdByChapterNumberData, Api.GetBibleBookByBookIdByChapterNumberResponse>
   | Read<Api.GetBibleBookExplanationByBookIdByChapterNumberData, Api.GetBibleBookExplanationByBookIdByChapterNumberResponse>
   | Read<Api.GetBibleExplanationsCoverageData, Api.GetBibleExplanationsCoverageResponse>
+  | Read<Api.GetBibleExplanationsLastModifiedData, Api.GetBibleExplanationsLastModifiedResponse>
   | Read<Api.GetJesusEventsData, Api.GetJesusEventsResponse>
   | Read<Api.GetJesusEventsBySlugData, Api.GetJesusEventsBySlugResponse>
   | Read<Api.GetTopicsCategoriesData, Api.GetTopicsCategoriesResponse>

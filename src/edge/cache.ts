@@ -4,6 +4,7 @@ import { DAY, reportFailure, type EdgeRequest, type Rendered } from './common';
 export const FRESH = DAY;
 export const STALE = 7 * DAY;
 export const SHORT = 10 * 60;
+export const SITEMAP_LIFETIME = { fresh: DAY / 2, stale: DAY / 2 };
 export const LEASE = 60;
 
 const RENDERED_AT = 'x-edge-rendered-at';
@@ -15,7 +16,8 @@ const CLIENT_CACHE_CONTROL = 'x-edge-cache-control';
 const inflight = new Map<string, Promise<Rendered | null>>();
 
 export function edgeCacheKey(edge: EdgeRequest, variant: string, lang: string) {
-  const path = edge.url.pathname.replace(/(.)\/$/, '$1');
+  const trimmed = edge.url.pathname.replace(/(.)\/$/, '$1');
+  const path = variant === 'md' ? trimmed.replace(/\.md$/, '') : trimmed;
   return `${SITE_ORIGIN}/__edge-cache/${encodeURIComponent(edge.config.buildId)}${path}?lang=${encodeURIComponent(lang)}&v=${variant}`;
 }
 
