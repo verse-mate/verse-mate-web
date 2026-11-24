@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, type KeyboardEvent, type MouseEvent } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate, useLocation, useNavigationType } from 'react-router-dom';
 import {
@@ -31,6 +31,8 @@ import { isEnglishVersion } from '@/constants/bible-versions';
 import { useHorizontalSwipe } from '@/hooks/useHorizontalSwipe';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
+import { getVisitLanguage } from '@/hooks/usePreferredLanguage';
+import { DEFAULT_LANGUAGE } from '@/edge/config';
 import { OVERLAY_MODAL_WIDTH, OVERLAY_MODAL_HEIGHT } from '@/constants/overlayModal';
 import { loadAlignmentFor, type ChapterAlignment } from '@versemate/lexicon';
 import { vmTokens } from '@/styles/themeStyles';
@@ -40,6 +42,16 @@ import { vmTokens } from '@/styles/themeStyles';
 // (gold accent, header chrome) reference vmTokens.* instead.
 
 const READING_SCROLL_KEY = 'versemate-reading-scroll';
+
+function chapterHref(bookId: number, chapter: number) {
+  const language = getVisitLanguage();
+  const query = language && language !== DEFAULT_LANGUAGE ? `?lang=${encodeURIComponent(language)}` : '';
+  return `/bible/${getBookSlug(bookId)}/${chapter}${query}`;
+}
+
+function isPlainClick(event: MouseEvent) {
+  return event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
+}
 
 export default function ReadingScreen() {
   const { state, dispatch, addBookmark, removeBookmark } = useApp();
@@ -170,6 +182,21 @@ export default function ReadingScreen() {
       scrollRef.current?.scrollTo(0, 0);
     }
   }, [state.chapter, state.book, maxChapter, dispatch]);
+
+  const arrowProps = (delta: number) => ({
+    href: chapterHref(state.bookId, state.chapter + delta),
+    draggable: false,
+    onClick: (event: MouseEvent<HTMLAnchorElement>) => {
+      if (!isPlainClick(event)) return;
+      event.preventDefault();
+      goToChapter(delta);
+    },
+    onKeyDown: (event: KeyboardEvent<HTMLAnchorElement>) => {
+      if (event.key !== ' ') return;
+      event.preventDefault();
+      goToChapter(delta);
+    },
+  });
 
   // Word highlights are painted over the text (see the effect below) where the
   // browser can; elsewhere they show on their whole verse, as they used to.
@@ -722,24 +749,24 @@ export default function ReadingScreen() {
             pinned as the verse column scrolls. Anchoring here (not .split-body)
             keeps them in the reading column rather than across both panes. */}
         {state.chapter > 1 && (
-          <button
-            onClick={() => goToChapter(-1)}
+          <a
+            {...arrowProps(-1)}
             aria-label="Previous chapter"
             data-testid="previous-chapter-button"
             className="chapter-nav-btn chapter-nav-prev"
           >
             <ChevronLeft size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
-          </button>
+          </a>
         )}
         {state.chapter < maxChapter && (
-          <button
-            onClick={() => goToChapter(1)}
+          <a
+            {...arrowProps(1)}
             aria-label="Next chapter"
             data-testid="next-chapter-button"
             className="chapter-nav-btn chapter-nav-next"
           >
             <ChevronRight size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
-          </button>
+          </a>
         )}
 
         {/* Desktop: floating toolbar on text selection */}
