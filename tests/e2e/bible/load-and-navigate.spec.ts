@@ -69,6 +69,22 @@ test.describe('Bible — FAB navigation', () => {
     await reader.expectChapterLoaded('Genesis', 1);
   });
 
+  test('Enter and Space on a focused Next chapter arrow advance one chapter each', async ({ page }) => {
+    const reader = new ReaderPage(page);
+    await reader.goto('romans', 12);
+    await reader.nextChapter.focus();
+    await page.keyboard.press('Enter');
+    await page.waitForURL(/\/bible\/romans\/13/, { timeout: 10_000 });
+    await reader.expectChapterLoaded('Romans', 13);
+
+    const scrollBefore = await page.evaluate(() => window.scrollY);
+    await reader.nextChapter.focus();
+    await page.keyboard.press('Space');
+    await page.waitForURL(/\/bible\/romans\/14/, { timeout: 10_000 });
+    await reader.expectChapterLoaded('Romans', 14);
+    expect(await page.evaluate(() => window.scrollY)).toBe(scrollBefore);
+  });
+
   test('Genesis 1 hides Previous FAB (left boundary)', async ({ page }) => {
     const reader = new ReaderPage(page);
     await reader.goto('genesis', 1);
