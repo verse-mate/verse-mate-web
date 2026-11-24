@@ -2,6 +2,7 @@ import type { Language } from './config';
 import { pageName } from './head';
 import { LABELS } from './labels';
 import { markdownToHtml } from './markdown';
+import { HTML_TARGET, pageNavigation, type NavLink } from './navigation';
 import type { PageData } from './pageData';
 import { escapeHtml } from './text';
 
@@ -11,6 +12,18 @@ function section(title: string, body: string) {
 
 function list(items: string[]) {
   return `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+}
+
+function anchor(link: NavLink) {
+  const rel = link.rel ? ` rel="${link.rel}"` : '';
+  return `<a${rel} href="${escapeHtml(link.href)}">${escapeHtml(link.text)}</a>`;
+}
+
+function navigation(data: PageData, lang: Language) {
+  const nav = pageNavigation(data, lang, HTML_TARGET);
+  const chapters = nav.chapters.length ? `<ul>${nav.chapters.map((link) => `<li>${anchor(link)}</li>`).join('')}</ul>` : '';
+  const assistants = `<p>${escapeHtml(nav.assistantsLabel)} ${nav.assistants.map(anchor).join(', ')}</p>`;
+  return `<nav class="mt-8 space-y-2">${chapters}${assistants}</nav>`;
 }
 
 export function renderArticle(data: PageData, lang: Language) {
@@ -37,5 +50,6 @@ export function renderArticle(data: PageData, lang: Language) {
     if (data.sections.length) parts.push(section(labels.passages, passages));
     if (data.explanation.trim()) parts.push(section(labels.explanation, markdownToHtml(data.explanation)));
   }
+  parts.push(navigation(data, lang));
   return `<article class="reading-inner">${parts.join('')}</article>`;
 }
