@@ -22,7 +22,11 @@ function allBooks() {
   data.books.find((book) => book.b === 1)!.n = 'Genesis';
   Object.assign(data.books.find((book) => book.b === 45)!, { n: 'Romans', c: 16 });
   Object.assign(data.books.find((book) => book.b === 31)!, { n: 'Obadiah', c: 1 });
-  for (const book of books) data.verses[`${book.b}:1`] ??= [{ verseNumber: 1, text: `First verse of book ${book.b}.` }];
+  for (const book of data.books) {
+    for (let chapter = 1; chapter <= book.c; chapter++) {
+      data.verses[`${book.b}:${chapter}`] ??= [{ verseNumber: 1, text: `First verse of book ${book.b}, chapter ${chapter}.` }];
+    }
+  }
   return data;
 }
 
@@ -159,8 +163,9 @@ describe('the links at the end of a Markdown version', () => {
 });
 
 describe('llms.txt', () => {
-  it('describes VerseMate and links all 66 books, the Jesus events and the topics', async () => {
-    installEdgeGlobals(allBooks());
+  it('describes VerseMate and links every chapter of the 66 books, the Jesus events and the topics', async () => {
+    const data = allBooks();
+    installEdgeGlobals(data);
 
     const { response, body } = await get('/llms.txt');
 
@@ -168,16 +173,25 @@ describe('llms.txt', () => {
     expect(body.startsWith('# VerseMate\n')).toBe(true);
     expect(body).not.toMatch(/<(div|html)/);
     const links = [...body.matchAll(/\]\((https:\/\/app\.versemate\.org[^)]+)\)/g)].map((m) => m[1]);
-    const books = links.filter((link) => link.startsWith('https://app.versemate.org/bible/'));
-    expect(books).toHaveLength(66);
-    expect(books).toContain('https://app.versemate.org/bible/john/1.md');
+    const chapters = links.filter((link) => link.startsWith('https://app.versemate.org/bible/'));
+    expect(chapters).toHaveLength(data.books.reduce((sum, book) => sum + book.c, 0));
+    expect(new Set(chapters).size).toBe(chapters.length);
+    expect(body).not.toContain('{1-');
     expect(body).toContain(
-      '- [Romans](https://app.versemate.org/bible/romans/1.md): 16 chapters at `/bible/romans/{1-16}.md`. [All chapters of Romans](https://versemate.org/bible/romans/)\n',
+      [
+        '## Romans',
+        '',
+        '[All chapters of Romans](https://versemate.org/bible/romans/)',
+        '- [Romans 1](https://app.versemate.org/bible/romans/1.md)',
+        '- [Romans 2](https://app.versemate.org/bible/romans/2.md)',
+      ].join('\n'),
     );
+    expect(body).toContain('- [Romans 16](https://app.versemate.org/bible/romans/16.md)\n\n## ');
+    expect(body).not.toContain('romans/17.md');
     expect(body).toContain(
-      '- [Obadiah](https://app.versemate.org/bible/obadiah/1.md): 1 chapter at `/bible/obadiah/1.md`. [All chapters of Obadiah](https://versemate.org/bible/obadiah/)\n',
+      '## Obadiah\n\n[All chapters of Obadiah](https://versemate.org/bible/obadiah/)\n- [Obadiah 1](https://app.versemate.org/bible/obadiah/1.md)\n\n## ',
     );
-    const intro = body.slice(0, body.indexOf('## Books of the Bible'));
+    const intro = body.slice(0, body.indexOf('## Genesis'));
     expect(intro).toContain('Links to app.versemate.org are the Markdown versions of VerseMate pages');
     expect(intro).toContain('Links to versemate.org/bible/ are book pages');
     expect(intro).not.toContain('Each link below is the Markdown version');

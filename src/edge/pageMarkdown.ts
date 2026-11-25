@@ -67,15 +67,13 @@ export async function llmsTxt(api: ApiGet) {
     'Links to app.versemate.org are the Markdown versions of VerseMate pages. The same page is at the address without `.md`.',
     'Links to versemate.org/bible/ are book pages: HTML pages that list every chapter of a book.',
     '',
-    '## Books of the Bible',
-    '',
-    ...books.map((book) => {
-      const pattern = book.chapters === 1 ? `/bible/${book.slug}/1.md` : `/bible/${book.slug}/{1-${book.chapters}}.md`;
-      const count = book.chapters === 1 ? '1 chapter' : `${book.chapters} chapters`;
-      const all = `[${LABELS[DEFAULT_LANGUAGE].allChapters(book.name).replace(/[[\]]/g, '')}](${bookPageUrl(book.slug)})`;
-      return `${link(book.name, `/bible/${book.slug}/1`)}: ${count} at \`${pattern}\`. ${all}`;
-    }),
-    '',
+    ...books.flatMap((book) => [
+      `## ${book.name}`,
+      '',
+      `[${LABELS[DEFAULT_LANGUAGE].allChapters(book.name).replace(/[[\]]/g, '')}](${bookPageUrl(book.slug)})`,
+      ...Array.from({ length: book.chapters }, (_, index) => link(`${book.name} ${index + 1}`, `/bible/${book.slug}/${index + 1}`)),
+      '',
+    ]),
     `## ${LABELS[DEFAULT_LANGUAGE].jesus}`,
     '',
     ...events.map((event) => link(event.title, event.path)),
