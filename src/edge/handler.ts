@@ -2,7 +2,7 @@ import { prefersMarkdown } from './accept';
 import { BUILD_CACHE_WRITES, BUILD_TIMEOUT_MS, createApi, type Runtime } from './api';
 import { languageFromQuery, PRODUCTION_HOST, readConfig, type EdgeEnv, type Language } from './config';
 import { renderArticle } from './article';
-import { edgeCacheKey, FRESH, SHORT, SITEMAP_LIFETIME, STALE, withEdgeCache } from './cache';
+import { edgeCacheKey, FRESH, GENERATED_CLIENT_MAX_AGE, SHORT, SITEMAP_LIFETIME, STALE, withEdgeCache } from './cache';
 import { buildHead, pageUrl, rewritePage } from './head';
 import { indexingFor, loadCoverage, type Indexing } from './indexing';
 import { DAY, reportFailure, type EdgeRequest, type ExecutionContextLike, type Rendered } from './common';
@@ -95,7 +95,7 @@ async function serveGenerated(
     rendered = await withEdgeCache(edge, edgeCacheKey(edge, variant, '-'), async () => {
       const body = await build(createApi(edge.config.apiUrl, edge.runtime, { timeoutMs: BUILD_TIMEOUT_MS, cacheWrites: BUILD_CACHE_WRITES }));
       if (body === null) return null;
-      const headers = { 'content-type': contentType, 'cache-control': `public, max-age=${Math.min(DAY, lifetime.fresh)}` };
+      const headers = { 'content-type': contentType, 'cache-control': `public, max-age=${GENERATED_CLIENT_MAX_AGE}` };
       return { body, status: 200, headers, ...lifetime };
     });
   } catch (error) {

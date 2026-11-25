@@ -277,6 +277,24 @@ describe('the Jesus and topic sitemaps', () => {
   });
 });
 
+describe('what a client may keep', () => {
+  it('is one hour for llms.txt and every sitemap, whether rendered now or served from the edge cache', async () => {
+    const { cache } = installEdgeGlobals(withEvents());
+
+    for (const path of ['/llms.txt', '/sitemap.xml', '/sitemaps/bible-en-US.xml', '/sitemaps/jesus-en-US.xml']) {
+      const rendered = await get(path);
+      const storesAfterRender = cache.ops.put;
+      const cached = await get(path);
+
+      expect(cache.ops.put, `${path} cached`).toBe(storesAfterRender);
+      for (const [pass, { response }] of [['rendered', rendered], ['cached', cached]] as const) {
+        expect(response.status, `${path} ${pass}`).toBe(200);
+        expect(response.headers.get('cache-control'), `${path} ${pass}`).toBe('public, max-age=3600');
+      }
+    }
+  });
+});
+
 describe('the work one request may do', () => {
   const SUBREQUEST_LIMIT = 1000;
   const CACHE_API_LIMIT = 1000;
