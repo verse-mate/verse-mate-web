@@ -127,6 +127,28 @@ describe('robots.txt as each crawler reads it', () => {
   it('names the sitemap index', () => {
     expect(robots.getSitemaps()).toContain('https://app.versemate.org/sitemap.xml');
   });
+
+  it('gives OAI-SearchBot a group of its own that allows the site first and repeats the private screens', () => {
+    const lines = served.split('\n').map((line) => line.trim());
+    const start = lines.indexOf('User-agent: OAI-SearchBot');
+    const end = lines.indexOf('', start);
+    const group = lines.slice(start, end === -1 ? undefined : end);
+
+    expect(start).toBeGreaterThan(-1);
+    expect(group[1]).toBe('Allow: /');
+    expect(group.filter((line) => /^content-signal:/i.test(line))).toEqual([]);
+    const everyone = lines.slice(lines.indexOf('User-agent: *'));
+    const disallows = (rules: string[]) => rules.slice(0, rules.indexOf('')).filter((line) => line.startsWith('Disallow:'));
+    expect(disallows(group.concat(''))).toEqual(disallows(everyone));
+  });
+
+  it('names Google-Extended only in comments, one of which says why it is not blocked', () => {
+    const mentions = served.split('\n').filter((line) => line.includes('Google-Extended'));
+
+    expect(mentions.length).toBeGreaterThan(0);
+    for (const line of mentions) expect(line.trim().startsWith('#'), line).toBe(true);
+    expect(served).toMatch(/^#.*grounding in Gemini/m);
+  });
 });
 
 describe('private screens', () => {

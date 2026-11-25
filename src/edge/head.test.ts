@@ -55,6 +55,11 @@ describe('the head of an indexable chapter', () => {
 
     const [crumbs, work] = john.graph;
     expect(crumbs.itemListElement.map((item: { name: string }) => item.name)).toEqual(['VerseMate', 'John', 'John 3']);
+    expect(crumbs.itemListElement.map((item: { item: string }) => item.item)).toEqual([
+      'https://versemate.org/',
+      'https://versemate.org/bible/john/',
+      'https://app.versemate.org/bible/john/3',
+    ]);
     expect(work).toMatchObject({ '@type': 'CreativeWork', inLanguage: 'en-US', url: john.canonical });
     expect(work.publisher['@id']).toBe('https://versemate.org/#org');
   });
@@ -93,6 +98,8 @@ describe('a chapter in another language', () => {
     expect(spanish.response.headers.get('x-robots-tag')).toBe('noindex');
     expect(spanish.alternates).toEqual([]);
     expect(spanish.graph[1].inLanguage).toBe('es-MX');
+    expect(spanish.graph[0].itemListElement[1].item).toBe('https://versemate.org/bible/john/');
+    expect((await page('/bible/john/3?lang=pt-BR')).graph[0].itemListElement[1].item).toBe('https://versemate.org/bible/john/');
 
     const english = await page('/bible/john/3');
     expect(english.alternates.some((alt) => alt.startsWith('es-MX'))).toBe(false);
@@ -155,6 +162,21 @@ describe('a Jesus event in a published language', () => {
       'VerseMate',
       'Vida de Jesús',
       'The baptism of Jesus',
+    ]);
+    expect(event.graph[0].itemListElement[1].item).toBe('https://app.versemate.org/jesus?lang=es-MX');
+  });
+});
+
+describe('the breadcrumb of a topic', () => {
+  it('leads to the list of topics on the reader', async () => {
+    installEdgeGlobals();
+
+    const topic = await page('/topic/events/the-creation-of-the-world');
+
+    expect(topic.graph[0].itemListElement.map((item: { item: string }) => item.item)).toEqual([
+      'https://versemate.org/',
+      'https://app.versemate.org/topics',
+      'https://app.versemate.org/topic/events/the-creation-of-the-world',
     ]);
   });
 });

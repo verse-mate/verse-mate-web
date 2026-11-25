@@ -13,6 +13,10 @@ export interface Labels {
   passages: string;
   jesus: string;
   categories: Record<string, string>;
+  previousChapter(name: string): string;
+  nextChapter(name: string): string;
+  allChapters(book: string): string;
+  forAssistants: string;
 }
 
 export const LABELS: Record<Language, Labels> = {
@@ -29,6 +33,10 @@ export const LABELS: Record<Language, Labels> = {
     passages: 'Passages',
     jesus: 'Life of Jesus',
     categories: { EVENT: 'Events', PROPHECY: 'Prophecies', PARABLE: 'Parables', THEME: 'Themes' },
+    previousChapter: (n) => `Previous chapter: ${n}`,
+    nextChapter: (n) => `Next chapter: ${n}`,
+    allChapters: (b) => `All chapters of ${b}`,
+    forAssistants: 'For AI assistants:',
   },
   'es-MX': {
     locale: 'es_MX',
@@ -43,6 +51,10 @@ export const LABELS: Record<Language, Labels> = {
     passages: 'Pasajes',
     jesus: 'Vida de Jesús',
     categories: { EVENT: 'Eventos', PROPHECY: 'Profecías', PARABLE: 'Parábolas', THEME: 'Temas' },
+    previousChapter: (n) => `Capítulo anterior: ${n}`,
+    nextChapter: (n) => `Capítulo siguiente: ${n}`,
+    allChapters: (b) => `Todos los capítulos de ${b}`,
+    forAssistants: 'Para asistentes de IA:',
   },
   'pt-BR': {
     locale: 'pt_BR',
@@ -57,6 +69,10 @@ export const LABELS: Record<Language, Labels> = {
     passages: 'Passagens',
     jesus: 'Vida de Jesus',
     categories: { EVENT: 'Eventos', PROPHECY: 'Profecias', PARABLE: 'Parábolas', THEME: 'Temas' },
+    previousChapter: (n) => `Capítulo anterior: ${n}`,
+    nextChapter: (n) => `Próximo capítulo: ${n}`,
+    allChapters: (b) => `Todos os capítulos de ${b}`,
+    forAssistants: 'Para assistentes de IA:',
   },
   uk: {
     locale: 'uk_UA',
@@ -71,6 +87,10 @@ export const LABELS: Record<Language, Labels> = {
     passages: 'Уривки',
     jesus: 'Життя Ісуса',
     categories: { EVENT: 'Події', PROPHECY: 'Пророцтва', PARABLE: 'Притчі', THEME: 'Теми' },
+    previousChapter: (n) => `Попередній розділ: ${n}`,
+    nextChapter: (n) => `Наступний розділ: ${n}`,
+    allChapters: (b) => `Усі розділи книги ${b}`,
+    forAssistants: 'Для ШІ-асистентів:',
   },
   ru: {
     locale: 'ru_RU',
@@ -85,6 +105,10 @@ export const LABELS: Record<Language, Labels> = {
     passages: 'Отрывки',
     jesus: 'Жизнь Иисуса',
     categories: { EVENT: 'События', PROPHECY: 'Пророчества', PARABLE: 'Притчи', THEME: 'Темы' },
+    previousChapter: (n) => `Предыдущая глава: ${n}`,
+    nextChapter: (n) => `Следующая глава: ${n}`,
+    allChapters: (b) => `Все главы книги ${b}`,
+    forAssistants: 'Для ИИ-ассистентов:',
   },
   'ro-RO': {
     locale: 'ro_RO',
@@ -99,6 +123,10 @@ export const LABELS: Record<Language, Labels> = {
     passages: 'Pasaje',
     jesus: 'Viața lui Isus',
     categories: { EVENT: 'Evenimente', PROPHECY: 'Profeții', PARABLE: 'Pilde', THEME: 'Teme' },
+    previousChapter: (n) => `Capitolul anterior: ${n}`,
+    nextChapter: (n) => `Capitolul următor: ${n}`,
+    allChapters: (b) => `Toate capitolele din ${b}`,
+    forAssistants: 'Pentru asistenții AI:',
   },
   de: {
     locale: 'de_DE',
@@ -113,6 +141,10 @@ export const LABELS: Record<Language, Labels> = {
     passages: 'Bibelstellen',
     jesus: 'Das Leben Jesu',
     categories: { EVENT: 'Ereignisse', PROPHECY: 'Prophezeiungen', PARABLE: 'Gleichnisse', THEME: 'Themen' },
+    previousChapter: (n) => `Vorheriges Kapitel: ${n}`,
+    nextChapter: (n) => `Nächstes Kapitel: ${n}`,
+    allChapters: (b) => `Alle Kapitel von ${b}`,
+    forAssistants: 'Für KI-Assistenten:',
   },
   fr: {
     locale: 'fr_FR',
@@ -127,5 +159,9 @@ export const LABELS: Record<Language, Labels> = {
     passages: 'Passages',
     jesus: 'La vie de Jésus',
     categories: { EVENT: 'Événements', PROPHECY: 'Prophéties', PARABLE: 'Paraboles', THEME: 'Thèmes' },
+    previousChapter: (n) => `Chapitre précédent : ${n}`,
+    nextChapter: (n) => `Chapitre suivant : ${n}`,
+    allChapters: (b) => `Tous les chapitres de ${b}`,
+    forAssistants: 'Pour les assistants IA :',
   },
 };

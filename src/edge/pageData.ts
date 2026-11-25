@@ -14,6 +14,12 @@ export interface RouteMatch {
   markdown: boolean;
 }
 
+export interface ChapterRef {
+  slug: string;
+  name: string;
+  chapter: number;
+}
+
 export interface ChapterPage {
   kind: 'chapter';
   path: string;
@@ -24,6 +30,8 @@ export interface ChapterPage {
   verses: { number: number; text: string }[];
   summary: string;
   byline: string;
+  previous: ChapterRef | null;
+  next: ChapterRef | null;
 }
 
 export interface EventPage {
@@ -72,7 +80,8 @@ export async function loadBooks(api: ApiGet) {
   const data = await api('/bible/testaments', { query: { bible_version: GUEST_VERSION } }, { ttl: DAY });
   const books = data?.testaments ?? [];
   if (books.length === 0) throw new ApiUnavailable('/bible/testaments: empty');
-  return books
+  return [...books]
+    .sort((a, b) => a.b - b.b)
     .filter((book) => getBookSlug(book.b))
     .map((book) => ({ bookId: book.b, slug: getBookSlug(book.b) as string, name: book.n, chapters: book.c }));
 }
@@ -102,11 +111,25 @@ export function checkRoute(route: PageRoute): RouteCheck {
   return bookSlug === route.bookParam ? { kind: 'ok' } : { kind: 'moved', bookParam: route.bookParam, bookSlug };
 }
 
+type Book = Awaited<ReturnType<typeof loadBooks>>[number];
+
+function neighbours(books: Book[], index: number, chapter: number) {
+  const book = books[index];
+  const before = books[index - 1];
+  const after = books[index + 1];
+  const ref = (entry: Book, number: number): ChapterRef => ({ slug: entry.slug, name: entry.name, chapter: number });
+  const previous = chapter > 1 ? ref(book, chapter - 1) : before ? ref(before, before.chapters) : null;
+  const next = chapter < book.chapters ? ref(book, chapter + 1) : after ? ref(after, 1) : null;
+  return { previous, next };
+}
+
 async function loadChapter(api: ApiGet, route: Extract<PageRoute, { kind: 'chapter' }>, lang: Language): Promise<ChapterPage | null> {
   const bookId = /^\d+$/.test(route.bookParam) ? null : parseBookParam(route.bookParam);
   if (!bookId || !CHAPTER_PARAM.test(route.chapterParam)) return null;
   const chapter = Number.parseInt(route.chapterParam, 10);
-  const book = (await loadBooks(api)).find((entry) => entry.bookId === bookId);
+  const books = await loadBooks(api);
+  const index = books.findIndex((entry) => entry.bookId === bookId);
+  const book = books[index];
   if (!book || chapter < 1 || chapter > book.chapters) return null;
 
   const path = { bookId, chapterNumber: chapter };
@@ -129,6 +152,7 @@ async function loadChapter(api: ApiGet, route: Extract<PageRoute, { kind: 'chapt
     verses,
     summary: summary?.explanation?.explanation ?? '',
     byline: byline?.explanation?.explanation ?? '',
+    ...neighbours(books, index, chapter),
   };
 }
 

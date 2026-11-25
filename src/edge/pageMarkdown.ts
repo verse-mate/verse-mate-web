@@ -3,6 +3,7 @@ import { pageName } from './head';
 import { LABELS } from './labels';
 import { listedEvents, listedTopics } from './sitemaps';
 import type { ApiGet } from './api';
+import { bookPageUrl, MARKDOWN_TARGET, pageNavigation, type NavLink } from './navigation';
 import { loadBooks, type PageData } from './pageData';
 import { resolvePlaceholders } from './text';
 
@@ -14,6 +15,17 @@ function shiftHeadings(markdown: string, by: number) {
 
 function section(title: string, body: string) {
   return `## ${title}\n\n${body}`;
+}
+
+function markdownLink(link: NavLink) {
+  return `[${link.text.replace(/[[\]]/g, '')}](${link.href})`;
+}
+
+function navigation(data: PageData, lang: Language) {
+  const nav = pageNavigation(data, lang, MARKDOWN_TARGET);
+  const assistants = `${nav.assistantsLabel} ${nav.assistants.map(markdownLink).join(', ')}`;
+  if (!nav.chapters.length) return assistants;
+  return `${nav.chapters.map((link) => `- ${markdownLink(link)}`).join('\n')}\n\n${assistants}`;
 }
 
 export function pageMarkdown(data: PageData, lang: Language) {
@@ -33,6 +45,7 @@ export function pageMarkdown(data: PageData, lang: Language) {
     if (data.sections.length) parts.push(section(labels.passages, passages));
     if (data.explanation.trim()) parts.push(section(labels.explanation, shiftHeadings(data.explanation, 2)));
   }
+  parts.push(navigation(data, lang));
   return `${parts.join('\n\n')}\n`;
 }
 
@@ -51,11 +64,17 @@ export async function llmsTxt(api: ApiGet) {
     '',
     `> ${ABOUT}`,
     '',
-    'Each link below is the Markdown version of a VerseMate page. The same page is at the address without `.md`.',
+    'Links to app.versemate.org are the Markdown versions of VerseMate pages. The same page is at the address without `.md`.',
+    'Links to versemate.org/bible/ are book pages: HTML pages that list every chapter of a book.',
     '',
     '## Books of the Bible',
     '',
-    ...books.map((book) => link(book.name, `/bible/${book.slug}/1`)),
+    ...books.map((book) => {
+      const pattern = book.chapters === 1 ? `/bible/${book.slug}/1.md` : `/bible/${book.slug}/{1-${book.chapters}}.md`;
+      const count = book.chapters === 1 ? '1 chapter' : `${book.chapters} chapters`;
+      const all = `[${LABELS[DEFAULT_LANGUAGE].allChapters(book.name).replace(/[[\]]/g, '')}](${bookPageUrl(book.slug)})`;
+      return `${link(book.name, `/bible/${book.slug}/1`)}: ${count} at \`${pattern}\`. ${all}`;
+    }),
     '',
     `## ${LABELS[DEFAULT_LANGUAGE].jesus}`,
     '',
