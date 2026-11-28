@@ -37,10 +37,10 @@ describe('a run in a coach’s words', () => {
     const words = (status: string) => runLine(run({ status }), CHICAGO);
     expect(words('starting')).toEqual({ text: 'Joining…', tone: 'progress', live: true });
     expect(words('joining')).toEqual({ text: 'Joining…', tone: 'progress', live: true });
-    expect(words('waiting_room')).toEqual({ text: 'Waiting in the waiting room: let VerseMate Coaching in', tone: 'waiting', live: true });
+    expect(words('waiting_room')).toEqual({ text: 'Waiting in the waiting room: let VerseMate Coach in', tone: 'waiting', live: true });
     expect(words('in_meeting')).toEqual({ text: 'In the meeting, about to record', tone: 'progress', live: true });
     expect(words('recording')).toEqual({ text: 'Recording now', tone: 'good', live: true });
-    expect(words('recording_denied')).toEqual({ text: 'In the meeting: allow VerseMate Coaching to record', tone: 'waiting', live: true });
+    expect(words('recording_denied')).toEqual({ text: 'In the meeting: allow VerseMate Coach to record', tone: 'waiting', live: true });
     expect(words('processing')).toEqual({ text: 'Processing the recording', tone: 'progress', live: true });
   });
 

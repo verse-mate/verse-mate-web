@@ -479,7 +479,7 @@ describe('Sessions, admin drill-in', () => {
     });
     renderAt('/coach/leader/avery/sessions');
 
-    expect(await screen.findByTestId('coach-class-last-run')).toHaveTextContent('Waiting in the waiting room: let VerseMate Coaching in');
+    expect(await screen.findByTestId('coach-class-last-run')).toHaveTextContent('Waiting in the waiting room: let VerseMate Coach in');
     expect(vi.mocked(coachService.fetchNotetakerActivity).mock.calls[0]).toEqual([true]);
   });
 

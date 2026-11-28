@@ -69,10 +69,10 @@ const FAILURE_WORDS: Record<string, string> = {
 const LIVE_WORDS: Record<string, string> = {
   starting: 'Joining…',
   joining: 'Joining…',
-  waiting_room: 'Waiting in the waiting room: let VerseMate Coaching in',
+  waiting_room: 'Waiting in the waiting room: let VerseMate Coach in',
   in_meeting: 'In the meeting, about to record',
   recording: 'Recording now',
-  recording_denied: 'In the meeting: allow VerseMate Coaching to record',
+  recording_denied: 'In the meeting: allow VerseMate Coach to record',
   processing: 'Processing the recording',
 };
 
